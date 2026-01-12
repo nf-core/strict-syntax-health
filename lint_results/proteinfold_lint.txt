@@ -1,0 +1,650 @@
+Linting Nextflow code..
+Linting: conf/test_alphafold_download.config
+Linting: conf/test_full_esmfold_multimer.config
+Linting: conf/test_full_alphafold_split.config
+Linting: conf/test_full_esmfold.config
+Linting: conf/test_colabfold_download.config
+Linting: conf/test_full_colabfold_local.config
+Linting: conf/base.config
+Linting: conf/test_colabfold_webserver.config
+Linting: conf/modules_colabfold.config
+Linting: conf/test_colabfold_local.config
+Linting: conf/modules.config
+Linting: conf/modules_alphafold2.config
+Linting: conf/modules_esmfold.config
+Linting: conf/test_esmfold.config
+Linting: conf/test_full.config
+Linting: conf/test_full_colabfold_webserver.config
+Linting: conf/test.config
+Linting: conf/test_full_alphafold_multimer.config
+Linting: conf/test_alphafold_split.config
+Linting: conf/test_full_colabfold_webserver_multimer.config
+Linting: conf/dbs.config
+Linting: nextflow.config
+Linting: workflows/esmfold.nf
+Linting: workflows/alphafold2.nf
+Linting: workflows/colabfold.nf
+Linting: subworkflows/local/prepare_colabfold_dbs.nf
+Linting: subworkflows/local/aria2_uncompress.nf
+Linting: subworkflows/local/utils_nfcore_proteinfold_pipeline/main.nf
+Linting: subworkflows/local/prepare_esmfold_dbs.nf
+Linting: subworkflows/local/prepare_alphafold2_dbs.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfvalidation_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: main.nf
+Linting: modules/local/run_alphafold2.nf
+Linting: modules/local/run_esmfold.nf
+Linting: modules/local/colabfold_batch.nf
+Linting: modules/local/multifasta_to_csv.nf
+Linting: modules/local/multifasta_to_singlefasta.nf
+Linting: modules/local/combine_uniprot.nf
+Linting: modules/local/run_alphafold2_pred.nf
+Linting: modules/local/mmseqs_colabfoldsearch.nf
+Linting: modules/local/run_alphafold2_msa.nf
+Linting: modules/local/download_pdbmmcif.nf
+Linting: modules/nf-core/gunzip/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/aria2/main.nf
+Linting: modules/nf-core/untar/main.nf
+Linting: modules/nf-core/mmseqs/tsv2exprofiledb/main.nf
+Linting: modules/nf-core/mmseqs/createindex/main.nf
+Linting: modules/nf-core/mmseqs/createindex/tests/nextflow.config
+Error main.nf:21:5: Unexpected input: 'include'
+│  21 |     include { PREPARE_ALPHAFOLD2_DBS } from './subworkflows/local/prep
+╰     |     ^
+
+
+Error modules/local/colabfold_batch.nf:6:5: Invalid process directive
+│   6 |     if (workflow.profile.tokenize(',').intersect(['conda', 'mamba']).s
+│     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│   7 |         error("Local COLABFOLD_BATCH module does not support Conda. Pl
+╰   8 |     }
+
+
+Warn  modules/local/combine_uniprot.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/download_pdbmmcif.nf:26:9: Variable was declared but not used
+│  26 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Error modules/local/mmseqs_colabfoldsearch.nf:6:5: Invalid process directive
+│   6 |     if (workflow.profile.tokenize(',').intersect(['conda', 'mamba']).s
+│     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│   7 |         error("Local MMSEQS_COLABFOLDSEARCH module does not support Co
+╰   8 |     }
+
+
+
+
+Error modules/local/run_alphafold2.nf:9:5: Invalid process directive
+│   9 |     if (workflow.profile.tokenize(',').intersect(['conda', 'mamba']).s
+│     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  10 |         error("Local RUN_ALPHAFOLD2 module does not support Conda. Ple
+╰  11 |     }
+
+Error modules/local/run_alphafold2.nf:40:9: `db_preset` is already declared
+│  40 |     def db_preset = db_preset ? "full_dbs --bfd_database_path=./bfd/bf
+╰     |         ^^^^^^^^^
+
+
+Error modules/local/run_alphafold2_msa.nf:9:5: Invalid process directive
+│   9 |     if (workflow.profile.tokenize(',').intersect(['conda', 'mamba']).s
+│     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  10 |         error("Local RUN_ALPHAFOLD2_MSA module does not support Conda.
+╰  11 |     }
+
+Error modules/local/run_alphafold2_msa.nf:40:9: `db_preset` is already declared
+│  40 |     def db_preset = db_preset ? "full_dbs --bfd_database_path=./bfd/bf
+╰     |         ^^^^^^^^^
+
+
+Error modules/local/run_alphafold2_pred.nf:9:5: Invalid process directive
+│   9 |     if (workflow.profile.tokenize(',').intersect(['conda', 'mamba']).s
+│     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  10 |         error("Local RUN_ALPHAFOLD2_PRED module does not support Conda
+╰  11 |     }
+
+
+Error modules/local/run_esmfold.nf:5:5: Invalid process directive
+│   5 |     if (workflow.profile.tokenize(',').intersect(['conda', 'mamba']).s
+│     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│   6 |         error("Local RUN_ESMFOLD module does not support Conda. Please
+╰   7 |     }
+
+
+
+
+Error modules/nf-core/mmseqs/createindex/main.nf:44:61: `args2` is not defined
+│  44 |  -L "$db/" -maxdepth 1 -name "$args2" | sed 's/\\.[^.]*\$//' |  sed -e
+╰     |                               ^^^^^^
+
+Warn  modules/nf-core/mmseqs/createindex/main.nf:23:9: Variable was declared but not used
+│  23 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+
+Error modules/nf-core/multiqc/main.nf:28:31: Unexpected input: '/'
+│  28 |     def logo = multiqc_logo ? /--cl-config 'custom_logo: "${multiqc_lo
+╰     |                               ^
+
+
+
+Warn  subworkflows/local/aria2_uncompress.nf:21:13: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  21 |     ch_db = Channel.empty()
+╰     |             ^^^^^^^
+
+Warn  subworkflows/local/aria2_uncompress.nf:24:64: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  24 |         ch_db = UNTAR ( ARIA2.out.downloaded_file ).untar.map{ it[1] }
+╰     |                                                                ^^
+
+Warn  subworkflows/local/aria2_uncompress.nf:26:67: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  26 |      ch_db = GUNZIP ( ARIA2.out.downloaded_file ).gunzip.map { it[1] }
+╰     |                                                                ^^
+
+
+Warn  subworkflows/local/prepare_alphafold2_dbs.nf:50:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  50 |     ch_bfd        = Channel.empty()
+╰     |                     ^^^^^^^
+
+Warn  subworkflows/local/prepare_alphafold2_dbs.nf:51:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  51 |     ch_small_bfd  = Channel.empty()
+╰     |                     ^^^^^^^
+
+Warn  subworkflows/local/prepare_alphafold2_dbs.nf:52:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  52 |     ch_versions   = Channel.empty()
+╰     |                     ^^^^^^^
+
+Warn  subworkflows/local/prepare_alphafold2_dbs.nf:57:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  57 |             ch_bfd       = Channel.value(file(bfd_path))
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/local/prepare_alphafold2_dbs.nf:58:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  58 |             ch_small_bfd = Channel.value(file("${projectDir}/assets/du
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/local/prepare_alphafold2_dbs.nf:61:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  61 |             ch_bfd       = Channel.value(file("${projectDir}/assets/du
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/local/prepare_alphafold2_dbs.nf:62:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  62 |             ch_small_bfd = Channel.value(file(small_bfd_path))
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/local/prepare_alphafold2_dbs.nf:65:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  65 |         ch_params         = Channel.value(file(alphafold2_params_path)
+╰     |                             ^^^^^^^
+
+Warn  subworkflows/local/prepare_alphafold2_dbs.nf:66:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  66 |         ch_mgnify         = Channel.value(file(mgnify_path))
+╰     |                             ^^^^^^^
+
+Warn  subworkflows/local/prepare_alphafold2_dbs.nf:67:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  67 |         ch_pdb70          = Channel.value(file(pdb70_path, type: 'dir'
+╰     |                             ^^^^^^^
+
+Warn  subworkflows/local/prepare_alphafold2_dbs.nf:70:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  70 |         ch_mmcif          = Channel.value(ch_mmcif_files + ch_mmcif_ob
+╰     |                             ^^^^^^^
+
+Warn  subworkflows/local/prepare_alphafold2_dbs.nf:71:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  71 |         ch_uniref30       = Channel.value(file(uniref30_alphafold2_pat
+╰     |                             ^^^^^^^
+
+Warn  subworkflows/local/prepare_alphafold2_dbs.nf:72:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  72 |         ch_uniref90       = Channel.value(file(uniref90_path))
+╰     |                             ^^^^^^^
+
+Warn  subworkflows/local/prepare_alphafold2_dbs.nf:73:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  73 |         ch_pdb_seqres     = Channel.value(file(pdb_seqres_path))
+╰     |                             ^^^^^^^
+
+Warn  subworkflows/local/prepare_alphafold2_dbs.nf:74:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  74 |         ch_uniprot        = Channel.value(file(uniprot_path))
+╰     |                             ^^^^^^^
+
+Warn  subworkflows/local/prepare_alphafold2_dbs.nf:134:67: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 134 |      ch_pdb_seqres = ARIA2_PDB_SEQRES.out.downloaded_file.map{ it[1] }
+╰     |                                                                ^^
+
+Warn  subworkflows/local/prepare_alphafold2_dbs.nf:150:9: Variable was declared but not used
+│ 150 |         ch_version =  ch_versions.mix(COMBINE_UNIPROT.out.versions)
+╰     |         ^^^^^^^^^^
+
+
+Warn  subworkflows/local/prepare_colabfold_dbs.nf:27:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  27 |     ch_params       = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/prepare_colabfold_dbs.nf:28:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  28 |     ch_colabfold_db = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/prepare_colabfold_dbs.nf:29:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  29 |     ch_uniref30     = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/prepare_colabfold_dbs.nf:30:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  30 |     ch_versions     = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/prepare_colabfold_dbs.nf:33:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  33 |         ch_params = Channel.value(file( colabfold_alphafold2_params_pa
+╰     |                     ^^^^^^^
+
+Warn  subworkflows/local/prepare_colabfold_dbs.nf:35:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  35 |             ch_colabfold_db = Channel.value(file( colabfold_db_path, t
+╰     |                               ^^^^^^^
+
+Warn  subworkflows/local/prepare_colabfold_dbs.nf:36:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  36 |             ch_uniref30     = Channel.value(file( uniref30_colabfold_p
+╰     |                               ^^^^^^^
+
+
+Warn  subworkflows/local/prepare_esmfold_dbs.nf:19:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 |     ch_versions   = Channel.empty()
+╰     |                     ^^^^^^^
+
+Warn  subworkflows/local/prepare_esmfold_dbs.nf:22:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  22 |         ch_params     = Channel.value(file( esmfold_params_path, type:
+╰     |                         ^^^^^^^
+
+Warn  subworkflows/local/prepare_esmfold_dbs.nf:46:31: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  46 |                         .map{ it[1] }
+╰     |                               ^^
+
+Warn  subworkflows/local/prepare_esmfold_dbs.nf:51:39: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  51 |                                 .map{ it[1] },
+╰     |                                       ^^
+
+Warn  subworkflows/local/prepare_esmfold_dbs.nf:55:39: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  55 |                                 .map{ it[1] })
+╰     |                                       ^^
+
+
+Error subworkflows/local/utils_nfcore_proteinfold_pipeline/main.nf:188:21: Unexpected input: 'doi_ref'
+│ 188 |         for (String doi_ref: manifest_doi) temp_doi_ref += "(doi: <a h
+╰     |                     ^
+
+
+Error subworkflows/nf-core/utils_nextflow_pipeline/main.nf:111:14: Unexpected input: 'i'
+│ 111 |     for (int i = 0; i < n - 1; i++) {
+╰     |              ^
+
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:73:17: Unexpected input: 'doi_ref'
+│  73 |     for (String doi_ref: manifest_doi) temp_doi_ref += "  https://doi.
+╰     |                 ^
+
+
+Error workflows/alphafold2.nf:23:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/proteinfold/modules/nf-core/multiqc/main.nf'
+│  23 | include { MULTIQC } from '../modules/nf-core/multiqc/main'
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/alphafold2.nf:30:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/proteinfold/subworkflows/nf-core/utils_nfcore_pipeline/main.nf'
+│  30 | include { paramsSummaryMultiqc   } from '../subworkflows/nf-core/utils
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/alphafold2.nf:31:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/proteinfold/subworkflows/nf-core/utils_nfcore_pipeline/main.nf'
+│  31 | include { softwareVersionsToYAML } from '../subworkflows/nf-core/utils
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/alphafold2.nf:32:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/proteinfold/subworkflows/local/utils_nfcore_proteinfold_pipeline/main.nf'
+│  32 | include { methodsDescriptionText } from '../subworkflows/local/utils_n
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/alphafold2.nf:144:5: `softwareVersionsToYAML` is not defined
+│ 144 |     softwareVersionsToYAML(ch_versions)
+╰     |     ^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/alphafold2.nf:158:50: `paramsSummaryMultiqc` is not defined
+│ 158 |         ch_workflow_summary      = Channel.value(paramsSummaryMultiqc(
+╰     |                                                  ^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/alphafold2.nf:160:63: `methodsDescriptionText` is not defined
+│ 160 |               = Channel.value(methodsDescriptionText(ch_multiqc_custom
+╰     |                               ^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/alphafold2.nf:168:9: `MULTIQC` is not defined
+│ 168 |         MULTIQC (
+╰     |         ^^^^^^^
+
+Error workflows/alphafold2.nf:174:29: `MULTIQC` is not defined
+│ 174 |         ch_multiqc_report = MULTIQC.out.report.toList()
+╰     |                             ^^^^^^^
+
+Warn  workflows/alphafold2.nf:59:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  59 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/alphafold2.nf:64:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  64 |     Channel
+╰     |     ^^^^^^^
+
+Warn  workflows/alphafold2.nf:151:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 151 |     ch_multiqc_report = Channel.empty()
+╰     |                         ^^^^^^^
+
+Warn  workflows/alphafold2.nf:153:36: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 153 |         ch_multiqc_report        = Channel.empty()
+╰     |                                    ^^^^^^^
+
+Warn  workflows/alphafold2.nf:154:36: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 154 |         ch_multiqc_config        = Channel.fromPath("$projectDir/asset
+╰     |                                    ^^^^^^^
+
+Warn  workflows/alphafold2.nf:155:60: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 155 |         ch_multiqc_custom_config = params.multiqc_config ? Channel.fro
+╰     |                                                            ^^^^^^^
+
+Warn  workflows/alphafold2.nf:155:104: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 155 | c_config ? Channel.fromPath( params.multiqc_config ) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/alphafold2.nf:156:60: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 156 |         ch_multiqc_logo          = params.multiqc_logo   ? Channel.fro
+╰     |                                                            ^^^^^^^
+
+Warn  workflows/alphafold2.nf:156:104: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 156 | c_logo   ? Channel.fromPath( params.multiqc_logo )   : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/alphafold2.nf:158:36: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 158 |         ch_workflow_summary      = Channel.value(paramsSummaryMultiqc(
+╰     |                                    ^^^^^^^
+
+Warn  workflows/alphafold2.nf:160:49: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 160 |         ch_methods_description                = Channel.value(methodsD
+╰     |                                                 ^^^^^^^
+
+Warn  workflows/alphafold2.nf:162:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 162 |         ch_multiqc_files = Channel.empty()
+╰     |                            ^^^^^^^
+
+
+Error workflows/colabfold.nf:23:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/proteinfold/modules/nf-core/multiqc/main.nf'
+│  23 | include { MULTIQC } from '../modules/nf-core/multiqc/main'
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/colabfold.nf:30:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/proteinfold/subworkflows/nf-core/utils_nfcore_pipeline/main.nf'
+│  30 | include { paramsSummaryMultiqc   } from '../subworkflows/nf-core/utils
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/colabfold.nf:31:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/proteinfold/subworkflows/nf-core/utils_nfcore_pipeline/main.nf'
+│  31 | include { softwareVersionsToYAML } from '../subworkflows/nf-core/utils
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/colabfold.nf:32:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/proteinfold/subworkflows/local/utils_nfcore_proteinfold_pipeline/main.nf'
+│  32 | include { methodsDescriptionText } from '../subworkflows/local/utils_n
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/colabfold.nf:133:5: `softwareVersionsToYAML` is not defined
+│ 133 |     softwareVersionsToYAML(ch_versions)
+╰     |     ^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/colabfold.nf:147:50: `paramsSummaryMultiqc` is not defined
+│ 147 |         ch_workflow_summary      = Channel.value(paramsSummaryMultiqc(
+╰     |                                                  ^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/colabfold.nf:149:63: `methodsDescriptionText` is not defined
+│ 149 |               = Channel.value(methodsDescriptionText(ch_multiqc_custom
+╰     |                               ^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/colabfold.nf:157:9: `MULTIQC` is not defined
+│ 157 |         MULTIQC (
+╰     |         ^^^^^^^
+
+Error workflows/colabfold.nf:163:29: `MULTIQC` is not defined
+│ 163 |         ch_multiqc_report = MULTIQC.out.report.toList()
+╰     |                             ^^^^^^^
+
+Warn  workflows/colabfold.nf:51:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  51 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/colabfold.nf:56:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  56 |     Channel
+╰     |     ^^^^^^^
+
+Warn  workflows/colabfold.nf:140:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 140 |     ch_multiqc_report = Channel.empty()
+╰     |                         ^^^^^^^
+
+Warn  workflows/colabfold.nf:142:36: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 142 |         ch_multiqc_report        = Channel.empty()
+╰     |                                    ^^^^^^^
+
+Warn  workflows/colabfold.nf:143:36: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 143 |         ch_multiqc_config        = Channel.fromPath("$projectDir/asset
+╰     |                                    ^^^^^^^
+
+Warn  workflows/colabfold.nf:144:60: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 144 |         ch_multiqc_custom_config = params.multiqc_config ? Channel.fro
+╰     |                                                            ^^^^^^^
+
+Warn  workflows/colabfold.nf:144:104: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 144 | c_config ? Channel.fromPath( params.multiqc_config ) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/colabfold.nf:145:60: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 145 |         ch_multiqc_logo          = params.multiqc_logo   ? Channel.fro
+╰     |                                                            ^^^^^^^
+
+Warn  workflows/colabfold.nf:145:104: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 145 | c_logo   ? Channel.fromPath( params.multiqc_logo )   : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/colabfold.nf:147:36: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 147 |         ch_workflow_summary      = Channel.value(paramsSummaryMultiqc(
+╰     |                                    ^^^^^^^
+
+Warn  workflows/colabfold.nf:149:49: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 149 |         ch_methods_description                = Channel.value(methodsD
+╰     |                                                 ^^^^^^^
+
+Warn  workflows/colabfold.nf:151:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 151 |         ch_multiqc_files = Channel.empty()
+╰     |                            ^^^^^^^
+
+
+Error workflows/esmfold.nf:22:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/proteinfold/modules/nf-core/multiqc/main.nf'
+│  22 | include { MULTIQC } from '../modules/nf-core/multiqc/main'
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/esmfold.nf:29:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/proteinfold/subworkflows/nf-core/utils_nfcore_pipeline/main.nf'
+│  29 | include { paramsSummaryMultiqc   } from '../subworkflows/nf-core/utils
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/esmfold.nf:30:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/proteinfold/subworkflows/nf-core/utils_nfcore_pipeline/main.nf'
+│  30 | include { softwareVersionsToYAML } from '../subworkflows/nf-core/utils
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/esmfold.nf:31:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/proteinfold/subworkflows/local/utils_nfcore_proteinfold_pipeline/main.nf'
+│  31 | include { methodsDescriptionText } from '../subworkflows/local/utils_n
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/esmfold.nf:82:5: `softwareVersionsToYAML` is not defined
+│  82 |     softwareVersionsToYAML(ch_versions)
+╰     |     ^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/esmfold.nf:96:63: `paramsSummaryMultiqc` is not defined
+│  96 |               = Channel.value(paramsSummaryMultiqc(summary_params))
+╰     |                               ^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/esmfold.nf:98:63: `methodsDescriptionText` is not defined
+│  98 |               = Channel.value(methodsDescriptionText(ch_multiqc_method
+╰     |                               ^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/esmfold.nf:106:9: `MULTIQC` is not defined
+│ 106 |         MULTIQC (
+╰     |         ^^^^^^^
+
+Error workflows/esmfold.nf:112:29: `MULTIQC` is not defined
+│ 112 |         ch_multiqc_report = MULTIQC.out.report.toList()
+╰     |                             ^^^^^^^
+
+Warn  workflows/esmfold.nf:47:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  47 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/esmfold.nf:52:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  52 |     Channel
+╰     |     ^^^^^^^
+
+Warn  workflows/esmfold.nf:89:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  89 |     ch_multiqc_report = Channel.empty()
+╰     |                         ^^^^^^^
+
+Warn  workflows/esmfold.nf:91:49: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  91 |         ch_multiqc_report                     = Channel.empty()
+╰     |                                                 ^^^^^^^
+
+Warn  workflows/esmfold.nf:92:49: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  92 |         ch_multiqc_config                     = Channel.fromPath("$pro
+╰     |                                                 ^^^^^^^
+
+Warn  workflows/esmfold.nf:93:73: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  93 |     = params.multiqc_config ? Channel.fromPath( params.multiqc_config 
+╰     |                               ^^^^^^^
+
+Warn  workflows/esmfold.nf:93:117: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  93 | c_config ? Channel.fromPath( params.multiqc_config ) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/esmfold.nf:94:73: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  94 |     = params.multiqc_logo   ? Channel.fromPath( params.multiqc_logo ) 
+╰     |                               ^^^^^^^
+
+Warn  workflows/esmfold.nf:94:117: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  94 | c_logo   ? Channel.fromPath( params.multiqc_logo )   : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/esmfold.nf:96:49: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  96 |         ch_workflow_summary                   = Channel.value(paramsSu
+╰     |                                                 ^^^^^^^
+
+Warn  workflows/esmfold.nf:98:49: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  98 |         ch_methods_description                = Channel.value(methodsD
+╰     |                                                 ^^^^^^^
+
+Warn  workflows/esmfold.nf:100:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 100 |         ch_multiqc_files = Channel.empty()
+╰     |                            ^^^^^^^
+
+
+Error conf/base.config:14:16: `check_max` is not defined
+│  14 |     cpus   = { check_max( 1    * task.attempt, 'cpus'   ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:15:16: `check_max` is not defined
+│  15 |     memory = { check_max( 6.GB * task.attempt, 'memory' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:16:16: `check_max` is not defined
+│  16 |     time   = { check_max( 4.h  * task.attempt, 'time'   ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:30:20: `check_max` is not defined
+│  30 |         cpus   = { check_max( 1                  , 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:31:20: `check_max` is not defined
+│  31 |         memory = { check_max( 6.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:32:20: `check_max` is not defined
+│  32 |         time   = { check_max( 4.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:35:20: `check_max` is not defined
+│  35 |         cpus   = { check_max( 2     * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:36:20: `check_max` is not defined
+│  36 |         memory = { check_max( 12.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:37:20: `check_max` is not defined
+│  37 |         time   = { check_max( 4.h   * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:40:20: `check_max` is not defined
+│  40 |         cpus   = { check_max( 6     * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:41:20: `check_max` is not defined
+│  41 |         memory = { check_max( 36.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:42:20: `check_max` is not defined
+│  42 |         time   = { check_max( 8.h   * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:45:20: `check_max` is not defined
+│  45 |         cpus   = { check_max( 12    * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:46:20: `check_max` is not defined
+│  46 |         memory = { check_max( 72.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:47:20: `check_max` is not defined
+│  47 |         time   = { check_max( 16.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:50:20: `check_max` is not defined
+│  50 |         time   = { check_max( 20.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:53:20: `check_max` is not defined
+│  53 |         memory = { check_max( 200.GB * task.attempt, 'memory' ) }
+╰     |                    ^^^^^^^^^
+
+
+Error conf/modules_alphafold2.config:27:1: If statements cannot be mixed with config statements
+│  25 | }
+│  26 | 
+│  27 | if (params.alphafold2_mode == 'standard') {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  28 |     process {
+╰  29 |         withName: 'RUN_ALPHAFOLD2' {
+
+Error conf/modules_alphafold2.config:45:1: If statements cannot be mixed with config statements
+│  62 |                 saveAs: { filename -> filename.equals('versions.yml') 
+│  63 |             ]
+│  64 |         }
+│  65 |     }
+╰  66 | }
+
+
+Error conf/modules_colabfold.config:13:1: If statements cannot be mixed with config statements
+│  11 | */
+│  12 | 
+│  13 | if (params.colabfold_server == 'webserver') {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  14 |     process {
+╰  15 |         withName: 'COLABFOLD_BATCH' {
+
+Error conf/modules_colabfold.config:32:1: If statements cannot be mixed with config statements
+│  63 |                 pattern: '*.*'
+│  64 |             ]
+│  65 |         }
+│  66 |     }
+╰  67 | }
+
+
+Error nextflow.config:132:5: Unexpected input: 'includeConfig'
+│ 132 |     includeConfig "${params.custom_config_base}/nfcore_custom.config"
+╰     |     ^
+
+
+Nextflow linting complete!
+ ❌ 19 files had 63 errors
+ ✅ 34 files had no errors

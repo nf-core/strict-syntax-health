@@ -1,0 +1,209 @@
+Linting Nextflow code..
+Linting: conf/test_fastq_cat.config
+Linting: conf/igenomes_ignored.config
+Linting: conf/test_dna_rna.config
+Linting: conf/base.config
+Linting: conf/test_fastq.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/test_rna.config
+Linting: conf/igenomes.config
+Linting: nextflow.config
+Linting: workflows/hlatyping.nf
+Linting: subworkflows/local/utils_nfcore_hlatyping_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: main.nf
+Linting: modules/local/check_paired.nf
+Linting: modules/nf-core/gunzip/main.nf
+Linting: modules/nf-core/gunzip/tests/nextflow.config
+Linting: modules/nf-core/samtools/view/main.nf
+Linting: modules/nf-core/samtools/view/tests/cram_index.config
+Linting: modules/nf-core/samtools/view/tests/bam_index.config
+Linting: modules/nf-core/samtools/view/tests/bam.config
+Linting: modules/nf-core/samtools/collatefastq/main.nf
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/cat/fastq/main.nf
+Linting: modules/nf-core/yara/mapper/main.nf
+Linting: modules/nf-core/yara/index/main.nf
+Linting: modules/nf-core/optitype/main.nf
+Linting: modules/nf-core/optitype/tests/nextflow.config
+Linting: modules/nf-core/optitype/tests/optitype_cbc.config
+Error main.nf:19:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/hlatyping/subworkflows/local/utils_nfcore_hlatyping_pipeline/main.nf'
+│  19 | include { PIPELINE_INITIALISATION } from './subworkflows/local/utils_n
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:20:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/hlatyping/subworkflows/local/utils_nfcore_hlatyping_pipeline/main.nf'
+│  20 | include { PIPELINE_COMPLETION     } from './subworkflows/local/utils_n
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:21:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/hlatyping/subworkflows/local/utils_nfcore_hlatyping_pipeline/main.nf'
+│  21 | include { getGenomeAttribute      } from './subworkflows/local/utils_n
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:66:5: `PIPELINE_INITIALISATION` is not defined
+│  66 |     PIPELINE_INITIALISATION (
+╰     |     ^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:79:9: `PIPELINE_INITIALISATION` is not defined
+│  79 |         PIPELINE_INITIALISATION.out.samplesheet
+╰     |         ^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:84:5: `PIPELINE_COMPLETION` is not defined
+│  84 |     PIPELINE_COMPLETION (
+╰     |     ^^^^^^^^^^^^^^^^^^^
+
+
+
+Warn  modules/nf-core/cat/fastq/main.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/cat/fastq/main.nf:23:60: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  23 |     def readList = reads instanceof List ? reads.collect { it.toString
+╰     |                                                            ^^
+
+Warn  modules/nf-core/cat/fastq/main.nf:55:60: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  55 |     def readList = reads instanceof List ? reads.collect { it.toString
+╰     |                                                            ^^
+
+
+
+Warn  modules/nf-core/gunzip/main.nf:43:9: Variable was declared but not used
+│  43 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+
+Warn  modules/nf-core/yara/index/main.nf:21:9: Variable was declared but not used
+│  21 |     def args   = task.ext.args   ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/yara/index/main.nf:35:9: Variable was declared but not used
+│  35 |     def args   = task.ext.args   ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/yara/mapper/main.nf:68:9: Variable was declared but not used
+│  68 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/yara/mapper/main.nf:70:9: Variable was declared but not used
+│  70 |     def index_prefix = index[0].baseName.substring(0,index[0].baseName
+╰     |         ^^^^^^^^^^^^
+
+
+Error subworkflows/local/utils_nfcore_hlatyping_pipeline/main.nf:181:13: Unexpected input: '+'
+│ 181 |             + "sample must have the same sequence type: ${metas[0].id}
+╰     |             ^
+
+
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 | mYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
+╰     |                               ^^^^^^^
+
+
+Error workflows/hlatyping.nf:21:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/hlatyping/subworkflows/local/utils_nfcore_hlatyping_pipeline/main.nf'
+│  21 | include { methodsDescriptionText      } from '../subworkflows/local/ut
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/hlatyping.nf:208:9: `methodsDescriptionText` is not defined
+│ 208 |         methodsDescriptionText(ch_multiqc_custom_methods_description))
+╰     |         ^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/hlatyping.nf:56:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  56 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  workflows/hlatyping.nf:57:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  57 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/hlatyping.nf:112:22: Parameter was not used -- prefix with `_` to suppress warning
+│ 112 |         .map { meta, reads ->
+╰     |                      ^^^^^
+
+Warn  workflows/hlatyping.nf:123:68: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 123 | ch_multiqc_files = ch_multiqc_files.mix(FASTQC.out.zip.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/hlatyping.nf:170:75: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 170 | iqc_files = ch_multiqc_files.mix(OPTITYPE.out.hla_type.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/hlatyping.nf:171:80: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 171 | iles = ch_multiqc_files.mix(OPTITYPE.out.coverage_plot.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/hlatyping.nf:190:32: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 190 |     ch_multiqc_config        = Channel.fromPath(
+╰     |                                ^^^^^^^
+
+Warn  workflows/hlatyping.nf:193:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 193 |         Channel.fromPath(params.multiqc_config, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/hlatyping.nf:194:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 194 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/hlatyping.nf:196:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 196 |         Channel.fromPath(params.multiqc_logo, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/hlatyping.nf:197:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 197 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/hlatyping.nf:201:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 201 |     ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_p
+╰     |                           ^^^^^^^
+
+Warn  workflows/hlatyping.nf:207:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 207 |     ch_methods_description                = Channel.value(
+╰     |                                             ^^^^^^^
+
+
+Error nextflow.config:317:33: `manifest` is not defined
+│ 317 | \033[0;35m  nf-core/hlatyping ${manifest.version}\033[0m
+╰     |                                 ^^^^^^^^
+
+Error nextflow.config:320:26: `manifest` is not defined
+│ 320 |         afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${ma
+╰     |                          ^^^^^^^^
+
+Error nextflow.config:320:69: `manifest` is not defined
+│ 320 | ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "  
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:320:186: `manifest` is not defined
+│ 320 | doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:329:22: `validation` is not defined
+│ 329 |         beforeText = validation.help.beforeText
+╰     |                      ^^^^^^^^^^
+
+Error nextflow.config:330:21: `validation` is not defined
+│ 330 |         afterText = validation.help.afterText
+╰     |                     ^^^^^^^^^^
+
+Warn  nextflow.config:320:129: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 320 | lect { "    https://doi.org/${it.trim().replace('https://doi.org/','')
+╰     |                               ^^
+
+
+Nextflow linting complete!
+ ❌ 4 files had 15 errors
+ ✅ 33 files had no errors

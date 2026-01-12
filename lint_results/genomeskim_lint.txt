@@ -1,0 +1,242 @@
+Linting Nextflow code..
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/igenomes.config
+Linting: nextflow.config
+Linting: workflows/genomeskim.nf
+Linting: subworkflows/local/input_check.nf
+Linting: main.nf
+Linting: modules/local/samplesheet_check.nf
+Linting: modules/nf-core/modules/fastqc/main.nf
+Linting: modules/nf-core/modules/multiqc/main.nf
+Linting: modules/nf-core/modules/custom/dumpsoftwareversions/main.nf
+Error main.nf:20:16: `WorkflowMain` is not defined
+│  20 | params.fasta = WorkflowMain.getGenomeAttribute(params, 'fasta')
+╰     |                ^^^^^^^^^^^^
+
+Error main.nf:28:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  28 | WorkflowMain.initialise(workflow, params, log)
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:28:1: `WorkflowMain` is not defined
+│  28 | WorkflowMain.initialise(workflow, params, log)
+╰     | ^^^^^^^^^^^^
+
+
+
+Warn  modules/nf-core/modules/custom/dumpsoftwareversions/main.nf:22:9: Variable was declared but not used
+│  22 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+Warn  subworkflows/local/input_check.nf:15:37: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  15 |         .map { create_fastq_channel(it) }
+╰     |                                     ^^
+
+
+Error workflows/genomeskim.nf:7:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│   7 | def summary_params = NfcoreSchema.paramsSummaryMap(workflow, params)
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/genomeskim.nf:7:22: `NfcoreSchema` is not defined
+│   7 | def summary_params = NfcoreSchema.paramsSummaryMap(workflow, params)
+╰     |                      ^^^^^^^^^^^^
+
+Error workflows/genomeskim.nf:10:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  10 | WorkflowGenomeskim.initialise(params, log)
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/genomeskim.nf:10:1: `WorkflowGenomeskim` is not defined
+│  10 | WorkflowGenomeskim.initialise(params, log)
+╰     | ^^^^^^^^^^^^^^^^^^
+
+Error workflows/genomeskim.nf:14:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  14 | def checkPathParamList = [ params.input, params.multiqc_config, params
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/genomeskim.nf:15:1: `for` loops are no longer supported
+│  15 | for (param in checkPathParamList) { if (param) { file(param, checkIfEx
+╰     | ^^^
+
+Error workflows/genomeskim.nf:15:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  15 | for (param in checkPathParamList) { if (param) { file(param, checkIfEx
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/genomeskim.nf:15:6: `param` is not defined
+│  15 | for (param in checkPathParamList) { if (param) { file(param, checkIfEx
+╰     |      ^^^^^
+
+Error workflows/genomeskim.nf:15:40: `param` is not defined
+│  15 | for (param in checkPathParamList) { if (param) { file(param, checkIfEx
+╰     |                                        ^^^^^^^
+
+Error workflows/genomeskim.nf:15:55: `param` is not defined
+│  15 | for (param in checkPathParamList) { if (param) { file(param, checkIfEx
+╰     |                                                       ^^^^^
+
+Error workflows/genomeskim.nf:18:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  18 | if (params.input) { ch_input = file(params.input) } else { exit 1, 'In
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/genomeskim.nf:26:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  26 | ch_multiqc_config        = file("$projectDir/assets/multiqc_config.yml
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/genomeskim.nf:27:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  27 | ch_multiqc_custom_config = params.multiqc_config ? Channel.fromPath(pa
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/genomeskim.nf:60:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  60 | def multiqc_report = []
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/genomeskim.nf:70:9: `ch_input` is not defined
+│  70 |         ch_input
+╰     |         ^^^^^^^^
+
+Error workflows/genomeskim.nf:89:27: `WorkflowGenomeskim` is not defined
+│  89 |     workflow_summary    = WorkflowGenomeskim.paramsSummaryMultiqc(work
+╰     |                           ^^^^^^^^^^^^^^^^^^
+
+Error workflows/genomeskim.nf:89:77: `summary_params` is not defined
+│  89 |    = WorkflowGenomeskim.paramsSummaryMultiqc(workflow, summary_params)
+╰     |                                                        ^^^^^^^^^^^^^^
+
+Error workflows/genomeskim.nf:93:58: `ch_multiqc_config` is not defined
+│  93 |     ch_multiqc_files = ch_multiqc_files.mix(Channel.from(ch_multiqc_co
+╰     |                                                          ^^^^^^^^^^^^^
+
+Error workflows/genomeskim.nf:94:45: `ch_multiqc_custom_config` is not defined
+│  94 |     ch_multiqc_files = ch_multiqc_files.mix(ch_multiqc_custom_config.c
+╰     |                                             ^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/genomeskim.nf:112:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│ 110 | */
+│ 111 | 
+│ 112 | workflow.onComplete {
+│     | ^^^^^^^^^^^^^^^^^^^^^
+│ 113 |     if (params.email || params.email_on_fail) {
+╰ 114 |         NfcoreTemplate.email(workflow, params, summary_params, project
+
+Error workflows/genomeskim.nf:114:9: `NfcoreTemplate` is not defined
+│ 114 |         NfcoreTemplate.email(workflow, params, summary_params, project
+╰     |         ^^^^^^^^^^^^^^
+
+Error workflows/genomeskim.nf:116:5: `NfcoreTemplate` is not defined
+│ 116 |     NfcoreTemplate.summary(workflow, params, log)
+╰     |     ^^^^^^^^^^^^^^
+
+Warn  workflows/genomeskim.nf:18:21: Variable was declared but not used
+│  18 | if (params.input) { ch_input = file(params.input) } else { exit 1, 'In
+╰     |                     ^^^^^^^^
+
+Warn  workflows/genomeskim.nf:26:1: Variable was declared but not used
+│  26 | ch_multiqc_config        = file("$projectDir/assets/multiqc_config.yml
+╰     | ^^^^^^^^^^^^^^^^^
+
+Warn  workflows/genomeskim.nf:27:1: Variable was declared but not used
+│  27 | ch_multiqc_custom_config = params.multiqc_config ? Channel.fromPath(pa
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/genomeskim.nf:27:52: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  27 | ch_multiqc_custom_config = params.multiqc_config ? Channel.fromPath(pa
+╰     |                                                    ^^^^^^^
+
+Warn  workflows/genomeskim.nf:27:94: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  27 | iqc_config ? Channel.fromPath(params.multiqc_config) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/genomeskim.nf:64:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  64 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  workflows/genomeskim.nf:90:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  90 |     ch_workflow_summary = Channel.value(workflow_summary)
+╰     |                           ^^^^^^^
+
+Warn  workflows/genomeskim.nf:92:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  92 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/genomeskim.nf:93:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  93 |     ch_multiqc_files = ch_multiqc_files.mix(Channel.from(ch_multiqc_co
+╰     |                                             ^^^^^^^
+
+Warn  workflows/genomeskim.nf:97:68: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  97 | es.mix(FASTQC.out.zip.collect{it[1]}.ifEmpty([]))
+╰     |                               ^^
+
+Warn  workflows/genomeskim.nf:102:5: Variable was declared but not used
+│ 102 |     multiqc_report = MULTIQC.out.report.toList()
+╰     |     ^^^^^^^^^^^^^^
+
+
+Error conf/base.config:14:16: `check_max` is not defined
+│  14 |     cpus   = { check_max( 1    * task.attempt, 'cpus'   ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:15:16: `check_max` is not defined
+│  15 |     memory = { check_max( 6.GB * task.attempt, 'memory' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:16:16: `check_max` is not defined
+│  16 |     time   = { check_max( 4.h  * task.attempt, 'time'   ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:30:20: `check_max` is not defined
+│  30 |         cpus   = { check_max( 2     * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:31:20: `check_max` is not defined
+│  31 |         memory = { check_max( 12.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:32:20: `check_max` is not defined
+│  32 |         time   = { check_max( 4.h   * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:35:20: `check_max` is not defined
+│  35 |         cpus   = { check_max( 6     * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:36:20: `check_max` is not defined
+│  36 |         memory = { check_max( 36.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:37:20: `check_max` is not defined
+│  37 |         time   = { check_max( 8.h   * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:40:20: `check_max` is not defined
+│  40 |         cpus   = { check_max( 12    * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:41:20: `check_max` is not defined
+│  41 |         memory = { check_max( 72.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:42:20: `check_max` is not defined
+│  42 |         time   = { check_max( 16.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:45:20: `check_max` is not defined
+│  45 |         time   = { check_max( 20.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:48:20: `check_max` is not defined
+│  48 |         memory = { check_max( 200.GB * task.attempt, 'memory' ) }
+╰     |                    ^^^^^^^^^
+
+
+Error nextflow.config:61:5: Unexpected input: 'includeConfig'
+│  61 |     includeConfig "${params.custom_config_base}/nfcore_custom.config"
+╰     |     ^
+
+
+Nextflow linting complete!
+ ❌ 4 files had 40 errors
+ ✅ 9 files had no errors

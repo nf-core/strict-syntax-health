@@ -1,0 +1,269 @@
+Linting Nextflow code..
+Linting: conf/test_ultra_map_entrypoint.config
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/test_minimap2_map_entrypoint.config
+Linting: conf/test_minimap2.config
+Linting: conf/igenomes.config
+Linting: nextflow.config
+Linting: workflows/isoseq.nf
+Linting: subworkflows/local/set_value_channel.nf
+Linting: subworkflows/local/utils_nfcore_isoseq_pipeline/main.nf
+Linting: subworkflows/local/set_chunk_num_channel.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfvalidation_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: main.nf
+Linting: modules/local/gstama/filelist/main.nf
+Linting: modules/local/samplesheet_check.nf
+Linting: modules/nf-core/ultra/index/main.nf
+Linting: modules/nf-core/ultra/align/main.nf
+Linting: modules/nf-core/gunzip/main.nf
+Linting: modules/nf-core/gunzip/tests/nextflow.config
+Linting: modules/nf-core/gstama/polyacleanup/main.nf
+Linting: modules/nf-core/gstama/collapse/main.nf
+Linting: modules/nf-core/gstama/merge/main.nf
+Linting: modules/nf-core/lima/main.nf
+Linting: modules/nf-core/lima/tests/nextflow.config
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/minimap2/align/main.nf
+Linting: modules/nf-core/custom/dumpsoftwareversions/main.nf
+Linting: modules/nf-core/gnu/sort/main.nf
+Linting: modules/nf-core/gnu/sort/tests/sort_simple_genome.config
+Linting: modules/nf-core/gnu/sort/tests/sort_simple_bed.config
+Linting: modules/nf-core/gnu/sort/tests/sort_complex.config
+Linting: modules/nf-core/isoseq/refine/main.nf
+Linting: modules/nf-core/isoseq/refine/tests/nextflow.config
+Linting: modules/nf-core/bamtools/convert/main.nf
+Linting: modules/nf-core/pbccs/main.nf
+Linting: modules/nf-core/pbccs/tests/nextflow.config
+Error main.nf:20:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/isoseq/subworkflows/local/utils_nfcore_isoseq_pipeline/main.nf'
+│  20 | include { getGenomeAttribute } from './subworkflows/local/utils_nfcore
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:22:16: `getGenomeAttribute` is not defined
+│  22 | params.fasta = getGenomeAttribute('fasta')
+╰     |                ^^^^^^^^^^^^^^^^^^
+
+Error main.nf:23:16: `getGenomeAttribute` is not defined
+│  23 | params.gtf   = getGenomeAttribute('gtf')
+╰     |                ^^^^^^^^^^^^^^^^^^
+
+Error main.nf:32:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/isoseq/workflows/isoseq.nf'
+│  32 | include { ISOSEQ } from './workflows/isoseq'
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:33:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/isoseq/subworkflows/local/utils_nfcore_isoseq_pipeline/main.nf'
+│  33 | include { PIPELINE_INITIALISATION } from './subworkflows/local/utils_n
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:34:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/isoseq/subworkflows/local/utils_nfcore_isoseq_pipeline/main.nf'
+│  34 | include { PIPELINE_COMPLETION     } from './subworkflows/local/utils_n
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:55:5: `ISOSEQ` is not defined
+│  55 |     ISOSEQ (
+╰     |     ^^^^^^
+
+Error main.nf:60:22: `ISOSEQ` is not defined
+│  60 |     multiqc_report = ISOSEQ.out.multiqc_report // channel: /path/to/mu
+╰     |                      ^^^^^^
+
+Error main.nf:76:5: `PIPELINE_INITIALISATION` is not defined
+│  76 |     PIPELINE_INITIALISATION (
+╰     |     ^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:90:9: `PIPELINE_INITIALISATION` is not defined
+│  90 |         PIPELINE_INITIALISATION.out.samplesheet
+╰     |         ^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:96:5: `PIPELINE_COMPLETION` is not defined
+│  96 |     PIPELINE_COMPLETION (
+╰     |     ^^^^^^^^^^^^^^^^^^^
+
+
+Warn  modules/local/gstama/filelist/main.nf:20:9: Variable was declared but not used
+│  20 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+Warn  modules/nf-core/custom/dumpsoftwareversions/main.nf:22:9: Variable was declared but not used
+│  22 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+
+Warn  modules/nf-core/gunzip/main.nf:43:9: Variable was declared but not used
+│  43 |     def args        = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/isoseq/refine/main.nf:44:9: Variable was declared but not used
+│  44 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/isoseq/refine/main.nf:45:9: Variable was declared but not used
+│  45 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/nf-core/lima/main.nf:72:9: Variable was declared but not used
+│  72 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/lima/main.nf:73:9: Variable was declared but not used
+│  73 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/nf-core/minimap2/align/main.nf:67:9: Variable was declared but not used
+│  67 |     def target = reference ?: (bam_input ? error("BAM input requires r
+╰     |         ^^^^^^
+
+
+Error modules/nf-core/multiqc/main.nf:31:31: Unexpected input: '/'
+│  31 |     def logo = multiqc_logo ? /--cl-config 'custom_logo: "${multiqc_lo
+╰     |                               ^
+
+
+Warn  modules/nf-core/pbccs/main.nf:47:9: Variable was declared but not used
+│  47 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/pbccs/main.nf:48:9: Variable was declared but not used
+│  48 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+
+Warn  modules/nf-core/ultra/index/main.nf:23:9: Variable was declared but not used
+│  23 |     def prefix = task.ext.prefix ?: "${gtf.baseName}"
+╰     |         ^^^^^^
+
+
+Error subworkflows/local/set_chunk_num_channel.nf:15:29: Unexpected input: '}'
+│  15 |         .each { n_samples++ }
+╰     |                             ^
+
+
+Warn  subworkflows/local/set_value_channel.nf:15:20: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  15 |             .map { it[1] }
+╰     |                    ^^
+
+Warn  subworkflows/local/set_value_channel.nf:19:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 |         Channel // Prepare value channel
+╰     |         ^^^^^^^
+
+
+Error subworkflows/local/utils_nfcore_isoseq_pipeline/main.nf:249:21: Unexpected input: 'doi_ref'
+│ 249 |         for (String doi_ref: manifest_doi) temp_doi_ref += "(doi: <a h
+╰     |                     ^
+
+
+Error subworkflows/nf-core/utils_nextflow_pipeline/main.nf:111:14: Unexpected input: 'i'
+│ 111 |     for (int i = 0; i < n - 1; i++) {
+╰     |              ^
+
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:73:17: Unexpected input: 'doi_ref'
+│  73 |     for (String doi_ref: manifest_doi) temp_doi_ref += "  https://doi.
+╰     |                 ^
+
+
+Error workflows/isoseq.nf:69:100: Unexpected input: 'addParams'
+│  69 | om/dumpsoftwareversions/main' addParams( options: [publish_files : ['_
+╰     |                               ^
+
+
+Error conf/base.config:13:16: `check_max` is not defined
+│  13 |     cpus   = { check_max( 1    * task.attempt, 'cpus'   ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:14:16: `check_max` is not defined
+│  14 |     memory = { check_max( 6.GB * task.attempt, 'memory' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:15:16: `check_max` is not defined
+│  15 |     time   = { check_max( 4.h  * task.attempt, 'time'   ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:28:20: `check_max` is not defined
+│  28 |         cpus   = { check_max( 1                  , 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:29:20: `check_max` is not defined
+│  29 |         memory = { check_max( 6.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:30:20: `check_max` is not defined
+│  30 |         time   = { check_max( 4.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:33:20: `check_max` is not defined
+│  33 |         cpus   = { check_max( 2     * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:34:20: `check_max` is not defined
+│  34 |         memory = { check_max( 12.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:35:20: `check_max` is not defined
+│  35 |         time   = { check_max( 4.h   * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:38:20: `check_max` is not defined
+│  38 |         cpus   = { check_max( 6     * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:39:20: `check_max` is not defined
+│  39 |         memory = { check_max( 36.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:40:20: `check_max` is not defined
+│  40 |         time   = { check_max( 8.h   * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:43:20: `check_max` is not defined
+│  43 |         cpus   = { check_max( 12    * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:44:20: `check_max` is not defined
+│  44 |         memory = { check_max( 72.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:45:20: `check_max` is not defined
+│  45 |         time   = { check_max( 16.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:48:20: `check_max` is not defined
+│  48 |         time   = { check_max( 20.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:51:20: `check_max` is not defined
+│  51 |         memory = { check_max( 200.GB * task.attempt, 'memory' ) }
+╰     |                    ^^^^^^^^^
+
+
+Error conf/modules.config:111:17: Unexpected input: ':'
+│ 111 |         withName: GSTAMA_COLLAPSE {
+╰     |                 ^
+
+
+Error nextflow.config:82:5: Unexpected input: 'includeConfig'
+│  82 |     includeConfig "${params.custom_config_base}/nfcore_custom.config"
+╰     |     ^
+
+
+Nextflow linting complete!
+ ❌ 10 files had 36 errors
+ ✅ 33 files had no errors

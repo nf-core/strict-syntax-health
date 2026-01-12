@@ -1,0 +1,347 @@
+Linting Nextflow code..
+Linting: conf/base.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: nextflow.config
+Linting: workflows/sra/nextflow.config
+Linting: workflows/sra/main.nf
+Linting: subworkflows/local/utils_nfcore_fetchngs_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfvalidation_plugin/main.nf
+Linting: subworkflows/nf-core/fastq_download_prefetch_fasterqdump_sratools/nextflow.config
+Linting: subworkflows/nf-core/fastq_download_prefetch_fasterqdump_sratools/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/aspera_cli/nextflow.config
+Linting: modules/local/aspera_cli/main.nf
+Linting: modules/local/sra_to_samplesheet/nextflow.config
+Linting: modules/local/sra_to_samplesheet/main.nf
+Linting: modules/local/sra_fastq_ftp/nextflow.config
+Linting: modules/local/sra_fastq_ftp/main.nf
+Linting: modules/local/multiqc_mappings_config/nextflow.config
+Linting: modules/local/multiqc_mappings_config/main.nf
+Linting: modules/local/sra_ids_to_runinfo/nextflow.config
+Linting: modules/local/sra_ids_to_runinfo/main.nf
+Linting: modules/local/sra_runinfo_to_ftp/nextflow.config
+Linting: modules/local/sra_runinfo_to_ftp/main.nf
+Linting: modules/nf-core/sratools/fasterqdump/nextflow.config
+Linting: modules/nf-core/sratools/fasterqdump/main.nf
+Linting: modules/nf-core/sratools/fasterqdump/tests/nextflow.config
+Linting: modules/nf-core/sratools/prefetch/nextflow.config
+Linting: modules/nf-core/sratools/prefetch/main.nf
+Linting: modules/nf-core/custom/sratoolsncbisettings/main.nf
+Linting: modules/nf-core/custom/sratoolsncbisettings/tests/nextflow.config
+Linting: modules/nf-core/untar/main.nf
+
+Warn  modules/local/sra_to_samplesheet/main.nf:52:57: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  52 |     samplesheet  = pipeline_map.keySet().collect{ '"' + it + '"'}.join
+╰     |                                                         ^^
+
+Warn  modules/local/sra_to_samplesheet/main.nf:53:57: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  53 |     samplesheet += pipeline_map.values().collect{ '"' + it + '"'}.join
+╰     |                                                         ^^
+
+Warn  modules/local/sra_to_samplesheet/main.nf:63:83: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  63 | ng_fields.split(',').collect{ it.trim().toLowerCase() } : []
+╰     |                               ^^
+
+Warn  modules/local/sra_to_samplesheet/main.nf:69:39: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  69 |     mappings  = fields.collect{ '"' + it + '"'}.join(",") + '\n'
+╰     |                                       ^^
+
+Warn  modules/local/sra_to_samplesheet/main.nf:70:69: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  70 | elds).values().collect{ '"' + it + '"'}.join(",")
+╰     |                               ^^
+
+
+Warn  modules/nf-core/custom/sratoolsncbisettings/main.nf:20:5: The `shell` block is deprecated, use `script` instead
+│  20 |     shell:
+╰     |     ^^^^^
+
+Warn  modules/nf-core/custom/sratoolsncbisettings/main.nf:21:5: Variable was declared but not used
+│  21 |     config = "/LIBS/GUID = \"${UUID.randomUUID().toString()}\"\\n/libs
+╰     |     ^^^^^^
+
+
+
+Warn  modules/nf-core/sratools/prefetch/main.nf:22:5: The `shell` block is deprecated, use `script` instead
+│  22 |     shell:
+╰     |     ^^^^^
+
+Warn  modules/nf-core/sratools/prefetch/main.nf:24:5: Variable was declared but not used
+│  24 |     args2 = task.ext.args2 ?: '5 1 100'  // <num retries> <base delay 
+╰     |     ^^^^^
+
+
+
+Error subworkflows/local/utils_nfcore_fetchngs_pipeline/main.nf:14:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/fetchngs/subworkflows/nf-core/utils_nextflow_pipeline/main.nf'
+│  14 | include { UTILS_NEXTFLOW_PIPELINE   } from '../../nf-core/utils_nextfl
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error subworkflows/local/utils_nfcore_fetchngs_pipeline/main.nf:46:5: `UTILS_NEXTFLOW_PIPELINE` is not defined
+│  46 |     UTILS_NEXTFLOW_PIPELINE (
+╰     |     ^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_fetchngs_pipeline/main.nf:86:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  86 |     Channel
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_fetchngs_pipeline/main.nf:89:16: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  89 |         .map { it[0] }
+╰     |                ^^
+
+Warn  subworkflows/local/utils_nfcore_fetchngs_pipeline/main.nf:173:100: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 173 | ta_fields.split(',').collect{ it.trim().toLowerCase() } : valid_ena_me
+╰     |                               ^^
+
+
+Warn  subworkflows/nf-core/fastq_download_prefetch_fasterqdump_sratools/main.nf:15:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Error subworkflows/nf-core/utils_nextflow_pipeline/main.nf:111:14: Unexpected input: 'i'
+│ 111 |     for (int i = 0; i < n - 1; i++) {
+╰     |              ^
+
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:5:1: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
+│   5 | import org.yaml.snakeyaml.Yaml
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:6:1: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
+│   6 | import nextflow.extension.FilesEx
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:37:5: `valid_config` was assigned but not declared
+│  37 |     valid_config = true
+╰     |     ^^^^^^^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:45:9: `valid_config` was assigned but not declared
+│  45 |         valid_config = false
+╰     |         ^^^^^^^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:47:12: `valid_config` is not defined
+│  47 |     return valid_config
+╰     |            ^^^^^^^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:99:17: `Yaml` is not defined
+│  99 |     Yaml yaml = new Yaml()
+╰     |                 ^^^^^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:100:5: `versions` was assigned but not declared
+│ 100 |     versions = yaml.load(yaml_file).collectEntries { k, v -> [ k.token
+╰     |     ^^^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:27: `versions` is not defined
+│ 101 |     return yaml.dumpAsMap(versions).trim()
+╰     |                           ^^^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:131:5: `for` loops are no longer supported
+│ 131 |     for (group in summary_params.keySet()) {
+╰     |     ^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:131:10: `group` is not defined
+│ 131 |     for (group in summary_params.keySet()) {
+╰     |          ^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:132:47: `group` is not defined
+│ 132 |         def group_params = summary_params.get(group)  // This gets the
+╰     |                                               ^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:134:68: `group` is not defined
+│ 134 | p style=\"font-size:110%\"><b>$group</b></p>\n"
+╰     |                               ^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:136:13: `for` loops are no longer supported
+│ 136 |             for (param in group_params.keySet()) {
+╰     |             ^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:136:18: `param` is not defined
+│ 136 |             for (param in group_params.keySet()) {
+╰     |                  ^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:137:49: `param` is not defined
+│ 137 |                 summary_section += "        <dt>$param</dt><dd><samp>$
+╰     |                                                 ^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:137:89: `param` is not defined
+│ 137 | ><dd><samp>${group_params.get(param) ?: '<span style=\"color:#999999;\
+╰     |                               ^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:284:5: `for` loops are no longer supported
+│ 284 |     for (group in summary_params.keySet()) {
+╰     |     ^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:284:10: `group` is not defined
+│ 284 |     for (group in summary_params.keySet()) {
+╰     |          ^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:285:34: `group` is not defined
+│ 285 |         summary << summary_params[group]
+╰     |                                  ^^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:344:42: `GroovyException` is not defined
+│ 344 |             if (plaintext_email) { throw GroovyException('Send plainte
+╰     |                                          ^^^^^^^^^^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:361:5: `FilesEx` is not defined
+│ 361 |     FilesEx.copyTo(output_hf.toPath(), "${outdir}/pipeline_info/pipeli
+╰     |     ^^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:367:5: `FilesEx` is not defined
+│ 367 |     FilesEx.copyTo(output_tf.toPath(), "${outdir}/pipeline_info/pipeli
+╰     |     ^^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:392:5: `for` loops are no longer supported
+│ 392 |     for (group in summary_params.keySet()) {
+╰     |     ^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:392:10: `group` is not defined
+│ 392 |     for (group in summary_params.keySet()) {
+╰     |          ^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:393:34: `group` is not defined
+│ 393 |         summary << summary_params[group]
+╰     |                                  ^^^^^^^
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:121:48: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 121 |                 .map { processVersionsFromYAML(it) }
+╰     |                                                ^^
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:123:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 123 |                 .mix(Channel.of(workflowVersionToYAML()))
+╰     |                      ^^^^^^^
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:264:14: Parameter was not used -- prefix with `_` to suppress warning
+│ 264 |     } catch (all) {
+╰     |              ^^^
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:350:18: Parameter was not used -- prefix with `_` to suppress warning
+│ 350 |         } catch (all) {
+╰     |                  ^^^
+
+
+Warn  workflows/sra/main.nf:35:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  35 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  workflows/sra/main.nf:151:16: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 151 |         .map { it[1] }
+╰     |                ^^
+
+Warn  workflows/sra/main.nf:152:91: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 152 | ue, keepHeader: true, sort: { it.baseName })
+╰     |                               ^^
+
+Warn  workflows/sra/main.nf:153:16: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 153 |         .map { it.text.tokenize('\n').join('\n') }
+╰     |                ^^
+
+Warn  workflows/sra/main.nf:160:16: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 160 |         .map { it[1] }
+╰     |                ^^
+
+Warn  workflows/sra/main.nf:161:91: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 161 | ue, keepHeader: true, sort: { it.baseName })
+╰     |                               ^^
+
+Warn  workflows/sra/main.nf:162:16: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 162 |         .map { it.text.tokenize('\n').join('\n') }
+╰     |                ^^
+
+Warn  workflows/sra/main.nf:169:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 169 |     ch_sample_mappings_yml = Channel.empty()
+╰     |                              ^^^^^^^
+
+
+Error conf/base.config:13:16: `check_max` is not defined
+│  13 |     cpus   = { check_max( 1    * task.attempt, 'cpus'   ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:14:16: `check_max` is not defined
+│  14 |     memory = { check_max( 6.GB * task.attempt, 'memory' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:15:16: `check_max` is not defined
+│  15 |     time   = { check_max( 4.h  * task.attempt, 'time'   ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:34:20: `check_max` is not defined
+│  34 |         cpus   = { check_max( 1                  , 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:35:20: `check_max` is not defined
+│  35 |         memory = { check_max( 6.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:36:20: `check_max` is not defined
+│  36 |         time   = { check_max( 4.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:39:20: `check_max` is not defined
+│  39 |         cpus   = { check_max( 2     * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:40:20: `check_max` is not defined
+│  40 |         memory = { check_max( 12.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:41:20: `check_max` is not defined
+│  41 |         time   = { check_max( 4.h   * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:44:20: `check_max` is not defined
+│  44 |         cpus   = { check_max( 6     * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:45:20: `check_max` is not defined
+│  45 |         memory = { check_max( 36.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:46:20: `check_max` is not defined
+│  46 |         time   = { check_max( 8.h   * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:49:20: `check_max` is not defined
+│  49 |         cpus   = { check_max( 12    * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:50:20: `check_max` is not defined
+│  50 |         memory = { check_max( 72.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:51:20: `check_max` is not defined
+│  51 |         time   = { check_max( 16.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:54:20: `check_max` is not defined
+│  54 |         time   = { check_max( 20.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:57:20: `check_max` is not defined
+│  57 |         memory = { check_max( 200.GB * task.attempt, 'memory' ) }
+╰     |                    ^^^^^^^^^
+
+
+Error nextflow.config:65:5: Unexpected input: 'includeConfig'
+│  65 |     includeConfig "${params.custom_config_base}/nfcore_custom.config"
+╰     |     ^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // Location of nf-tests
+│   3 |     testsDir "."
+│   4 | 
+╰   5 |     // nf-test directory used to create temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 6 files had 47 errors
+ ✅ 31 files had no errors

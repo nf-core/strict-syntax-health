@@ -1,0 +1,422 @@
+Linting Nextflow code..
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: nextflow.config
+Linting: workflows/rangeland.nf
+Linting: subworkflows/local/utils_nfcore_rangeland_pipeline/main.nf
+Linting: subworkflows/local/preprocessing.nf
+Linting: subworkflows/local/higher_level.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/force-preprocess/main.nf
+Linting: modules/local/check_results_full/main.nf
+Linting: modules/local/force-higher_level/main.nf
+Linting: modules/local/check_results/main.nf
+Linting: modules/local/force-generate_analysis_mask/main.nf
+Linting: modules/local/force-generate_tile_allow_list/main.nf
+Linting: modules/local/force-pyramid/main.nf
+Linting: modules/local/force-mosaic/main.nf
+Linting: modules/local/merge/main.nf
+Linting: modules/local/preprocess_force_config/main.nf
+Linting: modules/local/higher_level_force_config/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/untar/main.nf
+
+
+
+
+
+
+
+
+
+
+
+
+
+Warn  subworkflows/local/higher_level.nf:23:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  23 |         ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/higher_level.nf:46:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  46 |         mosaic_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/higher_level.nf:53:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  53 |         pyramid_files = Channel.empty()
+╰     |                         ^^^^^^^
+
+Warn  subworkflows/local/higher_level.nf:55:49: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  55 |             FORCE_PYRAMID( trend_files.filter { it[1].name.endsWith('.
+╰     |                                                 ^^
+
+Warn  subworkflows/local/higher_level.nf:55:88: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  55 | e.endsWith('.tif')  }.map { [ it[1].simpleName.substring(0,11), it[1] 
+╰     |                               ^^
+
+Warn  subworkflows/local/higher_level.nf:55:122: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  55 | sWith('.tif')  }.map { [ it[1].simpleName.substring(0,11), it[1] ] } )
+╰     |                                                            ^^
+
+
+Error subworkflows/local/preprocessing.nf:32:78: `extractDirectory` is not defined
+│  32 | t.masks.flatten().map{ x -> [ extractDirectory(x), x ] }
+╰     |                               ^^^^^^^^^^^^^^^^
+
+Error subworkflows/local/preprocessing.nf:43:72: `extractDirectory` is not defined
+│  43 | boa_tiles.flatten().map{ [ "${extractDirectory(it)}_${it.simpleName}",
+╰     |                               ^^^^^^^^^^^^^^^^
+
+Error subworkflows/local/preprocessing.nf:44:72: `extractDirectory` is not defined
+│  44 | qai_tiles.flatten().map{ [ "${extractDirectory(it)}_${it.simpleName}",
+╰     |                               ^^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/preprocessing.nf:21:13: Variable was declared but not used
+│  21 |         def extractDirectory = { it.parent.toString().substring(it.par
+╰     |             ^^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/preprocessing.nf:21:34: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  21 |         def extractDirectory = { it.parent.toString().substring(it.par
+╰     |                                  ^^
+
+Warn  subworkflows/local/preprocessing.nf:21:65: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  21 | t.parent.toString().substring(it.parent.toString().lastIndexOf('/') + 
+╰     |                               ^^
+
+Warn  subworkflows/local/preprocessing.nf:23:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  23 |         ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/preprocessing.nf:43:89: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  43 | ().map{ [ "${extractDirectory(it)}_${it.simpleName}", it ] }.groupTupl
+╰     |                               ^^
+
+Warn  subworkflows/local/preprocessing.nf:43:96: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  43 |  [ "${extractDirectory(it)}_${it.simpleName}", it ] }.groupTuple()
+╰     |                               ^^
+
+Warn  subworkflows/local/preprocessing.nf:43:113: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  43 | ctory(it)}_${it.simpleName}", it ] }.groupTuple()
+╰     |                               ^^
+
+Warn  subworkflows/local/preprocessing.nf:44:89: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  44 | ().map{ [ "${extractDirectory(it)}_${it.simpleName}", it ] }.groupTupl
+╰     |                               ^^
+
+Warn  subworkflows/local/preprocessing.nf:44:96: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  44 |  [ "${extractDirectory(it)}_${it.simpleName}", it ] }.groupTuple()
+╰     |                               ^^
+
+Warn  subworkflows/local/preprocessing.nf:44:113: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  44 | ctory(it)}_${it.simpleName}", it ] }.groupTuple()
+╰     |                               ^^
+
+Warn  subworkflows/local/preprocessing.nf:48:41: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  48 |                                 .map{ [ it[0].substring( 0, 11 ), it[1
+╰     |                                         ^^
+
+Warn  subworkflows/local/preprocessing.nf:48:67: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  48 |                            .map{ [ it[0].substring( 0, 11 ), it[1] ] }
+╰     |                                                              ^^
+
+Warn  subworkflows/local/preprocessing.nf:51:42: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  51 |                                 .flatMap{it}
+╰     |                                          ^^
+
+Warn  subworkflows/local/preprocessing.nf:52:91: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  52 | e, size : group_size ).map{ [ it[0], it[1] .flatten() ] }
+╰     |                               ^^
+
+Warn  subworkflows/local/preprocessing.nf:52:98: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  52 |  : group_size ).map{ [ it[0], it[1] .flatten() ] }
+╰     |                               ^^
+
+Warn  subworkflows/local/preprocessing.nf:55:41: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  55 |                                 .map{ [ it[0].substring( 0, 11 ), it[1
+╰     |                                         ^^
+
+Warn  subworkflows/local/preprocessing.nf:55:67: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  55 |                            .map{ [ it[0].substring( 0, 11 ), it[1] ] }
+╰     |                                                              ^^
+
+Warn  subworkflows/local/preprocessing.nf:58:42: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  58 |                                 .flatMap{it}
+╰     |                                          ^^
+
+Warn  subworkflows/local/preprocessing.nf:59:91: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  59 | e, size : group_size ).map{ [ it[0], it[1] .flatten() ] }
+╰     |                               ^^
+
+Warn  subworkflows/local/preprocessing.nf:59:98: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  59 |  : group_size ).map{ [ it[0], it[1] .flatten() ] }
+╰     |                               ^^
+
+Warn  subworkflows/local/preprocessing.nf:74:33: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  74 |                         .map { [it[0], it[1].flatten() ] }
+╰     |                                 ^^
+
+Warn  subworkflows/local/preprocessing.nf:74:40: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  74 |                         .map { [it[0], it[1].flatten() ] }
+╰     |                                        ^^
+
+Warn  subworkflows/local/preprocessing.nf:77:33: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  77 |                         .map { [it[0], it[1].flatten() ] }
+╰     |                                 ^^
+
+Warn  subworkflows/local/preprocessing.nf:77:40: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  77 |                         .map { [it[0], it[1].flatten() ] }
+╰     |                                        ^^
+
+
+Warn  subworkflows/local/utils_nfcore_rangeland_pipeline/main.nf:31:5: Parameter was not used -- prefix with `_` to suppress warning
+│  31 |     monochrome_logs   // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_rangeland_pipeline/main.nf:34:5: Parameter was not used -- prefix with `_` to suppress warning
+│  34 |     input             //  string: Path to input samplesheet
+╰     |     ^^^^^
+
+Warn  subworkflows/local/utils_nfcore_rangeland_pipeline/main.nf:38:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  38 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 | mYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
+╰     |                               ^^^^^^^
+
+
+Error workflows/rangeland.nf:89:21: `inRegion` is not defined
+│  89 |     .filter{ dir -> inRegion(dir) }
+╰     |                     ^^^^^^^^
+
+Warn  workflows/rangeland.nf:47:9: Variable was declared but not used
+│  47 |     def inRegion = {
+╰     |         ^^^^^^^^
+
+Warn  workflows/rangeland.nf:48:25: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  48 |         Integer date  = it.simpleName.split("_")[3]    as Integer
+╰     |                         ^^
+
+Warn  workflows/rangeland.nf:55:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  55 |     ch_versions      = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/rangeland.nf:56:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  56 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/rangeland.nf:60:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  60 |     data           = Channel.empty()
+╰     |                      ^^^^^^^
+
+Warn  workflows/rangeland.nf:61:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  61 |     dem            = Channel.empty()
+╰     |                      ^^^^^^^
+
+Warn  workflows/rangeland.nf:62:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  62 |     wvdb           = Channel.empty()
+╰     |                      ^^^^^^^
+
+Warn  workflows/rangeland.nf:70:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  70 |     tar_versions = Channel.empty()
+╰     |                    ^^^^^^^
+
+Warn  workflows/rangeland.nf:73:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  73 |     ch_input = Channel.of(file(params.input))
+╰     |                ^^^^^^^
+
+Warn  workflows/rangeland.nf:74:23: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  74 |     ch_input.branch { it
+╰     |                       ^^
+
+Warn  workflows/rangeland.nf:75:20: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  75 |         archives : it.name.endsWith('tar') || it.name.endsWith('tar.gz
+╰     |                    ^^
+
+Warn  workflows/rangeland.nf:75:47: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  75 |         archives : it.name.endsWith('tar') || it.name.endsWith('tar.gz
+╰     |                                               ^^
+
+Warn  workflows/rangeland.nf:76:31: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  76 |             return tuple([:], it)
+╰     |                               ^^
+
+Warn  workflows/rangeland.nf:78:20: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  78 |             return it
+╰     |                    ^^
+
+Warn  workflows/rangeland.nf:83:52: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  83 |     ch_untared_inputs = UNTAR_INPUT.out.untar.map{ it[1] }
+╰     |                                                    ^^
+
+Warn  workflows/rangeland.nf:100:14: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 100 |     ch_dem = Channel.of(file(params.dem))
+╰     |              ^^^^^^^
+
+Warn  workflows/rangeland.nf:101:21: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 101 |     ch_dem.branch { it
+╰     |                     ^^
+
+Warn  workflows/rangeland.nf:102:20: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 102 |         archives : it.name.endsWith('tar') || it.name.endsWith('tar.gz
+╰     |                    ^^
+
+Warn  workflows/rangeland.nf:102:47: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 102 |         archives : it.name.endsWith('tar') || it.name.endsWith('tar.gz
+╰     |                                               ^^
+
+Warn  workflows/rangeland.nf:103:31: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 103 |             return tuple([:], it)
+╰     |                               ^^
+
+Warn  workflows/rangeland.nf:105:25: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 105 |             return file(it)
+╰     |                         ^^
+
+Warn  workflows/rangeland.nf:110:47: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 110 |     ch_untared_dem = UNTAR_DEM.out.untar.map{ it[1] }
+╰     |                                               ^^
+
+Warn  workflows/rangeland.nf:116:15: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 116 |     ch_wvdb = Channel.of(file(params.wvdb))
+╰     |               ^^^^^^^
+
+Warn  workflows/rangeland.nf:117:22: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 117 |     ch_wvdb.branch { it
+╰     |                      ^^
+
+Warn  workflows/rangeland.nf:118:20: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 118 |         archives : it.name.endsWith('tar') || it.name.endsWith('tar.gz
+╰     |                    ^^
+
+Warn  workflows/rangeland.nf:118:47: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 118 |         archives : it.name.endsWith('tar') || it.name.endsWith('tar.gz
+╰     |                                               ^^
+
+Warn  workflows/rangeland.nf:119:31: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 119 |             return tuple([:], it)
+╰     |                               ^^
+
+Warn  workflows/rangeland.nf:121:25: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 121 |             return file(it)
+╰     |                         ^^
+
+Warn  workflows/rangeland.nf:126:49: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 126 |     ch_untared_wvdb = UNTAR_WVDB.out.untar.map{ it[1] }
+╰     |                                                 ^^
+
+Warn  workflows/rangeland.nf:165:5: Variable was declared but not used
+│ 165 |     grouped_trend_data = HIGHER_LEVEL.out.mosaic.map{ it[1] }.flatten(
+╰     |     ^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/rangeland.nf:165:55: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 165 |     grouped_trend_data = HIGHER_LEVEL.out.mosaic.map{ it[1] }.flatten(
+╰     |                                                       ^^
+
+Warn  workflows/rangeland.nf:182:32: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 182 |     ch_multiqc_config        = Channel.fromPath(
+╰     |                                ^^^^^^^
+
+Warn  workflows/rangeland.nf:185:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 185 |         Channel.fromPath(params.multiqc_config, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/rangeland.nf:186:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 186 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/rangeland.nf:188:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 188 |         Channel.fromPath(params.multiqc_logo, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/rangeland.nf:189:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 189 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/rangeland.nf:193:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 193 |     ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_p
+╰     |                           ^^^^^^^
+
+Warn  workflows/rangeland.nf:199:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 199 |     ch_methods_description                = Channel.value(
+╰     |                                             ^^^^^^^
+
+
+Warn  conf/modules.config:52:46: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  52 |                 saveAs:  { params.save_ard ? it : null },
+╰     |                                              ^^
+
+Warn  conf/modules.config:73:57: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  73 |             saveAs:  { params.save_ard ? "trend_files/${it.tokenize('/
+╰     |                                                         ^^
+
+Warn  conf/modules.config:82:27: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  82 |             saveAs:  { "${it.substring(12,it.indexOf("."))}/trend/${it
+╰     |                           ^^
+
+Warn  conf/modules.config:82:43: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  82 |             saveAs:  { "${it.substring(12,it.indexOf("."))}/trend/${it
+╰     |                                           ^^
+
+Warn  conf/modules.config:82:69: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  82 | (12,it.indexOf("."))}/trend/${it.substring(0,11)}/$it" },
+╰     |                               ^^
+
+Warn  conf/modules.config:82:89: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  82 | {it.substring(12,it.indexOf("."))}/trend/${it.substring(0,11)}/$it" },
+╰     |                                                                ^^
+
+
+Error nextflow.config:304:33: `manifest` is not defined
+│ 304 | \033[0;35m  nf-core/rangeland ${manifest.version}\033[0m
+╰     |                                 ^^^^^^^^
+
+Error nextflow.config:307:26: `manifest` is not defined
+│ 307 |         afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${ma
+╰     |                          ^^^^^^^^
+
+Error nextflow.config:307:69: `manifest` is not defined
+│ 307 | ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "  
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:307:186: `manifest` is not defined
+│ 307 | doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:316:22: `validation` is not defined
+│ 316 |         beforeText = validation.help.beforeText
+╰     |                      ^^^^^^^^^^
+
+Error nextflow.config:317:21: `validation` is not defined
+│ 317 |         afterText = validation.help.afterText
+╰     |                     ^^^^^^^^^^
+
+Warn  nextflow.config:307:129: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 307 | lect { "    https://doi.org/${it.trim().replace('https://doi.org/','')
+╰     |                               ^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 | 
+│   3 |     testsDir "tests"
+│   4 |     workDir ".nf-test"
+╰   5 |     configFile "tests/nextflow.config"
+
+
+Nextflow linting complete!
+ ❌ 4 files had 11 errors
+ ✅ 28 files had no errors

@@ -1,0 +1,205 @@
+Linting Nextflow code..
+Linting: conf/igenomes_ignored.config
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/igenomes.config
+Linting: conf/modules/prepare_cache.config
+Linting: conf/modules/annotate.config
+Linting: nextflow.config
+Linting: workflows/rnavar.nf
+Linting: subworkflows/local/prepare_genome/main.nf
+Linting: subworkflows/local/download_cache_snpeff_vep/main.nf
+Linting: subworkflows/local/cram_qc_mosdepth_samtools/main.nf
+Linting: subworkflows/local/annotation_cache_initialisation/main.nf
+Linting: subworkflows/local/prepare_alignment/main.nf
+Linting: subworkflows/local/splitncigar/main.nf
+Linting: subworkflows/local/vcf_annotate_all/main.nf
+Linting: subworkflows/local/utils_nfcore_rnavar_pipeline/main.nf
+Linting: subworkflows/local/recalibrate/main.nf
+Linting: subworkflows/local/recalibrate/tests/nextflow.config
+Linting: subworkflows/nf-core/bam_stats_samtools/main.nf
+Linting: subworkflows/nf-core/vcf_annotate_snpeff/main.nf
+Linting: subworkflows/nf-core/fastq_align_star/nextflow.config
+Linting: subworkflows/nf-core/fastq_align_star/main.nf
+Linting: subworkflows/nf-core/vcf_annotate_ensemblvep/main.nf
+Linting: subworkflows/nf-core/bam_sort_stats_samtools/main.nf
+Linting: subworkflows/nf-core/bam_markduplicates_picard/main.nf
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/remove_unknown_regions/main.nf
+Linting: modules/local/gtf2bed/main.nf
+Linting: modules/nf-core/seq2hla/main.nf
+Linting: modules/nf-core/star/genomegenerate/main.nf
+Linting: modules/nf-core/star/indexversion/main.nf
+Linting: modules/nf-core/star/align/main.nf
+Linting: modules/nf-core/umitools/extract/main.nf
+Linting: modules/nf-core/bcftools/annotate/main.nf
+Linting: modules/nf-core/gffread/main.nf
+Linting: modules/nf-core/gatk4/indexfeaturefile/main.nf
+Linting: modules/nf-core/gatk4/combinegvcfs/main.nf
+Linting: modules/nf-core/gatk4/mergevcfs/main.nf
+Linting: modules/nf-core/gatk4/applybqsr/main.nf
+Linting: modules/nf-core/gatk4/splitncigarreads/main.nf
+Linting: modules/nf-core/gatk4/bedtointervallist/main.nf
+Linting: modules/nf-core/gatk4/createsequencedictionary/main.nf
+Linting: modules/nf-core/gatk4/haplotypecaller/main.nf
+Linting: modules/nf-core/gatk4/baserecalibrator/main.nf
+Linting: modules/nf-core/gatk4/intervallisttools/main.nf
+Linting: modules/nf-core/gatk4/variantfiltration/main.nf
+Linting: modules/nf-core/gunzip/main.nf
+Linting: modules/nf-core/samtools/flagstat/main.nf
+Linting: modules/nf-core/samtools/idxstats/main.nf
+Linting: modules/nf-core/samtools/index/main.nf
+Linting: modules/nf-core/samtools/sort/main.nf
+Linting: modules/nf-core/samtools/stats/main.nf
+Linting: modules/nf-core/samtools/faidx/main.nf
+Linting: modules/nf-core/samtools/merge/main.nf
+Linting: modules/nf-core/samtools/convert/main.nf
+Linting: modules/nf-core/ensemblvep/vep/main.nf
+Linting: modules/nf-core/ensemblvep/download/main.nf
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/snpeff/snpeff/main.nf
+Linting: modules/nf-core/snpeff/download/main.nf
+Linting: modules/nf-core/cat/fastq/main.nf
+Linting: modules/nf-core/untar/main.nf
+Linting: modules/nf-core/mosdepth/main.nf
+Linting: modules/nf-core/picard/markduplicates/main.nf
+Linting: modules/nf-core/bedtools/sort/main.nf
+Linting: modules/nf-core/bedtools/merge/main.nf
+Linting: modules/nf-core/tabix/bgziptabix/main.nf
+Linting: modules/nf-core/tabix/tabix/main.nf
+
+
+
+
+
+
+Warn  modules/nf-core/cat/fastq/main.nf:22:60: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  22 |     def readList = reads instanceof List ? reads.collect { it.toString
+╰     |                                                            ^^
+
+Warn  modules/nf-core/cat/fastq/main.nf:58:60: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  58 |     def readList = reads instanceof List ? reads.collect { it.toString
+╰     |                                                            ^^
+
+
+
+
+
+
+Warn  modules/nf-core/gatk4/baserecalibrator/main.nf:29:64: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  29 | es.collect { "--known-sites ${it}" }.join(' ')
+╰     |                               ^^
+
+
+
+Warn  modules/nf-core/gatk4/combinegvcfs/main.nf:26:49: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  26 |     def input_list = vcf.collect { "--variant ${it}" }.join(' ')
+╰     |                                                 ^^
+
+
+
+
+
+
+Warn  modules/nf-core/gatk4/mergevcfs/main.nf:25:47: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  25 |     def input_list = vcf.collect { "--INPUT ${it}" }.join(' ')
+╰     |                                               ^^
+
+
+
+
+Warn  modules/nf-core/gffread/main.nf:26:103: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  26 | ', '-y' ].any { args.contains(it) } ) ? 'fasta' : 'gff3' )
+╰     |                               ^^
+
+Warn  modules/nf-core/gffread/main.nf:30:61: Parameter was not used -- prefix with `_` to suppress warning
+│  30 | laceAll(/(.*)(-[wxy])(.*)/) { all, pre, param, post -> "$pre $post $pa
+╰     |                               ^^^
+
+Warn  modules/nf-core/gffread/main.nf:49:103: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  49 | ', '-y' ].any { args.contains(it) } ) ? 'fasta' : 'gff3' )
+╰     |                               ^^
+
+
+Warn  modules/nf-core/gunzip/main.nf:43:9: Variable was declared but not used
+│  43 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+
+
+
+
+
+
+
+
+Warn  modules/nf-core/seq2hla/main.nf:53:9: Variable was declared but not used
+│  53 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+Warn  modules/nf-core/star/align/main.nf:46:56: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  46 |     meta.single_end ? [reads].flatten().each{reads1 << it} : reads.eac
+╰     |                                                        ^^
+
+
+
+
+
+
+
+
+
+Warn  subworkflows/nf-core/bam_markduplicates_picard/main.nf:18:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  18 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/nf-core/bam_sort_stats_samtools/main.nf:16:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/nf-core/bam_stats_samtools/main.nf:15:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/nf-core/fastq_align_star/main.nf:20:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  20 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/nf-core/vcf_annotate_ensemblvep/main.nf:19:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/nf-core/vcf_annotate_snpeff/main.nf:15:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-test tests
+│   3 |     testsDir "."
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 1 file had 1 error
+ ✅ 72 files had no errors

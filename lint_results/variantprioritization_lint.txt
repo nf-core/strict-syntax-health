@@ -1,0 +1,167 @@
+Linting Nextflow code..
+Linting: conf/igenomes_ignored.config
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/igenomes.config
+Linting: nextflow.config
+Linting: workflows/variantprioritization/main.nf
+Linting: subworkflows/local/format_files.nf
+Linting: subworkflows/local/reference_data/main.nf
+Linting: subworkflows/local/utils_nfcore_variantprioritization_pipeline/main.nf
+Linting: subworkflows/local/vcf_preprocessing.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/pcgr/main.nf
+Linting: modules/local/reformat_input/pcgr_vcf.nf
+Linting: modules/local/reformat_input/reformat_vcf.nf
+Linting: modules/local/reformat_input/reformat_cna.nf
+Linting: modules/local/reformat_input/isec_vcf.nf
+Linting: modules/nf-core/pcgr/getref/main.nf
+Linting: modules/nf-core/bcftools/norm/main.nf
+Linting: modules/nf-core/bcftools/norm/tests/nextflow.vcf_gz.config
+Linting: modules/nf-core/bcftools/norm/tests/vcf_gz_index.config
+Linting: modules/nf-core/bcftools/norm/tests/vcf_gz_index_csi.config
+Linting: modules/nf-core/bcftools/norm/tests/nextflow.config
+Linting: modules/nf-core/bcftools/norm/tests/nextflow.bcf_gz.config
+Linting: modules/nf-core/bcftools/norm/tests/nextflow.vcf.config
+Linting: modules/nf-core/bcftools/norm/tests/vcf_gz_index_tbi.config
+Linting: modules/nf-core/bcftools/norm/tests/nextflow.bcf.config
+Linting: modules/nf-core/bcftools/filter/main.nf
+Linting: modules/nf-core/bcftools/filter/tests/vcf_gz_index.config
+Linting: modules/nf-core/bcftools/filter/tests/vcf_gz_index_csi.config
+Linting: modules/nf-core/bcftools/filter/tests/nextflow.config
+Linting: modules/nf-core/bcftools/filter/tests/region_filter.config
+Linting: modules/nf-core/bcftools/filter/tests/vcf_gz_index_tbi.config
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/multiqc/tests/custom_prefix.config
+Linting: modules/nf-core/untar/main.nf
+Linting: modules/nf-core/tabix/bgziptabix/main.nf
+Linting: modules/nf-core/tabix/bgziptabix/tests/tabix_tbi.config
+Linting: modules/nf-core/tabix/bgziptabix/tests/tabix_csi.config
+Linting: modules/nf-core/tabix/tabix/main.nf
+Linting: modules/nf-core/tabix/tabix/tests/tabix_vcf_tbi.config
+Linting: modules/nf-core/tabix/tabix/tests/tabix_gff.config
+Linting: modules/nf-core/tabix/tabix/tests/tabix_bed.config
+Linting: modules/nf-core/tabix/tabix/tests/tabix_vcf_csi.config
+
+Error modules/local/pcgr/main.nf:27:9: `cna` is already declared
+│  27 |     def cna      = params.cna_analysis ? "--input_cna $cna" : ''
+╰     |         ^^^
+
+
+Warn  modules/local/reformat_input/isec_vcf.nf:20:9: Variable was declared but not used
+│  20 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/reformat_input/pcgr_vcf.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+Warn  modules/nf-core/bcftools/norm/main.nf:56:65: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  56 | '-W=tbi'].any { args.contains(it) }  && extension == 'vcf.gz') {
+╰     |                               ^^
+
+Warn  modules/nf-core/bcftools/norm/main.nf:58:126: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  58 | ex=csi', '-W=csi', '--write-index', '-W'].any { args.contains(it) }) {
+╰     |                                                               ^^
+
+
+
+
+
+
+
+Error subworkflows/local/format_files.nf:18:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  18 | pcgr_header = Channel.fromPath("${projectDir}/bin/pcgr_header.txt", ch
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error subworkflows/local/format_files.nf:46:61: Variables in a closure should be declared with `def`
+│  46 | vcf_ch.map{ meta, vcf, tbi -> var = [:]; var.patient = meta.patient; v
+╰     |                               ^^^
+
+Error subworkflows/local/format_files.nf:74:33: `pcgr_header` is not defined
+│  74 |     PCGR_VCF( sample_vcfs_keys, pcgr_header.collect() )
+╰     |                                 ^^^^^^^^^^^
+
+Warn  subworkflows/local/format_files.nf:18:1: Variable was declared but not used
+│  18 | pcgr_header = Channel.fromPath("${projectDir}/bin/pcgr_header.txt", ch
+╰     | ^^^^^^^^^^^
+
+Warn  subworkflows/local/format_files.nf:18:15: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  18 | pcgr_header = Channel.fromPath("${projectDir}/bin/pcgr_header.txt", ch
+╰     |               ^^^^^^^
+
+Warn  subworkflows/local/format_files.nf:28:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  28 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/format_files.nf:47:55: Parameter was not used -- prefix with `_` to suppress warning
+│  47 |     per_sample_somatic_vcfs = per_sample_somatic.map{ meta, vcf, tbi -
+╰     |                                                       ^^^^
+
+
+Error subworkflows/local/utils_nfcore_variantprioritization_pipeline/main.nf:228:147: `metas` is not defined
+│ 228 | ber alteration files provided with somatic VCF files: ${metas[0].id}")
+╰     |                                                         ^^^^^
+
+Warn  subworkflows/local/utils_nfcore_variantprioritization_pipeline/main.nf:31:5: Parameter was not used -- prefix with `_` to suppress warning
+│  31 |     monochrome_logs // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_variantprioritization_pipeline/main.nf:102:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 102 |     Channel
+╰     |     ^^^^^^^
+
+
+Error subworkflows/local/vcf_preprocessing.nf:36:54: Variables in a closure should be declared with `def`
+│  36 |     ch_cna_files = files.cna_files.map{ meta, cna -> var = [:]; var.pa
+╰     |                                                      ^^^
+
+Warn  subworkflows/local/vcf_preprocessing.nf:26:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  26 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/vcf_preprocessing.nf:41:19: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  41 |         to_bgzip: it[0].bgzip_vcf == false
+╰     |                   ^^
+
+Warn  subworkflows/local/vcf_preprocessing.nf:42:19: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  42 |         to_tabix: it[0].tabix_vcf == false
+╰     |                   ^^
+
+
+
+
+
+Warn  conf/modules.config:63:22: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  63 |             ].grep { it != null }.join("").trim()
+╰     |                      ^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-test tests
+│   3 |     testsDir "."
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 5 files had 7 errors
+ ✅ 49 files had no errors

@@ -1,0 +1,152 @@
+Linting Nextflow code..
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: nextflow.config
+Linting: workflows/ribomsqc.nf
+Linting: subworkflows/local/utils_nfcore_ribomsqc_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/msnbasexic/main.nf
+Linting: modules/local/msnbasexic/tests/nextflow.config
+Linting: modules/local/mergejsons/main.nf
+Linting: modules/nf-core/thermorawfileparser/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+
+
+
+
+Warn  subworkflows/local/utils_nfcore_ribomsqc_pipeline/main.nf:32:5: Parameter was not used -- prefix with `_` to suppress warning
+│  32 |     monochrome_logs   // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_ribomsqc_pipeline/main.nf:35:5: Parameter was not used -- prefix with `_` to suppress warning
+│  35 |     input             //  string: Path to input samplesheet
+╰     |     ^^^^^
+
+Warn  subworkflows/local/utils_nfcore_ribomsqc_pipeline/main.nf:42:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  42 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_ribomsqc_pipeline/main.nf:67:144: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  67 | lect { "    https://doi.org/${it.trim().replace('https://doi.org/','')
+╰     |                               ^^
+
+Warn  subworkflows/local/utils_nfcore_ribomsqc_pipeline/main.nf:99:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  99 |     Channel
+╰     |     ^^^^^^^
+
+
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 | mYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
+╰     |                               ^^^^^^^
+
+
+
+Warn  workflows/ribomsqc.nf:26:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  26 |         ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  workflows/ribomsqc.nf:45:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  45 |         analytes_tsv_ch     = Channel.value(file(params.analytes_tsv, 
+╰     |                               ^^^^^^^
+
+Warn  workflows/ribomsqc.nf:46:9: Variable was declared but not used
+│  46 |         analyte_ch          = Channel.value(params.analyte)
+╰     |         ^^^^^^^^^^
+
+Warn  workflows/ribomsqc.nf:46:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  46 |         analyte_ch          = Channel.value(params.analyte)
+╰     |                               ^^^^^^^
+
+Warn  workflows/ribomsqc.nf:47:9: Variable was declared but not used
+│  47 |         rt_tol_ch           = Channel.value(params.rt_tolerance)
+╰     |         ^^^^^^^^^
+
+Warn  workflows/ribomsqc.nf:47:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  47 |         rt_tol_ch           = Channel.value(params.rt_tolerance)
+╰     |                               ^^^^^^^
+
+Warn  workflows/ribomsqc.nf:48:9: Variable was declared but not used
+│  48 |         mz_tol_ch           = Channel.value(params.mz_tolerance)
+╰     |         ^^^^^^^^^
+
+Warn  workflows/ribomsqc.nf:48:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  48 |         mz_tol_ch           = Channel.value(params.mz_tolerance)
+╰     |                               ^^^^^^^
+
+Warn  workflows/ribomsqc.nf:49:9: Variable was declared but not used
+│  49 |         ms_level_ch         = Channel.value(params.ms_level)
+╰     |         ^^^^^^^^^^^
+
+Warn  workflows/ribomsqc.nf:49:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  49 |         ms_level_ch         = Channel.value(params.ms_level)
+╰     |                               ^^^^^^^
+
+Warn  workflows/ribomsqc.nf:50:9: Variable was declared but not used
+│  50 |         plot_xic_ms1_ch     = Channel.value(params.plot_xic_ms1)
+╰     |         ^^^^^^^^^^^^^^^
+
+Warn  workflows/ribomsqc.nf:50:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  50 |         plot_xic_ms1_ch     = Channel.value(params.plot_xic_ms1)
+╰     |                               ^^^^^^^
+
+Warn  workflows/ribomsqc.nf:51:9: Variable was declared but not used
+│  51 |         plot_xic_ms2_ch     = Channel.value(params.plot_xic_ms2)
+╰     |         ^^^^^^^^^^^^^^^
+
+Warn  workflows/ribomsqc.nf:51:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  51 |         plot_xic_ms2_ch     = Channel.value(params.plot_xic_ms2)
+╰     |                               ^^^^^^^
+
+Warn  workflows/ribomsqc.nf:52:9: Variable was declared but not used
+│  52 |         plot_output_path_ch = Channel.value(params.plot_output_path)
+╰     |         ^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/ribomsqc.nf:52:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  52 |         plot_output_path_ch = Channel.value(params.plot_output_path)
+╰     |                               ^^^^^^^
+
+Warn  workflows/ribomsqc.nf:53:9: Variable was declared but not used
+│  53 |         overwrite_tsv_ch    = Channel.value(params.overwrite_tsv)
+╰     |         ^^^^^^^^^^^^^^^^
+
+Warn  workflows/ribomsqc.nf:53:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  53 |         overwrite_tsv_ch    = Channel.value(params.overwrite_tsv)
+╰     |                               ^^^^^^^
+
+Warn  workflows/ribomsqc.nf:78:13: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  78 |             Channel.fromPath("${outdir_path}/**/*_mqc.json") :
+╰     |             ^^^^^^^
+
+Warn  workflows/ribomsqc.nf:79:13: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  79 |             Channel.empty()
+╰     |             ^^^^^^^
+
+Warn  workflows/ribomsqc.nf:111:21: Variable was declared but not used
+│ 111 |             ).set { ch_collated_versions }
+╰     |                     ^^^^^^^^^^^^^^^^^^^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-test tests
+│   3 |     testsDir "."
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 1 file had 1 error
+ ✅ 21 files had no errors

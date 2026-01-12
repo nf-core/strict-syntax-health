@@ -1,0 +1,477 @@
+Linting Nextflow code..
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: nextflow.config
+Linting: workflows/references/main.nf
+Linting: subworkflows/local/create_from_fasta_only/main.nf
+Linting: subworkflows/local/asset_to_channel/main.nf
+Linting: subworkflows/local/create_from_fasta_and_annotation/main.nf
+Linting: subworkflows/local/uncompress_asset/main.nf
+Linting: subworkflows/local/index_vcf/main.nf
+Linting: subworkflows/local/utils_nfcore_references_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: modules/nf-core/star/genomegenerate/main.nf
+Linting: modules/nf-core/gffread/main.nf
+Linting: modules/nf-core/gffread/tests/nextflow-gff3.config
+Linting: modules/nf-core/gffread/tests/nextflow-fasta.config
+Linting: modules/nf-core/gffread/tests/nextflow.config
+Linting: modules/nf-core/rsem/preparereference/main.nf
+Linting: modules/nf-core/gatk4/createsequencedictionary/main.nf
+Linting: modules/nf-core/bowtie/build/main.nf
+Linting: modules/nf-core/hisat2/extractsplicesites/main.nf
+Linting: modules/nf-core/hisat2/build/main.nf
+Linting: modules/nf-core/gunzip/main.nf
+Linting: modules/nf-core/gunzip/tests/nextflow.config
+Linting: modules/nf-core/msisensorpro/scan/main.nf
+Linting: modules/nf-core/samtools/faidx/main.nf
+Linting: modules/nf-core/samtools/faidx/tests/nextflow.config
+Linting: modules/nf-core/samtools/faidx/tests/nextflow2.config
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/bwamem2/index/main.nf
+Linting: modules/nf-core/bwa/index/main.nf
+Linting: modules/nf-core/kallisto/index/main.nf
+Linting: modules/nf-core/salmon/index/main.nf
+Linting: modules/nf-core/custom/catadditionalfasta/main.nf
+Linting: modules/nf-core/bowtie2/build/main.nf
+Linting: modules/nf-core/sortmerna/main.nf
+Linting: modules/nf-core/sortmerna/tests/indexing_only.config
+Linting: modules/nf-core/sortmerna/tests/premade_index.config
+Linting: modules/nf-core/bbmap/bbsplit/main.nf
+Linting: modules/nf-core/dragmap/hashtable/main.nf
+Linting: modules/nf-core/gawk/main.nf
+Linting: modules/nf-core/gawk/tests/nextflow.config
+Linting: modules/nf-core/gawk/tests/nextflow_with_program_file.config
+Linting: modules/nf-core/tabix/tabix/main.nf
+Linting: modules/nf-core/tabix/tabix/tests/tabix_vcf_tbi.config
+Linting: modules/nf-core/tabix/tabix/tests/tabix_gff.config
+Linting: modules/nf-core/tabix/tabix/tests/tabix_bed.config
+Linting: modules/nf-core/tabix/tabix/tests/tabix_vcf_csi.config
+Error main.nf:12:1: Unrecognized feature flag 'nextflow.preview.output'
+│  12 | nextflow.preview.output = true
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:97:5: Invalid workflow publish statement -- must be an assignment
+│  97 |     multiqc_data >> 'multiqc'
+╰     |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:98:5: Invalid workflow publish statement -- must be an assignment
+│  98 |     multiqc_plots >> 'multiqc'
+╰     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:99:5: Invalid workflow publish statement -- must be an assignment
+│  99 |     multiqc_report >> 'multiqc'
+╰     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:103:5: Invalid output declaration
+│ 103 |     'multiqc' {
+│     |     ^^^^^^^^^^^
+│ 104 |         path "multiqc"
+╰ 105 |     }
+
+Error main.nf:106:5: Invalid output declaration
+│ 104 |         path "multiqc"
+│ 105 |     }
+│ 106 |     'reference' {
+│     |     ^^^^^^^^^^^^^
+│ 107 |         path { meta, _file ->
+╰ 108 |             { file ->
+
+Warn  main.nf:55:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  55 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  main.nf:60:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  60 |     ch_multiqc_config = Channel.fromPath("${projectDir}/assets/multiqc
+╰     |                         ^^^^^^^
+
+Warn  main.nf:61:56: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  61 |     ch_multiqc_custom_config = params.multiqc_config ? Channel.fromPat
+╰     |                                                        ^^^^^^^
+
+Warn  main.nf:61:119: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  61 | fromPath(params.multiqc_config, checkIfExists: true) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  main.nf:62:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  62 |     ch_multiqc_logo = params.multiqc_logo ? Channel.fromPath(params.mu
+╰     |                                             ^^^^^^^
+
+Warn  main.nf:62:106: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  62 | l.fromPath(params.multiqc_logo, checkIfExists: true) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  main.nf:63:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  63 |     ch_workflow_summary = Channel.value(paramsSummaryMultiqc(paramsSum
+╰     |                           ^^^^^^^
+
+Warn  main.nf:65:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  65 |     ch_methods_description = Channel.value(methodsDescriptionText(ch_m
+╰     |                              ^^^^^^^
+
+Warn  main.nf:79:5: Variable was declared but not used
+│  79 |     multiqc_data = MULTIQC.out.data
+╰     |     ^^^^^^^^^^^^
+
+Warn  main.nf:80:5: Variable was declared but not used
+│  80 |     multiqc_plots = MULTIQC.out.plots
+╰     |     ^^^^^^^^^^^^^
+
+Warn  main.nf:81:5: Variable was declared but not used
+│  81 |     multiqc_report = MULTIQC.out.report
+╰     |     ^^^^^^^^^^^^^^
+
+
+Error modules/nf-core/bbmap/bbsplit/main.nf:41:43: `index` is already declared
+│  41 |     other_ref_names.eachWithIndex { name, index ->
+╰     |                                           ^^^^^
+
+Error modules/nf-core/bbmap/bbsplit/main.nf:110:43: `index` is already declared
+│ 110 |     other_ref_names.eachWithIndex { name, index ->
+╰     |                                           ^^^^^
+
+Warn  modules/nf-core/bbmap/bbsplit/main.nf:110:43: Parameter was not used -- prefix with `_` to suppress warning
+│ 110 |     other_ref_names.eachWithIndex { name, index ->
+╰     |                                           ^^^^^
+
+
+Warn  modules/nf-core/bowtie/build/main.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+Error modules/nf-core/bwa/index/main.nf:14:27: `bwa` is not defined
+│  14 |     tuple val(meta), path(bwa) , emit: index
+╰     |                           ^^^
+
+
+
+Warn  modules/nf-core/custom/catadditionalfasta/main.nf:26:9: Variable was declared but not used
+│  26 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+
+
+Warn  modules/nf-core/gawk/main.nf:25:51: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  25 |     suffix = task.ext.suffix ?: "${input.collect{ it.getExtension()}.g
+╰     |                                                   ^^
+
+Warn  modules/nf-core/gawk/main.nf:28:32: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  28 |     lst_gz    = input.collect{ it.getExtension().endsWith("gz") }
+╰     |                                ^^
+
+
+Warn  modules/nf-core/gffread/main.nf:26:103: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  26 | ', '-y' ].any { args.contains(it) } ) ? 'fasta' : 'gff3' )
+╰     |                               ^^
+
+Warn  modules/nf-core/gffread/main.nf:30:61: Parameter was not used -- prefix with `_` to suppress warning
+│  30 | laceAll(/(.*)(-[wxy])(.*)/) { all, pre, param, post -> "$pre $post $pa
+╰     |                               ^^^
+
+Warn  modules/nf-core/gffread/main.nf:49:103: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  49 | ', '-y' ].any { args.contains(it) } ) ? 'fasta' : 'gff3' )
+╰     |                               ^^
+
+
+Warn  modules/nf-core/gunzip/main.nf:43:9: Variable was declared but not used
+│  43 |     def args        = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+Warn  modules/nf-core/hisat2/extractsplicesites/main.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+Warn  modules/nf-core/rsem/preparereference/main.nf:27:30: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  27 |         args_list.removeIf { it.contains('--star') }
+╰     |                              ^^
+
+
+
+
+Warn  modules/nf-core/sortmerna/main.nf:29:9: Variable was declared but not used
+│  29 |     def skip_index    = args.contains('--index 0')? true : false
+╰     |         ^^^^^^^^^^
+
+Warn  modules/nf-core/sortmerna/main.nf:40:59: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  40 |         reads_input = paired_end ? reads.collect{"--reads $it"}.join('
+╰     |                                                           ^^
+
+Warn  modules/nf-core/sortmerna/main.nf:83:9: Variable was declared but not used
+│  83 |     def paired_cmd    = ''
+╰     |         ^^^^^^^^^^
+
+Warn  modules/nf-core/sortmerna/main.nf:84:9: Variable was declared but not used
+│  84 |     def out2_cmd      = ''
+╰     |         ^^^^^^^^
+
+Warn  modules/nf-core/sortmerna/main.nf:89:59: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  89 |         reads_input = paired_end ? reads.collect{"--reads $it"}.join('
+╰     |                                                           ^^
+
+
+
+
+Error subworkflows/local/asset_to_channel/main.nf:18:17: Operators cannot be called from within a closure
+│  18 |         return [reduce(meta), meta.intervals_bed]
+╰     |                 ^^^^^^^^^^^^
+
+Error subworkflows/local/asset_to_channel/main.nf:45:17: Operators cannot be called from within a closure
+│  45 |         return [reduce(meta) + meta_extra, fasta_]
+╰     |                 ^^^^^^^^^^^^
+
+Error subworkflows/local/asset_to_channel/main.nf:55:17: Operators cannot be called from within a closure
+│  55 |         return [reduce(meta), meta.fasta_dict]
+╰     |                 ^^^^^^^^^^^^
+
+Error subworkflows/local/asset_to_channel/main.nf:68:17: Operators cannot be called from within a closure
+│  68 |         return [reduce(meta) + meta_extra, meta.fasta_fai]
+╰     |                 ^^^^^^^^^^^^
+
+Error subworkflows/local/asset_to_channel/main.nf:78:17: Operators cannot be called from within a closure
+│  78 |         return [reduce(meta), meta.fasta_sizes]
+╰     |                 ^^^^^^^^^^^^
+
+Error subworkflows/local/asset_to_channel/main.nf:94:17: Operators cannot be called from within a closure
+│  94 |         return [reduce(meta) + meta_extra, meta.gff]
+╰     |                 ^^^^^^^^^^^^
+
+Error subworkflows/local/asset_to_channel/main.nf:109:17: Operators cannot be called from within a closure
+│ 109 |         return [reduce(meta) + meta_extra, meta.gtf]
+╰     |                 ^^^^^^^^^^^^
+
+Error subworkflows/local/asset_to_channel/main.nf:119:17: Operators cannot be called from within a closure
+│ 119 |         return [reduce(meta), meta.splice_sites]
+╰     |                 ^^^^^^^^^^^^
+
+Error subworkflows/local/asset_to_channel/main.nf:135:17: Operators cannot be called from within a closure
+│ 135 |         return [reduce(meta) + meta_extra, meta.transcript_fasta]
+╰     |                 ^^^^^^^^^^^^
+
+Error subworkflows/local/asset_to_channel/main.nf:148:17: Operators cannot be called from within a closure
+│ 148 |         return [reduce(meta) + meta_extra, file(meta.vcf)]
+╰     |                 ^^^^^^^^^^^^
+
+Warn  subworkflows/local/asset_to_channel/main.nf:14:9: Variable was declared but not used
+│  14 |     def reduce = { meta -> meta.subMap(['genome', 'id', 'source', 'sou
+╰     |         ^^^^^^
+
+
+Warn  subworkflows/local/create_from_fasta_and_annotation/main.nf:26:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  26 |     hisat2_index = Channel.empty()
+╰     |                    ^^^^^^^
+
+Warn  subworkflows/local/create_from_fasta_and_annotation/main.nf:27:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  27 |     kallisto_index = Channel.empty()
+╰     |                      ^^^^^^^
+
+Warn  subworkflows/local/create_from_fasta_and_annotation/main.nf:28:18: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  28 |     rsem_index = Channel.empty()
+╰     |                  ^^^^^^^
+
+Warn  subworkflows/local/create_from_fasta_and_annotation/main.nf:29:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  29 |     salmon_index = Channel.empty()
+╰     |                    ^^^^^^^
+
+Warn  subworkflows/local/create_from_fasta_and_annotation/main.nf:30:18: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  30 |     star_index = Channel.empty()
+╰     |                  ^^^^^^^
+
+Warn  subworkflows/local/create_from_fasta_and_annotation/main.nf:32:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  32 |     versions = Channel.empty()
+╰     |                ^^^^^^^
+
+
+Warn  subworkflows/local/create_from_fasta_only/main.nf:27:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  27 |     bowtie1_index = Channel.empty()
+╰     |                     ^^^^^^^
+
+Warn  subworkflows/local/create_from_fasta_only/main.nf:28:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  28 |     bowtie2_index = Channel.empty()
+╰     |                     ^^^^^^^
+
+Warn  subworkflows/local/create_from_fasta_only/main.nf:29:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  29 |     bwamem1_index = Channel.empty()
+╰     |                     ^^^^^^^
+
+Warn  subworkflows/local/create_from_fasta_only/main.nf:30:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  30 |     bwamem2_index = Channel.empty()
+╰     |                     ^^^^^^^
+
+Warn  subworkflows/local/create_from_fasta_only/main.nf:31:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  31 |     dragmap_hashmap = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/create_from_fasta_only/main.nf:32:18: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  32 |     fasta_dict = Channel.empty()
+╰     |                  ^^^^^^^
+
+Warn  subworkflows/local/create_from_fasta_only/main.nf:33:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  33 |     fasta_sizes = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/create_from_fasta_only/main.nf:34:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  34 |     intervals_bed = Channel.empty()
+╰     |                     ^^^^^^^
+
+Warn  subworkflows/local/create_from_fasta_only/main.nf:35:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  35 |     msisensorpro_list = Channel.empty()
+╰     |                         ^^^^^^^
+
+Warn  subworkflows/local/create_from_fasta_only/main.nf:37:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  37 |     versions = Channel.empty()
+╰     |                ^^^^^^^
+
+
+Warn  subworkflows/local/index_vcf/main.nf:9:15: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│   9 |     vcf_tbi = Channel.empty()
+╰     |               ^^^^^^^
+
+Warn  subworkflows/local/index_vcf/main.nf:10:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  10 |     versions = Channel.empty()
+╰     |                ^^^^^^^
+
+
+Warn  subworkflows/local/uncompress_asset/main.nf:16:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     versions = Channel.empty()
+╰     |                ^^^^^^^
+
+
+Warn  subworkflows/local/utils_nfcore_references_pipeline/main.nf:36:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  36 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_references_pipeline/main.nf:67:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  67 |     ch_asset = Channel.fromList(samplesheetToList(input, "${projectDir
+╰     |                ^^^^^^^
+
+
+Warn  subworkflows/nf-core/utils_nextflow_pipeline/main.nf:94:33: Parameter was not used -- prefix with `_` to suppress warning
+│  94 |     catch (NullPointerException e) {
+╰     |                                 ^
+
+Warn  subworkflows/nf-core/utils_nextflow_pipeline/main.nf:98:24: Parameter was not used -- prefix with `_` to suppress warning
+│  98 |     catch (IOException e) {
+╰     |                        ^
+
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:116:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 116 | mYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
+╰     |                               ^^^^^^^
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:264:22: Parameter was not used -- prefix with `_` to suppress warning
+│ 264 |     catch (Exception all) {
+╰     |                      ^^^
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:361:26: Parameter was not used -- prefix with `_` to suppress warning
+│ 361 |         catch (Exception all) {
+╰     |                          ^^^
+
+
+Error workflows/references/main.nf:152:5: Invalid workflow publish statement -- must be an assignment
+│ 152 |     reference >> 'reference'
+╰     |     ^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/references/main.nf:152:5: Named workflow cannot have a publish section
+│ 152 |     reference >> 'reference'
+╰     |     ^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/references/main.nf:13:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  13 |     versions = Channel.empty()
+╰     |                ^^^^^^^
+
+Warn  workflows/references/main.nf:119:17: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 119 |     reference = Channel
+╰     |                 ^^^^^^^
+
+
+Error nextflow.config:202:1: Variable declarations cannot be mixed with config statements
+│ 202 | def trace_timestamp = new java.util.Date().format( 'yyyy-MM-dd_HH-mm-s
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error nextflow.config:205:68: `trace_timestamp` is not defined
+│ 205 | rams.outdir}/pipeline_info/execution_timeline_${trace_timestamp}.html"
+╰     |                                                 ^^^^^^^^^^^^^^^
+
+Error nextflow.config:209:66: `trace_timestamp` is not defined
+│ 209 | params.outdir}/pipeline_info/execution_report_${trace_timestamp}.html"
+╰     |                                                 ^^^^^^^^^^^^^^^
+
+Error nextflow.config:213:65: `trace_timestamp` is not defined
+│ 213 | ${params.outdir}/pipeline_info/execution_trace_${trace_timestamp}.txt"
+╰     |                                                  ^^^^^^^^^^^^^^^
+
+Error nextflow.config:217:62: `trace_timestamp` is not defined
+│ 217 |  "${params.outdir}/pipeline_info/pipeline_dag_${trace_timestamp}.html"
+╰     |                                                 ^^^^^^^^^^^^^^^
+
+Error nextflow.config:240:34: `manifest` is not defined
+│ 240 |         command = "nextflow run $manifest.name -profile <docker/singul
+╰     |                                  ^^^^^^^^
+
+Error nextflow.config:250:15: `manifest` is not defined
+│ 250 | \033[0;35m  ${manifest.name} ${manifest.version}\033[0m
+╰     |               ^^^^^^^^
+
+Error nextflow.config:250:32: `manifest` is not defined
+│ 250 | \033[0;35m  ${manifest.name} ${manifest.version}\033[0m
+╰     |                                ^^^^^^^^
+
+Error nextflow.config:253:26: `manifest` is not defined
+│ 253 |         afterText = """${manifest.doi ? "* The pipeline\n" : ""}${mani
+╰     |                          ^^^^^^^^
+
+Error nextflow.config:253:67: `manifest` is not defined
+│ 253 | i ? "* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "  
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:253:182: `manifest` is not defined
+│ 253 | doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:258:26: `manifest` is not defined
+│ 258 |     https://github.com/${manifest.name}/blob/master/CITATIONS.md
+╰     |                          ^^^^^^^^
+
+Error nextflow.config:262:22: `validation` is not defined
+│ 262 |         beforeText = validation.help.beforeText
+╰     |                      ^^^^^^^^^^
+
+Error nextflow.config:263:21: `validation` is not defined
+│ 263 |         afterText = validation.help.afterText
+╰     |                     ^^^^^^^^^^
+
+Warn  nextflow.config:253:125: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 253 | ollect { "  https://doi.org/${it.trim().replace('https://doi.org/','')
+╰     |                               ^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-tests
+│   3 |     testsDir "."
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 7 files had 36 errors
+ ✅ 50 files had no errors

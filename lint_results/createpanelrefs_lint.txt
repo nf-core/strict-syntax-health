@@ -1,0 +1,146 @@
+Linting Nextflow code..
+Linting: conf/igenomes_ignored.config
+Linting: conf/base.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/igenomes.config
+Linting: conf/modules/cnvkit.config
+Linting: conf/modules/base.config
+Linting: conf/modules/germlinecnvcaller_cohort.config
+Linting: conf/modules/gens_pon.config
+Linting: conf/modules/prepare_genome.config
+Linting: conf/modules/mutect2.config
+Linting: nextflow.config
+Linting: workflows/createpanelrefs.nf
+Linting: subworkflows/local/prepare_genome/main.nf
+Linting: subworkflows/local/utils_nfcore_createpanelrefs_pipeline/main.nf
+Linting: subworkflows/local/gens_pon/main.nf
+Linting: subworkflows/local/germlinecnvcaller_cohort/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/bam_create_som_pon_gatk/main.nf
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: tests/germlinecnvcaller_cohort.config
+Linting: tests/gens_pon.config
+Linting: modules/nf-core/gatk4/collectreadcounts/main.nf
+Linting: modules/nf-core/gatk4/mutect2/main.nf
+Linting: modules/nf-core/gatk4/createsomaticpanelofnormals/main.nf
+Linting: modules/nf-core/gatk4/indexfeaturefile/main.nf
+Linting: modules/nf-core/gatk4/annotateintervals/main.nf
+Linting: modules/nf-core/gatk4/bedtointervallist/main.nf
+Linting: modules/nf-core/gatk4/determinegermlinecontigploidy/main.nf
+Linting: modules/nf-core/gatk4/createsequencedictionary/main.nf
+Linting: modules/nf-core/gatk4/preprocessintervals/main.nf
+Linting: modules/nf-core/gatk4/intervallisttools/main.nf
+Linting: modules/nf-core/gatk4/germlinecnvcaller/main.nf
+Linting: modules/nf-core/gatk4/genomicsdbimport/main.nf
+Linting: modules/nf-core/gatk4/createreadcountpanelofnormals/main.nf
+Linting: modules/nf-core/gatk4/filterintervals/main.nf
+Linting: modules/nf-core/samtools/index/main.nf
+Linting: modules/nf-core/samtools/view/main.nf
+Linting: modules/nf-core/samtools/faidx/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/cnvkit/batch/main.nf
+Linting: modules/nf-core/gawk/main.nf
+
+
+Warn  modules/nf-core/gatk4/annotateintervals/main.nf:31:53: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  31 |     def inputs = intervals.collect { "--intervals ${it}" }.join(" ")
+╰     |                                                     ^^
+
+
+
+
+Warn  modules/nf-core/gatk4/createreadcountpanelofnormals/main.nf:23:50: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  23 |     def input_list = counts.collect { "--input ${it}" }.join(" ")
+╰     |                                                  ^^
+
+
+
+
+Warn  modules/nf-core/gatk4/determinegermlinecontigploidy/main.nf:27:80: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  27 | lect { "--exclude-intervals ${it}" }.join(" ") : ""
+╰     |                               ^^
+
+Warn  modules/nf-core/gatk4/determinegermlinecontigploidy/main.nf:30:50: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  30 |     def input_list = counts.collect { "--input ${it}" }.join(" ")
+╰     |                                                  ^^
+
+
+Warn  modules/nf-core/gatk4/filterintervals/main.nf:26:78: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  26 | d_counts.collect { "--input ${it}" }.join(" ") : ""
+╰     |                               ^^
+
+
+
+Warn  modules/nf-core/gatk4/germlinecnvcaller/main.nf:28:47: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  28 |     def input_list = tsv.collect { "--input ${it}" }.join(' ')
+╰     |                                               ^^
+
+
+
+
+
+
+Warn  modules/nf-core/gawk/main.nf:26:54: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  26 |     suffix    = task.ext.suffix ?: "${input.collect{ it.getExtension()
+╰     |                                                      ^^
+
+Warn  modules/nf-core/gawk/main.nf:29:37: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  29 |     lst_gz     = input.findResults{ it.getExtension().endsWith("gz") ?
+╰     |                                     ^^
+
+Warn  modules/nf-core/gawk/main.nf:29:72: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  29 | tExtension().endsWith("gz") ? it.toString() : null }
+╰     |                               ^^
+
+Warn  modules/nf-core/gawk/main.nf:31:34: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  31 |     input_cmd  = input.collect { it.toString() - ~/\.gz$/ }.join(" ")
+╰     |                                  ^^
+
+Warn  modules/nf-core/gawk/main.nf:34:49: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  34 |     cleanup    = lst_gz ? "rm ${lst_gz.collect{ it - ~/\.gz$/ }.join("
+╰     |                                                 ^^
+
+Warn  modules/nf-core/gawk/main.nf:37:16: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  37 |         assert it.name != "${prefix}.${suffix}" : "Input and output na
+╰     |                ^^
+
+
+
+
+
+
+Warn  subworkflows/local/gens_pon/main.nf:45:20: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  45 |         .collect { it[1] }
+╰     |                    ^^
+
+
+Warn  subworkflows/local/germlinecnvcaller_cohort/main.nf:124:20: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 124 |         .collect { it[1] }
+╰     |                    ^^
+
+
+Warn  subworkflows/local/utils_nfcore_createpanelrefs_pipeline/main.nf:31:5: Parameter was not used -- prefix with `_` to suppress warning
+│  31 |     monochrome_logs // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+
+
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-test tests
+│   3 |     testsDir "."
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 1 file had 1 error
+ ✅ 45 files had no errors

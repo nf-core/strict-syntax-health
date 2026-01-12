@@ -1,0 +1,413 @@
+Linting Nextflow code..
+Linting: conf/test_tsv_bam.config
+Linting: conf/test_direct.config
+Linting: conf/test_stresstest_human.config
+Linting: conf/base.config
+Linting: conf/test_tsv_humanbam.config
+Linting: conf/test_tsv_fna.config
+Linting: conf/benchmarking_vikingfish.config
+Linting: conf/test_tsv_pretrim.config
+Linting: conf/benchmarking_human.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/test_tsv_complex.config
+Linting: conf/test_tsv_kraken.config
+Linting: conf/igenomes.config
+Linting: conf/test_resources.config
+Linting: nextflow.config
+Linting: main.nf
+Error main.nf:191:27: Unexpected input: 'from'
+│ 191 |         path zipped_fasta from file(params.fasta) // path doesn't like
+╰     |                           ^
+
+
+Error conf/base.config:13:12: `check_max` is not defined
+│  13 |   cpus = { check_max( 1 * task.attempt, 'cpus' ) }
+╰     |            ^^^^^^^^^
+
+Error conf/base.config:14:14: `check_max` is not defined
+│  14 |   memory = { check_max( 7.GB * task.attempt, 'memory' ) }
+╰     |              ^^^^^^^^^
+
+Error conf/base.config:15:12: `check_max` is not defined
+│  15 |   time = { check_max( 24.h * task.attempt, 'time' ) }
+╰     |            ^^^^^^^^^
+
+Error conf/base.config:30:16: `check_max` is not defined
+│  30 |       cpus = { check_max( 1, 'cpus' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:31:18: `check_max` is not defined
+│  31 |       memory = { check_max( 1.GB * task.attempt, 'memory' ) }
+╰     |                  ^^^^^^^^^
+
+Error conf/base.config:32:16: `check_max` is not defined
+│  32 |       time = { check_max( 4.h * task.attempt, 'time' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:36:16: `check_max` is not defined
+│  36 |       cpus = { check_max( 1, 'cpus' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:37:18: `check_max` is not defined
+│  37 |       memory = { check_max( 4.GB * task.attempt, 'memory' ) }
+╰     |                  ^^^^^^^^^
+
+Error conf/base.config:38:16: `check_max` is not defined
+│  38 |       time = { check_max( 4.h * task.attempt, 'time' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:42:16: `check_max` is not defined
+│  42 |       cpus = { check_max( 1, 'cpus' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:43:18: `check_max` is not defined
+│  43 |       memory = { check_max( 8.GB * task.attempt, 'memory' ) }
+╰     |                  ^^^^^^^^^
+
+Error conf/base.config:44:16: `check_max` is not defined
+│  44 |       time = { check_max( 4.h * task.attempt, 'time' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:48:16: `check_max` is not defined
+│  48 |       cpus = { check_max( 2 * task.attempt, 'cpus' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:49:18: `check_max` is not defined
+│  49 |       memory = { check_max( 4.GB * task.attempt, 'memory' ) }
+╰     |                  ^^^^^^^^^
+
+Error conf/base.config:50:16: `check_max` is not defined
+│  50 |       time = { check_max( 4.h * task.attempt, 'time' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:54:16: `check_max` is not defined
+│  54 |       cpus = { check_max( 4 * task.attempt, 'cpus' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:55:18: `check_max` is not defined
+│  55 |       memory = { check_max( 8.GB * task.attempt, 'memory' ) }
+╰     |                  ^^^^^^^^^
+
+Error conf/base.config:56:16: `check_max` is not defined
+│  56 |       time = { check_max( 4.h * task.attempt, 'time' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:60:16: `check_max` is not defined
+│  60 |       cpus = { check_max( 8 * task.attempt, 'cpus' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:61:18: `check_max` is not defined
+│  61 |       memory = { check_max( 16.GB * task.attempt, 'memory' ) }
+╰     |                  ^^^^^^^^^
+
+Error conf/base.config:62:16: `check_max` is not defined
+│  62 |       time = { check_max( 4.h * task.attempt, 'time' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:66:16: `check_max` is not defined
+│  66 |       cpus = { check_max( 32 * task.attempt, 'cpus' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:67:18: `check_max` is not defined
+│  67 |       memory = { check_max( 256.GB * task.attempt, 'memory' ) }
+╰     |                  ^^^^^^^^^
+
+Error conf/base.config:68:16: `check_max` is not defined
+│  68 |       time = { check_max( 4.h * task.attempt, 'time' ) }
+╰     |                ^^^^^^^^^
+
+
+Error conf/benchmarking_human.config:46:16: `check_max` is not defined
+│  46 |       time = { check_max( 4.h * task.attempt, 'time' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/benchmarking_human.config:49:16: `check_max` is not defined
+│  49 |       cpus = { check_max( 8, 'cpus' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/benchmarking_human.config:50:18: `check_max` is not defined
+│  50 |       memory = { check_max( 16.GB * task.attempt, 'memory' ) }
+╰     |                  ^^^^^^^^^
+
+Error conf/benchmarking_human.config:51:16: `check_max` is not defined
+│  51 |       time = { check_max( 2.h * task.attempt, 'time' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/benchmarking_human.config:54:16: `check_max` is not defined
+│  54 |       cpus = { check_max( 8, 'cpus' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/benchmarking_human.config:55:18: `check_max` is not defined
+│  55 |       memory = { check_max( 16.GB * task.attempt, 'memory' ) }
+╰     |                  ^^^^^^^^^
+
+Error conf/benchmarking_human.config:56:16: `check_max` is not defined
+│  56 |       time = { check_max( 4.h * task.attempt, 'time' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/benchmarking_human.config:59:16: `check_max` is not defined
+│  59 |       cpus = { check_max( 16, 'cpus' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/benchmarking_human.config:60:18: `check_max` is not defined
+│  60 |       memory = { check_max( 64.GB * task.attempt, 'memory' ) }
+╰     |                  ^^^^^^^^^
+
+Error conf/benchmarking_human.config:61:16: `check_max` is not defined
+│  61 |       time = { check_max( 4.h * task.attempt, 'time' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/benchmarking_human.config:65:18: `check_max` is not defined
+│  65 |       memory = { check_max( 8.GB * task.attempt, 'memory' ) }
+╰     |                  ^^^^^^^^^
+
+Error conf/benchmarking_human.config:66:16: `check_max` is not defined
+│  66 |       time = { check_max( 2.h * task.attempt, 'time' ) }
+╰     |                ^^^^^^^^^
+
+
+Error conf/benchmarking_vikingfish.config:34:16: `check_max` is not defined
+│  34 |       cpus = { check_max( 8, 'cpus' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/benchmarking_vikingfish.config:35:18: `check_max` is not defined
+│  35 |       memory = { check_max( 16.GB * task.attempt, 'memory' ) }
+╰     |                  ^^^^^^^^^
+
+Error conf/benchmarking_vikingfish.config:36:16: `check_max` is not defined
+│  36 |       time = { check_max( 2.h * task.attempt, 'time' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/benchmarking_vikingfish.config:39:16: `check_max` is not defined
+│  39 |       cpus = { check_max( 8, 'cpus' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/benchmarking_vikingfish.config:40:18: `check_max` is not defined
+│  40 |       memory = { check_max( 16.GB * task.attempt, 'memory' ) }
+╰     |                  ^^^^^^^^^
+
+Error conf/benchmarking_vikingfish.config:41:16: `check_max` is not defined
+│  41 |       time = { check_max( 8.h * task.attempt, 'time' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/benchmarking_vikingfish.config:44:16: `check_max` is not defined
+│  44 |       cpus = { check_max( 8, 'cpus' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/benchmarking_vikingfish.config:45:18: `check_max` is not defined
+│  45 |       memory = { check_max( 16.GB * task.attempt, 'memory' ) }
+╰     |                  ^^^^^^^^^
+
+Error conf/benchmarking_vikingfish.config:46:16: `check_max` is not defined
+│  46 |       time = { check_max( 4.h * task.attempt, 'time' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/benchmarking_vikingfish.config:49:15: `check_max` is not defined
+│  49 |      cpus = { check_max( 8, 'cpus' ) }
+╰     |               ^^^^^^^^^
+
+Error conf/benchmarking_vikingfish.config:50:17: `check_max` is not defined
+│  50 |      memory = { check_max( 16.GB * task.attempt, 'memory' ) }
+╰     |                 ^^^^^^^^^
+
+Error conf/benchmarking_vikingfish.config:51:15: `check_max` is not defined
+│  51 |      time = { check_max( 8.h * task.attempt, 'time' ) }
+╰     |               ^^^^^^^^^
+
+
+Error conf/test_full.config:35:16: `check_max` is not defined
+│  35 |       cpus = { check_max( 8, 'cpus' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/test_full.config:36:18: `check_max` is not defined
+│  36 |       memory = { check_max( 16.GB * task.attempt, 'memory' ) }
+╰     |                  ^^^^^^^^^
+
+Error conf/test_full.config:37:16: `check_max` is not defined
+│  37 |       time = { check_max( 2.h * task.attempt, 'time' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/test_full.config:40:16: `check_max` is not defined
+│  40 |       cpus = { check_max( 8, 'cpus' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/test_full.config:41:18: `check_max` is not defined
+│  41 |       memory = { check_max( 16.GB * task.attempt, 'memory' ) }
+╰     |                  ^^^^^^^^^
+
+Error conf/test_full.config:42:16: `check_max` is not defined
+│  42 |       time = { check_max( 8.h * task.attempt, 'time' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/test_full.config:45:16: `check_max` is not defined
+│  45 |       cpus = { check_max( 8, 'cpus' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/test_full.config:46:18: `check_max` is not defined
+│  46 |       memory = { check_max( 16.GB * task.attempt, 'memory' ) }
+╰     |                  ^^^^^^^^^
+
+Error conf/test_full.config:47:16: `check_max` is not defined
+│  47 |       time = { check_max( 4.h * task.attempt, 'time' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/test_full.config:50:15: `check_max` is not defined
+│  50 |      cpus = { check_max( 8, 'cpus' ) }
+╰     |               ^^^^^^^^^
+
+Error conf/test_full.config:51:17: `check_max` is not defined
+│  51 |      memory = { check_max( 16.GB * task.attempt, 'memory' ) }
+╰     |                 ^^^^^^^^^
+
+Error conf/test_full.config:52:15: `check_max` is not defined
+│  52 |      time = { check_max( 8.h * task.attempt, 'time' ) }
+╰     |               ^^^^^^^^^
+
+
+Error conf/test_resources.config:13:16: `check_max` is not defined
+│  13 |       cpus = { check_max( 1, 'cpus' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/test_resources.config:14:18: `check_max` is not defined
+│  14 |       memory = { check_max( 1.GB * task.attempt, 'memory' ) }
+╰     |                  ^^^^^^^^^
+
+Error conf/test_resources.config:15:16: `check_max` is not defined
+│  15 |       time = { check_max( 10.m * task.attempt, 'time' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/test_resources.config:19:16: `check_max` is not defined
+│  19 |       cpus = { check_max( 1, 'cpus' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/test_resources.config:20:18: `check_max` is not defined
+│  20 |       memory = { check_max( 4.GB * task.attempt, 'memory' ) }
+╰     |                  ^^^^^^^^^
+
+Error conf/test_resources.config:21:16: `check_max` is not defined
+│  21 |       time = { check_max( 10.m * task.attempt, 'time' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/test_resources.config:25:16: `check_max` is not defined
+│  25 |       cpus = { check_max( 1, 'cpus' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/test_resources.config:26:18: `check_max` is not defined
+│  26 |       memory = { check_max( 8.GB * task.attempt, 'memory' ) }
+╰     |                  ^^^^^^^^^
+
+Error conf/test_resources.config:27:16: `check_max` is not defined
+│  27 |       time = { check_max( 10.m * task.attempt, 'time' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/test_resources.config:31:16: `check_max` is not defined
+│  31 |       cpus = { check_max( 2 * task.attempt, 'cpus' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/test_resources.config:32:18: `check_max` is not defined
+│  32 |       memory = { check_max( 4.GB * task.attempt, 'memory' ) }
+╰     |                  ^^^^^^^^^
+
+Error conf/test_resources.config:33:16: `check_max` is not defined
+│  33 |       time = { check_max( 10.m * task.attempt, 'time' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/test_resources.config:37:16: `check_max` is not defined
+│  37 |       cpus = { check_max( 4 * task.attempt, 'cpus' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/test_resources.config:38:18: `check_max` is not defined
+│  38 |       memory = { check_max( 8.GB * task.attempt, 'memory' ) }
+╰     |                  ^^^^^^^^^
+
+Error conf/test_resources.config:39:16: `check_max` is not defined
+│  39 |       time = { check_max( 10.m * task.attempt, 'time' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/test_resources.config:43:16: `check_max` is not defined
+│  43 |       cpus = { check_max( 8 * task.attempt, 'cpus' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/test_resources.config:44:18: `check_max` is not defined
+│  44 |       memory = { check_max( 16.GB * task.attempt, 'memory' ) }
+╰     |                  ^^^^^^^^^
+
+Error conf/test_resources.config:45:16: `check_max` is not defined
+│  45 |       time = { check_max( 10.m * task.attempt, 'time' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/test_resources.config:49:16: `check_max` is not defined
+│  49 |       cpus = { check_max( 32 * task.attempt, 'cpus' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/test_resources.config:50:18: `check_max` is not defined
+│  50 |       memory = { check_max( 256.GB * task.attempt, 'memory' ) }
+╰     |                  ^^^^^^^^^
+
+Error conf/test_resources.config:51:16: `check_max` is not defined
+│  51 |       time = { check_max( 10.m * task.attempt, 'time' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/test_resources.config:55:16: `check_max` is not defined
+│  55 |       time = { check_max( 20.m * task.attempt, 'time' ) }
+╰     |                ^^^^^^^^^
+
+
+Error conf/test_stresstest_human.config:50:16: `check_max` is not defined
+│  50 |       time = { check_max( 48.h * task.attempt, 'time' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/test_stresstest_human.config:53:16: `check_max` is not defined
+│  53 |       cpus = { check_max( 8, 'cpus' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/test_stresstest_human.config:54:18: `check_max` is not defined
+│  54 |       memory = { check_max( 16.GB * task.attempt, 'memory' ) }
+╰     |                  ^^^^^^^^^
+
+Error conf/test_stresstest_human.config:55:16: `check_max` is not defined
+│  55 |       time = { check_max( 48.h * task.attempt, 'time' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/test_stresstest_human.config:58:16: `check_max` is not defined
+│  58 |       cpus = { check_max( 8, 'cpus' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/test_stresstest_human.config:59:18: `check_max` is not defined
+│  59 |       memory = { check_max( 16.GB * task.attempt, 'memory' ) }
+╰     |                  ^^^^^^^^^
+
+Error conf/test_stresstest_human.config:60:16: `check_max` is not defined
+│  60 |       time = { check_max( 48.h * task.attempt, 'time' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/test_stresstest_human.config:64:16: `check_max` is not defined
+│  64 |       cpus = { check_max( 16, 'cpus' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/test_stresstest_human.config:65:18: `check_max` is not defined
+│  65 |       memory = { check_max( 16.GB * task.attempt, 'memory' ) }
+╰     |                  ^^^^^^^^^
+
+Error conf/test_stresstest_human.config:66:16: `check_max` is not defined
+│  66 |       time = { check_max( 48.h * task.attempt, 'time' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/test_stresstest_human.config:70:18: `check_max` is not defined
+│  70 |       memory = { check_max( 8.GB * task.attempt, 'memory' ) }
+╰     |                  ^^^^^^^^^
+
+Error conf/test_stresstest_human.config:71:16: `check_max` is not defined
+│  71 |       time = { check_max( 48.h * task.attempt, 'time' ) }
+╰     |                ^^^^^^^^^
+
+
+Error nextflow.config:299:3: Unexpected input: 'includeConfig'
+│ 299 |   includeConfig "${params.custom_config_base}/nfcore_custom.config"
+╰     |   ^
+
+
+Nextflow linting complete!
+ ❌ 8 files had 96 errors
+ ✅ 9 files had no errors

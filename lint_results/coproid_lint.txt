@@ -1,0 +1,492 @@
+Linting Nextflow code..
+Linting: conf/igenomes_ignored.config
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/igenomes.config
+Linting: nextflow.config
+Linting: workflows/coproid.nf
+Linting: subworkflows/local/kraken2_classification/main.nf
+Linting: subworkflows/local/align_index/main.nf
+Linting: subworkflows/local/merge_sort_index_samtools/main.nf
+Linting: subworkflows/local/quarto_reporting/main.nf
+Linting: subworkflows/local/sam2lca_db/main.nf
+Linting: subworkflows/local/utils_nfcore_coproid_pipeline/main.nf
+Linting: subworkflows/local/prepare_genome_indices/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: main.nf
+Linting: modules/local/create_acc2tax/main.nf
+Linting: modules/local/sam2lca/updatedb/main.nf
+Linting: modules/local/sam2lca/merge/main.nf
+Linting: modules/local/sam2lca/prep_db/main.nf
+Linting: modules/local/damageprofiler/merge/main.nf
+Linting: modules/local/kraken/parse/main.nf
+Linting: modules/local/kraken/merge/main.nf
+Linting: modules/local/pydamage/merge/main.nf
+Linting: modules/nf-core/xz/decompress/main.nf
+Linting: modules/nf-core/xz/decompress/tests/nextflow.config
+Linting: modules/nf-core/quartonotebook/parametrize.nf
+Linting: modules/nf-core/quartonotebook/main.nf
+Linting: modules/nf-core/quartonotebook/tests/with-parametrization.config
+Linting: modules/nf-core/quartonotebook/tests/no-parametrization.config
+Linting: modules/nf-core/kraken2/kraken2/main.nf
+Linting: modules/nf-core/samtools/index/main.nf
+Linting: modules/nf-core/samtools/index/tests/csi.nextflow.config
+Linting: modules/nf-core/samtools/sort/main.nf
+Linting: modules/nf-core/samtools/sort/tests/nextflow.config
+Linting: modules/nf-core/samtools/sort/tests/nextflow_cram.config
+Linting: modules/nf-core/samtools/merge/main.nf
+Linting: modules/nf-core/samtools/merge/tests/index.config
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/bowtie2/build/main.nf
+Linting: modules/nf-core/bowtie2/align/main.nf
+Linting: modules/nf-core/bowtie2/align/tests/cram_crai.config
+Linting: modules/nf-core/bowtie2/align/tests/sam2.config
+Linting: modules/nf-core/bowtie2/align/tests/large_index.config
+Linting: modules/nf-core/bowtie2/align/tests/sam.config
+Linting: modules/nf-core/fastp/main.nf
+Linting: modules/nf-core/fastp/tests/nextflow.interleaved.config
+Linting: modules/nf-core/fastp/tests/nextflow.save_failed.config
+Linting: modules/nf-core/untar/main.nf
+Linting: modules/nf-core/sam2lca/analyze/main.nf
+Linting: modules/nf-core/sam2lca/analyze/tests/nextflow.config
+Linting: modules/nf-core/damageprofiler/main.nf
+Linting: modules/nf-core/sourcepredict/main.nf
+Linting: modules/nf-core/sourcepredict/tests/nextflow.config
+Linting: modules/nf-core/pydamage/analyze/main.nf
+Error main.nf:19:1: Included name 'PIPELINE_INITIALISATION' is not defined in module '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/coproid/subworkflows/local/utils_nfcore_coproid_pipeline/main.nf'
+│  19 | include { PIPELINE_INITIALISATION } from './subworkflows/local/utils_n
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:75:5: `PIPELINE_INITIALISATION` is not defined
+│  75 |     PIPELINE_INITIALISATION (
+╰     |     ^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:89:9: `PIPELINE_INITIALISATION` is not defined
+│  89 |         PIPELINE_INITIALISATION.out.samplesheet,
+╰     |         ^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:90:9: `PIPELINE_INITIALISATION` is not defined
+│  90 |         PIPELINE_INITIALISATION.out.genomesheet
+╰     |         ^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Warn  modules/local/create_acc2tax/main.nf:18:9: Variable was declared but not used
+│  18 |     def args = task.ext.args ?: ""
+╰     |         ^^^^
+
+
+Warn  modules/local/damageprofiler/merge/main.nf:17:9: Variable was declared but not used
+│  17 |     def args = task.ext.args   ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/kraken/merge/main.nf:18:9: Variable was declared but not used
+│  18 |     def args = task.ext.args   ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/kraken/parse/main.nf:19:9: Variable was declared but not used
+│  19 |     def args = task.ext.args   ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/pydamage/merge/main.nf:17:9: Variable was declared but not used
+│  17 |     def args = task.ext.args   ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/sam2lca/merge/main.nf:18:9: Variable was declared but not used
+│  18 |     def args = task.ext.args   ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/sam2lca/prep_db/main.nf:19:9: Variable was declared but not used
+│  19 |     def args = task.ext.args ?: ""
+╰     |         ^^^^
+
+
+
+
+
+
+
+
+Warn  modules/nf-core/kraken2/kraken2/main.nf:60:9: Variable was declared but not used
+│  60 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/kraken2/kraken2/main.nf:62:9: Variable was declared but not used
+│  62 |     def paired       = meta.single_end ? "" : "--paired"
+╰     |         ^^^^^^
+
+Warn  modules/nf-core/kraken2/kraken2/main.nf:65:9: Variable was declared but not used
+│  65 |     def readclassification_option = save_reads_assignment ? "--output 
+╰     |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  modules/nf-core/kraken2/kraken2/main.nf:66:9: Variable was declared but not used
+│  66 |     def compress_reads_command = save_output_fastqs ? "pigz -p $task.c
+╰     |         ^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+
+Warn  modules/nf-core/quartonotebook/main.nf:102:9: Variable was declared but not used
+│ 102 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Error modules/nf-core/quartonotebook/parametrize.nf:1:1: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
+│   1 | import org.yaml.snakeyaml.Yaml
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error modules/nf-core/quartonotebook/parametrize.nf:2:1: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
+│   2 | import org.yaml.snakeyaml.DumperOptions
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error modules/nf-core/quartonotebook/parametrize.nf:21:29: `DumperOptions` is not defined
+│  21 |     DumperOptions options = new DumperOptions();
+╰     |                             ^^^^^^^^^^^^^^^^^^^
+
+Error modules/nf-core/quartonotebook/parametrize.nf:22:33: `DumperOptions` is not defined
+│  22 |     options.setDefaultFlowStyle(DumperOptions.FlowStyle.BLOCK);
+╰     |                                 ^^^^^^^^^^^^^
+
+Error modules/nf-core/quartonotebook/parametrize.nf:23:16: `Yaml` is not defined
+│  23 |     def yaml = new Yaml(options)
+╰     |                ^^^^^^^^^^^^^^^^^
+
+
+Error modules/nf-core/sam2lca/analyze/main.nf:28:9: `database` is already declared
+│  28 |     def database = database ? "${database}" : "sam2lca_db"
+╰     |         ^^^^^^^^
+
+Warn  modules/nf-core/sam2lca/analyze/main.nf:45:9: Variable was declared but not used
+│  45 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+Error modules/nf-core/sourcepredict/main.nf:29:9: `save_embedding` is already declared
+│  29 |     def save_embedding = save_embedding ? "-e ${prefix}.embedding.sour
+╰     |         ^^^^^^^^^^^^^^
+
+Warn  modules/nf-core/sourcepredict/main.nf:50:9: Variable was declared but not used
+│  50 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+Warn  subworkflows/local/align_index/main.nf:9:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│   9 |         ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+
+Error subworkflows/local/kraken2_classification/main.nf:8:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│   8 | ch_sp_sources      = file(params.sp_sources)
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error subworkflows/local/kraken2_classification/main.nf:9:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│   9 | ch_sp_labels       = file(params.sp_labels)
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error subworkflows/local/kraken2_classification/main.nf:10:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  10 | ch_sqlite_traverse = file(params.taxa_sqlite_traverse_pkl)
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error subworkflows/local/kraken2_classification/main.nf:24:17: `kraken2_db` is already declared
+│  24 |                 kraken2_db -> [
+╰     |                 ^^^^^^^^^^
+
+Error subworkflows/local/kraken2_classification/main.nf:89:9: `ch_sp_sources` is not defined
+│  89 |         ch_sp_sources,
+╰     |         ^^^^^^^^^^^^^
+
+Error subworkflows/local/kraken2_classification/main.nf:90:9: `ch_sp_labels` is not defined
+│  90 |         ch_sp_labels,
+╰     |         ^^^^^^^^^^^^
+
+Error subworkflows/local/kraken2_classification/main.nf:92:9: `ch_sqlite_traverse` is not defined
+│  92 |         ch_sqlite_traverse,
+╰     |         ^^^^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/kraken2_classification/main.nf:8:1: Variable was declared but not used
+│   8 | ch_sp_sources      = file(params.sp_sources)
+╰     | ^^^^^^^^^^^^^
+
+Warn  subworkflows/local/kraken2_classification/main.nf:9:1: Variable was declared but not used
+│   9 | ch_sp_labels       = file(params.sp_labels)
+╰     | ^^^^^^^^^^^^
+
+Warn  subworkflows/local/kraken2_classification/main.nf:10:1: Variable was declared but not used
+│  10 | ch_sqlite_traverse = file(params.taxa_sqlite_traverse_pkl)
+╰     | ^^^^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/kraken2_classification/main.nf:18:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  18 |         ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/kraken2_classification/main.nf:21:13: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  21 |             Channel
+╰     |             ^^^^^^^
+
+Warn  subworkflows/local/kraken2_classification/main.nf:77:55: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  77 |             sqlite      = XZ_DECOMPRESS.out.file.map{ it[1] }
+╰     |                                                       ^^
+
+
+Warn  subworkflows/local/merge_sort_index_samtools/main.nf:10:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  10 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Error subworkflows/local/prepare_genome_indices/main.nf:48:49: `igenome` is not defined
+│  48 |         genome_meta = [meta, file(params.genomes[ igenome ][ fasta ]),
+╰     |                                                 ^^^^^^^^^^^
+
+Error subworkflows/local/prepare_genome_indices/main.nf:48:60: `fasta` is not defined
+│  48 |         genome_meta = [meta, file(params.genomes[ igenome ][ fasta ]),
+╰     |                                                            ^^^^^^^^^
+
+Error subworkflows/local/prepare_genome_indices/main.nf:48:72: `path` is not defined
+│  48 | genomes[ igenome ][ fasta ]), path(params.genomes[ igenome ][ bowtie2 
+╰     |                               ^^^^
+
+Error subworkflows/local/prepare_genome_indices/main.nf:48:91: `igenome` is not defined
+│  48 |  fasta ]), path(params.genomes[ igenome ][ bowtie2 ])]
+╰     |                               ^^^^^^^^^^^
+
+Error subworkflows/local/prepare_genome_indices/main.nf:48:102: `bowtie2` is not defined
+│  48 | omes[ igenome ][ fasta ]), path(params.genomes[ igenome ][ bowtie2 ])]
+╰     |                                                          ^^^^^^^^^^^
+
+Warn  subworkflows/local/prepare_genome_indices/main.nf:9:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│   9 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome_indices/main.nf:12:38: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  12 |         .map { create_genome_channel(it) }
+╰     |                                      ^^
+
+Warn  subworkflows/local/prepare_genome_indices/main.nf:17:26: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  17 |             index_avail: it.size() > 2
+╰     |                          ^^
+
+Warn  subworkflows/local/prepare_genome_indices/main.nf:18:29: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  18 |             no_index_avail: it.size() == 2
+╰     |                             ^^
+
+
+Error subworkflows/local/quarto_reporting/main.nf:26:9: `coproid_notebook` is already declared
+│  26 |         coproid_notebook ->
+╰     |         ^^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/quarto_reporting/main.nf:14:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  14 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/quarto_reporting/main.nf:20:18: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  20 |     extensions = Channel.fromPath("${projectDir}/assets/_extensions").
+╰     |                  ^^^^^^^
+
+Warn  subworkflows/local/quarto_reporting/main.nf:23:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  23 |     Channel
+╰     |     ^^^^^^^
+
+
+Warn  subworkflows/local/sam2lca_db/main.nf:15:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |         ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+
+Error subworkflows/local/utils_nfcore_coproid_pipeline/main.nf:27:1: Invalid workflow definition -- check for missing or out-of-order section labels
+│  25 | */
+│  26 | 
+│  27 | workflow PIPELINE_INITIALISATION {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  28 | 
+╰  29 |     take:
+
+
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 | mYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
+╰     |                               ^^^^^^^
+
+
+Error workflows/coproid.nf:37:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  37 | ch_kraken2_db = file(params.kraken2_db)
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/coproid.nf:212:9: `ch_kraken2_db` is not defined
+│ 212 |         ch_kraken2_db
+╰     |         ^^^^^^^^^^^^^
+
+Warn  workflows/coproid.nf:37:1: Variable was declared but not used
+│  37 | ch_kraken2_db = file(params.kraken2_db)
+╰     | ^^^^^^^^^^^^^
+
+Warn  workflows/coproid.nf:53:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  53 |     ch_versions      = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/coproid.nf:54:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  54 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/coproid.nf:71:68: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  71 | ch_multiqc_files = ch_multiqc_files.mix(FASTQC.out.zip.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/coproid.nf:84:5: Variable was declared but not used
+│  84 |     ch_trimmed       = FASTP.out.reads
+╰     |     ^^^^^^^^^^
+
+Warn  workflows/coproid.nf:85:68: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  85 | ch_multiqc_files = ch_multiqc_files.mix(FASTP.out.json.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/coproid.nf:117:83: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 117 | s = ch_multiqc_files.mix(ALIGN_INDEX.out.multiqc_files.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/coproid.nf:126:80: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 126 | iles = ch_multiqc_files.mix(DAMAGEPROFILER.out.results.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/coproid.nf:128:41: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 128 |     DAMAGEPROFILER.out.results.collect({it[1]})
+╰     |                                         ^^
+
+Warn  workflows/coproid.nf:148:39: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 148 |     PYDAMAGE_ANALYZE.out.csv.collect({it[1]})
+╰     |                                       ^^
+
+Warn  workflows/coproid.nf:160:20: Parameter was not used -- prefix with `_` to suppress warning
+│ 160 |         meta, bam, bai -> [['id':meta.sample_name], bam] // meta.id, b
+╰     |                    ^^^
+
+Warn  workflows/coproid.nf:174:30: Parameter was not used -- prefix with `_` to suppress warning
+│ 174 |                 meta, fasta, index -> [meta, fasta]
+╰     |                              ^^^^^
+
+Warn  workflows/coproid.nf:184:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 184 |         ch_sam2lca_db = Channel.fromPath(params.sam2lca_db).first()
+╰     |                         ^^^^^^^
+
+Warn  workflows/coproid.nf:196:5: Variable was declared but not used
+│ 196 |     ch_sam2lca  = SAM2LCA_ANALYZE.out.csv
+╰     |     ^^^^^^^^^^
+
+Warn  workflows/coproid.nf:199:38: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 199 |     SAM2LCA_ANALYZE.out.csv.collect({it[1]})
+╰     |                                      ^^
+
+Warn  workflows/coproid.nf:214:94: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 214 | iqc_files.mix(KRAKEN2_CLASSIFICATION.out.kraken_report.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/coproid.nf:230:62: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 230 |             KRAKEN2_CLASSIFICATION.out.sp_report.collectFile{it[1]},
+╰     |                                                              ^^
+
+Warn  workflows/coproid.nf:231:65: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 231 |            KRAKEN2_CLASSIFICATION.out.sp_embedding.collectFile{it[1]},
+╰     |                                                                ^^
+
+Warn  workflows/coproid.nf:234:13: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 234 |             Channel.fromPath(params.genome_sheet),
+╰     |             ^^^^^^^
+
+Warn  workflows/coproid.nf:249:32: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 249 |     ch_multiqc_config        = Channel.fromPath(
+╰     |                                ^^^^^^^
+
+Warn  workflows/coproid.nf:252:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 252 |         Channel.fromPath(params.multiqc_config, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/coproid.nf:253:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 253 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/coproid.nf:255:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 255 |         Channel.fromPath(params.multiqc_logo, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/coproid.nf:256:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 256 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/coproid.nf:261:32: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 261 |     ch_workflow_summary      = Channel.value(paramsSummaryMultiqc(summ
+╰     |                                ^^^^^^^
+
+Warn  workflows/coproid.nf:268:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 268 |     ch_methods_description                = Channel.value(
+╰     |                                             ^^^^^^^
+
+
+Error nextflow.config:215:1: Variable declarations cannot be mixed with config statements
+│ 215 | def trace_timestamp = new java.util.Date().format( 'yyyy-MM-dd_HH-mm-s
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error nextflow.config:218:68: `trace_timestamp` is not defined
+│ 218 | rams.outdir}/pipeline_info/execution_timeline_${trace_timestamp}.html"
+╰     |                                                 ^^^^^^^^^^^^^^^
+
+Error nextflow.config:222:66: `trace_timestamp` is not defined
+│ 222 | params.outdir}/pipeline_info/execution_report_${trace_timestamp}.html"
+╰     |                                                 ^^^^^^^^^^^^^^^
+
+Error nextflow.config:226:65: `trace_timestamp` is not defined
+│ 226 | ${params.outdir}/pipeline_info/execution_trace_${trace_timestamp}.txt"
+╰     |                                                  ^^^^^^^^^^^^^^^
+
+Error nextflow.config:230:62: `trace_timestamp` is not defined
+│ 230 |  "${params.outdir}/pipeline_info/pipeline_dag_${trace_timestamp}.html"
+╰     |                                                 ^^^^^^^^^^^^^^^
+
+Error nextflow.config:290:31: `manifest` is not defined
+│ 290 | \033[0;35m  nf-core/coproid ${manifest.version}\033[0m
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:293:26: `manifest` is not defined
+│ 293 |         afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${ma
+╰     |                          ^^^^^^^^
+
+Error nextflow.config:293:69: `manifest` is not defined
+│ 293 | ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "  
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:293:186: `manifest` is not defined
+│ 293 | doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:302:22: `validation` is not defined
+│ 302 |         beforeText = validation.help.beforeText
+╰     |                      ^^^^^^^^^^
+
+Error nextflow.config:303:21: `validation` is not defined
+│ 303 |         afterText = validation.help.afterText
+╰     |                     ^^^^^^^^^^
+
+Warn  nextflow.config:293:129: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 293 | lect { "    https://doi.org/${it.trim().replace('https://doi.org/','')
+╰     |                               ^^
+
+
+Nextflow linting complete!
+ ❌ 10 files had 38 errors
+ ✅ 53 files had no errors

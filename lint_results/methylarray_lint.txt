@@ -1,0 +1,152 @@
+Linting Nextflow code..
+Linting: conf/igenomes_ignored.config
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/igenomes.config
+Linting: nextflow.config
+Linting: workflows/methylarray.nf
+Linting: subworkflows/local/utils_nfcore_methylarray_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/find_blocks/main.nf
+Linting: modules/local/fetch_bs_genome/main.nf
+Linting: modules/local/remove_confounding_probes/main.nf
+Linting: modules/local/adjust_cell_composition/main.nf
+Linting: modules/local/xreactive_probes_find_remove/main.nf
+Linting: modules/local/preprocess/main.nf
+Linting: modules/local/find_dmp/main.nf
+Linting: modules/local/remove_snp_probes/main.nf
+Linting: modules/local/create_minfi_samplesheet/main.nf
+Linting: modules/local/adjust_batch_effect/main.nf
+Linting: modules/local/find_dmr/main.nf
+Linting: modules/local/remove_sex_chromosomes/main.nf
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+
+
+
+
+
+
+
+Error modules/local/remove_confounding_probes/main.nf:10:15: `samplesheet_name` is already declared
+│  10 |     tuple val(samplesheet_name), path(bVals)
+╰     |               ^^^^^^^^^^^^^^^^
+
+Error modules/local/remove_confounding_probes/main.nf:11:15: `samplesheet_name` is already declared
+│  11 |     tuple val(samplesheet_name), path(RData_REMOVESNP)
+╰     |               ^^^^^^^^^^^^^^^^
+
+Warn  modules/local/remove_confounding_probes/main.nf:9:15: Variable was declared but not used
+│   9 |     tuple val(samplesheet_name), path(mVals)
+╰     |               ^^^^^^^^^^^^^^^^
+
+Warn  modules/local/remove_confounding_probes/main.nf:10:15: Variable was declared but not used
+│  10 |     tuple val(samplesheet_name), path(bVals)
+╰     |               ^^^^^^^^^^^^^^^^
+
+
+Error modules/local/remove_sex_chromosomes/main.nf:10:15: `samplesheet_name` is already declared
+│  10 |     tuple val(samplesheet_name), path(RData_rgSet)
+╰     |               ^^^^^^^^^^^^^^^^
+
+Warn  modules/local/remove_sex_chromosomes/main.nf:9:15: Variable was declared but not used
+│   9 |     tuple val(samplesheet_name), path(RData_SNPPROBES)
+╰     |               ^^^^^^^^^^^^^^^^
+
+
+
+Warn  modules/local/xreactive_probes_find_remove/main.nf:25:5: Variable was declared but not used
+│  25 |     chrom_number = params.xreactive_chr_targets ? params.xreactive_chr
+╰     |     ^^^^^^^^^^^^
+
+
+
+
+Warn  subworkflows/local/utils_nfcore_methylarray_pipeline/main.nf:32:5: Parameter was not used -- prefix with `_` to suppress warning
+│  32 |     monochrome_logs   // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_methylarray_pipeline/main.nf:35:5: Parameter was not used -- prefix with `_` to suppress warning
+│  35 |     input             //  string: Path to input samplesheet
+╰     |     ^^^^^
+
+Warn  subworkflows/local/utils_nfcore_methylarray_pipeline/main.nf:105:11: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 105 |         ? Channel.fromList(samplesheetToList(params.input, "${projectD
+╰     |           ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_methylarray_pipeline/main.nf:105:105: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 105 | ms.input, "${projectDir}/assets/schema_input.json")) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+
+
+
+
+Warn  workflows/methylarray.nf:42:5: Variable was declared but not used
+│  42 |     ch_preprocessed_files = channel.empty()
+╰     |     ^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/methylarray.nf:49:26: Parameter was not used -- prefix with `_` to suppress warning
+│  49 |         .map{ meta, red, green -> red.getName().replaceFirst(/_Red\.id
+╰     |                          ^^^^^
+
+Warn  workflows/methylarray.nf:54:22: Parameter was not used -- prefix with `_` to suppress warning
+│  54 |         ch_input.map{meta, red, green -> [red, green]}.collect(),
+╰     |                      ^^^^
+
+Warn  workflows/methylarray.nf:90:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  90 |     final_bVals_ch = Channel.empty()
+╰     |                      ^^^^^^^
+
+Warn  workflows/methylarray.nf:91:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  91 |     current_bVals_ch = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/methylarray.nf:95:135: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  95 | _FIND_REMOVE.out.csv.filter { it == "bVals_noXprob.csv" }
+╰     |                               ^^
+
+Warn  workflows/methylarray.nf:96:135: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  96 | _FIND_REMOVE.out.csv.filter { it == "mVals_noXprob.csv" }
+╰     |                               ^^
+
+Warn  workflows/methylarray.nf:97:137: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  97 | IND_REMOVE.out.rdata.filter { it == "mSetSqFlt_noXprob.RData" }
+╰     |                               ^^
+
+Warn  workflows/methylarray.nf:161:30: Parameter was not used -- prefix with `_` to suppress warning
+│ 161 |         ch_input.map { meta, red, green -> "${meta.id},${meta.group}" 
+╰     |                              ^^^
+
+Warn  workflows/methylarray.nf:161:35: Parameter was not used -- prefix with `_` to suppress warning
+│ 161 |         ch_input.map { meta, red, green -> "${meta.id},${meta.group}" 
+╰     |                                   ^^^^^
+
+Warn  workflows/methylarray.nf:204:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 204 |     def topic_versions = Channel.topic("versions")
+╰     |                          ^^^^^^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-test tests
+│   3 |     testsDir "."
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 3 files had 4 errors
+ ✅ 30 files had no errors

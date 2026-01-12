@@ -1,0 +1,392 @@
+Linting Nextflow code..
+Linting: conf/igenomes_ignored.config
+Linting: conf/base.config
+Linting: conf/mtbseq_base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/mtbseq_test.config
+Linting: conf/igenomes.config
+Linting: conf/mtbseq_parallel_test.config
+Linting: nextflow.config
+Linting: workflows/mtbseqnf.nf
+Linting: workflows/tbanalyzer.nf
+Linting: subworkflows/local/utils_nfcore_tbanalyzer_pipeline/main.nf
+Linting: subworkflows/local/utils_nfcore_tbanalyzer_pipeline/magma/magma.nf
+Linting: subworkflows/local/mtbseq/parallel_mode.nf
+Linting: subworkflows/local/mtbseq/quality_check.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: main.nf
+Linting: modules/local/utils/rename_files.nf
+Linting: modules/local/mtbseq/tbstrains/main.nf
+Linting: modules/local/mtbseq/tblist/main.nf
+Linting: modules/local/mtbseq/tbrefine/main.nf
+Linting: modules/local/mtbseq/tbvariants/main.nf
+Linting: modules/local/mtbseq/tbbwa/main.nf
+Linting: modules/local/mtbseq/tbgroups/main.nf
+Linting: modules/local/mtbseq/tbfull/main.nf
+Linting: modules/local/mtbseq/tbstats/main.nf
+Linting: modules/local/mtbseq/tbjoin/main.nf
+Linting: modules/local/mtbseq/tbpile/main.nf
+Linting: modules/local/mtbseq/tbamend/main.nf
+Linting: modules/magma/modules/local/gatk4.nf
+Linting: modules/nf-core/bcftools/view/main.nf
+Linting: modules/nf-core/bcftools/view/tests/vcf_gz_index.config
+Linting: modules/nf-core/bcftools/view/tests/vcf_gz_index_csi.config
+Linting: modules/nf-core/bcftools/view/tests/nextflow.config
+Linting: modules/nf-core/bcftools/view/tests/vcf_gz_index_tbi.config
+Linting: modules/nf-core/bcftools/merge/main.nf
+Linting: modules/nf-core/bcftools/merge/tests/nextflow.gvcf.config
+Linting: modules/nf-core/bcftools/merge/tests/vcf_gz_index.config
+Linting: modules/nf-core/bcftools/merge/tests/vcf_gz_index_csi.config
+Linting: modules/nf-core/bcftools/merge/tests/nextflow.config
+Linting: modules/nf-core/bcftools/merge/tests/vcf.config
+Linting: modules/nf-core/bcftools/merge/tests/bcf_gz.config
+Linting: modules/nf-core/bcftools/merge/tests/bcf.config
+Linting: modules/nf-core/bcftools/merge/tests/vcf_gz_index_tbi.config
+Linting: modules/nf-core/bcftools/merge/tests/vcf_gz.config
+Linting: modules/nf-core/lofreq/indelqual/main.nf
+Linting: modules/nf-core/lofreq/indelqual/tests/nextflow.config
+Linting: modules/nf-core/lofreq/call/main.nf
+Linting: modules/nf-core/lofreq/filter/main.nf
+Linting: modules/nf-core/ismapper/main.nf
+Linting: modules/nf-core/gatk4/markduplicates/main.nf
+Linting: modules/nf-core/gatk4/markduplicates/tests/cram.config
+Linting: modules/nf-core/gatk4/markduplicates/tests/bam.config
+Linting: modules/nf-core/gatk4/indexfeaturefile/main.nf
+Linting: modules/nf-core/gatk4/applybqsr/main.nf
+Linting: modules/nf-core/gatk4/variantstotable/main.nf
+Linting: modules/nf-core/gatk4/variantstotable/tests/nextflow.config
+Linting: modules/nf-core/gatk4/applyvqsr/main.nf
+Linting: modules/nf-core/gatk4/applyvqsr/tests/no-allelspecificity.config
+Linting: modules/nf-core/gatk4/applyvqsr/tests/allelspecificity.config
+Linting: modules/nf-core/gatk4/variantrecalibrator/main.nf
+Linting: modules/nf-core/gatk4/selectvariants/main.nf
+Linting: modules/nf-core/samtools/index/main.nf
+Linting: modules/nf-core/samtools/index/tests/csi.nextflow.config
+Linting: modules/nf-core/samtools/stats/main.nf
+Linting: modules/nf-core/samtools/merge/main.nf
+Linting: modules/nf-core/samtools/merge/tests/index.config
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/snpeff/snpeff/main.nf
+Linting: modules/nf-core/snpeff/snpeff/tests/nextflow.config
+Linting: modules/nf-core/snpeff/download/main.nf
+Linting: modules/nf-core/bwamem2/index/main.nf
+Linting: modules/nf-core/bwamem2/mem/main.nf
+Linting: modules/nf-core/snpdists/main.nf
+Linting: modules/nf-core/tbprofiler/profile/main.nf
+Linting: modules/nf-core/tbprofiler/profile/tests/nextflow.nanopore.config
+Linting: modules/nf-core/tbprofiler/profile/tests/nextflow.illumina.config
+Linting: modules/nf-core/delly/call/main.nf
+Linting: modules/nf-core/delly/call/tests/vcf.config
+Linting: modules/nf-core/snpsites/main.nf
+Linting: modules/nf-core/iqtree/main.nf
+Linting: modules/nf-core/iqtree/tests/iqtree_bootstrap.config
+Linting: modules/nf-core/iqtree/tests/iqtree_treels.config
+Linting: modules/nf-core/iqtree/tests/iqtree_optional.config
+Linting: modules/nf-core/tabix/bgzip/main.nf
+Linting: modules/nf-core/tabix/bgzip/tests/vcf_none.config
+Linting: modules/nf-core/tabix/bgzip/tests/bgzip_compress.config
+
+Error modules/local/mtbseq/tbamend/main.nf:15:13: `USER` is not defined
+│  15 |         env(USER)
+╰     |             ^^^^
+
+
+Error modules/local/mtbseq/tbbwa/main.nf:16:13: `USER` is not defined
+│  16 |         env(USER)
+╰     |             ^^^^
+
+
+Error modules/local/mtbseq/tbfull/main.nf:18:13: `USER` is not defined
+│  18 |         env(USER)
+╰     |             ^^^^
+
+
+Error modules/local/mtbseq/tbgroups/main.nf:15:13: `USER` is not defined
+│  15 |         env(USER)
+╰     |             ^^^^
+
+
+Error modules/local/mtbseq/tbjoin/main.nf:18:13: `USER` is not defined
+│  18 |         env(USER)
+╰     |             ^^^^
+
+
+Error modules/local/mtbseq/tblist/main.nf:14:13: `USER` is not defined
+│  14 |         env(USER)
+╰     |             ^^^^
+
+
+Error modules/local/mtbseq/tbpile/main.nf:16:13: `USER` is not defined
+│  16 |         env(USER)
+╰     |             ^^^^
+
+
+Error modules/local/mtbseq/tbrefine/main.nf:14:13: `USER` is not defined
+│  14 |         env(USER)
+╰     |             ^^^^
+
+
+Error modules/local/mtbseq/tbstats/main.nf:16:13: `USER` is not defined
+│  16 |         env(USER)
+╰     |             ^^^^
+
+
+Error modules/local/mtbseq/tbstrains/main.nf:14:13: `USER` is not defined
+│  14 |         env(USER)
+╰     |             ^^^^
+
+
+Error modules/local/mtbseq/tbvariants/main.nf:14:13: `USER` is not defined
+│  14 |         env(USER)
+╰     |             ^^^^
+
+
+Warn  modules/magma/modules/local/gatk4.nf:77:9: Variable was declared but not used
+│  77 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/bcftools/merge/main.nf:28:58: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  28 |     def input = (vcfs.collect().size() > 1) ? vcfs.sort{ it.name } : v
+╰     |                                                          ^^
+
+
+Error modules/nf-core/bcftools/view/main.nf:60:9: `index` is already declared
+│  60 |     def index = args.contains("--write-index=tbi") || args.contains("-
+╰     |         ^^^^^
+
+
+
+Warn  modules/nf-core/bwamem2/mem/main.nf:59:9: Variable was declared but not used
+│  59 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/bwamem2/mem/main.nf:62:9: Variable was declared but not used
+│  62 |     def samtools_command = sort_bam ? 'sort' : 'view'
+╰     |         ^^^^^^^^^^^^^^^^
+
+Warn  modules/nf-core/bwamem2/mem/main.nf:66:9: Variable was declared but not used
+│  66 |     def reference = fasta && extension=="cram"  ? "--reference ${fasta
+╰     |         ^^^^^^^^^
+
+
+
+Warn  modules/nf-core/fastqc/main.nf:27:48: Parameter was not used -- prefix with `_` to suppress warning
+│  27 |     def renamed_files = old_new_pairs.collect{ old_name, new_name -> n
+╰     |                                                ^^^^^^^^
+
+
+
+
+
+Warn  modules/nf-core/gatk4/markduplicates/main.nf:33:43: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  33 |     def input_list = bam.collect{"--INPUT $it"}.join(' ')
+╰     |                                           ^^
+
+
+
+
+Warn  modules/nf-core/gatk4/variantstotable/main.nf:27:9: Variable was declared but not used
+│  27 |     def include_intervals_arg = include_intervals ? "-L ${include_inte
+╰     |         ^^^^^^^^^^^^^^^^^^^^^
+
+Warn  modules/nf-core/gatk4/variantstotable/main.nf:28:9: Variable was declared but not used
+│  28 |     def exclude_intervals_arg = exclude_intervals ? "-XL ${exclude_int
+╰     |         ^^^^^^^^^^^^^^^^^^^^^
+
+
+Warn  modules/nf-core/iqtree/main.nf:68:9: Variable was declared but not used
+│  68 |     def trees_rf_arg                = trees_rf                ? "-rf $
+╰     |         ^^^^^^^^^^^^
+
+
+Warn  modules/nf-core/ismapper/main.nf:22:9: Variable was declared but not used
+│  22 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+
+
+Warn  modules/nf-core/lofreq/indelqual/main.nf:38:9: Variable was declared but not used
+│  38 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+Warn  modules/nf-core/samtools/stats/main.nf:22:9: Variable was declared but not used
+│  22 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+Error modules/nf-core/snpsites/main.nf:16:11: `CONSTANT_SITES` is not defined
+│  16 |     env   CONSTANT_SITES, emit: constant_sites_string
+╰     |           ^^^^^^^^^^^^^^
+
+
+
+
+Warn  subworkflows/local/mtbseq/parallel_mode.nf:22:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  22 |         ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/mtbseq/parallel_mode.nf:23:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  23 |         ch_multiqc_files = Channel.empty()
+╰     |                            ^^^^^^^
+
+
+Warn  subworkflows/local/mtbseq/quality_check.nf:12:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  12 |         samples_tsv_file = Channel.empty()
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/local/mtbseq/quality_check.nf:27:32: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  27 |             samples_tsv_file = Channel.fromPath( params.mtbseq_cohort_
+╰     |                                ^^^^^^^
+
+Warn  subworkflows/local/mtbseq/quality_check.nf:34:53: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  34 |     multiqc_files          = FASTQC.out.zip.collect{it[1]}
+╰     |                                                     ^^
+
+
+Warn  subworkflows/local/utils_nfcore_tbanalyzer_pipeline/main.nf:31:5: Parameter was not used -- prefix with `_` to suppress warning
+│  31 |     monochrome_logs   // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_tbanalyzer_pipeline/main.nf:34:5: Parameter was not used -- prefix with `_` to suppress warning
+│  34 |     input             //  string: Path to input samplesheet
+╰     |     ^^^^^
+
+Warn  subworkflows/local/utils_nfcore_tbanalyzer_pipeline/main.nf:38:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  38 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_tbanalyzer_pipeline/main.nf:75:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  75 |     Channel
+╰     |     ^^^^^^^
+
+
+Warn  subworkflows/nf-core/utils_nextflow_pipeline/main.nf:94:33: Parameter was not used -- prefix with `_` to suppress warning
+│  94 |     catch (NullPointerException e) {
+╰     |                                 ^
+
+Warn  subworkflows/nf-core/utils_nextflow_pipeline/main.nf:98:24: Parameter was not used -- prefix with `_` to suppress warning
+│  98 |     catch (IOException e) {
+╰     |                        ^
+
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:116:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 116 | mYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
+╰     |                               ^^^^^^^
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:264:22: Parameter was not used -- prefix with `_` to suppress warning
+│ 264 |     catch (Exception all) {
+╰     |                      ^^^
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:361:26: Parameter was not used -- prefix with `_` to suppress warning
+│ 361 |         catch (Exception all) {
+╰     |                          ^^^
+
+
+Warn  workflows/mtbseqnf.nf:37:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  37 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  workflows/mtbseqnf.nf:38:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  38 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/mtbseqnf.nf:40:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  40 |     ch_reference_files = Channel.value([params.mtbseq_resilist,
+╰     |                          ^^^^^^^
+
+Warn  workflows/mtbseqnf.nf:123:32: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 123 |     ch_multiqc_config        = Channel.fromPath(
+╰     |                                ^^^^^^^
+
+Warn  workflows/mtbseqnf.nf:126:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 126 |         Channel.fromPath(params.multiqc_config, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/mtbseqnf.nf:127:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 127 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/mtbseqnf.nf:129:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 129 |         Channel.fromPath(params.multiqc_logo, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/mtbseqnf.nf:130:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 130 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/mtbseqnf.nf:134:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 134 |     ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_p
+╰     |                           ^^^^^^^
+
+Warn  workflows/mtbseqnf.nf:140:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 140 |     ch_methods_description                = Channel.value(
+╰     |                                             ^^^^^^^
+
+
+Warn  workflows/tbanalyzer.nf:25:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  25 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  workflows/tbanalyzer.nf:26:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  26 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/tbanalyzer.nf:33:68: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  33 | ch_multiqc_files = ch_multiqc_files.mix(FASTQC.out.zip.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/tbanalyzer.nf:51:32: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  51 |     ch_multiqc_config        = Channel.fromPath(
+╰     |                                ^^^^^^^
+
+Warn  workflows/tbanalyzer.nf:54:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  54 |         Channel.fromPath(params.multiqc_config, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/tbanalyzer.nf:55:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  55 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/tbanalyzer.nf:57:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  57 |         Channel.fromPath(params.multiqc_logo, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/tbanalyzer.nf:58:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  58 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/tbanalyzer.nf:62:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  62 |     ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_p
+╰     |                           ^^^^^^^
+
+Warn  workflows/tbanalyzer.nf:68:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  68 |     ch_methods_description                = Channel.value(
+╰     |                                             ^^^^^^^
+
+
+Error nextflow.config:62:5: Unexpected input: 'includeConfig'
+│  62 |     includeConfig 'conf/mtbseq_base.config'
+╰     |     ^
+
+
+Nextflow linting complete!
+ ❌ 14 files had 14 errors
+ ✅ 81 files had no errors

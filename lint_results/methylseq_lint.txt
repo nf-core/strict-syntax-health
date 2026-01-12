@@ -1,0 +1,480 @@
+Linting Nextflow code..
+Linting: conf/igenomes_ignored.config
+Linting: conf/base.config
+Linting: conf/subworkflows/bam_taps_conversion.config
+Linting: conf/subworkflows/targeted_sequencing.config
+Linting: conf/subworkflows/fastq_align_dedup_bwameth.config
+Linting: conf/subworkflows/fasta_index_bismark_bwameth.config
+Linting: conf/subworkflows/fastq_align_dedup_bismark.config
+Linting: conf/subworkflows/fasta_index_methylseq.config
+Linting: conf/subworkflows/bam_methyldackel.config
+Linting: conf/subworkflows/fastq_align_dedup_bwamem.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/test_single_gpu.config
+Linting: conf/test_gpu.config
+Linting: conf/igenomes.config
+Linting: conf/modules/preseq_lcextrap.config
+Linting: conf/modules/picard_addorreplacereadgroups.config
+Linting: conf/modules/methyldackel_mbias.config
+Linting: conf/modules/bwamem_align.config
+Linting: conf/modules/bedtools_intersect.config
+Linting: conf/modules/samtools_idxstats.config
+Linting: conf/modules/picard_createsequencedictionary.config
+Linting: conf/modules/bwameth_align.config
+Linting: conf/modules/bismark_report.config
+Linting: conf/modules/bismark_summary.config
+Linting: conf/modules/bwa_index.config
+Linting: conf/modules/bismark_coverage2cytosine.config
+Linting: conf/modules/picard_collecthsmetrics.config
+Linting: conf/modules/trimgalore.config
+Linting: conf/modules/samtools_flagstat.config
+Linting: conf/modules/bismark_genomepreparation.config
+Linting: conf/modules/multiqc.config
+Linting: conf/modules/picard_bedtointervallist.config
+Linting: conf/modules/gatk_removeduplicates.config
+Linting: conf/modules/samtools_stats.config
+Linting: conf/modules/samtools_index.config
+Linting: conf/modules/rastair_mbiasparser.config
+Linting: conf/modules/bismark_deduplicate.config
+Linting: conf/modules/methyldackel_extract.config
+Linting: conf/modules/qualimap_bamqc.config
+Linting: conf/modules/samtools_sort.config
+Linting: conf/modules/rastair_methylkit.config
+Linting: conf/modules/bismark_methylationextractor.config
+Linting: conf/modules/bwameth_index.config
+Linting: conf/modules/samtools_faidx.config
+Linting: conf/modules/picard_markduplicates.config
+Linting: conf/modules/bismark_align.config
+Linting: conf/modules/rastair_call.config
+Linting: conf/modules/picard_removeduplicates.config
+Linting: conf/modules/parabricks_fq2bammeth.config
+Linting: conf/modules/gunzip.config
+Linting: conf/modules/rastair_mbias.config
+Linting: conf/modules/fastqc.config
+Linting: nextflow.config
+Linting: workflows/methylseq/nextflow.config
+Linting: workflows/methylseq/main.nf
+Linting: subworkflows/local/utils_nfcore_methylseq_pipeline/main.nf
+Linting: subworkflows/local/targeted_sequencing/main.nf
+Linting: subworkflows/nf-core/fastq_align_dedup_bwameth/main.nf
+Linting: subworkflows/nf-core/fastq_align_dedup_bwameth/tests/nextflow.config
+Linting: subworkflows/nf-core/bam_stats_samtools/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/fasta_index_methylseq/nextflow.config
+Linting: subworkflows/nf-core/fasta_index_methylseq/main.nf
+Linting: subworkflows/nf-core/bam_methyldackel/main.nf
+Linting: subworkflows/nf-core/fasta_index_bismark_bwameth/main.nf
+Linting: subworkflows/nf-core/fasta_index_bismark_bwameth/tests/nextflow.config
+Linting: subworkflows/nf-core/fastq_align_dedup_bwamem/nextflow.config
+Linting: subworkflows/nf-core/fastq_align_dedup_bwamem/main.nf
+Linting: subworkflows/nf-core/fastq_align_dedup_bwamem/tests/nextflow.config
+Linting: subworkflows/nf-core/fastq_align_bwa/main.nf
+Linting: subworkflows/nf-core/fastq_align_bwa/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/bam_sort_stats_samtools/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: subworkflows/nf-core/fastq_align_dedup_bismark/main.nf
+Linting: subworkflows/nf-core/fastq_align_dedup_bismark/tests/nextflow.config
+Linting: subworkflows/nf-core/bam_taps_conversion/main.nf
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/nf-core/bismark/deduplicate/main.nf
+Linting: modules/nf-core/bismark/summary/main.nf
+Linting: modules/nf-core/bismark/genomepreparation/main.nf
+Linting: modules/nf-core/bismark/methylationextractor/main.nf
+Linting: modules/nf-core/bismark/coverage2cytosine/main.nf
+Linting: modules/nf-core/bismark/report/main.nf
+Linting: modules/nf-core/bismark/align/main.nf
+Linting: modules/nf-core/bismark/align/tests/nextflow.config
+Linting: modules/nf-core/gunzip/main.nf
+Linting: modules/nf-core/gunzip/tests/nextflow.config
+Linting: modules/nf-core/bwameth/index/main.nf
+Linting: modules/nf-core/bwameth/align/main.nf
+Linting: modules/nf-core/samtools/flagstat/main.nf
+Linting: modules/nf-core/samtools/idxstats/main.nf
+Linting: modules/nf-core/samtools/index/main.nf
+Linting: modules/nf-core/samtools/index/tests/csi.nextflow.config
+Linting: modules/nf-core/samtools/sort/main.nf
+Linting: modules/nf-core/samtools/sort/tests/nextflow.config
+Linting: modules/nf-core/samtools/sort/tests/nextflow_cram.config
+Linting: modules/nf-core/samtools/stats/main.nf
+Linting: modules/nf-core/samtools/faidx/main.nf
+Linting: modules/nf-core/samtools/faidx/tests/nextflow.config
+Linting: modules/nf-core/samtools/faidx/tests/nextflow2.config
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/multiqc/tests/custom_prefix.config
+Linting: modules/nf-core/cat/fastq/main.nf
+Linting: modules/nf-core/bwa/index/main.nf
+Linting: modules/nf-core/bwa/mem/main.nf
+Linting: modules/nf-core/parabricks/fq2bammeth/main.nf
+Linting: modules/nf-core/parabricks/fq2bammeth/tests/nextflow.config
+Linting: modules/nf-core/trimgalore/main.nf
+Linting: modules/nf-core/trimgalore/tests/nextflow.config
+Linting: modules/nf-core/preseq/lcextrap/main.nf
+Linting: modules/nf-core/untar/main.nf
+Linting: modules/nf-core/methyldackel/extract/main.nf
+Linting: modules/nf-core/methyldackel/extract/tests/nextflow.config
+Linting: modules/nf-core/methyldackel/mbias/main.nf
+Linting: modules/nf-core/rastair/methylkit/main.nf
+Linting: modules/nf-core/rastair/call/main.nf
+Linting: modules/nf-core/rastair/mbiasparser/main.nf
+Linting: modules/nf-core/rastair/mbias/main.nf
+Linting: modules/nf-core/qualimap/bamqccram/main.nf
+Linting: modules/nf-core/qualimap/bamqc/main.nf
+Linting: modules/nf-core/picard/markduplicates/main.nf
+Linting: modules/nf-core/picard/markduplicates/tests/nextflow.config
+Linting: modules/nf-core/picard/bedtointervallist/main.nf
+Linting: modules/nf-core/picard/createsequencedictionary/main.nf
+Linting: modules/nf-core/picard/collecthsmetrics/main.nf
+Linting: modules/nf-core/picard/addorreplacereadgroups/main.nf
+Linting: modules/nf-core/picard/addorreplacereadgroups/tests/cram.config
+Linting: modules/nf-core/picard/addorreplacereadgroups/tests/bam.config
+Linting: modules/nf-core/bedtools/intersect/main.nf
+Linting: modules/nf-core/bedtools/intersect/tests/nextflow.config
+
+
+Warn  modules/nf-core/bismark/align/main.nf:51:18: Parameter was not used -- prefix with `_` to suppress warning
+│  51 |         } catch (all) {
+╰     |                  ^^^
+
+Warn  modules/nf-core/bismark/align/main.nf:67:9: Variable was declared but not used
+│  67 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/bismark/coverage2cytosine/main.nf:42:9: Variable was declared but not used
+│  42 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/bismark/deduplicate/main.nf:23:9: Variable was declared but not used
+│  23 |     def prefix  = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+Warn  modules/nf-core/bismark/deduplicate/main.nf:38:9: Variable was declared but not used
+│  38 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/bismark/genomepreparation/main.nf:34:9: Variable was declared but not used
+│  34 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/bismark/methylationextractor/main.nf:54:9: Variable was declared but not used
+│  54 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/bismark/report/main.nf:32:9: Variable was declared but not used
+│  32 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/bismark/summary/main.nf:24:9: Variable was declared but not used
+│  24 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/bismark/summary/main.nf:35:9: Variable was declared but not used
+│  35 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+Warn  modules/nf-core/bwameth/index/main.nf:22:9: Variable was declared but not used
+│  22 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/bwameth/index/main.nf:37:9: Variable was declared but not used
+│  37 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/cat/fastq/main.nf:22:60: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  22 |     def readList = reads instanceof List ? reads.collect { it.toString
+╰     |                                                            ^^
+
+Warn  modules/nf-core/cat/fastq/main.nf:58:60: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  58 |     def readList = reads instanceof List ? reads.collect { it.toString
+╰     |                                                            ^^
+
+
+
+Warn  modules/nf-core/gunzip/main.nf:43:9: Variable was declared but not used
+│  43 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+Warn  modules/nf-core/parabricks/fq2bammeth/main.nf:35:83: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  35 | tes.collect { "--knownSites ${it}" }.join(' ') : ""
+╰     |                               ^^
+
+
+
+
+
+
+
+
+
+
+Warn  modules/nf-core/rastair/call/main.nf:25:9: Variable was declared but not used
+│  25 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/rastair/mbias/main.nf:23:9: Variable was declared but not used
+│  23 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Error modules/nf-core/rastair/mbiasparser/main.nf:15:26: `trim_OT` is not defined
+│  15 |     tuple val(meta), env(trim_OT), env(trim_OB),                    em
+╰     |                          ^^^^^^^
+
+Error modules/nf-core/rastair/mbiasparser/main.nf:15:40: `trim_OB` is not defined
+│  15 |     tuple val(meta), env(trim_OT), env(trim_OB),                    em
+╰     |                                        ^^^^^^^
+
+
+
+
+
+
+
+
+
+Warn  modules/nf-core/trimgalore/main.nf:47:31: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  47 |         args_list.removeAll { it.toLowerCase().contains('_r2 ') }
+╰     |                               ^^
+
+
+
+Warn  subworkflows/local/targeted_sequencing/main.nf:28:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  28 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/targeted_sequencing/main.nf:29:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  29 |     ch_picard_metrics = Channel.empty()
+╰     |                         ^^^^^^^
+
+Warn  subworkflows/local/targeted_sequencing/main.nf:70:72: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  70 | ch_intervals = PICARD_BEDTOINTERVALLIST.out.intervallist.map { it[1] }
+╰     |                                                                ^^
+
+
+Warn  subworkflows/local/utils_nfcore_methylseq_pipeline/main.nf:32:5: Parameter was not used -- prefix with `_` to suppress warning
+│  32 |     monochrome_logs   // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_methylseq_pipeline/main.nf:35:5: Parameter was not used -- prefix with `_` to suppress warning
+│  35 |     input             //  string: Path to input samplesheet
+╰     |     ^^^^^
+
+Warn  subworkflows/local/utils_nfcore_methylseq_pipeline/main.nf:109:37: Parameter was not used -- prefix with `_` to suppress warning
+│ 109 |             meta, fastq_1, fastq_2, genome ->
+╰     |                                     ^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_methylseq_pipeline/main.nf:241:9: Variable was declared but not used
+│ 241 |     def citation_text = [
+╰     |         ^^^^^^^^^^^^^
+
+
+Warn  subworkflows/nf-core/bam_methyldackel/main.nf:13:40: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  13 |     ch_methydackel_extract_bedgraph  = Channel.empty()
+╰     |                                        ^^^^^^^
+
+Warn  subworkflows/nf-core/bam_methyldackel/main.nf:14:40: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  14 |     ch_methydackel_extract_methylkit = Channel.empty()
+╰     |                                        ^^^^^^^
+
+Warn  subworkflows/nf-core/bam_methyldackel/main.nf:15:40: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |     ch_methydackel_mbias             = Channel.empty()
+╰     |                                        ^^^^^^^
+
+Warn  subworkflows/nf-core/bam_methyldackel/main.nf:16:40: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     ch_multiqc_files                 = Channel.empty()
+╰     |                                        ^^^^^^^
+
+Warn  subworkflows/nf-core/bam_methyldackel/main.nf:17:40: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |     ch_versions                      = Channel.empty()
+╰     |                                        ^^^^^^^
+
+Warn  subworkflows/nf-core/bam_methyldackel/main.nf:45:65: Parameter was not used -- prefix with `_` to suppress warning
+│  45 | kel_extract_bedgraph.collect{ meta, bedgraph -> bedgraph  }
+╰     |                               ^^^^
+
+Warn  subworkflows/nf-core/bam_methyldackel/main.nf:46:72: Parameter was not used -- prefix with `_` to suppress warning
+│  46 | el_extract_methylkit.collect{ meta, methylkit -> methylkit })
+╰     |                               ^^^^
+
+Warn  subworkflows/nf-core/bam_methyldackel/main.nf:47:60: Parameter was not used -- prefix with `_` to suppress warning
+│  47 |                         .mix(ch_methydackel_mbias.collect{ meta, txt -
+╰     |                                                            ^^^^
+
+
+Warn  subworkflows/nf-core/bam_sort_stats_samtools/main.nf:16:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/nf-core/bam_stats_samtools/main.nf:15:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/nf-core/bam_taps_conversion/main.nf:21:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  21 |     ch_rastair_mbias = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/nf-core/bam_taps_conversion/main.nf:22:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  22 |     ch_rastair_call  = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/nf-core/bam_taps_conversion/main.nf:23:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  23 |     ch_versions      = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/nf-core/bam_taps_conversion/main.nf:47:53: Parameter was not used -- prefix with `_` to suppress warning
+│  47 |         ch_rastair_mbiasparser.map{ meta, nOT_clip, nOB_clip -> [ meta
+╰     |                                                     ^^^^^^^^
+
+Warn  subworkflows/nf-core/bam_taps_conversion/main.nf:48:43: Parameter was not used -- prefix with `_` to suppress warning
+│  48 |         ch_rastair_mbiasparser.map{ meta, nOT_clip, nOB_clip -> [ meta
+╰     |                                           ^^^^^^^^
+
+
+Warn  subworkflows/nf-core/fasta_index_bismark_bwameth/main.nf:20:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  20 |     ch_fasta         = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/nf-core/fasta_index_bismark_bwameth/main.nf:21:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  21 |     ch_fasta_index   = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/nf-core/fasta_index_bismark_bwameth/main.nf:22:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  22 |     ch_bismark_index = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/nf-core/fasta_index_bismark_bwameth/main.nf:23:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  23 |     ch_bwameth_index = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/nf-core/fasta_index_bismark_bwameth/main.nf:24:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  24 |     ch_versions      = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/nf-core/fasta_index_bismark_bwameth/main.nf:29:22: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  29 |             gzipped: it[1].toString().endsWith('.gz')
+╰     |                      ^^
+
+Warn  subworkflows/nf-core/fasta_index_bismark_bwameth/main.nf:50:30: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  50 |                     gzipped: it[1].toString().endsWith('.gz')
+╰     |                              ^^
+
+Warn  subworkflows/nf-core/fasta_index_bismark_bwameth/main.nf:79:30: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  79 |                     gzipped: it[1].toString().endsWith('.gz')
+╰     |                              ^^
+
+
+Warn  subworkflows/nf-core/fasta_index_methylseq/main.nf:34:22: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  34 |             gzipped: it[1].toString().endsWith('.gz')
+╰     |                      ^^
+
+Warn  subworkflows/nf-core/fasta_index_methylseq/main.nf:55:30: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  55 |                     gzipped: it[1].toString().endsWith('.gz')
+╰     |                              ^^
+
+Warn  subworkflows/nf-core/fasta_index_methylseq/main.nf:93:30: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  93 |                     gzipped: it[1].toString().endsWith('.gz')
+╰     |                              ^^
+
+Warn  subworkflows/nf-core/fasta_index_methylseq/main.nf:123:30: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 123 |                     gzipped: it[1].toString().endsWith('.gz')
+╰     |                              ^^
+
+
+Warn  subworkflows/nf-core/fastq_align_bwa/main.nf:16:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 | mYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
+╰     |                               ^^^^^^^
+
+
+
+Warn  workflows/methylseq/main.nf:198:88: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 198 | P_BWAMEM.out.versions.unique{ it.baseName })
+╰     |                               ^^
+
+Warn  workflows/methylseq/main.nf:368:89: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 368 | AP_BAMQC.out.results.collect{ it[1] }.ifEmpty([]))
+╰     |                               ^^
+
+Warn  workflows/methylseq/main.nf:371:86: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 371 | SEQ_LCEXTRAP.out.log.collect{ it[1] }.ifEmpty([]))
+╰     |                               ^^
+
+Warn  workflows/methylseq/main.nf:375:81: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 375 | tiqc_files = ch_multiqc_files.mix(TRIMGALORE.out.log.collect{ it[1] })
+╰     |                                                               ^^
+
+Warn  workflows/methylseq/main.nf:379:105: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 379 | G.out.picard_metrics.collect{ it[1] }.ifEmpty([]))
+╰     |                               ^^
+
+Warn  workflows/methylseq/main.nf:383:77: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 383 | s.mix(FASTQC.out.zip.collect{ it[1] }.ifEmpty([]))
+╰     |                               ^^
+
+
+Warn  conf/modules/bismark_genomepreparation.config:9:23: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│   9 |             saveAs: { it =~ /.*\.yml/ ? null : it },
+╰     |                       ^^
+
+Warn  conf/modules/bismark_genomepreparation.config:9:48: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│   9 |             saveAs: { it =~ /.*\.yml/ ? null : it },
+╰     |                                                ^^
+
+
+Warn  conf/modules/bwameth_index.config:7:23: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│   7 |             saveAs: { it.equals('versions.yml') ? null : it.tokenize("
+╰     |                       ^^
+
+Warn  conf/modules/bwameth_index.config:7:58: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│   7 |             saveAs: { it.equals('versions.yml') ? null : it.tokenize("
+╰     |                                                          ^^
+
+
+Error nextflow.config:251:23: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/methylseq/conf/aws/batch/nextflow.config'
+│ 251 |     aws_batch       { includeConfig 'conf/aws/batch/nextflow.config' }
+╰     |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-test tests
+│   3 |     testsDir "."
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 3 files had 4 errors
+ ✅ 136 files had no errors

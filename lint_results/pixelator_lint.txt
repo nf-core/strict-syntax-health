@@ -1,0 +1,51 @@
+Linting Nextflow code..
+Linting: conf/test_pna.config
+Linting: conf/test_scsp_v1_immunology_v1.config
+Linting: conf/base.config
+Linting: conf/test_panel_v2.config
+Linting: conf/modules.config
+Linting: conf/modules.pna.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: nextflow.config
+Linting: workflows/pixelator.nf
+Linting: subworkflows/local/mpx/main.nf
+Linting: subworkflows/local/utils_nfcore_pixelator_pipeline/main.nf
+Linting: subworkflows/local/generate_reports/main.nf
+Linting: subworkflows/local/pna/nextflow.config
+Linting: subworkflows/local/pna/generate_reports/main.nf
+Linting: subworkflows/local/pna/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/experiment_summary/main.nf
+Linting: modules/local/pixelator/single-cell-pna/demux/main.nf
+Linting: modules/local/pixelator/single-cell-pna/demux/tests/multiple_chunks.config
+Linting: modules/local/pixelator/single-cell-pna/graph/main.nf
+Linting: modules/local/pixelator/single-cell-pna/amplicon/main.nf
+Linting: modules/local/pixelator/single-cell-pna/combine_collapse/main.nf
+Linting: modules/local/pixelator/single-cell-pna/combine_collapse/tests/multiple_chunks.config
+Linting: modules/local/pixelator/single-cell-pna/collapse/main.nf
+Linting: modules/local/pixelator/single-cell-pna/layout/main.nf
+Linting: modules/local/pixelator/single-cell-pna/analysis/main.nf
+Linting: modules/local/pixelator/single-cell-pna/denoise/main.nf
+Linting: modules/local/pixelator/single-cell-mpx/demux/main.nf
+Linting: modules/local/pixelator/single-cell-mpx/graph/main.nf
+Linting: modules/local/pixelator/single-cell-mpx/report/main.nf
+Linting: modules/local/pixelator/single-cell-mpx/amplicon/main.nf
+Linting: modules/local/pixelator/single-cell-mpx/collapse/main.nf
+Linting: modules/local/pixelator/single-cell-mpx/layout/main.nf
+Linting: modules/local/pixelator/single-cell-mpx/analysis/main.nf
+Linting: modules/local/pixelator/single-cell-mpx/annotate/main.nf
+Linting: modules/local/pixelator/single-cell-mpx/qc/main.nf
+Linting: modules/local/pixelator/list_options/main.nf
+Linting: modules/nf-core/cat/fastq/main.nf
+ERROR ~ Cannot invoke "nextflow.config.ast.ConfigStatement.visit(nextflow.config.ast.ConfigVisitor)" because "node" is null
+
+

@@ -1,0 +1,231 @@
+Linting Nextflow code..
+Linting: conf/test_transcriptome_bam.config
+Linting: conf/test_rmats.config
+Linting: conf/base.config
+Linting: conf/test_suppa.config
+Linting: conf/test_dexseq.config
+Linting: conf/test_fastq.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/test_salmon_results.config
+Linting: conf/test_genome_bam.config
+Linting: conf/test_edger.config
+Linting: conf/igenomes.config
+Linting: nextflow.config
+Linting: workflows/rnasplice.nf
+Linting: subworkflows/local/rmats.nf
+Linting: subworkflows/local/drimseq_dexseq_dtu.nf
+Linting: subworkflows/local/visualise_miso.nf
+Linting: subworkflows/local/prepare_genome.nf
+Linting: subworkflows/local/tx2gene_tximport.nf
+Linting: subworkflows/local/contrasts_check.nf
+Linting: subworkflows/local/dexseq_deu.nf
+Linting: subworkflows/local/align_star.nf
+Linting: subworkflows/local/input_check.nf
+Linting: subworkflows/local/edger_deu.nf
+Linting: subworkflows/local/suppa.nf
+Linting: subworkflows/nf-core/bam_stats_samtools/main.nf
+Linting: subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/main.nf
+Linting: subworkflows/nf-core/bedgraph_bedclip_bedgraphtobigwig/main.nf
+Linting: subworkflows/nf-core/bam_sort_stats_samtools/main.nf
+Linting: main.nf
+Linting: modules/local/suppa_clustergroups.nf
+Linting: modules/local/dexseq_annotation.nf
+Linting: modules/local/suppa_generateevents.nf
+Linting: modules/local/miso_index.nf
+Linting: modules/local/edger_exon.nf
+Linting: modules/local/dexseq_count.nf
+Linting: modules/local/suppa_split_files.nf
+Linting: modules/local/bedtools_genomecov.nf
+Linting: modules/local/flattengtf.nf
+Linting: modules/local/dexseq_exon.nf
+Linting: modules/local/star_align_igenomes.nf
+Linting: modules/local/suppa_psiperisoform.nf
+Linting: modules/local/gffread_tx2gene.nf
+Linting: modules/local/rmats_prep.nf
+Linting: modules/local/preprocess_transcripts_fasta_gencode.nf
+Linting: modules/local/stager.nf
+Linting: modules/local/create_bamlist_single.nf
+Linting: modules/local/tximport.nf
+Linting: modules/local/miso_run.nf
+Linting: modules/local/rmats_prep_single.nf
+Linting: modules/local/miso_sashimi.nf
+Linting: modules/local/suppa_psiperevent.nf
+Linting: modules/local/rmats_post.nf
+Linting: modules/local/miso_settings.nf
+Linting: modules/local/rmats_post_single.nf
+Linting: modules/local/dexseq_dtu.nf
+Linting: modules/local/contrastsheet_check.nf
+Linting: modules/local/suppa_diffsplice.nf
+Linting: modules/local/gtf_gene_filter.nf
+Linting: modules/local/suppa_clusterevents.nf
+Linting: modules/local/gtf_2_gff3.nf
+Linting: modules/local/samplesheet_check.nf
+Linting: modules/local/drimseq_filter.nf
+Linting: modules/local/star_genomegenerate_igenomes.nf
+Linting: modules/local/create_bamlist.nf
+Linting: modules/nf-core/star/genomegenerate/main.nf
+Linting: modules/nf-core/star/align/main.nf
+Linting: modules/nf-core/umitools/extract/main.nf
+Linting: modules/nf-core/gffread/main.nf
+Linting: modules/nf-core/rsem/preparereference/main.nf
+Linting: modules/nf-core/subread/featurecounts/main.nf
+Linting: modules/nf-core/gunzip/main.nf
+Linting: modules/nf-core/samtools/flagstat/main.nf
+Linting: modules/nf-core/samtools/idxstats/main.nf
+Linting: modules/nf-core/samtools/index/main.nf
+Linting: modules/nf-core/samtools/sort/main.nf
+Linting: modules/nf-core/samtools/stats/main.nf
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/cat/fastq/main.nf
+Linting: modules/nf-core/salmon/quant/main.nf
+Linting: modules/nf-core/salmon/index/main.nf
+Linting: modules/nf-core/custom/dumpsoftwareversions/main.nf
+Linting: modules/nf-core/custom/getchromsizes/main.nf
+Linting: modules/nf-core/trimgalore/main.nf
+Linting: modules/nf-core/ucsc/bedgraphtobigwig/main.nf
+Linting: modules/nf-core/ucsc/bedclip/main.nf
+Linting: modules/nf-core/untar/main.nf
+Error main.nf:20:24: `WorkflowMain` is not defined
+│  20 | params.fasta         = WorkflowMain.getGenomeAttribute(params, 'fasta'
+╰     |                        ^^^^^^^^^^^^
+
+Error main.nf:21:24: `WorkflowMain` is not defined
+│  21 | params.gff           = WorkflowMain.getGenomeAttribute(params, 'gff')
+╰     |                        ^^^^^^^^^^^^
+
+Error main.nf:22:24: `WorkflowMain` is not defined
+│  22 | params.gtf           = WorkflowMain.getGenomeAttribute(params, 'gtf')
+╰     |                        ^^^^^^^^^^^^
+
+Error main.nf:23:24: `WorkflowMain` is not defined
+│  23 | params.salmon_index  = WorkflowMain.getGenomeAttribute(params, 'salmon
+╰     |                        ^^^^^^^^^^^^
+
+Error main.nf:24:24: `WorkflowMain` is not defined
+│  24 | params.star_index    = WorkflowMain.getGenomeAttribute(params, 'star')
+╰     |                        ^^^^^^^^^^^^
+
+Error main.nf:35:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  33 | 
+│  34 | // Print help message if needed
+│  35 | if (params.help) {
+│     | ^^^^^^^^^^^^^^^^^^
+│  36 |     def logo = NfcoreTemplate.logo(workflow, params.monochrome_logs)
+╰  37 |     def citation = '\n' + WorkflowMain.citation(workflow) + '\n'
+
+Error main.nf:36:16: `NfcoreTemplate` is not defined
+│  36 |     def logo = NfcoreTemplate.logo(workflow, params.monochrome_logs)
+╰     |                ^^^^^^^^^^^^^^
+
+Error main.nf:37:27: `WorkflowMain` is not defined
+│  37 |     def citation = '\n' + WorkflowMain.citation(workflow) + '\n'
+╰     |                           ^^^^^^^^^^^^
+
+Error main.nf:39:54: `NfcoreTemplate` is not defined
+│  39 |     log.info logo + paramsHelp(command) + citation + NfcoreTemplate.da
+╰     |                                                      ^^^^^^^^^^^^^^
+
+Error main.nf:44:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  44 | if (params.validate_params) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  45 |     validateParameters()
+╰  46 | }
+
+Error main.nf:48:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  48 | WorkflowMain.initialise(workflow, params, log)
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:48:1: `WorkflowMain` is not defined
+│  48 | WorkflowMain.initialise(workflow, params, log)
+╰     | ^^^^^^^^^^^^
+
+Error main.nf:56:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/rnasplice/workflows/rnasplice.nf'
+│  56 | include { RNASPLICE } from './workflows/rnasplice'
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:62:5: `RNASPLICE` is not defined
+│  62 |     RNASPLICE ()
+╰     |     ^^^^^^^^^
+
+
+
+
+
+Error modules/local/create_bamlist_single.nf:13:34: `cond` is not defined
+│  13 |     tuple val(contrast), path("${cond}_bamlist.txt"), emit: bamlist
+╰     |                                  ^^^^
+
+Error modules/local/create_bamlist_single.nf:21:10: `bam` is not defined
+│  21 |     echo $bam | sed 's: :,:g' > ${cond}_bamlist.txt
+╰     |          ^^^^
+
+Error modules/local/create_bamlist_single.nf:21:35: `cond` is not defined
+│  21 |     echo $bam | sed 's: :,:g' > ${cond}_bamlist.txt
+╰     |                                   ^^^^
+
+
+Error modules/local/dexseq_annotation.nf:26:9: `aggregation` is already declared
+│  26 |     def aggregation = aggregation ? '' : '-r no'
+╰     |         ^^^^^^^^^^^
+
+Warn  modules/local/dexseq_annotation.nf:23:9: Variable was declared but not used
+│  23 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Error modules/local/dexseq_count.nf:28:9: `alignment_quality` is already declared
+│  28 |     def alignment_quality = "-a ${alignment_quality}"
+╰     |         ^^^^^^^^^^^^^^^^^
+
+Warn  modules/local/dexseq_count.nf:23:9: Variable was declared but not used
+│  23 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+Warn  modules/local/drimseq_filter.nf:30:9: Variable was declared but not used
+│  30 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+
+
+
+
+
+
+
+Warn  modules/local/rmats_post.nf:33:9: Variable was declared but not used
+│  33 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/rmats_post_single.nf:32:9: Variable was declared but not used
+│  32 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/rmats_prep.nf:31:9: Variable was declared but not used
+│  31 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Error modules/local/rmats_prep_single.nf:60:14: `bam_group1` is not defined
+│  60 |         --b1 $bam_group1 \\
+╰     |              ^^^^^^^^^^^
+
+Warn  modules/local/rmats_prep_single.nf:31:9: Variable was declared but not used
+│  31 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+ERROR ~ begin 21, end 22, length 21
+
+

@@ -1,0 +1,483 @@
+Linting Nextflow code..
+Linting: conf/test_timstof.config
+Linting: conf/test_speclib.config
+Linting: conf/igenomes_ignored.config
+Linting: conf/base.config
+Linting: conf/test_ionannotator.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/test_mokapot.config
+Linting: conf/igenomes.config
+Linting: nextflow.config
+Linting: workflows/mhcquant.nf
+Linting: subworkflows/local/quant/main.nf
+Linting: subworkflows/local/prepare_spectra/main.nf
+Linting: subworkflows/local/map_alignment/main.nf
+Linting: subworkflows/local/speclib/main.nf
+Linting: subworkflows/local/process_feature/main.nf
+Linting: subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf
+Linting: subworkflows/local/rescore/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/ms2rescore/main.nf
+Linting: modules/local/unzip/main.nf
+Linting: modules/local/openmsthirdparty/featurelinkerunlabeledkd/main.nf
+Linting: modules/local/openmsthirdparty/percolatoradapter/main.nf
+Linting: modules/local/pyopenms/summarize_results/main.nf
+Linting: modules/local/pyopenms/ionannotator/main.nf
+Linting: modules/local/pyopenms/chromatogramextractor/main.nf
+Linting: modules/local/epicore/main.nf
+Linting: modules/local/untar/main.nf
+Linting: modules/local/easypqp/library/main.nf
+Linting: modules/local/easypqp/convert/main.nf
+Linting: modules/local/openms/maprttransformer/main.nf
+Linting: modules/local/openms/psmfeatureextractor/main.nf
+Linting: modules/local/openms/featurefinderidentification/main.nf
+Linting: modules/local/openms/idconflictresolver/main.nf
+Linting: modules/local/openms/textexporter/main.nf
+Linting: modules/local/openms/mapaligneridentification/main.nf
+Linting: modules/local/openms/mztabexporter/main.nf
+Linting: modules/local/tdf2mzml/main.nf
+Linting: modules/nf-core/gunzip/main.nf
+Linting: modules/nf-core/gunzip/tests/nextflow.config
+Linting: modules/nf-core/openmsthirdparty/cometadapter/main.nf
+Linting: modules/nf-core/openmsthirdparty/cometadapter/tests/nextflow.config
+Linting: modules/nf-core/thermorawfileparser/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/openms/idmerger/main.nf
+Linting: modules/nf-core/openms/idripper/main.nf
+Linting: modules/nf-core/openms/idripper/tests/nextflow.config
+Linting: modules/nf-core/openms/peptideindexer/main.nf
+Linting: modules/nf-core/openms/peptideindexer/tests/nextflow.config
+Linting: modules/nf-core/openms/filefilter/main.nf
+Linting: modules/nf-core/openms/filefilter/tests/nextflow.config
+Linting: modules/nf-core/openms/peakpickerhires/main.nf
+Linting: modules/nf-core/openms/peakpickerhires/tests/nextflow.config
+Linting: modules/nf-core/openms/decoydatabase/main.nf
+Linting: modules/nf-core/openms/idscoreswitcher/main.nf
+Linting: modules/nf-core/openms/idscoreswitcher/tests/nextflow.config
+Linting: modules/nf-core/openms/idmassaccuracy/main.nf
+Linting: modules/nf-core/openms/idmassaccuracy/tests/nextflow.config
+Linting: modules/nf-core/openms/idfilter/main.nf
+
+
+Warn  modules/local/epicore/main.nf:43:9: Variable was declared but not used
+│  43 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Error modules/local/ms2rescore/main.nf:11:5: Invalid process directive
+│  11 |     containerOptions = (workflow.containerEngine == 'docker') ? '-u $(
+╰     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+
+Warn  modules/local/openms/mapaligneridentification/main.nf:22:38: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  22 |     def out_names = idxmls.collect { it.baseName.replace('_fdr_filtere
+╰     |                                      ^^
+
+
+Warn  modules/local/openms/maprttransformer/main.nf:23:44: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  23 |     def fileExt = alignment_file.collect { it.name.tokenize("\\.")[1] 
+╰     |                                            ^^
+
+Warn  modules/local/openms/maprttransformer/main.nf:41:44: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  41 |     def fileExt = alignment_file.collect { it.name.tokenize("\\.")[1] 
+╰     |                                            ^^
+
+
+
+Warn  modules/local/openms/psmfeatureextractor/main.nf:23:9: Variable was declared but not used
+│  23 |     def extra_features = ""
+╰     |         ^^^^^^^^^^^^^^
+
+
+
+
+
+Warn  modules/local/pyopenms/chromatogramextractor/main.nf:21:9: Variable was declared but not used
+│  21 |     def args   = task.ext.args  ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/pyopenms/ionannotator/main.nf:22:9: Variable was declared but not used
+│  22 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+
+
+
+Warn  modules/nf-core/gunzip/main.nf:43:9: Variable was declared but not used
+│  43 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+Warn  modules/nf-core/openms/decoydatabase/main.nf:39:9: Variable was declared but not used
+│  39 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/openms/filefilter/main.nf:42:9: Variable was declared but not used
+│  42 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/openms/idfilter/main.nf:43:9: Variable was declared but not used
+│  43 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/openms/idfilter/main.nf:49:9: Variable was declared but not used
+│  49 |     def filter = filter_file ? "${filter_citerion} ${filter_file}" : "
+╰     |         ^^^^^^
+
+
+Warn  modules/nf-core/openms/idmassaccuracy/main.nf:40:9: Variable was declared but not used
+│  40 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/openms/idmerger/main.nf:38:9: Variable was declared but not used
+│  38 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/openms/idripper/main.nf:22:9: Variable was declared but not used
+│  22 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+Warn  modules/nf-core/openms/idripper/main.nf:38:9: Variable was declared but not used
+│  38 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/openms/idscoreswitcher/main.nf:39:9: Variable was declared but not used
+│  39 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/openms/peakpickerhires/main.nf:38:9: Variable was declared but not used
+│  38 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/openms/peptideindexer/main.nf:41:9: Variable was declared but not used
+│  41 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/openmsthirdparty/cometadapter/main.nf:42:9: Variable was declared but not used
+│  42 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+Warn  subworkflows/local/map_alignment/main.nf:17:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |         ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/map_alignment/main.nf:25:24: Parameter was not used -- prefix with `_` to suppress warning
+│  25 |             .flatMap { group_meta, metas -> metas }
+╰     |                        ^^^^^^^^^^
+
+Warn  subworkflows/local/map_alignment/main.nf:28:32: Parameter was not used -- prefix with `_` to suppress warning
+│  28 |                     .flatMap { group_meta, trafoxmls -> trafoxmls.coll
+╰     |                                ^^^^^^^^^^
+
+Warn  subworkflows/local/map_alignment/main.nf:29:20: Parameter was not used -- prefix with `_` to suppress warning
+│  29 |             .map { spectra, meta, trafoxml -> [meta, trafoxml] }
+╰     |                    ^^^^^^^
+
+Warn  subworkflows/local/map_alignment/main.nf:39:28: Parameter was not used -- prefix with `_` to suppress warning
+│  39 |                 .flatMap { group_meta, idxmls -> idxmls.collect { idxm
+╰     |                            ^^^^^^^^^^
+
+Warn  subworkflows/local/map_alignment/main.nf:41:36: Parameter was not used -- prefix with `_` to suppress warning
+│  41 |                         .flatMap { group_meta, metas -> metas }
+╰     |                                    ^^^^^^^^^^
+
+Warn  subworkflows/local/map_alignment/main.nf:43:24: Parameter was not used -- prefix with `_` to suppress warning
+│  43 |                 .map { group_meta, idxml, meta -> [meta, idxml] }
+╰     |                        ^^^^^^^^^^
+
+
+Warn  subworkflows/local/prepare_spectra/main.nf:17:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |         ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+
+Warn  subworkflows/local/process_feature/main.nf:14:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  14 |         ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+
+Error subworkflows/local/quant/main.nf:18:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  18 | def sortById = { a, b -> a.id <=> b.id }
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error subworkflows/local/quant/main.nf:83:30: `mzml` is already declared
+│  83 |                 .map { meta, mzml, idxml -> [ groupKey([id: "${meta.sa
+╰     |                              ^^^^
+
+Error subworkflows/local/quant/main.nf:85:42: `mzml` is already declared
+│  85 |                 .map { group_meta, meta, mzml, idxml -> [group_meta, m
+╰     |                                          ^^^^
+
+Error subworkflows/local/quant/main.nf:87:42: `mzml` is already declared
+│  87 |                 .map { group_meta, meta, mzml, idxml, merged_idxml -> 
+╰     |                                          ^^^^
+
+Warn  subworkflows/local/quant/main.nf:18:5: Variable was declared but not used
+│  18 | def sortById = { a, b -> a.id <=> b.id }
+╰     |     ^^^^^^^^
+
+Warn  subworkflows/local/quant/main.nf:28:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  28 |         ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/quant/main.nf:33:28: Parameter was not used -- prefix with `_` to suppress warning
+│  33 |                 .flatMap { group_meta, idxmls -> idxmls.collect { idxm
+╰     |                            ^^^^^^^^^^
+
+Warn  subworkflows/local/quant/main.nf:37:36: Parameter was not used -- prefix with `_` to suppress warning
+│  37 |                         .flatMap { group_meta, metas -> metas }
+╰     |                                    ^^^^^^^^^^
+
+Warn  subworkflows/local/quant/main.nf:39:24: Parameter was not used -- prefix with `_` to suppress warning
+│  39 |                 .map { spectra, idxmls, meta -> [meta, idxmls] }
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/quant/main.nf:56:20: Parameter was not used -- prefix with `_` to suppress warning
+│  56 |             .map { group_meta, meta, idxml, q_value -> [meta, idxml, q
+╰     |                    ^^^^^^^^^^
+
+Warn  subworkflows/local/quant/main.nf:87:24: Parameter was not used -- prefix with `_` to suppress warning
+│  87 |                 .map { group_meta, meta, mzml, idxml, merged_idxml -> 
+╰     |                        ^^^^^^^^^^
+
+
+Warn  subworkflows/local/rescore/main.nf:31:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  31 |         ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/rescore/main.nf:60:99: Parameter was not used -- prefix with `_` to suppress warning
+│  60 | PTER.out.feature_weights.map{ meta, feature_weights -> feature_weights
+╰     |                               ^^^^
+
+Warn  subworkflows/local/rescore/main.nf:65:78: Parameter was not used -- prefix with `_` to suppress warning
+│  65 | ATUREEXTRACTOR.out.idxml.map {group_meta, idxml -> [[id:'global'], idx
+╰     |                               ^^^^^^^^^^
+
+Warn  subworkflows/local/rescore/main.nf:73:101: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  73 | out.combine(OPENMS_IDFILTER_Q_VALUE_GLOBAL.out.filtered.map{ it[1] }))
+╰     |                                                              ^^
+
+
+Warn  subworkflows/local/speclib/main.nf:24:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  24 |         ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/speclib/main.nf:49:20: Parameter was not used -- prefix with `_` to suppress warning
+│  49 |             .map { meta, psmpkl -> [[id: "global"], psmpkl] }
+╰     |                    ^^^^
+
+Warn  subworkflows/local/speclib/main.nf:53:20: Parameter was not used -- prefix with `_` to suppress warning
+│  53 |             .map { meta, peakpkl -> [[id: "global"], peakpkl] }
+╰     |                    ^^^^
+
+
+Warn  subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:32:5: Parameter was not used -- prefix with `_` to suppress warning
+│  32 |     monochrome_logs   // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:35:5: Parameter was not used -- prefix with `_` to suppress warning
+│  35 |     input             //  string: Path to input samplesheet
+╰     |     ^^^^^
+
+Warn  subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:42:5: Variable was declared but not used
+│  42 |     ch_versions = Channel.empty()
+╰     |     ^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:42:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  42 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:67:144: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  67 | lect { "    https://doi.org/${it.trim().replace('https://doi.org/','')
+╰     |                               ^^
+
+Warn  subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:99:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  99 |     Channel
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:105:28: Parameter was not used -- prefix with `_` to suppress warning
+│ 105 |         .map { group_meta, metas, files, fastas -> [ group_meta, files
+╰     |                            ^^^^^
+
+Warn  subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:105:42: Parameter was not used -- prefix with `_` to suppress warning
+│ 105 |         .map { group_meta, metas, files, fastas -> [ group_meta, files
+╰     |                                          ^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:107:16: Parameter was not used -- prefix with `_` to suppress warning
+│ 107 |         .map { group_meta, group_count, meta, file, fasta -> [meta + [
+╰     |                ^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:110:59: Parameter was not used -- prefix with `_` to suppress warning
+│ 110 |     ch_samplesheet = ch_samplesheet_raw.map { meta, file, fasta -> [ m
+╰     |                                                           ^^^^^
+
+Warn  subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:117:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 117 |         Channel.fromPath(params.fasta, checkIfExists: true)
+╰     |         ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:122:19: Parameter was not used -- prefix with `_` to suppress warning
+│ 122 |             .map{ meta, file, fasta -> fasta }
+╰     |                   ^^^^
+
+Warn  subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:122:25: Parameter was not used -- prefix with `_` to suppress warning
+│ 122 |             .map{ meta, file, fasta -> fasta }
+╰     |                         ^^^^
+
+Warn  subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:135:51: Parameter was not used -- prefix with `_` to suppress warning
+│ 135 |         ch_fasta = ch_samplesheet_raw.map { meta, file, fasta -> [ gro
+╰     |                                                   ^^^^
+
+Warn  subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:137:20: Parameter was not used -- prefix with `_` to suppress warning
+│ 137 |             .map { meta, fasta -> fasta }
+╰     |                    ^^^^
+
+
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 | mYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
+╰     |                               ^^^^^^^
+
+
+
+Warn  workflows/mhcquant.nf:60:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  60 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  workflows/mhcquant.nf:61:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  61 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/mhcquant.nf:89:89: Parameter was not used -- prefix with `_` to suppress warning
+│  89 | ATOGRAMEXTRACTOR.out.csv.map{ meta, mzml -> mzml })
+╰     |                               ^^^^
+
+Warn  workflows/mhcquant.nf:93:53: Parameter was not used -- prefix with `_` to suppress warning
+│  93 |         ch_clean_mzml_file.combine(ch_decoy_db.map{ meta, fasta -> [fa
+╰     |                                                     ^^^^
+
+Warn  workflows/mhcquant.nf:97:20: Parameter was not used -- prefix with `_` to suppress warning
+│  97 |             .map { groupKey, meta, mzml, fasta -> [meta, mzml, fasta] 
+╰     |                    ^^^^^^^^
+
+Warn  workflows/mhcquant.nf:105:74: Parameter was not used -- prefix with `_` to suppress warning
+│ 105 | dxml.combine(ch_decoy_db.map{ meta, fasta -> [fasta] }) :
+╰     |                               ^^^^
+
+Warn  workflows/mhcquant.nf:109:20: Parameter was not used -- prefix with `_` to suppress warning
+│ 109 |             .map { groupKey, meta, idxml, fasta -> [meta, idxml, fasta
+╰     |                    ^^^^^^^^
+
+Warn  workflows/mhcquant.nf:117:85: Parameter was not used -- prefix with `_` to suppress warning
+│ 117 | ASSACCURACY.out.frag_err.map{ meta, frag_err -> frag_err })
+╰     |                               ^^^^
+
+Warn  workflows/mhcquant.nf:121:22: Parameter was not used -- prefix with `_` to suppress warning
+│ 121 |         .map { meta, idxml -> [ groupKey([id: "${meta.sample}_${meta.c
+╰     |                      ^^^^^
+
+Warn  workflows/mhcquant.nf:154:24: Parameter was not used -- prefix with `_` to suppress warning
+│ 154 |                 .map { groupKey, meta, comet_idxml, fdr_filtered_idxml
+╰     |                        ^^^^^^^^
+
+Warn  workflows/mhcquant.nf:160:23: Parameter was not used -- prefix with `_` to suppress warning
+│ 160 |             .filter { meta, idxml -> idxml.countLines() > 130 }
+╰     |                       ^^^^
+
+Warn  workflows/mhcquant.nf:212:31: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 212 |         EPICORE(ch_fasta.map{ it.last()}, SUMMARIZE_RESULTS.out.epicor
+╰     |                               ^^
+
+Warn  workflows/mhcquant.nf:230:88: Parameter was not used -- prefix with `_` to suppress warning
+│ 230 | SULTS.out.epicore_input.map { meta, tsv, stats -> stats }
+╰     |                               ^^^^
+
+Warn  workflows/mhcquant.nf:230:94: Parameter was not used -- prefix with `_` to suppress warning
+│ 230 | out.epicore_input.map { meta, tsv, stats -> stats }
+╰     |                               ^^^
+
+Warn  workflows/mhcquant.nf:247:32: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 247 |     ch_multiqc_config        = Channel.fromPath(
+╰     |                                ^^^^^^^
+
+Warn  workflows/mhcquant.nf:250:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 250 |         Channel.fromPath(params.multiqc_config, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/mhcquant.nf:251:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 251 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/mhcquant.nf:253:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 253 |         Channel.fromPath(params.multiqc_logo, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/mhcquant.nf:254:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 254 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/mhcquant.nf:258:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 258 |     ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_p
+╰     |                           ^^^^^^^
+
+Warn  workflows/mhcquant.nf:264:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 264 |     ch_methods_description                = Channel.value(
+╰     |                                             ^^^^^^^
+
+
+Error conf/base.config:61:29: Unexpected input: ':'
+│  61 |     withName:NFCORE_MHCQUANT:MHCQUANT:PREPARE_SPECTRA:TDF2MZML {
+╰     |                             ^
+
+
+Error conf/modules.config:271:17: Unexpected input: ':'
+│ 271 |         withName: 'NFCORE_MHCQUANT:MHCQUANT:QUANT:OPENMS_IDSCORESWITCH
+╰     |                 ^
+
+
+Error nextflow.config:233:25: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/mhcquant/conf/test_percolator.config'
+│ 233 |     test_percolator   { includeConfig 'conf/test_percolator.config'   
+╰     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error nextflow.config:235:25: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/mhcquant/conf/test_epicore.config'
+│ 235 |     test_epicore      { includeConfig 'conf/test_epicore.config'      
+╰     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-test tests
+│   3 |     testsDir "."
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 6 files had 10 errors
+ ✅ 63 files had no errors

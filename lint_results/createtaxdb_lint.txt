@@ -1,0 +1,238 @@
+Linting Nextflow code..
+Linting: conf/test_minimal.config
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/test_alternatives.config
+Linting: nextflow.config
+Linting: workflows/createtaxdb.nf
+Linting: subworkflows/local/sourmash_create/main.nf
+Linting: subworkflows/local/sourmash_create/tests/protein.config
+Linting: subworkflows/local/sourmash_create/tests/dna.config
+Linting: subworkflows/local/kmcp_create/main.nf
+Linting: subworkflows/local/kmcp_create/tests/nextflow.config
+Linting: subworkflows/local/generate_downstream_samplesheets/main.nf
+Linting: subworkflows/local/utils_nfcore_createtaxdb_pipeline/main.nf
+Linting: subworkflows/local/preprocessing/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/fasta_build_add_kraken2_bracken/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/seqkit/batchrename/main.nf
+Linting: modules/nf-core/centrifuge/build/main.nf
+Linting: modules/nf-core/kmcp/index/main.nf
+Linting: modules/nf-core/kmcp/index/tests/nextflow.config
+Linting: modules/nf-core/kmcp/compute/main.nf
+Linting: modules/nf-core/kmcp/compute/tests/nextflow.config
+Linting: modules/nf-core/unzip/main.nf
+Linting: modules/nf-core/kaiju/mkfmi/main.nf
+Linting: modules/nf-core/kaiju/mkfmi/tests/nextflow.config
+Linting: modules/nf-core/kraken2/build/main.nf
+Linting: modules/nf-core/kraken2/build/tests/nextflow.config
+Linting: modules/nf-core/kraken2/add/main.nf
+Linting: modules/nf-core/pigz/compress/main.nf
+Linting: modules/nf-core/bracken/build/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/ganon/buildcustom/main.nf
+Linting: modules/nf-core/ganon/buildcustom/tests/nextflow.config
+Linting: modules/nf-core/malt/build/main.nf
+Linting: modules/nf-core/malt/build/tests/nextflow.config
+Linting: modules/nf-core/find/concatenate/main.nf
+Linting: modules/nf-core/find/concatenate/tests/nextflow_zipped_unzipped.config
+Linting: modules/nf-core/find/concatenate/tests/nextflow_unzipped_zipped.config
+Linting: modules/nf-core/find/unpigz/main.nf
+Linting: modules/nf-core/sylph/sketchgenomes/main.nf
+Linting: modules/nf-core/sourmash/sketch/main.nf
+Linting: modules/nf-core/sourmash/index/main.nf
+Linting: modules/nf-core/diamond/makedb/main.nf
+Linting: modules/nf-core/krakenuniq/build/main.nf
+Linting: modules/nf-core/krakenuniq/build/tests/nextflow.config
+
+
+
+
+
+
+
+Warn  modules/nf-core/ganon/buildcustom/main.nf:46:9: Variable was declared but not used
+│  46 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/ganon/buildcustom/main.nf:48:9: Variable was declared but not used
+│  48 |     def taxonomy_args = taxonomy_files ? "--taxonomy-files ${taxonomy_
+╰     |         ^^^^^^^^^^^^^
+
+Warn  modules/nf-core/ganon/buildcustom/main.nf:49:9: Variable was declared but not used
+│  49 |     def genome_size_args = genome_size_files ? "--genome-size-files ${
+╰     |         ^^^^^^^^^^^^^^^^
+
+
+Warn  modules/nf-core/kaiju/mkfmi/main.nf:44:9: Variable was declared but not used
+│  44 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/kmcp/compute/main.nf:40:9: Variable was declared but not used
+│  40 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/kmcp/index/main.nf:39:9: Variable was declared but not used
+│  39 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+Warn  modules/nf-core/malt/build/main.nf:44:9: Variable was declared but not used
+│  44 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+Warn  modules/nf-core/pigz/compress/main.nf:35:9: Variable was declared but not used
+│  35 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+Warn  modules/nf-core/unzip/main.nf:38:9: Variable was declared but not used
+│  38 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+Warn  subworkflows/local/kmcp_create/main.nf:11:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  11 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/preprocessing/main.nf:15:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/preprocessing/main.nf:16:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/preprocessing/main.nf:19:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 |     ch_singleref_for_dna = Channel.empty()
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/local/preprocessing/main.nf:20:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  20 |     ch_singleref_for_aa = Channel.empty()
+╰     |                           ^^^^^^^
+
+Warn  subworkflows/local/preprocessing/main.nf:21:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  21 |     ch_prepped_dna_fastas = Channel.empty()
+╰     |                             ^^^^^^^
+
+Warn  subworkflows/local/preprocessing/main.nf:22:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  22 |     ch_prepped_aa_fastas = Channel.empty()
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/local/preprocessing/main.nf:23:39: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  23 |     ch_prepped_dna_fastas_ungrouped = Channel.empty()
+╰     |                                       ^^^^^^^
+
+Warn  subworkflows/local/preprocessing/main.nf:24:38: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  24 |     ch_prepped_aa_fastas_ungrouped = Channel.empty()
+╰     |                                      ^^^^^^^
+
+Warn  subworkflows/local/preprocessing/main.nf:25:34: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  25 |     ch_prepped_aa_fastas_kaiju = Channel.empty()
+╰     |                                  ^^^^^^^
+
+
+Warn  subworkflows/local/utils_nfcore_createtaxdb_pipeline/main.nf:31:5: Parameter was not used -- prefix with `_` to suppress warning
+│  31 |     monochrome_logs // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_createtaxdb_pipeline/main.nf:34:5: Parameter was not used -- prefix with `_` to suppress warning
+│  34 |     input //  string: Path to input samplesheet
+╰     |     ^^^^^
+
+Warn  subworkflows/local/utils_nfcore_createtaxdb_pipeline/main.nf:41:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  41 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_createtaxdb_pipeline/main.nf:66:144: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  66 | lect { "    https://doi.org/${it.trim().replace('https://doi.org/', ''
+╰     |                               ^^
+
+Warn  subworkflows/local/utils_nfcore_createtaxdb_pipeline/main.nf:106:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 106 |     ch_samplesheet = Channel.fromList(samplesheetToList(params.input, 
+╰     |                      ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_createtaxdb_pipeline/main.nf:118:58: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 118 |                 def not_unique_dna = fasta_dna.countBy { it }.grep { i
+╰     |                                                          ^^
+
+Warn  subworkflows/local/utils_nfcore_createtaxdb_pipeline/main.nf:118:70: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 118 | sta_dna.countBy { it }.grep { it.value > 1 }.collect { it.key }
+╰     |                               ^^
+
+Warn  subworkflows/local/utils_nfcore_createtaxdb_pipeline/main.nf:118:95: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 118 | na = fasta_dna.countBy { it }.grep { it.value > 1 }.collect { it.key }
+╰     |                                                               ^^
+
+Warn  subworkflows/local/utils_nfcore_createtaxdb_pipeline/main.nf:133:56: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 133 |                 def not_unique_aa = fasta_aa.countBy { it }.grep { it.
+╰     |                                                        ^^
+
+Warn  subworkflows/local/utils_nfcore_createtaxdb_pipeline/main.nf:133:68: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 133 | asta_aa.countBy { it }.grep { it.value > 1 }.collect { it.key }
+╰     |                               ^^
+
+Warn  subworkflows/local/utils_nfcore_createtaxdb_pipeline/main.nf:133:93: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 133 | _aa = fasta_aa.countBy { it }.grep { it.value > 1 }.collect { it.key }
+╰     |                                                               ^^
+
+
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 | mYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
+╰     |                               ^^^^^^^
+
+
+
+Warn  workflows/createtaxdb.nf:123:20: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 123 |             .map { it.join("\t") }
+╰     |                    ^^
+
+Warn  workflows/createtaxdb.nf:129:39: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 129 |                 [[id: params.dbname], it]
+╰     |                                       ^^
+
+Warn  workflows/createtaxdb.nf:170:41: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 170 |         ch_taxdmpfiles_for_krakenuniq = Channel
+╰     |                                         ^^^^^^^
+
+Warn  workflows/createtaxdb.nf:173:21: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 173 |             .map { [it] }
+╰     |                     ^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-test tests
+│   3 |     testsDir "."
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 1 file had 1 error
+ ✅ 55 files had no errors

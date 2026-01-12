@@ -1,0 +1,186 @@
+Linting Nextflow code..
+Linting: conf/igenomes_ignored.config
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/igenomes.config
+Linting: nextflow.config
+Linting: workflows/datasync.nf
+Linting: subworkflows/local/utils_nfcore_datasync_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: main.nf
+Linting: modules/local/sync/sync.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Error modules/local/sync/sync.nf:13:38: Unexpected input: '_sha256_checksums'
+│  13 |     tuple val(run_id), path(${run_id}_sha256_checksums.txt) , emit: sy
+╰     |                                      ^
+
+
+
+Warn  subworkflows/local/utils_nfcore_datasync_pipeline/main.nf:31:5: Parameter was not used -- prefix with `_` to suppress warning
+│  31 |     monochrome_logs   // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_datasync_pipeline/main.nf:34:5: Parameter was not used -- prefix with `_` to suppress warning
+│  34 |     input             //  string: Path to input samplesheet
+╰     |     ^^^^^
+
+Warn  subworkflows/local/utils_nfcore_datasync_pipeline/main.nf:38:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  38 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_datasync_pipeline/main.nf:75:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  75 |     Channel
+╰     |     ^^^^^^^
+
+
+Warn  subworkflows/nf-core/utils_nextflow_pipeline/main.nf:94:33: Parameter was not used -- prefix with `_` to suppress warning
+│  94 |     catch (NullPointerException e) {
+╰     |                                 ^
+
+Warn  subworkflows/nf-core/utils_nextflow_pipeline/main.nf:98:24: Parameter was not used -- prefix with `_` to suppress warning
+│  98 |     catch (IOException e) {
+╰     |                        ^
+
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:116:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 116 | mYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
+╰     |                               ^^^^^^^
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:264:22: Parameter was not used -- prefix with `_` to suppress warning
+│ 264 |     catch (Exception all) {
+╰     |                      ^^^
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:361:26: Parameter was not used -- prefix with `_` to suppress warning
+│ 361 |         catch (Exception all) {
+╰     |                          ^^^
+
+
+Error workflows/datasync.nf:6:1: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/datasync/modules/nf-core/fastqc/main.nf'
+│   6 | include { FASTQC                 } from '../modules/nf-core/fastqc/mai
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/datasync.nf:30:5: `FASTQC` is not defined
+│  30 |     FASTQC (
+╰     |     ^^^^^^
+
+Error workflows/datasync.nf:33:45: `FASTQC` is not defined
+│  33 |     ch_multiqc_files = ch_multiqc_files.mix(FASTQC.out.zip.collect{it[
+╰     |                                             ^^^^^^
+
+Error workflows/datasync.nf:34:35: `FASTQC` is not defined
+│  34 |     ch_versions = ch_versions.mix(FASTQC.out.versions.first())
+╰     |                                   ^^^^^^
+
+Warn  workflows/datasync.nf:25:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  25 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  workflows/datasync.nf:26:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  26 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/datasync.nf:33:68: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  33 | ch_multiqc_files = ch_multiqc_files.mix(FASTQC.out.zip.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/datasync.nf:51:32: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  51 |     ch_multiqc_config        = Channel.fromPath(
+╰     |                                ^^^^^^^
+
+Warn  workflows/datasync.nf:54:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  54 |         Channel.fromPath(params.multiqc_config, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/datasync.nf:55:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  55 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/datasync.nf:57:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  57 |         Channel.fromPath(params.multiqc_logo, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/datasync.nf:58:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  58 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/datasync.nf:62:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  62 |     ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_p
+╰     |                           ^^^^^^^
+
+Warn  workflows/datasync.nf:68:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  68 |     ch_methods_description                = Channel.value(
+╰     |                                             ^^^^^^^
+
+
+Error nextflow.config:204:1: Variable declarations cannot be mixed with config statements
+│ 204 | def trace_timestamp = new java.util.Date().format( 'yyyy-MM-dd_HH-mm-s
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error nextflow.config:207:68: `trace_timestamp` is not defined
+│ 207 | rams.outdir}/pipeline_info/execution_timeline_${trace_timestamp}.html"
+╰     |                                                 ^^^^^^^^^^^^^^^
+
+Error nextflow.config:211:66: `trace_timestamp` is not defined
+│ 211 | params.outdir}/pipeline_info/execution_report_${trace_timestamp}.html"
+╰     |                                                 ^^^^^^^^^^^^^^^
+
+Error nextflow.config:215:65: `trace_timestamp` is not defined
+│ 215 | ${params.outdir}/pipeline_info/execution_trace_${trace_timestamp}.txt"
+╰     |                                                  ^^^^^^^^^^^^^^^
+
+Error nextflow.config:219:62: `trace_timestamp` is not defined
+│ 219 |  "${params.outdir}/pipeline_info/pipeline_dag_${trace_timestamp}.html"
+╰     |                                                 ^^^^^^^^^^^^^^^
+
+Error nextflow.config:242:34: `manifest` is not defined
+│ 242 |         command = "nextflow run $manifest.name -profile <docker/singul
+╰     |                                  ^^^^^^^^
+
+Error nextflow.config:252:15: `manifest` is not defined
+│ 252 | \033[0;35m  ${manifest.name} ${manifest.version}\033[0m
+╰     |               ^^^^^^^^
+
+Error nextflow.config:252:32: `manifest` is not defined
+│ 252 | \033[0;35m  ${manifest.name} ${manifest.version}\033[0m
+╰     |                                ^^^^^^^^
+
+Error nextflow.config:255:26: `manifest` is not defined
+│ 255 |         afterText = """${manifest.doi ? "* The pipeline\n" : ""}${mani
+╰     |                          ^^^^^^^^
+
+Error nextflow.config:255:67: `manifest` is not defined
+│ 255 | i ? "* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "  
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:255:182: `manifest` is not defined
+│ 255 | doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:260:26: `manifest` is not defined
+│ 260 |     https://github.com/${manifest.name}/blob/master/CITATIONS.md
+╰     |                          ^^^^^^^^
+
+Error nextflow.config:264:22: `validation` is not defined
+│ 264 |         beforeText = validation.help.beforeText
+╰     |                      ^^^^^^^^^^
+
+Error nextflow.config:265:21: `validation` is not defined
+│ 265 |         afterText = validation.help.afterText
+╰     |                     ^^^^^^^^^^
+
+Warn  nextflow.config:255:125: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 255 | ollect { "  https://doi.org/${it.trim().replace('https://doi.org/','')
+╰     |                               ^^
+
+
+Nextflow linting complete!
+ ❌ 3 files had 19 errors
+ ✅ 16 files had no errors

@@ -1,0 +1,215 @@
+Linting Nextflow code..
+Linting: conf/igenomes_ignored.config
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/igenomes.config
+Linting: nextflow.config
+Linting: workflows/riboseq/main.nf
+Linting: subworkflows/local/prepare_genome/main.nf
+Linting: subworkflows/local/utils_nfcore_riboseq_pipeline/main.nf
+Linting: subworkflows/nf-core/bam_dedup_stats_samtools_umicollapse/main.nf
+Linting: subworkflows/nf-core/bam_dedup_stats_samtools_umicollapse/tests/paired-end-umis.config
+Linting: subworkflows/nf-core/bam_stats_samtools/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/main.nf
+Linting: subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/tests/nextflow.config
+Linting: subworkflows/nf-core/bam_dedup_umi/main.nf
+Linting: subworkflows/nf-core/bam_dedup_umi/tests/nextflow.config
+Linting: subworkflows/nf-core/bam_dedup_stats_samtools_umitools/main.nf
+Linting: subworkflows/nf-core/fastq_subsample_fq_salmon/main.nf
+Linting: subworkflows/nf-core/fastq_subsample_fq_salmon/tests/nextflow.config
+Linting: subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/main.nf
+Linting: subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/tests/nextflow.config
+Linting: subworkflows/nf-core/fastq_align_star/nextflow.config
+Linting: subworkflows/nf-core/fastq_align_star/main.nf
+Linting: subworkflows/nf-core/fastq_align_star/tests/nextflow.config
+Linting: subworkflows/nf-core/fastq_align_star/tests/with_transcripts.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/bam_sort_stats_samtools/main.nf
+Linting: subworkflows/nf-core/quantify_pseudo_alignment/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: subworkflows/nf-core/fastq_fastqc_umitools_fastp/main.nf
+Linting: subworkflows/nf-core/fastq_fastqc_umitools_fastp/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/gtf_filter/main.nf
+Linting: modules/local/preprocess_transcripts_fasta_gencode/main.nf
+Linting: modules/local/gtf2bed/main.nf
+Linting: modules/local/star_genomegenerate_igenomes/main.nf
+Linting: modules/nf-core/tximeta/tximport/main.nf
+Linting: modules/nf-core/star/genomegenerate/main.nf
+Linting: modules/nf-core/star/align/main.nf
+Linting: modules/nf-core/star/align/tests/nextflow.arriba.config
+Linting: modules/nf-core/star/align/tests/nextflow.config
+Linting: modules/nf-core/star/align/tests/nextflow.starfusion.config
+Linting: modules/nf-core/umitools/dedup/main.nf
+Linting: modules/nf-core/umitools/dedup/tests/nextflow.config
+Linting: modules/nf-core/umitools/prepareforrsem/main.nf
+Linting: modules/nf-core/umitools/extract/main.nf
+Linting: modules/nf-core/umitools/extract/tests/nextflow.config
+Linting: modules/nf-core/gffread/main.nf
+Linting: modules/nf-core/gffread/tests/nextflow-gff3.config
+Linting: modules/nf-core/gffread/tests/nextflow-fasta.config
+Linting: modules/nf-core/gffread/tests/nextflow.config
+Linting: modules/nf-core/rsem/preparereference/main.nf
+Linting: modules/nf-core/ribowaltz/main.nf
+Linting: modules/nf-core/anota2seq/anota2seqrun/main.nf
+Linting: modules/nf-core/gunzip/main.nf
+Linting: modules/nf-core/gunzip/tests/nextflow.config
+Linting: modules/nf-core/samtools/flagstat/main.nf
+Linting: modules/nf-core/samtools/idxstats/main.nf
+Linting: modules/nf-core/samtools/index/main.nf
+Linting: modules/nf-core/samtools/index/tests/csi.nextflow.config
+Linting: modules/nf-core/samtools/sort/main.nf
+Linting: modules/nf-core/samtools/sort/tests/nextflow.config
+Linting: modules/nf-core/samtools/sort/tests/nextflow_cram.config
+Linting: modules/nf-core/samtools/stats/main.nf
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/cutadapt/main.nf
+Linting: modules/nf-core/cutadapt/tests/nextflow.config
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/ribotricer/detectorfs/main.nf
+Linting: modules/nf-core/ribotricer/detectorfs/tests/nextflow.all.config
+Linting: modules/nf-core/ribotricer/detectorfs/tests/nextflow.filtered.config
+Linting: modules/nf-core/ribotricer/prepareorfs/main.nf
+Linting: modules/nf-core/cat/fastq/main.nf
+Linting: modules/nf-core/kallisto/quant/main.nf
+Linting: modules/nf-core/kallisto/index/main.nf
+Linting: modules/nf-core/salmon/quant/main.nf
+Linting: modules/nf-core/salmon/quant/tests/nextflow.config
+Linting: modules/nf-core/salmon/index/main.nf
+Linting: modules/nf-core/custom/tx2gene/main.nf
+Linting: modules/nf-core/custom/getchromsizes/main.nf
+Linting: modules/nf-core/custom/catadditionalfasta/main.nf
+Linting: modules/nf-core/ribotish/predict/main.nf
+Linting: modules/nf-core/ribotish/quality/main.nf
+Linting: modules/nf-core/fastp/main.nf
+Linting: modules/nf-core/fastp/tests/nextflow.interleaved.config
+Linting: modules/nf-core/fastp/tests/nextflow.save_failed.config
+Linting: modules/nf-core/fq/subsample/main.nf
+Linting: modules/nf-core/fq/subsample/tests/nextflow_record_count.config
+Linting: modules/nf-core/fq/subsample/tests/nextflow_probability.config
+Linting: modules/nf-core/fq/subsample/tests/nextflow.config
+Linting: modules/nf-core/fq/subsample/tests/nextflow_no_args.config
+Linting: modules/nf-core/fq/lint/main.nf
+Linting: modules/nf-core/trimgalore/main.nf
+Linting: modules/nf-core/trimgalore/tests/nextflow.config
+Linting: modules/nf-core/untar/main.nf
+Linting: modules/nf-core/sortmerna/main.nf
+Linting: modules/nf-core/sortmerna/tests/indexing_only.config
+Linting: modules/nf-core/sortmerna/tests/premade_index.config
+Linting: modules/nf-core/bbmap/bbsplit/main.nf
+Linting: modules/nf-core/summarizedexperiment/summarizedexperiment/main.nf
+Linting: modules/nf-core/summarizedexperiment/summarizedexperiment/tests/single_matrix.config
+Linting: modules/nf-core/summarizedexperiment/summarizedexperiment/tests/multi_matrix.config
+Linting: modules/nf-core/umicollapse/main.nf
+Linting: modules/nf-core/umicollapse/tests/nextflow.config
+Warn  main.nf:54:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  54 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  main.nf:85:39: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  85 |             .map { checkMaxContigSize(it) }
+╰     |                                       ^^
+
+Warn  main.nf:91:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  91 |     ch_samplesheet = Channel.value(file(params.input, checkIfExists: t
+╰     |                      ^^^^^^^
+
+Warn  main.nf:93:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  93 |         ch_contrasts_file = Channel.value(file(params.contrasts))
+╰     |                             ^^^^^^^
+
+
+
+
+
+
+
+Error modules/nf-core/bbmap/bbsplit/main.nf:41:43: `index` is already declared
+│  41 |     other_ref_names.eachWithIndex { name, index ->
+╰     |                                           ^^^^^
+
+Error modules/nf-core/bbmap/bbsplit/main.nf:110:43: `index` is already declared
+│ 110 |     other_ref_names.eachWithIndex { name, index ->
+╰     |                                           ^^^^^
+
+Warn  modules/nf-core/bbmap/bbsplit/main.nf:110:43: Parameter was not used -- prefix with `_` to suppress warning
+│ 110 |     other_ref_names.eachWithIndex { name, index ->
+╰     |                                           ^^^^^
+
+
+Warn  modules/nf-core/cat/fastq/main.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/cat/fastq/main.nf:23:59: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  23 |     def readList = reads instanceof List ? reads.collect{ it.toString(
+╰     |                                                           ^^
+
+Warn  modules/nf-core/cat/fastq/main.nf:54:59: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  54 |     def readList = reads instanceof List ? reads.collect{ it.toString(
+╰     |                                                           ^^
+
+
+Warn  modules/nf-core/custom/catadditionalfasta/main.nf:26:9: Variable was declared but not used
+│  26 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/nf-core/custom/getchromsizes/main.nf:23:9: Variable was declared but not used
+│  23 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+
+
+
+Warn  modules/nf-core/gffread/main.nf:26:103: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  26 | ', '-y' ].any { args.contains(it) } ) ? 'fasta' : 'gff3' )
+╰     |                               ^^
+
+Warn  modules/nf-core/gffread/main.nf:30:61: Parameter was not used -- prefix with `_` to suppress warning
+│  30 | laceAll(/(.*)(-[wxy])(.*)/) { all, pre, param, post -> "$pre $post $pa
+╰     |                               ^^^
+
+Warn  modules/nf-core/gffread/main.nf:49:103: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  49 | ', '-y' ].any { args.contains(it) } ) ? 'fasta' : 'gff3' )
+╰     |                               ^^
+
+
+Warn  modules/nf-core/gunzip/main.nf:43:9: Variable was declared but not used
+│  43 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+Error modules/nf-core/ribotish/predict/main.nf:41:12: `para_tis` is not defined
+│  41 |         if (para_tis){
+╰     |            ^^^^^^^^^^
+
+Warn  modules/nf-core/ribotish/predict/main.nf:64:9: Variable was declared but not used
+│  64 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/ribotish/quality/main.nf:43:9: Variable was declared but not used
+│  43 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+ERROR ~ begin 23, end 24, length 23
+
+

@@ -1,0 +1,1503 @@
+Linting Nextflow code..
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test_controls.config
+Linting: conf/test.config
+Linting: conf/igenomes.config
+Linting: nextflow.config
+Linting: workflows/atacseq.nf
+Linting: subworkflows/local/bed_consensus_quantify_qc_bedtools_featurecounts_deseq2.nf
+Linting: subworkflows/local/bigwig_plot_deeptools.nf
+Linting: subworkflows/local/prepare_genome.nf
+Linting: subworkflows/local/bam_filter_bamtools.nf
+Linting: subworkflows/local/align_star.nf
+Linting: subworkflows/local/bam_peaks_call_qc_annotate_macs2_homer.nf
+Linting: subworkflows/local/input_check.nf
+Linting: subworkflows/local/bam_bedgraph_bigwig_bedtools_ucsc.nf
+Linting: subworkflows/nf-core/bam_stats_samtools/main.nf
+Linting: subworkflows/nf-core/fastq_align_bowtie2/main.nf
+Linting: subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/main.nf
+Linting: subworkflows/nf-core/fastq_align_chromap/main.nf
+Linting: subworkflows/nf-core/fastq_align_bwa/main.nf
+Linting: subworkflows/nf-core/bam_sort_stats_samtools/main.nf
+Linting: subworkflows/nf-core/bam_markduplicates_picard/main.nf
+Linting: main.nf
+Linting: modules/local/gtf2bed.nf
+Linting: modules/local/star_align.nf
+Linting: modules/local/igv.nf
+Linting: modules/local/plot_homer_annotatepeaks.nf
+Linting: modules/local/bam_remove_orphans.nf
+Linting: modules/local/bedtools_genomecov.nf
+Linting: modules/local/macs2_consensus.nf
+Linting: modules/local/deseq2_qc.nf
+Linting: modules/local/multiqc_custom_peaks.nf
+Linting: modules/local/bamtools_filter.nf
+Linting: modules/local/multiqc.nf
+Linting: modules/local/genome_blacklist_regions.nf
+Linting: modules/local/plot_macs2_qc.nf
+Linting: modules/local/star_genomegenerate.nf
+Linting: modules/local/frip_score.nf
+Linting: modules/local/samplesheet_check.nf
+Linting: modules/local/get_autosomes.nf
+Linting: modules/local/tss_extract.nf
+Linting: modules/nf-core/chromap/chromap/main.nf
+Linting: modules/nf-core/chromap/index/main.nf
+Linting: modules/nf-core/ataqv/ataqv/main.nf
+Linting: modules/nf-core/ataqv/mkarv/main.nf
+Linting: modules/nf-core/umitools/extract/main.nf
+Linting: modules/nf-core/gffread/main.nf
+Linting: modules/nf-core/subread/featurecounts/main.nf
+Linting: modules/nf-core/gunzip/main.nf
+Linting: modules/nf-core/homer/annotatepeaks/main.nf
+Linting: modules/nf-core/samtools/flagstat/main.nf
+Linting: modules/nf-core/samtools/idxstats/main.nf
+Linting: modules/nf-core/samtools/index/main.nf
+Linting: modules/nf-core/samtools/sort/main.nf
+Linting: modules/nf-core/samtools/stats/main.nf
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/bwa/index/main.nf
+Linting: modules/nf-core/bwa/mem/main.nf
+Linting: modules/nf-core/custom/dumpsoftwareversions/main.nf
+Linting: modules/nf-core/custom/getchromsizes/main.nf
+Linting: modules/nf-core/bowtie2/build/main.nf
+Linting: modules/nf-core/bowtie2/align/main.nf
+Linting: modules/nf-core/trimgalore/main.nf
+Linting: modules/nf-core/ucsc/bedgraphtobigwig/main.nf
+Linting: modules/nf-core/preseq/lcextrap/main.nf
+Linting: modules/nf-core/untar/main.nf
+Linting: modules/nf-core/deeptools/plotprofile/main.nf
+Linting: modules/nf-core/deeptools/plotheatmap/main.nf
+Linting: modules/nf-core/deeptools/plotfingerprint/main.nf
+Linting: modules/nf-core/deeptools/computematrix/main.nf
+Linting: modules/nf-core/picard/markduplicates/main.nf
+Linting: modules/nf-core/picard/mergesamfiles/main.nf
+Linting: modules/nf-core/picard/collectmultiplemetrics/main.nf
+Linting: modules/nf-core/macs2/callpeak/main.nf
+Linting: modules/nf-core/khmer/uniquekmers/main.nf
+Error main.nf:20:24: `WorkflowMain` is not defined
+│  20 | params.fasta         = WorkflowMain.getGenomeAttribute(params, 'fasta'
+╰     |                        ^^^^^^^^^^^^
+
+Error main.nf:21:24: `WorkflowMain` is not defined
+│  21 | params.bwa_index     = WorkflowMain.getGenomeAttribute(params, 'bwa')
+╰     |                        ^^^^^^^^^^^^
+
+Error main.nf:22:24: `WorkflowMain` is not defined
+│  22 | params.bowtie2_index = WorkflowMain.getGenomeAttribute(params, 'bowtie
+╰     |                        ^^^^^^^^^^^^
+
+Error main.nf:23:24: `WorkflowMain` is not defined
+│  23 | params.chromap_index = WorkflowMain.getGenomeAttribute(params, 'chroma
+╰     |                        ^^^^^^^^^^^^
+
+Error main.nf:24:24: `WorkflowMain` is not defined
+│  24 | params.star_index    = WorkflowMain.getGenomeAttribute(params, 'star')
+╰     |                        ^^^^^^^^^^^^
+
+Error main.nf:25:24: `WorkflowMain` is not defined
+│  25 | params.gtf           = WorkflowMain.getGenomeAttribute(params, 'gtf')
+╰     |                        ^^^^^^^^^^^^
+
+Error main.nf:26:24: `WorkflowMain` is not defined
+│  26 | params.gff           = WorkflowMain.getGenomeAttribute(params, 'gff')
+╰     |                        ^^^^^^^^^^^^
+
+Error main.nf:27:24: `WorkflowMain` is not defined
+│  27 | params.gene_bed      = WorkflowMain.getGenomeAttribute(params, 'gene_b
+╰     |                        ^^^^^^^^^^^^
+
+Error main.nf:28:24: `WorkflowMain` is not defined
+│  28 | params.tss_bed       = WorkflowMain.getGenomeAttribute(params, 'tss_be
+╰     |                        ^^^^^^^^^^^^
+
+Error main.nf:29:24: `WorkflowMain` is not defined
+│  29 | params.blacklist     = WorkflowMain.getGenomeAttribute(params, 'blackl
+╰     |                        ^^^^^^^^^^^^
+
+Error main.nf:30:24: `WorkflowMain` is not defined
+│  30 | params.mito_name     = WorkflowMain.getGenomeAttribute(params, 'mito_n
+╰     |                        ^^^^^^^^^^^^
+
+Error main.nf:31:24: `WorkflowMain` is not defined
+│  31 | params.macs_gsize    = WorkflowMain.getMacsGsize(params)
+╰     |                        ^^^^^^^^^^^^
+
+Error main.nf:42:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  40 | 
+│  41 | // Print help message if needed
+│  42 | if (params.help) {
+│     | ^^^^^^^^^^^^^^^^^^
+│  43 |     def logo = NfcoreTemplate.logo(workflow, params.monochrome_logs)
+╰  44 |     def citation = '\n' + WorkflowMain.citation(workflow) + '\n'
+
+Error main.nf:43:16: `NfcoreTemplate` is not defined
+│  43 |     def logo = NfcoreTemplate.logo(workflow, params.monochrome_logs)
+╰     |                ^^^^^^^^^^^^^^
+
+Error main.nf:44:27: `WorkflowMain` is not defined
+│  44 |     def citation = '\n' + WorkflowMain.citation(workflow) + '\n'
+╰     |                           ^^^^^^^^^^^^
+
+Error main.nf:46:54: `NfcoreTemplate` is not defined
+│  46 |     log.info logo + paramsHelp(command) + citation + NfcoreTemplate.da
+╰     |                                                      ^^^^^^^^^^^^^^
+
+Error main.nf:51:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  51 | if (params.validate_params) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  52 |     validateParameters()
+╰  53 | }
+
+Error main.nf:55:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  55 | WorkflowMain.initialise(workflow, params, log)
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:55:1: `WorkflowMain` is not defined
+│  55 | WorkflowMain.initialise(workflow, params, log)
+╰     | ^^^^^^^^^^^^
+
+
+
+
+
+
+
+
+
+
+
+Warn  modules/local/macs2_consensus.nf:33:46: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  33 |     sort -T '.' -k1,1 -k2,2n ${peaks.collect{it.toString()}.sort().joi
+╰     |                                              ^^
+
+Warn  modules/local/macs2_consensus.nf:38:25: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  38 |         ${peaks.collect{it.toString()}.sort().join(',').replaceAll("_p
+╰     |                         ^^
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Error modules/nf-core/bwa/index/main.nf:14:27: `bwa` is not defined
+│  14 |     tuple val(meta), path(bwa) , emit: index
+╰     |                           ^^^
+
+
+
+
+
+Warn  modules/nf-core/custom/dumpsoftwareversions/main.nf:22:9: Variable was declared but not used
+│  22 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/custom/getchromsizes/main.nf:23:9: Variable was declared but not used
+│  23 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+
+Warn  modules/nf-core/fastqc/main.nf:27:48: Parameter was not used -- prefix with `_` to suppress warning
+│  27 |     def renamed_files = old_new_pairs.collect{ old_name, new_name -> n
+╰     |                                                ^^^^^^^^
+
+
+
+
+
+
+Warn  modules/nf-core/macs2/callpeak/main.nf:33:40: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  33 |         def id = args_list.findIndexOf{it=='--format'}
+╰     |                                        ^^
+
+
+
+
+
+
+Warn  modules/nf-core/samtools/flagstat/main.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/samtools/idxstats/main.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+Warn  modules/nf-core/samtools/stats/main.nf:22:9: Variable was declared but not used
+│  22 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+Warn  modules/nf-core/trimgalore/main.nf:41:31: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  41 |         args_list.removeAll { it.toLowerCase().contains('_r2 ') }
+╰     |                               ^^
+
+
+Warn  modules/nf-core/ucsc/bedgraphtobigwig/main.nf:23:9: Variable was declared but not used
+│  23 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+Warn  subworkflows/local/align_star.nf:17:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/bam_bedgraph_bigwig_bedtools_ucsc.nf:16:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/bam_filter_bamtools.nf:19:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/bam_peaks_call_qc_annotate_macs2_homer.nf:29:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  29 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/bam_peaks_call_qc_annotate_macs2_homer.nf:47:13: Parameter was not used -- prefix with `_` to suppress warning
+│  47 |             meta, peaks ->
+╰     |             ^^^^
+
+Warn  subworkflows/local/bam_peaks_call_qc_annotate_macs2_homer.nf:56:27: Parameter was not used -- prefix with `_` to suppress warning
+│  56 |             meta, ip_bam, control_bam, peaks ->
+╰     |                           ^^^^^^^^^^^
+
+Warn  subworkflows/local/bam_peaks_call_qc_annotate_macs2_homer.nf:73:19: Parameter was not used -- prefix with `_` to suppress warning
+│  73 |             meta, ip_bam, peaks, frip ->
+╰     |                   ^^^^^^
+
+Warn  subworkflows/local/bam_peaks_call_qc_annotate_macs2_homer.nf:88:39: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  88 |     ch_homer_annotatepeaks          = Channel.empty()
+╰     |                                       ^^^^^^^
+
+Warn  subworkflows/local/bam_peaks_call_qc_annotate_macs2_homer.nf:89:39: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  89 |     ch_plot_macs2_qc_txt            = Channel.empty()
+╰     |                                       ^^^^^^^
+
+Warn  subworkflows/local/bam_peaks_call_qc_annotate_macs2_homer.nf:90:39: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  90 |     ch_plot_macs2_qc_pdf            = Channel.empty()
+╰     |                                       ^^^^^^^
+
+Warn  subworkflows/local/bam_peaks_call_qc_annotate_macs2_homer.nf:91:39: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  91 |     ch_plot_homer_annotatepeaks_txt = Channel.empty()
+╰     |                                       ^^^^^^^
+
+Warn  subworkflows/local/bam_peaks_call_qc_annotate_macs2_homer.nf:92:39: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  92 |     ch_plot_homer_annotatepeaks_pdf = Channel.empty()
+╰     |                                       ^^^^^^^
+
+Warn  subworkflows/local/bam_peaks_call_qc_annotate_macs2_homer.nf:93:39: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  93 |     ch_plot_homer_annotatepeaks_tsv = Channel.empty()
+╰     |                                       ^^^^^^^
+
+Warn  subworkflows/local/bam_peaks_call_qc_annotate_macs2_homer.nf:111:40: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 111 |                 ch_macs2_peaks.collect{it[1]},
+╰     |                                        ^^
+
+Warn  subworkflows/local/bam_peaks_call_qc_annotate_macs2_homer.nf:122:53: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 122 |                 HOMER_ANNOTATEPEAKS.out.txt.collect{it[1]},
+╰     |                                                     ^^
+
+
+Warn  subworkflows/local/bed_consensus_quantify_qc_bedtools_featurecounts_deseq2.nf:25:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  25 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/bed_consensus_quantify_qc_bedtools_featurecounts_deseq2.nf:30:20: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  30 |         .collect { it[1] }
+╰     |                    ^^
+
+Warn  subworkflows/local/bed_consensus_quantify_qc_bedtools_featurecounts_deseq2.nf:31:19: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  31 |         .filter { it.size() > 1 }
+╰     |                   ^^
+
+Warn  subworkflows/local/bed_consensus_quantify_qc_bedtools_featurecounts_deseq2.nf:50:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  50 |     ch_homer_annotatepeaks = Channel.empty()
+╰     |                              ^^^^^^^
+
+Warn  subworkflows/local/bed_consensus_quantify_qc_bedtools_featurecounts_deseq2.nf:64:20: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  64 |         .collect { it[1] }
+╰     |                    ^^
+
+Warn  subworkflows/local/bed_consensus_quantify_qc_bedtools_featurecounts_deseq2.nf:65:19: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  65 |         .filter { it.size() > 1 }
+╰     |                   ^^
+
+Warn  subworkflows/local/bed_consensus_quantify_qc_bedtools_featurecounts_deseq2.nf:66:18: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  66 |         .map { [ it ] }
+╰     |                  ^^
+
+Warn  subworkflows/local/bed_consensus_quantify_qc_bedtools_featurecounts_deseq2.nf:69:19: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  69 |         .filter { it.size() == 3 }
+╰     |                   ^^
+
+Warn  subworkflows/local/bed_consensus_quantify_qc_bedtools_featurecounts_deseq2.nf:87:34: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  87 |     ch_deseq2_qc_pdf           = Channel.empty()
+╰     |                                  ^^^^^^^
+
+Warn  subworkflows/local/bed_consensus_quantify_qc_bedtools_featurecounts_deseq2.nf:88:34: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  88 |     ch_deseq2_qc_rdata         = Channel.empty()
+╰     |                                  ^^^^^^^
+
+Warn  subworkflows/local/bed_consensus_quantify_qc_bedtools_featurecounts_deseq2.nf:89:34: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  89 |     ch_deseq2_qc_rds           = Channel.empty()
+╰     |                                  ^^^^^^^
+
+Warn  subworkflows/local/bed_consensus_quantify_qc_bedtools_featurecounts_deseq2.nf:90:34: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  90 |     ch_deseq2_qc_pca_txt       = Channel.empty()
+╰     |                                  ^^^^^^^
+
+Warn  subworkflows/local/bed_consensus_quantify_qc_bedtools_featurecounts_deseq2.nf:91:34: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  91 |     ch_deseq2_qc_pca_multiqc   = Channel.empty()
+╰     |                                  ^^^^^^^
+
+Warn  subworkflows/local/bed_consensus_quantify_qc_bedtools_featurecounts_deseq2.nf:92:34: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  92 |     ch_deseq2_qc_dists_txt     = Channel.empty()
+╰     |                                  ^^^^^^^
+
+Warn  subworkflows/local/bed_consensus_quantify_qc_bedtools_featurecounts_deseq2.nf:93:34: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  93 |     ch_deseq2_qc_dists_multiqc = Channel.empty()
+╰     |                                  ^^^^^^^
+
+Warn  subworkflows/local/bed_consensus_quantify_qc_bedtools_featurecounts_deseq2.nf:94:34: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  94 |     ch_deseq2_qc_log           = Channel.empty()
+╰     |                                  ^^^^^^^
+
+Warn  subworkflows/local/bed_consensus_quantify_qc_bedtools_featurecounts_deseq2.nf:95:34: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  95 |     ch_deseq2_qc_size_factors  = Channel.empty()
+╰     |                                  ^^^^^^^
+
+
+Warn  subworkflows/local/bigwig_plot_deeptools.nf:19:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/input_check.nf:11:5: Parameter was not used -- prefix with `_` to suppress warning
+│  11 |     with_control // boolean: samplesheet contains controls
+╰     |     ^^^^^^^^^^^^
+
+Warn  subworkflows/local/input_check.nf:18:37: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  18 |         .map { create_fastq_channel(it, seq_center) }
+╰     |                                     ^^
+
+
+Error subworkflows/local/prepare_genome.nf:199:48: `UNTAR` is not defined
+│ 199 |                 ch_versions  = ch_versions.mix(UNTAR.out.versions)
+╰     |                                                ^^^^^
+
+Warn  subworkflows/local/prepare_genome.nf:37:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  37 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome.nf:42:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  42 |     ch_fasta = Channel.empty()
+╰     |                ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome.nf:44:74: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  44 | _fasta    = GUNZIP_FASTA ( [ [:], params.fasta ] ).gunzip.map{ it[1] }
+╰     |                                                                ^^
+
+Warn  subworkflows/local/prepare_genome.nf:47:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  47 |         ch_fasta = Channel.value(file(params.fasta))
+╰     |                    ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome.nf:55:74: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  55 |   ch_gtf      = GUNZIP_GTF ( [ [:], params.gtf ] ).gunzip.map{ it[1] }
+╰     |                                                                ^^
+
+Warn  subworkflows/local/prepare_genome.nf:58:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  58 |             ch_gtf = Channel.value(file(params.gtf))
+╰     |                      ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome.nf:62:74: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  62 |   ch_gff      = GUNZIP_GFF ( [ [:], params.gff ] ).gunzip.map{ it[1] }
+╰     |                                                                ^^
+
+Warn  subworkflows/local/prepare_genome.nf:65:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  65 |             ch_gff = Channel.value(file(params.gff))
+╰     |                      ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome.nf:74:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  74 |     ch_blacklist = Channel.empty()
+╰     |                    ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome.nf:77:87: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  77 | t = GUNZIP_BLACKLIST ( [ [:], params.blacklist ] ).gunzip.map{ it[1] }
+╰     |                                                                ^^
+
+Warn  subworkflows/local/prepare_genome.nf:80:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  80 |             ch_blacklist = Channel.value(file(params.blacklist))
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome.nf:104:84: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 104 | bed = GUNZIP_GENE_BED ( [ [:], params.gene_bed ] ).gunzip.map{ it[1] }
+╰     |                                                                ^^
+
+Warn  subworkflows/local/prepare_genome.nf:107:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 107 |             ch_gene_bed = Channel.value(file(params.gene_bed))
+╰     |                           ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome.nf:116:81: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 116 | s_bed = GUNZIP_TSS_BED ( [ [:], params.tss_bed ] ).gunzip.map{ it[1] }
+╰     |                                                                ^^
+
+Warn  subworkflows/local/prepare_genome.nf:119:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 119 |             ch_tss_bed = Channel.value(file(params.tss_bed))
+╰     |                          ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome.nf:126:50: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 126 |     CUSTOM_GETCHROMSIZES ( ch_fasta.map { [ [:], it ] } )
+╰     |                                                  ^^
+
+Warn  subworkflows/local/prepare_genome.nf:127:59: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 127 |     ch_chrom_sizes = CUSTOM_GETCHROMSIZES.out.sizes.map { it[1] }
+╰     |                                                           ^^
+
+Warn  subworkflows/local/prepare_genome.nf:128:56: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 128 |     ch_fai         = CUSTOM_GETCHROMSIZES.out.fai.map{ it[1] }
+╰     |                                                        ^^
+
+Warn  subworkflows/local/prepare_genome.nf:134:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 134 |     ch_genome_autosomes = Channel.empty()
+╰     |                           ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome.nf:145:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 145 |     ch_genome_filtered_bed = Channel.empty()
+╰     |                              ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome.nf:158:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 158 |     ch_bwa_index = Channel.empty()
+╰     |                    ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome.nf:168:62: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 168 | INDEX ( ch_fasta.map { [ [:], it ] } ).index
+╰     |                               ^^
+
+Warn  subworkflows/local/prepare_genome.nf:176:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 176 |     ch_bowtie2_index = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome.nf:186:70: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 186 | BUILD ( ch_fasta.map { [ [:], it ] } ).index
+╰     |                               ^^
+
+Warn  subworkflows/local/prepare_genome.nf:194:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 194 |     ch_chromap_index = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome.nf:204:70: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 204 | INDEX ( ch_fasta.map { [ [:], it ] } ).index
+╰     |                               ^^
+
+Warn  subworkflows/local/prepare_genome.nf:212:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 212 |     ch_star_index = Channel.empty()
+╰     |                     ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome.nf:216:92: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 216 | x = UNTAR_STAR_INDEX ( [ [:], params.star_index ] ).untar.map{ it[1] }
+╰     |                                                                ^^
+
+Warn  subworkflows/local/prepare_genome.nf:219:33: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 219 |                 ch_star_index = Channel.value(file(params.star_index))
+╰     |                                 ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome.nf:236:59: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 236 |         ch_macs_gsize = KHMER_UNIQUEKMERS.out.kmers.map { it.text.trim
+╰     |                                                           ^^
+
+
+Warn  subworkflows/nf-core/bam_markduplicates_picard/main.nf:18:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  18 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/nf-core/bam_sort_stats_samtools/main.nf:16:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/nf-core/bam_stats_samtools/main.nf:15:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/nf-core/fastq_align_bowtie2/main.nf:18:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  18 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/nf-core/fastq_align_bwa/main.nf:16:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/nf-core/fastq_align_chromap/main.nf:19:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Error subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/main.nf:59:31: `reads` is already declared
+│  59 |                         meta, reads ->
+╰     |                               ^^^^^
+
+Error subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/main.nf:88:23: `reads` is already declared
+│  88 |                 meta, reads, trim_log ->
+╰     |                       ^^^^^
+
+Error subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/main.nf:88:30: `trim_log` is already declared
+│  88 |                 meta, reads, trim_log ->
+╰     |                              ^^^^^^^^
+
+Error subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/main.nf:90:25: Variables in a closure should be declared with `def`
+│  90 |                         num_reads = getTrimGaloreReadsAfterFiltering(m
+╰     |                         ^^^^^^^^^
+
+Error subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/main.nf:99:29: `reads` is already declared
+│  99 |             .filter { meta, reads, num_reads -> num_reads >= min_trimm
+╰     |                             ^^^^^
+
+Error subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/main.nf:99:36: `num_reads` is already declared
+│  99 |             .filter { meta, reads, num_reads -> num_reads >= min_trimm
+╰     |                                    ^^^^^^^^^
+
+Error subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/main.nf:100:26: `reads` is already declared
+│ 100 |             .map { meta, reads, num_reads -> [ meta, reads ] }
+╰     |                          ^^^^^
+
+Error subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/main.nf:100:33: `num_reads` is already declared
+│ 100 |             .map { meta, reads, num_reads -> [ meta, reads ] }
+╰     |                                 ^^^^^^^^^
+
+Error subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/main.nf:104:26: `reads` is already declared
+│ 104 |             .map { meta, reads, num_reads -> [ meta, num_reads ] }
+╰     |                          ^^^^^
+
+Error subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/main.nf:104:33: `num_reads` is already declared
+│ 104 |             .map { meta, reads, num_reads -> [ meta, num_reads ] }
+╰     |                                 ^^^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/main.nf:35:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  35 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/main.nf:36:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  36 |     fastqc_html = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/main.nf:37:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  37 |     fastqc_zip  = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/main.nf:46:17: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  46 |     umi_log   = Channel.empty()
+╰     |                 ^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/main.nf:67:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  67 |     trim_unpaired   = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/main.nf:68:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  68 |     trim_html       = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/main.nf:69:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  69 |     trim_zip        = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/main.nf:70:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  70 |     trim_log        = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/main.nf:71:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  71 |     trim_read_count = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/main.nf:99:23: Parameter was not used -- prefix with `_` to suppress warning
+│  99 |             .filter { meta, reads, num_reads -> num_reads >= min_trimm
+╰     |                       ^^^^
+
+Warn  subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/main.nf:99:29: Parameter was not used -- prefix with `_` to suppress warning
+│  99 |             .filter { meta, reads, num_reads -> num_reads >= min_trimm
+╰     |                             ^^^^^
+
+Warn  subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/main.nf:100:33: Parameter was not used -- prefix with `_` to suppress warning
+│ 100 |             .map { meta, reads, num_reads -> [ meta, reads ] }
+╰     |                                 ^^^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/main.nf:104:26: Parameter was not used -- prefix with `_` to suppress warning
+│ 104 |             .map { meta, reads, num_reads -> [ meta, num_reads ] }
+╰     |                          ^^^^^
+
+
+Error workflows/atacseq.nf:9:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│   9 | def logo = NfcoreTemplate.logo(workflow, params.monochrome_logs)
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:9:12: `NfcoreTemplate` is not defined
+│   9 | def logo = NfcoreTemplate.logo(workflow, params.monochrome_logs)
+╰     |            ^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:10:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  10 | def citation = '\n' + WorkflowMain.citation(workflow) + '\n'
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:10:23: `WorkflowMain` is not defined
+│  10 | def citation = '\n' + WorkflowMain.citation(workflow) + '\n'
+╰     |                       ^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:11:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  11 | def summary_params = paramsSummaryMap(workflow)
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:14:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  14 | log.info logo + paramsSummaryLog(workflow) + citation
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:17:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  17 | WorkflowAtacseq.initialise(params, log)
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:17:1: `WorkflowAtacseq` is not defined
+│  17 | WorkflowAtacseq.initialise(params, log)
+╰     | ^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:20:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  20 | ch_input = file(params.input)
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:23:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  23 | ataqv_mito_reference = params.ataqv_mito_reference
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:24:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  24 | if (!params.ataqv_mito_reference && params.mito_name) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  25 |     ataqv_mito_reference = params.mito_name
+╰  26 | }
+
+Error workflows/atacseq.nf:34:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  34 | ch_multiqc_config        = Channel.fromPath("$projectDir/assets/multiq
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:35:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  35 | ch_multiqc_custom_config = params.multiqc_config ? Channel.fromPath(pa
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:36:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  36 | ch_multiqc_logo          = params.multiqc_logo   ? Channel.fromPath(pa
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:37:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  37 | ch_multiqc_custom_methods_description = params.multiqc_methods_descrip
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:41:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  41 | ch_bamtools_filter_se_config = file(params.bamtools_filter_se_config)
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:42:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  42 | ch_bamtools_filter_pe_config = file(params.bamtools_filter_pe_config)
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:45:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  45 | ch_multiqc_merged_library_peak_count_header        = file("$projectDir
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:46:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  46 | ch_multiqc_merged_library_frip_score_header        = file("$projectDir
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:47:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  47 | ch_multiqc_merged_library_peak_annotation_header   = file("$projectDir
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:48:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  48 | ch_multiqc_merged_library_deseq2_pca_header        = file("$projectDir
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:49:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  49 | ch_multiqc_merged_library_deseq2_clustering_header = file("$projectDir
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:51:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  51 | ch_multiqc_merged_replicate_peak_count_header        = file("$projectD
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:52:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  52 | ch_multiqc_merged_replicate_frip_score_header        = file("$projectD
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:53:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  53 | ch_multiqc_merged_replicate_peak_annotation_header   = file("$projectD
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:54:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  54 | ch_multiqc_merged_replicate_deseq2_pca_header        = file("$projectD
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:55:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  55 | ch_multiqc_merged_replicate_deseq2_clustering_header = file("$projectD
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:119:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│ 119 | def multiqc_report = []
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:137:9: `ch_input` is not defined
+│ 137 |         ch_input,
+╰     |         ^^^^^^^^
+
+Error workflows/atacseq.nf:309:9: `ch_bamtools_filter_se_config` is not defined
+│ 309 |         ch_bamtools_filter_se_config,
+╰     |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:310:9: `ch_bamtools_filter_pe_config` is not defined
+│ 310 |         ch_bamtools_filter_pe_config
+╰     |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:441:9: `ch_multiqc_merged_library_peak_count_header` is not defined
+│ 441 |         ch_multiqc_merged_library_peak_count_header,
+╰     |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:442:9: `ch_multiqc_merged_library_frip_score_header` is not defined
+│ 442 |         ch_multiqc_merged_library_frip_score_header,
+╰     |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:443:9: `ch_multiqc_merged_library_peak_annotation_header` is not defined
+│ 443 |         ch_multiqc_merged_library_peak_annotation_header,
+╰     |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:463:13: `ch_multiqc_merged_library_deseq2_pca_header` is not defined
+│ 463 |             ch_multiqc_merged_library_deseq2_pca_header,
+╰     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:464:13: `ch_multiqc_merged_library_deseq2_clustering_header` is not defined
+│ 464 |             ch_multiqc_merged_library_deseq2_clustering_header,
+╰     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:491:13: `ataqv_mito_reference` is not defined
+│ 491 |             ataqv_mito_reference ?: '',
+╰     |             ^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:621:13: `ch_multiqc_merged_replicate_peak_count_header` is not defined
+│ 621 |             ch_multiqc_merged_replicate_peak_count_header,
+╰     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:622:13: `ch_multiqc_merged_replicate_frip_score_header` is not defined
+│ 622 |             ch_multiqc_merged_replicate_frip_score_header,
+╰     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:623:13: `ch_multiqc_merged_replicate_peak_annotation_header` is not defined
+│ 623 |             ch_multiqc_merged_replicate_peak_annotation_header,
+╰     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:643:17: `ch_multiqc_merged_replicate_deseq2_pca_header` is not defined
+│ 643 |                 ch_multiqc_merged_replicate_deseq2_pca_header,
+╰     |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:644:17: `ch_multiqc_merged_replicate_deseq2_clustering_header` is not defined
+│ 644 |                 ch_multiqc_merged_replicate_deseq2_clustering_header,
+╰     |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:701:31: `WorkflowAtacseq` is not defined
+│ 701 |         workflow_summary    = WorkflowAtacseq.paramsSummaryMultiqc(wor
+╰     |                               ^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:701:78: `summary_params` is not defined
+│ 701 | ry    = WorkflowAtacseq.paramsSummaryMultiqc(workflow, summary_params)
+╰     |                                                        ^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:704:30: `WorkflowAtacseq` is not defined
+│ 704 |     methods_description    = WorkflowAtacseq.methodsDescriptionText(wo
+╰     |                              ^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:704:79: `ch_multiqc_custom_methods_description` is not defined
+│ 704 | scriptionText(workflow, ch_multiqc_custom_methods_description, params)
+╰     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:708:13: `ch_multiqc_config` is not defined
+│ 708 |             ch_multiqc_config,
+╰     |             ^^^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:709:13: `ch_multiqc_custom_config` is not defined
+│ 709 |             ch_multiqc_custom_config.collect().ifEmpty([]),
+╰     |             ^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:766:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│ 764 | */
+│ 765 | 
+│ 766 | workflow.onComplete {
+│     | ^^^^^^^^^^^^^^^^^^^^^
+│ 767 |     if (params.email || params.email_on_fail) {
+╰ 768 |         NfcoreTemplate.email(workflow, params, summary_params, project
+
+Error workflows/atacseq.nf:768:9: `NfcoreTemplate` is not defined
+│ 768 |         NfcoreTemplate.email(workflow, params, summary_params, project
+╰     |         ^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:772:9: `NfcoreTemplate` is not defined
+│ 772 |         NfcoreTemplate.IM_notification(workflow, params, summary_param
+╰     |         ^^^^^^^^^^^^^^
+
+Error workflows/atacseq.nf:775:5: `NfcoreTemplate` is not defined
+│ 775 |     NfcoreTemplate.summary(workflow, params, log)
+╰     |     ^^^^^^^^^^^^^^
+
+Warn  workflows/atacseq.nf:20:1: Variable was declared but not used
+│  20 | ch_input = file(params.input)
+╰     | ^^^^^^^^
+
+Warn  workflows/atacseq.nf:34:1: Variable was declared but not used
+│  34 | ch_multiqc_config        = Channel.fromPath("$projectDir/assets/multiq
+╰     | ^^^^^^^^^^^^^^^^^
+
+Warn  workflows/atacseq.nf:34:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  34 | ch_multiqc_config        = Channel.fromPath("$projectDir/assets/multiq
+╰     |                            ^^^^^^^
+
+Warn  workflows/atacseq.nf:35:1: Variable was declared but not used
+│  35 | ch_multiqc_custom_config = params.multiqc_config ? Channel.fromPath(pa
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/atacseq.nf:35:52: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  35 | ch_multiqc_custom_config = params.multiqc_config ? Channel.fromPath(pa
+╰     |                                                    ^^^^^^^
+
+Warn  workflows/atacseq.nf:35:94: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  35 | iqc_config ? Channel.fromPath(params.multiqc_config) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/atacseq.nf:36:1: Variable was declared but not used
+│  36 | ch_multiqc_logo          = params.multiqc_logo   ? Channel.fromPath(pa
+╰     | ^^^^^^^^^^^^^^^
+
+Warn  workflows/atacseq.nf:36:52: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  36 | ch_multiqc_logo          = params.multiqc_logo   ? Channel.fromPath(pa
+╰     |                                                    ^^^^^^^
+
+Warn  workflows/atacseq.nf:36:94: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  36 | iqc_logo   ? Channel.fromPath(params.multiqc_logo)   : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/atacseq.nf:37:1: Variable was declared but not used
+│  37 | ch_multiqc_custom_methods_description = params.multiqc_methods_descrip
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/atacseq.nf:41:1: Variable was declared but not used
+│  41 | ch_bamtools_filter_se_config = file(params.bamtools_filter_se_config)
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/atacseq.nf:42:1: Variable was declared but not used
+│  42 | ch_bamtools_filter_pe_config = file(params.bamtools_filter_pe_config)
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/atacseq.nf:45:1: Variable was declared but not used
+│  45 | ch_multiqc_merged_library_peak_count_header        = file("$projectDir
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/atacseq.nf:46:1: Variable was declared but not used
+│  46 | ch_multiqc_merged_library_frip_score_header        = file("$projectDir
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/atacseq.nf:47:1: Variable was declared but not used
+│  47 | ch_multiqc_merged_library_peak_annotation_header   = file("$projectDir
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/atacseq.nf:48:1: Variable was declared but not used
+│  48 | ch_multiqc_merged_library_deseq2_pca_header        = file("$projectDir
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/atacseq.nf:49:1: Variable was declared but not used
+│  49 | ch_multiqc_merged_library_deseq2_clustering_header = file("$projectDir
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/atacseq.nf:51:1: Variable was declared but not used
+│  51 | ch_multiqc_merged_replicate_peak_count_header        = file("$projectD
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/atacseq.nf:52:1: Variable was declared but not used
+│  52 | ch_multiqc_merged_replicate_frip_score_header        = file("$projectD
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/atacseq.nf:53:1: Variable was declared but not used
+│  53 | ch_multiqc_merged_replicate_peak_annotation_header   = file("$projectD
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/atacseq.nf:54:1: Variable was declared but not used
+│  54 | ch_multiqc_merged_replicate_deseq2_pca_header        = file("$projectD
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/atacseq.nf:55:1: Variable was declared but not used
+│  55 | ch_multiqc_merged_replicate_deseq2_clustering_header = file("$projectD
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/atacseq.nf:123:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 123 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  workflows/atacseq.nf:163:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 163 |     ch_genome_bam        = Channel.empty()
+╰     |                            ^^^^^^^
+
+Warn  workflows/atacseq.nf:164:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 164 |     ch_genome_bam_index  = Channel.empty()
+╰     |                            ^^^^^^^
+
+Warn  workflows/atacseq.nf:165:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 165 |     ch_samtools_stats    = Channel.empty()
+╰     |                            ^^^^^^^
+
+Warn  workflows/atacseq.nf:166:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 166 |     ch_samtools_flagstat = Channel.empty()
+╰     |                            ^^^^^^^
+
+Warn  workflows/atacseq.nf:167:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 167 |     ch_samtools_idxstats = Channel.empty()
+╰     |                            ^^^^^^^
+
+Warn  workflows/atacseq.nf:175:32: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 175 |                         [ [:], it ]
+╰     |                                ^^
+
+Warn  workflows/atacseq.nf:197:28: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 197 |                     [ [:], it ]
+╰     |                            ^^
+
+Warn  workflows/atacseq.nf:217:28: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 217 |                     [ [:], it ]
+╰     |                            ^^
+
+Warn  workflows/atacseq.nf:235:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 235 |     ch_star_multiqc = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  workflows/atacseq.nf:242:28: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 242 |                     [ [:], it ]
+╰     |                            ^^
+
+Warn  workflows/atacseq.nf:288:24: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 288 |                 [ [:], it ]
+╰     |                        ^^
+
+Warn  workflows/atacseq.nf:292:24: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 292 |                 [ [:], it ]
+╰     |                        ^^
+
+Warn  workflows/atacseq.nf:307:24: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 307 |                 [ [:], it ]
+╰     |                        ^^
+
+Warn  workflows/atacseq.nf:317:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 317 |     ch_preseq_multiqc = Channel.empty()
+╰     |                         ^^^^^^^
+
+Warn  workflows/atacseq.nf:329:47: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 329 |     ch_picardcollectmultiplemetrics_multiqc = Channel.empty()
+╰     |                                               ^^^^^^^
+
+Warn  workflows/atacseq.nf:336:23: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 336 |                     [ it[0], it[1], [] ]
+╰     |                       ^^
+
+Warn  workflows/atacseq.nf:336:30: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 336 |                     [ it[0], it[1], [] ]
+╰     |                              ^^
+
+Warn  workflows/atacseq.nf:342:28: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 342 |                     [ [:], it ]
+╰     |                            ^^
+
+Warn  workflows/atacseq.nf:348:28: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 348 |                     [ [:], it ]
+╰     |                            ^^
+
+Warn  workflows/atacseq.nf:367:39: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 367 |     ch_deeptoolsplotprofile_multiqc = Channel.empty()
+╰     |                                       ^^^^^^^
+
+Warn  workflows/atacseq.nf:406:43: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 406 |     ch_deeptoolsplotfingerprint_multiqc = Channel.empty()
+╰     |                                           ^^^^^^^
+
+Warn  workflows/atacseq.nf:419:29: Parameter was not used -- prefix with `_` to suppress warning
+│ 419 |                 meta, bams, bais ->
+╰     |                             ^^^^
+
+Warn  workflows/atacseq.nf:426:28: Parameter was not used -- prefix with `_` to suppress warning
+│ 426 |                 meta, bam, bai ->
+╰     |                            ^^^
+
+Warn  workflows/atacseq.nf:453:44: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 453 |     ch_macs2_consensus_library_bed       = Channel.empty()
+╰     |                                            ^^^^^^^
+
+Warn  workflows/atacseq.nf:454:44: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 454 |     ch_featurecounts_library_multiqc     = Channel.empty()
+╰     |                                            ^^^^^^^
+
+Warn  workflows/atacseq.nf:455:44: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 455 |     ch_deseq2_pca_library_multiqc        = Channel.empty()
+╰     |                                            ^^^^^^^
+
+Warn  workflows/atacseq.nf:456:44: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 456 |     ch_deseq2_clustering_library_multiqc = Channel.empty()
+╰     |                                            ^^^^^^^
+
+Warn  workflows/atacseq.nf:499:57: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 499 |             MERGED_LIBRARY_ATAQV_ATAQV.out.json.collect{it[1]}
+╰     |                                                         ^^
+
+Warn  workflows/atacseq.nf:507:59: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 507 |     ch_markduplicates_replicate_stats                   = Channel.empt
+╰     |                                                           ^^^^^^^
+
+Warn  workflows/atacseq.nf:508:59: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 508 |     ch_markduplicates_replicate_flagstat                = Channel.empt
+╰     |                                                           ^^^^^^^
+
+Warn  workflows/atacseq.nf:509:59: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 509 |     ch_markduplicates_replicate_idxstats                = Channel.empt
+╰     |                                                           ^^^^^^^
+
+Warn  workflows/atacseq.nf:510:59: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 510 |     ch_markduplicates_replicate_metrics                 = Channel.empt
+╰     |                                                           ^^^^^^^
+
+Warn  workflows/atacseq.nf:511:59: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 511 |     ch_ucsc_bedgraphtobigwig_replicate_bigwig           = Channel.empt
+╰     |                                                           ^^^^^^^
+
+Warn  workflows/atacseq.nf:512:59: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 512 |     ch_macs2_replicate_peaks                            = Channel.empt
+╰     |                                                           ^^^^^^^
+
+Warn  workflows/atacseq.nf:513:59: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 513 |     ch_macs2_frip_replicate_multiqc                     = Channel.empt
+╰     |                                                           ^^^^^^^
+
+Warn  workflows/atacseq.nf:514:59: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 514 |     ch_macs2_peak_count_replicate_multiqc               = Channel.empt
+╰     |                                                           ^^^^^^^
+
+Warn  workflows/atacseq.nf:515:59: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 515 |     ch_macs2_plot_homer_annotatepeaks_replicate_multiqc = Channel.empt
+╰     |                                                           ^^^^^^^
+
+Warn  workflows/atacseq.nf:516:59: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 516 |     ch_macs2_consensus_replicate_bed                    = Channel.empt
+╰     |                                                           ^^^^^^^
+
+Warn  workflows/atacseq.nf:517:59: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 517 |     ch_featurecounts_replicate_multiqc                  = Channel.empt
+╰     |                                                           ^^^^^^^
+
+Warn  workflows/atacseq.nf:518:59: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 518 |     ch_deseq2_pca_replicate_multiqc                     = Channel.empt
+╰     |                                                           ^^^^^^^
+
+Warn  workflows/atacseq.nf:519:59: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 519 |     ch_deseq2_clustering_replicate_multiqc              = Channel.empt
+╰     |                                                           ^^^^^^^
+
+Warn  workflows/atacseq.nf:535:17: Parameter was not used -- prefix with `_` to suppress warning
+│ 535 |                 id, metas, bams ->
+╰     |                 ^^
+
+Warn  workflows/atacseq.nf:559:28: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 559 |                     [ [:], it ]
+╰     |                            ^^
+
+Warn  workflows/atacseq.nf:563:28: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 563 |                     [ [:], it ]
+╰     |                            ^^
+
+Warn  workflows/atacseq.nf:664:61: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 664 | _TO_BIGWIG.out.bigwig.collect{it[1]}.ifEmpty([]),
+╰     |                               ^^
+
+Warn  workflows/atacseq.nf:665:66: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 665 | OTATE_PEAKS.out.peaks.collect{it[1]}.ifEmpty([]),
+╰     |                               ^^
+
+Warn  workflows/atacseq.nf:666:52: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 666 |             ch_macs2_consensus_library_bed.collect{it[1]}.ifEmpty([]),
+╰     |                                                    ^^
+
+Warn  workflows/atacseq.nf:667:63: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 667 | gwig_replicate_bigwig.collect{it[1]}.ifEmpty([]),
+╰     |                               ^^
+
+Warn  workflows/atacseq.nf:668:46: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 668 |             ch_macs2_replicate_peaks.collect{it[1]}.ifEmpty([]),
+╰     |                                              ^^
+
+Warn  workflows/atacseq.nf:669:54: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 669 |             ch_macs2_consensus_replicate_bed.collect{it[1]}.ifEmpty([]
+╰     |                                                      ^^
+
+Warn  workflows/atacseq.nf:702:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 702 |         ch_workflow_summary = Channel.value(workflow_summary)
+╰     |                               ^^^^^^^
+
+Warn  workflows/atacseq.nf:705:5: Variable was declared but not used
+│ 705 |     ch_methods_description = Channel.value(methods_description)
+╰     |     ^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/atacseq.nf:705:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 705 |     ch_methods_description = Channel.value(methods_description)
+╰     |                              ^^^^^^^
+
+Warn  workflows/atacseq.nf:713:69: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 713 | GALORE.out.fastqc_zip.collect{it[1]}.ifEmpty([]),
+╰     |                               ^^
+
+Warn  workflows/atacseq.nf:714:67: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 714 | IMGALORE.out.trim_zip.collect{it[1]}.ifEmpty([]),
+╰     |                               ^^
+
+Warn  workflows/atacseq.nf:715:67: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 715 | IMGALORE.out.trim_log.collect{it[1]}.ifEmpty([]),
+╰     |                               ^^
+
+Warn  workflows/atacseq.nf:717:39: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 717 |             ch_samtools_stats.collect{it[1]}.ifEmpty([]),
+╰     |                                       ^^
+
+Warn  workflows/atacseq.nf:718:42: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 718 |             ch_samtools_flagstat.collect{it[1]}.ifEmpty([]),
+╰     |                                          ^^
+
+Warn  workflows/atacseq.nf:719:42: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 719 |             ch_samtools_idxstats.collect{it[1]}.ifEmpty([]),
+╰     |                                          ^^
+
+Warn  workflows/atacseq.nf:721:68: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 721 | ATES_PICARD.out.stats.collect{it[1]}.ifEmpty([]),
+╰     |                               ^^
+
+Warn  workflows/atacseq.nf:722:71: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 722 | S_PICARD.out.flagstat.collect{it[1]}.ifEmpty([]),
+╰     |                               ^^
+
+Warn  workflows/atacseq.nf:723:71: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 723 | S_PICARD.out.idxstats.collect{it[1]}.ifEmpty([]),
+╰     |                               ^^
+
+Warn  workflows/atacseq.nf:724:70: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 724 | ES_PICARD.out.metrics.collect{it[1]}.ifEmpty([]),
+╰     |                               ^^
+
+Warn  workflows/atacseq.nf:726:57: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 726 |             MERGED_LIBRARY_FILTER_BAM.out.stats.collect{it[1]}.ifEmpty
+╰     |                                                         ^^
+
+Warn  workflows/atacseq.nf:727:60: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 727 |             MERGED_LIBRARY_FILTER_BAM.out.flagstat.collect{it[1]}.ifEm
+╰     |                                                            ^^
+
+Warn  workflows/atacseq.nf:728:60: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 728 |             MERGED_LIBRARY_FILTER_BAM.out.idxstats.collect{it[1]}.ifEm
+╰     |                                                            ^^
+
+Warn  workflows/atacseq.nf:729:61: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 729 | ltiplemetrics_multiqc.collect{it[1]}.ifEmpty([]),
+╰     |                               ^^
+
+Warn  workflows/atacseq.nf:731:39: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 731 |             ch_preseq_multiqc.collect{it[1]}.ifEmpty([]),
+╰     |                                       ^^
+
+Warn  workflows/atacseq.nf:733:53: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 733 |             ch_deeptoolsplotprofile_multiqc.collect{it[1]}.ifEmpty([])
+╰     |                                                     ^^
+
+Warn  workflows/atacseq.nf:734:57: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 734 |             ch_deeptoolsplotfingerprint_multiqc.collect{it[1]}.ifEmpty
+╰     |                                                         ^^
+
+Warn  workflows/atacseq.nf:736:73: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 736 | EAKS.out.frip_multiqc.collect{it[1]}.ifEmpty([]),
+╰     |                               ^^
+
+Warn  workflows/atacseq.nf:737:79: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 737 | ut.peak_count_multiqc.collect{it[1]}.ifEmpty([]),
+╰     |                               ^^
+
+Warn  workflows/atacseq.nf:739:54: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 739 |             ch_featurecounts_library_multiqc.collect{it[1]}.ifEmpty([]
+╰     |                                                      ^^
+
+Warn  workflows/atacseq.nf:741:55: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 741 |             ch_markduplicates_replicate_stats.collect{it[1]}.ifEmpty([
+╰     |                                                       ^^
+
+Warn  workflows/atacseq.nf:742:58: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 742 |             ch_markduplicates_replicate_flagstat.collect{it[1]}.ifEmpt
+╰     |                                                          ^^
+
+Warn  workflows/atacseq.nf:743:58: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 743 |             ch_markduplicates_replicate_idxstats.collect{it[1]}.ifEmpt
+╰     |                                                          ^^
+
+Warn  workflows/atacseq.nf:744:57: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 744 |             ch_markduplicates_replicate_metrics.collect{it[1]}.ifEmpty
+╰     |                                                         ^^
+
+Warn  workflows/atacseq.nf:746:53: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 746 |             ch_macs2_frip_replicate_multiqc.collect{it[1]}.ifEmpty([])
+╰     |                                                     ^^
+
+Warn  workflows/atacseq.nf:747:59: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 747 |             ch_macs2_peak_count_replicate_multiqc.collect{it[1]}.ifEmp
+╰     |                                                           ^^
+
+Warn  workflows/atacseq.nf:749:56: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 749 |             ch_featurecounts_replicate_multiqc.collect{it[1]}.ifEmpty(
+╰     |                                                        ^^
+
+Warn  workflows/atacseq.nf:756:9: Variable was declared but not used
+│ 756 |         multiqc_report = MULTIQC.out.report.toList()
+╰     |         ^^^^^^^^^^^^^^
+
+
+Error conf/base.config:13:16: `check_max` is not defined
+│  13 |     cpus   = { check_max( 1    * task.attempt, 'cpus'   ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:14:16: `check_max` is not defined
+│  14 |     memory = { check_max( 6.GB * task.attempt, 'memory' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:15:16: `check_max` is not defined
+│  15 |     time   = { check_max( 4.h  * task.attempt, 'time'   ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:28:20: `check_max` is not defined
+│  28 |         cpus   = { check_max( 1                  , 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:29:20: `check_max` is not defined
+│  29 |         memory = { check_max( 6.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:30:20: `check_max` is not defined
+│  30 |         time   = { check_max( 4.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:33:20: `check_max` is not defined
+│  33 |         cpus   = { check_max( 2     * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:34:20: `check_max` is not defined
+│  34 |         memory = { check_max( 12.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:35:20: `check_max` is not defined
+│  35 |         time   = { check_max( 4.h   * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:38:20: `check_max` is not defined
+│  38 |         cpus   = { check_max( 6     * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:39:20: `check_max` is not defined
+│  39 |         memory = { check_max( 36.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:40:20: `check_max` is not defined
+│  40 |         time   = { check_max( 8.h   * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:43:20: `check_max` is not defined
+│  43 |         cpus   = { check_max( 12    * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:44:20: `check_max` is not defined
+│  44 |         memory = { check_max( 72.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:45:20: `check_max` is not defined
+│  45 |         time   = { check_max( 16.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:48:20: `check_max` is not defined
+│  48 |         time   = { check_max( 20.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:51:20: `check_max` is not defined
+│  51 |         memory = { check_max( 200.GB * task.attempt, 'memory' ) }
+╰     |                    ^^^^^^^^^
+
+
+Error conf/modules.config:144:1: If statements cannot be mixed with config statements
+│ 142 | //
+│ 143 | 
+│ 144 | if (!(params.skip_fastqc || params.skip_qc)) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│ 145 |     process {
+╰ 146 |         withName: 'FASTQC' {
+
+Error conf/modules.config:164:1: If statements cannot be mixed with config statements
+│ 162 | }
+│ 163 | 
+│ 164 | if (!params.skip_trimming) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│ 165 |     process {
+╰ 166 |         withName: 'TRIMGALORE' {
+
+Error conf/modules.config:236:1: If statements cannot be mixed with config statements
+│ 234 | }
+│ 235 | 
+│ 236 | if (params.aligner == 'bwa') {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│ 237 |     process {
+╰ 238 |         withName: 'BWA_MEM' {
+
+Error conf/modules.config:258:1: If statements cannot be mixed with config statements
+│ 256 | }
+│ 257 | 
+│ 258 | if (params.aligner == 'bowtie2') {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│ 259 |     process {
+╰ 260 |         withName: 'BOWTIE2_ALIGN' {
+
+Error conf/modules.config:286:1: If statements cannot be mixed with config statements
+│ 284 | }
+│ 285 | 
+│ 286 | if (params.aligner == 'chromap') {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│ 287 |     process {
+╰ 288 |         withName: 'CHROMAP_INDEX' {
+
+Error conf/modules.config:309:1: If statements cannot be mixed with config statements
+│ 307 | }
+│ 308 | 
+│ 309 | if (params.aligner == 'star') {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│ 310 |     process {
+╰ 311 |         withName: 'STAR_ALIGN' {
+
+Error conf/modules.config:495:1: If statements cannot be mixed with config statements
+│ 493 | }
+│ 494 | 
+│ 495 | if (!params.skip_picard_metrics) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│ 496 |     process {
+╰ 497 |         withName: 'MERGED_LIBRARY_PICARD_COLLECTMULTIPLEMETRICS' {
+
+Error conf/modules.config:516:1: If statements cannot be mixed with config statements
+│ 514 | }
+│ 515 | 
+│ 516 | if (!params.skip_preseq) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^
+│ 517 |     process {
+╰ 518 |         withName: 'MERGED_LIBRARY_PRESEQ_LCEXTRAP' {
+
+Error conf/modules.config:530:1: If statements cannot be mixed with config statements
+│ 528 | }
+│ 529 | 
+│ 530 | if (!params.skip_plot_profile) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│ 531 |     process {
+╰ 532 |         withName: 'DEEPTOOLS_COMPUTEMATRIX_SCALE_REGIONS' {
+
+Error conf/modules.config:572:1: If statements cannot be mixed with config statements
+│ 570 | }
+│ 571 | 
+│ 572 | if (!params.skip_plot_fingerprint) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│ 573 |     process {
+╰ 574 |         withName: 'MERGED_LIBRARY_DEEPTOOLS_PLOTFINGERPRINT' {
+
+Error conf/modules.config:628:1: If statements cannot be mixed with config statements
+│ 626 | }
+│ 627 | 
+│ 628 | if (!params.skip_peak_annotation) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│ 629 |     process {
+╰ 630 |         withName: '.*:MERGED_LIBRARY_CALL_ANNOTATE_PEAKS:HOMER_ANNOTAT
+
+Error conf/modules.config:665:1: If statements cannot be mixed with config statements
+│ 663 | }
+│ 664 | 
+│ 665 | if (!params.skip_consensus_peaks) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│ 666 |     process {
+╰ 667 |         withName: '.*:MERGED_LIBRARY_CONSENSUS_PEAKS:MACS2_CONSENSUS' 
+
+Error conf/modules.config:708:1: If statements cannot be mixed with config statements
+│ 706 | }
+│ 707 | 
+│ 708 | if (!params.skip_peak_annotation) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│ 709 |     process {
+╰ 710 |         withName: '.*:MERGED_LIBRARY_CONSENSUS_PEAKS:HOMER_ANNOTATEPEA
+
+Error conf/modules.config:722:1: If statements cannot be mixed with config statements
+│ 720 | }
+│ 721 | 
+│ 722 | if (!params.skip_ataqv) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+│ 723 |     process {
+╰ 724 |         withName: 'MERGED_LIBRARY_ATAQV_ATAQV' {
+
+Error conf/modules.config:742:1: If statements cannot be mixed with config statements
+│ 740 | }
+│ 741 | 
+│ 742 | if (!params.skip_merge_replicates) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│ 743 |     process {
+╰ 744 |         withName: 'PICARD_MERGESAMFILES_REPLICATE' {
+
+Error conf/modules.config:946:1: If statements cannot be mixed with config statements
+│ 944 | }
+│ 945 | 
+│ 946 | if (!params.skip_igv) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^
+│ 947 |     process {
+╰ 948 |         withName: 'IGV' {
+
+Error conf/modules.config:965:1: If statements cannot be mixed with config statements
+│ 972 |                 saveAs: { filename -> filename.equals('versions.yml') 
+│ 973 |             ]
+│ 974 |         }
+│ 975 |     }
+╰ 976 | }
+
+Warn  conf/modules.config:406:77: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 406 | ms.save_align_intermeds) ? "${it}" : null }
+╰     |                               ^^
+
+
+Error nextflow.config:123:5: Unexpected input: 'includeConfig'
+│ 123 |     includeConfig "${params.custom_config_base}/nfcore_custom.config"
+╰     |     ^
+
+
+Nextflow linting complete!
+ ❌ 8 files had 118 errors
+ ✅ 68 files had no errors

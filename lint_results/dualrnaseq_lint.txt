@@ -1,0 +1,73 @@
+Linting Nextflow code..
+Linting: conf/base.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/genomes.config
+Linting: nextflow.config
+Linting: main.nf
+Error main.nf:717:39: Unexpected input: 'into'
+│ 717 |     file 'software_versions_mqc.yaml' into ch_software_versions_yaml
+╰     |                                       ^
+
+
+Error conf/base.config:14:12: `check_max` is not defined
+│  14 |   cpus = { check_max( 2 * task.attempt, 'cpus' ) }
+╰     |            ^^^^^^^^^
+
+Error conf/base.config:15:14: `check_max` is not defined
+│  15 |   memory = { check_max( 10.GB * task.attempt, 'memory' ) }
+╰     |              ^^^^^^^^^
+
+Error conf/base.config:16:12: `check_max` is not defined
+│  16 |   time = { check_max( 4.h * task.attempt, 'time' ) }
+╰     |            ^^^^^^^^^
+
+Error conf/base.config:25:14: `check_max` is not defined
+│  25 |     cpus = { check_max( 2 * task.attempt, 'cpus' ) }
+╰     |              ^^^^^^^^^
+
+Error conf/base.config:26:16: `check_max` is not defined
+│  26 |     memory = { check_max( 14.GB * task.attempt, 'memory' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:27:14: `check_max` is not defined
+│  27 |     time = { check_max( 6.h * task.attempt, 'time' ) }
+╰     |              ^^^^^^^^^
+
+Error conf/base.config:30:14: `check_max` is not defined
+│  30 |     cpus = { check_max( 15 * task.attempt, 'cpus' ) }
+╰     |              ^^^^^^^^^
+
+Error conf/base.config:31:16: `check_max` is not defined
+│  31 |     memory = { check_max( 30.GB * task.attempt, 'memory' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:32:14: `check_max` is not defined
+│  32 |     time = { check_max( 8.h * task.attempt, 'time' ) }
+╰     |              ^^^^^^^^^
+
+Error conf/base.config:35:14: `check_max` is not defined
+│  35 |     cpus = { check_max( 20 * task.attempt, 'cpus' ) }
+╰     |              ^^^^^^^^^
+
+Error conf/base.config:36:16: `check_max` is not defined
+│  36 |     memory = { check_max( 30.GB * task.attempt, 'memory' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:37:14: `check_max` is not defined
+│  37 |     time = { check_max( 10.h * task.attempt, 'time' ) }
+╰     |              ^^^^^^^^^
+
+Error conf/base.config:40:14: `check_max` is not defined
+│  40 |     time = { check_max( 20.h * task.attempt, 'time' ) }
+╰     |              ^^^^^^^^^
+
+
+Error nextflow.config:196:3: Unexpected input: 'includeConfig'
+│ 196 |   includeConfig 'conf/genomes.config'
+╰     |   ^
+
+
+Nextflow linting complete!
+ ❌ 3 files had 15 errors
+ ✅ 3 files had no errors

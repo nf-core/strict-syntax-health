@@ -1,0 +1,1997 @@
+Linting Nextflow code..
+Linting: conf/arm.config
+Linting: conf/igenomes_ignored.config
+Linting: conf/base.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/igenomes.config
+Linting: nextflow.config
+Linting: workflows/rnaseq/nextflow.config
+Linting: workflows/rnaseq/main.nf
+Linting: subworkflows/local/prepare_genome/nextflow.config
+Linting: subworkflows/local/prepare_genome/main.nf
+Linting: subworkflows/local/prepare_genome/tests/nextflow.config
+Linting: subworkflows/local/quantify_rsem/nextflow.config
+Linting: subworkflows/local/quantify_rsem/main.nf
+Linting: subworkflows/local/quantify_rsem/tests/nextflow.config
+Linting: subworkflows/local/align_star/nextflow.config
+Linting: subworkflows/local/align_star/main.nf
+Linting: subworkflows/local/align_star/tests/nextflow.config
+Linting: subworkflows/local/utils_nfcore_rnaseq_pipeline/main.nf
+Linting: subworkflows/nf-core/bam_dedup_stats_samtools_umicollapse/main.nf
+Linting: subworkflows/nf-core/bam_dedup_stats_samtools_umicollapse/tests/paired-end-umis.config
+Linting: subworkflows/nf-core/bam_stats_samtools/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/nextflow.config
+Linting: subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/main.nf
+Linting: subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/tests/nextflow.config
+Linting: subworkflows/nf-core/bam_dedup_umi/main.nf
+Linting: subworkflows/nf-core/bam_dedup_umi/tests/nextflow.config
+Linting: subworkflows/nf-core/bedgraph_bedclip_bedgraphtobigwig/main.nf
+Linting: subworkflows/nf-core/bedgraph_bedclip_bedgraphtobigwig/tests/nextflow.config
+Linting: subworkflows/nf-core/bam_dedup_stats_samtools_umitools/main.nf
+Linting: subworkflows/nf-core/fastq_subsample_fq_salmon/nextflow.config
+Linting: subworkflows/nf-core/fastq_subsample_fq_salmon/main.nf
+Linting: subworkflows/nf-core/fastq_subsample_fq_salmon/tests/nextflow.config
+Linting: subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/nextflow.config
+Linting: subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/main.nf
+Linting: subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/bam_sort_stats_samtools/main.nf
+Linting: subworkflows/nf-core/bam_rseqc/nextflow.config
+Linting: subworkflows/nf-core/bam_rseqc/main.nf
+Linting: subworkflows/nf-core/quantify_pseudo_alignment/nextflow.config
+Linting: subworkflows/nf-core/quantify_pseudo_alignment/main.nf
+Linting: subworkflows/nf-core/quantify_pseudo_alignment/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: subworkflows/nf-core/fastq_align_hisat2/nextflow.config
+Linting: subworkflows/nf-core/fastq_align_hisat2/main.nf
+Linting: subworkflows/nf-core/fastq_align_hisat2/tests/nextflow.config
+Linting: subworkflows/nf-core/bam_markduplicates_picard/nextflow.config
+Linting: subworkflows/nf-core/bam_markduplicates_picard/main.nf
+Linting: subworkflows/nf-core/fastq_fastqc_umitools_fastp/nextflow.config
+Linting: subworkflows/nf-core/fastq_fastqc_umitools_fastp/main.nf
+Linting: subworkflows/nf-core/fastq_fastqc_umitools_fastp/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/multiqc_custom_biotype/nextflow.config
+Linting: modules/local/multiqc_custom_biotype/main.nf
+Linting: modules/local/star_align_igenomes/main.nf
+Linting: modules/local/star_align_igenomes/tests/nextflow.arriba.config
+Linting: modules/local/star_align_igenomes/tests/nextflow.config
+Linting: modules/local/star_align_igenomes/tests/nextflow.starfusion.config
+Linting: modules/local/gtf_filter/main.nf
+Linting: modules/local/preprocess_transcripts_fasta_gencode/main.nf
+Linting: modules/local/gtf2bed/main.nf
+Linting: modules/local/star_genomegenerate_igenomes/main.nf
+Linting: modules/local/rsem_merge_counts/main.nf
+Linting: modules/local/deseq2_qc/main.nf
+Linting: modules/nf-core/tximeta/tximport/main.nf
+Linting: modules/nf-core/tximeta/tximport/tests/nextflow.config
+Linting: modules/nf-core/star/genomegenerate/main.nf
+Linting: modules/nf-core/star/align/main.nf
+Linting: modules/nf-core/star/align/tests/nextflow.arriba.config
+Linting: modules/nf-core/star/align/tests/nextflow.config
+Linting: modules/nf-core/star/align/tests/nextflow.starfusion.config
+Linting: modules/nf-core/umitools/dedup/main.nf
+Linting: modules/nf-core/umitools/dedup/tests/nextflow.config
+Linting: modules/nf-core/umitools/prepareforrsem/main.nf
+Linting: modules/nf-core/umitools/extract/main.nf
+Linting: modules/nf-core/umitools/extract/tests/nextflow.config
+Linting: modules/nf-core/gffread/main.nf
+Linting: modules/nf-core/gffread/tests/nextflow-gff3.config
+Linting: modules/nf-core/gffread/tests/nextflow-fasta.config
+Linting: modules/nf-core/gffread/tests/nextflow.config
+Linting: modules/nf-core/rsem/calculateexpression/main.nf
+Linting: modules/nf-core/rsem/calculateexpression/tests/nextflow.config
+Linting: modules/nf-core/rsem/calculateexpression/tests/alignment.config
+Linting: modules/nf-core/rsem/preparereference/main.nf
+Linting: modules/nf-core/subread/featurecounts/nextflow.config
+Linting: modules/nf-core/subread/featurecounts/main.nf
+Linting: modules/nf-core/subread/featurecounts/tests/nextflow.config
+Linting: modules/nf-core/hisat2/extractsplicesites/main.nf
+Linting: modules/nf-core/hisat2/build/main.nf
+Linting: modules/nf-core/hisat2/align/main.nf
+Linting: modules/nf-core/gunzip/main.nf
+Linting: modules/nf-core/gunzip/tests/nextflow.config
+Linting: modules/nf-core/kraken2/kraken2/nextflow.config
+Linting: modules/nf-core/kraken2/kraken2/main.nf
+Linting: modules/nf-core/samtools/flagstat/main.nf
+Linting: modules/nf-core/samtools/idxstats/main.nf
+Linting: modules/nf-core/samtools/index/main.nf
+Linting: modules/nf-core/samtools/index/tests/csi.nextflow.config
+Linting: modules/nf-core/samtools/sort/main.nf
+Linting: modules/nf-core/samtools/sort/tests/nextflow.config
+Linting: modules/nf-core/samtools/sort/tests/nextflow_cram.config
+Linting: modules/nf-core/samtools/stats/main.nf
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/bracken/bracken/nextflow.config
+Linting: modules/nf-core/bracken/bracken/main.nf
+Linting: modules/nf-core/bracken/bracken/tests/nextflow.config
+Linting: modules/nf-core/bracken/bracken/tests/genus_test.config
+Linting: modules/nf-core/multiqc/nextflow.config
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/multiqc/tests/custom_prefix.config
+Linting: modules/nf-core/cat/fastq/nextflow.config
+Linting: modules/nf-core/cat/fastq/main.nf
+Linting: modules/nf-core/kallisto/quant/main.nf
+Linting: modules/nf-core/kallisto/index/main.nf
+Linting: modules/nf-core/salmon/quant/main.nf
+Linting: modules/nf-core/salmon/quant/tests/nextflow.config
+Linting: modules/nf-core/salmon/index/main.nf
+Linting: modules/nf-core/custom/tx2gene/main.nf
+Linting: modules/nf-core/custom/getchromsizes/main.nf
+Linting: modules/nf-core/custom/catadditionalfasta/main.nf
+Linting: modules/nf-core/fastp/main.nf
+Linting: modules/nf-core/fastp/tests/nextflow.interleaved.config
+Linting: modules/nf-core/fastp/tests/nextflow.save_failed.config
+Linting: modules/nf-core/rseqc/readduplication/main.nf
+Linting: modules/nf-core/rseqc/bamstat/main.nf
+Linting: modules/nf-core/rseqc/bamstat/tests/nextflow.config
+Linting: modules/nf-core/rseqc/junctionsaturation/main.nf
+Linting: modules/nf-core/rseqc/junctionannotation/main.nf
+Linting: modules/nf-core/rseqc/inferexperiment/main.nf
+Linting: modules/nf-core/rseqc/inferexperiment/tests/nextflow.config
+Linting: modules/nf-core/rseqc/tin/main.nf
+Linting: modules/nf-core/rseqc/innerdistance/main.nf
+Linting: modules/nf-core/rseqc/innerdistance/tests/nextflow.config
+Linting: modules/nf-core/rseqc/readdistribution/main.nf
+Linting: modules/nf-core/fq/subsample/main.nf
+Linting: modules/nf-core/fq/subsample/tests/nextflow_record_count.config
+Linting: modules/nf-core/fq/subsample/tests/nextflow_probability.config
+Linting: modules/nf-core/fq/subsample/tests/nextflow.config
+Linting: modules/nf-core/fq/subsample/tests/nextflow_no_args.config
+Linting: modules/nf-core/fq/lint/main.nf
+Linting: modules/nf-core/trimgalore/main.nf
+Linting: modules/nf-core/trimgalore/tests/nextflow.config
+Linting: modules/nf-core/ucsc/bedgraphtobigwig/main.nf
+Linting: modules/nf-core/ucsc/bedclip/main.nf
+Linting: modules/nf-core/ucsc/bedclip/tests/nextflow.config
+Linting: modules/nf-core/preseq/lcextrap/nextflow.config
+Linting: modules/nf-core/preseq/lcextrap/main.nf
+Linting: modules/nf-core/untar/main.nf
+Linting: modules/nf-core/sortmerna/nextflow.config
+Linting: modules/nf-core/sortmerna/main.nf
+Linting: modules/nf-core/sortmerna/tests/indexing_only.config
+Linting: modules/nf-core/sortmerna/tests/premade_index.config
+Linting: modules/nf-core/dupradar/nextflow.config
+Linting: modules/nf-core/dupradar/main.nf
+Linting: modules/nf-core/dupradar/tests/nextflow.config
+Linting: modules/nf-core/bbmap/bbsplit/nextflow.config
+Linting: modules/nf-core/bbmap/bbsplit/main.nf
+Linting: modules/nf-core/summarizedexperiment/summarizedexperiment/main.nf
+Linting: modules/nf-core/summarizedexperiment/summarizedexperiment/tests/single_matrix.config
+Linting: modules/nf-core/summarizedexperiment/summarizedexperiment/tests/multi_matrix.config
+Linting: modules/nf-core/summarizedexperiment/summarizedexperiment/tests/unify.config
+Linting: modules/nf-core/qualimap/rnaseq/nextflow.config
+Linting: modules/nf-core/qualimap/rnaseq/main.nf
+Linting: modules/nf-core/sentieon/rsempreparereference/main.nf
+Linting: modules/nf-core/sentieon/rsempreparereference/tests/nextflow.config
+Linting: modules/nf-core/sentieon/staralign/main.nf
+Linting: modules/nf-core/sentieon/staralign/tests/nextflow.arriba.config
+Linting: modules/nf-core/sentieon/staralign/tests/nextflow.config
+Linting: modules/nf-core/sentieon/staralign/tests/nextflow.starfusion.config
+Linting: modules/nf-core/sentieon/rsemcalculateexpression/main.nf
+Linting: modules/nf-core/sentieon/rsemcalculateexpression/tests/nextflow.config
+Linting: modules/nf-core/sentieon/rsemcalculateexpression/tests/alignment.config
+Linting: modules/nf-core/picard/markduplicates/main.nf
+Linting: modules/nf-core/picard/markduplicates/tests/nextflow.config
+Linting: modules/nf-core/umicollapse/main.nf
+Linting: modules/nf-core/umicollapse/tests/nextflow.config
+Linting: modules/nf-core/bedtools/genomecov/main.nf
+Linting: modules/nf-core/bedtools/genomecov/tests/nextflow.config
+Linting: modules/nf-core/stringtie/stringtie/nextflow.config
+Linting: modules/nf-core/stringtie/stringtie/main.nf
+Linting: modules/nf-core/stringtie/stringtie/tests/nextflow.config
+Warn  main.nf:57:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  57 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  main.nf:97:39: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  97 |             .map { checkMaxContigSize(it) }
+╰     |                                       ^^
+
+Warn  main.nf:103:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 103 |     ch_samplesheet = Channel.value(file(params.input, checkIfExists: t
+╰     |                      ^^^^^^^
+
+
+
+
+
+
+
+
+Error modules/local/star_align_igenomes/main.nf:43:9: `seq_platform` is already declared
+│  43 |     def seq_platform    = seq_platform ? "'PL:$seq_platform'" : ""
+╰     |         ^^^^^^^^^^^^
+
+Error modules/local/star_align_igenomes/main.nf:44:9: `seq_center` is already declared
+│  44 |     def seq_center      = seq_center ? "--outSAMattrRGline ID:$prefix 
+╰     |         ^^^^^^^^^^
+
+Warn  modules/local/star_align_igenomes/main.nf:41:56: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  41 |     meta.single_end ? [reads].flatten().each{reads1 << it} : reads.eac
+╰     |                                                        ^^
+
+
+
+Error modules/nf-core/bbmap/bbsplit/main.nf:41:43: `index` is already declared
+│  41 |     other_ref_names.eachWithIndex { name, index ->
+╰     |                                           ^^^^^
+
+Error modules/nf-core/bbmap/bbsplit/main.nf:116:43: `index` is already declared
+│ 116 |     other_ref_names.eachWithIndex { name, index ->
+╰     |                                           ^^^^^
+
+Warn  modules/nf-core/bbmap/bbsplit/main.nf:116:43: Parameter was not used -- prefix with `_` to suppress warning
+│ 116 |     other_ref_names.eachWithIndex { name, index ->
+╰     |                                           ^^^^^
+
+
+
+Warn  modules/nf-core/bracken/bracken/main.nf:42:9: Variable was declared but not used
+│  42 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/cat/fastq/main.nf:22:60: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  22 |     def readList = reads instanceof List ? reads.collect { it.toString
+╰     |                                                            ^^
+
+Warn  modules/nf-core/cat/fastq/main.nf:58:60: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  58 |     def readList = reads instanceof List ? reads.collect { it.toString
+╰     |                                                            ^^
+
+
+Warn  modules/nf-core/custom/catadditionalfasta/main.nf:26:9: Variable was declared but not used
+│  26 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/nf-core/custom/getchromsizes/main.nf:23:9: Variable was declared but not used
+│  23 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+
+
+
+Warn  modules/nf-core/gffread/main.nf:26:103: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  26 | ', '-y' ].any { args.contains(it) } ) ? 'fasta' : 'gff3' )
+╰     |                               ^^
+
+Warn  modules/nf-core/gffread/main.nf:30:61: Parameter was not used -- prefix with `_` to suppress warning
+│  30 | laceAll(/(.*)(-[wxy])(.*)/) { all, pre, param, post -> "$pre $post $pa
+╰     |                               ^^^
+
+Warn  modules/nf-core/gffread/main.nf:49:103: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  49 | ', '-y' ].any { args.contains(it) } ) ? 'fasta' : 'gff3' )
+╰     |                               ^^
+
+
+Warn  modules/nf-core/gunzip/main.nf:43:9: Variable was declared but not used
+│  43 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+Warn  modules/nf-core/hisat2/extractsplicesites/main.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+Warn  modules/nf-core/kraken2/kraken2/main.nf:60:9: Variable was declared but not used
+│  60 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/kraken2/kraken2/main.nf:62:9: Variable was declared but not used
+│  62 |     def paired       = meta.single_end ? "" : "--paired"
+╰     |         ^^^^^^
+
+Warn  modules/nf-core/kraken2/kraken2/main.nf:65:9: Variable was declared but not used
+│  65 |     def readclassification_option = save_reads_assignment ? "--output 
+╰     |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  modules/nf-core/kraken2/kraken2/main.nf:66:9: Variable was declared but not used
+│  66 |     def compress_reads_command = save_output_fastqs ? "pigz -p $task.c
+╰     |         ^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+
+
+
+
+Warn  modules/nf-core/rsem/preparereference/main.nf:27:30: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  27 |         args_list.removeIf { it.contains('--star') }
+╰     |                              ^^
+
+
+
+
+
+
+
+Warn  modules/nf-core/rseqc/readdistribution/main.nf:22:9: Variable was declared but not used
+│  22 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+Warn  modules/nf-core/rseqc/tin/main.nf:24:9: Variable was declared but not used
+│  24 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+Warn  modules/nf-core/rseqc/tin/main.nf:38:9: Variable was declared but not used
+│  38 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+
+Warn  modules/nf-core/salmon/quant/main.nf:34:58: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  34 |     meta.single_end ? [reads].flatten().each { reads1 << it } : reads.
+╰     |                                                          ^^
+
+
+
+
+
+
+
+Warn  modules/nf-core/sentieon/rsemcalculateexpression/main.nf:47:9: Variable was declared but not used
+│  47 |     def sentieonLicense = secrets.SENTIEON_LICENSE_BASE64
+╰     |         ^^^^^^^^^^^^^^^
+
+
+Warn  modules/nf-core/sentieon/rsempreparereference/main.nf:28:30: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  28 |         args_list.removeIf { it.contains('--star') }
+╰     |                              ^^
+
+
+Warn  modules/nf-core/sentieon/staralign/main.nf:48:58: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  48 |     meta.single_end ? [reads].flatten().each { reads1 << it } : reads.
+╰     |                                                          ^^
+
+Warn  modules/nf-core/sentieon/staralign/main.nf:56:9: Variable was declared but not used
+│  56 |     def sentieonLicense = secrets.SENTIEON_LICENSE_BASE64
+╰     |         ^^^^^^^^^^^^^^^
+
+
+Warn  modules/nf-core/sortmerna/main.nf:29:9: Variable was declared but not used
+│  29 |     def skip_index    = args.contains('--index 0')? true : false
+╰     |         ^^^^^^^^^^
+
+Warn  modules/nf-core/sortmerna/main.nf:40:59: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  40 |         reads_input = paired_end ? reads.collect{"--reads $it"}.join('
+╰     |                                                           ^^
+
+Warn  modules/nf-core/sortmerna/main.nf:83:9: Variable was declared but not used
+│  83 |     def paired_cmd    = ''
+╰     |         ^^^^^^^^^^
+
+Warn  modules/nf-core/sortmerna/main.nf:84:9: Variable was declared but not used
+│  84 |     def out2_cmd      = ''
+╰     |         ^^^^^^^^
+
+Warn  modules/nf-core/sortmerna/main.nf:89:59: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  89 |         reads_input = paired_end ? reads.collect{"--reads $it"}.join('
+╰     |                                                           ^^
+
+
+Warn  modules/nf-core/star/align/main.nf:46:56: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  46 |     meta.single_end ? [reads].flatten().each{reads1 << it} : reads.eac
+╰     |                                                        ^^
+
+
+
+
+
+
+Warn  modules/nf-core/trimgalore/main.nf:47:31: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  47 |         args_list.removeAll { it.toLowerCase().contains('_r2 ') }
+╰     |                               ^^
+
+
+
+Warn  modules/nf-core/ucsc/bedclip/main.nf:23:9: Variable was declared but not used
+│  23 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/ucsc/bedgraphtobigwig/main.nf:23:9: Variable was declared but not used
+│  23 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+
+
+Warn  subworkflows/local/align_star/main.nf:13:26: Parameter was not used -- prefix with `_` to suppress warning
+│  13 | def getStarPercentMapped(params, align_log) {
+╰     |                          ^^^^^^
+
+Warn  subworkflows/local/align_star/main.nf:40:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  40 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Error subworkflows/local/prepare_genome/main.nf:141:44: `fasta` is already declared
+│ 141 |             ch_fasta.combine(ch_gtf).map { fasta, gtf -> [ [:], fasta,
+╰     |                                            ^^^^^
+
+Error subworkflows/local/prepare_genome/main.nf:141:51: `gtf` is already declared
+│ 141 |             ch_fasta.combine(ch_gtf).map { fasta, gtf -> [ [:], fasta,
+╰     |                                                   ^^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:72:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  72 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:77:14: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  77 |     ch_gtf = Channel.empty()
+╰     |              ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:80:93: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  80 | ZIP_GTF ([ [:], file(gtf, checkIfExists: true) ]).gunzip.map { it[1] }
+╰     |                                                                ^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:83:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  83 |             ch_gtf = Channel.value(file(gtf, checkIfExists: true))
+╰     |                      ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:91:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  91 |             ch_gff = Channel.value(file(gff, checkIfExists: true)).map
+╰     |                      ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:91:81: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  91 | ff = Channel.value(file(gff, checkIfExists: true)).map { [ [:], it ] }
+╰     |                                                                 ^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:93:53: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  93 |         ch_gtf      = GFFREAD(ch_gff, []).gtf.map { it[1] }
+╰     |                                                     ^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:102:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 102 |     ch_fasta = Channel.of([])
+╰     |                ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:106:97: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 106 | FASTA ([ [:], file(fasta, checkIfExists: true) ]).gunzip.map { it[1] }
+╰     |                                                                ^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:109:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 109 |             ch_fasta = Channel.value(file(fasta, checkIfExists: true))
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:131:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 131 |     ch_add_fasta = Channel.empty()
+╰     |                    ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:134:119: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 134 | ], file(additional_fasta, checkIfExists: true) ]).gunzip.map { it[1] }
+╰     |                                                                ^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:137:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 137 |             ch_add_fasta = Channel.value(file(additional_fasta, checkI
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:142:39: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 142 |             ch_add_fasta.map { [ [:], it ] },
+╰     |                                       ^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:145:65: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 145 | DITIONALFASTA.out.fasta.map { it[1] }.first()
+╰     |                               ^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:146:63: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 146 | ADDITIONALFASTA.out.gtf.map { it[1] }.first()
+╰     |                               ^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:153:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 153 |     ch_gene_bed = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:156:103: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 156 | ED ([ [:], file(gene_bed, checkIfExists: true) ]).gunzip.map { it[1] }
+╰     |                                                                ^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:159:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 159 |             ch_gene_bed = Channel.value(file(gene_bed, checkIfExists: 
+╰     |                           ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:171:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 171 |     ch_transcript_fasta = Channel.empty()
+╰     |                           ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:175:127: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 175 | ], file(transcript_fasta, checkIfExists: true) ]).gunzip.map { it[1] }
+╰     |                                                                ^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:178:35: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 178 |             ch_transcript_fasta = Channel.value(file(transcript_fasta,
+╰     |                                   ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:202:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 202 |     ch_fai         = Channel.empty()
+╰     |                      ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:203:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 203 |     ch_chrom_sizes = Channel.empty()
+╰     |                      ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:205:52: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 205 |         CUSTOM_GETCHROMSIZES(ch_fasta.map { [ [:], it ] })
+╰     |                                                    ^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:206:61: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 206 |         ch_fai         = CUSTOM_GETCHROMSIZES.out.fai.map { it[1] }
+╰     |                                                             ^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:207:63: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 207 |         ch_chrom_sizes = CUSTOM_GETCHROMSIZES.out.sizes.map { it[1] }
+╰     |                                                               ^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:223:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 223 |     ch_bbsplit_index = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:228:120: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 228 | [ [:], file(bbsplit_index, checkIfExists: true) ]).untar.map { it[1] }
+╰     |                                                                ^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:231:36: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 231 |                 ch_bbsplit_index = Channel.value(file(bbsplit_index, c
+╰     |                                    ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:236:13: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 236 |             Channel
+╰     |             ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:242:30: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 242 |                 .collect { [ it ] } // Collect entries as a list to pa
+╰     |                              ^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:260:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 260 |     ch_sortmerna_index = Channel.empty()
+╰     |                          ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:261:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 261 |     ch_rrna_fastas     = Channel.empty()
+╰     |                          ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:265:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 265 |         ch_rrna_fastas = Channel.from(ribo_db.readLines())
+╰     |                          ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:270:126: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 270 | [:], file(sortmerna_index, checkIfExists: true) ]).untar.map { it[1] }
+╰     |                                                                ^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:273:38: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 273 |                 ch_sortmerna_index = Channel.value([ [:], file(sortmer
+╰     |                                      ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:278:17: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 278 |                 Channel.of([ [], [] ]),
+╰     |                 ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:279:63: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 279 |                 ch_rrna_fastas.collect().map { [ 'rrna_refs', it ] },
+╰     |                                                               ^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:280:17: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 280 |                 Channel.of([ [], [] ])
+╰     |                 ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:290:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 290 |     ch_star_index = Channel.empty()
+╰     |                     ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:294:111: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 294 | X ([ [:], file(star_index, checkIfExists: true) ]).untar.map { it[1] }
+╰     |                                                                ^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:297:33: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 297 |                 ch_star_index = Channel.value(file(star_index, checkIf
+╰     |                                 ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:312:43: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 312 |                     ch_fasta.map { [ [:], it ] },
+╰     |                                           ^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:313:43: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 313 |                     ch_gtf.map   { [ [:], it ] }
+╰     |                                           ^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:314:31: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 314 |                 ).index.map { it[1] }
+╰     |                               ^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:323:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 323 |     ch_rsem_index = Channel.empty()
+╰     |                     ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:327:111: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 327 | X ([ [:], file(rsem_index, checkIfExists: true) ]).untar.map { it[1] }
+╰     |                                                                ^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:330:33: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 330 |                 ch_rsem_index = Channel.value(file(rsem_index, checkIf
+╰     |                                 ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:349:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 349 |     ch_splicesites  = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:350:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 350 |     ch_hisat2_index = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:354:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 354 |             ch_splicesites = Channel.value(file(splicesites, checkIfEx
+╰     |                              ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:357:76: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 357 | LICESITES(ch_gtf.map { [ [:], it ] }).txt.map { it[1] }
+╰     |                               ^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:357:94: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 357 | ISAT2_EXTRACTSPLICESITES(ch_gtf.map { [ [:], it ] }).txt.map { it[1] }
+╰     |                                                                ^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:363:117: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 363 | ([ [:], file(hisat2_index, checkIfExists: true) ]).untar.map { it[1] }
+╰     |                                                                ^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:366:35: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 366 |                 ch_hisat2_index = Channel.value(file(hisat2_index, che
+╰     |                                   ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:371:39: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 371 |                 ch_fasta.map { [ [:], it ] },
+╰     |                                       ^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:372:39: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 372 |                 ch_gtf.map   { [ [:], it ] },
+╰     |                                       ^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:373:45: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 373 |                 ch_splicesites.map { [ [:], it ] }
+╰     |                                             ^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:374:27: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 374 |             ).index.map { it[1] }
+╰     |                           ^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:383:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 383 |     ch_salmon_index = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:386:88: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 386 | dex = UNTAR_SALMON_INDEX ( [ [:], salmon_index ] ).untar.map { it[1] }
+╰     |                                                                ^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:389:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 389 |             ch_salmon_index = Channel.value(file(salmon_index))
+╰     |                               ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:407:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 407 |     ch_kallisto_index = Channel.empty()
+╰     |                         ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:413:33: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 413 |             ch_kallisto_index = Channel.value([[:], file(kallisto_inde
+╰     |                                 ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:417:83: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 417 | transcript_fasta.map { [ [:], it] } ).index
+╰     |                               ^^
+
+
+Warn  subworkflows/local/quantify_rsem/main.nf:17:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/quantify_rsem/main.nf:41:32: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  41 |         ch_counts_gene.collect{it[1]},       // [meta, counts]: Collec
+╰     |                                ^^
+
+Warn  subworkflows/local/quantify_rsem/main.nf:42:38: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  42 |         ch_counts_transcript.collect{it[1]}
+╰     |                                      ^^
+
+
+Warn  subworkflows/local/utils_nfcore_rnaseq_pipeline/main.nf:34:5: Parameter was not used -- prefix with `_` to suppress warning
+│  34 |     monochrome_logs   // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_rnaseq_pipeline/main.nf:37:5: Parameter was not used -- prefix with `_` to suppress warning
+│  37 |     input             //  string: Path to input samplesheet
+╰     |     ^^^^^
+
+Warn  subworkflows/local/utils_nfcore_rnaseq_pipeline/main.nf:188:9: Variable was declared but not used
+│ 188 |     def id = input[0]
+╰     |         ^^
+
+Warn  subworkflows/local/utils_nfcore_rnaseq_pipeline/main.nf:195:42: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 195 |     def strandedness_ok = metas.collect{ it.strandedness }.unique().si
+╰     |                                          ^^
+
+Warn  subworkflows/local/utils_nfcore_rnaseq_pipeline/main.nf:208:46: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 208 |         def genome_bam = genome_bams?.find { it != null }
+╰     |                                              ^^
+
+Warn  subworkflows/local/utils_nfcore_rnaseq_pipeline/main.nf:209:60: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 209 |         def transcriptome_bam = transcriptome_bams?.find { it != null 
+╰     |                                                            ^^
+
+Warn  subworkflows/local/utils_nfcore_rnaseq_pipeline/main.nf:369:89: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 369 | c_modules.split(',').collect{ it.trim().toLowerCase() } : []
+╰     |                               ^^
+
+Warn  subworkflows/local/utils_nfcore_rnaseq_pipeline/main.nf:733:57: Parameter was not used -- prefix with `_` to suppress warning
+│ 733 |     def fail_mapped_count  = pass_mapped_reads.count  { key, value -> 
+╰     |                                                         ^^^
+
+Warn  subworkflows/local/utils_nfcore_rnaseq_pipeline/main.nf:734:57: Parameter was not used -- prefix with `_` to suppress warning
+│ 734 |     def fail_trimmed_count = pass_trimmed_reads.count { key, value -> 
+╰     |                                                         ^^^
+
+Warn  subworkflows/local/utils_nfcore_rnaseq_pipeline/main.nf:735:57: Parameter was not used -- prefix with `_` to suppress warning
+│ 735 |     def fail_strand_count  = pass_strand_check.count  { key, value -> 
+╰     |                                                         ^^^
+
+
+Warn  subworkflows/nf-core/bam_dedup_stats_samtools_umicollapse/main.nf:15:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/nf-core/bam_dedup_stats_samtools_umitools/main.nf:16:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/nf-core/bam_dedup_umi/main.nf:25:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  25 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/nf-core/bam_dedup_umi/main.nf:114:14: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 114 |         .map{it[1]}
+╰     |              ^^
+
+
+Warn  subworkflows/nf-core/bam_markduplicates_picard/main.nf:18:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  18 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/nf-core/bam_rseqc/main.nf:22:26: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  22 |     bam = bam_bai.map{ [ it[0], it[1] ] }
+╰     |                          ^^
+
+Warn  subworkflows/nf-core/bam_rseqc/main.nf:22:33: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  22 |     bam = bam_bai.map{ [ it[0], it[1] ] }
+╰     |                                 ^^
+
+Warn  subworkflows/nf-core/bam_rseqc/main.nf:24:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  24 |     versions = Channel.empty()
+╰     |                ^^^^^^^
+
+Warn  subworkflows/nf-core/bam_rseqc/main.nf:29:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  29 |     bamstat_txt = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/nf-core/bam_rseqc/main.nf:40:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  40 |     innerdistance_all      = Channel.empty()
+╰     |                              ^^^^^^^
+
+Warn  subworkflows/nf-core/bam_rseqc/main.nf:41:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  41 |     innerdistance_distance = Channel.empty()
+╰     |                              ^^^^^^^
+
+Warn  subworkflows/nf-core/bam_rseqc/main.nf:42:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  42 |     innerdistance_freq     = Channel.empty()
+╰     |                              ^^^^^^^
+
+Warn  subworkflows/nf-core/bam_rseqc/main.nf:43:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  43 |     innerdistance_mean     = Channel.empty()
+╰     |                              ^^^^^^^
+
+Warn  subworkflows/nf-core/bam_rseqc/main.nf:44:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  44 |     innerdistance_pdf      = Channel.empty()
+╰     |                              ^^^^^^^
+
+Warn  subworkflows/nf-core/bam_rseqc/main.nf:45:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  45 |     innerdistance_rscript  = Channel.empty()
+╰     |                              ^^^^^^^
+
+Warn  subworkflows/nf-core/bam_rseqc/main.nf:61:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  61 |     inferexperiment_txt = Channel.empty()
+╰     |                           ^^^^^^^
+
+Warn  subworkflows/nf-core/bam_rseqc/main.nf:71:39: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  71 |     junctionannotation_all          = Channel.empty()
+╰     |                                       ^^^^^^^
+
+Warn  subworkflows/nf-core/bam_rseqc/main.nf:72:39: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  72 |     junctionannotation_bed          = Channel.empty()
+╰     |                                       ^^^^^^^
+
+Warn  subworkflows/nf-core/bam_rseqc/main.nf:73:39: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  73 |     junctionannotation_interact_bed = Channel.empty()
+╰     |                                       ^^^^^^^
+
+Warn  subworkflows/nf-core/bam_rseqc/main.nf:74:39: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  74 |     junctionannotation_xls          = Channel.empty()
+╰     |                                       ^^^^^^^
+
+Warn  subworkflows/nf-core/bam_rseqc/main.nf:75:39: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  75 |     junctionannotation_pdf          = Channel.empty()
+╰     |                                       ^^^^^^^
+
+Warn  subworkflows/nf-core/bam_rseqc/main.nf:76:39: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  76 |     junctionannotation_events_pdf   = Channel.empty()
+╰     |                                       ^^^^^^^
+
+Warn  subworkflows/nf-core/bam_rseqc/main.nf:77:39: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  77 |     junctionannotation_rscript      = Channel.empty()
+╰     |                                       ^^^^^^^
+
+Warn  subworkflows/nf-core/bam_rseqc/main.nf:78:39: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  78 |     junctionannotation_log          = Channel.empty()
+╰     |                                       ^^^^^^^
+
+Warn  subworkflows/nf-core/bam_rseqc/main.nf:96:34: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  96 |     junctionsaturation_all     = Channel.empty()
+╰     |                                  ^^^^^^^
+
+Warn  subworkflows/nf-core/bam_rseqc/main.nf:97:34: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  97 |     junctionsaturation_pdf     = Channel.empty()
+╰     |                                  ^^^^^^^
+
+Warn  subworkflows/nf-core/bam_rseqc/main.nf:98:34: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  98 |     junctionsaturation_rscript = Channel.empty()
+╰     |                                  ^^^^^^^
+
+Warn  subworkflows/nf-core/bam_rseqc/main.nf:111:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 111 |     readdistribution_txt = Channel.empty()
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/nf-core/bam_rseqc/main.nf:122:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 122 |     readduplication_all     = Channel.empty()
+╰     |                               ^^^^^^^
+
+Warn  subworkflows/nf-core/bam_rseqc/main.nf:123:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 123 |     readduplication_seq_xls = Channel.empty()
+╰     |                               ^^^^^^^
+
+Warn  subworkflows/nf-core/bam_rseqc/main.nf:124:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 124 |     readduplication_pos_xls = Channel.empty()
+╰     |                               ^^^^^^^
+
+Warn  subworkflows/nf-core/bam_rseqc/main.nf:125:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 125 |     readduplication_pdf     = Channel.empty()
+╰     |                               ^^^^^^^
+
+Warn  subworkflows/nf-core/bam_rseqc/main.nf:126:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 126 |     readduplication_rscript = Channel.empty()
+╰     |                               ^^^^^^^
+
+Warn  subworkflows/nf-core/bam_rseqc/main.nf:141:15: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 141 |     tin_txt = Channel.empty()
+╰     |               ^^^^^^^
+
+
+Warn  subworkflows/nf-core/bam_sort_stats_samtools/main.nf:16:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/nf-core/bam_stats_samtools/main.nf:15:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/nf-core/bedgraph_bedclip_bedgraphtobigwig/main.nf:15:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/nf-core/fastq_align_hisat2/main.nf:14:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  14 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/nf-core/fastq_fastqc_umitools_fastp/main.nf:33:22: Parameter was not used -- prefix with `_` to suppress warning
+│  33 |     catch (Exception ex) {
+╰     |                      ^^
+
+Warn  subworkflows/nf-core/fastq_fastqc_umitools_fastp/main.nf:52:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  52 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_fastqc_umitools_fastp/main.nf:53:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  53 |     fastqc_raw_html = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_fastqc_umitools_fastp/main.nf:54:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  54 |     fastqc_raw_zip = Channel.empty()
+╰     |                      ^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_fastqc_umitools_fastp/main.nf:55:15: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  55 |     umi_log = Channel.empty()
+╰     |               ^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_fastqc_umitools_fastp/main.nf:56:17: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  56 |     trim_json = Channel.empty()
+╰     |                 ^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_fastqc_umitools_fastp/main.nf:57:17: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  57 |     trim_html = Channel.empty()
+╰     |                 ^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_fastqc_umitools_fastp/main.nf:58:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  58 |     trim_log = Channel.empty()
+╰     |                ^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_fastqc_umitools_fastp/main.nf:59:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  59 |     trim_reads_fail = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_fastqc_umitools_fastp/main.nf:60:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  60 |     trim_reads_merged = Channel.empty()
+╰     |                         ^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_fastqc_umitools_fastp/main.nf:61:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  61 |     fastqc_trim_html = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_fastqc_umitools_fastp/main.nf:62:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  62 |     fastqc_trim_zip = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_fastqc_umitools_fastp/main.nf:63:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  63 |     trim_read_count = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_fastqc_umitools_fastp/main.nf:64:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  64 |     adapter_seq = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Error subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/main.nf:60:30: `reads` is already declared
+│  60 |                 .map { meta, reads ->
+╰     |                              ^^^^^
+
+Warn  subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/main.nf:39:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  39 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/main.nf:40:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  40 |     fastqc_html = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/main.nf:41:18: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  41 |     fastqc_zip = Channel.empty()
+╰     |                  ^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/main.nf:50:15: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  50 |     umi_log = Channel.empty()
+╰     |               ^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/main.nf:68:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  68 |     trim_unpaired = Channel.empty()
+╰     |                     ^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/main.nf:69:17: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  69 |     trim_html = Channel.empty()
+╰     |                 ^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/main.nf:70:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  70 |     trim_zip = Channel.empty()
+╰     |                ^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/main.nf:71:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  71 |     trim_log = Channel.empty()
+╰     |                ^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/main.nf:72:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  72 |     trim_read_count = Channel.empty()
+╰     |                       ^^^^^^^
+
+
+Warn  subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/main.nf:66:59: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  66 |     def forwardFragments = forwardKeys.collect { libCounts[it] ?: 0 }.
+╰     |                                                           ^^
+
+Warn  subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/main.nf:67:59: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  67 |     def reverseFragments = reverseKeys.collect { libCounts[it] ?: 0 }.
+╰     |                                                           ^^
+
+Warn  subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/main.nf:68:65: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  68 | randedKeys.collect { libCounts[it] ?: 0 }.sum()
+╰     |                               ^^
+
+Warn  subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/main.nf:115:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 115 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/main.nf:116:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 116 |     ch_filtered_reads = Channel.empty()
+╰     |                         ^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/main.nf:117:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 117 |     ch_trim_read_count = Channel.empty()
+╰     |                          ^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/main.nf:118:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 118 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/main.nf:119:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 119 |     ch_lint_log = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/main.nf:149:75: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 149 | iltered_reads = ch_filtered_reads.join(FQ_LINT.out.lint.map { it[0] })
+╰     |                                                               ^^
+
+Warn  subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/main.nf:223:96: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 223 | qc.collectFile(name: 'fail_trimmed_samples_mqc.tsv').map { [[:], it] }
+╰     |                                                                  ^^
+
+Warn  subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/main.nf:231:90: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 231 |  ch_filtered_reads.join(FQ_LINT_AFTER_TRIMMING.out.lint.map { it[0] })
+╰     |                                                               ^^
+
+Warn  subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/main.nf:255:93: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 255 | = ch_filtered_reads.join(FQ_LINT_AFTER_BBSPLIT.out.lint.map { it[0] })
+╰     |                                                               ^^
+
+Warn  subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/main.nf:265:34: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 265 |             .map { ['rrna_refs', it] }
+╰     |                                  ^^
+
+Warn  subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/main.nf:293:95: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 293 | ch_filtered_reads.join(FQ_LINT_AFTER_SORTMERNA.out.lint.map { it[0] })
+╰     |                                                               ^^
+
+Warn  subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/main.nf:314:16: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 314 |         .map { it.first() }
+╰     |                ^^
+
+Warn  subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/main.nf:345:58: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 345 |     multiqc_files   = ch_multiqc_files.transpose().map { it[1] }
+╰     |                                                          ^^
+
+
+Warn  subworkflows/nf-core/fastq_subsample_fq_salmon/main.nf:21:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  21 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/nf-core/quantify_pseudo_alignment/main.nf:29:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  29 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/nf-core/quantify_pseudo_alignment/main.nf:62:26: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  62 |         gtf.map { [ [:], it ] },
+╰     |                          ^^
+
+Warn  subworkflows/nf-core/quantify_pseudo_alignment/main.nf:63:36: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  63 |         ch_pseudo_results.collect{ it[1] }.map { [ [:], it ] },
+╰     |                                    ^^
+
+Warn  subworkflows/nf-core/quantify_pseudo_alignment/main.nf:63:57: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  63 |         ch_pseudo_results.collect{ it[1] }.map { [ [:], it ] },
+╰     |                                                         ^^
+
+Warn  subworkflows/nf-core/quantify_pseudo_alignment/main.nf:71:36: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  71 |         ch_pseudo_results.collect{ it[1] }.map { [ ['id': 'all_samples
+╰     |                                    ^^
+
+Warn  subworkflows/nf-core/quantify_pseudo_alignment/main.nf:71:75: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  71 | pseudo_results.collect{ it[1] }.map { [ ['id': 'all_samples'], it ] },
+╰     |                                                                ^^
+
+Warn  subworkflows/nf-core/quantify_pseudo_alignment/main.nf:82:36: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  82 |                         .map{tuple(it[0], it.tail())}
+╰     |                                    ^^
+
+Warn  subworkflows/nf-core/quantify_pseudo_alignment/main.nf:82:43: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  82 |                         .map{tuple(it[0], it.tail())}
+╰     |                                           ^^
+
+Warn  subworkflows/nf-core/quantify_pseudo_alignment/main.nf:94:36: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  94 |                         .map{tuple(it[0], it.tail())}
+╰     |                                    ^^
+
+Warn  subworkflows/nf-core/quantify_pseudo_alignment/main.nf:94:43: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  94 |                         .map{tuple(it[0], it.tail())}
+╰     |                                           ^^
+
+
+
+
+
+Error workflows/rnaseq/main.nf:75:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  75 | ch_pca_header_multiqc           = file("$projectDir/workflows/rnaseq/a
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/rnaseq/main.nf:76:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  76 | sample_status_header_multiqc    = file("$projectDir/workflows/rnaseq/a
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/rnaseq/main.nf:77:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  77 | ch_clustering_header_multiqc    = file("$projectDir/workflows/rnaseq/a
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/rnaseq/main.nf:78:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  78 | ch_biotypes_header_multiqc      = file("$projectDir/workflows/rnaseq/a
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/rnaseq/main.nf:79:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  79 | ch_dummy_file                   = ch_pca_header_multiqc
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/rnaseq/main.nf:288:17: `ch_pca_header_multiqc` is not defined
+│ 288 |                 ch_pca_header_multiqc,
+╰     |                 ^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/rnaseq/main.nf:289:17: `ch_clustering_header_multiqc` is not defined
+│ 289 |                 ch_clustering_header_multiqc
+╰     |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/rnaseq/main.nf:304:13: `ch_dummy_file` is not defined
+│ 304 |             ch_dummy_file,
+╰     |             ^^^^^^^^^^^^^
+
+Error workflows/rnaseq/main.nf:320:17: `ch_pca_header_multiqc` is not defined
+│ 320 |                 ch_pca_header_multiqc,
+╰     |                 ^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/rnaseq/main.nf:321:17: `ch_clustering_header_multiqc` is not defined
+│ 321 |                 ch_clustering_header_multiqc
+╰     |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/rnaseq/main.nf:415:17: `sample_status_header_multiqc` is not defined
+│ 415 |                 sample_status_header_multiqc.text + multiqcTsvFromList
+╰     |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/rnaseq/main.nf:499:13: `ch_biotypes_header_multiqc` is not defined
+│ 499 |             ch_biotypes_header_multiqc
+╰     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/rnaseq/main.nf:575:13: `for` loops are no longer supported
+│ 575 |             for (rseqc_module in ['read_distribution', 'inner_distance
+╰     |             ^^^
+
+Error workflows/rnaseq/main.nf:575:18: `rseqc_module` is not defined
+│ 575 |             for (rseqc_module in ['read_distribution', 'inner_distance
+╰     |                  ^^^^^^^^^^^^
+
+Error workflows/rnaseq/main.nf:576:44: `rseqc_module` is not defined
+│ 576 |                 if (rseqc_modules.contains(rseqc_module)) {
+╰     |                                            ^^^^^^^^^^^^
+
+Error workflows/rnaseq/main.nf:577:42: `rseqc_module` is not defined
+│ 577 |                     rseqc_modules.remove(rseqc_module)
+╰     |                                          ^^^^^^^^^^^^
+
+Error workflows/rnaseq/main.nf:602:25: Variables in a closure should be declared with `def`
+│ 602 |                         rseqc_strandedness = rseqc_inferred_strand.inf
+╰     |                         ^^^^^^^^^^^^^^^^^^
+
+Error workflows/rnaseq/main.nf:607:29: Variables in a closure should be declared with `def`
+│ 607 |                             salmon_strandedness = meta.salmon_strand_a
+╰     |                             ^^^^^^^^^^^^^^^^^^^
+
+Error workflows/rnaseq/main.nf:650:25: `sample_status_header_multiqc` is not defined
+│ 650 |                         sample_status_header_multiqc.text + multiqcTsv
+╰     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/rnaseq/main.nf:695:13: `ch_dummy_file` is not defined
+│ 695 |             ch_dummy_file,
+╰     |             ^^^^^^^^^^^^^
+
+Error workflows/rnaseq/main.nf:712:17: `ch_pca_header_multiqc` is not defined
+│ 712 |                 ch_pca_header_multiqc,
+╰     |                 ^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/rnaseq/main.nf:713:17: `ch_clustering_header_multiqc` is not defined
+│ 713 |                 ch_clustering_header_multiqc
+╰     |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/rnaseq/main.nf:76:1: Variable was declared but not used
+│  76 | sample_status_header_multiqc    = file("$projectDir/workflows/rnaseq/a
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/rnaseq/main.nf:77:1: Variable was declared but not used
+│  77 | ch_clustering_header_multiqc    = file("$projectDir/workflows/rnaseq/a
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/rnaseq/main.nf:78:1: Variable was declared but not used
+│  78 | ch_biotypes_header_multiqc      = file("$projectDir/workflows/rnaseq/a
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/rnaseq/main.nf:79:1: Variable was declared but not used
+│  79 | ch_dummy_file                   = ch_pca_header_multiqc
+╰     | ^^^^^^^^^^^^^
+
+Warn  workflows/rnaseq/main.nf:104:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 104 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/rnaseq/main.nf:105:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 105 |     ch_trim_status = Channel.empty()
+╰     |                      ^^^^^^^
+
+Warn  workflows/rnaseq/main.nf:106:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 106 |     ch_map_status = Channel.empty()
+╰     |                     ^^^^^^^
+
+Warn  workflows/rnaseq/main.nf:107:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 107 |     ch_strand_status = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/rnaseq/main.nf:108:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 108 |     ch_percent_mapped = Channel.empty()
+╰     |                         ^^^^^^^
+
+Warn  workflows/rnaseq/main.nf:113:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 113 |     Channel
+╰     |     ^^^^^^^
+
+Warn  workflows/rnaseq/main.nf:132:44: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 132 |                     return [ meta.findAll {it.key != 'percent_mapped'}
+╰     |                                            ^^
+
+Warn  workflows/rnaseq/main.nf:139:67: Parameter was not used -- prefix with `_` to suppress warning
+│ 139 | d.bam.map { meta, genome_bam, transcriptome_bam -> [ meta, genome_bam 
+╰     |                               ^^^^^^^^^^^^^^^^^
+
+Warn  workflows/rnaseq/main.nf:140:62: Parameter was not used -- prefix with `_` to suppress warning
+│ 140 | nput_branched.bam.map { meta, genome_bam, transcriptome_bam -> [ meta,
+╰     |                               ^^^^^^^^^^
+
+Warn  workflows/rnaseq/main.nf:145:24: Parameter was not used -- prefix with `_` to suppress warning
+│ 145 |         .filter{ meta, genome_bam, transcriptome_bam -> meta.percent_m
+╰     |                        ^^^^^^^^^^
+
+Warn  workflows/rnaseq/main.nf:145:36: Parameter was not used -- prefix with `_` to suppress warning
+│ 145 |         .filter{ meta, genome_bam, transcriptome_bam -> meta.percent_m
+╰     |                                    ^^^^^^^^^^^^^^^^^
+
+Warn  workflows/rnaseq/main.nf:146:22: Parameter was not used -- prefix with `_` to suppress warning
+│ 146 |         .map { meta, genome_bam, transcriptome_bam -> [ meta, meta.per
+╰     |                      ^^^^^^^^^^
+
+Warn  workflows/rnaseq/main.nf:146:34: Parameter was not used -- prefix with `_` to suppress warning
+│ 146 |         .map { meta, genome_bam, transcriptome_bam -> [ meta, meta.per
+╰     |                                  ^^^^^^^^^^^^^^^^^
+
+Warn  workflows/rnaseq/main.nf:204:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 204 |     ch_star_log            = Channel.empty()
+╰     |                              ^^^^^^^
+
+Warn  workflows/rnaseq/main.nf:205:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 205 |     ch_unaligned_sequences = Channel.empty()
+╰     |                              ^^^^^^^
+
+Warn  workflows/rnaseq/main.nf:218:40: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 218 |             ch_star_index.map { [ [:], it ] },
+╰     |                                        ^^
+
+Warn  workflows/rnaseq/main.nf:219:33: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 219 |             ch_gtf.map { [ [:], it ] },
+╰     |                                 ^^
+
+Warn  workflows/rnaseq/main.nf:224:35: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 224 |             ch_fasta.map { [ [:], it ] },
+╰     |                                   ^^
+
+Warn  workflows/rnaseq/main.nf:235:85: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 235 | les                 = ch_multiqc_files.mix(ch_star_log.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/rnaseq/main.nf:246:39: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 246 |                 ch_fasta.map { [ [:], it ] },
+╰     |                                       ^^
+
+Warn  workflows/rnaseq/main.nf:251:50: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 251 |                 ch_transcript_fasta.map { [ [:], it ] }
+╰     |                                                  ^^
+
+Warn  workflows/rnaseq/main.nf:269:51: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 269 |                 .mix(ALIGN_STAR.out.stats.collect{it[1]})
+╰     |                                                   ^^
+
+Warn  workflows/rnaseq/main.nf:270:54: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 270 |                 .mix(ALIGN_STAR.out.flagstat.collect{it[1]})
+╰     |                                                      ^^
+
+Warn  workflows/rnaseq/main.nf:271:54: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 271 |                 .mix(ALIGN_STAR.out.idxstats.collect{it[1]})
+╰     |                                                      ^^
+
+Warn  workflows/rnaseq/main.nf:282:80: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 282 | qc_files = ch_multiqc_files.mix(QUANTIFY_RSEM.out.stat.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/rnaseq/main.nf:302:41: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 302 |             ch_samplesheet.map { [ [:], it ] },
+╰     |                                         ^^
+
+Warn  workflows/rnaseq/main.nf:319:74: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 319 |      QUANTIFY_STAR_SALMON.out.counts_gene_length_scaled.map { it[1] },
+╰     |                                                               ^^
+
+Warn  workflows/rnaseq/main.nf:335:42: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 335 |             ch_hisat2_index.map { [ [:], it ] },
+╰     |                                          ^^
+
+Warn  workflows/rnaseq/main.nf:336:41: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 336 |             ch_splicesites.map { [ [:], it ] },
+╰     |                                         ^^
+
+Warn  workflows/rnaseq/main.nf:337:35: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 337 |             ch_fasta.map { [ [:], it ] }
+╰     |                                   ^^
+
+Warn  workflows/rnaseq/main.nf:343:88: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 343 |  = ch_multiqc_files.mix(FASTQ_ALIGN_HISAT2.out.summary.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/rnaseq/main.nf:355:39: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 355 |                 ch_fasta.map { [ [:], it ] },
+╰     |                                       ^^
+
+Warn  workflows/rnaseq/main.nf:360:50: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 360 |                 ch_transcript_fasta.map { [ [:], it ] }
+╰     |                                                  ^^
+
+Warn  workflows/rnaseq/main.nf:376:59: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 376 |                 .mix(FASTQ_ALIGN_HISAT2.out.stats.collect{it[1]})
+╰     |                                                           ^^
+
+Warn  workflows/rnaseq/main.nf:377:62: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 377 |                 .mix(FASTQ_ALIGN_HISAT2.out.flagstat.collect{it[1]})
+╰     |                                                              ^^
+
+Warn  workflows/rnaseq/main.nf:378:62: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 378 |                 .mix(FASTQ_ALIGN_HISAT2.out.idxstats.collect{it[1]})
+╰     |                                                              ^^
+
+Warn  workflows/rnaseq/main.nf:405:19: Parameter was not used -- prefix with `_` to suppress warning
+│ 405 |         .filter { id, pass -> pass != null }
+╰     |                   ^^
+
+Warn  workflows/rnaseq/main.nf:409:19: Parameter was not used -- prefix with `_` to suppress warning
+│ 409 |         .filter { id, percent_mapped, pass -> pass != null && !pass }
+╰     |                   ^^
+
+Warn  workflows/rnaseq/main.nf:409:23: Parameter was not used -- prefix with `_` to suppress warning
+│ 409 |         .filter { id, percent_mapped, pass -> pass != null && !pass }
+╰     |                       ^^^^^^^^^^^^^^
+
+Warn  workflows/rnaseq/main.nf:410:36: Parameter was not used -- prefix with `_` to suppress warning
+│ 410 |         .map { id, percent_mapped, pass -> [ "${id}\t${percent_mapped}
+╰     |                                    ^^^^
+
+Warn  workflows/rnaseq/main.nf:424:19: Parameter was not used -- prefix with `_` to suppress warning
+│ 424 |         .filter { meta, bam, index, pass -> pass || pass == null }
+╰     |                   ^^^^
+
+Warn  workflows/rnaseq/main.nf:424:25: Parameter was not used -- prefix with `_` to suppress warning
+│ 424 |         .filter { meta, bam, index, pass -> pass || pass == null }
+╰     |                         ^^^
+
+Warn  workflows/rnaseq/main.nf:424:30: Parameter was not used -- prefix with `_` to suppress warning
+│ 424 |         .filter { meta, bam, index, pass -> pass || pass == null }
+╰     |                              ^^^^^
+
+Warn  workflows/rnaseq/main.nf:425:39: Parameter was not used -- prefix with `_` to suppress warning
+│ 425 |         .multiMap { meta, bam, index, pass ->
+╰     |                                       ^^^^
+
+Warn  workflows/rnaseq/main.nf:440:87: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 440 | s = ch_multiqc_files.mix(PRESEQ_LCEXTRAP.out.lc_extrap.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/rnaseq/main.nf:450:35: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 450 |             ch_fasta.map { [ [:], it ] },
+╰     |                                   ^^
+
+Warn  workflows/rnaseq/main.nf:451:33: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 451 |             ch_fai.map { [ [:], it ] }
+╰     |                                 ^^
+
+Warn  workflows/rnaseq/main.nf:455:93: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 455 | _multiqc_files.mix(BAM_MARKDUPLICATES_PICARD.out.stats.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/rnaseq/main.nf:456:96: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 456 | ltiqc_files.mix(BAM_MARKDUPLICATES_PICARD.out.flagstat.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/rnaseq/main.nf:457:96: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 457 | ltiqc_files.mix(BAM_MARKDUPLICATES_PICARD.out.idxstats.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/rnaseq/main.nf:458:95: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 458 | ultiqc_files.mix(BAM_MARKDUPLICATES_PICARD.out.metrics.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/rnaseq/main.nf:481:33: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 481 |             .map { biotypeInGtf(it, biotype) }
+╰     |                                 ^^
+
+Warn  workflows/rnaseq/main.nf:488:23: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 488 |             .filter { it[-1] }
+╰     |                       ^^
+
+Warn  workflows/rnaseq/main.nf:489:20: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 489 |             .map { it[0..<it.size()-1] }
+╰     |                    ^^
+
+Warn  workflows/rnaseq/main.nf:489:27: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 489 |             .map { it[0..<it.size()-1] }
+╰     |                           ^^
+
+Warn  workflows/rnaseq/main.nf:501:88: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 501 |  = ch_multiqc_files.mix(MULTIQC_CUSTOM_BIOTYPE.out.tsv.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/rnaseq/main.nf:551:39: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 551 |                 ch_fasta.map { [ [:], it ] }
+╰     |                                       ^^
+
+Warn  workflows/rnaseq/main.nf:557:37: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 557 |                 ch_gtf.map { [ [:], it ] }
+╰     |                                     ^^
+
+Warn  workflows/rnaseq/main.nf:559:89: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 559 | les = ch_multiqc_files.mix(QUALIMAP_RNASEQ.out.results.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/rnaseq/main.nf:566:37: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 566 |                 ch_gtf.map { [ [:], it ] }
+╰     |                                     ^^
+
+Warn  workflows/rnaseq/main.nf:568:82: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 568 | tiqc_files = ch_multiqc_files.mix(DUPRADAR.out.multiqc.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/rnaseq/main.nf:573:93: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 573 | c_modules.split(',').collect{ it.trim().toLowerCase() } : []
+╰     |                               ^^
+
+Warn  workflows/rnaseq/main.nf:587:87: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 587 | files = ch_multiqc_files.mix(BAM_RSEQC.out.bamstat_txt.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/rnaseq/main.nf:588:95: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 588 | ch_multiqc_files.mix(BAM_RSEQC.out.inferexperiment_txt.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/rnaseq/main.nf:589:94: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 589 |  ch_multiqc_files.mix(BAM_RSEQC.out.innerdistance_freq.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/rnaseq/main.nf:590:98: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 590 | multiqc_files.mix(BAM_RSEQC.out.junctionannotation_log.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/rnaseq/main.nf:591:102: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 591 | iqc_files.mix(BAM_RSEQC.out.junctionsaturation_rscript.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/rnaseq/main.nf:592:96: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 592 | h_multiqc_files.mix(BAM_RSEQC.out.readdistribution_txt.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/rnaseq/main.nf:593:99: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 593 | ultiqc_files.mix(BAM_RSEQC.out.readduplication_pos_xls.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/rnaseq/main.nf:594:83: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 594 | iqc_files = ch_multiqc_files.mix(BAM_RSEQC.out.tin_txt.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/rnaseq/main.nf:668:84: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 668 | ultiqc_files = ch_multiqc_files.mix(KRAKEN2.out.report.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/rnaseq/main.nf:675:81: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 675 | h_multiqc_files = ch_multiqc_files.mix(BRACKEN.out.txt.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/rnaseq/main.nf:692:41: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 692 |             ch_samplesheet.map { [ [:], it ] },
+╰     |                                         ^^
+
+Warn  workflows/rnaseq/main.nf:706:95: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 706 | ultiqc_files.mix(QUANTIFY_PSEUDO_ALIGNMENT.out.multiqc.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/rnaseq/main.nf:711:52: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 711 |                 ch_counts_gene_length_scaled.map { it[1] },
+╰     |                                                    ^^
+
+Warn  workflows/rnaseq/main.nf:731:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 731 |     ch_multiqc_report = Channel.empty()
+╰     |                         ^^^^^^^
+
+Warn  workflows/rnaseq/main.nf:736:36: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 736 |         ch_multiqc_config        = Channel.fromPath("$projectDir/workf
+╰     |                                    ^^^^^^^
+
+Warn  workflows/rnaseq/main.nf:737:60: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 737 |         ch_multiqc_custom_config = params.multiqc_config ? Channel.fro
+╰     |                                                            ^^^^^^^
+
+Warn  workflows/rnaseq/main.nf:737:102: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 737 | iqc_config ? Channel.fromPath(params.multiqc_config) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/rnaseq/main.nf:738:60: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 738 |         ch_multiqc_logo          = params.multiqc_logo   ? Channel.fro
+╰     |                                                            ^^^^^^^
+
+Warn  workflows/rnaseq/main.nf:738:102: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 738 | iqc_logo   ? Channel.fromPath(params.multiqc_logo)   : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/rnaseq/main.nf:741:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 741 |         ch_workflow_summary = Channel.value(
+╰     |                               ^^^^^^^
+
+Warn  workflows/rnaseq/main.nf:748:34: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 748 |         ch_methods_description = Channel.value(
+╰     |                                  ^^^^^^^
+
+Warn  workflows/rnaseq/main.nf:784:43: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 784 |                 return mappings.collect { it.join('\t') }
+╰     |                                           ^^
+
+Warn  workflows/rnaseq/main.nf:805:5: Variable was declared but not used
+│ 805 |     ch_samplesheet_with_bams = Channel.empty()
+╰     |     ^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/rnaseq/main.nf:805:32: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 805 |     ch_samplesheet_with_bams = Channel.empty()
+╰     |                                ^^^^^^^
+
+Warn  workflows/rnaseq/main.nf:812:20: Parameter was not used -- prefix with `_` to suppress warning
+│ 812 |             .map { id, fastq_meta, reads, meta, genome_bam, transcript
+╰     |                    ^^
+
+Warn  workflows/rnaseq/main.nf:812:24: Parameter was not used -- prefix with `_` to suppress warning
+│ 812 |             .map { id, fastq_meta, reads, meta, genome_bam, transcript
+╰     |                        ^^^^^^^^^^
+
+
+Error modules/local/multiqc_custom_biotype/nextflow.config:1:1: If statements cannot be mixed with config statements
+│   1 | if (!params.skip_qc) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^
+│   2 |     if (!params.skip_biotype_qc && params.featurecounts_group_type) {
+│   3 |         process {
+│   4 |             withName: 'MULTIQC_CUSTOM_BIOTYPE' {
+╰   5 |                 publishDir = [
+
+
+Error modules/nf-core/bbmap/bbsplit/nextflow.config:1:1: If statements cannot be mixed with config statements
+│   1 | if (!params.skip_bbsplit) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│   2 |     process {
+│   3 |         withName: 'BBMAP_BBSPLIT' {
+│   4 |             ext.args   = 'build=1 ambiguous2=all maxindel=150000 ow=f'
+╰   5 |             publishDir = [
+
+
+Error modules/nf-core/bracken/bracken/nextflow.config:1:1: If statements cannot be mixed with config statements
+│   1 | if (!params.skip_qc) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^
+│   2 |     if (params.contaminant_screening == 'kraken2_bracken') {
+│   3 |         process {
+│   4 |             withName: 'BRACKEN' {
+╰   5 |                 ext.args = "-l ${params.bracken_precision}"
+
+
+Error modules/nf-core/dupradar/nextflow.config:1:1: If statements cannot be mixed with config statements
+│   1 | if (!params.skip_qc) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^
+│   2 |     if (!params.skip_dupradar) {
+│   3 |         process {
+│   4 |             withName: 'DUPRADAR' {
+╰   5 |                 publishDir = [
+
+
+Error modules/nf-core/kraken2/kraken2/nextflow.config:1:1: If statements cannot be mixed with config statements
+│   1 | if (!params.skip_qc) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^
+│   2 |     if (params.contaminant_screening in ['kraken2', 'kraken2_bracken']
+│   3 |         process {
+│   4 |             withName: 'KRAKEN2' {
+╰   5 |                 // See https://doi.org/10.1080/19490976.2024.2323235 f
+
+
+Error modules/nf-core/multiqc/nextflow.config:1:1: If statements cannot be mixed with config statements
+│   1 | if (!params.skip_multiqc) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│   2 |     process {
+│   3 |         withName: 'MULTIQC' {
+│   4 |             ext.args = { [
+╰   5 |                 ((params.multiqc_title == null) ? '' : "--title \"${pa
+
+
+Error modules/nf-core/preseq/lcextrap/nextflow.config:1:1: If statements cannot be mixed with config statements
+│   1 | if (!params.skip_qc) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^
+│   2 |     if (!params.skip_preseq) {
+│   3 |         process {
+│   4 |             withName: 'PRESEQ_LCEXTRAP' {
+╰   5 |                 ext.args   = '-verbose -bam -seed 1 -seg_len 100000000
+
+
+Error modules/nf-core/qualimap/rnaseq/nextflow.config:1:1: If statements cannot be mixed with config statements
+│   1 | if (!params.skip_qc) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^
+│   2 |     if (!params.skip_qualimap) {
+│   3 |         process {
+│   4 |             withName: 'SAMTOOLS_SORT_QUALIMAP' {
+╰   5 |                 ext.args = '-n'
+
+
+Error modules/nf-core/sentieon/rsemcalculateexpression/tests/nextflow.config:17:25: `SENTIEON_LICSRVR_IP` is not defined
+│  17 |     SENTIEON_LICENSE = "$SENTIEON_LICSRVR_IP"
+╰     |                         ^^^^^^^^^^^^^^^^^^^^
+
+Error modules/nf-core/sentieon/rsemcalculateexpression/tests/nextflow.config:19:27: `SENTIEON_AUTH_MECH` is not defined
+│  19 |     SENTIEON_AUTH_MECH = "$SENTIEON_AUTH_MECH"
+╰     |                           ^^^^^^^^^^^^^^^^^^^
+
+
+Error modules/nf-core/sentieon/rsempreparereference/tests/nextflow.config:3:25: `SENTIEON_LICSRVR_IP` is not defined
+│   3 |     SENTIEON_LICENSE = "$SENTIEON_LICSRVR_IP"
+╰     |                         ^^^^^^^^^^^^^^^^^^^^
+
+Error modules/nf-core/sentieon/rsempreparereference/tests/nextflow.config:5:27: `SENTIEON_AUTH_MECH` is not defined
+│   5 |     SENTIEON_AUTH_MECH = "$SENTIEON_AUTH_MECH"
+╰     |                           ^^^^^^^^^^^^^^^^^^^
+
+
+Error modules/nf-core/sentieon/staralign/tests/nextflow.arriba.config:15:25: `SENTIEON_LICSRVR_IP` is not defined
+│  15 |     SENTIEON_LICENSE = "$SENTIEON_LICSRVR_IP"
+╰     |                         ^^^^^^^^^^^^^^^^^^^^
+
+Error modules/nf-core/sentieon/staralign/tests/nextflow.arriba.config:17:27: `SENTIEON_AUTH_MECH` is not defined
+│  17 |     SENTIEON_AUTH_MECH = "$SENTIEON_AUTH_MECH"
+╰     |                           ^^^^^^^^^^^^^^^^^^^
+
+
+Error modules/nf-core/sentieon/staralign/tests/nextflow.config:15:25: `SENTIEON_LICSRVR_IP` is not defined
+│  15 |     SENTIEON_LICENSE = "$SENTIEON_LICSRVR_IP"
+╰     |                         ^^^^^^^^^^^^^^^^^^^^
+
+Error modules/nf-core/sentieon/staralign/tests/nextflow.config:17:27: `SENTIEON_AUTH_MECH` is not defined
+│  17 |     SENTIEON_AUTH_MECH = "$SENTIEON_AUTH_MECH"
+╰     |                           ^^^^^^^^^^^^^^^^^^^
+
+
+Error modules/nf-core/sentieon/staralign/tests/nextflow.starfusion.config:15:25: `SENTIEON_LICSRVR_IP` is not defined
+│  15 |     SENTIEON_LICENSE = "$SENTIEON_LICSRVR_IP"
+╰     |                         ^^^^^^^^^^^^^^^^^^^^
+
+Error modules/nf-core/sentieon/staralign/tests/nextflow.starfusion.config:17:27: `SENTIEON_AUTH_MECH` is not defined
+│  17 |     SENTIEON_AUTH_MECH = "$SENTIEON_AUTH_MECH"
+╰     |                           ^^^^^^^^^^^^^^^^^^^
+
+
+Error modules/nf-core/sortmerna/nextflow.config:1:1: If statements cannot be mixed with config statements
+│   1 | if (params.remove_ribo_rna) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│   2 |     process {
+│   3 |         withName: 'SORTMERNA' {
+│   4 |             ext.args   = '--num_alignments 1 -v --index 0'
+╰   5 |             publishDir = [
+
+
+Error modules/nf-core/stringtie/stringtie/nextflow.config:1:1: If statements cannot be mixed with config statements
+│   1 | if (!params.skip_stringtie) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│   2 |     process {
+│   3 |         withName: 'STRINGTIE_STRINGTIE' {
+│   4 |             ext.args   = { [
+╰   5 |                 '-v',
+
+
+Error modules/nf-core/subread/featurecounts/nextflow.config:1:1: If statements cannot be mixed with config statements
+│   1 | if (!params.skip_qc) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^
+│   2 |     if (!params.skip_biotype_qc && params.featurecounts_group_type) {
+│   3 |         process {
+│   4 |             withName: 'SUBREAD_FEATURECOUNTS' {
+╰   5 |                 ext.args   = { [
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-test tests
+│   3 |     testsDir "."
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+
+Error subworkflows/local/align_star/nextflow.config:1:26: Unexpected input: '('
+│   1 | def generateStarAlignArgs(save_unaligned, contaminant_screening, extra
+╰     |                          ^
+
+
+Error subworkflows/local/align_star/tests/nextflow.config:15:1: If statements cannot be mixed with config statements
+│  15 | if (System.getenv('SENTIEON_LICSRVR_IP')) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  16 |     env.SENTIEON_LICENSE = "$SENTIEON_LICSRVR_IP"
+╰  17 | }
+
+Error subworkflows/local/align_star/tests/nextflow.config:19:1: If statements cannot be mixed with config statements
+│  19 | if (System.getenv('SENTIEON_AUTH_MECH')) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  20 |     env.SENTIEON_AUTH_MECH = "$SENTIEON_AUTH_MECH"
+╰  21 | }
+
+Error subworkflows/local/align_star/tests/nextflow.config:22:1: If statements cannot be mixed with config statements
+│  22 | if (secrets.SENTIEON_AUTH_DATA) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  23 |     env.SENTIEON_AUTH_DATA = secrets.SENTIEON_AUTH_DATA
+╰  24 | }
+
+
+Error subworkflows/local/prepare_genome/nextflow.config:103:1: If statements cannot be mixed with config statements
+│ 101 | }
+│ 102 | 
+│ 103 | if (!params.skip_bbsplit && params.bbsplit_fasta_list) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│ 104 |     process {
+╰ 105 |         withName: '.*:PREPARE_GENOME:BBMAP_BBSPLIT' {
+
+Error subworkflows/local/prepare_genome/nextflow.config:116:1: If statements cannot be mixed with config statements
+│ 123 |                 saveAs: { filename -> filename.equals('versions.yml') 
+│ 124 |             ]
+│ 125 |         }
+│ 126 |     }
+╰ 127 | }
+
+
+Error subworkflows/local/prepare_genome/tests/nextflow.config:27:1: If statements cannot be mixed with config statements
+│  27 | if (System.getenv('SENTIEON_LICSRVR_IP')) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  28 |     env.SENTIEON_LICENSE = "$SENTIEON_LICSRVR_IP"
+╰  29 | }
+
+Error subworkflows/local/prepare_genome/tests/nextflow.config:31:1: If statements cannot be mixed with config statements
+│  31 | if (System.getenv('SENTIEON_AUTH_MECH')) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  32 |     env.SENTIEON_AUTH_MECH = "$SENTIEON_AUTH_MECH"
+╰  33 | }
+
+Error subworkflows/local/prepare_genome/tests/nextflow.config:34:1: If statements cannot be mixed with config statements
+│  34 | if (secrets.SENTIEON_AUTH_DATA) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  35 |     env.SENTIEON_AUTH_DATA = secrets.SENTIEON_AUTH_DATA
+╰  36 | }
+
+
+Error subworkflows/local/quantify_rsem/nextflow.config:1:1: If statements cannot be mixed with config statements
+│   1 | if (!params.skip_alignment && params.aligner == 'star_rsem') {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│   2 |     process {
+│   3 |         withName: '.*:QUANTIFY_RSEM:RSEM_CALCULATEEXPRESSION|.*:QUANTI
+│   4 |             ext.args   = [
+╰   5 |                 '--estimate-rspd',
+
+
+Error subworkflows/local/quantify_rsem/tests/nextflow.config:2:1: If statements cannot be mixed with config statements
+│   2 | if (System.getenv('SENTIEON_LICSRVR_IP')) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│   3 |     env.SENTIEON_LICENSE = "$SENTIEON_LICSRVR_IP"
+╰   4 | }
+
+Error subworkflows/local/quantify_rsem/tests/nextflow.config:6:1: If statements cannot be mixed with config statements
+│   6 | if (System.getenv('SENTIEON_AUTH_MECH')) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│   7 |     env.SENTIEON_AUTH_MECH = "$SENTIEON_AUTH_MECH"
+╰   8 | }
+
+Error subworkflows/local/quantify_rsem/tests/nextflow.config:9:1: If statements cannot be mixed with config statements
+│   9 | if (secrets.SENTIEON_AUTH_DATA) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  10 |     env.SENTIEON_AUTH_DATA = secrets.SENTIEON_AUTH_DATA
+╰  11 | }
+
+
+Error subworkflows/nf-core/bam_markduplicates_picard/nextflow.config:1:1: If statements cannot be mixed with config statements
+│   1 | if (!params.skip_markduplicates && !params.with_umi) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│   2 |     process {
+│   3 |         withName: '.*:BAM_MARKDUPLICATES_PICARD:PICARD_MARKDUPLICATES'
+│   4 |             ext.args   = '--ASSUME_SORTED true --REMOVE_DUPLICATES fal
+╰   5 |             ext.prefix = { "${meta.id}.markdup.sorted" }
+
+
+Error subworkflows/nf-core/bam_rseqc/nextflow.config:1:1: Variable declarations cannot be mixed with config statements
+│   1 | def rseqc_modules = params.rseqc_modules ? params.rseqc_modules.split(
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error subworkflows/nf-core/bam_rseqc/nextflow.config:3:1: If statements cannot be mixed with config statements
+│   3 | if (!params.skip_qc && !params.skip_rseqc) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│   4 |     if ('bam_stat' in rseqc_modules) {
+│   5 |         process {
+│   6 |             withName: '.*:BAM_RSEQC:RSEQC_BAMSTAT' {
+╰   7 |                 publishDir = [
+
+
+Error subworkflows/nf-core/fastq_align_hisat2/nextflow.config:1:1: If statements cannot be mixed with config statements
+│   1 | if (!params.skip_alignment && params.aligner == 'hisat2') {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│   2 |     process {
+│   3 |         withName: '.*:FASTQ_ALIGN_HISAT2:HISAT2_ALIGN' {
+│   4 |             ext.args   = '--met-stderr --new-summary --dta'
+╰   5 |             publishDir = [
+
+
+Error subworkflows/nf-core/fastq_fastqc_umitools_fastp/nextflow.config:1:1: If statements cannot be mixed with config statements
+│   1 | if (!(params.skip_fastqc || params.skip_qc)) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│   2 |     if (params.trimmer == 'fastp') {
+│   3 |         process {
+│   4 |             withName: '.*:FASTQ_FASTQC_UMITOOLS_FASTP:FASTQC_RAW' {
+╰   5 |                 ext.args   = '--quiet'
+
+Error subworkflows/nf-core/fastq_fastqc_umitools_fastp/nextflow.config:27:1: If statements cannot be mixed with config statements
+│  25 | }
+│  26 | 
+│  27 | if (!params.skip_trimming) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  28 |     if (params.trimmer == 'fastp') {
+╰  29 |         process {
+
+Error subworkflows/nf-core/fastq_fastqc_umitools_fastp/nextflow.config:55:1: If statements cannot be mixed with config statements
+│  75 |                 ]
+│  76 |             ]
+│  77 |         }
+│  78 |     }
+╰  79 | }
+
+
+Error subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/nextflow.config:1:1: If statements cannot be mixed with config statements
+│   1 | if (!(params.skip_fastqc || params.skip_qc)) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│   2 |     if (params.trimmer == 'trimgalore') {
+│   3 |         process {
+│   4 |             withName: '.*:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC' {
+╰   5 |                 ext.args   = '--quiet'
+
+Error subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/nextflow.config:17:1: If statements cannot be mixed with config statements
+│  15 | }
+│  16 | 
+│  17 | if (!params.skip_trimming) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  18 |     if (params.trimmer == 'trimgalore') {
+╰  19 |         process {
+
+Error subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/nextflow.config:65:1: If statements cannot be mixed with config statements
+│  85 |                 ]
+│  86 |             ]
+│  87 |         }
+│  88 |     }
+╰  89 | }
+
+
+Error subworkflows/nf-core/quantify_pseudo_alignment/nextflow.config:1:1: If statements cannot be mixed with config statements
+│   1 | if (!params.skip_pseudo_alignment && params.pseudo_aligner == 'salmon'
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│   2 |     process {
+│   3 |         withName: '.*:QUANTIFY_PSEUDO_ALIGNMENT:SALMON_QUANT' {
+│   4 |             ext.args   = { params.extra_salmon_quant_args ?: '' }
+╰   5 |             publishDir = [
+
+Error subworkflows/nf-core/quantify_pseudo_alignment/nextflow.config:14:1: If statements cannot be mixed with config statements
+│  12 | }
+│  13 | 
+│  14 | if (!params.skip_pseudo_alignment && params.pseudo_aligner == 'kallist
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  15 |     process {
+╰  16 |         withName: '.*:QUANTIFY_PSEUDO_ALIGNMENT:KALLISTO_QUANT' {
+
+Error subworkflows/nf-core/quantify_pseudo_alignment/nextflow.config:27:1: If statements cannot be mixed with config statements
+│  59 |             ext.prefix = { "${meta.id}_transcript" }
+│  60 |             ext.args = '--assay_names counts,lengths,tpm'
+│  61 |         }
+│  62 |     }
+╰  63 | }
+
+
+Error tests/nextflow.config:32:1: If statements cannot be mixed with config statements
+│  32 | if (System.getenv('SENTIEON_LICSRVR_IP')) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  33 |     env.SENTIEON_LICENSE = "$SENTIEON_LICSRVR_IP"
+╰  34 | }
+
+Error tests/nextflow.config:36:1: If statements cannot be mixed with config statements
+│  36 | if (System.getenv('SENTIEON_AUTH_MECH')) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  37 |     env.SENTIEON_AUTH_MECH = "$SENTIEON_AUTH_MECH"
+╰  38 | }
+
+Error tests/nextflow.config:39:1: If statements cannot be mixed with config statements
+│  39 | if (secrets.SENTIEON_AUTH_DATA) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  40 |     env.SENTIEON_AUTH_DATA = secrets.SENTIEON_AUTH_DATA
+╰  41 | }
+
+
+Error workflows/rnaseq/nextflow.config:28:1: If statements cannot be mixed with config statements
+│  26 | //
+│  27 | 
+│  28 | if (params.aligner == 'star_salmon') {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  29 |     process {
+╰  30 |         withName: '.*:QUANTIFY_STAR_SALMON:SALMON_QUANT' {
+
+Error workflows/rnaseq/nextflow.config:222:1: If statements cannot be mixed with config statements
+│ 220 | }
+│ 221 | 
+│ 222 | if (params.with_umi && ['star_salmon','hisat2'].contains(params.aligne
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│ 223 |     process {
+╰ 224 | 
+
+Error workflows/rnaseq/nextflow.config:314:1: If statements cannot be mixed with config statements
+│ 312 | // bigWig coverage options
+│ 313 | //
+│ 314 | if (!params.skip_bigwig) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^
+│ 315 |     process {
+╰ 316 |         withName: 'BEDTOOLS_GENOMECOV_FW' {
+
+Error workflows/rnaseq/nextflow.config:362:1: If statements cannot be mixed with config statements
+│ 360 | //
+│ 361 | 
+│ 362 | if (params.aligner in ['star_salmon', 'star_rsem'] && !params.skip_qc 
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│ 363 |     process {
+╰ 364 |         withName: 'DESEQ2_QC_(STAR_SALMON|RSEM)' {
+
+Error workflows/rnaseq/nextflow.config:385:1: If statements cannot be mixed with config statements
+│ 419 |                 ]
+│ 420 |             }
+│ 421 |         }
+│ 422 |     }
+╰ 423 | }
+
+Warn  workflows/rnaseq/nextflow.config:205:83: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 205 | arams.save_align_intermeds || params.skip_markduplicates ? it : null }
+╰     |                                                            ^^
+
+
+Nextflow linting complete!
+ ❌ 36 files had 85 errors
+ ✅ 153 files had no errors

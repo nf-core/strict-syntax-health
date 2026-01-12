@@ -1,0 +1,625 @@
+Linting Nextflow code..
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_input_yml.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/test_input_csv.config
+Linting: conf/modules/scaffolding.config
+Linting: conf/modules/ont-prep.config
+Linting: conf/modules/QC/busco.config
+Linting: conf/modules/QC/merqury.config
+Linting: conf/modules/QC/quast.config
+Linting: conf/modules/QC/meryl.config
+Linting: conf/modules/QC/jellyfish-genomescope.config
+Linting: conf/modules/QC/alignments.config
+Linting: conf/modules/trimgalore.config
+Linting: conf/modules/polishing.config
+Linting: conf/modules/assembly.config
+Linting: conf/modules/liftoff.config
+Linting: conf/modules/report.config
+Linting: conf/modules/hifi-prep.config
+Linting: nextflow.config
+Linting: workflows/genomeassembler.nf
+Linting: subworkflows/local/mapping/map_sr/main.nf
+Linting: subworkflows/local/mapping/map_to_assembly/main.nf
+Linting: subworkflows/local/mapping/map_to_ref/main.nf
+Linting: subworkflows/local/jellyfish/main.nf
+Linting: subworkflows/local/prepare_shortreads/main.nf
+Linting: subworkflows/local/scaffolding/ragtag/main.nf
+Linting: subworkflows/local/scaffolding/longstitch/main.nf
+Linting: subworkflows/local/scaffolding/links/main.nf
+Linting: subworkflows/local/scaffolding/main.nf
+Linting: subworkflows/local/bam_sort_stat/main.nf
+Linting: subworkflows/local/prepare_ont/main.nf
+Linting: subworkflows/local/prepare_ont/chop/main.nf
+Linting: subworkflows/local/prepare_ont/collect/main.nf
+Linting: subworkflows/local/prepare_ont/run_nanoq/main.nf
+Linting: subworkflows/local/polishing/main.nf
+Linting: subworkflows/local/polishing/medaka/run_medaka/main.nf
+Linting: subworkflows/local/polishing/medaka/polish_medaka/main.nf
+Linting: subworkflows/local/polishing/pilon/run_pilon/main.nf
+Linting: subworkflows/local/polishing/pilon/polish_pilon/main.nf
+Linting: subworkflows/local/ont/main.nf
+Linting: subworkflows/local/liftoff/main.nf
+Linting: subworkflows/local/utils_nfcore_genomeassembler_pipeline/main.nf
+Linting: subworkflows/local/hifi/main.nf
+Linting: subworkflows/local/assemble/main.nf
+Linting: subworkflows/local/prepare_hifi/main.nf
+Linting: subworkflows/local/qc/busco/main.nf
+Linting: subworkflows/local/qc/quast/main.nf
+Linting: subworkflows/local/qc/main.nf
+Linting: subworkflows/local/qc/merqury/main.nf
+Linting: subworkflows/nf-core/bam_stats_samtools/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/bam_sort_stats_samtools/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: configs/hifi_flye.config
+Linting: configs/hifi_ont_hifiasm_ul.config
+Linting: configs/ont_flye.config
+Linting: configs/ont_hifiasm.config
+Linting: configs/hifi_hifiasm.config
+Linting: configs/hifi_ont_flye_on_hifiasm.config
+Linting: configs/hifi_ont_hifiasm_on_hifiasm.config
+Linting: modules/local/jellyfish/dump/main.nf
+Linting: modules/local/jellyfish/count/main.nf
+Linting: modules/local/jellyfish/histo/main.nf
+Linting: modules/local/jellyfish/stats/main.nf
+Linting: modules/local/nanoq/main.nf
+Linting: modules/local/longstitch/main.nf
+Linting: modules/local/gfa2fa/main.nf
+Linting: modules/local/report/main.nf
+Linting: modules/local/quast/main.nf
+Linting: modules/local/collect_reads/main.nf
+Linting: modules/local/medaka/main.nf
+Linting: modules/local/medaka/medaka_consensus/main.nf
+Linting: modules/local/genomescope/main.nf
+Linting: modules/nf-core/ragtag/scaffold/main.nf
+Linting: modules/nf-core/ragtag/patch/main.nf
+Linting: modules/nf-core/busco/busco/main.nf
+Linting: modules/nf-core/busco/busco/tests/nextflow.config
+Linting: modules/nf-core/lima/main.nf
+Linting: modules/nf-core/lima/tests/nextflow.config
+Linting: modules/nf-core/samtools/flagstat/main.nf
+Linting: modules/nf-core/samtools/idxstats/main.nf
+Linting: modules/nf-core/samtools/fastq/main.nf
+Linting: modules/nf-core/samtools/index/main.nf
+Linting: modules/nf-core/samtools/index/tests/csi.nextflow.config
+Linting: modules/nf-core/samtools/sort/main.nf
+Linting: modules/nf-core/samtools/sort/tests/nextflow.config
+Linting: modules/nf-core/samtools/sort/tests/nextflow_cram.config
+Linting: modules/nf-core/samtools/stats/main.nf
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/flye/main.nf
+Linting: modules/nf-core/minimap2/align/main.nf
+Linting: modules/nf-core/links/main.nf
+Linting: modules/nf-core/links/tests/nextflow.config
+Linting: modules/nf-core/meryl/count/main.nf
+Linting: modules/nf-core/meryl/unionsum/main.nf
+Linting: modules/nf-core/trimgalore/main.nf
+Linting: modules/nf-core/trimgalore/tests/nextflow.config
+Linting: modules/nf-core/liftoff/main.nf
+Linting: modules/nf-core/liftoff/tests/nextflow.config
+Linting: modules/nf-core/merqury/merqury/main.nf
+Linting: modules/nf-core/porechop/porechop/main.nf
+Linting: modules/nf-core/porechop/porechop/tests/nextflow.config
+Linting: modules/nf-core/hifiasm/main.nf
+Linting: modules/nf-core/hifiasm/tests/nextflow.config
+Linting: modules/nf-core/pilon/main.nf
+Error modules/local/genomescope/main.nf:16:30: `est_hap_len` is not defined
+│  16 |         tuple val(meta), env(est_hap_len)           , emit: estimated_
+╰     |                              ^^^^^^^^^^^
+
+
+
+
+
+Error modules/local/nanoq/main.nf:16:26: `median` is not defined
+│  16 |     tuple val(meta), env(median), emit: median_length
+╰     |                          ^^^^^^
+
+
+
+
+
+
+
+Warn  modules/nf-core/hifiasm/main.nf:36:75: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  36 | nceof List ? long_reads.sort{ it.name } : long_reads
+╰     |                               ^^
+
+Warn  modules/nf-core/hifiasm/main.nf:37:69: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  37 | tanceof List ? ul_reads.sort{ it.name } : ul_reads
+╰     |                               ^^
+
+
+
+
+
+
+
+Warn  modules/nf-core/meryl/unionsum/main.nf:40:9: Variable was declared but not used
+│  40 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/minimap2/align/main.nf:66:9: Variable was declared but not used
+│  66 |     def target = reference ?: (bam_input ? error("BAM input requires r
+╰     |         ^^^^^^
+
+
+
+
+
+
+
+
+
+
+
+
+Warn  modules/nf-core/trimgalore/main.nf:47:31: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  47 |         args_list.removeAll { it.toLowerCase().contains('_r2 ') }
+╰     |                               ^^
+
+
+Warn  subworkflows/local/assemble/main.nf:22:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  22 |     Channel.empty().set { ch_refs }
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/assemble/main.nf:23:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  23 |     Channel.empty().set { ch_ref_bam }
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/assemble/main.nf:24:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  24 |     Channel.empty().set { ch_assembly_bam }
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/assemble/main.nf:25:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  25 |     Channel.empty().set { ch_assembly }
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/assemble/main.nf:26:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  26 |     Channel.empty().set { flye_inputs }
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/assemble/main.nf:27:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  27 |     Channel.empty().set { hifiasm_inputs }
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/assemble/main.nf:28:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  28 |     Channel.empty().set { longreads }
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/assemble/main.nf:29:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  29 |     Channel.empty().set { ch_versions }
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/assemble/main.nf:45:13: Variable was declared but not used
+│  45 |         def hifi_only = params.hifi && !params.ont ? true : false
+╰     |             ^^^^^^^^^
+
+Warn  subworkflows/local/assemble/main.nf:171:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 171 |         Channel.empty().set { ch_ref_bam }
+╰     |         ^^^^^^^
+
+
+Warn  subworkflows/local/bam_sort_stat/main.nf:20:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  20 |     Channel.empty().set { ch_versions }
+╰     |     ^^^^^^^
+
+
+Warn  subworkflows/local/hifi/main.nf:9:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│   9 |     Channel.empty().set { ch_versions }
+╰     |     ^^^^^^^
+
+
+Warn  subworkflows/local/jellyfish/main.nf:13:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  13 |     Channel.empty().set { genomescope_in }
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/jellyfish/main.nf:14:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  14 |     Channel.empty().set { ch_versions }
+╰     |     ^^^^^^^
+
+
+Warn  subworkflows/local/liftoff/main.nf:9:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│   9 |     Channel.empty().set { ch_versions }
+╰     |     ^^^^^^^
+
+
+Warn  subworkflows/local/mapping/map_sr/main.nf:10:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  10 |     Channel.empty().set { ch_versions }
+╰     |     ^^^^^^^
+
+
+Warn  subworkflows/local/mapping/map_to_assembly/main.nf:10:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  10 |     Channel.empty().set { ch_versions }
+╰     |     ^^^^^^^
+
+
+Warn  subworkflows/local/mapping/map_to_ref/main.nf:10:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  10 |     Channel.empty().set { ch_versions }
+╰     |     ^^^^^^^
+
+
+Warn  subworkflows/local/ont/main.nf:10:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  10 |     Channel.empty().set { ch_versions }
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/ont/main.nf:11:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  11 |     Channel.of([[],[]])
+╰     |     ^^^^^^^
+
+
+Warn  subworkflows/local/polishing/main.nf:16:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     Channel.empty().set { ch_versions }
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/polishing/main.nf:17:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |     Channel.empty().set { polish_busco_reports }
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/polishing/main.nf:18:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  18 |     Channel.empty().set { polish_quast_reports }
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/polishing/main.nf:19:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 |     Channel.empty().set { polish_merqury_reports }
+╰     |     ^^^^^^^
+
+
+Warn  subworkflows/local/polishing/medaka/polish_medaka/main.nf:14:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  14 |     Channel.empty().set { ch_versions }
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/polishing/medaka/polish_medaka/main.nf:15:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |     Channel.empty().set { quast_out }
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/polishing/medaka/polish_medaka/main.nf:15:27: Variable was declared but not used
+│  15 |     Channel.empty().set { quast_out }
+╰     |                           ^^^^^^^^^
+
+Warn  subworkflows/local/polishing/medaka/polish_medaka/main.nf:16:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     Channel.empty().set { busco_out }
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/polishing/medaka/polish_medaka/main.nf:16:27: Variable was declared but not used
+│  16 |     Channel.empty().set { busco_out }
+╰     |                           ^^^^^^^^^
+
+Warn  subworkflows/local/polishing/medaka/polish_medaka/main.nf:17:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |     Channel.empty().set { merqury_report_files }
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/polishing/medaka/polish_medaka/main.nf:17:27: Variable was declared but not used
+│  17 |     Channel.empty().set { merqury_report_files }
+╰     |                           ^^^^^^^^^^^^^^^^^^^^
+
+
+Warn  subworkflows/local/polishing/pilon/polish_pilon/main.nf:16:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     Channel.empty().set { ch_versions }
+╰     |     ^^^^^^^
+
+
+Warn  subworkflows/local/prepare_hifi/main.nf:9:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│   9 |     Channel.empty().set { ch_versions }
+╰     |     ^^^^^^^
+
+
+Warn  subworkflows/local/prepare_ont/chop/main.nf:8:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│   8 |     Channel.empty().set { chopped_reads }
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/prepare_ont/chop/main.nf:9:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│   9 |     Channel.empty().set { ch_versions }
+╰     |     ^^^^^^^
+
+
+Warn  subworkflows/local/prepare_ont/collect/main.nf:8:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│   8 |     Channel.empty().set { ch_versions }
+╰     |     ^^^^^^^
+
+
+Warn  subworkflows/local/prepare_ont/main.nf:10:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  10 |     Channel.empty().set { ch_versions }
+╰     |     ^^^^^^^
+
+
+Warn  subworkflows/local/prepare_ont/run_nanoq/main.nf:8:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│   8 |     Channel.empty().set { versions }
+╰     |     ^^^^^^^
+
+
+Warn  subworkflows/local/prepare_shortreads/main.nf:10:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  10 |     Channel.empty().set { ch_versions }
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/prepare_shortreads/main.nf:13:41: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  13 |         .map { create_shortread_channel(it) }
+╰     |                                         ^^
+
+
+Warn  subworkflows/local/qc/busco/main.nf:8:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│   8 |     Channel.empty().set { versions }
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/qc/busco/main.nf:9:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│   9 |     Channel.empty().set { batch_summary }
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/qc/busco/main.nf:10:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  10 |     Channel.empty().set { short_summary_txt }
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/qc/busco/main.nf:11:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  11 |     Channel.empty().set { short_summary_json }
+╰     |     ^^^^^^^
+
+
+Warn  subworkflows/local/qc/main.nf:15:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |     Channel.empty().set { ch_versions }
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/qc/main.nf:16:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     Channel.empty().set { quast_out }
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/qc/main.nf:17:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |     Channel.empty().set { busco_out }
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/qc/main.nf:18:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  18 |     Channel.empty().set { merqury_report_files }
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/qc/main.nf:19:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 |     Channel.empty().set { map_to_assembly }
+╰     |     ^^^^^^^
+
+
+Warn  subworkflows/local/qc/merqury/main.nf:9:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│   9 |     Channel.empty().set { versions }
+╰     |     ^^^^^^^
+
+
+Warn  subworkflows/local/qc/quast/main.nf:11:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  11 |     Channel.empty().set { versions }
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/qc/quast/main.nf:16:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     Channel.empty().set { quast_results }
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/qc/quast/main.nf:17:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |     Channel.empty().set { quast_tsv }
+╰     |     ^^^^^^^
+
+
+Warn  subworkflows/local/scaffolding/links/main.nf:15:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |     Channel.empty().set { ch_versions }
+╰     |     ^^^^^^^
+
+
+Warn  subworkflows/local/scaffolding/longstitch/main.nf:16:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     Channel.empty().set { ch_versions }
+╰     |     ^^^^^^^
+
+
+Warn  subworkflows/local/scaffolding/main.nf:16:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     Channel.empty().set { ch_versions }
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/scaffolding/main.nf:17:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |     Channel.empty().set { links_busco }
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/scaffolding/main.nf:18:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  18 |     Channel.empty().set { links_quast }
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/scaffolding/main.nf:19:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 |     Channel.empty().set { links_merqury }
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/scaffolding/main.nf:20:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  20 |     Channel.empty().set { longstitch_busco }
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/scaffolding/main.nf:21:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  21 |     Channel.empty().set { longstitch_quast }
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/scaffolding/main.nf:22:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  22 |     Channel.empty().set { longstitch_merqury }
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/scaffolding/main.nf:23:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  23 |     Channel.empty().set { ragtag_busco }
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/scaffolding/main.nf:24:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  24 |     Channel.empty().set { ragtag_quast }
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/scaffolding/main.nf:25:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  25 |     Channel.empty().set { ragtag_merqury }
+╰     |     ^^^^^^^
+
+
+Warn  subworkflows/local/scaffolding/ragtag/main.nf:16:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     Channel.empty().set { ch_versions }
+╰     |     ^^^^^^^
+
+
+Warn  subworkflows/local/utils_nfcore_genomeassembler_pipeline/main.nf:30:5: Parameter was not used -- prefix with `_` to suppress warning
+│  30 |     monochrome_logs // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_genomeassembler_pipeline/main.nf:33:5: Parameter was not used -- prefix with `_` to suppress warning
+│  33 |     input //  string: Path to input samplesheet
+╰     |     ^^^^^
+
+Warn  subworkflows/local/utils_nfcore_genomeassembler_pipeline/main.nf:37:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  37 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_genomeassembler_pipeline/main.nf:69:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  69 |     Channel.empty().set { ch_refs }
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_genomeassembler_pipeline/main.nf:70:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  70 |     Channel.fromPath(params.input)
+╰     |     ^^^^^^^
+
+
+Warn  subworkflows/nf-core/bam_sort_stats_samtools/main.nf:16:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/nf-core/bam_stats_samtools/main.nf:15:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 | mYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
+╰     |                               ^^^^^^^
+
+
+Warn  workflows/genomeassembler.nf:44:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  44 |     Channel.empty().set { ch_ref_bam }
+╰     |     ^^^^^^^
+
+Warn  workflows/genomeassembler.nf:45:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  45 |     Channel.empty().set { ch_polished_genome }
+╰     |     ^^^^^^^
+
+Warn  workflows/genomeassembler.nf:46:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  46 |     Channel.empty().set { ch_ont_reads }
+╰     |     ^^^^^^^
+
+Warn  workflows/genomeassembler.nf:47:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  47 |     Channel.empty().set { ch_hifi_reads }
+╰     |     ^^^^^^^
+
+Warn  workflows/genomeassembler.nf:48:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  48 |     Channel.empty().set { ch_shortreads }
+╰     |     ^^^^^^^
+
+Warn  workflows/genomeassembler.nf:49:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  49 |     Channel.empty().set { meryl_kmers }
+╰     |     ^^^^^^^
+
+Warn  workflows/genomeassembler.nf:50:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  50 |     Channel.empty().set { genome_size }
+╰     |     ^^^^^^^
+
+Warn  workflows/genomeassembler.nf:51:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  51 |     Channel.empty().set { ch_versions }
+╰     |     ^^^^^^^
+
+Warn  workflows/genomeassembler.nf:53:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  53 |     Channel
+╰     |     ^^^^^^^
+
+Warn  workflows/genomeassembler.nf:198:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 198 |     Channel
+╰     |     ^^^^^^^
+
+Warn  workflows/genomeassembler.nf:203:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 203 |     Channel
+╰     |     ^^^^^^^
+
+Warn  workflows/genomeassembler.nf:209:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 209 |         merqury_files = Channel.of([])
+╰     |                         ^^^^^^^
+
+Warn  workflows/genomeassembler.nf:212:117: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 212 | , busco_files, merqury_files, Channel.fromPath("${params.outdir}/pipel
+╰     |                               ^^^^^^^
+
+
+Error nextflow.config:278:1: Variable declarations cannot be mixed with config statements
+│ 278 | def trace_timestamp = new java.util.Date().format( 'yyyy-MM-dd_HH-mm-s
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error nextflow.config:281:68: `trace_timestamp` is not defined
+│ 281 | rams.outdir}/pipeline_info/execution_timeline_${trace_timestamp}.html"
+╰     |                                                 ^^^^^^^^^^^^^^^
+
+Error nextflow.config:285:66: `trace_timestamp` is not defined
+│ 285 | params.outdir}/pipeline_info/execution_report_${trace_timestamp}.html"
+╰     |                                                 ^^^^^^^^^^^^^^^
+
+Error nextflow.config:289:65: `trace_timestamp` is not defined
+│ 289 | ${params.outdir}/pipeline_info/execution_trace_${trace_timestamp}.txt"
+╰     |                                                  ^^^^^^^^^^^^^^^
+
+Error nextflow.config:293:62: `trace_timestamp` is not defined
+│ 293 |  "${params.outdir}/pipeline_info/pipeline_dag_${trace_timestamp}.html"
+╰     |                                                 ^^^^^^^^^^^^^^^
+
+Error nextflow.config:327:34: `manifest` is not defined
+│ 327 |         command = "nextflow run $manifest.name -profile <docker/singul
+╰     |                                  ^^^^^^^^
+
+Error nextflow.config:337:15: `manifest` is not defined
+│ 337 | \033[0;35m  ${manifest.name} ${manifest.version}\033[0m
+╰     |               ^^^^^^^^
+
+Error nextflow.config:337:32: `manifest` is not defined
+│ 337 | \033[0;35m  ${manifest.name} ${manifest.version}\033[0m
+╰     |                                ^^^^^^^^
+
+Error nextflow.config:340:26: `manifest` is not defined
+│ 340 |         afterText = """${manifest.doi ? "* The pipeline\n" : ""}${mani
+╰     |                          ^^^^^^^^
+
+Error nextflow.config:340:67: `manifest` is not defined
+│ 340 | i ? "* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "  
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:340:182: `manifest` is not defined
+│ 340 | doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:345:26: `manifest` is not defined
+│ 345 |     https://github.com/${manifest.name}/blob/master/CITATIONS.md
+╰     |                          ^^^^^^^^
+
+Error nextflow.config:349:22: `validation` is not defined
+│ 349 |         beforeText = validation.help.beforeText
+╰     |                      ^^^^^^^^^^
+
+Error nextflow.config:350:21: `validation` is not defined
+│ 350 |         afterText = validation.help.afterText
+╰     |                     ^^^^^^^^^^
+
+Warn  nextflow.config:340:125: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 340 | ollect { "  https://doi.org/${it.trim().replace('https://doi.org/','')
+╰     |                               ^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-test tests
+│   3 |     testsDir "."
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 4 files had 17 errors
+ ✅ 110 files had no errors

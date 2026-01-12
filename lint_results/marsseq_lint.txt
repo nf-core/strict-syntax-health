@@ -1,0 +1,658 @@
+Linting Nextflow code..
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/genomes.config
+Linting: nextflow.config
+Linting: workflows/build_references.nf
+Linting: workflows/marsseq.nf
+Linting: subworkflows/local/build_references.nf
+Linting: subworkflows/local/align_reads.nf
+Linting: subworkflows/local/label_reads.nf
+Linting: subworkflows/local/velocity.nf
+Linting: subworkflows/local/demultiplex_reads.nf
+Linting: subworkflows/local/input_check.nf
+Linting: subworkflows/local/prepare_pipeline.nf
+Linting: main.nf
+Linting: modules/local/ercc/main.nf
+Linting: modules/local/wget/main.nf
+Linting: modules/local/fastp/split/main.nf
+Linting: modules/local/prepare/main.nf
+Linting: modules/local/demultiplex/main.nf
+Linting: modules/local/extract/main.nf
+Linting: modules/local/cut/sam/main.nf
+Linting: modules/local/velocity/whitelist/main.nf
+Linting: modules/local/velocity/convert/main.nf
+Linting: modules/local/samplesheet_check.nf
+Linting: modules/local/qc/batch/main.nf
+Linting: modules/local/qc/report/main.nf
+Linting: modules/local/qc/align/main.nf
+Linting: modules/nf-core/star/genomegenerate/main.nf
+Linting: modules/nf-core/star/align/main.nf
+Linting: modules/nf-core/gunzip/main.nf
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/cutadapt/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/cat/cat/main.nf
+Linting: modules/nf-core/custom/dumpsoftwareversions/main.nf
+Linting: modules/nf-core/bowtie2/build/main.nf
+Linting: modules/nf-core/bowtie2/align/main.nf
+Error main.nf:20:24: `WorkflowMain` is not defined
+│  20 | params.fasta         = WorkflowMain.getGenomeAttribute(params, 'fasta'
+╰     |                        ^^^^^^^^^^^^
+
+Error main.nf:21:24: `WorkflowMain` is not defined
+│  21 | params.gtf           = WorkflowMain.getGenomeAttribute(params, 'gtf')
+╰     |                        ^^^^^^^^^^^^
+
+Error main.nf:22:24: `WorkflowMain` is not defined
+│  22 | params.bowtie2_index = WorkflowMain.getGenomeAttribute(params, 'bowtie
+╰     |                        ^^^^^^^^^^^^
+
+Error main.nf:23:24: `WorkflowMain` is not defined
+│  23 | params.star_index    = WorkflowMain.getGenomeAttribute(params, 'star')
+╰     |                        ^^^^^^^^^^^^
+
+Error main.nf:34:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  32 | 
+│  33 | // Print help message if needed
+│  34 | if (params.help) {
+│     | ^^^^^^^^^^^^^^^^^^
+│  35 |     def logo = NfcoreTemplate.logo(workflow, params.monochrome_logs)
+╰  36 |     def citation = '\n' + WorkflowMain.citation(workflow) + '\n'
+
+Error main.nf:35:16: `NfcoreTemplate` is not defined
+│  35 |     def logo = NfcoreTemplate.logo(workflow, params.monochrome_logs)
+╰     |                ^^^^^^^^^^^^^^
+
+Error main.nf:36:27: `WorkflowMain` is not defined
+│  36 |     def citation = '\n' + WorkflowMain.citation(workflow) + '\n'
+╰     |                           ^^^^^^^^^^^^
+
+Error main.nf:38:54: `NfcoreTemplate` is not defined
+│  38 |     log.info logo + paramsHelp(command) + citation + NfcoreTemplate.da
+╰     |                                                      ^^^^^^^^^^^^^^
+
+Error main.nf:42:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  42 | WorkflowMain.initialise(workflow, params, log)
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:42:1: `WorkflowMain` is not defined
+│  42 | WorkflowMain.initialise(workflow, params, log)
+╰     | ^^^^^^^^^^^^
+
+
+
+
+Warn  modules/local/ercc/main.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/extract/main.nf:26:9: Variable was declared but not used
+│  26 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/extract/main.nf:52:9: Variable was declared but not used
+│  52 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+Warn  modules/local/qc/align/main.nf:25:9: Variable was declared but not used
+│  25 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+Error modules/local/qc/report/main.nf:15:15: `meta` is already declared
+│  15 |     tuple val(meta), path(pdf)
+╰     |               ^^^^
+
+Warn  modules/local/qc/report/main.nf:14:15: Variable was declared but not used
+│  14 |     tuple val(meta), path(rds)
+╰     |               ^^^^
+
+
+
+
+
+Warn  modules/local/wget/main.nf:37:9: Variable was declared but not used
+│  37 |     def args = task.ext.args ?: ""
+╰     |         ^^^^
+
+
+
+
+Warn  modules/nf-core/cat/cat/main.nf:23:40: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  23 |     def file_list = files_in.collect { it.toString() }
+╰     |                                        ^^
+
+Warn  modules/nf-core/cat/cat/main.nf:52:40: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  52 |     def file_list = files_in.collect { it.toString() }
+╰     |                                        ^^
+
+
+Warn  modules/nf-core/custom/dumpsoftwareversions/main.nf:22:9: Variable was declared but not used
+│  22 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+Warn  modules/nf-core/fastqc/main.nf:27:48: Parameter was not used -- prefix with `_` to suppress warning
+│  27 |     def renamed_files = old_new_pairs.collect{ old_name, new_name -> n
+╰     |                                                ^^^^^^^^
+
+
+
+
+Error modules/nf-core/star/align/main.nf:45:20: Unexpected input: ','
+│  45 |     def reads1 = [], reads2 = []
+╰     |                    ^
+
+
+
+Error subworkflows/local/align_reads.nf:18:22: `reads` is already declared
+│  18 |         .map { meta, reads -> [ [ "id": meta.id, "single_end": true, "
+╰     |                      ^^^^^
+
+Error subworkflows/local/align_reads.nf:20:22: `reads` is already declared
+│  20 |         .map { meta, reads -> [ meta, index ] }
+╰     |                      ^^^^^
+
+Warn  subworkflows/local/align_reads.nf:16:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/align_reads.nf:20:22: Parameter was not used -- prefix with `_` to suppress warning
+│  20 |         .map { meta, reads -> [ meta, index ] }
+╰     |                      ^^^^^
+
+
+Error subworkflows/local/build_references.nf:59:67: `fasta` is already declared
+│  59 | ENERATE( ch_genome.map{ meta, fasta -> fasta }, ch_gtf.map{ meta, gtf 
+╰     |                               ^^^^^
+
+Warn  subworkflows/local/build_references.nf:18:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  18 |     ch_star_index = Channel.empty()
+╰     |                     ^^^^^^^
+
+Warn  subworkflows/local/build_references.nf:19:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 |     ch_versions   = Channel.empty()
+╰     |                     ^^^^^^^
+
+Warn  subworkflows/local/build_references.nf:37:70: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  37 | _fasta = GUNZIP_FASTA ( DOWNLOAD_FASTA.out.file ).gunzip.map { it[1] }
+╰     |                                                                ^^
+
+Warn  subworkflows/local/build_references.nf:40:64: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  40 |     ch_gtf = GUNZIP_GTF ( DOWNLOAD_GTF.out.file ).gunzip.map { it[1] }
+╰     |                                                                ^^
+
+Warn  subworkflows/local/build_references.nf:44:18: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  44 |     ERCC_CREATE( Channel.from("$projectDir/data/spike-seq.txt") )
+╰     |                  ^^^^^^^
+
+Warn  subworkflows/local/build_references.nf:59:61: Parameter was not used -- prefix with `_` to suppress warning
+│  59 | ENOMEGENERATE( ch_genome.map{ meta, fasta -> fasta }, ch_gtf.map{ meta
+╰     |                               ^^^^
+
+Warn  subworkflows/local/build_references.nf:59:97: Parameter was not used -- prefix with `_` to suppress warning
+│  59 | fasta -> fasta }, ch_gtf.map{ meta, gtf -> gtf } ).index
+╰     |                               ^^^^
+
+
+Error subworkflows/local/demultiplex_reads.nf:26:47: `reads` is already declared
+│  26 |         .map { amp_batch, pool_barcode, meta, reads -> [
+╰     |                                               ^^^^^
+
+Warn  subworkflows/local/demultiplex_reads.nf:20:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  20 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/input_check.nf:15:37: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  15 |         .map { create_fastq_channel(it) }
+╰     |                                     ^^
+
+
+Warn  subworkflows/local/prepare_pipeline.nf:19:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 |     ch_reads = Channel.empty()
+╰     |                ^^^^^^^
+
+Warn  subworkflows/local/prepare_pipeline.nf:20:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  20 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Error subworkflows/local/velocity.nf:8:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/marsseq/modules/nf-core/star/align/main.nf'
+│   8 | include { STAR_ALIGN as VELOCITY_STARSOLO } from '../../modules/nf-cor
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error subworkflows/local/velocity.nf:21:35: `reads` is already declared
+│  21 |     ch_folder = reads.map { meta, reads -> [ meta, reads.first().Paren
+╰     |                                   ^^^^^
+
+Error subworkflows/local/velocity.nf:22:34: `reads` is already declared
+│  22 |     ch_index = reads.map { meta, reads -> [ meta, index ] }
+╰     |                                  ^^^^^
+
+Error subworkflows/local/velocity.nf:37:5: `VELOCITY_STARSOLO` is not defined
+│  37 |     VELOCITY_STARSOLO (
+╰     |     ^^^^^^^^^^^^^^^^^
+
+Error subworkflows/local/velocity.nf:46:35: `VELOCITY_STARSOLO` is not defined
+│  46 |     ch_versions = ch_versions.mix(VELOCITY_STARSOLO.out.versions)
+╰     |                                   ^^^^^^^^^^^^^^^^^
+
+Error subworkflows/local/velocity.nf:50:24: `VELOCITY_STARSOLO` is not defined
+│  50 |     star_multiqc     = VELOCITY_STARSOLO.out.log_final
+╰     |                        ^^^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/velocity.nf:19:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/velocity.nf:22:5: Variable was declared but not used
+│  22 |     ch_index = reads.map { meta, reads -> [ meta, index ] }
+╰     |     ^^^^^^^^
+
+Warn  subworkflows/local/velocity.nf:22:34: Parameter was not used -- prefix with `_` to suppress warning
+│  22 |     ch_index = reads.map { meta, reads -> [ meta, index ] }
+╰     |                                  ^^^^^
+
+
+Error workflows/build_references.nf:47:22: `fasta` is already declared
+│  47 |         .map { meta, fasta -> fasta }
+╰     |                      ^^^^^
+
+Error workflows/build_references.nf:63:51: `fasta` is already declared
+│  63 |         STAR_GENOMEGENERATE( ch_genome.map{ meta, fasta -> fasta }, ch
+╰     |                                                   ^^^^^
+
+Error workflows/build_references.nf:88:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  86 | */
+│  87 | 
+│  88 | workflow.onComplete {
+│     | ^^^^^^^^^^^^^^^^^^^^^
+│  89 |     if (params.email || params.email_on_fail) {
+╰  90 |         NfcoreTemplate.email(workflow, params, summary_params, project
+
+Error workflows/build_references.nf:90:9: `NfcoreTemplate` is not defined
+│  90 |         NfcoreTemplate.email(workflow, params, summary_params, project
+╰     |         ^^^^^^^^^^^^^^
+
+Error workflows/build_references.nf:90:48: `summary_params` is not defined
+│  90 |         NfcoreTemplate.email(workflow, params, summary_params, project
+╰     |                                                ^^^^^^^^^^^^^^
+
+Error workflows/build_references.nf:90:81: `multiqc_report` is not defined
+│  90 | ail(workflow, params, summary_params, projectDir, log, multiqc_report)
+╰     |                                                        ^^^^^^^^^^^^^^
+
+Error workflows/build_references.nf:92:5: `NfcoreTemplate` is not defined
+│  92 |     NfcoreTemplate.summary(workflow, params, log)
+╰     |     ^^^^^^^^^^^^^^
+
+Warn  workflows/build_references.nf:31:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  31 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  workflows/build_references.nf:47:16: Parameter was not used -- prefix with `_` to suppress warning
+│  47 |         .map { meta, fasta -> fasta }
+╰     |                ^^^^
+
+Warn  workflows/build_references.nf:51:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  51 |     ch_ercc = ERCC_CREATE( Channel.from("$projectDir/data/spike-seq.tx
+╰     |                            ^^^^^^^
+
+Warn  workflows/build_references.nf:63:45: Parameter was not used -- prefix with `_` to suppress warning
+│  63 |         STAR_GENOMEGENERATE( ch_genome.map{ meta, fasta -> fasta }, ch
+╰     |                                             ^^^^
+
+Warn  workflows/build_references.nf:63:81: Parameter was not used -- prefix with `_` to suppress warning
+│  63 | fasta -> fasta }, ch_gtf.map{ meta, gtf -> gtf } )
+╰     |                               ^^^^
+
+
+Error workflows/marsseq.nf:9:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│   9 | def logo = NfcoreTemplate.logo(workflow, params.monochrome_logs)
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/marsseq.nf:9:12: `NfcoreTemplate` is not defined
+│   9 | def logo = NfcoreTemplate.logo(workflow, params.monochrome_logs)
+╰     |            ^^^^^^^^^^^^^^
+
+Error workflows/marsseq.nf:10:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  10 | def citation = '\n' + WorkflowMain.citation(workflow) + '\n'
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/marsseq.nf:10:23: `WorkflowMain` is not defined
+│  10 | def citation = '\n' + WorkflowMain.citation(workflow) + '\n'
+╰     |                       ^^^^^^^^^^^^
+
+Error workflows/marsseq.nf:11:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  11 | def summary_params = paramsSummaryMap(workflow)
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/marsseq.nf:14:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  14 | log.info logo + paramsSummaryLog(workflow) + citation
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/marsseq.nf:16:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  16 | WorkflowMarsseq.initialise(params, log)
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/marsseq.nf:16:1: `WorkflowMarsseq` is not defined
+│  16 | WorkflowMarsseq.initialise(params, log)
+╰     | ^^^^^^^^^^^^^^^
+
+Error workflows/marsseq.nf:19:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  19 | def checkPathParamList = [ params.input, params.multiqc_config, params
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/marsseq.nf:20:1: `for` loops are no longer supported
+│  20 | for (param in checkPathParamList) { if (param && !params.build_referen
+╰     | ^^^
+
+Error workflows/marsseq.nf:20:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  20 | for (param in checkPathParamList) { if (param && !params.build_referen
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/marsseq.nf:20:6: `param` is not defined
+│  20 | for (param in checkPathParamList) { if (param && !params.build_referen
+╰     |      ^^^^^
+
+Error workflows/marsseq.nf:20:41: `param` is not defined
+│  20 | for (param in checkPathParamList) { if (param && !params.build_referen
+╰     |                                         ^^^^^
+
+Error workflows/marsseq.nf:20:83: `param` is not defined
+│  20 | rams.build_references) { file(param, checkIfExists: true) } }
+╰     |                               ^^^^^
+
+Error workflows/marsseq.nf:28:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  28 | ch_multiqc_config          = Channel.fromPath("$projectDir/assets/mult
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/marsseq.nf:29:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  29 | ch_multiqc_custom_config   = params.multiqc_config ? Channel.fromPath(
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/marsseq.nf:30:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  30 | ch_multiqc_logo            = params.multiqc_logo   ? Channel.fromPath(
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/marsseq.nf:31:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  31 | ch_multiqc_custom_methods_description = params.multiqc_methods_descrip
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/marsseq.nf:75:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  75 | def multiqc_report = []
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/marsseq.nf:184:27: `WorkflowMarsseq` is not defined
+│ 184 |     workflow_summary    = WorkflowMarsseq.paramsSummaryMultiqc(workflo
+╰     |                           ^^^^^^^^^^^^^^^
+
+Error workflows/marsseq.nf:184:74: `summary_params` is not defined
+│ 184 | ry    = WorkflowMarsseq.paramsSummaryMultiqc(workflow, summary_params)
+╰     |                                                        ^^^^^^^^^^^^^^
+
+Error workflows/marsseq.nf:187:30: `WorkflowMarsseq` is not defined
+│ 187 |     methods_description    = WorkflowMarsseq.methodsDescriptionText(wo
+╰     |                              ^^^^^^^^^^^^^^^
+
+Error workflows/marsseq.nf:187:79: `ch_multiqc_custom_methods_description` is not defined
+│ 187 | scriptionText(workflow, ch_multiqc_custom_methods_description, params)
+╰     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/marsseq.nf:200:9: `ch_multiqc_config` is not defined
+│ 200 |         ch_multiqc_config.toList(),
+╰     |         ^^^^^^^^^^^^^^^^^
+
+Error workflows/marsseq.nf:201:9: `ch_multiqc_custom_config` is not defined
+│ 201 |         ch_multiqc_custom_config.toList(),
+╰     |         ^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/marsseq.nf:202:9: `ch_multiqc_logo` is not defined
+│ 202 |         ch_multiqc_logo.toList()
+╰     |         ^^^^^^^^^^^^^^^
+
+Error workflows/marsseq.nf:213:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│ 211 | */
+│ 212 | 
+│ 213 | workflow.onComplete {
+│     | ^^^^^^^^^^^^^^^^^^^^^
+│ 214 |     if (params.email || params.email_on_fail) {
+╰ 215 |         NfcoreTemplate.email(workflow, params, summary_params, project
+
+Error workflows/marsseq.nf:215:9: `NfcoreTemplate` is not defined
+│ 215 |         NfcoreTemplate.email(workflow, params, summary_params, project
+╰     |         ^^^^^^^^^^^^^^
+
+Error workflows/marsseq.nf:217:5: `NfcoreTemplate` is not defined
+│ 217 |     NfcoreTemplate.summary(workflow, params, log)
+╰     |     ^^^^^^^^^^^^^^
+
+Error workflows/marsseq.nf:219:9: `NfcoreTemplate` is not defined
+│ 219 |         NfcoreTemplate.IM_notification(workflow, params, summary_param
+╰     |         ^^^^^^^^^^^^^^
+
+Warn  workflows/marsseq.nf:28:1: Variable was declared but not used
+│  28 | ch_multiqc_config          = Channel.fromPath("$projectDir/assets/mult
+╰     | ^^^^^^^^^^^^^^^^^
+
+Warn  workflows/marsseq.nf:28:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  28 | ch_multiqc_config          = Channel.fromPath("$projectDir/assets/mult
+╰     |                              ^^^^^^^
+
+Warn  workflows/marsseq.nf:29:1: Variable was declared but not used
+│  29 | ch_multiqc_custom_config   = params.multiqc_config ? Channel.fromPath(
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/marsseq.nf:29:54: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  29 | ch_multiqc_custom_config   = params.multiqc_config ? Channel.fromPath(
+╰     |                                                      ^^^^^^^
+
+Warn  workflows/marsseq.nf:29:119: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  29 | omPath( params.multiqc_config, checkIfExists: true ) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/marsseq.nf:30:1: Variable was declared but not used
+│  30 | ch_multiqc_logo            = params.multiqc_logo   ? Channel.fromPath(
+╰     | ^^^^^^^^^^^^^^^
+
+Warn  workflows/marsseq.nf:30:54: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  30 | ch_multiqc_logo            = params.multiqc_logo   ? Channel.fromPath(
+╰     |                                                      ^^^^^^^
+
+Warn  workflows/marsseq.nf:30:117: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  30 | fromPath( params.multiqc_logo, checkIfExists: true ) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/marsseq.nf:31:1: Variable was declared but not used
+│  31 | ch_multiqc_custom_methods_description = params.multiqc_methods_descrip
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/marsseq.nf:79:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  79 |     ch_versions             = Channel.empty()
+╰     |                               ^^^^^^^
+
+Warn  workflows/marsseq.nf:80:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  80 |     ch_multiqc_files        = Channel.empty()
+╰     |                               ^^^^^^^
+
+Warn  workflows/marsseq.nf:81:5: Variable was declared but not used
+│  81 |     ch_fasta                = file(params.fasta, checkIfExists: true)
+╰     |     ^^^^^^^^
+
+Warn  workflows/marsseq.nf:85:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  85 |     ch_ercc_regions         = Channel.fromPath("$projectDir/data/ercc-
+╰     |                               ^^^^^^^
+
+Warn  workflows/marsseq.nf:86:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  86 |     ch_oligos               = Channel.fromPath("$projectDir/data/oligo
+╰     |                               ^^^^^^^
+
+Warn  workflows/marsseq.nf:87:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  87 |     ch_spike_seq            = Channel.fromPath("$projectDir/data/spike
+╰     |                               ^^^^^^^
+
+Warn  workflows/marsseq.nf:88:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  88 |     ch_spike_concentrations = Channel.fromPath("$projectDir/data/spike
+╰     |                               ^^^^^^^
+
+Warn  workflows/marsseq.nf:110:37: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 110 |         INPUT_CHECK.out.reads.map { it[0].amp_batches },
+╰     |                                     ^^
+
+Warn  workflows/marsseq.nf:111:37: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 111 |         INPUT_CHECK.out.reads.map { it[0].seq_batches },
+╰     |                                     ^^
+
+Warn  workflows/marsseq.nf:112:37: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 112 |         INPUT_CHECK.out.reads.map { it[0].well_cells },
+╰     |                                     ^^
+
+Warn  workflows/marsseq.nf:133:38: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 133 |         .groupTuple(by: [0], sort: { it.name })
+╰     |                                      ^^
+
+Warn  workflows/marsseq.nf:165:41: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 165 |             INPUT_CHECK.out.reads.map { it[0].amp_batches },
+╰     |                                         ^^
+
+Warn  workflows/marsseq.nf:166:41: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 166 |             INPUT_CHECK.out.reads.map { it[0].well_cells },
+╰     |                                         ^^
+
+Warn  workflows/marsseq.nf:173:87: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 173 | .out.catadapt_multiqc.collect{it[1]}.ifEmpty([]))
+╰     |                               ^^
+
+Warn  workflows/marsseq.nf:174:83: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 174 | CITY.out.star_multiqc.collect{it[1]}.ifEmpty([]))
+╰     |                               ^^
+
+Warn  workflows/marsseq.nf:185:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 185 |     ch_workflow_summary = Channel.value(workflow_summary)
+╰     |                           ^^^^^^^
+
+Warn  workflows/marsseq.nf:188:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 188 |     ch_methods_description = Channel.value(methods_description)
+╰     |                              ^^^^^^^
+
+Warn  workflows/marsseq.nf:191:57: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 191 |         .mix(PREPARE_PIPELINE.out.fastp_multiqc.collect{it[1]}.ifEmpty
+╰     |                                                         ^^
+
+Warn  workflows/marsseq.nf:192:54: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 192 |         .mix(ALIGN_READS.out.bowtie2_multiqc.collect{it[1]}.ifEmpty([]
+╰     |                                                      ^^
+
+Warn  workflows/marsseq.nf:196:37: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 196 |         .mix(FASTQC.out.zip.collect{it[1]}.ifEmpty([]))
+╰     |                                     ^^
+
+Warn  workflows/marsseq.nf:204:5: Variable was declared but not used
+│ 204 |     multiqc_report = MULTIQC.out.report.toList()
+╰     |     ^^^^^^^^^^^^^^
+
+
+Error conf/base.config:13:16: `check_max` is not defined
+│  13 |     cpus   = { check_max( 1    * task.attempt, 'cpus'   ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:14:16: `check_max` is not defined
+│  14 |     memory = { check_max( 6.GB * task.attempt, 'memory' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:15:16: `check_max` is not defined
+│  15 |     time   = { check_max( 4.h  * task.attempt, 'time'   ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:28:20: `check_max` is not defined
+│  28 |         cpus   = { check_max( 1                  , 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:29:20: `check_max` is not defined
+│  29 |         memory = { check_max( 6.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:30:20: `check_max` is not defined
+│  30 |         time   = { check_max( 4.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:33:20: `check_max` is not defined
+│  33 |         cpus   = { check_max( 2     * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:34:20: `check_max` is not defined
+│  34 |         memory = { check_max( 12.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:35:20: `check_max` is not defined
+│  35 |         time   = { check_max( 4.h   * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:38:20: `check_max` is not defined
+│  38 |         cpus   = { check_max( 6     * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:39:20: `check_max` is not defined
+│  39 |         memory = { check_max( 36.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:40:20: `check_max` is not defined
+│  40 |         time   = { check_max( 8.h   * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:43:20: `check_max` is not defined
+│  43 |         cpus   = { check_max( 12    * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:44:20: `check_max` is not defined
+│  44 |         memory = { check_max( 72.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:45:20: `check_max` is not defined
+│  45 |         time   = { check_max( 16.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:48:20: `check_max` is not defined
+│  48 |         time   = { check_max( 20.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:51:20: `check_max` is not defined
+│  51 |         memory = { check_max( 200.GB * task.attempt, 'memory' ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:54:20: `check_max` is not defined
+│  54 |         cpus   = { check_max( 30    * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+
+Error conf/modules.config:87:20: `check_max` is not defined
+│  87 |         cpus   = { check_max( 24    * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/modules.config:88:20: `check_max` is not defined
+│  88 |         memory = { check_max( 100.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/modules.config:89:20: `check_max` is not defined
+│  89 |         time   = { check_max( 2.d  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+
+Error nextflow.config:79:5: Unexpected input: 'includeConfig'
+│  79 |     includeConfig "${params.custom_config_base}/nfcore_custom.config"
+╰     |     ^
+
+
+Nextflow linting complete!
+ ❌ 12 files had 81 errors
+ ✅ 27 files had no errors

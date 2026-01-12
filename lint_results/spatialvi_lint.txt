@@ -1,0 +1,197 @@
+Linting Nextflow code..
+Linting: conf/test_spaceranger_hd.config
+Linting: conf/test_spaceranger_v1.config
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_downstream.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: nextflow.config
+Linting: workflows/spatialvi.nf
+Linting: subworkflows/local/downstream/main.nf
+Linting: subworkflows/local/utils_nfcore_spatialvi_pipeline/main.nf
+Linting: subworkflows/local/aggregation/main.nf
+Linting: subworkflows/local/input_check/main.nf
+Linting: subworkflows/local/spaceranger/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/merge_sdata/main.nf
+Linting: modules/local/read_data/main.nf
+Linting: modules/nf-core/quartonotebook/main.nf
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/untar/main.nf
+Linting: modules/nf-core/spaceranger/count/main.nf
+Linting: modules/nf-core/spaceranger/count/tests/nextflow.config
+
+
+
+
+Error modules/nf-core/quartonotebook/main.nf:45:5: `yamlBuilder` is not defined
+│  45 |     yamlBuilder(notebook_parameters)
+╰     |     ^^^^^^^^^^^
+
+
+Error modules/nf-core/spaceranger/count/main.nf:27:9: `probeset` is already declared
+│  27 |     def probeset = probeset ? "--probe-set=\"${probeset}\"" : ""
+╰     |         ^^^^^^^^
+
+Error modules/nf-core/spaceranger/count/main.nf:28:9: `alignment` is already declared
+│  28 |     def alignment = alignment ? "--loupe-alignment=\"${alignment}\"" :
+╰     |         ^^^^^^^^^
+
+Error modules/nf-core/spaceranger/count/main.nf:29:9: `slidefile` is already declared
+│  29 |     def slidefile = slidefile ? "--slidefile=\"${slidefile}\"" : ""
+╰     |         ^^^^^^^^^
+
+Error modules/nf-core/spaceranger/count/main.nf:30:9: `image` is already declared
+│  30 |     def image = image ? "--image=\"${image}\"" : ""
+╰     |         ^^^^^
+
+Error modules/nf-core/spaceranger/count/main.nf:31:9: `cytaimage` is already declared
+│  31 |     def cytaimage = cytaimage ? "--cytaimage=\"${cytaimage}\"" : ""
+╰     |         ^^^^^^^^^
+
+Error modules/nf-core/spaceranger/count/main.nf:32:9: `darkimage` is already declared
+│  32 |     def darkimage = darkimage ? "--darkimage=\"${darkimage}\"" : ""
+╰     |         ^^^^^^^^^
+
+Error modules/nf-core/spaceranger/count/main.nf:33:9: `colorizedimage` is already declared
+│  33 |     def colorizedimage = colorizedimage ? "--colorizedimage=\"${colori
+╰     |         ^^^^^^^^^^^^^^
+
+
+
+Warn  subworkflows/local/aggregation/main.nf:19:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/aggregation/main.nf:23:18: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  23 |     extensions = Channel.fromPath("${projectDir}/assets/_extensions").
+╰     |                  ^^^^^^^
+
+Warn  subworkflows/local/aggregation/main.nf:35:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  35 |     ch_merged_sdata = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/aggregation/main.nf:47:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  47 |     ch_integrated_sdata = Channel.empty()
+╰     |                           ^^^^^^^
+
+Warn  subworkflows/local/aggregation/main.nf:48:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  48 |     ch_integrated_adata = Channel.empty()
+╰     |                           ^^^^^^^
+
+
+Warn  subworkflows/local/downstream/main.nf:26:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  26 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/downstream/main.nf:34:18: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  34 |     extensions = Channel.fromPath("${projectDir}/assets/_extensions").
+╰     |                  ^^^^^^^
+
+
+Error subworkflows/local/input_check/main.nf:135:28: `get_file_from_meta` is not defined
+│ 135 |     def manual_alignment = get_file_from_meta("manual_alignment")
+╰     |                            ^^^^^^^^^^^^^^^^^^
+
+Error subworkflows/local/input_check/main.nf:136:21: `get_file_from_meta` is not defined
+│ 136 |     def slidefile = get_file_from_meta("slidefile")
+╰     |                     ^^^^^^^^^^^^^^^^^^
+
+Error subworkflows/local/input_check/main.nf:137:17: `get_file_from_meta` is not defined
+│ 137 |     def image = get_file_from_meta("image")
+╰     |                 ^^^^^^^^^^^^^^^^^^
+
+Error subworkflows/local/input_check/main.nf:138:21: `get_file_from_meta` is not defined
+│ 138 |     def cytaimage = get_file_from_meta("cytaimage")
+╰     |                     ^^^^^^^^^^^^^^^^^^
+
+Error subworkflows/local/input_check/main.nf:139:26: `get_file_from_meta` is not defined
+│ 139 |     def colorizedimage = get_file_from_meta("colorizedimage")
+╰     |                          ^^^^^^^^^^^^^^^^^^
+
+Error subworkflows/local/input_check/main.nf:140:21: `get_file_from_meta` is not defined
+│ 140 |     def darkimage = get_file_from_meta("darkimage")
+╰     |                     ^^^^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/input_check/main.nf:16:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/input_check/main.nf:18:13: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  18 |     ch_st = Channel.fromPath(samplesheet)
+╰     |             ^^^^^^^
+
+Warn  subworkflows/local/input_check/main.nf:131:9: Variable was declared but not used
+│ 131 |     def get_file_from_meta = { k ->
+╰     |         ^^^^^^^^^^^^^^^^^^
+
+
+Warn  subworkflows/local/spaceranger/main.nf:17:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/spaceranger/main.nf:22:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  22 |     ch_reference = Channel.empty()
+╰     |                    ^^^^^^^
+
+Warn  subworkflows/local/spaceranger/main.nf:38:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  38 |     ch_probeset = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/utils_nfcore_spatialvi_pipeline/main.nf:32:5: Parameter was not used -- prefix with `_` to suppress warning
+│  32 |     monochrome_logs   // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_spatialvi_pipeline/main.nf:35:5: Parameter was not used -- prefix with `_` to suppress warning
+│  35 |     input             //  string: Path to input samplesheet
+╰     |     ^^^^^
+
+
+
+
+
+Warn  workflows/spatialvi.nf:131:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 131 |     def topic_versions = Channel.topic("versions")
+╰     |                          ^^^^^^^
+
+Warn  workflows/spatialvi.nf:163:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 163 |         Channel.fromPath(multiqc_config, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/spatialvi.nf:164:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 164 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/spatialvi.nf:166:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 166 |         Channel.fromPath(multiqc_logo, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/spatialvi.nf:167:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 167 |         Channel.empty()
+╰     |         ^^^^^^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-test tests
+│   3 |     testsDir "."
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 4 files had 15 errors
+ ✅ 28 files had no errors

@@ -1,0 +1,579 @@
+Linting Nextflow code..
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/igenomes.config
+Linting: nextflow.config
+Linting: workflows/only_toas_and_residuals.nf
+Linting: workflows/meerpipe.nf
+Linting: workflows/only_dm_rm_calc.nf
+Linting: main_only_toas_and_residuals.nf
+Linting: subworkflows/local/utils_nfcore_meerpipe_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfvalidation_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: main_only_dm_rm_calc.nf
+Linting: modules/local/obs_list.nf
+Linting: modules/local/upload_toas.nf
+Linting: modules/local/psradd_calibrate_clean.nf
+Linting: modules/local/dm_rm_calc.nf
+Linting: modules/local/grab_all_pairs.nf
+Linting: modules/local/decimate.nf
+Linting: modules/local/upload_results.nf
+Linting: modules/local/upload_dm_rm_results.nf
+Linting: modules/local/generate_image_results.nf
+Linting: modules/local/generate_toas.nf
+Linting: modules/local/generate_residuals.nf
+
+
+
+Warn  modules/local/decimate.nf:28:9: Variable was declared but not used
+│  28 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/decimate.nf:29:9: Variable was declared but not used
+│  29 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+Warn  modules/local/decimate.nf:89:9: Variable was declared but not used
+│  89 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/decimate.nf:90:9: Variable was declared but not used
+│  90 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/dm_rm_calc.nf:24:9: Variable was declared but not used
+│  24 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/dm_rm_calc.nf:25:9: Variable was declared but not used
+│  25 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+Warn  modules/local/dm_rm_calc.nf:171:9: Variable was declared but not used
+│ 171 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/dm_rm_calc.nf:172:9: Variable was declared but not used
+│ 172 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/generate_image_results.nf:29:9: Variable was declared but not used
+│  29 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/generate_image_results.nf:30:9: Variable was declared but not used
+│  30 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+Warn  modules/local/generate_image_results.nf:105:9: Variable was declared but not used
+│ 105 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/generate_residuals.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/generate_residuals.nf:22:9: Variable was declared but not used
+│  22 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+Warn  modules/local/generate_residuals.nf:51:9: Variable was declared but not used
+│  51 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/generate_residuals.nf:52:9: Variable was declared but not used
+│  52 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/generate_toas.nf:27:9: Variable was declared but not used
+│  27 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/generate_toas.nf:28:9: Variable was declared but not used
+│  28 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+Warn  modules/local/generate_toas.nf:64:9: Variable was declared but not used
+│  64 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/generate_toas.nf:65:9: Variable was declared but not used
+│  65 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Error modules/local/grab_all_pairs.nf:66:40: `meta` is not defined
+│  66 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |                                        ^^^^
+
+Warn  modules/local/grab_all_pairs.nf:24:9: Variable was declared but not used
+│  24 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/grab_all_pairs.nf:25:9: Variable was declared but not used
+│  25 |     def prefix = task.ext.prefix ?: "${pulsar}"
+╰     |         ^^^^^^
+
+Warn  modules/local/grab_all_pairs.nf:65:9: Variable was declared but not used
+│  65 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/grab_all_pairs.nf:66:9: Variable was declared but not used
+│  66 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+
+Error modules/local/psradd_calibrate_clean.nf:22:167: `SNR` is not defined
+│  22 | ar}_${meta.utc}_zap.ar"), env(SNR), env(FLUX)
+╰     |                               ^^^
+
+Error modules/local/psradd_calibrate_clean.nf:22:177: `FLUX` is not defined
+│  22 |  true), path("${meta.pulsar}_${meta.utc}_zap.ar"), env(SNR), env(FLUX)
+╰     |                                                                  ^^^^
+
+Warn  modules/local/psradd_calibrate_clean.nf:28:9: Variable was declared but not used
+│  28 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/psradd_calibrate_clean.nf:29:9: Variable was declared but not used
+│  29 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+Warn  modules/local/psradd_calibrate_clean.nf:186:9: Variable was declared but not used
+│ 186 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/psradd_calibrate_clean.nf:187:9: Variable was declared but not used
+│ 187 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/upload_dm_rm_results.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/upload_dm_rm_results.nf:22:9: Variable was declared but not used
+│  22 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+Warn  modules/local/upload_dm_rm_results.nf:103:9: Variable was declared but not used
+│ 103 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/upload_dm_rm_results.nf:104:9: Variable was declared but not used
+│ 104 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/upload_results.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/upload_results.nf:22:9: Variable was declared but not used
+│  22 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+Warn  modules/local/upload_results.nf:116:9: Variable was declared but not used
+│ 116 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/upload_results.nf:117:9: Variable was declared but not used
+│ 117 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/upload_toas.nf:24:9: Variable was declared but not used
+│  24 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/upload_toas.nf:25:9: Variable was declared but not used
+│  25 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+Warn  modules/local/upload_toas.nf:110:9: Variable was declared but not used
+│ 110 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/upload_toas.nf:111:9: Variable was declared but not used
+│ 111 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Error subworkflows/local/utils_nfcore_meerpipe_pipeline/main.nf:14:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/meerpipe/subworkflows/nf-core/utils_nextflow_pipeline/main.nf'
+│  14 | include { UTILS_NEXTFLOW_PIPELINE   } from '../../nf-core/utils_nextfl
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error subworkflows/local/utils_nfcore_meerpipe_pipeline/main.nf:15:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/meerpipe/subworkflows/nf-core/utils_nfcore_pipeline/main.nf'
+│  15 | include { completionEmail           } from '../../nf-core/utils_nfcore
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error subworkflows/local/utils_nfcore_meerpipe_pipeline/main.nf:16:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/meerpipe/subworkflows/nf-core/utils_nfcore_pipeline/main.nf'
+│  16 | include { completionSummary         } from '../../nf-core/utils_nfcore
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error subworkflows/local/utils_nfcore_meerpipe_pipeline/main.nf:17:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/meerpipe/subworkflows/nf-core/utils_nfcore_pipeline/main.nf'
+│  17 | include { dashedLine                } from '../../nf-core/utils_nfcore
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error subworkflows/local/utils_nfcore_meerpipe_pipeline/main.nf:18:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/meerpipe/subworkflows/nf-core/utils_nfcore_pipeline/main.nf'
+│  18 | include { nfCoreLogo                } from '../../nf-core/utils_nfcore
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error subworkflows/local/utils_nfcore_meerpipe_pipeline/main.nf:19:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/meerpipe/subworkflows/nf-core/utils_nfcore_pipeline/main.nf'
+│  19 | include { imNotification            } from '../../nf-core/utils_nfcore
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error subworkflows/local/utils_nfcore_meerpipe_pipeline/main.nf:20:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/meerpipe/subworkflows/nf-core/utils_nfcore_pipeline/main.nf'
+│  20 | include { UTILS_NFCORE_PIPELINE     } from '../../nf-core/utils_nfcore
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error subworkflows/local/utils_nfcore_meerpipe_pipeline/main.nf:21:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/meerpipe/subworkflows/nf-core/utils_nfcore_pipeline/main.nf'
+│  21 | include { workflowCitation          } from '../../nf-core/utils_nfcore
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error subworkflows/local/utils_nfcore_meerpipe_pipeline/main.nf:47:5: `UTILS_NEXTFLOW_PIPELINE` is not defined
+│  47 |     UTILS_NEXTFLOW_PIPELINE (
+╰     |     ^^^^^^^^^^^^^^^^^^^^^^^
+
+Error subworkflows/local/utils_nfcore_meerpipe_pipeline/main.nf:57:21: `nfCoreLogo` is not defined
+│  57 |     pre_help_text = nfCoreLogo(monochrome_logs)
+╰     |                     ^^^^^^^^^^
+
+Error subworkflows/local/utils_nfcore_meerpipe_pipeline/main.nf:58:29: `workflowCitation` is not defined
+│  58 |     post_help_text = '\n' + workflowCitation() + '\n' + dashedLine(mon
+╰     |                             ^^^^^^^^^^^^^^^^
+
+Error subworkflows/local/utils_nfcore_meerpipe_pipeline/main.nf:58:57: `dashedLine` is not defined
+│  58 |     post_help_text = '\n' + workflowCitation() + '\n' + dashedLine(mon
+╰     |                                                         ^^^^^^^^^^
+
+Error subworkflows/local/utils_nfcore_meerpipe_pipeline/main.nf:72:5: `UTILS_NFCORE_PIPELINE` is not defined
+│  72 |     UTILS_NFCORE_PIPELINE (
+╰     |     ^^^^^^^^^^^^^^^^^^^^^
+
+Error subworkflows/local/utils_nfcore_meerpipe_pipeline/main.nf:133:13: `completionEmail` is not defined
+│ 133 |             completionEmail(summary_params, email, email_on_fail, plai
+╰     |             ^^^^^^^^^^^^^^^
+
+Error subworkflows/local/utils_nfcore_meerpipe_pipeline/main.nf:136:9: `completionSummary` is not defined
+│ 136 |         completionSummary(monochrome_logs)
+╰     |         ^^^^^^^^^^^^^^^^^
+
+Error subworkflows/local/utils_nfcore_meerpipe_pipeline/main.nf:139:13: `imNotification` is not defined
+│ 139 |             imNotification(summary_params, hook_url)
+╰     |             ^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_meerpipe_pipeline/main.nf:38:5: Parameter was not used -- prefix with `_` to suppress warning
+│  38 |     input             //  string: Path to input samplesheet
+╰     |     ^^^^^
+
+Warn  subworkflows/local/utils_nfcore_meerpipe_pipeline/main.nf:42:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  42 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_meerpipe_pipeline/main.nf:83:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  83 |     Channel
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_meerpipe_pipeline/main.nf:95:38: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  95 |             validateInputSamplesheet(it)
+╰     |                                      ^^
+
+Warn  subworkflows/local/utils_nfcore_meerpipe_pipeline/main.nf:163:39: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 163 |     def endedness_ok = metas.collect{ it.single_end }.unique().size ==
+╰     |                                       ^^
+
+
+Error subworkflows/nf-core/utils_nextflow_pipeline/main.nf:111:14: Unexpected input: 'i'
+│ 111 |     for (int i = 0; i < n - 1; i++) {
+╰     |              ^
+
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:73:17: Unexpected input: 'doi_ref'
+│  73 |     for (String doi_ref: manifest_doi) temp_doi_ref += "  https://doi.
+╰     |                 ^
+
+
+Warn  workflows/meerpipe.nf:40:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  40 |         obs_csv = Channel.fromPath("none_given")
+╰     |                   ^^^^^^^
+
+Warn  workflows/meerpipe.nf:42:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  42 |         obs_csv = Channel.fromPath(params.obs_csv)
+╰     |                   ^^^^^^^
+
+Warn  workflows/meerpipe.nf:74:89: Parameter was not used -- prefix with `_` to suppress warning
+│  74 | ode_dur, obs_nchan, obs_nbin, cal_loc, pipe_id, ephemeris, template, n
+╰     |                               ^^^^^^^
+
+Warn  workflows/meerpipe.nf:88:64: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  88 | s.nchans.split(',').collect { it.toInteger() },
+╰     |                               ^^
+
+Warn  workflows/meerpipe.nf:89:62: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  89 | s.npols.split(',').collect  { it.toInteger() },
+╰     |                               ^^
+
+Warn  workflows/meerpipe.nf:119:64: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 119 | s.nchans.split(',').collect { it.toInteger() },
+╰     |                               ^^
+
+Warn  workflows/meerpipe.nf:120:62: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 120 | s.npols.split(',').collect  { it.toInteger() },
+╰     |                               ^^
+
+Warn  workflows/meerpipe.nf:150:64: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 150 | s.nchans.split(',').collect { it.toInteger() },
+╰     |                               ^^
+
+Warn  workflows/meerpipe.nf:151:62: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 151 | s.npols.split(',').collect  { it.toInteger() },
+╰     |                               ^^
+
+Warn  workflows/meerpipe.nf:215:22: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 215 |             .map { [ it[0] ] }
+╰     |                      ^^
+
+Warn  workflows/meerpipe.nf:224:19: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 224 |         .filter { it[2].baseName != "no_template" }
+╰     |                   ^^
+
+Warn  workflows/meerpipe.nf:227:19: Parameter was not used -- prefix with `_` to suppress warning
+│ 227 |             meta, ephemeris, template, raw_archive, cleaned_archive ->
+╰     |                   ^^^^^^^^^
+
+Warn  workflows/meerpipe.nf:227:40: Parameter was not used -- prefix with `_` to suppress warning
+│ 227 |             meta, ephemeris, template, raw_archive, cleaned_archive ->
+╰     |                                        ^^^^^^^^^^^
+
+Warn  workflows/meerpipe.nf:231:19: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 231 |         .filter { it[2].baseName == "no_template" }
+╰     |                   ^^
+
+Warn  workflows/meerpipe.nf:234:19: Parameter was not used -- prefix with `_` to suppress warning
+│ 234 |             meta, ephemeris, template, raw_archive, cleaned_archive ->
+╰     |                   ^^^^^^^^^
+
+Warn  workflows/meerpipe.nf:234:53: Parameter was not used -- prefix with `_` to suppress warning
+│ 234 |             meta, ephemeris, template, raw_archive, cleaned_archive ->
+╰     |                                                     ^^^^^^^^^^^^^^^
+
+Warn  workflows/meerpipe.nf:251:27: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 251 |                 .filter { it[1].baseName != "no_template" }
+╰     |                           ^^
+
+Warn  workflows/meerpipe.nf:253:27: Parameter was not used -- prefix with `_` to suppress warning
+│ 253 |                     meta, template, decimated_archives ->
+╰     |                           ^^^^^^^^
+
+Warn  workflows/meerpipe.nf:297:21: Parameter was not used -- prefix with `_` to suppress warning
+│ 297 |                     id, meta, ephem -> [ meta[0], ephem[0] ]
+╰     |                     ^^
+
+
+Warn  workflows/only_dm_rm_calc.nf:33:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  33 |         obs_csv = Channel.fromPath("none_given")
+╰     |                   ^^^^^^^
+
+Warn  workflows/only_dm_rm_calc.nf:35:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  35 |         obs_csv = Channel.fromPath(params.obs_csv)
+╰     |                   ^^^^^^^
+
+Warn  workflows/only_dm_rm_calc.nf:73:85: Parameter was not used -- prefix with `_` to suppress warning
+│  73 | ode_dur, obs_nchan, obs_nbin, cal_loc, pipe_id, ephemeris, template, n
+╰     |                               ^^^^^^^
+
+Warn  workflows/only_dm_rm_calc.nf:87:60: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  87 |                 nchans: params.nchans.split(',').collect { it.toIntege
+╰     |                                                            ^^
+
+Warn  workflows/only_dm_rm_calc.nf:88:58: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  88 |                 npols:params.npols.split(',').collect  { it.toInteger(
+╰     |                                                          ^^
+
+Warn  workflows/only_dm_rm_calc.nf:108:23: Parameter was not used -- prefix with `_` to suppress warning
+│ 108 |                 meta, ephemeris, template, raw_archive, cleaned_archiv
+╰     |                       ^^^^^^^^^
+
+Warn  workflows/only_dm_rm_calc.nf:108:34: Parameter was not used -- prefix with `_` to suppress warning
+│ 108 |                 meta, ephemeris, template, raw_archive, cleaned_archiv
+╰     |                                  ^^^^^^^^
+
+Warn  workflows/only_dm_rm_calc.nf:108:44: Parameter was not used -- prefix with `_` to suppress warning
+│ 108 |                 meta, ephemeris, template, raw_archive, cleaned_archiv
+╰     |                                            ^^^^^^^^^^^
+
+Warn  workflows/only_dm_rm_calc.nf:108:57: Parameter was not used -- prefix with `_` to suppress warning
+│ 108 |                 meta, ephemeris, template, raw_archive, cleaned_archiv
+╰     |                                                         ^^^^^^^^^^^^^^
+
+
+Warn  workflows/only_toas_and_residuals.nf:46:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  46 |         obs_csv = Channel.fromPath("none_given")
+╰     |                   ^^^^^^^
+
+Warn  workflows/only_toas_and_residuals.nf:48:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  48 |         obs_csv = Channel.fromPath(params.obs_csv)
+╰     |                   ^^^^^^^
+
+Warn  workflows/only_toas_and_residuals.nf:80:89: Parameter was not used -- prefix with `_` to suppress warning
+│  80 | ode_dur, obs_nchan, obs_nbin, cal_loc, pipe_id, ephemeris, template, n
+╰     |                               ^^^^^^^
+
+Warn  workflows/only_toas_and_residuals.nf:94:64: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  94 | s.nchans.split(',').collect { it.toInteger() },
+╰     |                               ^^
+
+Warn  workflows/only_toas_and_residuals.nf:95:62: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  95 | s.npols.split(',').collect  { it.toInteger() },
+╰     |                               ^^
+
+Warn  workflows/only_toas_and_residuals.nf:113:22: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 113 |             .map { [ it[0] ] }
+╰     |                      ^^
+
+Warn  workflows/only_toas_and_residuals.nf:122:19: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 122 |         .filter { it[2].baseName != "no_template" }
+╰     |                   ^^
+
+Warn  workflows/only_toas_and_residuals.nf:125:19: Parameter was not used -- prefix with `_` to suppress warning
+│ 125 |             meta, ephemeris, template, raw_archive, cleaned_archive ->
+╰     |                   ^^^^^^^^^
+
+Warn  workflows/only_toas_and_residuals.nf:125:40: Parameter was not used -- prefix with `_` to suppress warning
+│ 125 |             meta, ephemeris, template, raw_archive, cleaned_archive ->
+╰     |                                        ^^^^^^^^^^^
+
+Warn  workflows/only_toas_and_residuals.nf:140:27: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 140 |                 .filter { it[1].baseName != "no_template" }
+╰     |                           ^^
+
+Warn  workflows/only_toas_and_residuals.nf:142:27: Parameter was not used -- prefix with `_` to suppress warning
+│ 142 |                     meta, template, decimated_archives ->
+╰     |                           ^^^^^^^^
+
+Warn  workflows/only_toas_and_residuals.nf:186:21: Parameter was not used -- prefix with `_` to suppress warning
+│ 186 |                     id, meta, ephem -> [ meta[0], ephem[0] ]
+╰     |                     ^^
+
+
+Error conf/base.config:14:16: `check_max` is not defined
+│  14 |     cpus   = { check_max( 1    * task.attempt, 'cpus'   ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:15:16: `check_max` is not defined
+│  15 |     memory = { check_max( 6.GB * task.attempt, 'memory' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:16:16: `check_max` is not defined
+│  16 |     time   = { check_max( 4.h  * task.attempt, 'time'   ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:30:20: `check_max` is not defined
+│  30 |         cpus   = { check_max( 1                  , 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:31:20: `check_max` is not defined
+│  31 |         memory = { check_max( 6.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:32:20: `check_max` is not defined
+│  32 |         time   = { check_max( 4.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:35:20: `check_max` is not defined
+│  35 |         cpus   = { check_max( 1                  , 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:36:20: `check_max` is not defined
+│  36 |         memory = { check_max( 6.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:37:20: `check_max` is not defined
+│  37 |         time   = { check_max( 4.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:40:20: `check_max` is not defined
+│  40 |         cpus   = { check_max( 2     * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:41:20: `check_max` is not defined
+│  41 |         memory = { check_max( 12.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:42:20: `check_max` is not defined
+│  42 |         time   = { check_max( 4.h   * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:45:20: `check_max` is not defined
+│  45 |         cpus   = { check_max( 6     * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:46:20: `check_max` is not defined
+│  46 |         memory = { check_max( 36.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:47:20: `check_max` is not defined
+│  47 |         time   = { check_max( 8.h   * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:50:20: `check_max` is not defined
+│  50 |         cpus   = { check_max( 12    * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:51:20: `check_max` is not defined
+│  51 |         memory = { check_max( 72.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:52:20: `check_max` is not defined
+│  52 |         time   = { check_max( 16.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:55:20: `check_max` is not defined
+│  55 |         time   = { check_max( 20.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:58:20: `check_max` is not defined
+│  58 |         memory = { check_max( 200.GB * task.attempt, 'memory' ) }
+╰     |                    ^^^^^^^^^
+
+
+Error nextflow.config:111:5: Unexpected input: 'includeConfig'
+│ 111 |     includeConfig "${params.custom_config_base}/nfcore_custom.config"
+╰     |     ^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     testsDir "tests"
+│   3 |     workDir ".nf-test"
+│   4 |     configFile "tests/nextflow.config"
+╰   5 |     profile ""
+
+
+Error tests/nextflow.config:9:20: `PSRDB_URL` is not defined
+│   9 |     psrdb_url   = "$PSRDB_URL"
+╰     |                    ^^^^^^^^^^
+
+Error tests/nextflow.config:10:20: `PSRDB_TOKEN` is not defined
+│  10 |     psrdb_token = "$PSRDB_TOKEN"
+╰     |                    ^^^^^^^^^^^^
+
+
+Nextflow linting complete!
+ ❌ 9 files had 45 errors
+ ✅ 22 files had no errors

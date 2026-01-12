@@ -1,0 +1,575 @@
+Linting Nextflow code..
+Linting: conf/igenomes_ignored.config
+Linting: conf/base.config
+Linting: conf/test_mafft.config
+Linting: conf/modules.config
+Linting: conf/test_clustalo.config
+Linting: conf/test_hmmfile.config
+Linting: conf/test_phylosearch_input_full.config
+Linting: conf/test_full.config
+Linting: conf/test_phylosearch_input.config
+Linting: conf/test.config
+Linting: conf/test_phyloplace_input.config
+Linting: nextflow.config
+Linting: workflows/phyloplace.nf
+Linting: subworkflows/local/utils_nfcore_phyloplace_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/fasta_hmmsearch_rank_fastas/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: subworkflows/nf-core/fasta_newick_epang_gappa/main.nf
+Linting: subworkflows/nf-core/fasta_newick_epang_gappa/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/pipeline/nextflow.config
+Linting: modules/local/hmmer/hmmextract/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/seqtk/subseq/main.nf
+Linting: modules/nf-core/seqtk/subseq/tests/standard.config
+Linting: modules/nf-core/hmmer/hmmalign/main.nf
+Linting: modules/nf-core/hmmer/hmmsearch/main.nf
+Linting: modules/nf-core/hmmer/eslreformat/main.nf
+Linting: modules/nf-core/hmmer/eslalimask/main.nf
+Linting: modules/nf-core/hmmer/hmmbuild/main.nf
+Linting: modules/nf-core/hmmer/hmmrank/main.nf
+Linting: modules/nf-core/mafft/align/main.nf
+Linting: modules/nf-core/epang/place/main.nf
+Linting: modules/nf-core/epang/place/tests/nextflow.config
+Linting: modules/nf-core/epang/split/main.nf
+Linting: modules/nf-core/clustalo/align/main.nf
+Linting: modules/nf-core/gappa/examineheattree/main.nf
+Linting: modules/nf-core/gappa/examineheattree/tests/nextflow.config
+Linting: modules/nf-core/gappa/examineassign/main.nf
+Linting: modules/nf-core/gappa/examineassign/tests/nextflow.config
+Linting: modules/nf-core/gappa/examinegraft/main.nf
+Error modules/local/hmmer/hmmextract/main.nf:25:30: `keyfile` is not defined
+│  25 |     def outfile = ! key && ! keyfile ? '' : "> ${prefix}.hmm"
+╰     |                              ^^^^^^^
+
+Warn  modules/local/hmmer/hmmextract/main.nf:50:9: Variable was declared but not used
+│  50 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/clustalo/align/main.nf:60:9: Variable was declared but not used
+│  60 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/epang/place/main.nf:56:9: Variable was declared but not used
+│  56 |     def args       = task.ext.args   ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/epang/place/main.nf:58:9: Variable was declared but not used
+│  58 |     def queryarg   = queryaln        ? "--query $queryaln"       : ""
+╰     |         ^^^^^^^^
+
+Warn  modules/nf-core/epang/place/main.nf:59:9: Variable was declared but not used
+│  59 |     def refalnarg  = referencealn    ? "--ref-msa $referencealn" : ""
+╰     |         ^^^^^^^^^
+
+Warn  modules/nf-core/epang/place/main.nf:60:9: Variable was declared but not used
+│  60 |     def reftreearg = referencetree   ? "--tree $referencetree"   : ""
+╰     |         ^^^^^^^^^^
+
+Warn  modules/nf-core/epang/place/main.nf:61:9: Variable was declared but not used
+│  61 |     def bfastarg   = bfastfile       ? "--bfast $bfastfile"      : ""
+╰     |         ^^^^^^^^
+
+Warn  modules/nf-core/epang/place/main.nf:62:9: Variable was declared but not used
+│  62 |     def binaryarg  = binaryfile      ? "--binary $binaryfile"    : ""
+╰     |         ^^^^^^^^^
+
+
+
+Warn  modules/nf-core/gappa/examineassign/main.nf:44:9: Variable was declared but not used
+│  44 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+Warn  modules/nf-core/gappa/examineheattree/main.nf:47:9: Variable was declared but not used
+│  47 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+
+Warn  modules/nf-core/hmmer/hmmrank/main.nf:21:9: Variable was declared but not used
+│  21 |     def args   = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/hmmer/hmmrank/main.nf:59:9: Variable was declared but not used
+│  59 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+Error modules/nf-core/mafft/align/main.nf:29:9: `add` is already declared
+│  29 |     def add          = add             ? "--add <(unpigz -cdf ${add})"
+╰     |         ^^^
+
+Error modules/nf-core/mafft/align/main.nf:30:9: `addfragments` is already declared
+│  30 |     def addfragments = addfragments    ? "--addfragments <(unpigz -cdf
+╰     |         ^^^^^^^^^^^^
+
+Error modules/nf-core/mafft/align/main.nf:31:9: `addfull` is already declared
+│  31 |     def addfull      = addfull         ? "--addfull <(unpigz -cdf ${ad
+╰     |         ^^^^^^^
+
+Error modules/nf-core/mafft/align/main.nf:32:9: `addprofile` is already declared
+│  32 |     def addprofile   = addprofile      ? "--addprofile <(unpigz -cdf $
+╰     |         ^^^^^^^^^^
+
+Error modules/nf-core/mafft/align/main.nf:33:9: `addlong` is already declared
+│  33 |     def addlong      = addlong         ? "--addlong <(unpigz -cdf ${ad
+╰     |         ^^^^^^^
+
+Error modules/nf-core/mafft/align/main.nf:59:9: `add` is already declared
+│  59 |     def add          = add             ? "--add ${add}"               
+╰     |         ^^^
+
+Error modules/nf-core/mafft/align/main.nf:60:9: `addfragments` is already declared
+│  60 |     def addfragments = addfragments    ? "--addfragments ${addfragment
+╰     |         ^^^^^^^^^^^^
+
+Error modules/nf-core/mafft/align/main.nf:61:9: `addfull` is already declared
+│  61 |     def addfull      = addfull         ? "--addfull ${addfull}"       
+╰     |         ^^^^^^^
+
+Error modules/nf-core/mafft/align/main.nf:62:9: `addprofile` is already declared
+│  62 |     def addprofile   = addprofile      ? "--addprofile ${addprofile}" 
+╰     |         ^^^^^^^^^^
+
+Error modules/nf-core/mafft/align/main.nf:63:9: `addlong` is already declared
+│  63 |     def addlong      = addlong         ? "--addlong ${addlong}"       
+╰     |         ^^^^^^^
+
+Warn  modules/nf-core/mafft/align/main.nf:57:9: Variable was declared but not used
+│  57 |     def args         = task.ext.args   ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/mafft/align/main.nf:59:9: Variable was declared but not used
+│  59 |     def add          = add             ? "--add ${add}"               
+╰     |         ^^^
+
+Warn  modules/nf-core/mafft/align/main.nf:60:9: Variable was declared but not used
+│  60 |     def addfragments = addfragments    ? "--addfragments ${addfragment
+╰     |         ^^^^^^^^^^^^
+
+Warn  modules/nf-core/mafft/align/main.nf:61:9: Variable was declared but not used
+│  61 |     def addfull      = addfull         ? "--addfull ${addfull}"       
+╰     |         ^^^^^^^
+
+Warn  modules/nf-core/mafft/align/main.nf:62:9: Variable was declared but not used
+│  62 |     def addprofile   = addprofile      ? "--addprofile ${addprofile}" 
+╰     |         ^^^^^^^^^^
+
+Warn  modules/nf-core/mafft/align/main.nf:63:9: Variable was declared but not used
+│  63 |     def addlong      = addlong         ? "--addlong ${addlong}"       
+╰     |         ^^^^^^^
+
+
+
+
+Warn  subworkflows/local/utils_nfcore_phyloplace_pipeline/main.nf:31:5: Parameter was not used -- prefix with `_` to suppress warning
+│  31 |     monochrome_logs   // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_phyloplace_pipeline/main.nf:34:5: Parameter was not used -- prefix with `_` to suppress warning
+│  34 |     phyloplace_input  //  string: Path to phyloplace input samplesheet
+╰     |     ^^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_phyloplace_pipeline/main.nf:35:5: Parameter was not used -- prefix with `_` to suppress warning
+│  35 |     phylosearch_input //  string: Path to phylosearch input sampleshee
+╰     |     ^^^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_phyloplace_pipeline/main.nf:39:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  39 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_phyloplace_pipeline/main.nf:77:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  77 |     ch_phylosearch_data = Channel.empty()
+╰     |                           ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_phyloplace_pipeline/main.nf:78:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  78 |     ch_sequence_fasta   = Channel.empty()
+╰     |                           ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_phyloplace_pipeline/main.nf:79:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  79 |     ch_phyloplace_data  = Channel.empty()
+╰     |                           ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_phyloplace_pipeline/main.nf:82:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  82 |         ch_phylosearch_data = Channel.fromPath(params.phylosearch_inpu
+╰     |                               ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_phyloplace_pipeline/main.nf:87:29: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  87 |                         id: it.target,
+╰     |                             ^^
+
+Warn  subworkflows/local/utils_nfcore_phyloplace_pipeline/main.nf:88:39: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  88 |                         min_bitscore: it.min_bitscore
+╰     |                                       ^^
+
+Warn  subworkflows/local/utils_nfcore_phyloplace_pipeline/main.nf:91:41: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  91 |                         alignmethod:    it.alignmethod  ? it.alignmeth
+╰     |                                         ^^
+
+Warn  subworkflows/local/utils_nfcore_phyloplace_pipeline/main.nf:91:59: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  91 |                         alignmethod:    it.alignmethod  ? it.alignmeth
+╰     |                                                           ^^
+
+Warn  subworkflows/local/utils_nfcore_phyloplace_pipeline/main.nf:92:46: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  92 |                         hmm:            file(it.hmm,  checkIfExists: t
+╰     |                                              ^^
+
+Warn  subworkflows/local/utils_nfcore_phyloplace_pipeline/main.nf:93:41: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  93 |                         extract_hmm:    it.extract_hmm,
+╰     |                                         ^^
+
+Warn  subworkflows/local/utils_nfcore_phyloplace_pipeline/main.nf:94:41: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  94 |                         refseqfile:     it.refseqfile   ? file(it.refs
+╰     |                                         ^^
+
+Warn  subworkflows/local/utils_nfcore_phyloplace_pipeline/main.nf:94:64: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  94 | e:     it.refseqfile   ? file(it.refseqfile,   checkIfExists: true) : 
+╰     |                               ^^
+
+Warn  subworkflows/local/utils_nfcore_phyloplace_pipeline/main.nf:95:41: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  95 |                         refphylogeny:   it.refphylogeny ? file(it.refp
+╰     |                                         ^^
+
+Warn  subworkflows/local/utils_nfcore_phyloplace_pipeline/main.nf:95:64: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  95 | eny:   it.refphylogeny ? file(it.refphylogeny, checkIfExists: true) : 
+╰     |                               ^^
+
+Warn  subworkflows/local/utils_nfcore_phyloplace_pipeline/main.nf:96:41: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  96 |                         model:          it.model,
+╰     |                                         ^^
+
+Warn  subworkflows/local/utils_nfcore_phyloplace_pipeline/main.nf:97:41: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  97 |                         taxonomy:       it.taxonomy     ? file(it.taxo
+╰     |                                         ^^
+
+Warn  subworkflows/local/utils_nfcore_phyloplace_pipeline/main.nf:97:64: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  97 |        it.taxonomy     ? file(it.taxonomy,     checkIfExists: true) : 
+╰     |                               ^^
+
+Warn  subworkflows/local/utils_nfcore_phyloplace_pipeline/main.nf:101:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 |         Channel.fromPath(params.search_fasta)
+╰     |         ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_phyloplace_pipeline/main.nf:104:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 104 |         ch_phyloplace_data = Channel.fromPath(params.phyloplace_input)
+╰     |                              ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_phyloplace_pipeline/main.nf:108:33: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 108 |                     meta: [ id: it.sample ],
+╰     |                                 ^^
+
+Warn  subworkflows/local/utils_nfcore_phyloplace_pipeline/main.nf:110:39: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 110 |                         alignmethod:  it.alignmethod ? it.alignmethod 
+╰     |                                       ^^
+
+Warn  subworkflows/local/utils_nfcore_phyloplace_pipeline/main.nf:110:56: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 110 |                         alignmethod:  it.alignmethod ? it.alignmethod 
+╰     |                                                        ^^
+
+Warn  subworkflows/local/utils_nfcore_phyloplace_pipeline/main.nf:111:44: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 111 |                         queryseqfile: file(it.queryseqfile),
+╰     |                                            ^^
+
+Warn  subworkflows/local/utils_nfcore_phyloplace_pipeline/main.nf:112:44: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 112 |                         refseqfile:   file(it.refseqfile),
+╰     |                                            ^^
+
+Warn  subworkflows/local/utils_nfcore_phyloplace_pipeline/main.nf:113:39: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 113 |                         hmmfile:      it.hmmfile     ? file(it.hmmfile
+╰     |                                       ^^
+
+Warn  subworkflows/local/utils_nfcore_phyloplace_pipeline/main.nf:113:61: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 113 | e:      it.hmmfile     ? file(it.hmmfile,  checkIfExists: true) : [],
+╰     |                               ^^
+
+Warn  subworkflows/local/utils_nfcore_phyloplace_pipeline/main.nf:114:44: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 114 |                         refphylogeny: file(it.refphylogeny),
+╰     |                                            ^^
+
+Warn  subworkflows/local/utils_nfcore_phyloplace_pipeline/main.nf:115:39: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 115 |                         model:        it.model,
+╰     |                                       ^^
+
+Warn  subworkflows/local/utils_nfcore_phyloplace_pipeline/main.nf:116:39: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 116 |                         taxonomy:     it.taxonomy    ? file(it.taxonom
+╰     |                                       ^^
+
+Warn  subworkflows/local/utils_nfcore_phyloplace_pipeline/main.nf:116:61: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 116 | my:     it.taxonomy    ? file(it.taxonomy, checkIfExists: true) : []
+╰     |                               ^^
+
+Warn  subworkflows/local/utils_nfcore_phyloplace_pipeline/main.nf:121:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 121 |         Channel.of([
+╰     |         ^^^^^^^
+
+
+Warn  subworkflows/nf-core/fasta_hmmsearch_rank_fastas/main.nf:13:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  13 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/nf-core/fasta_hmmsearch_rank_fastas/main.nf:17:18: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  17 |         .map { [ it[0], it[1], it[2], false, true, false ] }
+╰     |                  ^^
+
+Warn  subworkflows/nf-core/fasta_hmmsearch_rank_fastas/main.nf:17:25: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  17 |         .map { [ it[0], it[1], it[2], false, true, false ] }
+╰     |                         ^^
+
+Warn  subworkflows/nf-core/fasta_hmmsearch_rank_fastas/main.nf:17:32: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  17 |         .map { [ it[0], it[1], it[2], false, true, false ] }
+╰     |                                ^^
+
+Warn  subworkflows/nf-core/fasta_hmmsearch_rank_fastas/main.nf:24:20: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  24 |         .collect { it[1] }
+╰     |                    ^^
+
+Warn  subworkflows/nf-core/fasta_hmmsearch_rank_fastas/main.nf:25:34: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  25 |         .map { [ [ id: 'rank' ], it ] }
+╰     |                                  ^^
+
+Warn  subworkflows/nf-core/fasta_hmmsearch_rank_fastas/main.nf:32:16: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  32 |         .map { it[1] }
+╰     |                ^^
+
+Warn  subworkflows/nf-core/fasta_hmmsearch_rank_fastas/main.nf:34:19: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  34 |         .filter { it.rank == '1' }
+╰     |                   ^^
+
+Warn  subworkflows/nf-core/fasta_hmmsearch_rank_fastas/main.nf:35:29: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  35 |         .collectFile { [ "${it.profile}.txt", "${it.accno}\n" ] }
+╰     |                             ^^
+
+Warn  subworkflows/nf-core/fasta_hmmsearch_rank_fastas/main.nf:35:50: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  35 |         .collectFile { [ "${it.profile}.txt", "${it.accno}\n" ] }
+╰     |                                                  ^^
+
+Warn  subworkflows/nf-core/fasta_hmmsearch_rank_fastas/main.nf:36:24: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  36 |         .map { [ [ id: it.baseName ], it ] }
+╰     |                        ^^
+
+Warn  subworkflows/nf-core/fasta_hmmsearch_rank_fastas/main.nf:36:39: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  36 |         .map { [ [ id: it.baseName ], it ] }
+╰     |                                       ^^
+
+Warn  subworkflows/nf-core/fasta_hmmsearch_rank_fastas/main.nf:42:18: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  42 |         .map { [ it[0], it[2] ] }
+╰     |                  ^^
+
+Warn  subworkflows/nf-core/fasta_hmmsearch_rank_fastas/main.nf:42:25: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  42 |         .map { [ it[0], it[2] ] }
+╰     |                         ^^
+
+Warn  subworkflows/nf-core/fasta_hmmsearch_rank_fastas/main.nf:46:60: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  46 |     SEQTK_SUBSEQ ( ch_subseq_fasta, ch_subseq_filter.map { it[1] } )
+╰     |                                                            ^^
+
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:24:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  24 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:39:14: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  39 |     ch_hmm = Channel.empty()
+╰     |              ^^^^^^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:55:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  55 |     ch_hmmer_unaligned = Channel.empty()
+╰     |                          ^^^^^^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:68:41: Parameter was not used -- prefix with `_` to suppress warning
+│  68 |         .groupTuple(size: 2, sort: { a, b -> a =~ /\.hmm/ ? 1 : -1 })
+╰     |                                         ^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:76:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  76 |     ch_hmmer_alignquery = Channel.empty()
+╰     |                           ^^^^^^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:79:41: Parameter was not used -- prefix with `_` to suppress warning
+│  79 |         .groupTuple(size: 2, sort: { a, b -> a =~ /\.hmm/ ? 1 : -1 })
+╰     |                                         ^
+
+
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 | mYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
+╰     |                               ^^^^^^^
+
+
+Warn  workflows/phyloplace.nf:31:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  31 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  workflows/phyloplace.nf:32:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  32 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/phyloplace.nf:38:19: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  38 |         .filter { it.data.extract_hmm }
+╰     |                   ^^
+
+Warn  workflows/phyloplace.nf:39:18: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  39 |         .map { [ it.meta, it.data.hmm, it.data.extract_hmm ] }
+╰     |                  ^^
+
+Warn  workflows/phyloplace.nf:39:27: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  39 |         .map { [ it.meta, it.data.hmm, it.data.extract_hmm ] }
+╰     |                           ^^
+
+Warn  workflows/phyloplace.nf:39:40: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  39 |         .map { [ it.meta, it.data.hmm, it.data.extract_hmm ] }
+╰     |                                        ^^
+
+Warn  workflows/phyloplace.nf:49:29: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  49 |                 .filter { ! it.data.extract_hmm }
+╰     |                             ^^
+
+Warn  workflows/phyloplace.nf:50:26: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  50 |                 .map { [ it.meta, it.data.hmm ] }
+╰     |                          ^^
+
+Warn  workflows/phyloplace.nf:50:35: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  50 |                 .map { [ it.meta, it.data.hmm ] }
+╰     |                                   ^^
+
+Warn  workflows/phyloplace.nf:60:27: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  60 |                 .filter { it.data.alignmethod && it.data.refseqfile &&
+╰     |                           ^^
+
+Warn  workflows/phyloplace.nf:60:50: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  60 |                 .filter { it.data.alignmethod && it.data.refseqfile &&
+╰     |                                                  ^^
+
+Warn  workflows/phyloplace.nf:60:72: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  60 | thod && it.data.refseqfile && it.data.refphylogeny }
+╰     |                               ^^
+
+Warn  workflows/phyloplace.nf:61:32: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  61 |                 .map { [ [ id: it.meta.id ], it ] }
+╰     |                                ^^
+
+Warn  workflows/phyloplace.nf:61:46: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  61 |                 .map { [ [ id: it.meta.id ], it ] }
+╰     |                                              ^^
+
+Warn  workflows/phyloplace.nf:64:19: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  64 |             meta: it[2].meta,
+╰     |                   ^^
+
+Warn  workflows/phyloplace.nf:66:30: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  66 |                 alignmethod: it[2].data.alignmethod,
+╰     |                              ^^
+
+Warn  workflows/phyloplace.nf:67:31: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  67 |                 queryseqfile: it[1],
+╰     |                               ^^
+
+Warn  workflows/phyloplace.nf:68:29: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  68 |                 refseqfile: it[2].data.refseqfile,
+╰     |                             ^^
+
+Warn  workflows/phyloplace.nf:69:31: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  69 |                 refphylogeny: it[2].data.refphylogeny,
+╰     |                               ^^
+
+Warn  workflows/phyloplace.nf:70:24: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  70 |                 model: it[2].data.model,
+╰     |                        ^^
+
+Warn  workflows/phyloplace.nf:71:27: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  71 |                 taxonomy: it[2].data.taxonomy
+╰     |                           ^^
+
+Warn  workflows/phyloplace.nf:94:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  94 |     ch_multiqc_config                     = Channel.fromPath("$project
+╰     |                                             ^^^^^^^
+
+Warn  workflows/phyloplace.nf:95:69: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  95 |     = params.multiqc_config ? Channel.fromPath(params.multiqc_config, 
+╰     |                               ^^^^^^^
+
+Warn  workflows/phyloplace.nf:95:132: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  95 | fromPath(params.multiqc_config, checkIfExists: true) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/phyloplace.nf:96:67: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  96 |       = params.multiqc_logo ? Channel.fromPath(params.multiqc_logo, ch
+╰     |                               ^^^^^^^
+
+Warn  workflows/phyloplace.nf:96:128: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  96 | l.fromPath(params.multiqc_logo, checkIfExists: true) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/phyloplace.nf:98:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  98 |     ch_workflow_summary                   = Channel.value(paramsSummar
+╰     |                                             ^^^^^^^
+
+Warn  workflows/phyloplace.nf:100:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 100 |     ch_methods_description                = Channel.value(methodsDescr
+╰     |                                             ^^^^^^^
+
+Warn  workflows/phyloplace.nf:107:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 107 |     ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_p
+╰     |                           ^^^^^^^
+
+Warn  workflows/phyloplace.nf:113:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 113 |     ch_methods_description                = Channel.value(
+╰     |                                             ^^^^^^^
+
+
+Error nextflow.config:289:34: `manifest` is not defined
+│ 289 | \033[0;35m  nf-core/phyloplace ${manifest.version}\033[0m
+╰     |                                  ^^^^^^^^
+
+Error nextflow.config:292:26: `manifest` is not defined
+│ 292 |         afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${ma
+╰     |                          ^^^^^^^^
+
+Error nextflow.config:292:69: `manifest` is not defined
+│ 292 | ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "  
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:292:186: `manifest` is not defined
+│ 292 | doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:301:22: `validation` is not defined
+│ 301 |         beforeText = validation.help.beforeText
+╰     |                      ^^^^^^^^^^
+
+Error nextflow.config:302:21: `validation` is not defined
+│ 302 |         afterText = validation.help.afterText
+╰     |                     ^^^^^^^^^^
+
+Warn  nextflow.config:292:129: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 292 | lect { "    https://doi.org/${it.trim().replace('https://doi.org/','')
+╰     |                               ^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-tests
+│   3 |     testsDir "tests"
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 4 files had 18 errors
+ ✅ 43 files had no errors

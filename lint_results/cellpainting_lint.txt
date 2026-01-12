@@ -1,0 +1,221 @@
+Linting Nextflow code..
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: nextflow.config
+Linting: workflows/cellpainting.nf
+Linting: subworkflows/local/cellprofiler_load_data_csv/main.nf
+Linting: subworkflows/local/utils_nfcore_cellpainting_pipeline/main.nf
+Linting: subworkflows/local/cellprofiler_load_data_csv_with_illum/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/cellprofiler/assaydevelopment.nf
+Linting: modules/local/cellprofiler/illuminationcorrection/main.nf
+Linting: modules/local/cellprofiler/analysis.nf
+Linting: modules/local/cytotable/main.nf
+Linting: modules/local/cytotable/tests/nextflow.config
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+
+Warn  modules/local/cellprofiler/analysis.nf:77:9: Variable was declared but not used
+│  77 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/cellprofiler/assaydevelopment.nf:27:9: Variable was declared but not used
+│  27 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/cellprofiler/assaydevelopment.nf:28:9: Variable was declared but not used
+│  28 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+Warn  modules/local/cellprofiler/assaydevelopment.nf:43:9: Variable was declared but not used
+│  43 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/cellprofiler/illuminationcorrection/main.nf:24:9: Variable was declared but not used
+│  24 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+Warn  modules/local/cellprofiler/illuminationcorrection/main.nf:45:9: Variable was declared but not used
+│  45 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/cellprofiler/illuminationcorrection/main.nf:46:9: Variable was declared but not used
+│  46 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+
+Warn  subworkflows/local/cellprofiler_load_data_csv/main.nf:20:47: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  20 |             def group_id = keys.collect { meta[it] }.join('_')
+╰     |                                               ^^
+
+Warn  subworkflows/local/cellprofiler_load_data_csv/main.nf:31:54: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  31 |             def image_channels = meta_list.collect { it.channel }.uniq
+╰     |                                                      ^^
+
+Warn  subworkflows/local/cellprofiler_load_data_csv/main.nf:38:25: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  38 |             }.groupBy { it[0] }
+╰     |                         ^^
+
+Warn  subworkflows/local/cellprofiler_load_data_csv/main.nf:43:54: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  43 |                 def row_channels = entries.collect { it[1] }  // Extra
+╰     |                                                      ^^
+
+Warn  subworkflows/local/cellprofiler_load_data_csv/main.nf:44:52: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  44 |                 def row_images = entries.collect { it[2] }    // Extra
+╰     |                                                    ^^
+
+
+Warn  subworkflows/local/cellprofiler_load_data_csv_with_illum/main.nf:19:92: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  19 | : grouping_keys.collect { meta[it] }.join('_')]
+╰     |                               ^^
+
+Warn  subworkflows/local/cellprofiler_load_data_csv_with_illum/main.nf:29:48: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  29 |             def channels = meta_list.collect { it.channel }.unique().s
+╰     |                                                ^^
+
+Warn  subworkflows/local/cellprofiler_load_data_csv_with_illum/main.nf:42:67: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  42 |           def orig_headers = channels.collect { "FileName_Orig${it}" }
+╰     |                                                                 ^^
+
+Warn  subworkflows/local/cellprofiler_load_data_csv_with_illum/main.nf:43:69: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  43 |         def illum_headers = channels.collect { "FileName_Illum${it}" }
+╰     |                                                                 ^^
+
+Warn  subworkflows/local/cellprofiler_load_data_csv_with_illum/main.nf:94:86: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  94 | m_grouping_keys = grouping_keys.findAll { illum_meta.containsKey(it) }
+╰     |                                                                  ^^
+
+Warn  subworkflows/local/cellprofiler_load_data_csv_with_illum/main.nf:95:116: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  95 | ping_keys.collect { illum_meta[it] }.join('_')]
+╰     |                               ^^
+
+Warn  subworkflows/local/cellprofiler_load_data_csv_with_illum/main.nf:111:82: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 111 | illum_keys = ['batch', 'plate'].findAll { first_meta.containsKey(it) }
+╰     |                                                                  ^^
+
+Warn  subworkflows/local/cellprofiler_load_data_csv_with_illum/main.nf:112:60: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 112 |             def illum_key = illum_keys.collect { first_meta[it] }.join
+╰     |                                                            ^^
+
+
+Warn  subworkflows/local/utils_nfcore_cellpainting_pipeline/main.nf:31:5: Parameter was not used -- prefix with `_` to suppress warning
+│  31 |     monochrome_logs   // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_cellpainting_pipeline/main.nf:38:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  38 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_cellpainting_pipeline/main.nf:70:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  70 |     Channel
+╰     |     ^^^^^^^
+
+
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 | mYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
+╰     |                               ^^^^^^^
+
+
+Warn  workflows/cellpainting.nf:32:5: Parameter was not used -- prefix with `_` to suppress warning
+│  32 |     cellprofiler_analysis_cppipe // value: path to analysis cppipe
+╰     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/cellpainting.nf:37:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  37 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  workflows/cellpainting.nf:38:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  38 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/cellpainting.nf:93:32: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  93 |     ch_multiqc_config        = Channel.fromPath(
+╰     |                                ^^^^^^^
+
+Warn  workflows/cellpainting.nf:96:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  96 |         Channel.fromPath(params.multiqc_config, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/cellpainting.nf:97:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  97 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/cellpainting.nf:99:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  99 |         Channel.fromPath(params.multiqc_logo, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/cellpainting.nf:100:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 100 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/cellpainting.nf:104:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 104 |     ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_p
+╰     |                           ^^^^^^^
+
+Warn  workflows/cellpainting.nf:110:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 110 |     ch_methods_description                = Channel.value(
+╰     |                                             ^^^^^^^
+
+
+Error nextflow.config:293:36: `manifest` is not defined
+│ 293 | \033[0;35m  nf-core/cellpainting ${manifest.version}\033[0m
+╰     |                                    ^^^^^^^^
+
+Error nextflow.config:296:26: `manifest` is not defined
+│ 296 |         afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${ma
+╰     |                          ^^^^^^^^
+
+Error nextflow.config:296:69: `manifest` is not defined
+│ 296 | ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "  
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:296:186: `manifest` is not defined
+│ 296 | doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:305:22: `validation` is not defined
+│ 305 |         beforeText = validation.help.beforeText
+╰     |                      ^^^^^^^^^^
+
+Error nextflow.config:306:21: `validation` is not defined
+│ 306 |         afterText = validation.help.afterText
+╰     |                     ^^^^^^^^^^
+
+Warn  nextflow.config:296:129: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 296 | lect { "    https://doi.org/${it.trim().replace('https://doi.org/','')
+╰     |                               ^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-test tests
+│   3 |     testsDir "."
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+Error nf-test.config:26:1: Config settings must be assigned with an equals sign (`=`)
+│  33 |         load "nft-utils@0.0.3"
+│  34 |     }
+│  35 |     triggers "nextflow.config", "nf-test.config", "conf/modules.config
+│  36 | 
+╰  37 | }
+
+
+Nextflow linting complete!
+ ❌ 2 files had 8 errors
+ ✅ 23 files had no errors

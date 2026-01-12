@@ -1,0 +1,238 @@
+Linting Nextflow code..
+Linting: conf/test_minimal.config
+Linting: conf/base.config
+Linting: conf/test_multi_sample_with_gz.config
+Linting: conf/test_merge.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/test_update.config
+Linting: nextflow.config
+Linting: workflows/proteinfamilies.nf
+Linting: subworkflows/local/update_families/main.nf
+Linting: subworkflows/local/update_families/tests/nextflow.config
+Linting: subworkflows/local/merge_families/main.nf
+Linting: subworkflows/local/remove_redundancy/main.nf
+Linting: subworkflows/local/utils_nfcore_proteinfamilies_pipeline/main.nf
+Linting: subworkflows/local/align_sequences/main.nf
+Linting: subworkflows/local/generate_families/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/mmseqs_fasta_cluster/main.nf
+Linting: subworkflows/nf-core/mmseqs_fasta_cluster/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: subworkflows/nf-core/faa_seqfu_seqkit/main.nf
+Linting: subworkflows/nf-core/faa_seqfu_seqkit/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/branch_hits_fasta/main.nf
+Linting: modules/local/filter_non_redundant_fams/main.nf
+Linting: modules/local/extract_family_members/main.nf
+Linting: modules/local/pool_similar_components/main.nf
+Linting: modules/local/identify_redundant_fams/main.nf
+Linting: modules/local/merge_seeds/main.nf
+Linting: modules/local/extract_family_reps/main.nf
+Linting: modules/local/calculate_cluster_distribution/main.nf
+Linting: modules/local/chunk_clusters/main.nf
+Linting: modules/local/remove_redundant_seqs/main.nf
+Linting: modules/local/filter_recruited/main.nf
+Linting: modules/nf-core/famsa/align/main.nf
+Linting: modules/nf-core/seqkit/replace/main.nf
+Linting: modules/nf-core/seqkit/replace/tests/uncomp.config
+Linting: modules/nf-core/seqkit/replace/tests/replace.config
+Linting: modules/nf-core/seqkit/rmdup/main.nf
+Linting: modules/nf-core/seqkit/seq/main.nf
+Linting: modules/nf-core/seqkit/seq/tests/nextflow.config
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/multiqc/tests/custom_prefix.config
+Linting: modules/nf-core/seqfu/stats/main.nf
+Linting: modules/nf-core/clipkit/main.nf
+Linting: modules/nf-core/clipkit/tests/nextflow.config
+Linting: modules/nf-core/hmmer/hmmalign/main.nf
+Linting: modules/nf-core/hmmer/hmmsearch/main.nf
+Linting: modules/nf-core/hmmer/hmmbuild/main.nf
+Linting: modules/nf-core/cmaple/main.nf
+Linting: modules/nf-core/untar/main.nf
+Linting: modules/nf-core/mafft/align/main.nf
+Linting: modules/nf-core/find/concatenate/main.nf
+Linting: modules/nf-core/find/concatenate/tests/nextflow_zipped_unzipped.config
+Linting: modules/nf-core/find/concatenate/tests/nextflow_unzipped_zipped.config
+Linting: modules/nf-core/mmseqs/createdb/main.nf
+Linting: modules/nf-core/mmseqs/cluster/main.nf
+Linting: modules/nf-core/mmseqs/cluster/tests/nextflow.config
+Linting: modules/nf-core/mmseqs/createtsv/main.nf
+Linting: modules/nf-core/mmseqs/createtsv/tests/taxonomy.nextflow.config
+Linting: modules/nf-core/mmseqs/createtsv/tests/cluster.nextflow.config
+Linting: modules/nf-core/mmseqs/linclust/main.nf
+Linting: modules/nf-core/mmseqs/linclust/tests/nextflow.config
+Linting: modules/nf-core/hhsuite/reformat/main.nf
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Warn  modules/nf-core/hhsuite/reformat/main.nf:48:9: Variable was declared but not used
+│  48 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+Error modules/nf-core/mafft/align/main.nf:29:9: `add` is already declared
+│  29 |     def add          = add             ? "--add <(unpigz -cdf ${add})"
+╰     |         ^^^
+
+Error modules/nf-core/mafft/align/main.nf:30:9: `addfragments` is already declared
+│  30 |     def addfragments = addfragments    ? "--addfragments <(unpigz -cdf
+╰     |         ^^^^^^^^^^^^
+
+Error modules/nf-core/mafft/align/main.nf:31:9: `addfull` is already declared
+│  31 |     def addfull      = addfull         ? "--addfull <(unpigz -cdf ${ad
+╰     |         ^^^^^^^
+
+Error modules/nf-core/mafft/align/main.nf:32:9: `addprofile` is already declared
+│  32 |     def addprofile   = addprofile      ? "--addprofile <(unpigz -cdf $
+╰     |         ^^^^^^^^^^
+
+Error modules/nf-core/mafft/align/main.nf:33:9: `addlong` is already declared
+│  33 |     def addlong      = addlong         ? "--addlong <(unpigz -cdf ${ad
+╰     |         ^^^^^^^
+
+Error modules/nf-core/mafft/align/main.nf:59:9: `add` is already declared
+│  59 |     def add          = add             ? "--add ${add}"               
+╰     |         ^^^
+
+Error modules/nf-core/mafft/align/main.nf:60:9: `addfragments` is already declared
+│  60 |     def addfragments = addfragments    ? "--addfragments ${addfragment
+╰     |         ^^^^^^^^^^^^
+
+Error modules/nf-core/mafft/align/main.nf:61:9: `addfull` is already declared
+│  61 |     def addfull      = addfull         ? "--addfull ${addfull}"       
+╰     |         ^^^^^^^
+
+Error modules/nf-core/mafft/align/main.nf:62:9: `addprofile` is already declared
+│  62 |     def addprofile   = addprofile      ? "--addprofile ${addprofile}" 
+╰     |         ^^^^^^^^^^
+
+Error modules/nf-core/mafft/align/main.nf:63:9: `addlong` is already declared
+│  63 |     def addlong      = addlong         ? "--addlong ${addlong}"       
+╰     |         ^^^^^^^
+
+Warn  modules/nf-core/mafft/align/main.nf:57:9: Variable was declared but not used
+│  57 |     def args         = task.ext.args   ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/mafft/align/main.nf:59:9: Variable was declared but not used
+│  59 |     def add          = add             ? "--add ${add}"               
+╰     |         ^^^
+
+Warn  modules/nf-core/mafft/align/main.nf:60:9: Variable was declared but not used
+│  60 |     def addfragments = addfragments    ? "--addfragments ${addfragment
+╰     |         ^^^^^^^^^^^^
+
+Warn  modules/nf-core/mafft/align/main.nf:61:9: Variable was declared but not used
+│  61 |     def addfull      = addfull         ? "--addfull ${addfull}"       
+╰     |         ^^^^^^^
+
+Warn  modules/nf-core/mafft/align/main.nf:62:9: Variable was declared but not used
+│  62 |     def addprofile   = addprofile      ? "--addprofile ${addprofile}" 
+╰     |         ^^^^^^^^^^
+
+Warn  modules/nf-core/mafft/align/main.nf:63:9: Variable was declared but not used
+│  63 |     def addlong      = addlong         ? "--addlong ${addlong}"       
+╰     |         ^^^^^^^
+
+
+
+
+
+
+
+
+
+
+
+
+Warn  subworkflows/local/generate_families/main.nf:48:16: Parameter was not used -- prefix with `_` to suppress warning
+│  48 |         .map { id, meta, hmm, seqs -> [ meta, hmm, seqs, false, hmmsea
+╰     |                ^^
+
+Warn  subworkflows/local/generate_families/main.nf:58:20: Parameter was not used -- prefix with `_` to suppress warning
+│  58 |             .map { id, meta, domtbl, seqs -> [ meta, domtbl, seqs ] }
+╰     |                    ^^
+
+
+Warn  subworkflows/local/utils_nfcore_proteinfamilies_pipeline/main.nf:32:5: Parameter was not used -- prefix with `_` to suppress warning
+│  32 |     monochrome_logs   // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_proteinfamilies_pipeline/main.nf:35:5: Parameter was not used -- prefix with `_` to suppress warning
+│  35 |     input             //  string: Path to input samplesheet
+╰     |     ^^^^^
+
+Warn  subworkflows/local/utils_nfcore_proteinfamilies_pipeline/main.nf:291:16: Parameter was not used -- prefix with `_` to suppress warning
+│ 291 |         .map { meta, folder1, folder2 ->
+╰     |                ^^^^
+
+Warn  subworkflows/local/utils_nfcore_proteinfamilies_pipeline/main.nf:301:47: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 301 |             def baseNames1 = files1.collect { it.getSimpleName() }.sor
+╰     |                                               ^^
+
+Warn  subworkflows/local/utils_nfcore_proteinfamilies_pipeline/main.nf:302:47: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 302 |             def baseNames2 = files2.collect { it.getSimpleName() }.sor
+╰     |                                               ^^
+
+
+Warn  subworkflows/nf-core/faa_seqfu_seqkit/main.nf:15:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/nf-core/faa_seqfu_seqkit/main.nf:16:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     ch_versions      = Channel.empty()
+╰     |                        ^^^^^^^
+
+
+
+
+
+Warn  workflows/proteinfamilies.nf:231:88: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 231 | KIT.out.multiqc_files.collect{it[1]}.ifEmpty([]))
+╰     |                               ^^
+
+Warn  workflows/proteinfamilies.nf:232:92: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 232 | _DISTRIBUTION.out.mqc.collect{it[1]}.ifEmpty([]))
+╰     |                               ^^
+
+Warn  workflows/proteinfamilies.nf:233:70: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 233 | .mix(ch_family_reps.collect { it[1] }.ifEmpty([]))
+╰     |                               ^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-test tests
+│   3 |     testsDir "."
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 2 files had 11 errors
+ ✅ 70 files had no errors

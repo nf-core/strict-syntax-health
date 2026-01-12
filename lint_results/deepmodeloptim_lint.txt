@@ -1,0 +1,55 @@
+Linting Nextflow code..
+Linting: conf/test_noise_eval.config
+Linting: conf/test_ibis_with_preprocessing.config
+Linting: conf/base.config
+Linting: conf/dev.config
+Linting: conf/local.config
+Linting: conf/modules.config
+Linting: conf/test_ibis.config
+Linting: conf/test.config
+Linting: conf/test_stub.config
+Linting: conf/igenomes.config
+Linting: nextflow.config
+Linting: workflows/deepmodeloptim.nf
+Linting: subworkflows/local/transform_csv/main.nf
+Linting: subworkflows/local/split_data_config_unified/main.nf
+Linting: subworkflows/local/check_model/main.nf
+Linting: subworkflows/local/split_csv/main.nf
+Linting: subworkflows/local/tune/main.nf
+Linting: subworkflows/local/utils_nfcore_deepmodeloptim_pipeline/main.nf
+Linting: subworkflows/local/preprocess_ibis_bedfile_to_stimulus/main.nf
+Linting: subworkflows/local/evaluation/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: modules/local/awk/extract/main.nf
+Linting: modules/local/stimulus/encode/main.nf
+Linting: modules/local/stimulus/transform_csv/main.nf
+Linting: modules/local/stimulus/predict/main.nf
+Linting: modules/local/stimulus/check_model/main.nf
+Linting: modules/local/stimulus/split_csv/main.nf
+Linting: modules/local/stimulus/tune/main.nf
+Linting: modules/local/stimulus/split_yaml/main.nf
+Linting: modules/local/stimulus/compare_tensors/main.nf
+Linting: modules/local/custom/modify_model_config/main.nf
+Linting: modules/local/bedtools/random/main.nf
+Linting: modules/nf-core/csvtk/concat/main.nf
+Linting: modules/nf-core/custom/getchromsizes/main.nf
+Linting: modules/nf-core/bedtools/shift/main.nf
+Linting: modules/nf-core/bedtools/shift/tests/nextflow.config
+Linting: modules/nf-core/bedtools/subtract/main.nf
+Linting: modules/nf-core/bedtools/getfasta/main.nf
+Linting: modules/nf-core/bedtools/slop/main.nf
+Linting: modules/nf-core/bedtools/slop/tests/nextflow.config
+Linting: modules/nf-core/bedtools/shuffle/main.nf
+Linting: modules/nf-core/bedtools/shuffle/tests/nextflow.config
+Linting: modules/nf-core/gawk/main.nf
+Linting: modules/nf-core/gawk/tests/nextflow.config
+ERROR ~ Cannot invoke "nextflow.config.ast.ConfigStatement.visit(nextflow.config.ast.ConfigVisitor)" because "node" is null
+
+

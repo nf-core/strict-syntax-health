@@ -1,0 +1,423 @@
+Linting Nextflow code..
+Linting: conf/test_single_end.config
+Linting: conf/test_assembly_input.config
+Linting: conf/test_minimal.config
+Linting: conf/test_longreadonly.config
+Linting: conf/igenomes_ignored.config
+Linting: conf/test_hybrid.config
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/test_alternatives.config
+Linting: conf/test_longreadonly_alternatives.config
+Linting: conf/igenomes.config
+Linting: nextflow.config
+Linting: workflows/mag.nf
+Linting: subworkflows/local/domain_classification/main.nf
+Linting: subworkflows/local/assembly/main.nf
+Linting: subworkflows/local/binning_refinement/main.nf
+Linting: subworkflows/local/binning_metabinner/main.nf
+Linting: subworkflows/local/preprocessing_shortread/main.nf
+Linting: subworkflows/local/binning_preparation/main.nf
+Linting: subworkflows/local/assembly_longread/main.nf
+Linting: subworkflows/local/tiara/main.nf
+Linting: subworkflows/local/depths/main.nf
+Linting: subworkflows/local/assembly_shortread/main.nf
+Linting: subworkflows/local/bin_qc/main.nf
+Linting: subworkflows/local/binning_preparation_longread/main.nf
+Linting: subworkflows/local/assembly_hybrid/main.nf
+Linting: subworkflows/local/preprocessing_longread/main.nf
+Linting: subworkflows/local/binning/main.nf
+Linting: subworkflows/local/hostremoval_longread/main.nf
+Linting: subworkflows/local/gtdbtk/main.nf
+Linting: subworkflows/local/ancient_dna/main.nf
+Linting: subworkflows/local/binning_preparation_shortread/main.nf
+Linting: subworkflows/local/virus_identification/main.nf
+Linting: subworkflows/local/utils_nfcore_mag_pipeline/main.nf
+Linting: subworkflows/local/catpack/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/fasta_binning_concoct/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/tiara_classify/main.nf
+Linting: modules/local/gtdbtk_db_preparation/main.nf
+Linting: modules/local/bowtie2_assembly_align/main.nf
+Linting: modules/local/mag_depths_convert/main.nf
+Linting: modules/local/quast_bins_summary/main.nf
+Linting: modules/local/quast_bins/main.nf
+Linting: modules/local/bin_summary/main.nf
+Linting: modules/local/bowtie2_assembly_build/main.nf
+Linting: modules/local/mag_depths_summary/main.nf
+Linting: modules/local/mag_depths_plot/main.nf
+Linting: modules/local/quast_run/main.nf
+Linting: modules/local/metabinner_bins/main.nf
+Linting: modules/local/adjust_maxbin2_ext/main.nf
+Linting: modules/local/mag_depths/main.nf
+Linting: modules/local/dastool_rename_post/main.nf
+Linting: modules/local/metabinner_tooshort/main.nf
+Linting: modules/local/samtools_unmapped/main.nf
+Linting: modules/local/gtdbtk_summary/main.nf
+Linting: modules/local/bowtie2_removal_align/main.nf
+Linting: modules/local/bigmag_summary/main.nf
+Linting: modules/local/metabinner_kmer/main.nf
+Linting: modules/local/split_fasta/main.nf
+Linting: modules/local/dastool_rename_pre/main.nf
+Linting: modules/local/bowtie2_removal_build/main.nf
+Linting: modules/local/metabinner_metabinner/main.nf
+Linting: modules/nf-core/metamdbg/asm/main.nf
+Linting: modules/nf-core/metabat2/metabat2/main.nf
+Linting: modules/nf-core/metabat2/metabat2/tests/nextflow.config
+Linting: modules/nf-core/metabat2/jgisummarizebamcontigdepths/main.nf
+Linting: modules/nf-core/bcftools/consensus/main.nf
+Linting: modules/nf-core/bcftools/index/main.nf
+Linting: modules/nf-core/bcftools/index/tests/nextflow.config
+Linting: modules/nf-core/bcftools/view/main.nf
+Linting: modules/nf-core/bcftools/view/tests/vcf_gz_index.config
+Linting: modules/nf-core/bcftools/view/tests/vcf_gz_index_csi.config
+Linting: modules/nf-core/bcftools/view/tests/nextflow.config
+Linting: modules/nf-core/bcftools/view/tests/vcf_gz_index_tbi.config
+Linting: modules/nf-core/metaeuk/easypredict/main.nf
+Linting: modules/nf-core/gunzip/main.nf
+Linting: modules/nf-core/gunzip/tests/nextflow.config
+Linting: modules/nf-core/seqkit/stats/main.nf
+Linting: modules/nf-core/busco/busco/main.nf
+Linting: modules/nf-core/busco/busco/tests/nextflow.config
+Linting: modules/nf-core/checkm/qa/main.nf
+Linting: modules/nf-core/checkm/lineagewf/main.nf
+Linting: modules/nf-core/nanoq/main.nf
+Linting: modules/nf-core/samtools/index/main.nf
+Linting: modules/nf-core/samtools/index/tests/csi.nextflow.config
+Linting: modules/nf-core/samtools/stats/main.nf
+Linting: modules/nf-core/samtools/faidx/main.nf
+Linting: modules/nf-core/samtools/faidx/tests/nextflow.config
+Linting: modules/nf-core/samtools/faidx/tests/nextflow2.config
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/flye/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/tiara/tiara/main.nf
+Linting: modules/nf-core/tiara/tiara/tests/nextflow.config
+Linting: modules/nf-core/minimap2/index/main.nf
+Linting: modules/nf-core/minimap2/align/main.nf
+Linting: modules/nf-core/cat/fastq/main.nf
+Linting: modules/nf-core/spades/main.nf
+Linting: modules/nf-core/spades/tests/nextflow.config
+Linting: modules/nf-core/trimmomatic/main.nf
+Linting: modules/nf-core/trimmomatic/tests/nextflow_PE.config
+Linting: modules/nf-core/trimmomatic/tests/nextflow_SE.config
+Linting: modules/nf-core/freebayes/main.nf
+Linting: modules/nf-core/fastp/main.nf
+Linting: modules/nf-core/fastp/tests/nextflow.interleaved.config
+Linting: modules/nf-core/fastp/tests/nextflow.save_failed.config
+Linting: modules/nf-core/seqtk/mergepe/main.nf
+Linting: modules/nf-core/adapterremoval/main.nf
+Linting: modules/nf-core/adapterremoval/tests/nextflow.config
+Linting: modules/nf-core/nanolyse/main.nf
+Linting: modules/nf-core/nanolyse/tests/nextflow.config
+Linting: modules/nf-core/concoct/cutupfasta/main.nf
+Linting: modules/nf-core/concoct/extractfastabins/main.nf
+Linting: modules/nf-core/concoct/mergecutupclustering/main.nf
+Linting: modules/nf-core/concoct/concoct/main.nf
+Linting: modules/nf-core/concoct/concoctcoveragetable/main.nf
+Linting: modules/nf-core/untar/main.nf
+Linting: modules/nf-core/gtdbtk/classifywf/main.nf
+Linting: modules/nf-core/gtdbtk/classifywf/tests/nextflow.config
+Linting: modules/nf-core/nanoplot/main.nf
+Linting: modules/nf-core/semibin/singleeasybin/main.nf
+Linting: modules/nf-core/semibin/singleeasybin/tests/nextflow.config
+Linting: modules/nf-core/bbmap/bbnorm/main.nf
+Linting: modules/nf-core/bbmap/bbnorm/tests/nextflow.config
+Linting: modules/nf-core/comebin/runcomebin/main.nf
+Linting: modules/nf-core/checkm2/predict/main.nf
+Linting: modules/nf-core/checkm2/predict/tests/nextflow.config
+Linting: modules/nf-core/checkm2/databasedownload/main.nf
+Linting: modules/nf-core/dastool/dastool/main.nf
+Linting: modules/nf-core/dastool/dastool/tests/nextflow.config
+Linting: modules/nf-core/dastool/fastatocontig2bin/main.nf
+Linting: modules/nf-core/qsv/cat/main.nf
+Linting: modules/nf-core/porechop/abi/main.nf
+Linting: modules/nf-core/porechop/porechop/main.nf
+Linting: modules/nf-core/porechop/porechop/tests/nextflow.config
+Linting: modules/nf-core/filtlong/main.nf
+Linting: modules/nf-core/filtlong/tests/nextflow.config
+Linting: modules/nf-core/maxbin2/main.nf
+Linting: modules/nf-core/gunc/mergecheckm/main.nf
+Linting: modules/nf-core/gunc/mergecheckm/tests/nextflow.config
+Linting: modules/nf-core/gunc/run/main.nf
+Linting: modules/nf-core/gunc/downloaddb/main.nf
+Linting: modules/nf-core/megahit/main.nf
+Linting: modules/nf-core/mmseqs/databases/main.nf
+Linting: modules/nf-core/prokka/main.nf
+Linting: modules/nf-core/chopper/main.nf
+Linting: modules/nf-core/prodigal/main.nf
+Linting: modules/nf-core/pydamage/analyze/main.nf
+Linting: modules/nf-core/pydamage/filter/main.nf
+Linting: modules/nf-core/catpack/addnames/main.nf
+Linting: modules/nf-core/catpack/addnames/tests/nextflow.config
+Linting: modules/nf-core/catpack/summarise/main.nf
+Linting: modules/nf-core/catpack/summarise/tests/nextflow.config
+Linting: modules/nf-core/catpack/prepare/main.nf
+Linting: modules/nf-core/catpack/prepare/tests/nextflow.config
+Linting: modules/nf-core/catpack/bins/main.nf
+Linting: modules/nf-core/catpack/bins/tests/nextflow.config
+Linting: modules/nf-core/catpack/contigs/main.nf
+Linting: modules/nf-core/catpack/contigs/tests/nextflow.config
+Linting: modules/nf-core/catpack/download/main.nf
+Linting: modules/nf-core/genomad/endtoend/main.nf
+Linting: modules/nf-core/genomad/endtoend/tests/nextflow.config
+Linting: modules/nf-core/genomad/download/main.nf
+Linting: modules/nf-core/genomad/download/tests/nextflow.config
+
+
+
+
+
+
+Warn  modules/nf-core/bcftools/consensus/main.nf:40:9: Variable was declared but not used
+│  40 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/bcftools/consensus/main.nf:42:9: Variable was declared but not used
+│  42 |     def masking = mask ? "-m $mask" : ""
+╰     |         ^^^^^^^
+
+
+Warn  modules/nf-core/bcftools/index/main.nf:23:9: Variable was declared but not used
+│  23 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+Warn  modules/nf-core/bcftools/index/main.nf:40:9: Variable was declared but not used
+│  40 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+
+
+Warn  modules/nf-core/cat/fastq/main.nf:22:60: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  22 |     def readList = reads instanceof List ? reads.collect { it.toString
+╰     |                                                            ^^
+
+Warn  modules/nf-core/cat/fastq/main.nf:58:60: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  58 |     def readList = reads instanceof List ? reads.collect { it.toString
+╰     |                                                            ^^
+
+
+
+
+
+
+
+
+
+
+
+
+
+Warn  modules/nf-core/comebin/runcomebin/main.nf:59:9: Variable was declared but not used
+│  59 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/concoct/concoct/main.nf:43:9: Variable was declared but not used
+│  43 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/concoct/concoctcoveragetable/main.nf:37:9: Variable was declared but not used
+│  37 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/concoct/cutupfasta/main.nf:43:9: Variable was declared but not used
+│  43 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/concoct/cutupfasta/main.nf:45:9: Variable was declared but not used
+│  45 |     def bedfile = bed ? "-b ${prefix}.bed" : ""
+╰     |         ^^^^^^^
+
+
+Warn  modules/nf-core/concoct/extractfastabins/main.nf:45:9: Variable was declared but not used
+│  45 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/concoct/mergecutupclustering/main.nf:39:9: Variable was declared but not used
+│  39 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+
+
+
+
+
+
+
+Warn  modules/nf-core/gunc/downloaddb/main.nf:32:9: Variable was declared but not used
+│  32 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/gunc/mergecheckm/main.nf:22:9: Variable was declared but not used
+│  22 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/nf-core/gunc/run/main.nf:24:9: Variable was declared but not used
+│  24 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/nf-core/gunzip/main.nf:43:9: Variable was declared but not used
+│  43 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+Warn  modules/nf-core/megahit/main.nf:52:9: Variable was declared but not used
+│  52 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/megahit/main.nf:53:9: Variable was declared but not used
+│  53 |     def args2 = task.ext.args2 ?: ''
+╰     |         ^^^^^
+
+Warn  modules/nf-core/megahit/main.nf:55:9: Variable was declared but not used
+│  55 |     def reads_command = meta.single_end || !reads2 ? "-r ${reads1}" : 
+╰     |         ^^^^^^^^^^^^^
+
+
+
+Warn  modules/nf-core/metabat2/metabat2/main.nf:51:9: Variable was declared but not used
+│  51 |     def args             = task.ext.args   ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/metabat2/metabat2/main.nf:53:9: Variable was declared but not used
+│  53 |     def decompress_depth = depth           ? "gzip -d -f $depth"    : 
+╰     |         ^^^^^^^^^^^^^^^^
+
+Warn  modules/nf-core/metabat2/metabat2/main.nf:54:9: Variable was declared but not used
+│  54 |     def depth_file       = depth           ? "-a ${depth.baseName}" : 
+╰     |         ^^^^^^^^^^
+
+
+
+Warn  modules/nf-core/metamdbg/asm/main.nf:47:9: Variable was declared but not used
+│  47 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/minimap2/align/main.nf:67:9: Variable was declared but not used
+│  67 |     def target = reference ?: (bam_input ? error("BAM input requires r
+╰     |         ^^^^^^
+
+
+
+
+
+Warn  modules/nf-core/nanolyse/main.nf:23:9: Variable was declared but not used
+│  23 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+Warn  modules/nf-core/nanoq/main.nf:38:9: Variable was declared but not used
+│  38 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/porechop/abi/main.nf:44:9: Variable was declared but not used
+│  44 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/porechop/abi/main.nf:46:9: Variable was declared but not used
+│  46 |     def adapters_list = custom_adapters ? "--custom_adapters ${custom_
+╰     |         ^^^^^^^^^^^^^
+
+
+
+Warn  modules/nf-core/prodigal/main.nf:49:9: Variable was declared but not used
+│  49 |     def args = task.ext.args   ?: ''
+╰     |         ^^^^
+
+
+
+
+
+
+
+
+
+
+
+
+Warn  modules/nf-core/spades/main.nf:80:9: Variable was declared but not used
+│  80 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/spades/main.nf:82:9: Variable was declared but not used
+│  82 |     def maxmem = task.memory.toGiga()
+╰     |         ^^^^^^
+
+Warn  modules/nf-core/spades/main.nf:86:9: Variable was declared but not used
+│  86 |     def custom_hmms = hmm ? "--custom-hmms $hmm" : ""
+╰     |         ^^^^^^^^^^^
+
+Warn  modules/nf-core/spades/main.nf:87:9: Variable was declared but not used
+│  87 |     def reads = yml ? "--dataset $yml" : "$illumina_reads $pacbio_read
+╰     |         ^^^^^
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Warn  subworkflows/nf-core/fasta_binning_concoct/main.nf:14:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  14 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+
+
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-test tests
+│   3 |     testsDir "."
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 1 file had 1 error
+ ✅ 174 files had no errors

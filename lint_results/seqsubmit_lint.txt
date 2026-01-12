@@ -1,0 +1,183 @@
+Linting Nextflow code..
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: nextflow.config
+Linting: workflows/genomesubmit.nf
+Linting: workflows/seqsubmit.nf
+Linting: subworkflows/local/utils_nfcore_seqsubmit_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/generate_assembly_manifest/main.nf
+Linting: modules/local/ena_webin_cli/main.nf
+Linting: modules/local/genome_upload/main.nf
+Linting: modules/local/registerstudy/nextflow.config
+Linting: modules/local/registerstudy/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/fastavalidator/main.nf
+Warn  main.nf:37:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  37 |     ch_multiqc_report = Channel.empty()
+╰     |                         ^^^^^^^
+
+
+
+Warn  modules/local/generate_assembly_manifest/main.nf:20:9: Variable was declared but not used
+│  20 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+Warn  modules/local/generate_assembly_manifest/main.nf:36:9: Variable was declared but not used
+│  36 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/generate_assembly_manifest/main.nf:37:9: Variable was declared but not used
+│  37 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+
+Error modules/local/registerstudy/main.nf:13:26: `STUDY_ID` is not defined
+│  13 |     tuple val(meta), env(STUDY_ID), emit: study_accession
+╰     |                          ^^^^^^^^
+
+Warn  modules/local/registerstudy/main.nf:22:9: Variable was declared but not used
+│  22 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+Warn  modules/local/registerstudy/main.nf:45:9: Variable was declared but not used
+│  45 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+Warn  subworkflows/local/utils_nfcore_seqsubmit_pipeline/main.nf:32:5: Parameter was not used -- prefix with `_` to suppress warning
+│  32 |     monochrome_logs   // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_seqsubmit_pipeline/main.nf:35:5: Parameter was not used -- prefix with `_` to suppress warning
+│  35 |     input             //  string: Path to input samplesheet
+╰     |     ^^^^^
+
+Warn  subworkflows/local/utils_nfcore_seqsubmit_pipeline/main.nf:42:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  42 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_seqsubmit_pipeline/main.nf:67:144: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  67 | lect { "    https://doi.org/${it.trim().replace('https://doi.org/','')
+╰     |                               ^^
+
+Warn  subworkflows/local/utils_nfcore_seqsubmit_pipeline/main.nf:99:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  99 |     ch_samplesheet = Channel
+╰     |                      ^^^^^^^
+
+
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 | mYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
+╰     |                               ^^^^^^^
+
+
+
+Warn  workflows/genomesubmit.nf:29:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  29 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  workflows/genomesubmit.nf:30:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  30 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/genomesubmit.nf:77:16: Parameter was not used -- prefix with `_` to suppress warning
+│  77 |         .map { meta, file -> file }
+╰     |                ^^^^
+
+Warn  workflows/genomesubmit.nf:119:32: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 119 |     ch_multiqc_config        = Channel.fromPath(
+╰     |                                ^^^^^^^
+
+Warn  workflows/genomesubmit.nf:122:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 122 |         Channel.fromPath(params.multiqc_config, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/genomesubmit.nf:123:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 123 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/genomesubmit.nf:125:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 125 |         Channel.fromPath(params.multiqc_logo, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/genomesubmit.nf:126:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 126 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/genomesubmit.nf:130:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 130 |     ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_p
+╰     |                           ^^^^^^^
+
+Warn  workflows/genomesubmit.nf:136:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 136 |     ch_methods_description                = Channel.value(
+╰     |                                             ^^^^^^^
+
+
+Warn  workflows/seqsubmit.nf:21:5: Parameter was not used -- prefix with `_` to suppress warning
+│  21 |     ch_samplesheet // channel: samplesheet read in from --input
+╰     |     ^^^^^^^^^^^^^^
+
+Warn  workflows/seqsubmit.nf:24:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  24 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  workflows/seqsubmit.nf:25:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  25 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/seqsubmit.nf:42:32: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  42 |     ch_multiqc_config        = Channel.fromPath(
+╰     |                                ^^^^^^^
+
+Warn  workflows/seqsubmit.nf:45:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  45 |         Channel.fromPath(params.multiqc_config, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/seqsubmit.nf:46:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  46 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/seqsubmit.nf:48:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  48 |         Channel.fromPath(params.multiqc_logo, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/seqsubmit.nf:49:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  49 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/seqsubmit.nf:53:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  53 |     ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_p
+╰     |                           ^^^^^^^
+
+Warn  workflows/seqsubmit.nf:59:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  59 |     ch_methods_description                = Channel.value(
+╰     |                                             ^^^^^^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-test tests
+│   3 |     testsDir "."
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 2 files had 2 errors
+ ✅ 23 files had no errors

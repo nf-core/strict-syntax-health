@@ -1,0 +1,670 @@
+Linting Nextflow code..
+Linting: conf/test_local.config
+Linting: conf/igenomes_ignored.config
+Linting: conf/base.config
+Linting: conf/test_genomeonly.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/gitpod.config
+Linting: conf/test_decon.config
+Linting: conf/igenomes.config
+Linting: conf/test_nofastq.config
+Linting: nextflow.config
+Linting: workflows/genomeqc.nf
+Linting: subworkflows/local/genome_only.nf
+Linting: subworkflows/local/decontamination.nf
+Linting: subworkflows/local/genome_and_annotation.nf
+Linting: subworkflows/local/utils_nfcore_genomeqc_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/fasta_explore_search_plot_tidk/main.nf
+Linting: subworkflows/nf-core/fasta_explore_search_plot_tidk/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/hite/main.nf
+Linting: modules/local/create_path.nf
+Linting: modules/local/orthologous_chromosomes/main.nf
+Linting: modules/local/genome_only_busco_ideogram.nf
+Linting: modules/local/extract_seqs.nf
+Linting: modules/local/gene_overlaps.nf
+Linting: modules/local/tree_summary.nf
+Linting: modules/local/genome_annotation_busco_ideogram.nf
+Linting: modules/local/busco_tsv_to_gff/main.nf
+Linting: modules/local/buscos_seqs/main.nf
+Linting: modules/nf-core/gffread/main.nf
+Linting: modules/nf-core/gffread/tests/nextflow-gff3.config
+Linting: modules/nf-core/gffread/tests/nextflow-fasta.config
+Linting: modules/nf-core/gffread/tests/nextflow.config
+Linting: modules/nf-core/seqkit/sort/main.nf
+Linting: modules/nf-core/seqkit/sort/tests/nextflow.config
+Linting: modules/nf-core/seqkit/seq/main.nf
+Linting: modules/nf-core/seqkit/seq/tests/nextflow.config
+Linting: modules/nf-core/busco/busco/main.nf
+Linting: modules/nf-core/busco/busco/tests/nextflow.config
+Linting: modules/nf-core/busco/busco/tests/nextflow.metaeuk.config
+Linting: modules/nf-core/busco/busco/tests/nextflow.augustus.config
+Linting: modules/nf-core/fcsgx/fetchdb/main.nf
+Linting: modules/nf-core/fcsgx/cleangenome/main.nf
+Linting: modules/nf-core/fcsgx/rungx/main.nf
+Linting: modules/nf-core/pigz/uncompress/main.nf
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/tiara/tiara/main.nf
+Linting: modules/nf-core/tiara/tiara/tests/nextflow.config
+Linting: modules/nf-core/ncbigenomedownload/main.nf
+Linting: modules/nf-core/ncbigenomedownload/tests/nextflow.config
+Linting: modules/nf-core/meryl/count/main.nf
+Linting: modules/nf-core/meryl/unionsum/main.nf
+Linting: modules/nf-core/agat/spkeeplongestisoform/main.nf
+Linting: modules/nf-core/agat/convertspgxf2gxf/main.nf
+Linting: modules/nf-core/agat/spstatistics/main.nf
+Linting: modules/nf-core/orthofinder/main.nf
+Linting: modules/nf-core/tidk/explore/main.nf
+Linting: modules/nf-core/tidk/explore/tests/nextflow.config
+Linting: modules/nf-core/tidk/search/main.nf
+Linting: modules/nf-core/tidk/search/tests/nextflow.config
+Linting: modules/nf-core/tidk/plot/main.nf
+Linting: modules/nf-core/quast/main.nf
+Linting: modules/nf-core/fcs/fcsgx/main.nf
+Linting: modules/nf-core/fcs/fcsadaptor/main.nf
+Linting: modules/nf-core/merqury/merqury/main.nf
+Linting: modules/nf-core/gawk/main.nf
+Linting: modules/nf-core/gawk/tests/nextflow.config
+Linting: modules/nf-core/fastavalidator/main.nf
+Warn  modules/local/buscos_seqs/main.nf:17:9: Variable was declared but not used
+│  17 |     def prefix         = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+
+Error modules/local/extract_seqs.nf:6:5: Invalid process directive
+│   6 |     container = 'community.wave.seqera.io/library/agat:1.4.1--304a47c6
+╰     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error modules/local/extract_seqs.nf:10:16: `meta` is already declared
+│  10 |     tuple val (meta),  path(gff)
+╰     |                ^^^^
+
+Warn  modules/local/extract_seqs.nf:9:16: Variable was declared but not used
+│   9 |     tuple val (meta),  path(fasta)
+╰     |                ^^^^
+
+
+Error modules/local/gene_overlaps.nf:4:5: Invalid process directive
+│   4 |     container = 'ecoflowucl/gene_overlap:v1.0'
+╰     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+Error modules/local/tree_summary.nf:5:5: Invalid process directive
+│   5 |     container = 'fduarte001/genomeqc_tree:0.3'
+╰     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  modules/local/tree_summary.nf:22:9: Variable was declared but not used
+│  22 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/nf-core/agat/convertspgxf2gxf/main.nf:37:9: Variable was declared but not used
+│  37 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Error modules/nf-core/agat/spkeeplongestisoform/main.nf:24:35: `gff` is not defined
+│  24 |     def prefix       = meta.id ?: gff.getBaseName()
+╰     |                                   ^^^
+
+Error modules/nf-core/agat/spkeeplongestisoform/main.nf:40:29: `gff` is not defined
+│  40 |     def prefix = meta.id ?: gff.getBaseName()
+╰     |                             ^^^
+
+
+Warn  modules/nf-core/agat/spstatistics/main.nf:36:9: Variable was declared but not used
+│  36 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+
+
+
+Error modules/nf-core/fcsgx/fetchdb/main.nf:38:41: `basename` is not defined
+│  38 |     prefix = task.ext.prefix ?: "gxdb_${basename}"
+╰     |                                         ^^^^^^^^
+
+
+
+Warn  modules/nf-core/gawk/main.nf:26:54: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  26 |     suffix    = task.ext.suffix ?: "${input.collect{ it.getExtension()
+╰     |                                                      ^^
+
+Warn  modules/nf-core/gawk/main.nf:29:37: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  29 |     lst_gz     = input.findResults{ it.getExtension().endsWith("gz") ?
+╰     |                                     ^^
+
+Warn  modules/nf-core/gawk/main.nf:29:72: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  29 | tExtension().endsWith("gz") ? it.toString() : null }
+╰     |                               ^^
+
+Warn  modules/nf-core/gawk/main.nf:31:34: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  31 |     input_cmd  = input.collect { it.toString() - ~/\.gz$/ }.join(" ")
+╰     |                                  ^^
+
+Warn  modules/nf-core/gawk/main.nf:34:49: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  34 |     cleanup    = lst_gz ? "rm ${lst_gz.collect{ it - ~/\.gz$/ }.join("
+╰     |                                                 ^^
+
+Warn  modules/nf-core/gawk/main.nf:37:16: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  37 |         assert it.name != "${prefix}.${suffix}" : "Input and output na
+╰     |                ^^
+
+
+Warn  modules/nf-core/gffread/main.nf:26:103: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  26 | ', '-y' ].any { args.contains(it) } ) ? 'fasta' : 'gff3' )
+╰     |                               ^^
+
+Warn  modules/nf-core/gffread/main.nf:30:61: Parameter was not used -- prefix with `_` to suppress warning
+│  30 | laceAll(/(.*)(-[wxy])(.*)/) { all, pre, param, post -> "$pre $post $pa
+╰     |                               ^^^
+
+Warn  modules/nf-core/gffread/main.nf:49:103: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  49 | ', '-y' ].any { args.contains(it) } ) ? 'fasta' : 'gff3' )
+╰     |                               ^^
+
+
+
+Warn  modules/nf-core/meryl/count/main.nf:23:9: Variable was declared but not used
+│  23 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+Warn  modules/nf-core/meryl/count/main.nf:42:9: Variable was declared but not used
+│  42 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/meryl/count/main.nf:43:9: Variable was declared but not used
+│  43 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/nf-core/meryl/unionsum/main.nf:40:9: Variable was declared but not used
+│  40 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+Warn  modules/nf-core/ncbigenomedownload/main.nf:37:9: Variable was declared but not used
+│  37 |     def prefix         = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/nf-core/orthofinder/main.nf:54:9: Variable was declared but not used
+│  54 |     def args   = task.ext.args   ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/orthofinder/main.nf:56:9: Variable was declared but not used
+│  56 |     def include_command = prior_run   ? "-b $prior_run" : ''
+╰     |         ^^^^^^^^^^^^^^^
+
+
+Warn  modules/nf-core/pigz/uncompress/main.nf:39:9: Variable was declared but not used
+│  39 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/quast/main.nf:52:9: Variable was declared but not used
+│  52 |     def args      = task.ext.args   ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/quast/main.nf:54:9: Variable was declared but not used
+│  54 |     def features  = gff             ? "--features $gff" : ''
+╰     |         ^^^^^^^^
+
+Warn  modules/nf-core/quast/main.nf:55:9: Variable was declared but not used
+│  55 |     def reference = fasta           ? "-r $fasta" : ''
+╰     |         ^^^^^^^^^
+
+
+
+
+
+Warn  modules/nf-core/tidk/explore/main.nf:46:9: Variable was declared but not used
+│  46 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/tidk/plot/main.nf:37:9: Variable was declared but not used
+│  37 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+Warn  subworkflows/local/decontamination.nf:23:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  23 |     ch_versions        = Channel.empty()
+╰     |                          ^^^^^^^
+
+Warn  subworkflows/local/decontamination.nf:45:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  45 |         ch_gxdb_manifest ?: Channel.empty() // If there no manifest, u
+╰     |                             ^^^^^^^
+
+
+Warn  subworkflows/local/genome_and_annotation.nf:23:32: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  23 |     ch_fasta.view { "Running ${it[0]} on genome and annotation mode"}
+╰     |                                ^^
+
+Warn  subworkflows/local/genome_and_annotation.nf:25:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  25 |     ch_versions  = Channel.empty()
+╰     |                    ^^^^^^^
+
+Warn  subworkflows/local/genome_and_annotation.nf:28:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  28 |     ch_tree_data = Channel.empty()
+╰     |                    ^^^^^^^
+
+Warn  subworkflows/local/genome_and_annotation.nf:112:80: Parameter was not used -- prefix with `_` to suppress warning
+│ 112 | .out.overlap_counts.collect { meta, file -> file })
+╰     |                               ^^^^
+
+Warn  subworkflows/local/genome_and_annotation.nf:135:30: Parameter was not used -- prefix with `_` to suppress warning
+│ 135 |         ch_input.fasta.map { meta, fasta -> fasta}
+╰     |                              ^^^^
+
+Warn  subworkflows/local/genome_and_annotation.nf:155:17: Parameter was not used -- prefix with `_` to suppress warning
+│ 155 |         | map { meta, fasta ->
+╰     |                 ^^^^
+
+Warn  subworkflows/local/genome_and_annotation.nf:179:43: Parameter was not used -- prefix with `_` to suppress warning
+│ 179 |         ORTHOFINDER.out.orthofinder.map { meta, folder ->
+╰     |                                           ^^^^
+
+Warn  subworkflows/local/genome_and_annotation.nf:182:49: Parameter was not used -- prefix with `_` to suppress warning
+│ 182 |         AGAT_SPKEEPLONGESTISOFORM.out.gff.map { meta, gff -> gff }.col
+╰     |                                                 ^^^^
+
+Warn  subworkflows/local/genome_and_annotation.nf:211:64: Parameter was not used -- prefix with `_` to suppress warning
+│ 211 | mix(GAWK.out.output.collect { meta, file -> file })
+╰     |                               ^^^^
+
+Warn  subworkflows/local/genome_and_annotation.nf:261:91: Parameter was not used -- prefix with `_` to suppress warning
+│ 261 | .out.busco_mappings.collect { meta, table -> table} // channel: [ val(
+╰     |                               ^^^^
+
+
+Warn  subworkflows/local/genome_only.nf:15:32: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  15 |     ch_fasta.view { "Running ${it[0]} on genome only mode"}
+╰     |                                ^^
+
+Warn  subworkflows/local/genome_only.nf:17:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |     ch_versions   = Channel.empty()
+╰     |                     ^^^^^^^
+
+Warn  subworkflows/local/genome_only.nf:20:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  20 |     ch_tree_data = Channel.empty()
+╰     |                    ^^^^^^^
+
+Warn  subworkflows/local/genome_only.nf:56:64: Parameter was not used -- prefix with `_` to suppress warning
+│  56 | mix(GAWK.out.output.collect { meta, file -> file })
+╰     |                               ^^^^
+
+Warn  subworkflows/local/genome_only.nf:112:43: Parameter was not used -- prefix with `_` to suppress warning
+│ 112 |         ORTHOFINDER.out.orthofinder.map { meta, folder ->
+╰     |                                           ^^^^
+
+Warn  subworkflows/local/genome_only.nf:115:40: Parameter was not used -- prefix with `_` to suppress warning
+│ 115 |         BUSCO_TSV_TO_GFF.out.gff.map { meta, gff -> gff }.collect()
+╰     |                                        ^^^^
+
+Warn  subworkflows/local/genome_only.nf:125:87: Parameter was not used -- prefix with `_` to suppress warning
+│ 125 | .out.busco_mappings.collect { meta, table -> table} // channel: [ csv 
+╰     |                               ^^^^
+
+
+Warn  subworkflows/local/utils_nfcore_genomeqc_pipeline/main.nf:31:5: Parameter was not used -- prefix with `_` to suppress warning
+│  31 |     monochrome_logs   // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_genomeqc_pipeline/main.nf:34:5: Parameter was not used -- prefix with `_` to suppress warning
+│  34 |     input             //  string: Path to input samplesheet
+╰     |     ^^^^^
+
+Warn  subworkflows/local/utils_nfcore_genomeqc_pipeline/main.nf:38:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  38 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_genomeqc_pipeline/main.nf:75:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  75 |     Channel
+╰     |     ^^^^^^^
+
+
+Warn  subworkflows/nf-core/fasta_explore_search_plot_tidk/main.nf:19:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/nf-core/fasta_explore_search_plot_tidk/main.nf:43:58: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  43 |                                 ( ch_apriori_sequence ?: Channel.empty
+╰     |                                                          ^^^^^^^
+
+Warn  subworkflows/nf-core/fasta_explore_search_plot_tidk/main.nf:46:37: Parameter was not used -- prefix with `_` to suppress warning
+│  46 |                             | map { id, meta, fasta, seq -> [ meta, fa
+╰     |                                     ^^
+
+Warn  subworkflows/nf-core/fasta_explore_search_plot_tidk/main.nf:49:46: Parameter was not used -- prefix with `_` to suppress warning
+│  49 |         ch_apriori_inputs.map { meta, fasta, seq -> [ meta, fasta ] },
+╰     |                                              ^^^
+
+Warn  subworkflows/nf-core/fasta_explore_search_plot_tidk/main.nf:50:33: Parameter was not used -- prefix with `_` to suppress warning
+│  50 |         ch_apriori_inputs.map { meta, fasta, seq -> seq }
+╰     |                                 ^^^^
+
+Warn  subworkflows/nf-core/fasta_explore_search_plot_tidk/main.nf:50:39: Parameter was not used -- prefix with `_` to suppress warning
+│  50 |         ch_apriori_inputs.map { meta, fasta, seq -> seq }
+╰     |                                       ^^^^^
+
+Warn  subworkflows/nf-core/fasta_explore_search_plot_tidk/main.nf:64:50: Parameter was not used -- prefix with `_` to suppress warning
+│  64 |         ch_aposteriori_inputs.map { meta, fasta, seq -> [ meta, fasta 
+╰     |                                                  ^^^
+
+Warn  subworkflows/nf-core/fasta_explore_search_plot_tidk/main.nf:65:37: Parameter was not used -- prefix with `_` to suppress warning
+│  65 |         ch_aposteriori_inputs.map { meta, fasta, seq -> seq }
+╰     |                                     ^^^^
+
+Warn  subworkflows/nf-core/fasta_explore_search_plot_tidk/main.nf:65:43: Parameter was not used -- prefix with `_` to suppress warning
+│  65 |         ch_aposteriori_inputs.map { meta, fasta, seq -> seq }
+╰     |                                           ^^^^^
+
+
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 | mYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
+╰     |                               ^^^^^^^
+
+
+Error workflows/genomeqc.nf:94:41: `fasta` is already declared
+│  94 |     gz_fasta     = fasta.filter { meta, fasta -> fasta.name.endsWith("
+╰     |                                         ^^^^^
+
+Error workflows/genomeqc.nf:95:41: `fasta` is already declared
+│  95 |     non_gz_fasta = fasta.filter { meta, fasta -> !fasta.name.endsWith(
+╰     |                                         ^^^^^
+
+Error workflows/genomeqc.nf:110:31: `fasta` is already declared
+│ 110 |                 | map { meta, fasta, gxf, fq ->  tuple( meta,  gxf) }
+╰     |                               ^^^^^
+
+Error workflows/genomeqc.nf:114:38: `gxf` is already declared
+│ 114 |     gz_gxf      = gxf.filter { meta, gxf -> gxf  && gxf.name.endsWith(
+╰     |                                      ^^^
+
+Error workflows/genomeqc.nf:115:38: `gxf` is already declared
+│ 115 |     non_gz_gxf  = gxf.filter { meta, gxf -> !gxf || !gxf.name.endsWith
+╰     |                                      ^^^
+
+Error workflows/genomeqc.nf:132:51: `fasta` is already declared
+│ 132 |                 | mix( ch_input.local.map { meta, fasta, gxf, fq -> tu
+╰     |                                                   ^^^^^
+
+Error workflows/genomeqc.nf:132:58: `gxf` is already declared
+│ 132 |                 | mix( ch_input.local.map { meta, fasta, gxf, fq -> tu
+╰     |                                                          ^^^
+
+Error workflows/genomeqc.nf:148:46: `fasta` is already declared
+│ 148 |     ch_input_anno  = ch_input.filter { meta, fasta, gxf, fastq ->  gxf
+╰     |                                              ^^^^^
+
+Error workflows/genomeqc.nf:148:53: `gxf` is already declared
+│ 148 |     ch_input_anno  = ch_input.filter { meta, fasta, gxf, fastq ->  gxf
+╰     |                                                     ^^^
+
+Error workflows/genomeqc.nf:149:22: `multimapChannel` is not defined
+│ 149 |                    | multimapChannel // Notice only fasta channel and 
+╰     |                      ^^^^^^^^^^^^^^^
+
+Error workflows/genomeqc.nf:150:46: `fasta` is already declared
+│ 150 |     ch_input_geno  = ch_input.filter { meta, fasta, gxf, fastq ->  !gx
+╰     |                                              ^^^^^
+
+Error workflows/genomeqc.nf:150:53: `gxf` is already declared
+│ 150 |     ch_input_geno  = ch_input.filter { meta, fasta, gxf, fastq ->  !gx
+╰     |                                                     ^^^
+
+Error workflows/genomeqc.nf:151:22: `multimapChannel` is not defined
+│ 151 |                    | multimapChannel // Notice only fasta channel is n
+╰     |                      ^^^^^^^^^^^^^^^
+
+Error workflows/genomeqc.nf:154:46: `fasta` is already declared
+│ 154 |     ch_input_merq  = ch_input.filter { meta, fasta, gxf, fastq -> fast
+╰     |                                              ^^^^^
+
+Error workflows/genomeqc.nf:154:53: `gxf` is already declared
+│ 154 |     ch_input_merq  = ch_input.filter { meta, fasta, gxf, fastq -> fast
+╰     |                                                     ^^^
+
+Error workflows/genomeqc.nf:155:22: `multimapChannel` is not defined
+│ 155 |                    | multimapChannel // Notice only fasta and fastq ch
+╰     |                      ^^^^^^^^^^^^^^^
+
+Error workflows/genomeqc.nf:158:46: `fasta` is already declared
+│ 158 |     ch_input_decon = ch_fasta.filter { meta, fasta -> meta.taxid } // 
+╰     |                                              ^^^^^
+
+Error workflows/genomeqc.nf:376:4: `multi_ch` was assigned but not declared
+│ 376 |    multi_ch = input
+╰     |    ^^^^^^^^
+
+Error workflows/genomeqc.nf:377:15: `multiMap` is not defined
+│ 377 |             | multiMap {
+╰     |               ^^^^^^^^
+
+Error workflows/genomeqc.nf:383:12: `multi_ch` is not defined
+│ 383 |     return multi_ch
+╰     |            ^^^^^^^^
+
+Warn  workflows/genomeqc.nf:42:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  42 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  workflows/genomeqc.nf:43:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  43 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/genomeqc.nf:47:46: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  47 |                     validateInputSamplesheet(it) // Input validation (
+╰     |                                              ^^
+
+Warn  workflows/genomeqc.nf:59:31: Parameter was not used -- prefix with `_` to suppress warning
+│  59 |         | map { meta, refseq, fq -> tuple( meta, refseq ) }
+╰     |                               ^^
+
+Warn  workflows/genomeqc.nf:90:39: Parameter was not used -- prefix with `_` to suppress warning
+│  90 |                  | map { meta, fasta, gxf, fq -> tuple( meta, fasta) }
+╰     |                                       ^^^
+
+Warn  workflows/genomeqc.nf:90:44: Parameter was not used -- prefix with `_` to suppress warning
+│  90 |                  | map { meta, fasta, gxf, fq -> tuple( meta, fasta) }
+╰     |                                            ^^
+
+Warn  workflows/genomeqc.nf:94:35: Parameter was not used -- prefix with `_` to suppress warning
+│  94 |     gz_fasta     = fasta.filter { meta, fasta -> fasta.name.endsWith("
+╰     |                                   ^^^^
+
+Warn  workflows/genomeqc.nf:95:35: Parameter was not used -- prefix with `_` to suppress warning
+│  95 |     non_gz_fasta = fasta.filter { meta, fasta -> !fasta.name.endsWith(
+╰     |                                   ^^^^
+
+Warn  workflows/genomeqc.nf:110:31: Parameter was not used -- prefix with `_` to suppress warning
+│ 110 |                 | map { meta, fasta, gxf, fq ->  tuple( meta,  gxf) }
+╰     |                               ^^^^^
+
+Warn  workflows/genomeqc.nf:110:43: Parameter was not used -- prefix with `_` to suppress warning
+│ 110 |                 | map { meta, fasta, gxf, fq ->  tuple( meta,  gxf) }
+╰     |                                           ^^
+
+Warn  workflows/genomeqc.nf:114:32: Parameter was not used -- prefix with `_` to suppress warning
+│ 114 |     gz_gxf      = gxf.filter { meta, gxf -> gxf  && gxf.name.endsWith(
+╰     |                                ^^^^
+
+Warn  workflows/genomeqc.nf:115:32: Parameter was not used -- prefix with `_` to suppress warning
+│ 115 |     non_gz_gxf  = gxf.filter { meta, gxf -> !gxf || !gxf.name.endsWith
+╰     |                                ^^^^
+
+Warn  workflows/genomeqc.nf:131:30: Parameter was not used -- prefix with `_` to suppress warning
+│ 131 |                 | map{ meta, refseq, fq -> tuple( meta, fq ) }
+╰     |                              ^^^^^^
+
+Warn  workflows/genomeqc.nf:132:51: Parameter was not used -- prefix with `_` to suppress warning
+│ 132 |                 | mix( ch_input.local.map { meta, fasta, gxf, fq -> tu
+╰     |                                                   ^^^^^
+
+Warn  workflows/genomeqc.nf:132:58: Parameter was not used -- prefix with `_` to suppress warning
+│ 132 |                 | mix( ch_input.local.map { meta, fasta, gxf, fq -> tu
+╰     |                                                          ^^^
+
+Warn  workflows/genomeqc.nf:148:40: Parameter was not used -- prefix with `_` to suppress warning
+│ 148 |     ch_input_anno  = ch_input.filter { meta, fasta, gxf, fastq ->  gxf
+╰     |                                        ^^^^
+
+Warn  workflows/genomeqc.nf:148:46: Parameter was not used -- prefix with `_` to suppress warning
+│ 148 |     ch_input_anno  = ch_input.filter { meta, fasta, gxf, fastq ->  gxf
+╰     |                                              ^^^^^
+
+Warn  workflows/genomeqc.nf:148:58: Parameter was not used -- prefix with `_` to suppress warning
+│ 148 |     ch_input_anno  = ch_input.filter { meta, fasta, gxf, fastq ->  gxf
+╰     |                                                          ^^^^^
+
+Warn  workflows/genomeqc.nf:150:40: Parameter was not used -- prefix with `_` to suppress warning
+│ 150 |     ch_input_geno  = ch_input.filter { meta, fasta, gxf, fastq ->  !gx
+╰     |                                        ^^^^
+
+Warn  workflows/genomeqc.nf:150:46: Parameter was not used -- prefix with `_` to suppress warning
+│ 150 |     ch_input_geno  = ch_input.filter { meta, fasta, gxf, fastq ->  !gx
+╰     |                                              ^^^^^
+
+Warn  workflows/genomeqc.nf:150:58: Parameter was not used -- prefix with `_` to suppress warning
+│ 150 |     ch_input_geno  = ch_input.filter { meta, fasta, gxf, fastq ->  !gx
+╰     |                                                          ^^^^^
+
+Warn  workflows/genomeqc.nf:154:40: Parameter was not used -- prefix with `_` to suppress warning
+│ 154 |     ch_input_merq  = ch_input.filter { meta, fasta, gxf, fastq -> fast
+╰     |                                        ^^^^
+
+Warn  workflows/genomeqc.nf:154:46: Parameter was not used -- prefix with `_` to suppress warning
+│ 154 |     ch_input_merq  = ch_input.filter { meta, fasta, gxf, fastq -> fast
+╰     |                                              ^^^^^
+
+Warn  workflows/genomeqc.nf:154:53: Parameter was not used -- prefix with `_` to suppress warning
+│ 154 |     ch_input_merq  = ch_input.filter { meta, fasta, gxf, fastq -> fast
+╰     |                                                     ^^^
+
+Warn  workflows/genomeqc.nf:158:46: Parameter was not used -- prefix with `_` to suppress warning
+│ 158 |     ch_input_decon = ch_fasta.filter { meta, fasta -> meta.taxid } // 
+╰     |                                              ^^^^^
+
+Warn  workflows/genomeqc.nf:216:5: Variable was declared but not used
+│ 216 |     ch_merqury_outputs                      = ch_merqury_qv
+╰     |     ^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/genomeqc.nf:221:57: Parameter was not used -- prefix with `_` to suppress warning
+│ 221 |                                             | flatMap { meta, data -> 
+╰     |                                                         ^^^^
+
+Warn  workflows/genomeqc.nf:233:68: Parameter was not used -- prefix with `_` to suppress warning
+│ 233 | _ONLY.out.quast_results.map { meta, results -> results })
+╰     |                               ^^^^
+
+Warn  workflows/genomeqc.nf:234:76: Parameter was not used -- prefix with `_` to suppress warning
+│ 234 | t.busco_short_summaries.map { meta, txt -> txt })
+╰     |                               ^^^^
+
+Warn  workflows/genomeqc.nf:245:78: Parameter was not used -- prefix with `_` to suppress warning
+│ 245 | ATION.out.quast_results.map { meta, results -> results })
+╰     |                               ^^^^
+
+Warn  workflows/genomeqc.nf:246:86: Parameter was not used -- prefix with `_` to suppress warning
+│ 246 | t.busco_short_summaries.map { meta, txt -> txt })
+╰     |                               ^^^^
+
+Warn  workflows/genomeqc.nf:262:77: Parameter was not used -- prefix with `_` to suppress warning
+│ 262 | S_GENOME_ANNO.out.table.map { meta, table -> table})
+╰     |                               ^^^^
+
+Warn  workflows/genomeqc.nf:265:72: Parameter was not used -- prefix with `_` to suppress warning
+│ 265 | O_SEQS_GENOME.out.table.map { meta, table -> table})
+╰     |                               ^^^^
+
+Warn  workflows/genomeqc.nf:311:32: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 311 |     ch_multiqc_config        = Channel.fromPath(
+╰     |                                ^^^^^^^
+
+Warn  workflows/genomeqc.nf:315:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 315 |         Channel.fromPath(params.multiqc_config, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/genomeqc.nf:316:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 316 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/genomeqc.nf:319:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 319 |         Channel.fromPath(params.multiqc_logo, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/genomeqc.nf:320:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 320 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/genomeqc.nf:325:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 325 |     ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_p
+╰     |                           ^^^^^^^
+
+Warn  workflows/genomeqc.nf:333:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 333 |     ch_methods_description                = Channel.value(
+╰     |                                             ^^^^^^^
+
+
+Error nextflow.config:339:32: `manifest` is not defined
+│ 339 | \033[0;35m  nf-core/genomeqc ${manifest.version}\033[0m
+╰     |                                ^^^^^^^^
+
+Error nextflow.config:342:26: `manifest` is not defined
+│ 342 |         afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${ma
+╰     |                          ^^^^^^^^
+
+Error nextflow.config:342:69: `manifest` is not defined
+│ 342 | ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "  
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:342:186: `manifest` is not defined
+│ 342 | doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:351:22: `validation` is not defined
+│ 351 |         beforeText = validation.help.beforeText
+╰     |                      ^^^^^^^^^^
+
+Error nextflow.config:352:21: `validation` is not defined
+│ 352 |         afterText = validation.help.afterText
+╰     |                     ^^^^^^^^^^
+
+Warn  nextflow.config:342:129: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 342 | lect { "    https://doi.org/${it.trim().replace('https://doi.org/','')
+╰     |                               ^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-test tests
+│   3 |     testsDir "."
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 8 files had 34 errors
+ ✅ 71 files had no errors

@@ -1,0 +1,993 @@
+Linting Nextflow code..
+Linting: conf/base.config
+Linting: conf/full.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/igenomes.config
+Linting: nextflow.config
+Linting: workflows/circrna/main.nf
+Linting: subworkflows/local/longread_tools/circtools.nf
+Linting: subworkflows/local/fli_detection.nf
+Linting: subworkflows/local/statistical_tests.nf
+Linting: subworkflows/local/longread.nf
+Linting: subworkflows/local/utils_nfcore_circrna_pipeline/main.nf
+Linting: subworkflows/local/prepare_genome.nf
+Linting: subworkflows/local/mirna/mirna_bindingsites.nf
+Linting: subworkflows/local/detection_tools/circrna_finder.nf
+Linting: subworkflows/local/detection_tools/circtools.nf
+Linting: subworkflows/local/detection_tools/star2pass.nf
+Linting: subworkflows/local/detection_tools/ciri.nf
+Linting: subworkflows/local/detection_tools/circexplorer2.nf
+Linting: subworkflows/local/detection_tools/psirc.nf
+Linting: subworkflows/local/detection_tools/find_circ.nf
+Linting: subworkflows/local/detection_tools/segemehl.nf
+Linting: subworkflows/local/detection_tools/mapsplice.nf
+Linting: subworkflows/local/quantification.nf
+Linting: subworkflows/local/bsj_detection.nf
+Linting: subworkflows/local/quantification_tools/psirc_quant.nf
+Linting: subworkflows/local/quantification_tools/ciriquant.nf
+Linting: subworkflows/local/mirna_prediction.nf
+Linting: subworkflows/local/fli_tools/jccirc.nf
+Linting: subworkflows/local/fli_tools/circtools.nf
+Linting: subworkflows/local/fli_tools/cirifull.nf
+Linting: subworkflows/local/fli_tools/psirc.nf
+Linting: subworkflows/local/combine_transcriptomes.nf
+Linting: subworkflows/local/annotation.nf
+Linting: subworkflows/nf-core/bam_stats_samtools/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/fastqc_trimgalore.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/bam_sort_stats_samtools/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: main.nf
+Linting: modules/local/tximeta/tximeta/main.nf
+Linting: modules/local/circrna_finder/main.nf
+Linting: modules/local/compute_correlations/main.nf
+Linting: modules/local/star/sjdb/main.nf
+Linting: modules/local/matrix/join_samples/main.nf
+Linting: modules/local/ciri/ciri2/main.nf
+Linting: modules/local/ciri/build_list/main.nf
+Linting: modules/local/ciri/readlength/main.nf
+Linting: modules/local/ciri/cirivis_unify/main.nf
+Linting: modules/local/ciri/cirivis/main.nf
+Linting: modules/local/ciri/cirias/main.nf
+Linting: modules/local/seqkit/split/main.nf
+Linting: modules/local/targetscan/predict/main.nf
+Linting: modules/local/targetscan/database/main.nf
+Linting: modules/local/circtools/reconstruct/main.nf
+Linting: modules/local/circtools/reference/main.nf
+Linting: modules/local/circtools/unify/main.nf
+Linting: modules/local/circtools/nanopore/main.nf
+Linting: modules/local/circtools/annotation/main.nf
+Linting: modules/local/circtools/detect/main.nf
+Linting: modules/local/circtest/circtest/main.nf
+Linting: modules/local/circtest/prepare/main.nf
+Linting: modules/local/majority_vote/main.nf
+Linting: modules/local/cirifull/ro2/main.nf
+Linting: modules/local/cirifull/ro1/main.nf
+Linting: modules/local/cirifull/merge/main.nf
+Linting: modules/local/csvtk/summary/main.nf
+Linting: modules/local/mapsplice/align/main.nf
+Linting: modules/local/fail_on_empty/main.nf
+Linting: modules/local/combinebeds/reads/main.nf
+Linting: modules/local/combinebeds/counts/main.nf
+Linting: modules/local/combinebeds/filter/main.nf
+Linting: modules/local/combinebeds/shifts/main.nf
+Linting: modules/local/find_circ/anchors/main.nf
+Linting: modules/local/find_circ/find_circ/main.nf
+Linting: modules/local/mirna_targets/main.nf
+Linting: modules/local/quantification/split_types/main.nf
+Linting: modules/local/quantification/merge_experiments/main.nf
+Linting: modules/local/annotation/bed2gtf/main.nf
+Linting: modules/local/pygtftk/tabulate/main.nf
+Linting: modules/local/mirna_filtering/main.nf
+Linting: modules/local/psircquant/quant/main.nf
+Linting: modules/local/psircquant/index/main.nf
+Linting: modules/local/jccirc/prep/main.nf
+Linting: modules/local/jccirc/jccirc/main.nf
+Linting: modules/local/psirc/fli/main.nf
+Linting: modules/local/psirc/unify/main.nf
+Linting: modules/local/psirc/index/main.nf
+Linting: modules/local/psirc/transcriptome/main.nf
+Linting: modules/local/psirc/bsj/main.nf
+Linting: modules/local/deseq2/normalization/main.nf
+Linting: modules/local/stringtie/prepde/main.nf
+Linting: modules/local/ciriquant/prepde/main.nf
+Linting: modules/local/ciriquant/de/main.nf
+Linting: modules/local/ciriquant/ciriquant/main.nf
+Linting: modules/nf-core/tximeta/tximport/main.nf
+Linting: modules/nf-core/star/genomegenerate/main.nf
+Linting: modules/nf-core/star/align/main.nf
+Linting: modules/nf-core/star/align/tests/nextflow.arriba.config
+Linting: modules/nf-core/star/align/tests/nextflow.config
+Linting: modules/nf-core/star/align/tests/nextflow.starfusion.config
+Linting: modules/nf-core/gffread/main.nf
+Linting: modules/nf-core/gffread/tests/nextflow-gff3.config
+Linting: modules/nf-core/gffread/tests/nextflow-fasta.config
+Linting: modules/nf-core/gffread/tests/nextflow.config
+Linting: modules/nf-core/bioawk/main.nf
+Linting: modules/nf-core/bioawk/tests/nextflow.config
+Linting: modules/nf-core/bowtie/build/main.nf
+Linting: modules/nf-core/bowtie/align/main.nf
+Linting: modules/nf-core/segemehl/index/main.nf
+Linting: modules/nf-core/segemehl/align/main.nf
+Linting: modules/nf-core/segemehl/align/tests/split.config
+Linting: modules/nf-core/hisat2/extractsplicesites/main.nf
+Linting: modules/nf-core/hisat2/build/main.nf
+Linting: modules/nf-core/hisat2/align/main.nf
+Linting: modules/nf-core/seqkit/fx2tab/main.nf
+Linting: modules/nf-core/seqkit/fx2tab/tests/nextflow.config
+Linting: modules/nf-core/seqkit/stats/main.nf
+Linting: modules/nf-core/samtools/flagstat/main.nf
+Linting: modules/nf-core/samtools/idxstats/main.nf
+Linting: modules/nf-core/samtools/index/main.nf
+Linting: modules/nf-core/samtools/index/tests/csi.nextflow.config
+Linting: modules/nf-core/samtools/sort/main.nf
+Linting: modules/nf-core/samtools/sort/tests/nextflow.config
+Linting: modules/nf-core/samtools/sort/tests/nextflow_cram.config
+Linting: modules/nf-core/samtools/stats/main.nf
+Linting: modules/nf-core/samtools/view/main.nf
+Linting: modules/nf-core/samtools/view/tests/bam_index.config
+Linting: modules/nf-core/samtools/view/tests/bam.config
+Linting: modules/nf-core/samtools/faidx/main.nf
+Linting: modules/nf-core/samtools/faidx/tests/nextflow.config
+Linting: modules/nf-core/samtools/faidx/tests/nextflow2.config
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/cat/fastq/main.nf
+Linting: modules/nf-core/cat/cat/main.nf
+Linting: modules/nf-core/cat/cat/tests/nextflow_zipped_unzipped.config
+Linting: modules/nf-core/cat/cat/tests/nextflow_unzipped_zipped.config
+Linting: modules/nf-core/bwa/index/main.nf
+Linting: modules/nf-core/bwa/mem/main.nf
+Linting: modules/nf-core/csvtk/join/main.nf
+Linting: modules/nf-core/csvtk/join/tests/nextflow.config
+Linting: modules/nf-core/csvtk/split/main.nf
+Linting: modules/nf-core/csvtk/split/tests/nextflow.config
+Linting: modules/nf-core/custom/gtffilter/main.nf
+Linting: modules/nf-core/custom/tx2gene/main.nf
+Linting: modules/nf-core/custom/dumpsoftwareversions/main.nf
+Linting: modules/nf-core/bowtie2/build/main.nf
+Linting: modules/nf-core/bowtie2/align/main.nf
+Linting: modules/nf-core/bowtie2/align/tests/cram_crai.config
+Linting: modules/nf-core/bowtie2/align/tests/sam2.config
+Linting: modules/nf-core/bowtie2/align/tests/large_index.config
+Linting: modules/nf-core/bowtie2/align/tests/sam.config
+Linting: modules/nf-core/gnu/sort/main.nf
+Linting: modules/nf-core/gnu/sort/tests/sort_simple_genome.config
+Linting: modules/nf-core/gnu/sort/tests/sort_simple_bed.config
+Linting: modules/nf-core/gnu/sort/tests/sort_complex.config
+Linting: modules/nf-core/fastp/main.nf
+Linting: modules/nf-core/fastp/tests/nextflow.interleaved.config
+Linting: modules/nf-core/fastp/tests/nextflow.save_failed.config
+Linting: modules/nf-core/trimgalore/main.nf
+Linting: modules/nf-core/trimgalore/tests/nextflow.config
+Linting: modules/nf-core/agat/convertbed2gff/main.nf
+Linting: modules/nf-core/agat/spaddintrons/main.nf
+Linting: modules/nf-core/ucsc/gtftogenepred/main.nf
+Linting: modules/nf-core/ucsc/gtftogenepred/tests/nextflow.config
+Linting: modules/nf-core/miranda/main.nf
+Linting: modules/nf-core/miranda/tests/nextflow.config
+Linting: modules/nf-core/filtlong/main.nf
+Linting: modules/nf-core/filtlong/tests/nextflow.config
+Linting: modules/nf-core/trinity/main.nf
+Linting: modules/nf-core/trinity/tests/nextflow.config
+Linting: modules/nf-core/bedtools/intersect/main.nf
+Linting: modules/nf-core/bedtools/intersect/tests/nextflow.config
+Linting: modules/nf-core/bedtools/groupby/main.nf
+Linting: modules/nf-core/bedtools/groupby/tests/nextflow.config
+Linting: modules/nf-core/bedtools/getfasta/main.nf
+Linting: modules/nf-core/bedtools/sort/main.nf
+Linting: modules/nf-core/bedtools/sort/tests/nextflow.config
+Linting: modules/nf-core/circexplorer2/parse/main.nf
+Linting: modules/nf-core/circexplorer2/annotate/main.nf
+Linting: modules/nf-core/gawk/main.nf
+Linting: modules/nf-core/gawk/tests/nextflow.config
+Linting: modules/nf-core/stringtie/stringtie/main.nf
+Linting: modules/nf-core/stringtie/stringtie/tests/nextflow.config
+Warn  main.nf:92:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  92 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  main.nf:97:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  97 |     ch_fasta = Channel.value([[id: "fasta"], file(params.fasta, checkI
+╰     |                ^^^^^^^
+
+Warn  main.nf:98:14: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  98 |     ch_gtf = Channel.value([[id: "gtf"], file(params.gtf, checkIfExist
+╰     |              ^^^^^^^
+
+Warn  main.nf:99:39: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  99 |     ch_blacklist = params.blacklist ? Channel.value(file(params.blackl
+╰     |                                       ^^^^^^^
+
+Warn  main.nf:99:100: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  99 | l.value(file(params.blacklist, checkIfExists: true)) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  main.nf:100:33: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 100 |     ch_mature = params.mature ? Channel.value([[id: "mature"], file(pa
+╰     |                                 ^^^^^^^
+
+Warn  main.nf:100:109: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 100 | mature"], file(params.mature, checkIfExists: true)]) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  main.nf:101:39: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 |     ch_phenotype = params.phenotype ? Channel.value([[id: "phenotype"]
+╰     |                                       ^^^^^^^
+
+Warn  main.nf:101:121: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 | ype"], file(params.phenotype, checkIfExists: true)]) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  main.nf:103:11: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 103 |         ? Channel.fromList(
+╰     |           ^^^^^^^
+
+Warn  main.nf:106:11: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 106 |         : Channel.empty()
+╰     |           ^^^^^^^
+
+Warn  main.nf:107:59: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 107 |     ch_mirna = params.mature && params.mirna_expression ? Channel.valu
+╰     |                                                           ^^^^^^^
+
+Warn  main.nf:107:144: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 107 | file(params.mirna_expression, checkIfExists: true)]) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+
+
+
+Warn  modules/local/circtest/prepare/main.nf:19:5: Variable was declared but not used
+│  19 |     prefix = task.ext.prefix ?: meta.id
+╰     |     ^^^^^^
+
+
+Warn  modules/local/ciri/build_list/main.nf:19:5: Variable was declared but not used
+│  19 |     max_shift = task.ext.max_shift ?: 0
+╰     |     ^^^^^^^^^
+
+
+
+
+
+Warn  modules/local/combinebeds/reads/main.nf:21:5: Variable was declared but not used
+│  21 |     consider_strand = task.ext.consider_strand ?: false
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  modules/local/combinebeds/reads/main.nf:22:5: Variable was declared but not used
+│  22 |     min_tools       = task.ext.min_tools       ?: 2
+╰     |     ^^^^^^^^^
+
+
+Warn  modules/local/combinebeds/shifts/main.nf:19:5: Variable was declared but not used
+│  19 |     prefix      = task.ext.prefix      ?: "${meta.id}"
+╰     |     ^^^^^^
+
+
+
+
+
+
+
+
+Warn  modules/local/majority_vote/main.nf:22:5: Variable was declared but not used
+│  22 |     min_tools = params.mirna_min_tools
+╰     |     ^^^^^^^^^
+
+
+
+Warn  modules/local/matrix/join_samples/main.nf:21:5: Variable was declared but not used
+│  21 |     metacols = task.ext.metacols ?: "gene_id,gene_name"
+╰     |     ^^^^^^^^
+
+Warn  modules/local/matrix/join_samples/main.nf:22:5: Variable was declared but not used
+│  22 |     has_header = task.ext.has_header == null ? true : task.ext.has_hea
+╰     |     ^^^^^^^^^^
+
+
+
+Warn  modules/local/mirna_targets/main.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+
+
+
+
+Warn  modules/local/tximeta/tximeta/main.nf:22:5: Variable was declared but not used
+│  22 |     prefix = task.ext.prefix ?: meta.id
+╰     |     ^^^^^^
+
+
+
+
+
+Error modules/nf-core/bedtools/groupby/main.nf:24:9: `summary_col` is already declared
+│  24 |     def summary_col = task.ext.summary_col ? "-c ${task.ext.summary_co
+╰     |         ^^^^^^^^^^^
+
+
+
+
+
+
+Warn  modules/nf-core/bowtie/build/main.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+Warn  modules/nf-core/bwa/mem/main.nf:31:9: Variable was declared but not used
+│  31 |     def samtools_command = sort_bam ? 'sort' : 'view'
+╰     |         ^^^^^^^^^^^^^^^^
+
+Warn  modules/nf-core/bwa/mem/main.nf:37:9: Variable was declared but not used
+│  37 |     def reference = fasta && extension=="cram"  ? "--reference ${fasta
+╰     |         ^^^^^^^^^
+
+
+Warn  modules/nf-core/cat/cat/main.nf:23:40: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  23 |     def file_list = files_in.collect { it.toString() }
+╰     |                                        ^^
+
+Warn  modules/nf-core/cat/cat/main.nf:58:42: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  58 |     def file_list   = files_in.collect { it.toString() }
+╰     |                                          ^^
+
+
+Warn  modules/nf-core/cat/fastq/main.nf:22:60: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  22 |     def readList = reads instanceof List ? reads.collect { it.toString
+╰     |                                                            ^^
+
+Warn  modules/nf-core/cat/fastq/main.nf:58:60: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  58 |     def readList = reads instanceof List ? reads.collect { it.toString
+╰     |                                                            ^^
+
+
+
+
+
+Warn  modules/nf-core/csvtk/split/main.nf:24:9: Variable was declared but not used
+│  24 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/nf-core/custom/dumpsoftwareversions/main.nf:22:9: Variable was declared but not used
+│  22 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+
+
+Warn  modules/nf-core/gawk/main.nf:26:54: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  26 |     suffix    = task.ext.suffix ?: "${input.collect{ it.getExtension()
+╰     |                                                      ^^
+
+Warn  modules/nf-core/gawk/main.nf:29:37: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  29 |     lst_gz     = input.findResults{ it.getExtension().endsWith("gz") ?
+╰     |                                     ^^
+
+Warn  modules/nf-core/gawk/main.nf:29:72: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  29 | tExtension().endsWith("gz") ? it.toString() : null }
+╰     |                               ^^
+
+Warn  modules/nf-core/gawk/main.nf:31:34: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  31 |     input_cmd  = input.collect { it.toString() - ~/\.gz$/ }.join(" ")
+╰     |                                  ^^
+
+Warn  modules/nf-core/gawk/main.nf:34:49: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  34 |     cleanup    = lst_gz ? "rm ${lst_gz.collect{ it - ~/\.gz$/ }.join("
+╰     |                                                 ^^
+
+Warn  modules/nf-core/gawk/main.nf:37:16: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  37 |         assert it.name != "${prefix}.${suffix}" : "Input and output na
+╰     |                ^^
+
+
+Warn  modules/nf-core/gffread/main.nf:26:103: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  26 | ', '-y' ].any { args.contains(it) } ) ? 'fasta' : 'gff3' )
+╰     |                               ^^
+
+Warn  modules/nf-core/gffread/main.nf:30:61: Parameter was not used -- prefix with `_` to suppress warning
+│  30 | laceAll(/(.*)(-[wxy])(.*)/) { all, pre, param, post -> "$pre $post $pa
+╰     |                               ^^^
+
+Warn  modules/nf-core/gffread/main.nf:49:103: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  49 | ', '-y' ].any { args.contains(it) } ) ? 'fasta' : 'gff3' )
+╰     |                               ^^
+
+
+
+
+
+Warn  modules/nf-core/hisat2/extractsplicesites/main.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+
+
+
+
+
+
+Error modules/nf-core/segemehl/align/main.nf:28:9: `reads` is already declared
+│  28 |     def reads = meta.single_end ? "-q ${reads}" : "-q ${reads[0]} -p $
+╰     |         ^^^^^
+
+
+
+
+
+Warn  modules/nf-core/star/align/main.nf:46:56: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  46 |     meta.single_end ? [reads].flatten().each{reads1 << it} : reads.eac
+╰     |                                                        ^^
+
+
+
+
+Warn  modules/nf-core/trimgalore/main.nf:47:31: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  47 |         args_list.removeAll { it.toLowerCase().contains('_r2 ') }
+╰     |                               ^^
+
+
+Error modules/nf-core/trinity/main.nf:26:20: Unexpected input: ','
+│  26 |     def reads1 = [], reads2 = []
+╰     |                    ^
+
+
+
+
+Warn  subworkflows/local/annotation.nf:18:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  18 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/bsj_detection.nf:44:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  44 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/bsj_detection.nf:45:34: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  45 |     ch_bsj_bed_per_sample_tool = Channel.empty()
+╰     |                                  ^^^^^^^
+
+Warn  subworkflows/local/bsj_detection.nf:46:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  46 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/bsj_detection.nf:50:60: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  50 |     def tools_selected = params.tools.split(',').collect { it.trim().t
+╰     |                                                            ^^
+
+Warn  subworkflows/local/bsj_detection.nf:51:68: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  51 | li_tools.split(',').collect { it.trim().toLowerCase() }
+╰     |                               ^^
+
+Warn  subworkflows/local/bsj_detection.nf:64:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  64 |         ch_star_bam = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/bsj_detection.nf:112:33: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 112 |         ch_reads_fixed_length = Channel.empty()
+╰     |                                 ^^^^^^^
+
+Warn  subworkflows/local/bsj_detection.nf:113:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 113 |         ch_ciri_txt = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/bsj_detection.nf:114:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 114 |         ch_ciri_sam = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/bsj_detection.nf:154:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 154 |         ch_psirc_bsj = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/bsj_detection.nf:266:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 266 |         Channel.empty().mix(ch_bsj_bed12_combined).mix(ch_bsj_bed12_pe
+╰     |         ^^^^^^^
+
+
+Warn  subworkflows/local/combine_transcriptomes.nf:12:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  12 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/combine_transcriptomes.nf:15:101: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  15 | tf).map{_meta, gtf -> gtf}.collect().map{[[id: "transcriptome"], it]},
+╰     |                                                                  ^^
+
+
+Warn  subworkflows/local/detection_tools/circexplorer2.nf:6:5: Parameter was not used -- prefix with `_` to suppress warning
+│   6 |     fasta
+╰     |     ^^^^^
+
+Warn  subworkflows/local/detection_tools/circexplorer2.nf:8:5: Parameter was not used -- prefix with `_` to suppress warning
+│   8 |     circexplorer2_index
+╰     |     ^^^^^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/detection_tools/circexplorer2.nf:11:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  11 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/detection_tools/circrna_finder.nf:11:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  11 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/detection_tools/circtools.nf:19:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/detection_tools/ciri.nf:17:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/detection_tools/ciri.nf:19:66: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  19 | li_tools.split(',').collect { it.trim() }.contains('cirifull')
+╰     |                               ^^
+
+Warn  subworkflows/local/detection_tools/ciri.nf:77:63: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  77 | ds_fixed_length = cirifull_enabled ? FASTP.out.reads : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+
+Warn  subworkflows/local/detection_tools/find_circ.nf:18:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  18 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/detection_tools/mapsplice.nf:9:5: Parameter was not used -- prefix with `_` to suppress warning
+│   9 |     fasta
+╰     |     ^^^^^
+
+Warn  subworkflows/local/detection_tools/mapsplice.nf:12:5: Parameter was not used -- prefix with `_` to suppress warning
+│  12 |     star_junctions
+╰     |     ^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/detection_tools/mapsplice.nf:13:5: Parameter was not used -- prefix with `_` to suppress warning
+│  13 |     circexplorer2_index
+╰     |     ^^^^^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/detection_tools/mapsplice.nf:16:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/detection_tools/psirc.nf:10:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  10 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/detection_tools/segemehl.nf:15:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/detection_tools/star2pass.nf:17:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/detection_tools/star2pass.nf:20:93: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  20 | map{ _meta, tab -> return tab }.collect().map{[[id: "star_sjdb"], it]}
+╰     |                                                                   ^^
+
+
+Warn  subworkflows/local/fli_detection.nf:24:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  24 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/fli_detection.nf:26:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  26 |     ch_bed12 = Channel.empty()
+╰     |                ^^^^^^^
+
+Warn  subworkflows/local/fli_detection.nf:27:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  27 |     ch_fasta = Channel.empty()
+╰     |                ^^^^^^^
+
+Warn  subworkflows/local/fli_detection.nf:29:59: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  29 |     def fli_tools = params.fli_tools.split(',').collect { it.trim() }
+╰     |                                                           ^^
+
+
+Warn  subworkflows/local/fli_tools/circtools.nf:16:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/fli_tools/cirifull.nf:21:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  21 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Error subworkflows/local/fli_tools/jccirc.nf:1:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/circrna/modules/nf-core/trinity/main.nf'
+│   1 | include { TRINITY } from '../../../modules/nf-core/trinity'
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error subworkflows/local/fli_tools/jccirc.nf:20:5: `TRINITY` is not defined
+│  20 |     TRINITY(ch_trinity)
+╰     |     ^^^^^^^
+
+Error subworkflows/local/fli_tools/jccirc.nf:21:35: `TRINITY` is not defined
+│  21 |     ch_versions = ch_versions.mix(TRINITY.out.versions)
+╰     |                                   ^^^^^^^
+
+Error subworkflows/local/fli_tools/jccirc.nf:32:22: `TRINITY` is not defined
+│  32 |             .combine(TRINITY.out.transcript_fasta
+╰     |                      ^^^^^^^
+
+Warn  subworkflows/local/fli_tools/jccirc.nf:14:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  14 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/fli_tools/psirc.nf:11:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  11 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/longread.nf:9:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│   9 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/longread_tools/circtools.nf:10:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  10 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/mirna/mirna_bindingsites.nf:13:5: Parameter was not used -- prefix with `_` to suppress warning
+│  13 |     circrna_bed12
+╰     |     ^^^^^^^^^^^^^
+
+Warn  subworkflows/local/mirna/mirna_bindingsites.nf:17:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/mirna/mirna_bindingsites.nf:18:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  18 |     ch_predictions = Channel.empty()
+╰     |                      ^^^^^^^
+
+Warn  subworkflows/local/mirna/mirna_bindingsites.nf:33:60: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  33 |     tools_selected = params.mirna_tools.split(',').collect{it.trim().t
+╰     |                                                            ^^
+
+Warn  subworkflows/local/mirna/mirna_bindingsites.nf:78:90: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  78 | dictions.map{_meta, file -> file}.collect().map{[[id: "mirna"], it]} )
+╰     |                                                                 ^^
+
+Warn  subworkflows/local/mirna/mirna_bindingsites.nf:109:99: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 109 | = ch_targetscan_meta_formatted.map { [[id: "mature_targetscan"], it] }
+╰     |                                                                  ^^
+
+
+Warn  subworkflows/local/mirna_prediction.nf:17:5: Parameter was not used -- prefix with `_` to suppress warning
+│  17 |     transcript_counts
+╰     |     ^^^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/mirna_prediction.nf:21:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  21 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/mirna_prediction.nf:45:98: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  45 |  }.splitCsv( sep: '\t' ).map{ it[0] }.unique().collect()
+╰     |                               ^^
+
+Warn  subworkflows/local/mirna_prediction.nf:73:9: Variable was declared but not used
+│  73 |         ch_correlation_results = COMPUTE_CORRELATIONS.out.correlations
+╰     |         ^^^^^^^^^^^^^^^^^^^^^^
+
+
+Warn  subworkflows/local/prepare_genome.nf:23:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  23 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome.nf:25:57: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  25 |     detection_tools = params.tools.split(',').collect { it.trim().toLo
+╰     |                                                         ^^
+
+Warn  subworkflows/local/prepare_genome.nf:47:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  47 |         ch_bowtie = Channel.value([[id: "bowtie"], file(params.bowtie,
+╰     |                     ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome.nf:55:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  55 |         ch_bowtie = Channel.empty()
+╰     |                     ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome.nf:59:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  59 |         ch_bowtie2 = Channel.value([[id: "bowtie2"], file(params.bowti
+╰     |                      ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome.nf:67:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  67 |         ch_bowtie2 = Channel.empty()
+╰     |                      ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome.nf:71:18: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  71 |         ch_bwa = Channel.value([[id: "bwa"], file(params.bwa, checkIfE
+╰     |                  ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome.nf:79:18: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  79 |         ch_bwa = Channel.empty()
+╰     |                  ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome.nf:82:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  82 |     ch_hisat2_splice_sites = Channel.empty()
+╰     |                              ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome.nf:84:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  84 |         ch_hisat2 = Channel.value([[id: "hisat2"], file(params.hisat2,
+╰     |                     ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome.nf:96:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  96 |         ch_hisat2 = Channel.empty()
+╰     |                     ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome.nf:100:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 100 |         ch_star = Channel.value([[id: "star"], file(params.star, check
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome.nf:108:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 108 |         ch_star = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome.nf:119:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 119 |     ch_psirc_index = Channel.empty()
+╰     |                      ^^^^^^^
+
+
+Warn  subworkflows/local/quantification.nf:13:5: Parameter was not used -- prefix with `_` to suppress warning
+│  13 |     circ_annotation_gtf
+╰     |     ^^^^^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/quantification.nf:22:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  22 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/quantification.nf:23:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  23 |     ch_gene_counts = Channel.empty()
+╰     |                      ^^^^^^^
+
+Warn  subworkflows/local/quantification.nf:24:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  24 |     ch_circ_counts = Channel.empty()
+╰     |                      ^^^^^^^
+
+Warn  subworkflows/local/quantification.nf:25:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  25 |     ch_ciriquant = Channel.empty()
+╰     |                    ^^^^^^^
+
+Warn  subworkflows/local/quantification.nf:26:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  26 |     ch_stringtie = Channel.empty()
+╰     |                    ^^^^^^^
+
+Warn  subworkflows/local/quantification.nf:27:14: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  27 |     ch_rds = Channel.empty()
+╰     |              ^^^^^^^
+
+Warn  subworkflows/local/quantification.nf:29:71: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  29 | on_tools.split(',').collect { it.trim().toLowerCase() }
+╰     |                               ^^
+
+Warn  subworkflows/local/quantification.nf:67:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  67 |         ch_aggregations = Channel.fromList(tools_selected.intersect(ag
+╰     |                           ^^^^^^^
+
+
+Warn  subworkflows/local/quantification_tools/ciriquant.nf:17:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/quantification_tools/psirc_quant.nf:25:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  25 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/quantification_tools/psirc_quant.nf:38:91: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  38 | y.map { _meta, quant -> quant }.collect().map { [[id: "quant"], it] },
+╰     |                                                                 ^^
+
+Warn  subworkflows/local/quantification_tools/psirc_quant.nf:59:112: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  59 |  _meta, counts -> counts }.collect().map { [[id: "gene_counts"], it] }
+╰     |                                                                  ^^
+
+Warn  subworkflows/local/quantification_tools/psirc_quant.nf:64:100: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  64 | ene.map { _meta, tpm -> tpm }.collect().map { [[id: "gene_tpm"], it] }
+╰     |                                                                  ^^
+
+Warn  subworkflows/local/quantification_tools/psirc_quant.nf:69:116: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  69 |  { _meta, counts -> counts }.collect().map { [[id: "tx_counts"], it] }
+╰     |                                                                  ^^
+
+Warn  subworkflows/local/quantification_tools/psirc_quant.nf:74:104: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  74 | cript.map { _meta, tpm -> tpm }.collect().map { [[id: "tx_tpm"], it] }
+╰     |                                                                  ^^
+
+Warn  subworkflows/local/quantification_tools/psirc_quant.nf:89:94: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  89 | e.map { _meta, se -> se }.collect().map { [[id: "experiments"], it] },
+╰     |                                                                 ^^
+
+
+Warn  subworkflows/local/statistical_tests.nf:16:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/utils_nfcore_circrna_pipeline/main.nf:31:5: Parameter was not used -- prefix with `_` to suppress warning
+│  31 |     monochrome_logs   // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_circrna_pipeline/main.nf:34:5: Parameter was not used -- prefix with `_` to suppress warning
+│  34 |     input             //  string: Path to input samplesheet
+╰     |     ^^^^^
+
+Warn  subworkflows/local/utils_nfcore_circrna_pipeline/main.nf:38:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  38 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_circrna_pipeline/main.nf:75:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  75 |     Channel
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_circrna_pipeline/main.nf:155:59: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 155 |     def fli_tools = params.fli_tools.split(',').collect { it.trim().to
+╰     |                                                           ^^
+
+Warn  subworkflows/local/utils_nfcore_circrna_pipeline/main.nf:156:55: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 156 |     def bsj_tools = params.tools.split(',').collect { it.trim().toLowe
+╰     |                                                       ^^
+
+Warn  subworkflows/local/utils_nfcore_circrna_pipeline/main.nf:190:42: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 190 |     def strandedness_ok = metas.collect{ it.strandedness }.unique().si
+╰     |                                          ^^
+
+Warn  subworkflows/local/utils_nfcore_circrna_pipeline/main.nf:195:59: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 195 |     def fli_tools = params.fli_tools.split(',').collect { it.trim().to
+╰     |                                                           ^^
+
+
+Warn  subworkflows/nf-core/bam_sort_stats_samtools/main.nf:16:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/nf-core/bam_stats_samtools/main.nf:15:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/nf-core/fastqc_trimgalore.nf:15:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/nf-core/fastqc_trimgalore.nf:16:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     fastqc_html = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/nf-core/fastqc_trimgalore.nf:17:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |     fastqc_zip  = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/nf-core/fastqc_trimgalore.nf:25:18: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  25 |     trim_html  = Channel.empty()
+╰     |                  ^^^^^^^
+
+Warn  subworkflows/nf-core/fastqc_trimgalore.nf:26:18: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  26 |     trim_zip   = Channel.empty()
+╰     |                  ^^^^^^^
+
+Warn  subworkflows/nf-core/fastqc_trimgalore.nf:27:18: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  27 |     trim_log   = Channel.empty()
+╰     |                  ^^^^^^^
+
+Warn  subworkflows/nf-core/fastqc_trimgalore.nf:28:5: Variable was declared but not used
+│  28 |     trimgalore_versions = Channel.empty()
+╰     |     ^^^^^^^^^^^^^^^^^^^
+
+Warn  subworkflows/nf-core/fastqc_trimgalore.nf:28:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  28 |     trimgalore_versions = Channel.empty()
+╰     |                           ^^^^^^^
+
+
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 | mYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
+╰     |                               ^^^^^^^
+
+
+Warn  workflows/circrna/main.nf:52:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  52 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/circrna/main.nf:91:5: Variable was declared but not used
+│  91 |     hisat2_index        = PREPARE_GENOME.out.hisat2
+╰     |     ^^^^^^^^^^^^
+
+Warn  workflows/circrna/main.nf:113:89: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 113 | IMGALORE.out.trim_zip.collect{it[1]}.ifEmpty([]))
+╰     |                               ^^
+
+Warn  workflows/circrna/main.nf:114:89: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 114 | IMGALORE.out.trim_log.collect{it[1]}.ifEmpty([]))
+╰     |                               ^^
+
+Warn  workflows/circrna/main.nf:232:34: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 232 |     ch_multiqc_config          = Channel.fromPath("$projectDir/assets/
+╰     |                                  ^^^^^^^
+
+Warn  workflows/circrna/main.nf:233:56: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 233 |     ch_multiqc_custom_config = params.multiqc_config ? Channel.fromPat
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/circrna/main.nf:233:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 233 | iqc_config ? Channel.fromPath(params.multiqc_config) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/circrna/main.nf:234:56: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 234 |     ch_multiqc_logo          = params.multiqc_logo   ? Channel.fromPat
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/circrna/main.nf:234:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 234 | iqc_logo   ? Channel.fromPath(params.multiqc_logo)   : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/circrna/main.nf:236:32: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 236 |     ch_workflow_summary      = Channel.value(paramsSummaryMultiqc(summ
+╰     |                                ^^^^^^^
+
+
+Error nextflow.config:233:21: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/circrna/conf/test_igenomes.config'
+│ 233 |     test_igenomes { includeConfig 'conf/test_igenomes.config' }
+╰     |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error nextflow.config:349:31: `manifest` is not defined
+│ 349 | \033[0;35m  nf-core/circrna ${manifest.version}\033[0m
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:352:26: `manifest` is not defined
+│ 352 |         afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${ma
+╰     |                          ^^^^^^^^
+
+Error nextflow.config:352:69: `manifest` is not defined
+│ 352 | ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "  
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:352:186: `manifest` is not defined
+│ 352 | doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:361:22: `validation` is not defined
+│ 361 |         beforeText = validation.help.beforeText
+╰     |                      ^^^^^^^^^^
+
+Error nextflow.config:362:21: `validation` is not defined
+│ 362 |         afterText = validation.help.afterText
+╰     |                     ^^^^^^^^^^
+
+Warn  nextflow.config:352:129: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 352 | lect { "    https://doi.org/${it.trim().replace('https://doi.org/','')
+╰     |                               ^^
+
+
+Nextflow linting complete!
+ ❌ 5 files had 14 errors
+ ✅ 186 files had no errors

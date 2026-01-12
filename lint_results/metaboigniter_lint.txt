@@ -1,0 +1,925 @@
+Linting Nextflow code..
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: nextflow.config
+Linting: workflows/metaboigniter.nf
+Linting: subworkflows/local/sirius.nf
+Linting: subworkflows/local/ms2query.nf
+Linting: subworkflows/local/utils_nfcore_metaboigniter_pipeline/main.nf
+Linting: subworkflows/local/linker.nf
+Linting: subworkflows/local/identification.nf
+Linting: subworkflows/local/quantification.nf
+Linting: subworkflows/local/ms2query_modeldownloader.nf
+Linting: subworkflows/local/requantification.nf
+Linting: subworkflows/local/annotation.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfvalidation_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: main.nf
+Linting: modules/local/pyopenms_reloadmaps.nf
+Linting: modules/local/openms_featurefindermetaboident.nf
+Linting: modules/local/ms2query_modeltrain.nf
+Linting: modules/local/pyopenms_extractmapping.nf
+Linting: modules/local/openms_idmapper.nf
+Linting: modules/local/ms2query_search.nf
+Linting: modules/local/pyopenms_c13detection.nf
+Linting: modules/local/openms_filefilter.nf
+Linting: modules/local/ms2query_downloadmodel.nf
+Linting: modules/local/pyopenms_generatesearchparamsunmapped.nf
+Linting: modules/local/openms_mapalignerposeclusteringmzml.nf
+Linting: modules/local/openms_gnpsexport.nf
+Linting: modules/local/general_mergefile.nf
+Linting: modules/local/ms2query_checkmodelfiles.nf
+Linting: modules/local/ms2query_modelfulltrain.nf
+Linting: modules/local/pyopenms_splitmgf.nf
+Linting: modules/local/pyopenms_conctsv.nf
+Linting: modules/local/pyopenms_splitfeaturexml.nf
+Linting: modules/local/pyopenms_extractfeaturemz.nf
+Linting: modules/local/openms_featurelinkerunlabeledkd.nf
+Linting: modules/local/openms_peakpickerhires.nf
+Linting: modules/local/pyopenms_generatesearchparams.nf
+Linting: modules/local/sirius_search.nf
+Linting: modules/local/pyopenms_merge.nf
+Linting: modules/local/openms_featurefindermetabo.nf
+Linting: modules/local/openms_metaboliteadductdecharger.nf
+Linting: modules/local/pyopenms_export.nf
+Linting: modules/local/pyopenms_filemerger.nf
+Linting: modules/local/pyopenms_removedup.nf
+Linting: modules/local/pyopenms_splitconsensus.nf
+Linting: modules/local/pyopenms_msmapping.nf
+Linting: modules/local/pyopenms_split.nf
+Linting: modules/local/pyopenms_isomapping.nf
+Linting: modules/local/openms_siriusparams.nf
+Linting: modules/local/pyopenms_calculateboundries.nf
+Linting: modules/local/ms2query_export.nf
+Linting: modules/local/openms_mapalignerposeclustering.nf
+Linting: modules/local/openms_maprttransformer.nf
+Linting: modules/local/openms_idmapperconsensus.nf
+Linting: modules/local/pyopenms_libbuilder.nf
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+
+Warn  modules/local/general_mergefile.nf:22:48: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  22 |     def inputs        = input_target.collect { it }.join(' ')
+╰     |                                                ^^
+
+
+Warn  modules/local/ms2query_checkmodelfiles.nf:31:51: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  31 |     def model_files        = modelfiles.collect { it }.join(' ')
+╰     |                                                   ^^
+
+
+
+
+Error modules/local/ms2query_modelfulltrain.nf:34:49: `PWD` is not defined
+│  34 |     fulltrain_ms2query.py --input $mgf --output $PWD/output/  --polari
+╰     |                                                 ^^^^
+
+Warn  modules/local/ms2query_modelfulltrain.nf:29:9: Variable was declared but not used
+│  29 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/ms2query_modelfulltrain.nf:30:9: Variable was declared but not used
+│  30 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/ms2query_modeltrain.nf:30:9: Variable was declared but not used
+│  30 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+
+
+
+Warn  modules/local/openms_featurelinkerunlabeledkd.nf:23:56: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  23 |     def featurexml_input        = featurexml.collect { it }.join(' ')
+╰     |                                                        ^^
+
+
+Warn  modules/local/openms_filefilter.nf:55:9: Variable was declared but not used
+│  55 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/openms_gnpsexport.nf:28:9: Variable was declared but not used
+│  28 |     def prefix = task.ext.prefix ?: meta.id
+╰     |         ^^^^^^
+
+Warn  modules/local/openms_gnpsexport.nf:29:44: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  29 |     def mzml_input        = mzml.collect { it }.join(' ')
+╰     |                                            ^^
+
+
+
+Warn  modules/local/openms_idmapperconsensus.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/openms_mapalignerposeclustering.nf:16:56: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  16 |     tuple val(meta), path({meta.id.collect { 'output/'+it+'.trafoXML' 
+╰     |                                                        ^^
+
+Warn  modules/local/openms_mapalignerposeclustering.nf:17:56: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  17 |     tuple val(meta), path({meta.id.collect { 'output/'+it+'.featureXML
+╰     |                                                        ^^
+
+Warn  modules/local/openms_mapalignerposeclustering.nf:27:56: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  27 |     def featurexml_input        = featurexml.collect { it }.join(' ')
+╰     |                                                        ^^
+
+Warn  modules/local/openms_mapalignerposeclustering.nf:28:61: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  28 |  = prefix.collect { 'output/'+it+'.trafoXML' }.join(' ')
+╰     |                               ^^
+
+Warn  modules/local/openms_mapalignerposeclustering.nf:29:63: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  29 |  = prefix.collect { 'output/'+it+'.featureXML' }.join(' ')
+╰     |                               ^^
+
+
+Warn  modules/local/openms_mapalignerposeclusteringmzml.nf:14:56: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  14 |     tuple val(meta), path({meta.id.collect { 'output/'+it+'.trafoXML' 
+╰     |                                                        ^^
+
+Warn  modules/local/openms_mapalignerposeclusteringmzml.nf:15:56: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  15 |     tuple val(meta), path({meta.id.collect { 'output/'+it+'.mzML' }}),
+╰     |                                                        ^^
+
+Warn  modules/local/openms_mapalignerposeclusteringmzml.nf:26:56: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  26 |     def featurexml_input        = featurexml.collect { it }.join(' ')
+╰     |                                                        ^^
+
+Warn  modules/local/openms_mapalignerposeclusteringmzml.nf:27:61: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  27 |  = prefix.collect { 'output/'+it+'.trafoXML' }.join(' ')
+╰     |                               ^^
+
+Warn  modules/local/openms_mapalignerposeclusteringmzml.nf:28:57: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  28 |     def mzml_output        = prefix.collect { 'output/'+it+'.mzML' }.j
+╰     |                                                         ^^
+
+
+
+
+
+Warn  modules/local/openms_siriusparams.nf:23:9: Variable was declared but not used
+│  23 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+Warn  modules/local/openms_siriusparams.nf:24:44: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  24 |     def mzml_input        = mzml.collect { it }.join(' ')
+╰     |                                            ^^
+
+Warn  modules/local/openms_siriusparams.nf:25:46: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  25 |     def ms_output        = mzml.collect { "${it.baseName}.ms" }.join('
+╰     |                                              ^^
+
+Warn  modules/local/openms_siriusparams.nf:26:43: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  26 |     def ms1_input        = mzml.collect { it }.join(' ')
+╰     |                                           ^^
+
+Warn  modules/local/openms_siriusparams.nf:27:56: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  27 |     def featurexml_input        = featurexml.collect { it }.join(' ')
+╰     |                                                        ^^
+
+
+
+
+Warn  modules/local/pyopenms_conctsv.nf:25:9: Variable was declared but not used
+│  25 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+Error modules/local/pyopenms_extractmapping.nf:28:18: `featurexmlcomplete` is not defined
+│  28 |         --inputc $featurexmlcomplete --inputr $featurexmlreq --output 
+╰     |                  ^^^^^^^^^^^^^^^^^^^
+
+Error modules/local/pyopenms_extractmapping.nf:28:47: `featurexmlreq` is not defined
+│  28 |         --inputc $featurexmlcomplete --inputr $featurexmlreq --output 
+╰     |                                               ^^^^^^^^^^^^^^
+
+
+Warn  modules/local/pyopenms_filemerger.nf:26:54: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  26 |     def inputs        = consensusxml_input.collect { it }.join(' ')
+╰     |                                                      ^^
+
+
+Warn  modules/local/pyopenms_generatesearchparams.nf:27:53: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  27 |     def mzml_input        = input_spectra.collect { it }.join(' ')
+╰     |                                                     ^^
+
+Warn  modules/local/pyopenms_generatesearchparams.nf:28:63: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  28 | t_spectra.collect { "output/${it.baseName}${map_index}.csv" }.join(' '
+╰     |                               ^^
+
+
+
+Warn  modules/local/pyopenms_isomapping.nf:25:53: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  25 |     def mzml_input        = input_spectra.collect { it }.join(' ')
+╰     |                                                     ^^
+
+
+
+
+Warn  modules/local/pyopenms_msmapping.nf:24:53: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  24 |     def mzml_input        = input_spectra.collect { it }.join(' ')
+╰     |                                                     ^^
+
+
+
+Warn  modules/local/pyopenms_removedup.nf:24:9: Variable was declared but not used
+│  24 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/pyopenms_removedup.nf:25:9: Variable was declared but not used
+│  25 |     def prefix = task.ext.prefix ?: meta.id
+╰     |         ^^^^^^
+
+Warn  modules/local/pyopenms_removedup.nf:26:44: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  26 |     def mzml_input        = mzml.collect { it }.join(' ')
+╰     |                                            ^^
+
+
+
+Warn  modules/local/pyopenms_splitconsensus.nf:22:9: Variable was declared but not used
+│  22 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/pyopenms_splitfeaturexml.nf:23:9: Variable was declared but not used
+│  23 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/pyopenms_splitmgf.nf:26:9: Variable was declared but not used
+│  26 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/sirius_search.nf:24:9: Variable was declared but not used
+│  24 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/nf-core/fastqc/main.nf:27:48: Parameter was not used -- prefix with `_` to suppress warning
+│  27 |     def renamed_files = old_new_pairs.collect{ old_name, new_name -> n
+╰     |                                                ^^^^^^^^
+
+
+Error modules/nf-core/multiqc/main.nf:28:31: Unexpected input: '/'
+│  28 |     def logo = multiqc_logo ? /--cl-config 'custom_logo: "${multiqc_lo
+╰     |                               ^
+
+
+Warn  subworkflows/local/annotation.nf:9:9: Parameter was not used -- prefix with `_` to suppress warning
+│   9 |         empty_id
+╰     |         ^^^^^^^^
+
+Warn  subworkflows/local/annotation.nf:10:9: Parameter was not used -- prefix with `_` to suppress warning
+│  10 |         separate
+╰     |         ^^^^^^^^
+
+Warn  subworkflows/local/annotation.nf:11:9: Parameter was not used -- prefix with `_` to suppress warning
+│  11 |         mzml_files
+╰     |         ^^^^^^^^^^
+
+Warn  subworkflows/local/annotation.nf:16:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/annotation.nf:20:73: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  20 | NMS_METABOLITEADDUCTDECHARGER(quantification_information.map{it[0,1]})
+╰     |                                                              ^^
+
+Warn  subworkflows/local/annotation.nf:21:9: Variable was declared but not used
+│  21 |         quantified_features=OPENMS_METABOLITEADDUCTDECHARGER.out.featu
+╰     |         ^^^^^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/annotation.nf:23:46: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  23 |         .join(quantification_information.map{it[0,2]},by:[0])
+╰     |                                              ^^
+
+
+Error subworkflows/local/identification.nf:106:20: Incomplete expression
+│ 104 | {
+│ 105 | 
+│ 106 | generated_params = OPENMS_FILEFILTER.out.consensusxml.map{it[0]}.combi
+│     |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│ 107 | PYOPENMS_GENERATESEARCHPARAMS.out.csv.collect{it[1]}
+╰ 108 | .map { files ->
+
+Error subworkflows/local/identification.nf:137:1: Incomplete expression
+│ 135 | // merge ms
+│ 136 | 
+│ 137 | OPENMS_FILEFILTER.out.consensusxml.map{it[0]}.combine(
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│ 138 | PYOPENMS_GENERATESEARCHPARAMS.out.ms.collect{it[1]}
+╰ 139 | .map { files ->
+
+Error subworkflows/local/identification.nf:165:1: Incomplete expression
+│ 163 | 
+│ 164 | 
+│ 165 | OPENMS_FILEFILTER.out.consensusxml.map{it[0]}.combine(
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│ 166 | PYOPENMS_GENERATESEARCHPARAMS.out.mgf.collect{it[1]}
+╰ 167 | .map { files ->
+
+Warn  subworkflows/local/identification.nf:23:5: Parameter was not used -- prefix with `_` to suppress warning
+│  23 |     quantification_information
+╰     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/identification.nf:41:15: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  41 | ch_versions = Channel.empty()
+╰     |               ^^^^^^^
+
+Warn  subworkflows/local/identification.nf:46:50: Parameter was not used -- prefix with `_` to suppress warning
+│  46 | consensusxml_data.combine(mzml_files.filter{meta,file->meta.level == "
+╰     |                                                  ^^^^
+
+Warn  subworkflows/local/identification.nf:46:108: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  46 | {meta,file->meta.level == "MS2" | meta.level == "MS12"}.collect{it[1]}
+╰     |                                                                 ^^
+
+Warn  subworkflows/local/identification.nf:70:67: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  70 | ONSENSUS.out.consensusxml.map{it[1]}.flatten().map{ file ->
+╰     |                               ^^
+
+Warn  subworkflows/local/identification.nf:83:26: Parameter was not used -- prefix with `_` to suppress warning
+│  83 | mzml_files.filter{ meta, file -> meta.level == "MS2" || meta.level == 
+╰     |                          ^^^^
+
+Warn  subworkflows/local/identification.nf:90:44: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  90 |         def metas = sortedTuples.collect { it[0] }
+╰     |                                            ^^
+
+Warn  subworkflows/local/identification.nf:91:44: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  91 |         def files = sortedTuples.collect { it[1] }
+╰     |                                            ^^
+
+Warn  subworkflows/local/identification.nf:98:66: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  98 | ERATESEARCHPARAMS.out.csv.map{it[1]}.flatten().map{file -> [[id:file.b
+╰     |                               ^^
+
+Warn  subworkflows/local/identification.nf:99:62: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  99 | NERATESEARCHPARAMS.out.ms.map{it[1]}.flatten().map{file -> [[id:file.b
+╰     |                               ^^
+
+Warn  subworkflows/local/identification.nf:100:64: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 100 | ERATESEARCHPARAMS.out.mgf.map{it[1]}.flatten().map{file -> [[id:file.b
+╰     |                               ^^
+
+Warn  subworkflows/local/identification.nf:106:59: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 106 | generated_params = OPENMS_FILEFILTER.out.consensusxml.map{it[0]}.combi
+╰     |                                                           ^^
+
+Warn  subworkflows/local/identification.nf:107:47: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 107 | PYOPENMS_GENERATESEARCHPARAMS.out.csv.collect{it[1]}
+╰     |                                               ^^
+
+Warn  subworkflows/local/identification.nf:123:17: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 123 | }.toList()).map{it[1]}.flatten().
+╰     |                 ^^
+
+Warn  subworkflows/local/identification.nf:137:40: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 137 | OPENMS_FILEFILTER.out.consensusxml.map{it[0]}.combine(
+╰     |                                        ^^
+
+Warn  subworkflows/local/identification.nf:138:46: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 138 | PYOPENMS_GENERATESEARCHPARAMS.out.ms.collect{it[1]}
+╰     |                                              ^^
+
+Warn  subworkflows/local/identification.nf:154:17: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 154 | }.toList()).map{it[1]}.flatten().
+╰     |                 ^^
+
+Warn  subworkflows/local/identification.nf:165:40: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 165 | OPENMS_FILEFILTER.out.consensusxml.map{it[0]}.combine(
+╰     |                                        ^^
+
+Warn  subworkflows/local/identification.nf:166:47: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 166 | PYOPENMS_GENERATESEARCHPARAMS.out.mgf.collect{it[1]}
+╰     |                                               ^^
+
+Warn  subworkflows/local/identification.nf:182:17: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 182 | }.toList()).map{it[1]}.flatten().
+╰     |                 ^^
+
+Warn  subworkflows/local/identification.nf:198:26: Parameter was not used -- prefix with `_` to suppress warning
+│ 198 | mzml_files.filter{ meta, file -> meta.level == "MS2" || meta.level == 
+╰     |                          ^^^^
+
+Warn  subworkflows/local/identification.nf:201:7: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 201 | ).map{it[1,2,3]} | PYOPENMS_GENERATESEARCHPARAMSUNMAPPED
+╰     |       ^^
+
+Warn  subworkflows/local/identification.nf:210:17: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 210 | output_sirius = Channel.empty()
+╰     |                 ^^^^^^^
+
+Warn  subworkflows/local/identification.nf:211:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 211 | output_fingerid = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/identification.nf:226:12: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 226 | ms2query = Channel.empty()
+╰     |            ^^^^^^^
+
+
+Error subworkflows/local/linker.nf:88:80: `consensusxml` is already declared
+│  88 | DKD.out.consensusxml.map{meta,consensusxml->[[id:consensusxml.baseName
+╰     |                               ^^^^^^^^^^^^
+
+Warn  subworkflows/local/linker.nf:19:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 |         ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/linker.nf:25:36: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  25 |     quantification_information.map{it[0,1]} | PYOPENMS_EXTRACTFEATUREM
+╰     |                                    ^^
+
+Warn  subworkflows/local/linker.nf:31:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  31 | PYOPENMS_CONCTSV_MZ(Channel.of([id:"merged_mz_range"]).combine(PYOPENM
+╰     |                     ^^^^^^^
+
+Warn  subworkflows/local/linker.nf:31:106: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  31 | RACTFEATUREMZ.out.tsv.collect{it[1]}.toList()),"tsv","tsv")
+╰     |                               ^^
+
+Warn  subworkflows/local/linker.nf:38:57: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  38 | PYOPENMS_SPLITFEATUREXML(quantification_information.map{it[0,1]},
+╰     |                                                         ^^
+
+Warn  subworkflows/local/linker.nf:39:45: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  39 |     PYOPENMS_CALCULATEBOUNDRIES.out.tsv.map{it[1]}
+╰     |                                             ^^
+
+Warn  subworkflows/local/linker.nf:45:49: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  45 | PYOPENMS_SPLITFEATUREXML.out.featurexml.collect{it[1]}.flatten().map{f
+╰     |                                                 ^^
+
+Warn  subworkflows/local/linker.nf:55:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  55 | to_be_merged = Channel.of([id:"Linked_data"]).combine(
+╰     |                ^^^^^^^
+
+Warn  subworkflows/local/linker.nf:56:59: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  56 | OPENMS_FEATURELINKERUNLABELEDKDPARTS.out.consensusxml.map{it[1]}.colle
+╰     |                                                           ^^
+
+Warn  subworkflows/local/linker.nf:77:58: Parameter was not used -- prefix with `_` to suppress warning
+│  77 | consensusxml=   PYOPENMS_FILEMERGER.out.consensusxml.map{meta,consensu
+╰     |                                                          ^^^^
+
+Warn  subworkflows/local/linker.nf:81:1: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  81 | Channel.of([id:"Linked_data"]).combine(quantification_information.coll
+╰     | ^^^^^^^
+
+Warn  subworkflows/local/linker.nf:81:75: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  81 | ification_information.collect{it[1]}.map { files ->
+╰     |                               ^^
+
+Warn  subworkflows/local/linker.nf:88:75: Parameter was not used -- prefix with `_` to suppress warning
+│  88 | ABELEDKD.out.consensusxml.map{meta,consensusxml->[[id:consensusxml.bas
+╰     |                               ^^^^
+
+
+Warn  subworkflows/local/ms2query.nf:26:15: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  26 | ch_versions = Channel.empty()
+╰     |               ^^^^^^^
+
+Warn  subworkflows/local/ms2query.nf:40:1: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  40 | Channel
+╰     | ^^^^^^^
+
+Warn  subworkflows/local/ms2query.nf:65:85: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  65 | NMS_SPLITMGF.out.mgf.flatMap{id, values -> values.collect { [id, it]}}
+╰     |                                                                  ^^
+
+Warn  subworkflows/local/ms2query.nf:73:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  73 |     Channel
+╰     |     ^^^^^^^
+
+
+Warn  subworkflows/local/ms2query_modeldownloader.nf:8:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│   8 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/ms2query_modeldownloader.nf:12:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  12 |     Channel
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/ms2query_modeldownloader.nf:18:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  18 |     Channel
+╰     |     ^^^^^^^
+
+
+Error subworkflows/local/quantification.nf:32:5: Variables in a closure should be declared with `def`
+│  32 |     idd=mzml.baseName
+╰     |     ^^^
+
+Warn  subworkflows/local/quantification.nf:17:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/quantification.nf:28:24: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  28 |     mzml_files.collect{it[0]}.toList().combine(mzml_files.collect{it[1
+╰     |                        ^^
+
+Warn  subworkflows/local/quantification.nf:28:67: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  28 | ().combine(mzml_files.collect{it[1]}.toList()) | OPENMS_MAPALIGNERPOSE
+╰     |                               ^^
+
+Warn  subworkflows/local/quantification.nf:33:85: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  33 | SECLUSTERINGMZML.out.mzml.map{it[1]}.flatten().map{mzml ->
+╰     |                               ^^
+
+Warn  subworkflows/local/quantification.nf:35:32: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  35 |     [[map_id:idd], mzml]}).map{it[1,3]}
+╰     |                                ^^
+
+Warn  subworkflows/local/quantification.nf:44:44: Parameter was not used -- prefix with `_` to suppress warning
+│  44 | quantificaiton_data=mzml_files.filter{meta,file->meta.level == "MS1" |
+╰     |                                            ^^^^
+
+Warn  subworkflows/local/quantification.nf:53:33: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  53 |     quantified_features.collect{it[0]}.toList().combine(quantified_fea
+╰     |                                 ^^
+
+Warn  subworkflows/local/quantification.nf:53:85: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  53 | e(quantified_features.collect{it[1]}.toList()) | OPENMS_MAPALIGNERPOSE
+╰     |                               ^^
+
+Warn  subworkflows/local/quantification.nf:59:62: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  59 | CLUSTERING.out.featurexml.map{it[1]}.flatten().map{featurexml ->
+╰     |                               ^^
+
+Warn  subworkflows/local/quantification.nf:61:60: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  61 |     .join(OPENMS_MAPALIGNERPOSECLUSTERING.out.trafoxml.map{it[1]}.flat
+╰     |                                                            ^^
+
+Warn  subworkflows/local/quantification.nf:63:35: Parameter was not used -- prefix with `_` to suppress warning
+│  63 |     .join(quantificaiton_data.map{meta,mzml->
+╰     |                                   ^^^^
+
+Warn  subworkflows/local/quantification.nf:64:34: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  64 | tuple(mzml.baseName, mzml)}).map{it[1..4]}
+╰     |                                  ^^
+
+Warn  subworkflows/local/quantification.nf:67:23: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  67 |     combined_data.map{it[0,2,3]} | OPENMS_MAPRTTRANSFORMER
+╰     |                       ^^
+
+Warn  subworkflows/local/quantification.nf:72:43: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  72 |     quantified_features=combined_data.map{it[0,1]}
+╰     |                                           ^^
+
+
+Warn  subworkflows/local/requantification.nf:14:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  14 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/requantification.nf:20:44: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  20 | quantified_features.combine(data_split.map{it[1]}) |  PYOPENMS_RELOADM
+╰     |                                            ^^
+
+Warn  subworkflows/local/requantification.nf:26:16: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  26 | data_split.map{it[0,2]} | PYOPENMS_LIBBUILDER
+╰     |                ^^
+
+Warn  subworkflows/local/requantification.nf:30:61: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  30 | OPENMS_LIBBUILDER.out.tsv.map{it[1]}) | OPENMS_FEATUREFINDERMETABOIDEN
+╰     |                               ^^
+
+
+Warn  subworkflows/local/sirius.nf:19:15: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 | ch_versions = Channel.empty()
+╰     |               ^^^^^^^
+
+Warn  subworkflows/local/sirius.nf:28:82: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  28 | PENMS_SPLITMS.out.ms.flatMap{id, values -> values.collect { [id, it]}}
+╰     |                                                                  ^^
+
+
+Error subworkflows/local/utils_nfcore_metaboigniter_pipeline/main.nf:14:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/metaboigniter/subworkflows/nf-core/utils_nextflow_pipeline/main.nf'
+│  14 | include { UTILS_NEXTFLOW_PIPELINE   } from '../../nf-core/utils_nextfl
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error subworkflows/local/utils_nfcore_metaboigniter_pipeline/main.nf:47:5: `UTILS_NEXTFLOW_PIPELINE` is not defined
+│  47 |     UTILS_NEXTFLOW_PIPELINE (
+╰     |     ^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_metaboigniter_pipeline/main.nf:38:5: Parameter was not used -- prefix with `_` to suppress warning
+│  38 |     input             //  string: Path to input samplesheet
+╰     |     ^^^^^
+
+Warn  subworkflows/local/utils_nfcore_metaboigniter_pipeline/main.nf:42:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  42 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_metaboigniter_pipeline/main.nf:83:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  83 |     Channel
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_metaboigniter_pipeline/main.nf:160:39: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 160 |     def endedness_ok = metas.collect{ it.single_end }.unique().size ==
+╰     |                                       ^^
+
+
+Error subworkflows/nf-core/utils_nextflow_pipeline/main.nf:111:14: Unexpected input: 'i'
+│ 111 |     for (int i = 0; i < n - 1; i++) {
+╰     |              ^
+
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:5:1: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
+│   5 | import org.yaml.snakeyaml.Yaml
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:6:1: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
+│   6 | import nextflow.extension.FilesEx
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:37:5: `valid_config` was assigned but not declared
+│  37 |     valid_config = true
+╰     |     ^^^^^^^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:45:9: `valid_config` was assigned but not declared
+│  45 |         valid_config = false
+╰     |         ^^^^^^^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:47:12: `valid_config` is not defined
+│  47 |     return valid_config
+╰     |            ^^^^^^^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:99:17: `Yaml` is not defined
+│  99 |     Yaml yaml = new Yaml()
+╰     |                 ^^^^^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:100:5: `versions` was assigned but not declared
+│ 100 |     versions = yaml.load(yaml_file).collectEntries { k, v -> [ k.token
+╰     |     ^^^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:27: `versions` is not defined
+│ 101 |     return yaml.dumpAsMap(versions).trim()
+╰     |                           ^^^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:131:5: `for` loops are no longer supported
+│ 131 |     for (group in summary_params.keySet()) {
+╰     |     ^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:131:10: `group` is not defined
+│ 131 |     for (group in summary_params.keySet()) {
+╰     |          ^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:132:47: `group` is not defined
+│ 132 |         def group_params = summary_params.get(group)  // This gets the
+╰     |                                               ^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:134:68: `group` is not defined
+│ 134 | p style=\"font-size:110%\"><b>$group</b></p>\n"
+╰     |                               ^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:136:13: `for` loops are no longer supported
+│ 136 |             for (param in group_params.keySet()) {
+╰     |             ^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:136:18: `param` is not defined
+│ 136 |             for (param in group_params.keySet()) {
+╰     |                  ^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:137:49: `param` is not defined
+│ 137 |                 summary_section += "        <dt>$param</dt><dd><samp>$
+╰     |                                                 ^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:137:89: `param` is not defined
+│ 137 | ><dd><samp>${group_params.get(param) ?: '<span style=\"color:#999999;\
+╰     |                               ^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:284:5: `for` loops are no longer supported
+│ 284 |     for (group in summary_params.keySet()) {
+╰     |     ^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:284:10: `group` is not defined
+│ 284 |     for (group in summary_params.keySet()) {
+╰     |          ^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:285:34: `group` is not defined
+│ 285 |         summary << summary_params[group]
+╰     |                                  ^^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:344:42: `GroovyException` is not defined
+│ 344 |             if (plaintext_email) { throw GroovyException('Send plainte
+╰     |                                          ^^^^^^^^^^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:361:5: `FilesEx` is not defined
+│ 361 |     FilesEx.copyTo(output_hf.toPath(), "${outdir}/pipeline_info/pipeli
+╰     |     ^^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:367:5: `FilesEx` is not defined
+│ 367 |     FilesEx.copyTo(output_tf.toPath(), "${outdir}/pipeline_info/pipeli
+╰     |     ^^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:392:5: `for` loops are no longer supported
+│ 392 |     for (group in summary_params.keySet()) {
+╰     |     ^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:392:10: `group` is not defined
+│ 392 |     for (group in summary_params.keySet()) {
+╰     |          ^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:393:34: `group` is not defined
+│ 393 |         summary << summary_params[group]
+╰     |                                  ^^^^^^^
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:121:48: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 121 |                 .map { processVersionsFromYAML(it) }
+╰     |                                                ^^
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:123:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 123 |                 .mix(Channel.of(workflowVersionToYAML()))
+╰     |                      ^^^^^^^
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:264:14: Parameter was not used -- prefix with `_` to suppress warning
+│ 264 |     } catch (all) {
+╰     |              ^^^
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:350:18: Parameter was not used -- prefix with `_` to suppress warning
+│ 350 |         } catch (all) {
+╰     |                  ^^^
+
+
+Error workflows/metaboigniter.nf:31:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/metaboigniter/modules/nf-core/multiqc/main.nf'
+│  31 | include { MULTIQC                } from '../modules/nf-core/multiqc/ma
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/metaboigniter.nf:161:5: `MULTIQC` is not defined
+│ 161 |     MULTIQC (
+╰     |     ^^^^^^^
+
+Error workflows/metaboigniter.nf:169:22: `MULTIQC` is not defined
+│ 169 |     multiqc_report = MULTIQC.out.report.toList() // channel: /path/to/
+╰     |                      ^^^^^^^
+
+Warn  workflows/metaboigniter.nf:49:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  49 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  workflows/metaboigniter.nf:50:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  50 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/metaboigniter.nf:54:14: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  54 |     empty_id=Channel.fromPath("$projectDir/assets/emptyfile.idXML")
+╰     |              ^^^^^^^
+
+Warn  workflows/metaboigniter.nf:72:62: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  72 | on_information,empty_id,false,Channel.empty(),params.skip_adduct_detec
+╰     |                               ^^^^^^^
+
+Warn  workflows/metaboigniter.nf:108:9: Variable was declared but not used
+│ 108 |         consensusxml_data_tsv = PYOPENMS_EXPORTQUANTIFICATION.out.tsv
+╰     |         ^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/metaboigniter.nf:150:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 150 |     ch_multiqc_config                     = Channel.fromPath("$project
+╰     |                                             ^^^^^^^
+
+Warn  workflows/metaboigniter.nf:151:69: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 151 |     = params.multiqc_config ? Channel.fromPath(params.multiqc_config, 
+╰     |                               ^^^^^^^
+
+Warn  workflows/metaboigniter.nf:151:132: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 151 | fromPath(params.multiqc_config, checkIfExists: true) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/metaboigniter.nf:152:67: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 152 |       = params.multiqc_logo ? Channel.fromPath(params.multiqc_logo, ch
+╰     |                               ^^^^^^^
+
+Warn  workflows/metaboigniter.nf:152:128: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 152 | l.fromPath(params.multiqc_logo, checkIfExists: true) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/metaboigniter.nf:154:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 154 |     ch_workflow_summary                   = Channel.value(paramsSummar
+╰     |                                             ^^^^^^^
+
+Warn  workflows/metaboigniter.nf:156:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 156 |     ch_methods_description                = Channel.value(methodsDescr
+╰     |                                             ^^^^^^^
+
+
+Error conf/base.config:13:16: `check_max` is not defined
+│  13 |     cpus   = { check_max( 1    * task.attempt, 'cpus'   ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:14:16: `check_max` is not defined
+│  14 |     memory = { check_max( 6.GB * task.attempt, 'memory' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:15:16: `check_max` is not defined
+│  15 |     time   = { check_max( 4.h  * task.attempt, 'time'   ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:28:20: `check_max` is not defined
+│  28 |         cpus   = { check_max( 1                  , 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:29:20: `check_max` is not defined
+│  29 |         memory = { check_max( 6.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:30:20: `check_max` is not defined
+│  30 |         time   = { check_max( 4.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:33:20: `check_max` is not defined
+│  33 |         cpus   = { check_max( 2     * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:34:20: `check_max` is not defined
+│  34 |         memory = { check_max( 12.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:35:20: `check_max` is not defined
+│  35 |         time   = { check_max( 4.h   * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:38:20: `check_max` is not defined
+│  38 |         cpus   = { check_max( 6     * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:39:20: `check_max` is not defined
+│  39 |         memory = { check_max( 36.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:40:20: `check_max` is not defined
+│  40 |         time   = { check_max( 8.h   * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:43:20: `check_max` is not defined
+│  43 |         cpus   = { check_max( 12    * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:44:20: `check_max` is not defined
+│  44 |         memory = { check_max( 84.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:45:20: `check_max` is not defined
+│  45 |         time   = { check_max( 16.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:48:20: `check_max` is not defined
+│  48 |         cpus   = { check_max( 12    * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:49:20: `check_max` is not defined
+│  49 |         memory = { check_max( 84.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:50:20: `check_max` is not defined
+│  50 |         time   = { check_max( 20.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:53:20: `check_max` is not defined
+│  53 |         time   = { check_max( 20.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:56:20: `check_max` is not defined
+│  56 |         memory = { check_max( 200.GB * task.attempt, 'memory' ) }
+╰     |                    ^^^^^^^^^
+
+
+Error conf/modules.config:134:32: `$` is not defined
+│ 134 |                 ext.prefix = { ${meta.id} }
+╰     |                                ^
+
+Error conf/modules.config:172:32: `$` is not defined
+│ 172 |                 ext.prefix = { ${meta.id} }
+╰     |                                ^
+
+Error conf/modules.config:311:31: `$` is not defined
+│ 311 |                 ext.prefix ={ ${meta.id} }
+╰     |                               ^
+
+Error conf/modules.config:327:31: `$` is not defined
+│ 327 |                 ext.prefix ={ ${meta.id} }
+╰     |                               ^
+
+Error conf/modules.config:346:39: `$` is not defined
+│ 346 |                         ext.prefix ={ ${meta.id} }
+╰     |                                       ^
+
+
+Error nextflow.config:303:5: Unexpected input: 'includeConfig'
+│ 303 |     includeConfig "${params.custom_config_base}/nfcore_custom.config"
+╰     |     ^
+
+
+Nextflow linting complete!
+ ❌ 13 files had 66 errors
+ ✅ 50 files had no errors

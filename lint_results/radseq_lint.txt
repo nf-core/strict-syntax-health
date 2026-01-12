@@ -1,0 +1,378 @@
+Linting Nextflow code..
+Linting: conf/base.config
+Linting: conf/test_demux.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/test_umi.config
+Linting: conf/igenomes.config
+Linting: nextflow.config
+Linting: workflows/radseq.nf
+Linting: subworkflows/local/vcf_bcftools_radseq_filters.nf
+Linting: subworkflows/local/fastq_unzip.nf
+Linting: subworkflows/local/bam_intervals_bedtools.nf
+Linting: subworkflows/local/input_check.nf
+Linting: subworkflows/nf-core/bam_stats_samtools/main.nf
+Linting: subworkflows/nf-core/fastq_create_umi_consensus_fgbio/main.nf
+Linting: subworkflows/nf-core/bam_dedup_stats_samtools_umitools/main.nf
+Linting: main.nf
+Linting: modules/local/rainbow/div/rainbow_div.nf
+Linting: modules/local/rainbow/merge/rainbow_merge.nf
+Linting: modules/local/bcftools/main.nf
+Linting: modules/local/prepare_forward_reads.nf
+Linting: modules/local/rbmerge2fasta.nf
+Linting: modules/local/cdhit_to_rbdiv.nf
+Linting: modules/local/bedops/merge/main.nf
+Linting: modules/local/create_intervals.nf
+Linting: modules/local/combine_uniq_forward_reads.nf
+Linting: modules/local/samplesheet_check.nf
+Linting: modules/nf-core/umitools/dedup/main.nf
+Linting: modules/nf-core/bcftools/concat/main.nf
+Linting: modules/nf-core/bcftools/sort/main.nf
+Linting: modules/nf-core/bcftools/stats/main.nf
+Linting: modules/nf-core/bcftools/view/main.nf
+Linting: modules/nf-core/bcftools/norm/main.nf
+Linting: modules/nf-core/gatk4/createsequencedictionary/main.nf
+Linting: modules/nf-core/gunzip/main.nf
+Linting: modules/nf-core/samtools/flagstat/main.nf
+Linting: modules/nf-core/samtools/idxstats/main.nf
+Linting: modules/nf-core/samtools/fastq/main.nf
+Linting: modules/nf-core/samtools/index/main.nf
+Linting: modules/nf-core/samtools/sort/main.nf
+Linting: modules/nf-core/samtools/stats/main.nf
+Linting: modules/nf-core/samtools/view/main.nf
+Linting: modules/nf-core/samtools/faidx/main.nf
+Linting: modules/nf-core/samtools/merge/main.nf
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/bwamem2/index/main.nf
+Linting: modules/nf-core/bwamem2/mem/main.nf
+Linting: modules/nf-core/minimap2/index/main.nf
+Linting: modules/nf-core/minimap2/align/main.nf
+Linting: modules/nf-core/bwa/index/main.nf
+Linting: modules/nf-core/bwa/mem/main.nf
+Linting: modules/nf-core/cdhit/cdhit/main.nf
+Linting: modules/nf-core/custom/dumpsoftwareversions/main.nf
+Linting: modules/nf-core/freebayes/main.nf
+Linting: modules/nf-core/fastp/main.nf
+Linting: modules/nf-core/seqtk/seq/main.nf
+Linting: modules/nf-core/fgbio/groupreadsbyumi/main.nf
+Linting: modules/nf-core/fgbio/callmolecularconsensusreads/main.nf
+Linting: modules/nf-core/fgbio/callduplexconsensusreads/main.nf
+Linting: modules/nf-core/fgbio/zipperbams/main.nf
+Linting: modules/nf-core/fgbio/fastqtobam/main.nf
+Linting: modules/nf-core/fgbio/filterconsensusreads/main.nf
+Linting: modules/nf-core/bedtools/intersect/main.nf
+Linting: modules/nf-core/bedtools/makewindows/main.nf
+Linting: modules/nf-core/bedtools/sort/main.nf
+Linting: modules/nf-core/bedtools/coverage/main.nf
+Linting: modules/nf-core/bedtools/bamtobed/main.nf
+Linting: modules/nf-core/bedtools/merge/main.nf
+Linting: modules/nf-core/tabix/tabix/main.nf
+Error main.nf:28:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  28 | WorkflowMain.initialise(workflow, params, log)
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:28:1: `WorkflowMain` is not defined
+│  28 | WorkflowMain.initialise(workflow, params, log)
+╰     | ^^^^^^^^^^^^
+
+Error main.nf:36:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/radseq/workflows/radseq.nf'
+│  36 | include { RADSEQ } from './workflows/radseq'
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:42:5: `RADSEQ` is not defined
+│  42 |     RADSEQ ()
+╰     |     ^^^^^^
+
+
+Error modules/local/bcftools/main.nf:78:23: `extension` is not defined
+│  78 |     touch ${prefix}.${extension}
+╰     |                       ^^^^^^^^^
+
+
+
+
+
+
+Error modules/local/prepare_forward_reads.nf:91:86: `assembled_fastq` is not defined
+│  91 | 2){gsub(/^[@]/,">");print}; if(P==4)P=0; P++}' ${assembled_fastq} | \\
+╰     |                                                  ^^^^^^^^^^^^^^^
+
+
+
+
+Error modules/local/rbmerge2fasta.nf:12:16: `meta` is already declared
+│  12 |     tuple val (meta), path (rbmerge)
+╰     |                ^^^^
+
+Warn  modules/local/rbmerge2fasta.nf:11:16: Variable was declared but not used
+│  11 |     tuple val (meta), path (rbdiv)
+╰     |                ^^^^
+
+
+
+
+
+
+Error modules/nf-core/bcftools/view/main.nf:57:23: `extension` is not defined
+│  57 |     touch ${prefix}.${extension}
+╰     |                       ^^^^^^^^^
+
+
+
+
+
+
+
+
+Error modules/nf-core/bwa/index/main.nf:14:27: `bwa` is not defined
+│  14 |     tuple val(meta), path(bwa) , emit: index
+╰     |                           ^^^
+
+
+
+
+
+
+Warn  modules/nf-core/custom/dumpsoftwareversions/main.nf:22:9: Variable was declared but not used
+│  22 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+Warn  modules/nf-core/fastqc/main.nf:27:48: Parameter was not used -- prefix with `_` to suppress warning
+│  27 |     def renamed_files = old_new_pairs.collect{ old_name, new_name -> n
+╰     |                                                ^^^^^^^^
+
+
+
+
+
+
+
+Error modules/nf-core/fgbio/zipperbams/main.nf:12:15: `meta` is already declared
+│  12 |     tuple val(meta), path(mapped_bam)
+╰     |               ^^^^
+
+Warn  modules/nf-core/fgbio/zipperbams/main.nf:11:15: Variable was declared but not used
+│  11 |     tuple val(meta), path(unmapped_bam)
+╰     |               ^^^^
+
+Warn  modules/nf-core/fgbio/zipperbams/main.nf:25:9: Variable was declared but not used
+│  25 |     def args2 = task.ext.args2 ?: ''
+╰     |         ^^^^^
+
+
+Error modules/nf-core/freebayes/main.nf:27:9: `targets_file` is already declared
+│  27 |     def targets_file     = target_bed     ? "--target ${target_bed}"  
+╰     |         ^^^^^^^^^^^^
+
+
+
+
+
+
+
+
+
+Warn  modules/nf-core/samtools/flagstat/main.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/samtools/idxstats/main.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+Warn  modules/nf-core/samtools/stats/main.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+Warn  modules/nf-core/tabix/tabix/main.nf:33:9: Variable was declared but not used
+│  33 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+
+Error subworkflows/local/bam_intervals_bedtools.nf:30:36: `WorkflowRadseq` is not defined
+│  30 |     ch_bed_to_merge = ch_bed.map { WorkflowRadseq.groupMetaID(it) }.gr
+╰     |                                    ^^^^^^^^^^^^^^
+
+Error subworkflows/local/bam_intervals_bedtools.nf:44:37: `WorkflowRadseq` is not defined
+│  44 |         ch_cov_to_merge = cov.map { WorkflowRadseq.groupMetaID(it) }.g
+╰     |                                     ^^^^^^^^^^^^^^
+
+Error subworkflows/local/bam_intervals_bedtools.nf:69:41: `WorkflowRadseq` is not defined
+│  69 |         ch_intervals = ch_fai_bed.map { WorkflowRadseq.splitBedFile(pa
+╰     |                                         ^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/bam_intervals_bedtools.nf:20:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  20 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/bam_intervals_bedtools.nf:30:63: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  30 |  { WorkflowRadseq.groupMetaID(it) }.groupTuple() // [meta, bed]
+╰     |                               ^^
+
+Warn  subworkflows/local/bam_intervals_bedtools.nf:37:60: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  37 |         ch_sorted_mbed = BEDTOOLS_SORT (ch_mbed, faidx.map{it[1]}).sor
+╰     |                                                            ^^
+
+Warn  subworkflows/local/bam_intervals_bedtools.nf:41:68: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  41 | ed.combine(ch_sorted_mbed.map{it[1]}).map{meta,bed,mbed -> [meta,mbed,
+╰     |                               ^^
+
+Warn  subworkflows/local/bam_intervals_bedtools.nf:41:125: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  41 | p{it[1]}).map{meta,bed,mbed -> [meta,mbed,bed]}, faidx.map{it[1]}).bed
+╰     |                                                            ^^
+
+Warn  subworkflows/local/bam_intervals_bedtools.nf:44:64: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  44 |  { WorkflowRadseq.groupMetaID(it) }.groupTuple()
+╰     |                               ^^
+
+Warn  subworkflows/local/bam_intervals_bedtools.nf:47:66: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  47 |   ch_mcov = BEDTOOLS_MERGE_COV (ch_cov_to_merge, faidx.map{it[1]}).cov
+╰     |                                                            ^^
+
+Warn  subworkflows/local/bam_intervals_bedtools.nf:69:82: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  69 | seq.splitBedFile(params, log, it) }.transpose()
+╰     |                               ^^
+
+
+Warn  subworkflows/local/fastq_unzip.nf:9:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│   9 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/fastq_unzip.nf:15:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |         ch_fasta    = Channel.fromPath(fasta).map{[ [:], it ]}
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/fastq_unzip.nf:15:58: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  15 |         ch_fasta    = Channel.fromPath(fasta).map{[ [:], it ]}
+╰     |                                                          ^^
+
+
+Warn  subworkflows/local/input_check.nf:15:38: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  15 |         .map { create_fastq_channels(it) }
+╰     |                                      ^^
+
+
+Warn  subworkflows/local/vcf_bcftools_radseq_filters.nf:15:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/vcf_bcftools_radseq_filters.nf:24:15: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  24 |     ch_miss = Channel.fromList(params.fraction_missingness_list)
+╰     |               ^^^^^^^
+
+Warn  subworkflows/local/vcf_bcftools_radseq_filters.nf:25:14: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  25 |     ch_mac = Channel.fromList(params.minor_allele_count_list)
+╰     |              ^^^^^^^
+
+
+Error subworkflows/nf-core/bam_dedup_stats_samtools_umitools/main.nf:43:5: Incorrect number of call arguments, expected 1 but received 2
+│  43 |     BAM_STATS_SAMTOOLS ( ch_bam_bai, [] )
+╰     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  subworkflows/nf-core/bam_dedup_stats_samtools_umitools/main.nf:16:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/nf-core/bam_stats_samtools/main.nf:14:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  14 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/nf-core/bam_stats_samtools/main.nf:19:56: Parameter was not used -- prefix with `_` to suppress warning
+│  19 |     SAMTOOLS_FLAGSTAT ( bam_bai_fasta.map{meta,bam,bai,fasta-> [meta,b
+╰     |                                                        ^^^^^
+
+Warn  subworkflows/nf-core/bam_stats_samtools/main.nf:22:56: Parameter was not used -- prefix with `_` to suppress warning
+│  22 |     SAMTOOLS_IDXSTATS ( bam_bai_fasta.map{meta,bam,bai,fasta-> [meta,b
+╰     |                                                        ^^^^^
+
+
+Error subworkflows/nf-core/fastq_create_umi_consensus_fgbio/main.nf:83:9: Incorrect number of call arguments, expected 4 but received 5
+│  83 |         BWAMEM1_MEM_PRE ( BAM2FASTQ_PRE.out.fastq, bwaindex, true, par
+╰     |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error subworkflows/nf-core/fastq_create_umi_consensus_fgbio/main.nf:100:9: Incorrect number of call arguments, expected 4 but received 5
+│ 100 |         BWAMEM2_MEM_PRE ( BAM2FASTQ_PRE.out.fastq, bwaindex, true, par
+╰     |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error subworkflows/nf-core/fastq_create_umi_consensus_fgbio/main.nf:182:9: Incorrect number of call arguments, expected 4 but received 5
+│ 182 |         BWAMEM1_MEM_POST ( BAM2FASTQ_POST.out.fastq, bwaindex, false, 
+╰     |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error subworkflows/nf-core/fastq_create_umi_consensus_fgbio/main.nf:187:9: Incorrect number of call arguments, expected 4 but received 5
+│ 187 |         BWAMEM2_MEM_POST ( BAM2FASTQ_POST.out.fastq, bwaindex, false, 
+╰     |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_create_umi_consensus_fgbio/main.nf:40:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  40 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_create_umi_consensus_fgbio/main.nf:57:5: Variable was declared but not used
+│  57 |     check_bam = FASTQTOBAM.out.bam.dump(tag: 'fastq_to_bam')
+╰     |     ^^^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_create_umi_consensus_fgbio/main.nf:64:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  64 |     aligned_bam = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_create_umi_consensus_fgbio/main.nf:71:13: Variable was declared but not used
+│  71 |             check_module_out = BWAMEM1_INDEX.out.index.dump(tag: 'inde
+╰     |             ^^^^^^^^^^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_create_umi_consensus_fgbio/main.nf:75:48: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  75 |         bwaindex    = fasta_meta ? bwa_index ? Channel.fromPath(bwa_in
+╰     |                                                ^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_create_umi_consensus_fgbio/main.nf:94:48: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  94 |         bwaindex    = fasta_meta ? bwa_index ? Channel.fromPath(bwa_in
+╰     |                                                ^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_create_umi_consensus_fgbio/main.nf:107:65: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 107 | t.bam, aligned_bam, fasta.map{it[1]}, dict.map{it[1]} )
+╰     |                               ^^
+
+Warn  subworkflows/nf-core/fastq_create_umi_consensus_fgbio/main.nf:107:82: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 107 | ( FASTQTOBAM.out.bam, aligned_bam, fasta.map{it[1]}, dict.map{it[1]} )
+╰     |                                                               ^^
+
+Warn  subworkflows/nf-core/fastq_create_umi_consensus_fgbio/main.nf:114:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 114 |     groupready_bam = Channel.empty()
+╰     |                      ^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_create_umi_consensus_fgbio/main.nf:125:9: Variable was declared but not used
+│ 125 |         check_dummy_bam_bai = dummy_bam_bai.dump(tag: 'dummy_index')
+╰     |         ^^^^^^^^^^^^^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_create_umi_consensus_fgbio/main.nf:151:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 151 |     consensus_bam = Channel.empty()
+╰     |                     ^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_create_umi_consensus_fgbio/main.nf:172:48: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 172 |     FILTERCONSENSUS ( consensus_bam, fasta.map{it[1]} )
+╰     |                                                ^^
+
+Warn  subworkflows/nf-core/fastq_create_umi_consensus_fgbio/main.nf:194:66: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 194 | , aligned_bam_post, fasta.map{it[1]}, dict.map{it[1]} )
+╰     |                               ^^
+
+Warn  subworkflows/nf-core/fastq_create_umi_consensus_fgbio/main.nf:194:83: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 194 | ( consensus_bam, aligned_bam_post, fasta.map{it[1]}, dict.map{it[1]} )
+╰     |                                                               ^^
+
+
+ERROR ~ begin 25, end 26, length 25
+
+

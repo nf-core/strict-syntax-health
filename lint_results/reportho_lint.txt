@@ -1,0 +1,485 @@
+Linting Nextflow code..
+Linting: conf/test_fasta.config
+Linting: conf/test_offline.config
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/array.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: nextflow.config
+Linting: workflows/reportho.nf
+Linting: subworkflows/local/report.nf
+Linting: subworkflows/local/get_sequences.nf
+Linting: subworkflows/local/merge_ids.nf
+Linting: subworkflows/local/utils_nfcore_reportho_pipeline/main.nf
+Linting: subworkflows/local/get_orthologs.nf
+Linting: subworkflows/local/score_orthologs.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/write_seqinfo.nf
+Linting: modules/local/plot_orthologs.nf
+Linting: modules/local/make_stats.nf
+Linting: modules/local/make_score_table.nf
+Linting: modules/local/make_hits_table.nf
+Linting: modules/local/fetch_oma_group_local.nf
+Linting: modules/local/filter_hits.nf
+Linting: modules/local/fetch_inspector_group_online.nf
+Linting: modules/local/fetch_eggnog_group_local.nf
+Linting: modules/local/fetch_oma_group_online.nf
+Linting: modules/local/fetch_panther_group_online.nf
+Linting: modules/local/fetch_refseq_sequences.nf
+Linting: modules/local/stats2csv.nf
+Linting: modules/local/filter_fasta.nf
+Linting: modules/local/make_report.nf
+Linting: modules/local/split_taxids.nf
+Linting: modules/local/fetch_uniprot_sequences.nf
+Linting: modules/local/dump_params.nf
+Linting: modules/local/fetch_ensembl_sequences.nf
+Linting: modules/local/fetch_ensembl_idmap.nf
+Linting: modules/local/fetch_oma_sequences.nf
+Linting: modules/local/split_id_format.nf
+Linting: modules/local/make_merge_table.nf
+Linting: modules/local/identify_seq_online.nf
+Linting: modules/local/fetch_panther_group_local.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/cat/cat/main.nf
+Linting: modules/nf-core/cat/cat/tests/nextflow_zipped_unzipped.config
+Linting: modules/nf-core/cat/cat/tests/nextflow_unzipped_zipped.config
+Linting: modules/nf-core/csvtk/join/main.nf
+Linting: modules/nf-core/csvtk/join/tests/nextflow.config
+Linting: modules/nf-core/csvtk/concat/main.nf
+Linting: modules/nf-core/diamond/cluster/main.nf
+Linting: modules/nf-core/gawk/main.nf
+Linting: modules/nf-core/gawk/tests/nextflow.config
+Linting: modules/nf-core/gawk/tests/nextflow_with_program_file.config
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Warn  modules/nf-core/cat/cat/main.nf:23:40: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  23 |     def file_list = files_in.collect { it.toString() }
+╰     |                                        ^^
+
+Warn  modules/nf-core/cat/cat/main.nf:58:42: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  58 |     def file_list   = files_in.collect { it.toString() }
+╰     |                                          ^^
+
+
+
+
+Warn  modules/nf-core/diamond/cluster/main.nf:41:9: Variable was declared but not used
+│  41 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/gawk/main.nf:25:51: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  25 |     suffix = task.ext.suffix ?: "${input.collect{ it.getExtension()}.g
+╰     |                                                   ^^
+
+Warn  modules/nf-core/gawk/main.nf:28:32: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  28 |     lst_gz    = input.collect{ it.getExtension().endsWith("gz") }
+╰     |                                ^^
+
+
+
+Warn  subworkflows/local/get_orthologs.nf:27:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  27 |     ch_versions     = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/get_orthologs.nf:28:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  28 |     ch_orthogroups  = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/get_orthologs.nf:34:16: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  34 |         return it
+╰     |                ^^
+
+Warn  subworkflows/local/get_orthologs.nf:160:34: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 160 |     id          = ch_query.map { it[1] }
+╰     |                                  ^^
+
+Warn  subworkflows/local/get_orthologs.nf:161:34: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 161 |     taxid       = ch_query.map { it[2] }
+╰     |                                  ^^
+
+Warn  subworkflows/local/get_orthologs.nf:162:34: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 162 |     exact       = ch_query.map { it[3] }
+╰     |                                  ^^
+
+
+Warn  subworkflows/local/get_sequences.nf:17:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/get_sequences.nf:31:17: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  31 |     ch_fasta  = Channel.empty()
+╰     |                 ^^^^^^^
+
+Warn  subworkflows/local/get_sequences.nf:32:17: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  32 |     ch_hits   = Channel.empty()
+╰     |                 ^^^^^^^
+
+Warn  subworkflows/local/get_sequences.nf:33:17: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  33 |     ch_misses = Channel.empty()
+╰     |                 ^^^^^^^
+
+
+Warn  subworkflows/local/merge_ids.nf:15:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/merge_ids.nf:16:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     ch_id_clusters = Channel.empty()
+╰     |                      ^^^^^^^
+
+Warn  subworkflows/local/merge_ids.nf:32:27: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  32 |             single_entry: it[2] == 1
+╰     |                           ^^
+
+Warn  subworkflows/local/merge_ids.nf:33:31: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  33 |             multiple_entries: it[2] > 1
+╰     |                               ^^
+
+Warn  subworkflows/local/merge_ids.nf:40:32: Parameter was not used -- prefix with `_` to suppress warning
+│  40 |             .map { meta, file, count -> [ meta, file ] }
+╰     |                                ^^^^^
+
+Warn  subworkflows/local/merge_ids.nf:50:32: Parameter was not used -- prefix with `_` to suppress warning
+│  50 |             .map { meta, file, count -> [ meta, file ] }
+╰     |                                ^^^^^
+
+
+Warn  subworkflows/local/report.nf:7:5: Parameter was not used -- prefix with `_` to suppress warning
+│   7 |     use_centroid
+╰     |     ^^^^^^^^^^^^
+
+Warn  subworkflows/local/report.nf:8:5: Parameter was not used -- prefix with `_` to suppress warning
+│   8 |     min_score
+╰     |     ^^^^^^^^^
+
+Warn  subworkflows/local/report.nf:22:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  22 |     ch_versions  = Channel.empty()
+╰     |                    ^^^^^^^
+
+Warn  subworkflows/local/report.nf:23:5: Variable was declared but not used
+│  23 |     ch_fasta     = ch_seqinfo.map { [it[0], []] }
+╰     |     ^^^^^^^^
+
+Warn  subworkflows/local/report.nf:23:38: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  23 |     ch_fasta     = ch_seqinfo.map { [it[0], []] }
+╰     |                                      ^^
+
+Warn  subworkflows/local/report.nf:26:27: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  26 |         ch_seqinfo.map { [it[0], it[3]] },
+╰     |                           ^^
+
+Warn  subworkflows/local/report.nf:26:34: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  26 |         ch_seqinfo.map { [it[0], it[3]] },
+╰     |                                  ^^
+
+
+Warn  subworkflows/local/score_orthologs.nf:23:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  23 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/score_orthologs.nf:33:34: Parameter was not used -- prefix with `_` to suppress warning
+│  33 |         .map { id, score, query, taxid, exact -> [id, score, query] }
+╰     |                                  ^^^^^
+
+Warn  subworkflows/local/score_orthologs.nf:33:41: Parameter was not used -- prefix with `_` to suppress warning
+│  33 |         .map { id, score, query, taxid, exact -> [id, score, query] }
+╰     |                                         ^^^^^
+
+Warn  subworkflows/local/score_orthologs.nf:45:39: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  45 |     ch_supportsplot = ch_query.map { [it[0], []]}
+╰     |                                       ^^
+
+Warn  subworkflows/local/score_orthologs.nf:46:39: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  46 |     ch_vennplot     = ch_query.map { [it[0], []]}
+╰     |                                       ^^
+
+Warn  subworkflows/local/score_orthologs.nf:47:39: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  47 |     ch_jaccardplot  = ch_query.map { [it[0], []]}
+╰     |                                       ^^
+
+Warn  subworkflows/local/score_orthologs.nf:70:20: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  70 |         .collect { it[1] }
+╰     |                    ^^
+
+Warn  subworkflows/local/score_orthologs.nf:71:30: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  71 |         .map { [[id: "all"], it] }
+╰     |                              ^^
+
+Warn  subworkflows/local/score_orthologs.nf:81:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  81 |     ch_merge_table      = Channel.empty()
+╰     |                           ^^^^^^^
+
+Warn  subworkflows/local/score_orthologs.nf:82:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  82 |     ch_aggregated_merge = Channel.empty()
+╰     |                           ^^^^^^^
+
+Warn  subworkflows/local/score_orthologs.nf:94:24: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  94 |             .collect { it[1] }
+╰     |                        ^^
+
+Warn  subworkflows/local/score_orthologs.nf:95:34: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  95 |             .map { [[id: "all"], it] }
+╰     |                                  ^^
+
+Warn  subworkflows/local/score_orthologs.nf:123:20: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 123 |         .collect { it[1] }
+╰     |                    ^^
+
+Warn  subworkflows/local/score_orthologs.nf:124:30: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 124 |         .map { [[id: "all"], it] }
+╰     |                              ^^
+
+
+Warn  subworkflows/local/utils_nfcore_reportho_pipeline/main.nf:32:5: Parameter was not used -- prefix with `_` to suppress warning
+│  32 |     monochrome_logs   // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_reportho_pipeline/main.nf:35:5: Parameter was not used -- prefix with `_` to suppress warning
+│  35 |     input             //  string: Path to input samplesheet
+╰     |     ^^^^^
+
+Warn  subworkflows/local/utils_nfcore_reportho_pipeline/main.nf:42:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  42 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_reportho_pipeline/main.nf:67:144: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  67 | lect { "    https://doi.org/${it.trim().replace('https://doi.org/','')
+╰     |                               ^^
+
+Warn  subworkflows/local/utils_nfcore_reportho_pipeline/main.nf:104:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 104 |     Channel
+╰     |     ^^^^^^^
+
+
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 | mYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
+╰     |                               ^^^^^^^
+
+
+
+Warn  workflows/reportho.nf:32:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  32 |     ch_versions      = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/reportho.nf:33:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  33 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/reportho.nf:34:52: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  34 |     ch_fasta_query   = ch_samplesheet_query.map { [it[0], []] }.mix(ch
+╰     |                                                    ^^
+
+Warn  workflows/reportho.nf:34:97: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  34 | x(ch_samplesheet_fasta.map { [it[0], file(it[1])] })
+╰     |                               ^^
+
+Warn  workflows/reportho.nf:34:109: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  34 | { [it[0], []] }.mix(ch_samplesheet_fasta.map { [it[0], file(it[1])] })
+╰     |                                                             ^^
+
+Warn  workflows/reportho.nf:36:42: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  36 |     ch_oma_groups    = params.oma_path ? Channel.value(file(params.oma
+╰     |                                          ^^^^^^^
+
+Warn  workflows/reportho.nf:36:81: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  36 | rams.oma_path ? Channel.value(file(params.oma_path)) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/reportho.nf:37:50: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  37 |     ch_oma_uniprot   = params.oma_uniprot_path ? Channel.value(file(pa
+╰     |                                                  ^^^^^^^
+
+Warn  workflows/reportho.nf:37:97: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  37 | _path ? Channel.value(file(params.oma_uniprot_path)) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/reportho.nf:38:50: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  38 |     ch_oma_ensembl   = params.oma_ensembl_path ? Channel.value(file(pa
+╰     |                                                  ^^^^^^^
+
+Warn  workflows/reportho.nf:38:97: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  38 | _path ? Channel.value(file(params.oma_ensembl_path)) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/reportho.nf:39:49: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  39 |     ch_oma_refseq    = params.oma_refseq_path ? Channel.value(file(par
+╰     |                                                 ^^^^^^^
+
+Warn  workflows/reportho.nf:39:95: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  39 | q_path ? Channel.value(file(params.oma_refseq_path)) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/reportho.nf:40:46: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  40 |     ch_panther       = params.panther_path ? Channel.value(file(params
+╰     |                                              ^^^^^^^
+
+Warn  workflows/reportho.nf:40:89: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  40 | ther_path ? Channel.value(file(params.panther_path)) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/reportho.nf:41:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  41 |     ch_eggnog        = params.eggnog_path ? Channel.value(file(params.
+╰     |                                             ^^^^^^^
+
+Warn  workflows/reportho.nf:41:87: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  41 | ggnog_path ? Channel.value(file(params.eggnog_path)) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/reportho.nf:42:51: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  42 |     ch_eggnog_idmap  = params.eggnog_idmap_path ? Channel.value(file(p
+╰     |                                                   ^^^^^^^
+
+Warn  workflows/reportho.nf:42:99: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  42 | path ? Channel.value(file(params.eggnog_idmap_path)) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/reportho.nf:44:52: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  44 |     ch_seqhits       = ch_samplesheet_query.map { [it[0], []] }
+╰     |                                                    ^^
+
+Warn  workflows/reportho.nf:45:52: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  45 |     ch_seqmisses     = ch_samplesheet_query.map { [it[0], []] }
+╰     |                                                    ^^
+
+Warn  workflows/reportho.nf:61:43: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  61 |     ch_seqs = ch_samplesheet_query.map { [it[0], []] }
+╰     |                                           ^^
+
+Warn  workflows/reportho.nf:77:41: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  77 |     ch_id_map   = ch_fasta_query.map { [it[0], []] }
+╰     |                                         ^^
+
+Warn  workflows/reportho.nf:78:41: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  78 |     ch_clusters = ch_fasta_query.map { [it[0], []] }
+╰     |                                         ^^
+
+Warn  workflows/reportho.nf:103:5: Variable was declared but not used
+│ 103 |     ch_samplesheet = ch_samplesheet_query.mix (ch_samplesheet_fasta)
+╰     |     ^^^^^^^^^^^^^^
+
+Warn  workflows/reportho.nf:105:87: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 105 | ch_multiqc_files.mix(SCORE_ORTHOLOGS.out.aggregated_stats.map {it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/reportho.nf:106:86: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 106 |  ch_multiqc_files.mix(SCORE_ORTHOLOGS.out.aggregated_hits.map {it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/reportho.nf:107:87: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 107 | ch_multiqc_files.mix(SCORE_ORTHOLOGS.out.aggregated_merge.map {it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/reportho.nf:123:54: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 123 |             SCORE_ORTHOLOGS.out.supports_plot.map { [it[0], it[2]]},
+╰     |                                                      ^^
+
+Warn  workflows/reportho.nf:123:61: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 123 |             SCORE_ORTHOLOGS.out.supports_plot.map { [it[0], it[2]]},
+╰     |                                                             ^^
+
+Warn  workflows/reportho.nf:124:50: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 124 |             SCORE_ORTHOLOGS.out.venn_plot.map { [it[0], it[2]]},
+╰     |                                                  ^^
+
+Warn  workflows/reportho.nf:124:57: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 124 |             SCORE_ORTHOLOGS.out.venn_plot.map { [it[0], it[2]]},
+╰     |                                                         ^^
+
+Warn  workflows/reportho.nf:125:53: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 125 |             SCORE_ORTHOLOGS.out.jaccard_plot.map { [it[0], it[2]]},
+╰     |                                                     ^^
+
+Warn  workflows/reportho.nf:125:60: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 125 |             SCORE_ORTHOLOGS.out.jaccard_plot.map { [it[0], it[2]]},
+╰     |                                                            ^^
+
+Warn  workflows/reportho.nf:151:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 151 |     ch_multiqc_report = Channel.empty()
+╰     |                         ^^^^^^^
+
+Warn  workflows/reportho.nf:153:36: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 153 |         ch_multiqc_config        = Channel.fromPath(
+╰     |                                    ^^^^^^^
+
+Warn  workflows/reportho.nf:157:13: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 157 |             Channel.fromPath(params.multiqc_config, checkIfExists: tru
+╰     |             ^^^^^^^
+
+Warn  workflows/reportho.nf:158:13: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 158 |             Channel.empty()
+╰     |             ^^^^^^^
+
+Warn  workflows/reportho.nf:161:13: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 161 |             Channel.fromPath(params.multiqc_logo, checkIfExists: true)
+╰     |             ^^^^^^^
+
+Warn  workflows/reportho.nf:162:13: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 162 |             Channel.empty()
+╰     |             ^^^^^^^
+
+Warn  workflows/reportho.nf:166:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 166 |         ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summa
+╰     |                               ^^^^^^^
+
+Warn  workflows/reportho.nf:172:49: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 172 |         ch_methods_description                = Channel.value(
+╰     |                                                 ^^^^^^^
+
+
+Error conf/test.config:26:14: `pipelines_testdata_base_path` is not defined
+│  26 |     input  = pipelines_testdata_base_path + 'reportho/testdata/samples
+╰     |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Error conf/test_fasta.config:27:14: `pipelines_testdata_base_path` is not defined
+│  27 |     input  = pipelines_testdata_base_path + 'reportho/testdata/samples
+╰     |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // nf-test directory used to create temporary files for each test
+│   3 |     workDir System.getenv("NFT_WORKDIR") ?: ".nf-test"
+│   4 | 
+╰   5 |     testsDir "."
+
+
+Nextflow linting complete!
+ ❌ 3 files had 3 errors
+ ✅ 58 files had no errors

@@ -1,0 +1,659 @@
+Linting Nextflow code..
+Linting: conf/base.config
+Linting: conf/test_nodx_rnamod.config
+Linting: conf/test_nodx_stringtie.config
+Linting: conf/modules.config
+Linting: conf/test_nodx_vc.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/igenomes.config
+Linting: conf/test_nodx_noaln.config
+Linting: nextflow.config
+Linting: workflows/nanoseq.nf
+Linting: subworkflows/local/rna_fusions_jaffal.nf
+Linting: subworkflows/local/align_minimap2.nf
+Linting: subworkflows/local/bedtools_ucsc_bigbed.nf
+Linting: subworkflows/local/bedtools_ucsc_bigwig.nf
+Linting: subworkflows/local/prepare_genome.nf
+Linting: subworkflows/local/qcfastq_nanoplot_fastqc.nf
+Linting: subworkflows/local/rna_modifications_xpore_m6anet.nf
+Linting: subworkflows/local/differential_deseq2_dexseq.nf
+Linting: subworkflows/local/bam_sort_index_samtools.nf
+Linting: subworkflows/local/align_graphmap2.nf
+Linting: subworkflows/local/quantify_stringtie_featurecounts.nf
+Linting: subworkflows/local/input_check.nf
+Linting: subworkflows/local/structural_variant_calling.nf
+Linting: subworkflows/local/short_variant_calling.nf
+Linting: subworkflows/nf-core/bam_stats_samtools.nf
+Linting: main.nf
+Linting: modules/local/cutesv.nf
+Linting: modules/local/subread_featurecounts.nf
+Linting: modules/local/gtf2bed.nf
+Linting: modules/local/qcat.nf
+Linting: modules/local/xpore_diffmod.nf
+Linting: modules/local/bambu.nf
+Linting: modules/local/stringtie2.nf
+Linting: modules/local/medaka_variant.nf
+Linting: modules/local/graphmap2_align.nf
+Linting: modules/local/m6anet_dataprep.nf
+Linting: modules/local/samtools_sort_index.nf
+Linting: modules/local/bedtools_genomecov.nf
+Linting: modules/local/get_test_data.nf
+Linting: modules/local/sniffles.nf
+Linting: modules/local/dexseq.nf
+Linting: modules/local/deepvariant.nf
+Linting: modules/local/bedtools_bamtobed.nf
+Linting: modules/local/m6anet_inference.nf
+Linting: modules/local/bam_rename.nf
+Linting: modules/local/multiqc.nf
+Linting: modules/local/pepper_margin_deepvariant.nf
+Linting: modules/local/deseq2.nf
+Linting: modules/local/nanopolish_index_eventalign.nf
+Linting: modules/local/ucsc_bed12tobigbed.nf
+Linting: modules/local/minimap2_index.nf
+Linting: modules/local/xpore_dataprep.nf
+Linting: modules/local/minimap2_align.nf
+Linting: modules/local/get_chrom_sizes.nf
+Linting: modules/local/jaffal.nf
+Linting: modules/local/samtools_view_bam.nf
+Linting: modules/local/samplesheet_check.nf
+Linting: modules/local/ucsc_bedgraphtobigwig.nf
+Linting: modules/local/get_nanolyse_fasta.nf
+Linting: modules/local/get_jaffal_ref.nf
+Linting: modules/local/graphmap2_index.nf
+Linting: modules/nf-core/bcftools/sort/main.nf
+Linting: modules/nf-core/samtools/flagstat/main.nf
+Linting: modules/nf-core/samtools/idxstats/main.nf
+Linting: modules/nf-core/samtools/index/main.nf
+Linting: modules/nf-core/samtools/sort/main.nf
+Linting: modules/nf-core/samtools/stats/main.nf
+Linting: modules/nf-core/samtools/faidx/main.nf
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/custom/dumpsoftwareversions/main.nf
+Linting: modules/nf-core/nanolyse/main.nf
+Linting: modules/nf-core/untar/main.nf
+Linting: modules/nf-core/nanoplot/main.nf
+Linting: modules/nf-core/stringtie/merge/main.nf
+Linting: modules/nf-core/tabix/bgzip/main.nf
+Linting: modules/nf-core/tabix/bgziptabix/main.nf
+Linting: modules/nf-core/tabix/tabix/main.nf
+Error main.nf:21:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  21 | WorkflowMain.initialise(workflow, params, log)
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:21:1: `WorkflowMain` is not defined
+│  21 | WorkflowMain.initialise(workflow, params, log)
+╰     | ^^^^^^^^^^^^
+
+
+
+
+
+Warn  modules/local/bedtools_genomecov.nf:21:5: Variable was declared but not used
+│  21 |     split = (params.protocol == 'DNA' || is_transcripts) ? "" : "-spli
+╰     |     ^^^^^
+
+
+
+Error modules/local/deepvariant.nf:8:5: Invalid process directive
+│   8 |     if (workflow.profile.tokenize(',').intersect(['conda', 'mamba']).s
+│     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│   9 |         exit 1, "DEEPVARIANT module does not support Conda. Please use
+╰  10 |     }
+
+
+
+
+
+
+
+
+
+
+
+Error modules/local/jaffal.nf:2:5: Unrecognized process directive `echo`
+│   2 |     echo true
+╰     |     ^^^^^^^^^
+
+
+
+Error modules/local/m6anet_inference.nf:3:5: Unrecognized process directive `echo`
+│   3 |     echo true
+╰     |     ^^^^^^^^^
+
+
+
+
+
+
+
+Error modules/local/pepper_margin_deepvariant.nf:5:5: Invalid process directive
+│   5 |     if (params.deepvariant_gpu) {
+│     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│   6 |         container 'docker.io/kishwars/pepper_deepvariant:r0.8-gpu'
+│   7 |     } else {
+│   8 |         container 'docker.io/kishwars/pepper_deepvariant:r0.8'
+╰   9 |     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Warn  modules/nf-core/custom/dumpsoftwareversions/main.nf:22:9: Variable was declared but not used
+│  22 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/fastqc/main.nf:27:48: Parameter was not used -- prefix with `_` to suppress warning
+│  27 |     def renamed_files = old_new_pairs.collect{ old_name, new_name -> n
+╰     |                                                ^^^^^^^^
+
+
+
+Warn  modules/nf-core/nanolyse/main.nf:23:9: Variable was declared but not used
+│  23 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+Warn  modules/nf-core/samtools/flagstat/main.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/samtools/idxstats/main.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+Warn  modules/nf-core/samtools/stats/main.nf:22:9: Variable was declared but not used
+│  22 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+Warn  modules/nf-core/tabix/tabix/main.nf:33:9: Variable was declared but not used
+│  33 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+
+Error subworkflows/local/input_check.nf:46:5: `input_file` was assigned but not declared
+│  46 |     input_file = sample.input_file ? file(sample.input_file, checkIfEx
+╰     |     ^^^^^^^^^^
+
+Error subworkflows/local/input_check.nf:49:20: `input_file` is not defined
+│  49 |     return [ meta, input_file, sample.barcode, fasta, gtf, sample.is_t
+╰     |                    ^^^^^^^^^^
+
+Warn  subworkflows/local/input_check.nf:19:32: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  19 |         .map { get_sample_info(it, params.genomes) }
+╰     |                                ^^
+
+
+Warn  subworkflows/local/prepare_genome.nf:16:19: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  16 |         .filter { it[2] }
+╰     |                   ^^
+
+Warn  subworkflows/local/prepare_genome.nf:30:19: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  30 |         .filter { it[3] }
+╰     |                   ^^
+
+Warn  subworkflows/local/prepare_genome.nf:56:19: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  56 |         .filter { it[2] }
+╰     |                   ^^
+
+
+Warn  subworkflows/local/qcfastq_nanoplot_fastqc.nf:22:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  22 |     nanoplot_png     = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/qcfastq_nanoplot_fastqc.nf:23:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  23 |     nanoplot_html    = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/qcfastq_nanoplot_fastqc.nf:24:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  24 |     nanoplot_txt     = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/qcfastq_nanoplot_fastqc.nf:25:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  25 |     nanoplot_log     = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/qcfastq_nanoplot_fastqc.nf:26:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  26 |     nanoplot_version = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/qcfastq_nanoplot_fastqc.nf:39:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  39 |     fastqc_zip     = Channel.empty()
+╰     |                      ^^^^^^^
+
+Warn  subworkflows/local/qcfastq_nanoplot_fastqc.nf:40:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  40 |     fastqc_html    = Channel.empty()
+╰     |                      ^^^^^^^
+
+Warn  subworkflows/local/qcfastq_nanoplot_fastqc.nf:41:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  41 |     fastqc_multiqc = Channel.empty()
+╰     |                      ^^^^^^^
+
+Warn  subworkflows/local/qcfastq_nanoplot_fastqc.nf:42:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  42 |     fastqc_version = Channel.empty()
+╰     |                      ^^^^^^^
+
+
+Warn  subworkflows/local/quantify_stringtie_featurecounts.nf:43:20: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  43 |         .collect { it[-1]    }
+╰     |                    ^^
+
+
+
+
+Error subworkflows/local/short_variant_calling.nf:36:54: Unexpected input: '='
+│  36 |         ch_versions = ch_versions.mix(medaka_version = MEDAKA_VARIANT.
+╰     |                                                      ^
+
+
+Warn  subworkflows/local/structural_variant_calling.nf:20:5: Parameter was not used -- prefix with `_` to suppress warning
+│  20 |     ch_fai
+╰     |     ^^^^^^
+
+Warn  subworkflows/local/structural_variant_calling.nf:23:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  23 |     ch_sv_calls_vcf     = Channel.empty()
+╰     |                           ^^^^^^^
+
+Warn  subworkflows/local/structural_variant_calling.nf:24:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  24 |     ch_sv_calls_vcf_tbi = Channel.empty()
+╰     |                           ^^^^^^^
+
+Warn  subworkflows/local/structural_variant_calling.nf:26:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  26 |     ch_versions         = Channel.empty()
+╰     |                           ^^^^^^^
+
+
+Error workflows/nanoseq.nf:7:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│   7 | def summary_params = NfcoreSchema.paramsSummaryMap(workflow, params)
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/nanoseq.nf:7:22: `NfcoreSchema` is not defined
+│   7 | def summary_params = NfcoreSchema.paramsSummaryMap(workflow, params)
+╰     |                      ^^^^^^^^^^^^
+
+Error workflows/nanoseq.nf:14:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  14 | checkPathParamList = [ params.input, params.multiqc_config ]
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/nanoseq.nf:15:1: `for` loops are no longer supported
+│  15 | for (param in checkPathParamList) { if (param) { file(param, checkIfEx
+╰     | ^^^
+
+Error workflows/nanoseq.nf:15:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  15 | for (param in checkPathParamList) { if (param) { file(param, checkIfEx
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/nanoseq.nf:15:6: `param` is not defined
+│  15 | for (param in checkPathParamList) { if (param) { file(param, checkIfEx
+╰     |      ^^^^^
+
+Error workflows/nanoseq.nf:15:40: `param` is not defined
+│  15 | for (param in checkPathParamList) { if (param) { file(param, checkIfEx
+╰     |                                        ^^^^^^^
+
+Error workflows/nanoseq.nf:15:55: `param` is not defined
+│  15 | for (param in checkPathParamList) { if (param) { file(param, checkIfEx
+╰     |                                                       ^^^^^
+
+Error workflows/nanoseq.nf:18:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  18 | if (params.input) {
+│     | ^^^^^^^^^^^^^^^^^^^
+│  19 |     ch_input = file(params.input)
+│  20 | } else {
+│  21 |     exit 1, 'Input samplesheet not specified!'
+╰  22 | }
+
+Error workflows/nanoseq.nf:27:16: `NXF_OFFLINE` is not defined
+│  27 |         return NXF_OFFLINE as Boolean
+╰     |                ^^^^^^^^^^^
+
+Error workflows/nanoseq.nf:34:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  34 | if (params.protocol != 'DNA' && params.protocol != 'cDNA' && params.pr
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  35 |     exit 1, "Invalid protocol option: ${params.protocol}. Valid option
+╰  36 | }
+
+Error workflows/nanoseq.nf:38:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  36 | }
+│  37 | 
+│  38 | if (!params.skip_demultiplexing) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  39 |     if (!params.barcode_kit) {
+╰  40 |         params.barcode_kit = 'Auto'
+
+Error workflows/nanoseq.nf:59:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  57 | 
+│  58 | 
+│  59 | if (!params.skip_alignment) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  60 |     if (params.aligner != 'minimap2' && params.aligner != 'graphmap2')
+╰  61 |         exit 1, "Invalid aligner option: ${params.aligner}. Valid opti
+
+Error workflows/nanoseq.nf:68:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  66 | }
+│  67 | 
+│  68 | if (params.call_variants) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  69 |     if (params.protocol != 'DNA') {
+╰  70 |         exit 1, "Invalid protocol option: ${params.protocol}. Valid op
+
+Error workflows/nanoseq.nf:83:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  81 | }
+│  82 | 
+│  83 | if (!params.skip_quantification) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  84 |     if (params.quantification_method != 'bambu' && params.quantificati
+╰  85 |         exit 1, "Invalid transcript quantification option: ${params.qu
+
+Error workflows/nanoseq.nf:96:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  96 | ch_multiqc_config        = file("$baseDir/assets/multiqc_config.yml", 
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/nanoseq.nf:97:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  97 | ch_multiqc_custom_config = params.multiqc_config ? Channel.fromPath(pa
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/nanoseq.nf:120:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/nanoseq/subworkflows/local/short_variant_calling.nf'
+│ 120 | include { SHORT_VARIANT_CALLING            } from '../subworkflows/loc
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/nanoseq.nf:148:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│ 148 | def multiqc_report      = []
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/nanoseq.nf:186:19: `ch_input` is not defined
+│ 186 |     INPUT_CHECK ( ch_input, ch_input_path )
+╰     |                   ^^^^^^^^
+
+Error workflows/nanoseq.nf:297:17: `SHORT_VARIANT_CALLING` is not defined
+│ 297 |                 SHORT_VARIANT_CALLING ( ch_view_sortbam, ch_fasta.map{
+╰     |                 ^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/nanoseq.nf:298:65: `SHORT_VARIANT_CALLING` is not defined
+│ 298 | ns = ch_software_versions.mix(SHORT_VARIANT_CALLING.out.ch_versions.fi
+╰     |                               ^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/nanoseq.nf:429:31: `WorkflowNanoseq` is not defined
+│ 429 |         workflow_summary    = WorkflowNanoseq.paramsSummaryMultiqc(wor
+╰     |                               ^^^^^^^^^^^^^^^
+
+Error workflows/nanoseq.nf:429:78: `summary_params` is not defined
+│ 429 | ry    = WorkflowNanoseq.paramsSummaryMultiqc(workflow, summary_params)
+╰     |                                                        ^^^^^^^^^^^^^^
+
+Error workflows/nanoseq.nf:436:9: `ch_multiqc_config` is not defined
+│ 436 |         ch_multiqc_config,
+╰     |         ^^^^^^^^^^^^^^^^^
+
+Error workflows/nanoseq.nf:437:9: `ch_multiqc_custom_config` is not defined
+│ 437 |         ch_multiqc_custom_config.collect().ifEmpty([]),
+╰     |         ^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/nanoseq.nf:452:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│ 450 | ////////////////////////////////////////////////////
+│ 451 | 
+│ 452 | workflow.onComplete {
+│     | ^^^^^^^^^^^^^^^^^^^^^
+│ 453 |     if (params.email) {
+╰ 454 |         NfcoreTemplate.email(workflow, params, summary_params, project
+
+Error workflows/nanoseq.nf:454:9: `NfcoreTemplate` is not defined
+│ 454 |         NfcoreTemplate.email(workflow, params, summary_params, project
+╰     |         ^^^^^^^^^^^^^^
+
+Error workflows/nanoseq.nf:458:5: `NfcoreTemplate` is not defined
+│ 458 |     NfcoreTemplate.summary(workflow, params, log)
+╰     |     ^^^^^^^^^^^^^^
+
+Error workflows/nanoseq.nf:460:9: `NfcoreTemplate` is not defined
+│ 460 |         NfcoreTemplate.IM_notification(workflow, params, summary_param
+╰     |         ^^^^^^^^^^^^^^
+
+Warn  workflows/nanoseq.nf:19:5: Variable was declared but not used
+│  19 |     ch_input = file(params.input)
+╰     |     ^^^^^^^^
+
+Warn  workflows/nanoseq.nf:29:22: Parameter was not used -- prefix with `_` to suppress warning
+│  29 |     catch( Exception e ) {
+╰     |                      ^
+
+Warn  workflows/nanoseq.nf:40:9: Params should be declared at the top-level (i.e. outside the workflow)
+│  40 |         params.barcode_kit = 'Auto'
+╰     |         ^^^^^^
+
+Warn  workflows/nanoseq.nf:49:13: Variable was declared but not used
+│  49 |             ch_input_path = Channel.fromPath(params.input_path, checkI
+╰     |             ^^^^^^^^^^^^^
+
+Warn  workflows/nanoseq.nf:49:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  49 |             ch_input_path = Channel.fromPath(params.input_path, checkI
+╰     |                             ^^^^^^^
+
+Warn  workflows/nanoseq.nf:96:1: Variable was declared but not used
+│  96 | ch_multiqc_config        = file("$baseDir/assets/multiqc_config.yml", 
+╰     | ^^^^^^^^^^^^^^^^^
+
+Warn  workflows/nanoseq.nf:97:1: Variable was declared but not used
+│  97 | ch_multiqc_custom_config = params.multiqc_config ? Channel.fromPath(pa
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/nanoseq.nf:97:52: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  97 | ch_multiqc_custom_config = params.multiqc_config ? Channel.fromPath(pa
+╰     |                                                    ^^^^^^^
+
+Warn  workflows/nanoseq.nf:97:94: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  97 | iqc_config ? Channel.fromPath(params.multiqc_config) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/nanoseq.nf:165:33: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 165 |                 ch_input_path = Channel.fromPath(params.input_path, ch
+╰     |                                 ^^^^^^^
+
+Warn  workflows/nanoseq.nf:172:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 172 |             ch_input_path = Channel.fromPath(params.input_path, checkI
+╰     |                             ^^^^^^^
+
+Warn  workflows/nanoseq.nf:181:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 181 |     ch_software_versions = Channel.empty()
+╰     |                            ^^^^^^^
+
+Warn  workflows/nanoseq.nf:195:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 195 |         ch_fastq = Channel.empty()
+╰     |                    ^^^^^^^
+
+Warn  workflows/nanoseq.nf:209:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 209 |             ch_fastq = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/nanoseq.nf:240:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 240 |     ch_fastqc_multiqc = Channel.empty()
+╰     |                         ^^^^^^^
+
+Warn  workflows/nanoseq.nf:251:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 251 |     ch_samtools_multiqc = Channel.empty()
+╰     |                           ^^^^^^^
+
+Warn  workflows/nanoseq.nf:259:9: Variable was declared but not used
+│ 259 |         ch_gtf_bed     = PREPARE_GENOME.out.ch_gtf_bed
+╰     |         ^^^^^^^^^^
+
+Warn  workflows/nanoseq.nf:297:72: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 297 | h_view_sortbam, ch_fasta.map{ it [1] }, ch_fai.map{ it [1] } )
+╰     |                               ^^
+
+Warn  workflows/nanoseq.nf:297:94: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 297 | LING ( ch_view_sortbam, ch_fasta.map{ it [1] }, ch_fai.map{ it [1] } )
+╰     |                                                             ^^
+
+Warn  workflows/nanoseq.nf:305:77: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 305 | h_view_sortbam, ch_fasta.map{ it [1] }, ch_fai.map{ it [1] } )
+╰     |                               ^^
+
+Warn  workflows/nanoseq.nf:305:99: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 305 | LING ( ch_view_sortbam, ch_fasta.map{ it [1] }, ch_fai.map{ it [1] } )
+╰     |                                                             ^^
+
+Warn  workflows/nanoseq.nf:310:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 310 |         ch_bedtools_version = Channel.empty()
+╰     |                               ^^^^^^^
+
+Warn  workflows/nanoseq.nf:345:43: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 345 |     ch_featurecounts_gene_multiqc       = Channel.empty()
+╰     |                                           ^^^^^^^
+
+Warn  workflows/nanoseq.nf:346:43: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 346 |     ch_featurecounts_transcript_multiqc = Channel.empty()
+╰     |                                           ^^^^^^^
+
+Warn  workflows/nanoseq.nf:351:9: Variable was declared but not used
+│ 351 |         REPLICATES_EXIST    = false
+╰     |         ^^^^^^^^^^^^^^^^
+
+Warn  workflows/nanoseq.nf:352:9: Variable was declared but not used
+│ 352 |         MULTIPLE_CONDITIONS = false
+╰     |         ^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/nanoseq.nf:353:24: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 353 |         ch_sample.map{ it[2] }.unique().toList().set { fastas }
+╰     |                        ^^
+
+Warn  workflows/nanoseq.nf:353:56: Variable was declared but not used
+│ 353 |         ch_sample.map{ it[2] }.unique().toList().set { fastas }
+╰     |                                                        ^^^^^^
+
+Warn  workflows/nanoseq.nf:354:24: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 354 |         ch_sample.map{ it[3] }.unique().toList().set { gtfs }
+╰     |                        ^^
+
+Warn  workflows/nanoseq.nf:354:56: Variable was declared but not used
+│ 354 |         ch_sample.map{ it[3] }.unique().toList().set { gtfs }
+╰     |                                                        ^^^^
+
+Warn  workflows/nanoseq.nf:363:9: Variable was declared but not used
+│ 363 |         ch_r_version = Channel.empty()
+╰     |         ^^^^^^^^^^^^
+
+Warn  workflows/nanoseq.nf:363:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 363 |         ch_r_version = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/nanoseq.nf:373:63: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 373 |           BAMBU ( ch_sample_annotation, ch_sortbam.collect{ it [1] } )
+╰     |                                                             ^^
+
+Warn  workflows/nanoseq.nf:430:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 430 |         ch_workflow_summary = Channel.value(workflow_summary)
+╰     |                               ^^^^^^^
+
+
+Error conf/base.config:11:1: If statements cannot be mixed with config statements
+│  11 | if (params.deepvariant_gpu) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  12 |     docker.runOptions      = '--gpus all'
+│  13 |     singularity.runOptions = '--nv'
+╰  14 | }
+
+Error conf/base.config:18:16: `check_max` is not defined
+│  18 |     cpus   = { check_max( 1 * task.attempt, 'cpus' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:19:16: `check_max` is not defined
+│  19 |     memory = { check_max( 7.GB * task.attempt, 'memory' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:20:16: `check_max` is not defined
+│  20 |     time   = { check_max( 4.h * task.attempt, 'time' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:34:20: `check_max` is not defined
+│  34 |         cpus   = { check_max( 1                  , 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:35:20: `check_max` is not defined
+│  35 |         memory = { check_max( 6.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:36:20: `check_max` is not defined
+│  36 |         time   = { check_max( 4.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:39:20: `check_max` is not defined
+│  39 |         cpus   = { check_max( 2     * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:40:20: `check_max` is not defined
+│  40 |         memory = { check_max( 12.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:41:20: `check_max` is not defined
+│  41 |         time   = { check_max( 4.h   * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:44:20: `check_max` is not defined
+│  44 |         cpus   = { check_max( 6     * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:45:20: `check_max` is not defined
+│  45 |         memory = { check_max( 42.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:46:20: `check_max` is not defined
+│  46 |         time   = { check_max( 8.h   * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:49:20: `check_max` is not defined
+│  49 |         cpus   = { check_max( 12    * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:50:20: `check_max` is not defined
+│  50 |         memory = { check_max( 84.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:51:20: `check_max` is not defined
+│  51 |         time   = { check_max( 16.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:54:20: `check_max` is not defined
+│  54 |         time   = { check_max( 20.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:57:20: `check_max` is not defined
+│  57 |         memory = { check_max( 200.GB * task.attempt, 'memory' ) }
+╰     |                    ^^^^^^^^^
+
+
+Error conf/modules.config:64:13: Unexpected input: ':'
+│  64 |     withName: GET_NANOLYSE_FASTA {
+╰     |             ^
+
+
+Error nextflow.config:122:5: Unexpected input: 'includeConfig'
+│ 122 |     includeConfig "${params.custom_config_base}/nfcore_custom.config"
+╰     |     ^
+
+
+Nextflow linting complete!
+ ❌ 11 files had 59 errors
+ ✅ 68 files had no errors

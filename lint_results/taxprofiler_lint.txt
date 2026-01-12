@@ -1,0 +1,777 @@
+Linting Nextflow code..
+Linting: conf/test_minimal.config
+Linting: conf/base.config
+Linting: conf/test_alternativepreprocessing.config
+Linting: conf/test_noprofiling.config
+Linting: conf/test_motus.config
+Linting: conf/test_nopreprocessing.config
+Linting: conf/modules.config
+Linting: conf/test_prinseqplusplus.config
+Linting: conf/test_fastp.config
+Linting: conf/test_malt.config
+Linting: conf/test_full.config
+Linting: conf/test_bbduk.config
+Linting: conf/test.config
+Linting: conf/test_falco.config
+Linting: conf/test_krakenuniq.config
+Linting: nextflow.config
+Linting: workflows/taxprofiler.nf
+Linting: subworkflows/local/visualization_krona.nf
+Linting: subworkflows/local/shortread_complexityfiltering.nf
+Linting: subworkflows/local/profiling.nf
+Linting: subworkflows/local/longread_hostremoval.nf
+Linting: subworkflows/local/longread_preprocessing.nf
+Linting: subworkflows/local/utils_nfcore_taxprofiler_pipeline/main.nf
+Linting: subworkflows/local/shortread_fastp.nf
+Linting: subworkflows/local/longread_adapterremoval.nf
+Linting: subworkflows/local/standardisation_profiles.nf
+Linting: subworkflows/local/shortread_preprocessing.nf
+Linting: subworkflows/local/shortread_adapterremoval.nf
+Linting: subworkflows/local/longread_filtering.nf
+Linting: subworkflows/local/nonpareil.nf
+Linting: subworkflows/local/shortread_hostremoval.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/kraken2_standard_report.nf
+Linting: modules/local/krona_cleanup.nf
+Linting: modules/nf-core/nonpareil/nonpareil/main.nf
+Linting: modules/nf-core/nonpareil/nonpareil/tests/nextflow.config
+Linting: modules/nf-core/nonpareil/curve/main.nf
+Linting: modules/nf-core/nonpareil/curve/tests/nextflow.config
+Linting: modules/nf-core/nonpareil/nonpareilcurvesr/main.nf
+Linting: modules/nf-core/nonpareil/set/main.nf
+Linting: modules/nf-core/nonpareil/set/tests/nextflow.config
+Linting: modules/nf-core/motus/profile/main.nf
+Linting: modules/nf-core/motus/merge/main.nf
+Linting: modules/nf-core/centrifuge/kreport/main.nf
+Linting: modules/nf-core/centrifuge/centrifuge/main.nf
+Linting: modules/nf-core/krona/ktimporttaxonomy/main.nf
+Linting: modules/nf-core/krona/ktimporttext/main.nf
+Linting: modules/nf-core/kmcp/profile/main.nf
+Linting: modules/nf-core/kmcp/profile/tests/nextflow.config
+Linting: modules/nf-core/kmcp/search/main.nf
+Linting: modules/nf-core/kmcp/search/tests/nextflow.config
+Linting: modules/nf-core/gunzip/main.nf
+Linting: modules/nf-core/gunzip/tests/nextflow.config
+Linting: modules/nf-core/prinseqplusplus/main.nf
+Linting: modules/nf-core/prinseqplusplus/tests/nextflow.config
+Linting: modules/nf-core/kaiju/kaiju/main.nf
+Linting: modules/nf-core/kaiju/kaiju2krona/main.nf
+Linting: modules/nf-core/kaiju/kaiju2table/main.nf
+Linting: modules/nf-core/krakentools/kreport2krona/main.nf
+Linting: modules/nf-core/krakentools/combinekreports/main.nf
+Linting: modules/nf-core/kraken2/kraken2/main.nf
+Linting: modules/nf-core/nanoq/main.nf
+Linting: modules/nf-core/samtools/fastq/main.nf
+Linting: modules/nf-core/samtools/index/main.nf
+Linting: modules/nf-core/samtools/index/tests/csi.nextflow.config
+Linting: modules/nf-core/samtools/stats/main.nf
+Linting: modules/nf-core/samtools/view/main.nf
+Linting: modules/nf-core/samtools/view/tests/bam_index.config
+Linting: modules/nf-core/samtools/view/tests/bam.config
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/bracken/bracken/main.nf
+Linting: modules/nf-core/bracken/bracken/tests/nextflow.config
+Linting: modules/nf-core/bracken/bracken/tests/genus_test.config
+Linting: modules/nf-core/bracken/combinebrackenoutputs/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/falco/main.nf
+Linting: modules/nf-core/minimap2/index/main.nf
+Linting: modules/nf-core/minimap2/align/main.nf
+Linting: modules/nf-core/megan/rma2info/main.nf
+Linting: modules/nf-core/megan/rma2info/tests/nextflow.config
+Linting: modules/nf-core/cat/fastq/main.nf
+Linting: modules/nf-core/bowtie2/build/main.nf
+Linting: modules/nf-core/bowtie2/align/main.nf
+Linting: modules/nf-core/bowtie2/align/tests/cram_crai.config
+Linting: modules/nf-core/bowtie2/align/tests/sam2.config
+Linting: modules/nf-core/bowtie2/align/tests/large_index.config
+Linting: modules/nf-core/bowtie2/align/tests/sam.config
+Linting: modules/nf-core/taxpasta/merge/main.nf
+Linting: modules/nf-core/taxpasta/standardise/main.nf
+Linting: modules/nf-core/fastp/main.nf
+Linting: modules/nf-core/fastp/tests/nextflow.interleaved.config
+Linting: modules/nf-core/fastp/tests/nextflow.save_failed.config
+Linting: modules/nf-core/adapterremoval/main.nf
+Linting: modules/nf-core/adapterremoval/tests/nextflow.config
+Linting: modules/nf-core/untar/main.nf
+Linting: modules/nf-core/metaphlan/metaphlan/main.nf
+Linting: modules/nf-core/metaphlan/metaphlan/tests/nextflow.config
+Linting: modules/nf-core/metaphlan/mergemetaphlantables/main.nf
+Linting: modules/nf-core/metaphlan/mergemetaphlantables/tests/nextflow.config
+Linting: modules/nf-core/ganon/report/main.nf
+Linting: modules/nf-core/ganon/report/tests/nextflow.config
+Linting: modules/nf-core/ganon/table/main.nf
+Linting: modules/nf-core/ganon/table/tests/nextflow.config
+Linting: modules/nf-core/ganon/classify/main.nf
+Linting: modules/nf-core/ganon/classify/tests/nextflow.config
+Linting: modules/nf-core/bbmap/bbduk/main.nf
+Linting: modules/nf-core/bbmap/bbduk/tests/nextflow.config
+Linting: modules/nf-core/malt/run/main.nf
+Linting: modules/nf-core/malt/run/tests/nextflow.config
+Linting: modules/nf-core/porechop/abi/main.nf
+Linting: modules/nf-core/porechop/porechop/main.nf
+Linting: modules/nf-core/porechop/porechop/tests/nextflow.config
+Linting: modules/nf-core/filtlong/main.nf
+Linting: modules/nf-core/filtlong/tests/nextflow.config
+Linting: modules/nf-core/diamond/blastx/main.nf
+Linting: modules/nf-core/krakenuniq/preloadedkrakenuniq/main.nf
+Linting: modules/nf-core/krakenuniq/preloadedkrakenuniq/tests/nextflow.config
+
+
+
+Warn  modules/nf-core/bbmap/bbduk/main.nf:45:9: Variable was declared but not used
+│  45 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+Warn  modules/nf-core/bracken/bracken/main.nf:42:9: Variable was declared but not used
+│  42 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/bracken/combinebrackenoutputs/main.nf:39:9: Variable was declared but not used
+│  39 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/cat/fastq/main.nf:22:60: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  22 |     def readList = reads instanceof List ? reads.collect { it.toString
+╰     |                                                            ^^
+
+Warn  modules/nf-core/cat/fastq/main.nf:58:60: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  58 |     def readList = reads instanceof List ? reads.collect { it.toString
+╰     |                                                            ^^
+
+
+
+
+
+
+
+
+
+Warn  modules/nf-core/ganon/classify/main.nf:48:9: Variable was declared but not used
+│  48 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/ganon/classify/main.nf:50:9: Variable was declared but not used
+│  50 |     def input = meta.single_end ? "--single-reads ${fastqs}" : "--pair
+╰     |         ^^^^^
+
+
+Warn  modules/nf-core/ganon/report/main.nf:41:9: Variable was declared but not used
+│  41 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/ganon/table/main.nf:36:9: Variable was declared but not used
+│  36 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/gunzip/main.nf:43:9: Variable was declared but not used
+│  43 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/kaiju/kaiju/main.nf:43:9: Variable was declared but not used
+│  43 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/kaiju/kaiju/main.nf:45:9: Variable was declared but not used
+│  45 |     def input = meta.single_end ? "-i ${reads}" : "-i ${reads[0]} -j $
+╰     |         ^^^^^
+
+
+Warn  modules/nf-core/kaiju/kaiju2krona/main.nf:41:9: Variable was declared but not used
+│  41 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/kaiju/kaiju2table/main.nf:42:9: Variable was declared but not used
+│  42 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/kmcp/profile/main.nf:42:9: Variable was declared but not used
+│  42 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/kmcp/search/main.nf:24:9: Variable was declared but not used
+│  24 |     def input  = meta.single_end ? "${reads}": "-1 ${reads[0]} -2 ${re
+╰     |         ^^^^^
+
+Warn  modules/nf-core/kmcp/search/main.nf:40:9: Variable was declared but not used
+│  40 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/kraken2/kraken2/main.nf:60:9: Variable was declared but not used
+│  60 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/kraken2/kraken2/main.nf:62:9: Variable was declared but not used
+│  62 |     def paired       = meta.single_end ? "" : "--paired"
+╰     |         ^^^^^^
+
+Warn  modules/nf-core/kraken2/kraken2/main.nf:65:9: Variable was declared but not used
+│  65 |     def readclassification_option = save_reads_assignment ? "--output 
+╰     |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  modules/nf-core/kraken2/kraken2/main.nf:66:9: Variable was declared but not used
+│  66 |     def compress_reads_command = save_output_fastqs ? "pigz -p $task.c
+╰     |         ^^^^^^^^^^^^^^^^^^^^^^
+
+
+Warn  modules/nf-core/krakentools/combinekreports/main.nf:36:9: Variable was declared but not used
+│  36 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/krakentools/kreport2krona/main.nf:38:9: Variable was declared but not used
+│  38 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+Warn  modules/nf-core/malt/run/main.nf:42:9: Variable was declared but not used
+│  42 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/megan/rma2info/main.nf:40:9: Variable was declared but not used
+│  40 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/megan/rma2info/main.nf:42:9: Variable was declared but not used
+│  42 |     def summary = megan_summary ? "-es ${prefix}.megan" : ""
+╰     |         ^^^^^^^
+
+
+Warn  modules/nf-core/metaphlan/mergemetaphlantables/main.nf:35:9: Variable was declared but not used
+│  35 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/metaphlan/metaphlan/main.nf:58:9: Variable was declared but not used
+│  58 |     def input_data = ("${input_type}".contains("fastq")) && !meta.sing
+╰     |         ^^^^^^^^^^
+
+Warn  modules/nf-core/metaphlan/metaphlan/main.nf:59:9: Variable was declared but not used
+│  59 |     def bowtie2_out = "${input_type}" == "--input_type bowtie2out" || 
+╰     |         ^^^^^^^^^^^
+
+Warn  modules/nf-core/metaphlan/metaphlan/main.nf:60:9: Variable was declared but not used
+│  60 |     def samfile_out = save_samfile ? "-s ${prefix}.sam" : ''
+╰     |         ^^^^^^^^^^^
+
+
+Warn  modules/nf-core/minimap2/align/main.nf:67:9: Variable was declared but not used
+│  67 |     def target = reference ?: (bam_input ? error("BAM input requires r
+╰     |         ^^^^^^
+
+
+
+Warn  modules/nf-core/motus/merge/main.nf:47:9: Variable was declared but not used
+│  47 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/motus/merge/main.nf:49:9: Variable was declared but not used
+│  49 |     def cmd_input = input.size() > 1 ? "-i ${input.join(',')}" : input
+╰     |         ^^^^^^^^^
+
+Warn  modules/nf-core/motus/merge/main.nf:50:9: Variable was declared but not used
+│  50 |     def suffix = task.ext.args?.contains("-B") ? "biom" : "txt"
+╰     |         ^^^^^^
+
+
+Warn  modules/nf-core/motus/profile/main.nf:58:9: Variable was declared but not used
+│  58 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/motus/profile/main.nf:60:9: Variable was declared but not used
+│  60 |     def inputs = reads[0].getExtension() == 'bam' ?
+╰     |         ^^^^^^
+
+Warn  modules/nf-core/motus/profile/main.nf:65:9: Variable was declared but not used
+│  65 |     def refdb = db ? "-db ${db}" : ""
+╰     |         ^^^^^
+
+
+
+Warn  modules/nf-core/nanoq/main.nf:38:9: Variable was declared but not used
+│  38 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/nonpareil/curve/main.nf:42:9: Variable was declared but not used
+│  42 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/nonpareil/nonpareil/main.nf:46:9: Variable was declared but not used
+│  46 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/nonpareil/nonpareilcurvesr/main.nf:44:9: Variable was declared but not used
+│  44 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/nonpareil/set/main.nf:42:9: Variable was declared but not used
+│  42 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/porechop/abi/main.nf:39:9: Variable was declared but not used
+│  39 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+
+Warn  modules/nf-core/samtools/stats/main.nf:22:9: Variable was declared but not used
+│  22 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Error modules/nf-core/samtools/view/main.nf:66:9: `index` is already declared
+│  66 |     def index = args.contains("--write-index") ? "touch ${prefix}.${fi
+╰     |         ^^^^^
+
+
+Warn  modules/nf-core/taxpasta/merge/main.nf:46:9: Variable was declared but not used
+│  46 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/taxpasta/merge/main.nf:48:9: Variable was declared but not used
+│  48 |     def taxonomy_option = taxonomy ? "--taxonomy ${taxonomy}" : ''
+╰     |         ^^^^^^^^^^^^^^^
+
+Warn  modules/nf-core/taxpasta/merge/main.nf:49:9: Variable was declared but not used
+│  49 |     def samplesheet_input = samplesheet ? "-s ${samplesheet}" : ''
+╰     |         ^^^^^^^^^^^^^^^^^
+
+
+Warn  modules/nf-core/taxpasta/standardise/main.nf:42:9: Variable was declared but not used
+│  42 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/taxpasta/standardise/main.nf:44:9: Variable was declared but not used
+│  44 |     def taxonomy_option = taxonomy ? "--taxonomy ${taxonomy}" : ''
+╰     |         ^^^^^^^^^^^^^^^
+
+
+
+Warn  subworkflows/local/longread_adapterremoval.nf:13:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  13 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/longread_adapterremoval.nf:14:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  14 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+
+Warn  subworkflows/local/longread_filtering.nf:13:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  13 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/longread_filtering.nf:14:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  14 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+
+Warn  subworkflows/local/longread_hostremoval.nf:19:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/longread_hostremoval.nf:20:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  20 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+
+
+Warn  subworkflows/local/nonpareil.nf:11:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  11 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/nonpareil.nf:12:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  12 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+
+Warn  subworkflows/local/profiling.nf:29:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  29 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/profiling.nf:30:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  30 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/profiling.nf:31:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  31 |     ch_raw_classifications = Channel.empty()
+╰     |                              ^^^^^^^
+
+Warn  subworkflows/local/profiling.nf:33:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  33 |     ch_raw_profiles = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/profiling.nf:237:21: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 237 |                 if (it[0].is_fasta) {
+╰     |                     ^^
+
+Warn  subworkflows/local/profiling.nf:238:145: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 238 | pping Centrifuge for sample ${it[0].id}.")
+╰     |                               ^^
+
+Warn  subworkflows/local/profiling.nf:240:18: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 240 |                 !it[0].is_fasta
+╰     |                  ^^
+
+Warn  subworkflows/local/profiling.nf:325:21: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 325 |                 if (it[0].is_fasta) {
+╰     |                     ^^
+
+Warn  subworkflows/local/profiling.nf:326:135: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 326 | . Skipping mOTUs for sample ${it[0].id}.")
+╰     |                               ^^
+
+Warn  subworkflows/local/profiling.nf:328:18: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 328 |                 !it[0].is_fasta
+╰     |                  ^^
+
+Warn  subworkflows/local/profiling.nf:488:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 488 | arams.run_motus ? MOTUS_PROFILE.out.versions.first() : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+
+Warn  subworkflows/local/shortread_adapterremoval.nf:15:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/shortread_adapterremoval.nf:16:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/shortread_adapterremoval.nf:19:17: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  19 |         single: it[0].single_end
+╰     |                 ^^
+
+Warn  subworkflows/local/shortread_adapterremoval.nf:20:18: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  20 |         paired: !it[0].single_end
+╰     |                  ^^
+
+Warn  subworkflows/local/shortread_adapterremoval.nf:33:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  33 |         ch_concat_fastq = Channel.empty()
+╰     |                           ^^^^^^^
+
+Warn  subworkflows/local/shortread_adapterremoval.nf:54:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  54 |         ch_concat_fastq = Channel.empty()
+╰     |                           ^^^^^^^
+
+
+Warn  subworkflows/local/shortread_complexityfiltering.nf:13:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  13 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/shortread_complexityfiltering.nf:14:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  14 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+
+Warn  subworkflows/local/shortread_fastp.nf:14:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  14 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/shortread_fastp.nf:15:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/shortread_fastp.nf:18:17: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  18 |         single: it[0]['single_end'] == true
+╰     |                 ^^
+
+Warn  subworkflows/local/shortread_fastp.nf:19:17: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  19 |         paired: it[0]['single_end'] == false
+╰     |                 ^^
+
+
+Warn  subworkflows/local/shortread_hostremoval.nf:17:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/shortread_hostremoval.nf:18:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  18 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+
+
+Warn  subworkflows/local/standardisation_profiles.nf:23:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  23 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/standardisation_profiles.nf:24:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  24 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/standardisation_profiles.nf:45:58: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  45 |     ch_taxpasta_tax_dir = params.taxpasta_taxonomy_dir ? Channel.fromP
+╰     |                                                          ^^^^^^^
+
+Warn  subworkflows/local/standardisation_profiles.nf:74:18: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  74 |         bracken: it[0]['tool'] == 'bracken'
+╰     |                  ^^
+
+Warn  subworkflows/local/standardisation_profiles.nf:75:21: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  75 |         centrifuge: it[0]['tool'] == 'centrifuge'
+╰     |                     ^^
+
+Warn  subworkflows/local/standardisation_profiles.nf:76:16: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  76 |         ganon: it[0]['tool'] == 'ganon'
+╰     |                ^^
+
+Warn  subworkflows/local/standardisation_profiles.nf:77:15: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  77 |         kmcp: it[0]['tool'] == 'kmcp'
+╰     |               ^^
+
+Warn  subworkflows/local/standardisation_profiles.nf:78:18: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  78 |         kraken2: it[0]['tool'] == 'kraken2' || it[0]['tool'] == 'krake
+╰     |                  ^^
+
+Warn  subworkflows/local/standardisation_profiles.nf:78:48: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  78 |         kraken2: it[0]['tool'] == 'kraken2' || it[0]['tool'] == 'krake
+╰     |                                                ^^
+
+Warn  subworkflows/local/standardisation_profiles.nf:79:20: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  79 |         metaphlan: it[0]['tool'] == 'metaphlan'
+╰     |                    ^^
+
+Warn  subworkflows/local/standardisation_profiles.nf:80:16: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  80 |         motus: it[0]['tool'] == 'motus'
+╰     |                ^^
+
+Warn  subworkflows/local/standardisation_profiles.nf:85:16: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  85 |         kaiju: it[0]['tool'] == 'kaiju'
+╰     |                ^^
+
+Warn  subworkflows/local/standardisation_profiles.nf:90:16: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  90 |         motus: it[0]['tool'] == 'motus'
+╰     |                ^^
+
+Warn  subworkflows/local/standardisation_profiles.nf:91:16: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  91 |         kaiju: it[0]['tool'] == 'kaiju'
+╰     |                ^^
+
+Warn  subworkflows/local/standardisation_profiles.nf:112:19: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 112 |         [sort: { -it.size() }],
+╰     |                   ^^
+
+Warn  subworkflows/local/standardisation_profiles.nf:141:19: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 141 |         [sort: { -it.size() }],
+╰     |                   ^^
+
+
+Warn  subworkflows/local/utils_nfcore_taxprofiler_pipeline/main.nf:31:5: Parameter was not used -- prefix with `_` to suppress warning
+│  31 |     monochrome_logs   // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_taxprofiler_pipeline/main.nf:99:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  99 |     Channel.fromList(samplesheetToList(input, "assets/schema_input.jso
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_taxprofiler_pipeline/main.nf:105:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 105 |     Channel.fromList(samplesheetToList(databases, "assets/schema_datab
+╰     |     ^^^^^^^
+
+
+Warn  subworkflows/local/visualization_krona.nf:20:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  20 |     ch_krona_text = Channel.empty()
+╰     |                     ^^^^^^^
+
+Warn  subworkflows/local/visualization_krona.nf:21:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  21 |     ch_krona_html = Channel.empty()
+╰     |                     ^^^^^^^
+
+Warn  subworkflows/local/visualization_krona.nf:22:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  22 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/visualization_krona.nf:28:21: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  28 |         centrifuge: it[0]['tool'] == 'centrifuge'
+╰     |                     ^^
+
+Warn  subworkflows/local/visualization_krona.nf:29:18: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  29 |         kraken2: it[0]['tool'] == 'kraken2' || it[0]['tool'] == 'krake
+╰     |                  ^^
+
+Warn  subworkflows/local/visualization_krona.nf:29:48: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  29 |         kraken2: it[0]['tool'] == 'kraken2' || it[0]['tool'] == 'krake
+╰     |                                                ^^
+
+Warn  subworkflows/local/visualization_krona.nf:33:16: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  33 |         kaiju: it[0]['tool'] == 'kaiju'
+╰     |                ^^
+
+Warn  subworkflows/local/visualization_krona.nf:34:15: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  34 |         malt: it[0]['tool'] == 'malt'
+╰     |               ^^
+
+Warn  subworkflows/local/visualization_krona.nf:79:22: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  79 |         .map { [[id: it[0]['db_name'], tool: it[0]['tool']], it[1]] }
+╰     |                      ^^
+
+Warn  subworkflows/local/visualization_krona.nf:79:46: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  79 |         .map { [[id: it[0]['db_name'], tool: it[0]['tool']], it[1]] }
+╰     |                                              ^^
+
+Warn  subworkflows/local/visualization_krona.nf:79:62: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  79 |         .map { [[id: it[0]['db_name'], tool: it[0]['tool']], it[1]] }
+╰     |                                                              ^^
+
+Warn  subworkflows/local/visualization_krona.nf:93:26: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  93 |             .map { [[id: it[0]['db_name'], tool: it[0]['tool']], it[1]
+╰     |                          ^^
+
+Warn  subworkflows/local/visualization_krona.nf:93:50: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  93 |             .map { [[id: it[0]['db_name'], tool: it[0]['tool']], it[1]
+╰     |                                                  ^^
+
+Warn  subworkflows/local/visualization_krona.nf:93:66: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  93 |          .map { [[id: it[0]['db_name'], tool: it[0]['tool']], it[1]] }
+╰     |                                                               ^^
+
+
+
+
+
+Warn  workflows/taxprofiler.nf:68:104: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  68 |  channel.fromPath(params.shortread_hostremoval_index).map { [[], it] }
+╰     |                                                                  ^^
+
+Warn  workflows/taxprofiler.nf:308:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 308 |     def topic_versions = Channel.topic("versions")
+╰     |                          ^^^^^^^
+
+Warn  workflows/taxprofiler.nf:375:78: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 375 | .mix(FASTQC.out.zip.collect { it[1] }.ifEmpty([]))
+╰     |                               ^^
+
+Warn  workflows/taxprofiler.nf:380:91: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 380 | EPROCESSING.out.mqc.collect { it[1] }.ifEmpty([]))
+╰     |                               ^^
+
+Warn  workflows/taxprofiler.nf:384:90: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 384 | EPROCESSING.out.mqc.collect { it[1] }.ifEmpty([]))
+╰     |                               ^^
+
+Warn  workflows/taxprofiler.nf:388:77: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 388 | x(NONPAREIL.out.mqc.collect { it[1] }.ifEmpty([]))
+╰     |                               ^^
+
+Warn  workflows/taxprofiler.nf:392:97: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 392 | TYFILTERING.out.mqc.collect { it[1] }.ifEmpty([]))
+╰     |                               ^^
+
+Warn  workflows/taxprofiler.nf:396:89: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 396 | HOSTREMOVAL.out.mqc.collect { it[1] }.ifEmpty([]))
+╰     |                               ^^
+
+Warn  workflows/taxprofiler.nf:400:88: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 400 | HOSTREMOVAL.out.mqc.collect { it[1] }.ifEmpty([]))
+╰     |                               ^^
+
+Warn  workflows/taxprofiler.nf:403:73: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 403 | x(PROFILING.out.mqc.collect { it[1] }.ifEmpty([]))
+╰     |                               ^^
+
+Warn  workflows/taxprofiler.nf:406:92: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 406 | ON_PROFILES.out.mqc.collect { it[1] }.ifEmpty([]))
+╰     |                               ^^
+
+
+Warn  conf/modules.config:94:273: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  94 | .save_analysis_ready_fastqs ? it : null },
+╰     |                               ^^
+
+Warn  conf/modules.config:127:273: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 127 | .save_analysis_ready_fastqs ? it : null },
+╰     |                               ^^
+
+Warn  conf/modules.config:155:273: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 155 | .save_analysis_ready_fastqs ? it : null },
+╰     |                               ^^
+
+Warn  conf/modules.config:185:308: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 185 | .save_analysis_ready_fastqs ? it : null },
+╰     |                               ^^
+
+Warn  conf/modules.config:236:273: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 236 | .save_analysis_ready_fastqs ? it : null },
+╰     |                               ^^
+
+Warn  conf/modules.config:260:304: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 260 | .save_analysis_ready_fastqs ? it : null },
+╰     |                               ^^
+
+Warn  conf/modules.config:284:304: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 284 | .save_analysis_ready_fastqs ? it : null },
+╰     |                               ^^
+
+Warn  conf/modules.config:313:266: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 313 | .save_analysis_ready_fastqs ? it : null },
+╰     |                               ^^
+
+Warn  conf/modules.config:342:266: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 342 | .save_analysis_ready_fastqs ? it : null },
+╰     |                               ^^
+
+Warn  conf/modules.config:371:238: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 371 | .save_analysis_ready_fastqs ? it : null },
+╰     |                               ^^
+
+Warn  conf/modules.config:399:238: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 399 | .save_analysis_ready_fastqs ? it : null },
+╰     |                               ^^
+
+Warn  conf/modules.config:442:195: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 442 | .save_analysis_ready_fastqs ? it : null },
+╰     |                               ^^
+
+Warn  conf/modules.config:486:194: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 486 | .save_analysis_ready_fastqs ? it : null },
+╰     |                               ^^
+
+Warn  conf/modules.config:548:99: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 548 | cken_save_intermediatekraken2 && meta.tool == "bracken" ? null : it },
+╰     |                                                                  ^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-test tests
+│   3 |     testsDir "."
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 2 files had 2 errors
+ ✅ 124 files had no errors

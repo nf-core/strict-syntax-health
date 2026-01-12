@@ -1,0 +1,124 @@
+Linting Nextflow code..
+Linting: conf/igenomes_ignored.config
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/igenomes.config
+Linting: nextflow.config
+Linting: workflows/seqinspector.nf
+Linting: subworkflows/local/prepare_genome/main.nf
+Linting: subworkflows/local/utils_nfcore_seqinspector_pipeline/main.nf
+Linting: subworkflows/local/qc_bam/main.nf
+Linting: subworkflows/local/qc_bam/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/rundirparser/main.nf
+Linting: modules/local/rundirparser/tests/nextflow.config
+Linting: modules/nf-core/samtools/index/main.nf
+Linting: modules/nf-core/samtools/index/tests/csi.nextflow.config
+Linting: modules/nf-core/samtools/faidx/main.nf
+Linting: modules/nf-core/samtools/faidx/tests/nextflow.config
+Linting: modules/nf-core/samtools/faidx/tests/nextflow2.config
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/bwamem2/index/main.nf
+Linting: modules/nf-core/bwamem2/mem/main.nf
+Linting: modules/nf-core/bowtie2/build/main.nf
+Linting: modules/nf-core/seqfu/stats/main.nf
+Linting: modules/nf-core/seqtk/sample/main.nf
+Linting: modules/nf-core/seqtk/sample/tests/standard.config
+Linting: modules/nf-core/fastqscreen/buildfromindex/main.nf
+Linting: modules/nf-core/fastqscreen/fastqscreen/main.nf
+Linting: modules/nf-core/fastqscreen/fastqscreen/tests/nextflow.config
+Linting: modules/nf-core/picard/createsequencedictionary/main.nf
+Linting: modules/nf-core/picard/collecthsmetrics/main.nf
+Linting: modules/nf-core/picard/collectmultiplemetrics/main.nf
+
+
+
+
+
+
+Warn  modules/nf-core/fastqscreen/buildfromindex/main.nf:22:32: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  22 |     folder = indexes.collect { it.toString() }
+╰     |                                ^^
+
+Warn  modules/nf-core/fastqscreen/buildfromindex/main.nf:24:46: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  24 |     copy_indexes = folder.collect { "cp -r ${it} $dir/${it}"}.join(" &
+╰     |                                              ^^
+
+Warn  modules/nf-core/fastqscreen/buildfromindex/main.nf:24:57: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  24 |     copy_indexes = folder.collect { "cp -r ${it} $dir/${it}"}.join(" &
+╰     |                                                         ^^
+
+Warn  modules/nf-core/fastqscreen/buildfromindex/main.nf:28:34: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  28 |         .collect { "########## ${it[0]} \nDATABASE ${it[0]} $dir/${it[
+╰     |                                  ^^
+
+Warn  modules/nf-core/fastqscreen/buildfromindex/main.nf:28:54: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  28 |         .collect { "########## ${it[0]} \nDATABASE ${it[0]} $dir/${it[
+╰     |                                                      ^^
+
+Warn  modules/nf-core/fastqscreen/buildfromindex/main.nf:28:68: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  28 | ]} \nDATABASE ${it[0]} $dir/${it[1]}/${it[1] + '_to_be_replaced'}" }
+╰     |                               ^^
+
+Warn  modules/nf-core/fastqscreen/buildfromindex/main.nf:28:77: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  28 | BASE ${it[0]} $dir/${it[1]}/${it[1] + '_to_be_replaced'}" }
+╰     |                               ^^
+
+
+
+
+
+
+
+
+
+
+
+Warn  subworkflows/local/utils_nfcore_seqinspector_pipeline/main.nf:32:5: Parameter was not used -- prefix with `_` to suppress warning
+│  32 |     monochrome_logs   // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_seqinspector_pipeline/main.nf:35:5: Parameter was not used -- prefix with `_` to suppress warning
+│  35 |     input             //  string: Path to input samplesheet
+╰     |     ^^^^^
+
+Warn  subworkflows/local/utils_nfcore_seqinspector_pipeline/main.nf:103:18: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 103 |     nr_samples = Channel.fromList(samplesheetToList(params.input, "${p
+╰     |                  ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_seqinspector_pipeline/main.nf:109:20: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 109 |         .flatMap { it.withIndex().collect {  entry, idx -> entry + "${
+╰     |                    ^^
+
+Warn  subworkflows/local/utils_nfcore_seqinspector_pipeline/main.nf:132:38: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 132 |             validateInputSamplesheet(it) // Applies additional group v
+╰     |                                      ^^
+
+Warn  subworkflows/local/utils_nfcore_seqinspector_pipeline/main.nf:143:19: Parameter was not used -- prefix with `_` to suppress warning
+│ 143 |             meta, fastqs -> meta.tags
+╰     |                   ^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_seqinspector_pipeline/main.nf:150:13: Parameter was not used -- prefix with `_` to suppress warning
+│ 150 |             tag_lowercase, tags ->
+╰     |             ^^^^^^^^^^^^^
+
+
+
+
+
+
+ERROR ~ begin 44, end 45, length 44
+
+

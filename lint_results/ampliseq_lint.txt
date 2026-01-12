@@ -1,0 +1,1281 @@
+Linting Nextflow code..
+Linting: conf/test_fasta.config
+Linting: conf/ref_databases.config
+Linting: conf/igenomes_ignored.config
+Linting: conf/test_failed.config
+Linting: conf/base.config
+Linting: conf/test_doubleprimers.config
+Linting: conf/test_novaseq.config
+Linting: conf/modules.config
+Linting: conf/test_pacbio_its.config
+Linting: conf/test_pplace.config
+Linting: conf/test_full.config
+Linting: conf/test_reftaxcustom.config
+Linting: conf/test.config
+Linting: conf/test_qiimecustom.config
+Linting: conf/test_multiregion.config
+Linting: conf/test_sintax.config
+Linting: conf/test_iontorrent.config
+Linting: conf/test_single.config
+Linting: conf/test_multi.config
+Linting: nextflow.config
+Linting: workflows/ampliseq.nf
+Linting: subworkflows/local/qiime2_export.nf
+Linting: subworkflows/local/qiime2_diversity.nf
+Linting: subworkflows/local/cutadapt_workflow.nf
+Linting: subworkflows/local/robject_workflow.nf
+Linting: subworkflows/local/qiime2_barplotavg.nf
+Linting: subworkflows/local/dada2_preprocessing.nf
+Linting: subworkflows/local/qiime2_taxonomy.nf
+Linting: subworkflows/local/utils_nfcore_ampliseq_pipeline/main.nf
+Linting: subworkflows/local/parse_input.nf
+Linting: subworkflows/local/kraken2_taxonomy_wf.nf
+Linting: subworkflows/local/dada2_taxonomy_wf.nf
+Linting: subworkflows/local/qiime2_ancom.nf
+Linting: subworkflows/local/sidle_wf.nf
+Linting: subworkflows/local/sintax_taxonomy_wf.nf
+Linting: subworkflows/local/qiime2_preptax.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: subworkflows/nf-core/fasta_newick_epang_gappa/main.nf
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/cutadapt_summary_merge.nf
+Linting: modules/local/qiime2_inseq.nf
+Linting: modules/local/sidle_in.nf
+Linting: modules/local/dada2_quality.nf
+Linting: modules/local/barrnapsummary.nf
+Linting: modules/local/cutadapt_summary.nf
+Linting: modules/local/dada2_err.nf
+Linting: modules/local/dada2_taxonomy.nf
+Linting: modules/local/format_taxonomy_sintax.nf
+Linting: modules/local/qiime2_extract.nf
+Linting: modules/local/format_taxresults_sintax.nf
+Linting: modules/local/qiime2_barplot.nf
+Linting: modules/local/sbdiexport.nf
+Linting: modules/local/sidle_indbaligned.nf
+Linting: modules/local/qiime2_diversity_alpha.nf
+Linting: modules/local/dada2_rmchimera.nf
+Linting: modules/local/rename_raw_data_files.nf
+Linting: modules/local/phyloseq_inasv.nf
+Linting: modules/local/phyloseq_intax.nf
+Linting: modules/local/qiime2_classify.nf
+Linting: modules/local/sidle_filttax.nf
+Linting: modules/local/novaseq_err.nf
+Linting: modules/local/format_taxonomy_qiime.nf
+Linting: modules/local/trunclen.nf
+Linting: modules/local/qiime2_diversity_beta.nf
+Linting: modules/local/dada2_denoising.nf
+Linting: modules/local/sidle_align.nf
+Linting: modules/local/qiime2_ancom_asv.nf
+Linting: modules/local/merge_stats.nf
+Linting: modules/local/format_taxonomy.nf
+Linting: modules/local/format_taxresults_kraken2.nf
+Linting: modules/local/filter_ssu.nf
+Linting: modules/local/qiime2_ancombc_tax.nf
+Linting: modules/local/qiime2_intree.nf
+Linting: modules/local/combine_table.nf
+Linting: modules/local/sidle_trim.nf
+Linting: modules/local/filter_stats.nf
+Linting: modules/local/itsx_cutasv.nf
+Linting: modules/local/qiime2_train.nf
+Linting: modules/local/format_pplacetax.nf
+Linting: modules/local/phyloseq.nf
+Linting: modules/local/qiime2_filtersamples.nf
+Linting: modules/local/qiime2_tablefiltertaxa.nf
+Linting: modules/local/dada2_merge.nf
+Linting: modules/local/qiime2_ancombc_asv.nf
+Linting: modules/local/barrnap.nf
+Linting: modules/local/qiime2_export_relasv.nf
+Linting: modules/local/sidle_treerecon.nf
+Linting: modules/local/dada2_addspecies.nf
+Linting: modules/local/metadata_all.nf
+Linting: modules/local/filter_len.nf
+Linting: modules/local/qiime2_diversity_adonis.nf
+Linting: modules/local/format_fastainput.nf
+Linting: modules/local/assignsh.nf
+Linting: modules/local/qiime2_inasv.nf
+Linting: modules/local/sidle_indb.nf
+Linting: modules/local/qiime2_alphararefaction.nf
+Linting: modules/local/sidle_dbrecon.nf
+Linting: modules/local/qiime2_export_reltax.nf
+Linting: modules/local/dada2_filtntrim.nf
+Linting: modules/local/qiime2_diversity_betaord.nf
+Linting: modules/local/summary_report.nf
+Linting: modules/local/qiime2_tree.nf
+Linting: modules/local/format_taxonomy_sidle.nf
+Linting: modules/local/sidle_tablerecon.nf
+Linting: modules/local/qiime2_export_absolute.nf
+Linting: modules/local/sidle_seqrecon.nf
+Linting: modules/local/filter_clusters.nf
+Linting: modules/local/qiime2_intax.nf
+Linting: modules/local/dada2_splitregions.nf
+Linting: modules/local/sidle_dbfilt.nf
+Linting: modules/local/qiime2_ancom_tax.nf
+Linting: modules/local/sidle_dbextract.nf
+Linting: modules/local/picrust.nf
+Linting: modules/local/sidle_taxrecon.nf
+Linting: modules/local/qiime2_featuretable_group.nf
+Linting: modules/local/format_taxresults.nf
+Linting: modules/local/sbdiexportreannotate.nf
+Linting: modules/local/qiime2_diversity_core.nf
+Linting: modules/local/metadata_pairwise.nf
+Linting: modules/local/treesummarizedexperiment.nf
+Linting: modules/local/filter_codons.nf
+Linting: modules/local/dada2_stats.nf
+Linting: modules/local/qiime2_seqfiltertable.nf
+Linting: modules/nf-core/kraken2/kraken2/main.nf
+Linting: modules/nf-core/pigz/uncompress/main.nf
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/cutadapt/main.nf
+Linting: modules/nf-core/cutadapt/tests/nextflow.config
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/vsearch/cluster/main.nf
+Linting: modules/nf-core/vsearch/cluster/tests/nextflow_userout.config
+Linting: modules/nf-core/vsearch/cluster/tests/nextflow_unoise.config
+Linting: modules/nf-core/vsearch/cluster/tests/nextflow_smallmem.config
+Linting: modules/nf-core/vsearch/cluster/tests/nextflow_size.config
+Linting: modules/nf-core/vsearch/cluster/tests/nextflow_fast.config
+Linting: modules/nf-core/vsearch/usearchglobal/main.nf
+Linting: modules/nf-core/vsearch/sintax/main.nf
+Linting: modules/nf-core/hmmer/hmmalign/main.nf
+Linting: modules/nf-core/hmmer/eslreformat/main.nf
+Linting: modules/nf-core/hmmer/eslalimask/main.nf
+Linting: modules/nf-core/hmmer/hmmbuild/main.nf
+Linting: modules/nf-core/untar/main.nf
+Linting: modules/nf-core/mafft/main.nf
+Linting: modules/nf-core/epang/place/main.nf
+Linting: modules/nf-core/epang/split/main.nf
+Linting: modules/nf-core/gappa/examineheattree/main.nf
+Linting: modules/nf-core/gappa/examineassign/main.nf
+Linting: modules/nf-core/gappa/examinegraft/main.nf
+Warn  modules/local/barrnapsummary.nf:19:9: Variable was declared but not used
+│  19 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+
+
+
+
+
+Warn  modules/local/qiime2_alphararefaction.nf:4:14: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│   4 |     conda "${projectDir}/modules/local/envs/qiime2-amplicon-2024.10-py
+╰     |              ^^^^^^^^^^
+
+
+Warn  modules/local/qiime2_ancom_asv.nf:8:14: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│   8 |     conda "${projectDir}/modules/local/envs/qiime2-amplicon-2024.10-py
+╰     |              ^^^^^^^^^^
+
+
+Warn  modules/local/qiime2_ancom_tax.nf:6:14: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│   6 |     conda "${projectDir}/modules/local/envs/qiime2-amplicon-2024.10-py
+╰     |              ^^^^^^^^^^
+
+
+Warn  modules/local/qiime2_ancombc_asv.nf:8:14: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│   8 |     conda "${projectDir}/modules/local/envs/qiime2-amplicon-2024.10-py
+╰     |              ^^^^^^^^^^
+
+
+Warn  modules/local/qiime2_ancombc_tax.nf:6:14: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│   6 |     conda "${projectDir}/modules/local/envs/qiime2-amplicon-2024.10-py
+╰     |              ^^^^^^^^^^
+
+
+Warn  modules/local/qiime2_barplot.nf:4:14: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│   4 |     conda "${projectDir}/modules/local/envs/qiime2-amplicon-2024.10-py
+╰     |              ^^^^^^^^^^
+
+
+Warn  modules/local/qiime2_classify.nf:5:14: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│   5 |     conda "${projectDir}/modules/local/envs/qiime2-amplicon-2024.10-py
+╰     |              ^^^^^^^^^^
+
+
+Warn  modules/local/qiime2_diversity_adonis.nf:5:14: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│   5 |     conda "${projectDir}/modules/local/envs/qiime2-amplicon-2024.10-py
+╰     |              ^^^^^^^^^^
+
+
+Warn  modules/local/qiime2_diversity_alpha.nf:5:14: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│   5 |     conda "${projectDir}/modules/local/envs/qiime2-amplicon-2024.10-py
+╰     |              ^^^^^^^^^^
+
+
+Warn  modules/local/qiime2_diversity_beta.nf:5:14: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│   5 |     conda "${projectDir}/modules/local/envs/qiime2-amplicon-2024.10-py
+╰     |              ^^^^^^^^^^
+
+
+Warn  modules/local/qiime2_diversity_betaord.nf:5:14: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│   5 |     conda "${projectDir}/modules/local/envs/qiime2-amplicon-2024.10-py
+╰     |              ^^^^^^^^^^
+
+
+Warn  modules/local/qiime2_diversity_core.nf:4:14: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│   4 |     conda "${projectDir}/modules/local/envs/qiime2-amplicon-2024.10-py
+╰     |              ^^^^^^^^^^
+
+
+Warn  modules/local/qiime2_export_absolute.nf:4:14: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│   4 |     conda "${projectDir}/modules/local/envs/qiime2-amplicon-2024.10-py
+╰     |              ^^^^^^^^^^
+
+
+Warn  modules/local/qiime2_export_relasv.nf:4:14: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│   4 |     conda "${projectDir}/modules/local/envs/qiime2-amplicon-2024.10-py
+╰     |              ^^^^^^^^^^
+
+
+Warn  modules/local/qiime2_export_reltax.nf:4:14: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│   4 |     conda "${projectDir}/modules/local/envs/qiime2-amplicon-2024.10-py
+╰     |              ^^^^^^^^^^
+
+
+Warn  modules/local/qiime2_extract.nf:4:14: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│   4 |     conda "${projectDir}/modules/local/envs/qiime2-amplicon-2024.10-py
+╰     |              ^^^^^^^^^^
+
+
+Warn  modules/local/qiime2_featuretable_group.nf:5:14: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│   5 |     conda "${projectDir}/modules/local/envs/qiime2-amplicon-2024.10-py
+╰     |              ^^^^^^^^^^
+
+
+Warn  modules/local/qiime2_filtersamples.nf:5:14: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│   5 |     conda "${projectDir}/modules/local/envs/qiime2-amplicon-2024.10-py
+╰     |              ^^^^^^^^^^
+
+
+Warn  modules/local/qiime2_inasv.nf:5:14: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│   5 |     conda "${projectDir}/modules/local/envs/qiime2-amplicon-2024.10-py
+╰     |              ^^^^^^^^^^
+
+
+Warn  modules/local/qiime2_inseq.nf:5:14: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│   5 |     conda "${projectDir}/modules/local/envs/qiime2-amplicon-2024.10-py
+╰     |              ^^^^^^^^^^
+
+
+Warn  modules/local/qiime2_intax.nf:5:14: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│   5 |     conda "${projectDir}/modules/local/envs/qiime2-amplicon-2024.10-py
+╰     |              ^^^^^^^^^^
+
+
+Warn  modules/local/qiime2_intree.nf:5:14: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│   5 |     conda "${projectDir}/modules/local/envs/qiime2-amplicon-2024.10-py
+╰     |              ^^^^^^^^^^
+
+
+Warn  modules/local/qiime2_seqfiltertable.nf:5:14: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│   5 |     conda "${projectDir}/modules/local/envs/qiime2-amplicon-2024.10-py
+╰     |              ^^^^^^^^^^
+
+
+Warn  modules/local/qiime2_tablefiltertaxa.nf:5:14: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│   5 |     conda "${projectDir}/modules/local/envs/qiime2-amplicon-2024.10-py
+╰     |              ^^^^^^^^^^
+
+
+Warn  modules/local/qiime2_train.nf:6:14: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│   6 |     conda "${projectDir}/modules/local/envs/qiime2-amplicon-2024.10-py
+╰     |              ^^^^^^^^^^
+
+
+Warn  modules/local/qiime2_tree.nf:4:14: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│   4 |     conda "${projectDir}/modules/local/envs/qiime2-amplicon-2024.10-py
+╰     |              ^^^^^^^^^^
+
+
+Warn  modules/local/sidle_align.nf:5:14: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│   5 |     conda "${projectDir}/modules/local/envs/pipesidle-0-1-0-beta.yml"
+╰     |              ^^^^^^^^^^
+
+Warn  modules/local/sidle_align.nf:18:9: Variable was declared but not used
+│  18 |     def primerfw = "${meta.fw_primer}"
+╰     |         ^^^^^^^^
+
+Warn  modules/local/sidle_align.nf:19:9: Variable was declared but not used
+│  19 |     def primerrv = "${meta.rv_primer}"
+╰     |         ^^^^^^^^
+
+
+Warn  modules/local/sidle_dbextract.nf:6:14: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│   6 |     conda "${projectDir}/modules/local/envs/pipesidle-0-1-0-beta.yml"
+╰     |              ^^^^^^^^^^
+
+
+Warn  modules/local/sidle_dbfilt.nf:4:14: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│   4 |     conda "${projectDir}/modules/local/envs/pipesidle-0-1-0-beta.yml"
+╰     |              ^^^^^^^^^^
+
+
+Warn  modules/local/sidle_dbrecon.nf:4:14: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│   4 |     conda "${projectDir}/modules/local/envs/pipesidle-0-1-0-beta.yml"
+╰     |              ^^^^^^^^^^
+
+Warn  modules/local/sidle_dbrecon.nf:22:59: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  22 |     def df = [metaid, map, aligned_map].transpose().sort{ it[0] }
+╰     |                                                           ^^
+
+
+Warn  modules/local/sidle_filttax.nf:5:14: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│   5 |     conda "${projectDir}/modules/local/envs/pipesidle-0-1-0-beta.yml"
+╰     |              ^^^^^^^^^^
+
+
+Warn  modules/local/sidle_in.nf:5:14: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│   5 |     conda "${projectDir}/modules/local/envs/pipesidle-0-1-0-beta.yml"
+╰     |              ^^^^^^^^^^
+
+Warn  modules/local/sidle_in.nf:16:9: Variable was declared but not used
+│  16 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/sidle_indb.nf:4:14: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│   4 |     conda "${projectDir}/modules/local/envs/pipesidle-0-1-0-beta.yml"
+╰     |              ^^^^^^^^^^
+
+
+Warn  modules/local/sidle_indbaligned.nf:4:14: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│   4 |     conda "${projectDir}/modules/local/envs/pipesidle-0-1-0-beta.yml"
+╰     |              ^^^^^^^^^^
+
+Warn  modules/local/sidle_indbaligned.nf:15:9: Variable was declared but not used
+│  15 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/sidle_seqrecon.nf:5:14: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│   5 |     conda "${projectDir}/modules/local/envs/pipesidle-0-1-0-beta.yml"
+╰     |              ^^^^^^^^^^
+
+
+Warn  modules/local/sidle_tablerecon.nf:4:14: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│   4 |     conda "${projectDir}/modules/local/envs/pipesidle-0-1-0-beta.yml"
+╰     |              ^^^^^^^^^^
+
+Warn  modules/local/sidle_tablerecon.nf:25:61: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  25 |     def df = [metaid, aligned_map, table].transpose().sort{ it[0] }
+╰     |                                                             ^^
+
+
+Warn  modules/local/sidle_taxrecon.nf:4:14: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│   4 |     conda "${projectDir}/modules/local/envs/pipesidle-0-1-0-beta.yml"
+╰     |              ^^^^^^^^^^
+
+
+Warn  modules/local/sidle_treerecon.nf:4:14: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│   4 |     conda "${projectDir}/modules/local/envs/pipesidle-0-1-0-beta.yml"
+╰     |              ^^^^^^^^^^
+
+
+Warn  modules/local/sidle_trim.nf:5:14: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│   5 |     conda "${projectDir}/modules/local/envs/pipesidle-0-1-0-beta.yml"
+╰     |              ^^^^^^^^^^
+
+Warn  modules/local/sidle_trim.nf:17:9: Variable was declared but not used
+│  17 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/sidle_trim.nf:19:9: Variable was declared but not used
+│  19 |     def primerfw = "${meta.fw_primer}"
+╰     |         ^^^^^^^^
+
+Warn  modules/local/sidle_trim.nf:20:9: Variable was declared but not used
+│  20 |     def primerrv = "${meta.rv_primer}"
+╰     |         ^^^^^^^^
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Warn  modules/nf-core/kraken2/kraken2/main.nf:59:9: Variable was declared but not used
+│  59 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/kraken2/kraken2/main.nf:61:9: Variable was declared but not used
+│  61 |     def paired       = meta.single_end ? "" : "--paired"
+╰     |         ^^^^^^
+
+Warn  modules/nf-core/kraken2/kraken2/main.nf:64:9: Variable was declared but not used
+│  64 |     def readclassification_option = save_reads_assignment ? "--output 
+╰     |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  modules/nf-core/kraken2/kraken2/main.nf:65:9: Variable was declared but not used
+│  65 |     def compress_reads_command = save_output_fastqs ? "pigz -p $task.c
+╰     |         ^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+
+Warn  modules/nf-core/pigz/uncompress/main.nf:38:9: Variable was declared but not used
+│  38 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+
+Warn  subworkflows/local/cutadapt_workflow.nf:19:37: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 |     ch_versions_cutadapt_workflow = Channel.empty()
+╰     |                                     ^^^^^^^
+
+Warn  subworkflows/local/cutadapt_workflow.nf:66:22: Parameter was not used -- prefix with `_` to suppress warning
+│  66 |         .map { meta, reads -> [ meta.id ] }
+╰     |                      ^^^^^
+
+
+Warn  subworkflows/local/dada2_preprocessing.nf:19:39: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 |     ch_versions_dada2_preprocessing = Channel.empty()
+╰     |                                       ^^^^^^^
+
+Warn  subworkflows/local/dada2_preprocessing.nf:24:20: Parameter was not used -- prefix with `_` to suppress warning
+│  24 |             .map { meta, reads -> [ reads ] }
+╰     |                    ^^^^
+
+Warn  subworkflows/local/dada2_preprocessing.nf:30:20: Parameter was not used -- prefix with `_` to suppress warning
+│  30 |             .map { meta, reads -> [ reads[0] ] }
+╰     |                    ^^^^
+
+Warn  subworkflows/local/dada2_preprocessing.nf:35:20: Parameter was not used -- prefix with `_` to suppress warning
+│  35 |             .map { meta, reads -> [ reads[1] ] }
+╰     |                    ^^^^
+
+Warn  subworkflows/local/dada2_preprocessing.nf:44:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  44 |     ch_DADA2_QUALITY1_SVG = Channel.empty()
+╰     |                             ^^^^^^^
+
+Warn  subworkflows/local/dada2_preprocessing.nf:67:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  67 |         Channel.fromList( [['FW', trunclenf], ['RV', trunclenr]] )
+╰     |         ^^^^^^^
+
+Warn  subworkflows/local/dada2_preprocessing.nf:86:22: Parameter was not used -- prefix with `_` to suppress warning
+│  86 |         .map { meta, reads, logs, args -> [ meta.id ] }
+╰     |                      ^^^^^
+
+Warn  subworkflows/local/dada2_preprocessing.nf:86:29: Parameter was not used -- prefix with `_` to suppress warning
+│  86 |         .map { meta, reads, logs, args -> [ meta.id ] }
+╰     |                             ^^^^
+
+Warn  subworkflows/local/dada2_preprocessing.nf:86:35: Parameter was not used -- prefix with `_` to suppress warning
+│  86 |         .map { meta, reads, logs, args -> [ meta.id ] }
+╰     |                                   ^^^^
+
+Warn  subworkflows/local/dada2_preprocessing.nf:100:28: Parameter was not used -- prefix with `_` to suppress warning
+│ 100 |         .map{ meta, reads, logs, args -> [meta, reads] }
+╰     |                            ^^^^
+
+Warn  subworkflows/local/dada2_preprocessing.nf:100:34: Parameter was not used -- prefix with `_` to suppress warning
+│ 100 |         .map{ meta, reads, logs, args -> [meta, reads] }
+╰     |                                  ^^^^
+
+Warn  subworkflows/local/dada2_preprocessing.nf:103:21: Parameter was not used -- prefix with `_` to suppress warning
+│ 103 |         .map{ meta, reads, logs, args -> [meta, logs] }
+╰     |                     ^^^^^
+
+Warn  subworkflows/local/dada2_preprocessing.nf:103:34: Parameter was not used -- prefix with `_` to suppress warning
+│ 103 |         .map{ meta, reads, logs, args -> [meta, logs] }
+╰     |                                  ^^^^
+
+Warn  subworkflows/local/dada2_preprocessing.nf:106:15: Parameter was not used -- prefix with `_` to suppress warning
+│ 106 |         .map{ meta, reads, logs, args -> args }
+╰     |               ^^^^
+
+Warn  subworkflows/local/dada2_preprocessing.nf:106:21: Parameter was not used -- prefix with `_` to suppress warning
+│ 106 |         .map{ meta, reads, logs, args -> args }
+╰     |                     ^^^^^
+
+Warn  subworkflows/local/dada2_preprocessing.nf:106:28: Parameter was not used -- prefix with `_` to suppress warning
+│ 106 |         .map{ meta, reads, logs, args -> args }
+╰     |                            ^^^^
+
+Warn  subworkflows/local/dada2_preprocessing.nf:112:20: Parameter was not used -- prefix with `_` to suppress warning
+│ 112 |             .map { meta, reads -> [ reads ] }
+╰     |                    ^^^^
+
+Warn  subworkflows/local/dada2_preprocessing.nf:118:20: Parameter was not used -- prefix with `_` to suppress warning
+│ 118 |             .map { meta, reads -> [ reads[0] ] }
+╰     |                    ^^^^
+
+Warn  subworkflows/local/dada2_preprocessing.nf:123:20: Parameter was not used -- prefix with `_` to suppress warning
+│ 123 |             .map { meta, reads -> [ reads[1] ] }
+╰     |                    ^^^^
+
+Warn  subworkflows/local/dada2_preprocessing.nf:132:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 132 |     ch_DADA2_QUALITY2_SVG = Channel.empty()
+╰     |                             ^^^^^^^
+
+
+Warn  subworkflows/local/dada2_taxonomy_wf.nf:27:33: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  27 |     ch_versions_dada_taxonomy = Channel.empty()
+╰     |                                 ^^^^^^^
+
+Warn  subworkflows/local/dada2_taxonomy_wf.nf:32:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  32 |         ch_shinfo = Channel.fromList(params.dada_ref_databases[params.
+╰     |                     ^^^^^^^
+
+Warn  subworkflows/local/dada2_taxonomy_wf.nf:48:20: Parameter was not used -- prefix with `_` to suppress warning
+│  48 |             .map { meta, db -> db }
+╰     |                    ^^^^
+
+
+Warn  subworkflows/local/kraken2_taxonomy_wf.nf:17:36: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |     ch_versions_kraken2_taxonomy = Channel.empty()
+╰     |                                    ^^^^^^^
+
+
+Warn  subworkflows/local/parse_input.nf:21:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  21 |         Channel
+╰     |         ^^^^^^^
+
+Warn  subworkflows/local/parse_input.nf:33:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  33 |         Channel
+╰     |         ^^^^^^^
+
+Warn  subworkflows/local/parse_input.nf:47:30: Parameter was not used -- prefix with `_` to suppress warning
+│  47 |             .flatMap { meta, reads -> [ meta.run ] }
+╰     |                              ^^^^^
+
+Warn  subworkflows/local/parse_input.nf:64:22: Parameter was not used -- prefix with `_` to suppress warning
+│  64 |         .map { meta, reads -> [ meta.sample ] }
+╰     |                      ^^^^^
+
+Warn  subworkflows/local/parse_input.nf:75:22: Parameter was not used -- prefix with `_` to suppress warning
+│  75 |         .map { meta, reads -> meta.sample }
+╰     |                      ^^^^^
+
+Warn  subworkflows/local/parse_input.nf:80:22: Parameter was not used -- prefix with `_` to suppress warning
+│  80 |         .map { meta, reads -> meta.sample }
+╰     |                      ^^^^^
+
+
+Warn  subworkflows/local/qiime2_ancom.nf:24:32: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  24 |     ch_versions_qiime2_ancom = Channel.empty()
+╰     |                                ^^^^^^^
+
+Warn  subworkflows/local/qiime2_ancom.nf:26:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  26 |     ch_taxlevel = Channel.of( tax_agglom_min..tax_agglom_max )
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/qiime2_ancom.nf:58:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  58 |             .combine( Channel.fromList([""]) )
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/qiime2_ancom.nf:65:107: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  65 | .out.qza.flatten() ).combine( Channel.fromList([""]) ) )
+╰     |                               ^^^^^^^
+
+Warn  subworkflows/local/qiime2_ancom.nf:70:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  70 |         ch_ancombc_formula = Channel.fromList( ancombc_formula.toStrin
+╰     |                              ^^^^^^^
+
+Warn  subworkflows/local/qiime2_ancom.nf:73:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  73 |         ch_taxlevel = Channel.of( tax_agglom_min..tax_agglom_max )
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/qiime2_ancom.nf:90:92: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  90 | _ANCOM_ASV.out.ancom.mix(QIIME2_ANCOM_TAX.out.ancom) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  subworkflows/local/qiime2_ancom.nf:91:108: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  91 | ut.da_barplot.mix(QIIME2_ANCOMBC_TAX.out.da_barplot) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  subworkflows/local/qiime2_ancom.nf:92:118: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  92 | t.da_barplot.mix(ANCOMBC_FORMULA_TAX.out.da_barplot) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+
+Warn  subworkflows/local/qiime2_barplotavg.nf:17:37: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |     ch_versions_qiime2_barplotavg = Channel.empty()
+╰     |                                     ^^^^^^^
+
+Warn  subworkflows/local/qiime2_barplotavg.nf:18:36: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  18 |     ch_metadata_category_barplot = Channel.fromList(metadata_category_
+╰     |                                    ^^^^^^^
+
+
+Warn  subworkflows/local/qiime2_diversity.nf:21:5: Parameter was not used -- prefix with `_` to suppress warning
+│  21 |     ch_metacolumn_all //METADATA_ALL.out
+╰     |     ^^^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/qiime2_diversity.nf:27:36: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  27 |     ch_versions_qiime2_diversity = Channel.empty()
+╰     |                                    ^^^^^^^
+
+Warn  subworkflows/local/qiime2_diversity.nf:68:39: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  68 |             ch_qiime_adonis_formula = Channel.fromList(params.qiime_ad
+╰     |                                       ^^^^^^^
+
+
+Warn  subworkflows/local/qiime2_export.nf:26:33: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  26 |     ch_versions_qiime2_export = Channel.empty()
+╰     |                                 ^^^^^^^
+
+
+Warn  subworkflows/local/qiime2_preptax.nf:19:34: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 |     ch_qiime2_preptax_versions = Channel.empty()
+╰     |                                  ^^^^^^^
+
+Warn  subworkflows/local/qiime2_preptax.nf:69:21: Variable was declared but not used
+│  69 |                 def files = file(dir.resolve("*.fna"), checkIfExists: 
+╰     |                     ^^^^^
+
+Warn  subworkflows/local/qiime2_preptax.nf:75:21: Variable was declared but not used
+│  75 |                 def files = file(dir.resolve("*.tax"), checkIfExists: 
+╰     |                     ^^^^^
+
+
+Warn  subworkflows/local/robject_workflow.nf:18:36: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  18 |     ch_versions_robject_workflow = Channel.empty()
+╰     |                                    ^^^^^^^
+
+
+Warn  subworkflows/local/sidle_wf.nf:28:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  28 |     ch_sidle_versions = Channel.empty()
+╰     |                         ^^^^^^^
+
+Warn  subworkflows/local/sidle_wf.nf:42:107: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  42 | ln_custom ? ch_sidle_ref_taxonomy.map{ it -> it[2] } : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+
+Warn  subworkflows/local/sintax_taxonomy_wf.nf:19:35: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 |     ch_versions_sintax_taxonomy = Channel.empty()
+╰     |                                   ^^^^^^^
+
+
+Warn  subworkflows/local/utils_nfcore_ampliseq_pipeline/main.nf:31:5: Parameter was not used -- prefix with `_` to suppress warning
+│  31 |     monochrome_logs   // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_ampliseq_pipeline/main.nf:37:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  37 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:22:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  22 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:25:41: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  25 |     ch_hmmer_data = ch_pp_data.filter { it.data.alignmethod == 'hmmer'
+╰     |                                         ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:26:41: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  26 |     ch_mafft_data = ch_pp_data.filter { it.data.alignmethod == 'mafft'
+╰     |                                         ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:31:25: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  31 |             .filter { ! it.data.hmmfile }
+╰     |                         ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:32:22: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  32 |             .map { [ it.meta, it.data.refseqfile ] },
+╰     |                      ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:32:31: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  32 |             .map { [ it.meta, it.data.refseqfile ] },
+╰     |                               ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:36:14: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  36 |     ch_hmm = Channel.empty()
+╰     |              ^^^^^^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:37:45: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  37 |         .mix(HMMER_HMMBUILD.out.hmm.map { [ it[0], it[1] ] })
+╰     |                                             ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:37:52: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  37 |         .mix(HMMER_HMMBUILD.out.hmm.map { [ it[0], it[1] ] })
+╰     |                                                    ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:40:27: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  40 |                 .filter { it.data.hmmfile }
+╰     |                           ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:41:26: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  41 |                 .map { [ it.meta, it.data.hmmfile ] }
+╰     |                          ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:41:35: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  41 |                 .map { [ it.meta, it.data.hmmfile ] }
+╰     |                                   ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:49:25: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  49 |             .filter { ! it.data.hmmfile }
+╰     |                         ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:50:22: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  50 |             .map { [ it.meta, it.data.refseqfile ] }
+╰     |                      ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:50:31: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  50 |             .map { [ it.meta, it.data.refseqfile ] }
+╰     |                               ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:52:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  52 |     ch_hmmer_unaligned = Channel.empty()
+╰     |                          ^^^^^^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:53:57: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  53 |         .mix(HMMER_UNALIGNREF.out.seqreformated.map { [ it[0], it[1] ]
+╰     |                                                         ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:53:64: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  53 |      .mix(HMMER_UNALIGNREF.out.seqreformated.map { [ it[0], it[1] ] })
+╰     |                                                             ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:56:27: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  56 |                 .filter { it.data.hmmfile }
+╰     |                           ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:57:26: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  57 |                 .map { [ it.meta, it.data.refseqfile ] }
+╰     |                          ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:57:35: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  57 |                 .map { [ it.meta, it.data.refseqfile ] }
+╰     |                                   ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:65:41: Parameter was not used -- prefix with `_` to suppress warning
+│  65 |         .groupTuple(size: 2, sort: { a, b -> a =~ /\.hmm/ ? 1 : -1 })
+╰     |                                         ^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:68:35: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  68 |         ch_hmmer_alignref.map { [ it[0], it[1][0] ] },
+╰     |                                   ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:68:42: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  68 |         ch_hmmer_alignref.map { [ it[0], it[1][0] ] },
+╰     |                                          ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:69:33: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  69 |         ch_hmmer_alignref.map { it[1][1] }
+╰     |                                 ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:73:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  73 |     ch_hmmer_alignquery = Channel.empty()
+╰     |                           ^^^^^^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:74:36: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  74 |         .mix(ch_hmmer_data.map { [ it.meta, it.data.queryseqfile ] })
+╰     |                                    ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:74:45: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  74 |         .mix(ch_hmmer_data.map { [ it.meta, it.data.queryseqfile ] })
+╰     |                                             ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:76:41: Parameter was not used -- prefix with `_` to suppress warning
+│  76 |         .groupTuple(size: 2, sort: { a, b -> a =~ /\.hmm/ ? 1 : -1 })
+╰     |                                         ^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:79:37: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  79 |         ch_hmmer_alignquery.map { [ it[0], it[1][0] ] },
+╰     |                                     ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:79:44: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  79 |         ch_hmmer_alignquery.map { [ it[0], it[1][0] ] },
+╰     |                                            ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:80:35: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  80 |         ch_hmmer_alignquery.map { it[1][1] }
+╰     |                                   ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:85:57: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  85 |     HMMER_MASKREF ( HMMER_HMMALIGNREF.out.sthlm.map { [ it[0], it[1], 
+╰     |                                                         ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:85:64: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  85 | NREF.out.sthlm.map { [ it[0], it[1], [], [], [], [], [], [] ] }, [] )
+╰     |                               ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:88:61: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  88 | MALIGNQUERY.out.sthlm.map { [ it[0], it[1], [], [], [], [], [], [] ] }
+╰     |                               ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:88:68: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  88 | UERY.out.sthlm.map { [ it[0], it[1], [], [], [], [], [], [] ] }, [] )
+╰     |                               ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:100:31: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 100 |         ch_mafft_data.map { [ it.meta, it.data.refseqfile ] },
+╰     |                               ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:100:40: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 100 |         ch_mafft_data.map { [ it.meta, it.data.refseqfile ] },
+╰     |                                        ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:101:31: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 101 |         ch_mafft_data.map { [ it.data.queryseqfile ] }
+╰     |                               ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:107:31: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 107 |         ch_mafft_data.map { [ it.meta, it.data.refseqfile ] }
+╰     |                               ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:107:40: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 107 |         ch_mafft_data.map { [ it.meta, it.data.refseqfile ] }
+╰     |                                        ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:113:41: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 113 |     ch_epang_query = ch_pp_data.map { [ it.meta, it.data.model, it.dat
+╰     |                                         ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:113:50: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 113 |     ch_epang_query = ch_pp_data.map { [ it.meta, it.data.model, it.dat
+╰     |                                                  ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:113:65: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 113 | p { [ it.meta, it.data.model, it.data.refphylogeny ] }
+╰     |                               ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:117:32: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 117 |             ch_pp_data.map { [ it.meta, it.data.model, it.data.refphyl
+╰     |                                ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:117:41: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 117 |             ch_pp_data.map { [ it.meta, it.data.model, it.data.refphyl
+╰     |                                         ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:117:56: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 117 |             ch_pp_data.map { [ it.meta, it.data.model, it.data.refphyl
+╰     |                                                        ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:118:53: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 118 |                 .join(EPANG_SPLIT.out.query.map { [ it[0], it[1] ] } )
+╰     |                                                     ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:118:60: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 118 |                 .join(EPANG_SPLIT.out.query.map { [ it[0], it[1] ] } )
+╰     |                                                            ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:119:57: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 119 |                 .join(EPANG_SPLIT.out.reference.map { [ it[0], it[1] ]
+╰     |                                                         ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:119:64: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 119 |             .join(EPANG_SPLIT.out.reference.map { [ it[0], it[1] ] } )
+╰     |                                                            ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:121:23: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 121 |         .map { [ [ id:it[0].id, model:it[1] ], it[3], it[4], it[2] ] }
+╰     |                       ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:121:39: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 121 |         .map { [ [ id:it[0].id, model:it[1] ], it[3], it[4], it[2] ] }
+╰     |                                       ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:121:48: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 121 |         .map { [ [ id:it[0].id, model:it[1] ], it[3], it[4], it[2] ] }
+╰     |                                                ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:121:55: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 121 |         .map { [ [ id:it[0].id, model:it[1] ], it[3], it[4], it[2] ] }
+╰     |                                                       ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:121:62: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 121 |         .map { [ [ id:it[0].id, model:it[1] ], it[3], it[4], it[2] ] }
+╰     |                                                              ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:136:27: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 136 |             .map { [ [ id:it[0].id ], it[1] ] }
+╰     |                           ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:136:39: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 136 |             .map { [ [ id:it[0].id ], it[1] ] }
+╰     |                                       ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:137:39: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 137 |             .join( ch_pp_data.map { [ it.meta, it.data.taxonomy ] } )
+╰     |                                       ^^
+
+Warn  subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:137:48: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 137 |             .join( ch_pp_data.map { [ it.meta, it.data.taxonomy ] } )
+╰     |                                                ^^
+
+
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 | mYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
+╰     |                               ^^^^^^^
+
+
+Warn  workflows/ampliseq.nf:103:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 103 |         ch_metadata = Channel.fromPath("${params.metadata}", checkIfEx
+╰     |                       ^^^^^^^
+
+Warn  workflows/ampliseq.nf:104:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 104 |     } else { ch_metadata = Channel.empty() }
+╰     |                            ^^^^^^^
+
+Warn  workflows/ampliseq.nf:107:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 107 |         ch_qiime_classifier = Channel.fromPath("${params.classifier}",
+╰     |                               ^^^^^^^
+
+Warn  workflows/ampliseq.nf:108:36: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 108 |     } else { ch_qiime_classifier = Channel.empty() }
+╰     |                                    ^^^^^^^
+
+Warn  workflows/ampliseq.nf:112:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 112 |         Channel.fromPath("${params.sidle_ref_tax_custom}", checkIfExis
+╰     |         ^^^^^^^
+
+Warn  workflows/ampliseq.nf:113:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 113 |             .combine( Channel.fromPath("${params.sidle_ref_seq_custom}
+╰     |                       ^^^^^^^
+
+Warn  workflows/ampliseq.nf:114:53: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 114 |             .combine( params.sidle_ref_aln_custom ? Channel.fromPath("
+╰     |                                                     ^^^^^^^
+
+Warn  workflows/ampliseq.nf:114:127: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 114 | tom}", checkIfExists: true) : Channel.of("EMPTY") )
+╰     |                               ^^^^^^^
+
+Warn  workflows/ampliseq.nf:116:69: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 116 | arams.sidle_ref_tree_custom ? Channel.fromPath("${params.sidle_ref_tre
+╰     |                               ^^^^^^^
+
+Warn  workflows/ampliseq.nf:116:144: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 116 | params.sidle_ref_tree_custom}", checkIfExists: true) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/ampliseq.nf:120:33: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 120 |         ch_sidle_ref_taxonomy = Channel.fromList( params.sidle_ref_dat
+╰     |                                 ^^^^^^^
+
+Warn  workflows/ampliseq.nf:121:69: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 121 | arams.sidle_ref_tree_custom ? Channel.fromPath("${params.sidle_ref_tre
+╰     |                               ^^^^^^^
+
+Warn  workflows/ampliseq.nf:122:81: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 122 | e_ref_taxonomy]["tree_qza"] ? Channel.fromList( params.sidle_ref_datab
+╰     |                               ^^^^^^^
+
+Warn  workflows/ampliseq.nf:122:192: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 122 | e_ref_taxonomy]["tree_qza"] ).map { it -> file(it) } : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/ampliseq.nf:125:33: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 125 |         ch_sidle_ref_taxonomy = Channel.empty()
+╰     |                                 ^^^^^^^
+
+Warn  workflows/ampliseq.nf:126:38: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 126 |         ch_sidle_ref_taxonomy_tree = Channel.empty()
+╰     |                                      ^^^^^^^
+
+Warn  workflows/ampliseq.nf:132:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 132 |         ch_assigntax = Channel.fromPath("${params.dada_ref_tax_custom}
+╰     |                        ^^^^^^^
+
+Warn  workflows/ampliseq.nf:134:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 134 |             ch_addspecies = Channel.fromPath("${params.dada_ref_tax_cu
+╰     |                             ^^^^^^^
+
+Warn  workflows/ampliseq.nf:135:34: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 135 |         } else { ch_addspecies = Channel.empty() }
+╰     |                                  ^^^^^^^
+
+Warn  workflows/ampliseq.nf:136:32: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 136 |         ch_dada_ref_taxonomy = Channel.empty()
+╰     |                                ^^^^^^^
+
+Warn  workflows/ampliseq.nf:140:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 140 | y(params.dada_ref_taxonomy) ? Channel.fromList(params.dada_ref_databas
+╰     |                               ^^^^^^^
+
+Warn  workflows/ampliseq.nf:140:201: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 140 | s.dada_ref_taxonomy]["file"]).map { it -> file(it) } : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/ampliseq.nf:143:32: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 143 |         ch_dada_ref_taxonomy = Channel.empty()
+╰     |                                ^^^^^^^
+
+Warn  workflows/ampliseq.nf:154:37: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 154 |             ch_qiime_ref_taxonomy = Channel.fromPath(Arrays.asList(qii
+╰     |                                     ^^^^^^^
+
+Warn  workflows/ampliseq.nf:156:37: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 156 |             ch_qiime_ref_taxonomy = Channel.fromPath("${params.qiime_r
+╰     |                                     ^^^^^^^
+
+Warn  workflows/ampliseq.nf:160:101: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 160 | (params.qiime_ref_taxonomy) ? Channel.fromList(params.qiime_ref_databa
+╰     |                               ^^^^^^^
+
+Warn  workflows/ampliseq.nf:160:206: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 160 | .qiime_ref_taxonomy]["file"]).map { it -> file(it) } : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/ampliseq.nf:163:33: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 163 |         ch_qiime_ref_taxonomy = Channel.empty()
+╰     |                                 ^^^^^^^
+
+Warn  workflows/ampliseq.nf:168:104: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 168 | params.sintax_ref_taxonomy) ? Channel.fromList(params.sintax_ref_datab
+╰     |                               ^^^^^^^
+
+Warn  workflows/ampliseq.nf:168:211: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 168 | sintax_ref_taxonomy]["file"]).map { it -> file(it) } : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/ampliseq.nf:171:34: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 171 |         ch_sintax_ref_taxonomy = Channel.empty()
+╰     |                                  ^^^^^^^
+
+Warn  workflows/ampliseq.nf:177:35: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 177 |         ch_kraken2_ref_taxonomy = Channel.fromPath("${params.kraken2_r
+╰     |                                   ^^^^^^^
+
+Warn  workflows/ampliseq.nf:181:107: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 181 | arams.kraken2_ref_taxonomy) ? Channel.fromList(params.kraken2_ref_data
+╰     |                               ^^^^^^^
+
+Warn  workflows/ampliseq.nf:181:216: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 181 | raken2_ref_taxonomy]["file"]).map { it -> file(it) } : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/ampliseq.nf:184:35: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 184 |         ch_kraken2_ref_taxonomy = Channel.empty()
+╰     |                                   ^^^^^^^
+
+Warn  workflows/ampliseq.nf:189:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 189 |     ch_report_template = Channel.fromPath("${params.report_template}",
+╰     |                          ^^^^^^^
+
+Warn  workflows/ampliseq.nf:190:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 190 |     ch_report_css = Channel.fromPath("${params.report_css}", checkIfEx
+╰     |                     ^^^^^^^
+
+Warn  workflows/ampliseq.nf:191:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 191 |     ch_report_logo = Channel.fromPath("${params.report_logo}", checkIf
+╰     |                      ^^^^^^^
+
+Warn  workflows/ampliseq.nf:192:51: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 192 |     ch_report_abstract = params.report_abstract ? Channel.fromPath(par
+╰     |                                                   ^^^^^^^
+
+Warn  workflows/ampliseq.nf:248:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 248 |     ch_tax_for_robject = Channel.empty()
+╰     |                          ^^^^^^^
+
+Warn  workflows/ampliseq.nf:249:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 249 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  workflows/ampliseq.nf:250:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 250 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/ampliseq.nf:255:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 255 |     ch_input_fasta = Channel.empty()
+╰     |                      ^^^^^^^
+
+Warn  workflows/ampliseq.nf:256:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 256 |     ch_input_reads = Channel.empty()
+╰     |                      ^^^^^^^
+
+Warn  workflows/ampliseq.nf:259:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 259 |         ch_input_reads = Channel.fromList(samplesheetToList(params.inp
+╰     |                          ^^^^^^^
+
+Warn  workflows/ampliseq.nf:268:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 268 |         ch_input_fasta = Channel.fromPath(params.input_fasta, checkIfE
+╰     |                          ^^^^^^^
+
+Warn  workflows/ampliseq.nf:282:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 282 |             .combine( Channel.fromList(samplesheetToList(params.multir
+╰     |                       ^^^^^^^
+
+Warn  workflows/ampliseq.nf:316:22: Parameter was not used -- prefix with `_` to suppress warning
+│ 316 |         .map { meta, reads -> [ meta.id ] }
+╰     |                      ^^^^^
+
+Warn  workflows/ampliseq.nf:407:37: Parameter was not used -- prefix with `_` to suppress warning
+│ 407 |         DADA2_STATS.out.stats.map { meta, stats -> stats }.collect(),
+╰     |                                     ^^^^
+
+Warn  workflows/ampliseq.nf:408:39: Parameter was not used -- prefix with `_` to suppress warning
+│ 408 |         DADA2_RMCHIMERA.out.rds.map { meta, rds -> rds }.collect() )
+╰     |                                       ^^^^
+
+Warn  workflows/ampliseq.nf:429:27: Parameter was not used -- prefix with `_` to suppress warning
+│ 429 |                     info, reads ->
+╰     |                           ^^^^^
+
+Warn  workflows/ampliseq.nf:448:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 448 |         ch_dada2_fasta = Channel.empty()
+╰     |                          ^^^^^^^
+
+Warn  workflows/ampliseq.nf:520:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 520 |         ch_barrnapsummary = Channel.empty()
+╰     |                             ^^^^^^^
+
+Warn  workflows/ampliseq.nf:601:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 601 |         ch_dada2_tax = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/ampliseq.nf:615:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 615 |         ch_kraken2_tax = Channel.empty()
+╰     |                          ^^^^^^^
+
+Warn  workflows/ampliseq.nf:630:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 630 |         ch_sintax_tax = Channel.empty()
+╰     |                         ^^^^^^^
+
+Warn  workflows/ampliseq.nf:652:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 652 |         ch_pplace_tax = Channel.empty()
+╰     |                         ^^^^^^^
+
+Warn  workflows/ampliseq.nf:674:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 674 |         ch_qiime2_tax = Channel.empty()
+╰     |                         ^^^^^^^
+
+Warn  workflows/ampliseq.nf:699:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 699 |             ch_tax = Channel.empty()
+╰     |                      ^^^^^^^
+
+Warn  workflows/ampliseq.nf:729:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 729 |             ch_tax = Channel.empty()
+╰     |                      ^^^^^^^
+
+Warn  workflows/ampliseq.nf:776:33: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 776 |             ch_metacolumn_all = Channel.fromList(params.metadata_categ
+╰     |                                 ^^^^^^^
+
+Warn  workflows/ampliseq.nf:792:33: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 792 |             ch_metacolumn_all = Channel.empty()
+╰     |                                 ^^^^^^^
+
+Warn  workflows/ampliseq.nf:793:38: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 793 |             ch_metacolumn_pairwise = Channel.empty()
+╰     |                                      ^^^^^^^
+
+Warn  workflows/ampliseq.nf:869:35: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 869 |             ch_tree_for_robject = Channel.empty()
+╰     |                                   ^^^^^^^
+
+Warn  workflows/ampliseq.nf:898:36: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 898 |         ch_multiqc_config        = Channel.fromPath(
+╰     |                                    ^^^^^^^
+
+Warn  workflows/ampliseq.nf:901:13: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 901 |             Channel.fromPath(params.multiqc_config, checkIfExists: tru
+╰     |             ^^^^^^^
+
+Warn  workflows/ampliseq.nf:902:13: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 902 |             Channel.empty()
+╰     |             ^^^^^^^
+
+Warn  workflows/ampliseq.nf:904:13: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 904 |             Channel.fromPath(params.multiqc_logo, checkIfExists: true)
+╰     |             ^^^^^^^
+
+Warn  workflows/ampliseq.nf:905:13: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 905 |             Channel.empty()
+╰     |             ^^^^^^^
+
+Warn  workflows/ampliseq.nf:909:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 909 |         ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summa
+╰     |                               ^^^^^^^
+
+Warn  workflows/ampliseq.nf:916:49: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 916 |         ch_methods_description                = Channel.value(
+╰     |                                                 ^^^^^^^
+
+Warn  workflows/ampliseq.nf:938:34: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 938 |         ch_multiqc_report_list = Channel.empty()
+╰     |                                  ^^^^^^^
+
+Warn  workflows/ampliseq.nf:1010:96: Parameter was not used -- prefix with `_` to suppress warning
+│ 1010 | ECT_WORKFLOW.out.phyloseq.map{info,rds -> [rds]}.collect().ifEmpty( []
+╰     |                               ^^^^
+
+Warn  workflows/ampliseq.nf:1011:86: Parameter was not used -- prefix with `_` to suppress warning
+│ 1011 |  ROBJECT_WORKFLOW.out.tse.map{info,rds -> [rds]}.collect().ifEmpty( []
+╰     |                               ^^^^
+
+
+Error conf/modules.config:146:81: `max_len` is not defined
+│ 146 | = ${params.min_len}, maxLen = $max_len, rm.phix = FALSE" :
+╰     |                               ^^^^^^^^
+
+Error conf/modules.config:147:90: `max_len` is not defined
+│ 147 | = ${params.min_len}, maxLen = $max_len, rm.phix = TRUE" :
+╰     |                               ^^^^^^^^
+
+Error conf/modules.config:148:94: `max_len` is not defined
+│ 148 | = ${params.min_len}, maxLen = $max_len, rm.phix = TRUE" :
+╰     |                               ^^^^^^^^
+
+Error conf/modules.config:149:69: `max_len` is not defined
+│ 149 | = ${params.min_len}, maxLen = $max_len, rm.phix = TRUE"
+╰     |                               ^^^^^^^^
+
+
+Error nextflow.config:443:32: `manifest` is not defined
+│ 443 | \033[0;35m  nf-core/ampliseq ${manifest.version}\033[0m
+╰     |                                ^^^^^^^^
+
+Error nextflow.config:446:26: `manifest` is not defined
+│ 446 |         afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${ma
+╰     |                          ^^^^^^^^
+
+Error nextflow.config:446:69: `manifest` is not defined
+│ 446 | ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "  
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:446:186: `manifest` is not defined
+│ 446 | doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:455:22: `validation` is not defined
+│ 455 |         beforeText = validation.help.beforeText
+╰     |                      ^^^^^^^^^^
+
+Error nextflow.config:456:21: `validation` is not defined
+│ 456 |         afterText = validation.help.afterText
+╰     |                     ^^^^^^^^^^
+
+Warn  nextflow.config:446:129: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 446 | lect { "    https://doi.org/${it.trim().replace('https://doi.org/','')
+╰     |                               ^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-test tests
+│   3 |     testsDir "."
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 3 files had 11 errors
+ ✅ 153 files had no errors

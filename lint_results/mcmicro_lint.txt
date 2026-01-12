@@ -1,0 +1,63 @@
+Linting Nextflow code..
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: nextflow.config
+Linting: workflows/mcmicro.nf
+Linting: subworkflows/local/utils_nfcore_mcmicro_pipeline/main.nf
+Linting: subworkflows/local/update_from_ome/main.nf
+Linting: subworkflows/local/prelude/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: tests/lib/utils.nf
+Linting: modules/local/mccellpose/main.nf
+Linting: modules/local/prelude/main.nf
+Linting: modules/local/omevalidation/main.nf
+Linting: modules/nf-core/bftools/showinf/main.nf
+Linting: modules/nf-core/coreograph/main.nf
+Linting: modules/nf-core/ilastik/multicut/main.nf
+Linting: modules/nf-core/ilastik/pixelclassification/main.nf
+Linting: modules/nf-core/cellpose/main.nf
+Linting: modules/nf-core/cellpose/tests/nextflow_wflows.config
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/basicpy/main.nf
+Linting: modules/nf-core/deepcell/mesmer/main.nf
+Linting: modules/nf-core/deepcell/mesmer/tests/nextflow.config
+Linting: modules/nf-core/mcquant/main.nf
+Linting: modules/nf-core/mcquant/tests/nextflow.config
+Linting: modules/nf-core/ashlar/main.nf
+Linting: modules/nf-core/ashlar/tests/nextflow.config
+Linting: modules/nf-core/backsub/main.nf
+Linting: modules/nf-core/backsub/tests/nextflow.config
+Linting: modules/nf-core/scimap/mcmicro/main.nf
+Error main.nf:18:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/mcmicro/workflows/mcmicro.nf'
+│  18 | include { MCMICRO  } from './workflows/mcmicro'
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:42:5: `MCMICRO` is not defined
+│  42 |     MCMICRO (
+╰     |     ^^^^^^^
+
+Error main.nf:47:22: `MCMICRO` is not defined
+│  47 |     multiqc_report = MCMICRO.out.multiqc_report // channel: /path/to/m
+╰     |                      ^^^^^^^
+
+
+
+Error modules/local/omevalidation/main.nf:28:53: Unexpected character: '@'
+│  28 |             node -> node.name() == 'Pixels' && node.@SizeX != '' && no
+╰     |                                                     ^
+
+
+ERROR ~ begin 21, end 22, length 21
+
+

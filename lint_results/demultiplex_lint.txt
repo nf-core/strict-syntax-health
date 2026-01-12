@@ -1,0 +1,486 @@
+Linting Nextflow code..
+Linting: conf/test_bclconvert.config
+Linting: conf/test_uncompressed.config
+Linting: conf/test_bcl2fastq.config
+Linting: conf/base.config
+Linting: conf/test_mkfastq.config
+Linting: conf/modules.config
+Linting: conf/test_fqtk.config
+Linting: conf/test_bases2fastq.config
+Linting: conf/test_sgdemux.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/test_pe.config
+Linting: conf/test_mgikit.config
+Linting: conf/test_checkqc.config
+Linting: conf/test_two_lanes.config
+Linting: conf/test_kraken.config
+Linting: nextflow.config
+Linting: workflows/demultiplex.nf
+Linting: subworkflows/local/bases_demultiplex/main.nf
+Linting: subworkflows/local/utils_nfcore_demultiplex_pipeline/main.nf
+Linting: subworkflows/local/rundir_checkqc/main.nf
+Linting: subworkflows/local/singular_demultiplex/main.nf
+Linting: subworkflows/local/mkfastq_demultiplex/main.nf
+Linting: subworkflows/local/fqtk_demultiplex/main.nf
+Linting: subworkflows/local/mgikit_demultiplex/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/bcl_demultiplex/main.nf
+Linting: subworkflows/nf-core/bcl_demultiplex/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: subworkflows/nf-core/fastq_contam_seqtk_kraken/main.nf
+Linting: subworkflows/nf-core/fastq_contam_seqtk_kraken/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/csv2tsv/main.nf
+Linting: modules/local/fastq_to_samplesheet/main.nf
+Linting: modules/local/checkqc_dir/main.nf
+Linting: modules/nf-core/mgikit/demultiplex/main.nf
+Linting: modules/nf-core/mgikit/demultiplex/tests/nextflow.config
+Linting: modules/nf-core/fqtk/main.nf
+Linting: modules/nf-core/bases2fastq/main.nf
+Linting: modules/nf-core/kraken2/kraken2/main.nf
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/falco/main.nf
+Linting: modules/nf-core/sgdemux/main.nf
+Linting: modules/nf-core/bclconvert/main.nf
+Linting: modules/nf-core/bclconvert/tests/nextflow.config
+Linting: modules/nf-core/fastp/main.nf
+Linting: modules/nf-core/fastp/tests/nextflow.interleaved.config
+Linting: modules/nf-core/fastp/tests/nextflow.save_failed.config
+Linting: modules/nf-core/seqtk/sample/main.nf
+Linting: modules/nf-core/seqtk/sample/tests/standard.config
+Linting: modules/nf-core/bcl2fastq/main.nf
+Linting: modules/nf-core/bcl2fastq/tests/nextflow.config
+Linting: modules/nf-core/untar/main.nf
+Linting: modules/nf-core/samshee/main.nf
+Linting: modules/nf-core/samshee/tests/nextflow.config
+Linting: modules/nf-core/md5sum/main.nf
+Linting: modules/nf-core/md5sum/tests/nextflow.config
+Linting: modules/nf-core/checkqc/main.nf
+Linting: modules/nf-core/checkqc/tests/nextflow.config
+Linting: modules/nf-core/cellranger/mkfastq/main.nf
+Linting: modules/nf-core/cellranger/mkfastq/tests/nextflow.config
+Error main.nf:18:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/demultiplex/workflows/demultiplex.nf'
+│  18 | include { DEMULTIPLEX             } from './workflows/demultiplex'
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:41:5: `DEMULTIPLEX` is not defined
+│  41 |     DEMULTIPLEX (
+╰     |     ^^^^^^^^^^^
+
+Error main.nf:46:22: `DEMULTIPLEX` is not defined
+│  46 |     multiqc_report = DEMULTIPLEX.out.multiqc_report // channel: /path/
+╰     |                      ^^^^^^^^^^^
+
+
+Warn  modules/local/checkqc_dir/main.nf:17:9: Variable was declared but not used
+│  17 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+Warn  modules/local/fastq_to_samplesheet/main.nf:20:34: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  20 |     def sortedMeta = meta.sort { it.id }
+╰     |                                  ^^
+
+Warn  modules/local/fastq_to_samplesheet/main.nf:70:52: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  70 |     samplesheetHeader = allColumns.collect { '"' + it + '"' }
+╰     |                                                    ^^
+
+
+
+
+
+
+Warn  modules/nf-core/checkqc/main.nf:47:9: Variable was declared but not used
+│  47 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+Warn  modules/nf-core/fqtk/main.nf:28:9: Variable was declared but not used
+│  28 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+Warn  modules/nf-core/fqtk/main.nf:30:48: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  30 |     fastqs = fastq_readstructure_pairs.collect{it[2]/it[0]}.join(" ")
+╰     |                                                ^^
+
+Warn  modules/nf-core/fqtk/main.nf:30:54: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  30 |     fastqs = fastq_readstructure_pairs.collect{it[2]/it[0]}.join(" ")
+╰     |                                                      ^^
+
+Warn  modules/nf-core/fqtk/main.nf:32:57: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  32 |     read_structures = fastq_readstructure_pairs.collect{it[1]}.join(" 
+╰     |                                                         ^^
+
+
+Warn  modules/nf-core/kraken2/kraken2/main.nf:60:9: Variable was declared but not used
+│  60 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/kraken2/kraken2/main.nf:62:9: Variable was declared but not used
+│  62 |     def paired       = meta.single_end ? "" : "--paired"
+╰     |         ^^^^^^
+
+Warn  modules/nf-core/kraken2/kraken2/main.nf:65:9: Variable was declared but not used
+│  65 |     def readclassification_option = save_reads_assignment ? "--output 
+╰     |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  modules/nf-core/kraken2/kraken2/main.nf:66:9: Variable was declared but not used
+│  66 |     def compress_reads_command = save_output_fastqs ? "pigz -p $task.c
+╰     |         ^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+
+
+
+
+
+
+Error subworkflows/local/bases_demultiplex/main.nf:89:5: `sequencer_serial` was assigned but not declared
+│  89 |     sequencer_serial = fields[0]
+╰     |     ^^^^^^^^^^^^^^^^
+
+Error subworkflows/local/bases_demultiplex/main.nf:90:5: `run_nubmer` was assigned but not declared
+│  90 |     run_nubmer       = fields[1]
+╰     |     ^^^^^^^^^^
+
+Error subworkflows/local/bases_demultiplex/main.nf:91:5: `fcid` was assigned but not declared
+│  91 |     fcid             = fields[2]
+╰     |     ^^^^
+
+Error subworkflows/local/bases_demultiplex/main.nf:92:5: `lane` was assigned but not declared
+│  92 |     lane             = fields[3]
+╰     |     ^^^^
+
+Error subworkflows/local/bases_demultiplex/main.nf:93:5: `index` was assigned but not declared
+│  93 |     index            = fields[-1] =~ /[GATC+-]/ ? fields[-1] : ""
+╰     |     ^^^^^
+
+Error subworkflows/local/bases_demultiplex/main.nf:95:14: `fcid` is not defined
+│  95 |     rg.ID = [fcid,lane].join(".")
+╰     |              ^^^^
+
+Error subworkflows/local/bases_demultiplex/main.nf:95:19: `lane` is not defined
+│  95 |     rg.ID = [fcid,lane].join(".")
+╰     |                   ^^^^
+
+Error subworkflows/local/bases_demultiplex/main.nf:96:14: `fcid` is not defined
+│  96 |     rg.PU = [fcid, lane, index].findAll().join(".")
+╰     |              ^^^^
+
+Error subworkflows/local/bases_demultiplex/main.nf:96:20: `lane` is not defined
+│  96 |     rg.PU = [fcid, lane, index].findAll().join(".")
+╰     |                    ^^^^
+
+Error subworkflows/local/bases_demultiplex/main.nf:96:26: `index` is not defined
+│  96 |     rg.PU = [fcid, lane, index].findAll().join(".")
+╰     |                          ^^^^^
+
+Warn  subworkflows/local/bases_demultiplex/main.nf:77:68: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  77 |         InputStream gzipStream = new java.util.zip.GZIPInputStream(it)
+╰     |                                                                    ^^
+
+
+Error subworkflows/local/fqtk_demultiplex/main.nf:90:5: `sequencer_serial` was assigned but not declared
+│  90 |     sequencer_serial = fields[0]
+╰     |     ^^^^^^^^^^^^^^^^
+
+Error subworkflows/local/fqtk_demultiplex/main.nf:91:5: `run_nubmer` was assigned but not declared
+│  91 |     run_nubmer       = fields[1]
+╰     |     ^^^^^^^^^^
+
+Error subworkflows/local/fqtk_demultiplex/main.nf:92:5: `fcid` was assigned but not declared
+│  92 |     fcid             = fields[2]
+╰     |     ^^^^
+
+Error subworkflows/local/fqtk_demultiplex/main.nf:93:5: `lane` was assigned but not declared
+│  93 |     lane             = fields[3]
+╰     |     ^^^^
+
+Error subworkflows/local/fqtk_demultiplex/main.nf:94:5: `index` was assigned but not declared
+│  94 |     index            = fields[-1] =~ /[GATC+-]/ ? fields[-1] : ""
+╰     |     ^^^^^
+
+Error subworkflows/local/fqtk_demultiplex/main.nf:96:14: `fcid` is not defined
+│  96 |     rg.ID = [fcid,lane].join(".")
+╰     |              ^^^^
+
+Error subworkflows/local/fqtk_demultiplex/main.nf:96:19: `lane` is not defined
+│  96 |     rg.ID = [fcid,lane].join(".")
+╰     |                   ^^^^
+
+Error subworkflows/local/fqtk_demultiplex/main.nf:97:14: `fcid` is not defined
+│  97 |     rg.PU = [fcid, lane, index].findAll().join(".")
+╰     |              ^^^^
+
+Error subworkflows/local/fqtk_demultiplex/main.nf:97:20: `lane` is not defined
+│  97 |     rg.PU = [fcid, lane, index].findAll().join(".")
+╰     |                    ^^^^
+
+Error subworkflows/local/fqtk_demultiplex/main.nf:97:26: `index` is not defined
+│  97 |     rg.PU = [fcid, lane, index].findAll().join(".")
+╰     |                          ^^^^^
+
+Warn  subworkflows/local/fqtk_demultiplex/main.nf:79:68: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  79 |         InputStream gzipStream = new java.util.zip.GZIPInputStream(it)
+╰     |                                                                    ^^
+
+
+Error subworkflows/local/mgikit_demultiplex/main.nf:86:5: `sequencer_serial` was assigned but not declared
+│  86 |     sequencer_serial = fields[0]
+╰     |     ^^^^^^^^^^^^^^^^
+
+Error subworkflows/local/mgikit_demultiplex/main.nf:87:5: `run_nubmer` was assigned but not declared
+│  87 |     run_nubmer       = fields[1]
+╰     |     ^^^^^^^^^^
+
+Error subworkflows/local/mgikit_demultiplex/main.nf:88:5: `fcid` was assigned but not declared
+│  88 |     fcid             = fields[2]
+╰     |     ^^^^
+
+Error subworkflows/local/mgikit_demultiplex/main.nf:89:5: `lane` was assigned but not declared
+│  89 |     lane             = fields[3]
+╰     |     ^^^^
+
+Error subworkflows/local/mgikit_demultiplex/main.nf:90:5: `index` was assigned but not declared
+│  90 |     index            = fields[-1] =~ /[GATC+-]/ ? fields[-1] : ""
+╰     |     ^^^^^
+
+Error subworkflows/local/mgikit_demultiplex/main.nf:92:14: `fcid` is not defined
+│  92 |     rg.ID = [fcid,lane].join(".")
+╰     |              ^^^^
+
+Error subworkflows/local/mgikit_demultiplex/main.nf:92:19: `lane` is not defined
+│  92 |     rg.ID = [fcid,lane].join(".")
+╰     |                   ^^^^
+
+Error subworkflows/local/mgikit_demultiplex/main.nf:93:14: `fcid` is not defined
+│  93 |     rg.PU = [fcid, lane, index].findAll().join(".")
+╰     |              ^^^^
+
+Error subworkflows/local/mgikit_demultiplex/main.nf:93:20: `lane` is not defined
+│  93 |     rg.PU = [fcid, lane, index].findAll().join(".")
+╰     |                    ^^^^
+
+Error subworkflows/local/mgikit_demultiplex/main.nf:93:26: `index` is not defined
+│  93 |     rg.PU = [fcid, lane, index].findAll().join(".")
+╰     |                          ^^^^^
+
+Warn  subworkflows/local/mgikit_demultiplex/main.nf:72:68: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  72 |         InputStream gzipStream = new java.util.zip.GZIPInputStream(it)
+╰     |                                                                    ^^
+
+
+Error subworkflows/local/mkfastq_demultiplex/main.nf:83:5: `sequencer_serial` was assigned but not declared
+│  83 |     sequencer_serial = fields[0]
+╰     |     ^^^^^^^^^^^^^^^^
+
+Error subworkflows/local/mkfastq_demultiplex/main.nf:84:5: `run_nubmer` was assigned but not declared
+│  84 |     run_nubmer       = fields[1]
+╰     |     ^^^^^^^^^^
+
+Error subworkflows/local/mkfastq_demultiplex/main.nf:85:5: `fcid` was assigned but not declared
+│  85 |     fcid             = fields[2]
+╰     |     ^^^^
+
+Error subworkflows/local/mkfastq_demultiplex/main.nf:86:5: `lane` was assigned but not declared
+│  86 |     lane             = fields[3]
+╰     |     ^^^^
+
+Error subworkflows/local/mkfastq_demultiplex/main.nf:87:5: `index` was assigned but not declared
+│  87 |     index            = fields[-1] =~ /[GATC+-]/ ? fields[-1] : ""
+╰     |     ^^^^^
+
+Error subworkflows/local/mkfastq_demultiplex/main.nf:89:14: `fcid` is not defined
+│  89 |     rg.ID = [fcid,lane].join(".")
+╰     |              ^^^^
+
+Error subworkflows/local/mkfastq_demultiplex/main.nf:89:19: `lane` is not defined
+│  89 |     rg.ID = [fcid,lane].join(".")
+╰     |                   ^^^^
+
+Error subworkflows/local/mkfastq_demultiplex/main.nf:90:14: `fcid` is not defined
+│  90 |     rg.PU = [fcid, lane, index].findAll().join(".")
+╰     |              ^^^^
+
+Error subworkflows/local/mkfastq_demultiplex/main.nf:90:20: `lane` is not defined
+│  90 |     rg.PU = [fcid, lane, index].findAll().join(".")
+╰     |                    ^^^^
+
+Error subworkflows/local/mkfastq_demultiplex/main.nf:90:26: `index` is not defined
+│  90 |     rg.PU = [fcid, lane, index].findAll().join(".")
+╰     |                          ^^^^^
+
+Warn  subworkflows/local/mkfastq_demultiplex/main.nf:72:68: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  72 |         InputStream gzipStream = new java.util.zip.GZIPInputStream(it)
+╰     |                                                                    ^^
+
+
+Warn  subworkflows/local/rundir_checkqc/main.nf:20:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  20 |         ch_versions      = Channel.empty()
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/local/rundir_checkqc/main.nf:21:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  21 |         ch_report        = Channel.empty()
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/local/rundir_checkqc/main.nf:22:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  22 |         ch_checkqc_dir   = Channel.empty()
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/local/rundir_checkqc/main.nf:27:23: Parameter was not used -- prefix with `_` to suppress warning
+│  27 |             .branch { meta, samplesheet, run ->
+╰     |                       ^^^^
+
+Warn  subworkflows/local/rundir_checkqc/main.nf:27:29: Parameter was not used -- prefix with `_` to suppress warning
+│  27 |             .branch { meta, samplesheet, run ->
+╰     |                             ^^^^^^^^^^^
+
+
+Error subworkflows/local/singular_demultiplex/main.nf:88:5: `sequencer_serial` was assigned but not declared
+│  88 |     sequencer_serial = fields[0]
+╰     |     ^^^^^^^^^^^^^^^^
+
+Error subworkflows/local/singular_demultiplex/main.nf:89:5: `run_nubmer` was assigned but not declared
+│  89 |     run_nubmer       = fields[1]
+╰     |     ^^^^^^^^^^
+
+Error subworkflows/local/singular_demultiplex/main.nf:90:5: `fcid` was assigned but not declared
+│  90 |     fcid             = fields[2]
+╰     |     ^^^^
+
+Error subworkflows/local/singular_demultiplex/main.nf:91:5: `lane` was assigned but not declared
+│  91 |     lane             = fields[3]
+╰     |     ^^^^
+
+Error subworkflows/local/singular_demultiplex/main.nf:92:5: `index` was assigned but not declared
+│  92 |     index            = fields[-1] =~ /[GATC+-]/ ? fields[-1] : ""
+╰     |     ^^^^^
+
+Error subworkflows/local/singular_demultiplex/main.nf:94:14: `fcid` is not defined
+│  94 |     rg.ID = [fcid,lane].join(".")
+╰     |              ^^^^
+
+Error subworkflows/local/singular_demultiplex/main.nf:94:19: `lane` is not defined
+│  94 |     rg.ID = [fcid,lane].join(".")
+╰     |                   ^^^^
+
+Error subworkflows/local/singular_demultiplex/main.nf:95:14: `fcid` is not defined
+│  95 |     rg.PU = [fcid, lane, index].findAll().join(".")
+╰     |              ^^^^
+
+Error subworkflows/local/singular_demultiplex/main.nf:95:20: `lane` is not defined
+│  95 |     rg.PU = [fcid, lane, index].findAll().join(".")
+╰     |                    ^^^^
+
+Error subworkflows/local/singular_demultiplex/main.nf:95:26: `index` is not defined
+│  95 |     rg.PU = [fcid, lane, index].findAll().join(".")
+╰     |                          ^^^^^
+
+Warn  subworkflows/local/singular_demultiplex/main.nf:77:68: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  77 |         InputStream gzipStream = new java.util.zip.GZIPInputStream(it)
+╰     |                                                                    ^^
+
+
+Warn  subworkflows/local/utils_nfcore_demultiplex_pipeline/main.nf:32:5: Parameter was not used -- prefix with `_` to suppress warning
+│  32 |     monochrome_logs   // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_demultiplex_pipeline/main.nf:35:5: Parameter was not used -- prefix with `_` to suppress warning
+│  35 |     input             //  string: Path to input samplesheet
+╰     |     ^^^^^
+
+Warn  subworkflows/local/utils_nfcore_demultiplex_pipeline/main.nf:42:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  42 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_demultiplex_pipeline/main.nf:67:144: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  67 | lect { "    https://doi.org/${it.trim().replace('https://doi.org/','')
+╰     |                               ^^
+
+Warn  subworkflows/local/utils_nfcore_demultiplex_pipeline/main.nf:106:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 106 |         ch_samplesheet = Channel.fromList(samplesheetToList(params.inp
+╰     |                          ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_demultiplex_pipeline/main.nf:115:9: Variable was declared but not used
+│ 115 |         ch_flowcell_manifest = ch_samplesheet.map{ meta, samplesheet, 
+╰     |         ^^^^^^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_demultiplex_pipeline/main.nf:115:52: Parameter was not used -- prefix with `_` to suppress warning
+│ 115 |         ch_flowcell_manifest = ch_samplesheet.map{ meta, samplesheet, 
+╰     |                                                    ^^^^
+
+Warn  subworkflows/local/utils_nfcore_demultiplex_pipeline/main.nf:115:58: Parameter was not used -- prefix with `_` to suppress warning
+│ 115 |         ch_flowcell_manifest = ch_samplesheet.map{ meta, samplesheet, 
+╰     |                                                          ^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_demultiplex_pipeline/main.nf:115:71: Parameter was not used -- prefix with `_` to suppress warning
+│ 115 | sheet.map{ meta, samplesheet, flowcell, per_flowcell_manifest -> per_f
+╰     |                               ^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_demultiplex_pipeline/main.nf:124:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 124 |         ch_samplesheet = Channel.fromList(samplesheetToList(params.inp
+╰     |                          ^^^^^^^
+
+
+Warn  subworkflows/nf-core/bcl_demultiplex/main.nf:16:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |         ch_versions      = Channel.empty()
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/nf-core/bcl_demultiplex/main.nf:17:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |         ch_fastq         = Channel.empty()
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/nf-core/bcl_demultiplex/main.nf:18:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  18 |         ch_reports       = Channel.empty()
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/nf-core/bcl_demultiplex/main.nf:19:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 |         ch_stats         = Channel.empty()
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/nf-core/bcl_demultiplex/main.nf:20:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  20 |         ch_interop       = Channel.empty()
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/nf-core/bcl_demultiplex/main.nf:124:27: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 124 |             fastq       : it[0].empty == false
+╰     |                           ^^
+
+Warn  subworkflows/nf-core/bcl_demultiplex/main.nf:125:27: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 125 |             empty_fastq : it[0].empty == true
+╰     |                           ^^
+
+
+Warn  subworkflows/nf-core/fastq_contam_seqtk_kraken/main.nf:17:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |         ch_reports  = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/nf-core/fastq_contam_seqtk_kraken/main.nf:18:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  18 |         ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 | mYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
+╰     |                               ^^^^^^^
+
+
+
+ERROR ~ begin 27, end 28, length 27
+
+

@@ -1,0 +1,558 @@
+Linting Nextflow code..
+Linting: conf/igenomes_ignored.config
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/igenomes.config
+Linting: nextflow.config
+Linting: workflows/bactmap.nf
+Linting: subworkflows/local/minimap2_alignment/main.nf
+Linting: subworkflows/local/shortread_mapping/main.nf
+Linting: subworkflows/local/bam_variant_calling_sort_freebayes_bcftools/main.nf
+Linting: subworkflows/local/shortread_adapterremoval/main.nf
+Linting: subworkflows/local/longread_filtering/main.nf
+Linting: subworkflows/local/utils_nfcore_bactmap_pipeline/main.nf
+Linting: subworkflows/local/fastq_align_bwamem2/main.nf
+Linting: subworkflows/local/shortread_preprocessing/main.nf
+Linting: subworkflows/local/longread_preprocessing/main.nf
+Linting: subworkflows/local/longread_adapterremoval/main.nf
+Linting: subworkflows/local/shortread_fastp/main.nf
+Linting: subworkflows/local/longread_mapping/main.nf
+Linting: subworkflows/local/consensus_bcftools/main.nf
+Linting: subworkflows/nf-core/bam_stats_samtools/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/fastq_align_bowtie2/main.nf
+Linting: subworkflows/nf-core/fastq_align_bowtie2/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/bam_sort_stats_samtools/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/alignpseudogenomes/main.nf
+Linting: modules/local/rasusa/main.nf
+Linting: modules/local/bcftools/consensus/main.nf
+Linting: modules/local/get_genome_size/main.nf
+Linting: modules/local/clair3/main.nf
+Linting: modules/local/concatenate_fasta/main.nf
+Linting: modules/local/read_stats_parse/main.nf
+Linting: modules/local/seqtk_parse/main.nf
+Linting: modules/local/fastq_scan_parse/main.nf
+Linting: modules/local/fasta_rename/main.nf
+Linting: modules/local/bedtools/genomecov/main.nf
+Linting: modules/local/read_stats/main.nf
+Linting: modules/nf-core/bcftools/query/main.nf
+Linting: modules/nf-core/bcftools/query/tests/nextflow.config
+Linting: modules/nf-core/bcftools/index/main.nf
+Linting: modules/nf-core/bcftools/index/tests/nextflow.config
+Linting: modules/nf-core/bcftools/sort/main.nf
+Linting: modules/nf-core/bcftools/sort/tests/vcf_gz_index.config
+Linting: modules/nf-core/bcftools/sort/tests/vcf_gz_index_csi.config
+Linting: modules/nf-core/bcftools/sort/tests/vcf_gz_index_tbi.config
+Linting: modules/nf-core/bcftools/stats/main.nf
+Linting: modules/nf-core/bcftools/filter/main.nf
+Linting: modules/nf-core/bcftools/filter/tests/vcf_gz_index.config
+Linting: modules/nf-core/bcftools/filter/tests/vcf_gz_index_csi.config
+Linting: modules/nf-core/bcftools/filter/tests/nextflow.config
+Linting: modules/nf-core/bcftools/filter/tests/region_filter.config
+Linting: modules/nf-core/bcftools/filter/tests/vcf_gz_index_tbi.config
+Linting: modules/nf-core/gunzip/main.nf
+Linting: modules/nf-core/gunzip/tests/nextflow.config
+Linting: modules/nf-core/nanoq/main.nf
+Linting: modules/nf-core/samtools/flagstat/main.nf
+Linting: modules/nf-core/samtools/idxstats/main.nf
+Linting: modules/nf-core/samtools/index/main.nf
+Linting: modules/nf-core/samtools/index/tests/csi.nextflow.config
+Linting: modules/nf-core/samtools/sort/main.nf
+Linting: modules/nf-core/samtools/sort/tests/nextflow.config
+Linting: modules/nf-core/samtools/sort/tests/nextflow_cram.config
+Linting: modules/nf-core/samtools/stats/main.nf
+Linting: modules/nf-core/samtools/faidx/main.nf
+Linting: modules/nf-core/samtools/faidx/tests/nextflow.config
+Linting: modules/nf-core/samtools/faidx/tests/nextflow2.config
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/bwamem2/index/main.nf
+Linting: modules/nf-core/bwamem2/mem/main.nf
+Linting: modules/nf-core/falco/main.nf
+Linting: modules/nf-core/minimap2/index/main.nf
+Linting: modules/nf-core/minimap2/align/main.nf
+Linting: modules/nf-core/cat/fastq/main.nf
+Linting: modules/nf-core/bowtie2/build/main.nf
+Linting: modules/nf-core/bowtie2/align/main.nf
+Linting: modules/nf-core/bowtie2/align/tests/cram_crai.config
+Linting: modules/nf-core/bowtie2/align/tests/sam2.config
+Linting: modules/nf-core/bowtie2/align/tests/large_index.config
+Linting: modules/nf-core/bowtie2/align/tests/sam.config
+Linting: modules/nf-core/freebayes/main.nf
+Linting: modules/nf-core/fastp/main.nf
+Linting: modules/nf-core/fastp/tests/nextflow.interleaved.config
+Linting: modules/nf-core/fastp/tests/nextflow.save_failed.config
+Linting: modules/nf-core/seqtk/comp/main.nf
+Linting: modules/nf-core/adapterremoval/main.nf
+Linting: modules/nf-core/adapterremoval/tests/nextflow.config
+Linting: modules/nf-core/fastqscan/main.nf
+Linting: modules/nf-core/porechop/abi/main.nf
+Linting: modules/nf-core/porechop/porechop/main.nf
+Linting: modules/nf-core/porechop/porechop/tests/nextflow.config
+Linting: modules/nf-core/filtlong/main.nf
+Linting: modules/nf-core/filtlong/tests/nextflow.config
+Linting: modules/nf-core/bedtools/subtract/main.nf
+Linting: modules/nf-core/snpsites/main.nf
+Error main.nf:18:1: Included name 'BACTMAP' is not defined in module '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/bactmap/workflows/bactmap.nf'
+│  18 | include { BACTMAP                 } from './workflows/bactmap'
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:59:5: `BACTMAP` is not defined
+│  59 |     BACTMAP (
+╰     |     ^^^^^^^
+
+Error main.nf:64:22: `BACTMAP` is not defined
+│  64 |     multiqc_report = BACTMAP.out.multiqc_report // channel: /path/to/m
+╰     |                      ^^^^^^^
+
+Warn  main.nf:50:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  50 |         ch_fasta = Channel.fromPath(params.fasta, checkIfExists: true)
+╰     |                    ^^^^^^^
+
+
+Error modules/local/alignpseudogenomes/main.nf:14:15: `NUM_ALIGNMENT_GENOMES` is not defined
+│  14 |     tuple env(NUM_ALIGNMENT_GENOMES), path("aligned_pseudogenomes.fas"
+╰     |               ^^^^^^^^^^^^^^^^^^^^^
+
+
+Warn  modules/local/bcftools/consensus/main.nf:46:9: Variable was declared but not used
+│  46 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/bcftools/consensus/main.nf:48:9: Variable was declared but not used
+│  48 |     def masking = mask ? "-m $mask" : ""
+╰     |         ^^^^^^^
+
+
+Warn  modules/local/bedtools/genomecov/main.nf:30:9: Variable was declared but not used
+│  30 |     def buffer   = task.memory ? "--buffer-size=${task.memory.toGiga()
+╰     |         ^^^^^^
+
+
+Warn  modules/local/clair3/main.nf:46:9: Variable was declared but not used
+│  46 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+
+Error modules/local/read_stats/main.nf:11:39: `json` is already declared
+│  11 |     tuple val(meta), path(json), path(json)
+╰     |                                       ^^^^
+
+Warn  modules/local/read_stats/main.nf:11:27: Variable was declared but not used
+│  11 |     tuple val(meta), path(json), path(json)
+╰     |                           ^^^^
+
+
+
+
+
+
+Warn  modules/nf-core/bcftools/index/main.nf:23:9: Variable was declared but not used
+│  23 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+Warn  modules/nf-core/bcftools/index/main.nf:40:9: Variable was declared but not used
+│  40 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+
+
+
+
+
+
+
+
+Warn  modules/nf-core/cat/fastq/main.nf:22:60: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  22 |     def readList = reads instanceof List ? reads.collect { it.toString
+╰     |                                                            ^^
+
+Warn  modules/nf-core/cat/fastq/main.nf:58:60: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  58 |     def readList = reads instanceof List ? reads.collect { it.toString
+╰     |                                                            ^^
+
+
+
+
+
+
+
+
+Warn  modules/nf-core/gunzip/main.nf:43:9: Variable was declared but not used
+│  43 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/minimap2/align/main.nf:67:9: Variable was declared but not used
+│  67 |     def target = reference ?: (bam_input ? error("BAM input requires r
+╰     |         ^^^^^^
+
+
+
+
+Warn  modules/nf-core/nanoq/main.nf:38:9: Variable was declared but not used
+│  38 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/porechop/abi/main.nf:44:9: Variable was declared but not used
+│  44 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/porechop/abi/main.nf:46:9: Variable was declared but not used
+│  46 |     def adapters_list = custom_adapters ? "--custom_adapters ${custom_
+╰     |         ^^^^^^^^^^^^^
+
+
+
+
+
+
+
+
+
+Warn  modules/nf-core/seqtk/comp/main.nf:37:9: Variable was declared but not used
+│  37 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Error modules/nf-core/snpsites/main.nf:16:11: `CONSTANT_SITES` is not defined
+│  16 |     env   CONSTANT_SITES, emit: constant_sites_string
+╰     |           ^^^^^^^^^^^^^^
+
+
+Warn  subworkflows/local/bam_variant_calling_sort_freebayes_bcftools/main.nf:16:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/bam_variant_calling_sort_freebayes_bcftools/main.nf:19:58: Parameter was not used -- prefix with `_` to suppress warning
+│  19 |     FREEBAYES ( ch_input, ch_fasta_fai.map{ meta, fasta, fai -> [ meta
+╰     |                                                          ^^^
+
+Warn  subworkflows/local/bam_variant_calling_sort_freebayes_bcftools/main.nf:19:108: Parameter was not used -- prefix with `_` to suppress warning
+│  19 |  ] }, ch_fasta_fai.map{ meta, fasta, fai -> [ meta, fai ] }, ch_sample
+╰     |                               ^^^^^
+
+
+Warn  subworkflows/local/consensus_bcftools/main.nf:21:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  21 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/fastq_align_bwamem2/main.nf:14:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  14 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Error subworkflows/local/longread_adapterremoval/main.nf:19:26: `reads` is already declared
+│  19 |             .map { meta, reads -> [meta + [ single_end: true ], reads 
+╰     |                          ^^^^^
+
+Error subworkflows/local/longread_adapterremoval/main.nf:25:26: `reads` is already declared
+│  25 |             .map { meta, reads -> [ meta + [ single_end: true ], reads
+╰     |                          ^^^^^
+
+Warn  subworkflows/local/longread_adapterremoval/main.nf:13:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  13 |     ch_versions      = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/longread_adapterremoval/main.nf:14:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  14 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+
+Error subworkflows/local/longread_filtering/main.nf:18:58: `reads` is already declared
+│  18 |         ch_filtered_reads = FILTLONG ( reads.map { meta, reads -> [ me
+╰     |                                                          ^^^^^
+
+Warn  subworkflows/local/longread_filtering/main.nf:13:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  13 |     ch_versions       = Channel.empty()
+╰     |                         ^^^^^^^
+
+Warn  subworkflows/local/longread_filtering/main.nf:14:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  14 |     ch_multiqc_files  = Channel.empty()
+╰     |                         ^^^^^^^
+
+
+Warn  subworkflows/local/longread_mapping/main.nf:23:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  23 |     ch_versions      = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/longread_mapping/main.nf:24:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  24 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+
+Error subworkflows/local/longread_preprocessing/main.nf:29:26: `reads` is already declared
+│  29 |             .map { meta, reads -> [ meta + [single_end: true], reads ]
+╰     |                          ^^^^^
+
+Warn  subworkflows/local/longread_preprocessing/main.nf:15:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |     ch_versions      = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/longread_preprocessing/main.nf:16:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+
+Warn  subworkflows/local/minimap2_alignment/main.nf:13:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  13 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Error subworkflows/local/shortread_adapterremoval/main.nf:42:26: `reads` is already declared
+│  42 |             .map { meta, reads ->
+╰     |                          ^^^^^
+
+Error subworkflows/local/shortread_adapterremoval/main.nf:63:26: `reads` is already declared
+│  63 |             .map { meta, reads ->
+╰     |                          ^^^^^
+
+Warn  subworkflows/local/shortread_adapterremoval/main.nf:16:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     ch_versions      = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/shortread_adapterremoval/main.nf:17:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/shortread_adapterremoval/main.nf:21:49: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  21 |                                         single: it[0].single_end
+╰     |                                                 ^^
+
+Warn  subworkflows/local/shortread_adapterremoval/main.nf:22:50: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  22 |                                         paired: !it[0].single_end
+╰     |                                                  ^^
+
+Warn  subworkflows/local/shortread_adapterremoval/main.nf:35:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  35 |         ch_concat_fastq = Channel.empty()
+╰     |                           ^^^^^^^
+
+Warn  subworkflows/local/shortread_adapterremoval/main.nf:58:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  58 |         ch_concat_fastq = Channel.empty()
+╰     |                           ^^^^^^^
+
+
+Error subworkflows/local/shortread_fastp/main.nf:30:51: `reads` is already declared
+│  30 |                                             meta, reads ->
+╰     |                                                   ^^^^^
+
+Warn  subworkflows/local/shortread_fastp/main.nf:14:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  14 |     ch_versions           = Channel.empty()
+╰     |                             ^^^^^^^
+
+Warn  subworkflows/local/shortread_fastp/main.nf:15:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |     ch_multiqc_files      = Channel.empty()
+╰     |                             ^^^^^^^
+
+Warn  subworkflows/local/shortread_fastp/main.nf:19:41: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  19 |                                 single: it[0]['single_end'] == true
+╰     |                                         ^^
+
+Warn  subworkflows/local/shortread_fastp/main.nf:20:41: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  20 |                                 paired: it[0]['single_end'] == false
+╰     |                                         ^^
+
+Warn  subworkflows/local/shortread_fastp/main.nf:31:53: Variable was declared but not used
+│  31 |                                                 def meta_new = meta + 
+╰     |                                                     ^^^^^^^^
+
+
+Warn  subworkflows/local/shortread_mapping/main.nf:22:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  22 |     ch_versions      = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/shortread_mapping/main.nf:23:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  23 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+
+Warn  subworkflows/local/shortread_preprocessing/main.nf:11:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  11 |     ch_versions       = Channel.empty()
+╰     |                         ^^^^^^^
+
+Warn  subworkflows/local/shortread_preprocessing/main.nf:12:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  12 |     ch_multiqc_files  = Channel.empty()
+╰     |                         ^^^^^^^
+
+
+Warn  subworkflows/local/utils_nfcore_bactmap_pipeline/main.nf:31:5: Parameter was not used -- prefix with `_` to suppress warning
+│  31 |     monochrome_logs   // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_bactmap_pipeline/main.nf:34:5: Parameter was not used -- prefix with `_` to suppress warning
+│  34 |     input             //  string: Path to input samplesheet
+╰     |     ^^^^^
+
+Warn  subworkflows/local/utils_nfcore_bactmap_pipeline/main.nf:38:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  38 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_bactmap_pipeline/main.nf:75:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  75 |     Channel
+╰     |     ^^^^^^^
+
+
+Warn  subworkflows/nf-core/bam_sort_stats_samtools/main.nf:16:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/nf-core/bam_stats_samtools/main.nf:15:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/nf-core/fastq_align_bowtie2/main.nf:18:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  18 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 | mYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
+╰     |                               ^^^^^^^
+
+
+Error workflows/bactmap.nf:12:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  12 | def checkPathParamList = [ params.input, params.fasta, params.multiqc_
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  13 |                             params.shortread_qc_adapterlist, params.mu
+╰  14 |                             params.multiqc_methods_description ]
+
+Error workflows/bactmap.nf:16:1: `for` loops are no longer supported
+│  16 | for (param in checkPathParamList) { if (param) { file(param, checkIfEx
+╰     | ^^^
+
+Error workflows/bactmap.nf:16:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  16 | for (param in checkPathParamList) { if (param) { file(param, checkIfEx
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/bactmap.nf:16:6: `param` is not defined
+│  16 | for (param in checkPathParamList) { if (param) { file(param, checkIfEx
+╰     |      ^^^^^
+
+Error workflows/bactmap.nf:16:40: `param` is not defined
+│  16 | for (param in checkPathParamList) { if (param) { file(param, checkIfEx
+╰     |                                        ^^^^^^^
+
+Error workflows/bactmap.nf:16:55: `param` is not defined
+│  16 | for (param in checkPathParamList) { if (param) { file(param, checkIfEx
+╰     |                                                       ^^^^^
+
+Error workflows/bactmap.nf:19:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  19 | if ( params.input ) {
+│     | ^^^^^^^^^^^^^^^^^^^^^
+│  20 |     ch_input = file(params.input, checkIfExists: true)
+│  21 | } else {
+│  22 |     error("Input samplesheet not specified")
+╰  23 | }
+
+Error workflows/bactmap.nf:76:1: Invalid workflow definition -- check for missing or out-of-order section labels
+│  74 | */
+│  75 | 
+│  76 | workflow BACTMAP {
+│     | ^^^^^^^^^^^^^^^^^^
+│  77 | 
+╰  78 |     adapterlist = params.shortread_qc_adapterlist ? file(params.shortr
+
+Warn  workflows/bactmap.nf:20:5: Variable was declared but not used
+│  20 |     ch_input = file(params.input, checkIfExists: true)
+╰     |     ^^^^^^^^
+
+
+Warn  conf/modules.config:109:191: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 109 | erform_shortread_qc && params.save_analysis_ready_fastqs ? it : null }
+╰     |                                                            ^^
+
+Warn  conf/modules.config:144:191: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 144 | erform_shortread_qc && params.save_analysis_ready_fastqs ? it : null }
+╰     |                                                            ^^
+
+Warn  conf/modules.config:174:190: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 174 | erform_shortread_qc && params.save_analysis_ready_fastqs ? it : null }
+╰     |                                                            ^^
+
+Warn  conf/modules.config:207:225: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 207 | rtread_qc_mergepairs && params.save_analysis_ready_fastqs ? it : null}
+╰     |                                                             ^^
+
+Warn  conf/modules.config:231:308: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 231 | perform_longread_qc && params.save_analysis_ready_fastqs ? it : null }
+╰     |                                                            ^^
+
+Warn  conf/modules.config:255:308: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 255 | perform_longread_qc && params.save_analysis_ready_fastqs ? it : null }
+╰     |                                                            ^^
+
+Warn  conf/modules.config:285:270: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 285 | perform_longread_qc && params.save_analysis_ready_fastqs ? it : null }
+╰     |                                                            ^^
+
+Warn  conf/modules.config:315:270: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 315 | perform_longread_qc && params.save_analysis_ready_fastqs ? it : null }
+╰     |                                                            ^^
+
+Warn  conf/modules.config:364:190: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 364 | erform_shortread_qc && params.save_analysis_ready_fastqs ? it : null }
+╰     |                                                            ^^
+
+
+Error nextflow.config:351:31: `manifest` is not defined
+│ 351 | \033[0;35m  nf-core/bactmap ${manifest.version}\033[0m
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:354:26: `manifest` is not defined
+│ 354 |         afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${ma
+╰     |                          ^^^^^^^^
+
+Error nextflow.config:354:69: `manifest` is not defined
+│ 354 | ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "  
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:354:186: `manifest` is not defined
+│ 354 | doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:363:22: `validation` is not defined
+│ 363 |         beforeText = validation.help.beforeText
+╰     |                      ^^^^^^^^^^
+
+Error nextflow.config:364:21: `validation` is not defined
+│ 364 |         afterText = validation.help.afterText
+╰     |                     ^^^^^^^^^^
+
+Warn  nextflow.config:354:129: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 354 | lect { "    https://doi.org/${it.trim().replace('https://doi.org/','')
+╰     |                               ^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-test tests
+│   3 |     testsDir "."
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 12 files had 28 errors
+ ✅ 93 files had no errors

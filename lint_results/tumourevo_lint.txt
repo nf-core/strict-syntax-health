@@ -1,0 +1,380 @@
+Linting Nextflow code..
+Linting: conf/igenomes_ignored.config
+Linting: conf/base.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/igenomes.config
+Linting: conf/modules/tinc.config
+Linting: conf/modules/pyclonevi.config
+Linting: conf/modules/cnaqc.config
+Linting: conf/modules/driver_annotation.config
+Linting: conf/modules/mobster.config
+Linting: conf/modules/bcftools.config
+Linting: conf/modules/lifter.config
+Linting: conf/modules/viber.config
+Linting: conf/modules/ensemblvep.config
+Linting: conf/modules/sparsesignatures.config
+Linting: conf/modules/sigprofiler.config
+Linting: conf/modules/ctree.config
+Linting: conf/modules/formatter.config
+Linting: nextflow.config
+Linting: workflows/tumourevo.nf
+Linting: subworkflows/local/subclonal_deconvolution/main.nf
+Linting: subworkflows/local/lifter/main.nf
+Linting: subworkflows/local/signature_deconvolution/main.nf
+Linting: subworkflows/local/annotation_cache_initialisation/main.nf
+Linting: subworkflows/local/formatter/main.nf
+Linting: subworkflows/local/utils_nfcore_tumourevo_pipeline/main.nf
+Linting: subworkflows/local/qc/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/vcf2cnaqc/main.nf
+Linting: modules/local/annotate_driver/main.nf
+Linting: modules/local/get_positions/main_rel.nf
+Linting: modules/local/get_positions/main.nf
+Linting: modules/local/cna2cnaqc/main.nf
+Linting: modules/local/cnaqc2tsv/main.nf
+Linting: modules/local/join_positions/main.nf
+Linting: modules/local/join_cnaqc/main.nf
+Linting: modules/nf-core/bcftools/view/main.nf
+Linting: modules/nf-core/bcftools/view/tests/vcf_gz_index.config
+Linting: modules/nf-core/bcftools/view/tests/vcf_gz_index_csi.config
+Linting: modules/nf-core/bcftools/view/tests/nextflow.config
+Linting: modules/nf-core/bcftools/view/tests/vcf_gz_index_tbi.config
+Linting: modules/nf-core/bcftools/mpileup/main.nf
+Linting: modules/nf-core/bcftools/mpileup/tests/nextflow.config
+Linting: modules/nf-core/pyclonevi/main.nf
+Linting: modules/nf-core/pyclonevi/tests/nextflow.config
+Linting: modules/nf-core/ensemblvep/vep/main.nf
+Linting: modules/nf-core/ensemblvep/vep/tests/nextflow.config
+Linting: modules/nf-core/ensemblvep/vep/tests/vcf.config
+Linting: modules/nf-core/ensemblvep/vep/tests/tab.gz.config
+Linting: modules/nf-core/ensemblvep/download/main.nf
+Linting: modules/nf-core/ensemblvep/download/tests/nextflow.config
+Linting: modules/nf-core/cnaqc/main.nf
+Linting: modules/nf-core/cnaqc/tests/nextflow.config
+Linting: modules/nf-core/sigprofiler/main.nf
+Linting: modules/nf-core/sigprofiler/tests/nextflow.config
+Linting: modules/nf-core/mobster/main.nf
+Linting: modules/nf-core/mobster/tests/nextflow.config
+Linting: modules/nf-core/untar/main.nf
+Linting: modules/nf-core/tinc/main.nf
+Linting: modules/nf-core/tinc/tests/nextflow.config
+Linting: modules/nf-core/sparsesignatures/main.nf
+Linting: modules/nf-core/sparsesignatures/tests/nextflow.config
+Linting: modules/nf-core/vcf2maf/main.nf
+Linting: modules/nf-core/vcf2maf/tests/nextflow.config
+Linting: modules/nf-core/viber/main.nf
+Linting: modules/nf-core/viber/tests/nextflow.config
+Linting: modules/nf-core/ctree/main.nf
+Error main.nf:45:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  45 | input = params.input ? Channel.fromList(samplesheetToList(params.input
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:74:51: `path` is already declared
+│  74 |             vep_cache = UNTAR.out.untar.map{meta, path ->
+╰     |                                                   ^^^^
+
+Error main.nf:114:9: `input` is not defined
+│ 114 |         input
+╰     |         ^^^^^
+
+Warn  main.nf:45:1: Variable was declared but not used
+│  45 | input = params.input ? Channel.fromList(samplesheetToList(params.input
+╰     | ^^^^^
+
+Warn  main.nf:45:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  45 | input = params.input ? Channel.fromList(samplesheetToList(params.input
+╰     |                        ^^^^^^^
+
+Warn  main.nf:45:104: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  45 | eetToList(params.input, "assets/schema_input.json")) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  main.nf:62:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  62 |     fasta = params.fasta ? Channel.fromPath(params.fasta).map{ it -> [
+╰     |                            ^^^^^^^
+
+Warn  main.nf:62:109: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  62 | sta).map{ it -> [ [id:it.baseName], it ] }.collect() : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  main.nf:63:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  63 |     drivers_table =  params.drivers_table ? Channel.fromPath(params.dr
+╰     |                                             ^^^^^^^
+
+Warn  main.nf:63:116: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  63 | (params.drivers_table).map{ it -> [ it ] }.collect() : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  main.nf:66:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  66 |         ensemblvep_info = Channel.of([ [ id:"${params.vep_cache_versio
+╰     |                           ^^^^^^^
+
+Warn  main.nf:68:66: Parameter was not used -- prefix with `_` to suppress warning
+│  68 | LOAD.out.cache.collect().map{ meta, cache -> [ cache ] }
+╰     |                               ^^^^
+
+Warn  main.nf:72:39: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  72 |             path = params.vep_cache ? Channel.fromPath(params.vep_cach
+╰     |                                       ^^^^^^^
+
+Warn  main.nf:72:124: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  72 | che).map{ it -> [ [id:it.baseName], it ] }.collect() : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  main.nf:74:45: Parameter was not used -- prefix with `_` to suppress warning
+│  74 |             vep_cache = UNTAR.out.untar.map{meta, path ->
+╰     |                                             ^^^^
+
+
+Warn  modules/local/annotate_driver/main.nf:19:9: Variable was declared but not used
+│  19 |     def args   = task.ext.args   ?: ""
+╰     |         ^^^^
+
+
+
+Warn  modules/local/get_positions/main.nf:19:9: Variable was declared but not used
+│  19 |     def args   = task.ext.args   ?: ""
+╰     |         ^^^^
+
+
+Warn  modules/local/get_positions/main_rel.nf:19:9: Variable was declared but not used
+│  19 |     def args   = task.ext.args   ?: ""
+╰     |         ^^^^
+
+Warn  modules/local/get_positions/main_rel.nf:20:9: Variable was declared but not used
+│  20 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/join_cnaqc/main.nf:22:9: Variable was declared but not used
+│  22 |     def qc_filter = args!='' && args.qc_filter ? "$args.qc_filter" : "
+╰     |         ^^^^^^^^^
+
+
+Warn  modules/local/join_positions/main.nf:19:9: Variable was declared but not used
+│  19 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+Warn  modules/nf-core/cnaqc/main.nf:25:9: Variable was declared but not used
+│  25 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/cnaqc/main.nf:26:9: Variable was declared but not used
+│  26 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+Warn  modules/nf-core/cnaqc/main.nf:31:9: Variable was declared but not used
+│  31 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+
+Warn  modules/nf-core/pyclonevi/main.nf:26:9: Variable was declared but not used
+│  26 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/sigprofiler/main.nf:26:9: Variable was declared but not used
+│  26 |     def args   = task.ext.args   ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/sigprofiler/main.nf:36:57: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  36 |     def signatures = context_types.collect { context_map[it] }
+╰     |                                                         ^^
+
+
+
+
+
+
+
+Warn  subworkflows/local/annotation_cache_initialisation/main.nf:22:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  22 |     ensemblvep_cache = Channel.fromPath(file("${vep_cache}/${vep_annot
+╰     |                        ^^^^^^^
+
+
+Error subworkflows/local/lifter/main.nf:23:36: `bam` is already declared
+│  23 |         rds = data.map{ meta, rds, bam, bai ->
+╰     |                                    ^^^
+
+Error subworkflows/local/lifter/main.nf:27:35: `rds` is already declared
+│  27 |         all_rds = data.map{ meta, rds, bam, bai ->
+╰     |                                   ^^^
+
+Error subworkflows/local/lifter/main.nf:27:40: `bam` is already declared
+│  27 |         all_rds = data.map{ meta, rds, bam, bai ->
+╰     |                                        ^^^
+
+Error subworkflows/local/lifter/main.nf:33:72: `rds` is already declared
+│  33 |  all_pos = GET_POSITIONS_ALL.out.all_pos.transpose().map{ meta, rds ->
+╰     |                                                                 ^^^
+
+Warn  subworkflows/local/lifter/main.nf:17:15: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |         out = Channel.empty()
+╰     |               ^^^^^^^
+
+Warn  subworkflows/local/lifter/main.nf:19:31: Parameter was not used -- prefix with `_` to suppress warning
+│  19 |         bam = data.map{ meta, rds, bam, bai ->
+╰     |                               ^^^
+
+Warn  subworkflows/local/lifter/main.nf:19:41: Parameter was not used -- prefix with `_` to suppress warning
+│  19 |         bam = data.map{ meta, rds, bam, bai ->
+╰     |                                         ^^^
+
+Warn  subworkflows/local/lifter/main.nf:23:36: Parameter was not used -- prefix with `_` to suppress warning
+│  23 |         rds = data.map{ meta, rds, bam, bai ->
+╰     |                                    ^^^
+
+Warn  subworkflows/local/lifter/main.nf:23:41: Parameter was not used -- prefix with `_` to suppress warning
+│  23 |         rds = data.map{ meta, rds, bam, bai ->
+╰     |                                         ^^^
+
+Warn  subworkflows/local/lifter/main.nf:27:40: Parameter was not used -- prefix with `_` to suppress warning
+│  27 |         all_rds = data.map{ meta, rds, bam, bai ->
+╰     |                                        ^^^
+
+Warn  subworkflows/local/lifter/main.nf:27:45: Parameter was not used -- prefix with `_` to suppress warning
+│  27 |         all_rds = data.map{ meta, rds, bam, bai ->
+╰     |                                             ^^^
+
+Warn  subworkflows/local/lifter/main.nf:33:66: Parameter was not used -- prefix with `_` to suppress warning
+│  33 |  all_pos = GET_POSITIONS_ALL.out.all_pos.transpose().map{ meta, rds ->
+╰     |                                                           ^^^^
+
+
+Warn  subworkflows/local/signature_deconvolution/main.nf:27:79: Parameter was not used -- prefix with `_` to suppress warning
+│  27 | rsesig = FORMATTER_RDS_SPARSESIGNATURES.out.map { meta, tsv, sample ->
+╰     |                                                              ^^^^^^
+
+Warn  subworkflows/local/signature_deconvolution/main.nf:52:76: Parameter was not used -- prefix with `_` to suppress warning
+│  52 | sigprofiler = FORMATTER_RDS_SIGPROFILER.out.map { meta, tsv, sample ->
+╰     |                                                              ^^^^^^
+
+
+
+Warn  subworkflows/local/utils_nfcore_tumourevo_pipeline/main.nf:32:5: Parameter was not used -- prefix with `_` to suppress warning
+│  32 |     monochrome_logs   // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_tumourevo_pipeline/main.nf:35:5: Parameter was not used -- prefix with `_` to suppress warning
+│  35 |     input             //  string: Path to input samplesheet
+╰     |     ^^^^^
+
+
+
+
+
+Error workflows/tumourevo.nf:36:17: Variables in a closure should be declared with `def`
+│  36 |                 n = vcf.baseName.unique().size()
+╰     |                 ^
+
+Error workflows/tumourevo.nf:39:71: `n` is already declared
+│  39 |        .map { id, meta, vcf, tbi, bam, bai, cna_segs, cna_extra, n  ->
+╰     |                                                                  ^
+
+Warn  workflows/tumourevo.nf:39:20: Parameter was not used -- prefix with `_` to suppress warning
+│  39 |             .map { id, meta, vcf, tbi, bam, bai, cna_segs, cna_extra, 
+╰     |                    ^^
+
+Warn  workflows/tumourevo.nf:48:44: Parameter was not used -- prefix with `_` to suppress warning
+│  48 |     input_vcf = input.map{ meta, vcf, tbi, bam, bai, cna_segs, cna_ext
+╰     |                                            ^^^
+
+Warn  workflows/tumourevo.nf:48:49: Parameter was not used -- prefix with `_` to suppress warning
+│  48 |     input_vcf = input.map{ meta, vcf, tbi, bam, bai, cna_segs, cna_ext
+╰     |                                                 ^^^
+
+Warn  workflows/tumourevo.nf:48:54: Parameter was not used -- prefix with `_` to suppress warning
+│  48 |     input_vcf = input.map{ meta, vcf, tbi, bam, bai, cna_segs, cna_ext
+╰     |                                                      ^^^^^^^^
+
+Warn  workflows/tumourevo.nf:48:64: Parameter was not used -- prefix with `_` to suppress warning
+│  48 | put_vcf = input.map{ meta, vcf, tbi, bam, bai, cna_segs, cna_extra  ->
+╰     |                                                          ^^^^^^^^^
+
+Warn  workflows/tumourevo.nf:52:34: Parameter was not used -- prefix with `_` to suppress warning
+│  52 |     input_cna = input.map{ meta, vcf, tbi, bam, bai, cna_segs, cna_ext
+╰     |                                  ^^^
+
+Warn  workflows/tumourevo.nf:52:39: Parameter was not used -- prefix with `_` to suppress warning
+│  52 |     input_cna = input.map{ meta, vcf, tbi, bam, bai, cna_segs, cna_ext
+╰     |                                       ^^^
+
+Warn  workflows/tumourevo.nf:52:44: Parameter was not used -- prefix with `_` to suppress warning
+│  52 |     input_cna = input.map{ meta, vcf, tbi, bam, bai, cna_segs, cna_ext
+╰     |                                            ^^^
+
+Warn  workflows/tumourevo.nf:52:49: Parameter was not used -- prefix with `_` to suppress warning
+│  52 |     input_cna = input.map{ meta, vcf, tbi, bam, bai, cna_segs, cna_ext
+╰     |                                                 ^^^
+
+Warn  workflows/tumourevo.nf:56:34: Parameter was not used -- prefix with `_` to suppress warning
+│  56 |     input_bam = input.map{ meta, vcf, tbi, bam, bai, cna_segs, cna_ext
+╰     |                                  ^^^
+
+Warn  workflows/tumourevo.nf:56:39: Parameter was not used -- prefix with `_` to suppress warning
+│  56 |     input_bam = input.map{ meta, vcf, tbi, bam, bai, cna_segs, cna_ext
+╰     |                                       ^^^
+
+Warn  workflows/tumourevo.nf:56:54: Parameter was not used -- prefix with `_` to suppress warning
+│  56 |     input_bam = input.map{ meta, vcf, tbi, bam, bai, cna_segs, cna_ext
+╰     |                                                      ^^^^^^^^
+
+Warn  workflows/tumourevo.nf:56:64: Parameter was not used -- prefix with `_` to suppress warning
+│  56 | put_bam = input.map{ meta, vcf, tbi, bam, bai, cna_segs, cna_extra  ->
+╰     |                                                          ^^^^^^^^^
+
+Warn  workflows/tumourevo.nf:85:29: Parameter was not used -- prefix with `_` to suppress warning
+│  85 |             .branch { meta, rds, bam, bai ->
+╰     |                             ^^^
+
+Warn  workflows/tumourevo.nf:85:34: Parameter was not used -- prefix with `_` to suppress warning
+│  85 |             .branch { meta, rds, bam, bai ->
+╰     |                                  ^^^
+
+Warn  workflows/tumourevo.nf:85:39: Parameter was not used -- prefix with `_` to suppress warning
+│  85 |             .branch { meta, rds, bam, bai ->
+╰     |                                       ^^^
+
+Warn  workflows/tumourevo.nf:92:56: Parameter was not used -- prefix with `_` to suppress warning
+│  92 |     rds_input = join_input.multisample.map{ meta, rds, bam, bai ->
+╰     |                                                        ^^^
+
+Warn  workflows/tumourevo.nf:92:61: Parameter was not used -- prefix with `_` to suppress warning
+│  92 |     rds_input = join_input.multisample.map{ meta, rds, bam, bai ->
+╰     |                                                             ^^^
+
+
+Warn  conf/modules/cnaqc.config:28:20: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  28 |         .findAll { it }      // remove empty strings
+╰     |                    ^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-test tests
+│   3 |     testsDir "."
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 4 files had 10 errors
+ ✅ 71 files had no errors

@@ -1,0 +1,426 @@
+Linting Nextflow code..
+Linting: conf/igenomes_ignored.config
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/igenomes.config
+Linting: nextflow.config
+Linting: workflows/abotyper.nf
+Linting: subworkflows/local/utils_nfcore_abotyper_pipeline/main.nf
+Linting: subworkflows/local/predictabophenotype/main.nf
+Linting: subworkflows/local/minimap_align_exons/main.nf
+Linting: subworkflows/local/variant_calling_mpileup/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/makeindex/main.nf
+Linting: modules/local/mpileupstats/main.nf
+Linting: modules/local/abo/snps2pheno/main.nf
+Linting: modules/local/abo/abosnps/main.nf
+Linting: modules/nf-core/samtools/flagstat/main.nf
+Linting: modules/nf-core/samtools/coverage/main.nf
+Linting: modules/nf-core/samtools/stats/main.nf
+Linting: modules/nf-core/samtools/mpileup/main.nf
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/minimap2/align/main.nf
+Error main.nf:39:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  39 | exon6fai          = params.exon6fai   ? Channel.fromPath(params.exon6f
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:40:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  40 | exon6fasta        = params.exon6fasta ? Channel.fromPath(params.exon6f
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:41:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  41 | exon7fai          = params.exon7fai   ? Channel.fromPath(params.exon7f
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:42:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  42 | exon7fasta        = params.exon7fasta ? Channel.fromPath(params.exon7f
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:43:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  43 | logo              = params.logo       ? Channel.fromPath(params.logo).
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:60:9: `exon6fai` is not defined
+│  60 |         exon6fai,
+╰     |         ^^^^^^^^
+
+Error main.nf:61:9: `exon6fasta` is not defined
+│  61 |         exon6fasta,
+╰     |         ^^^^^^^^^^
+
+Error main.nf:62:9: `exon7fai` is not defined
+│  62 |         exon7fai,
+╰     |         ^^^^^^^^
+
+Error main.nf:63:9: `exon7fasta` is not defined
+│  63 |         exon7fasta,
+╰     |         ^^^^^^^^^^
+
+Error main.nf:64:9: `logo` is not defined
+│  64 |         logo
+╰     |         ^^^^
+
+Warn  main.nf:39:1: Variable was declared but not used
+│  39 | exon6fai          = params.exon6fai   ? Channel.fromPath(params.exon6f
+╰     | ^^^^^^^^
+
+Warn  main.nf:39:41: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  39 | exon6fai          = params.exon6fai   ? Channel.fromPath(params.exon6f
+╰     |                                         ^^^^^^^
+
+Warn  main.nf:39:132: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  39 | p { it -> [[id: it.baseName, exon: 'exon6'], it] }   : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  main.nf:40:1: Variable was declared but not used
+│  40 | exon6fasta        = params.exon6fasta ? Channel.fromPath(params.exon6f
+╰     | ^^^^^^^^^^
+
+Warn  main.nf:40:41: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  40 | exon6fasta        = params.exon6fasta ? Channel.fromPath(params.exon6f
+╰     |                                         ^^^^^^^
+
+Warn  main.nf:40:132: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  40 | map { it -> [[id: it.baseName, exon: 'exon6'], it] } : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  main.nf:41:1: Variable was declared but not used
+│  41 | exon7fai          = params.exon7fai   ? Channel.fromPath(params.exon7f
+╰     | ^^^^^^^^
+
+Warn  main.nf:41:41: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  41 | exon7fai          = params.exon7fai   ? Channel.fromPath(params.exon7f
+╰     |                                         ^^^^^^^
+
+Warn  main.nf:41:132: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  41 | p { it -> [[id: it.baseName, exon: 'exon7'], it] }   : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  main.nf:42:1: Variable was declared but not used
+│  42 | exon7fasta        = params.exon7fasta ? Channel.fromPath(params.exon7f
+╰     | ^^^^^^^^^^
+
+Warn  main.nf:42:41: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  42 | exon7fasta        = params.exon7fasta ? Channel.fromPath(params.exon7f
+╰     |                                         ^^^^^^^
+
+Warn  main.nf:42:132: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  42 | map { it -> [[id: it.baseName, exon: 'exon7'], it] } : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  main.nf:43:1: Variable was declared but not used
+│  43 | logo              = params.logo       ? Channel.fromPath(params.logo).
+╰     | ^^^^
+
+Warn  main.nf:43:41: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  43 | logo              = params.logo       ? Channel.fromPath(params.logo).
+╰     |                                         ^^^^^^^
+
+Warn  main.nf:43:132: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  43 | t()                                                  : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+
+Warn  modules/local/abo/abosnps/main.nf:19:9: Variable was declared but not used
+│  19 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/abo/snps2pheno/main.nf:31:13: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│  31 |     python3 $projectDir/bin/aggregate_abo_reports.py \\
+╰     |             ^^^^^^^^^^
+
+
+
+Warn  modules/local/mpileupstats/main.nf:36:9: Variable was declared but not used
+│  36 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/mpileupstats/main.nf:40:13: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│  40 |     python3 $projectDir/bin/stats_from_pileup.py \\
+╰     |             ^^^^^^^^^^
+
+
+
+Warn  modules/nf-core/minimap2/align/main.nf:67:9: Variable was declared but not used
+│  67 |     def target = reference ?: (bam_input ? error("BAM input requires r
+╰     |         ^^^^^^
+
+
+
+
+
+
+
+Error subworkflows/local/minimap_align_exons/main.nf:41:19: Unexpected input: '='
+│  41 |         bam_format="bam",
+╰     |                   ^
+
+
+Warn  subworkflows/local/predictabophenotype/main.nf:19:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/predictabophenotype/main.nf:46:51: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  46 |                 def exon_dir = sample_dir.resolve(it.exon)
+╰     |                                                   ^^
+
+Warn  subworkflows/local/predictabophenotype/main.nf:48:17: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  48 |                 it.file.copyTo(exon_dir.resolve(it.file.name))
+╰     |                 ^^
+
+Warn  subworkflows/local/predictabophenotype/main.nf:48:49: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  48 |                 it.file.copyTo(exon_dir.resolve(it.file.name))
+╰     |                                                 ^^
+
+Warn  subworkflows/local/predictabophenotype/main.nf:55:32: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  55 |     ch_per_sample_processing = Channel.fromPath("${params.outdir}/per_
+╰     |                                ^^^^^^^
+
+
+Warn  subworkflows/local/utils_nfcore_abotyper_pipeline/main.nf:31:5: Parameter was not used -- prefix with `_` to suppress warning
+│  31 |     monochrome_logs   // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_abotyper_pipeline/main.nf:34:5: Parameter was not used -- prefix with `_` to suppress warning
+│  34 |     input             //  string: Path to input samplesheet
+╰     |     ^^^^^
+
+Warn  subworkflows/local/utils_nfcore_abotyper_pipeline/main.nf:38:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  38 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_abotyper_pipeline/main.nf:75:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  75 |     Channel
+╰     |     ^^^^^^^
+
+
+Warn  subworkflows/local/variant_calling_mpileup/main.nf:8:5: Parameter was not used -- prefix with `_` to suppress warning
+│   8 |     ch_bai       // channel: [ val(meta), path(bai)]    - BAI file fro
+╰     |     ^^^^^^
+
+Warn  subworkflows/local/variant_calling_mpileup/main.nf:10:5: Parameter was not used -- prefix with `_` to suppress warning
+│  10 |     ch_fai       // channel: [ val(meta1), path(fai)]   - fasta index 
+╰     |     ^^^^^^
+
+Warn  subworkflows/local/variant_calling_mpileup/main.nf:15:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/variant_calling_mpileup/main.nf:20:29: Parameter was not used -- prefix with `_` to suppress warning
+│  20 |         .filter { bam_meta, bam, bed_meta, bed ->
+╰     |                             ^^^
+
+Warn  subworkflows/local/variant_calling_mpileup/main.nf:20:44: Parameter was not used -- prefix with `_` to suppress warning
+│  20 |         .filter { bam_meta, bam, bed_meta, bed ->
+╰     |                                            ^^^
+
+Warn  subworkflows/local/variant_calling_mpileup/main.nf:24:31: Parameter was not used -- prefix with `_` to suppress warning
+│  24 |         .map { bam_meta, bam, bed_meta, bed ->
+╰     |                               ^^^^^^^^
+
+Warn  subworkflows/local/variant_calling_mpileup/main.nf:31:29: Parameter was not used -- prefix with `_` to suppress warning
+│  31 |         .filter { bam_meta, bam, bed, fasta_meta, fasta ->
+╰     |                             ^^^
+
+Warn  subworkflows/local/variant_calling_mpileup/main.nf:31:34: Parameter was not used -- prefix with `_` to suppress warning
+│  31 |         .filter { bam_meta, bam, bed, fasta_meta, fasta ->
+╰     |                                  ^^^
+
+Warn  subworkflows/local/variant_calling_mpileup/main.nf:31:51: Parameter was not used -- prefix with `_` to suppress warning
+│  31 |         .filter { bam_meta, bam, bed, fasta_meta, fasta ->
+╰     |                                                   ^^^^^
+
+Warn  subworkflows/local/variant_calling_mpileup/main.nf:43:52: Parameter was not used -- prefix with `_` to suppress warning
+│  43 |         ch_fasta_matched.map { bam_meta, bam, bed, fasta_meta, fasta -
+╰     |                                                    ^^^^^^^^^^
+
+Warn  subworkflows/local/variant_calling_mpileup/main.nf:43:64: Parameter was not used -- prefix with `_` to suppress warning
+│  43 | m_meta, bam, bed, fasta_meta, fasta -> [bam_meta, bam, bed] },
+╰     |                               ^^^^^
+
+Warn  subworkflows/local/variant_calling_mpileup/main.nf:44:32: Parameter was not used -- prefix with `_` to suppress warning
+│  44 |         ch_fasta_matched.map { bam_meta, bam, bed, fasta_meta, fasta -
+╰     |                                ^^^^^^^^
+
+Warn  subworkflows/local/variant_calling_mpileup/main.nf:44:42: Parameter was not used -- prefix with `_` to suppress warning
+│  44 |         ch_fasta_matched.map { bam_meta, bam, bed, fasta_meta, fasta -
+╰     |                                          ^^^
+
+Warn  subworkflows/local/variant_calling_mpileup/main.nf:44:47: Parameter was not used -- prefix with `_` to suppress warning
+│  44 |         ch_fasta_matched.map { bam_meta, bam, bed, fasta_meta, fasta -
+╰     |                                               ^^^
+
+Warn  subworkflows/local/variant_calling_mpileup/main.nf:52:33: Parameter was not used -- prefix with `_` to suppress warning
+│  52 |         .filter { mpileup_meta, mpileup, fasta_meta, fasta ->
+╰     |                                 ^^^^^^^
+
+Warn  subworkflows/local/variant_calling_mpileup/main.nf:52:54: Parameter was not used -- prefix with `_` to suppress warning
+│  52 |         .filter { mpileup_meta, mpileup, fasta_meta, fasta ->
+╰     |                                                      ^^^^^
+
+Warn  subworkflows/local/variant_calling_mpileup/main.nf:60:57: Parameter was not used -- prefix with `_` to suppress warning
+│  60 |         ch_nucl_freq_input.map { mpileup_meta, mpileup, fasta_meta, fa
+╰     |                                                         ^^^^^^^^^^
+
+Warn  subworkflows/local/variant_calling_mpileup/main.nf:60:69: Parameter was not used -- prefix with `_` to suppress warning
+│  60 | up_meta, mpileup, fasta_meta, fasta -> [mpileup_meta, mpileup] },
+╰     |                               ^^^^^
+
+Warn  subworkflows/local/variant_calling_mpileup/main.nf:61:34: Parameter was not used -- prefix with `_` to suppress warning
+│  61 |         ch_nucl_freq_input.map { mpileup_meta, mpileup, fasta_meta, fa
+╰     |                                  ^^^^^^^^^^^^
+
+Warn  subworkflows/local/variant_calling_mpileup/main.nf:61:48: Parameter was not used -- prefix with `_` to suppress warning
+│  61 |         ch_nucl_freq_input.map { mpileup_meta, mpileup, fasta_meta, fa
+╰     |                                                ^^^^^^^
+
+
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 | mYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
+╰     |                               ^^^^^^^
+
+
+Error workflows/abotyper.nf:19:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/abotyper/subworkflows/local/minimap_align_exons/main.nf'
+│  19 | include { MINIMAP2_ALIGN_READS    } from '../subworkflows/local/minima
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/abotyper.nf:82:5: `MINIMAP2_ALIGN_READS` is not defined
+│  82 |     MINIMAP2_ALIGN_READS (
+╰     |     ^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/abotyper.nf:87:35: `MINIMAP2_ALIGN_READS` is not defined
+│  87 |     ch_versions = ch_versions.mix(MINIMAP2_ALIGN_READS.out.versions)
+╰     |                                   ^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/abotyper.nf:93:9: `MINIMAP2_ALIGN_READS` is not defined
+│  93 |         MINIMAP2_ALIGN_READS.out.bam,
+╰     |         ^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/abotyper.nf:94:9: `MINIMAP2_ALIGN_READS` is not defined
+│  94 |         MINIMAP2_ALIGN_READS.out.bai,
+╰     |         ^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/abotyper.nf:95:9: `MINIMAP2_ALIGN_READS` is not defined
+│  95 |         MINIMAP2_ALIGN_READS.out.fasta,
+╰     |         ^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/abotyper.nf:96:9: `MINIMAP2_ALIGN_READS` is not defined
+│  96 |         MINIMAP2_ALIGN_READS.out.fai,
+╰     |         ^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/abotyper.nf:106:15: `MINIMAP2_ALIGN_READS` is not defined
+│ 106 |         .join(MINIMAP2_ALIGN_READS.out.coverage)
+╰     |               ^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/abotyper.nf:139:14: `MINIMAP2_ALIGN_READS` is not defined
+│ 139 |         .mix(MINIMAP2_ALIGN_READS.out.coverage.map { meta, cov -> cov 
+╰     |              ^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/abotyper.nf:39:5: Parameter was not used -- prefix with `_` to suppress warning
+│  39 |     logo           // channel: png from params.logo (custom pathwest l
+╰     |     ^^^^
+
+Warn  workflows/abotyper.nf:43:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  43 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  workflows/abotyper.nf:129:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 129 |     ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_p
+╰     |                           ^^^^^^^
+
+Warn  workflows/abotyper.nf:134:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 134 |     ch_methods_description = Channel.value(methodsDescriptionText(ch_m
+╰     |                              ^^^^^^^
+
+Warn  workflows/abotyper.nf:137:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 137 |     ch_multiqc_inputs = Channel.empty()
+╰     |                         ^^^^^^^
+
+Warn  workflows/abotyper.nf:138:35: Parameter was not used -- prefix with `_` to suppress warning
+│ 138 |         .mix(FASTQC.out.zip.map { meta, files -> files }.flatten())
+╰     |                                   ^^^^
+
+Warn  workflows/abotyper.nf:139:54: Parameter was not used -- prefix with `_` to suppress warning
+│ 139 |         .mix(MINIMAP2_ALIGN_READS.out.coverage.map { meta, cov -> cov 
+╰     |                                                      ^^^^
+
+Warn  workflows/abotyper.nf:140:56: Parameter was not used -- prefix with `_` to suppress warning
+│ 140 |         .mix(VARIANTS_QUANTIFICATION.out.metrics.map { meta, metrics -
+╰     |                                                        ^^^^
+
+Warn  workflows/abotyper.nf:145:32: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 145 |     ch_multiqc_config        = Channel.fromPath(
+╰     |                                ^^^^^^^
+
+Warn  workflows/abotyper.nf:148:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 148 |         Channel.fromPath(params.multiqc_config, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/abotyper.nf:149:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 149 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/abotyper.nf:151:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 151 |         Channel.fromPath(params.multiqc_logo, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/abotyper.nf:152:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 152 |         Channel.empty()
+╰     |         ^^^^^^^
+
+
+Error nextflow.config:314:32: `manifest` is not defined
+│ 314 | \033[0;35m  nf-core/abotyper ${manifest.version}\033[0m
+╰     |                                ^^^^^^^^
+
+Error nextflow.config:317:26: `manifest` is not defined
+│ 317 |         afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${ma
+╰     |                          ^^^^^^^^
+
+Error nextflow.config:317:69: `manifest` is not defined
+│ 317 | ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "  
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:317:186: `manifest` is not defined
+│ 317 | doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:326:22: `validation` is not defined
+│ 326 |         beforeText = validation.help.beforeText
+╰     |                      ^^^^^^^^^^
+
+Error nextflow.config:327:21: `validation` is not defined
+│ 327 |         afterText = validation.help.afterText
+╰     |                     ^^^^^^^^^^
+
+Warn  nextflow.config:317:129: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 317 | lect { "    https://doi.org/${it.trim().replace('https://doi.org/','')
+╰     |                               ^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     testsDir "./tests"
+│   3 |     workDir System.getenv("NFT_WORKDIR") ?: ".nf-test"
+│   4 |     configFile "tests/nextflow.config"
+╰   5 |     ignore 'modules/nf-core/**/tests/*', 'subworkflows/nf-core/**/test
+
+
+Nextflow linting complete!
+ ❌ 5 files had 27 errors
+ ✅ 28 files had no errors

@@ -1,0 +1,1279 @@
+Linting Nextflow code..
+Linting: conf/test_full_nanopore.config
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/modules_illumina.config
+Linting: conf/test_sispa.config
+Linting: conf/modules_nanopore.config
+Linting: conf/test_nanopore.config
+Linting: nextflow.config
+Linting: workflows/viralrecon.nf
+Linting: subworkflows/local/prepare_genome_nanopore/main.nf
+Linting: subworkflows/local/assembly_qc/main.nf
+Linting: subworkflows/local/assembly_spades/main.nf
+Linting: subworkflows/local/fastq_trim_fastp_fastqc/main.nf
+Linting: subworkflows/local/consensus_qc/main.nf
+Linting: subworkflows/local/prepare_genome_illumina/main.nf
+Linting: subworkflows/local/snpeff_snpsift/main.nf
+Linting: subworkflows/local/filter_bam_samtools/main.nf
+Linting: subworkflows/local/variants_bcftools/main.nf
+Linting: subworkflows/local/utils_nfcore_viralrecon_pipeline/main.nf
+Linting: subworkflows/local/assembly_minia/main.nf
+Linting: subworkflows/local/variants_qc/main.nf
+Linting: subworkflows/local/vcf_bgzip_tabix_stats/main.nf
+Linting: subworkflows/local/additional_annotation/main.nf
+Linting: subworkflows/local/variants_long_table/main.nf
+Linting: subworkflows/local/consensus_ivar/main.nf
+Linting: subworkflows/local/consensus_bcftools/main.nf
+Linting: subworkflows/local/assembly_unicycler/main.nf
+Linting: subworkflows/local/vcf_tabix_stats/main.nf
+Linting: subworkflows/local/variants_ivar/main.nf
+Linting: subworkflows/local/bam_trim_primers_ivar/main.nf
+Linting: subworkflows/nf-core/bam_stats_samtools/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/fastq_align_bowtie2/main.nf
+Linting: subworkflows/nf-core/fastq_align_bowtie2/tests/nextflow.config
+Linting: subworkflows/nf-core/bam_variant_demix_boot_freyja/main.nf
+Linting: subworkflows/nf-core/bam_variant_demix_boot_freyja/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/bam_sort_stats_samtools/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: subworkflows/nf-core/bam_markduplicates_picard/main.nf
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/prepare_primer_fasta/main.nf
+Linting: modules/local/ivar_variants_to_vcf/main.nf
+Linting: modules/local/make_bed_mask/main.nf
+Linting: modules/local/plot_base_density/main.nf
+Linting: modules/local/kraken2/build/main.nf
+Linting: modules/local/rename_fasta_header/main.nf
+Linting: modules/local/snpeff/build/main.nf
+Linting: modules/local/snpeff/ann/main.nf
+Linting: modules/local/snpsift/extractfields/main.nf
+Linting: modules/local/make_variants_long_table/main.nf
+Linting: modules/local/filter_blastn/main.nf
+Linting: modules/local/collapse_primers/main.nf
+Linting: modules/local/plot_mosdepth_regions/main.nf
+Linting: modules/nf-core/plasmidid/main.nf
+Linting: modules/nf-core/plasmidid/tests/nextflow.config
+Linting: modules/nf-core/bcftools/query/main.nf
+Linting: modules/nf-core/bcftools/query/tests/nextflow.config
+Linting: modules/nf-core/bcftools/consensus/main.nf
+Linting: modules/nf-core/bcftools/sort/main.nf
+Linting: modules/nf-core/bcftools/sort/tests/vcf_gz_index.config
+Linting: modules/nf-core/bcftools/sort/tests/vcf_gz_index_csi.config
+Linting: modules/nf-core/bcftools/sort/tests/vcf_gz_index_tbi.config
+Linting: modules/nf-core/bcftools/stats/main.nf
+Linting: modules/nf-core/bcftools/norm/main.nf
+Linting: modules/nf-core/bcftools/norm/tests/nextflow.vcf_gz.config
+Linting: modules/nf-core/bcftools/norm/tests/vcf_gz_index.config
+Linting: modules/nf-core/bcftools/norm/tests/vcf_gz_index_csi.config
+Linting: modules/nf-core/bcftools/norm/tests/nextflow.config
+Linting: modules/nf-core/bcftools/norm/tests/nextflow.bcf_gz.config
+Linting: modules/nf-core/bcftools/norm/tests/nextflow.vcf.config
+Linting: modules/nf-core/bcftools/norm/tests/vcf_gz_index_tbi.config
+Linting: modules/nf-core/bcftools/norm/tests/nextflow.bcf.config
+Linting: modules/nf-core/bcftools/filter/main.nf
+Linting: modules/nf-core/bcftools/filter/tests/vcf_gz_index.config
+Linting: modules/nf-core/bcftools/filter/tests/vcf_gz_index_csi.config
+Linting: modules/nf-core/bcftools/filter/tests/nextflow.config
+Linting: modules/nf-core/bcftools/filter/tests/region_filter.config
+Linting: modules/nf-core/bcftools/filter/tests/vcf_gz_index_tbi.config
+Linting: modules/nf-core/bcftools/mpileup/main.nf
+Linting: modules/nf-core/bcftools/mpileup/tests/nextflow.config
+Linting: modules/nf-core/bandage/image/main.nf
+Linting: modules/nf-core/gunzip/main.nf
+Linting: modules/nf-core/gunzip/tests/nextflow.config
+Linting: modules/nf-core/kraken2/kraken2/main.nf
+Linting: modules/nf-core/samtools/flagstat/main.nf
+Linting: modules/nf-core/samtools/idxstats/main.nf
+Linting: modules/nf-core/samtools/index/main.nf
+Linting: modules/nf-core/samtools/index/tests/csi.nextflow.config
+Linting: modules/nf-core/samtools/sort/main.nf
+Linting: modules/nf-core/samtools/sort/tests/nextflow.config
+Linting: modules/nf-core/samtools/sort/tests/nextflow_cram.config
+Linting: modules/nf-core/samtools/stats/main.nf
+Linting: modules/nf-core/samtools/view/main.nf
+Linting: modules/nf-core/samtools/view/tests/cram_index.config
+Linting: modules/nf-core/samtools/view/tests/bam_index.config
+Linting: modules/nf-core/samtools/view/tests/bam.config
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/cutadapt/main.nf
+Linting: modules/nf-core/cutadapt/tests/nextflow.config
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/cat/fastq/main.nf
+Linting: modules/nf-core/spades/main.nf
+Linting: modules/nf-core/spades/tests/nextflow.config
+Linting: modules/nf-core/custom/getchromsizes/main.nf
+Linting: modules/nf-core/bowtie2/build/main.nf
+Linting: modules/nf-core/bowtie2/align/main.nf
+Linting: modules/nf-core/bowtie2/align/tests/cram_crai.config
+Linting: modules/nf-core/bowtie2/align/tests/sam2.config
+Linting: modules/nf-core/bowtie2/align/tests/large_index.config
+Linting: modules/nf-core/bowtie2/align/tests/sam.config
+Linting: modules/nf-core/pangolin/run/main.nf
+Linting: modules/nf-core/pangolin/updatedata/main.nf
+Linting: modules/nf-core/fastp/main.nf
+Linting: modules/nf-core/fastp/tests/nextflow.interleaved.config
+Linting: modules/nf-core/fastp/tests/nextflow.save_failed.config
+Linting: modules/nf-core/untar/main.nf
+Linting: modules/nf-core/artic/guppyplex/main.nf
+Linting: modules/nf-core/artic/minion/main.nf
+Linting: modules/nf-core/quast/main.nf
+Linting: modules/nf-core/blast/makeblastdb/main.nf
+Linting: modules/nf-core/blast/makeblastdb/tests/nextflow.config
+Linting: modules/nf-core/blast/blastn/main.nf
+Linting: modules/nf-core/blast/blastn/tests/nextflow.config
+Linting: modules/nf-core/nanoplot/main.nf
+Linting: modules/nf-core/unicycler/main.nf
+Linting: modules/nf-core/mosdepth/main.nf
+Linting: modules/nf-core/mosdepth/tests/window.config
+Linting: modules/nf-core/mosdepth/tests/threshold.config
+Linting: modules/nf-core/mosdepth/tests/quantized.config
+Linting: modules/nf-core/vcflib/vcfuniq/main.nf
+Linting: modules/nf-core/abacas/main.nf
+Linting: modules/nf-core/abacas/tests/nextflow.config
+Linting: modules/nf-core/pycoqc/main.nf
+Linting: modules/nf-core/pycoqc/tests/nextflow.config
+Linting: modules/nf-core/picard/markduplicates/main.nf
+Linting: modules/nf-core/picard/markduplicates/tests/nextflow.config
+Linting: modules/nf-core/picard/collectmultiplemetrics/main.nf
+Linting: modules/nf-core/bedtools/maskfasta/main.nf
+Linting: modules/nf-core/bedtools/getfasta/main.nf
+Linting: modules/nf-core/bedtools/merge/main.nf
+Linting: modules/nf-core/bedtools/merge/tests/nextflow.config
+Linting: modules/nf-core/freyja/update/main.nf
+Linting: modules/nf-core/freyja/variants/main.nf
+Linting: modules/nf-core/freyja/demix/main.nf
+Linting: modules/nf-core/freyja/demix/tests/nextflow.config
+Linting: modules/nf-core/freyja/boot/main.nf
+Linting: modules/nf-core/freyja/boot/tests/nextflow.config
+Linting: modules/nf-core/minia/main.nf
+Linting: modules/nf-core/nextclade/datasetget/main.nf
+Linting: modules/nf-core/nextclade/run/main.nf
+Linting: modules/nf-core/tabix/bgzip/main.nf
+Linting: modules/nf-core/tabix/bgzip/tests/vcf_none.config
+Linting: modules/nf-core/tabix/bgzip/tests/bgzip_compress.config
+Linting: modules/nf-core/tabix/tabix/main.nf
+Linting: modules/nf-core/tabix/tabix/tests/tabix_vcf_tbi.config
+Linting: modules/nf-core/tabix/tabix/tests/tabix_gff.config
+Linting: modules/nf-core/tabix/tabix/tests/tabix_bed.config
+Linting: modules/nf-core/tabix/tabix/tests/tabix_vcf_csi.config
+Linting: modules/nf-core/ivar/variants/main.nf
+Linting: modules/nf-core/ivar/consensus/main.nf
+Linting: modules/nf-core/ivar/consensus/tests/nextflow.config
+Linting: modules/nf-core/ivar/trim/main.nf
+Error main.nf:18:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  18 | def primer_set         = ''
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:19:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  19 | def primer_set_version = 0
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:22:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  22 | if( !params.platform ) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^
+│  23 |     error "Parameter --platform is required (illumina / nanopore). Ple
+╰  24 | }
+
+Error main.nf:27:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  27 | def valid_platforms = ["illumina","nanopore"]
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:28:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  28 | if( !(params.platform in valid_platforms) ) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  29 |     error "Invalid value for --platform: '${params.platform}'. Allowed
+╰  30 | }
+
+Error main.nf:32:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  30 | }
+│  31 | 
+│  32 | if (params.platform == 'illumina' && params.protocol == 'amplicon') {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  33 |     primer_set         = params.primer_set
+╰  34 |     primer_set_version = params.primer_set_version
+
+Error main.nf:41:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  41 | def artic_scheme = params.platform == 'nanopore' ? params.artic_scheme
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:46:57: `primer_set` is not defined
+│  46 | params.primer_bed    = getGenomeAttribute('primer_bed', primer_set, pr
+╰     |                                                         ^^^^^^^^^^
+
+Error main.nf:46:69: `primer_set_version` is not defined
+│  46 |     = getGenomeAttribute('primer_bed', primer_set, primer_set_version)
+╰     |                                                    ^^^^^^^^^^^^^^^^^^
+
+Error main.nf:58:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/viralrecon/workflows/viralrecon.nf'
+│  58 | include { VIRALRECON              } from './workflows/viralrecon'
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:83:9: `VIRALRECON` is not defined
+│  83 |         VIRALRECON (
+╰     |         ^^^^^^^^^^
+
+Error main.nf:92:13: `artic_scheme` is not defined
+│  92 |             artic_scheme
+╰     |             ^^^^^^^^^^^^
+
+Error main.nf:95:26: `VIRALRECON` is not defined
+│  95 |         multiqc_report = VIRALRECON.out.multiqc_report
+╰     |                          ^^^^^^^^^^
+
+Error main.nf:176:29: `Nextflow` is not defined
+│ 176 |                             Nextflow.error("~~~~~~~~~~~~~~~~~~~~~~~~~~
+╰     |                             ^^^^^^^^
+
+Error main.nf:186:25: `Nextflow` is not defined
+│ 186 |                         Nextflow.error("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+╰     |                         ^^^^^^^^
+
+Error main.nf:195:21: `Nextflow` is not defined
+│ 195 |                     Nextflow.error("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+╰     |                     ^^^^^^^^
+
+Warn  main.nf:38:5: Params should be declared at the top-level (i.e. outside the workflow)
+│  38 |     params.artic_scheme = getGenomeAttribute('scheme', primer_set, pri
+╰     |     ^^^^^^
+
+Warn  main.nf:41:5: Variable was declared but not used
+│  41 | def artic_scheme = params.platform == 'nanopore' ? params.artic_scheme
+╰     |     ^^^^^^^^^^^^
+
+Warn  main.nf:81:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  81 |     multiqc_report   = Channel.empty()
+╰     |                        ^^^^^^^
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Warn  modules/nf-core/bcftools/consensus/main.nf:40:9: Variable was declared but not used
+│  40 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/bcftools/consensus/main.nf:42:9: Variable was declared but not used
+│  42 |     def masking = mask ? "-m $mask" : ""
+╰     |         ^^^^^^^
+
+
+
+
+Warn  modules/nf-core/bcftools/norm/main.nf:56:65: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  56 | '-W=tbi'].any { args.contains(it) }  && extension == 'vcf.gz') {
+╰     |                               ^^
+
+Warn  modules/nf-core/bcftools/norm/main.nf:58:126: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  58 | ex=csi', '-W=csi', '--write-index', '-W'].any { args.contains(it) }) {
+╰     |                                                               ^^
+
+
+
+
+
+
+
+
+Warn  modules/nf-core/blast/blastn/main.nf:52:9: Variable was declared but not used
+│  52 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/blast/makeblastdb/main.nf:42:9: Variable was declared but not used
+│  42 |     def args           = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+Warn  modules/nf-core/cat/fastq/main.nf:22:60: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  22 |     def readList = reads instanceof List ? reads.collect { it.toString
+╰     |                                                            ^^
+
+Warn  modules/nf-core/cat/fastq/main.nf:58:60: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  58 |     def readList = reads instanceof List ? reads.collect { it.toString
+╰     |                                                            ^^
+
+
+Warn  modules/nf-core/custom/getchromsizes/main.nf:23:9: Variable was declared but not used
+│  23 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+
+
+Warn  modules/nf-core/freyja/update/main.nf:24:9: Variable was declared but not used
+│  24 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+Warn  modules/nf-core/gunzip/main.nf:43:9: Variable was declared but not used
+│  43 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+Warn  modules/nf-core/ivar/trim/main.nf:40:9: Variable was declared but not used
+│  40 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+Warn  modules/nf-core/kraken2/kraken2/main.nf:60:9: Variable was declared but not used
+│  60 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/kraken2/kraken2/main.nf:62:9: Variable was declared but not used
+│  62 |     def paired       = meta.single_end ? "" : "--paired"
+╰     |         ^^^^^^
+
+Warn  modules/nf-core/kraken2/kraken2/main.nf:65:9: Variable was declared but not used
+│  65 |     def readclassification_option = save_reads_assignment ? "--output 
+╰     |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  modules/nf-core/kraken2/kraken2/main.nf:66:9: Variable was declared but not used
+│  66 |     def compress_reads_command = save_output_fastqs ? "pigz -p $task.c
+╰     |         ^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Warn  modules/nf-core/quast/main.nf:52:9: Variable was declared but not used
+│  52 |     def args      = task.ext.args   ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/quast/main.nf:54:9: Variable was declared but not used
+│  54 |     def features  = gff             ? "--features $gff" : ''
+╰     |         ^^^^^^^^
+
+Warn  modules/nf-core/quast/main.nf:55:9: Variable was declared but not used
+│  55 |     def reference = fasta           ? "-r $fasta" : ''
+╰     |         ^^^^^^^^^
+
+
+
+
+
+
+
+
+Warn  modules/nf-core/spades/main.nf:80:9: Variable was declared but not used
+│  80 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/spades/main.nf:82:9: Variable was declared but not used
+│  82 |     def maxmem = task.memory.toGiga()
+╰     |         ^^^^^^
+
+Warn  modules/nf-core/spades/main.nf:86:9: Variable was declared but not used
+│  86 |     def custom_hmms = hmm ? "--custom-hmms $hmm" : ""
+╰     |         ^^^^^^^^^^^
+
+Warn  modules/nf-core/spades/main.nf:87:9: Variable was declared but not used
+│  87 |     def reads = yml ? "--dataset $yml" : "$illumina_reads $pacbio_read
+╰     |         ^^^^^
+
+
+
+
+
+
+
+Warn  subworkflows/local/additional_annotation/main.nf:24:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  24 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/additional_annotation/main.nf:29:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  29 |     ch_annot = Channel.empty()
+╰     |                ^^^^^^^
+
+Warn  subworkflows/local/additional_annotation/main.nf:35:54: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  35 |         ch_annot       = GUNZIP_GFF.out.gunzip.map { it[1] }
+╰     |                                                      ^^
+
+Warn  subworkflows/local/additional_annotation/main.nf:38:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  38 |         ch_annot = Channel.value(file(params.additional_annotation))
+╰     |                    ^^^^^^^
+
+Warn  subworkflows/local/additional_annotation/main.nf:44:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  44 |     ch_snpeff_db     = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/additional_annotation/main.nf:45:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  45 |     ch_snpeff_config = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/additional_annotation/main.nf:85:43: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  85 |         BCFTOOLS_QUERY.out.output.collect{it[1]},
+╰     |                                           ^^
+
+Warn  subworkflows/local/additional_annotation/main.nf:86:47: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  86 |         SNPSIFT_EXTRACTFIELDS.out.txt.collect{it[1]}.ifEmpty([]),
+╰     |                                               ^^
+
+Warn  subworkflows/local/additional_annotation/main.nf:87:26: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  87 |         pangolin.collect{it[1]}.ifEmpty([])
+╰     |                          ^^
+
+
+Warn  subworkflows/local/assembly_minia/main.nf:20:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  20 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/assembly_minia/main.nf:36:19: Parameter was not used -- prefix with `_` to suppress warning
+│  36 |         .filter { meta, contig -> contig.size() > 0 }
+╰     |                   ^^^^
+
+
+Warn  subworkflows/local/assembly_qc/main.nf:22:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  22 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/assembly_qc/main.nf:27:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  27 |     ch_blast_txt        = Channel.empty()
+╰     |                           ^^^^^^^
+
+Warn  subworkflows/local/assembly_qc/main.nf:28:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  28 |     ch_blast_filter_txt = Channel.empty()
+╰     |                           ^^^^^^^
+
+Warn  subworkflows/local/assembly_qc/main.nf:49:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  49 |     ch_quast_results = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/assembly_qc/main.nf:50:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  50 |     ch_quast_tsv     = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/assembly_qc/main.nf:53:23: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  53 |             .collect{ it[1] }
+╰     |                       ^^
+
+Warn  subworkflows/local/assembly_qc/main.nf:59:32: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  59 |             fasta.map { [ [:], it ] },
+╰     |                                ^^
+
+Warn  subworkflows/local/assembly_qc/main.nf:70:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  70 |     ch_abacas_results = Channel.empty()
+╰     |                         ^^^^^^^
+
+Warn  subworkflows/local/assembly_qc/main.nf:74:32: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  74 |             fasta.map { [ [:], it ] }
+╰     |                                ^^
+
+Warn  subworkflows/local/assembly_qc/main.nf:83:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  83 |     ch_plasmidid_html     = Channel.empty()
+╰     |                             ^^^^^^^
+
+Warn  subworkflows/local/assembly_qc/main.nf:84:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  84 |     ch_plasmidid_tab      = Channel.empty()
+╰     |                             ^^^^^^^
+
+Warn  subworkflows/local/assembly_qc/main.nf:85:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  85 |     ch_plasmidid_images   = Channel.empty()
+╰     |                             ^^^^^^^
+
+Warn  subworkflows/local/assembly_qc/main.nf:86:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  86 |     ch_plasmidid_logs     = Channel.empty()
+╰     |                             ^^^^^^^
+
+Warn  subworkflows/local/assembly_qc/main.nf:87:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  87 |     ch_plasmidid_data     = Channel.empty()
+╰     |                             ^^^^^^^
+
+Warn  subworkflows/local/assembly_qc/main.nf:88:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  88 |     ch_plasmidid_database = Channel.empty()
+╰     |                             ^^^^^^^
+
+Warn  subworkflows/local/assembly_qc/main.nf:89:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  89 |     ch_plasmidid_fasta    = Channel.empty()
+╰     |                             ^^^^^^^
+
+Warn  subworkflows/local/assembly_qc/main.nf:90:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  90 |     ch_plasmidid_kmer     = Channel.empty()
+╰     |                             ^^^^^^^
+
+
+Warn  subworkflows/local/assembly_spades/main.nf:25:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  25 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/assembly_spades/main.nf:33:29: Parameter was not used -- prefix with `_` to suppress warning
+│  33 |             .filter { meta, illumina, pacbio, nanopore -> !meta.single
+╰     |                             ^^^^^^^^
+
+Warn  subworkflows/local/assembly_spades/main.nf:33:39: Parameter was not used -- prefix with `_` to suppress warning
+│  33 |             .filter { meta, illumina, pacbio, nanopore -> !meta.single
+╰     |                                       ^^^^^^
+
+Warn  subworkflows/local/assembly_spades/main.nf:33:47: Parameter was not used -- prefix with `_` to suppress warning
+│  33 |             .filter { meta, illumina, pacbio, nanopore -> !meta.single
+╰     |                                               ^^^^^^^^
+
+Warn  subworkflows/local/assembly_spades/main.nf:68:19: Parameter was not used -- prefix with `_` to suppress warning
+│  68 |         .filter { meta, scaffold -> scaffold.size() > 0 }
+╰     |                   ^^^^
+
+Warn  subworkflows/local/assembly_spades/main.nf:74:19: Parameter was not used -- prefix with `_` to suppress warning
+│  74 |         .filter { meta, gfa -> gfa.size() > 0 }
+╰     |                   ^^^^
+
+Warn  subworkflows/local/assembly_spades/main.nf:80:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  80 |     ch_bandage_png = Channel.empty()
+╰     |                      ^^^^^^^
+
+Warn  subworkflows/local/assembly_spades/main.nf:81:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  81 |     ch_bandage_svg = Channel.empty()
+╰     |                      ^^^^^^^
+
+
+Warn  subworkflows/local/assembly_unicycler/main.nf:23:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  23 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/assembly_unicycler/main.nf:54:19: Parameter was not used -- prefix with `_` to suppress warning
+│  54 |         .filter { meta, scaffold -> scaffold.size() > 0 }
+╰     |                   ^^^^
+
+Warn  subworkflows/local/assembly_unicycler/main.nf:60:19: Parameter was not used -- prefix with `_` to suppress warning
+│  60 |         .filter { meta, gfa -> gfa.size() > 0 }
+╰     |                   ^^^^
+
+Warn  subworkflows/local/assembly_unicycler/main.nf:66:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  66 |     ch_bandage_png = Channel.empty()
+╰     |                      ^^^^^^^
+
+Warn  subworkflows/local/assembly_unicycler/main.nf:67:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  67 |     ch_bandage_svg = Channel.empty()
+╰     |                      ^^^^^^^
+
+
+Warn  subworkflows/local/bam_trim_primers_ivar/main.nf:16:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Error subworkflows/local/consensus_bcftools/main.nf:74:26: `vcf` is already declared
+│  74 |             .map { meta, vcf, tbi, fasta -> tuple(meta, vcf, tbi, fast
+╰     |                          ^^^
+
+Error subworkflows/local/consensus_bcftools/main.nf:74:31: `tbi` is already declared
+│  74 |             .map { meta, vcf, tbi, fasta -> tuple(meta, vcf, tbi, fast
+╰     |                               ^^^
+
+Error subworkflows/local/consensus_bcftools/main.nf:74:36: `fasta` is already declared
+│  74 |             .map { meta, vcf, tbi, fasta -> tuple(meta, vcf, tbi, fast
+╰     |                                    ^^^^^
+
+Warn  subworkflows/local/consensus_bcftools/main.nf:25:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  25 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/consensus_ivar/main.nf:17:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/consensus_qc/main.nf:20:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  20 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/consensus_qc/main.nf:25:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  25 |     ch_quast_results = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/consensus_qc/main.nf:26:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  26 |     ch_quast_tsv     = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/consensus_qc/main.nf:29:19: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  29 |         .collect{ it[1] }
+╰     |                   ^^
+
+Warn  subworkflows/local/consensus_qc/main.nf:35:32: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  35 |             fasta.map { [ [:], it ] },
+╰     |                                ^^
+
+Warn  subworkflows/local/consensus_qc/main.nf:46:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  46 |     ch_pangolin_report = Channel.empty()
+╰     |                          ^^^^^^^
+
+Warn  subworkflows/local/consensus_qc/main.nf:48:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  48 |     ch_pangolin_report = Channel.empty()
+╰     |                          ^^^^^^^
+
+Warn  subworkflows/local/consensus_qc/main.nf:55:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  55 |             pango_database = Channel.value(file(params.pango_database,
+╰     |                              ^^^^^^^
+
+Warn  subworkflows/local/consensus_qc/main.nf:69:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  69 |     ch_nextclade_report = Channel.empty()
+╰     |                           ^^^^^^^
+
+Warn  subworkflows/local/consensus_qc/main.nf:82:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  82 |     ch_bases_tsv = Channel.empty()
+╰     |                    ^^^^^^^
+
+Warn  subworkflows/local/consensus_qc/main.nf:83:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  83 |     ch_bases_pdf = Channel.empty()
+╰     |                    ^^^^^^^
+
+
+Error subworkflows/local/fastq_trim_fastp_fastqc/main.nf:15:26: Unexpected input: 'new'
+│  15 |     def Map json = (Map) new JsonSlurper().parseText(json_file.text).g
+╰     |                          ^
+
+
+Warn  subworkflows/local/filter_bam_samtools/main.nf:16:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/filter_bam_samtools/main.nf:25:23: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  25 |         bam_bai.map { it[2].getName().tokenize('.')[-1] }
+╰     |                       ^^
+
+
+Warn  subworkflows/local/prepare_genome_illumina/main.nf:36:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  36 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome_illumina/main.nf:45:53: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  45 |         ch_fasta    = GUNZIP_FASTA.out.gunzip.map { it[1] }
+╰     |                                                     ^^
+
+Warn  subworkflows/local/prepare_genome_illumina/main.nf:48:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  48 |         ch_fasta = Channel.value(file(fasta))
+╰     |                    ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome_illumina/main.nf:54:14: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  54 |     ch_gff = Channel.empty()
+╰     |              ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome_illumina/main.nf:60:55: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  60 |             ch_gff      = GUNZIP_GFF.out.gunzip.map { it[1] }
+╰     |                                                       ^^
+
+Warn  subworkflows/local/prepare_genome_illumina/main.nf:63:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  63 |             ch_gff = Channel.value(file(gff))
+╰     |                      ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome_illumina/main.nf:71:31: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  71 |         ch_fasta.map { [ [:], it ] }
+╰     |                               ^^
+
+Warn  subworkflows/local/prepare_genome_illumina/main.nf:73:57: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  73 |     ch_fai         = CUSTOM_GETCHROMSIZES.out.fai.map { it[1] }
+╰     |                                                         ^^
+
+Warn  subworkflows/local/prepare_genome_illumina/main.nf:74:59: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  74 |     ch_chrom_sizes = CUSTOM_GETCHROMSIZES.out.sizes.map { it[1] }
+╰     |                                                           ^^
+
+Warn  subworkflows/local/prepare_genome_illumina/main.nf:80:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  80 |     ch_kraken2_db = Channel.empty()
+╰     |                     ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome_illumina/main.nf:87:66: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  87 |               ch_kraken2_db = UNTAR_KRAKEN2_DB.out.untar.map { it[1] }
+╰     |                                                                ^^
+
+Warn  subworkflows/local/prepare_genome_illumina/main.nf:90:33: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  90 |                 ch_kraken2_db = Channel.value(file(params.kraken2_db))
+╰     |                                 ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome_illumina/main.nf:104:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 104 |     ch_primer_bed           = Channel.empty()
+╰     |                               ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome_illumina/main.nf:105:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 105 |     ch_primer_fasta         = Channel.empty()
+╰     |                               ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome_illumina/main.nf:106:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 106 |     ch_primer_collapsed_bed = Channel.empty()
+╰     |                               ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome_illumina/main.nf:113:68: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 113 |             ch_primer_bed = GUNZIP_PRIMER_BED.out.gunzip.map { it[1] }
+╰     |                                                                ^^
+
+Warn  subworkflows/local/prepare_genome_illumina/main.nf:116:33: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 116 |                 ch_primer_bed = Channel.value(file(primer_bed))
+╰     |                                 ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome_illumina/main.nf:136:76: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 136 |         ch_primer_fasta = GUNZIP_PRIMER_FASTA.out.gunzip.map { it[1] }
+╰     |                                                                ^^
+
+Warn  subworkflows/local/prepare_genome_illumina/main.nf:139:39: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 139 |                     ch_primer_fasta = Channel.value(file(params.primer
+╰     |                                       ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome_illumina/main.nf:143:48: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 143 |                     ch_primer_bed.map { [ [:], it ] },
+╰     |                                                ^^
+
+Warn  subworkflows/local/prepare_genome_illumina/main.nf:155:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 155 |     ch_bowtie2_index = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome_illumina/main.nf:169:39: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 169 |                 ch_fasta.map { [ [:], it ] }
+╰     |                                       ^^
+
+Warn  subworkflows/local/prepare_genome_illumina/main.nf:179:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 179 |     ch_nextclade_db = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome_illumina/main.nf:186:70: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 186 |           ch_nextclade_db = UNTAR_NEXTCLADE_DB.out.untar.map { it[1] }
+╰     |                                                                ^^
+
+Warn  subworkflows/local/prepare_genome_illumina/main.nf:189:35: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 189 |                 ch_nextclade_db = Channel.value(file(nextclade_dataset
+╰     |                                   ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome_illumina/main.nf:204:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 204 |     ch_blast_db = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome_illumina/main.nf:215:35: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 215 |                     ch_blast_db = Channel.value(
+╰     |                                   ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome_illumina/main.nf:221:43: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 221 |                     ch_fasta.map { [ [:], it ] }
+╰     |                                           ^^
+
+Warn  subworkflows/local/prepare_genome_illumina/main.nf:232:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 232 |     ch_snpeff_db     = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome_illumina/main.nf:233:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 233 |     ch_snpeff_config = Channel.empty()
+╰     |                        ^^^^^^^
+
+
+Warn  subworkflows/local/prepare_genome_nanopore/main.nf:22:5: Parameter was not used -- prefix with `_` to suppress warning
+│  22 |     bowtie2_index
+╰     |     ^^^^^^^^^^^^^
+
+Warn  subworkflows/local/prepare_genome_nanopore/main.nf:29:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  29 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome_nanopore/main.nf:38:53: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  38 |         ch_fasta    = GUNZIP_FASTA.out.gunzip.map { it[1] }
+╰     |                                                     ^^
+
+Warn  subworkflows/local/prepare_genome_nanopore/main.nf:41:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  41 |         ch_fasta = Channel.value(file(fasta))
+╰     |                    ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome_nanopore/main.nf:47:14: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  47 |     ch_gff = Channel.empty()
+╰     |              ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome_nanopore/main.nf:53:55: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  53 |             ch_gff      = GUNZIP_GFF.out.gunzip.map { it[1] }
+╰     |                                                       ^^
+
+Warn  subworkflows/local/prepare_genome_nanopore/main.nf:56:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  56 |             ch_gff = Channel.value(file(gff))
+╰     |                      ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome_nanopore/main.nf:64:31: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  64 |         ch_fasta.map { [ [:], it ] }
+╰     |                               ^^
+
+Warn  subworkflows/local/prepare_genome_nanopore/main.nf:66:57: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  66 |     ch_fai         = CUSTOM_GETCHROMSIZES.out.fai.map { it[1] }
+╰     |                                                         ^^
+
+Warn  subworkflows/local/prepare_genome_nanopore/main.nf:67:59: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  67 |     ch_chrom_sizes = CUSTOM_GETCHROMSIZES.out.sizes.map { it[1] }
+╰     |                                                           ^^
+
+Warn  subworkflows/local/prepare_genome_nanopore/main.nf:73:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  73 |     ch_kraken2_db = Channel.empty()
+╰     |                     ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome_nanopore/main.nf:80:66: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  80 |               ch_kraken2_db = UNTAR_KRAKEN2_DB.out.untar.map { it[1] }
+╰     |                                                                ^^
+
+Warn  subworkflows/local/prepare_genome_nanopore/main.nf:83:33: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  83 |                 ch_kraken2_db = Channel.value(file(params.kraken2_db))
+╰     |                                 ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome_nanopore/main.nf:97:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  97 |     ch_primer_bed = Channel.empty()
+╰     |                     ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome_nanopore/main.nf:103:64: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 103 |             ch_primer_bed = GUNZIP_PRIMER_BED.out.gunzip.map { it[1] }
+╰     |                                                                ^^
+
+Warn  subworkflows/local/prepare_genome_nanopore/main.nf:106:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 106 |             ch_primer_bed = Channel.value(file(primer_bed))
+╰     |                             ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome_nanopore/main.nf:113:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 113 |     ch_primer_collapsed_bed = Channel.empty()
+╰     |                               ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome_nanopore/main.nf:127:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 127 |     ch_nextclade_db = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome_nanopore/main.nf:134:57: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 134 |                 ch_nextclade_db = UNTAR.out.untar.map { it[1] }
+╰     |                                                         ^^
+
+Warn  subworkflows/local/prepare_genome_nanopore/main.nf:137:35: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 137 |                 ch_nextclade_db = Channel.value(file(nextclade_dataset
+╰     |                                   ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome_nanopore/main.nf:152:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 152 |     ch_snpeff_db     = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome_nanopore/main.nf:153:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 153 |     ch_snpeff_config = Channel.empty()
+╰     |                        ^^^^^^^
+
+
+Warn  subworkflows/local/snpeff_snpsift/main.nf:19:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/utils_nfcore_viralrecon_pipeline/main.nf:32:5: Parameter was not used -- prefix with `_` to suppress warning
+│  32 |     monochrome_logs   // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_viralrecon_pipeline/main.nf:42:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  42 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_viralrecon_pipeline/main.nf:67:144: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  67 | lect { "    https://doi.org/${it.trim().replace('https://doi.org/','')
+╰     |                               ^^
+
+Warn  subworkflows/local/utils_nfcore_viralrecon_pipeline/main.nf:99:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  99 |         Channel
+╰     |         ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_viralrecon_pipeline/main.nf:102:41: Parameter was not used -- prefix with `_` to suppress warning
+│ 102 |                 meta, fastq_1, fastq_2, barcode->
+╰     |                                         ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_viralrecon_pipeline/main.nf:111:42: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 111 |                 validateInputSamplesheet(it)
+╰     |                                          ^^
+
+Warn  subworkflows/local/utils_nfcore_viralrecon_pipeline/main.nf:119:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 119 |         ch_samplesheet = Channel.empty()
+╰     |                          ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_viralrecon_pipeline/main.nf:121:13: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 121 |             Channel
+╰     |             ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_viralrecon_pipeline/main.nf:124:27: Parameter was not used -- prefix with `_` to suppress warning
+│ 124 |                     meta, fastq_1, fastq_2, barcode->
+╰     |                           ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_viralrecon_pipeline/main.nf:124:36: Parameter was not used -- prefix with `_` to suppress warning
+│ 124 |                     meta, fastq_1, fastq_2, barcode->
+╰     |                                    ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_viralrecon_pipeline/main.nf:297:9: Variable was declared but not used
+│ 297 |     def logname = flagstat_file.getBaseName() - 'flagstat'
+╰     |         ^^^^^^^
+
+
+Error subworkflows/local/variants_bcftools/main.nf:40:44: `WorkflowCommons` is not defined
+│  40 |         .filter { meta, vcf, tbi, stats -> WorkflowCommons.getNumVaria
+╰     |                                            ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/variants_bcftools/main.nf:22:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  22 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/variants_bcftools/main.nf:29:28: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  29 |         fasta.map { [ [:], it ] },
+╰     |                            ^^
+
+Warn  subworkflows/local/variants_bcftools/main.nf:40:19: Parameter was not used -- prefix with `_` to suppress warning
+│  40 |         .filter { meta, vcf, tbi, stats -> WorkflowCommons.getNumVaria
+╰     |                   ^^^^
+
+Warn  subworkflows/local/variants_bcftools/main.nf:40:25: Parameter was not used -- prefix with `_` to suppress warning
+│  40 |         .filter { meta, vcf, tbi, stats -> WorkflowCommons.getNumVaria
+╰     |                         ^^^
+
+Warn  subworkflows/local/variants_bcftools/main.nf:40:30: Parameter was not used -- prefix with `_` to suppress warning
+│  40 |         .filter { meta, vcf, tbi, stats -> WorkflowCommons.getNumVaria
+╰     |                              ^^^
+
+Warn  subworkflows/local/variants_bcftools/main.nf:44:27: Parameter was not used -- prefix with `_` to suppress warning
+│  44 |         .map { meta, vcf, tbi, stats -> [ meta, vcf ] }
+╰     |                           ^^^
+
+Warn  subworkflows/local/variants_bcftools/main.nf:44:32: Parameter was not used -- prefix with `_` to suppress warning
+│  44 |         .map { meta, vcf, tbi, stats -> [ meta, vcf ] }
+╰     |                                ^^^^^
+
+Warn  subworkflows/local/variants_bcftools/main.nf:48:22: Parameter was not used -- prefix with `_` to suppress warning
+│  48 |         .map { meta, vcf, tbi, stats -> [ meta, tbi ] }
+╰     |                      ^^^
+
+Warn  subworkflows/local/variants_bcftools/main.nf:48:32: Parameter was not used -- prefix with `_` to suppress warning
+│  48 |         .map { meta, vcf, tbi, stats -> [ meta, tbi ] }
+╰     |                                ^^^^^
+
+Warn  subworkflows/local/variants_bcftools/main.nf:52:22: Parameter was not used -- prefix with `_` to suppress warning
+│  52 |         .map { meta, vcf, tbi, stats -> [ meta, stats ] }
+╰     |                      ^^^
+
+Warn  subworkflows/local/variants_bcftools/main.nf:52:27: Parameter was not used -- prefix with `_` to suppress warning
+│  52 |         .map { meta, vcf, tbi, stats -> [ meta, stats ] }
+╰     |                           ^^^
+
+Warn  subworkflows/local/variants_bcftools/main.nf:60:28: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  60 |         fasta.map { [ [:], it ] }
+╰     |                            ^^
+
+
+Error subworkflows/local/variants_ivar/main.nf:43:32: `WorkflowCommons` is not defined
+│  43 |         .filter { meta, tsv -> WorkflowCommons.getNumLinesInFile(tsv) 
+╰     |                                ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/variants_ivar/main.nf:25:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  25 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/variants_ivar/main.nf:43:19: Parameter was not used -- prefix with `_` to suppress warning
+│  43 |         .filter { meta, tsv -> WorkflowCommons.getNumLinesInFile(tsv) 
+╰     |                   ^^^^
+
+
+Warn  subworkflows/local/variants_long_table/main.nf:17:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/variants_long_table/main.nf:28:43: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  28 |         BCFTOOLS_QUERY.out.output.collect{it[1]},
+╰     |                                           ^^
+
+Warn  subworkflows/local/variants_long_table/main.nf:29:25: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  29 |         snpsift.collect{it[1]}.ifEmpty([]),
+╰     |                         ^^
+
+Warn  subworkflows/local/variants_long_table/main.nf:30:26: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  30 |         pangolin.collect{it[1]}.ifEmpty([])
+╰     |                          ^^
+
+
+Warn  subworkflows/local/variants_qc/main.nf:9:5: Parameter was not used -- prefix with `_` to suppress warning
+│   9 |     bam           // channel: [ val(meta), [ bam ] ]
+╰     |     ^^^
+
+Warn  subworkflows/local/variants_qc/main.nf:11:5: Parameter was not used -- prefix with `_` to suppress warning
+│  11 |     stats         // channel: [ val(meta), [ bcftools_stats ] ]
+╰     |     ^^^^^
+
+Warn  subworkflows/local/variants_qc/main.nf:13:5: Parameter was not used -- prefix with `_` to suppress warning
+│  13 |     sizes         // channel: /path/to/genome.sizes
+╰     |     ^^^^^
+
+Warn  subworkflows/local/variants_qc/main.nf:15:5: Parameter was not used -- prefix with `_` to suppress warning
+│  15 |     bed           // channel: /path/to/primers.bed
+╰     |     ^^^
+
+Warn  subworkflows/local/variants_qc/main.nf:21:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  21 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/variants_qc/main.nf:26:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  26 |     ch_snpeff_vcf   = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/variants_qc/main.nf:27:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  27 |     ch_snpeff_tbi   = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/variants_qc/main.nf:28:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  28 |     ch_snpeff_stats = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/variants_qc/main.nf:29:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  29 |     ch_snpeff_csv   = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/variants_qc/main.nf:30:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  30 |     ch_snpeff_txt   = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/variants_qc/main.nf:31:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  31 |     ch_snpeff_html  = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/variants_qc/main.nf:32:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  32 |     ch_snpsift_txt  = Channel.empty()
+╰     |                       ^^^^^^^
+
+
+Warn  subworkflows/local/vcf_bgzip_tabix_stats/main.nf:17:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/vcf_tabix_stats/main.nf:17:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/nf-core/bam_markduplicates_picard/main.nf:18:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  18 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/nf-core/bam_sort_stats_samtools/main.nf:16:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/nf-core/bam_stats_samtools/main.nf:15:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/nf-core/bam_variant_demix_boot_freyja/main.nf:18:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  18 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/nf-core/bam_variant_demix_boot_freyja/main.nf:51:5: Variable was declared but not used
+│  51 |     ch_freyja_demix = FREYJA_DEMIX.out.demix
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/nf-core/bam_variant_demix_boot_freyja/main.nf:58:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  58 |     ch_lineages   = Channel.empty()
+╰     |                     ^^^^^^^
+
+Warn  subworkflows/nf-core/bam_variant_demix_boot_freyja/main.nf:59:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  59 |     ch_summarized = Channel.empty()
+╰     |                     ^^^^^^^
+
+
+Warn  subworkflows/nf-core/fastq_align_bowtie2/main.nf:18:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  18 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 | mYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
+╰     |                               ^^^^^^^
+
+
+
+Error workflows/viralrecon.nf:91:5: Unexpected input: 'include'
+│  91 |     include { PREPARE_GENOME_ILLUMINA as PREPARE_GENOME } from '../sub
+╰     |     ^
+
+
+Error conf/modules.config:43:5: Unexpected input: 'includeConfig'
+│  43 |     includeConfig 'modules_nanopore.config'
+╰     |     ^
+
+
+Error conf/modules_illumina.config:13:1: Variable declarations cannot be mixed with config statements
+│  13 | def variant_caller = params.variant_caller
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error conf/modules_illumina.config:14:1: If statements cannot be mixed with config statements
+│  14 | if (!variant_caller) { variant_caller = params.protocol == 'amplicon' 
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error conf/modules_illumina.config:16:1: Variable declarations cannot be mixed with config statements
+│  16 | def assemblers = params.assemblers ? params.assemblers.split(',').coll
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error conf/modules_illumina.config:59:1: If statements cannot be mixed with config statements
+│  57 | }
+│  58 | 
+│  59 | if (!params.skip_fastqc) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  60 |     process {
+╰  61 |         withName: '.*:.*:FASTQ_TRIM_FASTP_FASTQC:FASTQC_RAW' {
+
+Error conf/modules_illumina.config:72:1: If statements cannot be mixed with config statements
+│  70 | }
+│  71 | 
+│  72 | if (!params.skip_fastp) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+│  73 |     process {
+╰  74 |         withName: 'FASTP' {
+
+Error conf/modules_illumina.config:111:1: If statements cannot be mixed with config statements
+│ 109 | }
+│ 110 | 
+│ 111 | if (!params.skip_kraken2) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│ 112 |     process {
+╰ 113 |         withName: 'KRAKEN2_BUILD' {
+
+Error conf/modules_illumina.config:137:1: If statements cannot be mixed with config statements
+│ 135 | //
+│ 136 | 
+│ 137 | if (!params.skip_variants) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│ 138 |     process {
+╰ 139 |         withName: 'BOWTIE2_BUILD' {
+
+Error conf/modules_illumina.config:730:1: If statements cannot be mixed with config statements
+│ 728 | }
+│ 729 | 
+│ 730 | if (!params.skip_assembly) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│ 731 |     if (!params.skip_blast) {
+╰ 732 |         process {
+
+Error conf/modules_illumina.config:1077:1: If statements cannot be mixed with config statements
+│ 1101 |                 ]
+│ 1102 |             ]
+│ 1103 |         }
+│ 1104 |     }
+╰ 1105 | }
+
+
+Error conf/modules_nanopore.config:111:1: If statements cannot be mixed with config statements
+│ 109 | //
+│ 110 | 
+│ 111 | if (params.sequencing_summary && !params.skip_pycoqc) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│ 112 |     process {
+╰ 113 |         withName: 'PYCOQC' {
+
+Error conf/modules_nanopore.config:124:1: If statements cannot be mixed with config statements
+│ 122 | }
+│ 123 | 
+│ 124 | if (!params.skip_nanoplot) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│ 125 |     process {
+╰ 126 |         withName: 'NANOPLOT' {
+
+Error conf/modules_nanopore.config:136:1: If statements cannot be mixed with config statements
+│ 134 | }
+│ 135 | 
+│ 136 | if (!params.skip_mosdepth) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│ 137 |     process {
+╰ 138 |         withName: 'COLLAPSE_PRIMERS' {
+
+Error conf/modules_nanopore.config:185:1: If statements cannot be mixed with config statements
+│ 183 | }
+│ 184 | 
+│ 185 | if (!params.skip_pangolin) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│ 186 |     process {
+╰ 187 |         withName: 'PANGOLIN_RUN' {
+
+Error conf/modules_nanopore.config:204:1: If statements cannot be mixed with config statements
+│ 202 | }
+│ 203 | 
+│ 204 | if (!params.skip_nextclade) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│ 205 |     process {
+╰ 206 |         withName: 'UNTAR' {
+
+Error conf/modules_nanopore.config:234:1: If statements cannot be mixed with config statements
+│ 232 | }
+│ 233 | 
+│ 234 | if (!params.skip_freyja) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^
+│ 235 |     process {
+╰ 236 |         withName: 'FREYJA_VARIANTS' {
+
+Error conf/modules_nanopore.config:277:1: If statements cannot be mixed with config statements
+│ 275 | }
+│ 276 | 
+│ 277 | if (!params.skip_variants_quast) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│ 278 |     process {
+╰ 279 |         withName: 'QUAST' {
+
+Error conf/modules_nanopore.config:289:1: If statements cannot be mixed with config statements
+│ 287 | }
+│ 288 | 
+│ 289 | if (!params.skip_snpeff) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^
+│ 290 |     process {
+╰ 291 |         withName: 'SNPEFF_BUILD' {
+
+Error conf/modules_nanopore.config:375:1: If statements cannot be mixed with config statements
+│ 385 |                 saveAs: { filename -> filename.equals('versions.yml') 
+│ 386 |             ]
+│ 387 |         }
+│ 388 |     }
+╰ 389 | }
+
+
+Error nextflow.config:252:26: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/viralrecon/conf/test_full_sispa.config'
+│ 252 |     test_full_sispa    { includeConfig 'conf/test_full_sispa.config'  
+╰     |                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-test tests
+│   3 |     testsDir "."
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 11 files had 44 errors
+ ✅ 160 files had no errors

@@ -1,0 +1,389 @@
+Linting Nextflow code..
+Linting: conf/base.config
+Linting: conf/hla.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: nextflow.config
+Linting: workflows/pangenome.nf
+Linting: subworkflows/local/odgi_qc.nf
+Linting: subworkflows/local/community.nf
+Linting: subworkflows/local/pggb.nf
+Linting: subworkflows/local/input_check.nf
+Linting: subworkflows/local/utils_nfcore_pangenome_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: main.nf
+Linting: modules/local/extract_communities/main.nf
+Linting: modules/local/split_approx_mappings_in_chunks/main.nf
+Linting: modules/local/vg_deconstruct/main.nf
+Linting: modules/local/multiqc_community/main.nf
+Linting: modules/local/net2communities/main.nf
+Linting: modules/local/paf2net/main.nf
+Linting: modules/nf-core/seqwish/induce/main.nf
+Linting: modules/nf-core/gfaffix/main.nf
+Linting: modules/nf-core/odgi/viz/main.nf
+Linting: modules/nf-core/odgi/unchop/main.nf
+Linting: modules/nf-core/odgi/squeeze/main.nf
+Linting: modules/nf-core/odgi/sort/main.nf
+Linting: modules/nf-core/odgi/stats/main.nf
+Linting: modules/nf-core/odgi/view/main.nf
+Linting: modules/nf-core/odgi/build/main.nf
+Linting: modules/nf-core/odgi/layout/main.nf
+Linting: modules/nf-core/odgi/layout/tests/nextflow.config
+Linting: modules/nf-core/odgi/draw/main.nf
+Linting: modules/nf-core/samtools/faidx/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/smoothxg/main.nf
+Linting: modules/nf-core/smoothxg/tests/nextflow.config
+Linting: modules/nf-core/wfmash/main.nf
+Linting: modules/nf-core/tabix/bgzip/main.nf
+Warn  main.nf:29:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  29 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  modules/local/extract_communities/main.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+Warn  modules/local/paf2net/main.nf:22:9: Variable was declared but not used
+│  22 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/split_approx_mappings_in_chunks/main.nf:22:9: Variable was declared but not used
+│  22 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/vg_deconstruct/main.nf:46:9: Variable was declared but not used
+│  46 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/vg_deconstruct/main.nf:47:9: Variable was declared but not used
+│  47 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Error subworkflows/local/community.nf:26:37: `fasta` is already declared
+│  26 |     ch_wfmash_map = fasta.map{meta, fasta -> [ meta, fasta, [] ]}
+╰     |                                     ^^^^^
+
+Error subworkflows/local/community.nf:40:55: `fasta` is already declared
+│  40 |     ch_txt_communities = ch_txt_communities.map{meta, fasta, community
+╰     |                                                       ^^^^^
+
+Warn  subworkflows/local/community.nf:21:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  21 |     ch_versions = Channel.empty() // we collect all versions here
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/community.nf:22:5: Variable was declared but not used
+│  22 |     ch_communities = Channel.empty()
+╰     |     ^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/community.nf:22:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  22 |     ch_communities = Channel.empty()
+╰     |                      ^^^^^^^
+
+Warn  subworkflows/local/community.nf:40:49: Parameter was not used -- prefix with `_` to suppress warning
+│  40 |     ch_txt_communities = ch_txt_communities.map{meta, fasta, community
+╰     |                                                 ^^^^
+
+
+Warn  subworkflows/local/input_check.nf:14:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  14 |     ch_versions = Channel.empty() // we collect all versions here
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/input_check.nf:15:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |     ch_fasta = Channel.empty() // final output channel [ val(meta) , [
+╰     |                ^^^^^^^
+
+Warn  subworkflows/local/input_check.nf:20:11: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  20 |     fai = Channel.empty() // we store the .fai index here [ fai ]
+╰     |           ^^^^^^^
+
+Warn  subworkflows/local/input_check.nf:21:11: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  21 |     gzi = Channel.empty() // we store the .gzi index here [ gzi ]
+╰     |           ^^^^^^^
+
+Warn  subworkflows/local/input_check.nf:23:18: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  23 |     meta_fasta = Channel.empty() // intermediate channel where we buil
+╰     |                  ^^^^^^^
+
+Warn  subworkflows/local/input_check.nf:36:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  36 |             fai = Channel.of([ [ id:fasta_file_name ], fai_path ])
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/input_check.nf:37:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  37 |             gzi = Channel.of([ [ id:fasta_file_name ], gzi_path ])
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/odgi_qc.nf:25:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  25 |     ch_versions = Channel.empty() // we collect all versions here
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/odgi_qc.nf:26:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  26 |     ch_graph_qc = Channel.empty() // we collect all graph quality cont
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/odgi_qc.nf:71:61: Parameter was not used -- prefix with `_` to suppress warning
+│  71 | _STATS.out.yaml.collect().map{seqwish_id, seqwish_qc, gfaffix_id, gfaf
+╰     |                               ^^^^^^^^^^
+
+
+Error subworkflows/local/pggb.nf:38:51: `fasta` is already declared
+│  38 |             ch_wfmash_map_align = fasta.map{meta, fasta -> [ meta, fas
+╰     |                                                   ^^^^^
+
+Error subworkflows/local/pggb.nf:45:45: `fasta` is already declared
+│  45 |             ch_wfmash_map = fasta.map{meta, fasta -> [ meta, fasta, []
+╰     |                                             ^^^^^
+
+Error subworkflows/local/pggb.nf:67:55: `fasta` is already declared
+│  67 |                 ch_wfmash_map_align = fasta.map{meta, fasta -> [ meta,
+╰     |                                                       ^^^^^
+
+Error subworkflows/local/pggb.nf:77:49: `fasta` is already declared
+│  77 |                 ch_wfmash_map = fasta.map{meta, fasta -> [ meta, fasta
+╰     |                                                 ^^^^^
+
+Warn  subworkflows/local/pggb.nf:29:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  29 |     ch_versions = Channel.empty()  // we collect all versions here
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/pggb.nf:30:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  30 |     ch_graph_qc = Channel.empty()  // we collect all graph quality con
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/pggb.nf:31:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  31 |     ch_odgi_view = Channel.empty() // we collect the final graph in GF
+╰     |                    ^^^^^^^
+
+Warn  subworkflows/local/pggb.nf:32:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  32 |     ch_odgi_build_seqwish = Channel.empty()
+╰     |                             ^^^^^^^
+
+Warn  subworkflows/local/pggb.nf:33:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  33 |     ch_sorted_graph = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/pggb.nf:62:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  62 |             ch_combined = Channel.of([ [ id:file_fasta.getName() ], fi
+╰     |                           ^^^^^^^
+
+Warn  subworkflows/local/pggb.nf:105:42: Parameter was not used -- prefix with `_` to suppress warning
+│ 105 |         ch_gfaffix = GFAFFIX.out.gfa.map{meta, gfa -> [ [ id: gfa.base
+╰     |                                          ^^^^
+
+Warn  subworkflows/local/pggb.nf:106:42: Parameter was not used -- prefix with `_` to suppress warning
+│ 106 |         ch_seqwish = SEQWISH.out.gfa.map{meta, gfa -> [ [ id: gfa.base
+╰     |                                          ^^^^
+
+Warn  subworkflows/local/pggb.nf:115:24: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 115 |             }}.filter{ it != null }
+╰     |                        ^^
+
+Warn  subworkflows/local/pggb.nf:129:24: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 129 |             }}.filter{ it != null }
+╰     |                        ^^
+
+
+Error subworkflows/local/utils_nfcore_pangenome_pipeline/main.nf:5:1: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
+│   5 | import groovy.json.JsonSlurper
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_pangenome_pipeline/main.nf:33:5: Parameter was not used -- prefix with `_` to suppress warning
+│  33 |     monochrome_logs   // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_pangenome_pipeline/main.nf:132:42: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 132 |     def strandedness_ok = metas.collect{ it.strandedness }.unique().si
+╰     |                                          ^^
+
+
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 | mYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
+╰     |                               ^^^^^^^
+
+
+Warn  workflows/pangenome.nf:58:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  58 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  workflows/pangenome.nf:59:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  59 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/pangenome.nf:60:5: Variable was declared but not used
+│  60 |     multiqc_report = Channel.empty()
+╰     |     ^^^^^^^^^^^^^^
+
+Warn  workflows/pangenome.nf:60:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  60 |     multiqc_report = Channel.empty()
+╰     |                      ^^^^^^^
+
+Warn  workflows/pangenome.nf:69:32: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  69 |     ch_multiqc_config        = Channel.fromPath("$projectDir/assets/mu
+╰     |                                ^^^^^^^
+
+Warn  workflows/pangenome.nf:71:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  71 |     ch_multiqc_config = Channel.fromPath("$projectDir/assets/multiqc_c
+╰     |                         ^^^^^^^
+
+Warn  workflows/pangenome.nf:72:56: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  72 |     ch_multiqc_custom_config = params.multiqc_config ? Channel.fromPat
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/pangenome.nf:72:119: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  72 | fromPath(params.multiqc_config, checkIfExists: true) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/pangenome.nf:75:56: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  75 |     ch_multiqc_custom_config = params.multiqc_config ? Channel.fromPat
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/pangenome.nf:75:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  75 | iqc_config ? Channel.fromPath(params.multiqc_config) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/pangenome.nf:76:56: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  76 |     ch_multiqc_logo          = params.multiqc_logo   ? Channel.fromPat
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/pangenome.nf:76:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  76 | iqc_logo   ? Channel.fromPath(params.multiqc_logo)   : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/pangenome.nf:88:48: Parameter was not used -- prefix with `_` to suppress warning
+│  88 |             ch_community_join.map{meta, fasta, gzi, fai -> [ meta, fas
+╰     |                                                ^^^
+
+Warn  workflows/pangenome.nf:88:53: Parameter was not used -- prefix with `_` to suppress warning
+│  88 |             ch_community_join.map{meta, fasta, gzi, fai -> [ meta, fas
+╰     |                                                     ^^^
+
+Warn  workflows/pangenome.nf:89:41: Parameter was not used -- prefix with `_` to suppress warning
+│  89 |             ch_community_join.map{meta, fasta, gzi, fai -> [ meta, fai
+╰     |                                         ^^^^^
+
+Warn  workflows/pangenome.nf:89:48: Parameter was not used -- prefix with `_` to suppress warning
+│  89 |             ch_community_join.map{meta, fasta, gzi, fai -> [ meta, fai
+╰     |                                                ^^^
+
+Warn  workflows/pangenome.nf:90:41: Parameter was not used -- prefix with `_` to suppress warning
+│  90 |             ch_community_join.map{meta, fasta, gzi, fai -> [ meta, gzi
+╰     |                                         ^^^^^
+
+Warn  workflows/pangenome.nf:90:53: Parameter was not used -- prefix with `_` to suppress warning
+│  90 |             ch_community_join.map{meta, fasta, gzi, fai -> [ meta, gzi
+╰     |                                                     ^^^
+
+Warn  workflows/pangenome.nf:101:17: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 |         ODGI_QC(Channel.empty(), ch_odgi_qc_in, false, true)
+╰     |                 ^^^^^^^
+
+Warn  workflows/pangenome.nf:127:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 127 |         ch_vcf_spec = Channel.from(params.vcf_spec).splitCsv().flatten
+╰     |                       ^^^^^^^
+
+Warn  workflows/pangenome.nf:148:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 148 |     ch_multiqc_config = Channel.fromPath("$projectDir/assets/multiqc_c
+╰     |                         ^^^^^^^
+
+Warn  workflows/pangenome.nf:149:56: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 149 |     ch_multiqc_custom_config = params.multiqc_config ? Channel.fromPat
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/pangenome.nf:149:119: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 149 | fromPath(params.multiqc_config, checkIfExists: true) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/pangenome.nf:150:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 150 |     ch_multiqc_logo = params.multiqc_logo ? Channel.fromPath(params.mu
+╰     |                                             ^^^^^^^
+
+Warn  workflows/pangenome.nf:150:106: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 150 | l.fromPath(params.multiqc_logo, checkIfExists: true) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/pangenome.nf:153:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 153 |     ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_p
+╰     |                           ^^^^^^^
+
+Warn  workflows/pangenome.nf:158:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 158 |     ch_methods_description = Channel.value(methodsDescriptionText(ch_m
+╰     |                              ^^^^^^^
+
+Warn  workflows/pangenome.nf:165:76: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 165 | multiqc_files = ch_multiqc_files.mix(PGGB.out.qc.map{return it[1..9]})
+╰     |                                                             ^^
+
+Warn  workflows/pangenome.nf:169:75: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 169 | tiqc_files = ch_multiqc_files.mix(ODGI_QC.out.qc.map{return it[1..8]})
+╰     |                                                             ^^
+
+
+Error conf/modules.config:14:35: Unexpected input: '('
+│  14 | def generate_wfmash_sparse_map_cmd() {
+╰     |                                   ^
+
+
+Error nextflow.config:396:33: `manifest` is not defined
+│ 396 | \033[0;35m  nf-core/pangenome ${manifest.version}\033[0m
+╰     |                                 ^^^^^^^^
+
+Error nextflow.config:399:26: `manifest` is not defined
+│ 399 |         afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${ma
+╰     |                          ^^^^^^^^
+
+Error nextflow.config:399:69: `manifest` is not defined
+│ 399 | ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "  
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:399:186: `manifest` is not defined
+│ 399 | doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:408:22: `validation` is not defined
+│ 408 |         beforeText = validation.help.beforeText
+╰     |                      ^^^^^^^^^^
+
+Error nextflow.config:409:21: `validation` is not defined
+│ 409 |         afterText = validation.help.afterText
+╰     |                     ^^^^^^^^^^
+
+Warn  nextflow.config:399:129: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 399 | lect { "    https://doi.org/${it.trim().replace('https://doi.org/','')
+╰     |                               ^^
+
+
+Nextflow linting complete!
+ ❌ 5 files had 14 errors
+ ✅ 39 files had no errors

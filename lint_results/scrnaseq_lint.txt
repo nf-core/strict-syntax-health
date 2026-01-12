@@ -1,0 +1,704 @@
+Linting Nextflow code..
+Linting: conf/test_cellranger_multi.config
+Linting: conf/igenomes_ignored.config
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/igenomes.config
+Linting: nextflow.config
+Linting: workflows/scrnaseq.nf
+Linting: subworkflows/local/fastqc.nf
+Linting: subworkflows/local/starsolo.nf
+Linting: subworkflows/local/align_cellrangerarc.nf
+Linting: subworkflows/local/align_cellranger.nf
+Linting: subworkflows/local/h5ad_conversion.nf
+Linting: subworkflows/local/align_cellrangermulti.nf
+Linting: subworkflows/local/kallisto_bustools.nf
+Linting: subworkflows/local/simpleaf.nf
+Linting: subworkflows/local/utils_nfcore_scrnaseq_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/h5ad_removebackground_barcodes_cellbender_anndata/main.nf
+Linting: subworkflows/nf-core/h5ad_removebackground_barcodes_cellbender_anndata/tests/epochs.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/mtx_to_h5ad.nf
+Linting: modules/local/star_align.nf
+Linting: modules/local/parse_cellrangermulti_samplesheet.nf
+Linting: modules/local/gffread_transcriptome.nf
+Linting: modules/local/concat_h5ad.nf
+Linting: modules/local/alevinqc.nf
+Linting: modules/local/anndatar_convert.nf
+Linting: modules/local/gtf_gene_filter.nf
+Linting: modules/nf-core/star/genomegenerate/main.nf
+Linting: modules/nf-core/gffread/main.nf
+Linting: modules/nf-core/gffread/tests/nextflow-gff3.config
+Linting: modules/nf-core/gffread/tests/nextflow.config
+Linting: modules/nf-core/gunzip/main.nf
+Linting: modules/nf-core/gunzip/tests/nextflow.config
+Linting: modules/nf-core/unzip/main.nf
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/simpleaf/quant/main.nf
+Linting: modules/nf-core/simpleaf/index/main.nf
+Linting: modules/nf-core/kallistobustools/count/main.nf
+Linting: modules/nf-core/kallistobustools/count/tests/nextflow.config
+Linting: modules/nf-core/kallistobustools/ref/main.nf
+Linting: modules/nf-core/cellrangerarc/mkref/main.nf
+Linting: modules/nf-core/cellrangerarc/count/main.nf
+Linting: modules/nf-core/cellrangerarc/mkgtf/main.nf
+Linting: modules/nf-core/cellbender/removebackground/main.nf
+Linting: modules/nf-core/cellbender/removebackground/tests/epochs.config
+Linting: modules/nf-core/anndata/barcodes/main.nf
+Linting: modules/nf-core/cellranger/mkref/main.nf
+Linting: modules/nf-core/cellranger/mkref/tests/nextflow.config
+Linting: modules/nf-core/cellranger/multi/main.nf
+Linting: modules/nf-core/cellranger/multi/tests/nextflow.config
+Linting: modules/nf-core/cellranger/count/main.nf
+Linting: modules/nf-core/cellranger/count/tests/nextflow.config
+Linting: modules/nf-core/cellranger/mkvdjref/main.nf
+Linting: modules/nf-core/cellranger/mkvdjref/tests/nextflow.config
+Linting: modules/nf-core/cellranger/mkgtf/main.nf
+Linting: modules/nf-core/cellranger/mkgtf/tests/nextflow.config
+
+
+
+
+
+
+
+Error modules/local/parse_cellrangermulti_samplesheet.nf:8:5: Invalid process directive
+│   8 |     publishDir = [ enabled: false ]
+╰     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+
+
+Error modules/nf-core/cellranger/count/main.nf:32:9: `prefix` is already declared
+│  32 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+Warn  modules/nf-core/cellranger/count/main.nf:23:5: Variable was declared but not used
+│  23 |     args = task.ext.args ?: ''
+╰     |     ^^^^
+
+Warn  modules/nf-core/cellranger/count/main.nf:24:5: Variable was declared but not used
+│  24 |     prefix = task.ext.prefix ?: "${meta.id}"
+╰     |     ^^^^^^
+
+
+Warn  modules/nf-core/cellranger/mkgtf/main.nf:42:9: Variable was declared but not used
+│  42 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/cellranger/mkref/main.nf:50:9: Variable was declared but not used
+│  50 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+Error modules/nf-core/cellranger/multi/main.nf:126:46: `meta_fb` is not defined
+│ 126 |     fb_options_r1_length = fb_options_use && meta_fb.options.containsK
+╰     |                                              ^^^^^^^
+
+Error modules/nf-core/cellranger/multi/main.nf:126:102: `meta_fb` is not defined
+│ 126 | y("r1-length") ? "r1-length,${meta_fb.options["r1-length"]}" : ''
+╰     |                               ^^^^^^^
+
+Error modules/nf-core/cellranger/multi/main.nf:127:46: `meta_fb` is not defined
+│ 127 |     fb_options_r2_length = fb_options_use && meta_fb.options.containsK
+╰     |                                              ^^^^^^^
+
+Error modules/nf-core/cellranger/multi/main.nf:127:102: `meta_fb` is not defined
+│ 127 | y("r2-length") ? "r2-length,${meta_fb.options["r2-length"]}" : ''
+╰     |                               ^^^^^^^
+
+Warn  modules/nf-core/cellranger/multi/main.nf:44:63: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  44 | des, frna_sampleinfo].count { it } >= 2) {
+╰     |                               ^^
+
+Warn  modules/nf-core/cellranger/multi/main.nf:47:5: Variable was declared but not used
+│  47 |     args   = task.ext.args   ?: ''
+╰     |     ^^^^
+
+Warn  modules/nf-core/cellranger/multi/main.nf:71:5: Variable was declared but not used
+│  71 |     gex_reference_path = include_gex ? "reference,./${gex_reference_na
+╰     |     ^^^^^^^^^^^^^^^^^^
+
+Warn  modules/nf-core/cellranger/multi/main.nf:72:5: Variable was declared but not used
+│  72 |     fb_reference_path  = include_fb  ? "reference,./${fb_reference_nam
+╰     |     ^^^^^^^^^^^^^^^^^
+
+Warn  modules/nf-core/cellranger/multi/main.nf:73:5: Variable was declared but not used
+│  73 |     vdj_reference_path = include_vdj ? "reference,./${vdj_reference_na
+╰     |     ^^^^^^^^^^^^^^^^^^
+
+Warn  modules/nf-core/cellranger/multi/main.nf:76:5: Variable was declared but not used
+│  76 |     target_panel = gex_targetpanel_name != '' ? "target-panel,./$gex_t
+╰     |     ^^^^^^^^^^^^
+
+Warn  modules/nf-core/cellranger/multi/main.nf:79:5: Variable was declared but not used
+│  79 |     frna_probeset = include_frna && gex_frna_probeset_name != '' ? "pr
+╰     |     ^^^^^^^^^^^^^
+
+Warn  modules/nf-core/cellranger/multi/main.nf:82:5: Variable was declared but not used
+│  82 |     primer_index = vdj_primer_index ? "inner-enrichment-primers,./refe
+╰     |     ^^^^^^^^^^^^
+
+Warn  modules/nf-core/cellranger/multi/main.nf:85:5: Variable was declared but not used
+│  85 |     beam_antigen_csv = include_beam && beam_antigen_panel_name != '' ?
+╰     |     ^^^^^^^^^^^^^^^^
+
+Warn  modules/nf-core/cellranger/multi/main.nf:89:5: Variable was declared but not used
+│  89 |     beam_csv_text  = include_beam && beam_control_panel.size() > 0 ? b
+╰     |     ^^^^^^^^^^^^^
+
+Warn  modules/nf-core/cellranger/multi/main.nf:90:5: Variable was declared but not used
+│  90 |     cmo_csv_text   = include_cmo  && cmo_barcodes.size() > 0       ? c
+╰     |     ^^^^^^^^^^^^
+
+Warn  modules/nf-core/cellranger/multi/main.nf:91:5: Variable was declared but not used
+│  91 |     ocm_csv_text   = include_ocm  && ocm_barcodes.size() > 0       ? o
+╰     |     ^^^^^^^^^^^^
+
+Warn  modules/nf-core/cellranger/multi/main.nf:92:5: Variable was declared but not used
+│  92 |     frna_csv_text  = include_frna && frna_sampleinfo.size() > 0    ? f
+╰     |     ^^^^^^^^^^^^^
+
+Warn  modules/nf-core/cellranger/multi/main.nf:102:5: Variable was declared but not used
+│ 102 |     beam_options_use   = include_beam && meta_beam?.options ? 'true' :
+╰     |     ^^^^^^^^^^^^^^^^
+
+Warn  modules/nf-core/cellranger/multi/main.nf:107:5: Variable was declared but not used
+│ 107 |     gex_options_filter_probes = gex_options_use && meta_gex.options.co
+╰     |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  modules/nf-core/cellranger/multi/main.nf:108:5: Variable was declared but not used
+│ 108 |     gex_options_r1_length     = gex_options_use && meta_gex.options.co
+╰     |     ^^^^^^^^^^^^^^^^^^^^^
+
+Warn  modules/nf-core/cellranger/multi/main.nf:109:5: Variable was declared but not used
+│ 109 |     gex_options_r2_length     = gex_options_use && meta_gex.options.co
+╰     |     ^^^^^^^^^^^^^^^^^^^^^
+
+Warn  modules/nf-core/cellranger/multi/main.nf:110:5: Variable was declared but not used
+│ 110 |     gex_options_chemistry     = gex_options_use && meta_gex.options.co
+╰     |     ^^^^^^^^^^^^^^^^^^^^^
+
+Warn  modules/nf-core/cellranger/multi/main.nf:111:5: Variable was declared but not used
+│ 111 |     gex_options_expect_cells  = gex_options_use && meta_gex.options.co
+╰     |     ^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  modules/nf-core/cellranger/multi/main.nf:112:5: Variable was declared but not used
+│ 112 |     gex_options_force_cells   = gex_options_use && meta_gex.options.co
+╰     |     ^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  modules/nf-core/cellranger/multi/main.nf:113:5: Variable was declared but not used
+│ 113 |     gex_options_no_secondary  = gex_options_use && meta_gex.options.co
+╰     |     ^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  modules/nf-core/cellranger/multi/main.nf:114:5: Variable was declared but not used
+│ 114 |     gex_options_no_bam        = gex_options_use && meta_gex.options.co
+╰     |     ^^^^^^^^^^^^^^^^^^
+
+Warn  modules/nf-core/cellranger/multi/main.nf:115:5: Variable was declared but not used
+│ 115 |     gex_options_no_target_umi_filter = gex_options_use && meta_gex.opt
+╰     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  modules/nf-core/cellranger/multi/main.nf:116:5: Variable was declared but not used
+│ 116 |     gex_options_include_introns      = gex_options_use && meta_gex.opt
+╰     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  modules/nf-core/cellranger/multi/main.nf:117:5: Variable was declared but not used
+│ 117 |     gex_options_check_library_compatibility = gex_options_use && meta_
+╰     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  modules/nf-core/cellranger/multi/main.nf:119:5: Variable was declared but not used
+│ 119 |     cmo_reference_path = cmo_options_use && cmo_reference_name    ? "c
+╰     |     ^^^^^^^^^^^^^^^^^^
+
+Warn  modules/nf-core/cellranger/multi/main.nf:120:5: Variable was declared but not used
+│ 120 |     cmo_barcode_path   = cmo_options_use && cmo_sample_assignment ? "b
+╰     |     ^^^^^^^^^^^^^^^^
+
+Warn  modules/nf-core/cellranger/multi/main.nf:121:5: Variable was declared but not used
+│ 121 |     cmo_options_min_assignment_confidence = cmo_options_use && meta_cm
+╰     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  modules/nf-core/cellranger/multi/main.nf:123:5: Variable was declared but not used
+│ 123 |     vdj_options_r1_length = vdj_options_use && meta_vdj.options.contai
+╰     |     ^^^^^^^^^^^^^^^^^^^^^
+
+Warn  modules/nf-core/cellranger/multi/main.nf:124:5: Variable was declared but not used
+│ 124 |     vdj_options_r2_length = vdj_options_use && meta_vdj.options.contai
+╰     |     ^^^^^^^^^^^^^^^^^^^^^
+
+Warn  modules/nf-core/cellranger/multi/main.nf:126:5: Variable was declared but not used
+│ 126 |     fb_options_r1_length = fb_options_use && meta_fb.options.containsK
+╰     |     ^^^^^^^^^^^^^^^^^^^^
+
+Warn  modules/nf-core/cellranger/multi/main.nf:127:5: Variable was declared but not used
+│ 127 |     fb_options_r2_length = fb_options_use && meta_fb.options.containsK
+╰     |     ^^^^^^^^^^^^^^^^^^^^
+
+Warn  modules/nf-core/cellranger/multi/main.nf:131:5: Variable was declared but not used
+│ 131 |     fastq_gex      = include_gex                      ? "${meta_gex.id
+╰     |     ^^^^^^^^^
+
+Warn  modules/nf-core/cellranger/multi/main.nf:132:5: Variable was declared but not used
+│ 132 |     fastq_vdj      = include_vdj                      ? "${meta_vdj.id
+╰     |     ^^^^^^^^^
+
+Warn  modules/nf-core/cellranger/multi/main.nf:133:5: Variable was declared but not used
+│ 133 |     fastq_antibody = include_fb && ab_options_use     ? "${meta_ab.id}
+╰     |     ^^^^^^^^^^^^^^
+
+Warn  modules/nf-core/cellranger/multi/main.nf:134:5: Variable was declared but not used
+│ 134 |     fastq_beam     = include_beam                     ? "${meta_beam.i
+╰     |     ^^^^^^^^^^
+
+Warn  modules/nf-core/cellranger/multi/main.nf:135:5: Variable was declared but not used
+│ 135 |     fastq_crispr   = include_fb && crispr_options_use ? "${meta_crispr
+╰     |     ^^^^^^^^^^^^
+
+Warn  modules/nf-core/cellranger/multi/main.nf:136:5: Variable was declared but not used
+│ 136 |     fastq_cmo      = include_cmo                      ? "${meta_cmo.id
+╰     |     ^^^^^^^^^
+
+Warn  modules/nf-core/cellranger/multi/main.nf:139:5: Variable was declared but not used
+│ 139 |     config = "cellranger_multi_config.csv"
+╰     |     ^^^^^^
+
+
+Error modules/nf-core/cellrangerarc/count/main.nf:8:5: Invalid process directive
+│   8 |     if (workflow.profile.tokenize(',').intersect(['conda', 'mamba']).s
+│     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│   9 |         exit 1, "CELLRANGERARC_COUNT module does not support Conda. Pl
+╰  10 |     }
+
+
+Error modules/nf-core/cellrangerarc/mkgtf/main.nf:8:5: Invalid process directive
+│   8 |     if (workflow.profile.tokenize(',').intersect(['conda', 'mamba']).s
+│     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│   9 |         exit 1, "CELLRANGERARC_COUNT module does not support Conda. Pl
+╰  10 |     }
+
+
+Error modules/nf-core/cellrangerarc/mkref/main.nf:8:5: Invalid process directive
+│   8 |     if (workflow.profile.tokenize(',').intersect(['conda', 'mamba']).s
+│     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│   9 |         exit 1, "CELLRANGERARC_COUNT module does not support Conda. Pl
+╰  10 |     }
+
+Error modules/nf-core/cellrangerarc/mkref/main.nf:31:9: `reference_config` is already declared
+│  31 |     def reference_config = reference_config.name
+╰     |         ^^^^^^^^^^^^^^^^
+
+
+
+
+Warn  modules/nf-core/gunzip/main.nf:43:9: Variable was declared but not used
+│  43 |     def args        = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+Warn  modules/nf-core/kallistobustools/ref/main.nf:28:9: Variable was declared but not used
+│  28 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+
+Warn  modules/nf-core/unzip/main.nf:38:9: Variable was declared but not used
+│  38 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  subworkflows/local/align_cellranger.nf:19:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 |         ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/align_cellranger.nf:50:22: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  50 |                 if ( it.toString().contains("raw_feature_bc_matrix") )
+╰     |                      ^^
+
+Warn  subworkflows/local/align_cellranger.nf:50:93: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  50 | ring().contains("raw_feature_bc_matrix") ) { desired_files.add( it ) }
+╰     |                                                                 ^^
+
+Warn  subworkflows/local/align_cellranger.nf:59:22: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  59 |                 if ( it.toString().contains("filtered_feature_bc_matri
+╰     |                      ^^
+
+Warn  subworkflows/local/align_cellranger.nf:59:98: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  59 | ).contains("filtered_feature_bc_matrix") ) { desired_files.add( it ) }
+╰     |                                                                 ^^
+
+
+Warn  subworkflows/local/align_cellrangerarc.nf:20:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  20 |         ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/align_cellrangerarc.nf:73:30: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  73 |         mtx_files.each{ if ( it.toString().contains("${pattern}") ) { 
+╰     |                              ^^
+
+Warn  subworkflows/local/align_cellrangerarc.nf:73:90: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  73 | ( it.toString().contains("${pattern}") ) { desired_files.add( it ) } }
+╰     |                                                               ^^
+
+
+Error subworkflows/local/align_cellrangermulti.nf:35:13: Variables in a closure should be declared with `def`
+│  35 |             fastqs = data_dict?.value
+╰     |             ^^^^^^
+
+Error subworkflows/local/align_cellrangermulti.nf:225:5: `out_ch` was assigned but not declared
+│ 225 |     out_ch =
+╰     |     ^^^^^^
+
+Error subworkflows/local/align_cellrangermulti.nf:243:12: `out_ch` is not defined
+│ 243 |     return out_ch
+╰     |            ^^^^^^
+
+Warn  subworkflows/local/align_cellrangermulti.nf:21:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  21 |         ch_versions    = Channel.empty()
+╰     |                          ^^^^^^^
+
+Warn  subworkflows/local/align_cellrangermulti.nf:34:47: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  34 |             def data_dict  = meta_clone.find{ it.key == "${meta_clone.
+╰     |                                               ^^
+
+Warn  subworkflows/local/align_cellrangermulti.nf:64:9: Variable was declared but not used
+│  64 |         ch_gex_barcodes           = params.gex_barcode_sample_assignme
+╰     |         ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/align_cellrangermulti.nf:95:20: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  95 |             .map{ [it[0].id] }
+╰     |                    ^^
+
+Warn  subworkflows/local/align_cellrangermulti.nf:96:85: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  96 | .out.cmo.flatten().map { [ "${it.baseName}" - "_cmo", it ] } )
+╰     |                               ^^
+
+Warn  subworkflows/local/align_cellrangermulti.nf:96:109: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  96 | PLESHEET.out.cmo.flatten().map { [ "${it.baseName}" - "_cmo", it ] } )
+╰     |                                                               ^^
+
+Warn  subworkflows/local/align_cellrangermulti.nf:98:25: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  98 |             .map { if ( it.size() == 2 ) { it[1] } else { [] } } // a 
+╰     |                         ^^
+
+Warn  subworkflows/local/align_cellrangermulti.nf:98:44: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  98 |             .map { if ( it.size() == 2 ) { it[1] } else { [] } } // a 
+╰     |                                            ^^
+
+Warn  subworkflows/local/align_cellrangermulti.nf:103:20: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 103 |             .map{ [it[0].id] }
+╰     |                    ^^
+
+Warn  subworkflows/local/align_cellrangermulti.nf:104:85: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 104 | .out.ocm.flatten().map { [ "${it.baseName}" - "_ocm", it ] } )
+╰     |                               ^^
+
+Warn  subworkflows/local/align_cellrangermulti.nf:104:109: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 104 | PLESHEET.out.ocm.flatten().map { [ "${it.baseName}" - "_ocm", it ] } )
+╰     |                                                               ^^
+
+Warn  subworkflows/local/align_cellrangermulti.nf:106:25: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 106 |             .map { if ( it.size() == 2 ) { it[1] } else { [] } } // a 
+╰     |                         ^^
+
+Warn  subworkflows/local/align_cellrangermulti.nf:106:44: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 106 |             .map { if ( it.size() == 2 ) { it[1] } else { [] } } // a 
+╰     |                                            ^^
+
+Warn  subworkflows/local/align_cellrangermulti.nf:111:20: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 111 |             .map{ [it[0].id] }
+╰     |                    ^^
+
+Warn  subworkflows/local/align_cellrangermulti.nf:112:86: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 112 | out.frna.flatten().map { [ "${it.baseName}" - "_frna", it ] } )
+╰     |                               ^^
+
+Warn  subworkflows/local/align_cellrangermulti.nf:112:111: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 112 | ESHEET.out.frna.flatten().map { [ "${it.baseName}" - "_frna", it ] } )
+╰     |                                                               ^^
+
+Warn  subworkflows/local/align_cellrangermulti.nf:114:25: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 114 |             .map { if ( it.size() == 2 ) { it[1] } else { [] } } // a 
+╰     |                         ^^
+
+Warn  subworkflows/local/align_cellrangermulti.nf:114:44: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 114 |             .map { if ( it.size() == 2 ) { it[1] } else { [] } } // a 
+╰     |                                            ^^
+
+Warn  subworkflows/local/align_cellrangermulti.nf:179:39: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 179 |             ch_grouped_fastq.gex.map{ it[0] },
+╰     |                                       ^^
+
+Warn  subworkflows/local/align_cellrangermulti.nf:228:30: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 228 |         mtx_files.each{ if ( it.toString().contains("${pattern}") ) { 
+╰     |                              ^^
+
+Warn  subworkflows/local/align_cellrangermulti.nf:228:90: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 228 | ( it.toString().contains("${pattern}") ) { desired_files.add( it ) } }
+╰     |                                                               ^^
+
+
+Warn  subworkflows/local/fastqc.nf:29:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  29 |     fastqc_multiqc = Channel.empty()
+╰     |                      ^^^^^^^
+
+
+Warn  subworkflows/local/h5ad_conversion.nf:13:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  13 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Error subworkflows/local/kallisto_bustools.nf:8:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│   8 | def multiqc_report    = []
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/kallisto_bustools.nf:8:5: Variable was declared but not used
+│   8 | def multiqc_report    = []
+╰     |     ^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/kallisto_bustools.nf:23:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  23 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/simpleaf.nf:21:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  21 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/simpleaf.nf:61:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  61 |                 txp2gene = Channel.of( txp2gene )
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/local/simpleaf.nf:65:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  65 |             simpleaf_index = Channel.of( [ [:], [] ] )
+╰     |                              ^^^^^^^
+
+Warn  subworkflows/local/simpleaf.nf:70:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  70 |         simpleaf_index = Channel.of( [ [ id: simpleaf_index.getName() 
+╰     |                          ^^^^^^^
+
+Warn  subworkflows/local/simpleaf.nf:74:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  74 |             txp2gene = Channel.of( txp2gene )
+╰     |                        ^^^^^^^
+
+
+Warn  subworkflows/local/starsolo.nf:22:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  22 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/starsolo.nf:76:53: Parameter was not used -- prefix with `_` to suppress warning
+│  76 |     for_multiqc     = STAR_ALIGN.out.log_final.map{ meta, it -> it }
+╰     |                                                     ^^^^
+
+
+Warn  subworkflows/local/utils_nfcore_scrnaseq_pipeline/main.nf:32:5: Parameter was not used -- prefix with `_` to suppress warning
+│  32 |     monochrome_logs   // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_scrnaseq_pipeline/main.nf:35:5: Parameter was not used -- prefix with `_` to suppress warning
+│  35 |     input             //  string: Path to input samplesheet
+╰     |     ^^^^^
+
+Warn  subworkflows/local/utils_nfcore_scrnaseq_pipeline/main.nf:42:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  42 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_scrnaseq_pipeline/main.nf:67:144: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  67 | lect { "    https://doi.org/${it.trim().replace('https://doi.org/','')
+╰     |                               ^^
+
+Warn  subworkflows/local/utils_nfcore_scrnaseq_pipeline/main.nf:104:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 104 |         Channel
+╰     |         ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_scrnaseq_pipeline/main.nf:115:23: Parameter was not used -- prefix with `_` to suppress warning
+│ 115 |             .map{ id, type, meta, reads -> [ id, meta, reads ] }
+╰     |                       ^^^^
+
+Warn  subworkflows/local/utils_nfcore_scrnaseq_pipeline/main.nf:117:42: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 117 |                 validateInputSamplesheet(it)
+╰     |                                          ^^
+
+Warn  subworkflows/local/utils_nfcore_scrnaseq_pipeline/main.nf:125:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 125 |         Channel
+╰     |         ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_scrnaseq_pipeline/main.nf:139:40: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 139 |                 cellrangerarcStructure(it)
+╰     |                                        ^^
+
+Warn  subworkflows/local/utils_nfcore_scrnaseq_pipeline/main.nf:143:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 143 |         Channel
+╰     |         ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_scrnaseq_pipeline/main.nf:155:42: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 155 |                 validateInputSamplesheet(it)
+╰     |                                          ^^
+
+Warn  subworkflows/local/utils_nfcore_scrnaseq_pipeline/main.nf:257:86: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 257 | ample_type }.unique().every { it in valid_sample_types }
+╰     |                               ^^
+
+
+Warn  subworkflows/nf-core/h5ad_removebackground_barcodes_cellbender_anndata/main.nf:13:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  13 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 | mYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
+╰     |                               ^^^^^^^
+
+
+
+Error workflows/scrnaseq.nf:37:23: `Utils` is not defined
+│  37 |     protocol_config = Utils.getProtocol(workflow, log, params.aligner,
+╰     |                       ^^^^^
+
+Warn  workflows/scrnaseq.nf:33:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  33 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/scrnaseq.nf:34:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  34 |     ch_versions      = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/scrnaseq.nf:35:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  35 |     ch_mtx_matrices  = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/scrnaseq.nf:71:38: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  71 |     ch_star_index     = star_index ? Channel.value( [[id: star_index.b
+╰     |                                      ^^^^^^^
+
+Warn  workflows/scrnaseq.nf:96:89: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  96 | ta    = GUNZIP_FASTA ( [ [:], ch_genome_fasta ] ).gunzip.map { it[1] }
+╰     |                                                                ^^
+
+Warn  workflows/scrnaseq.nf:99:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  99 |             ch_genome_fasta = Channel.value( ch_genome_fasta )
+╰     |                               ^^^^^^^
+
+Warn  workflows/scrnaseq.nf:108:71: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 108 |      ch_gtf      = GUNZIP_GTF ( [ [:], ch_gtf ] ).gunzip.map { it[1] }
+╰     |                                                                ^^
+
+Warn  workflows/scrnaseq.nf:111:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 111 |             ch_gtf = Channel.value( ch_gtf )
+╰     |                      ^^^^^^^
+
+Warn  workflows/scrnaseq.nf:193:13: Parameter was not used -- prefix with `_` to suppress warning
+│ 193 |             meta, outs -> outs.findAll{ it -> it.name == "web_summary.
+╰     |             ^^^^
+
+Warn  workflows/scrnaseq.nf:251:44: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 251 |             if (!map_collection_clone.any{ it.feature_type == 'gex' })
+╰     |                                            ^^
+
+Warn  workflows/scrnaseq.nf:252:44: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 252 |             if (!map_collection_clone.any{ it.feature_type == 'vdj' })
+╰     |                                            ^^
+
+Warn  workflows/scrnaseq.nf:253:44: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 253 |             if (!map_collection_clone.any{ it.feature_type == 'ab' }) 
+╰     |                                            ^^
+
+Warn  workflows/scrnaseq.nf:254:44: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 254 |             if (!map_collection_clone.any{ it.feature_type == 'beam' }
+╰     |                                            ^^
+
+Warn  workflows/scrnaseq.nf:255:44: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 255 |             if (!map_collection_clone.any{ it.feature_type == 'crispr'
+╰     |                                            ^^
+
+Warn  workflows/scrnaseq.nf:256:44: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 256 |             if (!map_collection_clone.any{ it.feature_type == 'cmo' })
+╰     |                                            ^^
+
+Warn  workflows/scrnaseq.nf:274:13: Parameter was not used -- prefix with `_` to suppress warning
+│ 274 |             meta, outs -> outs.findAll{ it -> it.name == "web_summary.
+╰     |             ^^^^
+
+Warn  workflows/scrnaseq.nf:286:40: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 286 |         star_index ? ch_star_index.map{it[1]} : [],
+╰     |                                        ^^
+
+Warn  workflows/scrnaseq.nf:299:33: Parameter was not used -- prefix with `_` to suppress warning
+│ 299 |                 .filter { meta, mtx_files -> meta.input_type == 'raw' 
+╰     |                                 ^^^^^^^^^
+
+Warn  workflows/scrnaseq.nf:330:36: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 330 |         ch_multiqc_config        = Channel.fromPath(
+╰     |                                    ^^^^^^^
+
+Warn  workflows/scrnaseq.nf:333:13: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 333 |             Channel.fromPath(params.multiqc_config, checkIfExists: tru
+╰     |             ^^^^^^^
+
+Warn  workflows/scrnaseq.nf:334:13: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 334 |             Channel.empty()
+╰     |             ^^^^^^^
+
+Warn  workflows/scrnaseq.nf:336:13: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 336 |             Channel.fromPath(params.multiqc_logo, checkIfExists: true)
+╰     |             ^^^^^^^
+
+Warn  workflows/scrnaseq.nf:337:13: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 337 |             Channel.empty()
+╰     |             ^^^^^^^
+
+Warn  workflows/scrnaseq.nf:341:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 341 |         ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summa
+╰     |                               ^^^^^^^
+
+Warn  workflows/scrnaseq.nf:347:49: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 347 |         ch_methods_description                = Channel.value(
+╰     |                                                 ^^^^^^^
+
+Warn  workflows/scrnaseq.nf:368:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 368 |         ch_multiqc_report = Channel.empty()
+╰     |                             ^^^^^^^
+
+
+Error conf/modules.config:35:17: Unexpected input: ':'
+│  35 |         withName: 'CELLBENDER_REMOVEBACKGROUND' {
+╰     |                 ^
+
+
+Error nextflow.config:230:28: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/scrnaseq/conf/test_multiome.config'
+│ 230 |     test_multiome        { includeConfig 'conf/test_multiome.config'  
+╰     |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-test tests
+│   3 |     testsDir "."
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 12 files had 18 errors
+ ✅ 56 files had no errors

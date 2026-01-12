@@ -1,0 +1,875 @@
+Linting Nextflow code..
+Linting: conf/test_full_sv.config
+Linting: conf/truth.config
+Linting: conf/test_full_somatic.config
+Linting: conf/igenomes_ignored.config
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/tests/somatic_snv.config
+Linting: conf/tests/concordance.config
+Linting: conf/tests/test_ga4gh.config
+Linting: conf/tests/germline_sv.config
+Linting: conf/tests/somatic_cnv.config
+Linting: conf/tests/liftover_test.config
+Linting: conf/tests/germline_small.config
+Linting: conf/tests/liftover_truth.config
+Linting: conf/tests/somatic_sv.config
+Linting: conf/tests/somatic_indel.config
+Linting: conf/tests/test_happy.config
+Linting: conf/tests/germline_bnd.config
+Linting: conf/gitpod.config
+Linting: conf/igenomes.config
+Linting: nextflow.config
+Linting: workflows/variantbenchmarking.nf
+Linting: subworkflows/local/utils_nfcore_variantbenchmarking_pipeline/main.nf
+Linting: subworkflows/local/prepare_vcfs_test/main.nf
+Linting: subworkflows/local/vcf_variant_filtering/main.nf
+Linting: subworkflows/local/concordance_analysis/main.nf
+Linting: subworkflows/local/intersect_statistics/main.nf
+Linting: subworkflows/local/subsample_vcf_test/main.nf
+Linting: subworkflows/local/rtgtools_benchmark/main.nf
+Linting: subworkflows/local/sv_germline_benchmark/main.nf
+Linting: subworkflows/local/compare_benchmark_results/main.nf
+Linting: subworkflows/local/prepare_vcfs_truth/main.nf
+Linting: subworkflows/local/report_benchmark_statistics/main.nf
+Linting: subworkflows/local/wittyer_benchmark/main.nf
+Linting: subworkflows/local/liftover_vcfs/main.nf
+Linting: subworkflows/local/vcf_variant_deduplication/main.nf
+Linting: subworkflows/local/bnd_benchmark/main.nf
+Linting: subworkflows/local/small_somatic_benchmark/main.nf
+Linting: subworkflows/local/small_germline_benchmark/main.nf
+Linting: subworkflows/local/report_vcf_statistics/main.nf
+Linting: subworkflows/local/sompy_benchmark/main.nf
+Linting: subworkflows/local/svanalyzer_benchmark/main.nf
+Linting: subworkflows/local/sv_vcf_conversion/main.nf
+Linting: subworkflows/local/truvari_benchmark/main.nf
+Linting: subworkflows/local/split_small_variants_test/main.nf
+Linting: subworkflows/local/happy_benchmark/main.nf
+Linting: subworkflows/local/prepare_references/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/bcftools/reheader/main.nf
+Linting: modules/local/bcftools/rename_chr/main.nf
+Linting: modules/local/bgzip/tabix/main.nf
+Linting: modules/local/custom/plot_svlen_dist/main.nf
+Linting: modules/local/custom/publish_processed_vcf/main.nf
+Linting: modules/local/custom/subtract_vcf/main.nf
+Linting: modules/local/custom/vcf_to_csv/main.nf
+Linting: modules/local/custom/plots/main.nf
+Linting: modules/local/custom/variant_extractor/main.nf
+Linting: modules/local/custom/sort_bed/main.nf
+Linting: modules/local/custom/merge_reports/main.nf
+Linting: modules/local/custom/split_sompy_features/main.nf
+Linting: modules/local/custom/bedtools_intersect_bench/main.nf
+Linting: modules/local/custom/plot_upset/main.nf
+Linting: modules/local/custom/fix_vcf_prefix/main.nf
+Linting: modules/local/custom/reformat_header/main.nf
+Linting: modules/local/custom/create_datavzrd_input/main.nf
+Linting: modules/local/custom/merge_sompy_features/main.nf
+Linting: modules/nf-core/svanalyzer/svbenchmark/main.nf
+Linting: modules/nf-core/bcftools/sort/main.nf
+Linting: modules/nf-core/bcftools/sort/tests/vcf_gz_index.config
+Linting: modules/nf-core/bcftools/sort/tests/vcf_gz_index_csi.config
+Linting: modules/nf-core/bcftools/sort/tests/vcf_gz_index_tbi.config
+Linting: modules/nf-core/bcftools/pluginsetgt/main.nf
+Linting: modules/nf-core/bcftools/pluginsetgt/tests/vcf_gz_index.config
+Linting: modules/nf-core/bcftools/pluginsetgt/tests/vcf_gz_index_csi.config
+Linting: modules/nf-core/bcftools/pluginsetgt/tests/nextflow.config
+Linting: modules/nf-core/bcftools/pluginsetgt/tests/vcf_gz_index_tbi.config
+Linting: modules/nf-core/bcftools/stats/main.nf
+Linting: modules/nf-core/bcftools/view/main.nf
+Linting: modules/nf-core/bcftools/view/tests/vcf_gz_index.config
+Linting: modules/nf-core/bcftools/view/tests/vcf_gz_index_csi.config
+Linting: modules/nf-core/bcftools/view/tests/nextflow.config
+Linting: modules/nf-core/bcftools/view/tests/vcf_gz_index_tbi.config
+Linting: modules/nf-core/bcftools/merge/main.nf
+Linting: modules/nf-core/bcftools/norm/main.nf
+Linting: modules/nf-core/bcftools/norm/tests/nextflow.vcf_gz.config
+Linting: modules/nf-core/bcftools/norm/tests/vcf_gz_index.config
+Linting: modules/nf-core/bcftools/norm/tests/vcf_gz_index_csi.config
+Linting: modules/nf-core/bcftools/norm/tests/nextflow.config
+Linting: modules/nf-core/bcftools/norm/tests/nextflow.bcf_gz.config
+Linting: modules/nf-core/bcftools/norm/tests/nextflow.vcf.config
+Linting: modules/nf-core/bcftools/norm/tests/vcf_gz_index_tbi.config
+Linting: modules/nf-core/bcftools/norm/tests/nextflow.bcf.config
+Linting: modules/nf-core/bcftools/filter/main.nf
+Linting: modules/nf-core/bcftools/filter/tests/vcf_gz_index.config
+Linting: modules/nf-core/bcftools/filter/tests/vcf_gz_index_csi.config
+Linting: modules/nf-core/bcftools/filter/tests/nextflow.config
+Linting: modules/nf-core/bcftools/filter/tests/region_filter.config
+Linting: modules/nf-core/bcftools/filter/tests/vcf_gz_index_tbi.config
+Linting: modules/nf-core/bcftools/annotate/main.nf
+Linting: modules/nf-core/bcftools/annotate/tests/vcf_gz_index.config
+Linting: modules/nf-core/bcftools/annotate/tests/vcf_gz_index_csi.config
+Linting: modules/nf-core/bcftools/annotate/tests/vcf.config
+Linting: modules/nf-core/bcftools/annotate/tests/bcf.config
+Linting: modules/nf-core/bcftools/annotate/tests/vcf_gz_index_tbi.config
+Linting: modules/nf-core/gatk4/concordance/main.nf
+Linting: modules/nf-core/wittyer/main.nf
+Linting: modules/nf-core/wittyer/tests/test.config
+Linting: modules/nf-core/rtgtools/bndeval/main.nf
+Linting: modules/nf-core/rtgtools/svdecompose/main.nf
+Linting: modules/nf-core/rtgtools/vcfeval/main.nf
+Linting: modules/nf-core/rtgtools/format/main.nf
+Linting: modules/nf-core/truvari/bench/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/svync/main.nf
+Linting: modules/nf-core/svtk/standardize/main.nf
+Linting: modules/nf-core/svtk/vcf2bed/main.nf
+Linting: modules/nf-core/datavzrd/main.nf
+Linting: modules/nf-core/ucsc/liftover/main.nf
+Linting: modules/nf-core/ucsc/liftover/tests/test.config
+Linting: modules/nf-core/manta/convertinversion/main.nf
+Linting: modules/nf-core/bedops/convert2bed/main.nf
+Linting: modules/nf-core/happy/prepy/main.nf
+Linting: modules/nf-core/happy/sompy/main.nf
+Linting: modules/nf-core/happy/sompy/tests/nextflow.config
+Linting: modules/nf-core/happy/happy/main.nf
+Linting: modules/nf-core/survivor/stats/main.nf
+Linting: modules/nf-core/survivor/merge/main.nf
+Linting: modules/nf-core/survivor/filter/main.nf
+Linting: modules/nf-core/picard/createsequencedictionary/main.nf
+Linting: modules/nf-core/picard/liftovervcf/main.nf
+Linting: modules/nf-core/bedtools/merge/main.nf
+Linting: modules/nf-core/bedtools/merge/tests/nextflow.config
+Linting: modules/nf-core/tabix/bgzip/main.nf
+Linting: modules/nf-core/tabix/bgzip/tests/vcf_none.config
+Linting: modules/nf-core/tabix/bgzip/tests/bgzip_compress.config
+Linting: modules/nf-core/tabix/bgziptabix/main.nf
+Linting: modules/nf-core/tabix/bgziptabix/tests/tabix_tbi.config
+Linting: modules/nf-core/tabix/bgziptabix/tests/tabix_csi.config
+Linting: modules/nf-core/tabix/tabix/main.nf
+Linting: modules/nf-core/tabix/tabix/tests/tabix_vcf_tbi.config
+Linting: modules/nf-core/tabix/tabix/tests/tabix_gff.config
+Linting: modules/nf-core/tabix/tabix/tests/tabix_bed.config
+Linting: modules/nf-core/tabix/tabix/tests/tabix_vcf_csi.config
+
+Error modules/local/bcftools/rename_chr/main.nf:59:9: `index` is already declared
+│  59 |     def index = args.contains("--write-index=tbi") || args.contains("-
+╰     |         ^^^^^
+
+
+
+
+Warn  modules/local/custom/fix_vcf_prefix/main.nf:22:9: Variable was declared but not used
+│  22 |     def args    = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/custom/fix_vcf_prefix/main.nf:40:9: Variable was declared but not used
+│  40 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/custom/merge_reports/main.nf:22:9: Variable was declared but not used
+│  22 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/custom/merge_sompy_features/main.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+Warn  modules/local/custom/plots/main.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/custom/plots/main.nf:22:9: Variable was declared but not used
+│  22 |     def prefix = task.ext.prefix ?: "${meta.benchmark_tool}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/custom/publish_processed_vcf/main.nf:21:9: Variable was declared but not used
+│  21 |     def args  = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/custom/reformat_header/main.nf:21:9: Variable was declared but not used
+│  21 |     def args  = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/custom/sort_bed/main.nf:21:9: Variable was declared but not used
+│  21 |     def args    = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+Warn  modules/local/custom/subtract_vcf/main.nf:40:9: Variable was declared but not used
+│  40 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/custom/variant_extractor/main.nf:23:9: Variable was declared but not used
+│  23 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/custom/vcf_to_csv/main.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Error modules/nf-core/bcftools/annotate/main.nf:64:9: `index` is already declared
+│  64 |     def index = args.contains("--write-index=tbi") || args.contains("-
+╰     |         ^^^^^
+
+
+
+
+Warn  modules/nf-core/bcftools/norm/main.nf:56:65: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  56 | '-W=tbi'].any { args.contains(it) }  && extension == 'vcf.gz') {
+╰     |                               ^^
+
+Warn  modules/nf-core/bcftools/norm/main.nf:58:126: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  58 | ex=csi', '-W=csi', '--write-index', '-W'].any { args.contains(it) }) {
+╰     |                                                               ^^
+
+
+
+
+
+Error modules/nf-core/bcftools/view/main.nf:60:9: `index` is already declared
+│  60 |     def index = args.contains("--write-index=tbi") || args.contains("-
+╰     |         ^^^^^
+
+
+Warn  modules/nf-core/bedops/convert2bed/main.nf:38:9: Variable was declared but not used
+│  38 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+Warn  modules/nf-core/happy/happy/main.nf:64:9: Variable was declared but not used
+│  64 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/happy/prepy/main.nf:44:9: Variable was declared but not used
+│  44 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/happy/prepy/main.nf:46:9: Variable was declared but not used
+│  46 |     def restrict_region = bed ? "-R ${bed}": ""
+╰     |         ^^^^^^^^^^^^^^^
+
+
+Error modules/nf-core/happy/sompy/main.nf:35:9: `bams` is already declared
+│  35 |     def bams = bams ? "--bam ${bams}" : ""
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/manta/convertinversion/main.nf:24:9: Variable was declared but not used
+│  24 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+
+Warn  modules/nf-core/rtgtools/format/main.nf:49:9: Variable was declared but not used
+│  49 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+Warn  modules/nf-core/survivor/filter/main.nf:25:9: Variable was declared but not used
+│  25 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/survivor/filter/main.nf:51:9: Variable was declared but not used
+│  51 |     def bed_file = bed ? "${bed}" : "NA"
+╰     |         ^^^^^^^^
+
+
+Warn  modules/nf-core/survivor/merge/main.nf:30:13: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  30 |         if (it.getExtension() == "gz"){
+╰     |             ^^
+
+Warn  modules/nf-core/survivor/merge/main.nf:57:13: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  57 |         if (it.getExtension() == "gz"){
+╰     |             ^^
+
+
+Warn  modules/nf-core/survivor/stats/main.nf:24:9: Variable was declared but not used
+│  24 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Error modules/nf-core/svanalyzer/svbenchmark/main.nf:36:9: `bed` is already declared
+│  36 |     def bed = bed ? "-includebed $bed" : ""
+╰     |         ^^^
+
+Warn  modules/nf-core/svanalyzer/svbenchmark/main.nf:63:9: Variable was declared but not used
+│  63 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+
+
+
+
+
+Error modules/nf-core/wittyer/main.nf:8:5: Invalid process directive
+│   8 |     if (workflow.profile.tokenize(',').intersect(['conda', 'mamba']).s
+│     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│   9 |         error "WITTYER module does not support Conda. Please use Docke
+╰  10 |     }
+
+Warn  modules/nf-core/wittyer/main.nf:55:9: Variable was declared but not used
+│  55 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  subworkflows/local/bnd_benchmark/main.nf:18:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  18 |     versions        = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/bnd_benchmark/main.nf:19:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 |     tagged_variants = Channel.empty()
+╰     |                       ^^^^^^^
+
+
+Warn  subworkflows/local/compare_benchmark_results/main.nf:22:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  22 |     versions    = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/compare_benchmark_results/main.nf:23:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  23 |     merged_vcfs = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/compare_benchmark_results/main.nf:24:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  24 |     ch_plots    = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Error subworkflows/local/concordance_analysis/main.nf:38:22: Unexpected input: 'i'
+│  38 |             for (int i = 0; i < items.size(); i++) {
+╰     |                      ^
+
+
+Warn  subworkflows/local/happy_benchmark/main.nf:27:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  27 |     versions        = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/happy_benchmark/main.nf:28:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  28 |     tagged_variants = Channel.empty()
+╰     |                       ^^^^^^^
+
+
+Warn  subworkflows/local/intersect_statistics/main.nf:17:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |     versions        = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/intersect_statistics/main.nf:20:28: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  20 |             def vcf_file = it[1]
+╰     |                            ^^
+
+Warn  subworkflows/local/intersect_statistics/main.nf:21:32: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  21 |             def regions_file = it[2]
+╰     |                                ^^
+
+Warn  subworkflows/local/intersect_statistics/main.nf:28:51: Parameter was not used -- prefix with `_` to suppress warning
+│  28 |     test_beds_ch = test_samples.regions.map{meta, vcf, bed -> [meta, b
+╰     |                                                   ^^^
+
+
+Warn  subworkflows/local/liftover_vcfs/main.nf:24:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  24 |     versions = Channel.empty()
+╰     |                ^^^^^^^
+
+
+Warn  subworkflows/local/prepare_references/main.nf:16:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     versions = Channel.empty()
+╰     |                ^^^^^^^
+
+
+Warn  subworkflows/local/prepare_vcfs_test/main.nf:29:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  29 |     versions = Channel.empty()
+╰     |                ^^^^^^^
+
+Warn  subworkflows/local/prepare_vcfs_test/main.nf:33:20: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  33 |         def meta = it[0]
+╰     |                    ^^
+
+Warn  subworkflows/local/prepare_vcfs_test/main.nf:37:14: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  37 |     vcf_ch = Channel.empty()
+╰     |              ^^^^^^^
+
+Warn  subworkflows/local/prepare_vcfs_test/main.nf:44:13: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  44 |             Channel.empty(),
+╰     |             ^^^^^^^
+
+Warn  subworkflows/local/prepare_vcfs_test/main.nf:57:20: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  57 |         def meta = it[0]
+╰     |                    ^^
+
+Warn  subworkflows/local/prepare_vcfs_test/main.nf:61:14: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  61 |     vcf_ch = Channel.empty()
+╰     |              ^^^^^^^
+
+
+Warn  subworkflows/local/prepare_vcfs_truth/main.nf:27:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  27 |     versions = Channel.empty()
+╰     |                ^^^^^^^
+
+
+Warn  subworkflows/local/report_benchmark_statistics/main.nf:19:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 |     versions = Channel.empty()
+╰     |                ^^^^^^^
+
+Warn  subworkflows/local/report_benchmark_statistics/main.nf:20:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  20 |     ch_plots = Channel.empty()
+╰     |                ^^^^^^^
+
+Warn  subworkflows/local/report_benchmark_statistics/main.nf:21:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  21 |     merged_reports = Channel.empty()
+╰     |                      ^^^^^^^
+
+
+Warn  subworkflows/local/report_vcf_statistics/main.nf:14:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  14 |     versions     = Channel.empty()
+╰     |                    ^^^^^^^
+
+Warn  subworkflows/local/report_vcf_statistics/main.nf:15:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |     ch_stats     = Channel.empty()
+╰     |                    ^^^^^^^
+
+
+Warn  subworkflows/local/rtgtools_benchmark/main.nf:19:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 |     versions        = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/rtgtools_benchmark/main.nf:20:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  20 |     tagged_variants = Channel.empty()
+╰     |                       ^^^^^^^
+
+
+Warn  subworkflows/local/small_germline_benchmark/main.nf:21:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  21 |     versions        = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/small_germline_benchmark/main.nf:22:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  22 |     summary_reports = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/small_germline_benchmark/main.nf:23:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  23 |     tagged_variants = Channel.empty()
+╰     |                       ^^^^^^^
+
+
+Warn  subworkflows/local/small_somatic_benchmark/main.nf:20:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  20 |     versions            = Channel.empty()
+╰     |                           ^^^^^^^
+
+Warn  subworkflows/local/small_somatic_benchmark/main.nf:21:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  21 |     summary_reports     = Channel.empty()
+╰     |                           ^^^^^^^
+
+Warn  subworkflows/local/small_somatic_benchmark/main.nf:22:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  22 |     tagged_variants     = Channel.empty()
+╰     |                           ^^^^^^^
+
+Warn  subworkflows/local/small_somatic_benchmark/main.nf:23:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  23 |     tagged_variants_csv = Channel.empty()
+╰     |                           ^^^^^^^
+
+
+Warn  subworkflows/local/sompy_benchmark/main.nf:19:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 |     versions            = Channel.empty()
+╰     |                           ^^^^^^^
+
+Warn  subworkflows/local/sompy_benchmark/main.nf:20:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  20 |     tagged_variants_csv = Channel.empty()
+╰     |                           ^^^^^^^
+
+Warn  subworkflows/local/sompy_benchmark/main.nf:24:34: Parameter was not used -- prefix with `_` to suppress warning
+│  24 |         input_ch.map{meta, test, test_index, truth, truth_index, regio
+╰     |                                  ^^^^^^^^^^
+
+Warn  subworkflows/local/sompy_benchmark/main.nf:24:53: Parameter was not used -- prefix with `_` to suppress warning
+│  24 |         input_ch.map{meta, test, test_index, truth, truth_index, regio
+╰     |                                                     ^^^^^^^^^^^
+
+
+Warn  subworkflows/local/split_small_variants_test/main.nf:16:18: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     versions   = Channel.empty()
+╰     |                  ^^^^^^^
+
+Warn  subworkflows/local/split_small_variants_test/main.nf:17:18: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |     out_vcf_ch = Channel.empty()
+╰     |                  ^^^^^^^
+
+
+Warn  subworkflows/local/subsample_vcf_test/main.nf:16:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     versions = Channel.empty()
+╰     |                ^^^^^^^
+
+Warn  subworkflows/local/subsample_vcf_test/main.nf:35:25: Parameter was not used -- prefix with `_` to suppress warning
+│  35 |         .branch { meta, vcf ->
+╰     |                         ^^^
+
+Warn  subworkflows/local/subsample_vcf_test/main.nf:42:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  42 |         Channel.value('q'),
+╰     |         ^^^^^^^
+
+Warn  subworkflows/local/subsample_vcf_test/main.nf:43:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  43 |         Channel.value('0p --include "1"'),
+╰     |         ^^^^^^^
+
+
+Warn  subworkflows/local/sv_germline_benchmark/main.nf:17:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |     versions        = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/sv_germline_benchmark/main.nf:18:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  18 |     summary_reports = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/sv_germline_benchmark/main.nf:19:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 |     tagged_variants = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/sv_germline_benchmark/main.nf:20:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  20 |     logs            = Channel.empty()
+╰     |                       ^^^^^^^
+
+
+Warn  subworkflows/local/sv_vcf_conversion/main.nf:22:18: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  22 |     versions   = Channel.empty()
+╰     |                  ^^^^^^^
+
+Warn  subworkflows/local/sv_vcf_conversion/main.nf:44:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  44 |         out_vcf_ch = Channel.empty()
+╰     |                      ^^^^^^^
+
+Warn  subworkflows/local/sv_vcf_conversion/main.nf:100:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 100 |         out_vcf_ch = Channel.empty()
+╰     |                      ^^^^^^^
+
+Warn  subworkflows/local/sv_vcf_conversion/main.nf:133:28: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 133 |                 def meta = it[0]
+╰     |                            ^^
+
+Warn  subworkflows/local/sv_vcf_conversion/main.nf:134:27: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 134 |                 def vcf = it[1]
+╰     |                           ^^
+
+
+Warn  subworkflows/local/svanalyzer_benchmark/main.nf:17:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |     versions        = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/svanalyzer_benchmark/main.nf:18:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  18 |     tagged_variants = Channel.empty()
+╰     |                       ^^^^^^^
+
+
+Warn  subworkflows/local/truvari_benchmark/main.nf:19:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 |     versions        = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/truvari_benchmark/main.nf:20:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  20 |     tagged_variants = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/truvari_benchmark/main.nf:21:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  21 |     logs            = Channel.empty()
+╰     |                       ^^^^^^^
+
+
+Warn  subworkflows/local/utils_nfcore_variantbenchmarking_pipeline/main.nf:32:5: Parameter was not used -- prefix with `_` to suppress warning
+│  32 |     monochrome_logs   // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_variantbenchmarking_pipeline/main.nf:35:5: Parameter was not used -- prefix with `_` to suppress warning
+│  35 |     input             //  string: Path to input samplesheet
+╰     |     ^^^^^
+
+Warn  subworkflows/local/utils_nfcore_variantbenchmarking_pipeline/main.nf:104:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 104 |     Channel
+╰     |     ^^^^^^^
+
+
+Warn  subworkflows/local/vcf_variant_deduplication/main.nf:15:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |     versions = Channel.empty()
+╰     |                ^^^^^^^
+
+Warn  subworkflows/local/vcf_variant_deduplication/main.nf:16:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     versions = Channel.empty()
+╰     |                ^^^^^^^
+
+
+Warn  subworkflows/local/vcf_variant_filtering/main.nf:17:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |     versions = Channel.empty()
+╰     |                ^^^^^^^
+
+Warn  subworkflows/local/vcf_variant_filtering/main.nf:31:36: Parameter was not used -- prefix with `_` to suppress warning
+│  31 |             vcf_ch.map{ meta, vcf, index -> tuple(meta, vcf)}
+╰     |                                    ^^^^^
+
+
+Warn  subworkflows/local/wittyer_benchmark/main.nf:15:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |     versions        = Channel.empty()
+╰     |                       ^^^^^^^
+
+
+
+
+
+Error workflows/variantbenchmarking.nf:32:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/variantbenchmarking/subworkflows/local/concordance_analysis/main.nf'
+│  32 | include { CONCORDANCE_ANALYSIS        } from '../subworkflows/local/co
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/variantbenchmarking.nf:237:7: `CONCORDANCE_ANALYSIS` is not defined
+│ 237 |       CONCORDANCE_ANALYSIS(
+╰     |       ^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/variantbenchmarking.nf:244:44: `CONCORDANCE_ANALYSIS` is not defined
+│ 244 |         ch_versions      = ch_versions.mix(CONCORDANCE_ANALYSIS.out.ve
+╰     |                                            ^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/variantbenchmarking.nf:245:43: `CONCORDANCE_ANALYSIS` is not defined
+│ 245 |         ch_reports       = ch_reports.mix(CONCORDANCE_ANALYSIS.out.sum
+╰     |                                           ^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/variantbenchmarking.nf:246:41: `CONCORDANCE_ANALYSIS` is not defined
+│ 246 |         evals_ch         = evals_ch.mix(CONCORDANCE_ANALYSIS.out.tagge
+╰     |                                         ^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:47:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  47 |     ch_versions      = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:48:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  48 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:51:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  51 |     ch_reports       = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:55:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  55 |     fasta       = Channel.fromPath(params.fasta, checkIfExists: true)
+╰     |                   ^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:57:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  57 |     fai         = Channel.fromPath(params.fai, checkIfExists: true)
+╰     |                   ^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:61:42: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  61 |     truth_ch        = params.truth_vcf ? Channel.fromPath(params.truth
+╰     |                                          ^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:63:43: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  63 |                                         : Channel.empty()
+╰     |                                           ^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:65:43: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  65 |     regions_bed_ch = params.regions_bed ? Channel.fromPath(params.regi
+╰     |                                           ^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:66:43: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  66 |                                         : Channel.empty()
+╰     |                                           ^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:67:43: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  67 |     targets_bed_ch = params.targets_bed ? Channel.fromPath(params.targ
+╰     |                                           ^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:68:43: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  68 |                                         : Channel.empty()
+╰     |                                           ^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:87:55: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  87 |     falsepositive_bed   = params.falsepositive_bed  ? Channel.fromPath
+╰     |                                                       ^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:88:55: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  88 |                                                     : Channel.of([[id:
+╰     |                                                       ^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:89:55: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  89 |     ambiguous_beds      = params.ambiguous_beds     ? Channel.fromPath
+╰     |                                                       ^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:90:55: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  90 |                                                     : Channel.of([[id:
+╰     |                                                       ^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:92:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  92 |         stratification_bed  = Channel.fromPath(params.stratification_b
+╰     |                               ^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:93:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  93 |         stratification_tsv  = Channel.fromPath(params.stratification_t
+╰     |                               ^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:95:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  95 |         stratification_bed  = Channel.of([[id: "stratification"],[]]).
+╰     |                               ^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:96:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  96 |         stratification_tsv  = Channel.of([[id: "stratification"],[]]).
+╰     |                               ^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:100:43: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 100 |     sdf             = params.sdf        ? Channel.fromPath(params.sdf,
+╰     |                                           ^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:101:43: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 |                                         : Channel.empty()
+╰     |                                           ^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:104:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 104 |         rename_chr = Channel.fromPath(params.rename_chr, checkIfExists
+╰     |                      ^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:112:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 112 |             rename_chr = Channel.fromPath("${projectDir}/assets/rename
+╰     |                          ^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:116:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 116 |             rename_chr = Channel.fromPath("${projectDir}/assets/rename
+╰     |                          ^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:119:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 119 |             rename_chr = Channel.empty()
+╰     |                          ^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:127:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 127 |             chain           = Channel.fromPath(params.chain, checkIfEx
+╰     |                               ^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:133:47: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 133 |         dictionary      = params.dictionary ? Channel.fromPath(params.
+╰     |                                               ^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:133:213: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 133 | .collect()                                           : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:135:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 135 |         chain           = Channel.empty()
+╰     |                           ^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:136:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 136 |         dictionary      = Channel.empty()
+╰     |                           ^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:154:24: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 154 |             def meta = it[0]
+╰     |                        ^^
+
+Warn  workflows/variantbenchmarking.nf:155:23: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 155 |             def vcf = it[1]
+╰     |                       ^^
+
+Warn  workflows/variantbenchmarking.nf:161:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 161 |     out_vcf_ch  = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:164:43: Parameter was not used -- prefix with `_` to suppress warning
+│ 164 |         sample.multisample.map{meta, vcf, bed -> [meta, vcf]}
+╰     |                                           ^^^
+
+Warn  workflows/variantbenchmarking.nf:168:68: Parameter was not used -- prefix with `_` to suppress warning
+│ 168 | e.singlesample.map{meta, vcf, bed -> [meta, vcf]})
+╰     |                               ^^^
+
+Warn  workflows/variantbenchmarking.nf:215:13: Variable was declared but not used
+│ 215 |         def meta = it[0]
+╰     |             ^^^^
+
+Warn  workflows/variantbenchmarking.nf:215:20: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 215 |         def meta = it[0]
+╰     |                    ^^
+
+Warn  workflows/variantbenchmarking.nf:216:28: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 216 |         def regions_file = it[2]
+╰     |                            ^^
+
+Warn  workflows/variantbenchmarking.nf:232:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 232 |     evals_ch     = Channel.empty()
+╰     |                    ^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:233:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 233 |     evals_csv_ch = Channel.empty()
+╰     |                    ^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:268:85: Parameter was not used -- prefix with `_` to suppress warning
+│ 268 | MLINE_BENCHMARK.out.logs.map{ meta, log -> log })
+╰     |                               ^^^^
+
+Warn  workflows/variantbenchmarking.nf:343:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 343 |     def topic_versions = Channel.topic("versions")
+╰     |                          ^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:373:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 373 |     ch_multiqc_config                     = Channel.fromPath("$project
+╰     |                                             ^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:374:69: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 374 |     = params.multiqc_config ? Channel.fromPath(params.multiqc_config, 
+╰     |                               ^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:374:131: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 374 | .fromPath(params.multiqc_config, checkIfExists: true) :Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:375:67: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 375 |       = params.multiqc_logo ? Channel.fromPath(params.multiqc_logo, ch
+╰     |                               ^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:375:128: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 375 | l.fromPath(params.multiqc_logo, checkIfExists: true) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:377:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 377 |     ch_workflow_summary                   = Channel.value(paramsSummar
+╰     |                                             ^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:380:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 380 |     ch_methods_description                = Channel.value(methodsDescr
+╰     |                                             ^^^^^^^
+
+Warn  workflows/variantbenchmarking.nf:386:118: Parameter was not used -- prefix with `_` to suppress warning
+│ 386 | STICS.out.merged_reports.map{ meta, report -> report }.flatten())
+╰     |                               ^^^^
+
+Warn  workflows/variantbenchmarking.nf:387:82: Parameter was not used -- prefix with `_` to suppress warning
+│ 387 | iqc_files.mix(ch_reports.map{ meta, report -> report }.flatten())
+╰     |                               ^^^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-test tests
+│   3 |     testsDir "."
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 9 files had 13 errors
+ ✅ 145 files had no errors

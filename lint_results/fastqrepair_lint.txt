@@ -1,0 +1,270 @@
+Linting Nextflow code..
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: nextflow.config
+Linting: workflows/fastqrepair.nf
+Linting: subworkflows/local/fastq_repair_wipertools/main.nf
+Linting: subworkflows/local/utils_nfcore_fastqrepair_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/nf-core/wipertools/fastqscatter/main.nf
+Linting: modules/nf-core/wipertools/fastqscatter/tests/nextflow.config
+Linting: modules/nf-core/wipertools/fastqgather/main.nf
+Linting: modules/nf-core/wipertools/fastqgather/tests/nextflow.config
+Linting: modules/nf-core/wipertools/fastqwiper/main.nf
+Linting: modules/nf-core/wipertools/fastqwiper/tests/nextflow.config
+Linting: modules/nf-core/wipertools/reportgather/main.nf
+Linting: modules/nf-core/gzrt/main.nf
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/bbmap/repair/main.nf
+Linting: modules/nf-core/bbmap/repair/tests/nextflow.config
+Error main.nf:19:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/fastqrepair/subworkflows/local/utils_nfcore_fastqrepair_pipeline/main.nf'
+│  19 | include { PIPELINE_INITIALISATION } from './subworkflows/local/utils_n
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:20:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/fastqrepair/subworkflows/local/utils_nfcore_fastqrepair_pipeline/main.nf'
+│  20 | include { PIPELINE_COMPLETION     } from './subworkflows/local/utils_n
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:58:5: `PIPELINE_INITIALISATION` is not defined
+│  58 |     PIPELINE_INITIALISATION (
+╰     |     ^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:71:9: `PIPELINE_INITIALISATION` is not defined
+│  71 |         PIPELINE_INITIALISATION.out.samplesheet
+╰     |         ^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:76:5: `PIPELINE_COMPLETION` is not defined
+│  76 |     PIPELINE_COMPLETION (
+╰     |     ^^^^^^^^^^^^^^^^^^^
+
+
+
+
+
+
+Warn  modules/nf-core/wipertools/fastqgather/main.nf:25:21: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  25 |     if (fastq.any { it.name == "${prefix}.fastq.gz" }) {
+╰     |                     ^^
+
+Warn  modules/nf-core/wipertools/fastqgather/main.nf:46:21: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  46 |     if (fastq.any { it.name == "${prefix}.fastq.gz" }) {
+╰     |                     ^^
+
+
+
+
+Warn  modules/nf-core/wipertools/reportgather/main.nf:25:22: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  25 |     if (report.any { it.name == "${prefix}.report" }) {
+╰     |                      ^^
+
+Warn  modules/nf-core/wipertools/reportgather/main.nf:46:22: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  46 |     if (report.any { it.name == "${prefix}.report" }) {
+╰     |                      ^^
+
+
+Warn  subworkflows/local/fastq_repair_wipertools/main.nf:12:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  12 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/fastq_repair_wipertools/main.nf:46:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  46 |     ch_cleaned_fastq = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/fastq_repair_wipertools/main.nf:60:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  60 |     ch_gathered_report = Channel.empty()
+╰     |                          ^^^^^^^
+
+Warn  subworkflows/local/fastq_repair_wipertools/main.nf:68:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  68 |     ch_final_reports = Channel.empty()
+╰     |                        ^^^^^^^
+
+
+Error subworkflows/local/utils_nfcore_fastqrepair_pipeline/main.nf:187:30: Unexpected input: 'gis'
+│ 187 |         try (GZIPInputStream gis = new GZIPInputStream(Files.newInputS
+╰     |                              ^
+
+
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 | mYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
+╰     |                               ^^^^^^^
+
+
+Error workflows/fastqrepair.nf:14:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/fastqrepair/subworkflows/local/utils_nfcore_fastqrepair_pipeline/main.nf'
+│  14 | include { methodsDescriptionText  } from '../subworkflows/local/utils_
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/fastqrepair.nf:15:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/fastqrepair/subworkflows/local/utils_nfcore_fastqrepair_pipeline/main.nf'
+│  15 | include { isFastqFileEmpty        } from '../subworkflows/local/utils_
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/fastqrepair.nf:51:39: `isFastqFileEmpty` is not defined
+│  51 |         ? fileList instanceof List ? !isFastqFileEmpty(fileList[0]) : 
+╰     |                                       ^^^^^^^^^^^^^^^^
+
+Error workflows/fastqrepair.nf:51:72: `isFastqFileEmpty` is not defined
+│  51 | astqFileEmpty(fileList[0]) : !isFastqFileEmpty(fileList)
+╰     |                               ^^^^^^^^^^^^^^^^
+
+Error workflows/fastqrepair.nf:52:12: `isFastqFileEmpty` is not defined
+│  52 |         : !isFastqFileEmpty(fileList[0]) && !isFastqFileEmpty(fileList
+╰     |            ^^^^^^^^^^^^^^^^
+
+Error workflows/fastqrepair.nf:52:46: `isFastqFileEmpty` is not defined
+│  52 |         : !isFastqFileEmpty(fileList[0]) && !isFastqFileEmpty(fileList
+╰     |                                              ^^^^^^^^^^^^^^^^
+
+Error workflows/fastqrepair.nf:58:102: `meta` is not defined
+│  58 | es found after GZRT. Skipping the rest of the pipeline for ${meta.id}"
+╰     |                                                              ^^^^
+
+Error workflows/fastqrepair.nf:62:32: `_` is not allowed as an identifier because it is reserved for future use
+│  62 |     ch_samplesheet.map { meta, _ -> meta.id }
+╰     |                                ^
+
+Error workflows/fastqrepair.nf:67:36: `_` is not allowed as an identifier because it is reserved for future use
+│  67 |     ch_tobewiped_fastq.map { meta, _ -> meta.id }
+╰     |                                    ^
+
+Error workflows/fastqrepair.nf:149:9: `methodsDescriptionText` is not defined
+│ 149 |         methodsDescriptionText(ch_multiqc_custom_methods_description))
+╰     |         ^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/fastqrepair.nf:29:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  29 |     ch_final = Channel.empty()      // channel: repaired fastq files
+╰     |                ^^^^^^^
+
+Warn  workflows/fastqrepair.nf:30:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  30 |     ch_versions = Channel.empty()   // channel: versions of the softwa
+╰     |                   ^^^^^^^
+
+Warn  workflows/fastqrepair.nf:33:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  33 |     ch_fastq_ext = Channel.empty()
+╰     |                    ^^^^^^^
+
+Warn  workflows/fastqrepair.nf:47:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  47 |     ch_tobewiped_fastq = Channel.empty()
+╰     |                          ^^^^^^^
+
+Warn  workflows/fastqrepair.nf:76:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  76 |     ch_repaired_fastq = Channel.empty()
+╰     |                         ^^^^^^^
+
+Warn  workflows/fastqrepair.nf:84:21: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  84 |         single_end: it[0].single_end == true
+╰     |                     ^^
+
+Warn  workflows/fastqrepair.nf:85:21: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  85 |         paired_end: it[0].single_end == false }
+╰     |                     ^^
+
+Warn  workflows/fastqrepair.nf:89:36: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  89 |     ch_repaired_fastq_paired_end = Channel.empty()
+╰     |                                    ^^^^^^^
+
+Warn  workflows/fastqrepair.nf:101:50: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 |         ch_repaired_fastq_paired_end_singleton = Channel.empty()
+╰     |                                                  ^^^^^^^
+
+Warn  workflows/fastqrepair.nf:131:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 131 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/fastqrepair.nf:132:68: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 132 | ch_multiqc_files = ch_multiqc_files.mix(FASTQC.out.zip.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/fastqrepair.nf:134:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 134 |     ch_multiqc_config = Channel.fromPath("$projectDir/assets/multiqc_c
+╰     |                         ^^^^^^^
+
+Warn  workflows/fastqrepair.nf:135:56: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 135 |     ch_multiqc_custom_config = params.multiqc_config ? Channel.fromPat
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/fastqrepair.nf:135:119: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 135 | fromPath(params.multiqc_config, checkIfExists: true) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/fastqrepair.nf:137:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 137 |         Channel.fromPath(params.multiqc_logo, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/fastqrepair.nf:138:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 138 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/fastqrepair.nf:142:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 142 |     ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_p
+╰     |                           ^^^^^^^
+
+Warn  workflows/fastqrepair.nf:148:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 148 |     ch_methods_description                = Channel.value(
+╰     |                                             ^^^^^^^
+
+
+Error nextflow.config:265:47: `manifest` is not defined
+│ 265 |         command             = "nextflow run ${manifest.name} -profile 
+╰     |                                               ^^^^^^^^
+
+Error nextflow.config:275:15: `manifest` is not defined
+│ 275 | \033[0;35m  ${manifest.name} ${manifest.version}\033[0m
+╰     |               ^^^^^^^^
+
+Error nextflow.config:275:32: `manifest` is not defined
+│ 275 | \033[0;35m  ${manifest.name} ${manifest.version}\033[0m
+╰     |                                ^^^^^^^^
+
+Error nextflow.config:278:36: `manifest` is not defined
+│ 278 |         afterText           = """${manifest.doi ? "* The pipeline\n" :
+╰     |                                    ^^^^^^^^
+
+Error nextflow.config:278:77: `manifest` is not defined
+│ 278 | i ? "* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "  
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:278:194: `manifest` is not defined
+│ 278 | i.org/', '')}" }.join("\n")}${manifest.doi ? "\n" : ""}
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:283:26: `manifest` is not defined
+│ 283 |     https://github.com/${manifest.name}/blob/master/CITATIONS.md
+╰     |                          ^^^^^^^^
+
+Error nextflow.config:287:22: `validation` is not defined
+│ 287 |         beforeText = validation.help.beforeText
+╰     |                      ^^^^^^^^^^
+
+Error nextflow.config:288:22: `validation` is not defined
+│ 288 |         afterText  = validation.help.afterText
+╰     |                      ^^^^^^^^^^
+
+Warn  nextflow.config:278:135: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 278 | ollect { "  https://doi.org/${it.trim().replace('https://doi.org/', ''
+╰     |                               ^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // Location of nf-tests
+│   3 |     testsDir "./tests"
+│   4 | 
+╰   5 |     // nf-test directory used to create temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 5 files had 26 errors
+ ✅ 25 files had no errors

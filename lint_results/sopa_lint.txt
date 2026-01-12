@@ -1,0 +1,219 @@
+Linting Nextflow code..
+Linting: conf/base.config
+Linting: conf/test_cellpose.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test_baysor.config
+Linting: conf/test.config
+Linting: conf/test_comseg.config
+Linting: conf/predefined/xenium_baysor_prior_small_cells.config
+Linting: conf/predefined/xenium_cellpose.config
+Linting: conf/predefined/merscope_baysor_vizgen.config
+Linting: conf/predefined/cosmx_cellpose_baysor.config
+Linting: conf/predefined/phenocycler_base_20X.config
+Linting: conf/predefined/xenium_baysor.config
+Linting: conf/predefined/phenocycler_base_10X.config
+Linting: conf/predefined/visium_hd_stardist.config
+Linting: conf/predefined/visium_hd_proseg.config
+Linting: conf/predefined/hyperion_base.config
+Linting: conf/predefined/macsima_base.config
+Linting: conf/predefined/cosmx_cellpose.config
+Linting: conf/predefined/xenium_baysor_prior.config
+Linting: conf/predefined/merscope_baysor_cellpose.config
+Linting: conf/predefined/merscope_cellpose.config
+Linting: conf/predefined/xenium_cellpose_baysor.config
+Linting: conf/predefined/cosmx_baysor.config
+Linting: conf/predefined/xenium_proseg.config
+Linting: conf/predefined/visium_hd_stardist_proseg.config
+Linting: conf/predefined/phenocycler_base_40X.config
+Linting: conf/predefined/cosmx_proseg.config
+Linting: conf/predefined/merscope_proseg.config
+Linting: conf/test_cellpose_CK_DAPI.config
+Linting: nextflow.config
+Linting: workflows/sopa.nf
+Linting: subworkflows/local/utils_nfcore_sopa_pipeline/main.nf
+Linting: subworkflows/local/spaceranger.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/resolve_comseg/main.nf
+Linting: modules/local/aggregate/main.nf
+Linting: modules/local/tissue_segmentation/main.nf
+Linting: modules/local/patch_segmentation_proseg/main.nf
+Linting: modules/local/fluo_annotation/main.nf
+Linting: modules/local/tangram_annotation/main.nf
+Linting: modules/local/utils.nf
+Linting: modules/local/make_image_patches/main.nf
+Linting: modules/local/explorer_raw/main.nf
+Linting: modules/local/report/main.nf
+Linting: modules/local/resolve_baysor/main.nf
+Linting: modules/local/patch_segmentation_stardist/main.nf
+Linting: modules/local/explorer/main.nf
+Linting: modules/local/patch_segmentation_cellpose/main.nf
+Linting: modules/local/make_transcript_patches/main.nf
+Linting: modules/local/resolve_stardist/main.nf
+Linting: modules/local/resolve_cellpose/main.nf
+Linting: modules/local/patch_segmentation_baysor/main.nf
+Linting: modules/local/scanpy_preprocess/main.nf
+Linting: modules/local/patch_segmentation_comseg/main.nf
+Linting: modules/local/to_spatialdata/main.nf
+Linting: modules/nf-core/untar/main.nf
+Linting: modules/nf-core/spaceranger/count/main.nf
+Linting: modules/nf-core/spaceranger/count/tests/nextflow.config
+
+
+
+
+Warn  modules/local/utils.nf:23:59: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  23 |         return "[" + value.collect { stringifyValueForCli(it) }.join("
+╰     |                                                           ^^
+
+Warn  modules/local/utils.nf:185:51: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 185 |         return channels.split(/[ ,|]+/).findAll { it }
+╰     |                                                   ^^
+
+
+Error modules/nf-core/spaceranger/count/main.nf:27:9: `probeset` is already declared
+│  27 |     def probeset = probeset ? "--probe-set=\"${probeset}\"" : ""
+╰     |         ^^^^^^^^
+
+Error modules/nf-core/spaceranger/count/main.nf:28:9: `alignment` is already declared
+│  28 |     def alignment = alignment ? "--loupe-alignment=\"${alignment}\"" :
+╰     |         ^^^^^^^^^
+
+Error modules/nf-core/spaceranger/count/main.nf:29:9: `slidefile` is already declared
+│  29 |     def slidefile = slidefile ? "--slidefile=\"${slidefile}\"" : ""
+╰     |         ^^^^^^^^^
+
+Error modules/nf-core/spaceranger/count/main.nf:30:9: `image` is already declared
+│  30 |     def image = image ? "--image=\"${image}\"" : ""
+╰     |         ^^^^^
+
+Error modules/nf-core/spaceranger/count/main.nf:31:9: `cytaimage` is already declared
+│  31 |     def cytaimage = cytaimage ? "--cytaimage=\"${cytaimage}\"" : ""
+╰     |         ^^^^^^^^^
+
+Error modules/nf-core/spaceranger/count/main.nf:32:9: `darkimage` is already declared
+│  32 |     def darkimage = darkimage ? "--darkimage=\"${darkimage}\"" : ""
+╰     |         ^^^^^^^^^
+
+Error modules/nf-core/spaceranger/count/main.nf:33:9: `colorizedimage` is already declared
+│  33 |     def colorizedimage = colorizedimage ? "--colorizedimage=\"${colori
+╰     |         ^^^^^^^^^^^^^^
+
+
+
+Error subworkflows/local/spaceranger.nf:100:28: `get_file_from_meta` is not defined
+│ 100 |     def manual_alignment = get_file_from_meta("manual_alignment")
+╰     |                            ^^^^^^^^^^^^^^^^^^
+
+Error subworkflows/local/spaceranger.nf:101:21: `get_file_from_meta` is not defined
+│ 101 |     def slidefile = get_file_from_meta("slidefile")
+╰     |                     ^^^^^^^^^^^^^^^^^^
+
+Error subworkflows/local/spaceranger.nf:102:17: `get_file_from_meta` is not defined
+│ 102 |     def image = get_file_from_meta("image")
+╰     |                 ^^^^^^^^^^^^^^^^^^
+
+Error subworkflows/local/spaceranger.nf:103:21: `get_file_from_meta` is not defined
+│ 103 |     def cytaimage = get_file_from_meta("cytaimage")
+╰     |                     ^^^^^^^^^^^^^^^^^^
+
+Error subworkflows/local/spaceranger.nf:104:26: `get_file_from_meta` is not defined
+│ 104 |     def colorizedimage = get_file_from_meta("colorizedimage")
+╰     |                          ^^^^^^^^^^^^^^^^^^
+
+Error subworkflows/local/spaceranger.nf:105:21: `get_file_from_meta` is not defined
+│ 105 |     def darkimage = get_file_from_meta("darkimage")
+╰     |                     ^^^^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/spaceranger.nf:15:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/spaceranger.nf:23:18: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  23 |             tar: it[1].name.contains(".tar.gz")
+╰     |                  ^^
+
+Warn  subworkflows/local/spaceranger.nf:24:19: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  24 |             dir: !it[1].name.contains(".tar.gz")
+╰     |                   ^^
+
+Warn  subworkflows/local/spaceranger.nf:37:85: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  37 | input = ch_spaceranger_combined.map { create_channel_spaceranger(it) }
+╰     |                                                                  ^^
+
+Warn  subworkflows/local/spaceranger.nf:43:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  43 |     ch_reference = Channel.empty()
+╰     |                    ^^^^^^^
+
+Warn  subworkflows/local/spaceranger.nf:62:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  62 |     ch_probeset = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/spaceranger.nf:91:9: Variable was declared but not used
+│  91 |     def get_file_from_meta = { key ->
+╰     |         ^^^^^^^^^^^^^^^^^^
+
+
+Warn  subworkflows/local/utils_nfcore_sopa_pipeline/main.nf:31:5: Parameter was not used -- prefix with `_` to suppress warning
+│  31 |     monochrome_logs // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_sopa_pipeline/main.nf:34:5: Parameter was not used -- prefix with `_` to suppress warning
+│  34 |     input //  string: Path to input samplesheet
+╰     |     ^^^^^
+
+Warn  subworkflows/local/utils_nfcore_sopa_pipeline/main.nf:98:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  98 |     Channel
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_sopa_pipeline/main.nf:283:51: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 283 |     assert TRANSCRIPT_BASED_METHODS.count { params[it] } <= 1 : "Only 
+╰     |                                                   ^^
+
+Warn  subworkflows/local/utils_nfcore_sopa_pipeline/main.nf:284:49: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 284 |     assert STAINING_BASED_METHODS.count { params[it] } <= 1 : "Only on
+╰     |                                                 ^^
+
+Warn  subworkflows/local/utils_nfcore_sopa_pipeline/main.nf:286:58: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 286 |         assert NON_VALID_STARDIST_METHODS.every { !params[it] } : "'st
+╰     |                                                          ^^
+
+
+
+
+
+Warn  workflows/sopa.nf:148:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 148 |     def topic_versions = Channel.topic("versions")
+╰     |                          ^^^^^^^
+
+Warn  workflows/sopa.nf:172:17: Variable was declared but not used
+│ 172 |         ).set { ch_collated_versions }
+╰     |                 ^^^^^^^^^^^^^^^^^^^^
+
+
+
+
+
+
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-test tests
+│   3 |     testsDir "."
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 3 files had 14 errors
+ ✅ 64 files had no errors

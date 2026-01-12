@@ -1,0 +1,489 @@
+Linting Nextflow code..
+Linting: conf/ref_databases.config
+Linting: conf/test_data.config
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/igenomes.config
+Linting: nextflow.config
+Linting: workflows/readsimulator/main.nf
+Linting: subworkflows/local/utils_nfcore_readsimulator_pipeline/main.nf
+Linting: subworkflows/local/target_capture_workflow.nf
+Linting: subworkflows/local/amplicon_workflow.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfvalidation_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/unzip/main.nf
+Linting: modules/local/uncompress_fasta/main.nf
+Linting: modules/local/crabs/insilicopcr/main.nf
+Linting: modules/local/crabs/dbimport/main.nf
+Linting: modules/local/wgsim/main.nf
+Linting: modules/local/japsa/capsim/main.nf
+Linting: modules/local/custom/create_samplesheet/main.nf
+Linting: modules/local/custom/merge_samplesheets/main.nf
+Linting: modules/local/custom/merge_fastas/main.nf
+Linting: modules/local/insilicoseq/generate/main.nf
+Linting: modules/nf-core/samtools/index/main.nf
+Linting: modules/nf-core/samtools/index/tests/csi.nextflow.config
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/bowtie2/build/main.nf
+Linting: modules/nf-core/bowtie2/align/main.nf
+Linting: modules/nf-core/ncbigenomedownload/main.nf
+Linting: modules/nf-core/art/illumina/main.nf
+Linting: modules/nf-core/bedtools/getfasta/main.nf
+Error main.nf:34:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  34 | if (!params.fasta) {
+│     | ^^^^^^^^^^^^^^^^^^^^
+│  35 |     params.fasta = getGenomeAttribute('fasta')
+╰  36 | }
+
+Warn  main.nf:35:5: Params should be declared at the top-level (i.e. outside the workflow)
+│  35 |     params.fasta = getGenomeAttribute('fasta')
+╰     |     ^^^^^^
+
+
+
+
+Warn  modules/local/custom/create_samplesheet/main.nf:26:57: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  26 |     samplesheet  = pipeline_map.keySet().collect{ '"' + it + '"'}.join
+╰     |                                                         ^^
+
+Warn  modules/local/custom/create_samplesheet/main.nf:27:57: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  27 |     samplesheet += pipeline_map.values().collect{ '"' + it + '"'}.join
+╰     |                                                         ^^
+
+
+
+Warn  modules/local/custom/merge_samplesheets/main.nf:20:9: Variable was declared but not used
+│  20 |     def args    = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Error modules/local/insilicoseq/generate/main.nf:26:9: `input_format` is already declared
+│  26 |     def input_format  = input_format == "genomes" ? "--genomes": "--dr
+╰     |         ^^^^^^^^^^^^
+
+
+
+Error modules/local/uncompress_fasta/main.nf:2:10: `file` is not defined
+│   2 |     tag "$file"
+╰     |          ^^^^^
+
+
+
+
+
+
+
+
+Warn  modules/nf-core/fastqc/main.nf:27:48: Parameter was not used -- prefix with `_` to suppress warning
+│  27 |     def renamed_files = old_new_pairs.collect{ old_name, new_name -> n
+╰     |                                                ^^^^^^^^
+
+
+Error modules/nf-core/multiqc/main.nf:28:31: Unexpected input: '/'
+│  28 |     def logo = multiqc_logo ? /--cl-config 'custom_logo: "${multiqc_lo
+╰     |                               ^
+
+
+Warn  modules/nf-core/ncbigenomedownload/main.nf:37:9: Variable was declared but not used
+│  37 |     def prefix         = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+
+Warn  subworkflows/local/amplicon_workflow.nf:16:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     ch_ref_fasta = Channel.empty()
+╰     |                    ^^^^^^^
+
+Warn  subworkflows/local/amplicon_workflow.nf:17:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/amplicon_workflow.nf:47:13: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  47 |             it = [ it[2], it[1] ]
+╰     |             ^^
+
+Warn  subworkflows/local/amplicon_workflow.nf:47:20: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  47 |             it = [ it[2], it[1] ]
+╰     |                    ^^
+
+Warn  subworkflows/local/amplicon_workflow.nf:47:27: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  47 |             it = [ it[2], it[1] ]
+╰     |                           ^^
+
+
+Warn  subworkflows/local/target_capture_workflow.nf:20:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  20 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/target_capture_workflow.nf:26:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  26 |         ch_zip_file = Channel.fromPath(params.probe_ref_db[params.prob
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/target_capture_workflow.nf:93:43: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  93 |     ch_capsim_input = ch_meta_fasta.map { it = it[1] }
+╰     |                                           ^^
+
+Warn  subworkflows/local/target_capture_workflow.nf:93:48: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  93 |     ch_capsim_input = ch_meta_fasta.map { it = it[1] }
+╰     |                                                ^^
+
+Warn  subworkflows/local/target_capture_workflow.nf:94:52: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  94 |         .combine ( BOWTIE2_ALIGN.out.aligned.map { it = it[1] } )
+╰     |                                                    ^^
+
+Warn  subworkflows/local/target_capture_workflow.nf:94:57: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  94 |         .combine ( BOWTIE2_ALIGN.out.aligned.map { it = it[1] } )
+╰     |                                                         ^^
+
+Warn  subworkflows/local/target_capture_workflow.nf:95:49: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  95 |         .combine ( SAMTOOLS_INDEX.out.bai.map { it = it[1] } )
+╰     |                                                 ^^
+
+Warn  subworkflows/local/target_capture_workflow.nf:95:54: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  95 |         .combine ( SAMTOOLS_INDEX.out.bai.map { it = it[1] } )
+╰     |                                                      ^^
+
+Warn  subworkflows/local/target_capture_workflow.nf:104:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 104 |     ch_reads = Channel.empty()
+╰     |                ^^^^^^^
+
+
+Error subworkflows/local/utils_nfcore_readsimulator_pipeline/main.nf:14:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/readsimulator/subworkflows/nf-core/utils_nextflow_pipeline/main.nf'
+│  14 | include { UTILS_NEXTFLOW_PIPELINE   } from '../../nf-core/utils_nextfl
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error subworkflows/local/utils_nfcore_readsimulator_pipeline/main.nf:47:5: `UTILS_NEXTFLOW_PIPELINE` is not defined
+│  47 |     UTILS_NEXTFLOW_PIPELINE (
+╰     |     ^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_readsimulator_pipeline/main.nf:38:5: Parameter was not used -- prefix with `_` to suppress warning
+│  38 |     input             //  string: Path to input samplesheet
+╰     |     ^^^^^
+
+Warn  subworkflows/local/utils_nfcore_readsimulator_pipeline/main.nf:42:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  42 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_readsimulator_pipeline/main.nf:83:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  83 |     Channel
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_readsimulator_pipeline/main.nf:87:38: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  87 |             validateInputSamplesheet(it)
+╰     |                                      ^^
+
+
+Error subworkflows/nf-core/utils_nextflow_pipeline/main.nf:111:14: Unexpected input: 'i'
+│ 111 |     for (int i = 0; i < n - 1; i++) {
+╰     |              ^
+
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:5:1: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
+│   5 | import org.yaml.snakeyaml.Yaml
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:6:1: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
+│   6 | import nextflow.extension.FilesEx
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:37:5: `valid_config` was assigned but not declared
+│  37 |     valid_config = true
+╰     |     ^^^^^^^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:45:9: `valid_config` was assigned but not declared
+│  45 |         valid_config = false
+╰     |         ^^^^^^^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:47:12: `valid_config` is not defined
+│  47 |     return valid_config
+╰     |            ^^^^^^^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:99:17: `Yaml` is not defined
+│  99 |     Yaml yaml = new Yaml()
+╰     |                 ^^^^^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:100:5: `versions` was assigned but not declared
+│ 100 |     versions = yaml.load(yaml_file).collectEntries { k, v -> [ k.token
+╰     |     ^^^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:27: `versions` is not defined
+│ 101 |     return yaml.dumpAsMap(versions).trim()
+╰     |                           ^^^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:131:5: `for` loops are no longer supported
+│ 131 |     for (group in summary_params.keySet()) {
+╰     |     ^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:131:10: `group` is not defined
+│ 131 |     for (group in summary_params.keySet()) {
+╰     |          ^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:132:47: `group` is not defined
+│ 132 |         def group_params = summary_params.get(group)  // This gets the
+╰     |                                               ^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:134:68: `group` is not defined
+│ 134 | p style=\"font-size:110%\"><b>$group</b></p>\n"
+╰     |                               ^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:136:13: `for` loops are no longer supported
+│ 136 |             for (param in group_params.keySet()) {
+╰     |             ^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:136:18: `param` is not defined
+│ 136 |             for (param in group_params.keySet()) {
+╰     |                  ^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:137:49: `param` is not defined
+│ 137 |                 summary_section += "        <dt>$param</dt><dd><samp>$
+╰     |                                                 ^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:137:89: `param` is not defined
+│ 137 | ><dd><samp>${group_params.get(param) ?: '<span style=\"color:#999999;\
+╰     |                               ^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:284:5: `for` loops are no longer supported
+│ 284 |     for (group in summary_params.keySet()) {
+╰     |     ^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:284:10: `group` is not defined
+│ 284 |     for (group in summary_params.keySet()) {
+╰     |          ^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:285:34: `group` is not defined
+│ 285 |         summary << summary_params[group]
+╰     |                                  ^^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:344:42: `GroovyException` is not defined
+│ 344 |             if (plaintext_email) { throw GroovyException('Send plainte
+╰     |                                          ^^^^^^^^^^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:361:5: `FilesEx` is not defined
+│ 361 |     FilesEx.copyTo(output_hf.toPath(), "${outdir}/pipeline_info/pipeli
+╰     |     ^^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:367:5: `FilesEx` is not defined
+│ 367 |     FilesEx.copyTo(output_tf.toPath(), "${outdir}/pipeline_info/pipeli
+╰     |     ^^^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:392:5: `for` loops are no longer supported
+│ 392 |     for (group in summary_params.keySet()) {
+╰     |     ^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:392:10: `group` is not defined
+│ 392 |     for (group in summary_params.keySet()) {
+╰     |          ^^^^^
+
+Error subworkflows/nf-core/utils_nfcore_pipeline/main.nf:393:34: `group` is not defined
+│ 393 |         summary << summary_params[group]
+╰     |                                  ^^^^^^^
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:121:48: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 121 |                 .map { processVersionsFromYAML(it) }
+╰     |                                                ^^
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:123:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 123 |                 .mix(Channel.of(workflowVersionToYAML()))
+╰     |                      ^^^^^^^
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:264:14: Parameter was not used -- prefix with `_` to suppress warning
+│ 264 |     } catch (all) {
+╰     |              ^^^
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:350:18: Parameter was not used -- prefix with `_` to suppress warning
+│ 350 |         } catch (all) {
+╰     |                  ^^^
+
+
+Error workflows/readsimulator/main.nf:8:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/readsimulator/modules/nf-core/multiqc/main.nf'
+│   8 | include { MULTIQC                     } from '../../modules/nf-core/mu
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/readsimulator/main.nf:197:5: `MULTIQC` is not defined
+│ 197 |     MULTIQC (
+╰     |     ^^^^^^^
+
+Error workflows/readsimulator/main.nf:207:23: `MULTIQC` is not defined
+│ 207 |     multiqc_report  = MULTIQC.out.report.toList() // channel: /path/to
+╰     |                       ^^^^^^^
+
+Warn  workflows/readsimulator/main.nf:35:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  35 |     ch_versions        = Channel.empty()
+╰     |                          ^^^^^^^
+
+Warn  workflows/readsimulator/main.nf:36:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  36 |     ch_multiqc_files   = Channel.empty()
+╰     |                          ^^^^^^^
+
+Warn  workflows/readsimulator/main.nf:37:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  37 |     ch_simulated_reads = Channel.empty()
+╰     |                          ^^^^^^^
+
+Warn  workflows/readsimulator/main.nf:38:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  38 |     ch_taxids          = Channel.empty()
+╰     |                          ^^^^^^^
+
+Warn  workflows/readsimulator/main.nf:39:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  39 |     ch_accessions      = Channel.empty()
+╰     |                          ^^^^^^^
+
+Warn  workflows/readsimulator/main.nf:40:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  40 |     ch_fasta           = Channel.empty()
+╰     |                          ^^^^^^^
+
+Warn  workflows/readsimulator/main.nf:43:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  43 |         ch_fasta = Channel.fromPath(params.fasta)
+╰     |                    ^^^^^^^
+
+Warn  workflows/readsimulator/main.nf:46:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  46 |             ch_accessions = Channel.fromPath(params.ncbidownload_acces
+╰     |                             ^^^^^^^
+
+Warn  workflows/readsimulator/main.nf:48:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  48 |             ch_taxids = Channel.fromPath(params.ncbidownload_taxids)
+╰     |                         ^^^^^^^
+
+Warn  workflows/readsimulator/main.nf:70:17: Parameter was not used -- prefix with `_` to suppress warning
+│  70 |                 meta, fasta ->
+╰     |                 ^^^^
+
+Warn  workflows/readsimulator/main.nf:76:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  76 |         ch_probes = Channel.fromPath(params.probe_file)
+╰     |                     ^^^^^^^
+
+Warn  workflows/readsimulator/main.nf:78:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  78 |         ch_probes = Channel.empty()
+╰     |                     ^^^^^^^
+
+Warn  workflows/readsimulator/main.nf:156:23: Parameter was not used -- prefix with `_` to suppress warning
+│ 156 |             datatype, old_meta, samplesheet ->
+╰     |                       ^^^^^^^^
+
+Warn  workflows/readsimulator/main.nf:173:68: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 173 | ch_multiqc_files = ch_multiqc_files.mix(FASTQC.out.zip.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/readsimulator/main.nf:186:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 186 |     ch_multiqc_config                     = Channel.fromPath("$project
+╰     |                                             ^^^^^^^
+
+Warn  workflows/readsimulator/main.nf:187:69: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 187 |     = params.multiqc_config ? Channel.fromPath(params.multiqc_config, 
+╰     |                               ^^^^^^^
+
+Warn  workflows/readsimulator/main.nf:187:132: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 187 | fromPath(params.multiqc_config, checkIfExists: true) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/readsimulator/main.nf:188:67: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 188 |       = params.multiqc_logo ? Channel.fromPath(params.multiqc_logo, ch
+╰     |                               ^^^^^^^
+
+Warn  workflows/readsimulator/main.nf:188:128: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 188 | l.fromPath(params.multiqc_logo, checkIfExists: true) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/readsimulator/main.nf:190:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 190 |     ch_workflow_summary                   = Channel.value(paramsSummar
+╰     |                                             ^^^^^^^
+
+Warn  workflows/readsimulator/main.nf:192:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 192 |     ch_methods_description                = Channel.value(methodsDescr
+╰     |                                             ^^^^^^^
+
+
+Error conf/base.config:13:16: `check_max` is not defined
+│  13 |     cpus   = { check_max( 1    * task.attempt, 'cpus'   ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:14:16: `check_max` is not defined
+│  14 |     memory = { check_max( 6.GB * task.attempt, 'memory' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:15:16: `check_max` is not defined
+│  15 |     time   = { check_max( 4.h  * task.attempt, 'time'   ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:28:20: `check_max` is not defined
+│  28 |         cpus   = { check_max( 1                  , 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:29:20: `check_max` is not defined
+│  29 |         memory = { check_max( 6.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:30:20: `check_max` is not defined
+│  30 |         time   = { check_max( 4.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:33:20: `check_max` is not defined
+│  33 |         cpus   = { check_max( 2     * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:34:20: `check_max` is not defined
+│  34 |         memory = { check_max( 12.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:35:20: `check_max` is not defined
+│  35 |         time   = { check_max( 4.h   * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:38:20: `check_max` is not defined
+│  38 |         cpus   = { check_max( 6     * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:39:20: `check_max` is not defined
+│  39 |         memory = { check_max( 36.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:40:20: `check_max` is not defined
+│  40 |         time   = { check_max( 8.h   * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:43:20: `check_max` is not defined
+│  43 |         cpus   = { check_max( 12    * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:44:20: `check_max` is not defined
+│  44 |         memory = { check_max( 72.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:45:20: `check_max` is not defined
+│  45 |         time   = { check_max( 16.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:48:20: `check_max` is not defined
+│  48 |         time   = { check_max( 20.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:51:20: `check_max` is not defined
+│  51 |         memory = { check_max( 200.GB * task.attempt, 'memory' ) }
+╰     |                    ^^^^^^^^^
+
+
+Error nextflow.config:123:5: Unexpected input: 'includeConfig'
+│ 123 |     includeConfig "${params.custom_config_base}/nfcore_custom.config"
+╰     |     ^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // Location of nf-tests
+│   3 |     testsDir "."
+│   4 | 
+╰   5 |     // nf-test directory used to create temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 11 files had 54 errors
+ ✅ 28 files had no errors

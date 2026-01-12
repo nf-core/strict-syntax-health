@@ -1,0 +1,380 @@
+Linting Nextflow code..
+Linting: conf/test_AA.config
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/igenomes.config
+Linting: conf/test_AA_local.config
+Linting: nextflow.config
+Linting: workflows/circdna.nf
+Linting: subworkflows/local/input_check.nf
+Linting: subworkflows/nf-core/bam_stats_samtools/main.nf
+Linting: subworkflows/nf-core/bam_markduplicates_picard/main.nf
+Linting: main.nf
+Linting: modules/local/circlefinder.nf
+Linting: modules/local/samblaster.nf
+Linting: modules/local/samtools/flagstat/main.nf
+Linting: modules/local/samtools/idxstats/main.nf
+Linting: modules/local/getcircularreads.nf
+Linting: modules/local/multiqc/main.nf
+Linting: modules/local/ampliconsuite/ampliconsuite.nf
+Linting: modules/local/bwa/mem/main.nf
+Linting: modules/local/cnvkit/segment.nf
+Linting: modules/local/cnvkit/batch/main.nf
+Linting: modules/local/circlemap/repeats.nf
+Linting: modules/local/circlemap/realign.nf
+Linting: modules/local/circlemap/readextractor.nf
+Linting: modules/local/seqtk/seq.nf
+Linting: modules/local/unicycler/main.nf
+Linting: modules/local/bedtools/sortedbam2bed.nf
+Linting: modules/local/bedtools/splitbam2bed.nf
+Linting: modules/local/samplesheet_check.nf
+Linting: modules/local/circexplorer2/parse.nf
+Linting: modules/nf-core/samtools/flagstat/main.nf
+Linting: modules/nf-core/samtools/idxstats/main.nf
+Linting: modules/nf-core/samtools/index/main.nf
+Linting: modules/nf-core/samtools/index/tests/csi.nextflow.config
+Linting: modules/nf-core/samtools/sort/main.nf
+Linting: modules/nf-core/samtools/sort/tests/nextflow.config
+Linting: modules/nf-core/samtools/stats/main.nf
+Linting: modules/nf-core/samtools/view/main.nf
+Linting: modules/nf-core/samtools/view/tests/bam_index.config
+Linting: modules/nf-core/samtools/view/tests/bam.config
+Linting: modules/nf-core/samtools/faidx/main.nf
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/minimap2/align/main.nf
+Linting: modules/nf-core/cat/fastq/main.nf
+Linting: modules/nf-core/bwa/index/main.nf
+Linting: modules/nf-core/custom/dumpsoftwareversions/main.nf
+Linting: modules/nf-core/trimgalore/main.nf
+Linting: modules/nf-core/picard/markduplicates/main.nf
+Linting: modules/nf-core/picard/markduplicates/tests/nextflow.config
+Error main.nf:22:16: `WorkflowMain` is not defined
+│  22 | params.fasta = WorkflowMain.getGenomeAttribute(params, 'fasta')
+╰     |                ^^^^^^^^^^^^
+
+Error main.nf:33:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  31 | 
+│  32 | // Print help message if needed
+│  33 | if (params.help) {
+│     | ^^^^^^^^^^^^^^^^^^
+│  34 |     def logo = NfcoreTemplate.logo(workflow, params.monochrome_logs)
+╰  35 |     def citation = '\n' + WorkflowMain.citation(workflow) + '\n'
+
+Error main.nf:34:16: `NfcoreTemplate` is not defined
+│  34 |     def logo = NfcoreTemplate.logo(workflow, params.monochrome_logs)
+╰     |                ^^^^^^^^^^^^^^
+
+Error main.nf:35:27: `WorkflowMain` is not defined
+│  35 |     def citation = '\n' + WorkflowMain.citation(workflow) + '\n'
+╰     |                           ^^^^^^^^^^^^
+
+Error main.nf:37:54: `NfcoreTemplate` is not defined
+│  37 |     log.info logo + paramsHelp(command) + citation + NfcoreTemplate.da
+╰     |                                                      ^^^^^^^^^^^^^^
+
+Error main.nf:42:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  42 | if (params.validate_params) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  43 |     validateParameters()
+╰  44 | }
+
+Error main.nf:46:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  46 | WorkflowMain.initialise(workflow, params, log, args)
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:46:1: `WorkflowMain` is not defined
+│  46 | WorkflowMain.initialise(workflow, params, log, args)
+╰     | ^^^^^^^^^^^^
+
+Error main.nf:54:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/circdna/workflows/circdna.nf'
+│  54 | include { CIRCDNA } from './workflows/circdna'
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:60:5: `CIRCDNA` is not defined
+│  60 |     CIRCDNA ()
+╰     |     ^^^^^^^
+
+
+Warn  modules/local/ampliconsuite/ampliconsuite.nf:34:9: Variable was declared but not used
+│  34 |     def cngain = params.aa_cngain
+╰     |         ^^^^^^
+
+Warn  modules/local/ampliconsuite/ampliconsuite.nf:65:9: Variable was declared but not used
+│  65 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/ampliconsuite/ampliconsuite.nf:67:9: Variable was declared but not used
+│  67 |     def cngain = params.aa_cngain
+╰     |         ^^^^^^
+
+Warn  modules/local/ampliconsuite/ampliconsuite.nf:68:9: Variable was declared but not used
+│  68 |     def ref = params.reference_build
+╰     |         ^^^
+
+
+Warn  modules/local/bwa/mem/main.nf:45:9: Variable was declared but not used
+│  45 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/bwa/mem/main.nf:46:9: Variable was declared but not used
+│  46 |     def args2 = task.ext.args2 ?: ''
+╰     |         ^^^^^
+
+Warn  modules/local/bwa/mem/main.nf:48:9: Variable was declared but not used
+│  48 |     def samtools_command = sort_bam ? 'sort' : 'view'
+╰     |         ^^^^^^^^^^^^^^^^
+
+
+Error modules/local/circexplorer2/parse.nf:6:5: Invalid process directive
+│   6 |     if (workflow.containerEngine == 'singularity' && !params.singulari
+│     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│   7 |         container "https://depot.galaxyproject.org/singularity/circexp
+│   8 |     } else {
+│   9 |         container "quay.io/biocontainers/circexplorer2:2.3.8--pyh864c0
+╰  10 |     }
+
+
+Warn  modules/local/circlefinder.nf:16:9: Variable was declared but not used
+│  16 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/circlemap/readextractor.nf:18:9: Variable was declared but not used
+│  18 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/cnvkit/batch/main.nf:47:9: Variable was declared but not used
+│  47 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/cnvkit/batch/main.nf:49:9: Variable was declared but not used
+│  49 |     def fasta_args = cnn ? "" : "--fasta $fasta"
+╰     |         ^^^^^^^^^^
+
+Warn  modules/local/cnvkit/batch/main.nf:50:9: Variable was declared but not used
+│  50 |     def reference_args = cnn ? "--reference $cnn" : ""
+╰     |         ^^^^^^^^^^^^^^
+
+
+Warn  modules/local/cnvkit/segment.nf:18:9: Variable was declared but not used
+│  18 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/cnvkit/segment.nf:35:9: Variable was declared but not used
+│  35 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/getcircularreads.nf:15:9: Variable was declared but not used
+│  15 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+Warn  modules/local/samtools/flagstat/main.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/samtools/idxstats/main.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+Error modules/nf-core/bwa/index/main.nf:14:27: `bwa` is not defined
+│  14 |     tuple val(meta), path(bwa) , emit: index
+╰     |                           ^^^
+
+
+Warn  modules/nf-core/cat/fastq/main.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/cat/fastq/main.nf:23:59: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  23 |     def readList = reads instanceof List ? reads.collect{ it.toString(
+╰     |                                                           ^^
+
+Warn  modules/nf-core/cat/fastq/main.nf:54:59: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  54 |     def readList = reads instanceof List ? reads.collect{ it.toString(
+╰     |                                                           ^^
+
+
+Warn  modules/nf-core/custom/dumpsoftwareversions/main.nf:22:9: Variable was declared but not used
+│  22 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/fastqc/main.nf:27:48: Parameter was not used -- prefix with `_` to suppress warning
+│  27 |     def renamed_files = old_new_pairs.collect{ old_name, new_name -> n
+╰     |                                                ^^^^^^^^
+
+
+
+
+
+Warn  modules/nf-core/samtools/flagstat/main.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/samtools/idxstats/main.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+Warn  modules/nf-core/samtools/stats/main.nf:22:9: Variable was declared but not used
+│  22 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Error modules/nf-core/samtools/view/main.nf:64:9: `index` is already declared
+│  64 |     def index = args.contains("--write-index") ? "touch ${prefix}.csi"
+╰     |         ^^^^^
+
+
+Warn  modules/nf-core/trimgalore/main.nf:41:31: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  41 |         args_list.removeAll { it.toLowerCase().contains('_r2 ') }
+╰     |                               ^^
+
+
+Warn  subworkflows/local/input_check.nf:16:42: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  16 |             .map { create_fastq_channels(it) }
+╰     |                                          ^^
+
+Warn  subworkflows/local/input_check.nf:22:40: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  22 |             .map { create_bam_channels(it) }
+╰     |                                        ^^
+
+
+Warn  subworkflows/nf-core/bam_markduplicates_picard/main.nf:18:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  18 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/nf-core/bam_stats_samtools/main.nf:15:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Error workflows/circdna.nf:329:21: Unexpected input: 'map'
+│ 329 |                     map { meta, bam, bai -> [meta, bam, bai] },
+╰     |                     ^
+
+
+Error conf/base.config:13:16: `check_max` is not defined
+│  13 |     cpus   = { check_max( 1    * task.attempt, 'cpus'   ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:14:16: `check_max` is not defined
+│  14 |     memory = { check_max( 6.GB * task.attempt, 'memory' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:15:16: `check_max` is not defined
+│  15 |     time   = { check_max( 4.h  * task.attempt, 'time'   ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:28:20: `check_max` is not defined
+│  28 |         cpus   = { check_max( 1                  , 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:29:20: `check_max` is not defined
+│  29 |         memory = { check_max( 6.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:30:20: `check_max` is not defined
+│  30 |         time   = { check_max( 4.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:33:20: `check_max` is not defined
+│  33 |         cpus   = { check_max( 2     * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:34:20: `check_max` is not defined
+│  34 |         memory = { check_max( 12.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:35:20: `check_max` is not defined
+│  35 |         time   = { check_max( 4.h   * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:38:20: `check_max` is not defined
+│  38 |         cpus   = { check_max( 6     * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:39:20: `check_max` is not defined
+│  39 |         memory = { check_max( 36.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:40:20: `check_max` is not defined
+│  40 |         time   = { check_max( 8.h   * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:43:20: `check_max` is not defined
+│  43 |         cpus   = { check_max( 12    * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:44:20: `check_max` is not defined
+│  44 |         memory = { check_max( 72.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:45:20: `check_max` is not defined
+│  45 |         time   = { check_max( 16.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:48:20: `check_max` is not defined
+│  48 |         time   = { check_max( 20.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:52:20: `check_max` is not defined
+│  52 |         time   = { check_max( max_time, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:56:20: `check_max` is not defined
+│  56 |         memory = { check_max( 200.GB * task.attempt, 'memory' ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:59:20: `check_max` is not defined
+│  59 |         cpus   = { check_max( params.max_cpus, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:60:20: `check_max` is not defined
+│  60 |         memory = { check_max( params.max_memory, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:61:20: `check_max` is not defined
+│  61 |         time   = { check_max( max_time, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+
+Error conf/modules.config:73:1: If statements cannot be mixed with config statements
+│  71 | // Quality Control options
+│  72 | //
+│  73 | if(!params.skip_qc) {
+│     | ^^^^^^^^^^^^^^^^^^^^^
+│  74 |     process {
+╰  75 |         withName: 'FASTQC' {
+
+Error conf/modules.config:515:1: If statements cannot be mixed with config statements
+│ 530 |                 pattern: '*_versions.yml'
+│ 531 |             ]
+│ 532 |         }
+│ 533 |     }
+╰ 534 | }
+
+
+Error nextflow.config:109:5: Unexpected input: 'includeConfig'
+│ 109 |     includeConfig "${params.custom_config_base}/nfcore_custom.config"
+╰     |     ^
+
+
+Nextflow linting complete!
+ ❌ 8 files had 38 errors
+ ✅ 43 files had no errors

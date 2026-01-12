@@ -1,0 +1,662 @@
+Linting Nextflow code..
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/igenomes.config
+Linting: conf/public_aws_ecr.config
+Linting: nextflow.config
+Linting: workflows/hic.nf
+Linting: subworkflows/local/tads.nf
+Linting: subworkflows/local/compartments.nf
+Linting: subworkflows/local/prepare_genome.nf
+Linting: subworkflows/local/hicpro.nf
+Linting: subworkflows/local/input_check.nf
+Linting: subworkflows/local/cooler.nf
+Linting: subworkflows/local/hicpro_mapping.nf
+Linting: main.nf
+Linting: modules/local/hicpro/trim_reads.nf
+Linting: modules/local/hicpro/build_contact_maps.nf
+Linting: modules/local/hicpro/dnase_mapping_stats.nf
+Linting: modules/local/hicpro/merge_stats.nf
+Linting: modules/local/hicpro/get_valid_interaction_dnase.nf
+Linting: modules/local/hicpro/combine_mates.nf
+Linting: modules/local/hicpro/run_ice.nf
+Linting: modules/local/hicpro/bowtie2_merge.nf
+Linting: modules/local/hicpro/hicpro2pairs.nf
+Linting: modules/local/hicpro/merge_valid_interaction.nf
+Linting: modules/local/hicpro/get_valid_interaction.nf
+Linting: modules/local/hicpro/get_restriction_fragments.nf
+Linting: modules/local/split_cooler_dump.nf
+Linting: modules/local/hicexplorer/hicFindTADs.nf
+Linting: modules/local/hicexplorer/hicPlotDistVsCounts.nf
+Linting: modules/local/multiqc.nf
+Linting: modules/local/cooltools/insulation.nf
+Linting: modules/local/cooltools/eigscis.nf
+Linting: modules/local/samplesheet_check.nf
+Linting: modules/nf-core/cooler/balance/main.nf
+Linting: modules/nf-core/cooler/dump/main.nf
+Linting: modules/nf-core/cooler/makebins/main.nf
+Linting: modules/nf-core/cooler/cload/main.nf
+Linting: modules/nf-core/cooler/zoomify/main.nf
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/custom/dumpsoftwareversions/main.nf
+Linting: modules/nf-core/custom/getchromsizes/main.nf
+Linting: modules/nf-core/bowtie2/build/main.nf
+Linting: modules/nf-core/bowtie2/align/main.nf
+Error main.nf:20:16: `WorkflowMain` is not defined
+│  20 | params.fasta = WorkflowMain.getGenomeAttribute(params, 'fasta')
+╰     |                ^^^^^^^^^^^^
+
+Error main.nf:21:21: `WorkflowMain` is not defined
+│  21 | params.bwt2_index = WorkflowMain.getGenomeAttribute(params, 'bowtie2')
+╰     |                     ^^^^^^^^^^^^
+
+Error main.nf:29:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  29 | WorkflowMain.initialise(workflow, params, log)
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:29:1: `WorkflowMain` is not defined
+│  29 | WorkflowMain.initialise(workflow, params, log)
+╰     | ^^^^^^^^^^^^
+
+
+Warn  modules/local/hicexplorer/hicPlotDistVsCounts.nf:22:9: Variable was declared but not used
+│  22 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Error modules/local/hicpro/dnase_mapping_stats.nf:2:10: `sample` is not defined
+│   2 |     tag "$sample = $bam"
+╰     |          ^^^^^^^
+
+
+
+
+
+Warn  modules/local/split_cooler_dump.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+
+
+
+
+Warn  modules/nf-core/custom/dumpsoftwareversions/main.nf:22:9: Variable was declared but not used
+│  22 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/custom/getchromsizes/main.nf:23:9: Variable was declared but not used
+│  23 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/fastqc/main.nf:27:48: Parameter was not used -- prefix with `_` to suppress warning
+│  27 |     def renamed_files = old_new_pairs.collect{ old_name, new_name -> n
+╰     |                                                ^^^^^^^^
+
+
+Warn  subworkflows/local/compartments.nf:11:17: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  11 |   ch_versions = Channel.empty()
+╰     |                 ^^^^^^^
+
+
+Warn  subworkflows/local/cooler.nf:31:17: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  31 |   ch_versions = Channel.empty()
+╰     |                 ^^^^^^^
+
+Warn  subworkflows/local/cooler.nf:57:18: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  57 |     ch_cool.map{[it[0], it[1], ""]}
+╰     |                  ^^
+
+Warn  subworkflows/local/cooler.nf:57:25: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  57 |     ch_cool.map{[it[0], it[1], ""]}
+╰     |                         ^^
+
+Warn  subworkflows/local/cooler.nf:65:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  65 |     ch_res_zoomify = Channel.from(params.res_zoomify).splitCsv().flatt
+╰     |                      ^^^^^^^
+
+Warn  subworkflows/local/cooler.nf:70:14: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  70 |     .filter{ it[2] == it[3] }
+╰     |              ^^
+
+Warn  subworkflows/local/cooler.nf:70:23: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  70 |     .filter{ it[2] == it[3] }
+╰     |                       ^^
+
+Warn  subworkflows/local/cooler.nf:84:34: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  84 |     COOLER_BALANCE.out.cool.map{[it[0], it[1], ""]}
+╰     |                                  ^^
+
+Warn  subworkflows/local/cooler.nf:84:41: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  84 |     COOLER_BALANCE.out.cool.map{[it[0], it[1], ""]}
+╰     |                                         ^^
+
+
+Error subworkflows/local/hicpro.nf:18:3: `meta` was assigned but not declared
+│  18 |   meta = row[0].clone()
+╰     |   ^^^^
+
+Error subworkflows/local/hicpro.nf:19:3: `meta` is not defined
+│  19 |   meta.remove('chunk')
+╰     |   ^^^^
+
+Error subworkflows/local/hicpro.nf:20:11: `meta` is not defined
+│  20 |   return [meta, row[1]]
+╰     |           ^^^^
+
+Warn  subworkflows/local/hicpro.nf:34:17: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  34 |   ch_versions = Channel.empty()
+╰     |                 ^^^^^^^
+
+Warn  subworkflows/local/hicpro.nf:122:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 122 |     ch_hicpro_raw_maps = Channel.empty()
+╰     |                          ^^^^^^^
+
+Warn  subworkflows/local/hicpro.nf:123:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 123 |     ch_hicpro_iced_maps = Channel.empty()
+╰     |                           ^^^^^^^
+
+
+Warn  subworkflows/local/hicpro_mapping.nf:42:17: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  42 |   ch_versions = Channel.empty()
+╰     |                 ^^^^^^^
+
+Warn  subworkflows/local/hicpro_mapping.nf:88:27: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  88 |       .map { singleToPair(it) }
+╰     |                           ^^
+
+Warn  subworkflows/local/hicpro_mapping.nf:100:27: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 100 |       .map { singleToPair(it) }
+╰     |                           ^^
+
+
+Error subworkflows/local/input_check.nf:67:5: `meta` was assigned but not declared
+│  67 |     meta = row[0].clone()
+╰     |     ^^^^
+
+Error subworkflows/local/input_check.nf:68:5: `meta` is not defined
+│  68 |     meta.chunk = i
+╰     |     ^^^^
+
+Error subworkflows/local/input_check.nf:69:13: `meta` is not defined
+│  69 |     map += [meta, file]
+╰     |             ^^^^
+
+Warn  subworkflows/local/input_check.nf:17:31: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  17 | 	.map { create_fastq_channels(it) }
+╰     |                               ^^
+
+Warn  subworkflows/local/input_check.nf:34:38: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  34 |         .map { create_fastq_channels(it) }
+╰     |                                      ^^
+
+
+Warn  subworkflows/local/prepare_genome.nf:16:17: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |   ch_versions = Channel.empty()
+╰     |                 ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome.nf:27:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  27 |     Channel.fromPath( params.bwt2_index , checkIfExists: true)
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome.nf:42:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  42 |     Channel.fromPath( params.chromosome_size , checkIfExists: true)
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome.nf:57:6: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  57 |      Channel.fromPath( params.restriction_fragments, checkIfExists: tr
+╰     |      ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome.nf:61:18: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  61 |     ch_resfrag = Channel.empty()
+╰     |                  ^^^^^^^
+
+
+Warn  subworkflows/local/tads.nf:10:17: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  10 |   ch_versions = Channel.empty()
+╰     |                 ^^^^^^^
+
+Warn  subworkflows/local/tads.nf:11:13: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  11 |   ch_tads = Channel.empty()
+╰     |             ^^^^^^^
+
+
+Error workflows/hic.nf:7:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│   7 | def summary_params = NfcoreSchema.paramsSummaryMap(workflow, params)
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/hic.nf:7:22: `NfcoreSchema` is not defined
+│   7 | def summary_params = NfcoreSchema.paramsSummaryMap(workflow, params)
+╰     |                      ^^^^^^^^^^^^
+
+Error workflows/hic.nf:10:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  10 | WorkflowHic.initialise(params, log)
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/hic.nf:10:1: `WorkflowHic` is not defined
+│  10 | WorkflowHic.initialise(params, log)
+╰     | ^^^^^^^^^^^
+
+Error workflows/hic.nf:13:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  13 | def checkPathParamList = [ params.input ]
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/hic.nf:14:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  14 | checkPathParamList = [
+│     | ^^^^^^^^^^^^^^^^^^^^^^
+│  15 |     params.input, params.multiqc_config,
+│  16 |     params.fasta, params.bwt2_index
+╰  17 | ]
+
+Error workflows/hic.nf:19:1: `for` loops are no longer supported
+│  19 | for (param in checkPathParamList) { if (param) { file(param, checkIfEx
+╰     | ^^^
+
+Error workflows/hic.nf:19:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  19 | for (param in checkPathParamList) { if (param) { file(param, checkIfEx
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/hic.nf:19:6: `param` is not defined
+│  19 | for (param in checkPathParamList) { if (param) { file(param, checkIfEx
+╰     |      ^^^^^
+
+Error workflows/hic.nf:19:40: `param` is not defined
+│  19 | for (param in checkPathParamList) { if (param) { file(param, checkIfEx
+╰     |                                        ^^^^^^^
+
+Error workflows/hic.nf:19:55: `param` is not defined
+│  19 | for (param in checkPathParamList) { if (param) { file(param, checkIfEx
+╰     |                                                       ^^^^^
+
+Error workflows/hic.nf:22:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  22 | if (params.input) { ch_input = file(params.input) } else { exit 1, 'In
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/hic.nf:26:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  24 | //*****************************************
+│  25 | // Digestion parameters
+│  26 | if (params.digestion){
+│     | ^^^^^^^^^^^^^^^^^^^^^^
+│  27 |   restriction_site = params.digestion ? params.digest[ params.digestio
+╰  28 |   ch_restriction_site = Channel.value(restriction_site)
+
+Error workflows/hic.nf:44:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  44 | ch_map_res = Channel.from( params.bin_size ).splitCsv().flatten().toIn
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/hic.nf:46:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  46 | if (params.res_zoomify){
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^
+│  47 |   ch_zoom_res = Channel.from( params.res_zoomify ).splitCsv().flatten(
+│  48 |   ch_map_res = ch_map_res.concat(ch_zoom_res)
+╰  49 | }
+
+Error workflows/hic.nf:51:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  49 | }
+│  50 | 
+│  51 | if (params.res_tads && !params.skip_tads){
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  52 |   ch_tads_res = Channel.from( "${params.res_tads}" ).splitCsv().flatte
+╰  53 |   ch_map_res = ch_map_res.concat(ch_tads_res)
+
+Error workflows/hic.nf:61:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  59 | }
+│  60 | 
+│  61 | if (params.res_dist_decay && !params.skip_dist_decay){
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  62 |   ch_ddecay_res = Channel.from( "${params.res_dist_decay}" ).splitCsv(
+╰  63 |   ch_map_res = ch_map_res.concat(ch_ddecay_res)
+
+Error workflows/hic.nf:71:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  69 | }
+│  70 | 
+│  71 | if (params.res_compartments && !params.skip_compartments){
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  72 |   ch_comp_res = Channel.from( "${params.res_compartments}" ).splitCsv(
+╰  73 |   ch_map_res = ch_map_res.concat(ch_comp_res)
+
+Error workflows/hic.nf:81:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  81 | ch_map_res = ch_map_res.unique()
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/hic.nf:88:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  88 | ch_multiqc_config          = Channel.fromPath("$projectDir/assets/mult
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/hic.nf:89:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  89 | ch_multiqc_custom_config   = params.multiqc_config ? Channel.fromPath(
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/hic.nf:90:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  90 | ch_multiqc_logo            = params.multiqc_logo   ? Channel.fromPath(
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/hic.nf:91:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  91 | ch_multiqc_custom_methods_description = params.multiqc_methods_descrip
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/hic.nf:133:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│ 133 | Channel.fromPath( params.fasta )
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│ 134 |        .ifEmpty { exit 1, "Genome index: Fasta file not found: ${param
+│ 135 |        .map{it->[[:],it]}
+╰ 136 |        .set { ch_fasta }
+
+Error workflows/hic.nf:145:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│ 145 | def multiqc_report = []
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/hic.nf:155:5: `ch_input` is not defined
+│ 155 |     ch_input
+╰     |     ^^^^^^^^
+
+Error workflows/hic.nf:162:5: `ch_fasta` is not defined
+│ 162 |     ch_fasta,
+╰     |     ^^^^^^^^
+
+Error workflows/hic.nf:163:5: `ch_restriction_site` is not defined
+│ 163 |     ch_restriction_site
+╰     |     ^^^^^^^^^^^^^^^^^^^
+
+Error workflows/hic.nf:184:5: `ch_ligation_site` is not defined
+│ 184 |     ch_ligation_site,
+╰     |     ^^^^^^^^^^^^^^^^
+
+Error workflows/hic.nf:185:5: `ch_map_res` is not defined
+│ 185 |     ch_map_res
+╰     |     ^^^^^^^^^^
+
+Error workflows/hic.nf:195:5: `ch_map_res` is not defined
+│ 195 |     ch_map_res
+╰     |     ^^^^^^^^^^
+
+Error workflows/hic.nf:204:16: `ch_ddecay_res` is not defined
+│ 204 |       .combine(ch_ddecay_res)
+╰     |                ^^^^^^^^^^^^^
+
+Error workflows/hic.nf:220:16: `ch_comp_res` is not defined
+│ 220 |       .combine(ch_comp_res)
+╰     |                ^^^^^^^^^^^
+
+Error workflows/hic.nf:227:7: `ch_fasta` is not defined
+│ 227 |       ch_fasta,
+╰     |       ^^^^^^^^
+
+Error workflows/hic.nf:238:16: `ch_tads_res` is not defined
+│ 238 |       .combine(ch_tads_res)
+╰     |                ^^^^^^^^^^^
+
+Error workflows/hic.nf:259:25: `WorkflowHic` is not defined
+│ 259 |   workflow_summary    = WorkflowHic.paramsSummaryMultiqc(workflow, sum
+╰     |                         ^^^^^^^^^^^
+
+Error workflows/hic.nf:259:68: `summary_params` is not defined
+│ 259 | ummary    = WorkflowHic.paramsSummaryMultiqc(workflow, summary_params)
+╰     |                                                        ^^^^^^^^^^^^^^
+
+Error workflows/hic.nf:263:43: `ch_multiqc_config` is not defined
+│ 263 |   ch_multiqc_files = ch_multiqc_files.mix(ch_multiqc_config)
+╰     |                                           ^^^^^^^^^^^^^^^^^
+
+Error workflows/hic.nf:264:43: `ch_multiqc_custom_config` is not defined
+│ 264 |   ch_multiqc_files = ch_multiqc_files.mix(ch_multiqc_custom_config.col
+╰     |                                           ^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/hic.nf:270:5: `ch_multiqc_config` is not defined
+│ 270 |     ch_multiqc_config,
+╰     |     ^^^^^^^^^^^^^^^^^
+
+Error workflows/hic.nf:271:5: `ch_multiqc_custom_config` is not defined
+│ 271 |     ch_multiqc_custom_config.collect().ifEmpty([]),
+╰     |     ^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/hic.nf:285:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│ 283 | */
+│ 284 | 
+│ 285 | workflow.onComplete {
+│     | ^^^^^^^^^^^^^^^^^^^^^
+│ 286 |     if (params.email || params.email_on_fail) {
+╰ 287 |         NfcoreTemplate.email(workflow, params, summary_params, project
+
+Error workflows/hic.nf:287:9: `NfcoreTemplate` is not defined
+│ 287 |         NfcoreTemplate.email(workflow, params, summary_params, project
+╰     |         ^^^^^^^^^^^^^^
+
+Error workflows/hic.nf:289:5: `NfcoreTemplate` is not defined
+│ 289 |     NfcoreTemplate.summary(workflow, params, log)
+╰     |     ^^^^^^^^^^^^^^
+
+Error workflows/hic.nf:291:9: `NfcoreTemplate` is not defined
+│ 291 |         NfcoreTemplate.IM_notification(workflow, params, summary_param
+╰     |         ^^^^^^^^^^^^^^
+
+Warn  workflows/hic.nf:22:21: Variable was declared but not used
+│  22 | if (params.input) { ch_input = file(params.input) } else { exit 1, 'In
+╰     |                     ^^^^^^^^
+
+Warn  workflows/hic.nf:28:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  28 |   ch_restriction_site = Channel.value(restriction_site)
+╰     |                         ^^^^^^^
+
+Warn  workflows/hic.nf:30:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  30 |   ch_ligation_site = Channel.value(ligation_site)
+╰     |                      ^^^^^^^
+
+Warn  workflows/hic.nf:32:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  32 |   ch_restriction_site = Channel.value(params.restriction_site)
+╰     |                         ^^^^^^^
+
+Warn  workflows/hic.nf:33:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  33 |   ch_ligation_site = Channel.value(params.ligation_site)
+╰     |                      ^^^^^^^
+
+Warn  workflows/hic.nf:35:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  35 |   ch_restriction_site = Channel.empty()
+╰     |                         ^^^^^^^
+
+Warn  workflows/hic.nf:36:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  36 |   ch_ligation_site = Channel.empty()
+╰     |                      ^^^^^^^
+
+Warn  workflows/hic.nf:44:14: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  44 | ch_map_res = Channel.from( params.bin_size ).splitCsv().flatten().toIn
+╰     |              ^^^^^^^
+
+Warn  workflows/hic.nf:47:17: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  47 |   ch_zoom_res = Channel.from( params.res_zoomify ).splitCsv().flatten(
+╰     |                 ^^^^^^^
+
+Warn  workflows/hic.nf:52:17: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  52 |   ch_tads_res = Channel.from( "${params.res_tads}" ).splitCsv().flatte
+╰     |                 ^^^^^^^
+
+Warn  workflows/hic.nf:55:15: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  55 |   ch_tads_res=Channel.empty()
+╰     |               ^^^^^^^
+
+Warn  workflows/hic.nf:62:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  62 |   ch_ddecay_res = Channel.from( "${params.res_dist_decay}" ).splitCsv(
+╰     |                   ^^^^^^^
+
+Warn  workflows/hic.nf:65:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  65 |   ch_ddecay_res = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  workflows/hic.nf:72:17: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  72 |   ch_comp_res = Channel.from( "${params.res_compartments}" ).splitCsv(
+╰     |                 ^^^^^^^
+
+Warn  workflows/hic.nf:75:17: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  75 |   ch_comp_res = Channel.empty()
+╰     |                 ^^^^^^^
+
+Warn  workflows/hic.nf:88:1: Variable was declared but not used
+│  88 | ch_multiqc_config          = Channel.fromPath("$projectDir/assets/mult
+╰     | ^^^^^^^^^^^^^^^^^
+
+Warn  workflows/hic.nf:88:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  88 | ch_multiqc_config          = Channel.fromPath("$projectDir/assets/mult
+╰     |                              ^^^^^^^
+
+Warn  workflows/hic.nf:89:1: Variable was declared but not used
+│  89 | ch_multiqc_custom_config   = params.multiqc_config ? Channel.fromPath(
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/hic.nf:89:54: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  89 | ch_multiqc_custom_config   = params.multiqc_config ? Channel.fromPath(
+╰     |                                                      ^^^^^^^
+
+Warn  workflows/hic.nf:89:119: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  89 | omPath( params.multiqc_config, checkIfExists: true ) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/hic.nf:90:1: Variable was declared but not used
+│  90 | ch_multiqc_logo            = params.multiqc_logo   ? Channel.fromPath(
+╰     | ^^^^^^^^^^^^^^^
+
+Warn  workflows/hic.nf:90:54: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  90 | ch_multiqc_logo            = params.multiqc_logo   ? Channel.fromPath(
+╰     |                                                      ^^^^^^^
+
+Warn  workflows/hic.nf:90:117: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  90 | fromPath( params.multiqc_logo, checkIfExists: true ) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/hic.nf:91:1: Variable was declared but not used
+│  91 | ch_multiqc_custom_methods_description = params.multiqc_methods_descrip
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/hic.nf:133:1: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 133 | Channel.fromPath( params.fasta )
+╰     | ^^^^^^^
+
+Warn  workflows/hic.nf:136:15: Variable was declared but not used
+│ 136 |        .set { ch_fasta }
+╰     |               ^^^^^^^^
+
+Warn  workflows/hic.nf:149:17: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 149 |   ch_versions = Channel.empty()
+╰     |                 ^^^^^^^
+
+Warn  workflows/hic.nf:205:16: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 205 |       .filter{ it[0].resolution == it[2] }
+╰     |                ^^
+
+Warn  workflows/hic.nf:205:36: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 205 |       .filter{ it[0].resolution == it[2] }
+╰     |                                    ^^
+
+Warn  workflows/hic.nf:221:16: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 221 |       .filter{ it[0].resolution == it[2] }
+╰     |                ^^
+
+Warn  workflows/hic.nf:221:36: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 221 |       .filter{ it[0].resolution == it[2] }
+╰     |                                    ^^
+
+Warn  workflows/hic.nf:239:16: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 239 |       .filter{ it[0].resolution == it[2] }
+╰     |                ^^
+
+Warn  workflows/hic.nf:239:36: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 239 |       .filter{ it[0].resolution == it[2] }
+╰     |                                    ^^
+
+Warn  workflows/hic.nf:260:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 260 |   ch_workflow_summary = Channel.value(workflow_summary)
+╰     |                         ^^^^^^^
+
+Warn  workflows/hic.nf:262:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 262 |   ch_multiqc_files = Channel.empty()
+╰     |                      ^^^^^^^
+
+Warn  workflows/hic.nf:276:3: Variable was declared but not used
+│ 276 |   multiqc_report = MULTIQC.out.report.toList()
+╰     |   ^^^^^^^^^^^^^^
+
+
+Error conf/base.config:13:16: `check_max` is not defined
+│  13 |     cpus   = { check_max( 1    * task.attempt, 'cpus'   ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:14:16: `check_max` is not defined
+│  14 |     memory = { check_max( 8.GB * task.attempt, 'memory' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:15:16: `check_max` is not defined
+│  15 |     time   = { check_max( 12.h  * task.attempt, 'time'   ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:28:20: `check_max` is not defined
+│  28 |         cpus   = { check_max( 1                  , 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:29:20: `check_max` is not defined
+│  29 |         memory = { check_max( 6.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:30:20: `check_max` is not defined
+│  30 |         time   = { check_max( 4.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:33:20: `check_max` is not defined
+│  33 |         cpus   = { check_max( 2     * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:34:20: `check_max` is not defined
+│  34 |         memory = { check_max( 4.GB  * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:35:20: `check_max` is not defined
+│  35 |         time   = { check_max( 4.h   * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:38:20: `check_max` is not defined
+│  38 |         cpus   = { check_max( 6     * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:39:20: `check_max` is not defined
+│  39 |         memory = { check_max( 8.GB  * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:40:20: `check_max` is not defined
+│  40 |         time   = { check_max( 8.h   * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:43:20: `check_max` is not defined
+│  43 |         cpus   = { check_max( 12    * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:44:20: `check_max` is not defined
+│  44 |         memory = { check_max( 64.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:45:20: `check_max` is not defined
+│  45 |         time   = { check_max( 16.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:48:20: `check_max` is not defined
+│  48 |         time   = { check_max( 20.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:51:20: `check_max` is not defined
+│  51 |         memory = { check_max( 24.GB * task.attempt, 'memory' ) }
+╰     |                    ^^^^^^^^^
+
+
+
+Error nextflow.config:140:5: Unexpected input: 'includeConfig'
+│ 140 |     includeConfig "${params.custom_config_base}/nfcore_custom.config"
+╰     |     ^
+
+
+Nextflow linting complete!
+ ❌ 7 files had 74 errors
+ ✅ 38 files had no errors

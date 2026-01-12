@@ -1,0 +1,1117 @@
+Linting Nextflow code..
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/igenomes.config
+Linting: nextflow.config
+Linting: workflows/genomeannotator.nf
+Linting: assets/pasa/annotationCompare.config
+Linting: assets/pasa/alignAssembly.config
+Linting: subworkflows/local/augustus_pipeline.nf
+Linting: subworkflows/local/fasta_preprocess.nf
+Linting: subworkflows/local/assembly_preprocess.nf
+Linting: subworkflows/local/minimap_align_transcripts.nf
+Linting: subworkflows/local/genome_align.nf
+Linting: subworkflows/local/spaln_align_protein.nf
+Linting: subworkflows/local/evm.nf
+Linting: subworkflows/local/input_check.nf
+Linting: subworkflows/local/busco_qc.nf
+Linting: subworkflows/local/rnaseq_align.nf
+Linting: subworkflows/local/ncrna.nf
+Linting: subworkflows/local/pasa_pipeline.nf
+Linting: subworkflows/local/repeatmasker.nf
+Linting: main.nf
+Linting: modules/local/star/align.nf
+Linting: modules/local/star/index.nf
+Linting: modules/local/repeatmodeler.nf
+Linting: modules/local/gaas/fastastatistics.nf
+Linting: modules/local/gaas/fastafilterbysize.nf
+Linting: modules/local/gaas/fastacleaner.nf
+Linting: modules/local/busco/downloaddb.nf
+Linting: modules/local/busco/busco.nf
+Linting: modules/local/pasa/asmblstotraining.nf
+Linting: modules/local/pasa/seqclean.nf
+Linting: modules/local/pasa/alignassemble.nf
+Linting: modules/local/samtools/merge.nf
+Linting: modules/local/samtools/faidx.nf
+Linting: modules/local/minimap2/align.nf
+Linting: modules/local/minimap2/index.nf
+Linting: modules/local/satsuma2/satsumasynteny2.nf
+Linting: modules/local/cat/fasta.nf
+Linting: modules/local/cat/gff.nf
+Linting: modules/local/kraken.nf
+Linting: modules/local/gffread.nf
+Linting: modules/local/repeatmasker/repeatmask.nf
+Linting: modules/local/repeatmasker/stagelib.nf
+Linting: modules/local/augustus/training.nf
+Linting: modules/local/augustus/fixjoingenes.nf
+Linting: modules/local/augustus/augustusbatch.nf
+Linting: modules/local/augustus/stageconfig.nf
+Linting: modules/local/augustus/bam2hints.nf
+Linting: modules/local/augustus/aligntohints.nf
+Linting: modules/local/deeptools/bamcoverage.nf
+Linting: modules/local/trinity/genomeguided.nf
+Linting: modules/local/fastp.nf
+Linting: modules/local/infernal/search.nf
+Linting: modules/local/infernal/press.nf
+Linting: modules/local/spaln/makeindex.nf
+Linting: modules/local/spaln/merge.nf
+Linting: modules/local/spaln/align.nf
+Linting: modules/local/samplesheet_check.nf
+Linting: modules/local/fastasplitter.nf
+Linting: modules/local/evidencemodeler/partition.nf
+Linting: modules/local/evidencemodeler/merge.nf
+Linting: modules/local/evidencemodeler/execute.nf
+Linting: modules/local/exonerate/fastaclean.nf
+Linting: modules/local/helper/minimaptohints.nf
+Linting: modules/local/helper/spalntotraining.nf
+Linting: modules/local/helper/downloadrfam.nf
+Linting: modules/local/helper/bamtogff.nf
+Linting: modules/local/helper/kraken2gff.nf
+Linting: modules/local/helper/spalntogmod.nf
+Linting: modules/local/helper/spalntoevm.nf
+Linting: modules/local/helper/addexons.nf
+Linting: modules/local/helper/gtf2hints.nf
+Linting: modules/local/helper/gfffiltermulti.nf
+Linting: modules/local/helper/creategffids.nf
+Linting: modules/local/helper/rfamtogff.nf
+Linting: modules/local/helper/match2gmod.nf
+Linting: modules/local/helper/pasa2training.nf
+Linting: modules/local/helper/evm2gff.nf
+Linting: modules/nf-core/modules/gunzip/main.nf
+Linting: modules/nf-core/modules/fastqc/main.nf
+Linting: modules/nf-core/modules/multiqc/main.nf
+Linting: modules/nf-core/modules/cat/fastq/main.nf
+Linting: modules/nf-core/modules/custom/dumpsoftwareversions/main.nf
+Error main.nf:28:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  28 | WorkflowMain.initialise(workflow, params, log)
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:28:1: `WorkflowMain` is not defined
+│  28 | WorkflowMain.initialise(workflow, params, log)
+╰     | ^^^^^^^^^^^^
+
+
+Warn  modules/local/augustus/aligntohints.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/augustus/aligntohints.nf:22:9: Variable was declared but not used
+│  22 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Error modules/local/augustus/augustusbatch.nf:11:9: `AUGUSTUS_CONFIG_PATH` is not defined
+│  11 |     env AUGUSTUS_CONFIG_PATH
+╰     |         ^^^^^^^^^^^^^^^^^^^^
+
+Warn  modules/local/augustus/augustusbatch.nf:22:9: Variable was declared but not used
+│  22 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/augustus/bam2hints.nf:19:9: Variable was declared but not used
+│  19 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/augustus/fixjoingenes.nf:18:9: Variable was declared but not used
+│  18 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/augustus/fixjoingenes.nf:19:9: Variable was declared but not used
+│  19 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/augustus/stageconfig.nf:18:9: Variable was declared but not used
+│  18 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Error modules/local/augustus/training.nf:13:9: `AUGUSTUS_CONFIG_PATH` is not defined
+│  13 |     env AUGUSTUS_CONFIG_PATH
+╰     |         ^^^^^^^^^^^^^^^^^^^^
+
+Warn  modules/local/augustus/training.nf:22:9: Variable was declared but not used
+│  22 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/augustus/training.nf:23:9: Variable was declared but not used
+│  23 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/busco/busco.nf:22:9: Variable was declared but not used
+│  22 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/busco/busco.nf:23:9: Variable was declared but not used
+│  23 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/busco/downloaddb.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/cat/fasta.nf:18:9: Variable was declared but not used
+│  18 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/cat/gff.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+Warn  modules/local/evidencemodeler/execute.nf:18:9: Variable was declared but not used
+│  18 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/evidencemodeler/execute.nf:19:9: Variable was declared but not used
+│  19 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/evidencemodeler/merge.nf:20:9: Variable was declared but not used
+│  20 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/evidencemodeler/merge.nf:21:9: Variable was declared but not used
+│  21 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/evidencemodeler/partition.nf:24:9: Variable was declared but not used
+│  24 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/evidencemodeler/partition.nf:25:9: Variable was declared but not used
+│  25 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/exonerate/fastaclean.nf:18:9: Variable was declared but not used
+│  18 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/exonerate/fastaclean.nf:19:9: Variable was declared but not used
+│  19 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/fastasplitter.nf:19:9: Variable was declared but not used
+│  19 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/fastasplitter.nf:20:9: Variable was declared but not used
+│  20 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/fastp.nf:20:9: Variable was declared but not used
+│  20 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/gaas/fastacleaner.nf:18:9: Variable was declared but not used
+│  18 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/gaas/fastacleaner.nf:19:9: Variable was declared but not used
+│  19 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/gaas/fastafilterbysize.nf:19:9: Variable was declared but not used
+│  19 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/gaas/fastastatistics.nf:18:9: Variable was declared but not used
+│  18 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/gffread.nf:20:9: Variable was declared but not used
+│  20 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/gffread.nf:21:5: Variable was declared but not used
+│  21 |     prefix = task.ext.prefix ?: "${meta.id}"
+╰     |     ^^^^^^
+
+
+Error modules/local/helper/addexons.nf:14:27: `models` is not defined
+│  14 |     tuple val(meta), path(models), emit: gff
+╰     |                           ^^^^^^
+
+Warn  modules/local/helper/addexons.nf:18:9: Variable was declared but not used
+│  18 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/helper/bamtogff.nf:18:9: Variable was declared but not used
+│  18 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/helper/bamtogff.nf:19:9: Variable was declared but not used
+│  19 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/helper/creategffids.nf:18:9: Variable was declared but not used
+│  18 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/helper/creategffids.nf:19:9: Variable was declared but not used
+│  19 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/helper/downloadrfam.nf:20:9: Variable was declared but not used
+│  20 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/helper/evm2gff.nf:18:9: Variable was declared but not used
+│  18 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+Warn  modules/local/helper/gtf2hints.nf:19:9: Variable was declared but not used
+│  19 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/helper/kraken2gff.nf:18:9: Variable was declared but not used
+│  18 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/helper/kraken2gff.nf:19:9: Variable was declared but not used
+│  19 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/helper/match2gmod.nf:18:9: Variable was declared but not used
+│  18 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/helper/match2gmod.nf:19:9: Variable was declared but not used
+│  19 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/helper/minimaptohints.nf:20:9: Variable was declared but not used
+│  20 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Error modules/local/helper/pasa2training.nf:5:5: Invalid process directive
+│   5 |     if (params.enable_conda) {
+│     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+│   6 |         exit 1, "Conda environments cannot be used when using this ver
+╰   7 |     }
+
+Warn  modules/local/helper/pasa2training.nf:19:9: Variable was declared but not used
+│  19 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/helper/rfamtogff.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/helper/spalntoevm.nf:18:9: Variable was declared but not used
+│  18 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/helper/spalntoevm.nf:19:9: Variable was declared but not used
+│  19 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/helper/spalntogmod.nf:18:9: Variable was declared but not used
+│  18 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/helper/spalntogmod.nf:19:9: Variable was declared but not used
+│  19 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/helper/spalntotraining.nf:18:9: Variable was declared but not used
+│  18 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/helper/spalntotraining.nf:19:9: Variable was declared but not used
+│  19 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/infernal/press.nf:18:9: Variable was declared but not used
+│  18 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/infernal/search.nf:19:9: Variable was declared but not used
+│  19 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/infernal/search.nf:20:9: Variable was declared but not used
+│  20 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Error modules/local/kraken.nf:5:5: Invalid process directive
+│   5 |     if (params.enable_conda) {
+│     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+│   6 |         exit 1, "Conda environments cannot be used when using this ver
+╰   7 |     }
+
+Warn  modules/local/kraken.nf:19:9: Variable was declared but not used
+│  19 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/kraken.nf:20:9: Variable was declared but not used
+│  20 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/minimap2/align.nf:20:9: Variable was declared but not used
+│  20 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/minimap2/align.nf:21:9: Variable was declared but not used
+│  21 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+
+Error modules/local/pasa/alignassemble.nf:5:5: Invalid process directive
+│   5 |     if (params.enable_conda) {
+│     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+│   6 |         exit 1, "Conda environments cannot be used when using this ver
+╰   7 |     }
+
+Warn  modules/local/pasa/alignassemble.nf:23:9: Variable was declared but not used
+│  23 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Error modules/local/pasa/asmblstotraining.nf:5:5: Invalid process directive
+│   5 |     if (params.enable_conda) {
+│     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+│   6 |         exit 1, "Conda environments cannot be used when using this ver
+╰   7 |     }
+
+Warn  modules/local/pasa/asmblstotraining.nf:19:9: Variable was declared but not used
+│  19 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/pasa/asmblstotraining.nf:20:9: Variable was declared but not used
+│  20 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Error modules/local/pasa/seqclean.nf:5:5: Invalid process directive
+│   5 |     if (params.enable_conda) {
+│     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+│   6 |         exit 1, "Conda environments cannot be used when using this ver
+╰   7 |     }
+
+Warn  modules/local/pasa/seqclean.nf:18:9: Variable was declared but not used
+│  18 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/pasa/seqclean.nf:19:9: Variable was declared but not used
+│  19 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Error modules/local/repeatmasker/repeatmask.nf:12:9: `LIBDIR` is not defined
+│  12 |     env LIBDIR
+╰     |         ^^^^^^
+
+Warn  modules/local/repeatmasker/repeatmask.nf:24:9: Variable was declared but not used
+│  24 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/repeatmasker/repeatmask.nf:25:9: Variable was declared but not used
+│  25 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/repeatmasker/stagelib.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/repeatmasker/stagelib.nf:29:13: The use of `baseDir` in a process is discouraged -- input files should be provided as process inputs
+│  29 |        cp ${baseDir}/assets/repeatmasker/my_genome.fa .
+╰     |             ^^^^^^^
+
+Warn  modules/local/repeatmasker/stagelib.nf:30:13: The use of `baseDir` in a process is discouraged -- input files should be provided as process inputs
+│  30 |        cp ${baseDir}/assets/repeatmasker/repeats.fa .
+╰     |             ^^^^^^^
+
+
+Warn  modules/local/repeatmodeler.nf:18:9: Variable was declared but not used
+│  18 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/repeatmodeler.nf:19:9: Variable was declared but not used
+│  19 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+
+
+
+Error modules/local/satsuma2/satsumasynteny2.nf:5:5: Invalid process directive
+│   5 |     if (params.enable_conda) {
+│     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+│   6 |         exit 1, "Conda environments cannot be used when using this ver
+╰   7 |     }
+
+Warn  modules/local/satsuma2/satsumasynteny2.nf:20:9: Variable was declared but not used
+│  20 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/satsuma2/satsumasynteny2.nf:21:9: Variable was declared but not used
+│  21 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/spaln/align.nf:22:9: Variable was declared but not used
+│  22 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/spaln/align.nf:23:9: Variable was declared but not used
+│  23 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/spaln/makeindex.nf:18:9: Variable was declared but not used
+│  18 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/spaln/makeindex.nf:19:9: Variable was declared but not used
+│  19 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/spaln/merge.nf:20:9: Variable was declared but not used
+│  20 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/spaln/merge.nf:21:9: Variable was declared but not used
+│  21 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/star/align.nf:23:9: Variable was declared but not used
+│  23 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/star/index.nf:18:9: Variable was declared but not used
+│  18 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/star/index.nf:19:9: Variable was declared but not used
+│  19 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/trinity/genomeguided.nf:19:9: Variable was declared but not used
+│  19 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/trinity/genomeguided.nf:20:9: Variable was declared but not used
+│  20 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/nf-core/modules/cat/fastq/main.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/modules/cat/fastq/main.nf:23:35: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  23 |     def readList = reads.collect{ it.toString() }
+╰     |                                   ^^
+
+
+Warn  modules/nf-core/modules/custom/dumpsoftwareversions/main.nf:22:9: Variable was declared but not used
+│  22 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+
+Warn  subworkflows/local/augustus_pipeline.nf:28:41: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  28 |        aug_config_folder.collect().map{ it[0].toString() },
+╰     |                                         ^^
+
+Warn  subworkflows/local/augustus_pipeline.nf:50:12: Parameter was not used -- prefix with `_` to suppress warning
+│  50 |     .map { k,m,f -> tuple(m,f) }
+╰     |            ^
+
+
+Warn  subworkflows/local/busco_qc.nf:22:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  22 |       ch_lineage_dir = Channel.from([busco_lineage,busco_db_path])
+╰     |                        ^^^^^^^
+
+
+Warn  subworkflows/local/evm.nf:18:5: Parameter was not used -- prefix with `_` to suppress warning
+│  18 |     evm_config
+╰     |     ^^^^^^^^^^
+
+
+Error subworkflows/local/genome_align.nf:98:5: `array` was assigned but not declared
+│  98 |     array = [ meta, file(row.fasta), file(row.gtf) ]
+╰     |     ^^^^^
+
+Error subworkflows/local/genome_align.nf:100:12: `array` is not defined
+│ 100 |     return array
+╰     |            ^^^^^
+
+Warn  subworkflows/local/genome_align.nf:23:37: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  23 |        .map { create_target_channel(it) }
+╰     |                                     ^^
+
+Warn  subworkflows/local/genome_align.nf:30:26: Parameter was not used -- prefix with `_` to suppress warning
+│  30 |        targets.map { m,f,g ->
+╰     |                          ^
+
+Warn  subworkflows/local/genome_align.nf:46:27: Parameter was not used -- prefix with `_` to suppress warning
+│  46 |           targets.map { m,f,g ->
+╰     |                           ^
+
+Warn  subworkflows/local/genome_align.nf:62:46: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  62 |        row[1..-1].collect { [row[0].clone(), it]  }
+╰     |                                              ^^
+
+
+Warn  subworkflows/local/input_check.nf:15:37: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  15 |         .map { create_fastq_channel(it) }
+╰     |                                     ^^
+
+
+
+Warn  subworkflows/local/ncrna.nf:29:38: Parameter was not used -- prefix with `_` to suppress warning
+│  29 |       GUNZIP_RFAM_CM.out.gunzip.map {m,f -> f}
+╰     |                                      ^
+
+Warn  subworkflows/local/ncrna.nf:50:12: Parameter was not used -- prefix with `_` to suppress warning
+│  50 |     .map { k,m,f -> tuple(m,f) }
+╰     |            ^
+
+Warn  subworkflows/local/ncrna.nf:55:41: Parameter was not used -- prefix with `_` to suppress warning
+│  55 |       GUNZIP_RFAM_FAMILY.out.gunzip.map{m,f -> f}
+╰     |                                         ^
+
+
+
+Warn  subworkflows/local/repeatmasker.nf:26:31: Parameter was not used -- prefix with `_` to suppress warning
+│  26 |        GUNZIP.out.gunzip.map {m,g -> g}
+╰     |                               ^
+
+Warn  subworkflows/local/repeatmasker.nf:30:56: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  30 |        REPEATMASKER_STAGELIB.out.library.collect().map{it[0].toString(
+╰     |                                                        ^^
+
+
+Warn  subworkflows/local/rnaseq_align.nf:25:37: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  25 |         .map { create_fastq_channel(it) }
+╰     |                                     ^^
+
+Warn  subworkflows/local/rnaseq_align.nf:61:8: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  61 |        Channel.from(params.dummy_gff).collect(),
+╰     |        ^^^^^^^
+
+
+
+Error workflows/genomeannotator.nf:7:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│   7 | def summary_params = NfcoreSchema.paramsSummaryMap(workflow, params)
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/genomeannotator.nf:7:22: `NfcoreSchema` is not defined
+│   7 | def summary_params = NfcoreSchema.paramsSummaryMap(workflow, params)
+╰     |                      ^^^^^^^^^^^^
+
+Error workflows/genomeannotator.nf:10:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  10 | WorkflowGenomeannotator.initialise(params, log)
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/genomeannotator.nf:10:1: `WorkflowGenomeannotator` is not defined
+│  10 | WorkflowGenomeannotator.initialise(params, log)
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/genomeannotator.nf:12:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  12 | def checkPathParamList = [ params.multiqc_config, params.assembly ]
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/genomeannotator.nf:13:1: `for` loops are no longer supported
+│  13 | for (param in checkPathParamList) { if (param) { file(param, checkIfEx
+╰     | ^^^
+
+Error workflows/genomeannotator.nf:13:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  13 | for (param in checkPathParamList) { if (param) { file(param, checkIfEx
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/genomeannotator.nf:13:6: `param` is not defined
+│  13 | for (param in checkPathParamList) { if (param) { file(param, checkIfEx
+╰     |      ^^^^^
+
+Error workflows/genomeannotator.nf:13:40: `param` is not defined
+│  13 | for (param in checkPathParamList) { if (param) { file(param, checkIfEx
+╰     |                                        ^^^^^^^
+
+Error workflows/genomeannotator.nf:13:55: `param` is not defined
+│  13 | for (param in checkPathParamList) { if (param) { file(param, checkIfEx
+╰     |                                                       ^^^^^
+
+Error workflows/genomeannotator.nf:16:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  16 | if (params.assembly) { ch_genome = file(params.assembly, checkIfExists
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/genomeannotator.nf:19:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  19 | if (params.proteins) { ch_proteins = file(params.proteins, checkIfExis
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/genomeannotator.nf:20:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  20 | if (params.proteins_targeted) { ch_proteins_targeted = file(params.pro
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/genomeannotator.nf:21:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  21 | if (params.transcripts) { ch_t = file(params.transcripts) } else { ch_
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/genomeannotator.nf:22:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  22 | if (params.rnaseq_samples) { ch_samplesheet = file(params.rnaseq_sampl
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/genomeannotator.nf:23:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  23 | if (params.rm_lib) { ch_repeats = Channel.fromPath(file(params.rm_lib,
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/genomeannotator.nf:24:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  24 | if (params.aug_config_dir) { ch_aug_config_folder = file(params.aug_co
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/genomeannotator.nf:25:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  25 | if (params.references) { ch_ref_genomes = Channel.fromPath(params.refe
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/genomeannotator.nf:26:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  26 | if (params.rm_db)  { ch_rm_db = file(params.rm_db) } else { ch_rm_db =
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/genomeannotator.nf:34:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  34 | ch_multiqc_config        = file("$projectDir/assets/multiqc_config.yam
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/genomeannotator.nf:35:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  35 | ch_multiqc_custom_config = params.multiqc_config ? Channel.fromPath(pa
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/genomeannotator.nf:36:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  36 | ch_aug_extrinsic_cfg = params.aug_extrinsic_cfg ? Channel.from( file(p
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/genomeannotator.nf:37:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  37 | ch_evm_weights = Channel.from(file(params.evm_weights, checkIfExists: 
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/genomeannotator.nf:38:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  38 | ch_rfam_cm = file("${workflow.projectDir}/assets/rfam/14.2/Rfam.cm.gz"
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/genomeannotator.nf:39:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  39 | ch_rfam_family = file("${workflow.projectDir}/assets/rfam/14.2/family.
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/genomeannotator.nf:88:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  88 | def multiqc_report = []
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/genomeannotator.nf:109:11: `ch_t` is not defined
+│ 109 |           ch_t
+╰     |           ^^^^
+
+Error workflows/genomeannotator.nf:117:26: `ch_aug_config_folder` is not defined
+│ 117 |     AUGUSTUS_STAGECONFIG(ch_aug_config_folder)
+╰     |                          ^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/genomeannotator.nf:124:9: `ch_genome` is not defined
+│ 124 |         ch_genome
+╰     |         ^^^^^^^^^
+
+Error workflows/genomeannotator.nf:134:11: `ch_rfam_cm` is not defined
+│ 134 |           ch_rfam_cm,
+╰     |           ^^^^^^^^^^
+
+Error workflows/genomeannotator.nf:135:11: `ch_rfam_family` is not defined
+│ 135 |           ch_rfam_family
+╰     |           ^^^^^^^^^^^^^^
+
+Error workflows/genomeannotator.nf:145:11: `ch_ref_genomes` is not defined
+│ 145 |           ch_ref_genomes
+╰     |           ^^^^^^^^^^^^^^
+
+Error workflows/genomeannotator.nf:169:11: `ch_rm_db` is not defined
+│ 169 |           ch_rm_db
+╰     |           ^^^^^^^^
+
+Error workflows/genomeannotator.nf:178:11: `ch_rm_db` is not defined
+│ 178 |           ch_rm_db
+╰     |           ^^^^^^^^
+
+Error workflows/genomeannotator.nf:189:11: `ch_proteins` is not defined
+│ 189 |           ch_proteins,
+╰     |           ^^^^^^^^^^^
+
+Error workflows/genomeannotator.nf:202:11: `ch_proteins_targeted` is not defined
+│ 202 |           ch_proteins_targeted,
+╰     |           ^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/genomeannotator.nf:216:11: `ch_samplesheet` is not defined
+│ 216 |           ch_samplesheet
+╰     |           ^^^^^^^^^^^^^^
+
+Error workflows/genomeannotator.nf:222:9: Variables in a closure should be declared with `def`
+│ 222 |         new_meta = [:]
+╰     |         ^^^^^^^^
+
+Error workflows/genomeannotator.nf:290:11: `AUGUSTUS_TRAINING` is not defined
+│ 290 |           AUGUSTUS_TRAINING(
+╰     |           ^^^^^^^^^^^^^^^^^
+
+Error workflows/genomeannotator.nf:293:33: `AUGUSTUS_TRAINING` is not defined
+│ 293 |           ch_aug_config_final = AUGUSTUS_TRAINING.out.aug_config_folde
+╰     |                                 ^^^^^^^^^^^^^^^^^
+
+Error workflows/genomeannotator.nf:295:11: `AUGUSTUS_TRAINING` is not defined
+│ 295 |           AUGUSTUS_TRAINING(
+╰     |           ^^^^^^^^^^^^^^^^^
+
+Error workflows/genomeannotator.nf:298:33: `AUGUSTUS_TRAINING` is not defined
+│ 298 |           ch_aug_config_final = AUGUSTUS_TRAINING.out.aug_config_folde
+╰     |                                 ^^^^^^^^^^^^^^^^^
+
+Error workflows/genomeannotator.nf:314:8: `ch_aug_extrinsic_cfg` is not defined
+│ 314 |        ch_aug_extrinsic_cfg,
+╰     |        ^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/genomeannotator.nf:329:11: `ch_evm_weights` is not defined
+│ 329 |           ch_evm_weights
+╰     |           ^^^^^^^^^^^^^^
+
+Error workflows/genomeannotator.nf:357:27: `WorkflowGenomeannotator` is not defined
+│ 357 |     workflow_summary    = WorkflowGenomeannotator.paramsSummaryMultiqc
+╰     |                           ^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/genomeannotator.nf:357:82: `summary_params` is not defined
+│ 357 | WorkflowGenomeannotator.paramsSummaryMultiqc(workflow, summary_params)
+╰     |                                                        ^^^^^^^^^^^^^^
+
+Error workflows/genomeannotator.nf:361:58: `ch_multiqc_config` is not defined
+│ 361 |     ch_multiqc_files = ch_multiqc_files.mix(Channel.from(ch_multiqc_co
+╰     |                                                          ^^^^^^^^^^^^^
+
+Error workflows/genomeannotator.nf:362:45: `ch_multiqc_custom_config` is not defined
+│ 362 |     ch_multiqc_files = ch_multiqc_files.mix(ch_multiqc_custom_config.c
+╰     |                                             ^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/genomeannotator.nf:380:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│ 378 | */
+│ 379 | 
+│ 380 | workflow.onComplete {
+│     | ^^^^^^^^^^^^^^^^^^^^^
+│ 381 |     if (params.email || params.email_on_fail) {
+╰ 382 |         NfcoreTemplate.email(workflow, params, summary_params, project
+
+Error workflows/genomeannotator.nf:382:9: `NfcoreTemplate` is not defined
+│ 382 |         NfcoreTemplate.email(workflow, params, summary_params, project
+╰     |         ^^^^^^^^^^^^^^
+
+Error workflows/genomeannotator.nf:384:5: `NfcoreTemplate` is not defined
+│ 384 |     NfcoreTemplate.summary(workflow, params, log)
+╰     |     ^^^^^^^^^^^^^^
+
+Warn  workflows/genomeannotator.nf:16:24: Variable was declared but not used
+│  16 | if (params.assembly) { ch_genome = file(params.assembly, checkIfExists
+╰     |                        ^^^^^^^^^
+
+Warn  workflows/genomeannotator.nf:19:104: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 |  true) } else { ch_proteins = Channel.empty() }
+╰     |                               ^^^^^^^
+
+Warn  workflows/genomeannotator.nf:20:140: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  20 | else { ch_proteins_targeted = Channel.empty() }
+╰     |                               ^^^^^^^
+
+Warn  workflows/genomeannotator.nf:21:27: Variable was declared but not used
+│  21 | if (params.transcripts) { ch_t = file(params.transcripts) } else { ch_
+╰     |                           ^^^^
+
+Warn  workflows/genomeannotator.nf:21:68: Variable was declared but not used
+│  21 | (params.transcripts) } else { ch_transcripts = Channel.empty() }
+╰     |                               ^^^^^^^^^^^^^^
+
+Warn  workflows/genomeannotator.nf:21:85: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  21 | ts) } else { ch_transcripts = Channel.empty() }
+╰     |                               ^^^^^^^
+
+Warn  workflows/genomeannotator.nf:22:122: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  22 | ue) } else { ch_samplesheet = Channel.empty() }
+╰     |                               ^^^^^^^
+
+Warn  workflows/genomeannotator.nf:23:35: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  23 | if (params.rm_lib) { ch_repeats = Channel.fromPath(file(params.rm_lib,
+╰     |                                   ^^^^^^^
+
+Warn  workflows/genomeannotator.nf:23:116: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  23 |  true)) } else { ch_repeats = Channel.fromPath("${workflow.projectDir}
+╰     |                               ^^^^^^^
+
+Warn  workflows/genomeannotator.nf:24:134: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  24 | else { ch_aug_config_folder = Channel.from(params.aug_config_container
+╰     |                               ^^^^^^^
+
+Warn  workflows/genomeannotator.nf:25:43: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  25 | if (params.references) { ch_ref_genomes = Channel.fromPath(params.refe
+╰     |                                           ^^^^^^^
+
+Warn  workflows/genomeannotator.nf:25:127: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  25 | e)  } else { ch_ref_genomes = Channel.empty() }
+╰     |                               ^^^^^^^
+
+Warn  workflows/genomeannotator.nf:26:72: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  26 | ms.rm_db) } else { ch_rm_db = Channel.empty() }
+╰     |                               ^^^^^^^
+
+Warn  workflows/genomeannotator.nf:34:1: Variable was declared but not used
+│  34 | ch_multiqc_config        = file("$projectDir/assets/multiqc_config.yam
+╰     | ^^^^^^^^^^^^^^^^^
+
+Warn  workflows/genomeannotator.nf:35:1: Variable was declared but not used
+│  35 | ch_multiqc_custom_config = params.multiqc_config ? Channel.fromPath(pa
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/genomeannotator.nf:35:52: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  35 | ch_multiqc_custom_config = params.multiqc_config ? Channel.fromPath(pa
+╰     |                                                    ^^^^^^^
+
+Warn  workflows/genomeannotator.nf:35:94: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  35 | iqc_config ? Channel.fromPath(params.multiqc_config) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/genomeannotator.nf:36:1: Variable was declared but not used
+│  36 | ch_aug_extrinsic_cfg = params.aug_extrinsic_cfg ? Channel.from( file(p
+╰     | ^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/genomeannotator.nf:36:51: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  36 | ch_aug_extrinsic_cfg = params.aug_extrinsic_cfg ? Channel.from( file(p
+╰     |                                                   ^^^^^^^
+
+Warn  workflows/genomeannotator.nf:36:121: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  36 | cfg, checkIfExists: true) ) : Channel.from( file("${workflow.projectDi
+╰     |                               ^^^^^^^
+
+Warn  workflows/genomeannotator.nf:37:1: Variable was declared but not used
+│  37 | ch_evm_weights = Channel.from(file(params.evm_weights, checkIfExists: 
+╰     | ^^^^^^^^^^^^^^
+
+Warn  workflows/genomeannotator.nf:37:18: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  37 | ch_evm_weights = Channel.from(file(params.evm_weights, checkIfExists: 
+╰     |                  ^^^^^^^
+
+Warn  workflows/genomeannotator.nf:38:1: Variable was declared but not used
+│  38 | ch_rfam_cm = file("${workflow.projectDir}/assets/rfam/14.2/Rfam.cm.gz"
+╰     | ^^^^^^^^^^
+
+Warn  workflows/genomeannotator.nf:39:1: Variable was declared but not used
+│  39 | ch_rfam_family = file("${workflow.projectDir}/assets/rfam/14.2/family.
+╰     | ^^^^^^^^^^^^^^
+
+Warn  workflows/genomeannotator.nf:92:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  92 |     ch_empty_gff = Channel.fromPath(params.dummy_gff)
+╰     |                    ^^^^^^^
+
+Warn  workflows/genomeannotator.nf:93:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  93 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  workflows/genomeannotator.nf:94:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  94 |     ch_hints = Channel.empty()
+╰     |                ^^^^^^^
+
+Warn  workflows/genomeannotator.nf:95:5: Variable was declared but not used
+│  95 |     ch_repeats_lib = Channel.empty()
+╰     |     ^^^^^^^^^^^^^^
+
+Warn  workflows/genomeannotator.nf:95:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  95 |     ch_repeats_lib = Channel.empty()
+╰     |                      ^^^^^^^
+
+Warn  workflows/genomeannotator.nf:96:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  96 |     ch_proteins_gff = Channel.from([])
+╰     |                       ^^^^^^^
+
+Warn  workflows/genomeannotator.nf:97:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  97 |     ch_transcripts_gff = Channel.from([])
+╰     |                          ^^^^^^^
+
+Warn  workflows/genomeannotator.nf:98:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  98 |     ch_genes_gff = Channel.empty()
+╰     |                    ^^^^^^^
+
+Warn  workflows/genomeannotator.nf:99:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  99 |     ch_transcripts = Channel.empty()
+╰     |                      ^^^^^^^
+
+Warn  workflows/genomeannotator.nf:100:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 100 |     ch_genome_rm = Channel.empty()
+╰     |                    ^^^^^^^
+
+Warn  workflows/genomeannotator.nf:101:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 |     ch_proteins_fa = Channel.empty()
+╰     |                      ^^^^^^^
+
+Warn  workflows/genomeannotator.nf:102:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 102 |     ch_busco_qc = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  workflows/genomeannotator.nf:159:50: Parameter was not used -- prefix with `_` to suppress warning
+│ 159 |        ch_repeats = REPEATMODELER.out.fasta.map {m,fasta -> fasta}
+╰     |                                                  ^
+
+Warn  workflows/genomeannotator.nf:274:33: Parameter was not used -- prefix with `_` to suppress warning
+│ 274 |            ch_transcripts.map { m,t -> t }.collectFile(name: "transcri
+╰     |                                 ^
+
+Warn  workflows/genomeannotator.nf:326:28: Parameter was not used -- prefix with `_` to suppress warning
+│ 326 |           ch_genes_gff.map{m,g -> g}.collectFile(name: 'genes.gff3'),
+╰     |                            ^
+
+Warn  workflows/genomeannotator.nf:327:31: Parameter was not used -- prefix with `_` to suppress warning
+│ 327 |           ch_proteins_gff.map{m,p -> p}.mix(ch_empty_gff).collectFile(
+╰     |                               ^
+
+Warn  workflows/genomeannotator.nf:328:34: Parameter was not used -- prefix with `_` to suppress warning
+│ 328 |           ch_transcripts_gff.map{m,t ->t}.mix(ch_empty_gff).collectFil
+╰     |                                  ^
+
+Warn  workflows/genomeannotator.nf:358:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 358 |     ch_workflow_summary = Channel.value(workflow_summary)
+╰     |                           ^^^^^^^
+
+Warn  workflows/genomeannotator.nf:360:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 360 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/genomeannotator.nf:361:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 361 |     ch_multiqc_files = ch_multiqc_files.mix(Channel.from(ch_multiqc_co
+╰     |                                             ^^^^^^^
+
+Warn  workflows/genomeannotator.nf:370:5: Variable was declared but not used
+│ 370 |     multiqc_report = MULTIQC.out.report.toList()
+╰     |     ^^^^^^^^^^^^^^
+
+
+Error assets/pasa/alignAssembly.config:2:1: Unexpected character: '#'
+│   2 | ## templated variables to be replaced exist as <__var_name__>
+╰     | ^
+
+
+Error assets/pasa/annotationCompare.config:2:1: Unexpected character: '#'
+│   2 | ## templated variables to be replaced exist as <__var_name__>
+╰     | ^
+
+
+Error conf/base.config:13:16: `check_max` is not defined
+│  13 |     cpus   = { check_max( 1    * task.attempt, 'cpus'   ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:14:16: `check_max` is not defined
+│  14 |     memory = { check_max( 6.GB * task.attempt, 'memory' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:15:16: `check_max` is not defined
+│  15 |     time   = { check_max( 4.h  * task.attempt, 'time'   ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:27:20: `check_max` is not defined
+│  27 |         cpus   = { check_max( 2     * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:28:20: `check_max` is not defined
+│  28 |         memory = { check_max( 12.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:29:20: `check_max` is not defined
+│  29 |         time   = { check_max( 4.h   * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:32:20: `check_max` is not defined
+│  32 |         cpus   = { check_max( 6     * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:33:20: `check_max` is not defined
+│  33 |         memory = { check_max( 36.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:34:20: `check_max` is not defined
+│  34 |         time   = { check_max( 8.h   * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:37:20: `check_max` is not defined
+│  37 |         cpus   = { check_max( 12    * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:38:20: `check_max` is not defined
+│  38 |         memory = { check_max( 72.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:39:20: `check_max` is not defined
+│  39 |         time   = { check_max( 16.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:42:20: `check_max` is not defined
+│  42 |         time   = { check_max( 20.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:45:20: `check_max` is not defined
+│  45 |         cpus   = { check_max( 12    * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:46:20: `check_max` is not defined
+│  46 |         memory = { check_max( 72.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:47:20: `check_max` is not defined
+│  47 |         time   = { check_max( 72.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:50:20: `check_max` is not defined
+│  50 |         memory = { check_max( 200.GB * task.attempt, 'memory' ) }
+╰     |                    ^^^^^^^^^
+
+
+Error nextflow.config:120:5: Unexpected input: 'includeConfig'
+│ 120 |     includeConfig "${params.custom_config_base}/nfcore_custom.config"
+╰     |     ^
+
+
+Nextflow linting complete!
+ ❌ 17 files had 85 errors
+ ✅ 68 files had no errors

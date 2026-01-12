@@ -1,0 +1,2116 @@
+Linting Nextflow code..
+Linting: conf/igenomes_ignored.config
+Linting: conf/base.config
+Linting: conf/test_singleton.config
+Linting: conf/test_bam.config
+Linting: conf/test_full.config
+Linting: conf/test_sentieon.config
+Linting: conf/test.config
+Linting: conf/igenomes.config
+Linting: conf/modules/scatter_genome.config
+Linting: conf/modules/annotate_rhocallviz.config
+Linting: conf/modules/align_bwa_bwamem2_bwameme.config
+Linting: conf/modules/variant_evaluation.config
+Linting: conf/modules/gens.config
+Linting: conf/modules/call_snv_sentieon.config
+Linting: conf/modules/rank_variants.config
+Linting: conf/modules/call_sv_cnvnator.config
+Linting: conf/modules/convert_mt_bam_to_fastq.config
+Linting: conf/modules/postprocess_MT_calls.config
+Linting: conf/modules/annotate_mt_snvs.config
+Linting: conf/modules/prepare_references.config
+Linting: conf/modules/call_snv_MT.config
+Linting: conf/modules/call_sv_MT.config
+Linting: conf/modules/annotate_mobile_elements.config
+Linting: conf/modules/annotate_structural_variants.config
+Linting: conf/modules/align_MT.config
+Linting: conf/modules/generate_cytosure_files.config
+Linting: conf/modules/align.config
+Linting: conf/modules/raredisease.config
+Linting: conf/modules/qc_bam.config
+Linting: conf/modules/call_snv_deepvariant.config
+Linting: conf/modules/call_snv.config
+Linting: conf/modules/align_sentieon.config
+Linting: conf/modules/generate_clinical_set.config
+Linting: conf/modules/call_mobile_elements.config
+Linting: conf/modules/annotate_genome_snvs.config
+Linting: conf/modules/call_sv_germlinecnvcaller.config
+Linting: conf/modules/call_sv_tiddit.config
+Linting: conf/modules/call_structural_variants.config
+Linting: conf/modules/annotate_consequence_pli.config
+Linting: conf/modules/call_sv_manta.config
+Linting: conf/modules/call_repeat_expansions.config
+Linting: conf/modules/annotate_cadd.config
+Linting: conf/modules/subsample_mt.config
+Linting: nextflow.config
+Linting: workflows/raredisease.nf
+Linting: subworkflows/local/rank_variants.nf
+Linting: subworkflows/local/annotate_rhocallviz/main.nf
+Linting: subworkflows/local/call_sv_cnvnator/main.nf
+Linting: subworkflows/local/call_sv_germlinecnvcaller/main.nf
+Linting: subworkflows/local/annotate_consequence_pli.nf
+Linting: subworkflows/local/align_sentieon/main.nf
+Linting: subworkflows/local/annotate_structural_variants.nf
+Linting: subworkflows/local/subsample_mt.nf
+Linting: subworkflows/local/call_repeat_expansions.nf
+Linting: subworkflows/local/annotate_mobile_elements.nf
+Linting: subworkflows/local/scatter_genome.nf
+Linting: subworkflows/local/call_snv_deepvariant/main.nf
+Linting: subworkflows/local/generate_clinical_set.nf
+Linting: subworkflows/local/call_sv_tiddit/main.nf
+Linting: subworkflows/local/call_snv.nf
+Linting: subworkflows/local/align_MT/main.nf
+Linting: subworkflows/local/generate_cytosure_files.nf
+Linting: subworkflows/local/call_sv_MT/main.nf
+Linting: subworkflows/local/postprocess_MT_calls/main.nf
+Linting: subworkflows/local/utils_nfcore_raredisease_pipeline/main.nf
+Linting: subworkflows/local/annotate_cadd/main.nf
+Linting: subworkflows/local/gens.nf
+Linting: subworkflows/local/call_sv_manta/main.nf
+Linting: subworkflows/local/call_snv_sentieon/main.nf
+Linting: subworkflows/local/call_structural_variants.nf
+Linting: subworkflows/local/qc_bam.nf
+Linting: subworkflows/local/annotate_mt_snvs.nf
+Linting: subworkflows/local/align_bwa_bwamem2_bwameme/main.nf
+Linting: subworkflows/local/align.nf
+Linting: subworkflows/local/call_mobile_elements.nf
+Linting: subworkflows/local/call_snv_MT/main.nf
+Linting: subworkflows/local/prepare_references.nf
+Linting: subworkflows/local/variant_evaluation.nf
+Linting: subworkflows/local/convert_mt_bam_to_fastq/main.nf
+Linting: subworkflows/local/annotate_genome_snvs.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/create_hgncids_file/main.nf
+Linting: modules/local/mt_deletion_script/main.nf
+Linting: modules/local/add_most_severe_pli/main.nf
+Linting: modules/local/add_varcallername_to_bed/main.nf
+Linting: modules/local/rename_align_files/main.nf
+Linting: modules/local/add_most_severe_consequence/main.nf
+Linting: modules/local/retroseq/discover/main.nf
+Linting: modules/local/retroseq/call/main.nf
+Linting: modules/local/create_bed_from_fai/main.nf
+Linting: modules/local/gens/main.nf
+Linting: modules/local/create_pedigree_file/main.nf
+Linting: modules/local/get_chrom_sizes/main.nf
+Linting: modules/local/replace_spaces_in_vcfinfo/main.nf
+Linting: modules/local/calculate_seed_fraction/main.nf
+Linting: modules/nf-core/upd/main.nf
+Linting: modules/nf-core/upd/tests/nextflow.config
+Linting: modules/nf-core/chromograph/main.nf
+Linting: modules/nf-core/smncopynumbercaller/main.nf
+Linting: modules/nf-core/smncopynumbercaller/tests/nextflow.config
+Linting: modules/nf-core/bcftools/reheader/main.nf
+Linting: modules/nf-core/bcftools/reheader/tests/vcf_gz_index.config
+Linting: modules/nf-core/bcftools/reheader/tests/vcf_gz_index_csi.config
+Linting: modules/nf-core/bcftools/reheader/tests/vcf.config
+Linting: modules/nf-core/bcftools/reheader/tests/vcf.gz.config
+Linting: modules/nf-core/bcftools/reheader/tests/bcf.config
+Linting: modules/nf-core/bcftools/reheader/tests/vcf_gz_index_tbi.config
+Linting: modules/nf-core/bcftools/roh/main.nf
+Linting: modules/nf-core/bcftools/concat/main.nf
+Linting: modules/nf-core/bcftools/concat/tests/vcf_gz_index.config
+Linting: modules/nf-core/bcftools/concat/tests/vcf_gz_index_csi.config
+Linting: modules/nf-core/bcftools/concat/tests/nextflow.config
+Linting: modules/nf-core/bcftools/concat/tests/vcf_gz_index_tbi.config
+Linting: modules/nf-core/bcftools/sort/main.nf
+Linting: modules/nf-core/bcftools/sort/tests/vcf_gz_index.config
+Linting: modules/nf-core/bcftools/sort/tests/vcf_gz_index_csi.config
+Linting: modules/nf-core/bcftools/sort/tests/vcf_gz_index_tbi.config
+Linting: modules/nf-core/bcftools/view/main.nf
+Linting: modules/nf-core/bcftools/view/tests/vcf_gz_index.config
+Linting: modules/nf-core/bcftools/view/tests/vcf_gz_index_csi.config
+Linting: modules/nf-core/bcftools/view/tests/nextflow.config
+Linting: modules/nf-core/bcftools/view/tests/vcf_gz_index_tbi.config
+Linting: modules/nf-core/bcftools/merge/main.nf
+Linting: modules/nf-core/bcftools/merge/tests/nextflow.gvcf.config
+Linting: modules/nf-core/bcftools/merge/tests/vcf_gz_index.config
+Linting: modules/nf-core/bcftools/merge/tests/vcf_gz_index_csi.config
+Linting: modules/nf-core/bcftools/merge/tests/nextflow.config
+Linting: modules/nf-core/bcftools/merge/tests/vcf.config
+Linting: modules/nf-core/bcftools/merge/tests/bcf_gz.config
+Linting: modules/nf-core/bcftools/merge/tests/bcf.config
+Linting: modules/nf-core/bcftools/merge/tests/vcf_gz_index_tbi.config
+Linting: modules/nf-core/bcftools/merge/tests/vcf_gz.config
+Linting: modules/nf-core/bcftools/norm/main.nf
+Linting: modules/nf-core/bcftools/norm/tests/nextflow.vcf_gz.config
+Linting: modules/nf-core/bcftools/norm/tests/vcf_gz_index.config
+Linting: modules/nf-core/bcftools/norm/tests/vcf_gz_index_csi.config
+Linting: modules/nf-core/bcftools/norm/tests/nextflow.config
+Linting: modules/nf-core/bcftools/norm/tests/nextflow.bcf_gz.config
+Linting: modules/nf-core/bcftools/norm/tests/nextflow.vcf.config
+Linting: modules/nf-core/bcftools/norm/tests/vcf_gz_index_tbi.config
+Linting: modules/nf-core/bcftools/norm/tests/nextflow.bcf.config
+Linting: modules/nf-core/bcftools/filter/main.nf
+Linting: modules/nf-core/bcftools/filter/tests/vcf_gz_index.config
+Linting: modules/nf-core/bcftools/filter/tests/vcf_gz_index_csi.config
+Linting: modules/nf-core/bcftools/filter/tests/nextflow.config
+Linting: modules/nf-core/bcftools/filter/tests/vcf_gz_index_tbi.config
+Linting: modules/nf-core/bcftools/annotate/main.nf
+Linting: modules/nf-core/bcftools/annotate/tests/vcf_gz_index.config
+Linting: modules/nf-core/bcftools/annotate/tests/vcf_gz_index_csi.config
+Linting: modules/nf-core/bcftools/annotate/tests/vcf.config
+Linting: modules/nf-core/bcftools/annotate/tests/bcf.config
+Linting: modules/nf-core/bcftools/annotate/tests/vcf_gz_index_tbi.config
+Linting: modules/nf-core/cadd/main.nf
+Linting: modules/nf-core/gatk4/splitintervals/main.nf
+Linting: modules/nf-core/gatk4/splitintervals/tests/nextflow.config
+Linting: modules/nf-core/gatk4/collectreadcounts/main.nf
+Linting: modules/nf-core/gatk4/collectreadcounts/tests/nextflow.cram.config
+Linting: modules/nf-core/gatk4/collectreadcounts/tests/nextflow.tsv.config
+Linting: modules/nf-core/gatk4/collectreadcounts/tests/nextflow.hdf5.config
+Linting: modules/nf-core/gatk4/mutect2/main.nf
+Linting: modules/nf-core/gatk4/mutect2/tests/f1r2.config
+Linting: modules/nf-core/gatk4/mutect2/tests/pair.config
+Linting: modules/nf-core/gatk4/mutect2/tests/mito.config
+Linting: modules/nf-core/gatk4/denoisereadcounts/main.nf
+Linting: modules/nf-core/gatk4/denoisereadcounts/tests/nextflow.config
+Linting: modules/nf-core/gatk4/mergevcfs/main.nf
+Linting: modules/nf-core/gatk4/shiftfasta/main.nf
+Linting: modules/nf-core/gatk4/shiftfasta/tests/nextflow.config
+Linting: modules/nf-core/gatk4/postprocessgermlinecnvcalls/main.nf
+Linting: modules/nf-core/gatk4/bedtointervallist/main.nf
+Linting: modules/nf-core/gatk4/determinegermlinecontigploidy/main.nf
+Linting: modules/nf-core/gatk4/createsequencedictionary/main.nf
+Linting: modules/nf-core/gatk4/intervallisttools/main.nf
+Linting: modules/nf-core/gatk4/intervallisttools/tests/nextflow.config
+Linting: modules/nf-core/gatk4/filtermutectcalls/main.nf
+Linting: modules/nf-core/gatk4/filtermutectcalls/tests/nextflow.config
+Linting: modules/nf-core/gatk4/variantfiltration/main.nf
+Linting: modules/nf-core/gatk4/mergebamalignment/main.nf
+Linting: modules/nf-core/gatk4/germlinecnvcaller/main.nf
+Linting: modules/nf-core/gatk4/samtofastq/main.nf
+Linting: modules/nf-core/gatk4/printreads/main.nf
+Linting: modules/nf-core/gatk4/revertsam/main.nf
+Linting: modules/nf-core/gatk4/selectvariants/main.nf
+Linting: modules/nf-core/genmod/models/main.nf
+Linting: modules/nf-core/genmod/compound/main.nf
+Linting: modules/nf-core/genmod/score/main.nf
+Linting: modules/nf-core/genmod/annotate/main.nf
+Linting: modules/nf-core/genmod/annotate/tests/nextflow.config
+Linting: modules/nf-core/rhocall/viz/main.nf
+Linting: modules/nf-core/rhocall/viz/tests/nextflow.config
+Linting: modules/nf-core/rhocall/annotate/main.nf
+Linting: modules/nf-core/verifybamid/verifybamid2/main.nf
+Linting: modules/nf-core/verifybamid/verifybamid2/tests/nextflow.config
+Linting: modules/nf-core/haplocheck/main.nf
+Linting: modules/nf-core/peddy/main.nf
+Linting: modules/nf-core/expansionhunter/main.nf
+Linting: modules/nf-core/hmtnote/annotate/main.nf
+Linting: modules/nf-core/samtools/index/main.nf
+Linting: modules/nf-core/samtools/index/tests/csi.nextflow.config
+Linting: modules/nf-core/samtools/sort/main.nf
+Linting: modules/nf-core/samtools/sort/tests/nextflow.config
+Linting: modules/nf-core/samtools/sort/tests/nextflow_cram.config
+Linting: modules/nf-core/samtools/stats/main.nf
+Linting: modules/nf-core/samtools/view/main.nf
+Linting: modules/nf-core/samtools/view/tests/bam_index.config
+Linting: modules/nf-core/samtools/view/tests/bam.config
+Linting: modules/nf-core/samtools/faidx/main.nf
+Linting: modules/nf-core/samtools/faidx/tests/nextflow.config
+Linting: modules/nf-core/samtools/faidx/tests/nextflow2.config
+Linting: modules/nf-core/samtools/merge/main.nf
+Linting: modules/nf-core/samtools/merge/tests/index.config
+Linting: modules/nf-core/ensemblvep/vep/main.nf
+Linting: modules/nf-core/ensemblvep/filtervep/main.nf
+Linting: modules/nf-core/ensemblvep/filtervep/tests/nextflow.config
+Linting: modules/nf-core/ensemblvep/filtervep/tests/vcf.config
+Linting: modules/nf-core/ensemblvep/filtervep/tests/tab.gz.config
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/vcfanno/main.nf
+Linting: modules/nf-core/vcfanno/tests/nextflow.config
+Linting: modules/nf-core/rtgtools/vcfeval/main.nf
+Linting: modules/nf-core/rtgtools/vcfeval/tests/nextflow.config
+Linting: modules/nf-core/rtgtools/format/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/bwamem2/index/main.nf
+Linting: modules/nf-core/bwamem2/mem/main.nf
+Linting: modules/nf-core/vcf2cytosure/main.nf
+Linting: modules/nf-core/cat/cat/main.nf
+Linting: modules/nf-core/cat/cat/tests/nextflow_zipped_unzipped.config
+Linting: modules/nf-core/cat/cat/tests/nextflow_unzipped_zipped.config
+Linting: modules/nf-core/bwa/index/main.nf
+Linting: modules/nf-core/bwa/mem/main.nf
+Linting: modules/nf-core/svdb/query/main.nf
+Linting: modules/nf-core/svdb/merge/main.nf
+Linting: modules/nf-core/svdb/merge/tests/nextflow.config
+Linting: modules/nf-core/fastp/main.nf
+Linting: modules/nf-core/fastp/tests/nextflow.interleaved.config
+Linting: modules/nf-core/fastp/tests/nextflow.save_failed.config
+Linting: modules/nf-core/ucsc/wigtobigwig/main.nf
+Linting: modules/nf-core/ngsbits/samplegender/main.nf
+Linting: modules/nf-core/untar/main.nf
+Linting: modules/nf-core/cnvnator/convert2vcf/main.nf
+Linting: modules/nf-core/cnvnator/cnvnator/main.nf
+Linting: modules/nf-core/eklipse/main.nf
+Linting: modules/nf-core/manta/germline/main.nf
+Linting: modules/nf-core/manta/germline/tests/nextflow.config
+Linting: modules/nf-core/stranger/main.nf
+Linting: modules/nf-core/stranger/tests/nextflow.config
+Linting: modules/nf-core/mosdepth/main.nf
+Linting: modules/nf-core/mosdepth/tests/window.config
+Linting: modules/nf-core/mosdepth/tests/threshold.config
+Linting: modules/nf-core/mosdepth/tests/quantized.config
+Linting: modules/nf-core/tiddit/sv/main.nf
+Linting: modules/nf-core/tiddit/sv/tests/nextflow.config
+Linting: modules/nf-core/tiddit/cov/main.nf
+Linting: modules/nf-core/tiddit/cov/tests/nextflow.config
+Linting: modules/nf-core/qualimap/bamqc/main.nf
+Linting: modules/nf-core/haplogrep3/classify/main.nf
+Linting: modules/nf-core/haplogrep3/classify/tests/nextflow.config
+Linting: modules/nf-core/sentieon/dnamodelapply/main.nf
+Linting: modules/nf-core/sentieon/readwriter/main.nf
+Linting: modules/nf-core/sentieon/readwriter/tests/nextflow.config
+Linting: modules/nf-core/sentieon/readwriter/tests/nextflow_outputcram.config
+Linting: modules/nf-core/sentieon/wgsmetrics/main.nf
+Linting: modules/nf-core/sentieon/dnascope/main.nf
+Linting: modules/nf-core/sentieon/datametrics/main.nf
+Linting: modules/nf-core/sentieon/datametrics/tests/nextflow.config
+Linting: modules/nf-core/sentieon/bwamem/main.nf
+Linting: modules/nf-core/sentieon/bwamem/tests/nextflow.config
+Linting: modules/nf-core/sentieon/bwamem/tests/nextflow_out_cram.config
+Linting: modules/nf-core/sentieon/dedup/main.nf
+Linting: modules/nf-core/sentieon/dedup/tests/nextflow.config
+Linting: modules/nf-core/sentieon/dedup/tests/nextflow_rmdup.config
+Linting: modules/nf-core/sentieon/bwaindex/main.nf
+Linting: modules/nf-core/picard/renamesampleinvcf/main.nf
+Linting: modules/nf-core/picard/markduplicates/main.nf
+Linting: modules/nf-core/picard/markduplicates/tests/nextflow.config
+Linting: modules/nf-core/picard/sortvcf/main.nf
+Linting: modules/nf-core/picard/collecthsmetrics/main.nf
+Linting: modules/nf-core/picard/collectwgsmetrics/main.nf
+Linting: modules/nf-core/picard/liftovervcf/main.nf
+Linting: modules/nf-core/picard/liftovervcf/tests/nextflow.config
+Linting: modules/nf-core/picard/addorreplacereadgroups/main.nf
+Linting: modules/nf-core/picard/addorreplacereadgroups/tests/cram.config
+Linting: modules/nf-core/picard/addorreplacereadgroups/tests/bam.config
+Linting: modules/nf-core/picard/collectmultiplemetrics/main.nf
+Linting: modules/nf-core/bedtools/genomecov/main.nf
+Linting: modules/nf-core/bedtools/genomecov/tests/nextflow.config
+Linting: modules/nf-core/bedtools/slop/main.nf
+Linting: modules/nf-core/bedtools/slop/tests/nextflow.config
+Linting: modules/nf-core/spring/decompress/main.nf
+Linting: modules/nf-core/spring/decompress/tests/nextflow.config
+Linting: modules/nf-core/deepvariant/rundeepvariant/main.nf
+Linting: modules/nf-core/deepvariant/rundeepvariant/tests/nextflow.config
+Linting: modules/nf-core/deepvariant/rundeepvariant/tests/nextflow-intervals.config
+Linting: modules/nf-core/deepvariant/rundeepvariant/tests/nextflow-non-autosomal-calling.config
+Linting: modules/nf-core/glnexus/main.nf
+Linting: modules/nf-core/tabix/bgzip/main.nf
+Linting: modules/nf-core/tabix/bgzip/tests/vcf_none.config
+Linting: modules/nf-core/tabix/bgzip/tests/bgzip_compress.config
+Linting: modules/nf-core/tabix/bgziptabix/main.nf
+Linting: modules/nf-core/tabix/bgziptabix/tests/tabix_tbi.config
+Linting: modules/nf-core/tabix/bgziptabix/tests/tabix_csi.config
+Linting: modules/nf-core/tabix/tabix/main.nf
+Linting: modules/nf-core/tabix/tabix/tests/tabix_vcf_tbi.config
+Linting: modules/nf-core/tabix/tabix/tests/tabix_gff.config
+Linting: modules/nf-core/tabix/tabix/tests/tabix_bed.config
+Linting: modules/nf-core/tabix/tabix/tests/tabix_vcf_csi.config
+Linting: modules/nf-core/bwameme/index/main.nf
+Linting: modules/nf-core/bwameme/index/tests/nextflow.config
+Linting: modules/nf-core/bwameme/mem/main.nf
+Linting: modules/nf-core/bwameme/mem/tests/nextflow.config
+
+
+
+Warn  modules/local/calculate_seed_fraction/main.nf:23:9: Variable was declared but not used
+│  23 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/calculate_seed_fraction/main.nf:24:9: Variable was declared but not used
+│  24 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+
+
+
+
+
+
+
+Warn  modules/local/retroseq/call/main.nf:43:9: Variable was declared but not used
+│  43 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/retroseq/discover/main.nf:43:9: Variable was declared but not used
+│  43 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+Warn  modules/nf-core/bcftools/merge/main.nf:28:58: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  28 |     def input = (vcfs.collect().size() > 1) ? vcfs.sort{ it.name } : v
+╰     |                                                          ^^
+
+
+
+
+
+
+Error modules/nf-core/bcftools/view/main.nf:60:9: `index` is already declared
+│  60 |     def index = args.contains("--write-index=tbi") || args.contains("-
+╰     |         ^^^^^
+
+
+
+
+Error modules/nf-core/bwa/index/main.nf:14:27: `bwa` is not defined
+│  14 |     tuple val(meta), path(bwa) , emit: index
+╰     |                           ^^^
+
+
+Warn  modules/nf-core/bwa/mem/main.nf:56:9: Variable was declared but not used
+│  56 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/bwa/mem/main.nf:59:9: Variable was declared but not used
+│  59 |     def samtools_command = sort_bam ? 'sort' : 'view'
+╰     |         ^^^^^^^^^^^^^^^^
+
+
+
+Warn  modules/nf-core/bwamem2/mem/main.nf:59:9: Variable was declared but not used
+│  59 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/bwamem2/mem/main.nf:62:9: Variable was declared but not used
+│  62 |     def samtools_command = sort_bam ? 'sort' : 'view'
+╰     |         ^^^^^^^^^^^^^^^^
+
+Warn  modules/nf-core/bwamem2/mem/main.nf:66:9: Variable was declared but not used
+│  66 |     def reference = fasta && extension=="cram"  ? "--reference ${fasta
+╰     |         ^^^^^^^^^
+
+
+
+Warn  modules/nf-core/bwameme/mem/main.nf:75:9: Variable was declared but not used
+│  75 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/bwameme/mem/main.nf:78:9: Variable was declared but not used
+│  78 |     def samtools_command = sort_bam ? 'sort' : 'view'
+╰     |         ^^^^^^^^^^^^^^^^
+
+Warn  modules/nf-core/bwameme/mem/main.nf:82:9: Variable was declared but not used
+│  82 |     def reference = fasta && extension=="cram"  ? "--reference ${fasta
+╰     |         ^^^^^^^^^
+
+
+Warn  modules/nf-core/cadd/main.nf:42:9: Variable was declared but not used
+│  42 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/cat/cat/main.nf:23:40: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  23 |     def file_list = files_in.collect { it.toString() }
+╰     |                                        ^^
+
+Warn  modules/nf-core/cat/cat/main.nf:58:42: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  58 |     def file_list   = files_in.collect { it.toString() }
+╰     |                                          ^^
+
+
+Warn  modules/nf-core/chromograph/main.nf:70:9: Variable was declared but not used
+│  70 |     def args               = task.ext.args   ?: ''
+╰     |         ^^^^
+
+
+Error modules/nf-core/cnvnator/cnvnator/main.nf:59:9: `calls_cmd` is already declared
+│  59 |     def calls_cmd = args.contains("-call") ? "touch ${prefix}.tab" : '
+╰     |         ^^^^^^^^^
+
+
+Warn  modules/nf-core/cnvnator/convert2vcf/main.nf:36:9: Variable was declared but not used
+│  36 |     def args   = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+Error modules/nf-core/eklipse/main.nf:28:9: `ref_gb` is already declared
+│  28 |     def ref_gb = ref_gb ? "$ref_gb" : "/usr/local/bin/data/NC_012920.1
+╰     |         ^^^^^^
+
+
+
+
+
+
+
+
+
+
+Warn  modules/nf-core/gatk4/denoisereadcounts/main.nf:49:9: Variable was declared but not used
+│  49 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/gatk4/determinegermlinecontigploidy/main.nf:30:91: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  30 | ollect(){"--exclude-intervals $it"}.join(" ") : ""
+╰     |                               ^^
+
+Warn  modules/nf-core/gatk4/determinegermlinecontigploidy/main.nf:33:51: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  33 |     def input_list    = counts.collect(){"--input $it"}.join(" ")
+╰     |                                                   ^^
+
+
+Warn  modules/nf-core/gatk4/filtermutectcalls/main.nf:29:113: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  29 | entation-bias-artifact-priors $it"}.join(' ') : ''
+╰     |                               ^^
+
+Warn  modules/nf-core/gatk4/filtermutectcalls/main.nf:30:96: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  30 | collect{"--tumor-segmentation $it"}.join(' ')                  : ''
+╰     |                               ^^
+
+Warn  modules/nf-core/gatk4/filtermutectcalls/main.nf:32:90: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  32 | ollect{"--contamination-table $it"}.join(' ')                        :
+╰     |                               ^^
+
+
+Warn  modules/nf-core/gatk4/germlinecnvcaller/main.nf:30:50: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  30 |     def input_list        = tsv.collect{"--input $it"}.join(' ')
+╰     |                                                  ^^
+
+
+
+
+Warn  modules/nf-core/gatk4/mergevcfs/main.nf:25:44: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  25 |     def input_list = vcf.collect{ "--INPUT $it"}.join(' ')
+╰     |                                            ^^
+
+
+Warn  modules/nf-core/gatk4/mutect2/main.nf:33:42: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  33 |     def inputs = input.collect{ "--input $it"}.join(" ")
+╰     |                                          ^^
+
+
+Warn  modules/nf-core/gatk4/postprocessgermlinecnvcalls/main.nf:25:9: Variable was declared but not used
+│  25 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/gatk4/postprocessgermlinecnvcalls/main.nf:27:70: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  27 | s.collect{"--calls-shard-path $it"}.join(' ')  : ""
+╰     |                               ^^
+
+Warn  modules/nf-core/gatk4/postprocessgermlinecnvcalls/main.nf:28:70: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  28 | l.collect{"--model-shard-path $it"}.join(' ')  : ""
+╰     |                               ^^
+
+
+
+
+
+
+
+
+
+
+
+
+
+Warn  modules/nf-core/glnexus/main.nf:27:33: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  27 |     def input = gvcfs.collect { it.toString() }
+╰     |                                 ^^
+
+
+Warn  modules/nf-core/haplocheck/main.nf:22:9: Variable was declared but not used
+│  22 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+Warn  modules/nf-core/manta/germline/main.nf:33:46: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  33 |     def input_files = input.collect{"--bam ${it}"}.join(' ')
+╰     |                                              ^^
+
+
+
+
+Error modules/nf-core/ngsbits/samplegender/main.nf:13:15: `meta2` is already declared
+│  13 |     tuple val(meta2), path(fai)
+╰     |               ^^^^^
+
+Warn  modules/nf-core/ngsbits/samplegender/main.nf:12:15: Variable was declared but not used
+│  12 |     tuple val(meta2), path(fasta)
+╰     |               ^^^^^
+
+
+
+
+
+
+
+
+
+Error modules/nf-core/picard/renamesampleinvcf/main.nf:23:62: `$args` is not defined
+│  23 | ntains("--NEW_SAMPLE_NAME") ? $args : "${args} --NEW_SAMPLE_NAME ${met
+╰     |                               ^^^^^
+
+Warn  modules/nf-core/picard/renamesampleinvcf/main.nf:47:9: Variable was declared but not used
+│  47 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+
+
+
+
+
+
+
+Warn  modules/nf-core/samtools/stats/main.nf:22:9: Variable was declared but not used
+│  22 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Error modules/nf-core/samtools/view/main.nf:66:9: `index` is already declared
+│  66 |     def index = args.contains("--write-index") ? "touch ${prefix}.${fi
+╰     |         ^^^^^
+
+
+Error modules/nf-core/sentieon/bwaindex/main.nf:15:27: `bwa` is not defined
+│  15 |     tuple val(meta), path(bwa), emit: index
+╰     |                           ^^^
+
+
+
+Warn  modules/nf-core/sentieon/datametrics/main.nf:36:41: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  36 |     def input  = bam.sort().collect{"-i $it"}.join(' ')
+╰     |                                         ^^
+
+
+Warn  modules/nf-core/sentieon/dedup/main.nf:36:38: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  36 |     def input_list = bam.collect{"-i $it"}.join(' ')
+╰     |                                      ^^
+
+
+
+
+Warn  modules/nf-core/sentieon/readwriter/main.nf:30:39: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  30 |     def input_str       = input.sort{ it.getName() }.collect{"-i $it"}
+╰     |                                       ^^
+
+Warn  modules/nf-core/sentieon/readwriter/main.nf:30:66: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  30 | t{ it.getName() }.collect{"-i $it"}.join(' ')
+╰     |                               ^^
+
+
+Warn  modules/nf-core/sentieon/wgsmetrics/main.nf:26:43: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  26 |     def input    = bam.sort().collect{"-i $it"}.join(' ')
+╰     |                                           ^^
+
+
+
+
+
+Warn  modules/nf-core/svdb/merge/main.nf:38:53: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  38 |             def pairs = vcfs.indices.collect { [vcfs[it], input_priori
+╰     |                                                     ^^
+
+Warn  modules/nf-core/svdb/merge/main.nf:38:73: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  38 |    def pairs = vcfs.indices.collect { [vcfs[it], input_priority[it]] }
+╰     |                                                                ^^
+
+Warn  modules/nf-core/svdb/merge/main.nf:40:36: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  40 |             vcfs = pairs.collect { it[0] }
+╰     |                                    ^^
+
+Warn  modules/nf-core/svdb/merge/main.nf:41:40: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  41 |             priority = pairs.collect { it[1] }
+╰     |                                        ^^
+
+Warn  modules/nf-core/svdb/merge/main.nf:55:74: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  55 | && sort_inputs) ? vcfs.sort { it.name } : vcfs
+╰     |                               ^^
+
+
+
+
+
+
+
+
+
+
+
+Warn  modules/nf-core/vcf2cytosure/main.nf:51:9: Variable was declared but not used
+│  51 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/vcf2cytosure/main.nf:52:9: Variable was declared but not used
+│  52 |     def coverage = coverage_bed ? "--coverage ${coverage_bed}" : ''
+╰     |         ^^^^^^^^
+
+Warn  modules/nf-core/vcf2cytosure/main.nf:53:9: Variable was declared but not used
+│  53 |     def cnvkit = cns ? ( coverage_bed ? '' : "--cn ${cns}" ) : ''
+╰     |         ^^^^^^
+
+Warn  modules/nf-core/vcf2cytosure/main.nf:54:9: Variable was declared but not used
+│  54 |     def snv = snv_vcf ? ( coverage_bed ? '' : "--snv ${snv_vcf}" ) : '
+╰     |         ^^^
+
+Warn  modules/nf-core/vcf2cytosure/main.nf:55:9: Variable was declared but not used
+│  55 |     def blacklist = blacklist_bed ? "--blacklist ${blacklist_bed}" : '
+╰     |         ^^^^^^^^^
+
+
+
+
+Warn  subworkflows/local/align.nf:38:33: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  38 |         ch_bwamem2_bam        = Channel.empty()
+╰     |                                 ^^^^^^^
+
+Warn  subworkflows/local/align.nf:39:33: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  39 |         ch_bwamem2_bai        = Channel.empty()
+╰     |                                 ^^^^^^^
+
+Warn  subworkflows/local/align.nf:40:33: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  40 |         ch_fastp_json         = Channel.empty()
+╰     |                                 ^^^^^^^
+
+Warn  subworkflows/local/align.nf:41:33: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  41 |         ch_markdup_metrics    = Channel.empty()
+╰     |                                 ^^^^^^^
+
+Warn  subworkflows/local/align.nf:42:33: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  42 |         ch_mt_bam_bai         = Channel.empty()
+╰     |                                 ^^^^^^^
+
+Warn  subworkflows/local/align.nf:43:33: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  43 |         ch_mt_marked_bam      = Channel.empty()
+╰     |                                 ^^^^^^^
+
+Warn  subworkflows/local/align.nf:44:33: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  44 |         ch_mt_marked_bai      = Channel.empty()
+╰     |                                 ^^^^^^^
+
+Warn  subworkflows/local/align.nf:45:33: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  45 |         ch_mtshift_bam_bai    = Channel.empty()
+╰     |                                 ^^^^^^^
+
+Warn  subworkflows/local/align.nf:46:33: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  46 |         ch_mtshift_marked_bam = Channel.empty()
+╰     |                                 ^^^^^^^
+
+Warn  subworkflows/local/align.nf:47:33: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  47 |         ch_mtshift_marked_bai = Channel.empty()
+╰     |                                 ^^^^^^^
+
+Warn  subworkflows/local/align.nf:48:33: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  48 |         ch_sentieon_bam       = Channel.empty()
+╰     |                                 ^^^^^^^
+
+Warn  subworkflows/local/align.nf:49:33: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  49 |         ch_sentieon_bai       = Channel.empty()
+╰     |                                 ^^^^^^^
+
+Warn  subworkflows/local/align.nf:50:33: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  50 |         ch_versions           = Channel.empty()
+╰     |                                 ^^^^^^^
+
+Warn  subworkflows/local/align.nf:107:32: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 107 |         ch_genome_marked_bam = Channel.empty().mix(ch_bwamem2_bam, ch_
+╰     |                                ^^^^^^^
+
+Warn  subworkflows/local/align.nf:108:32: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 108 |         ch_genome_marked_bai = Channel.empty().mix(ch_bwamem2_bai, ch_
+╰     |                                ^^^^^^^
+
+
+Warn  subworkflows/local/align_MT/main.nf:25:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  25 |         ch_versions     = Channel.empty()
+╰     |                           ^^^^^^^
+
+Warn  subworkflows/local/align_MT/main.nf:33:81: Parameter was not used -- prefix with `_` to suppress warning
+│  33 | t.bam_and_bai.map{ meta, bam, bai -> [meta, bam] }
+╰     |                               ^^^
+
+
+Warn  subworkflows/local/align_bwa_bwamem2_bwameme/main.nf:30:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  30 |         ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/align_bwa_bwamem2_bwameme/main.nf:78:25: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  78 |                 single: it[1].size() == 1
+╰     |                         ^^
+
+Warn  subworkflows/local/align_bwa_bwamem2_bwameme/main.nf:79:27: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  79 |                 multiple: it[1].size() > 1
+╰     |                           ^^
+
+
+Warn  subworkflows/local/align_sentieon/main.nf:21:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  21 |         ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/align_sentieon/main.nf:34:25: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  34 |                 single: it[1].size() == 1
+╰     |                         ^^
+
+Warn  subworkflows/local/align_sentieon/main.nf:35:27: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  35 |                 multiple: it[1].size() > 1
+╰     |                           ^^
+
+
+Warn  subworkflows/local/annotate_cadd/main.nf:20:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  20 |         ch_versions       = Channel.empty()
+╰     |                             ^^^^^^^
+
+
+Warn  subworkflows/local/annotate_consequence_pli.nf:15:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |         ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/annotate_consequence_pli.nf:28:65: Parameter was not used -- prefix with `_` to suppress warning
+│  28 | X.out.gz_tbi.map { meta, vcf, tbi -> return [ meta, vcf ] } // channel
+╰     |                               ^^^
+
+Warn  subworkflows/local/annotate_consequence_pli.nf:29:60: Parameter was not used -- prefix with `_` to suppress warning
+│  29 |         tbi_ann  = TABIX_BGZIPTABIX.out.gz_tbi.map { meta, vcf, tbi ->
+╰     |                                                            ^^^
+
+
+Warn  subworkflows/local/annotate_genome_snvs.nf:28:9: Parameter was not used -- prefix with `_` to suppress warning
+│  28 |         analysis_type         // string: [mandatory] 'wgs' or 'wes'
+╰     |         ^^^^^^^^^^^^^
+
+Warn  subworkflows/local/annotate_genome_snvs.nf:46:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  46 |         ch_cadd_vcf       = Channel.empty()
+╰     |                             ^^^^^^^
+
+Warn  subworkflows/local/annotate_genome_snvs.nf:47:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  47 |         ch_versions       = Channel.empty()
+╰     |                             ^^^^^^^
+
+Warn  subworkflows/local/annotate_genome_snvs.nf:48:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  48 |         ch_vcf_scatter_in = Channel.empty()
+╰     |                             ^^^^^^^
+
+Warn  subworkflows/local/annotate_genome_snvs.nf:49:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  49 |         ch_vep_in         = Channel.empty()
+╰     |                             ^^^^^^^
+
+Warn  subworkflows/local/annotate_genome_snvs.nf:136:46: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 136 |                 def sortedvcfs = vcfs.sort { it.baseName }
+╰     |                                              ^^
+
+Warn  subworkflows/local/annotate_genome_snvs.nf:137:46: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 137 |                 def sortedtbis = tbis.sort { it.baseName }
+╰     |                                              ^^
+
+
+Warn  subworkflows/local/annotate_mobile_elements.nf:24:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  24 |         ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/annotate_mobile_elements.nf:25:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  25 |         ch_svdb_dbs = Channel.empty()
+╰     |                       ^^^^^^^
+
+
+Warn  subworkflows/local/annotate_mt_snvs.nf:18:9: Parameter was not used -- prefix with `_` to suppress warning
+│  18 |         ch_mt_tbi              // channel: [mandatory] [ val(meta), pa
+╰     |         ^^^^^^^^^
+
+Warn  subworkflows/local/annotate_mt_snvs.nf:32:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  32 |         ch_versions     = Channel.empty()
+╰     |                           ^^^^^^^
+
+Warn  subworkflows/local/annotate_mt_snvs.nf:33:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  33 |         ch_haplog       = Channel.empty()
+╰     |                           ^^^^^^^
+
+Warn  subworkflows/local/annotate_mt_snvs.nf:56:73: Parameter was not used -- prefix with `_` to suppress warning
+│  56 | _MT.out.gz_tbi.map{meta, vcf, tbi -> return [meta, vcf]}
+╰     |                               ^^^
+
+Warn  subworkflows/local/annotate_mt_snvs.nf:57:9: Variable was declared but not used
+│  57 |         ch_vcfanno_tbi = ZIP_TABIX_VCFANNO_MT.out.gz_tbi.map{meta, vcf
+╰     |         ^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/annotate_mt_snvs.nf:57:68: Parameter was not used -- prefix with `_` to suppress warning
+│  57 | FANNO_MT.out.gz_tbi.map{meta, vcf, tbi -> return [meta, tbi]}
+╰     |                               ^^^
+
+Warn  subworkflows/local/annotate_mt_snvs.nf:69:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  69 |             ch_cadd_vcf = Channel.empty()
+╰     |                           ^^^^^^^
+
+
+Warn  subworkflows/local/annotate_rhocallviz/main.nf:21:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  21 |         ch_versions       = Channel.empty()
+╰     |                             ^^^^^^^
+
+Warn  subworkflows/local/annotate_rhocallviz/main.nf:25:19: Parameter was not used -- prefix with `_` to suppress warning
+│  25 |             .map {meta, vcf, tbi, meta2 -> return [meta2,vcf,tbi]}
+╰     |                   ^^^^
+
+
+Warn  subworkflows/local/annotate_structural_variants.nf:26:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  26 |         ch_versions      = Channel.empty()
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/local/annotate_structural_variants.nf:27:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  27 |         ch_svdb_dbs      = Channel.empty()
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/local/annotate_structural_variants.nf:28:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  28 |         ch_svdb_bedpedbs = Channel.empty()
+╰     |                            ^^^^^^^
+
+
+Warn  subworkflows/local/call_mobile_elements.nf:24:9: Parameter was not used -- prefix with `_` to suppress warning
+│  24 |         val_genome_build    // string: [mandatory] GRCh37 or GRCh38
+╰     |         ^^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/call_mobile_elements.nf:27:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  27 |         ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/call_mobile_elements.nf:32:20: Parameter was not used -- prefix with `_` to suppress warning
+│  32 |             .map { meta, fai -> [ fai.first() ] }
+╰     |                    ^^^^
+
+Warn  subworkflows/local/call_mobile_elements.nf:115:22: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 115 |             .collect{it[1]}
+╰     |                      ^^
+
+
+Warn  subworkflows/local/call_repeat_expansions.nf:23:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  23 |         ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/call_repeat_expansions.nf:52:22: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  52 |             .collect{it[1]}
+╰     |                      ^^
+
+
+Warn  subworkflows/local/call_snv.nf:21:9: Parameter was not used -- prefix with `_` to suppress warning
+│  21 |         ch_genome_dictionary  // channel: [mandatory] [ val(meta), pat
+╰     |         ^^^^^^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/call_snv.nf:42:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  42 |         ch_versions      = Channel.empty()
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/local/call_snv.nf:43:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  43 |         ch_deepvar_vcf   = Channel.empty()
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/local/call_snv.nf:44:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  44 |         ch_deepvar_tbi   = Channel.empty()
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/local/call_snv.nf:45:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  45 |         ch_deepvar_gvcf  = Channel.empty()
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/local/call_snv.nf:46:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  46 |         ch_deepvar_gtbi  = Channel.empty()
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/local/call_snv.nf:47:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  47 |         ch_mt_vcf        = Channel.empty()
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/local/call_snv.nf:48:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  48 |         ch_mt_tabix      = Channel.empty()
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/local/call_snv.nf:49:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  49 |         ch_mt_vcf_tabix  = Channel.empty()
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/local/call_snv.nf:50:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  50 |         ch_mt_txt        = Channel.empty()
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/local/call_snv.nf:51:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  51 |         ch_sentieon_vcf  = Channel.empty()
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/local/call_snv.nf:52:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  52 |         ch_sentieon_tbi  = Channel.empty()
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/local/call_snv.nf:53:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  53 |         ch_sentieon_gvcf = Channel.empty()
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/local/call_snv.nf:54:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  54 |         ch_sentieon_gtbi = Channel.empty()
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/local/call_snv.nf:93:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  93 |         ch_vcf    = Channel.empty().mix(ch_deepvar_vcf, ch_sentieon_vc
+╰     |                     ^^^^^^^
+
+Warn  subworkflows/local/call_snv.nf:94:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  94 |         ch_tabix  = Channel.empty().mix(ch_deepvar_tbi, ch_sentieon_tb
+╰     |                     ^^^^^^^
+
+Warn  subworkflows/local/call_snv.nf:95:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  95 |         ch_gvcf   = Channel.empty().mix(ch_deepvar_gvcf, ch_sentieon_g
+╰     |                     ^^^^^^^
+
+Warn  subworkflows/local/call_snv.nf:96:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  96 |         ch_gtabix = Channel.empty().mix(ch_deepvar_gtbi, ch_sentieon_g
+╰     |                     ^^^^^^^
+
+
+Warn  subworkflows/local/call_snv_MT/main.nf:18:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  18 |         ch_versions        = Channel.empty()
+╰     |                              ^^^^^^^
+
+Warn  subworkflows/local/call_snv_MT/main.nf:19:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 |         ch_haplocheck_txt  = Channel.empty()
+╰     |                              ^^^^^^^
+
+Warn  subworkflows/local/call_snv_MT/main.nf:20:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  20 |         ch_haplocheck_html = Channel.empty()
+╰     |                              ^^^^^^^
+
+Warn  subworkflows/local/call_snv_MT/main.nf:26:56: Variable was declared but not used
+│  26 |         HAPLOCHECK_MT (GATK4_MUTECT2_MT.out.vcf).set { ch_haplocheck }
+╰     |                                                        ^^^^^^^^^^^^^
+
+
+Warn  subworkflows/local/call_snv_deepvariant/main.nf:27:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  27 |         ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/call_snv_deepvariant/main.nf:30:56: Parameter was not used -- prefix with `_` to suppress warning
+│  30 |             TABIX_BGZIP(ch_target_bed.map{meta, gzbed, index -> return
+╰     |                                                        ^^^^^
+
+Warn  subworkflows/local/call_snv_deepvariant/main.nf:32:55: Parameter was not used -- prefix with `_` to suppress warning
+│  32 |                 .combine (TABIX_BGZIP.out.output.map {meta, bed -> ret
+╰     |                                                       ^^^^
+
+Warn  subworkflows/local/call_snv_deepvariant/main.nf:73:18: Parameter was not used -- prefix with `_` to suppress warning
+│  73 |             .map{meta,bed,tbi -> return [bed, tbi]}
+╰     |                  ^^^^
+
+
+Warn  subworkflows/local/call_snv_sentieon/main.nf:32:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  32 |         ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/call_snv_sentieon/main.nf:37:33: Parameter was not used -- prefix with `_` to suppress warning
+│  37 |                 meta, bam, bai, meta2, interval -> [meta, bam, bai, in
+╰     |                                 ^^^^^
+
+Warn  subworkflows/local/call_snv_sentieon/main.nf:63:20: Parameter was not used -- prefix with `_` to suppress warning
+│  63 |             .map { meta,vcf,tbi -> return [vcf,tbi] }
+╰     |                    ^^^^
+
+Warn  subworkflows/local/call_snv_sentieon/main.nf:70:25: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  70 |                 single: it[1].size() == 1
+╰     |                         ^^
+
+Warn  subworkflows/local/call_snv_sentieon/main.nf:71:27: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  71 |                 multiple: it[1].size() > 1
+╰     |                           ^^
+
+Warn  subworkflows/local/call_snv_sentieon/main.nf:99:18: Parameter was not used -- prefix with `_` to suppress warning
+│  99 |             .map{meta,bed,tbi -> return [bed, tbi]}
+╰     |                  ^^^^
+
+
+Warn  subworkflows/local/call_structural_variants.nf:20:9: Parameter was not used -- prefix with `_` to suppress warning
+│  20 |         ch_mtshift_bam_bai     // channel: [mandatory] [ val(meta), pa
+╰     |         ^^^^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/call_structural_variants.nf:24:9: Parameter was not used -- prefix with `_` to suppress warning
+│  24 |         ch_mtshift_fasta       // channel: [mandatory] [ val(meta), pa
+╰     |         ^^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/call_structural_variants.nf:34:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  34 |         ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/call_structural_variants.nf:35:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  35 |         ch_merged_svs = Channel.empty()
+╰     |                         ^^^^^^^
+
+Warn  subworkflows/local/call_structural_variants.nf:36:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  36 |         ch_merged_tbi = Channel.empty()
+╰     |                         ^^^^^^^
+
+Warn  subworkflows/local/call_structural_variants.nf:41:26: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  41 |                 .collect{it[1]}
+╰     |                          ^^
+
+Warn  subworkflows/local/call_structural_variants.nf:49:26: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  49 |                 .collect{it[1]}
+╰     |                          ^^
+
+Warn  subworkflows/local/call_structural_variants.nf:55:26: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  55 |                 .collect{it[1]}
+╰     |                          ^^
+
+Warn  subworkflows/local/call_structural_variants.nf:63:26: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  63 |                 .collect{it[1]}
+╰     |                          ^^
+
+
+Warn  subworkflows/local/call_sv_MT/main.nf:14:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  14 |         ch_versions       = Channel.empty()
+╰     |                             ^^^^^^^
+
+Warn  subworkflows/local/call_sv_MT/main.nf:15:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |         ch_eklipse_del    = Channel.empty()
+╰     |                             ^^^^^^^
+
+Warn  subworkflows/local/call_sv_MT/main.nf:16:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |         ch_eklipse_genes  = Channel.empty()
+╰     |                             ^^^^^^^
+
+Warn  subworkflows/local/call_sv_MT/main.nf:17:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |         ch_eklipse_circos = Channel.empty()
+╰     |                             ^^^^^^^
+
+
+Warn  subworkflows/local/call_sv_cnvnator/main.nf:23:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  23 |         ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/call_sv_cnvnator/main.nf:33:22: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  33 |             .collect{it[1]}
+╰     |                      ^^
+
+
+Warn  subworkflows/local/call_sv_germlinecnvcaller/main.nf:25:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  25 |         ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/call_sv_germlinecnvcaller/main.nf:40:42: Parameter was not used -- prefix with `_` to suppress warning
+│  40 |                 .map({ meta, tsv, calls, meta2, model -> return [meta,
+╰     |                                          ^^^^^
+
+Warn  subworkflows/local/call_sv_germlinecnvcaller/main.nf:50:20: Parameter was not used -- prefix with `_` to suppress warning
+│  50 |             .map { sample, metas, model_calls ->
+╰     |                    ^^^^^^
+
+Warn  subworkflows/local/call_sv_germlinecnvcaller/main.nf:52:52: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  52 |                 def models = model_calls.collect { it.toString() }
+╰     |                                                    ^^
+
+Warn  subworkflows/local/call_sv_germlinecnvcaller/main.nf:55:50: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  55 |             .combine(ch_gcnvcaller_model.collect{it[1]}.toList())
+╰     |                                                  ^^
+
+Warn  subworkflows/local/call_sv_germlinecnvcaller/main.nf:69:22: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  69 |             .collect{it[1]}
+╰     |                      ^^
+
+
+Warn  subworkflows/local/call_sv_manta/main.nf:18:24: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  18 |         ch_bam.collect{it[1]}
+╰     |                        ^^
+
+Warn  subworkflows/local/call_sv_manta/main.nf:22:24: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  22 |         ch_bai.collect{it[1]}
+╰     |                        ^^
+
+Warn  subworkflows/local/call_sv_manta/main.nf:27:17: Parameter was not used -- prefix with `_` to suppress warning
+│  27 |                 id, bed_file, index ->
+╰     |                 ^^
+
+
+Warn  subworkflows/local/call_sv_tiddit/main.nf:22:22: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  22 |             .collect{it[1]}
+╰     |                      ^^
+
+
+Warn  subworkflows/local/convert_mt_bam_to_fastq/main.nf:17:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |         ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+
+Warn  subworkflows/local/generate_clinical_set.nf:16:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |         ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+
+Error subworkflows/local/generate_cytosure_files.nf:31:17: Variables in a closure should be declared with `def`
+│  31 |                 id_meta = ['id':meta_sample.sample]
+╰     |                 ^^^^^^^
+
+Error subworkflows/local/generate_cytosure_files.nf:32:17: Variables in a closure should be declared with `def`
+│  32 |                 sex_meta = ['sex':meta_sample.sex]
+╰     |                 ^^^^^^^^
+
+Warn  subworkflows/local/generate_cytosure_files.nf:19:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 |         ch_versions     = Channel.empty()
+╰     |                           ^^^^^^^
+
+Warn  subworkflows/local/generate_cytosure_files.nf:20:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  20 |         ch_reheader_out = Channel.empty()
+╰     |                           ^^^^^^^
+
+Warn  subworkflows/local/generate_cytosure_files.nf:30:30: Parameter was not used -- prefix with `_` to suppress warning
+│  30 |                 meta_sample, bam, meta_case, vcf, tbi ->
+╰     |                              ^^^
+
+Warn  subworkflows/local/generate_cytosure_files.nf:30:35: Parameter was not used -- prefix with `_` to suppress warning
+│  30 |                 meta_sample, bam, meta_case, vcf, tbi ->
+╰     |                                   ^^^^^^^^^
+
+Warn  subworkflows/local/generate_cytosure_files.nf:44:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  44 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  subworkflows/local/generate_cytosure_files.nf:73:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  73 |         Channel.empty()
+╰     |         ^^^^^^^
+
+
+Warn  subworkflows/local/gens.nf:20:9: Parameter was not used -- prefix with `_` to suppress warning
+│  20 |         ch_case_info         // channel: [mandatory] [ val(case_info) 
+╰     |         ^^^^^^^^^^^^
+
+Warn  subworkflows/local/gens.nf:24:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  24 |         ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/gens.nf:38:29: Parameter was not used -- prefix with `_` to suppress warning
+│  38 |             .branch { meta, counts ->
+╰     |                             ^^^^^^
+
+
+Warn  subworkflows/local/postprocess_MT_calls/main.nf:31:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  31 |         ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/postprocess_MT_calls/main.nf:112:18: Parameter was not used -- prefix with `_` to suppress warning
+│ 112 |             .map{meta,bed,tbi -> return [bed, tbi]}
+╰     |                  ^^^^
+
+
+Warn  subworkflows/local/prepare_references.nf:49:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  49 |         ch_versions      = Channel.empty()
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/local/prepare_references.nf:50:9: Variable was declared but not used
+│  50 |         ch_tbi           = Channel.empty()
+╰     |         ^^^^^^
+
+Warn  subworkflows/local/prepare_references.nf:50:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  50 |         ch_tbi           = Channel.empty()
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/local/prepare_references.nf:51:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  51 |         ch_bgzip_tbi     = Channel.empty()
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/local/prepare_references.nf:52:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  52 |         ch_bwa           = Channel.empty()
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/local/prepare_references.nf:53:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  53 |         ch_sentieonbwa   = Channel.empty()
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/local/prepare_references.nf:54:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  54 |         ch_vcfanno_extra = Channel.empty()
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/local/prepare_references.nf:55:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  55 |         ch_vcfanno_bgzip = Channel.empty()
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/local/prepare_references.nf:56:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  56 |         ch_vcfanno_index = Channel.empty()
+╰     |                            ^^^^^^^
+
+Warn  subworkflows/local/prepare_references.nf:61:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  61 |         ch_fai  = Channel.empty().mix(ch_genome_fai, SAMTOOLS_FAIDX_GE
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/prepare_references.nf:62:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  62 |         ch_dict = Channel.empty().mix(ch_genome_dictionary, GATK_SD.ou
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/prepare_references.nf:73:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  73 |         ch_mt_fasta_in = Channel.empty().mix(ch_mt_fasta, SAMTOOLS_EXT
+╰     |                          ^^^^^^^
+
+Warn  subworkflows/local/prepare_references.nf:82:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  82 |         ch_bwa_mt = Channel.empty().mix(SENTIEON_BWAINDEX_MT.out.index
+╰     |                     ^^^^^^^
+
+Warn  subworkflows/local/prepare_references.nf:87:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  87 |         ch_bwa_mtshift = Channel.empty().mix(SENTIEON_BWAINDEX_MT_SHIF
+╰     |                          ^^^^^^^
+
+Warn  subworkflows/local/prepare_references.nf:89:24: Parameter was not used -- prefix with `_` to suppress warning
+│  89 |             .multiMap{ meta, files ->
+╰     |                        ^^^^
+
+Warn  subworkflows/local/prepare_references.nf:91:58: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  91 |                         def ind = files.findIndexValues {it.toString()
+╰     |                                                          ^^
+
+Warn  subworkflows/local/prepare_references.nf:94:56: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  94 |                         ind = files.findIndexValues {!(it.toString().e
+╰     |                                                        ^^
+
+Warn  subworkflows/local/prepare_references.nf:111:32: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 111 |         ch_target_bed_gz_tbi = Channel.empty()
+╰     |                                ^^^^^^^
+
+Warn  subworkflows/local/prepare_references.nf:123:20: Parameter was not used -- prefix with `_` to suppress warning
+│ 123 |             .map { meta, tbi, vcf -> return [[vcf,tbi]]}
+╰     |                    ^^^^
+
+Warn  subworkflows/local/prepare_references.nf:127:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 127 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  subworkflows/local/prepare_references.nf:129:20: Parameter was not used -- prefix with `_` to suppress warning
+│ 129 |             .map { meta, vcf, index -> return [[vcf,index]] }
+╰     |                    ^^^^
+
+Warn  subworkflows/local/prepare_references.nf:132:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 132 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  subworkflows/local/prepare_references.nf:149:23: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 149 |             .collect{ it[1] }
+╰     |                       ^^
+
+Warn  subworkflows/local/prepare_references.nf:196:33: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 196 |         genome_bwa_index      = Channel.empty().mix(ch_bwa, ch_sentieo
+╰     |                                 ^^^^^^^
+
+Warn  subworkflows/local/prepare_references.nf:220:64: Parameter was not used -- prefix with `_` to suppress warning
+│ 220 | AT_CAT_BAIT.out.file_out.map{ meta, inter -> inter}.collect().ifEmpty(
+╰     |                               ^^^^
+
+Warn  subworkflows/local/prepare_references.nf:221:66: Parameter was not used -- prefix with `_` to suppress warning
+│ 221 | K_BILT.out.interval_list.map{ meta, inter -> inter}.collect()         
+╰     |                               ^^^^
+
+Warn  subworkflows/local/prepare_references.nf:222:63: Parameter was not used -- prefix with `_` to suppress warning
+│ 222 | UNTAR_VEP_CACHE.out.untar.map{meta, files -> [files]}.collect()       
+╰     |                               ^^^^
+
+
+Warn  subworkflows/local/qc_bam.nf:23:9: Parameter was not used -- prefix with `_` to suppress warning
+│  23 |         ch_bai                      // channel: [mandatory] [ val(meta
+╰     |         ^^^^^^
+
+Warn  subworkflows/local/qc_bam.nf:38:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  38 |         ch_cov      = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/qc_bam.nf:39:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  39 |         ch_cov_y    = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/qc_bam.nf:40:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  40 |         ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/qc_bam.nf:41:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  41 |         ch_qualimap = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/qc_bam.nf:42:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  42 |         ch_ngsbits  = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/qc_bam.nf:71:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  71 |             ch_cov   = Channel.empty().mix(PICARD_COLLECTWGSMETRICS_WG
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/qc_bam.nf:72:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  72 |             ch_cov_y = Channel.empty().mix(PICARD_COLLECTWGSMETRICS_Y.
+╰     |                        ^^^^^^^
+
+
+Warn  subworkflows/local/rank_variants.nf:22:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  22 |         ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+
+Warn  subworkflows/local/scatter_genome.nf:16:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |         ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/scatter_genome.nf:27:74: Parameter was not used -- prefix with `_` to suppress warning
+│  27 | ALS.out.split_intervals.map { meta, it -> it }.flatten().collate(1) //
+╰     |                               ^^^^
+
+
+Warn  subworkflows/local/subsample_mt.nf:18:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  18 |         ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/subsample_mt.nf:20:39: Parameter was not used -- prefix with `_` to suppress warning
+│  20 |         ch_mt_bam_bai.map {meta, bam, bai -> return [meta, bam, -1]}.s
+╰     |                                       ^^^
+
+
+Error subworkflows/local/utils_nfcore_raredisease_pipeline/main.nf:288:5: `all_skips` was assigned but not declared
+│ 288 |     all_skips = params.skip_subworkflows+","+params.skip_tools
+╰     |     ^^^^^^^^^
+
+Error subworkflows/local/utils_nfcore_raredisease_pipeline/main.nf:290:14: `all_skips` is not defined
+│ 290 |         if (!all_skips.split(',').contains(condition)) {
+╰     |              ^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_raredisease_pipeline/main.nf:31:5: Parameter was not used -- prefix with `_` to suppress warning
+│  31 |     monochrome_logs   // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_raredisease_pipeline/main.nf:34:5: Parameter was not used -- prefix with `_` to suppress warning
+│  34 |     input             //  string: Path to input samplesheet
+╰     |     ^^^^^
+
+Warn  subworkflows/local/utils_nfcore_raredisease_pipeline/main.nf:38:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  38 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_raredisease_pipeline/main.nf:75:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  75 |     Channel
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_raredisease_pipeline/main.nf:78:22: Parameter was not used -- prefix with `_` to suppress warning
+│  78 |         .map { meta, fastq1, fastq2, spring1, spring2, bam, bai -> met
+╰     |                      ^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_raredisease_pipeline/main.nf:78:30: Parameter was not used -- prefix with `_` to suppress warning
+│  78 |         .map { meta, fastq1, fastq2, spring1, spring2, bam, bai -> met
+╰     |                              ^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_raredisease_pipeline/main.nf:78:38: Parameter was not used -- prefix with `_` to suppress warning
+│  78 |         .map { meta, fastq1, fastq2, spring1, spring2, bam, bai -> met
+╰     |                                      ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_raredisease_pipeline/main.nf:78:47: Parameter was not used -- prefix with `_` to suppress warning
+│  78 |         .map { meta, fastq1, fastq2, spring1, spring2, bam, bai -> met
+╰     |                                               ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_raredisease_pipeline/main.nf:78:56: Parameter was not used -- prefix with `_` to suppress warning
+│  78 |         .map { meta, fastq1, fastq2, spring1, spring2, bam, bai -> met
+╰     |                                                        ^^^
+
+Warn  subworkflows/local/utils_nfcore_raredisease_pipeline/main.nf:78:61: Parameter was not used -- prefix with `_` to suppress warning
+│  78 | astq2, spring1, spring2, bam, bai -> meta.id }
+╰     |                               ^^^
+
+Warn  subworkflows/local/utils_nfcore_raredisease_pipeline/main.nf:104:16: Parameter was not used -- prefix with `_` to suppress warning
+│ 104 |         .map { meta, files -> files }
+╰     |                ^^^^
+
+Warn  subworkflows/local/utils_nfcore_raredisease_pipeline/main.nf:123:46: Parameter was not used -- prefix with `_` to suppress warning
+│ 123 |     ch_samples  = ch_samplesheet.map { meta, files ->
+╰     |                                              ^^^^^
+
+Warn  subworkflows/local/utils_nfcore_raredisease_pipeline/main.nf:129:64: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 129 |     ch_case_info = ch_samples.toList().map { createCaseChannel(it) }
+╰     |                                                                ^^
+
+
+Warn  subworkflows/local/variant_evaluation.nf:13:9: Parameter was not used -- prefix with `_` to suppress warning
+│  13 |         ch_genome_fai      // channel: [mandatory] [ val(meta), path(f
+╰     |         ^^^^^^^^^^^^^
+
+Warn  subworkflows/local/variant_evaluation.nf:18:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  18 |         ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 | mYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
+╰     |                               ^^^^^^^
+
+
+Warn  workflows/raredisease.nf:88:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  88 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  workflows/raredisease.nf:89:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  89 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/raredisease.nf:90:17: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  90 |     ch_mt_txt = Channel.empty()
+╰     |                 ^^^^^^^
+
+Warn  workflows/raredisease.nf:95:36: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  95 |     ch_genome_fasta              = Channel.fromPath(params.fasta).map 
+╰     |                                    ^^^^^^^
+
+Warn  workflows/raredisease.nf:96:65: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  96 |  params.fai                 ? Channel.fromPath(params.fai).map {it -> 
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:97:67: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  97 |                                                      : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/raredisease.nf:98:65: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  98 |  params.sequence_dictionary ? Channel.fromPath(params.sequence_diction
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:99:67: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  99 |                                                      : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/raredisease.nf:100:65: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 100 |  params.gnomad_af           ? Channel.fromPath(params.gnomad_af).map{ 
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:101:67: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 |                             : Channel.value([[],[]])
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:102:65: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 102 |  params.known_dbsnp         ? Channel.fromPath(params.known_dbsnp).map
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:103:67: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 103 |                             : Channel.value([[],[]])
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:104:65: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 104 |  params.mt_fasta            ? Channel.fromPath(params.mt_fasta).map { 
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:105:67: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 105 |                                                      : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/raredisease.nf:106:65: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 106 |  params.target_bed          ? Channel.fromPath(params.target_bed).map{
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:107:67: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 107 |                             : Channel.value([[],[]])
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:108:69: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 108 | ams.vcfanno_extra_resources ? Channel.fromPath(params.vcfanno_extra_re
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:109:67: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 109 |                                                      : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/raredisease.nf:110:65: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 110 |  params.vep_cache           ? Channel.fromPath(params.vep_cache).map {
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:111:67: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 111 |                             : Channel.value([[],[]])
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:133:35: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 133 |     ch_cadd_header              = Channel.fromPath("$projectDir/assets
+╰     |                                   ^^^^^^^
+
+Warn  workflows/raredisease.nf:134:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 134 | sources                     ? Channel.fromPath(params.cadd_resources).
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:135:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 135 |                             : Channel.value([])
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:136:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 136 | terval                      ? Channel.fromPath(params.call_interval).m
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:137:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 137 |                             : Channel.value([[:],[]])
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:138:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 138 | bsnp_tbi                    ? Channel.fromPath(params.known_dbsnp_tbi)
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:140:35: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 140 |     ch_foundin_header           = Channel.fromPath("$projectDir/assets
+╰     |                                   ^^^^^^^
+
+Warn  workflows/raredisease.nf:141:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 141 | ler_model                   ? Channel.fromPath(params.gcnvcaller_model
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:145:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 145 |                                                      : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/raredisease.nf:146:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 146 |                             ? Channel.fromPath(params.bwa).map {it -> 
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:148:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 148 |                             ? Channel.fromPath(params.bwamem2).map {it
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:150:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 150 |                             ? Channel.fromPath(params.bwameme).map {it
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:155:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 155 | omad_pos                    ? Channel.fromPath(params.gens_gnomad_pos)
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:156:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 156 |                                                      : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/raredisease.nf:157:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 157 | terval_list                 ? Channel.fromPath(params.gens_interval_li
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:158:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 158 |                                                      : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/raredisease.nf:159:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 159 | n_female                    ? Channel.fromPath(params.gens_pon_female)
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:160:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 160 |                                                      : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/raredisease.nf:161:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 161 | n_male                      ? Channel.fromPath(params.gens_pon_male).m
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:162:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 162 |                                                      : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/raredisease.nf:163:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 163 | af_idx                      ? Channel.fromPath(params.gnomad_af_idx).c
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:165:123: Parameter was not used -- prefix with `_` to suppress warning
+│ 165 | ab.join(ch_gnomad_afidx).map {meta, tab, idx -> [tab,idx]}.collect()
+╰     |                               ^^^^
+
+Warn  workflows/raredisease.nf:166:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 166 |                                                      : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/raredisease.nf:167:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 167 | ls_wgs                      ? Channel.fromPath(params.intervals_wgs).c
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:168:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 168 |                                                      : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/raredisease.nf:169:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 169 | ls_y                        ? Channel.fromPath(params.intervals_y).col
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:170:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 170 |                                                      : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/raredisease.nf:171:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 171 | element_references          ? Channel.fromList(samplesheetToList(param
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:172:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 172 |                                                      : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/raredisease.nf:173:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 173 | element_svdb_annotations    ? Channel.fromPath(params.mobile_element_s
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:174:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 174 |                                                      : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/raredisease.nf:175:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 175 | _caller.equals("sentieon")  ? Channel.fromPath(params.ml_model).map {i
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:176:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 176 |                             : Channel.value([[:],[]])
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:190:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 190 |                             ? Channel.fromPath(params.par_bed).map{ it
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:191:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 191 |                             : Channel.value([[],[]])
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:192:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 192 | model                       ? Channel.fromPath(params.ploidy_model).ma
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:193:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 193 |                                                      : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/raredisease.nf:194:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 194 | nt_intervals                ? Channel.fromPath(params.readcount_interv
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:195:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 195 |                                                      : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/raredisease.nf:196:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 196 | _penetrance                 ? Channel.fromPath(params.reduced_penetran
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:197:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 197 |                             : Channel.value([])
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:198:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 198 | thvcfs                      ? Channel.fromPath(params.rtg_truthvcfs).c
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:199:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 199 |                             : Channel.value([])
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:200:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 200 | id_map                      ? Channel.fromList(samplesheetToList(param
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:201:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 201 |                                                      : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/raredisease.nf:202:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 202 | onfig_mt                    ? Channel.fromPath(params.score_config_mt)
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:203:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 203 |                             : Channel.value([])
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:204:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 204 | onfig_snv                   ? Channel.fromPath(params.score_config_snv
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:205:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 205 |                             : Channel.value([])
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:206:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 206 | onfig_sv                    ? Channel.fromPath(params.score_config_sv)
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:207:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 207 |                             : Channel.value([])
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:208:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 208 |                             ? Channel.fromPath(params.sdf).map{it -> [
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:210:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 210 | ery_dbs                     ? Channel.fromPath(params.svdb_query_dbs)
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:211:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 211 |                                                      : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/raredisease.nf:212:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 212 | ery_bedpedbs                ? Channel.fromPath(params.svdb_query_bedpe
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:213:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 213 |                                                      : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/raredisease.nf:214:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 214 | amid_svd_bed                ? Channel.fromPath(params.verifybamid_svd_
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:215:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 215 |                                                      : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/raredisease.nf:216:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 216 | amid_svd_mu                 ? Channel.fromPath(params.verifybamid_svd_
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:217:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 217 |                                                      : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/raredisease.nf:218:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 218 | amid_svd_ud                 ? Channel.fromPath(params.verifybamid_svd_
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:219:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 219 |                                                      : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/raredisease.nf:222:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 222 | _catalog                    ? Channel.fromPath(params.variant_catalog)
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:223:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 223 |                             : Channel.value([[],[]])
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:224:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 224 | _consequences_snv           ? Channel.fromPath(params.variant_conseque
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:225:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 225 |                             : Channel.value([])
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:226:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 226 | _consequences_sv            ? Channel.fromPath(params.variant_conseque
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:227:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 227 |                             : Channel.value([])
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:229:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 229 | _resources                  ? Channel.fromPath(params.vcfanno_resource
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:230:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 230 |                             : Channel.value([])
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:231:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 231 | osure_blacklist             ? Channel.fromPath(params.vcf2cytosure_bla
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:232:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 232 |                             : Channel.value([])
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:233:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 233 | _lua                        ? Channel.fromPath(params.vcfanno_lua).col
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:234:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 234 |                             : Channel.value([])
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:235:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 235 | _toml                       ? Channel.fromPath(params.vcfanno_toml).co
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:236:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 236 |                             : Channel.value([])
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:238:103: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 238 |     : ( params.vep_cache    ? Channel.fromPath(params.vep_cache).colle
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:238:150: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 238 | params.vep_cache).collect() : Channel.value([]) )
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:239:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 239 | gin_files                   ? Channel.fromPath(params.vep_plugin_files
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:240:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 240 |                             : Channel.value([])
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:241:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 241 | ters                        ? Channel.fromPath(params.vep_filters).map
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:242:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 242 |                                                      : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/raredisease.nf:243:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 243 | ters_scout_fmt              ? Channel.fromPath(params.vep_filters_scou
+╰     |                               ^^^^^^^
+
+Warn  workflows/raredisease.nf:244:79: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 244 |                                                      : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/raredisease.nf:252:36: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 252 |             ch_svcaller_priority = Channel.value(["tiddit", "manta", "
+╰     |                                    ^^^^^^^
+
+Warn  workflows/raredisease.nf:254:36: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 254 |             ch_svcaller_priority = Channel.value([])
+╰     |                                    ^^^^^^^
+
+Warn  workflows/raredisease.nf:258:36: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 258 |             ch_svcaller_priority = Channel.value(["tiddit", "manta", "
+╰     |                                    ^^^^^^^
+
+Warn  workflows/raredisease.nf:260:36: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 260 |             ch_svcaller_priority = Channel.value(["manta", "gcnvcaller
+╰     |                                    ^^^^^^^
+
+Warn  workflows/raredisease.nf:273:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 273 |     ch_vep_extra_files = Channel.empty()
+╰     |                          ^^^^^^^
+
+Warn  workflows/raredisease.nf:304:29: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 304 |         fastq_gz:           it[0].data_type == "fastq_gz"
+╰     |                             ^^
+
+Warn  workflows/raredisease.nf:305:29: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 305 |         interleaved_spring: it[0].data_type == "interleaved_spring"
+╰     |                             ^^
+
+Warn  workflows/raredisease.nf:306:29: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 306 |         separate_spring:    it[0].data_type == "separate_spring"
+╰     |                             ^^
+
+Warn  workflows/raredisease.nf:325:34: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 325 |     ch_scatter_split_intervals = Channel.empty()
+╰     |                                  ^^^^^^^
+
+Warn  workflows/raredisease.nf:403:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 403 |         Channel.value(params.ngsbits_samplegender_method)
+╰     |         ^^^^^^^
+
+Warn  workflows/raredisease.nf:478:13: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 478 |             Channel.value(params.sentieon_dnascope_pcr_indel_model)
+╰     |             ^^^^^^^
+
+Warn  workflows/raredisease.nf:516:35: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 516 |             ch_clinical_snv_vcf = Channel.empty()
+╰     |                                   ^^^^^^^
+
+Warn  workflows/raredisease.nf:583:37: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 583 |             ch_clinical_mtsnv_vcf = Channel.empty()
+╰     |                                     ^^^^^^^
+
+Warn  workflows/raredisease.nf:673:34: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 673 |             ch_clinical_sv_vcf = Channel.empty()
+╰     |                                  ^^^^^^^
+
+Warn  workflows/raredisease.nf:749:34: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 749 |             ch_clinical_me_vcf = Channel.empty()
+╰     |                                  ^^^^^^^
+
+Warn  workflows/raredisease.nf:781:22: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 781 |             .collect{it[1]}
+╰     |                      ^^
+
+Warn  workflows/raredisease.nf:786:22: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 786 |             .collect{it[1]}
+╰     |                      ^^
+
+Warn  workflows/raredisease.nf:885:32: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 885 |     ch_multiqc_config        = Channel.fromPath(
+╰     |                                ^^^^^^^
+
+Warn  workflows/raredisease.nf:888:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 888 |         Channel.fromPath(params.multiqc_config, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/raredisease.nf:889:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 889 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/raredisease.nf:891:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 891 |         Channel.fromPath(params.multiqc_logo, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/raredisease.nf:892:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 892 |         Channel.fromPath("$projectDir/docs/images/nf-core-raredisease_
+╰     |         ^^^^^^^
+
+Warn  workflows/raredisease.nf:897:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 897 |     ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_p
+╰     |                           ^^^^^^^
+
+Warn  workflows/raredisease.nf:903:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 903 |     ch_methods_description                = Channel.value(
+╰     |                                             ^^^^^^^
+
+Warn  workflows/raredisease.nf:914:67: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 914 | les.mix(fastqc_report.collect{it[1]}.ifEmpty([]))
+╰     |                               ^^
+
+Warn  workflows/raredisease.nf:915:59: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 915 |     ch_multiqc_files = ch_multiqc_files.mix(ch_mt_txt.map{it[1]}.colle
+╰     |                                                           ^^
+
+Warn  workflows/raredisease.nf:916:70: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 916 | .mix(ALIGN.out.fastp_json.map{it[1]}.collect().ifEmpty([]))
+╰     |                               ^^
+
+Warn  workflows/raredisease.nf:917:75: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 917 | ALIGN.out.markdup_metrics.map{it[1]}.collect().ifEmpty([]))
+╰     |                               ^^
+
+Warn  workflows/raredisease.nf:918:70: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 918 | .mix(QC_BAM.out.sex_check.map{it[1]}.collect().ifEmpty([]))
+╰     |                               ^^
+
+Warn  workflows/raredisease.nf:919:77: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 919 | _BAM.out.multiple_metrics.map{it[1]}.collect().ifEmpty([]))
+╰     |                               ^^
+
+Warn  workflows/raredisease.nf:920:71: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 920 | mix(QC_BAM.out.hs_metrics.map{it[1]}.collect().ifEmpty([]))
+╰     |                               ^^
+
+Warn  workflows/raredisease.nf:921:77: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 921 | _BAM.out.qualimap_results.map{it[1]}.collect().ifEmpty([]))
+╰     |                               ^^
+
+Warn  workflows/raredisease.nf:922:72: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 922 | ix(QC_BAM.out.global_dist.map{it[1]}.collect().ifEmpty([]))
+╰     |                               ^^
+
+Warn  workflows/raredisease.nf:923:64: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 923 | _files.mix(QC_BAM.out.cov.map{it[1]}.collect().ifEmpty([]))
+╰     |                               ^^
+
+Warn  workflows/raredisease.nf:924:68: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 924 | es.mix(QC_BAM.out.self_sm.map{it[1]}.collect().ifEmpty([]))
+╰     |                               ^^
+
+Warn  workflows/raredisease.nf:927:67: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 927 | c_files.mix(PEDDY.out.ped.map{it[1]}.collect().ifEmpty([]))
+╰     |                               ^^
+
+Warn  workflows/raredisease.nf:928:67: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 928 | c_files.mix(PEDDY.out.csv.map{it[1]}.collect().ifEmpty([]))
+╰     |                               ^^
+
+
+Error modules/nf-core/sentieon/bwamem/tests/nextflow.config:3:25: `SENTIEON_LICSRVR_IP` is not defined
+│   3 |     SENTIEON_LICENSE = "$SENTIEON_LICSRVR_IP"
+╰     |                         ^^^^^^^^^^^^^^^^^^^^
+
+Error modules/nf-core/sentieon/bwamem/tests/nextflow.config:5:27: `SENTIEON_AUTH_MECH` is not defined
+│   5 |     SENTIEON_AUTH_MECH = "$SENTIEON_AUTH_MECH"
+╰     |                           ^^^^^^^^^^^^^^^^^^^
+
+
+Error modules/nf-core/sentieon/bwamem/tests/nextflow_out_cram.config:3:25: `SENTIEON_LICSRVR_IP` is not defined
+│   3 |     SENTIEON_LICENSE = "$SENTIEON_LICSRVR_IP"
+╰     |                         ^^^^^^^^^^^^^^^^^^^^
+
+Error modules/nf-core/sentieon/bwamem/tests/nextflow_out_cram.config:5:27: `SENTIEON_AUTH_MECH` is not defined
+│   5 |     SENTIEON_AUTH_MECH = "$SENTIEON_AUTH_MECH"
+╰     |                           ^^^^^^^^^^^^^^^^^^^
+
+
+Error modules/nf-core/sentieon/datametrics/tests/nextflow.config:3:25: `SENTIEON_LICSRVR_IP` is not defined
+│   3 |     SENTIEON_LICENSE = "$SENTIEON_LICSRVR_IP"
+╰     |                         ^^^^^^^^^^^^^^^^^^^^
+
+Error modules/nf-core/sentieon/datametrics/tests/nextflow.config:5:27: `SENTIEON_AUTH_MECH` is not defined
+│   5 |     SENTIEON_AUTH_MECH = "$SENTIEON_AUTH_MECH"
+╰     |                           ^^^^^^^^^^^^^^^^^^^
+
+
+Error modules/nf-core/sentieon/dedup/tests/nextflow.config:3:25: `SENTIEON_LICSRVR_IP` is not defined
+│   3 |     SENTIEON_LICENSE = "$SENTIEON_LICSRVR_IP"
+╰     |                         ^^^^^^^^^^^^^^^^^^^^
+
+Error modules/nf-core/sentieon/dedup/tests/nextflow.config:5:27: `SENTIEON_AUTH_MECH` is not defined
+│   5 |     SENTIEON_AUTH_MECH = "$SENTIEON_AUTH_MECH"
+╰     |                           ^^^^^^^^^^^^^^^^^^^
+
+
+Error modules/nf-core/sentieon/dedup/tests/nextflow_rmdup.config:3:25: `SENTIEON_LICSRVR_IP` is not defined
+│   3 |     SENTIEON_LICENSE = "$SENTIEON_LICSRVR_IP"
+╰     |                         ^^^^^^^^^^^^^^^^^^^^
+
+Error modules/nf-core/sentieon/dedup/tests/nextflow_rmdup.config:5:27: `SENTIEON_AUTH_MECH` is not defined
+│   5 |     SENTIEON_AUTH_MECH = "$SENTIEON_AUTH_MECH"
+╰     |                           ^^^^^^^^^^^^^^^^^^^
+
+
+Error modules/nf-core/sentieon/readwriter/tests/nextflow.config:3:25: `SENTIEON_LICSRVR_IP` is not defined
+│   3 |     SENTIEON_LICENSE = "$SENTIEON_LICSRVR_IP"
+╰     |                         ^^^^^^^^^^^^^^^^^^^^
+
+Error modules/nf-core/sentieon/readwriter/tests/nextflow.config:5:27: `SENTIEON_AUTH_MECH` is not defined
+│   5 |     SENTIEON_AUTH_MECH = "$SENTIEON_AUTH_MECH"
+╰     |                           ^^^^^^^^^^^^^^^^^^^
+
+
+Error modules/nf-core/sentieon/readwriter/tests/nextflow_outputcram.config:3:25: `SENTIEON_LICSRVR_IP` is not defined
+│   3 |     SENTIEON_LICENSE = "$SENTIEON_LICSRVR_IP"
+╰     |                         ^^^^^^^^^^^^^^^^^^^^
+
+Error modules/nf-core/sentieon/readwriter/tests/nextflow_outputcram.config:5:27: `SENTIEON_AUTH_MECH` is not defined
+│   5 |     SENTIEON_AUTH_MECH = "$SENTIEON_AUTH_MECH"
+╰     |                           ^^^^^^^^^^^^^^^^^^^
+
+
+Error nextflow.config:501:35: `manifest` is not defined
+│ 501 | \033[0;35m  nf-core/raredisease ${manifest.version}\033[0m
+╰     |                                   ^^^^^^^^
+
+Error nextflow.config:504:26: `manifest` is not defined
+│ 504 |         afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${ma
+╰     |                          ^^^^^^^^
+
+Error nextflow.config:504:69: `manifest` is not defined
+│ 504 | ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "  
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:504:186: `manifest` is not defined
+│ 504 | doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:513:22: `validation` is not defined
+│ 513 |         beforeText = validation.help.beforeText
+╰     |                      ^^^^^^^^^^
+
+Error nextflow.config:514:21: `validation` is not defined
+│ 514 |         afterText = validation.help.afterText
+╰     |                     ^^^^^^^^^^
+
+Warn  nextflow.config:504:129: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 504 | lect { "    https://doi.org/${it.trim().replace('https://doi.org/','')
+╰     |                               ^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-test tests
+│   3 |     testsDir "."
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 19 files had 33 errors
+ ✅ 301 files had no errors

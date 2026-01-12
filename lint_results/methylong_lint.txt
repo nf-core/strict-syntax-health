@@ -1,0 +1,497 @@
+Linting Nextflow code..
+Linting: conf/test_small_aws.config
+Linting: conf/test_unmodified_bam.config
+Linting: conf/base.config
+Linting: conf/test_dmr.config
+Linting: conf/test_pod5.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: nextflow.config
+Linting: workflows/methylong.nf
+Linting: subworkflows/local/shared_dss_haplotype_level/main.nf
+Linting: subworkflows/local/shared_modkit_dmr_population_scale/preprocess/main.nf
+Linting: subworkflows/local/shared_modkit_dmr_population_scale/main.nf
+Linting: subworkflows/local/shared_fastqc_unzip/main.nf
+Linting: subworkflows/local/ONT_main.nf
+Linting: subworkflows/local/pacbio_fiberseq/main.nf
+Linting: subworkflows/local/ont_align/main.nf
+Linting: subworkflows/local/ont_fiberseq/main.nf
+Linting: subworkflows/local/pacbio_align_pbmm2/main.nf
+Linting: subworkflows/local/pacbio_align_minimap2/main.nf
+Linting: subworkflows/local/downstream_main.nf
+Linting: subworkflows/local/shared_dss_population_scale/preprocess/main.nf
+Linting: subworkflows/local/shared_dss_population_scale/main.nf
+Linting: subworkflows/local/shared_gunzip_awk/main.nf
+Linting: subworkflows/local/shared_modkit_dmr_haplotype_level/main.nf
+Linting: subworkflows/local/shared_modkit_pileup/main.nf
+Linting: subworkflows/local/Pacbio_main.nf
+Linting: subworkflows/local/shared_whatshap/main.nf
+Linting: subworkflows/local/ont_trim_repair/main.nf
+Linting: subworkflows/local/shared_snvcall_clair3/main.nf
+Linting: subworkflows/local/shared_bed2bedgraph/main.nf
+Linting: subworkflows/local/pacbio_split_strand_pbcpg_pileup/main.nf
+Linting: subworkflows/local/utils_nfcore_methylong_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/bed2bedgraphs/pbcpgtools_bedgraphs/main.nf
+Linting: modules/local/bed2bedgraphs/modkit_bedgraphs/main.nf
+Linting: modules/local/rename_fastq/main.nf
+Linting: modules/local/modkit/dmrpair/main.nf
+Linting: modules/local/samtools/reset/main.nf
+Linting: modules/local/samtools/split_strands/main.nf
+Linting: modules/local/samtools/merge/main.nf
+Linting: modules/local/ccsmeth/callmods/main.nf
+Linting: modules/local/ccsmeth/callfreqb/main.nf
+Linting: modules/local/whatshap/phase/main.nf
+Linting: modules/local/whatshap/haplotag/main.nf
+Linting: modules/local/dss/main.nf
+Linting: modules/local/pb_cpg_tools/main.nf
+Linting: modules/local/dorado/aligner/main.nf
+Linting: modules/local/dorado/basecaller/main.nf
+Linting: modules/nf-core/pbjasmine/main.nf
+Linting: modules/nf-core/clair3/main.nf
+Linting: modules/nf-core/clair3/tests/nextflow.config
+Linting: modules/nf-core/gunzip/main.nf
+Linting: modules/nf-core/gunzip/tests/nextflow.config
+Linting: modules/nf-core/modkit/pileup/main.nf
+Linting: modules/nf-core/modkit/pileup/tests/nextflow.traditional_hp.config
+Linting: modules/nf-core/modkit/pileup/tests/nextflow.traditional_hp_bedgraph.config
+Linting: modules/nf-core/modkit/pileup/tests/nextflow.traditional.config
+Linting: modules/nf-core/modkit/repair/main.nf
+Linting: modules/nf-core/modkit/callmods/main.nf
+Linting: modules/nf-core/pigz/compress/main.nf
+Linting: modules/nf-core/samtools/flagstat/main.nf
+Linting: modules/nf-core/samtools/fastq/main.nf
+Linting: modules/nf-core/samtools/index/main.nf
+Linting: modules/nf-core/samtools/index/tests/csi.nextflow.config
+Linting: modules/nf-core/samtools/sort/main.nf
+Linting: modules/nf-core/samtools/sort/tests/nextflow.config
+Linting: modules/nf-core/samtools/sort/tests/nextflow_cram.config
+Linting: modules/nf-core/samtools/import/main.nf
+Linting: modules/nf-core/samtools/faidx/main.nf
+Linting: modules/nf-core/samtools/faidx/tests/nextflow.config
+Linting: modules/nf-core/samtools/faidx/tests/nextflow2.config
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/minimap2/align/main.nf
+Linting: modules/nf-core/porechop/porechop/main.nf
+Linting: modules/nf-core/porechop/porechop/tests/nextflow.config
+Linting: modules/nf-core/fibertoolsrs/addnucleosomes/main.nf
+Linting: modules/nf-core/fibertoolsrs/predictm6a/main.nf
+Linting: modules/nf-core/fibertoolsrs/extract/main.nf
+Linting: modules/nf-core/pbmm2/align/main.nf
+Linting: modules/nf-core/gawk/main.nf
+Linting: modules/nf-core/gawk/tests/nextflow.config
+Linting: modules/nf-core/tabix/bgziptabix/main.nf
+Linting: modules/nf-core/tabix/bgziptabix/tests/tabix_tbi.config
+Linting: modules/nf-core/tabix/bgziptabix/tests/tabix_csi.config
+Warn  modules/local/bed2bedgraphs/modkit_bedgraphs/main.nf:58:9: Variable was declared but not used
+│  58 |     def args   = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/bed2bedgraphs/pbcpgtools_bedgraphs/main.nf:44:9: Variable was declared but not used
+│  44 |     def args   = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+Warn  modules/local/dorado/aligner/main.nf:36:9: Variable was declared but not used
+│  36 |     def args   = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+Warn  modules/local/modkit/dmrpair/main.nf:27:45: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  27 |     def a_params    = bed_hp1.collect { "-a $it" }.join(' ')
+╰     |                                             ^^
+
+Warn  modules/local/modkit/dmrpair/main.nf:28:45: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  28 |     def b_params    = bed_hp2.collect { "-b $it" }.join(' ')
+╰     |                                             ^^
+
+
+Warn  modules/local/pb_cpg_tools/main.nf:43:9: Variable was declared but not used
+│  43 |     def args   = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/rename_fastq/main.nf:22:9: Variable was declared but not used
+│  22 |     def args   = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/samtools/merge/main.nf:38:9: Variable was declared but not used
+│  38 |     def args   = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/samtools/reset/main.nf:36:9: Variable was declared but not used
+│  36 |     def args   = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/samtools/split_strands/main.nf:42:9: Variable was declared but not used
+│  42 |     def args   = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+Warn  modules/nf-core/clair3/main.nf:72:9: Variable was declared but not used
+│  72 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+
+Warn  modules/nf-core/gawk/main.nf:26:54: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  26 |     suffix    = task.ext.suffix ?: "${input.collect{ it.getExtension()
+╰     |                                                      ^^
+
+Warn  modules/nf-core/gawk/main.nf:29:37: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  29 |     lst_gz     = input.findResults{ it.getExtension().endsWith("gz") ?
+╰     |                                     ^^
+
+Warn  modules/nf-core/gawk/main.nf:29:72: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  29 | tExtension().endsWith("gz") ? it.toString() : null }
+╰     |                               ^^
+
+Warn  modules/nf-core/gawk/main.nf:31:34: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  31 |     input_cmd  = input.collect { it.toString() - ~/\.gz$/ }.join(" ")
+╰     |                                  ^^
+
+Warn  modules/nf-core/gawk/main.nf:34:49: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  34 |     cleanup    = lst_gz ? "rm ${lst_gz.collect{ it - ~/\.gz$/ }.join("
+╰     |                                                 ^^
+
+Warn  modules/nf-core/gawk/main.nf:37:16: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  37 |         assert it.name != "${prefix}.${suffix}" : "Input and output na
+╰     |                ^^
+
+
+Warn  modules/nf-core/gunzip/main.nf:43:9: Variable was declared but not used
+│  43 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/minimap2/align/main.nf:67:9: Variable was declared but not used
+│  67 |     def target = reference ?: (bam_input ? error("BAM input requires r
+╰     |         ^^^^^^
+
+
+
+Warn  modules/nf-core/modkit/pileup/main.nf:58:9: Variable was declared but not used
+│  58 |     def args   = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+Warn  modules/nf-core/pbmm2/align/main.nf:41:9: Variable was declared but not used
+│  41 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/pigz/compress/main.nf:35:9: Variable was declared but not used
+│  35 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+
+
+
+
+
+Warn  subworkflows/local/ONT_main.nf:35:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  35 |     ont_versions = Channel.empty()
+╰     |                    ^^^^^^^
+
+Warn  subworkflows/local/ONT_main.nf:36:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  36 |     map_stat     = Channel.empty()
+╰     |                    ^^^^^^^
+
+Warn  subworkflows/local/ONT_main.nf:41:19: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  41 |         .filter { it[1].toString().endsWith('.pod5') || file(it[1]).is
+╰     |                   ^^
+
+Warn  subworkflows/local/ONT_main.nf:41:62: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  41 | g().endsWith('.pod5') || file(it[1]).isDirectory() }
+╰     |                               ^^
+
+Warn  subworkflows/local/ONT_main.nf:52:34: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  52 |         .mix ( ch_input.filter { it[1].toString().endsWith('.bam') } )
+╰     |                                  ^^
+
+Warn  subworkflows/local/ONT_main.nf:60:66: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  60 | NZIP.out.fastqc_log.collect { it[1] }.ifEmpty([]))
+╰     |                               ^^
+
+
+Warn  subworkflows/local/Pacbio_main.nf:37:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  37 |     pacbio_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/Pacbio_main.nf:38:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  38 |     map_stat        = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/Pacbio_main.nf:40:13: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  40 |     input = Channel.empty()
+╰     |             ^^^^^^^
+
+Warn  subworkflows/local/Pacbio_main.nf:86:66: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  86 | NZIP.out.fastqc_log.collect { it[1] }.ifEmpty([]))
+╰     |                               ^^
+
+
+
+Warn  subworkflows/local/ont_align/main.nf:25:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  25 |     versions = Channel.empty()
+╰     |                ^^^^^^^
+
+
+Warn  subworkflows/local/ont_fiberseq/main.nf:23:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  23 |     versions = Channel.empty()
+╰     |                ^^^^^^^
+
+
+Warn  subworkflows/local/ont_trim_repair/main.nf:29:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  29 |     versions = Channel.empty()
+╰     |                ^^^^^^^
+
+
+Warn  subworkflows/local/pacbio_align_minimap2/main.nf:26:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  26 |     versions = Channel.empty()
+╰     |                ^^^^^^^
+
+
+Warn  subworkflows/local/pacbio_align_pbmm2/main.nf:28:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  28 |     versions = Channel.empty()
+╰     |                ^^^^^^^
+
+
+Warn  subworkflows/local/pacbio_fiberseq/main.nf:22:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  22 |     versions = Channel.empty()
+╰     |                ^^^^^^^
+
+
+Warn  subworkflows/local/pacbio_split_strand_pbcpg_pileup/main.nf:26:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  26 |     versions = Channel.empty()
+╰     |                ^^^^^^^
+
+
+Warn  subworkflows/local/shared_bed2bedgraph/main.nf:25:36: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  25 |     modkit_input = in_bed.filter { it[0].method == 'ont' || (it[0].met
+╰     |                                    ^^
+
+Warn  subworkflows/local/shared_bed2bedgraph/main.nf:25:62: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  25 | r { it[0].method == 'ont' || (it[0].method == 'pacbio' && params.pileu
+╰     |                               ^^
+
+Warn  subworkflows/local/shared_bed2bedgraph/main.nf:26:35: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  26 |     pbcpg_input = in_bed.filter { it[0].method == 'pacbio' && params.p
+╰     |                                   ^^
+
+
+Warn  subworkflows/local/shared_dss_haplotype_level/main.nf:25:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  25 |     versions = Channel.empty()
+╰     |                ^^^^^^^
+
+
+Warn  subworkflows/local/shared_dss_population_scale/main.nf:26:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  26 |     versions = Channel.empty()
+╰     |                ^^^^^^^
+
+Warn  subworkflows/local/shared_dss_population_scale/main.nf:49:46: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  49 |             def metas = sampleList.collect { it[0] }
+╰     |                                              ^^
+
+Warn  subworkflows/local/shared_dss_population_scale/main.nf:50:46: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  50 |             def beds  = sampleList.collect { it[1] }
+╰     |                                              ^^
+
+Warn  subworkflows/local/shared_dss_population_scale/main.nf:58:46: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  58 |             def metas = sampleList.collect { it[0] }
+╰     |                                              ^^
+
+Warn  subworkflows/local/shared_dss_population_scale/main.nf:59:46: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  59 |             def beds  = sampleList.collect { it[1] }
+╰     |                                              ^^
+
+
+Warn  subworkflows/local/shared_dss_population_scale/preprocess/main.nf:23:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  23 |     versions = Channel.empty()
+╰     |                ^^^^^^^
+
+
+Warn  subworkflows/local/shared_fastqc_unzip/main.nf:22:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  22 |     versions = Channel.empty()
+╰     |                ^^^^^^^
+
+Warn  subworkflows/local/shared_fastqc_unzip/main.nf:23:18: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  23 |     fastqc_log = Channel.empty()
+╰     |                  ^^^^^^^
+
+Warn  subworkflows/local/shared_fastqc_unzip/main.nf:31:58: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  31 |     fastqc_log = fastqc_log.mix(FASTQC.out.zip.collect { it[1] }.ifEmp
+╰     |                                                          ^^
+
+Warn  subworkflows/local/shared_fastqc_unzip/main.nf:35:19: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  35 |         .filter { it[1] =~ /fa\.gz$|fna\.gz$|fasta\.gz$/ }
+╰     |                   ^^
+
+Warn  subworkflows/local/shared_fastqc_unzip/main.nf:40:21: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  40 |         .filter { !(it[2] =~ /fa\.gz$|fna\.gz$|fasta\.gz$/) }
+╰     |                     ^^
+
+
+Warn  subworkflows/local/shared_gunzip_awk/main.nf:22:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  22 |     versions = Channel.empty()
+╰     |                ^^^^^^^
+
+Warn  subworkflows/local/shared_gunzip_awk/main.nf:26:19: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  26 |         .filter { it[1] =~ /\.vcf\.gz$/ }
+╰     |                   ^^
+
+
+Warn  subworkflows/local/shared_modkit_dmr_haplotype_level/main.nf:25:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  25 |     versions = Channel.empty()
+╰     |                ^^^^^^^
+
+
+Warn  subworkflows/local/shared_modkit_dmr_population_scale/main.nf:26:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  26 |     versions = Channel.empty()
+╰     |                ^^^^^^^
+
+Warn  subworkflows/local/shared_modkit_dmr_population_scale/main.nf:50:46: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  50 |             def metas = sampleList.collect { it[0] }
+╰     |                                              ^^
+
+Warn  subworkflows/local/shared_modkit_dmr_population_scale/main.nf:51:46: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  51 |             def beds  = sampleList.collect { it[1] }
+╰     |                                              ^^
+
+Warn  subworkflows/local/shared_modkit_dmr_population_scale/main.nf:52:46: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  52 |             def tbis  = sampleList.collect { it[2] }
+╰     |                                              ^^
+
+Warn  subworkflows/local/shared_modkit_dmr_population_scale/main.nf:60:46: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  60 |             def metas = sampleList.collect { it[0] }
+╰     |                                              ^^
+
+Warn  subworkflows/local/shared_modkit_dmr_population_scale/main.nf:61:46: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  61 |             def beds  = sampleList.collect { it[1] }
+╰     |                                              ^^
+
+Warn  subworkflows/local/shared_modkit_dmr_population_scale/main.nf:62:46: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  62 |             def tbis  = sampleList.collect { it[2] }
+╰     |                                              ^^
+
+
+Warn  subworkflows/local/shared_modkit_dmr_population_scale/preprocess/main.nf:23:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  23 |     versions = Channel.empty()
+╰     |                ^^^^^^^
+
+
+Warn  subworkflows/local/shared_modkit_pileup/main.nf:24:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  24 |     versions = Channel.empty()
+╰     |                ^^^^^^^
+
+
+Warn  subworkflows/local/shared_snvcall_clair3/main.nf:23:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  23 |     versions = Channel.empty()
+╰     |                ^^^^^^^
+
+
+Warn  subworkflows/local/shared_whatshap/main.nf:25:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  25 |     versions = Channel.empty()
+╰     |                ^^^^^^^
+
+
+Warn  subworkflows/local/utils_nfcore_methylong_pipeline/main.nf:31:5: Parameter was not used -- prefix with `_` to suppress warning
+│  31 |     monochrome_logs   // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_methylong_pipeline/main.nf:34:5: Parameter was not used -- prefix with `_` to suppress warning
+│  34 |     input             //  string: Path to input samplesheet
+╰     |     ^^^^^
+
+Warn  subworkflows/local/utils_nfcore_methylong_pipeline/main.nf:98:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  98 |     Channel
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_methylong_pipeline/main.nf:134:9: Variable was declared but not used
+│ 134 |     def multiqc_reports = multiqc_report.toList()
+╰     |         ^^^^^^^^^^^^^^^
+
+
+
+
+
+Warn  workflows/methylong.nf:30:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  30 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  workflows/methylong.nf:31:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  31 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/methylong.nf:38:19: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  38 |         .filter { it[0].method == "pacbio" }
+╰     |                   ^^
+
+Warn  workflows/methylong.nf:42:19: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  42 |         .filter { it[0].method == "ont" }
+╰     |                   ^^
+
+Warn  workflows/methylong.nf:51:75: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  51 | PACBIO.out.map_stat.collect { it[1] }.ifEmpty([]))
+╰     |                               ^^
+
+Warn  workflows/methylong.nf:56:72: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  56 | ix(ONT.out.map_stat.collect { it[1] }.ifEmpty([]))
+╰     |                               ^^
+
+Warn  workflows/methylong.nf:116:19: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 116 |         .filter { it != null &&!(it instanceof List && it.contains(nul
+╰     |                   ^^
+
+Warn  workflows/methylong.nf:116:34: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 116 |         .filter { it != null &&!(it instanceof List && it.contains(nul
+╰     |                                  ^^
+
+Warn  workflows/methylong.nf:116:56: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 116 |         .filter { it != null &&!(it instanceof List && it.contains(nul
+╰     |                                                        ^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-test tests
+│   3 |     testsDir "."
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 1 file had 1 error
+ ✅ 94 files had no errors

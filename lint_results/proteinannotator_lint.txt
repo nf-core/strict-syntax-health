@@ -1,0 +1,111 @@
+Linting Nextflow code..
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: nextflow.config
+Linting: workflows/proteinannotator.nf
+Linting: subworkflows/local/interproscan/main.nf
+Linting: subworkflows/local/functional_annotation/main.nf
+Linting: subworkflows/local/utils_nfcore_proteinannotator_pipeline/main.nf
+Linting: subworkflows/local/domain_annotation/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: subworkflows/nf-core/faa_seqfu_seqkit/main.nf
+Linting: subworkflows/nf-core/faa_seqfu_seqkit/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/interproscan/main.nf
+Linting: modules/local/interproscan/tests/nextflow.config
+Linting: modules/nf-core/mtmalign/align/main.nf
+Linting: modules/nf-core/seqkit/replace/main.nf
+Linting: modules/nf-core/seqkit/replace/tests/uncomp.config
+Linting: modules/nf-core/seqkit/replace/tests/replace.config
+Linting: modules/nf-core/seqkit/rmdup/main.nf
+Linting: modules/nf-core/seqkit/stats/main.nf
+Linting: modules/nf-core/seqkit/seq/main.nf
+Linting: modules/nf-core/seqkit/seq/tests/nextflow.config
+Linting: modules/nf-core/s4pred/runmodel/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/aria2/main.nf
+Linting: modules/nf-core/seqfu/stats/main.nf
+Linting: modules/nf-core/hmmer/hmmsearch/main.nf
+Linting: modules/nf-core/untar/main.nf
+Linting: modules/nf-core/mmseqs/search/main.nf
+Linting: modules/nf-core/mmseqs/search/tests/nextflow.config
+
+
+
+
+Warn  modules/nf-core/mmseqs/search/main.nf:53:9: Variable was declared but not used
+│  53 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/mtmalign/align/main.nf:25:9: Variable was declared but not used
+│  25 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+
+
+
+
+
+Warn  subworkflows/local/functional_annotation/main.nf:11:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  11 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/interproscan/main.nf:16:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/utils_nfcore_proteinannotator_pipeline/main.nf:31:5: Parameter was not used -- prefix with `_` to suppress warning
+│  31 |     monochrome_logs // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_proteinannotator_pipeline/main.nf:34:5: Parameter was not used -- prefix with `_` to suppress warning
+│  34 |     input             //  string: Path to input samplesheet
+╰     |     ^^^^^
+
+
+Warn  subworkflows/nf-core/faa_seqfu_seqkit/main.nf:15:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/nf-core/faa_seqfu_seqkit/main.nf:16:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     ch_versions      = Channel.empty()
+╰     |                        ^^^^^^^
+
+
+
+
+
+Warn  workflows/proteinannotator.nf:133:88: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 133 | KIT.out.multiqc_files.collect{it[1]}.ifEmpty([]))
+╰     |                               ^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-test tests
+│   3 |     testsDir "."
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 1 file had 1 error
+ ✅ 39 files had no errors

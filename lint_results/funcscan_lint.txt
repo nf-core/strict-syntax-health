@@ -1,0 +1,718 @@
+Linting Nextflow code..
+Linting: conf/test_bgc_pyrodigal.config
+Linting: conf/test_bgc_prokka.config
+Linting: conf/test_preannotated_bgc.config
+Linting: conf/test_minimal.config
+Linting: conf/test_preannotated.config
+Linting: conf/base.config
+Linting: conf/test_taxonomy_bakta.config
+Linting: conf/test_taxonomy_pyrodigal.config
+Linting: conf/modules.config
+Linting: conf/test_bgc_bakta.config
+Linting: conf/test_prokka.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/test_taxonomy_prokka.config
+Linting: conf/test_bakta.config
+Linting: nextflow.config
+Linting: workflows/funcscan.nf
+Linting: subworkflows/local/utils_nfcore_funcscan_pipeline/main.nf
+Linting: subworkflows/local/bgc.nf
+Linting: subworkflows/local/protein_annotation.nf
+Linting: subworkflows/local/arg.nf
+Linting: subworkflows/local/amp.nf
+Linting: subworkflows/local/taxa_class.nf
+Linting: subworkflows/local/annotation.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/amp_database_download.nf
+Linting: modules/local/merge_taxonomy_ampcombi.nf
+Linting: modules/local/merge_taxonomy_hamronization.nf
+Linting: modules/local/interproscan_download.nf
+Linting: modules/local/combgc.nf
+Linting: modules/local/merge_taxonomy_combgc.nf
+Linting: modules/nf-core/amrfinderplus/update/main.nf
+Linting: modules/nf-core/amrfinderplus/run/main.nf
+Linting: modules/nf-core/gunzip/main.nf
+Linting: modules/nf-core/gunzip/tests/nextflow.config
+Linting: modules/nf-core/seqkit/seq/main.nf
+Linting: modules/nf-core/seqkit/seq/tests/nextflow.config
+Linting: modules/nf-core/pyrodigal/main.nf
+Linting: modules/nf-core/abricate/run/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/argnorm/main.nf
+Linting: modules/nf-core/argnorm/tests/argnorm_hamronized.config
+Linting: modules/nf-core/argnorm/tests/argnorm_raw.config
+Linting: modules/nf-core/interproscan/main.nf
+Linting: modules/nf-core/interproscan/tests/nextflow.config
+Linting: modules/nf-core/hamronization/amrfinderplus/main.nf
+Linting: modules/nf-core/hamronization/abricate/main.nf
+Linting: modules/nf-core/hamronization/summarize/main.nf
+Linting: modules/nf-core/hamronization/rgi/main.nf
+Linting: modules/nf-core/hamronization/deeparg/main.nf
+Linting: modules/nf-core/hamronization/fargene/main.nf
+Linting: modules/nf-core/gecco/run/main.nf
+Linting: modules/nf-core/hmmer/hmmsearch/main.nf
+Linting: modules/nf-core/ampir/main.nf
+Linting: modules/nf-core/untar/main.nf
+Linting: modules/nf-core/rgi/cardannotation/main.nf
+Linting: modules/nf-core/rgi/main/main.nf
+Linting: modules/nf-core/amplify/predict/main.nf
+Linting: modules/nf-core/deepbgc/pipeline/main.nf
+Linting: modules/nf-core/deepbgc/download/main.nf
+Linting: modules/nf-core/macrel/contigs/main.nf
+Linting: modules/nf-core/deeparg/predict/main.nf
+Linting: modules/nf-core/deeparg/downloaddata/main.nf
+Linting: modules/nf-core/bakta/baktadbdownload/main.nf
+Linting: modules/nf-core/bakta/baktadbdownload/tests/nextflow.config
+Linting: modules/nf-core/bakta/bakta/main.nf
+Linting: modules/nf-core/bakta/bakta/tests/nextflow.config
+Linting: modules/nf-core/mmseqs/createdb/main.nf
+Linting: modules/nf-core/mmseqs/createtsv/main.nf
+Linting: modules/nf-core/mmseqs/createtsv/tests/taxonomy.nextflow.config
+Linting: modules/nf-core/mmseqs/createtsv/tests/cluster.nextflow.config
+Linting: modules/nf-core/mmseqs/taxonomy/main.nf
+Linting: modules/nf-core/mmseqs/taxonomy/tests/nextflow.config
+Linting: modules/nf-core/mmseqs/databases/main.nf
+Linting: modules/nf-core/prokka/main.nf
+Linting: modules/nf-core/antismash/antismashdownloaddatabases/main.nf
+Linting: modules/nf-core/antismash/antismashdownloaddatabases/tests/nextflow.config
+Linting: modules/nf-core/antismash/antismash/main.nf
+Linting: modules/nf-core/antismash/antismash/tests/nextflow.config
+Linting: modules/nf-core/ampcombi2/parsetables/main.nf
+Linting: modules/nf-core/ampcombi2/parsetables/tests/nextflow.config
+Linting: modules/nf-core/ampcombi2/cluster/main.nf
+Linting: modules/nf-core/ampcombi2/complete/main.nf
+Linting: modules/nf-core/fargene/main.nf
+Linting: modules/nf-core/tabix/bgzip/main.nf
+Linting: modules/nf-core/tabix/bgzip/tests/vcf_none.config
+Linting: modules/nf-core/tabix/bgzip/tests/bgzip_compress.config
+Linting: modules/nf-core/prodigal/main.nf
+
+
+
+
+
+
+
+Warn  modules/nf-core/ampcombi2/cluster/main.nf:37:9: Variable was declared but not used
+│  37 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/ampcombi2/complete/main.nf:25:49: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  25 |         --summaries_files '${summaries.collect{"$it"}.join("' '")}' \\
+╰     |                                                 ^^
+
+Warn  modules/nf-core/ampcombi2/complete/main.nf:35:9: Variable was declared but not used
+│  35 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/ampcombi2/parsetables/main.nf:43:47: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  43 |         --path_list '${amp_input.collect { "${it}" }.join("' '")}' \\
+╰     |                                               ^^
+
+Warn  modules/nf-core/ampcombi2/parsetables/main.nf:60:9: Variable was declared but not used
+│  60 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/ampcombi2/parsetables/main.nf:62:9: Variable was declared but not used
+│  62 |     def db_dir = opt_amp_db_dir ? "--amp_database_dir ${opt_amp_db_dir
+╰     |         ^^^^^^
+
+Warn  modules/nf-core/ampcombi2/parsetables/main.nf:63:9: Variable was declared but not used
+│  63 |     def interpro = opt_interproscan ? "--interproscan_output ${opt_int
+╰     |         ^^^^^^^^
+
+
+Warn  modules/nf-core/ampir/main.nf:25:9: Variable was declared but not used
+│  25 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/ampir/main.nf:49:9: Variable was declared but not used
+│  49 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+
+
+Warn  modules/nf-core/argnorm/main.nf:49:9: Variable was declared but not used
+│  49 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Error modules/nf-core/bakta/bakta/main.nf:36:9: `prodigal_tf` is already declared
+│  36 |     def prodigal_tf = prodigal_tf ? "--prodigal-tf ${prodigal_tf[0]}" 
+╰     |         ^^^^^^^^^^^
+
+
+
+
+Warn  modules/nf-core/deeparg/predict/main.nf:65:9: Variable was declared but not used
+│  65 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/deepbgc/download/main.nf:17:9: Variable was declared but not used
+│  17 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+Warn  modules/nf-core/fargene/main.nf:56:9: Variable was declared but not used
+│  56 |     def args = task.ext.args   ?: ''
+╰     |         ^^^^
+
+
+
+Warn  modules/nf-core/gunzip/main.nf:43:9: Variable was declared but not used
+│  43 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+
+
+
+
+
+
+Warn  modules/nf-core/mmseqs/createdb/main.nf:45:9: Variable was declared but not used
+│  45 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/mmseqs/createtsv/main.nf:52:9: Variable was declared but not used
+│  52 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+Warn  modules/nf-core/mmseqs/taxonomy/main.nf:50:9: Variable was declared but not used
+│  50 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+Warn  modules/nf-core/prodigal/main.nf:49:9: Variable was declared but not used
+│  49 |     def args = task.ext.args   ?: ''
+╰     |         ^^^^
+
+
+
+Warn  modules/nf-core/pyrodigal/main.nf:48:9: Variable was declared but not used
+│  48 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Error modules/nf-core/rgi/cardannotation/main.nf:14:9: `RGI_VERSION` is not defined
+│  14 |     env RGI_VERSION, emit: tool_version
+╰     |         ^^^^^^^^^^^
+
+Error modules/nf-core/rgi/cardannotation/main.nf:15:9: `DB_VERSION` is not defined
+│  15 |     env DB_VERSION, emit: db_version
+╰     |         ^^^^^^^^^^
+
+
+Error modules/nf-core/rgi/main/main.nf:19:9: `RGI_VERSION` is not defined
+│  19 |     env RGI_VERSION, emit: tool_version
+╰     |         ^^^^^^^^^^^
+
+Error modules/nf-core/rgi/main/main.nf:20:9: `DB_VERSION` is not defined
+│  20 |     env DB_VERSION, emit: db_version
+╰     |         ^^^^^^^^^^
+
+
+
+
+
+Warn  subworkflows/local/amp.nf:27:38: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  27 |     ch_versions                    = Channel.empty()
+╰     |                                      ^^^^^^^
+
+Warn  subworkflows/local/amp.nf:28:38: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  28 |     ch_ampresults_for_ampcombi     = Channel.empty()
+╰     |                                      ^^^^^^^
+
+Warn  subworkflows/local/amp.nf:29:38: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  29 |     ch_macrel_faa                  = Channel.empty()
+╰     |                                      ^^^^^^^
+
+Warn  subworkflows/local/amp.nf:30:38: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  30 |     ch_ampcombi_summaries          = Channel.empty()
+╰     |                                      ^^^^^^^
+
+Warn  subworkflows/local/amp.nf:72:66: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  72 | odels ) { ch_amp_hmm_models = Channel.fromPath( params.amp_hmmsearch_m
+╰     |                               ^^^^^^^
+
+Warn  subworkflows/local/amp.nf:110:22: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 110 |             input: [ it[0], it[1] ]
+╰     |                      ^^
+
+Warn  subworkflows/local/amp.nf:110:29: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 110 |             input: [ it[0], it[1] ]
+╰     |                             ^^
+
+Warn  subworkflows/local/amp.nf:111:18: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 111 |             faa: it[2]
+╰     |                  ^^
+
+Warn  subworkflows/local/amp.nf:112:18: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 112 |             gbk: it[3]
+╰     |                  ^^
+
+Warn  subworkflows/local/amp.nf:113:23: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 113 |             interpro: it [4]
+╰     |                       ^^
+
+Warn  subworkflows/local/amp.nf:127:64: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 127 | MBI2_PARSETABLES.out.tsv.map{ it[1] }.collect()
+╰     |                               ^^
+
+Warn  subworkflows/local/amp.nf:130:52: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 130 |     ch_summary_count = ch_ampcombi_summaries.map { it.size() }.sum()
+╰     |                                                    ^^
+
+Warn  subworkflows/local/amp.nf:153:45: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 153 |         ch_mmseqs_taxonomy_list = tsvs.map{ it[1] }.collect()
+╰     |                                             ^^
+
+Warn  subworkflows/local/amp.nf:158:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 158 |         ch_tabix_input = Channel.of( [ 'id':'ampcombi_complete_summary
+╰     |                          ^^^^^^^
+
+
+Warn  subworkflows/local/annotation.nf:22:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  22 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/annotation.nf:23:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  23 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/annotation.nf:65:53: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  65 |         ch_multiqc_files = PROKKA.out.txt.collect { it[1] }.ifEmpty([]
+╰     |                                                     ^^
+
+Warn  subworkflows/local/annotation.nf:74:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  74 |             ch_bakta_db = Channel
+╰     |                           ^^^^^^^
+
+Warn  subworkflows/local/annotation.nf:86:58: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  86 |         ch_multiqc_files = BAKTA_BAKTA.out.txt.collect { it[1] }.ifEmp
+╰     |                                                          ^^
+
+
+Error subworkflows/local/arg.nf:73:26: `fastas` is already declared
+│  73 |             .map { meta, fastas, hmm_class ->
+╰     |                          ^^^^^^
+
+Warn  subworkflows/local/arg.nf:33:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  33 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/arg.nf:36:43: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  36 |     ch_input_to_hamronization_summarize = Channel.empty()
+╰     |                                           ^^^^^^^
+
+Warn  subworkflows/local/arg.nf:41:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  41 |         ch_amrfinderplus_db = Channel
+╰     |                               ^^^^^^^
+
+Warn  subworkflows/local/arg.nf:61:94: Parameter was not used -- prefix with `_` to suppress warning
+│  61 | MRFINDERPLUS.out.tsv.filter { meta, file -> !file.isEmpty() }
+╰     |                               ^^^^
+
+Warn  subworkflows/local/arg.nf:69:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  69 |         ch_fargene_classes = Channel.fromList(params.arg_fargene_hmmmo
+╰     |                              ^^^^^^^
+
+Warn  subworkflows/local/arg.nf:79:26: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  79 |                 fastas: [it[0], it[1]]
+╰     |                          ^^
+
+Warn  subworkflows/local/arg.nf:79:33: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  79 |                 fastas: [it[0], it[1]]
+╰     |                                 ^^
+
+Warn  subworkflows/local/arg.nf:80:27: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  80 |                 hmmclass: it[2]
+╰     |                           ^^
+
+Warn  subworkflows/local/arg.nf:101:49: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 101 |             rgi_db = UNTAR_CARD.out.untar.map { it[1] }
+╰     |                                                 ^^
+
+Warn  subworkflows/local/arg.nf:131:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 131 |         ch_deeparg_db = Channel
+╰     |                         ^^^^^^^
+
+Warn  subworkflows/local/arg.nf:166:82: Parameter was not used -- prefix with `_` to suppress warning
+│ 166 | TION_DEEPARG.out.tsv.filter { meta, file -> !file.isEmpty() }
+╰     |                               ^^^^
+
+Warn  subworkflows/local/arg.nf:183:84: Parameter was not used -- prefix with `_` to suppress warning
+│ 183 | ION_ABRICATE.out.tsv.filter { meta, file -> !file.isEmpty() }
+╰     |                               ^^^^
+
+Warn  subworkflows/local/arg.nf:191:13: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 191 |             it[1]
+╰     |             ^^
+
+Warn  subworkflows/local/arg.nf:202:46: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 202 |         ch_mmseqs_taxonomy_list = tsvs.map { it[1] }.collect()
+╰     |                                              ^^
+
+Warn  subworkflows/local/arg.nf:206:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 206 |         ch_tabix_input = Channel
+╰     |                          ^^^^^^^
+
+
+Warn  subworkflows/local/bgc.nf:24:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  24 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/bgc.nf:25:32: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  25 |     ch_bgcresults_for_combgc = Channel.empty()
+╰     |                                ^^^^^^^
+
+Warn  subworkflows/local/bgc.nf:41:38: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  41 |             ch_antismash_databases = Channel.fromPath(params.bgc_antis
+╰     |                                      ^^^^^^^
+
+Warn  subworkflows/local/bgc.nf:74:35: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  74 |             ch_deepbgc_database = Channel.fromPath(params.bgc_deepbgc_
+╰     |                                   ^^^^^^^
+
+Warn  subworkflows/local/bgc.nf:93:26: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  93 |                 fastas: [it[0], it[1], []]
+╰     |                          ^^
+
+Warn  subworkflows/local/bgc.nf:93:33: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  93 |                 fastas: [it[0], it[1], []]
+╰     |                                 ^^
+
+Warn  subworkflows/local/bgc.nf:110:33: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 110 |             ch_bgc_hmm_models = Channel.fromPath(params.bgc_hmmsearch_
+╰     |                                 ^^^^^^^
+
+Warn  subworkflows/local/bgc.nf:152:52: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 152 |         ch_combgc_summaries = COMBGC.out.tsv.map { it[1] }.collectFile
+╰     |                                                    ^^
+
+Warn  subworkflows/local/bgc.nf:155:52: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 155 |         ch_combgc_summaries = COMBGC.out.tsv.map { it[1] }.collectFile
+╰     |                                                    ^^
+
+Warn  subworkflows/local/bgc.nf:161:46: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 161 |         ch_mmseqs_taxonomy_list = tsvs.map { it[1] }.collect()
+╰     |                                              ^^
+
+Warn  subworkflows/local/bgc.nf:165:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 165 |         ch_tabix_input = Channel.of(['id': 'combgc_complete_summary_ta
+╰     |                          ^^^^^^^
+
+
+Warn  subworkflows/local/protein_annotation.nf:13:36: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  13 |     ch_versions                  = Channel.empty()
+╰     |                                    ^^^^^^^
+
+Warn  subworkflows/local/protein_annotation.nf:14:36: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  14 |     ch_interproscan_tsv          = Channel.empty()
+╰     |                                    ^^^^^^^
+
+Warn  subworkflows/local/protein_annotation.nf:15:36: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |     ch_interproscan_db           = Channel.empty()
+╰     |                                    ^^^^^^^
+
+Warn  subworkflows/local/protein_annotation.nf:16:36: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     ch_interproscan_tsv_modified = Channel.empty()
+╰     |                                    ^^^^^^^
+
+Warn  subworkflows/local/protein_annotation.nf:23:34: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  23 |             ch_interproscan_db = Channel
+╰     |                                  ^^^^^^^
+
+
+Warn  subworkflows/local/taxa_class.nf:15:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/taxa_class.nf:16:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     ch_mmseqs_db = Channel.empty()
+╰     |                    ^^^^^^^
+
+Warn  subworkflows/local/taxa_class.nf:17:5: Variable was declared but not used
+│  17 |     ch_taxonomy_querydb = Channel.empty()
+╰     |     ^^^^^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/taxa_class.nf:17:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |     ch_taxonomy_querydb = Channel.empty()
+╰     |                           ^^^^^^^
+
+Warn  subworkflows/local/taxa_class.nf:18:33: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  18 |     ch_taxonomy_querydb_taxdb = Channel.empty()
+╰     |                                 ^^^^^^^
+
+Warn  subworkflows/local/taxa_class.nf:19:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 |     ch_taxonomy_tsv = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/taxa_class.nf:26:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  26 |             ch_mmseqs_db = Channel
+╰     |                            ^^^^^^^
+
+
+Warn  subworkflows/local/utils_nfcore_funcscan_pipeline/main.nf:30:5: Parameter was not used -- prefix with `_` to suppress warning
+│  30 |     monochrome_logs   // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_funcscan_pipeline/main.nf:37:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  37 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_funcscan_pipeline/main.nf:73:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  73 |     Channel.fromList(samplesheetToList(input, "${projectDir}/assets/sc
+╰     |     ^^^^^^^
+
+
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 | mYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
+╰     |                               ^^^^^^^
+
+
+Error workflows/funcscan.nf:206:65: `_` is not allowed as an identifier because it is reserved for future use
+│ 206 |         ch_interproscan_tsv = ch_prepped_input.faas.map { meta, _ ->
+╰     |                                                                 ^
+
+Warn  workflows/funcscan.nf:54:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  54 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  workflows/funcscan.nf:55:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  55 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/funcscan.nf:63:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  63 |     ch_multiqc_config = Channel.fromPath("${projectDir}/assets/multiqc
+╰     |                         ^^^^^^^
+
+Warn  workflows/funcscan.nf:64:56: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  64 |     ch_multiqc_custom_config = params.multiqc_config ? Channel.fromPat
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/funcscan.nf:64:119: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  64 | fromPath(params.multiqc_config, checkIfExists: true) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/funcscan.nf:65:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  65 |     ch_multiqc_logo = params.multiqc_logo ? Channel.fromPath(params.mu
+╰     |                                             ^^^^^^^
+
+Warn  workflows/funcscan.nf:65:106: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  65 | l.fromPath(params.multiqc_logo, checkIfExists: true) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/funcscan.nf:74:25: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  74 |             compressed: it[1].toString().endsWith('.gz')
+╰     |                         ^^
+
+Warn  workflows/funcscan.nf:75:27: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  75 |             uncompressed: it[1]
+╰     |                           ^^
+
+Warn  workflows/funcscan.nf:87:44: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  87 |             def fasta_found = files.find { it.toString().tokenize('.')
+╰     |                                            ^^
+
+Warn  workflows/funcscan.nf:88:42: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  88 |             def faa_found = files.find { it.toString().endsWith('.faa'
+╰     |                                          ^^
+
+Warn  workflows/funcscan.nf:89:42: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  89 |             def gbk_found = files.find { it.toString().tokenize('.').l
+╰     |                                          ^^
+
+Warn  workflows/funcscan.nf:96:19: Parameter was not used -- prefix with `_` to suppress warning
+│  96 |         .branch { meta, fasta, faa, gbk ->
+╰     |                   ^^^^
+
+Warn  workflows/funcscan.nf:96:25: Parameter was not used -- prefix with `_` to suppress warning
+│  96 |         .branch { meta, fasta, faa, gbk ->
+╰     |                         ^^^^^
+
+Warn  workflows/funcscan.nf:96:32: Parameter was not used -- prefix with `_` to suppress warning
+│  96 |         .branch { meta, fasta, faa, gbk ->
+╰     |                                ^^^
+
+Warn  workflows/funcscan.nf:104:75: Parameter was not used -- prefix with `_` to suppress warning
+│ 104 | put.fastas.map { meta, fasta, faa, gbk -> [meta, fasta] })
+╰     |                               ^^^
+
+Warn  workflows/funcscan.nf:104:80: Parameter was not used -- prefix with `_` to suppress warning
+│ 104 | astas.map { meta, fasta, faa, gbk -> [meta, fasta] })
+╰     |                               ^^^
+
+Warn  workflows/funcscan.nf:106:33: Parameter was not used -- prefix with `_` to suppress warning
+│ 106 |             .map { meta, fasta, protein, gbk -> [meta, fasta] }
+╰     |                                 ^^^^^^^
+
+Warn  workflows/funcscan.nf:106:42: Parameter was not used -- prefix with `_` to suppress warning
+│ 106 |             .map { meta, fasta, protein, gbk -> [meta, fasta] }
+╰     |                                          ^^^
+
+Warn  workflows/funcscan.nf:117:83: Parameter was not used -- prefix with `_` to suppress warning
+│ 117 | put.fastas.map { meta, fasta, protein, gbk -> [meta, fasta] }
+╰     |                               ^^^^^^^
+
+Warn  workflows/funcscan.nf:117:92: Parameter was not used -- prefix with `_` to suppress warning
+│ 117 | s.map { meta, fasta, protein, gbk -> [meta, fasta] }
+╰     |                               ^^^
+
+Warn  workflows/funcscan.nf:139:25: Parameter was not used -- prefix with `_` to suppress warning
+│ 139 |         .filter { meta, fasta, faa, gbk -> meta.category != 'long' }
+╰     |                         ^^^^^
+
+Warn  workflows/funcscan.nf:139:32: Parameter was not used -- prefix with `_` to suppress warning
+│ 139 |         .filter { meta, fasta, faa, gbk -> meta.category != 'long' }
+╰     |                                ^^^
+
+Warn  workflows/funcscan.nf:139:37: Parameter was not used -- prefix with `_` to suppress warning
+│ 139 |         .filter { meta, fasta, faa, gbk -> meta.category != 'long' }
+╰     |                                     ^^^
+
+Warn  workflows/funcscan.nf:150:29: Parameter was not used -- prefix with `_` to suppress warning
+│ 150 |             .filter { meta, fasta, faa, gbk -> meta.category == 'long'
+╰     |                             ^^^^^
+
+Warn  workflows/funcscan.nf:150:36: Parameter was not used -- prefix with `_` to suppress warning
+│ 150 |             .filter { meta, fasta, faa, gbk -> meta.category == 'long'
+╰     |                                    ^^^
+
+Warn  workflows/funcscan.nf:150:41: Parameter was not used -- prefix with `_` to suppress warning
+│ 150 |             .filter { meta, fasta, faa, gbk -> meta.category == 'long'
+╰     |                                         ^^^
+
+Warn  workflows/funcscan.nf:173:9: Variable was declared but not used
+│ 173 |         ch_mmseqs_db = Channel.empty()
+╰     |         ^^^^^^^^^^^^
+
+Warn  workflows/funcscan.nf:173:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 173 |         ch_mmseqs_db = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/funcscan.nf:174:9: Variable was declared but not used
+│ 174 |         ch_taxonomy_querydb = Channel.empty()
+╰     |         ^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/funcscan.nf:174:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 174 |         ch_taxonomy_querydb = Channel.empty()
+╰     |                               ^^^^^^^
+
+Warn  workflows/funcscan.nf:175:9: Variable was declared but not used
+│ 175 |         ch_taxonomy_querydb_taxdb = Channel.empty()
+╰     |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/funcscan.nf:175:37: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 175 |         ch_taxonomy_querydb_taxdb = Channel.empty()
+╰     |                                     ^^^^^^^
+
+Warn  workflows/funcscan.nf:176:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 176 |         ch_taxonomy_tsv = Channel.empty()
+╰     |                           ^^^^^^^
+
+Warn  workflows/funcscan.nf:376:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 376 |     ch_multiqc_config = Channel.fromPath(
+╰     |                         ^^^^^^^
+
+Warn  workflows/funcscan.nf:381:11: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 381 |         ? Channel.fromPath(params.multiqc_config, checkIfExists: true)
+╰     |           ^^^^^^^
+
+Warn  workflows/funcscan.nf:382:11: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 382 |         : Channel.empty()
+╰     |           ^^^^^^^
+
+Warn  workflows/funcscan.nf:384:11: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 384 |         ? Channel.fromPath(params.multiqc_logo, checkIfExists: true)
+╰     |           ^^^^^^^
+
+Warn  workflows/funcscan.nf:385:11: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 385 |         : Channel.fromPath("${workflow.projectDir}/docs/images/nf-core
+╰     |           ^^^^^^^
+
+Warn  workflows/funcscan.nf:391:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 391 |     ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_p
+╰     |                           ^^^^^^^
+
+Warn  workflows/funcscan.nf:398:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 398 |     ch_methods_description = Channel.value(
+╰     |                              ^^^^^^^
+
+Warn  workflows/funcscan.nf:411:88: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 411 | = ch_multiqc_files.mix(ANNOTATION.out.multiqc_files.collect { it[1] })
+╰     |                                                               ^^
+
+
+Warn  conf/modules.config:581:65: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 581 | axa_classification == false ? it : null },
+╰     |                               ^^
+
+
+Error nextflow.config:563:32: `manifest` is not defined
+│ 563 | \033[0;35m  nf-core/funcscan ${manifest.version}\033[0m
+╰     |                                ^^^^^^^^
+
+Error nextflow.config:566:36: `manifest` is not defined
+│ 566 |         afterText           = """${manifest.doi ? "\n* The pipeline\n"
+╰     |                                    ^^^^^^^^
+
+Error nextflow.config:566:79: `manifest` is not defined
+│ 566 | ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "  
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:566:198: `manifest` is not defined
+│ 566 | i.org/', '')}" }.join("\n")}${manifest.doi ? "\n" : ""}
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:575:22: `validation` is not defined
+│ 575 |         beforeText = validation.help.beforeText
+╰     |                      ^^^^^^^^^^
+
+Error nextflow.config:576:22: `validation` is not defined
+│ 576 |         afterText  = validation.help.afterText
+╰     |                      ^^^^^^^^^^
+
+Warn  nextflow.config:566:139: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 566 | lect { "    https://doi.org/${it.trim().replace('https://doi.org/', ''
+╰     |                               ^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-test tests
+│   3 |     testsDir "."
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 7 files had 14 errors
+ ✅ 90 files had no errors

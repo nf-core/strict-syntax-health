@@ -1,0 +1,488 @@
+Linting Nextflow code..
+Linting: conf/igenomes_ignored.config
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/igenomes.config
+Linting: nextflow.config
+Linting: workflows/drop.nf
+Linting: subworkflows/local/aberrantsplicing/main.nf
+Linting: subworkflows/local/aberrantexpression/main.nf
+Linting: subworkflows/local/bam_stats_idxstats_merge/main.nf
+Linting: subworkflows/local/mae/main.nf
+Linting: subworkflows/local/utils_nfcore_drop_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/mae_small_container.config
+Linting: tests/nextflow.config
+Linting: modules/local/outrider/results/main.nf
+Linting: modules/local/outrider/summary/main.nf
+Linting: modules/local/outrider/pvals/main.nf
+Linting: modules/local/outrider/fit/main.nf
+Linting: modules/local/splicecounts/mergenonsplitreads/main.nf
+Linting: modules/local/splicecounts/summary/main.nf
+Linting: modules/local/splicecounts/init/main.nf
+Linting: modules/local/splicecounts/countsplitreads/main.nf
+Linting: modules/local/splicecounts/countnonsplitreads/main.nf
+Linting: modules/local/splicecounts/mergesplitreads/main.nf
+Linting: modules/local/splicecounts/collectcounts/main.nf
+Linting: modules/local/fraser/calculatestats/main.nf
+Linting: modules/local/fraser/filterexpression/main.nf
+Linting: modules/local/fraser/summary/main.nf
+Linting: modules/local/fraser/annotategenes/main.nf
+Linting: modules/local/fraser/psivaluecalculation/main.nf
+Linting: modules/local/fraser/extractresults/main.nf
+Linting: modules/local/fraser/fithyperparams/main.nf
+Linting: modules/local/fraser/fitautoencoder/main.nf
+Linting: modules/local/mae/createsnvs/main.nf
+Linting: modules/local/mae/genenamemapping/main.nf
+Linting: modules/local/mae/results/main.nf
+Linting: modules/local/mae/deseq/main.nf
+Linting: modules/local/mae/deseq/tests/nextflow.config
+Linting: modules/local/mae/alleliccounts/main.nf
+Linting: modules/local/maeqc/dnarnadeseq/main.nf
+Linting: modules/local/maeqc/dnarnamatrixplot/main.nf
+Linting: modules/local/maeqc/dnarnamatrix/main.nf
+Linting: modules/local/genecounts/filtercounts/main.nf
+Linting: modules/local/genecounts/countreads/main.nf
+Linting: modules/local/genecounts/summary/main.nf
+Linting: modules/local/genecounts/mergecounts/main.nf
+Linting: modules/local/preprocessgeneannotation/main.nf
+Linting: modules/local/strip_nav_multiqc/main.nf
+Linting: modules/nf-core/gatk4/createsequencedictionary/main.nf
+Linting: modules/nf-core/samtools/idxstats/main.nf
+Linting: modules/nf-core/samtools/index/main.nf
+Linting: modules/nf-core/samtools/index/tests/csi.nextflow.config
+Linting: modules/nf-core/samtools/convert/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/untar/main.nf
+Linting: modules/nf-core/tabix/tabix/main.nf
+Linting: modules/nf-core/tabix/tabix/tests/tabix_vcf_tbi.config
+Linting: modules/nf-core/tabix/tabix/tests/tabix_gff.config
+Linting: modules/nf-core/tabix/tabix/tests/tabix_bed.config
+Linting: modules/nf-core/tabix/tabix/tests/tabix_vcf_csi.config
+Warn  main.nf:68:42: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  68 |     def ucsc_fasta = params.ucsc_fasta ? Channel.value([[id: 'ucsc'], 
+╰     |                                          ^^^^^^^
+
+Warn  main.nf:68:99: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  68 | , file(params.ucsc_fasta)]) : Channel.of([[id:'ucsc'], []])
+╰     |                               ^^^^^^^
+
+Warn  main.nf:69:38: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  69 |     def ucsc_fai = params.ucsc_fai ? Channel.value([[id: 'ucsc'], file
+╰     |                                      ^^^^^^^
+
+Warn  main.nf:69:93: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  69 | '], file(params.ucsc_fai)]) : Channel.of([[id:'ucsc'], []])
+╰     |                               ^^^^^^^
+
+Warn  main.nf:70:42: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  70 |     def ncbi_fasta = params.ncbi_fasta ? Channel.value([[id: 'ncbi'], 
+╰     |                                          ^^^^^^^
+
+Warn  main.nf:70:99: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  70 | , file(params.ncbi_fasta)]) : Channel.of([[id:'ncbi'], []])
+╰     |                               ^^^^^^^
+
+Warn  main.nf:71:38: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  71 |     def ncbi_fai = params.ncbi_fai ? Channel.value([[id: 'ncbi'], file
+╰     |                                      ^^^^^^^
+
+Warn  main.nf:71:93: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  71 | '], file(params.ncbi_fai)]) : Channel.of([[id:'ncbi'], []])
+╰     |                               ^^^^^^^
+
+Warn  main.nf:74:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  74 |         Channel.value([[id: 'qc_vcf'], file(params.mae_qc_vcf), params
+╰     |         ^^^^^^^
+
+Warn  main.nf:77:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  77 |     def ucsc_dict = Channel.of([[id:'ucsc'], []])
+╰     |                     ^^^^^^^
+
+Warn  main.nf:79:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  79 |         ucsc_dict = Channel.value([[id: 'ucsc'], file(params.ucsc_dict
+╰     |                     ^^^^^^^
+
+Warn  main.nf:87:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  87 |     def ncbi_dict = Channel.of([[id:'ncbi'], []])
+╰     |                     ^^^^^^^
+
+Warn  main.nf:89:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  89 |         ncbi_dict = Channel.value([[id: 'ncbi'], file(params.ncbi_dict
+╰     |                     ^^^^^^^
+
+Warn  main.nf:97:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  97 |     def samplesheet_file = Channel.value([[id: 'samplesheet'], file(pa
+╰     |                            ^^^^^^^
+
+Warn  main.nf:99:38: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  99 |     def hpo_file = params.hpo_file ? Channel.value([[id: 'hpo'], file(
+╰     |                                      ^^^^^^^
+
+Warn  main.nf:102:54: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 102 |     def ae_genes_to_test = params.ae_genes_to_test ? Channel.value([[i
+╰     |                                                      ^^^^^^^
+
+Warn  main.nf:105:54: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 105 |     def as_genes_to_test = params.as_genes_to_test ? Channel.value([[i
+╰     |                                                      ^^^^^^^
+
+
+
+
+
+
+
+
+
+Warn  modules/local/fraser/summary/main.nf:33:9: Variable was declared but not used
+│  33 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Warn  modules/local/splicecounts/summary/main.nf:31:9: Variable was declared but not used
+│  31 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+
+
+
+
+
+
+
+Error subworkflows/local/aberrantexpression/main.nf:270:29: `_` is not allowed as an identifier because it is reserved for future use
+│ 270 |         .collectFile { tag, _ ->
+╰     |                             ^
+
+Error subworkflows/local/aberrantexpression/main.nf:320:29: `_` is not allowed as an identifier because it is reserved for future use
+│ 320 |         .collectFile { tag, _ ->
+╰     |                             ^
+
+Warn  subworkflows/local/aberrantexpression/main.nf:28:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  28 |     def ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/aberrantexpression/main.nf:30:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  30 |     def inputs_to_analyse = Channel.empty()
+╰     |                             ^^^^^^^
+
+Warn  subworkflows/local/aberrantexpression/main.nf:263:43: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 263 |         def files = tup.drop(1).findAll { it instanceof Path } // drop
+╰     |                                           ^^
+
+Warn  subworkflows/local/aberrantexpression/main.nf:289:36: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 289 |         ch_genecounts_bundle.map { it[0] },
+╰     |                                    ^^
+
+Warn  subworkflows/local/aberrantexpression/main.nf:290:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 290 |         Channel.fromPath("$projectDir/assets/multiqc_configs/multiqc_g
+╰     |         ^^^^^^^
+
+Warn  subworkflows/local/aberrantexpression/main.nf:291:36: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 291 |         ch_genecounts_bundle.map { it[1] },
+╰     |                                    ^^
+
+Warn  subworkflows/local/aberrantexpression/main.nf:313:43: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 313 |         def files = tup.drop(1).findAll { it instanceof Path } // drop
+╰     |                                           ^^
+
+Warn  subworkflows/local/aberrantexpression/main.nf:339:34: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 339 |         ch_outrider_bundle.map { it[0] },
+╰     |                                  ^^
+
+Warn  subworkflows/local/aberrantexpression/main.nf:340:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 340 |         Channel.fromPath("$projectDir/assets/multiqc_configs/multiqc_o
+╰     |         ^^^^^^^
+
+Warn  subworkflows/local/aberrantexpression/main.nf:341:34: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 341 |         ch_outrider_bundle.map { it[1] },
+╰     |                                  ^^
+
+
+Error subworkflows/local/aberrantsplicing/main.nf:447:29: `_` is not allowed as an identifier because it is reserved for future use
+│ 447 |         .collectFile { tag, _ ->
+╰     |                             ^
+
+Error subworkflows/local/aberrantsplicing/main.nf:492:29: `_` is not allowed as an identifier because it is reserved for future use
+│ 492 |         .collectFile { tag, _ ->
+╰     |                             ^
+
+Warn  subworkflows/local/aberrantsplicing/main.nf:33:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  33 |     def ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/aberrantsplicing/main.nf:35:40: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  35 |     def inputs_to_analyse_unfiltered = Channel.empty()
+╰     |                                        ^^^^^^^
+
+Warn  subworkflows/local/aberrantsplicing/main.nf:282:60: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 282 |             def count_dirs = splice_counts_group.collect { it.file }.u
+╰     |                                                            ^^
+
+Warn  subworkflows/local/aberrantsplicing/main.nf:283:59: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 283 |             def count_ids = splice_counts_group.collect { it.id }
+╰     |                                                           ^^
+
+Warn  subworkflows/local/aberrantsplicing/main.nf:290:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 290 |         Channel.value([[id:'samplesheet'], samplesheet]),
+╰     |         ^^^^^^^
+
+Warn  subworkflows/local/aberrantsplicing/main.nf:402:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 402 |         Channel.value([[id:'samplesheet'], samplesheet]),
+╰     |         ^^^^^^^
+
+Warn  subworkflows/local/aberrantsplicing/main.nf:440:43: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 440 |         def files = tup.drop(1).findAll { it instanceof Path } // drop
+╰     |                                           ^^
+
+Warn  subworkflows/local/aberrantsplicing/main.nf:466:38: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 466 |         ch_splicecounts_bundle.map { it[0] },
+╰     |                                      ^^
+
+Warn  subworkflows/local/aberrantsplicing/main.nf:467:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 467 |         Channel.fromPath("$projectDir/assets/multiqc_configs/multiqc_s
+╰     |         ^^^^^^^
+
+Warn  subworkflows/local/aberrantsplicing/main.nf:468:38: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 468 |         ch_splicecounts_bundle.map { it[1] },
+╰     |                                      ^^
+
+Warn  subworkflows/local/aberrantsplicing/main.nf:485:116: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 485 |  bc_list).flatten().findAll { it instanceof Path } // drop meta and nu
+╰     |                               ^^
+
+Warn  subworkflows/local/aberrantsplicing/main.nf:511:32: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 511 |         ch_fraser_bundle.map { it[0] },
+╰     |                                ^^
+
+Warn  subworkflows/local/aberrantsplicing/main.nf:512:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 512 |         Channel.fromPath("$projectDir/assets/multiqc_configs/multiqc_f
+╰     |         ^^^^^^^
+
+Warn  subworkflows/local/aberrantsplicing/main.nf:513:32: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 513 |         ch_fraser_bundle.map { it[1] },
+╰     |                                ^^
+
+
+Warn  subworkflows/local/bam_stats_idxstats_merge/main.nf:12:40: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  12 |     def ucsc_chr = ucsc2ncbi.collect { it[0] }
+╰     |                                        ^^
+
+Warn  subworkflows/local/bam_stats_idxstats_merge/main.nf:13:40: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  13 |     def ncbi_chr = ucsc2ncbi.collect { it[1] }
+╰     |                                        ^^
+
+Warn  subworkflows/local/bam_stats_idxstats_merge/main.nf:14:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  14 |     def ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+
+Error subworkflows/local/mae/main.nf:192:29: `_` is not allowed as an identifier because it is reserved for future use
+│ 192 |         .collectFile { tag, _ ->
+╰     |                             ^
+
+Error subworkflows/local/mae/main.nf:236:29: `_` is not allowed as an identifier because it is reserved for future use
+│ 236 |         .collectFile { tag, _ ->
+╰     |                             ^
+
+Warn  subworkflows/local/mae/main.nf:27:5: Parameter was not used -- prefix with `_` to suppress warning
+│  27 |     include_qc_groups   // list         : A list of groups to include 
+╰     |     ^^^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/mae/main.nf:32:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  32 |     def ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/mae/main.nf:44:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  44 |     def ch_filtered_inputs = Channel.empty()
+╰     |                              ^^^^^^^
+
+Warn  subworkflows/local/mae/main.nf:167:59: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 167 |         .view {println "[DEBUG ch_dnarnamatrixplot_input] $it"}
+╰     |                                                           ^^
+
+Warn  subworkflows/local/mae/main.nf:185:43: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 185 |         def files = tup.drop(1).findAll { it instanceof Path } // drop
+╰     |                                           ^^
+
+Warn  subworkflows/local/mae/main.nf:211:29: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 211 |         ch_mae_bundle.map { it[0] },
+╰     |                             ^^
+
+Warn  subworkflows/local/mae/main.nf:212:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 212 |         Channel.fromPath("$projectDir/assets/multiqc_configs/multiqc_m
+╰     |         ^^^^^^^
+
+Warn  subworkflows/local/mae/main.nf:213:29: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 213 |         ch_mae_bundle.map { it[1] },
+╰     |                             ^^
+
+Warn  subworkflows/local/mae/main.nf:229:43: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 229 |         def files = tup.drop(1).findAll { it instanceof Path } // drop
+╰     |                                           ^^
+
+Warn  subworkflows/local/mae/main.nf:255:31: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 255 |         ch_maeqc_bundle.map { it[0] },
+╰     |                               ^^
+
+Warn  subworkflows/local/mae/main.nf:256:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 256 |         Channel.fromPath("$projectDir/assets/multiqc_configs/multiqc_m
+╰     |         ^^^^^^^
+
+Warn  subworkflows/local/mae/main.nf:257:31: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 257 |         ch_maeqc_bundle.map { it[1] },
+╰     |                               ^^
+
+
+Warn  subworkflows/local/utils_nfcore_drop_pipeline/main.nf:37:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  37 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_drop_pipeline/main.nf:78:63: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  78 | ene_annotation_list.collect { it[0].id }.sort().toSet()
+╰     |                               ^^
+
+Warn  subworkflows/local/utils_nfcore_drop_pipeline/main.nf:81:11: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  81 |         ? Channel.fromList(gene_annotation_list)
+╰     |           ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_drop_pipeline/main.nf:82:11: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  82 |         : Channel.empty()
+╰     |           ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_drop_pipeline/main.nf:129:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 129 |     def ch_samplesheet = Channel.fromList(samplesheet_list)
+╰     |                          ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_drop_pipeline/main.nf:336:37: Parameter was not used -- prefix with `_` to suppress warning
+│ 336 |     def offending = flags.findAll { k, v -> v.hasNo && v.hasStranded }
+╰     |                                     ^
+
+
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 | mYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
+╰     |                               ^^^^^^^
+
+
+Warn  workflows/drop.nf:62:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  62 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  workflows/drop.nf:63:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  63 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/drop.nf:213:13: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 213 |             Channel.value(file("${projectDir}/assets/chr_NCBI_UCSC.txt
+╰     |             ^^^^^^^
+
+Warn  workflows/drop.nf:214:13: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 214 |             Channel.value(file("${projectDir}/assets/chr_UCSC_NCBI.txt
+╰     |             ^^^^^^^
+
+Warn  workflows/drop.nf:235:32: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 235 |     ch_multiqc_config        = Channel.fromPath(
+╰     |                                ^^^^^^^
+
+Warn  workflows/drop.nf:238:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 238 |         Channel.fromPath(params.multiqc_config, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/drop.nf:239:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 239 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/drop.nf:241:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 241 |         Channel.fromPath(params.multiqc_logo, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/drop.nf:242:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 242 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/drop.nf:246:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 246 |     ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_p
+╰     |                           ^^^^^^^
+
+Warn  workflows/drop.nf:252:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 252 |     ch_methods_description                = Channel.value(
+╰     |                                             ^^^^^^^
+
+
+Error nextflow.config:388:28: `manifest` is not defined
+│ 388 | \033[0;35m  nf-core/drop ${manifest.version}\033[0m
+╰     |                            ^^^^^^^^
+
+Error nextflow.config:391:26: `manifest` is not defined
+│ 391 |         afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${ma
+╰     |                          ^^^^^^^^
+
+Error nextflow.config:391:69: `manifest` is not defined
+│ 391 | ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "  
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:391:186: `manifest` is not defined
+│ 391 | doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:400:22: `validation` is not defined
+│ 400 |         beforeText = validation.help.beforeText
+╰     |                      ^^^^^^^^^^
+
+Error nextflow.config:401:21: `validation` is not defined
+│ 401 |         afterText = validation.help.afterText
+╰     |                     ^^^^^^^^^^
+
+Warn  nextflow.config:391:129: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 391 | lect { "    https://doi.org/${it.trim().replace('https://doi.org/','')
+╰     |                               ^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-test tests
+│   3 |     testsDir "."
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 5 files had 13 errors
+ ✅ 65 files had no errors

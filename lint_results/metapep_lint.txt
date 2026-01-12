@@ -1,0 +1,314 @@
+Linting Nextflow code..
+Linting: conf/test_mouse_all_pep_lengths.config
+Linting: conf/igenomes_ignored.config
+Linting: conf/base.config
+Linting: conf/test_bins_only.config
+Linting: conf/test_taxa_only.config
+Linting: conf/test_assembly_only.config
+Linting: conf/modules.config
+Linting: conf/test_mhcflurry.config
+Linting: conf/test_mouse.config
+Linting: conf/test_model_information.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/test_mhcnuggets_2.config
+Linting: conf/test_mhcnuggets_1.config
+Linting: conf/test_coassembly.config
+Linting: conf/test_taxa_specific_assembly.config
+Linting: conf/test_all.config
+Linting: nextflow.config
+Linting: workflows/metapep.nf
+Linting: subworkflows/local/utils_nfcore_metapep_pipeline/main.nf
+Linting: subworkflows/local/process_input.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/finalize_microbiome_entities.nf
+Linting: modules/local/predict_epitopes.nf
+Linting: modules/local/unify_model_lengths.nf
+Linting: modules/local/download_proteins.nf
+Linting: modules/local/unpack_bin_archives.nf
+Linting: modules/local/create_protein_tsv.nf
+Linting: modules/local/prepare_score_distribution.nf
+Linting: modules/local/split_pred_tasks.nf
+Linting: modules/local/generate_protein_and_entity_ids.nf
+Linting: modules/local/merge_predictions_buffer.nf
+Linting: modules/local/prepare_entity_binding_ratios.nf
+Linting: modules/local/collect_stats.nf
+Linting: modules/local/merge_predictions.nf
+Linting: modules/local/check_samplesheet_create_tables.nf
+Linting: modules/local/plot_entity_binding_ratios.nf
+Linting: modules/local/plot_score_distribution.nf
+Linting: modules/local/assign_nucl_entity_weights.nf
+Linting: modules/local/generate_peptides.nf
+Linting: modules/local/epytope_show_supported_models.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/prodigal/main.nf
+
+Error modules/local/collect_stats.nf:24:5: Invalid process output
+│  24 |     def score_threshold = params.pred_method != "SYFPEITHI" ? params.m
+╰     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error modules/local/collect_stats.nf:34:41: `score_threshold` is not defined
+│  34 |                     --binder_threshold "$score_threshold"             
+╰     |                                         ^^^^^^^^^^^^^^^^
+
+
+Error modules/local/download_proteins.nf:27:9: `microbiome_ids` is already declared
+│  27 |     def microbiome_ids = microbiome_ids.join(' ')
+╰     |         ^^^^^^^^^^^^^^
+
+
+
+
+
+
+
+
+
+
+
+Error modules/local/unify_model_lengths.nf:15:9: `unified_peptide_lengths` is not defined
+│  15 |     env unified_peptide_lengths       , emit: unified_pep_lens
+╰     |         ^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+
+Error subworkflows/local/process_input.nf:136:103: `microbiome_id` is not defined
+│ 136 |  provided for microbiome ID ${microbiome_id} did not yield any bin fil
+╰     |                               ^^^^^^^^^^^^^
+
+Warn  subworkflows/local/process_input.nf:15:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/process_input.nf:39:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  39 |         peptide_lengths = Channel.fromList( params.min_pep_len..params
+╰     |                           ^^^^^^^
+
+Warn  subworkflows/local/process_input.nf:102:78: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 102 | ome_path.listFiles().findAll{ it.name =~ fasta_suffix }
+╰     |                               ^^
+
+Warn  subworkflows/local/process_input.nf:106:45: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 106 |                         meta.bin_basename = it.name - fasta_suffix
+╰     |                                             ^^
+
+Warn  subworkflows/local/process_input.nf:107:40: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 107 |                         return [ meta, it ]
+╰     |                                        ^^
+
+Warn  subworkflows/local/process_input.nf:132:34: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 132 |         ch_bins_archives_input = Channel.empty()
+╰     |                                  ^^^^^^^
+
+Warn  subworkflows/local/process_input.nf:135:52: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 135 |                     bin_files = bin_files.findAll{ it.name =~ fasta_su
+╰     |                                                    ^^
+
+Warn  subworkflows/local/process_input.nf:140:49: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 140 |                         meta_new.bin_basename = it.name - fasta_suffix
+╰     |                                                 ^^
+
+Warn  subworkflows/local/process_input.nf:141:44: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 141 |                         return [ meta_new, it ]
+╰     |                                            ^^
+
+Warn  subworkflows/local/process_input.nf:154:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 154 |         ch_weights = Channel.empty()
+╰     |                      ^^^^^^^
+
+
+Warn  subworkflows/local/utils_nfcore_metapep_pipeline/main.nf:31:5: Parameter was not used -- prefix with `_` to suppress warning
+│  31 |     monochrome_logs   // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_metapep_pipeline/main.nf:38:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  38 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_metapep_pipeline/main.nf:74:53: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  74 |     ch_samplesheet = params.show_supported_models ? Channel.empty() : 
+╰     |                                                     ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_metapep_pipeline/main.nf:74:71: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  74 | ed_models ? Channel.empty() : Channel.fromPath(input, checkIfExists: t
+╰     |                               ^^^^^^^
+
+
+Warn  subworkflows/nf-core/utils_nextflow_pipeline/main.nf:94:33: Parameter was not used -- prefix with `_` to suppress warning
+│  94 |     catch (NullPointerException e) {
+╰     |                                 ^
+
+Warn  subworkflows/nf-core/utils_nextflow_pipeline/main.nf:98:24: Parameter was not used -- prefix with `_` to suppress warning
+│  98 |     catch (IOException e) {
+╰     |                        ^
+
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:116:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 116 | mYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
+╰     |                               ^^^^^^^
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:264:22: Parameter was not used -- prefix with `_` to suppress warning
+│ 264 |     catch (Exception all) {
+╰     |                      ^^^
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:361:26: Parameter was not used -- prefix with `_` to suppress warning
+│ 361 |         catch (Exception all) {
+╰     |                          ^^^
+
+
+Warn  workflows/metapep.nf:50:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  50 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  workflows/metapep.nf:51:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  51 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/metapep.nf:72:57: Parameter was not used -- prefix with `_` to suppress warning
+│  72 |             PROCESS_INPUT.out.ch_taxa_input.map { meta, file -> meta.i
+╰     |                                                         ^^^^
+
+Warn  workflows/metapep.nf:73:51: Parameter was not used -- prefix with `_` to suppress warning
+│  73 |             PROCESS_INPUT.out.ch_taxa_input.map { meta, file -> file }
+╰     |                                                   ^^^^
+
+Warn  workflows/metapep.nf:95:54: Parameter was not used -- prefix with `_` to suppress warning
+│  95 |             PROCESS_INPUT.out.ch_weights.map { meta, file -> meta.id }
+╰     |                                                      ^^^^
+
+Warn  workflows/metapep.nf:96:48: Parameter was not used -- prefix with `_` to suppress warning
+│  96 |             PROCESS_INPUT.out.ch_weights.map { meta, file -> file }.co
+╰     |                                                ^^^^
+
+Warn  workflows/metapep.nf:109:47: Parameter was not used -- prefix with `_` to suppress warning
+│ 109 |             ch_pred_proteins_sorted.collect { meta, file -> file }.ifE
+╰     |                                               ^^^^
+
+Warn  workflows/metapep.nf:110:53: Parameter was not used -- prefix with `_` to suppress warning
+│ 110 |             ch_pred_proteins_sorted.collect { meta, file -> meta }.ifE
+╰     |                                                     ^^^^
+
+Warn  workflows/metapep.nf:204:61: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 204 | ns_input_pred.collect(sort: { it.baseName }),
+╰     |                               ^^
+
+Warn  workflows/metapep.nf:205:61: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 205 | ns_input_warn.collect(sort: { it.baseName })
+╰     |                               ^^
+
+Warn  workflows/metapep.nf:282:32: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 282 |     ch_multiqc_config        = Channel.fromPath(
+╰     |                                ^^^^^^^
+
+Warn  workflows/metapep.nf:285:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 285 |         Channel.fromPath(params.multiqc_config, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/metapep.nf:286:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 286 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/metapep.nf:288:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 288 |         Channel.fromPath(params.multiqc_logo, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/metapep.nf:289:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 289 |         Channel.fromPath("$projectDir/assets/nf-core-metapep_logo_ligh
+╰     |         ^^^^^^^
+
+Warn  workflows/metapep.nf:293:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 293 |     ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_p
+╰     |                           ^^^^^^^
+
+Warn  workflows/metapep.nf:299:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 299 |     ch_methods_description                = Channel.value(
+╰     |                                             ^^^^^^^
+
+Warn  workflows/metapep.nf:322:5: Variable was declared but not used
+│ 322 |     multiqc_report = MULTIQC.out.report.toList()
+╰     |     ^^^^^^^^^^^^^^
+
+
+Error nextflow.config:234:1: Variable declarations cannot be mixed with config statements
+│ 234 | def trace_timestamp = new java.util.Date().format( 'yyyy-MM-dd_HH-mm-s
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error nextflow.config:237:68: `trace_timestamp` is not defined
+│ 237 | rams.outdir}/pipeline_info/execution_timeline_${trace_timestamp}.html"
+╰     |                                                 ^^^^^^^^^^^^^^^
+
+Error nextflow.config:241:66: `trace_timestamp` is not defined
+│ 241 | params.outdir}/pipeline_info/execution_report_${trace_timestamp}.html"
+╰     |                                                 ^^^^^^^^^^^^^^^
+
+Error nextflow.config:245:65: `trace_timestamp` is not defined
+│ 245 | ${params.outdir}/pipeline_info/execution_trace_${trace_timestamp}.txt"
+╰     |                                                  ^^^^^^^^^^^^^^^
+
+Error nextflow.config:249:62: `trace_timestamp` is not defined
+│ 249 |  "${params.outdir}/pipeline_info/pipeline_dag_${trace_timestamp}.html"
+╰     |                                                 ^^^^^^^^^^^^^^^
+
+Error nextflow.config:272:34: `manifest` is not defined
+│ 272 |         command = "nextflow run $manifest.name -profile <docker/singul
+╰     |                                  ^^^^^^^^
+
+Error nextflow.config:282:15: `manifest` is not defined
+│ 282 | \033[0;35m  ${manifest.name} ${manifest.version}\033[0m
+╰     |               ^^^^^^^^
+
+Error nextflow.config:282:32: `manifest` is not defined
+│ 282 | \033[0;35m  ${manifest.name} ${manifest.version}\033[0m
+╰     |                                ^^^^^^^^
+
+Error nextflow.config:285:26: `manifest` is not defined
+│ 285 |         afterText = """${manifest.doi ? "* The pipeline\n" : ""}${mani
+╰     |                          ^^^^^^^^
+
+Error nextflow.config:285:67: `manifest` is not defined
+│ 285 | i ? "* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "  
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:285:182: `manifest` is not defined
+│ 285 | doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:290:26: `manifest` is not defined
+│ 290 |     https://github.com/${manifest.name}/blob/master/CITATIONS.md
+╰     |                          ^^^^^^^^
+
+Error nextflow.config:294:22: `validation` is not defined
+│ 294 |         beforeText = validation.help.beforeText
+╰     |                      ^^^^^^^^^^
+
+Error nextflow.config:295:21: `validation` is not defined
+│ 295 |         afterText = validation.help.afterText
+╰     |                     ^^^^^^^^^^
+
+Warn  nextflow.config:285:125: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 285 | ollect { "  https://doi.org/${it.trim().replace('https://doi.org/','')
+╰     |                               ^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-tests
+│   3 |     testsDir "tests"
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 6 files had 20 errors
+ ✅ 46 files had no errors

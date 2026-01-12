@@ -1,0 +1,1241 @@
+Linting Nextflow code..
+Linting: conf/test_vcf.config
+Linting: conf/igenomes_ignored.config
+Linting: conf/test_all_fullchr.config
+Linting: conf/base.config
+Linting: conf/test_quilt.config
+Linting: conf/test_validate.config
+Linting: conf/steps/chrcheck.config
+Linting: conf/steps/simulation.config
+Linting: conf/steps/panel_prep.config
+Linting: conf/steps/imputation_quilt.config
+Linting: conf/steps/validation.config
+Linting: conf/steps/imputation_glimpse2.config
+Linting: conf/steps/imputation_stitch.config
+Linting: conf/steps/imputation_beagle5.config
+Linting: conf/steps/imputation_glimpse1.config
+Linting: conf/steps/initialisation.config
+Linting: conf/steps/imputation_minimac4.config
+Linting: conf/test_beagle5.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/test_sim.config
+Linting: conf/test_glimpse2.config
+Linting: conf/test_minimac4.config
+Linting: conf/test_stitch.config
+Linting: conf/test_dog.config
+Linting: conf/test_batch.config
+Linting: conf/igenomes.config
+Linting: conf/test_panelprep.config
+Linting: conf/test_all.config
+Linting: nextflow.config
+Linting: workflows/chrcheck/main.nf
+Linting: workflows/chrcheck/tests/nextflow.config
+Linting: workflows/chrcheck/tests/nextflow_rename.config
+Linting: workflows/chrcheck/function.nf
+Linting: workflows/phaseimpute/main.nf
+Linting: workflows/phaseimpute/function.nf
+Linting: subworkflows/local/bam_extract_region_samtools/main.nf
+Linting: subworkflows/local/bam_extract_region_samtools/tests/nextflow.config
+Linting: subworkflows/local/vcf_normalize_bcftools/main.nf
+Linting: subworkflows/local/vcf_normalize_bcftools/tests/nextflow.config
+Linting: subworkflows/local/bam_chr_rename_samtools/main.nf
+Linting: subworkflows/local/bam_chr_rename_samtools/tests/nextflow.config
+Linting: subworkflows/local/vcf_split_bcftools/main.nf
+Linting: subworkflows/local/vcf_split_bcftools/tests/nextflow.config
+Linting: subworkflows/local/bam_gl_bcftools/main.nf
+Linting: subworkflows/local/bam_gl_bcftools/tests/nextflow.config
+Linting: subworkflows/local/vcf_phase_shapeit5/main.nf
+Linting: subworkflows/local/vcf_phase_shapeit5/tests/nextflow.config
+Linting: subworkflows/local/vcf_impute_glimpse1/main.nf
+Linting: subworkflows/local/vcf_impute_glimpse1/tests/nextflow.config
+Linting: subworkflows/local/vcf_impute_minimac4/main.nf
+Linting: subworkflows/local/vcf_impute_minimac4/tests/nextflow.config
+Linting: subworkflows/local/vcf_impute_beagle5/main.nf
+Linting: subworkflows/local/vcf_impute_beagle5/tests/nextflow.config
+Linting: subworkflows/local/bam_impute_quilt/main.nf
+Linting: subworkflows/local/bam_impute_quilt/tests/nextflow.config
+Linting: subworkflows/local/bam_impute_stitch/main.nf
+Linting: subworkflows/local/bam_impute_stitch/tests/nextflow.config
+Linting: subworkflows/local/bam_vcf_impute_glimpse2/main.nf
+Linting: subworkflows/local/bam_vcf_impute_glimpse2/tests/nextflow.config
+Linting: subworkflows/local/vcf_concatenate_bcftools/main.nf
+Linting: subworkflows/local/vcf_concatenate_bcftools/tests/nextflow.config
+Linting: subworkflows/local/vcf_concordance_glimpse2/main.nf
+Linting: subworkflows/local/vcf_concordance_glimpse2/tests/nextflow.config
+Linting: subworkflows/local/vcf_sites_extract_bcftools/main.nf
+Linting: subworkflows/local/vcf_sites_extract_bcftools/tests/nextflow.config
+Linting: subworkflows/local/vcf_chunk_glimpse/main.nf
+Linting: subworkflows/local/vcf_chunk_glimpse/tests/nextflow.config
+Linting: subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf
+Linting: subworkflows/local/vcf_chr_rename_bcftools/main.nf
+Linting: subworkflows/local/vcf_chr_rename_bcftools/tests/nextflow.config
+Linting: subworkflows/local/bam_downsample_samtools/main.nf
+Linting: subworkflows/local/bam_downsample_samtools/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: tests/config/test_data.config
+Linting: modules/local/listtofile/main.nf
+Linting: modules/local/vcfchrextract/main.nf
+Linting: modules/local/addcolumns/main.nf
+Linting: modules/local/bamchrextract/main.nf
+Linting: modules/nf-core/bcftools/query/main.nf
+Linting: modules/nf-core/bcftools/query/tests/nextflow.config
+Linting: modules/nf-core/bcftools/concat/main.nf
+Linting: modules/nf-core/bcftools/concat/tests/vcf_gz_index.config
+Linting: modules/nf-core/bcftools/concat/tests/vcf_gz_index_csi.config
+Linting: modules/nf-core/bcftools/concat/tests/nextflow.config
+Linting: modules/nf-core/bcftools/concat/tests/vcf_gz_index_tbi.config
+Linting: modules/nf-core/bcftools/index/main.nf
+Linting: modules/nf-core/bcftools/index/tests/nextflow.config
+Linting: modules/nf-core/bcftools/pluginsplit/main.nf
+Linting: modules/nf-core/bcftools/pluginsplit/tests/nextflow.config
+Linting: modules/nf-core/bcftools/stats/main.nf
+Linting: modules/nf-core/bcftools/view/main.nf
+Linting: modules/nf-core/bcftools/view/tests/vcf_gz_index.config
+Linting: modules/nf-core/bcftools/view/tests/vcf_gz_index_csi.config
+Linting: modules/nf-core/bcftools/view/tests/nextflow.config
+Linting: modules/nf-core/bcftools/view/tests/vcf_gz_index_tbi.config
+Linting: modules/nf-core/bcftools/merge/main.nf
+Linting: modules/nf-core/bcftools/merge/tests/nextflow.gvcf.config
+Linting: modules/nf-core/bcftools/merge/tests/vcf_gz_index.config
+Linting: modules/nf-core/bcftools/merge/tests/vcf_gz_index_csi.config
+Linting: modules/nf-core/bcftools/merge/tests/nextflow.config
+Linting: modules/nf-core/bcftools/merge/tests/vcf.config
+Linting: modules/nf-core/bcftools/merge/tests/bcf_gz.config
+Linting: modules/nf-core/bcftools/merge/tests/bcf.config
+Linting: modules/nf-core/bcftools/merge/tests/vcf_gz_index_tbi.config
+Linting: modules/nf-core/bcftools/merge/tests/vcf_gz.config
+Linting: modules/nf-core/bcftools/norm/main.nf
+Linting: modules/nf-core/bcftools/norm/tests/nextflow.vcf_gz.config
+Linting: modules/nf-core/bcftools/norm/tests/vcf_gz_index.config
+Linting: modules/nf-core/bcftools/norm/tests/vcf_gz_index_csi.config
+Linting: modules/nf-core/bcftools/norm/tests/nextflow.config
+Linting: modules/nf-core/bcftools/norm/tests/nextflow.bcf_gz.config
+Linting: modules/nf-core/bcftools/norm/tests/nextflow.vcf.config
+Linting: modules/nf-core/bcftools/norm/tests/vcf_gz_index_tbi.config
+Linting: modules/nf-core/bcftools/norm/tests/nextflow.bcf.config
+Linting: modules/nf-core/bcftools/annotate/main.nf
+Linting: modules/nf-core/bcftools/annotate/tests/vcf_gz_index.config
+Linting: modules/nf-core/bcftools/annotate/tests/vcf_gz_index_csi.config
+Linting: modules/nf-core/bcftools/annotate/tests/vcf.config
+Linting: modules/nf-core/bcftools/annotate/tests/bcf.config
+Linting: modules/nf-core/bcftools/annotate/tests/vcf_gz_index_tbi.config
+Linting: modules/nf-core/bcftools/convert/main.nf
+Linting: modules/nf-core/bcftools/convert/tests/nextflow.config
+Linting: modules/nf-core/bcftools/mpileup/main.nf
+Linting: modules/nf-core/bcftools/mpileup/tests/nextflow.config
+Linting: modules/nf-core/gunzip/main.nf
+Linting: modules/nf-core/gunzip/tests/nextflow.config
+Linting: modules/nf-core/glimpse/phase/main.nf
+Linting: modules/nf-core/glimpse/ligate/main.nf
+Linting: modules/nf-core/glimpse/chunk/main.nf
+Linting: modules/nf-core/glimpse/chunk/tests/nextflow.config
+Linting: modules/nf-core/samtools/reheader/main.nf
+Linting: modules/nf-core/samtools/reheader/tests/rgdel.config
+Linting: modules/nf-core/samtools/reheader/tests/chrdel.config
+Linting: modules/nf-core/samtools/depth/main.nf
+Linting: modules/nf-core/samtools/index/main.nf
+Linting: modules/nf-core/samtools/index/tests/csi.nextflow.config
+Linting: modules/nf-core/samtools/coverage/main.nf
+Linting: modules/nf-core/samtools/view/main.nf
+Linting: modules/nf-core/samtools/view/tests/cram_index.config
+Linting: modules/nf-core/samtools/view/tests/bam_index.config
+Linting: modules/nf-core/samtools/view/tests/bam.config
+Linting: modules/nf-core/samtools/faidx/main.nf
+Linting: modules/nf-core/samtools/faidx/tests/nextflow.config
+Linting: modules/nf-core/samtools/faidx/tests/nextflow2.config
+Linting: modules/nf-core/samtools/merge/main.nf
+Linting: modules/nf-core/samtools/merge/tests/index.config
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/glimpse2/concordance/main.nf
+Linting: modules/nf-core/glimpse2/concordance/tests/nextflow.config
+Linting: modules/nf-core/glimpse2/phase/main.nf
+Linting: modules/nf-core/glimpse2/phase/tests/nextflow.config
+Linting: modules/nf-core/glimpse2/ligate/main.nf
+Linting: modules/nf-core/glimpse2/chunk/main.nf
+Linting: modules/nf-core/glimpse2/chunk/tests/nextflow.config
+Linting: modules/nf-core/quilt/quilt/main.nf
+Linting: modules/nf-core/quilt/quilt/tests/nextflow.config
+Linting: modules/nf-core/vcflib/vcffixup/main.nf
+Linting: modules/nf-core/minimac4/compressref/main.nf
+Linting: modules/nf-core/minimac4/impute/main.nf
+Linting: modules/nf-core/minimac4/impute/tests/nextflow.config
+Linting: modules/nf-core/bedtools/makewindows/main.nf
+Linting: modules/nf-core/bedtools/makewindows/tests/nextflow.config
+Linting: modules/nf-core/shapeit5/phasecommon/main.nf
+Linting: modules/nf-core/shapeit5/ligate/main.nf
+Linting: modules/nf-core/shapeit5/ligate/tests/nextflow.config
+Linting: modules/nf-core/gawk/main.nf
+Linting: modules/nf-core/gawk/tests/nextflow.config
+Linting: modules/nf-core/stitch/main.nf
+Linting: modules/nf-core/stitch/tests/nextflow.config
+Linting: modules/nf-core/beagle5/beagle/main.nf
+Linting: modules/nf-core/tabix/bgzip/main.nf
+Linting: modules/nf-core/tabix/bgzip/tests/vcf_none.config
+Linting: modules/nf-core/tabix/bgzip/tests/bgzip_compress.config
+Linting: modules/nf-core/tabix/tabix/main.nf
+Linting: modules/nf-core/tabix/tabix/tests/tabix_vcf_tbi.config
+Linting: modules/nf-core/tabix/tabix/tests/tabix_gff.config
+Linting: modules/nf-core/tabix/tabix/tests/tabix_bed.config
+Linting: modules/nf-core/tabix/tabix/tests/tabix_vcf_csi.config
+Warn  main.nf:55:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  55 |     ch_input_impute         = Channel.empty()
+╰     |                               ^^^^^^^
+
+Warn  main.nf:56:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  56 |     ch_input_simulate       = Channel.empty()
+╰     |                               ^^^^^^^
+
+Warn  main.nf:57:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  57 |     ch_input_validate       = Channel.empty()
+╰     |                               ^^^^^^^
+
+Warn  main.nf:60:32: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  60 |     lst_chr = ch_regions.map { it[0].chr }
+╰     |                                ^^
+
+
+
+
+
+
+
+Warn  modules/nf-core/bcftools/concat/main.nf:32:27: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  32 |     def input = vcfs.sort{it.toString()}.join(" ")
+╰     |                           ^^
+
+
+Warn  modules/nf-core/bcftools/convert/main.nf:87:39: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  87 |         hap = args_split.findIndexOf{ it == '--haplegendsample'}
+╰     |                                       ^^
+
+
+Warn  modules/nf-core/bcftools/index/main.nf:23:9: Variable was declared but not used
+│  23 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+Warn  modules/nf-core/bcftools/index/main.nf:40:9: Variable was declared but not used
+│  40 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/nf-core/bcftools/merge/main.nf:27:58: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  27 |     def input = (vcfs.collect().size() > 1) ? vcfs.sort{ it.name } : v
+╰     |                                                          ^^
+
+
+
+Warn  modules/nf-core/bcftools/norm/main.nf:56:65: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  56 | '-W=tbi'].any { args.contains(it) }  && extension == 'vcf.gz') {
+╰     |                               ^^
+
+Warn  modules/nf-core/bcftools/norm/main.nf:58:126: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  58 | ex=csi', '-W=csi', '--write-index', '-W'].any { args.contains(it) }) {
+╰     |                                                               ^^
+
+
+
+
+
+
+
+
+Warn  modules/nf-core/gawk/main.nf:26:54: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  26 |     suffix    = task.ext.suffix ?: "${input.collect{ it.getExtension()
+╰     |                                                      ^^
+
+Warn  modules/nf-core/gawk/main.nf:29:37: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  29 |     lst_gz     = input.findResults{ it.getExtension().endsWith("gz") ?
+╰     |                                     ^^
+
+Warn  modules/nf-core/gawk/main.nf:29:72: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  29 | tExtension().endsWith("gz") ? it.toString() : null }
+╰     |                               ^^
+
+Warn  modules/nf-core/gawk/main.nf:31:34: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  31 |     input_cmd  = input.collect { it.toString() - ~/\.gz$/ }.join(" ")
+╰     |                                  ^^
+
+Warn  modules/nf-core/gawk/main.nf:34:49: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  34 |     cleanup    = lst_gz ? "rm ${lst_gz.collect{ it - ~/\.gz$/ }.join("
+╰     |                                                 ^^
+
+Warn  modules/nf-core/gawk/main.nf:37:16: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  37 |         assert it.name != "${prefix}.${suffix}" : "Input and output na
+╰     |                ^^
+
+
+Warn  modules/nf-core/glimpse/chunk/main.nf:40:9: Variable was declared but not used
+│  40 |     def args    = task.ext.args   ?: ""
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/glimpse/ligate/main.nf:42:9: Variable was declared but not used
+│  42 |     def args    = task.ext.args   ?: ""
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/glimpse/phase/main.nf:47:9: Variable was declared but not used
+│  47 |     def args   = task.ext.args   ?: ''
+╰     |         ^^^^
+
+
+
+
+
+Warn  modules/nf-core/glimpse2/phase/main.nf:45:9: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  45 |         it.toString().endsWithAny("cram", "bam") ? "bam" :
+╰     |         ^^
+
+Warn  modules/nf-core/glimpse2/phase/main.nf:46:9: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  46 |         it.toString().endsWithAny("vcf", "bcf", "vcf.gz") ? "gl" :
+╰     |         ^^
+
+Warn  modules/nf-core/glimpse2/phase/main.nf:47:9: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  47 |         it.getExtension()
+╰     |         ^^
+
+
+Warn  modules/nf-core/gunzip/main.nf:43:9: Variable was declared but not used
+│  43 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/minimac4/compressref/main.nf:37:9: Variable was declared but not used
+│  37 |     def args   = task.ext.args   ?: ''
+╰     |         ^^^^
+
+
+
+
+Warn  modules/nf-core/quilt/quilt/main.nf:28:56: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  28 |     def extensions                  =   bams.collect { it.extension }
+╰     |                                                        ^^
+
+
+
+
+
+
+Error modules/nf-core/samtools/merge/main.nf:51:9: `index` is already declared
+│  51 |     def index = args.contains("--write-index") ? "touch ${prefix}.${in
+╰     |         ^^^^^
+
+
+
+
+
+
+Error modules/nf-core/stitch/main.nf:18:77: `generate_input_only` is not defined
+│  18 | plots", type: "dir") , emit: plots , optional: { generate_input_only }
+╰     |                                                  ^^^^^^^^^^^^^^^^^^^
+
+Error modules/nf-core/stitch/main.nf:19:77: `generate_input_only` is not defined
+│  19 |   , emit: vcf   , optional: { generate_input_only || bgen_output }
+╰     |                               ^^^^^^^^^^^^^^^^^^^
+
+Error modules/nf-core/stitch/main.nf:19:100: `bgen_output` is not defined
+│  19 |       , emit: vcf   , optional: { generate_input_only || bgen_output }
+╰     |                                                          ^^^^^^^^^^^
+
+Error modules/nf-core/stitch/main.nf:20:77: `generate_input_only` is not defined
+│  20 |   , emit: bgen  , optional: { generate_input_only || !bgen_output }
+╰     |                               ^^^^^^^^^^^^^^^^^^^
+
+Error modules/nf-core/stitch/main.nf:20:101: `bgen_output` is not defined
+│  20 |      , emit: bgen  , optional: { generate_input_only || !bgen_output }
+╰     |                                                          ^^^^^^^^^^^
+
+Warn  modules/nf-core/stitch/main.nf:30:9: Variable was declared but not used
+│  30 |     def generate_input_only  = args2.contains( "--generateInputOnly TR
+╰     |         ^^^^^^^^^^^^^^^^^^^
+
+
+
+
+
+Warn  subworkflows/local/bam_chr_rename_samtools/main.nf:10:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  10 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/bam_downsample_samtools/main.nf:13:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  13 |     ch_versions      = Channel.empty()
+╰     |                        ^^^^^^^
+
+
+Warn  subworkflows/local/bam_extract_region_samtools/main.nf:13:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  13 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/bam_gl_bcftools/main.nf:16:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     ch_versions      = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/bam_gl_bcftools/main.nf:17:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/bam_gl_bcftools/main.nf:39:77: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  39 | _files = ch_multiqc_files.mix(BCFTOOLS_MPILEUP.out.stats.map{ it[1] })
+╰     |                                                               ^^
+
+Warn  subworkflows/local/bam_gl_bcftools/main.nf:47:59: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  47 |             metaPC + [id: "all", metas: filestups.collect{it[0]}],
+╰     |                                                           ^^
+
+Warn  subworkflows/local/bam_gl_bcftools/main.nf:48:31: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  48 |             filestups.collect{it[1]},
+╰     |                               ^^
+
+Warn  subworkflows/local/bam_gl_bcftools/main.nf:49:31: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  49 |             filestups.collect{it[2]},
+╰     |                               ^^
+
+Warn  subworkflows/local/bam_gl_bcftools/main.nf:50:31: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  50 |             filestups.collect{it[1]}.size()
+╰     |                               ^^
+
+Warn  subworkflows/local/bam_gl_bcftools/main.nf:53:18: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  53 |             one: it[3] == 1
+╰     |                  ^^
+
+Warn  subworkflows/local/bam_gl_bcftools/main.nf:54:19: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  54 |             more: it[3] > 1
+╰     |                   ^^
+
+Warn  subworkflows/local/bam_gl_bcftools/main.nf:59:31: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  59 |         ch_all_vcf.more.map{ [it[0], it[1], it[2], []] },
+╰     |                               ^^
+
+Warn  subworkflows/local/bam_gl_bcftools/main.nf:59:38: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  59 |         ch_all_vcf.more.map{ [it[0], it[1], it[2], []] },
+╰     |                                      ^^
+
+Warn  subworkflows/local/bam_gl_bcftools/main.nf:59:45: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  59 |         ch_all_vcf.more.map{ [it[0], it[1], it[2], []] },
+╰     |                                             ^^
+
+Warn  subworkflows/local/bam_gl_bcftools/main.nf:66:16: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  66 |         .map{ [it[0]["metas"][0], it[1][0], it[2][0]] }
+╰     |                ^^
+
+Warn  subworkflows/local/bam_gl_bcftools/main.nf:66:35: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  66 |         .map{ [it[0]["metas"][0], it[1][0], it[2][0]] }
+╰     |                                   ^^
+
+Warn  subworkflows/local/bam_gl_bcftools/main.nf:66:45: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  66 |         .map{ [it[0]["metas"][0], it[1][0], it[2][0]] }
+╰     |                                             ^^
+
+Warn  subworkflows/local/bam_gl_bcftools/main.nf:74:18: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  74 |         .combine(Channel.of([[], [], [], []]))
+╰     |                  ^^^^^^^
+
+
+Warn  subworkflows/local/bam_impute_quilt/main.nf:14:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  14 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/bam_impute_quilt/main.nf:23:16: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  23 |         .map { it + ngen_params + buffer_params + [[]] }
+╰     |                ^^
+
+Warn  subworkflows/local/bam_impute_quilt/main.nf:28:18: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  28 |             .map{it[0..-1]}
+╰     |                  ^^
+
+Warn  subworkflows/local/bam_impute_quilt/main.nf:49:18: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  49 |         .combine(Channel.of([[], [], [], []]))
+╰     |                  ^^^^^^^
+
+
+Warn  subworkflows/local/bam_impute_stitch/main.nf:15:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |     ch_versions      = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/bam_impute_stitch/main.nf:39:16: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  39 |         .map { it + input_empty + rdata_empty}
+╰     |                ^^
+
+Warn  subworkflows/local/bam_impute_stitch/main.nf:41:16: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  41 |         .map { it + k_val_params + ngen_params}
+╰     |                ^^
+
+
+Warn  subworkflows/local/bam_vcf_impute_glimpse2/main.nf:16:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/bam_vcf_impute_glimpse2/main.nf:19:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 |     samples_file = Channel.of([[]]).collect()
+╰     |                    ^^^^^^^
+
+Warn  subworkflows/local/bam_vcf_impute_glimpse2/main.nf:20:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  20 |     gmap_file    = Channel.of([[]]).collect()
+╰     |                    ^^^^^^^
+
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:110:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 110 |         ch_fasta  = Channel.of([[genome:genome], getGenomeAttribute('f
+╰     |                     ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:113:38: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 113 |             SAMTOOLS_FAIDX(ch_fasta, Channel.of([[], []]), false)
+╰     |                                      ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:115:55: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 115 |             fai         = SAMTOOLS_FAIDX.out.fai.map{ it[1] }
+╰     |                                                       ^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:117:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 117 |             fai = Channel.of(file(fai, checkIfExists:true))
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:121:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 121 |         ch_fasta  = Channel.of([[genome:genome], file(params.fasta, ch
+╰     |                     ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:123:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 123 |             fai = Channel.of(file(params.fasta_fai, checkIfExists:true
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:125:38: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 125 |             SAMTOOLS_FAIDX(ch_fasta, Channel.of([[], []]), false)
+╰     |                                      ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:127:55: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 127 |             fai         = SAMTOOLS_FAIDX.out.fai.map{ it[1] }
+╰     |                                                       ^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:136:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 136 |         ch_input = Channel
+╰     |                    ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:146:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 146 |         ch_input = Channel.of([[], [], []])
+╰     |                    ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:162:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 162 |             ch_input_truth = Channel
+╰     |                              ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:175:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 175 |         ch_input_truth = Channel.of([[], [], []])
+╰     |                          ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:184:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 184 |             ch_panel = Channel.fromList(samplesheetToList(
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:196:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 196 |         ch_panel = Channel.of([[],[],[]])
+╰     |                    ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:207:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 207 |         ch_regions = Channel.from(samplesheetToList(
+╰     |                      ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:225:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 225 |             ch_map = Channel.fromList(samplesheetToList(params.map, "$
+╰     |                      ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:238:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 238 |         ch_depth = Channel.of([[depth: params.depth], params.depth])
+╰     |                    ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:240:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 240 |         ch_depth = Channel.of([[],[]])
+╰     |                    ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:247:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 247 |         ch_genotype = Channel.of([[gparray: params.genotype], params.g
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:249:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 249 |         ch_genotype = Channel.of([[],[]])
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:256:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 256 |         ch_posfile = Channel // ["meta", "vcf", "index", "hap", "legen
+╰     |                      ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:262:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 262 |         ch_posfile = Channel.of([[],[],[],[],[]])
+╰     |                      ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:277:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 277 |         ch_chunks = Channel
+╰     |                     ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:283:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 283 |         ch_chunks = Channel.of([[],[]])
+╰     |                     ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:290:102: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 290 | asta, fai_file -> [fai_file.readLines()*.split('\t').collect{it[0]}] }
+╰     |                                                              ^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:318:16: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 318 |         .map { it[1] }
+╰     |                ^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:320:75: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 320 | ubscribe { log.info "The following contigs will be processed: ${it}" }
+╰     |                                                                 ^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:324:38: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 324 |         .combine(ch_regions.collect{ it[0]["chr"]}.toList())
+╰     |                                      ^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:333:38: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 333 |         .combine(ch_regions.collect{ it[0]["chr"] }.toList())
+╰     |                                      ^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:438:87: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 438 | arams.steps.split(',').find { it in ["all", "panelprep"] }) {
+╰     |                               ^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:440:45: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 440 |         if (!params.tools.split(',').find { it in ["glimpse2", "beagle
+╰     |                                             ^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:444:45: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 444 |         if (!params.tools.split(',').find { it in ["stitch", "beagle5"
+╰     |                                             ^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:453:44: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 453 |         if (params.steps.split(',').find { it in ["all", "validate"] }
+╰     |                                            ^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:459:73: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 459 | arams.steps.split(',').find { it in ["all", "panelprep"]} ) {
+╰     |                               ^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:462:74: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 462 | arams.steps.split(',').find { it in ["all", "panelprep"]} ) {
+╰     |                               ^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:467:56: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 467 |     if (params.panel && params.steps.split(',').find { it in ["impute"
+╰     |                                                        ^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:467:110: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 467 | arams.steps.split(',').find { it in ["all", "panelprep"] } ) {
+╰     |                               ^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:472:40: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 472 |     if (params.steps.split(',').find { it in ["all", "panelprep"] } &&
+╰     |                                        ^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:546:21: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 546 |     ch_input.map { [it[0].chr] }
+╰     |                     ^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:576:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 576 |     def ch_regions = Channel.empty()
+╰     |                      ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:583:44: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 583 |             ch_regions = ch_regions.filter{it.chr == input_region}
+╰     |                                            ^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:586:26: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 586 |             .map{ [[chr: it.chr, region: it.chr + ":" + it.region], it
+╰     |                          ^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:586:42: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 586 |             .map{ [[chr: it.chr, region: it.chr + ":" + it.region], it
+╰     |                                          ^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:586:57: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 586 |             .map{ [[chr: it.chr, region: it.chr + ":" + it.region], it
+╰     |                                                         ^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:586:69: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 586 | n: it.chr + ":" + it.region], it.chr + ":" + it.region]}
+╰     |                               ^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:586:84: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 586 |  it.chr, region: it.chr + ":" + it.region], it.chr + ":" + it.region]}
+╰     |                                                            ^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:589:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 589 |             ch_regions = Channel.from([input_region])
+╰     |                          ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:590:30: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 590 |                 .map{ [[chr: it.split(":")[0], "region": it], it]}
+╰     |                              ^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:590:58: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 590 |                 .map{ [[chr: it.split(":")[0], "region": it], it]}
+╰     |                                                          ^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:590:63: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 590 |                 .map{ [[chr: it.split(":")[0], "region": it], it]}
+╰     |                                                               ^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:610:48: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 610 |         return file.collect { getFileExtension(it) }
+╰     |                                                ^^
+
+Warn  subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:623:33: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 623 |         .map { getFileExtension(it[1]) } // Extract files extensions
+╰     |                                 ^^
+
+
+Warn  subworkflows/local/vcf_chr_rename_bcftools/main.nf:9:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│   9 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/vcf_chunk_glimpse/main.nf:13:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  13 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/vcf_concatenate_bcftools/main.nf:10:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  10 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/vcf_concatenate_bcftools/main.nf:18:18: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  18 |             one: it[3] == 1
+╰     |                  ^^
+
+Warn  subworkflows/local/vcf_concatenate_bcftools/main.nf:19:19: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  19 |             more: it[3] > 1
+╰     |                   ^^
+
+Warn  subworkflows/local/vcf_concatenate_bcftools/main.nf:23:51: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  23 |     BCFTOOLS_CONCAT(ch_vcf_tbi_grouped.more.map{ [it[0], it[1], it[2]]
+╰     |                                                   ^^
+
+Warn  subworkflows/local/vcf_concatenate_bcftools/main.nf:23:58: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  23 |     BCFTOOLS_CONCAT(ch_vcf_tbi_grouped.more.map{ [it[0], it[1], it[2]]
+╰     |                                                          ^^
+
+Warn  subworkflows/local/vcf_concatenate_bcftools/main.nf:23:65: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  23 |  BCFTOOLS_CONCAT(ch_vcf_tbi_grouped.more.map{ [it[0], it[1], it[2]] })
+╰     |                                                              ^^
+
+Warn  subworkflows/local/vcf_concatenate_bcftools/main.nf:31:16: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  31 |         .map{ [it[0], it[1][0], it[2][0]] }
+╰     |                ^^
+
+Warn  subworkflows/local/vcf_concatenate_bcftools/main.nf:31:23: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  31 |         .map{ [it[0], it[1][0], it[2][0]] }
+╰     |                       ^^
+
+Warn  subworkflows/local/vcf_concatenate_bcftools/main.nf:31:33: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  31 |         .map{ [it[0], it[1][0], it[2][0]] }
+╰     |                                 ^^
+
+
+Warn  subworkflows/local/vcf_concordance_glimpse2/main.nf:18:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  18 |     ch_versions      = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/vcf_concordance_glimpse2/main.nf:19:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/vcf_concordance_glimpse2/main.nf:28:33: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  28 |         .combine(ch_region.map{[it[1]]}.collect().toList())
+╰     |                                 ^^
+
+Warn  subworkflows/local/vcf_concordance_glimpse2/main.nf:70:55: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  70 |                 def all_files = sorted_list.collect { it[1] }
+╰     |                                                       ^^
+
+
+Warn  subworkflows/local/vcf_impute_glimpse1/main.nf:15:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  15 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/vcf_impute_glimpse1/main.nf:17:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |     samples_file = Channel.of([[]]).collect()
+╰     |                    ^^^^^^^
+
+Warn  subworkflows/local/vcf_impute_glimpse1/main.nf:18:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  18 |     gmap_file    = Channel.of([[]]).collect()
+╰     |                    ^^^^^^^
+
+
+Warn  subworkflows/local/vcf_normalize_bcftools/main.nf:13:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  13 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/vcf_phase_shapeit5/main.nf:19:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/vcf_phase_shapeit5/main.nf:75:30: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  75 |                     .collect{it.first()},
+╰     |                              ^^
+
+
+Warn  subworkflows/local/vcf_sites_extract_bcftools/main.nf:11:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  11 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/vcf_split_bcftools/main.nf:9:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│   9 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+
+
+
+Warn  workflows/chrcheck/function.nf:10:53: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  10 |                 chr.readLines()*.split(' ').collect{it[0]},
+╰     |                                                     ^^
+
+Warn  workflows/chrcheck/function.nf:37:47: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  37 |             chr_target.each{ new_chr += "chr${it}" }
+╰     |                                               ^^
+
+Warn  workflows/chrcheck/function.nf:38:37: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  38 |             diff.each{ to_rename += it.replace('chr', '') }
+╰     |                                     ^^
+
+Warn  workflows/chrcheck/function.nf:40:41: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  40 |             chr_target.each{ new_chr += it.replace('chr', '') }
+╰     |                                         ^^
+
+Warn  workflows/chrcheck/function.nf:41:43: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  41 |             diff.each{ to_rename += "chr${it}" }
+╰     |                                           ^^
+
+
+Warn  workflows/chrcheck/main.nf:19:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 |         ch_versions = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  workflows/chrcheck/main.nf:22:18: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  22 |             bam: it[1] =~ 'bam|cram'
+╰     |                  ^^
+
+Warn  workflows/chrcheck/main.nf:23:18: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  23 |             vcf: it[1] =~ 'vcf|bcf'
+╰     |                  ^^
+
+Warn  workflows/chrcheck/main.nf:24:20: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  24 |             other: it[1].size() > 0
+╰     |                    ^^
+
+Warn  workflows/chrcheck/main.nf:29:28: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  29 |             error "File: ${it[1]} is not a VCF, BCFT or BAM, CRAM file
+╰     |                            ^^
+
+Warn  workflows/chrcheck/main.nf:33:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  33 |         ch_vcf_split = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/chrcheck/main.nf:39:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  39 |         ch_bam_split = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/chrcheck/main.nf:46:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  46 |             ch_bam_renamed = Channel.empty()
+╰     |                              ^^^^^^^
+
+Warn  workflows/chrcheck/main.nf:54:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  54 |             ch_vcf_renamed = Channel.empty()
+╰     |                              ^^^^^^^
+
+Warn  workflows/chrcheck/main.nf:61:33: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  61 |                 def chr_names = it[3].size() > params.max_chr_names ? 
+╰     |                                 ^^
+
+Warn  workflows/chrcheck/main.nf:61:71: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  61 | ze() > params.max_chr_names ? it[3][0..params.max_chr_names - 1] + ['.
+╰     |                               ^^
+
+Warn  workflows/chrcheck/main.nf:61:118: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  61 | s.max_chr_names ? it[3][0..params.max_chr_names - 1] + ['...'] : it[3]
+╰     |                                                                  ^^
+
+Warn  workflows/chrcheck/main.nf:62:61: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  62 | names: ${chr_names} in VCF: ${it[1]} are not present in reference geno
+╰     |                               ^^
+
+Warn  workflows/chrcheck/main.nf:65:33: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  65 |                 def chr_names = it[3].size() > params.max_chr_names ? 
+╰     |                                 ^^
+
+Warn  workflows/chrcheck/main.nf:65:71: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  65 | ze() > params.max_chr_names ? it[3][0..params.max_chr_names - 1] + ['.
+╰     |                               ^^
+
+Warn  workflows/chrcheck/main.nf:65:118: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  65 | s.max_chr_names ? it[3][0..params.max_chr_names - 1] + ['...'] : it[3]
+╰     |                                                                  ^^
+
+Warn  workflows/chrcheck/main.nf:66:61: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  66 | names: ${chr_names} in BAM: ${it[1]} are not present in reference geno
+╰     |                               ^^
+
+Warn  workflows/chrcheck/main.nf:68:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  68 |             ch_vcf_renamed = Channel.empty()
+╰     |                              ^^^^^^^
+
+Warn  workflows/chrcheck/main.nf:69:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  69 |             ch_bam_renamed = Channel.empty()
+╰     |                              ^^^^^^^
+
+
+Warn  workflows/phaseimpute/main.nf:109:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 109 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/phaseimpute/main.nf:117:23: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 117 |             .map{ if (it != "bam" & it != "cram") {
+╰     |                       ^^
+
+Warn  workflows/phaseimpute/main.nf:117:37: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 117 |             .map{ if (it != "bam" & it != "cram") {
+╰     |                                     ^^
+
+Warn  workflows/phaseimpute/main.nf:118:113: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 118 |  in the same format, either BAM or CRAM, to perform simulation: ${it}"
+╰     |                                                                   ^^
+
+Warn  workflows/phaseimpute/main.nf:155:80: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 155 | c_files = ch_multiqc_files.mix(FILTER_CHR_INP.out.output.map{ it[1] })
+╰     |                                                               ^^
+
+Warn  workflows/phaseimpute/main.nf:173:84: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 173 | c_files = ch_multiqc_files.mix(FILTER_CHR_DWN.out.output.map{ it[1] })
+╰     |                                                               ^^
+
+Warn  workflows/phaseimpute/main.nf:209:60: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 209 |                 VCF_NORMALIZE_BCFTOOLS.out.vcf_tbi.combine(Channel.of(
+╰     |                                                            ^^^^^^^
+
+Warn  workflows/phaseimpute/main.nf:263:22: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 263 |                 bam: it[1] =~ 'bam|cram'
+╰     |                      ^^
+
+Warn  workflows/phaseimpute/main.nf:264:22: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 264 |                 vcf: it[1] =~ '(vcf|bcf)(.gz)*'
+╰     |                      ^^
+
+Warn  workflows/phaseimpute/main.nf:277:73: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 277 |        .collect{ nb_batch += 1; [[id: "all", batch: nb_batch], it] } }
+╰     |                                                                ^^
+
+Warn  workflows/phaseimpute/main.nf:278:43: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 278 |             .map { list -> [list.collect{ it[0] }, list.collect{ it[1]
+╰     |                                           ^^
+
+Warn  workflows/phaseimpute/main.nf:278:66: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 278 |        .map { list -> [list.collect{ it[0] }, list.collect{ it[1] }] }
+╰     |                                                             ^^
+
+Warn  workflows/phaseimpute/main.nf:281:53: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 281 |                 metaI + [metas: filestuples.collect{it[0].findAll{it.k
+╰     |                                                     ^^
+
+Warn  workflows/phaseimpute/main.nf:281:67: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 281 | stuples.collect{it[0].findAll{it.key != "batch"}}],
+╰     |                               ^^
+
+Warn  workflows/phaseimpute/main.nf:282:37: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 282 |                 filestuples.collect{it[1]}, filestuples.collect{it[2]}
+╰     |                                     ^^
+
+Warn  workflows/phaseimpute/main.nf:282:65: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 282 |                 filestuples.collect{it[1]}, filestuples.collect{it[2]}
+╰     |                                                                 ^^
+
+Warn  workflows/phaseimpute/main.nf:287:50: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 287 |                 meta, file, meta.metas.collect { it.id }
+╰     |                                                  ^^
+
+Warn  workflows/phaseimpute/main.nf:295:61: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 295 | arams.steps.split(',').find { it in ["all", "panelprep"] }) {
+╰     |                               ^^
+
+Warn  workflows/phaseimpute/main.nf:311:34: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 311 |                 ch_posfile.map{ [it[0], it[4]] },
+╰     |                                  ^^
+
+Warn  workflows/phaseimpute/main.nf:311:41: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 311 |                 ch_posfile.map{ [it[0], it[4]] },
+╰     |                                         ^^
+
+Warn  workflows/phaseimpute/main.nf:348:28: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 348 |                     .map{ [it[0], it[1], it[2], it[3]] }
+╰     |                            ^^
+
+Warn  workflows/phaseimpute/main.nf:348:35: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 348 |                     .map{ [it[0], it[1], it[2], it[3]] }
+╰     |                                   ^^
+
+Warn  workflows/phaseimpute/main.nf:348:42: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 348 |                     .map{ [it[0], it[1], it[2], it[3]] }
+╰     |                                          ^^
+
+Warn  workflows/phaseimpute/main.nf:348:49: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 348 |                     .map{ [it[0], it[1], it[2], it[3]] }
+╰     |                                                 ^^
+
+Warn  workflows/phaseimpute/main.nf:349:52: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 349 |                     .mix(ch_input_type.vcf.combine(Channel.of([[]]))),
+╰     |                                                    ^^^^^^^
+
+Warn  workflows/phaseimpute/main.nf:368:46: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 368 |                 ch_input_bams_withlist.map{ [it[0], it[1], it[2], it[4
+╰     |                                              ^^
+
+Warn  workflows/phaseimpute/main.nf:368:53: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 368 |                 ch_input_bams_withlist.map{ [it[0], it[1], it[2], it[4
+╰     |                                                     ^^
+
+Warn  workflows/phaseimpute/main.nf:368:60: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 368 |                 ch_input_bams_withlist.map{ [it[0], it[1], it[2], it[4
+╰     |                                                            ^^
+
+Warn  workflows/phaseimpute/main.nf:368:67: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 368 | st.map{ [it[0], it[1], it[2], it[4], it[5]] },
+╰     |                               ^^
+
+Warn  workflows/phaseimpute/main.nf:368:74: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 368 |     ch_input_bams_withlist.map{ [it[0], it[1], it[2], it[4], it[5]] },
+╰     |                                                              ^^
+
+Warn  workflows/phaseimpute/main.nf:369:34: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 369 |                 ch_posfile.map{ [it[0], it[4]] },
+╰     |                                  ^^
+
+Warn  workflows/phaseimpute/main.nf:369:41: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 369 |                 ch_posfile.map{ [it[0], it[4]] },
+╰     |                                         ^^
+
+Warn  workflows/phaseimpute/main.nf:394:46: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 394 |                 ch_input_bams_withlist.map{ [it[0], it[1], it[2], it[4
+╰     |                                              ^^
+
+Warn  workflows/phaseimpute/main.nf:394:53: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 394 |                 ch_input_bams_withlist.map{ [it[0], it[1], it[2], it[4
+╰     |                                                     ^^
+
+Warn  workflows/phaseimpute/main.nf:394:60: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 394 |                 ch_input_bams_withlist.map{ [it[0], it[1], it[2], it[4
+╰     |                                                            ^^
+
+Warn  workflows/phaseimpute/main.nf:394:67: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 394 | st.map{ [it[0], it[1], it[2], it[4], it[5]] },
+╰     |                               ^^
+
+Warn  workflows/phaseimpute/main.nf:394:74: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 394 |     ch_input_bams_withlist.map{ [it[0], it[1], it[2], it[4], it[5]] },
+╰     |                                                              ^^
+
+Warn  workflows/phaseimpute/main.nf:395:34: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 395 |                 ch_posfile.map{ [it[0], it[3], it[4]] },
+╰     |                                  ^^
+
+Warn  workflows/phaseimpute/main.nf:395:41: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 395 |                 ch_posfile.map{ [it[0], it[3], it[4]] },
+╰     |                                         ^^
+
+Warn  workflows/phaseimpute/main.nf:395:48: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 395 |                 ch_posfile.map{ [it[0], it[3], it[4]] },
+╰     |                                                ^^
+
+Warn  workflows/phaseimpute/main.nf:397:32: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 397 |                 ch_fasta.map{ [it[0], it[1]] }
+╰     |                                ^^
+
+Warn  workflows/phaseimpute/main.nf:397:39: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 397 |                 ch_fasta.map{ [it[0], it[1]] }
+╰     |                                       ^^
+
+Warn  workflows/phaseimpute/main.nf:439:59: Parameter was not used -- prefix with `_` to suppress warning
+│ 439 |                 .map { meta_vcf, vcf, index, meta_region, region ->
+╰     |                                                           ^^^^^^
+
+Warn  workflows/phaseimpute/main.nf:477:28: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 477 |             ch_fasta.map{ [it[0], it[1]] })
+╰     |                            ^^
+
+Warn  workflows/phaseimpute/main.nf:477:35: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 477 |             ch_fasta.map{ [it[0], it[1]] })
+╰     |                                   ^^
+
+Warn  workflows/phaseimpute/main.nf:479:86: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 479 |  = ch_multiqc_files.mix(BCFTOOLS_STATS_TOOLS.out.stats.map{ [it[1]] })
+╰     |                                                              ^^
+
+Warn  workflows/phaseimpute/main.nf:493:39: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 493 |         CONCAT_PANEL(ch_posfile.map{ [it[0], it[1], it[2]] })
+╰     |                                       ^^
+
+Warn  workflows/phaseimpute/main.nf:493:46: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 493 |         CONCAT_PANEL(ch_posfile.map{ [it[0], it[1], it[2]] })
+╰     |                                              ^^
+
+Warn  workflows/phaseimpute/main.nf:493:53: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 493 |         CONCAT_PANEL(ch_posfile.map{ [it[0], it[1], it[2]] })
+╰     |                                                     ^^
+
+Warn  workflows/phaseimpute/main.nf:504:28: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 504 |             ch_fasta.map{ [it[0], it[1]] })
+╰     |                            ^^
+
+Warn  workflows/phaseimpute/main.nf:504:35: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 504 |             ch_fasta.map{ [it[0], it[1]] })
+╰     |                                   ^^
+
+Warn  workflows/phaseimpute/main.nf:506:86: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 506 |  = ch_multiqc_files.mix(BCFTOOLS_STATS_PANEL.out.stats.map{ [it[1]] })
+╰     |                                                              ^^
+
+Warn  workflows/phaseimpute/main.nf:508:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 508 |         ch_truth_vcf = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/phaseimpute/main.nf:512:21: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 512 |             .map { [it[0], it[1], it[2], getFileExtension(it[1])] }
+╰     |                     ^^
+
+Warn  workflows/phaseimpute/main.nf:512:28: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 512 |             .map { [it[0], it[1], it[2], getFileExtension(it[1])] }
+╰     |                            ^^
+
+Warn  workflows/phaseimpute/main.nf:512:35: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 512 |             .map { [it[0], it[1], it[2], getFileExtension(it[1])] }
+╰     |                                   ^^
+
+Warn  workflows/phaseimpute/main.nf:512:59: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 512 |             .map { [it[0], it[1], it[2], getFileExtension(it[1])] }
+╰     |                                                           ^^
+
+Warn  workflows/phaseimpute/main.nf:514:22: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 514 |                 bam: it[3] =~ 'bam|cram'
+╰     |                      ^^
+
+Warn  workflows/phaseimpute/main.nf:515:22: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 515 |                 vcf: it[3] =~ '(vcf|bcf)(.gz)*'
+╰     |                      ^^
+
+Warn  workflows/phaseimpute/main.nf:523:33: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 523 |             ch_truth.bam.map { [it[0], it[1], it[2]] },
+╰     |                                 ^^
+
+Warn  workflows/phaseimpute/main.nf:523:40: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 523 |             ch_truth.bam.map { [it[0], it[1], it[2]] },
+╰     |                                        ^^
+
+Warn  workflows/phaseimpute/main.nf:523:47: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 523 |             ch_truth.bam.map { [it[0], it[1], it[2]] },
+╰     |                                               ^^
+
+Warn  workflows/phaseimpute/main.nf:524:30: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 524 |             ch_posfile.map{ [it[0], it[4]] },
+╰     |                              ^^
+
+Warn  workflows/phaseimpute/main.nf:524:37: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 524 |             ch_posfile.map{ [it[0], it[4]] },
+╰     |                                     ^^
+
+Warn  workflows/phaseimpute/main.nf:531:21: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 531 |             .map { [it[0], it[1], it[2]] }
+╰     |                     ^^
+
+Warn  workflows/phaseimpute/main.nf:531:28: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 531 |             .map { [it[0], it[1], it[2]] }
+╰     |                            ^^
+
+Warn  workflows/phaseimpute/main.nf:531:35: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 531 |             .map { [it[0], it[1], it[2]] }
+╰     |                                   ^^
+
+Warn  workflows/phaseimpute/main.nf:554:28: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 554 |             ch_fasta.map{ [it[0], it[1]] }
+╰     |                            ^^
+
+Warn  workflows/phaseimpute/main.nf:554:35: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 554 |             ch_fasta.map{ [it[0], it[1]] }
+╰     |                                   ^^
+
+Warn  workflows/phaseimpute/main.nf:557:86: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 557 |  = ch_multiqc_files.mix(BCFTOOLS_STATS_TRUTH.out.stats.map{ [it[1]] })
+╰     |                                                              ^^
+
+Warn  workflows/phaseimpute/main.nf:574:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 574 |     def topic_versions = Channel.topic("versions")
+╰     |                          ^^^^^^^
+
+Warn  workflows/phaseimpute/main.nf:603:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 603 |     ch_multiqc_config                     = Channel.fromPath("$project
+╰     |                                             ^^^^^^^
+
+Warn  workflows/phaseimpute/main.nf:604:69: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 604 |     = params.multiqc_config ? Channel.fromPath(params.multiqc_config, 
+╰     |                               ^^^^^^^
+
+Warn  workflows/phaseimpute/main.nf:604:132: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 604 | fromPath(params.multiqc_config, checkIfExists: true) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/phaseimpute/main.nf:605:67: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 605 |       = params.multiqc_logo ? Channel.fromPath(params.multiqc_logo, ch
+╰     |                               ^^^^^^^
+
+Warn  workflows/phaseimpute/main.nf:605:128: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 605 | l.fromPath(params.multiqc_logo, checkIfExists: true) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/phaseimpute/main.nf:607:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 607 |     ch_workflow_summary                   = Channel.value(paramsSummar
+╰     |                                             ^^^^^^^
+
+Warn  workflows/phaseimpute/main.nf:610:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 610 |     ch_methods_description                = Channel.value(methodsDescr
+╰     |                                             ^^^^^^^
+
+Warn  workflows/phaseimpute/main.nf:613:76: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 613 | arams.multiqc_replace_names ? Channel.fromPath(params.multiqc_replace_
+╰     |                               ^^^^^^^
+
+Warn  workflows/phaseimpute/main.nf:613:146: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 613 | h(params.multiqc_replace_names, checkIfExists: true) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/phaseimpute/main.nf:614:75: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 614 | params.multiqc_sample_names ? Channel.fromPath(params.multiqc_sample_n
+╰     |                               ^^^^^^^
+
+Warn  workflows/phaseimpute/main.nf:614:144: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 614 | th(params.multiqc_sample_names, checkIfExists: true) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-test tests
+│   3 |     testsDir "."
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 3 files had 7 errors
+ ✅ 186 files had no errors

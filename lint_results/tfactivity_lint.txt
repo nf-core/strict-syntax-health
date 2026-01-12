@@ -1,0 +1,409 @@
+Linting Nextflow code..
+Linting: conf/igenomes_ignored.config
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/igenomes.config
+Linting: nextflow.config
+Linting: workflows/tfactivity.nf
+Linting: subworkflows/local/prepare_genome/main.nf
+Linting: subworkflows/local/merge_samples/main.nf
+Linting: subworkflows/local/merge_samples/tests/nextflow.config
+Linting: subworkflows/local/utils_nfcore_tfactivity_pipeline/main.nf
+Linting: subworkflows/local/chromhmm/main.nf
+Linting: subworkflows/local/fimo/main.nf
+Linting: subworkflows/local/fimo/tests/nextflow.config
+Linting: subworkflows/local/motifs/main.nf
+Linting: subworkflows/local/counts/main.nf
+Linting: subworkflows/local/counts/tests/nextflow.config
+Linting: subworkflows/local/ranking/main.nf
+Linting: subworkflows/local/sneep/main.nf
+Linting: subworkflows/local/sneep/tests/nextflow.config
+Linting: subworkflows/local/report/main.nf
+Linting: subworkflows/local/peaks/main.nf
+Linting: subworkflows/local/peaks/tests/nextflow.config
+Linting: subworkflows/local/rose/main.nf
+Linting: subworkflows/local/rose/tests/nextflow.config
+Linting: subworkflows/local/footprinting/main.nf
+Linting: subworkflows/local/footprinting/tests/nextflow.config
+Linting: subworkflows/local/dynamite/main.nf
+Linting: subworkflows/local/dynamite/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/gtftools/length/main.nf
+Linting: modules/local/chromhmm/learn_model/main.nf
+Linting: modules/local/chromhmm/binarize_bams/main.nf
+Linting: modules/local/chromhmm/get_results/main.nf
+Linting: modules/local/fimo/filter_motifs/main.nf
+Linting: modules/local/fimo/run_fimo/main.nf
+Linting: modules/local/motifs/transfac_to_psem/main.nf
+Linting: modules/local/motifs/filter_motifs/main.nf
+Linting: modules/local/motifs/convert_motifs/main.nf
+Linting: modules/local/motifs/fetch_jaspar/main.nf
+Linting: modules/local/combine_tables/main.nf
+Linting: modules/local/counts/calculate_tpm/main.nf
+Linting: modules/local/counts/calculate_tpm/tests/nextflow.config
+Linting: modules/local/counts/filter_genes/main.nf
+Linting: modules/local/counts/prepare_design/main.nf
+Linting: modules/local/counts/combine/main.nf
+Linting: modules/local/extract_id_symbol_map/main.nf
+Linting: modules/local/ranking/ranking/main.nf
+Linting: modules/local/ranking/tf_tg_score/main.nf
+Linting: modules/local/sneep/run_sneep/main.nf
+Linting: modules/local/sneep/filter_scales_motifs/main.nf
+Linting: modules/local/report/preprocess/main.nf
+Linting: modules/local/report/create/main.nf
+Linting: modules/local/peaks/aggregate_synonyms/main.nf
+Linting: modules/local/dynamite/preprocess/main.nf
+Linting: modules/local/dynamite/dynamite/main.nf
+Linting: modules/local/stare/main.nf
+Linting: modules/nf-core/gunzip/main.nf
+Linting: modules/nf-core/gunzip/tests/nextflow.config
+Linting: modules/nf-core/samtools/reheader/main.nf
+Linting: modules/nf-core/samtools/reheader/tests/rgdel.config
+Linting: modules/nf-core/samtools/reheader/tests/chrdel.config
+Linting: modules/nf-core/samtools/faidx/main.nf
+Linting: modules/nf-core/samtools/faidx/tests/nextflow.config
+Linting: modules/nf-core/samtools/faidx/tests/nextflow2.config
+Linting: modules/nf-core/cat/cat/main.nf
+Linting: modules/nf-core/cat/cat/tests/nextflow_zipped_unzipped.config
+Linting: modules/nf-core/cat/cat/tests/nextflow_unzipped_zipped.config
+Linting: modules/nf-core/csvtk/sort/main.nf
+Linting: modules/nf-core/gnu/sort/main.nf
+Linting: modules/nf-core/gnu/sort/tests/sort_simple_genome.config
+Linting: modules/nf-core/gnu/sort/tests/sort_simple_bed.config
+Linting: modules/nf-core/gnu/sort/tests/sort_complex.config
+Linting: modules/nf-core/untar/main.nf
+Linting: modules/nf-core/zip/main.nf
+Linting: modules/nf-core/stare/main.nf
+Linting: modules/nf-core/bedtools/intersect/main.nf
+Linting: modules/nf-core/bedtools/intersect/tests/nextflow.config
+Linting: modules/nf-core/bedtools/subtract/main.nf
+Linting: modules/nf-core/bedtools/getfasta/main.nf
+Linting: modules/nf-core/bedtools/sort/main.nf
+Linting: modules/nf-core/bedtools/sort/tests/nextflow.config
+Linting: modules/nf-core/bedtools/slop/main.nf
+Linting: modules/nf-core/bedtools/slop/tests/nextflow.config
+Linting: modules/nf-core/bedtools/merge/main.nf
+Linting: modules/nf-core/bedtools/merge/tests/nextflow.config
+Linting: modules/nf-core/bedtools/complement/main.nf
+Linting: modules/nf-core/gawk/main.nf
+Linting: modules/nf-core/gawk/tests/nextflow.config
+Linting: modules/nf-core/deseq2/differential/main.nf
+Linting: modules/nf-core/deseq2/differential/tests/contrasts_matrix_subset_to_contrast.config
+Linting: modules/nf-core/deseq2/differential/tests/contrasts_matrix_noblocking.config
+Linting: modules/nf-core/deseq2/differential/tests/contrasts_matrix_spikes.config
+Linting: modules/nf-core/deseq2/differential/tests/contrasts_matrix_exclude_samples.config
+Linting: modules/nf-core/deseq2/differential/tests/contrasts_matrix.config
+Linting: modules/nf-core/deseq2/differential/tests/contrasts_matrix_vst_nsub.config
+Linting: modules/nf-core/deseq2/differential/tests/contrasts_interaction.config
+Warn  main.nf:54:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  54 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  main.nf:59:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  59 |     ch_blacklist = Channel.value(params.blacklist ? file(params.blackl
+╰     |                    ^^^^^^^
+
+Warn  main.nf:61:17: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  61 |     ch_counts = Channel.value(file(params.counts, checkIfExists: true)
+╰     |                 ^^^^^^^
+
+Warn  main.nf:104:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 104 |         Channel.value([[id: "design"], file(params.counts_design, chec
+╰     |         ^^^^^^^
+
+
+
+
+
+
+
+
+
+
+Warn  modules/nf-core/cat/cat/main.nf:23:40: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  23 |     def file_list = files_in.collect { it.toString() }
+╰     |                                        ^^
+
+Warn  modules/nf-core/cat/cat/main.nf:58:42: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  58 |     def file_list   = files_in.collect { it.toString() }
+╰     |                                          ^^
+
+
+
+
+Warn  modules/nf-core/gawk/main.nf:26:54: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  26 |     suffix    = task.ext.suffix ?: "${input.collect{ it.getExtension()
+╰     |                                                      ^^
+
+Warn  modules/nf-core/gawk/main.nf:29:37: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  29 |     lst_gz     = input.findResults{ it.getExtension().endsWith("gz") ?
+╰     |                                     ^^
+
+Warn  modules/nf-core/gawk/main.nf:29:72: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  29 | tExtension().endsWith("gz") ? it.toString() : null }
+╰     |                               ^^
+
+Warn  modules/nf-core/gawk/main.nf:31:34: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  31 |     input_cmd  = input.collect { it.toString() - ~/\.gz$/ }.join(" ")
+╰     |                                  ^^
+
+Warn  modules/nf-core/gawk/main.nf:34:49: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  34 |     cleanup    = lst_gz ? "rm ${lst_gz.collect{ it - ~/\.gz$/ }.join("
+╰     |                                                 ^^
+
+Warn  modules/nf-core/gawk/main.nf:37:16: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  37 |         assert it.name != "${prefix}.${suffix}" : "Input and output na
+╰     |                ^^
+
+Warn  modules/nf-core/gawk/main.nf:59:51: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  59 |     suffix = task.ext.suffix ?: "${input.collect{ it.getExtension()}.g
+╰     |                                                   ^^
+
+
+
+Warn  modules/nf-core/gunzip/main.nf:43:9: Variable was declared but not used
+│  43 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+
+
+Warn  subworkflows/local/chromhmm/main.nf:17:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/chromhmm/main.nf:24:39: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  24 |             ["cellmarkfiletable.tsv", it.join("\t") + "\n"]
+╰     |                                       ^^
+
+Warn  subworkflows/local/chromhmm/main.nf:26:17: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  26 |         .map { [it.baseName, it] }
+╰     |                 ^^
+
+Warn  subworkflows/local/chromhmm/main.nf:26:30: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  26 |         .map { [it.baseName, it] }
+╰     |                              ^^
+
+
+Warn  subworkflows/local/counts/main.nf:24:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  24 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/counts/main.nf:61:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  61 |         Channel.value(["condition"]).combine(contrasts).map { variable
+╰     |         ^^^^^^^
+
+
+Warn  subworkflows/local/dynamite/main.nf:16:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/fimo/main.nf:18:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  18 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/footprinting/main.nf:10:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  10 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/merge_samples/main.nf:14:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  14 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/motifs/main.nf:16:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/motifs/main.nf:19:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  19 |         ch_motifs = Channel.value(motifs)
+╰     |                     ^^^^^^^
+
+Warn  subworkflows/local/motifs/main.nf:43:24: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  43 |         .splitText() { it.trim() }
+╰     |                        ^^
+
+Warn  subworkflows/local/motifs/main.nf:44:19: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  44 |         .filter { it.startsWith("Removing duplicate motif with symbol"
+╰     |                   ^^
+
+Warn  subworkflows/local/motifs/main.nf:45:31: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  45 |         .subscribe { log.warn(it) }
+╰     |                               ^^
+
+
+Warn  subworkflows/local/peaks/main.nf:37:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  37 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/peaks/main.nf:58:23: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  58 |     ch_chromhmm_out = Channel.empty()
+╰     |                       ^^^^^^^
+
+Warn  subworkflows/local/peaks/main.nf:65:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  65 |     ch_rose_out = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/peaks/main.nf:132:24: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 132 |         .splitText() { it.trim() }
+╰     |                        ^^
+
+Warn  subworkflows/local/peaks/main.nf:133:19: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 133 |         .filter { it.startsWith("Merging duplicate motif in") }
+╰     |                   ^^
+
+Warn  subworkflows/local/peaks/main.nf:134:31: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 134 |         .subscribe { log.warn(it) }
+╰     |                               ^^
+
+
+Warn  subworkflows/local/prepare_genome/main.nf:14:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  14 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:16:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     ch_fasta = Channel.value([[id: 'fasta'], fasta])
+╰     |                ^^^^^^^
+
+Warn  subworkflows/local/prepare_genome/main.nf:17:14: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |     ch_gtf = Channel.value([[id: 'gtf'], gtf])
+╰     |              ^^^^^^^
+
+
+Warn  subworkflows/local/ranking/main.nf:18:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  18 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/report/main.nf:49:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  49 |     ch_workflow_summary = Channel.value(paramsSummaryToYAML(summary_pa
+╰     |                           ^^^^^^^
+
+Warn  subworkflows/local/report/main.nf:50:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  50 |     ch_methods_description = Channel.value(methodsDescriptionText())
+╰     |                              ^^^^^^^
+
+
+Warn  subworkflows/local/rose/main.nf:21:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  21 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/rose/main.nf:47:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  47 |     ch_filter_predictions = Channel.empty()
+╰     |                             ^^^^^^^
+
+
+Warn  subworkflows/local/sneep/main.nf:17:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/utils_nfcore_tfactivity_pipeline/main.nf:31:5: Parameter was not used -- prefix with `_` to suppress warning
+│  31 |     monochrome_logs   // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_tfactivity_pipeline/main.nf:34:5: Parameter was not used -- prefix with `_` to suppress warning
+│  34 |     input             //  string: Path to input samplesheet
+╰     |     ^^^^^
+
+Warn  subworkflows/local/utils_nfcore_tfactivity_pipeline/main.nf:38:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  38 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_tfactivity_pipeline/main.nf:75:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  75 |     Channel
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_tfactivity_pipeline/main.nf:78:38: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  78 |             validateInputSamplesheet(it)
+╰     |                                      ^^
+
+Warn  subworkflows/local/utils_nfcore_tfactivity_pipeline/main.nf:82:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  82 |     ch_samplesheet_bam = params.input_bam ? Channel.fromList(sampleshe
+╰     |                                             ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_tfactivity_pipeline/main.nf:82:147: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  82 | _bam, "${projectDir}/assets/schema_input_bam.json")) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_tfactivity_pipeline/main.nf:83:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  83 |     ch_counts_design = Channel.fromList(samplesheetToList(params.count
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_tfactivity_pipeline/main.nf:224:21: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 224 |         ].findAll { it }
+╰     |                     ^^
+
+
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 | mYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
+╰     |                               ^^^^^^^
+
+
+Warn  workflows/tfactivity.nf:62:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  62 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  workflows/tfactivity.nf:136:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 136 |     ch_fimo_binding_sites = Channel.empty()
+╰     |                             ^^^^^^^
+
+
+Error nextflow.config:324:34: `manifest` is not defined
+│ 324 | \033[0;35m  nf-core/tfactivity ${manifest.version}\033[0m
+╰     |                                  ^^^^^^^^
+
+Error nextflow.config:327:26: `manifest` is not defined
+│ 327 |         afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${ma
+╰     |                          ^^^^^^^^
+
+Error nextflow.config:327:69: `manifest` is not defined
+│ 327 | ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "  
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:327:186: `manifest` is not defined
+│ 327 | doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:336:22: `validation` is not defined
+│ 336 |         beforeText = validation.help.beforeText
+╰     |                      ^^^^^^^^^^
+
+Error nextflow.config:337:21: `validation` is not defined
+│ 337 |         afterText = validation.help.afterText
+╰     |                     ^^^^^^^^^^
+
+Warn  nextflow.config:327:129: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 327 | lect { "    https://doi.org/${it.trim().replace('https://doi.org/','')
+╰     |                               ^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-test tests
+│   3 |     testsDir "."
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 2 files had 7 errors
+ ✅ 104 files had no errors

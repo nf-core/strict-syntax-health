@@ -1,0 +1,294 @@
+Linting Nextflow code..
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: nextflow.config
+Linting: workflows/scdownstream.nf
+Linting: subworkflows/local/unify.nf
+Linting: subworkflows/local/scimilarity.nf
+Linting: subworkflows/local/utils_nfcore_scdownstream_pipeline/main.nf
+Linting: subworkflows/local/finalize.nf
+Linting: subworkflows/local/integrate.nf
+Linting: subworkflows/local/load_h5ad/main.nf
+Linting: subworkflows/local/cluster/main.nf
+Linting: subworkflows/local/celltype_assignment/main.nf
+Linting: subworkflows/local/ambient_correction/main.nf
+Linting: subworkflows/local/pseudobulking/main.nf
+Linting: subworkflows/local/unify_genes.nf
+Linting: subworkflows/local/doublet_detection/main.nf
+Linting: subworkflows/local/combine.nf
+Linting: subworkflows/local/quality_control/main.nf
+Linting: subworkflows/local/singler/main.nf
+Linting: subworkflows/local/per_group.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/h5ad_removebackground_barcodes_cellbender_anndata/main.nf
+Linting: subworkflows/nf-core/h5ad_removebackground_barcodes_cellbender_anndata/tests/epochs.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/scimilarity/embed/main.nf
+Linting: modules/local/scimilarity/pseudobulk/main.nf
+Linting: modules/local/scimilarity/pseudobulk/tests/nextflow.config
+Linting: modules/local/scimilarity/annotate/main.nf
+Linting: modules/local/celda/decontx/main.nf
+Linting: modules/local/liana/rankaggregate/main.nf
+Linting: modules/local/seurat/integration/main.nf
+Linting: modules/local/celldex/fetchreference/main.nf
+Linting: modules/local/scvitools/scvi/main.nf
+Linting: modules/local/scvitools/scanvi/main.nf
+Linting: modules/local/scvitools/scanvi/tests/nextflow.config
+Linting: modules/local/scanpy/harmony/main.nf
+Linting: modules/local/scanpy/hvgs/main.nf
+Linting: modules/local/scanpy/plotqc/main.nf
+Linting: modules/local/scanpy/paga/main.nf
+Linting: modules/local/scanpy/rankgenesgroups/main.nf
+Linting: modules/local/scanpy/bbknn/main.nf
+Linting: modules/local/scanpy/umap/main.nf
+Linting: modules/local/scanpy/neighbors/main.nf
+Linting: modules/local/scanpy/leiden/main.nf
+Linting: modules/local/scanpy/pca/main.nf
+Linting: modules/local/scanpy/filter/main.nf
+Linting: modules/local/scanpy/combat/main.nf
+Linting: modules/local/scanpy/readh5/main.nf
+Linting: modules/local/custom/collectsizes/main.nf
+Linting: modules/local/doublet_detection/doublet_removal/main.nf
+Linting: modules/local/doublet_detection/scds/main.nf
+Linting: modules/local/celltypes/singler/main.nf
+Linting: modules/local/celltypes/celltypist/main.nf
+Linting: modules/local/hugounifier/get/main.nf
+Linting: modules/local/hugounifier/apply/main.nf
+Linting: modules/local/adata/upsetgenes/main.nf
+Linting: modules/local/adata/mergeembeddings/main.nf
+Linting: modules/local/adata/setindex/main.nf
+Linting: modules/local/adata/mygene/main.nf
+Linting: modules/local/adata/readcsv/main.nf
+Linting: modules/local/adata/readrds/main.nf
+Linting: modules/local/adata/unify/main.nf
+Linting: modules/local/adata/splitembeddings/main.nf
+Linting: modules/local/adata/entropy/main.nf
+Linting: modules/local/adata/prepcellxgene/main.nf
+Linting: modules/local/adata/extend/main.nf
+Linting: modules/local/adata/tords/main.nf
+Linting: modules/local/adata/merge/main.nf
+Linting: modules/local/adata/splitcol/main.nf
+Linting: modules/local/soupx/main.nf
+Linting: modules/nf-core/scvitools/solo/main.nf
+Linting: modules/nf-core/scvitools/scar/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/multiqc/tests/custom_prefix.config
+Linting: modules/nf-core/scanpy/scrublet/main.nf
+Linting: modules/nf-core/untar/main.nf
+Linting: modules/nf-core/cellbender/removebackground/main.nf
+Linting: modules/nf-core/cellbender/removebackground/tests/epochs.config
+Linting: modules/nf-core/cellbender/merge/main.nf
+Linting: modules/nf-core/anndata/getsize/main.nf
+Linting: modules/nf-core/anndata/barcodes/main.nf
+Linting: modules/nf-core/doubletdetection/main.nf
+Warn  modules/local/adata/extend/main.nf:22:5: Variable was declared but not used
+│  22 |     prefix = task.ext.prefix ?: "${meta.id}"
+╰     |     ^^^^^^
+
+
+Warn  modules/local/adata/merge/main.nf:27:5: Variable was declared but not used
+│  27 |     force_obs_cols = task.ext.force_obs_cols ?: params.force_obs_cols 
+╰     |     ^^^^^^^^^^^^^^
+
+
+
+Warn  modules/local/adata/mygene/main.nf:22:5: Variable was declared but not used
+│  22 |     input_col = task.ext.input_col ?: "index"
+╰     |     ^^^^^^^^^
+
+Warn  modules/local/adata/mygene/main.nf:23:5: Variable was declared but not used
+│  23 |     output_col = task.ext.output_col ?: "symbols"
+╰     |     ^^^^^^^^^^
+
+
+Warn  modules/local/adata/prepcellxgene/main.nf:21:5: Variable was declared but not used
+│  21 |     prefix = task.ext.prefix ?: "${meta.id}"
+╰     |     ^^^^^^
+
+
+
+
+
+Warn  modules/local/adata/splitembeddings/main.nf:22:5: Variable was declared but not used
+│  22 |     prefix = task.ext.prefix ?: "${meta.id}"
+╰     |     ^^^^^^
+
+
+Warn  modules/local/adata/tords/main.nf:21:5: Variable was declared but not used
+│  21 |     counts_layer = task.ext.counts_layer ?: 'X'
+╰     |     ^^^^^^^^^^^^
+
+
+
+
+
+
+
+
+
+
+Error modules/local/liana/rankaggregate/main.nf:7:9: `https` is not defined
+│   7 |         https://community-cr-prod.seqera.io/docker/registry/v2/blobs/s
+╰     |         ^^^^^
+
+Warn  modules/local/liana/rankaggregate/main.nf:22:5: Variable was declared but not used
+│  22 |     obs_key = meta.obs_key ?: "leiden"
+╰     |     ^^^^^^^
+
+Warn  modules/local/liana/rankaggregate/main.nf:23:5: Variable was declared but not used
+│  23 |     prefix = task.ext.prefix ?: "${meta.id}"
+╰     |     ^^^^^^
+
+
+
+
+
+Warn  modules/local/scanpy/hvgs/main.nf:25:5: Variable was declared but not used
+│  25 |     batch_key = task.ext.batch_key ?: ""
+╰     |     ^^^^^^^^^
+
+
+
+
+Warn  modules/local/scanpy/paga/main.nf:25:5: Variable was declared but not used
+│  25 |     obs_key = meta.obs_key ?: "leiden"
+╰     |     ^^^^^^^
+
+Warn  modules/local/scanpy/paga/main.nf:26:5: Variable was declared but not used
+│  26 |     prefix = task.ext.prefix ?: "${meta.id}"
+╰     |     ^^^^^^
+
+
+
+
+Warn  modules/local/scanpy/rankgenesgroups/main.nf:24:5: Variable was declared but not used
+│  24 |     obs_key = meta.obs_key ?: "leiden"
+╰     |     ^^^^^^^
+
+Warn  modules/local/scanpy/rankgenesgroups/main.nf:25:5: Variable was declared but not used
+│  25 |     prefix = task.ext.prefix ?: "${meta.id}"
+╰     |     ^^^^^^
+
+
+
+
+
+
+
+Warn  modules/local/scvitools/scanvi/main.nf:33:5: Variable was declared but not used
+│  33 |     n_hidden = task.ext.n_hidden ?: 128
+╰     |     ^^^^^^^^
+
+Warn  modules/local/scvitools/scanvi/main.nf:34:5: Variable was declared but not used
+│  34 |     n_layers = task.ext.n_layers ?: 2
+╰     |     ^^^^^^^^
+
+Warn  modules/local/scvitools/scanvi/main.nf:35:5: Variable was declared but not used
+│  35 |     n_latent = task.ext.n_latent ?: 30
+╰     |     ^^^^^^^^
+
+Warn  modules/local/scvitools/scanvi/main.nf:36:5: Variable was declared but not used
+│  36 |     dispersion = task.ext.dispersion ?: 'gene'
+╰     |     ^^^^^^^^^^
+
+Warn  modules/local/scvitools/scanvi/main.nf:37:5: Variable was declared but not used
+│  37 |     gene_likelihood = task.ext.gene_likelihood ?: 'zinb'
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  modules/local/scvitools/scanvi/main.nf:38:5: Variable was declared but not used
+│  38 |     max_epochs = task.ext.max_epochs ?: null
+╰     |     ^^^^^^^^^^
+
+
+Warn  modules/local/scvitools/scvi/main.nf:31:5: Variable was declared but not used
+│  31 |     n_hidden = task.ext.n_hidden ?: 128
+╰     |     ^^^^^^^^
+
+Warn  modules/local/scvitools/scvi/main.nf:32:5: Variable was declared but not used
+│  32 |     n_layers = task.ext.n_layers ?: 2
+╰     |     ^^^^^^^^
+
+Warn  modules/local/scvitools/scvi/main.nf:33:5: Variable was declared but not used
+│  33 |     n_latent = task.ext.n_latent ?: 30
+╰     |     ^^^^^^^^
+
+Warn  modules/local/scvitools/scvi/main.nf:34:5: Variable was declared but not used
+│  34 |     dispersion = task.ext.dispersion ?: 'gene'
+╰     |     ^^^^^^^^^^
+
+Warn  modules/local/scvitools/scvi/main.nf:35:5: Variable was declared but not used
+│  35 |     gene_likelihood = task.ext.gene_likelihood ?: 'zinb'
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  modules/local/scvitools/scvi/main.nf:36:5: Variable was declared but not used
+│  36 |     max_epochs = task.ext.max_epochs ?: null
+╰     |     ^^^^^^^^^^
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Warn  subworkflows/local/utils_nfcore_scdownstream_pipeline/main.nf:31:5: Parameter was not used -- prefix with `_` to suppress warning
+│  31 |     monochrome_logs   // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_scdownstream_pipeline/main.nf:34:5: Parameter was not used -- prefix with `_` to suppress warning
+│  34 |     input             //  string: Path to input samplesheet
+╰     |     ^^^^^
+
+Warn  subworkflows/local/utils_nfcore_scdownstream_pipeline/main.nf:172:79: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 172 | _methods.split(',').collect { it.trim().toLowerCase() }
+╰     |                               ^^
+
+
+Warn  subworkflows/nf-core/h5ad_removebackground_barcodes_cellbender_anndata/main.nf:13:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  13 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+
+
+
+
+Error nextflow.config:237:9: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/scdownstream/conf/test_offline.config'
+│ 237 |         includeConfig 'conf/test_offline.config'
+╰     |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-test tests
+│   3 |     testsDir "."
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 3 files had 3 errors
+ ✅ 89 files had no errors

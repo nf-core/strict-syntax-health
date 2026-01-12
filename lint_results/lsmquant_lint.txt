@@ -1,0 +1,304 @@
+Linting Nextflow code..
+Linting: conf/igenomes_ignored.config
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/igenomes.config
+Linting: nextflow.config
+Linting: workflows/lsmquant.nf
+Linting: subworkflows/local/araregistration/main.nf
+Linting: subworkflows/local/numorph_preprocessing/main.nf
+Linting: subworkflows/local/utils_nfcore_lsmquant_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/numorphstitch/main.nf
+Linting: modules/local/stagefiles/main.nf
+Linting: modules/local/numorphintensity/main.nf
+Linting: modules/local/numorphresample/main.nf
+Linting: modules/local/numorphalign/main.nf
+Linting: modules/local/numorphregister/main.nf
+Linting: modules/local/mat2json/main.nf
+Linting: modules/local/numorph3dunet/main.nf
+Linting: modules/local/numorph3dunet/tests/nextflow.config
+Linting: modules/nf-core/unzip/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/unzipfiles/main.nf
+Warn  modules/local/mat2json/main.nf:20:9: Variable was declared but not used
+│  20 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/mat2json/main.nf:42:9: Variable was declared but not used
+│  42 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/numorph3dunet/main.nf:52:9: Variable was declared but not used
+│  52 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/numorphalign/main.nf:29:9: Variable was declared but not used
+│  29 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/numorphalign/main.nf:30:9: Variable was declared but not used
+│  30 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+Warn  modules/local/numorphalign/main.nf:56:9: Variable was declared but not used
+│  56 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/numorphalign/main.nf:57:9: Variable was declared but not used
+│  57 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/numorphintensity/main.nf:24:9: Variable was declared but not used
+│  24 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/numorphintensity/main.nf:25:9: Variable was declared but not used
+│  25 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+Warn  modules/local/numorphintensity/main.nf:46:9: Variable was declared but not used
+│  46 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/numorphintensity/main.nf:47:9: Variable was declared but not used
+│  47 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/numorphregister/main.nf:22:9: Variable was declared but not used
+│  22 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/numorphregister/main.nf:48:9: Variable was declared but not used
+│  48 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/numorphresample/main.nf:18:9: Variable was declared but not used
+│  18 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/numorphresample/main.nf:19:9: Variable was declared but not used
+│  19 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+Warn  modules/local/numorphresample/main.nf:40:9: Variable was declared but not used
+│  40 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/numorphstitch/main.nf:26:9: Variable was declared but not used
+│  26 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/numorphstitch/main.nf:27:9: Variable was declared but not used
+│  27 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+Warn  modules/local/numorphstitch/main.nf:54:9: Variable was declared but not used
+│  54 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/numorphstitch/main.nf:55:9: Variable was declared but not used
+│  55 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/stagefiles/main.nf:20:9: Variable was declared but not used
+│  20 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/stagefiles/main.nf:41:9: Variable was declared but not used
+│  41 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/stagefiles/main.nf:42:9: Variable was declared but not used
+│  42 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+
+Warn  modules/nf-core/unzip/main.nf:38:9: Variable was declared but not used
+│  38 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+Warn  subworkflows/local/araregistration/main.nf:14:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  14 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/araregistration/main.nf:15:45: Parameter was not used -- prefix with `_` to suppress warning
+│  15 |     sample_meta = stitched_data.map { meta, img_dir, params -> meta }
+╰     |                                             ^^^^^^^
+
+Warn  subworkflows/local/araregistration/main.nf:15:54: Parameter was not used -- prefix with `_` to suppress warning
+│  15 |     sample_meta = stitched_data.map { meta, img_dir, params -> meta }
+╰     |                                                      ^^^^^^
+
+Warn  subworkflows/local/araregistration/main.nf:26:33: Parameter was not used -- prefix with `_` to suppress warning
+│  26 |         .map { meta, resampled, stitched_img_directory, parameter_file
+╰     |                                 ^^^^^^^^^^^^^^^^^^^^^^
+
+
+Warn  subworkflows/local/numorph_preprocessing/main.nf:17:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/numorph_preprocessing/main.nf:19:43: Parameter was not used -- prefix with `_` to suppress warning
+│  19 |     sample_meta = samplesheet.map { meta, img_dir, params -> meta }
+╰     |                                           ^^^^^^^
+
+Warn  subworkflows/local/numorph_preprocessing/main.nf:19:52: Parameter was not used -- prefix with `_` to suppress warning
+│  19 |     sample_meta = samplesheet.map { meta, img_dir, params -> meta }
+╰     |                                                    ^^^^^^
+
+
+Warn  subworkflows/local/utils_nfcore_lsmquant_pipeline/main.nf:31:5: Parameter was not used -- prefix with `_` to suppress warning
+│  31 |     monochrome_logs   // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_lsmquant_pipeline/main.nf:34:5: Parameter was not used -- prefix with `_` to suppress warning
+│  34 |     input             //  string: Path to input samplesheet
+╰     |     ^^^^^
+
+Warn  subworkflows/local/utils_nfcore_lsmquant_pipeline/main.nf:38:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  38 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_lsmquant_pipeline/main.nf:74:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  74 |     ch_samplesheet = Channel.fromList(samplesheetToList(params.input, 
+╰     |                      ^^^^^^^
+
+
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 | mYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
+╰     |                               ^^^^^^^
+
+
+Warn  workflows/lsmquant.nf:34:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  34 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  workflows/lsmquant.nf:35:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  35 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/lsmquant.nf:42:41: Parameter was not used -- prefix with `_` to suppress warning
+│  42 |             .map { meta, img_directory, parameter_file ->
+╰     |                                         ^^^^^^^^^^^^^^
+
+Warn  workflows/lsmquant.nf:54:36: Parameter was not used -- prefix with `_` to suppress warning
+│  54 |             .map { meta, unzipped, raw_img_directory, parameter_file -
+╰     |                                    ^^^^^^^^^^^^^^^^^
+
+Warn  workflows/lsmquant.nf:61:41: Parameter was not used -- prefix with `_` to suppress warning
+│  61 |             .map { meta, img_directory, parameter_file ->
+╰     |                                         ^^^^^^^^^^^^^^
+
+Warn  workflows/lsmquant.nf:73:34: Parameter was not used -- prefix with `_` to suppress warning
+│  73 |             .map { meta, staged, raw_img_directory, parameter_file ->
+╰     |                                  ^^^^^^^^^^^^^^^^^
+
+Warn  workflows/lsmquant.nf:85:13: Variable was declared but not used
+│  85 |         def NM_variables = NUMORPH_PREPROCESSING.out.NM_variables
+╰     |             ^^^^^^^^^^^^
+
+Warn  workflows/lsmquant.nf:90:36: Parameter was not used -- prefix with `_` to suppress warning
+│  90 |             .map { meta, stitched, raw_img_directory, parameter_file -
+╰     |                                    ^^^^^^^^^^^^^^^^^
+
+Warn  workflows/lsmquant.nf:100:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 100 |         model_file = Channel.fromPath(params.model_file, checkIfExists
+╰     |                      ^^^^^^^
+
+Warn  workflows/lsmquant.nf:116:36: Parameter was not used -- prefix with `_` to suppress warning
+│ 116 |             .map { meta, stitched, raw_img_directory, parameter_file -
+╰     |                                    ^^^^^^^^^^^^^^^^^
+
+Warn  workflows/lsmquant.nf:142:32: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 142 |     ch_multiqc_config        = Channel.fromPath(
+╰     |                                ^^^^^^^
+
+Warn  workflows/lsmquant.nf:145:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 145 |         Channel.fromPath(params.multiqc_config, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/lsmquant.nf:146:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 146 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/lsmquant.nf:148:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 148 |         Channel.fromPath(params.multiqc_logo, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/lsmquant.nf:149:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 149 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/lsmquant.nf:153:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 153 |     ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_p
+╰     |                           ^^^^^^^
+
+Warn  workflows/lsmquant.nf:159:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 159 |     ch_methods_description                = Channel.value(
+╰     |                                             ^^^^^^^
+
+
+Error nextflow.config:277:32: `manifest` is not defined
+│ 277 | \033[0;35m  nf-core/lsmquant ${manifest.version}\033[0m
+╰     |                                ^^^^^^^^
+
+Error nextflow.config:280:26: `manifest` is not defined
+│ 280 |         afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${ma
+╰     |                          ^^^^^^^^
+
+Error nextflow.config:280:69: `manifest` is not defined
+│ 280 | ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "  
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:280:186: `manifest` is not defined
+│ 280 | doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:289:22: `validation` is not defined
+│ 289 |         beforeText = validation.help.beforeText
+╰     |                      ^^^^^^^^^^
+
+Error nextflow.config:290:21: `validation` is not defined
+│ 290 |         afterText = validation.help.afterText
+╰     |                     ^^^^^^^^^^
+
+Warn  nextflow.config:280:129: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 280 | lect { "    https://doi.org/${it.trim().replace('https://doi.org/','')
+╰     |                               ^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-test tests
+│   3 |     testsDir "."
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 2 files had 7 errors
+ ✅ 31 files had no errors

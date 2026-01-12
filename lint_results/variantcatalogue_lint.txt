@@ -1,0 +1,532 @@
+Linting Nextflow code..
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/igenomes.config
+Linting: nextflow.config
+Linting: workflows/variantcatalogue.nf
+Linting: subworkflows/local/input_check.nf
+Linting: main.nf
+Linting: modules/local/MT_Step3_metadata_sample.nf
+Linting: modules/local/bcftools/norm/main.nf
+Linting: modules/local/gatk4/samtofastq/main.nf
+Linting: modules/local/gatk4/leftalignandtrimvariants/main.nf
+Linting: modules/local/gatk4/printreads/main.nf
+Linting: modules/local/gatk4/mergemutectstats/main.nf
+Linting: modules/local/haplocheck/main.nf
+Linting: modules/local/Hail_sample_QC.nf
+Linting: modules/local/Picard_CollectAlignmentSummaryMetrics.nf
+Linting: modules/local/Hail_variant_QC.nf
+Linting: modules/local/bwa/mem/main.nf
+Linting: modules/local/collecthsmetrics/main.nf
+Linting: modules/local/MT_Liftover.nf
+Linting: modules/local/Hail_variant_MT_QC.nf
+Linting: modules/local/filtermutectcalls/main.nf
+Linting: modules/local/shift_back.nf
+Linting: modules/local/variantfiltration/main.nf
+Linting: modules/local/Picard_QualityScoreDistribution.nf
+Linting: modules/local/MT_Step3_metadata.nf
+Linting: modules/local/MT_Step2_participant_data.nf
+Linting: modules/local/deepvariant/main.nf
+Linting: modules/local/samplesheet_check.nf
+Linting: modules/local/MT_Step1_input_tsv.nf
+Linting: modules/nf-core/bcftools/norm/main.nf
+Linting: modules/nf-core/bcftools/annotate/main.nf
+Linting: modules/nf-core/gatk4/mutect2/main.nf
+Linting: modules/nf-core/gatk4/markduplicates/main.nf
+Linting: modules/nf-core/gatk4/mergevcfs/main.nf
+Linting: modules/nf-core/gatk4/filtermutectcalls/main.nf
+Linting: modules/nf-core/gatk4/variantfiltration/main.nf
+Linting: modules/nf-core/gatk4/samtofastq/main.nf
+Linting: modules/nf-core/gatk4/leftalignandtrimvariants/main.nf
+Linting: modules/nf-core/gatk4/printreads/main.nf
+Linting: modules/nf-core/gatk4/mergemutectstats/main.nf
+Linting: modules/nf-core/haplocheck/main.nf
+Linting: modules/nf-core/samtools/index/main.nf
+Linting: modules/nf-core/ensemblvep/vep/main.nf
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/bwa/index/main.nf
+Linting: modules/nf-core/bwa/mem/main.nf
+Linting: modules/nf-core/custom/dumpsoftwareversions/main.nf
+Linting: modules/nf-core/trimmomatic/main.nf
+Linting: modules/nf-core/mosdepth/main.nf
+Linting: modules/nf-core/picard/collecthsmetrics/main.nf
+Linting: modules/nf-core/picard/collectwgsmetrics/main.nf
+Linting: modules/nf-core/deepvariant/main.nf
+Linting: modules/nf-core/glnexus/main.nf
+Linting: modules/nf-core/tabix/tabix/main.nf
+Error main.nf:21:16: `WorkflowMain` is not defined
+│  21 | params.fasta = WorkflowMain.getGenomeAttribute(params, 'fasta')
+╰     |                ^^^^^^^^^^^^
+
+Error main.nf:29:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  29 | WorkflowMain.initialise(workflow, params, log)
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:29:1: `WorkflowMain` is not defined
+│  29 | WorkflowMain.initialise(workflow, params, log)
+╰     | ^^^^^^^^^^^^
+
+
+Warn  modules/local/Hail_sample_QC.nf:21:14: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│  21 |     python ${projectDir}/modules/local/Hail_sample_QC.py $SNV_vcf $par
+╰     |              ^^^^^^^^^^
+
+
+Warn  modules/local/Hail_variant_MT_QC.nf:32:11: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│  32 | 	python ${projectDir}/modules/local/Hail_variant_MT_QC.py $MT_Step1_in
+╰     |           ^^^^^^^^^^
+
+
+Warn  modules/local/Hail_variant_QC.nf:24:14: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│  24 |     python ${projectDir}/modules/local/Hail_variant_QC.py $vcf_sample_
+╰     |              ^^^^^^^^^^
+
+
+
+Error modules/local/MT_Step2_participant_data.nf:6:12: `meta` is already declared
+│   6 | 	tuple val(meta), path(Sample_list)
+╰     |            ^^^^
+
+Warn  modules/local/MT_Step2_participant_data.nf:5:19: Variable was declared but not used
+│   5 |         tuple val(meta), path(Sample_MT_Step2_participant_data)
+╰     |                   ^^^^
+
+
+Error modules/local/MT_Step3_metadata_sample.nf:11:12: `meta` is already declared
+│  11 | 	tuple val(meta), path(haplocheck)
+╰     |            ^^^^
+
+Warn  modules/local/MT_Step3_metadata_sample.nf:10:12: Variable was declared but not used
+│  10 | 	tuple val(meta), path(mosdepth)
+╰     |            ^^^^
+
+Warn  modules/local/MT_Step3_metadata_sample.nf:18:12: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│  18 | 	Rscript ${projectDir}/modules/local/MT_Step3_metadata_sample.R ${mosd
+╰     |            ^^^^^^^^^^
+
+
+
+
+
+Error modules/local/deepvariant/main.nf:8:5: Invalid process directive
+│   8 |     if (workflow.profile.tokenize(',').intersect(['conda', 'mamba']).s
+│     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│   9 |         exit 1, "DEEPVARIANT module does not support Conda. Please use
+╰  10 |     }
+
+
+Warn  modules/local/filtermutectcalls/main.nf:26:9: Variable was declared but not used
+│  26 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/filtermutectcalls/main.nf:27:9: Variable was declared but not used
+│  27 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+
+Warn  modules/local/gatk4/mergemutectstats/main.nf:24:9: Variable was declared but not used
+│  24 |     def input_list = stats.collect{ "--stats ${it}"}.join(' ')
+╰     |         ^^^^^^^^^^
+
+Warn  modules/local/gatk4/mergemutectstats/main.nf:24:48: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  24 |     def input_list = stats.collect{ "--stats ${it}"}.join(' ')
+╰     |                                                ^^
+
+
+
+
+Warn  modules/local/haplocheck/main.nf:23:9: Variable was declared but not used
+│  23 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+Warn  modules/local/shift_back.nf:19:12: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+│  19 | 	Rscript ${projectDir}/modules/local/shift_back.R $MT_shifted_CollectM
+╰     |            ^^^^^^^^^^
+
+
+
+
+
+Error modules/nf-core/bwa/index/main.nf:14:27: `bwa` is not defined
+│  14 |     tuple val(meta), path(bwa) , emit: index
+╰     |                           ^^^
+
+
+
+Warn  modules/nf-core/custom/dumpsoftwareversions/main.nf:22:9: Variable was declared but not used
+│  22 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Error modules/nf-core/deepvariant/main.nf:8:5: Invalid process directive
+│   8 |     if (workflow.profile.tokenize(',').intersect(['conda', 'mamba']).s
+│     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│   9 |         exit 1, "DEEPVARIANT module does not support Conda. Please use
+╰  10 |     }
+
+
+
+Warn  modules/nf-core/fastqc/main.nf:27:48: Parameter was not used -- prefix with `_` to suppress warning
+│  27 |     def renamed_files = old_new_pairs.collect{ old_name, new_name -> n
+╰     |                                                ^^^^^^^^
+
+
+Warn  modules/nf-core/gatk4/filtermutectcalls/main.nf:29:113: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  29 | entation-bias-artifact-priors $it"}.join(' ') : ''
+╰     |                               ^^
+
+Warn  modules/nf-core/gatk4/filtermutectcalls/main.nf:30:96: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  30 | collect{"--tumor-segmentation $it"}.join(' ')                  : ''
+╰     |                               ^^
+
+
+
+Warn  modules/nf-core/gatk4/markduplicates/main.nf:29:43: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  29 |     def input_list = bam.collect{"--INPUT $it"}.join(' ')
+╰     |                                           ^^
+
+
+Warn  modules/nf-core/gatk4/mergemutectstats/main.nf:23:48: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  23 |     def input_list = stats.collect{ "--stats ${it}"}.join(' ')
+╰     |                                                ^^
+
+
+Warn  modules/nf-core/gatk4/mergevcfs/main.nf:25:44: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  25 |     def input_list = vcf.collect{ "--INPUT $it"}.join(' ')
+╰     |                                            ^^
+
+
+Warn  modules/nf-core/gatk4/mutect2/main.nf:33:42: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  33 |     def inputs = input.collect{ "--input $it"}.join(" ")
+╰     |                                          ^^
+
+
+
+
+
+Warn  modules/nf-core/glnexus/main.nf:25:33: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  25 |     def input = gvcfs.collect { it.toString() }
+╰     |                                 ^^
+
+
+Warn  modules/nf-core/haplocheck/main.nf:22:9: Variable was declared but not used
+│  22 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+Error modules/nf-core/picard/collectwgsmetrics/main.nf:13:15: `meta2` is already declared
+│  13 |     tuple val(meta2), path(fai)
+╰     |               ^^^^^
+
+Warn  modules/nf-core/picard/collectwgsmetrics/main.nf:12:15: Variable was declared but not used
+│  12 |     tuple val(meta2), path(fasta)
+╰     |               ^^^^^
+
+
+
+Warn  modules/nf-core/tabix/tabix/main.nf:33:9: Variable was declared but not used
+│  33 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+
+Warn  subworkflows/local/input_check.nf:15:37: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  15 |         .map { create_fastq_channel(it) }
+╰     |                                     ^^
+
+
+Error workflows/variantcatalogue.nf:7:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│   7 | def summary_params = NfcoreSchema.paramsSummaryMap(workflow, params)
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/variantcatalogue.nf:7:22: `NfcoreSchema` is not defined
+│   7 | def summary_params = NfcoreSchema.paramsSummaryMap(workflow, params)
+╰     |                      ^^^^^^^^^^^^
+
+Error workflows/variantcatalogue.nf:10:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  10 | WorkflowVariantcatalogue.initialise(params, log)
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/variantcatalogue.nf:10:1: `WorkflowVariantcatalogue` is not defined
+│  10 | WorkflowVariantcatalogue.initialise(params, log)
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/variantcatalogue.nf:13:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  13 | def checkPathParamList = [ params.input, params.multiqc_config, params
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/variantcatalogue.nf:14:1: `for` loops are no longer supported
+│  14 | for (param in checkPathParamList) { if (param) { file(param, checkIfEx
+╰     | ^^^
+
+Error workflows/variantcatalogue.nf:14:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  14 | for (param in checkPathParamList) { if (param) { file(param, checkIfEx
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/variantcatalogue.nf:14:6: `param` is not defined
+│  14 | for (param in checkPathParamList) { if (param) { file(param, checkIfEx
+╰     |      ^^^^^
+
+Error workflows/variantcatalogue.nf:14:40: `param` is not defined
+│  14 | for (param in checkPathParamList) { if (param) { file(param, checkIfEx
+╰     |                                        ^^^^^^^
+
+Error workflows/variantcatalogue.nf:14:55: `param` is not defined
+│  14 | for (param in checkPathParamList) { if (param) { file(param, checkIfEx
+╰     |                                                       ^^^^^
+
+Error workflows/variantcatalogue.nf:17:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  17 | if (params.input) { ch_input = file(params.input) } else { exit 1, 'In
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/variantcatalogue.nf:25:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  25 | ch_multiqc_config          = Channel.fromPath("$projectDir/assets/mult
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/variantcatalogue.nf:26:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  26 | ch_multiqc_custom_config   = params.multiqc_config ? Channel.fromPath(
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/variantcatalogue.nf:27:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  27 | ch_multiqc_logo            = params.multiqc_logo   ? Channel.fromPath(
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/variantcatalogue.nf:28:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  28 | ch_multiqc_custom_methods_description = params.multiqc_methods_descrip
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/variantcatalogue.nf:135:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│ 135 | def multiqc_report = []
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/variantcatalogue.nf:145:9: `ch_input` is not defined
+│ 145 |         ch_input
+╰     |         ^^^^^^^^
+
+Error workflows/variantcatalogue.nf:359:27: `WorkflowVariantcatalogue` is not defined
+│ 359 |     workflow_summary    = WorkflowVariantcatalogue.paramsSummaryMultiq
+╰     |                           ^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/variantcatalogue.nf:359:83: `summary_params` is not defined
+│ 359 | orkflowVariantcatalogue.paramsSummaryMultiqc(workflow, summary_params)
+╰     |                                                        ^^^^^^^^^^^^^^
+
+Error workflows/variantcatalogue.nf:362:30: `WorkflowVariantcatalogue` is not defined
+│ 362 |     methods_description    = WorkflowVariantcatalogue.methodsDescripti
+╰     |                              ^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/variantcatalogue.nf:362:88: `ch_multiqc_custom_methods_description` is not defined
+│ 362 | ethodsDescriptionText(workflow, ch_multiqc_custom_methods_description)
+╰     |                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/variantcatalogue.nf:378:9: `ch_multiqc_config` is not defined
+│ 378 |         ch_multiqc_config.toList(),
+╰     |         ^^^^^^^^^^^^^^^^^
+
+Error workflows/variantcatalogue.nf:379:9: `ch_multiqc_custom_config` is not defined
+│ 379 |         ch_multiqc_custom_config.toList(),
+╰     |         ^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/variantcatalogue.nf:380:9: `ch_multiqc_logo` is not defined
+│ 380 |         ch_multiqc_logo.toList()
+╰     |         ^^^^^^^^^^^^^^^
+
+Error workflows/variantcatalogue.nf:391:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│ 389 | */
+│ 390 | 
+│ 391 | workflow.onComplete {
+│     | ^^^^^^^^^^^^^^^^^^^^^
+│ 392 |     if (params.email || params.email_on_fail) {
+╰ 393 |         NfcoreTemplate.email(workflow, params, summary_params, project
+
+Error workflows/variantcatalogue.nf:393:9: `NfcoreTemplate` is not defined
+│ 393 |         NfcoreTemplate.email(workflow, params, summary_params, project
+╰     |         ^^^^^^^^^^^^^^
+
+Error workflows/variantcatalogue.nf:395:5: `NfcoreTemplate` is not defined
+│ 395 |     NfcoreTemplate.summary(workflow, params, log)
+╰     |     ^^^^^^^^^^^^^^
+
+Error workflows/variantcatalogue.nf:397:9: `NfcoreTemplate` is not defined
+│ 397 |         NfcoreTemplate.IM_notification(workflow, params, summary_param
+╰     |         ^^^^^^^^^^^^^^
+
+Warn  workflows/variantcatalogue.nf:17:21: Variable was declared but not used
+│  17 | if (params.input) { ch_input = file(params.input) } else { exit 1, 'In
+╰     |                     ^^^^^^^^
+
+Warn  workflows/variantcatalogue.nf:25:1: Variable was declared but not used
+│  25 | ch_multiqc_config          = Channel.fromPath("$projectDir/assets/mult
+╰     | ^^^^^^^^^^^^^^^^^
+
+Warn  workflows/variantcatalogue.nf:25:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  25 | ch_multiqc_config          = Channel.fromPath("$projectDir/assets/mult
+╰     |                              ^^^^^^^
+
+Warn  workflows/variantcatalogue.nf:26:1: Variable was declared but not used
+│  26 | ch_multiqc_custom_config   = params.multiqc_config ? Channel.fromPath(
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/variantcatalogue.nf:26:54: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  26 | ch_multiqc_custom_config   = params.multiqc_config ? Channel.fromPath(
+╰     |                                                      ^^^^^^^
+
+Warn  workflows/variantcatalogue.nf:26:119: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  26 | omPath( params.multiqc_config, checkIfExists: true ) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/variantcatalogue.nf:27:1: Variable was declared but not used
+│  27 | ch_multiqc_logo            = params.multiqc_logo   ? Channel.fromPath(
+╰     | ^^^^^^^^^^^^^^^
+
+Warn  workflows/variantcatalogue.nf:27:54: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  27 | ch_multiqc_logo            = params.multiqc_logo   ? Channel.fromPath(
+╰     |                                                      ^^^^^^^
+
+Warn  workflows/variantcatalogue.nf:27:117: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  27 | fromPath( params.multiqc_logo, checkIfExists: true ) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/variantcatalogue.nf:28:1: Variable was declared but not used
+│  28 | ch_multiqc_custom_methods_description = params.multiqc_methods_descrip
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/variantcatalogue.nf:139:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 139 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  workflows/variantcatalogue.nf:216:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 216 |     ch_case_info = Channel.from([id:'SNV'])
+╰     |                    ^^^^^^^
+
+Warn  workflows/variantcatalogue.nf:219:22: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 219 |             .collect{it[1]}
+╰     |                      ^^
+
+Warn  workflows/variantcatalogue.nf:275:5: Variable was declared but not used
+│ 275 |     reference_MT_shifted_dict = [
+╰     |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/variantcatalogue.nf:360:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 360 |     ch_workflow_summary = Channel.value(workflow_summary)
+╰     |                           ^^^^^^^
+
+Warn  workflows/variantcatalogue.nf:363:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 363 |     ch_methods_description = Channel.value(methods_description)
+╰     |                              ^^^^^^^
+
+Warn  workflows/variantcatalogue.nf:365:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 365 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/variantcatalogue.nf:369:68: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 369 | es.mix(FASTQC.out.zip.collect{it[1]}.ifEmpty([]))
+╰     |                               ^^
+
+Warn  workflows/variantcatalogue.nf:370:77: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 370 | SDEPTH.out.global_txt.collect{it[1]}.ifEmpty([]))
+╰     |                               ^^
+
+Warn  workflows/variantcatalogue.nf:371:90: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 371 | GSMETRICS.out.metrics.collect{it[1]}.ifEmpty([]))
+╰     |                               ^^
+
+Warn  workflows/variantcatalogue.nf:372:102: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 372 | aryMetrics.out.report.collect{it[1]}.ifEmpty([]))
+╰     |                               ^^
+
+Warn  workflows/variantcatalogue.nf:373:96: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 373 | stribution.out.report.collect{it[1]}.ifEmpty([]))
+╰     |                               ^^
+
+Warn  workflows/variantcatalogue.nf:382:5: Variable was declared but not used
+│ 382 |     multiqc_report = MULTIQC.out.report.toList()
+╰     |     ^^^^^^^^^^^^^^
+
+
+Error conf/base.config:13:16: `check_max` is not defined
+│  13 |     cpus   = { check_max( 1    * task.attempt, 'cpus'   ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:14:16: `check_max` is not defined
+│  14 |     memory = { check_max( 6.GB * task.attempt, 'memory' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:15:16: `check_max` is not defined
+│  15 |     time   = { check_max( 4.h  * task.attempt, 'time'   ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:28:20: `check_max` is not defined
+│  28 |         cpus   = { check_max( 1                  , 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:29:20: `check_max` is not defined
+│  29 |         memory = { check_max( 6.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:30:20: `check_max` is not defined
+│  30 |         time   = { check_max( 4.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:33:20: `check_max` is not defined
+│  33 |         cpus   = { check_max( 2     * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:34:20: `check_max` is not defined
+│  34 |         memory = { check_max( 12.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:35:20: `check_max` is not defined
+│  35 |         time   = { check_max( 4.h   * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:38:20: `check_max` is not defined
+│  38 |         cpus   = { check_max( 6     * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:39:20: `check_max` is not defined
+│  39 |         memory = { check_max( 36.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:40:20: `check_max` is not defined
+│  40 |         time   = { check_max( 8.h   * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:43:20: `check_max` is not defined
+│  43 |         cpus   = { check_max( 12    * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:44:20: `check_max` is not defined
+│  44 |         memory = { check_max( 72.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:45:20: `check_max` is not defined
+│  45 |         time   = { check_max( 16.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:48:20: `check_max` is not defined
+│  48 |         time   = { check_max( 20.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:51:20: `check_max` is not defined
+│  51 |         memory = { check_max( 200.GB * task.attempt, 'memory' ) }
+╰     |                    ^^^^^^^^^
+
+
+Error nextflow.config:65:5: Unexpected input: 'includeConfig'
+│  65 |     includeConfig "${params.custom_config_base}/nfcore_custom.config"
+╰     |     ^
+
+
+Nextflow linting complete!
+ ❌ 10 files had 55 errors
+ ✅ 48 files had no errors

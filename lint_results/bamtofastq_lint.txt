@@ -1,0 +1,269 @@
+Linting Nextflow code..
+Linting: conf/igenomes_ignored.config
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/igenomes.config
+Linting: nextflow.config
+Linting: workflows/bamtofastq.nf
+Linting: subworkflows/local/utils_nfcore_bamtofastq_pipeline/main.nf
+Linting: subworkflows/local/pre_conversion_qc.nf
+Linting: subworkflows/local/alignment_to_fastq.nf
+Linting: subworkflows/local/prepare_indices.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/check_paired_end.nf
+Linting: modules/nf-core/samtools/flagstat/main.nf
+Linting: modules/nf-core/samtools/idxstats/main.nf
+Linting: modules/nf-core/samtools/index/main.nf
+Linting: modules/nf-core/samtools/index/tests/csi.nextflow.config
+Linting: modules/nf-core/samtools/stats/main.nf
+Linting: modules/nf-core/samtools/view/main.nf
+Linting: modules/nf-core/samtools/view/tests/cram_index.config
+Linting: modules/nf-core/samtools/view/tests/bam_index.config
+Linting: modules/nf-core/samtools/view/tests/bam.config
+Linting: modules/nf-core/samtools/faidx/main.nf
+Linting: modules/nf-core/samtools/faidx/tests/nextflow.config
+Linting: modules/nf-core/samtools/faidx/tests/nextflow2.config
+Linting: modules/nf-core/samtools/merge/main.nf
+Linting: modules/nf-core/samtools/merge/tests/index.config
+Linting: modules/nf-core/samtools/collatefastq/main.nf
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/fastqutils/info/main.nf
+Linting: modules/nf-core/cat/fastq/main.nf
+
+Warn  modules/local/check_paired_end.nf:23:9: Variable was declared but not used
+│  23 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/cat/fastq/main.nf:22:60: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  22 |     def readList = reads instanceof List ? reads.collect { it.toString
+╰     |                                                            ^^
+
+Warn  modules/nf-core/cat/fastq/main.nf:58:60: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  58 |     def readList = reads instanceof List ? reads.collect { it.toString
+╰     |                                                            ^^
+
+
+
+Warn  modules/nf-core/fastqutils/info/main.nf:37:9: Variable was declared but not used
+│  37 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+
+
+
+
+
+
+Warn  subworkflows/local/alignment_to_fastq.nf:22:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  22 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/alignment_to_fastq.nf:54:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  54 |     ch_unmapped_bam_cram = Channel.empty().mix(all_unmapped_bam,all_un
+╰     |                            ^^^^^^^
+
+
+Warn  subworkflows/local/pre_conversion_qc.nf:17:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  17 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/pre_conversion_qc.nf:30:15: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  30 |         bam:  it[0].filetype == 'bam'
+╰     |               ^^
+
+Warn  subworkflows/local/pre_conversion_qc.nf:31:15: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  31 |         cram: it[0].filetype == 'cram'
+╰     |               ^^
+
+
+Warn  subworkflows/local/prepare_indices.nf:20:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  20 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/prepare_indices.nf:22:14: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  22 |     ch_out = Channel.empty()
+╰     |              ^^^^^^^
+
+Warn  subworkflows/local/prepare_indices.nf:26:22: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  26 |         is_indexed:  it[0].index == true
+╰     |                      ^^
+
+Warn  subworkflows/local/prepare_indices.nf:27:22: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  27 |         to_index:    it[0].index == false
+╰     |                      ^^
+
+Warn  subworkflows/local/prepare_indices.nf:36:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  36 |     ch_index_files = Channel.empty().mix(SAMTOOLS_INDEX.out.bai, SAMTO
+╰     |                      ^^^^^^^
+
+Warn  subworkflows/local/prepare_indices.nf:44:17: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  44 |     fasta_fai = Channel.empty()
+╰     |                 ^^^^^^^
+
+Warn  subworkflows/local/prepare_indices.nf:48:51: Parameter was not used -- prefix with `_` to suppress warning
+│  48 |         fasta_fai   = SAMTOOLS_FAIDX.out.fai.map{ meta, fai -> [fai] }
+╰     |                                                   ^^^^
+
+
+Warn  subworkflows/local/utils_nfcore_bamtofastq_pipeline/main.nf:31:5: Parameter was not used -- prefix with `_` to suppress warning
+│  31 |     monochrome_logs   // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_bamtofastq_pipeline/main.nf:34:5: Parameter was not used -- prefix with `_` to suppress warning
+│  34 |     input             //  string: Path to input samplesheet
+╰     |     ^^^^^
+
+Warn  subworkflows/local/utils_nfcore_bamtofastq_pipeline/main.nf:38:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  38 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_bamtofastq_pipeline/main.nf:75:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  75 |     Channel
+╰     |     ^^^^^^^
+
+
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 | mYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
+╰     |                               ^^^^^^^
+
+
+Warn  workflows/bamtofastq.nf:58:36: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  58 |     fasta     = params.fasta     ? Channel.fromPath(params.fasta).coll
+╰     |                                    ^^^^^^^
+
+Warn  workflows/bamtofastq.nf:58:84: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  58 | arams.fasta).collect()      : Channel.value([])
+╰     |                               ^^^^^^^
+
+Warn  workflows/bamtofastq.nf:61:5: Variable was declared but not used
+│  61 |     chr       = params.chr       ?: Channel.empty()
+╰     |     ^^^
+
+Warn  workflows/bamtofastq.nf:61:37: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  61 |     chr       = params.chr       ?: Channel.empty()
+╰     |                                     ^^^^^^^
+
+Warn  workflows/bamtofastq.nf:63:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  63 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  workflows/bamtofastq.nf:64:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  64 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/bamtofastq.nf:115:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 115 |         samtools_chr_out = Channel.empty().mix( SAMTOOLS_CHR.out.bam,
+╰     |                            ^^^^^^^
+
+Warn  workflows/bamtofastq.nf:118:46: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 118 |         ch_input_chr = samtools_chr_out.join(Channel.empty().mix( SAMT
+╰     |                                              ^^^^^^^
+
+Warn  workflows/bamtofastq.nf:141:21: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 141 |         ch_single:  it[0].single_end == true
+╰     |                     ^^
+
+Warn  workflows/bamtofastq.nf:142:21: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 142 |         ch_paired:  it[0].single_end == false
+╰     |                     ^^
+
+Warn  workflows/bamtofastq.nf:162:51: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 162 |     fasta_fai = params.fasta ? params.fasta_fai ? Channel.fromPath(par
+╰     |                                                   ^^^^^^^
+
+Warn  workflows/bamtofastq.nf:162:130: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 162 | EPARE_INDICES.out.fasta_fai : Channel.value([])
+╰     |                               ^^^^^^^
+
+Warn  workflows/bamtofastq.nf:177:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 177 |     ch_reads_post_qc = Channel.empty().mix(SAMTOOLS_COLLATEFASTQ_SINGL
+╰     |                        ^^^^^^^
+
+Warn  workflows/bamtofastq.nf:203:32: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 203 |     ch_multiqc_config        = Channel.fromPath(
+╰     |                                ^^^^^^^
+
+Warn  workflows/bamtofastq.nf:206:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 206 |         Channel.fromPath(params.multiqc_config, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/bamtofastq.nf:207:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 207 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/bamtofastq.nf:209:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 209 |         Channel.fromPath(params.multiqc_logo, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/bamtofastq.nf:210:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 210 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/bamtofastq.nf:214:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 214 |     ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_p
+╰     |                           ^^^^^^^
+
+Warn  workflows/bamtofastq.nf:220:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 220 |     ch_methods_description                = Channel.value(
+╰     |                                             ^^^^^^^
+
+
+Error nextflow.config:331:34: `manifest` is not defined
+│ 331 | \033[0;35m  nf-core/bamtofastq ${manifest.version}\033[0m
+╰     |                                  ^^^^^^^^
+
+Error nextflow.config:334:26: `manifest` is not defined
+│ 334 |         afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${ma
+╰     |                          ^^^^^^^^
+
+Error nextflow.config:334:69: `manifest` is not defined
+│ 334 | ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "  
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:334:186: `manifest` is not defined
+│ 334 | doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:343:22: `validation` is not defined
+│ 343 |         beforeText = validation.help.beforeText
+╰     |                      ^^^^^^^^^^
+
+Error nextflow.config:344:21: `validation` is not defined
+│ 344 |         afterText = validation.help.afterText
+╰     |                     ^^^^^^^^^^
+
+Warn  nextflow.config:334:129: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 334 | lect { "    https://doi.org/${it.trim().replace('https://doi.org/','')
+╰     |                               ^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-test tests
+│   3 |     testsDir "."
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 2 files had 7 errors
+ ✅ 40 files had no errors

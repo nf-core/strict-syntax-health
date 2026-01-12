@@ -1,0 +1,202 @@
+Linting Nextflow code..
+Linting: conf/igenomes_ignored.config
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/igenomes.config
+Linting: nextflow.config
+Linting: workflows/fastquorum.nf
+Linting: subworkflows/local/prepare_genome/main.nf
+Linting: subworkflows/local/utils_nfcore_fastquorum_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/align_bam/main.nf
+Linting: modules/local/fgbio/callandfilterduplexconsensusreads/main.nf
+Linting: modules/local/fgbio/groupreadsbyumi/main.nf
+Linting: modules/local/fgbio/collectduplexseqmetrics/main.nf
+Linting: modules/local/fgbio/callmolecularconsensusreads/main.nf
+Linting: modules/local/fgbio/callduplexconsensusreads/main.nf
+Linting: modules/local/fgbio/callandfiltermolecularconsensusreads/main.nf
+Linting: modules/local/fgbio/fastqtobam/main.nf
+Linting: modules/local/fgbio/filterconsensusreads/main.nf
+Linting: modules/nf-core/samtools/faidx/main.nf
+Linting: modules/nf-core/samtools/faidx/tests/nextflow.config
+Linting: modules/nf-core/samtools/faidx/tests/nextflow2.config
+Linting: modules/nf-core/samtools/merge/main.nf
+Linting: modules/nf-core/samtools/merge/tests/index.config
+Linting: modules/nf-core/samtools/dict/main.nf
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/bwa/index/main.nf
+Warn  main.nf:89:28: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  89 |     fasta = params.fasta ? Channel.fromPath(params.fasta).map { it -> 
+╰     |                            ^^^^^^^
+
+Warn  main.nf:89:109: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  89 | sta).map { it -> [[id: it.baseName], it] }.collect() : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  main.nf:129:11: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 129 |         ? Channel.fromPath(params.dict).map { it -> [[id: 'dict'], it]
+╰     |           ^^^^^^^
+
+Warn  main.nf:132:11: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 132 |         ? Channel.fromPath(params.fasta_fai).map { it -> [[id: 'fai'],
+╰     |           ^^^^^^^
+
+Warn  main.nf:135:11: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 135 |         ? Channel.fromPath(params.bwa).map { it -> [[id: 'bwa'], it] }
+╰     |           ^^^^^^^
+
+
+
+
+
+
+
+
+
+
+Warn  subworkflows/local/prepare_genome/main.nf:20:16: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  20 |     versions = Channel.empty()
+╰     |                ^^^^^^^
+
+
+Warn  subworkflows/local/utils_nfcore_fastquorum_pipeline/main.nf:30:5: Parameter was not used -- prefix with `_` to suppress warning
+│  30 |     monochrome_logs // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_fastquorum_pipeline/main.nf:33:5: Parameter was not used -- prefix with `_` to suppress warning
+│  33 |     input //  string: Path to input samplesheet
+╰     |     ^^^^^
+
+Warn  subworkflows/local/utils_nfcore_fastquorum_pipeline/main.nf:37:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  37 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_fastquorum_pipeline/main.nf:74:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  74 |     Channel
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_fastquorum_pipeline/main.nf:82:41: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  82 |             validateInputSamplesheetRow(it)
+╰     |                                         ^^
+
+Warn  subworkflows/local/utils_nfcore_fastquorum_pipeline/main.nf:87:38: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  87 |             validateInputSamplesheet(it)
+╰     |                                      ^^
+
+Warn  subworkflows/local/utils_nfcore_fastquorum_pipeline/main.nf:93:31: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  93 |                 return [meta, it]
+╰     |                               ^^
+
+Warn  subworkflows/local/utils_nfcore_fastquorum_pipeline/main.nf:201:49: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 201 |     def fastqs_per_sample_ok = fastqs.collect { it.size() }.unique().s
+╰     |                                                 ^^
+
+Warn  subworkflows/local/utils_nfcore_fastquorum_pipeline/main.nf:205:46: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 205 |     def read_structures_ok = metas.collect { it.read_structure }.uniqu
+╰     |                                              ^^
+
+
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 | mYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
+╰     |                               ^^^^^^^
+
+
+Warn  workflows/fastquorum.nf:45:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  45 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  workflows/fastquorum.nf:46:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  46 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/fastquorum.nf:54:70: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  54 | multiqc_files = ch_multiqc_files.mix(FASTQC.out.zip.collect { it[1] })
+╰     |                                                               ^^
+
+Warn  workflows/fastquorum.nf:103:81: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 103 | EADSBYUMI.out.histogram.map { it[1] }.collect())
+╰     |                               ^^
+
+Warn  workflows/fastquorum.nf:194:25: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 194 |     ch_multiqc_config = Channel.fromPath(
+╰     |                         ^^^^^^^
+
+Warn  workflows/fastquorum.nf:199:11: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 199 |         ? Channel.fromPath(params.multiqc_config, checkIfExists: true)
+╰     |           ^^^^^^^
+
+Warn  workflows/fastquorum.nf:200:11: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 200 |         : Channel.empty()
+╰     |           ^^^^^^^
+
+Warn  workflows/fastquorum.nf:202:11: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 202 |         ? Channel.fromPath(params.multiqc_logo, checkIfExists: true)
+╰     |           ^^^^^^^
+
+Warn  workflows/fastquorum.nf:203:11: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 203 |         : Channel.empty()
+╰     |           ^^^^^^^
+
+Warn  workflows/fastquorum.nf:209:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 209 |     ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_p
+╰     |                           ^^^^^^^
+
+Warn  workflows/fastquorum.nf:216:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 216 |     ch_methods_description = Channel.value(
+╰     |                              ^^^^^^^
+
+
+Error nextflow.config:297:34: `manifest` is not defined
+│ 297 | \033[0;35m  nf-core/fastquorum ${manifest.version}\033[0m
+╰     |                                  ^^^^^^^^
+
+Error nextflow.config:300:26: `manifest` is not defined
+│ 300 |         afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${ma
+╰     |                          ^^^^^^^^
+
+Error nextflow.config:300:69: `manifest` is not defined
+│ 300 | ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "  
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:300:188: `manifest` is not defined
+│ 300 | i.org/', '')}" }.join("\n")}${manifest.doi ? "\n" : ""}
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:309:22: `validation` is not defined
+│ 309 |         beforeText = validation.help.beforeText
+╰     |                      ^^^^^^^^^^
+
+Error nextflow.config:310:21: `validation` is not defined
+│ 310 |         afterText = validation.help.afterText
+╰     |                     ^^^^^^^^^^
+
+Warn  nextflow.config:300:129: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 300 | lect { "    https://doi.org/${it.trim().replace('https://doi.org/', ''
+╰     |                               ^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-test tests
+│   3 |     testsDir "."
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 2 files had 7 errors
+ ✅ 36 files had no errors

@@ -1,0 +1,384 @@
+Linting Nextflow code..
+Linting: conf/igenomes_ignored.config
+Linting: conf/test_wgs_deepvariant.config
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/test_wgs_gatk.config
+Linting: conf/igenomes.config
+Linting: nextflow.config
+Linting: workflows/pacvar.nf
+Linting: subworkflows/local/utils_nfcore_pacvar_pipeline/main.nf
+Linting: subworkflows/local/set_value_channel/main.nf
+Linting: subworkflows/local/bam_snp_variant_calling/main.nf
+Linting: subworkflows/local/repeat_characterization/main.nf
+Linting: subworkflows/local/bam_sv_variant_calling/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/nf-core/pbsv/discover/main.nf
+Linting: modules/nf-core/pbsv/call/main.nf
+Linting: modules/nf-core/bcftools/index/main.nf
+Linting: modules/nf-core/bcftools/index/tests/nextflow.config
+Linting: modules/nf-core/bcftools/sort/main.nf
+Linting: modules/nf-core/bcftools/sort/tests/vcf_gz_index.config
+Linting: modules/nf-core/bcftools/sort/tests/vcf_gz_index_csi.config
+Linting: modules/nf-core/bcftools/sort/tests/vcf_gz_index_tbi.config
+Linting: modules/nf-core/gatk4/haplotypecaller/main.nf
+Linting: modules/nf-core/gunzip/main.nf
+Linting: modules/nf-core/gunzip/tests/nextflow.config
+Linting: modules/nf-core/lima/main.nf
+Linting: modules/nf-core/lima/tests/nextflow.config
+Linting: modules/nf-core/samtools/index/main.nf
+Linting: modules/nf-core/samtools/index/tests/csi.nextflow.config
+Linting: modules/nf-core/samtools/sort/main.nf
+Linting: modules/nf-core/samtools/sort/tests/nextflow.config
+Linting: modules/nf-core/samtools/sort/tests/nextflow_cram.config
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/hiphase/main.nf
+Linting: modules/nf-core/deepvariant/makeexamples/main.nf
+Linting: modules/nf-core/deepvariant/makeexamples/tests/nextflow.config
+Linting: modules/nf-core/deepvariant/rundeepvariant/main.nf
+Linting: modules/nf-core/deepvariant/rundeepvariant/tests/nextflow.config
+Linting: modules/nf-core/deepvariant/rundeepvariant/tests/nextflow-intervals.config
+Linting: modules/nf-core/deepvariant/rundeepvariant/tests/nextflow-non-autosomal-calling.config
+Linting: modules/nf-core/deepvariant/callvariants/main.nf
+Linting: modules/nf-core/deepvariant/callvariants/tests/nextflow.config
+Linting: modules/nf-core/deepvariant/postprocessvariants/main.nf
+Linting: modules/nf-core/deepvariant/postprocessvariants/tests/nextflow.config
+Linting: modules/nf-core/deepvariant/main.nf
+Linting: modules/nf-core/pbmm2/align/main.nf
+Linting: modules/nf-core/trgt/genotype/main.nf
+Linting: modules/nf-core/trgt/plot/main.nf
+Linting: modules/nf-core/trgt/plot/tests/nextflow.config
+Linting: modules/nf-core/tabix/bgzip/main.nf
+Linting: modules/nf-core/tabix/bgzip/tests/vcf_none.config
+Linting: modules/nf-core/tabix/bgzip/tests/bgzip_compress.config
+Warn  main.nf:75:42: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  75 |     fasta               = params.fasta ? Channel.fromPath(params.fasta
+╰     |                                          ^^^^^^^
+
+Warn  main.nf:75:123: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  75 | sta).map{ it -> [ [id:it.baseName], it ] }.collect() : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  main.nf:76:46: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  76 |     fasta_fai           = params.fasta_fai ? Channel.fromPath(params.f
+╰     |                                              ^^^^^^^
+
+Warn  main.nf:76:131: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  76 | fai).map{ it -> [ [id:it.baseName], it ] }.collect() : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  main.nf:77:41: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  77 |     dict                = params.dict ? Channel.fromPath(params.dict).
+╰     |                                         ^^^^^^^
+
+Warn  main.nf:77:121: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  77 | ict).map{ it -> [ [id:it.baseName], it ] }.collect() : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  main.nf:78:42: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  78 |     dbsnp               = params.dbsnp ? Channel.fromPath(params.dbsnp
+╰     |                                          ^^^^^^^
+
+Warn  main.nf:78:85: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  78 | ath(params.dbsnp).collect() : Channel.value([])
+╰     |                               ^^^^^^^
+
+Warn  main.nf:79:46: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  79 |     dbsnp_tbi           = params.dbsnp_tbi ? Channel.fromPath(params.d
+╰     |                                              ^^^^^^^
+
+Warn  main.nf:79:93: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  79 | params.dbsnp_tbi).collect() : Channel.value([])
+╰     |                               ^^^^^^^
+
+Warn  main.nf:81:46: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  81 |     intervals           = params.intervals ? Channel.fromPath(params.i
+╰     |                                              ^^^^^^^
+
+Warn  main.nf:81:131: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  81 | baseName], it ] }.collect() : Channel.value([[],[]])
+╰     |                               ^^^^^^^
+
+Warn  main.nf:82:46: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  82 |     repeat_id           = params.repeat_id ? Channel.fromPath(params.r
+╰     |                                              ^^^^^^^
+
+Warn  main.nf:82:140: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  82 | , it.baseName ] }.collect() : Channel.value([])
+╰     |                               ^^^^^^^
+
+Warn  main.nf:83:46: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  83 |     karyotype           = params.karyotype ? Channel.fromPath(params.k
+╰     |                                              ^^^^^^^
+
+Warn  main.nf:83:140: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  83 | , it.baseName ] }.collect() : Channel.value([])
+╰     |                               ^^^^^^^
+
+
+Warn  modules/nf-core/bcftools/index/main.nf:23:9: Variable was declared but not used
+│  23 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+Warn  modules/nf-core/bcftools/index/main.nf:40:9: Variable was declared but not used
+│  40 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+
+
+Error modules/nf-core/deepvariant/main.nf:1:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│   1 | def deprecation_message = """
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│   2 | WARNING: The deepvariant process has been moved into deepvariant/runde
+│   3 | 
+│   4 | Reason:
+╰   5 | A subworkflow "deepvariant" was added, to split DeepVariant into three
+
+Error modules/nf-core/deepvariant/main.nf:29:30: `prefix` is not defined
+│  29 |     tuple val(meta), path("${prefix}.vcf.gz")      ,  emit: vcf
+╰     |                              ^^^^^^
+
+Error modules/nf-core/deepvariant/main.nf:30:30: `prefix` is not defined
+│  30 |     tuple val(meta), path("${prefix}.vcf.gz.tbi")  ,  emit: vcf_tbi
+╰     |                              ^^^^^^
+
+Error modules/nf-core/deepvariant/main.nf:31:30: `prefix` is not defined
+│  31 |     tuple val(meta), path("${prefix}.g.vcf.gz")    ,  emit: gvcf
+╰     |                              ^^^^^^
+
+Error modules/nf-core/deepvariant/main.nf:32:30: `prefix` is not defined
+│  32 |     tuple val(meta), path("${prefix}.g.vcf.gz.tbi"),  emit: gvcf_tbi
+╰     |                              ^^^^^^
+
+Error modules/nf-core/deepvariant/main.nf:39:19: `deprecation_message` is not defined
+│  39 |     assert false: deprecation_message
+╰     |                   ^^^^^^^^^^^^^^^^^^^
+
+Warn  modules/nf-core/deepvariant/main.nf:1:5: Variable was declared but not used
+│   1 | def deprecation_message = """
+╰     |     ^^^^^^^^^^^^^^^^^^^
+
+
+
+
+
+
+
+Warn  modules/nf-core/gunzip/main.nf:43:9: Variable was declared but not used
+│  43 |     def args        = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+Warn  modules/nf-core/lima/main.nf:72:9: Variable was declared but not used
+│  72 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/lima/main.nf:73:9: Variable was declared but not used
+│  73 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+
+Warn  modules/nf-core/pbmm2/align/main.nf:49:9: Variable was declared but not used
+│  49 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/pbsv/call/main.nf:40:9: Variable was declared but not used
+│  40 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/pbsv/discover/main.nf:36:9: Variable was declared but not used
+│  36 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+Warn  modules/nf-core/trgt/genotype/main.nf:45:9: Variable was declared but not used
+│  45 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/trgt/plot/main.nf:46:9: Variable was declared but not used
+│  46 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  subworkflows/local/bam_snp_variant_calling/main.nf:16:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/bam_snp_variant_calling/main.nf:18:36: Parameter was not used -- prefix with `_` to suppress warning
+│  18 |     intervals_path = intervals.map{metadata, interval -> [interval]}
+╰     |                                    ^^^^^^^^
+
+
+Warn  subworkflows/local/bam_sv_variant_calling/main.nf:11:5: Parameter was not used -- prefix with `_` to suppress warning
+│  11 |     sorted_bai
+╰     |     ^^^^^^^^^^
+
+Warn  subworkflows/local/bam_sv_variant_calling/main.nf:13:5: Parameter was not used -- prefix with `_` to suppress warning
+│  13 |     fasta_fai
+╰     |     ^^^^^^^^^
+
+Warn  subworkflows/local/bam_sv_variant_calling/main.nf:16:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  16 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/repeat_characterization/main.nf:21:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  21 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/set_value_channel/main.nf:13:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  13 |     Channel // Prepare value channel
+╰     |     ^^^^^^^
+
+
+Warn  subworkflows/local/utils_nfcore_pacvar_pipeline/main.nf:33:5: Parameter was not used -- prefix with `_` to suppress warning
+│  33 |     monochrome_logs   // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_pacvar_pipeline/main.nf:36:5: Parameter was not used -- prefix with `_` to suppress warning
+│  36 |     input             //  string: Path to input samplesheet
+╰     |     ^^^^^
+
+Warn  subworkflows/local/utils_nfcore_pacvar_pipeline/main.nf:40:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  40 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_pacvar_pipeline/main.nf:81:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  81 |     Channel
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_pacvar_pipeline/main.nf:84:24: Parameter was not used -- prefix with `_` to suppress warning
+│  84 |             meta, bam, pbi ->
+╰     |                        ^^^
+
+Warn  subworkflows/local/utils_nfcore_pacvar_pipeline/main.nf:117:9: Variable was declared but not used
+│ 117 |     def multiqc_reports = multiqc_report.toList()
+╰     |         ^^^^^^^^^^^^^^^
+
+
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 | mYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
+╰     |                               ^^^^^^^
+
+
+Warn  workflows/pacvar.nf:60:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  60 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  workflows/pacvar.nf:64:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  64 |         barcode_ch = Channel.value(file(params.barcodes))
+╰     |                      ^^^^^^^
+
+Warn  workflows/pacvar.nf:101:50: Parameter was not used -- prefix with `_` to suppress warning
+│ 101 |     ordered_bam_ch = bam_bai_ch.map { meta, bam, bai -> [meta, bam] }
+╰     |                                                  ^^^
+
+Warn  workflows/pacvar.nf:102:45: Parameter was not used -- prefix with `_` to suppress warning
+│ 102 |     ordered_bai_ch = bam_bai_ch.map { meta, bam, bai -> [meta, bai] }
+╰     |                                             ^^^
+
+Warn  workflows/pacvar.nf:168:9: Variable was declared but not used
+│ 168 |         id_ch = Channel.fromPath(params.repeat_id).map { file ->[file.
+╰     |         ^^^^^
+
+Warn  workflows/pacvar.nf:168:17: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 168 |         id_ch = Channel.fromPath(params.repeat_id).map { file ->[file.
+╰     |                 ^^^^^^^
+
+Warn  workflows/pacvar.nf:183:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 183 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/pacvar.nf:197:32: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 197 |     ch_multiqc_config        = Channel.fromPath(
+╰     |                                ^^^^^^^
+
+Warn  workflows/pacvar.nf:200:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 200 |         Channel.fromPath(params.multiqc_config, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/pacvar.nf:201:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 201 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/pacvar.nf:203:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 203 |         Channel.fromPath(params.multiqc_logo, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/pacvar.nf:204:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 204 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/pacvar.nf:208:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 208 |     ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_p
+╰     |                           ^^^^^^^
+
+Warn  workflows/pacvar.nf:216:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 216 |     ch_methods_description                = Channel.value(
+╰     |                                             ^^^^^^^
+
+
+Error nextflow.config:301:30: `manifest` is not defined
+│ 301 | \033[0;35m  nf-core/pacvar ${manifest.version}\033[0m
+╰     |                              ^^^^^^^^
+
+Error nextflow.config:304:26: `manifest` is not defined
+│ 304 |         afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${ma
+╰     |                          ^^^^^^^^
+
+Error nextflow.config:304:69: `manifest` is not defined
+│ 304 | ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "  
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:304:186: `manifest` is not defined
+│ 304 | doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:313:22: `validation` is not defined
+│ 313 |         beforeText = validation.help.beforeText
+╰     |                      ^^^^^^^^^^
+
+Error nextflow.config:314:21: `validation` is not defined
+│ 314 |         afterText = validation.help.afterText
+╰     |                     ^^^^^^^^^^
+
+Warn  nextflow.config:304:129: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 304 | lect { "    https://doi.org/${it.trim().replace('https://doi.org/','')
+╰     |                               ^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-tests
+│   3 |     testsDir "."
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 3 files had 13 errors
+ ✅ 61 files had no errors

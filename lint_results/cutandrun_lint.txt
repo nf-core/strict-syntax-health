@@ -1,0 +1,204 @@
+Linting Nextflow code..
+Linting: conf/test_no_control.config
+Linting: conf/test_tech_reps.config
+Linting: conf/base.config
+Linting: conf/test_linear_dedup.config
+Linting: conf/test_local_zip.config
+Linting: conf/test_full_multi.config
+Linting: conf/flowswitch.config
+Linting: conf/resources.config
+Linting: conf/test_full_small_local_zip.config
+Linting: conf/test_no_genome.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test_full_small.config
+Linting: conf/test.config
+Linting: conf/test_fasta_only.config
+Linting: conf/laptop.config
+Linting: conf/igenomes.config
+Linting: nextflow.config
+Linting: workflows/cutandrun.nf
+Linting: subworkflows/local/consensus_peaks.nf
+Linting: subworkflows/local/fastqc_trimgalore.nf
+Linting: subworkflows/local/extract_fragments.nf
+Linting: subworkflows/local/prepare_genome.nf
+Linting: subworkflows/local/peak_qc.nf
+Linting: subworkflows/local/mark_duplicates_picard.nf
+Linting: subworkflows/local/extract_metadata_awk.nf
+Linting: subworkflows/local/prepare_peakcalling.nf
+Linting: subworkflows/local/input_check.nf
+Linting: subworkflows/local/samtools_view_sort_stats.nf
+Linting: subworkflows/local/deeptools_qc.nf
+Linting: subworkflows/local/align_bowtie2.nf
+Linting: subworkflows/local/deduplicate_linear.nf
+Linting: subworkflows/nf-core/bam_stats_samtools/main.nf
+Linting: subworkflows/nf-core/bam_sort_stats_samtools/main.nf
+Linting: main.nf
+Linting: tests/config/nextflow.config
+Linting: modules/local/gtf2bed.nf
+Linting: modules/local/for_patch/samtools/view/main.nf
+Linting: modules/local/for_patch/trimgalore/main.nf
+Linting: modules/local/for_patch/deeptools/bamcoverage/main.nf
+Linting: modules/local/for_patch/bedtools/sort/main.nf
+Linting: modules/local/python/plot_consensus_peaks.nf
+Linting: modules/local/python/peak_reprod.nf
+Linting: modules/local/python/frag_len_hist.nf
+Linting: modules/local/python/igv_session.nf
+Linting: modules/local/python/merge_sample_metadata.nf
+Linting: modules/local/python/find_unique_reads.nf
+Linting: modules/local/python/samplesheet_check.nf
+Linting: modules/local/peak_counts.nf
+Linting: modules/local/multiqc.nf
+Linting: modules/local/samtools_custom_view.nf
+Linting: modules/local/peak_frip.nf
+Linting: modules/local/linux/awk_script.nf
+Linting: modules/local/linux/awk.nf
+Linting: modules/local/linux/sort.nf
+Linting: modules/local/linux/cut.nf
+Linting: modules/local/custom_dumpsoftwareversions.nf
+Linting: modules/nf-core/gunzip/main.nf
+Linting: modules/nf-core/samtools/flagstat/main.nf
+Linting: modules/nf-core/samtools/idxstats/main.nf
+Linting: modules/nf-core/samtools/index/main.nf
+Linting: modules/nf-core/samtools/sort/main.nf
+Linting: modules/nf-core/samtools/sort/tests/nextflow.config
+Linting: modules/nf-core/samtools/stats/main.nf
+Linting: modules/nf-core/samtools/view/main.nf
+Linting: modules/nf-core/samtools/faidx/main.nf
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/cat/fastq/main.nf
+Linting: modules/nf-core/custom/getchromsizes/main.nf
+Linting: modules/nf-core/bowtie2/build/main.nf
+Linting: modules/nf-core/bowtie2/align/main.nf
+Linting: modules/nf-core/ucsc/bedgraphtobigwig/main.nf
+Linting: modules/nf-core/ucsc/bedclip/main.nf
+Linting: modules/nf-core/preseq/lcextrap/main.nf
+Linting: modules/nf-core/untar/main.nf
+Linting: modules/nf-core/seacr/callpeak/main.nf
+Linting: modules/nf-core/deeptools/plotcorrelation/main.nf
+Linting: modules/nf-core/deeptools/multibamsummary/main.nf
+Linting: modules/nf-core/deeptools/plotheatmap/main.nf
+Linting: modules/nf-core/deeptools/plotfingerprint/main.nf
+Linting: modules/nf-core/deeptools/computematrix/main.nf
+Linting: modules/nf-core/deeptools/plotpca/main.nf
+Linting: modules/nf-core/picard/markduplicates/main.nf
+Linting: modules/nf-core/picard/markduplicates/tests/nextflow.config
+Linting: modules/nf-core/bedtools/intersect/main.nf
+Linting: modules/nf-core/bedtools/genomecov/main.nf
+Linting: modules/nf-core/bedtools/bamtobed/main.nf
+Linting: modules/nf-core/bedtools/merge/main.nf
+Linting: modules/nf-core/bedtools/complement/main.nf
+Linting: modules/nf-core/macs2/callpeak/main.nf
+Linting: modules/nf-core/tabix/bgziptabix/main.nf
+Error main.nf:20:20: `WorkflowMain` is not defined
+│  20 | params.fasta     = WorkflowMain.getGenomeAttribute(params, 'fasta')
+╰     |                    ^^^^^^^^^^^^
+
+Error main.nf:21:20: `WorkflowMain` is not defined
+│  21 | params.bowtie2   = WorkflowMain.getGenomeAttribute(params, 'bowtie2')
+╰     |                    ^^^^^^^^^^^^
+
+Error main.nf:22:20: `WorkflowMain` is not defined
+│  22 | params.gtf       = WorkflowMain.getGenomeAttribute(params, 'gtf')
+╰     |                    ^^^^^^^^^^^^
+
+Error main.nf:23:20: `WorkflowMain` is not defined
+│  23 | params.gene_bed  = WorkflowMain.getGenomeAttribute(params, 'bed12')
+╰     |                    ^^^^^^^^^^^^
+
+Error main.nf:24:20: `WorkflowMain` is not defined
+│  24 | params.blacklist = WorkflowMain.getGenomeAttribute(params, 'blacklist'
+╰     |                    ^^^^^^^^^^^^
+
+Error main.nf:32:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  32 | if(params.normalisation_mode == "Spikein") {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  33 |     params.spikein_fasta   = WorkflowMain.getGenomeAttributeSpikeIn(pa
+│  34 |     params.spikein_bowtie2 = WorkflowMain.getGenomeAttributeSpikeIn(pa
+╰  35 | }
+
+Error main.nf:33:30: `WorkflowMain` is not defined
+│  33 |     params.spikein_fasta   = WorkflowMain.getGenomeAttributeSpikeIn(pa
+╰     |                              ^^^^^^^^^^^^
+
+Error main.nf:34:30: `WorkflowMain` is not defined
+│  34 |     params.spikein_bowtie2 = WorkflowMain.getGenomeAttributeSpikeIn(pa
+╰     |                              ^^^^^^^^^^^^
+
+Error main.nf:46:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  44 | 
+│  45 | // Print help message if needed
+│  46 | if (params.help) {
+│     | ^^^^^^^^^^^^^^^^^^
+│  47 |     def logo = NfcoreTemplate.logo(workflow, params.monochrome_logs)
+╰  48 |     def citation = '\n' + WorkflowMain.citation(workflow) + '\n'
+
+Error main.nf:47:16: `NfcoreTemplate` is not defined
+│  47 |     def logo = NfcoreTemplate.logo(workflow, params.monochrome_logs)
+╰     |                ^^^^^^^^^^^^^^
+
+Error main.nf:48:27: `WorkflowMain` is not defined
+│  48 |     def citation = '\n' + WorkflowMain.citation(workflow) + '\n'
+╰     |                           ^^^^^^^^^^^^
+
+Error main.nf:50:54: `NfcoreTemplate` is not defined
+│  50 |     log.info logo + paramsHelp(command) + citation + NfcoreTemplate.da
+╰     |                                                      ^^^^^^^^^^^^^^
+
+Error main.nf:55:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  55 | if (params.validate_params) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  56 |     validateParameters()
+╰  57 | }
+
+Error main.nf:59:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  59 | WorkflowMain.initialise(workflow, params, log, args)
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:59:1: `WorkflowMain` is not defined
+│  59 | WorkflowMain.initialise(workflow, params, log, args)
+╰     | ^^^^^^^^^^^^
+
+Error main.nf:67:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/cutandrun/workflows/cutandrun.nf'
+│  67 | include { CUTANDRUN } from './workflows/cutandrun'
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:73:5: `CUTANDRUN` is not defined
+│  73 |     CUTANDRUN ()
+╰     |     ^^^^^^^^^
+
+Warn  main.nf:33:5: Params should be declared at the top-level (i.e. outside the workflow)
+│  33 |     params.spikein_fasta   = WorkflowMain.getGenomeAttributeSpikeIn(pa
+╰     |     ^^^^^^
+
+Warn  main.nf:34:5: Params should be declared at the top-level (i.e. outside the workflow)
+│  34 |     params.spikein_bowtie2 = WorkflowMain.getGenomeAttributeSpikeIn(pa
+╰     |     ^^^^^^
+
+
+
+Error modules/local/for_patch/bedtools/sort/main.nf:25:9: `sizes` is already declared
+│  25 |     def sizes  = sizes ? "-g $sizes" : ""
+╰     |         ^^^^^
+
+
+
+
+Error modules/local/for_patch/trimgalore/main.nf:18:49: Unexpected input: 'optional'
+│  18 |     tuple val(meta), path("*.html"), emit: html optional true
+╰     |                                                 ^
+
+
+
+
+
+
+
+
+
+
+
+
+ERROR ~ begin 24, end 25, length 24
+
+

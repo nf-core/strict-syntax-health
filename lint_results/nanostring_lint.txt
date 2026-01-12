@@ -1,0 +1,241 @@
+Linting Nextflow code..
+Linting: conf/igenomes_ignored.config
+Linting: conf/test_scores.config
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_samples.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/igenomes.config
+Linting: nextflow.config
+Linting: workflows/nanostring.nf
+Linting: subworkflows/local/normalize/main.nf
+Linting: subworkflows/local/quality_control/main.nf
+Linting: subworkflows/local/compute_gene_scores_heatmap/main.nf
+Linting: subworkflows/local/compute_gene_scores_heatmap/tests/nextflow.config
+Linting: subworkflows/local/utils_nfcore_nanostring_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: modules/local/compute_gene_scores/main.nf
+Linting: modules/local/compute_gene_scores/tests/nextflow.config
+Linting: modules/local/create_annotated_tables/main.nf
+Linting: modules/local/create_gene_heatmap/main.nf
+Linting: modules/local/create_gene_heatmap/tests/nextflow.config
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/nacho/normalize/main.nf
+Linting: modules/nf-core/nacho/normalize/tests/nextflow.config
+Linting: modules/nf-core/nacho/qc/main.nf
+Linting: modules/nf-core/nacho/qc/tests/nextflow.config
+Warn  main.nf:50:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  50 |         Channel.from(file(params.input)).map{ tuple( [id: file(params.
+╰     |         ^^^^^^^
+
+Warn  main.nf:50:90: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  50 | ile(params.input).getName()], it) } // Add meta component to channel
+╰     |                               ^^
+
+
+
+Warn  modules/local/create_annotated_tables/main.nf:22:9: Variable was declared but not used
+│  22 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/create_annotated_tables/main.nf:36:9: Variable was declared but not used
+│  36 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+Warn  modules/nf-core/nacho/normalize/main.nf:42:9: Variable was declared but not used
+│  42 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/nacho/qc/main.nf:22:9: Variable was declared but not used
+│  22 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  subworkflows/local/compute_gene_scores_heatmap/main.nf:21:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  21 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/compute_gene_scores_heatmap/main.nf:22:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  22 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/compute_gene_scores_heatmap/main.nf:32:89: Parameter was not used -- prefix with `_` to suppress warning
+│  32 | CORES.out.scores_for_mqc.map{ meta, file -> file }.collect())
+╰     |                               ^^^^
+
+Warn  subworkflows/local/compute_gene_scores_heatmap/main.nf:44:92: Parameter was not used -- prefix with `_` to suppress warning
+│  44 | HEATMAP.out.gene_heatmap.map{ meta, file -> file }.collect())
+╰     |                               ^^^^
+
+
+Warn  subworkflows/local/quality_control/main.nf:16:62: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  16 | NACHO_QC.out.nacho_qc_png.map{it[1]}.mix(NACHO_QC.out.nacho_qc_txt.map
+╰     |                               ^^
+
+Warn  subworkflows/local/quality_control/main.nf:16:103: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  16 | NACHO_QC.out.nacho_qc_txt.map{it[1]}) // channel: [ .png and .txt mqc 
+╰     |                               ^^
+
+
+Warn  subworkflows/local/utils_nfcore_nanostring_pipeline/main.nf:31:5: Parameter was not used -- prefix with `_` to suppress warning
+│  31 |     monochrome_logs   // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_nanostring_pipeline/main.nf:34:5: Parameter was not used -- prefix with `_` to suppress warning
+│  34 |     input             //  string: Path to input samplesheet
+╰     |     ^^^^^
+
+Warn  subworkflows/local/utils_nfcore_nanostring_pipeline/main.nf:38:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  38 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_nanostring_pipeline/main.nf:75:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  75 |     Channel
+╰     |     ^^^^^^^
+
+
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 | mYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
+╰     |                               ^^^^^^^
+
+
+Error workflows/nanostring.nf:7:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│   7 | ch_gene_score_yaml         = params.gene_score_yaml   ? Channel.fromPa
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/nanostring.nf:8:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│   8 | ch_heatmap_genes_to_filter   = params.heatmap_genes_to_filter  ? Chann
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/nanostring.nf:111:9: `ch_gene_score_yaml` is not defined
+│ 111 |         ch_gene_score_yaml,
+╰     |         ^^^^^^^^^^^^^^^^^^
+
+Error workflows/nanostring.nf:112:9: `ch_heatmap_genes_to_filter` is not defined
+│ 112 |         ch_heatmap_genes_to_filter,
+╰     |         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/nanostring.nf:7:1: Variable was declared but not used
+│   7 | ch_gene_score_yaml         = params.gene_score_yaml   ? Channel.fromPa
+╰     | ^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/nanostring.nf:7:57: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│   7 | ch_gene_score_yaml         = params.gene_score_yaml   ? Channel.fromPa
+╰     |                                                         ^^^^^^^
+
+Warn  workflows/nanostring.nf:7:123: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│   7 | mPath( params.gene_score_yaml, checkIfExists: true ) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/nanostring.nf:8:1: Variable was declared but not used
+│   8 | ch_heatmap_genes_to_filter   = params.heatmap_genes_to_filter  ? Chann
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/nanostring.nf:8:66: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│   8 | ms.heatmap_genes_to_filter  ? Channel.fromPath( params.heatmap_genes_t
+╰     |                               ^^^^^^^
+
+Warn  workflows/nanostring.nf:8:140: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│   8 | arams.heatmap_genes_to_filter, checkIfExists: true ) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/nanostring.nf:59:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  59 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  workflows/nanostring.nf:60:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  60 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/nanostring.nf:66:16: Parameter was not used -- prefix with `_` to suppress warning
+│  66 |         .map { meta, rcc_path -> rcc_path}
+╰     |                ^^^^
+
+Warn  workflows/nanostring.nf:103:102: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 103 | ES.out.annotated_data_mqc.map{it[1]}.collect())
+╰     |                               ^^
+
+Warn  workflows/nanostring.nf:133:32: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 133 |     ch_multiqc_config        = Channel.fromPath(
+╰     |                                ^^^^^^^
+
+Warn  workflows/nanostring.nf:136:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 136 |         Channel.fromPath(params.multiqc_config, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/nanostring.nf:137:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 137 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/nanostring.nf:139:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 139 |         Channel.fromPath(params.multiqc_logo, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/nanostring.nf:140:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 140 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/nanostring.nf:144:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 144 |     ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_p
+╰     |                           ^^^^^^^
+
+Warn  workflows/nanostring.nf:150:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 150 |     ch_methods_description                = Channel.value(
+╰     |                                             ^^^^^^^
+
+
+Error nextflow.config:283:34: `manifest` is not defined
+│ 283 | \033[0;35m  nf-core/nanostring ${manifest.version}\033[0m
+╰     |                                  ^^^^^^^^
+
+Error nextflow.config:286:26: `manifest` is not defined
+│ 286 |         afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${ma
+╰     |                          ^^^^^^^^
+
+Error nextflow.config:286:69: `manifest` is not defined
+│ 286 | ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "  
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:286:186: `manifest` is not defined
+│ 286 | doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:295:22: `validation` is not defined
+│ 295 |         beforeText = validation.help.beforeText
+╰     |                      ^^^^^^^^^^
+
+Error nextflow.config:296:21: `validation` is not defined
+│ 296 |         afterText = validation.help.afterText
+╰     |                     ^^^^^^^^^^
+
+Warn  nextflow.config:286:129: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 286 | lect { "    https://doi.org/${it.trim().replace('https://doi.org/','')
+╰     |                               ^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-tests
+│   3 |     testsDir "tests"
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 3 files had 11 errors
+ ✅ 31 files had no errors

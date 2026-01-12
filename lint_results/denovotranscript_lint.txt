@@ -1,0 +1,403 @@
+Linting Nextflow code..
+Linting: conf/igenomes_ignored.config
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/igenomes.config
+Linting: nextflow.config
+Linting: workflows/denovotranscript.nf
+Linting: subworkflows/local/utils_nfcore_denovotranscript_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/fastq_trim_fastp_fastqc/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: main.nf
+Linting: modules/local/rnaquast/main.nf
+Linting: modules/local/orp_transrate/main.nf
+Linting: modules/nf-core/busco/busco/main.nf
+Linting: modules/nf-core/busco/busco/tests/nextflow.config
+Linting: modules/nf-core/busco/busco/tests/nextflow.metaeuk.config
+Linting: modules/nf-core/busco/busco/tests/nextflow.augustus.config
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/cat/fastq/main.nf
+Linting: modules/nf-core/cat/cat/main.nf
+Linting: modules/nf-core/cat/cat/tests/nextflow_zipped_unzipped.config
+Linting: modules/nf-core/cat/cat/tests/nextflow_unzipped_zipped.config
+Linting: modules/nf-core/evigene/tr2aacds/main.nf
+Linting: modules/nf-core/salmon/quant/main.nf
+Linting: modules/nf-core/salmon/quant/tests/nextflow.config
+Linting: modules/nf-core/salmon/index/main.nf
+Linting: modules/nf-core/spades/main.nf
+Linting: modules/nf-core/spades/tests/nextflow.config
+Linting: modules/nf-core/fastp/main.nf
+Linting: modules/nf-core/fastp/tests/nextflow.interleaved.config
+Linting: modules/nf-core/fastp/tests/nextflow.save_failed.config
+Linting: modules/nf-core/sortmerna/main.nf
+Linting: modules/nf-core/trinity/main.nf
+Linting: modules/nf-core/trinity/tests/nextflow.config
+Linting: modules/nf-core/gawk/main.nf
+Linting: modules/nf-core/gawk/tests/nextflow.config
+Linting: modules/nf-core/gawk/tests/nextflow_with_program_file.config
+Error modules/local/orp_transrate/main.nf:12:15: `meta` is already declared
+│  12 |     tuple val(meta), path(reads)         // processed reads
+╰     |               ^^^^
+
+Warn  modules/local/orp_transrate/main.nf:11:15: Variable was declared but not used
+│  11 |     tuple val(meta), path(fasta)         // assembly file
+╰     |               ^^^^
+
+
+
+
+Warn  modules/nf-core/cat/cat/main.nf:23:40: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  23 |     def file_list = files_in.collect { it.toString() }
+╰     |                                        ^^
+
+Warn  modules/nf-core/cat/cat/main.nf:58:42: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  58 |     def file_list   = files_in.collect { it.toString() }
+╰     |                                          ^^
+
+
+Warn  modules/nf-core/cat/fastq/main.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/cat/fastq/main.nf:23:59: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  23 |     def readList = reads instanceof List ? reads.collect{ it.toString(
+╰     |                                                           ^^
+
+Warn  modules/nf-core/cat/fastq/main.nf:54:59: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  54 |     def readList = reads instanceof List ? reads.collect{ it.toString(
+╰     |                                                           ^^
+
+
+Warn  modules/nf-core/evigene/tr2aacds/main.nf:68:9: Variable was declared but not used
+│  68 |     def args        = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/evigene/tr2aacds/main.nf:70:9: Variable was declared but not used
+│  70 |     def max_memory  = 7*1024
+╰     |         ^^^^^^^^^^
+
+
+
+
+
+
+
+Error modules/nf-core/salmon/quant/main.nf:30:20: Unexpected input: ','
+│  30 |     def reads1 = [], reads2 = []
+╰     |                    ^
+
+
+Warn  modules/nf-core/sortmerna/main.nf:25:70: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  25 | List ? reads.collect{"--reads $it"}.join(' ') : "--reads $reads"
+╰     |                               ^^
+
+Warn  modules/nf-core/sortmerna/main.nf:62:9: Variable was declared but not used
+│  62 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/sortmerna/main.nf:64:9: Variable was declared but not used
+│  64 |     def reads_input = reads instanceof List ? reads.collect{"--reads $
+╰     |         ^^^^^^^^^^^
+
+Warn  modules/nf-core/sortmerna/main.nf:64:70: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  64 | List ? reads.collect{"--reads $it"}.join(' ') : "--reads $reads"
+╰     |                               ^^
+
+
+Warn  modules/nf-core/spades/main.nf:88:9: Variable was declared but not used
+│  88 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/spades/main.nf:90:9: Variable was declared but not used
+│  90 |     def maxmem = task.memory.toGiga()
+╰     |         ^^^^^^
+
+Warn  modules/nf-core/spades/main.nf:94:9: Variable was declared but not used
+│  94 |     def custom_hmms = hmm ? "--custom-hmms $hmm" : ""
+╰     |         ^^^^^^^^^^^
+
+Warn  modules/nf-core/spades/main.nf:95:9: Variable was declared but not used
+│  95 |     def reads = yml ? "--dataset $yml" : "$illumina_reads $pacbio_read
+╰     |         ^^^^^
+
+Warn  modules/nf-core/spades/main.nf:96:9: Variable was declared but not used
+│  96 |     def ss = params.ss ? "--ss ${params.ss}" : ""
+╰     |         ^^
+
+
+Error modules/nf-core/trinity/main.nf:26:20: Unexpected input: ','
+│  26 |     def reads1 = [], reads2 = []
+╰     |                    ^
+
+
+Warn  subworkflows/local/utils_nfcore_denovotranscript_pipeline/main.nf:31:5: Parameter was not used -- prefix with `_` to suppress warning
+│  31 |     monochrome_logs   // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_denovotranscript_pipeline/main.nf:34:5: Parameter was not used -- prefix with `_` to suppress warning
+│  34 |     input             //  string: Path to input samplesheet
+╰     |     ^^^^^
+
+Warn  subworkflows/local/utils_nfcore_denovotranscript_pipeline/main.nf:38:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  38 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_denovotranscript_pipeline/main.nf:75:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  75 |     Channel
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_denovotranscript_pipeline/main.nf:183:55: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 183 |         def invalid_assemblers = assemblers.findAll { it != "trinity" 
+╰     |                                                       ^^
+
+Warn  subworkflows/local/utils_nfcore_denovotranscript_pipeline/main.nf:183:74: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 183 | .findAll { it != "trinity" && it != "trinity_no_norm" && it != "rnaspa
+╰     |                               ^^
+
+Warn  subworkflows/local/utils_nfcore_denovotranscript_pipeline/main.nf:183:101: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 183 | && it != "trinity_no_norm" && it != "rnaspades" }
+╰     |                               ^^
+
+
+Error subworkflows/nf-core/fastq_trim_fastp_fastqc/main.nf:15:26: Unexpected input: 'new'
+│  15 |     def Map json = (Map) new JsonSlurper().parseText(json_file.text).g
+╰     |                          ^
+
+
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 | mYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
+╰     |                               ^^^^^^^
+
+
+Error workflows/denovotranscript.nf:8:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│   6 | 
+│   7 | // Check rRNA databases for sortmerna
+│   8 | if (params.remove_ribo_rna) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│   9 |     ch_ribo_db = file(params.ribo_database_manifest)
+╰  10 |     if (ch_ribo_db.isEmpty()) {exit 1, "File provided with --ribo_data
+
+Error workflows/denovotranscript.nf:53:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/denovotranscript/modules/nf-core/trinity/main.nf'
+│  53 | include { TRINITY                     } from '../modules/nf-core/trini
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/denovotranscript.nf:54:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/denovotranscript/modules/nf-core/trinity/main.nf'
+│  54 | include { TRINITY as TRINITY_NO_NORM  } from '../modules/nf-core/trini
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/denovotranscript.nf:56:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/denovotranscript/modules/nf-core/salmon/quant/main.nf'
+│  56 | include { SALMON_QUANT                } from '../modules/nf-core/salmo
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/denovotranscript.nf:61:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/denovotranscript/subworkflows/nf-core/fastq_trim_fastp_fastqc/main.nf'
+│  61 | include { FASTQ_TRIM_FASTP_FASTQC     } from '../subworkflows/nf-core/
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/denovotranscript.nf:83:5: `FASTQ_TRIM_FASTP_FASTQC` is not defined
+│  83 |     FASTQ_TRIM_FASTP_FASTQC (
+╰     |     ^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/denovotranscript.nf:91:45: `FASTQ_TRIM_FASTP_FASTQC` is not defined
+│  91 |     ch_multiqc_files = ch_multiqc_files.mix(FASTQ_TRIM_FASTP_FASTQC.ou
+╰     |                                             ^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/denovotranscript.nf:92:45: `FASTQ_TRIM_FASTP_FASTQC` is not defined
+│  92 |     ch_multiqc_files = ch_multiqc_files.mix(FASTQ_TRIM_FASTP_FASTQC.ou
+╰     |                                             ^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/denovotranscript.nf:93:35: `FASTQ_TRIM_FASTP_FASTQC` is not defined
+│  93 |     ch_versions = ch_versions.mix(FASTQ_TRIM_FASTP_FASTQC.out.versions
+╰     |                                   ^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/denovotranscript.nf:94:25: `FASTQ_TRIM_FASTP_FASTQC` is not defined
+│  94 |     ch_filtered_reads = FASTQ_TRIM_FASTP_FASTQC.out.reads
+╰     |                         ^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/denovotranscript.nf:97:44: `ch_ribo_db` is not defined
+│  97 |         ch_sortmerna_fastas = Channel.from(ch_ribo_db.readLines()).map
+╰     |                                            ^^^^^^^^^^
+
+Error workflows/denovotranscript.nf:142:17: `TRINITY` is not defined
+│ 142 |                 TRINITY (
+╰     |                 ^^^^^^^
+
+Error workflows/denovotranscript.nf:145:47: `TRINITY` is not defined
+│ 145 |                 ch_versions = ch_versions.mix(TRINITY.out.versions)
+╰     |                                               ^^^^^^^
+
+Error workflows/denovotranscript.nf:146:51: `TRINITY` is not defined
+│ 146 |                 ch_assemblies = ch_assemblies.mix(TRINITY.out.transcri
+╰     |                                                   ^^^^^^^
+
+Error workflows/denovotranscript.nf:153:17: `TRINITY_NO_NORM` is not defined
+│ 153 |                 TRINITY_NO_NORM (
+╰     |                 ^^^^^^^^^^^^^^^
+
+Error workflows/denovotranscript.nf:156:47: `TRINITY_NO_NORM` is not defined
+│ 156 |                 ch_versions = ch_versions.mix(TRINITY_NO_NORM.out.vers
+╰     |                                               ^^^^^^^^^^^^^^^
+
+Error workflows/denovotranscript.nf:157:51: `TRINITY_NO_NORM` is not defined
+│ 157 |                 ch_assemblies = ch_assemblies.mix(TRINITY_NO_NORM.out.
+╰     |                                                   ^^^^^^^^^^^^^^^
+
+Error workflows/denovotranscript.nf:276:9: `SALMON_QUANT` is not defined
+│ 276 |         SALMON_QUANT (
+╰     |         ^^^^^^^^^^^^
+
+Error workflows/denovotranscript.nf:282:49: `SALMON_QUANT` is not defined
+│ 282 |         ch_multiqc_files = ch_multiqc_files.mix(SALMON_QUANT.out.resul
+╰     |                                                 ^^^^^^^^^^^^
+
+Error workflows/denovotranscript.nf:283:39: `SALMON_QUANT` is not defined
+│ 283 |         ch_versions = ch_versions.mix(SALMON_QUANT.out.versions)
+╰     |                                       ^^^^^^^^^^^^
+
+Warn  workflows/denovotranscript.nf:12:18: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  12 |     ch_ribo_db = Channel.empty()
+╰     |                  ^^^^^^^
+
+Warn  workflows/denovotranscript.nf:77:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  77 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  workflows/denovotranscript.nf:78:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  78 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/denovotranscript.nf:91:96: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  91 | c_files.mix(FASTQ_TRIM_FASTP_FASTQC.out.fastqc_raw_zip.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/denovotranscript.nf:92:97: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  92 | _files.mix(FASTQ_TRIM_FASTP_FASTQC.out.fastqc_trim_zip.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/denovotranscript.nf:97:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  97 |         ch_sortmerna_fastas = Channel.from(ch_ribo_db.readLines()).map
+╰     |                               ^^^^^^^
+
+Warn  workflows/denovotranscript.nf:106:75: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 106 | mix(SORTMERNA.out.log.collect{it[1]}.ifEmpty([]))
+╰     |                               ^^
+
+Warn  workflows/denovotranscript.nf:115:78: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 115 | tiqc_files = ch_multiqc_files.mix(FASTQC_FINAL.out.zip.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/denovotranscript.nf:124:51: Parameter was not used -- prefix with `_` to suppress warning
+│ 124 |             ch_pool = ch_filtered_reads.collect { meta, fastq -> fastq
+╰     |                                                   ^^^^
+
+Warn  workflows/denovotranscript.nf:124:120: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 124 | , fastq -> fastq }.map { [[id:'pooled_reads', single_end:false], it] }
+╰     |                                                                  ^^
+
+Warn  workflows/denovotranscript.nf:134:29: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 134 |             ch_assemblies = Channel.empty()
+╰     |                             ^^^^^^^
+
+Warn  workflows/denovotranscript.nf:185:28: Parameter was not used -- prefix with `_` to suppress warning
+│ 185 |                 .collect { meta, fasta -> fasta }
+╰     |                            ^^^^
+
+Warn  workflows/denovotranscript.nf:186:65: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 186 |                 .map { [[id:'all_assembled', single_end:false], it ] }
+╰     |                                                                 ^^
+
+Warn  workflows/denovotranscript.nf:205:56: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 205 |                 def mrna_file = dir.listFiles().find { it.name.endsWit
+╰     |                                                        ^^
+
+Warn  workflows/denovotranscript.nf:211:58: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 211 |                 def pubids_file = dir.listFiles().find { it.name.endsW
+╰     |                                                          ^^
+
+Warn  workflows/denovotranscript.nf:234:97: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 234 | _multiqc_files.mix(BUSCO_BUSCO.out.short_summaries_txt.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/denovotranscript.nf:262:58: Parameter was not used -- prefix with `_` to suppress warning
+│ 262 |             ch_transcripts_fa = ch_transcripts.collect { meta, fasta -
+╰     |                                                          ^^^^
+
+Warn  workflows/denovotranscript.nf:282:82: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 282 | _files = ch_multiqc_files.mix(SALMON_QUANT.out.results.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/denovotranscript.nf:302:32: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 302 |     ch_multiqc_config        = Channel.fromPath(
+╰     |                                ^^^^^^^
+
+Warn  workflows/denovotranscript.nf:305:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 305 |         Channel.fromPath(params.multiqc_config, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/denovotranscript.nf:306:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 306 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/denovotranscript.nf:308:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 308 |         Channel.fromPath(params.multiqc_logo, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/denovotranscript.nf:309:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 309 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/denovotranscript.nf:313:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 313 |     ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_p
+╰     |                           ^^^^^^^
+
+Warn  workflows/denovotranscript.nf:319:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 319 |     ch_methods_description                = Channel.value(
+╰     |                                             ^^^^^^^
+
+
+Error conf/modules.config:22:21: Unexpected input: ':'
+│  22 |             withName: '.*FASTQC_RAW' {
+╰     |                     ^
+
+
+Error nextflow.config:318:40: `manifest` is not defined
+│ 318 | \033[0;35m  nf-core/denovotranscript ${manifest.version}\033[0m
+╰     |                                        ^^^^^^^^
+
+Error nextflow.config:321:26: `manifest` is not defined
+│ 321 |         afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${ma
+╰     |                          ^^^^^^^^
+
+Error nextflow.config:321:69: `manifest` is not defined
+│ 321 | ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "  
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:321:186: `manifest` is not defined
+│ 321 | doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:330:22: `validation` is not defined
+│ 330 |         beforeText = validation.help.beforeText
+╰     |                      ^^^^^^^^^^
+
+Error nextflow.config:331:21: `validation` is not defined
+│ 331 |         afterText = validation.help.afterText
+╰     |                     ^^^^^^^^^^
+
+Warn  nextflow.config:321:129: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 321 | lect { "    https://doi.org/${it.trim().replace('https://doi.org/','')
+╰     |                               ^^
+
+
+Nextflow linting complete!
+ ❌ 7 files had 31 errors
+ ✅ 38 files had no errors

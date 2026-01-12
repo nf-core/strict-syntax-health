@@ -1,0 +1,364 @@
+Linting Nextflow code..
+Linting: conf/igenomes_ignored.config
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/igenomes.config
+Linting: nextflow.config
+Linting: workflows/asenext.nf
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/phaser/main.nf
+Linting: modules/local/star_align_wasp/main.nf
+Linting: modules/local/phaser_gene_ae/main.nf
+Linting: modules/local/beagle5_beagle/main.nf
+Linting: modules/local/input_check/main.nf
+Linting: modules/local/extract_ase_genes/main/main.nf
+Linting: modules/local/tabix_index/main.nf
+Linting: modules/local/bcftools_view/main.nf
+Linting: modules/local/filter_wasp_reads/main.nf
+Linting: modules/local/prepare_vcf/main.nf
+Linting: modules/local/chromosome_check/main.nf
+Linting: modules/nf-core/star/align/main.nf
+Linting: modules/nf-core/star/align/tests/nextflow.arriba.config
+Linting: modules/nf-core/star/align/tests/nextflow.config
+Linting: modules/nf-core/star/align/tests/nextflow.starfusion.config
+Linting: modules/nf-core/umitools/dedup/main.nf
+Linting: modules/nf-core/umitools/dedup/tests/nextflow.config
+Linting: modules/nf-core/bcftools/index/main.nf
+Linting: modules/nf-core/bcftools/index/tests/nextflow.config
+Linting: modules/nf-core/bcftools/view/main.nf
+Linting: modules/nf-core/bcftools/view/tests/vcf_gz_index.config
+Linting: modules/nf-core/bcftools/view/tests/vcf_gz_index_csi.config
+Linting: modules/nf-core/bcftools/view/tests/nextflow.config
+Linting: modules/nf-core/bcftools/view/tests/vcf_gz_index_tbi.config
+Linting: modules/nf-core/bcftools/annotate/main.nf
+Linting: modules/nf-core/bcftools/annotate/tests/vcf_gz_index.config
+Linting: modules/nf-core/bcftools/annotate/tests/vcf_gz_index_csi.config
+Linting: modules/nf-core/bcftools/annotate/tests/vcf.config
+Linting: modules/nf-core/bcftools/annotate/tests/bcf.config
+Linting: modules/nf-core/bcftools/annotate/tests/vcf_gz_index_tbi.config
+Linting: modules/nf-core/samtools/index/main.nf
+Linting: modules/nf-core/samtools/index/tests/csi.nextflow.config
+Linting: modules/nf-core/samtools/sort/main.nf
+Linting: modules/nf-core/samtools/sort/tests/nextflow.config
+Linting: modules/nf-core/samtools/sort/tests/nextflow_cram.config
+Linting: modules/nf-core/samtools/view/main.nf
+Linting: modules/nf-core/samtools/view/tests/cram_index.config
+Linting: modules/nf-core/samtools/view/tests/bam_index.config
+Linting: modules/nf-core/samtools/view/tests/bam.config
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/beagle5/beagle/main.nf
+Error main.nf:21:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  21 | log.info "ASENext pipeline parameters:"
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:22:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  22 | params.each { k, v -> log.info "  --${k}=${v}" }
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:25:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  25 | if (params.input) { ch_input = file(params.input) } else { exit 1, 'In
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:28:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  28 | if (!params.chromosome) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+│  29 |     log.warn "No chromosome specified, defaulting to 'chr11'"
+│  30 |     params.chromosome = 'chr11'
+╰  31 | }
+
+Error main.nf:39:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  39 | ch_multiqc_config        = params.multiqc_config ? Channel.fromPath(pa
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:40:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  40 | ch_multiqc_custom_config = params.multiqc_config ? Channel.fromPath(pa
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:49:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  49 | if (!params.containsKey('modules')) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  50 |     params.modules = [:]
+╰  51 | }
+
+Error main.nf:54:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  54 | def multiqc_options = [:]
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:55:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  55 | multiqc_options.args = params.multiqc_title ? "--title \"${params.mult
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:72:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  72 | def multiqc_report = []
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:77:9: `ch_input` is not defined
+│  77 |         ch_input,
+╰     |         ^^^^^^^^
+
+Error main.nf:78:9: `ch_multiqc_config` is not defined
+│  78 |         ch_multiqc_config,
+╰     |         ^^^^^^^^^^^^^^^^^
+
+Error main.nf:79:9: `ch_multiqc_custom_config` is not defined
+│  79 |         ch_multiqc_custom_config
+╰     |         ^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:92:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  92 | workflow.onComplete {
+│     | ^^^^^^^^^^^^^^^^^^^^^
+│  93 |     log.info "Pipeline completed at: ${workflow.complete}"
+│  94 |     log.info "Execution status: ${workflow.success ? 'OK' : 'failed'}"
+│  95 |     log.info "Execution duration: ${workflow.duration}"
+╰  96 | }
+
+Warn  main.nf:25:21: Variable was declared but not used
+│  25 | if (params.input) { ch_input = file(params.input) } else { exit 1, 'In
+╰     |                     ^^^^^^^^
+
+Warn  main.nf:30:5: Params should be declared at the top-level (i.e. outside the workflow)
+│  30 |     params.chromosome = 'chr11'
+╰     |     ^^^^^^
+
+Warn  main.nf:39:1: Variable was declared but not used
+│  39 | ch_multiqc_config        = params.multiqc_config ? Channel.fromPath(pa
+╰     | ^^^^^^^^^^^^^^^^^
+
+Warn  main.nf:39:52: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  39 | ch_multiqc_config        = params.multiqc_config ? Channel.fromPath(pa
+╰     |                                                    ^^^^^^^
+
+Warn  main.nf:39:94: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  39 | Path(params.multiqc_config) : Channel.fromPath("$projectDir/assets/mul
+╰     |                               ^^^^^^^
+
+Warn  main.nf:40:1: Variable was declared but not used
+│  40 | ch_multiqc_custom_config = params.multiqc_config ? Channel.fromPath(pa
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  main.nf:40:52: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  40 | ch_multiqc_custom_config = params.multiqc_config ? Channel.fromPath(pa
+╰     |                                                    ^^^^^^^
+
+Warn  main.nf:40:94: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  40 | iqc_config ? Channel.fromPath(params.multiqc_config) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  main.nf:50:5: Params should be declared at the top-level (i.e. outside the workflow)
+│  50 |     params.modules = [:]
+╰     |     ^^^^^^
+
+Warn  main.nf:72:5: Variable was declared but not used
+│  72 | def multiqc_report = []
+╰     |     ^^^^^^^^^^^^^^
+
+Warn  main.nf:83:5: Variable was declared but not used
+│  83 |     multiqc_report = ASENEXT.out.multiqc_report
+╰     |     ^^^^^^^^^^^^^^
+
+
+Error modules/local/chromosome_check/main.nf:2:11: `meta` is not defined
+│   2 |     tag "$meta.id"
+╰     |           ^^^^
+
+Warn  modules/local/chromosome_check/main.nf:22:9: Variable was declared but not used
+│  22 |     def meta = inputs[0]
+╰     |         ^^^^
+
+
+
+
+Error modules/local/phaser/main.nf:11:15: `meta` is already declared
+│  11 |     tuple val(meta), path(bam), path(bai)
+╰     |               ^^^^
+
+Warn  modules/local/phaser/main.nf:10:15: Variable was declared but not used
+│  10 |     tuple val(meta), path(vcf), path(tbi)
+╰     |               ^^^^
+
+
+Warn  modules/local/star_align_wasp/main.nf:47:56: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  47 |     meta.single_end ? [reads].flatten().each{reads1 << it} : reads.eac
+╰     |                                                        ^^
+
+Warn  modules/local/star_align_wasp/main.nf:61:22: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  61 |     if (reads1.any { it.toString().endsWith('.gz') } || reads2.any { i
+╰     |                      ^^
+
+Warn  modules/local/star_align_wasp/main.nf:61:70: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  61 | With('.gz') } || reads2.any { it.toString().endsWith('.gz') }) {
+╰     |                               ^^
+
+
+
+Warn  modules/nf-core/bcftools/index/main.nf:23:9: Variable was declared but not used
+│  23 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+Warn  modules/nf-core/bcftools/index/main.nf:40:9: Variable was declared but not used
+│  40 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+
+
+
+
+
+
+
+Warn  modules/nf-core/star/align/main.nf:46:56: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  46 |     meta.single_end ? [reads].flatten().each{reads1 << it} : reads.eac
+╰     |                                                        ^^
+
+
+
+Warn  workflows/asenext.nf:37:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  37 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  workflows/asenext.nf:59:29: Parameter was not used -- prefix with `_` to suppress warning
+│  59 |         .map { meta, reads, vcf -> [meta, reads] }
+╰     |                             ^^^
+
+Warn  workflows/asenext.nf:76:21: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  76 |     ch_star_index = Channel.fromPath(params.star_index)
+╰     |                     ^^^^^^^
+
+Warn  workflows/asenext.nf:78:14: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  78 |     ch_gtf = Channel.fromPath(params.gtf)
+╰     |              ^^^^^^^
+
+Warn  workflows/asenext.nf:91:46: Parameter was not used -- prefix with `_` to suppress warning
+│  91 |         ch_reads_with_vcf.map { meta, reads, vcf -> [meta, reads] },
+╰     |                                              ^^^
+
+Warn  workflows/asenext.nf:94:33: Parameter was not used -- prefix with `_` to suppress warning
+│  94 |         ch_reads_with_vcf.map { meta, reads, vcf -> vcf },
+╰     |                                 ^^^^
+
+Warn  workflows/asenext.nf:94:39: Parameter was not used -- prefix with `_` to suppress warning
+│  94 |         ch_reads_with_vcf.map { meta, reads, vcf -> vcf },
+╰     |                                       ^^^^^
+
+Warn  workflows/asenext.nf:110:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 110 |         Channel.value([['id': 'dummy'], []])
+╰     |         ^^^^^^^
+
+Warn  workflows/asenext.nf:144:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 144 |         Channel.fromPath(params.beagle_ref).first() :
+╰     |         ^^^^^^^
+
+Warn  workflows/asenext.nf:145:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 145 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/asenext.nf:147:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 147 |         Channel.fromPath(params.beagle_map).first() :
+╰     |         ^^^^^^^
+
+Warn  workflows/asenext.nf:148:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 148 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/asenext.nf:175:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 175 |     ch_gene_features = Channel.fromPath(params.gene_features).first()
+╰     |                        ^^^^^^^
+
+Warn  workflows/asenext.nf:191:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 191 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/asenext.nf:192:37: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 192 |         .mix(FASTQC.out.zip.collect{it[1]})
+╰     |                                     ^^
+
+Warn  workflows/asenext.nf:199:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 199 |         Channel.empty(),  // multiqc_logo
+╰     |         ^^^^^^^
+
+Warn  workflows/asenext.nf:200:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 200 |         Channel.empty(),  // replace_names
+╰     |         ^^^^^^^
+
+Warn  workflows/asenext.nf:201:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 201 |         Channel.empty()   // sample_names
+╰     |         ^^^^^^^
+
+
+Error conf/base.config:9:16: `check_max` is not defined
+│   9 |     cpus   = { check_max( 1    * task.attempt, 'cpus'   ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:10:16: `check_max` is not defined
+│  10 |     memory = { check_max( 6.GB * task.attempt, 'memory' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:11:16: `check_max` is not defined
+│  11 |     time   = { check_max( 4.h  * task.attempt, 'time'   ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:19:20: `check_max` is not defined
+│  19 |         cpus   = { check_max( 2     * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:20:20: `check_max` is not defined
+│  20 |         memory = { check_max( 4.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:21:20: `check_max` is not defined
+│  21 |         time   = { check_max( 4.h   * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:24:20: `check_max` is not defined
+│  24 |         cpus   = { check_max( 6     * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:25:20: `check_max` is not defined
+│  25 |         memory = { check_max( 8.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:26:20: `check_max` is not defined
+│  26 |         time   = { check_max( 8.h   * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:29:20: `check_max` is not defined
+│  29 |         cpus   = { check_max( 10    * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:30:20: `check_max` is not defined
+│  30 |         memory = { check_max( 24.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:31:20: `check_max` is not defined
+│  31 |         time   = { check_max( 16.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:34:20: `check_max` is not defined
+│  34 |         time   = { check_max( 20.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:37:20: `check_max` is not defined
+│  37 |         memory = { check_max( 28.GB * task.attempt, 'memory' ) }
+╰     |                    ^^^^^^^^^
+
+
+Error nextflow.config:76:5: Unexpected input: 'includeConfig'
+│  76 |     includeConfig 'conf/igenomes.config'
+╰     |     ^
+
+
+Error nf-test.config:21:13: Unexpected input: '='
+│  21 |     profile = "test"
+╰     |             ^
+
+
+Nextflow linting complete!
+ ❌ 6 files had 32 errors
+ ✅ 48 files had no errors

@@ -1,0 +1,408 @@
+Linting Nextflow code..
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/igenomes.config
+Linting: nextflow.config
+Linting: workflows/spatialxe.nf
+Linting: subworkflows/local/input_check.nf
+Linting: main.nf
+Linting: modules/local/proseg/preprocess/main.nf
+Linting: modules/local/proseg/main.nf
+Linting: modules/local/samplesheet_check.nf
+Linting: modules/nf-core/cellpose/main.nf
+Linting: modules/nf-core/cellpose/tests/nextflow_wflows.config
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/xeniumranger/import-segmentation/main.nf
+Linting: modules/nf-core/xeniumranger/import-segmentation/tests/nextflow.config
+Linting: modules/nf-core/xeniumranger/resegment/main.nf
+Linting: modules/nf-core/xeniumranger/resegment/tests/nextflow.config
+Linting: modules/nf-core/xeniumranger/relabel/main.nf
+Linting: modules/nf-core/xeniumranger/relabel/tests/nextflow.config
+Linting: modules/nf-core/custom/dumpsoftwareversions/main.nf
+Error main.nf:21:16: `WorkflowMain` is not defined
+│  21 | params.fasta = WorkflowMain.getGenomeAttribute(params, 'fasta')
+╰     |                ^^^^^^^^^^^^
+
+Error main.nf:29:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  29 | WorkflowMain.initialise(workflow, params, log)
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:29:1: `WorkflowMain` is not defined
+│  29 | WorkflowMain.initialise(workflow, params, log)
+╰     | ^^^^^^^^^^^^
+
+
+Error modules/local/proseg/main.nf:31:20: `preset` is not defined
+│  31 |     def platform = preset ? "${params.preset}" : ""
+╰     |                    ^^^^^^
+
+Error modules/local/proseg/main.nf:40:13: `preset` is not defined
+│  40 |         --${preset} \\
+╰     |             ^^^^^^
+
+Warn  modules/local/proseg/main.nf:30:9: Variable was declared but not used
+│  30 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+Warn  modules/local/proseg/main.nf:64:9: Variable was declared but not used
+│  64 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/proseg/main.nf:65:9: Variable was declared but not used
+│  65 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Error modules/local/proseg/preprocess/main.nf:2:11: `meta` is not defined
+│   2 |     tag "$meta.id"
+╰     |           ^^^^
+
+Error modules/local/proseg/preprocess/main.nf:41:40: `meta` is not defined
+│  41 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |                                        ^^^^
+
+Warn  modules/local/proseg/preprocess/main.nf:40:9: Variable was declared but not used
+│  40 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/proseg/preprocess/main.nf:41:9: Variable was declared but not used
+│  41 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+
+Warn  modules/nf-core/cellpose/main.nf:25:9: Variable was declared but not used
+│  25 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+Warn  modules/nf-core/cellpose/main.nf:45:9: Variable was declared but not used
+│  45 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/nf-core/custom/dumpsoftwareversions/main.nf:22:9: Variable was declared but not used
+│  22 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+Error modules/nf-core/xeniumranger/import-segmentation/main.nf:32:9: `expansion_distance` is already declared
+│  32 |     def expansion_distance = expansion_distance ? "--expansion-distanc
+╰     |         ^^^^^^^^^^^^^^^^^^
+
+Error modules/nf-core/xeniumranger/import-segmentation/main.nf:33:9: `coordinate_transform` is already declared
+│  33 |     def coordinate_transform = coordinate_transform ? "--coordinate-tr
+╰     |         ^^^^^^^^^^^^^^^^^^^^
+
+Error modules/nf-core/xeniumranger/import-segmentation/main.nf:36:9: `cells` is already declared
+│  36 |     def cells = cells ? "--cells=\"${cells}\"": ""
+╰     |         ^^^^^
+
+Error modules/nf-core/xeniumranger/import-segmentation/main.nf:39:9: `transcript_assignment` is already declared
+│  39 |     def transcript_assignment = transcript_assignment ? "--transcript-
+╰     |         ^^^^^^^^^^^^^^^^^^^^^
+
+Error modules/nf-core/xeniumranger/import-segmentation/main.nf:40:9: `viz_polygons` is already declared
+│  40 |     def viz_polygons = viz_polygons ? "--viz-polygons=\"${viz_polygons
+╰     |         ^^^^^^^^^^^^
+
+
+
+Error modules/nf-core/xeniumranger/resegment/main.nf:29:9: `expansion_distance` is already declared
+│  29 |     def expansion_distance = expansion_distance ? "--expansion-distanc
+╰     |         ^^^^^^^^^^^^^^^^^^
+
+Error modules/nf-core/xeniumranger/resegment/main.nf:30:9: `dapi_filter` is already declared
+│  30 |     def dapi_filter = dapi_filter ? "--dapi-filter=\"${dapi_filter}\""
+╰     |         ^^^^^^^^^^^
+
+Error modules/nf-core/xeniumranger/resegment/main.nf:33:9: `boundary_stain` is already declared
+│  33 |     def boundary_stain = boundary_stain ? "--boundary-stain=disable": 
+╰     |         ^^^^^^^^^^^^^^
+
+Error modules/nf-core/xeniumranger/resegment/main.nf:35:9: `interior_stain` is already declared
+│  35 |     def interior_stain = interior_stain ? "--interior-stain=disable": 
+╰     |         ^^^^^^^^^^^^^^
+
+
+Warn  subworkflows/local/input_check.nf:15:37: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  15 |         .map { create_fastq_channel(it) }
+╰     |                                     ^^
+
+
+Error workflows/spatialxe.nf:7:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│   7 | def summary_params = NfcoreSchema.paramsSummaryMap(workflow, params)
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/spatialxe.nf:7:22: `NfcoreSchema` is not defined
+│   7 | def summary_params = NfcoreSchema.paramsSummaryMap(workflow, params)
+╰     |                      ^^^^^^^^^^^^
+
+Error workflows/spatialxe.nf:10:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  10 | WorkflowSpatialxe.initialise(params, log)
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/spatialxe.nf:10:1: `WorkflowSpatialxe` is not defined
+│  10 | WorkflowSpatialxe.initialise(params, log)
+╰     | ^^^^^^^^^^^^^^^^^
+
+Error workflows/spatialxe.nf:14:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  14 | def checkPathParamList = [ params.input, params.multiqc_config, params
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/spatialxe.nf:15:1: `for` loops are no longer supported
+│  15 | for (param in checkPathParamList) { if (param) { file(param, checkIfEx
+╰     | ^^^
+
+Error workflows/spatialxe.nf:15:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  15 | for (param in checkPathParamList) { if (param) { file(param, checkIfEx
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/spatialxe.nf:15:6: `param` is not defined
+│  15 | for (param in checkPathParamList) { if (param) { file(param, checkIfEx
+╰     |      ^^^^^
+
+Error workflows/spatialxe.nf:15:40: `param` is not defined
+│  15 | for (param in checkPathParamList) { if (param) { file(param, checkIfEx
+╰     |                                        ^^^^^^^
+
+Error workflows/spatialxe.nf:15:55: `param` is not defined
+│  15 | for (param in checkPathParamList) { if (param) { file(param, checkIfEx
+╰     |                                                       ^^^^^
+
+Error workflows/spatialxe.nf:18:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  18 | if (params.input) { ch_input = file(params.input) } else { exit 1, 'In
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/spatialxe.nf:26:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  26 | ch_multiqc_config          = Channel.fromPath("$projectDir/assets/mult
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/spatialxe.nf:27:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  27 | ch_multiqc_custom_config   = params.multiqc_config ? Channel.fromPath(
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/spatialxe.nf:28:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  28 | ch_multiqc_logo            = params.multiqc_logo   ? Channel.fromPath(
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/spatialxe.nf:29:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  29 | ch_multiqc_custom_methods_description = params.multiqc_methods_descrip
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/spatialxe.nf:51:1: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/spatialxe/modules/nf-core/fastqc/main.nf'
+│  51 | include { FASTQC                      } from '../modules/nf-core/fastq
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/spatialxe.nf:62:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  62 | def multiqc_report = []
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/spatialxe.nf:72:9: `ch_input` is not defined
+│  72 |         ch_input
+╰     |         ^^^^^^^^
+
+Error workflows/spatialxe.nf:79:5: `FASTQC` is not defined
+│  79 |     FASTQC (
+╰     |     ^^^^^^
+
+Error workflows/spatialxe.nf:82:35: `FASTQC` is not defined
+│  82 |     ch_versions = ch_versions.mix(FASTQC.out.versions.first())
+╰     |                                   ^^^^^^
+
+Error workflows/spatialxe.nf:91:27: `WorkflowSpatialxe` is not defined
+│  91 |     workflow_summary    = WorkflowSpatialxe.paramsSummaryMultiqc(workf
+╰     |                           ^^^^^^^^^^^^^^^^^
+
+Error workflows/spatialxe.nf:91:76: `summary_params` is not defined
+│  91 |     = WorkflowSpatialxe.paramsSummaryMultiqc(workflow, summary_params)
+╰     |                                                        ^^^^^^^^^^^^^^
+
+Error workflows/spatialxe.nf:94:30: `WorkflowSpatialxe` is not defined
+│  94 |     methods_description    = WorkflowSpatialxe.methodsDescriptionText(
+╰     |                              ^^^^^^^^^^^^^^^^^
+
+Error workflows/spatialxe.nf:94:81: `ch_multiqc_custom_methods_description` is not defined
+│  94 | ethodsDescriptionText(workflow, ch_multiqc_custom_methods_description)
+╰     |                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/spatialxe.nf:101:45: `FASTQC` is not defined
+│ 101 |     ch_multiqc_files = ch_multiqc_files.mix(FASTQC.out.zip.collect{it[
+╰     |                                             ^^^^^^
+
+Error workflows/spatialxe.nf:105:9: `ch_multiqc_config` is not defined
+│ 105 |         ch_multiqc_config.toList(),
+╰     |         ^^^^^^^^^^^^^^^^^
+
+Error workflows/spatialxe.nf:106:9: `ch_multiqc_custom_config` is not defined
+│ 106 |         ch_multiqc_custom_config.toList(),
+╰     |         ^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/spatialxe.nf:107:9: `ch_multiqc_logo` is not defined
+│ 107 |         ch_multiqc_logo.toList()
+╰     |         ^^^^^^^^^^^^^^^
+
+Error workflows/spatialxe.nf:118:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│ 116 | */
+│ 117 | 
+│ 118 | workflow.onComplete {
+│     | ^^^^^^^^^^^^^^^^^^^^^
+│ 119 |     if (params.email || params.email_on_fail) {
+╰ 120 |         NfcoreTemplate.email(workflow, params, summary_params, project
+
+Error workflows/spatialxe.nf:120:9: `NfcoreTemplate` is not defined
+│ 120 |         NfcoreTemplate.email(workflow, params, summary_params, project
+╰     |         ^^^^^^^^^^^^^^
+
+Error workflows/spatialxe.nf:122:5: `NfcoreTemplate` is not defined
+│ 122 |     NfcoreTemplate.summary(workflow, params, log)
+╰     |     ^^^^^^^^^^^^^^
+
+Error workflows/spatialxe.nf:124:9: `NfcoreTemplate` is not defined
+│ 124 |         NfcoreTemplate.IM_notification(workflow, params, summary_param
+╰     |         ^^^^^^^^^^^^^^
+
+Warn  workflows/spatialxe.nf:18:21: Variable was declared but not used
+│  18 | if (params.input) { ch_input = file(params.input) } else { exit 1, 'In
+╰     |                     ^^^^^^^^
+
+Warn  workflows/spatialxe.nf:26:1: Variable was declared but not used
+│  26 | ch_multiqc_config          = Channel.fromPath("$projectDir/assets/mult
+╰     | ^^^^^^^^^^^^^^^^^
+
+Warn  workflows/spatialxe.nf:26:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  26 | ch_multiqc_config          = Channel.fromPath("$projectDir/assets/mult
+╰     |                              ^^^^^^^
+
+Warn  workflows/spatialxe.nf:27:1: Variable was declared but not used
+│  27 | ch_multiqc_custom_config   = params.multiqc_config ? Channel.fromPath(
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/spatialxe.nf:27:54: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  27 | ch_multiqc_custom_config   = params.multiqc_config ? Channel.fromPath(
+╰     |                                                      ^^^^^^^
+
+Warn  workflows/spatialxe.nf:27:119: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  27 | omPath( params.multiqc_config, checkIfExists: true ) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/spatialxe.nf:28:1: Variable was declared but not used
+│  28 | ch_multiqc_logo            = params.multiqc_logo   ? Channel.fromPath(
+╰     | ^^^^^^^^^^^^^^^
+
+Warn  workflows/spatialxe.nf:28:54: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  28 | ch_multiqc_logo            = params.multiqc_logo   ? Channel.fromPath(
+╰     |                                                      ^^^^^^^
+
+Warn  workflows/spatialxe.nf:28:117: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  28 | fromPath( params.multiqc_logo, checkIfExists: true ) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/spatialxe.nf:29:1: Variable was declared but not used
+│  29 | ch_multiqc_custom_methods_description = params.multiqc_methods_descrip
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/spatialxe.nf:66:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  66 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  workflows/spatialxe.nf:92:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  92 |     ch_workflow_summary = Channel.value(workflow_summary)
+╰     |                           ^^^^^^^
+
+Warn  workflows/spatialxe.nf:95:30: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  95 |     ch_methods_description = Channel.value(methods_description)
+╰     |                              ^^^^^^^
+
+Warn  workflows/spatialxe.nf:97:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  97 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/spatialxe.nf:101:68: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 101 | es.mix(FASTQC.out.zip.collect{it[1]}.ifEmpty([]))
+╰     |                               ^^
+
+Warn  workflows/spatialxe.nf:109:5: Variable was declared but not used
+│ 109 |     multiqc_report = MULTIQC.out.report.toList()
+╰     |     ^^^^^^^^^^^^^^
+
+
+Error conf/base.config:14:16: `check_max` is not defined
+│  14 |     cpus   = { check_max( 1    * task.attempt, 'cpus'   ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:15:16: `check_max` is not defined
+│  15 |     memory = { check_max( 6.GB * task.attempt, 'memory' ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:16:16: `check_max` is not defined
+│  16 |     time   = { check_max( 4.h  * task.attempt, 'time'   ) }
+╰     |                ^^^^^^^^^
+
+Error conf/base.config:30:20: `check_max` is not defined
+│  30 |         cpus   = { check_max( 1                  , 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:31:20: `check_max` is not defined
+│  31 |         memory = { check_max( 6.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:32:20: `check_max` is not defined
+│  32 |         time   = { check_max( 4.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:35:20: `check_max` is not defined
+│  35 |         cpus   = { check_max( 2     * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:36:20: `check_max` is not defined
+│  36 |         memory = { check_max( 12.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:37:20: `check_max` is not defined
+│  37 |         time   = { check_max( 4.h   * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:40:20: `check_max` is not defined
+│  40 |         cpus   = { check_max( 6     * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:41:20: `check_max` is not defined
+│  41 |         memory = { check_max( 36.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:42:20: `check_max` is not defined
+│  42 |         time   = { check_max( 8.h   * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:45:20: `check_max` is not defined
+│  45 |         cpus   = { check_max( 12    * task.attempt, 'cpus'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:46:20: `check_max` is not defined
+│  46 |         memory = { check_max( 72.GB * task.attempt, 'memory'  ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:47:20: `check_max` is not defined
+│  47 |         time   = { check_max( 16.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:50:20: `check_max` is not defined
+│  50 |         time   = { check_max( 20.h  * task.attempt, 'time'    ) }
+╰     |                    ^^^^^^^^^
+
+Error conf/base.config:53:20: `check_max` is not defined
+│  53 |         memory = { check_max( 200.GB * task.attempt, 'memory' ) }
+╰     |                    ^^^^^^^^^
+
+
+Error nextflow.config:66:5: Unexpected input: 'includeConfig'
+│  66 |     includeConfig "${params.custom_config_base}/nfcore_custom.config"
+╰     |     ^
+
+
+Nextflow linting complete!
+ ❌ 8 files had 66 errors
+ ✅ 14 files had no errors

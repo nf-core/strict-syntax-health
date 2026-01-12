@@ -1,0 +1,489 @@
+Linting Nextflow code..
+Linting: conf/test_hipeak.config
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: conf/igenomes.config
+Linting: conf/test_multi.config
+Linting: conf/test_hichip.config
+Linting: nextflow.config
+Linting: workflows/hicar.nf
+Linting: subworkflows/local/apa.nf
+Linting: subworkflows/local/tads.nf
+Linting: subworkflows/local/circos.nf
+Linting: subworkflows/local/v4c.nf
+Linting: subworkflows/local/tfea/homer.nf
+Linting: subworkflows/local/compartments_caller/homer.nf
+Linting: subworkflows/local/compartments_caller/cooltools.nf
+Linting: subworkflows/local/compartments_caller/hicexplorer.nf
+Linting: subworkflows/local/compartments_caller/juicer.nf
+Linting: subworkflows/local/interaction_caller/peakachu.nf
+Linting: subworkflows/local/interaction_caller/maps_multienzyme.nf
+Linting: subworkflows/local/interaction_caller/hicdcplus.nf
+Linting: subworkflows/local/interaction_caller/hicexplorer.nf
+Linting: subworkflows/local/interaction_caller/maps.nf
+Linting: subworkflows/local/interaction_caller/maps_peak.nf
+Linting: subworkflows/local/tfea.nf
+Linting: subworkflows/local/diff_ana/chicdiff.nf
+Linting: subworkflows/local/interactions.nf
+Linting: subworkflows/local/compartments.nf
+Linting: subworkflows/local/differential_analysis.nf
+Linting: subworkflows/local/hipeak.nf
+Linting: subworkflows/local/apa/cooltools.nf
+Linting: subworkflows/local/apa/juicer.nf
+Linting: subworkflows/local/coveragescale.nf
+Linting: subworkflows/local/v4c/cooltools.nf
+Linting: subworkflows/local/hipeak/fragment_peak.nf
+Linting: subworkflows/local/hipeak/call_hipeak.nf
+Linting: subworkflows/local/cooler.nf
+Linting: subworkflows/local/preparegenome.nf
+Linting: subworkflows/local/bam_stats.nf
+Linting: subworkflows/local/callatacpeak.nf
+Linting: subworkflows/local/tads_caller/homer.nf
+Linting: subworkflows/local/tads_caller/cooltools.nf
+Linting: subworkflows/local/tads_caller/hicexplorer.nf
+Linting: subworkflows/local/pairtools.nf
+Linting: main.nf
+Linting: modules/local/gtf2bed.nf
+Linting: modules/local/circos/circos.nf
+Linting: modules/local/circos/circos_prepare.nf
+Linting: modules/local/atacreads/atacqc.nf
+Linting: modules/local/atacreads/bedsort.nf
+Linting: modules/local/atacreads/getscale.nf
+Linting: modules/local/atacreads/dumpreads.nf
+Linting: modules/local/atacreads/shiftreads.nf
+Linting: modules/local/atacreads/mergereads.nf
+Linting: modules/local/atacreads/mergepeak.nf
+Linting: modules/local/igv.nf
+Linting: modules/local/cooler/load/main.nf
+Linting: modules/local/cooler/dumpreads.nf
+Linting: modules/local/re_cut.nf
+Linting: modules/local/homer/find_tad_loops.nf
+Linting: modules/local/homer/install.nf
+Linting: modules/local/homer/dump4homer.nf
+Linting: modules/local/homer/find_hic_compartments.nf
+Linting: modules/local/homer/get_hic_corr_diff.nf
+Linting: modules/local/homer/find_motifs_genome.nf
+Linting: modules/local/homer/run_hic_pca.nf
+Linting: modules/local/checksums.nf
+Linting: modules/local/reads_summary.nf
+Linting: modules/local/pairtools/sample.nf
+Linting: modules/local/pairtools/stats.nf
+Linting: modules/local/samtools/sort/main.nf
+Linting: modules/local/hicexplorer/hicaggregatecontacts.nf
+Linting: modules/local/hicexplorer/chicviewpoint.nf
+Linting: modules/local/hicexplorer/recenterpeak.nf
+Linting: modules/local/hicexplorer/hictransform.nf
+Linting: modules/local/hicexplorer/hicpca.nf
+Linting: modules/local/hicexplorer/chicplotviewpoint.nf
+Linting: modules/local/hicexplorer/chicdifferentialtest.nf
+Linting: modules/local/hicexplorer/chicviewpointbackgroundmodel.nf
+Linting: modules/local/hicexplorer/chicsignificantinteractions.nf
+Linting: modules/local/hicexplorer/hicfindtads.nf
+Linting: modules/local/hicexplorer/hicplotmatrix.nf
+Linting: modules/local/hicexplorer/chicexportdata.nf
+Linting: modules/local/hicexplorer/chicqualitycontrol.nf
+Linting: modules/local/hicexplorer/chicaggregatestatistic.nf
+Linting: modules/local/hicexplorer/hiccorrectmatrix.nf
+Linting: modules/local/hicexplorer/hicplottads.nf
+Linting: modules/local/reads_stat.nf
+Linting: modules/local/hichipper/hichipper.nf
+Linting: modules/local/hichipper/create_yaml.nf
+Linting: modules/local/pairix/pairsplot.nf
+Linting: modules/local/pairix/pairsqc.nf
+Linting: modules/local/maps/callpeak.nf
+Linting: modules/local/maps/fend.nf
+Linting: modules/local/maps/reformat.nf
+Linting: modules/local/maps/maps.nf
+Linting: modules/local/maps/merge.nf
+Linting: modules/local/maps/cut.nf
+Linting: modules/local/maps/raw2bg2.nf
+Linting: modules/local/maps/feature.nf
+Linting: modules/local/bioc/pair2bam.nf
+Linting: modules/local/bioc/pairs2hdf5.nf
+Linting: modules/local/bioc/chippeakanno.nf
+Linting: modules/local/bioc/subsetloops.nf
+Linting: modules/local/bioc/ensembl_ucsc_convert.nf
+Linting: modules/local/bioc/bedpe2bed.nf
+Linting: modules/local/bioc/diffhicar.nf
+Linting: modules/local/bioc/merge_interactions.nf
+Linting: modules/local/bioc/trimbedgraph.nf
+Linting: modules/local/bioc/enrich.nf
+Linting: modules/local/bioc/atacseqtfea.nf
+Linting: modules/local/bioc/enzyme_cut.nf
+Linting: modules/local/bioc/diffset.nf
+Linting: modules/local/bioc/seqlevelsstyle.nf
+Linting: modules/local/bioc/diffhic.nf
+Linting: modules/local/bioc/trackviewer.nf
+Linting: modules/local/genome/chromsizes.nf
+Linting: modules/local/genome/filter.nf
+Linting: modules/local/juicer/apa.nf
+Linting: modules/local/juicer/addnorm.nf
+Linting: modules/local/juicer/pre.nf
+Linting: modules/local/juicer/eigenvector.nf
+Linting: modules/local/cooltools/plotnpz.nf
+Linting: modules/local/cooltools/insulation.nf
+Linting: modules/local/cooltools/virtual4c.nf
+Linting: modules/local/cooltools/pileup.nf
+Linting: modules/local/cooltools/eigscis.nf
+Linting: modules/local/hipeak/prepare_counts.nf
+Linting: modules/local/hipeak/callpeak.nf
+Linting: modules/local/hipeak/diff_hipeak.nf
+Linting: modules/local/hipeak/post_counts.nf
+Linting: modules/local/hipeak/assign_type.nf
+Linting: modules/local/hicdcplus/callloops.nf
+Linting: modules/local/hicdcplus/features.nf
+Linting: modules/local/fragmentreads/call_peak.nf
+Linting: modules/local/fragmentreads/r1reads.nf
+Linting: modules/local/peakachu/score_genome.nf
+Linting: modules/local/peakachu/model.nf
+Linting: modules/nf-core/genmap/mappability/main.nf
+Linting: modules/nf-core/genmap/index/main.nf
+Linting: modules/nf-core/gffread/main.nf
+Linting: modules/nf-core/cooler/balance/main.nf
+Linting: modules/nf-core/cooler/dump/main.nf
+Linting: modules/nf-core/cooler/digest/main.nf
+Linting: modules/nf-core/cooler/cload/main.nf
+Linting: modules/nf-core/cooler/merge/main.nf
+Linting: modules/nf-core/cooler/zoomify/main.nf
+Linting: modules/nf-core/gunzip/main.nf
+Linting: modules/nf-core/homer/maketagdirectory/main.nf
+Linting: modules/nf-core/pairtools/parse/main.nf
+Linting: modules/nf-core/pairtools/select/main.nf
+Linting: modules/nf-core/pairtools/flip/main.nf
+Linting: modules/nf-core/pairtools/dedup/main.nf
+Linting: modules/nf-core/pairtools/sort/main.nf
+Linting: modules/nf-core/pairtools/restrict/main.nf
+Linting: modules/nf-core/samtools/flagstat/main.nf
+Linting: modules/nf-core/samtools/idxstats/main.nf
+Linting: modules/nf-core/samtools/index/main.nf
+Linting: modules/nf-core/samtools/sort/main.nf
+Linting: modules/nf-core/samtools/stats/main.nf
+Linting: modules/nf-core/samtools/view/main.nf
+Linting: modules/nf-core/samtools/merge/main.nf
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/cutadapt/main.nf
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/cat/cat/main.nf
+Linting: modules/nf-core/bwa/index/main.nf
+Linting: modules/nf-core/bwa/mem/main.nf
+Linting: modules/nf-core/custom/dumpsoftwareversions/main.nf
+Linting: modules/nf-core/pairix/main.nf
+Linting: modules/nf-core/ucsc/bedgraphtobigwig/main.nf
+Linting: modules/nf-core/ucsc/bigwigaverageoverbed/main.nf
+Linting: modules/nf-core/ucsc/bedclip/main.nf
+Linting: modules/nf-core/ucsc/wigtobigwig/main.nf
+Linting: modules/nf-core/bedtools/genomecov/main.nf
+Linting: modules/nf-core/bedtools/sort/main.nf
+Linting: modules/nf-core/macs2/callpeak/main.nf
+Error main.nf:20:21: `WorkflowMain` is not defined
+│  20 | params.fasta      = WorkflowMain.getGenomeAttribute(params, 'fasta')
+╰     |                     ^^^^^^^^^^^^
+
+Error main.nf:21:21: `WorkflowMain` is not defined
+│  21 | params.bwa_index  = WorkflowMain.getGenomeAttribute(params, 'bwa')
+╰     |                     ^^^^^^^^^^^^
+
+Error main.nf:22:21: `WorkflowMain` is not defined
+│  22 | params.gtf        = WorkflowMain.getGenomeAttribute(params, 'gtf')
+╰     |                     ^^^^^^^^^^^^
+
+Error main.nf:23:21: `WorkflowMain` is not defined
+│  23 | params.gff        = WorkflowMain.getGenomeAttribute(params, 'gff')
+╰     |                     ^^^^^^^^^^^^
+
+Error main.nf:24:21: `WorkflowMain` is not defined
+│  24 | params.gene_bed   = WorkflowMain.getGenomeAttribute(params, 'bed12')
+╰     |                     ^^^^^^^^^^^^
+
+Error main.nf:25:21: `WorkflowMain` is not defined
+│  25 | params.macs_gsize = WorkflowMain.getGenomeAttribute(params, 'macs_gsiz
+╰     |                     ^^^^^^^^^^^^
+
+Error main.nf:26:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  26 | anno_readme       = WorkflowMain.getGenomeAttribute(params, 'readme')
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:26:21: `WorkflowMain` is not defined
+│  26 | anno_readme       = WorkflowMain.getGenomeAttribute(params, 'readme')
+╰     |                     ^^^^^^^^^^^^
+
+Error main.nf:28:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  28 | if (anno_readme && file(anno_readme).exists()) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  29 |     file("${params.outdir}/genome/").mkdirs()
+│  30 |     file(anno_readme).copyTo("${params.outdir}/genome/")
+╰  31 | }
+
+Error main.nf:42:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  40 | 
+│  41 | // Print help message if needed
+│  42 | if (params.help) {
+│     | ^^^^^^^^^^^^^^^^^^
+│  43 |     def logo = NfcoreTemplate.logo(workflow, params.monochrome_logs)
+╰  44 |     def citation = '\n' + WorkflowMain.citation(workflow) + '\n'
+
+Error main.nf:43:16: `NfcoreTemplate` is not defined
+│  43 |     def logo = NfcoreTemplate.logo(workflow, params.monochrome_logs)
+╰     |                ^^^^^^^^^^^^^^
+
+Error main.nf:44:27: `WorkflowMain` is not defined
+│  44 |     def citation = '\n' + WorkflowMain.citation(workflow) + '\n'
+╰     |                           ^^^^^^^^^^^^
+
+Error main.nf:46:54: `NfcoreTemplate` is not defined
+│  46 |     log.info logo + paramsHelp(command) + citation + NfcoreTemplate.da
+╰     |                                                      ^^^^^^^^^^^^^^
+
+Error main.nf:51:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  51 | if (params.validate_params) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  52 |     validateParameters()
+╰  53 | }
+
+Error main.nf:55:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  55 | WorkflowMain.initialise(workflow, params, log)
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:55:1: `WorkflowMain` is not defined
+│  55 | WorkflowMain.initialise(workflow, params, log)
+╰     | ^^^^^^^^^^^^
+
+Error main.nf:63:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/hicar/workflows/hicar.nf'
+│  63 | include { HICAR } from './workflows/hicar'
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:69:5: `HICAR` is not defined
+│  69 |     HICAR ()
+╰     |     ^^^^^
+
+
+Warn  modules/local/atacreads/dumpreads.nf:21:9: Variable was declared but not used
+│  21 |     def software = "awk"
+╰     |         ^^^^^^^^
+
+
+
+Warn  modules/local/bioc/bedpe2bed.nf:19:9: Variable was declared but not used
+│  19 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Error modules/local/bioc/enrich.nf:23:56: `options` is not defined
+│  23 |     enrich.r -s ${ucscname} -o "${prefix}/enrichment" $options.args
+╰     |                                                        ^^^^^^^
+
+
+Warn  modules/local/bioc/merge_interactions.nf:19:9: Variable was declared but not used
+│  19 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/bioc/pair2bam.nf:20:9: Variable was declared but not used
+│  20 |     def prefix   = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+
+Warn  modules/local/bioc/subsetloops.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/cooltools/plotnpz.nf:20:9: Variable was declared but not used
+│  20 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Error modules/local/cooltools/virtual4c.nf:17:13: `prefix` is not defined
+│  17 |     path "${prefix}/*"            , emit: v4c
+╰     |             ^^^^^^
+
+
+Error modules/local/hicexplorer/hicfindtads.nf:26:10: Unexpected input: '='
+│  26 |     for(i=0; i<2; i++){
+╰     |          ^
+
+
+Warn  modules/local/hicexplorer/hicpca.nf:23:33: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  23 |     def idx = args.findIndexOf{ it == '--format' | it == '-f' }
+╰     |                                 ^^
+
+Warn  modules/local/hicexplorer/hicpca.nf:23:52: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  23 |     def idx = args.findIndexOf{ it == '--format' | it == '-f' }
+╰     |                                                    ^^
+
+Warn  modules/local/hicexplorer/hicpca.nf:38:34: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  38 |         .collect{"${prefix}_pca${it}.${format}"}.join(' ')
+╰     |                                  ^^
+
+
+Warn  modules/local/hichipper/create_yaml.nf:20:9: Variable was declared but not used
+│  20 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Error modules/local/hipeak/diff_hipeak.nf:5:5: Invalid process directive
+│   5 |     if (workflow.containerEngine == 'singularity' && !params.singulari
+│     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│   6 |         container "https://depot.galaxyproject.org/singularity/biocond
+│   7 |     } else {
+│   8 |         container "biocontainers/bioconductor-diffhic:1.24.0--r41h399d
+╰   9 |     }
+
+
+Warn  modules/local/hipeak/post_counts.nf:19:9: Variable was declared but not used
+│  19 |     def args   = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+Warn  modules/local/homer/find_tad_loops.nf:25:9: Variable was declared but not used
+│  25 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+
+Warn  modules/local/homer/install.nf:22:9: Variable was declared but not used
+│  22 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+Warn  modules/local/juicer/eigenvector.nf:33:21: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  33 |     args.removeIf { it.contains('NONE') }
+╰     |                     ^^
+
+Warn  modules/local/juicer/eigenvector.nf:34:21: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  34 |     args.removeIf { it.contains('VC_SQRT') }
+╰     |                     ^^
+
+Warn  modules/local/juicer/eigenvector.nf:35:21: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  35 |     args.removeIf { it.contains('VC') }
+╰     |                     ^^
+
+Warn  modules/local/juicer/eigenvector.nf:36:21: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  36 |     args.removeIf { it.contains('KR') }
+╰     |                     ^^
+
+Warn  modules/local/juicer/eigenvector.nf:37:21: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  37 |     args.removeIf { it.contains('SCALE') }
+╰     |                     ^^
+
+Warn  modules/local/juicer/eigenvector.nf:38:21: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  38 |     args.removeIf { it.contains('BP') }
+╰     |                     ^^
+
+Warn  modules/local/juicer/eigenvector.nf:39:21: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  39 |     args.removeIf { it.contains('FRAG') }
+╰     |                     ^^
+
+
+Warn  modules/local/maps/raw2bg2.nf:20:9: Variable was declared but not used
+│  20 |     def args   = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+Warn  modules/local/peakachu/model.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+
+Error modules/nf-core/bwa/index/main.nf:14:27: `bwa` is not defined
+│  14 |     tuple val(meta), path(bwa) , emit: index
+╰     |                           ^^^
+
+
+
+Warn  modules/nf-core/cat/cat/main.nf:23:40: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  23 |     def file_list = files_in.collect { it.toString() }
+╰     |                                        ^^
+
+Warn  modules/nf-core/cat/cat/main.nf:52:40: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  52 |     def file_list = files_in.collect { it.toString() }
+╰     |                                        ^^
+
+
+
+
+
+
+
+
+Warn  modules/nf-core/custom/dumpsoftwareversions/main.nf:22:9: Variable was declared but not used
+│  22 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+Warn  modules/nf-core/fastqc/main.nf:27:48: Parameter was not used -- prefix with `_` to suppress warning
+│  27 |     def renamed_files = old_new_pairs.collect{ old_name, new_name -> n
+╰     |                                                ^^^^^^^^
+
+
+Warn  modules/nf-core/genmap/index/main.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+
+Warn  modules/nf-core/macs2/callpeak/main.nf:33:40: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  33 |         def id = args_list.findIndexOf{it=='--format'}
+╰     |                                        ^^
+
+
+
+
+
+
+
+
+
+
+Warn  modules/nf-core/samtools/flagstat/main.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/samtools/idxstats/main.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+Warn  modules/nf-core/samtools/stats/main.nf:22:9: Variable was declared but not used
+│  22 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+Warn  modules/nf-core/ucsc/bedclip/main.nf:23:9: Variable was declared but not used
+│  23 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/ucsc/bedgraphtobigwig/main.nf:23:9: Variable was declared but not used
+│  23 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+ERROR ~ begin 27, end 28, length 27
+
+

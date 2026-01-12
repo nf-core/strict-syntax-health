@@ -1,0 +1,287 @@
+Linting Nextflow code..
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: nextflow.config
+Linting: workflows/drugresponseeval.nf
+Linting: subworkflows/local/utils_nfcore_drugresponseeval_pipeline/main.nf
+Linting: subworkflows/local/run_cv/main.nf
+Linting: subworkflows/local/preprocess_custom/main.nf
+Linting: subworkflows/local/model_testing/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/predict_full/main.nf
+Linting: modules/local/preprocess_raw_viability/main.nf
+Linting: modules/local/postprocess_curvecurator_output/main.nf
+Linting: modules/local/tune_final_model/main.nf
+Linting: modules/local/cv_split/main.nf
+Linting: modules/local/unzip/main.nf
+Linting: modules/local/randomization_split/main.nf
+Linting: modules/local/hpam_split/main.nf
+Linting: modules/local/evaluate_final/main.nf
+Linting: modules/local/final_split/main.nf
+Linting: modules/local/train_final_model/main.nf
+Linting: modules/local/train_and_predict_cv/main.nf
+Linting: modules/local/robustness_test/main.nf
+Linting: modules/local/randomization_test/main.nf
+Linting: modules/local/collect_results/main.nf
+Linting: modules/local/fit_curves/main.nf
+Linting: modules/local/evaluate_find_max/main.nf
+Linting: modules/local/make_model_channel/main.nf
+Linting: modules/local/load_response/main.nf
+Linting: modules/local/visualize_results/main.nf
+Linting: modules/local/consolidate_results/main.nf
+Linting: modules/nf-core/custom/dumpsoftwareversions/main.nf
+Warn  main.nf:41:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  41 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+
+
+Error modules/nf-core/custom/dumpsoftwareversions/main.nf:1:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│   1 | def deprecation_message = """
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│   2 | WARNING: This module has been deprecated.
+│   3 | 
+│   4 | Reason:
+╰   5 | This module is no longer recommended for use, as it is replaced by the
+
+Error modules/nf-core/custom/dumpsoftwareversions/main.nf:30:18: `deprecation_message` is not defined
+│  30 |     assert true: deprecation_message
+╰     |                  ^^^^^^^^^^^^^^^^^^^
+
+Warn  modules/nf-core/custom/dumpsoftwareversions/main.nf:1:5: Variable was declared but not used
+│   1 | def deprecation_message = """
+╰     |     ^^^^^^^^^^^^^^^^^^^
+
+Warn  modules/nf-core/custom/dumpsoftwareversions/main.nf:31:9: Variable was declared but not used
+│  31 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  subworkflows/local/model_testing/main.nf:28:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  28 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/model_testing/main.nf:63:31: Parameter was not used -- prefix with `_` to suppress warning
+│  63 |                         .map{ model_class, model_name, rand_file -> [m
+╰     |                               ^^^^^^^^^^^
+
+Warn  subworkflows/local/model_testing/main.nf:86:32: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  86 |         ch_trials_robustness = Channel.from(1..params.n_trials_robustn
+╰     |                                ^^^^^^^
+
+Warn  subworkflows/local/model_testing/main.nf:126:36: Parameter was not used -- prefix with `_` to suppress warning
+│ 126 |                             .map { model_class, model_name, train_ds, 
+╰     |                                    ^^^^^^^^^^^
+
+Warn  subworkflows/local/model_testing/main.nf:147:47: Parameter was not used -- prefix with `_` to suppress warning
+│ 147 |                             .map{ model_name, final_constant, test_mod
+╰     |                                               ^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/model_testing/main.nf:160:49: Parameter was not used -- prefix with `_` to suppress warning
+│ 160 |                         .map{ test_mode, model, pred_file -> [test_mod
+╰     |                                                 ^^^^^^^^^
+
+
+Warn  subworkflows/local/preprocess_custom/main.nf:12:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  12 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+
+Warn  subworkflows/local/run_cv/main.nf:21:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  21 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/run_cv/main.nf:31:32: Parameter was not used -- prefix with `_` to suppress warning
+│  31 |                         .map { dataset_name, path_to_dir, response_fil
+╰     |                                ^^^^^^^^^^^^
+
+Warn  subworkflows/local/run_cv/main.nf:31:46: Parameter was not used -- prefix with `_` to suppress warning
+│  31 |                         .map { dataset_name, path_to_dir, response_fil
+╰     |                                              ^^^^^^^^^^^
+
+Warn  subworkflows/local/run_cv/main.nf:47:43: Parameter was not used -- prefix with `_` to suppress warning
+│  47 |                                 .filter { dataset_name, dataset_path -
+╰     |                                           ^^^^^^^^^^^^
+
+Warn  subworkflows/local/run_cv/main.nf:50:40: Parameter was not used -- prefix with `_` to suppress warning
+│  50 |                                 .map { dataset_name, dataset_path ->
+╰     |                                        ^^^^^^^^^^^^
+
+Warn  subworkflows/local/run_cv/main.nf:55:43: Parameter was not used -- prefix with `_` to suppress warning
+│  55 |                                 .filter { dataset_name, dataset_path -
+╰     |                                           ^^^^^^^^^^^^
+
+Warn  subworkflows/local/run_cv/main.nf:64:32: Parameter was not used -- prefix with `_` to suppress warning
+│  64 |                         .map { dataset_name, path_to_dir, response_fil
+╰     |                                ^^^^^^^^^^^^
+
+Warn  subworkflows/local/run_cv/main.nf:64:46: Parameter was not used -- prefix with `_` to suppress warning
+│  64 |                         .map { dataset_name, path_to_dir, response_fil
+╰     |                                              ^^^^^^^^^^^
+
+Warn  subworkflows/local/run_cv/main.nf:126:16: Parameter was not used -- prefix with `_` to suppress warning
+│ 126 |         .map { model_class, model_name, hpam_combis -> [model_name, hp
+╰     |                ^^^^^^^^^^^
+
+Warn  subworkflows/local/run_cv/main.nf:134:16: Parameter was not used -- prefix with `_` to suppress warning
+│ 134 |         .map { model_class, model_name, test_mode, split -> [model_nam
+╰     |                ^^^^^^^^^^^
+
+
+Warn  subworkflows/local/utils_nfcore_drugresponseeval_pipeline/main.nf:31:5: Parameter was not used -- prefix with `_` to suppress warning
+│  31 |     monochrome_logs         // boolean: Do not use coloured log output
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_drugresponseeval_pipeline/main.nf:41:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  41 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_drugresponseeval_pipeline/main.nf:98:58: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  98 |     ch_models = channel.from(models.split(',').collect { it.trim() })
+╰     |                                                          ^^
+
+
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 | mYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
+╰     |                               ^^^^^^^
+
+
+Error workflows/drugresponseeval.nf:24:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  24 | def test_modes = params.test_mode.split(",")
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/drugresponseeval.nf:25:1: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+│  25 | def randomizations = params.randomization_mode.split(",")
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/drugresponseeval.nf:47:9: `test_modes` is not defined
+│  47 |         test_modes,
+╰     |         ^^^^^^^^^^
+
+Error workflows/drugresponseeval.nf:58:9: `randomizations` is not defined
+│  58 |         randomizations,
+╰     |         ^^^^^^^^^^^^^^
+
+Error workflows/drugresponseeval.nf:63:9: `test_modes` is not defined
+│  63 |         test_modes,
+╰     |         ^^^^^^^^^^
+
+Warn  workflows/drugresponseeval.nf:24:5: Variable was declared but not used
+│  24 | def test_modes = params.test_mode.split(",")
+╰     |     ^^^^^^^^^^
+
+Warn  workflows/drugresponseeval.nf:25:5: Variable was declared but not used
+│  25 | def randomizations = params.randomization_mode.split(",")
+╰     |     ^^^^^^^^^^^^^^
+
+Warn  workflows/drugresponseeval.nf:35:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  35 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  workflows/drugresponseeval.nf:77:17: Variable was declared but not used
+│  77 |         ).set { ch_collated_versions }
+╰     |                 ^^^^^^^^^^^^^^^^^^^^
+
+
+Warn  conf/modules.config:57:23: Parameter was not used -- prefix with `_` to suppress warning
+│  57 |             saveAs: { filename -> null }
+╰     |                       ^^^^^^^^
+
+Warn  conf/modules.config:65:23: Parameter was not used -- prefix with `_` to suppress warning
+│  65 |             saveAs: { filename -> null }
+╰     |                       ^^^^^^^^
+
+Warn  conf/modules.config:73:23: Parameter was not used -- prefix with `_` to suppress warning
+│  73 |             saveAs: { filename -> null }
+╰     |                       ^^^^^^^^
+
+Warn  conf/modules.config:81:23: Parameter was not used -- prefix with `_` to suppress warning
+│  81 |             saveAs: { filename -> null }
+╰     |                       ^^^^^^^^
+
+Warn  conf/modules.config:89:23: Parameter was not used -- prefix with `_` to suppress warning
+│  89 |             saveAs: { filename -> null }
+╰     |                       ^^^^^^^^
+
+Warn  conf/modules.config:97:23: Parameter was not used -- prefix with `_` to suppress warning
+│  97 |             saveAs: { filename -> null }
+╰     |                       ^^^^^^^^
+
+Warn  conf/modules.config:106:23: Parameter was not used -- prefix with `_` to suppress warning
+│ 106 |             saveAs: { filename -> null }
+╰     |                       ^^^^^^^^
+
+Warn  conf/modules.config:123:23: Parameter was not used -- prefix with `_` to suppress warning
+│ 123 |             saveAs: { filename -> null }
+╰     |                       ^^^^^^^^
+
+Warn  conf/modules.config:147:23: Parameter was not used -- prefix with `_` to suppress warning
+│ 147 |             saveAs: { filename -> null }
+╰     |                       ^^^^^^^^
+
+Warn  conf/modules.config:189:23: Parameter was not used -- prefix with `_` to suppress warning
+│ 189 |             saveAs: { filename -> null }
+╰     |                       ^^^^^^^^
+
+Warn  conf/modules.config:197:23: Parameter was not used -- prefix with `_` to suppress warning
+│ 197 |             saveAs: { filename -> null }
+╰     |                       ^^^^^^^^
+
+Warn  conf/modules.config:221:23: Parameter was not used -- prefix with `_` to suppress warning
+│ 221 |             saveAs: { filename -> null }
+╰     |                       ^^^^^^^^
+
+
+Error nextflow.config:305:40: `manifest` is not defined
+│ 305 | \033[0;35m  nf-core/drugresponseeval ${manifest.version}\033[0m
+╰     |                                        ^^^^^^^^
+
+Error nextflow.config:308:26: `manifest` is not defined
+│ 308 |         afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${ma
+╰     |                          ^^^^^^^^
+
+Error nextflow.config:308:69: `manifest` is not defined
+│ 308 | ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "  
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:308:186: `manifest` is not defined
+│ 308 | doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:317:22: `validation` is not defined
+│ 317 |         beforeText = validation.help.beforeText
+╰     |                      ^^^^^^^^^^
+
+Error nextflow.config:318:21: `validation` is not defined
+│ 318 |         afterText = validation.help.afterText
+╰     |                     ^^^^^^^^^^
+
+Warn  nextflow.config:308:129: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 308 | lect { "    https://doi.org/${it.trim().replace('https://doi.org/','')
+╰     |                               ^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-test tests
+│   3 |     testsDir "."
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 4 files had 14 errors
+ ✅ 37 files had no errors

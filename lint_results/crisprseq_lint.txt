@@ -1,0 +1,688 @@
+Linting Nextflow code..
+Linting: conf/test_umis.config
+Linting: conf/test_screening_count_table.config
+Linting: conf/igenomes_ignored.config
+Linting: conf/base.config
+Linting: conf/test_targeted.config
+Linting: conf/test_screening_rra.config
+Linting: conf/modules.config
+Linting: conf/test_targeted_full.config
+Linting: conf/test_screening_paired.config
+Linting: conf/test_screening.config
+Linting: conf/test_screening_full.config
+Linting: conf/igenomes.config
+Linting: nextflow.config
+Linting: workflows/crisprseq_screening.nf
+Linting: workflows/crisprseq_targeted.nf
+Linting: subworkflows/local/utils_nfcore_crisprseq_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: main.nf
+Linting: modules/local/find_adapters.nf
+Linting: modules/local/alignment_summary.nf
+Linting: modules/local/clonality_classifier.nf
+Linting: modules/local/drugz.nf
+Linting: modules/local/hitselection.nf
+Linting: modules/local/orient_reference.nf
+Linting: modules/local/mageck/graphrra.nf
+Linting: modules/local/mageck/flutemle.nf
+Linting: modules/local/bagel2/bf.nf
+Linting: modules/local/bagel2/fc.nf
+Linting: modules/local/bagel2/pr.nf
+Linting: modules/local/bagel2/graph.nf
+Linting: modules/local/preprocessing_summary.nf
+Linting: modules/local/matricescreation.nf
+Linting: modules/local/venndiagram.nf
+Linting: modules/local/extract_umis.nf
+Linting: modules/local/template_reference.nf
+Linting: modules/local/cigar_parser.nf
+Linting: modules/local/clustering_summary.nf
+Linting: modules/local/crisprseq_plotter.nf
+Linting: modules/nf-core/racon/main.nf
+Linting: modules/nf-core/samtools/index/main.nf
+Linting: modules/nf-core/samtools/index/tests/csi.nextflow.config
+Linting: modules/nf-core/fastqc/main.nf
+Linting: modules/nf-core/cutadapt/main.nf
+Linting: modules/nf-core/cutadapt/tests/nextflow.config
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/minimap2/index/main.nf
+Linting: modules/nf-core/minimap2/align/main.nf
+Linting: modules/nf-core/cat/fastq/main.nf
+Linting: modules/nf-core/bwa/index/main.nf
+Linting: modules/nf-core/bwa/mem/main.nf
+Linting: modules/nf-core/bowtie2/build/main.nf
+Linting: modules/nf-core/bowtie2/align/main.nf
+Linting: modules/nf-core/bowtie2/align/tests/cram_crai.config
+Linting: modules/nf-core/bowtie2/align/tests/sam2.config
+Linting: modules/nf-core/bowtie2/align/tests/large_index.config
+Linting: modules/nf-core/bowtie2/align/tests/sam.config
+Linting: modules/nf-core/mageck/count/main.nf
+Linting: modules/nf-core/mageck/test/main.nf
+Linting: modules/nf-core/mageck/test/tests/nextflow.config
+Linting: modules/nf-core/mageck/test/tests/nextflow-day0_label.config
+Linting: modules/nf-core/mageck/mle/main.nf
+Linting: modules/nf-core/vsearch/cluster/main.nf
+Linting: modules/nf-core/vsearch/cluster/tests/nextflow_userout.config
+Linting: modules/nf-core/vsearch/cluster/tests/nextflow_unoise.config
+Linting: modules/nf-core/vsearch/cluster/tests/nextflow_smallmem.config
+Linting: modules/nf-core/vsearch/cluster/tests/nextflow_size.config
+Linting: modules/nf-core/vsearch/cluster/tests/nextflow_fast.config
+Linting: modules/nf-core/vsearch/sort/main.nf
+Linting: modules/nf-core/vsearch/sort/tests/nextflow.config
+Linting: modules/nf-core/seqtk/seq/main.nf
+Linting: modules/nf-core/seqtk/seq/tests/standard.config
+Linting: modules/nf-core/pear/main.nf
+Linting: modules/nf-core/crisprcleanr/normalize/main.nf
+Linting: modules/nf-core/medaka/main.nf
+Error main.nf:36:1: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/crisprseq/workflows/crisprseq_targeted.nf'
+│  36 | include { CRISPRSEQ_TARGETED  } from './workflows/crisprseq_targeted'
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error main.nf:56:9: `CRISPRSEQ_TARGETED` is not defined
+│  56 |         CRISPRSEQ_TARGETED (
+╰     |         ^^^^^^^^^^^^^^^^^^
+
+Error main.nf:62:29: `CRISPRSEQ_TARGETED` is not defined
+│  62 |         multiqc_report_ch = CRISPRSEQ_TARGETED.out.multiqc_report
+╰     |                             ^^^^^^^^^^^^^^^^^^
+
+
+
+Warn  modules/local/bagel2/bf.nf:26:9: Variable was declared but not used
+│  26 |     def prefix = task.ext.prefix ?: "${meta.treatment}_vs_${meta.refer
+╰     |         ^^^^^^
+
+
+Warn  modules/local/bagel2/fc.nf:23:9: Variable was declared but not used
+│  23 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/bagel2/graph.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/bagel2/graph.nf:22:9: Variable was declared but not used
+│  22 |     def prefix = task.ext.prefix ?: "${meta.treatment}_${meta.referenc
+╰     |         ^^^^^^
+
+
+Warn  modules/local/bagel2/pr.nf:23:9: Variable was declared but not used
+│  23 |     def prefix = task.ext.prefix ?: "${meta.treatment}_vs_${meta.refer
+╰     |         ^^^^^^
+
+
+
+
+
+
+Warn  modules/local/drugz.nf:25:9: Variable was declared but not used
+│  25 |     def prefix     = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/extract_umis.nf:19:9: Variable was declared but not used
+│  19 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/find_adapters.nf:18:9: Variable was declared but not used
+│  18 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/local/hitselection.nf:26:9: Variable was declared but not used
+│  26 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/hitselection.nf:27:9: Variable was declared but not used
+│  27 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+Warn  modules/local/hitselection.nf:303:9: Variable was declared but not used
+│ 303 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/hitselection.nf:304:9: Variable was declared but not used
+│ 304 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+Warn  modules/local/mageck/flutemle.nf:25:5: Variable was declared but not used
+│  25 |     args = task.ext.args ?: ' '
+╰     |     ^^^^
+
+
+Warn  modules/local/mageck/graphrra.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/local/mageck/graphrra.nf:22:9: Variable was declared but not used
+│  22 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+
+Warn  modules/local/orient_reference.nf:19:9: Variable was declared but not used
+│  19 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+Warn  modules/local/venndiagram.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+Warn  modules/nf-core/bowtie2/align/main.nf:93:9: Variable was declared but not used
+│  93 |     def reference = fasta && extension=="cram"  ? "--reference ${fasta
+╰     |         ^^^^^^^^^
+
+
+
+Error modules/nf-core/bwa/index/main.nf:14:27: `bwa` is not defined
+│  14 |     tuple val(meta), path(bwa) , emit: index
+╰     |                           ^^^
+
+
+Warn  modules/nf-core/bwa/mem/main.nf:56:9: Variable was declared but not used
+│  56 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/bwa/mem/main.nf:59:9: Variable was declared but not used
+│  59 |     def samtools_command = sort_bam ? 'sort' : 'view'
+╰     |         ^^^^^^^^^^^^^^^^
+
+
+Warn  modules/nf-core/cat/fastq/main.nf:21:9: Variable was declared but not used
+│  21 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/cat/fastq/main.nf:23:59: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  23 |     def readList = reads instanceof List ? reads.collect{ it.toString(
+╰     |                                                           ^^
+
+Warn  modules/nf-core/cat/fastq/main.nf:54:59: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  54 |     def readList = reads instanceof List ? reads.collect{ it.toString(
+╰     |                                                           ^^
+
+
+Warn  modules/nf-core/crisprcleanr/normalize/main.nf:26:9: Variable was declared but not used
+│  26 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+Warn  modules/nf-core/fastqc/main.nf:27:48: Parameter was not used -- prefix with `_` to suppress warning
+│  27 |     def renamed_files = old_new_pairs.collect{ old_name, new_name -> n
+╰     |                                                ^^^^^^^^
+
+
+Warn  modules/nf-core/mageck/count/main.nf:53:9: Variable was declared but not used
+│  53 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+Warn  modules/nf-core/mageck/count/main.nf:55:9: Variable was declared but not used
+│  55 |     def sample_label = ("$fastq1".endsWith(".fastq.gz") || "$fastq1".e
+╰     |         ^^^^^^^^^^^^
+
+
+Error modules/nf-core/mageck/mle/main.nf:46:9: `prefix` is already declared
+│  46 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+Warn  modules/nf-core/mageck/mle/main.nf:24:9: Variable was declared but not used
+│  24 |     def args2 = task.ext.args2 ?: ''
+╰     |         ^^^^^
+
+
+Warn  modules/nf-core/mageck/test/main.nf:26:9: Variable was declared but not used
+│  26 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+Warn  modules/nf-core/mageck/test/main.nf:45:9: Variable was declared but not used
+│  45 |     def args = task.ext.args ?: ''
+╰     |         ^^^^
+
+
+
+
+
+
+
+
+
+
+
+Error modules/nf-core/vsearch/sort/main.nf:40:13: `prefix` is not defined
+│  40 |     touch ${prefix}.fasta
+╰     |             ^^^^^^
+
+
+Error subworkflows/local/utils_nfcore_crisprseq_pipeline/main.nf:86:41: `reference` is already declared
+│  86 |                 meta, fastq_1, fastq_2, reference, protospacer, templa
+╰     |                                         ^^^^^^^^^
+
+Error subworkflows/local/utils_nfcore_crisprseq_pipeline/main.nf:86:52: `protospacer` is already declared
+│  86 |                 meta, fastq_1, fastq_2, reference, protospacer, templa
+╰     |                                                    ^^^^^^^^^^^
+
+Error subworkflows/local/utils_nfcore_crisprseq_pipeline/main.nf:86:65: `template` is already declared
+│  86 |            meta, fastq_1, fastq_2, reference, protospacer, template ->
+╰     |                                                            ^^^^^^^^
+
+Error subworkflows/local/utils_nfcore_crisprseq_pipeline/main.nf:88:25: Variables in a closure should be declared with `def`
+│  88 |                         files = [ fastq_1, fastq_2 ]
+╰     |                         ^^^^^
+
+Error subworkflows/local/utils_nfcore_crisprseq_pipeline/main.nf:133:1: Invalid workflow definition -- check for missing or out-of-order section labels
+│ 131 | */
+│ 132 | 
+│ 133 | workflow INITIALISATION_CHANNEL_CREATION_SCREENING {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│ 134 | 
+╰ 135 |     take:
+
+Error subworkflows/local/utils_nfcore_crisprseq_pipeline/main.nf:473:9: `warning` is not defined
+│ 473 |         warning "mle_design_matrix will only be used for the MAGeCK ML
+╰     |         ^^^^^^^
+
+Error subworkflows/local/utils_nfcore_crisprseq_pipeline/main.nf:485:9: `warning` is not defined
+│ 485 |         warning "MAGeCK MLE module will be run twice, once with the de
+╰     |         ^^^^^^^
+
+Error subworkflows/local/utils_nfcore_crisprseq_pipeline/main.nf:489:9: `warning` is not defined
+│ 489 |         warning "mle_design_matrix will only be used for the MAGeCK ML
+╰     |         ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_crisprseq_pipeline/main.nf:31:5: Parameter was not used -- prefix with `_` to suppress warning
+│  31 |     monochrome_logs   // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_crisprseq_pipeline/main.nf:34:5: Parameter was not used -- prefix with `_` to suppress warning
+│  34 |     input             //  string: Path to input samplesheet
+╰     |     ^^^^^
+
+Warn  subworkflows/local/utils_nfcore_crisprseq_pipeline/main.nf:38:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  38 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_crisprseq_pipeline/main.nf:71:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  71 |     reads_targeted   = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_crisprseq_pipeline/main.nf:72:5: Variable was declared but not used
+│  72 |     reads_screening  = Channel.empty()
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_crisprseq_pipeline/main.nf:72:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  72 |     reads_screening  = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_crisprseq_pipeline/main.nf:73:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  73 |     fastqc_screening = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_crisprseq_pipeline/main.nf:74:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  74 |     reference        = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_crisprseq_pipeline/main.nf:75:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  75 |     protospacer      = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_crisprseq_pipeline/main.nf:76:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  76 |     template         = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_crisprseq_pipeline/main.nf:77:5: Variable was declared but not used
+│  77 |     versions         = Channel.empty()
+╰     |     ^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_crisprseq_pipeline/main.nf:77:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  77 |     versions         = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_crisprseq_pipeline/main.nf:83:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  83 |         Channel
+╰     |         ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_crisprseq_pipeline/main.nf:115:20: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 115 |         ch_input = Channel.empty()
+╰     |                    ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_crisprseq_pipeline/main.nf:217:14: Parameter was not used -- prefix with `_` to suppress warning
+│ 217 |     .filter{ meta, sequence -> sequence instanceof String }
+╰     |              ^^^^
+
+Warn  subworkflows/local/utils_nfcore_crisprseq_pipeline/main.nf:225:21: Parameter was not used -- prefix with `_` to suppress warning
+│ 225 |         .map{ meta, reference ->
+╰     |                     ^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_crisprseq_pipeline/main.nf:229:11: Parameter was not used -- prefix with `_` to suppress warning
+│ 229 |     .map{ metaid, new_file, meta ->
+╰     |           ^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_crisprseq_pipeline/main.nf:240:14: Parameter was not used -- prefix with `_` to suppress warning
+│ 240 |     .filter{ meta, sequence -> sequence instanceof String }
+╰     |              ^^^^
+
+Warn  subworkflows/local/utils_nfcore_crisprseq_pipeline/main.nf:248:21: Parameter was not used -- prefix with `_` to suppress warning
+│ 248 |         .map{ meta, template ->
+╰     |                     ^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_crisprseq_pipeline/main.nf:252:11: Parameter was not used -- prefix with `_` to suppress warning
+│ 252 |     .map{ metaid, new_file, meta ->
+╰     |           ^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_crisprseq_pipeline/main.nf:266:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 266 |         ch_protospacer = Channel.of(params.protospacer)
+╰     |                          ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_crisprseq_pipeline/main.nf:272:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 272 |         ch_reference = Channel.fromPath(params.reference_fasta)
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_crisprseq_pipeline/main.nf:278:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 278 |         ch_reference = Channel.fromPath(params.reference_fasta)
+╰     |                        ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_crisprseq_pipeline/main.nf:279:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 279 |         ch_protospacer = Channel.of(params.protospacer)
+╰     |                          ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_crisprseq_pipeline/main.nf:283:25: Parameter was not used -- prefix with `_` to suppress warning
+│ 283 |             .map{ meta, fastqs, reference, protospacer -> [ meta, refe
+╰     |                         ^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_crisprseq_pipeline/main.nf:367:39: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 367 |     def reference_ok = metas.collect{ it.self_reference }.unique().siz
+╰     |                                       ^^
+
+Warn  subworkflows/local/utils_nfcore_crisprseq_pipeline/main.nf:373:38: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 373 |     def template_ok = metas.collect{ it.template }.unique().size == 1
+╰     |                                      ^^
+
+
+Warn  subworkflows/nf-core/utils_nextflow_pipeline/main.nf:94:33: Parameter was not used -- prefix with `_` to suppress warning
+│  94 |     catch (NullPointerException e) {
+╰     |                                 ^
+
+Warn  subworkflows/nf-core/utils_nextflow_pipeline/main.nf:98:24: Parameter was not used -- prefix with `_` to suppress warning
+│  98 |     catch (IOException e) {
+╰     |                        ^
+
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:116:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 116 | mYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
+╰     |                               ^^^^^^^
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:264:22: Parameter was not used -- prefix with `_` to suppress warning
+│ 264 |     catch (Exception all) {
+╰     |                      ^^^
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:361:26: Parameter was not used -- prefix with `_` to suppress warning
+│ 361 |         catch (Exception all) {
+╰     |                          ^^^
+
+
+Error workflows/crisprseq_screening.nf:38:1: Included name 'INITIALISATION_CHANNEL_CREATION_SCREENING' is not defined in module '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/crisprseq/subworkflows/local/utils_nfcore_crisprseq_pipeline/main.nf'
+│  38 | include { INITIALISATION_CHANNEL_CREATION_SCREENING    } from '../subw
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/crisprseq_screening.nf:70:5: `INITIALISATION_CHANNEL_CREATION_SCREENING` is not defined
+│  70 |     INITIALISATION_CHANNEL_CREATION_SCREENING()
+╰     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/crisprseq_screening.nf:169:13: `INITIALISATION_CHANNEL_CREATION_SCREENING` is not defined
+│ 169 |             INITIALISATION_CHANNEL_CREATION_SCREENING.out.library
+╰     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/crisprseq_screening.nf:191:17: `INITIALISATION_CHANNEL_CREATION_SCREENING` is not defined
+│ 191 |                 INITIALISATION_CHANNEL_CREATION_SCREENING.out.crisprcl
+╰     |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/crisprseq_screening.nf:199:17: `INITIALISATION_CHANNEL_CREATION_SCREENING` is not defined
+│ 199 |                 INITIALISATION_CHANNEL_CREATION_SCREENING.out.crisprcl
+╰     |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/crisprseq_screening.nf:233:17: `INITIALISATION_CHANNEL_CREATION_SCREENING` is not defined
+│ 233 |                 INITIALISATION_CHANNEL_CREATION_SCREENING.out.biogrid,
+╰     |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/crisprseq_screening.nf:234:17: `INITIALISATION_CHANNEL_CREATION_SCREENING` is not defined
+│ 234 |                 INITIALISATION_CHANNEL_CREATION_SCREENING.out.hgnc,
+╰     |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/crisprseq_screening.nf:285:17: `INITIALISATION_CHANNEL_CREATION_SCREENING` is not defined
+│ 285 |                 INITIALISATION_CHANNEL_CREATION_SCREENING.out.biogrid,
+╰     |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/crisprseq_screening.nf:286:17: `INITIALISATION_CHANNEL_CREATION_SCREENING` is not defined
+│ 286 |                 INITIALISATION_CHANNEL_CREATION_SCREENING.out.hgnc,
+╰     |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/crisprseq_screening.nf:300:13: `INITIALISATION_CHANNEL_CREATION_SCREENING` is not defined
+│ 300 |             INITIALISATION_CHANNEL_CREATION_SCREENING.out.design.map {
+╰     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/crisprseq_screening.nf:305:40: `INITIALISATION_CHANNEL_CREATION_SCREENING` is not defined
+│ 305 |             MAGECK_MLE_MATRIX (ch_mle, INITIALISATION_CHANNEL_CREATION
+╰     |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/crisprseq_screening.nf:315:33: `INITIALISATION_CHANNEL_CREATION_SCREENING` is not defined
+│ 315 |             MAGECK_MLE (ch_mle, INITIALISATION_CHANNEL_CREATION_SCREEN
+╰     |                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/crisprseq_screening.nf:320:17: `INITIALISATION_CHANNEL_CREATION_SCREENING` is not defined
+│ 320 |                 INITIALISATION_CHANNEL_CREATION_SCREENING.out.biogrid,
+╰     |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/crisprseq_screening.nf:321:17: `INITIALISATION_CHANNEL_CREATION_SCREENING` is not defined
+│ 321 |                 INITIALISATION_CHANNEL_CREATION_SCREENING.out.hgnc,
+╰     |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/crisprseq_screening.nf:332:38: `INITIALISATION_CHANNEL_CREATION_SCREENING` is not defined
+│ 332 |             MAGECK_MLE_DAY0 (ch_mle, INITIALISATION_CHANNEL_CREATION_S
+╰     |                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/crisprseq_screening.nf:353:17: `INITIALISATION_CHANNEL_CREATION_SCREENING` is not defined
+│ 353 |                 INITIALISATION_CHANNEL_CREATION_SCREENING.out.biogrid,
+╰     |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error workflows/crisprseq_screening.nf:354:17: `INITIALISATION_CHANNEL_CREATION_SCREENING` is not defined
+│ 354 |                 INITIALISATION_CHANNEL_CREATION_SCREENING.out.hgnc,
+╰     |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warn  workflows/crisprseq_screening.nf:61:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  61 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  workflows/crisprseq_screening.nf:62:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  62 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/crisprseq_screening.nf:81:72: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  81 | ch_multiqc_files = ch_multiqc_files.mix(FASTQC.out.zip.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/crisprseq_screening.nf:85:40: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  85 |         ch_cutadapt = ch_input.combine(Channel.value([[]]))
+╰     |                                        ^^^^^^^
+
+Warn  workflows/crisprseq_screening.nf:90:51: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  90 |             CUTADAPT_FIVE_PRIME.out.reads.combine(Channel.value([[]]))
+╰     |                                                   ^^^^^^^
+
+Warn  workflows/crisprseq_screening.nf:96:89: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  96 | les = ch_multiqc_files.mix(CUTADAPT_FIVE_PRIME.out.log.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/crisprseq_screening.nf:104:66: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 104 | THREE_PRIME.out.reads.combine(Channel.value([[]]))
+╰     |                               ^^^^^^^
+
+Warn  workflows/crisprseq_screening.nf:105:90: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 105 | es = ch_multiqc_files.mix(CUTADAPT_THREE_PRIME.out.log.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/crisprseq_screening.nf:112:32: Parameter was not used -- prefix with `_` to suppress warning
+│ 112 |             .map{ meta, fastq, empty  ->
+╰     |                                ^^^^^
+
+Warn  workflows/crisprseq_screening.nf:119:13: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 119 |             Channel.of("fasta")
+╰     |             ^^^^^^^
+
+Warn  workflows/crisprseq_screening.nf:120:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 120 |                 .combine(Channel.fromPath(params.fasta))
+╰     |                          ^^^^^^^
+
+Warn  workflows/crisprseq_screening.nf:173:82: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 173 | _files = ch_multiqc_files.mix(MAGECK_COUNT.out.summary.collect{it[1]})
+╰     |                                                                ^^
+
+Warn  workflows/crisprseq_screening.nf:180:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 180 |         Channel.fromPath(params.count_table)
+╰     |         ^^^^^^^
+
+Warn  workflows/crisprseq_screening.nf:185:31: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 185 |         ch_crispr_normalize = Channel.of([id: "count_table_normalize"]
+╰     |                               ^^^^^^^
+
+Warn  workflows/crisprseq_screening.nf:196:35: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 196 |             ch_crispr_normalize = Channel.of([id: "count_table_normali
+╰     |                                   ^^^^^^^
+
+Warn  workflows/crisprseq_screening.nf:214:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 214 |         Channel.fromPath(params.contrasts)
+╰     |         ^^^^^^^
+
+Warn  workflows/crisprseq_screening.nf:242:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 242 |         Channel.fromPath(params.contrasts)
+╰     |         ^^^^^^^
+
+Warn  workflows/crisprseq_screening.nf:250:44: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 250 |         ch_bagel_reference_essentials    = Channel.fromPath(params.bag
+╰     |                                            ^^^^^^^
+
+Warn  workflows/crisprseq_screening.nf:251:44: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 251 |         ch_bagel_reference_nonessentials = Channel.fromPath(params.bag
+╰     |                                            ^^^^^^^
+
+Warn  workflows/crisprseq_screening.nf:331:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 331 |             ch_mle = Channel.of([id: "day0"]).merge(Channel.of([[]])).
+╰     |                      ^^^^^^^
+
+Warn  workflows/crisprseq_screening.nf:331:53: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 331 |             ch_mle = Channel.of([id: "day0"]).merge(Channel.of([[]])).
+╰     |                                                     ^^^^^^^
+
+Warn  workflows/crisprseq_screening.nf:341:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 341 |         Channel.fromPath(params.contrasts)
+╰     |         ^^^^^^^
+
+Warn  workflows/crisprseq_screening.nf:390:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 390 |     ch_multiqc_config                     = Channel.fromPath("$project
+╰     |                                             ^^^^^^^
+
+Warn  workflows/crisprseq_screening.nf:391:69: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 391 |     = params.multiqc_config ? Channel.fromPath(params.multiqc_config, 
+╰     |                               ^^^^^^^
+
+Warn  workflows/crisprseq_screening.nf:391:132: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 391 | fromPath(params.multiqc_config, checkIfExists: true) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/crisprseq_screening.nf:392:67: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 392 |       = params.multiqc_logo ? Channel.fromPath(params.multiqc_logo, ch
+╰     |                               ^^^^^^^
+
+Warn  workflows/crisprseq_screening.nf:392:128: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 392 | l.fromPath(params.multiqc_logo, checkIfExists: true) : Channel.empty()
+╰     |                                                        ^^^^^^^
+
+Warn  workflows/crisprseq_screening.nf:394:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 394 |     ch_workflow_summary                   = Channel.value(paramsSummar
+╰     |                                             ^^^^^^^
+
+Warn  workflows/crisprseq_screening.nf:396:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 396 |     ch_methods_description                = Channel.value(methodsDescr
+╰     |                                             ^^^^^^^
+
+
+Error workflows/crisprseq_targeted.nf:61:22: Unexpected input: '='
+│  61 |         while ( line1=it.readLine() ) {
+╰     |                      ^
+
+
+Error nextflow.config:256:1: Variable declarations cannot be mixed with config statements
+│ 256 | def trace_timestamp = new java.util.Date().format( 'yyyy-MM-dd_HH-mm-s
+╰     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error nextflow.config:259:68: `trace_timestamp` is not defined
+│ 259 | rams.outdir}/pipeline_info/execution_timeline_${trace_timestamp}.html"
+╰     |                                                 ^^^^^^^^^^^^^^^
+
+Error nextflow.config:263:66: `trace_timestamp` is not defined
+│ 263 | params.outdir}/pipeline_info/execution_report_${trace_timestamp}.html"
+╰     |                                                 ^^^^^^^^^^^^^^^
+
+Error nextflow.config:267:65: `trace_timestamp` is not defined
+│ 267 | ${params.outdir}/pipeline_info/execution_trace_${trace_timestamp}.txt"
+╰     |                                                  ^^^^^^^^^^^^^^^
+
+Error nextflow.config:271:62: `trace_timestamp` is not defined
+│ 271 |  "${params.outdir}/pipeline_info/pipeline_dag_${trace_timestamp}.html"
+╰     |                                                 ^^^^^^^^^^^^^^^
+
+Error nextflow.config:294:34: `manifest` is not defined
+│ 294 |         command = "nextflow run $manifest.name -profile <docker/singul
+╰     |                                  ^^^^^^^^
+
+Error nextflow.config:304:15: `manifest` is not defined
+│ 304 | \033[0;35m  ${manifest.name} ${manifest.version}\033[0m
+╰     |               ^^^^^^^^
+
+Error nextflow.config:304:32: `manifest` is not defined
+│ 304 | \033[0;35m  ${manifest.name} ${manifest.version}\033[0m
+╰     |                                ^^^^^^^^
+
+Error nextflow.config:307:26: `manifest` is not defined
+│ 307 |         afterText = """${manifest.doi ? "* The pipeline\n" : ""}${mani
+╰     |                          ^^^^^^^^
+
+Error nextflow.config:307:67: `manifest` is not defined
+│ 307 | i ? "* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "  
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:307:182: `manifest` is not defined
+│ 307 | doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+╰     |                               ^^^^^^^^
+
+Error nextflow.config:312:26: `manifest` is not defined
+│ 312 |     https://github.com/${manifest.name}/blob/master/CITATIONS.md
+╰     |                          ^^^^^^^^
+
+Error nextflow.config:316:22: `validation` is not defined
+│ 316 |         beforeText = validation.help.beforeText
+╰     |                      ^^^^^^^^^^
+
+Error nextflow.config:317:21: `validation` is not defined
+│ 317 |         afterText = validation.help.afterText
+╰     |                     ^^^^^^^^^^
+
+Warn  nextflow.config:307:125: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 307 | ollect { "  https://doi.org/${it.trim().replace('https://doi.org/','')
+╰     |                               ^^
+
+
+Nextflow linting complete!
+ ❌ 8 files had 46 errors
+ ✅ 72 files had no errors

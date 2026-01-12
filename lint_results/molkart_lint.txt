@@ -1,0 +1,329 @@
+Linting Nextflow code..
+Linting: conf/base.config
+Linting: conf/modules.config
+Linting: conf/test_full.config
+Linting: conf/test.config
+Linting: nextflow.config
+Linting: workflows/molkart.nf
+Linting: subworkflows/local/utils_nfcore_molkart_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nfcore_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+Linting: subworkflows/nf-core/utils_nextflow_pipeline/tests/nextflow.config
+Linting: subworkflows/nf-core/utils_nfschema_plugin/main.nf
+Linting: subworkflows/nf-core/utils_nfschema_plugin/tests/nextflow.config
+Linting: nf-test.config
+Linting: main.nf
+Linting: tests/nextflow.config
+Linting: modules/local/createstack/main.nf
+Linting: modules/local/molkartqcpng/main.nf
+Linting: modules/local/createanndata/main.nf
+Linting: modules/local/crophdf5/main.nf
+Linting: modules/local/spot2cell/main.nf
+Linting: modules/local/tiffh5convert/main.nf
+Linting: modules/local/maskfilter/main.nf
+Linting: modules/local/molkartqc/main.nf
+Linting: modules/local/clahe/main.nf
+Linting: modules/local/croptiff/main.nf
+Linting: modules/nf-core/ilastik/multicut/main.nf
+Linting: modules/nf-core/ilastik/pixelclassification/main.nf
+Linting: modules/nf-core/cellpose/main.nf
+Linting: modules/nf-core/cellpose/tests/nextflow_wflows.config
+Linting: modules/nf-core/multiqc/main.nf
+Linting: modules/nf-core/multiqc/tests/nextflow.config
+Linting: modules/nf-core/deepcell/mesmer/main.nf
+Linting: modules/nf-core/deepcell/mesmer/tests/nextflow.config
+Linting: modules/nf-core/mindagap/duplicatefinder/main.nf
+Linting: modules/nf-core/mindagap/duplicatefinder/tests/nextflow.config
+Linting: modules/nf-core/mindagap/mindagap/main.nf
+Linting: modules/nf-core/mindagap/mindagap/tests/nextflow.config
+Linting: modules/nf-core/stardist/main.nf
+Linting: modules/nf-core/stardist/tests/nextflow.config
+
+
+
+
+
+
+
+
+
+
+Warn  modules/nf-core/cellpose/main.nf:25:9: Variable was declared but not used
+│  25 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+Warn  modules/nf-core/cellpose/main.nf:46:9: Variable was declared but not used
+│  46 |     def prefix = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+
+
+
+
+
+
+
+Warn  modules/nf-core/stardist/main.nf:20:9: Variable was declared but not used
+│  20 |     def prefix             = task.ext.prefix ?: "${meta.id}"
+╰     |         ^^^^^^
+
+Warn  modules/nf-core/stardist/main.nf:38:9: Variable was declared but not used
+│  38 |     def args               = task.ext.args   ?: ''
+╰     |         ^^^^
+
+
+Warn  subworkflows/local/utils_nfcore_molkart_pipeline/main.nf:32:5: Parameter was not used -- prefix with `_` to suppress warning
+│  32 |     monochrome_logs   // boolean: Do not use coloured log outputs
+╰     |     ^^^^^^^^^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_molkart_pipeline/main.nf:35:5: Parameter was not used -- prefix with `_` to suppress warning
+│  35 |     input             //  string: Path to input samplesheet
+╰     |     ^^^^^
+
+Warn  subworkflows/local/utils_nfcore_molkart_pipeline/main.nf:42:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  42 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_molkart_pipeline/main.nf:67:144: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  67 | lect { "    https://doi.org/${it.trim().replace('https://doi.org/','')
+╰     |                               ^^
+
+Warn  subworkflows/local/utils_nfcore_molkart_pipeline/main.nf:104:5: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 104 |     Channel
+╰     |     ^^^^^^^
+
+Warn  subworkflows/local/utils_nfcore_molkart_pipeline/main.nf:185:10: Variable was declared but not used
+│ 185 |     def (meta, files) = input
+╰     |          ^^^^
+
+Warn  subworkflows/local/utils_nfcore_molkart_pipeline/main.nf:185:16: Variable was declared but not used
+│ 185 |     def (meta, files) = input
+╰     |                ^^^^^
+
+
+
+Warn  subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 101 | mYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
+╰     |                               ^^^^^^^
+
+
+
+Warn  workflows/molkart.nf:43:19: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  43 |     ch_versions = Channel.empty()
+╰     |                   ^^^^^^^
+
+Warn  workflows/molkart.nf:44:24: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│  44 |     ch_multiqc_files = Channel.empty()
+╰     |                        ^^^^^^^
+
+Warn  workflows/molkart.nf:49:19: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  49 |         .filter { it[3] } // filter samples with membrane
+╰     |                   ^^
+
+Warn  workflows/molkart.nf:87:61: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  87 |             def sorted = [tiffs, stains].transpose().sort { it[1] }
+╰     |                                                             ^^
+
+Warn  workflows/molkart.nf:94:33: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  94 |     grouped_map_stack.filter { !it[2] } // for rows without a present 
+╰     |                                 ^^
+
+Warn  workflows/molkart.nf:97:31: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│  97 |     grouped_map_stack.filter{ it[2] }      // for rows where the membr
+╰     |                               ^^
+
+Warn  workflows/molkart.nf:104:10: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 104 |         [it[0], it[1]]
+╰     |          ^^
+
+Warn  workflows/molkart.nf:104:17: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 104 |         [it[0], it[1]]
+╰     |                 ^^
+
+Warn  workflows/molkart.nf:118:17: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 118 |                 it[2] == null ? tuple(it[0], 1) : tuple(it[0], 2)
+╰     |                 ^^
+
+Warn  workflows/molkart.nf:118:39: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 118 |                 it[2] == null ? tuple(it[0], 1) : tuple(it[0], 2)
+╰     |                                       ^^
+
+Warn  workflows/molkart.nf:118:57: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 118 |                 it[2] == null ? tuple(it[0], 1) : tuple(it[0], 2)
+╰     |                                                         ^^
+
+Warn  workflows/molkart.nf:129:39: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 129 |                     tuple('matchkey', it[1])
+╰     |                                       ^^
+
+Warn  workflows/molkart.nf:130:41: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 130 |                     }.groupTuple().map{ it[1]} )
+╰     |                                         ^^
+
+Warn  workflows/molkart.nf:145:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 145 |     segmentation_masks = Channel.empty()
+╰     |                          ^^^^^^^
+
+Warn  workflows/molkart.nf:148:42: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 148 |             grouped_map_stack.map{ tuple(it[0], it[1]) },
+╰     |                                          ^^
+
+Warn  workflows/molkart.nf:148:49: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 148 |             grouped_map_stack.map{ tuple(it[0], it[1]) },
+╰     |                                                 ^^
+
+Warn  workflows/molkart.nf:150:17: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 150 |                 it[2] == null ? [[:],[]] : tuple(it[0], it[2]) // if n
+╰     |                 ^^
+
+Warn  workflows/molkart.nf:150:50: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 150 |                 it[2] == null ? [[:],[]] : tuple(it[0], it[2]) // if n
+╰     |                                                  ^^
+
+Warn  workflows/molkart.nf:150:57: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 150 |                 it[2] == null ? [[:],[]] : tuple(it[0], it[2]) // if n
+╰     |                                                         ^^
+
+Warn  workflows/molkart.nf:156:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 156 |                 .combine(Channel.of('mesmer')))
+╰     |                          ^^^^^^^
+
+Warn  workflows/molkart.nf:168:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 168 |                 .combine(Channel.of('stardist')))
+╰     |                          ^^^^^^^
+
+Warn  workflows/molkart.nf:173:78: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 173 | tom_model ? stack_mix.combine(Channel.fromPath(params.cellpose_custom_
+╰     |                               ^^^^^^^
+
+Warn  workflows/molkart.nf:177:63: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 177 |          cellpose_custom_model ? cellpose_custom_model.map{it[2]} : []
+╰     |                                                            ^^
+
+Warn  workflows/molkart.nf:182:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 182 |                 .combine(Channel.of('cellpose')))
+╰     |                          ^^^^^^^
+
+Warn  workflows/molkart.nf:193:17: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 193 |                 it[2] == null ? tuple(it[0], 1) : tuple(it[0], 2)
+╰     |                 ^^
+
+Warn  workflows/molkart.nf:193:39: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 193 |                 it[2] == null ? tuple(it[0], 1) : tuple(it[0], 2)
+╰     |                                       ^^
+
+Warn  workflows/molkart.nf:193:57: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 193 |                 it[2] == null ? tuple(it[0], 1) : tuple(it[0], 2)
+╰     |                                                         ^^
+
+Warn  workflows/molkart.nf:200:13: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 200 |             Channel.fromPath(params.ilastik_pixel_project)
+╰     |             ^^^^^^^
+
+Warn  workflows/molkart.nf:203:30: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 203 |             ilastik_in.map{ [it[0], it[1]] },
+╰     |                              ^^
+
+Warn  workflows/molkart.nf:203:37: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 203 |             ilastik_in.map{ [it[0], it[1]] },
+╰     |                                     ^^
+
+Warn  workflows/molkart.nf:204:30: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 204 |             ilastik_in.map{ [it[0], it[2]] }
+╰     |                              ^^
+
+Warn  workflows/molkart.nf:204:37: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 204 |             ilastik_in.map{ [it[0], it[2]] }
+╰     |                                     ^^
+
+Warn  workflows/molkart.nf:212:22: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 212 |             .combine(Channel.fromPath(params.ilastik_multicut_project)
+╰     |                      ^^^^^^^
+
+Warn  workflows/molkart.nf:216:36: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 216 |             multicut_in.map{ tuple(it[0], it[1]) },
+╰     |                                    ^^
+
+Warn  workflows/molkart.nf:216:43: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 216 |             multicut_in.map{ tuple(it[0], it[1]) },
+╰     |                                           ^^
+
+Warn  workflows/molkart.nf:217:36: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 217 |             multicut_in.map{ tuple(it[0], it[4]) },
+╰     |                                    ^^
+
+Warn  workflows/molkart.nf:217:43: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 217 |             multicut_in.map{ tuple(it[0], it[4]) },
+╰     |                                           ^^
+
+Warn  workflows/molkart.nf:218:36: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 218 |             multicut_in.map{ tuple(it[0], it[3]) }
+╰     |                                    ^^
+
+Warn  workflows/molkart.nf:218:43: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 218 |             multicut_in.map{ tuple(it[0], it[3]) }
+╰     |                                           ^^
+
+Warn  workflows/molkart.nf:223:26: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 223 |                 .combine(Channel.of('ilastik')))
+╰     |                          ^^^^^^^
+
+Warn  workflows/molkart.nf:298:32: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 298 |     ch_multiqc_config        = Channel.fromPath(
+╰     |                                ^^^^^^^
+
+Warn  workflows/molkart.nf:301:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 301 |         Channel.fromPath(params.multiqc_config, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/molkart.nf:302:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 302 |         Channel.empty()
+╰     |         ^^^^^^^
+
+Warn  workflows/molkart.nf:304:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 304 |         Channel.fromPath(params.multiqc_logo, checkIfExists: true) :
+╰     |         ^^^^^^^
+
+Warn  workflows/molkart.nf:305:9: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 305 |         Channel.fromPath("$projectDir/assets/nf-core-molkart_logo_ligh
+╰     |         ^^^^^^^
+
+Warn  workflows/molkart.nf:309:27: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 309 |     ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_p
+╰     |                           ^^^^^^^
+
+Warn  workflows/molkart.nf:315:45: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+│ 315 |     ch_methods_description                = Channel.value(
+╰     |                                             ^^^^^^^
+
+Warn  workflows/molkart.nf:330:43: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 330 |             CROPHDF5.out.crop_summary.map{it[1]}
+╰     |                                           ^^
+
+Warn  workflows/molkart.nf:335:34: Implicit closure parameter is deprecated, declare an explicit parameter instead
+│ 335 |             MOLKARTQC.out.qc.map{it[1]}
+╰     |                                  ^^
+
+
+Warn  conf/modules.config:187:23: Parameter was not used -- prefix with `_` to suppress warning
+│ 187 |             saveAs: { filename -> "${meta.id}_stardist_mask.tif" }
+╰     |                       ^^^^^^^^
+
+Warn  conf/modules.config:222:23: Parameter was not used -- prefix with `_` to suppress warning
+│ 222 |             saveAs: { filename -> "${meta.id}_cellpose_mask.tif" }
+╰     |                       ^^^^^^^^
+
+
+Error nf-test.config:1:1: Config settings must be assigned with an equals sign (`=`)
+│   1 | config {
+│     | ^^^^^^^^
+│   2 |     // location for all nf-test tests
+│   3 |     testsDir "."
+│   4 | 
+╰   5 |     // nf-test directory including temporary files for each test
+
+
+Nextflow linting complete!
+ ❌ 1 file had 1 error
+ ✅ 39 files had no errors
