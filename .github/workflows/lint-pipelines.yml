@@ -66,7 +66,9 @@ jobs:
           ln -s build/releases/nextflow-*-dist build/releases/nextflow
 
       - name: Add Nextflow to PATH
-        run: echo "${{ github.workspace }}/nextflow-src/build/releases" >> $GITHUB_PATH
+        run: |
+          ls -l echo "${{ github.workspace }}/nextflow-src/build/releases"
+          echo "${{ github.workspace }}/nextflow-src/build/releases" >> $GITHUB_PATH
 
       - name: Install dependencies
         run: pip install .
