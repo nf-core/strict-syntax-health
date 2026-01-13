@@ -1,12 +1,16 @@
 # nf-core Strict Syntax Health Report
 
-This repository tracks the health of nf-core pipelines with respect to Nextflow's strict syntax linting.
+This repository tracks the health of nf-core pipelines with respect to Nextflow's [strict syntax](https://www.nextflow.io/docs/latest/strict-syntax.html) linting.
+
+Strict syntax is backwards compatible with existing Nextflow code, but enforces stricter rules to catch common errors and improve code quality. The goal is for all nf-core pipelines to run without errors using strict syntax.
 
 **Last updated:** 2026-01-13 05:26:50 UTC
 
 **Nextflow version:** 25.12.0-edge
 
 **Total:** 4 parse errors, 4067 errors, 9669 warnings across 129 pipelines
+
+**Zero errors:** 8 pipelines (6.2%)
 
 ## Trends
 
@@ -160,3 +164,23 @@ The linting checks for strict syntax compliance in Nextflow DSL2 code.
 - **Parse errors** indicate pipelines where `nextflow lint` could not run at all, typically due to syntax errors that prevent Nextflow from parsing the pipeline code
 - **Errors** indicate syntax issues that will cause problems in future Nextflow versions
 - **Warnings** indicate deprecated patterns that should be updated
+
+## Running Locally
+
+You can run `nextflow lint` on your own pipeline to check for strict syntax issues:
+
+```bash
+nextflow lint .
+```
+
+For JSON output that can be parsed programmatically:
+
+```bash
+nextflow lint . -o json
+```
+
+See the [strict syntax documentation](https://www.nextflow.io/docs/latest/strict-syntax.html) for more information about the rules being checked.
+
+## Getting Help
+
+If you need help fixing strict syntax errors in your pipeline, the [Nextflow community forum](https://community.seqera.io/) is a great place to ask questions.
