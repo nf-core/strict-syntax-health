@@ -1,16 +1,20 @@
 # nf-core Strict Syntax Health Report
 
-This repository tracks the health of nf-core pipelines with respect to Nextflow's [strict syntax](https://www.nextflow.io/docs/latest/strict-syntax.html) linting. The documentation describes the differences from standard Nextflow syntax and includes many examples to help with migration and fixing errors.
+This repository tracks the health of nf-core pipelines with respect to Nextflow's _strict syntax_ linting.
 
-Strict syntax is backwards compatible with existing Nextflow code, but enforces stricter rules to catch common errors and improve code quality. The goal is for all nf-core pipelines to run without errors using strict syntax. See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline - fixing all errors from `nextflow lint` will be a requirement by early spring 2026.
+The [Nextflow docs](https://www.nextflow.io/docs/latest/strict-syntax.html) describes the differences from standard Nextflow syntax and includes many examples to help with migration and fixing errors.
+Strict syntax is backwards compatible with existing Nextflow code, but enforces stricter rules to catch common errors and improve code quality.
 
-**Last updated:** 2026-01-13 07:00:17 UTC
+The goal is for all nf-core pipelines to run without errors using strict syntax.
 
-**Nextflow version:** 25.12.0-edge
+> [!IMPORTANT]
+> See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline.
+> **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**
 
-**Total:** 4 parse errors, 4067 errors, 9669 warnings across 129 pipelines
-
-**Zero errors:** 8 pipelines (6.2%)
+- **Last updated:** 2026-01-13 07:00:17 UTC
+- **Nextflow version:** 25.12.0-edge
+- **Total:** 4 parse errors, 4067 errors, 9669 warnings across 129 pipelines
+- **Zero errors:** 8 pipelines (6.2%)
 
 ## Trends
 
