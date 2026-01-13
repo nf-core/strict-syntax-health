@@ -25,8 +25,8 @@ console = Console()
 
 
 def _sort_results(results: list[dict]) -> list[dict]:
-    """Sort results by parse_error last, then errors (ascending), then warnings (ascending)."""
-    return sorted(results, key=lambda x: (x.get("parse_error", False), x["errors"], x["warnings"]))
+    """Sort results by parse_error first, then errors (descending), then warnings (descending)."""
+    return sorted(results, key=lambda x: (not x.get("parse_error", False), -x["errors"], -x["warnings"]))
 
 
 def update_pipelines_json() -> None:
@@ -413,12 +413,14 @@ def generate_readme(results: list[dict], include_chart: bool = False, nextflow_v
             parse_error_str = "Yes"
             error_str = "-"
             warning_str = "-"
+            status_emoji = ":x:"
         else:
             parse_error_str = "No"
             error_str = str(errors)
             warning_str = str(warnings)
+            status_emoji = ":white_check_mark:" if errors == 0 else ":x:"
 
-        name_link = f"[{result['name']}]({result['html_url']})"
+        name_link = f"{status_emoji} [{result['name']}]({result['html_url']})"
         lint_file_link = f"[View]({LINT_RESULTS_DIR}/{result['name']}_lint.txt)"
         lines.append(f"| {name_link} | {parse_error_str} | {error_str} | {warning_str} | {lint_file_link} |")
 
