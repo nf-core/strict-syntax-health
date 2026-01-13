@@ -76,7 +76,8 @@ jobs:
 
       - name: Add Nextflow to PATH
         run: |
-          cd "${{ github.workspace }}"
+          cd ${{ github.workspace }}
+          tree -L 3
           ls -l nextflow-src/build/releases"
           echo nextflow-src/build/releases" >> $GITHUB_PATH
 
