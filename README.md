@@ -2,7 +2,7 @@
 
 This repository tracks the health of nf-core pipelines with respect to Nextflow's strict syntax linting.
 
-**Last updated:** 2026-01-12 21:54:43 UTC
+**Last updated:** 2026-01-13 01:27:18 UTC
 
 **Nextflow version:** 25.12.0-edge
 
