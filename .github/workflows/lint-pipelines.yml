@@ -92,10 +92,11 @@ jobs:
       - name: Run linting
         run: ${{ steps.build-cmd.outputs.cmd }}
 
-      - name: Run pre-commit on all files to fix formatting
-        run: |
-          pip install pre-commit
-          pre-commit run --all-files || true
+      - name: Run prek on all files to fix formatting
+        uses: j178/prek-action@v1
+        with:
+          install-only: true
+      - run: prek run --all-files || true
 
       - name: Commit and push changes
         run: |

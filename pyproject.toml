@@ -13,6 +13,9 @@ dependencies = [
     "kaleido>=0.2",
 ]
 
+[project.optional-dependencies]
+dev = ["prek", "ruff"]
+
 [project.scripts]
 strict-syntax-health = "strict_syntax_health.cli:main"
 
