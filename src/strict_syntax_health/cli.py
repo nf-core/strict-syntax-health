@@ -12,14 +12,26 @@ import rich_click as click
 from rich.console import Console
 from rich.table import Table
 
+# API URLs
 PIPELINES_URL = "https://nf-co.re/pipelines.json"
-PIPELINES_JSON_PATH = Path("pipelines.json")
+MODULES_REPO_URL = "https://github.com/nf-core/modules.git"
+
+# Directory paths
 PIPELINES_DIR = Path("pipelines")
+MODULES_DIR = Path("modules")
 LINT_RESULTS_DIR = Path("lint_results")
+
+# Pipelines.json now lives inside pipelines/
+PIPELINES_JSON_PATH = PIPELINES_DIR / "pipelines.json"
+
+# History and README
+HISTORY_PATH = LINT_RESULTS_DIR / "history.json"
 README_PATH = Path("README.md")
-HISTORY_PATH = Path("history.json")
-ERRORS_CHART_PATH = Path("errors_chart.png")
-WARNINGS_CHART_PATH = Path("warnings_chart.png")
+
+# Lint results subdirectories
+PIPELINES_LINT_RESULTS_DIR = LINT_RESULTS_DIR / "pipelines"
+MODULES_LINT_RESULTS_DIR = LINT_RESULTS_DIR / "modules"
+SUBWORKFLOWS_LINT_RESULTS_DIR = LINT_RESULTS_DIR / "subworkflows"
 
 console = Console()
 
@@ -32,6 +44,7 @@ def _sort_results(results: list[dict]) -> list[dict]:
 def update_pipelines_json() -> None:
     """Download the latest pipelines.json from nf-co.re."""
     console.print(f"Downloading {PIPELINES_URL}...")
+    PIPELINES_JSON_PATH.parent.mkdir(parents=True, exist_ok=True)
     response = httpx.get(PIPELINES_URL, timeout=60)
     response.raise_for_status()
     PIPELINES_JSON_PATH.write_bytes(response.content)
@@ -61,6 +74,98 @@ def load_pipelines() -> list[dict]:
 
     console.print(f"Found {len(pipelines)} active pipelines")
     return pipelines
+
+
+def clone_modules_repo() -> Path:
+    """Clone or update the nf-core/modules repository."""
+    if MODULES_DIR.exists():
+        console.print("Updating nf-core/modules repository...")
+        subprocess.run(
+            ["git", "-C", str(MODULES_DIR), "fetch", "--quiet", "origin", "master"],
+            check=True,
+            capture_output=True,
+        )
+        subprocess.run(
+            ["git", "-C", str(MODULES_DIR), "checkout", "--quiet", "master"],
+            check=True,
+            capture_output=True,
+        )
+        subprocess.run(
+            ["git", "-C", str(MODULES_DIR), "pull", "--quiet"],
+            check=True,
+            capture_output=True,
+        )
+    else:
+        console.print("Cloning nf-core/modules repository...")
+        subprocess.run(
+            ["git", "clone", "--quiet", "--depth", "1", MODULES_REPO_URL, str(MODULES_DIR)],
+            check=True,
+            capture_output=True,
+        )
+    console.print(f"nf-core/modules repository ready at {MODULES_DIR}")
+    return MODULES_DIR
+
+
+def discover_modules() -> list[dict]:
+    """Discover all modules in the nf-core/modules repository."""
+    modules_path = MODULES_DIR / "modules" / "nf-core"
+    if not modules_path.exists():
+        console.print(f"[red]Modules path not found: {modules_path}[/red]")
+        return []
+
+    modules = []
+    # Walk through tool directories
+    for tool_dir in sorted(modules_path.iterdir()):
+        if not tool_dir.is_dir() or tool_dir.name.startswith("."):
+            continue
+        # Walk through subcommand directories
+        for subcommand_dir in sorted(tool_dir.iterdir()):
+            if not subcommand_dir.is_dir() or subcommand_dir.name.startswith("."):
+                continue
+            main_nf = subcommand_dir / "main.nf"
+            if main_nf.exists():
+                # Module name is tool_subcommand (e.g., bwa_mem)
+                name = f"{tool_dir.name}_{subcommand_dir.name}"
+                modules.append(
+                    {
+                        "name": name,
+                        "path": subcommand_dir,
+                        "html_url": (
+                            f"https://github.com/nf-core/modules/tree/master/modules/nf-core/"
+                            f"{tool_dir.name}/{subcommand_dir.name}"
+                        ),
+                    }
+                )
+
+    console.print(f"Found {len(modules)} modules")
+    return modules
+
+
+def discover_subworkflows() -> list[dict]:
+    """Discover all subworkflows in the nf-core/modules repository."""
+    subworkflows_path = MODULES_DIR / "subworkflows" / "nf-core"
+    if not subworkflows_path.exists():
+        console.print(f"[red]Subworkflows path not found: {subworkflows_path}[/red]")
+        return []
+
+    subworkflows = []
+    for subworkflow_dir in sorted(subworkflows_path.iterdir()):
+        if not subworkflow_dir.is_dir() or subworkflow_dir.name.startswith("."):
+            continue
+        main_nf = subworkflow_dir / "main.nf"
+        if main_nf.exists():
+            subworkflows.append(
+                {
+                    "name": subworkflow_dir.name,
+                    "path": subworkflow_dir,
+                    "html_url": (
+                        f"https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/{subworkflow_dir.name}"
+                    ),
+                }
+            )
+
+    console.print(f"Found {len(subworkflows)} subworkflows")
+    return subworkflows
 
 
 def clone_pipeline(pipeline: dict) -> Path:
@@ -128,10 +233,20 @@ def get_nextflow_version() -> str:
     return "unknown"
 
 
-def lint_pipeline(repo_path: Path) -> dict:
-    """Run nextflow lint on a pipeline (JSON output for parsing)."""
+def lint_component(repo_path: Path, target_path: Path | None = None) -> dict:
+    """Run nextflow lint on a component (JSON output for parsing).
+
+    Args:
+        repo_path: The repository root path (used as cwd)
+        target_path: Optional specific path to lint (relative to repo_path or absolute)
+    """
+    if target_path:
+        cmd = ["nextflow", "lint", str(target_path), "-o", "json"]
+    else:
+        cmd = ["nextflow", "lint", ".", "-o", "json"]
+
     result = subprocess.run(
-        ["nextflow", "lint", ".", "-o", "json"],
+        cmd,
         cwd=repo_path,
         capture_output=True,
         text=True,
@@ -144,19 +259,31 @@ def lint_pipeline(repo_path: Path) -> dict:
         lint_result["parse_error"] = False
         return lint_result
     except json.JSONDecodeError:
-        console.print(f"[red]Failed to parse lint output for {repo_path.name}[/red]")
+        name = target_path.name if target_path else repo_path.name
+        console.print(f"[red]Failed to parse lint output for {name}[/red]")
         console.print(f"stdout: {result.stdout}")
         console.print(f"stderr: {result.stderr}")
         return {"summary": {"errors": 0}, "errors": [], "warnings": [], "parse_error": True}
 
 
-def lint_pipeline_markdown(repo_path: Path, pipeline_name: str) -> None:
-    """Run nextflow lint on a pipeline and save markdown output to file."""
-    LINT_RESULTS_DIR.mkdir(parents=True, exist_ok=True)
-    output_file = LINT_RESULTS_DIR / f"{pipeline_name}_lint.md"
+def lint_pipeline(repo_path: Path) -> dict:
+    """Run nextflow lint on a pipeline (JSON output for parsing)."""
+    return lint_component(repo_path)
+
+
+def lint_component_markdown(repo_path: Path, name: str, output_dir: Path, target_path: Path | None = None) -> None:
+    """Run nextflow lint on a component and save markdown output to file."""
+    output_dir.mkdir(parents=True, exist_ok=True)
+    output_file = output_dir / f"{name}_lint.md"
+
+    # Build command - if target_path specified, lint that specific path
+    if target_path:
+        cmd = ["nextflow", "lint", str(target_path), "-o", "markdown"]
+    else:
+        cmd = ["nextflow", "lint", ".", "-o", "markdown"]
 
     result = subprocess.run(
-        ["nextflow", "lint", ".", "-o", "markdown"],
+        cmd,
         cwd=repo_path,
         capture_output=True,
         text=True,
@@ -171,17 +298,17 @@ def lint_pipeline_markdown(repo_path: Path, pipeline_name: str) -> None:
     console.print(f"  Saved lint output to {output_file}")
 
 
-def run_lint(pipelines: list[dict]) -> list[dict]:
+def run_pipeline_lint(pipelines: list[dict]) -> list[dict]:
     """Clone and lint all pipelines."""
     results = []
 
     for pipeline in pipelines:
-        console.print(f"Processing {pipeline['name']}...")
+        console.print(f"Processing pipeline {pipeline['name']}...")
 
         try:
             repo_path = clone_pipeline(pipeline)
             lint_result = lint_pipeline(repo_path)
-            lint_pipeline_markdown(repo_path, pipeline["name"])
+            lint_component_markdown(repo_path, pipeline["name"], PIPELINES_LINT_RESULTS_DIR)
 
             results.append(
                 {
@@ -211,9 +338,85 @@ def run_lint(pipelines: list[dict]) -> list[dict]:
     return results
 
 
-def display_results(results: list[dict]) -> None:
+def run_modules_lint(modules: list[dict]) -> list[dict]:
+    """Lint all modules."""
+    results = []
+
+    for module in modules:
+        console.print(f"Processing module {module['name']}...")
+
+        try:
+            lint_result = lint_component(MODULES_DIR, module["path"])
+            lint_component_markdown(MODULES_DIR, module["name"], MODULES_LINT_RESULTS_DIR, module["path"])
+
+            results.append(
+                {
+                    "name": module["name"],
+                    "html_url": module["html_url"],
+                    "errors": lint_result.get("summary", {}).get("errors", 0),
+                    "warnings": len(lint_result.get("warnings", [])),
+                    "parse_error": lint_result.get("parse_error", False),
+                    "lint_details": lint_result,
+                }
+            )
+        except subprocess.CalledProcessError as e:
+            console.print(f"[red]Failed to process module {module['name']}: {e}[/red]")
+            results.append(
+                {
+                    "name": module["name"],
+                    "html_url": module["html_url"],
+                    "errors": 0,
+                    "warnings": 0,
+                    "parse_error": True,
+                    "lint_details": {},
+                }
+            )
+
+    return results
+
+
+def run_subworkflows_lint(subworkflows: list[dict]) -> list[dict]:
+    """Lint all subworkflows."""
+    results = []
+
+    for subworkflow in subworkflows:
+        console.print(f"Processing subworkflow {subworkflow['name']}...")
+
+        try:
+            lint_result = lint_component(MODULES_DIR, subworkflow["path"])
+            lint_component_markdown(
+                MODULES_DIR, subworkflow["name"], SUBWORKFLOWS_LINT_RESULTS_DIR, subworkflow["path"]
+            )
+
+            results.append(
+                {
+                    "name": subworkflow["name"],
+                    "html_url": subworkflow["html_url"],
+                    "errors": lint_result.get("summary", {}).get("errors", 0),
+                    "warnings": len(lint_result.get("warnings", [])),
+                    "parse_error": lint_result.get("parse_error", False),
+                    "lint_details": lint_result,
+                }
+            )
+        except subprocess.CalledProcessError as e:
+            console.print(f"[red]Failed to process subworkflow {subworkflow['name']}: {e}[/red]")
+            results.append(
+                {
+                    "name": subworkflow["name"],
+                    "html_url": subworkflow["html_url"],
+                    "errors": 0,
+                    "warnings": 0,
+                    "parse_error": True,
+                    "lint_details": {},
+                }
+            )
+
+    return results
+
+
+def display_results(results: list[dict], title: str = "nf-core Strict Syntax Health") -> None:
     """Display results in a rich table."""
-    table = Table(title="nf-core Pipeline Strict Syntax Health")
+    table = Table(title=title)
     table.add_column("Pipeline", style="cyan")
     table.add_column("Parse Error", justify="right")
     table.add_column("Errors", justify="right")
@@ -250,30 +453,33 @@ def display_results(results: list[dict]) -> None:
     )
 
 
-def load_history() -> list[dict]:
+def load_history() -> dict:
     """Load historical results from the history file."""
     if HISTORY_PATH.exists():
-        return json.loads(HISTORY_PATH.read_text())
-    return []
+        data = json.loads(HISTORY_PATH.read_text())
+        # Handle both old list format and new dict format
+        if isinstance(data, list):
+            # Migrate old format to new format
+            return {"pipelines": data, "modules": [], "subworkflows": []}
+        return data
+    return {"pipelines": [], "modules": [], "subworkflows": []}
 
 
-def save_history(history: list[dict]) -> None:
+def save_history(history: dict) -> None:
     """Save historical results to the history file."""
+    HISTORY_PATH.parent.mkdir(parents=True, exist_ok=True)
     HISTORY_PATH.write_text(json.dumps(history, indent=2))
     console.print(f"Updated {HISTORY_PATH}")
 
 
-def update_history(results: list[dict]) -> list[dict]:
-    """Add current results to history and return updated history."""
-    history = load_history()
-
-    # Calculate categories for this run
+def _create_history_entry(results: list[dict]) -> dict:
+    """Create a history entry from results."""
     valid_results = [r for r in results if not r.get("parse_error", False)]
     parse_error_results = [r for r in results if r.get("parse_error", False)]
 
-    entry = {
+    return {
         "date": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
-        "total_pipelines": len(results),
+        "total": len(results),
         "parse_errors": len(parse_error_results),
         "errors_zero": sum(1 for r in valid_results if r["errors"] == 0),
         "errors_low": sum(1 for r in valid_results if 0 < r["errors"] <= 5),
@@ -283,14 +489,37 @@ def update_history(results: list[dict]) -> list[dict]:
         "warnings_high": sum(1 for r in valid_results if r["warnings"] > 20),
     }
 
-    # Check if we already have an entry for today and update it, otherwise append
+
+def _update_history_for_type(history_list: list[dict], entry: dict) -> list[dict]:
+    """Update history list for a specific type, replacing today's entry if it exists."""
     today = entry["date"]
-    for i, h in enumerate(history):
+    for i, h in enumerate(history_list):
         if h["date"] == today:
-            history[i] = entry
-            break
-    else:
-        history.append(entry)
+            history_list[i] = entry
+            return history_list
+    history_list.append(entry)
+    return history_list
+
+
+def update_history(
+    pipeline_results: list[dict] | None = None,
+    module_results: list[dict] | None = None,
+    subworkflow_results: list[dict] | None = None,
+) -> dict:
+    """Add current results to history and return updated history."""
+    history = load_history()
+
+    if pipeline_results is not None:
+        entry = _create_history_entry(pipeline_results)
+        history["pipelines"] = _update_history_for_type(history.get("pipelines", []), entry)
+
+    if module_results is not None:
+        entry = _create_history_entry(module_results)
+        history["modules"] = _update_history_for_type(history.get("modules", []), entry)
+
+    if subworkflow_results is not None:
+        entry = _create_history_entry(subworkflow_results)
+        history["subworkflows"] = _update_history_for_type(history.get("subworkflows", []), entry)
 
     save_history(history)
     return history
@@ -301,6 +530,7 @@ def _create_stacked_chart(
     series: list[tuple[list[int], str, str, str]],  # (values, name, line_color, fill_color)
     title: str,
     output_path: Path,
+    y_label: str = "Number of Items",
 ) -> None:
     """Create a stacked area chart and save it to a file."""
     fig = go.Figure()
@@ -320,7 +550,7 @@ def _create_stacked_chart(
     fig.update_layout(
         title={"text": title, "x": 0.5, "xanchor": "center", "font": {"size": 20}},
         xaxis_title="Date",
-        yaxis_title="Number of Pipelines",
+        yaxis_title=y_label,
         legend={"orientation": "h", "yanchor": "bottom", "y": 1.02, "xanchor": "center", "x": 0.5},
         template="plotly_white",
         hovermode="x unified",
@@ -331,13 +561,15 @@ def _create_stacked_chart(
     console.print(f"Generated {output_path}")
 
 
-def generate_charts(history: list[dict]) -> None:
-    """Generate charts showing pipeline health over time."""
+def generate_charts_for_type(history: list[dict], output_dir: Path, type_name: str) -> None:
+    """Generate error and warning charts for a specific type (pipelines, modules, subworkflows)."""
     if not history:
-        console.print("[yellow]Not enough history to generate charts[/yellow]")
+        console.print(f"[yellow]Not enough history to generate {type_name} charts[/yellow]")
         return
 
+    output_dir.mkdir(parents=True, exist_ok=True)
     dates = [h["date"] for h in history]
+    y_label = f"Number of {type_name.title()}"
 
     _create_stacked_chart(
         dates,
@@ -347,8 +579,9 @@ def generate_charts(history: list[dict]) -> None:
             ([h["errors_high"] for h in history], ">5 errors", "#e74c3c", "rgba(231, 76, 60, 0.7)"),
             ([h.get("parse_errors", 0) for h in history], "Parse errors", "#8e44ad", "rgba(142, 68, 173, 0.7)"),
         ],
-        "Errors Over Time",
-        ERRORS_CHART_PATH,
+        f"{type_name.title()} Errors Over Time",
+        output_dir / "errors_chart.png",
+        y_label,
     )
 
     _create_stacked_chart(
@@ -359,17 +592,34 @@ def generate_charts(history: list[dict]) -> None:
             ([h["warnings_high"] for h in history], ">20 warnings", "#9b59b6", "rgba(155, 89, 182, 0.7)"),
             ([h.get("parse_errors", 0) for h in history], "Parse errors", "#8e44ad", "rgba(142, 68, 173, 0.7)"),
         ],
-        "Warnings Over Time",
-        WARNINGS_CHART_PATH,
+        f"{type_name.title()} Warnings Over Time",
+        output_dir / "warnings_chart.png",
+        y_label,
     )
 
 
-def generate_readme(results: list[dict], include_chart: bool = False, nextflow_version: str = "unknown") -> str:
-    """Generate README content with results."""
-    now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
+def generate_all_charts(history: dict) -> None:
+    """Generate charts for all types (pipelines, modules, subworkflows)."""
+    if history.get("pipelines"):
+        generate_charts_for_type(history["pipelines"], PIPELINES_LINT_RESULTS_DIR, "pipelines")
+    if history.get("modules"):
+        generate_charts_for_type(history["modules"], MODULES_LINT_RESULTS_DIR, "modules")
+    if history.get("subworkflows"):
+        generate_charts_for_type(history["subworkflows"], SUBWORKFLOWS_LINT_RESULTS_DIR, "subworkflows")
+
+
+def _generate_results_section(
+    results: list[dict],
+    type_name: str,
+    type_singular: str,
+    lint_results_dir: Path,
+    include_charts: bool,
+) -> list[str]:
+    """Generate a results section for a specific type (pipelines, modules, subworkflows)."""
+    if not results:
+        return []
 
     sorted_results = _sort_results(results)
-
     valid_results = [r for r in results if not r.get("parse_error", False)]
     parse_error_count = sum(1 for r in results if r.get("parse_error", False))
     total_errors = sum(r["errors"] for r in valid_results)
@@ -378,51 +628,34 @@ def generate_readme(results: list[dict], include_chart: bool = False, nextflow_v
     zero_error_percentage = (zero_error_count / len(results) * 100) if results else 0
 
     lines = [
-        "# nf-core Strict Syntax Health Report",
+        f"## {type_name.title()}",
         "",
-        "This repository tracks the health of nf-core pipelines with respect to Nextflow's _strict syntax_ linting.",
-        "",
-        "The [Nextflow docs](https://www.nextflow.io/docs/latest/strict-syntax.html) describes the differences "
-        "from standard Nextflow syntax and includes many examples to help with migration and fixing errors.",
-        "Strict syntax is backwards compatible with existing Nextflow code, "
-        "but enforces stricter rules to catch common errors and improve code quality.",
-        "",
-        "The goal is for all nf-core pipelines to run without errors using strict syntax.",
-        "",
-        "> [!IMPORTANT]",
-        "> See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) "
-        "for details on the migration timeline.",
-        "> **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**",
-        "",
-        f"- **Last updated:** {now}",
-        f"- **Nextflow version:** {nextflow_version}",
         f"- **Total:** {parse_error_count} parse errors, {total_errors} errors, "
-        f"{total_warnings} warnings across {len(results)} pipelines",
-        f"- **Zero errors:** {zero_error_count} pipelines ({zero_error_percentage:.1f}%)",
+        f"{total_warnings} warnings across {len(results)} {type_name}",
+        f"- **Zero errors:** {zero_error_count} {type_name} ({zero_error_percentage:.1f}%)",
         "",
     ]
 
-    if include_chart and ERRORS_CHART_PATH.exists() and WARNINGS_CHART_PATH.exists():
+    # Add charts in a side-by-side table
+    errors_chart = lint_results_dir / "errors_chart.png"
+    warnings_chart = lint_results_dir / "warnings_chart.png"
+    if include_charts and errors_chart.exists() and warnings_chart.exists():
         lines.extend(
             [
-                "## Trends",
-                "",
-                "### Errors",
-                "",
-                f"![Errors Chart]({ERRORS_CHART_PATH})",
-                "",
-                "### Warnings",
-                "",
-                f"![Warnings Chart]({WARNINGS_CHART_PATH})",
+                "| Errors | Warnings |",
+                "|:------:|:--------:|",
+                f"| ![Errors]({errors_chart}) | ![Warnings]({warnings_chart}) |",
                 "",
             ]
         )
 
+    # Results table in a collapsible details section
     lines.extend(
         [
-            "## Results",
+            "<details>",
+            f"<summary>{type_singular.title()} Results ({len(results)} {type_name})</summary>",
             "",
-            "| Pipeline | Parse Error | Errors | Warnings | Lint Output |",
+            f"| {type_singular.title()} | Parse Error | Errors | Warnings | Lint Output |",
             "|----------|:-----------:|-------:|---------:|:-----------:|",
         ]
     )
@@ -444,19 +677,83 @@ def generate_readme(results: list[dict], include_chart: bool = False, nextflow_v
             status_emoji = ":white_check_mark:" if errors == 0 else ":x:"
 
         name_link = f"{status_emoji} [{result['name']}]({result['html_url']})"
-        lint_file_link = f"[View]({LINT_RESULTS_DIR}/{result['name']}_lint.md)"
+        lint_file_link = f"[View]({lint_results_dir}/{result['name']}_lint.md)"
         lines.append(f"| {name_link} | {parse_error_str} | {error_str} | {warning_str} | {lint_file_link} |")
 
     lines.extend(
         [
             "",
+            "</details>",
+            "",
+        ]
+    )
+
+    return lines
+
+
+def generate_readme(
+    pipeline_results: list[dict] | None = None,
+    module_results: list[dict] | None = None,
+    subworkflow_results: list[dict] | None = None,
+    include_charts: bool = False,
+    nextflow_version: str = "unknown",
+) -> str:
+    """Generate README content with results for all types."""
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
+
+    lines = [
+        "# nf-core Strict Syntax Health Report",
+        "",
+        "This repository tracks the health of nf-core pipelines, modules, and subworkflows "
+        "with respect to Nextflow's _strict syntax_ linting.",
+        "",
+        "The [Nextflow docs](https://www.nextflow.io/docs/latest/strict-syntax.html) describes the differences "
+        "from standard Nextflow syntax and includes many examples to help with migration and fixing errors.",
+        "Strict syntax is backwards compatible with existing Nextflow code, "
+        "but enforces stricter rules to catch common errors and improve code quality.",
+        "",
+        "The goal is for all nf-core pipelines to run without errors using strict syntax.",
+        "",
+        "> [!IMPORTANT]",
+        "> See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) "
+        "for details on the migration timeline.",
+        "> **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**",
+        "",
+        f"- **Last updated:** {now}",
+        f"- **Nextflow version:** {nextflow_version}",
+        "",
+    ]
+
+    # Add sections for each type
+    if pipeline_results:
+        lines.extend(
+            _generate_results_section(
+                pipeline_results, "pipelines", "pipeline", PIPELINES_LINT_RESULTS_DIR, include_charts
+            )
+        )
+
+    if module_results:
+        lines.extend(
+            _generate_results_section(module_results, "modules", "module", MODULES_LINT_RESULTS_DIR, include_charts)
+        )
+
+    if subworkflow_results:
+        lines.extend(
+            _generate_results_section(
+                subworkflow_results, "subworkflows", "subworkflow", SUBWORKFLOWS_LINT_RESULTS_DIR, include_charts
+            )
+        )
+
+    lines.extend(
+        [
             "## About",
             "",
-            "This report is generated weekly by running `nextflow lint` on each nf-core pipeline.",
+            "This report is generated daily by running `nextflow lint` on each nf-core pipeline, module, "
+            "and subworkflow.",
             "The linting checks for strict syntax compliance in Nextflow DSL2 code.",
             "",
-            "- **Parse errors** indicate pipelines where `nextflow lint` could not run at all, "
-            "typically due to syntax errors that prevent Nextflow from parsing the pipeline code",
+            "- **Parse errors** indicate items where `nextflow lint` could not run at all, "
+            "typically due to syntax errors that prevent Nextflow from parsing the code",
             "- **Errors** indicate syntax issues that will cause problems in future Nextflow versions",
             "- **Warnings** indicate deprecated patterns that should be updated, "
             "but having warnings is fine (though it's nice to fix those as well if possible)",
@@ -506,8 +803,30 @@ def generate_readme(results: list[dict], include_chart: bool = False, nextflow_v
     multiple=True,
     help="Only process specific pipeline(s) by name (can be used multiple times)",
 )
-def main(update_readme: bool, update_pipelines: bool, pipeline: tuple[str, ...]) -> None:
-    """Check nf-core pipelines for Nextflow strict syntax linting issues."""
+@click.option(
+    "--skip-pipelines",
+    is_flag=True,
+    help="Skip linting pipelines",
+)
+@click.option(
+    "--skip-modules",
+    is_flag=True,
+    help="Skip linting modules",
+)
+@click.option(
+    "--skip-subworkflows",
+    is_flag=True,
+    help="Skip linting subworkflows",
+)
+def main(
+    update_readme: bool,
+    update_pipelines: bool,
+    pipeline: tuple[str, ...],
+    skip_pipelines: bool,
+    skip_modules: bool,
+    skip_subworkflows: bool,
+) -> None:
+    """Check nf-core pipelines, modules, and subworkflows for Nextflow strict syntax linting issues."""
     if update_pipelines:
         update_pipelines_json()
 
@@ -515,28 +834,58 @@ def main(update_readme: bool, update_pipelines: bool, pipeline: tuple[str, ...])
     nextflow_version = get_nextflow_version()
     console.print(f"Using Nextflow version: {nextflow_version}")
 
-    pipelines = load_pipelines()
+    pipeline_results: list[dict] | None = None
+    module_results: list[dict] | None = None
+    subworkflow_results: list[dict] | None = None
 
-    if pipeline:
-        pipeline_names = set(pipeline)
-        pipelines = [p for p in pipelines if p["name"] in pipeline_names]
-        if not pipelines:
-            console.print(f"[red]No matching pipelines found for: {', '.join(pipeline_names)}[/red]")
-            sys.exit(1)
-        console.print(f"Filtering to {len(pipelines)} pipeline(s): {', '.join(p['name'] for p in pipelines)}")
+    # Lint pipelines
+    if not skip_pipelines:
+        pipelines = load_pipelines()
 
-    results = run_lint(pipelines)
-    display_results(results)
+        if pipeline:
+            pipeline_names = set(pipeline)
+            pipelines = [p for p in pipelines if p["name"] in pipeline_names]
+            if not pipelines:
+                console.print(f"[red]No matching pipelines found for: {', '.join(pipeline_names)}[/red]")
+                sys.exit(1)
+            console.print(f"Filtering to {len(pipelines)} pipeline(s): {', '.join(p['name'] for p in pipelines)}")
 
-    # Update history and generate charts (only when not filtering pipelines)
-    include_chart = False
+        pipeline_results = run_pipeline_lint(pipelines)
+        display_results(pipeline_results, title="nf-core Pipeline Strict Syntax Health")
+
+    # Lint modules and subworkflows (requires modules repo)
+    if not skip_modules or not skip_subworkflows:
+        clone_modules_repo()
+
+        if not skip_modules:
+            modules = discover_modules()
+            module_results = run_modules_lint(modules)
+            display_results(module_results, title="nf-core Module Strict Syntax Health")
+
+        if not skip_subworkflows:
+            subworkflows = discover_subworkflows()
+            subworkflow_results = run_subworkflows_lint(subworkflows)
+            display_results(subworkflow_results, title="nf-core Subworkflow Strict Syntax Health")
+
+    # Update history and generate charts (only when not filtering)
+    include_charts = False
     if not pipeline:
-        history = update_history(results)
-        generate_charts(history)
-        include_chart = True
+        history = update_history(
+            pipeline_results=pipeline_results,
+            module_results=module_results,
+            subworkflow_results=subworkflow_results,
+        )
+        generate_all_charts(history)
+        include_charts = True
 
     if update_readme:
-        readme_content = generate_readme(results, include_chart=include_chart, nextflow_version=nextflow_version)
+        readme_content = generate_readme(
+            pipeline_results=pipeline_results,
+            module_results=module_results,
+            subworkflow_results=subworkflow_results,
+            include_charts=include_charts,
+            nextflow_version=nextflow_version,
+        )
         README_PATH.write_text(readme_content)
         console.print(f"\n[green]Updated {README_PATH}[/green]")
 

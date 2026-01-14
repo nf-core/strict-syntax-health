@@ -18,6 +18,18 @@ on:
         description: "Specific pipeline(s) to lint (comma-separated, leave empty for all)"
         type: string
         default: ""
+      skip_pipelines:
+        description: "Skip linting pipelines"
+        type: boolean
+        default: false
+      skip_modules:
+        description: "Skip linting modules"
+        type: boolean
+        default: false
+      skip_subworkflows:
+        description: "Skip linting subworkflows"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -95,7 +107,7 @@ jobs:
         run: |
           CMD="strict-syntax-health"
 
-          # For scheduled runs, use defaults (update both)
+          # For scheduled runs, use defaults (update both, lint everything)
           # For workflow_dispatch, use the inputs
           if [[ "${{ github.event_name }}" == "schedule" ]]; then
             CMD="$CMD --update-pipelines --update-readme"
@@ -105,6 +117,15 @@ jobs:
             fi
             if [[ "${{ inputs.update_readme }}" == "true" ]]; then
               CMD="$CMD --update-readme"
+            fi
+            if [[ "${{ inputs.skip_pipelines }}" == "true" ]]; then
+              CMD="$CMD --skip-pipelines"
+            fi
+            if [[ "${{ inputs.skip_modules }}" == "true" ]]; then
+              CMD="$CMD --skip-modules"
+            fi
+            if [[ "${{ inputs.skip_subworkflows }}" == "true" ]]; then
+              CMD="$CMD --skip-subworkflows"
             fi
             if [[ -n "${{ inputs.pipelines }}" ]]; then
               # Convert comma-separated list to multiple -p flags
@@ -135,6 +156,6 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add README.md pipelines.json history.json errors_chart.png warnings_chart.png lint_results/
+          git add README.md pipelines/pipelines.json lint_results/
           git diff --staged --quiet || git commit -m "Update lint results [skip ci]"
           git push
