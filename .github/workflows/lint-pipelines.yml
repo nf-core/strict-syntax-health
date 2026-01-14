@@ -258,7 +258,7 @@ jobs:
           for artifact_dir in downloaded-results/lint-results-*/; do
             if [ -d "$artifact_dir" ]; then
               echo "Merging from $artifact_dir"
-              # Copy all subdirectories (pipelines/, modules/, subworkflows/)
+              # Copy lint_results subdirectories (pipelines/, modules/, subworkflows/)
               for type_dir in "$artifact_dir"*/; do
                 if [ -d "$type_dir" ]; then
                   type_name=$(basename "$type_dir")
@@ -288,6 +288,6 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add README.md pipelines/pipelines.json lint_results/
+          git add README.md lint_results/
           git diff --staged --quiet || git commit -m "Update lint results [skip ci]"
           git push

@@ -1,9 +1,6 @@
-# Cloned repositories
+# Cloned repositories and downloaded data
 pipelines/
 modules/
-
-# But track the pipelines list
-!pipelines/pipelines.json
 
 # Python
 __pycache__/
