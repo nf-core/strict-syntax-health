@@ -241,7 +241,12 @@ def lint_component(repo_path: Path, target_path: Path | None = None) -> dict:
         target_path: Optional specific path to lint (relative to repo_path or absolute)
     """
     if target_path:
-        cmd = ["nextflow", "lint", str(target_path), "-o", "json"]
+        # Make path relative to repo_path if it's absolute or inside repo_path
+        try:
+            relative_path = target_path.relative_to(repo_path)
+        except ValueError:
+            relative_path = target_path
+        cmd = ["nextflow", "lint", str(relative_path), "-o", "json"]
     else:
         cmd = ["nextflow", "lint", ".", "-o", "json"]
 
@@ -278,7 +283,12 @@ def lint_component_markdown(repo_path: Path, name: str, output_dir: Path, target
 
     # Build command - if target_path specified, lint that specific path
     if target_path:
-        cmd = ["nextflow", "lint", str(target_path), "-o", "markdown"]
+        # Make path relative to repo_path if it's absolute or inside repo_path
+        try:
+            relative_path = target_path.relative_to(repo_path)
+        except ValueError:
+            relative_path = target_path
+        cmd = ["nextflow", "lint", str(relative_path), "-o", "markdown"]
     else:
         cmd = ["nextflow", "lint", ".", "-o", "markdown"]
 
