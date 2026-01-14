@@ -6,16 +6,16 @@ on:
     - cron: "0 0 * * *"
   workflow_dispatch:
     inputs:
-      update_pipelines:
-        description: "Update lint results pipelines (don't just use history)"
-        type: boolean
-        default: true
-      update_readme:
-        description: "Update README.md with results"
-        type: boolean
-        default: true
       pipelines:
         description: "Specific pipeline(s) to lint (comma-separated, leave empty for all)"
+        type: string
+        default: ""
+      modules:
+        description: "Specific module(s) to lint (comma-separated, leave empty for all)"
+        type: string
+        default: ""
+      subworkflows:
+        description: "Specific subworkflow(s) to lint (comma-separated, leave empty for all)"
         type: string
         default: ""
       skip_pipelines:
@@ -105,39 +105,50 @@ jobs:
       - name: Build linting command
         id: build-cmd
         run: |
-          CMD="strict-syntax-health"
+          CMD="strict-syntax-health --update-pipelines --update-readme"
 
-          # For scheduled runs, use defaults (update both, lint everything)
-          # For workflow_dispatch, use the inputs
-          if [[ "${{ github.event_name }}" == "schedule" ]]; then
-            CMD="$CMD --update-pipelines --update-readme"
-          else
-            if [[ "${{ inputs.update_pipelines }}" == "true" ]]; then
-              CMD="$CMD --update-pipelines"
-            fi
-            if [[ "${{ inputs.update_readme }}" == "true" ]]; then
-              CMD="$CMD --update-readme"
-            fi
-            if [[ "${{ inputs.skip_pipelines }}" == "true" ]]; then
-              CMD="$CMD --skip-pipelines"
-            fi
-            if [[ "${{ inputs.skip_modules }}" == "true" ]]; then
-              CMD="$CMD --skip-modules"
-            fi
-            if [[ "${{ inputs.skip_subworkflows }}" == "true" ]]; then
-              CMD="$CMD --skip-subworkflows"
-            fi
-            if [[ -n "${{ inputs.pipelines }}" ]]; then
-              # Convert comma-separated list to multiple -p flags
-              IFS=',' read -ra PIPELINES <<< "${{ inputs.pipelines }}"
-              for p in "${PIPELINES[@]}"; do
-                # Trim whitespace
-                p=$(echo "$p" | xargs)
-                if [[ -n "$p" ]]; then
-                  CMD="$CMD -p $p"
-                fi
-              done
-            fi
+          # Add skip flags
+          if [[ "${{ inputs.skip_pipelines }}" == "true" ]]; then
+            CMD="$CMD --skip-pipelines"
+          fi
+          if [[ "${{ inputs.skip_modules }}" == "true" ]]; then
+            CMD="$CMD --skip-modules"
+          fi
+          if [[ "${{ inputs.skip_subworkflows }}" == "true" ]]; then
+            CMD="$CMD --skip-subworkflows"
+          fi
+
+          # Add pipeline filters
+          if [[ -n "${{ inputs.pipelines }}" ]]; then
+            IFS=',' read -ra ITEMS <<< "${{ inputs.pipelines }}"
+            for item in "${ITEMS[@]}"; do
+              item=$(echo "$item" | xargs)
+              if [[ -n "$item" ]]; then
+                CMD="$CMD -p $item"
+              fi
+            done
+          fi
+
+          # Add module filters
+          if [[ -n "${{ inputs.modules }}" ]]; then
+            IFS=',' read -ra ITEMS <<< "${{ inputs.modules }}"
+            for item in "${ITEMS[@]}"; do
+              item=$(echo "$item" | xargs)
+              if [[ -n "$item" ]]; then
+                CMD="$CMD -m $item"
+              fi
+            done
+          fi
+
+          # Add subworkflow filters
+          if [[ -n "${{ inputs.subworkflows }}" ]]; then
+            IFS=',' read -ra ITEMS <<< "${{ inputs.subworkflows }}"
+            for item in "${ITEMS[@]}"; do
+              item=$(echo "$item" | xargs)
+              if [[ -n "$item" ]]; then
+                CMD="$CMD -s $item"
+              fi
+            done
           fi
 
           echo "cmd=$CMD" >> $GITHUB_OUTPUT

@@ -804,6 +804,18 @@ def generate_readme(
     help="Only process specific pipeline(s) by name (can be used multiple times)",
 )
 @click.option(
+    "--module",
+    "-m",
+    multiple=True,
+    help="Only process specific module(s) by name (can be used multiple times)",
+)
+@click.option(
+    "--subworkflow",
+    "-s",
+    multiple=True,
+    help="Only process specific subworkflow(s) by name (can be used multiple times)",
+)
+@click.option(
     "--skip-pipelines",
     is_flag=True,
     help="Skip linting pipelines",
@@ -822,6 +834,8 @@ def main(
     update_readme: bool,
     update_pipelines: bool,
     pipeline: tuple[str, ...],
+    module: tuple[str, ...],
+    subworkflow: tuple[str, ...],
     skip_pipelines: bool,
     skip_modules: bool,
     skip_subworkflows: bool,
@@ -859,17 +873,37 @@ def main(
 
         if not skip_modules:
             modules = discover_modules()
+
+            if module:
+                module_names = set(module)
+                modules = [m for m in modules if m["name"] in module_names]
+                if not modules:
+                    console.print(f"[red]No matching modules found for: {', '.join(module_names)}[/red]")
+                    sys.exit(1)
+                console.print(f"Filtering to {len(modules)} module(s): {', '.join(m['name'] for m in modules)}")
+
             module_results = run_modules_lint(modules)
             display_results(module_results, title="nf-core Module Strict Syntax Health")
 
         if not skip_subworkflows:
             subworkflows = discover_subworkflows()
+
+            if subworkflow:
+                subworkflow_names = set(subworkflow)
+                subworkflows = [s for s in subworkflows if s["name"] in subworkflow_names]
+                if not subworkflows:
+                    console.print(f"[red]No matching subworkflows found for: {', '.join(subworkflow_names)}[/red]")
+                    sys.exit(1)
+                console.print(
+                    f"Filtering to {len(subworkflows)} subworkflow(s): {', '.join(s['name'] for s in subworkflows)}"
+                )
+
             subworkflow_results = run_subworkflows_lint(subworkflows)
             display_results(subworkflow_results, title="nf-core Subworkflow Strict Syntax Health")
 
     # Update history and generate charts (only when not filtering)
     include_charts = False
-    if not pipeline:
+    if not pipeline and not module and not subworkflow:
         history = update_history(
             pipeline_results=pipeline_results,
             module_results=module_results,
