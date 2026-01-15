@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-01-14T09:19:54.525102177Z
+- Generated: 2026-01-15T01:23:45.391180245Z
 - Nextflow version: 25.12.0-edge
 - Summary: 37 errors, 64 warnings
 
@@ -202,28 +202,28 @@
                          ^^^^^^^^
   ```
 
-- Error: `workflows/marsseq.nf:29:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/marsseq.nf:29:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ercc_regions            = file("$projectDir/data/ercc-regions.tsv")
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/marsseq.nf:30:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/marsseq.nf:30:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_oligos               = Channel.fromPath("$projectDir/data/oligos.txt", checkIfExists: true)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/marsseq.nf:31:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/marsseq.nf:31:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_spike_seq            = Channel.fromPath("$projectDir/data/spike-seq.txt", checkIfExists: true)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/marsseq.nf:32:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/marsseq.nf:32:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_spike_concentrations = Channel.fromPath("$projectDir/data/spike-concentrations.txt", checkIfExists: true)

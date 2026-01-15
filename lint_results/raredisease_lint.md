@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-01-14T09:23:30.874521489Z
+- Generated: 2026-01-15T01:27:53.889575038Z
 - Nextflow version: 25.12.0-edge
 - Summary: 30 errors, 55 warnings
 
@@ -55,140 +55,140 @@
                            ^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `modules/nf-core/sentieon/bwamem/tests/nextflow.config:3:25`: `SENTIEON_LICSRVR_IP` is not defined
+- Error: `modules/nf-core/sentieon/bwamem/tests/nextflow.config:3:25`: `SENTIEON_LICSRVR_IP` is not defined (hint: use `env('...')` to access environment variable)
 
   ```nextflow
       SENTIEON_LICENSE = "$SENTIEON_LICSRVR_IP"
                           ^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `modules/nf-core/sentieon/bwamem/tests/nextflow.config:5:27`: `SENTIEON_AUTH_MECH` is not defined
+- Error: `modules/nf-core/sentieon/bwamem/tests/nextflow.config:5:27`: `SENTIEON_AUTH_MECH` is not defined (hint: use `env('...')` to access environment variable)
 
   ```nextflow
       SENTIEON_AUTH_MECH = "$SENTIEON_AUTH_MECH"
                             ^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `modules/nf-core/sentieon/bwamem/tests/nextflow_out_cram.config:3:25`: `SENTIEON_LICSRVR_IP` is not defined
+- Error: `modules/nf-core/sentieon/bwamem/tests/nextflow_out_cram.config:3:25`: `SENTIEON_LICSRVR_IP` is not defined (hint: use `env('...')` to access environment variable)
 
   ```nextflow
       SENTIEON_LICENSE = "$SENTIEON_LICSRVR_IP"
                           ^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `modules/nf-core/sentieon/bwamem/tests/nextflow_out_cram.config:5:27`: `SENTIEON_AUTH_MECH` is not defined
+- Error: `modules/nf-core/sentieon/bwamem/tests/nextflow_out_cram.config:5:27`: `SENTIEON_AUTH_MECH` is not defined (hint: use `env('...')` to access environment variable)
 
   ```nextflow
       SENTIEON_AUTH_MECH = "$SENTIEON_AUTH_MECH"
                             ^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `modules/nf-core/sentieon/datametrics/tests/nextflow.config:3:25`: `SENTIEON_LICSRVR_IP` is not defined
+- Error: `modules/nf-core/sentieon/datametrics/tests/nextflow.config:3:25`: `SENTIEON_LICSRVR_IP` is not defined (hint: use `env('...')` to access environment variable)
 
   ```nextflow
       SENTIEON_LICENSE = "$SENTIEON_LICSRVR_IP"
                           ^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `modules/nf-core/sentieon/datametrics/tests/nextflow.config:5:27`: `SENTIEON_AUTH_MECH` is not defined
+- Error: `modules/nf-core/sentieon/datametrics/tests/nextflow.config:5:27`: `SENTIEON_AUTH_MECH` is not defined (hint: use `env('...')` to access environment variable)
 
   ```nextflow
       SENTIEON_AUTH_MECH = "$SENTIEON_AUTH_MECH"
                             ^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `modules/nf-core/sentieon/dedup/tests/nextflow.config:3:25`: `SENTIEON_LICSRVR_IP` is not defined
+- Error: `modules/nf-core/sentieon/dedup/tests/nextflow.config:3:25`: `SENTIEON_LICSRVR_IP` is not defined (hint: use `env('...')` to access environment variable)
 
   ```nextflow
       SENTIEON_LICENSE = "$SENTIEON_LICSRVR_IP"
                           ^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `modules/nf-core/sentieon/dedup/tests/nextflow.config:5:27`: `SENTIEON_AUTH_MECH` is not defined
+- Error: `modules/nf-core/sentieon/dedup/tests/nextflow.config:5:27`: `SENTIEON_AUTH_MECH` is not defined (hint: use `env('...')` to access environment variable)
 
   ```nextflow
       SENTIEON_AUTH_MECH = "$SENTIEON_AUTH_MECH"
                             ^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `modules/nf-core/sentieon/dedup/tests/nextflow_rmdup.config:3:25`: `SENTIEON_LICSRVR_IP` is not defined
+- Error: `modules/nf-core/sentieon/dedup/tests/nextflow_rmdup.config:3:25`: `SENTIEON_LICSRVR_IP` is not defined (hint: use `env('...')` to access environment variable)
 
   ```nextflow
       SENTIEON_LICENSE = "$SENTIEON_LICSRVR_IP"
                           ^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `modules/nf-core/sentieon/dedup/tests/nextflow_rmdup.config:5:27`: `SENTIEON_AUTH_MECH` is not defined
+- Error: `modules/nf-core/sentieon/dedup/tests/nextflow_rmdup.config:5:27`: `SENTIEON_AUTH_MECH` is not defined (hint: use `env('...')` to access environment variable)
 
   ```nextflow
       SENTIEON_AUTH_MECH = "$SENTIEON_AUTH_MECH"
                             ^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `modules/nf-core/sentieon/dnamodelapply/tests/nextflow.config:3:25`: `SENTIEON_LICSRVR_IP` is not defined
+- Error: `modules/nf-core/sentieon/dnamodelapply/tests/nextflow.config:3:25`: `SENTIEON_LICSRVR_IP` is not defined (hint: use `env('...')` to access environment variable)
 
   ```nextflow
       SENTIEON_LICENSE = "$SENTIEON_LICSRVR_IP"
                           ^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `modules/nf-core/sentieon/dnamodelapply/tests/nextflow.config:5:27`: `SENTIEON_AUTH_MECH` is not defined
+- Error: `modules/nf-core/sentieon/dnamodelapply/tests/nextflow.config:5:27`: `SENTIEON_AUTH_MECH` is not defined (hint: use `env('...')` to access environment variable)
 
   ```nextflow
       SENTIEON_AUTH_MECH = "$SENTIEON_AUTH_MECH"
                             ^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `modules/nf-core/sentieon/dnascope/tests/nextflow.config:3:25`: `SENTIEON_LICSRVR_IP` is not defined
+- Error: `modules/nf-core/sentieon/dnascope/tests/nextflow.config:3:25`: `SENTIEON_LICSRVR_IP` is not defined (hint: use `env('...')` to access environment variable)
 
   ```nextflow
       SENTIEON_LICENSE = "$SENTIEON_LICSRVR_IP"
                           ^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `modules/nf-core/sentieon/dnascope/tests/nextflow.config:5:27`: `SENTIEON_AUTH_MECH` is not defined
+- Error: `modules/nf-core/sentieon/dnascope/tests/nextflow.config:5:27`: `SENTIEON_AUTH_MECH` is not defined (hint: use `env('...')` to access environment variable)
 
   ```nextflow
       SENTIEON_AUTH_MECH = "$SENTIEON_AUTH_MECH"
                             ^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `modules/nf-core/sentieon/readwriter/tests/nextflow.config:3:25`: `SENTIEON_LICSRVR_IP` is not defined
+- Error: `modules/nf-core/sentieon/readwriter/tests/nextflow.config:3:25`: `SENTIEON_LICSRVR_IP` is not defined (hint: use `env('...')` to access environment variable)
 
   ```nextflow
       SENTIEON_LICENSE = "$SENTIEON_LICSRVR_IP"
                           ^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `modules/nf-core/sentieon/readwriter/tests/nextflow.config:5:27`: `SENTIEON_AUTH_MECH` is not defined
+- Error: `modules/nf-core/sentieon/readwriter/tests/nextflow.config:5:27`: `SENTIEON_AUTH_MECH` is not defined (hint: use `env('...')` to access environment variable)
 
   ```nextflow
       SENTIEON_AUTH_MECH = "$SENTIEON_AUTH_MECH"
                             ^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `modules/nf-core/sentieon/readwriter/tests/nextflow_outputcram.config:3:25`: `SENTIEON_LICSRVR_IP` is not defined
+- Error: `modules/nf-core/sentieon/readwriter/tests/nextflow_outputcram.config:3:25`: `SENTIEON_LICSRVR_IP` is not defined (hint: use `env('...')` to access environment variable)
 
   ```nextflow
       SENTIEON_LICENSE = "$SENTIEON_LICSRVR_IP"
                           ^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `modules/nf-core/sentieon/readwriter/tests/nextflow_outputcram.config:5:27`: `SENTIEON_AUTH_MECH` is not defined
+- Error: `modules/nf-core/sentieon/readwriter/tests/nextflow_outputcram.config:5:27`: `SENTIEON_AUTH_MECH` is not defined (hint: use `env('...')` to access environment variable)
 
   ```nextflow
       SENTIEON_AUTH_MECH = "$SENTIEON_AUTH_MECH"
                             ^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `modules/nf-core/sentieon/wgsmetrics/tests/nextflow.config:3:25`: `SENTIEON_LICSRVR_IP` is not defined
+- Error: `modules/nf-core/sentieon/wgsmetrics/tests/nextflow.config:3:25`: `SENTIEON_LICSRVR_IP` is not defined (hint: use `env('...')` to access environment variable)
 
   ```nextflow
       SENTIEON_LICENSE = "$SENTIEON_LICSRVR_IP"
                           ^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `modules/nf-core/sentieon/wgsmetrics/tests/nextflow.config:5:27`: `SENTIEON_AUTH_MECH` is not defined
+- Error: `modules/nf-core/sentieon/wgsmetrics/tests/nextflow.config:5:27`: `SENTIEON_AUTH_MECH` is not defined (hint: use `env('...')` to access environment variable)
 
   ```nextflow
       SENTIEON_AUTH_MECH = "$SENTIEON_AUTH_MECH"
@@ -202,7 +202,7 @@
                                                        ^^^^^^^^^^^^^^
   ```
 
-- Error: `tests/nextflow.config:28:27`: `SENTIEON_AUTH_MECH` is not defined
+- Error: `tests/nextflow.config:28:27`: `SENTIEON_AUTH_MECH` is not defined (hint: use `env('...')` to access environment variable)
 
   ```nextflow
       SENTIEON_AUTH_MECH = "$SENTIEON_AUTH_MECH"

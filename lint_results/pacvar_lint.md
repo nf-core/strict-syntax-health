@@ -1,12 +1,12 @@
 # Nextflow lint results
 
-- Generated: 2026-01-14T09:21:45.380629738Z
+- Generated: 2026-01-15T01:25:54.001139921Z
 - Nextflow version: 25.12.0-edge
 - Summary: 12 errors, 54 warnings
 
 ## :x: Errors
 
-- Error: `modules/nf-core/deepvariant/main.nf:1:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `modules/nf-core/deepvariant/main.nf:1:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   def deprecation_message = """

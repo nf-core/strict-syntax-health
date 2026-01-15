@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-01-14T09:09:23.686014381Z
+- Generated: 2026-01-15T01:17:23.055979266Z
 - Nextflow version: 25.12.0-edge
 - Summary: 56 errors, 205 warnings
 
@@ -209,98 +209,98 @@
                                   ^^^^^^^^^
   ```
 
-- Error: `workflows/atacseq.nf:70:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/atacseq.nf:70:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_bamtools_filter_se_config = file(params.bamtools_filter_se_config)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/atacseq.nf:71:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/atacseq.nf:71:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_bamtools_filter_pe_config = file(params.bamtools_filter_pe_config)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/atacseq.nf:74:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/atacseq.nf:74:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_multiqc_merged_library_peak_count_header        = file("$projectDir/assets/multiqc/merged_library_peak_count_header.txt", checkIfExists: true)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/atacseq.nf:75:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/atacseq.nf:75:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_multiqc_merged_library_frip_score_header        = file("$projectDir/assets/multiqc/merged_library_frip_score_header.txt", checkIfExists: true)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/atacseq.nf:76:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/atacseq.nf:76:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_multiqc_merged_library_peak_annotation_header   = file("$projectDir/assets/multiqc/merged_library_peak_annotation_header.txt", checkIfExists: true)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/atacseq.nf:77:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/atacseq.nf:77:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_multiqc_merged_library_deseq2_pca_header        = file("$projectDir/assets/multiqc/merged_library_deseq2_pca_header.txt", checkIfExists: true)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/atacseq.nf:78:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/atacseq.nf:78:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_multiqc_merged_library_deseq2_clustering_header = file("$projectDir/assets/multiqc/merged_library_deseq2_clustering_header.txt", checkIfExists: true)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/atacseq.nf:80:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/atacseq.nf:80:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_multiqc_merged_replicate_peak_count_header        = file("$projectDir/assets/multiqc/merged_replicate_peak_count_header.txt", checkIfExists: true)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/atacseq.nf:81:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/atacseq.nf:81:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_multiqc_merged_replicate_frip_score_header        = file("$projectDir/assets/multiqc/merged_replicate_frip_score_header.txt", checkIfExists: true)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/atacseq.nf:82:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/atacseq.nf:82:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_multiqc_merged_replicate_peak_annotation_header   = file("$projectDir/assets/multiqc/merged_replicate_peak_annotation_header.txt", checkIfExists: true)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/atacseq.nf:83:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/atacseq.nf:83:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_multiqc_merged_replicate_deseq2_pca_header        = file("$projectDir/assets/multiqc/merged_replicate_deseq2_pca_header.txt", checkIfExists: true)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/atacseq.nf:84:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/atacseq.nf:84:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_multiqc_merged_replicate_deseq2_clustering_header = file("$projectDir/assets/multiqc/merged_replicate_deseq2_clustering_header.txt", checkIfExists: true)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/atacseq.nf:87:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/atacseq.nf:87:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ataqv_mito_reference = params.ataqv_mito_reference
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/atacseq.nf:88:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/atacseq.nf:88:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (!params.ataqv_mito_reference && params.mito_name) {

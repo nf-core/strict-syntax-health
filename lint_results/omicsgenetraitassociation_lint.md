@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-01-14T09:21:32.225197752Z
+- Generated: 2026-01-15T01:25:38.783711275Z
 - Nextflow version: 25.12.0-edge
 - Summary: 44 errors, 30 warnings
 
@@ -125,7 +125,7 @@
                      ^^^^^^^^^
   ```
 
-- Error: `main.nf:30:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `main.nf:30:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (params.help) {
@@ -153,7 +153,7 @@
                                                        ^^^^^^^^^^^^^^
   ```
 
-- Error: `main.nf:43:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `main.nf:43:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   WorkflowMain.initialise(workflow, params, log, args)
@@ -188,7 +188,7 @@
                       ^
   ```
 
-- Error: `workflows/omicsgenetraitassociation.nf:9:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/omicsgenetraitassociation.nf:9:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   def logo = NfcoreTemplate.logo(workflow, params.monochrome_logs)
@@ -202,7 +202,7 @@
              ^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/omicsgenetraitassociation.nf:10:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/omicsgenetraitassociation.nf:10:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   def citation = '\n' + WorkflowMain.citation(workflow) + '\n'
@@ -216,21 +216,21 @@
                         ^^^^^^^^^^^^
   ```
 
-- Error: `workflows/omicsgenetraitassociation.nf:11:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/omicsgenetraitassociation.nf:11:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   def summary_params = paramsSummaryMap(workflow)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/omicsgenetraitassociation.nf:14:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/omicsgenetraitassociation.nf:14:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   log.info logo + paramsSummaryLog(workflow) + citation
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/omicsgenetraitassociation.nf:16:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/omicsgenetraitassociation.nf:16:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   WorkflowOmicsgenetraitassociation.initialise(params, log)
@@ -279,7 +279,7 @@
                                     ^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/omicsgenetraitassociation.nf:248:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/omicsgenetraitassociation.nf:248:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   workflow.onComplete {

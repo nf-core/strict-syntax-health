@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-01-14T09:18:23.989193076Z
+- Generated: 2026-01-15T01:22:01.023187495Z
 - Nextflow version: 25.12.0-edge
 - Summary: 40 errors, 13 warnings
 
@@ -111,7 +111,7 @@
                  ^^^^^^^^^^^^
   ```
 
-- Error: `main.nf:28:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `main.nf:28:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   WorkflowMain.initialise(workflow, params, log)
@@ -132,7 +132,7 @@
       ^
   ```
 
-- Error: `workflows/genomeskim.nf:7:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/genomeskim.nf:7:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   def summary_params = NfcoreSchema.paramsSummaryMap(workflow, params)
@@ -146,7 +146,7 @@
                        ^^^^^^^^^^^^
   ```
 
-- Error: `workflows/genomeskim.nf:10:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/genomeskim.nf:10:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   WorkflowGenomeskim.initialise(params, log)
@@ -160,7 +160,7 @@
   ^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/genomeskim.nf:14:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/genomeskim.nf:14:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   def checkPathParamList = [ params.input, params.multiqc_config, params.fasta ]
@@ -174,7 +174,7 @@
   ^^^
   ```
 
-- Error: `workflows/genomeskim.nf:15:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/genomeskim.nf:15:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   for (param in checkPathParamList) { if (param) { file(param, checkIfExists: true) } }
@@ -202,28 +202,28 @@
                                                         ^^^^^
   ```
 
-- Error: `workflows/genomeskim.nf:18:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/genomeskim.nf:18:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (params.input) { ch_input = file(params.input) } else { exit 1, 'Input samplesheet not specified!' }
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/genomeskim.nf:26:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/genomeskim.nf:26:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_multiqc_config        = file("$projectDir/assets/multiqc_config.yml", checkIfExists: true)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/genomeskim.nf:27:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/genomeskim.nf:27:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_multiqc_custom_config = params.multiqc_config ? Channel.fromPath(params.multiqc_config) : Channel.empty()
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/genomeskim.nf:60:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/genomeskim.nf:60:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   def multiqc_report = []
@@ -265,7 +265,7 @@
                                               ^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/genomeskim.nf:112:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/genomeskim.nf:112:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   workflow.onComplete {

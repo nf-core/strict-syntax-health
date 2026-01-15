@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-01-14T09:09:55.460750279Z
+- Generated: 2026-01-15T01:18:00.744041592Z
 - Nextflow version: 25.12.0-edge
 - Summary: 41 errors, 168 warnings
 
@@ -13,63 +13,63 @@
                   ^
   ```
 
-- Error: `main.nf:34:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `main.nf:34:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (params.datatype == 'yeast'){
   ^
   ```
 
-- Error: `main.nf:49:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `main.nf:49:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (params.genome == 'GRCm38'){
   ^
   ```
 
-- Error: `main.nf:55:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `main.nf:55:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if(!params.containsKey('regions_mask')){
   ^
   ```
 
-- Error: `main.nf:60:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `main.nf:60:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if(!params.containsKey('additional_fasta')){
   ^
   ```
 
-- Error: `main.nf:65:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `main.nf:65:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (!params.containsKey('fasta_index')){
   ^
   ```
 
-- Error: `main.nf:73:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `main.nf:73:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if(!params.containsKey('bwa_index')){
   ^
   ```
 
-- Error: `main.nf:76:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `main.nf:76:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if(!params.containsKey('bwamem2_index')){
   ^
   ```
 
-- Error: `main.nf:79:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `main.nf:79:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if(!params.containsKey('bowtie_index')){
   ^
   ```
 
-- Error: `main.nf:82:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `main.nf:82:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if(!params.containsKey('bowtie2_index')){

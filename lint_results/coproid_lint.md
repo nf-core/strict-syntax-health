@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-01-14T09:10:31.545733117Z
+- Generated: 2026-01-15T01:18:43.690828464Z
 - Nextflow version: 25.12.0-edge
 - Summary: 38 errors, 58 warnings
 
@@ -160,21 +160,21 @@
                       ^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/kraken2_classification/main.nf:8:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `subworkflows/local/kraken2_classification/main.nf:8:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_sp_sources      = file(params.sp_sources)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/kraken2_classification/main.nf:9:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `subworkflows/local/kraken2_classification/main.nf:9:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_sp_labels       = file(params.sp_labels)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/kraken2_classification/main.nf:10:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `subworkflows/local/kraken2_classification/main.nf:10:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_sqlite_traverse = file(params.taxa_sqlite_traverse_pkl)
@@ -258,7 +258,7 @@
   ^
   ```
 
-- Error: `workflows/coproid.nf:37:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/coproid.nf:37:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_kraken2_db = file(params.kraken2_db)

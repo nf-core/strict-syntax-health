@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-01-14T09:27:36.782906407Z
+- Generated: 2026-01-15T01:32:31.780391992Z
 - Nextflow version: 25.12.0-edge
 - Summary: 66 errors, 13 warnings
 
@@ -321,7 +321,7 @@
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/viralintegration.nf:24:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/viralintegration.nf:24:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_igvjs_VIF             = file("$projectDir/assets/igvjs_VIF.html", checkIfExists: true)

@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-01-14T09:09:37.453846430Z
+- Generated: 2026-01-15T01:17:39.211084300Z
 - Nextflow version: 25.12.0-edge
 - Summary: 27 errors, 64 warnings
 
@@ -139,7 +139,7 @@
                                                     ^^^^^
   ```
 
-- Error: `workflows/bactmap.nf:12:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/bactmap.nf:12:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   def checkPathParamList = [ params.input, params.fasta, params.multiqc_config,
@@ -153,7 +153,7 @@
   ^^^
   ```
 
-- Error: `workflows/bactmap.nf:16:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/bactmap.nf:16:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   for (param in checkPathParamList) { if (param) { file(param, checkIfExists: true) } }
@@ -181,7 +181,7 @@
                                                         ^^^^^
   ```
 
-- Error: `workflows/bactmap.nf:19:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/bactmap.nf:19:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if ( params.input ) {

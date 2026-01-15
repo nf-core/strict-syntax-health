@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-01-14T09:20:22.382899872Z
+- Generated: 2026-01-15T01:24:17.817279675Z
 - Nextflow version: 25.12.0-edge
 - Summary: 64 errors, 157 warnings
 
@@ -167,77 +167,77 @@
                          ^^^^^^^
   ```
 
-- Error: `workflows/metatdenovo.nf:3:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/metatdenovo.nf:3:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if ( ( params.assembler && params.user_assembly ) || ( ! params.assembler && ! params.user_assembly ) ) {
   ^
   ```
 
-- Error: `workflows/metatdenovo.nf:6:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/metatdenovo.nf:6:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if ( ( params.orf_caller && ( params.user_orfs_gff ) ) && ( ! params.orf_caller && ! params.user_orfs_gff ) ) {
   ^
   ```
 
-- Error: `workflows/metatdenovo.nf:11:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/metatdenovo.nf:11:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if ( params.user_orfs_gff && ! params.user_orfs_faa ) {
   ^
   ```
 
-- Error: `workflows/metatdenovo.nf:18:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/metatdenovo.nf:18:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if ( params.assembler && ( params.user_orfs_gff || params.user_orfs_faa ) ) {
   ^
   ```
 
-- Error: `workflows/metatdenovo.nf:23:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/metatdenovo.nf:23:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   assembler     = params.assembler
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/metatdenovo.nf:24:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/metatdenovo.nf:24:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   assembly_name = params.assembler ?: params.user_assembly_name
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/metatdenovo.nf:27:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/metatdenovo.nf:27:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   orf_caller = params.orf_caller
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/metatdenovo.nf:28:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/metatdenovo.nf:28:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   orfs_name  = params.orf_caller ?: params.user_orfs_name
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/metatdenovo.nf:31:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/metatdenovo.nf:31:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_multiqc_files = Channel.empty()
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/metatdenovo.nf:35:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/metatdenovo.nf:35:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_hmmrs = Channel.empty()
   ^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/metatdenovo.nf:36:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/metatdenovo.nf:36:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if ( params.hmmdir ) {

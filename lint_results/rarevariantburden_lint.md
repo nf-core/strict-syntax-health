@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-01-14T09:23:35.768984746Z
+- Generated: 2026-01-15T01:27:59.514775068Z
 - Nextflow version: 25.12.0-edge
 - Summary: 33 errors, 22 warnings
 
@@ -55,7 +55,7 @@
                           ^^^^^^^^
   ```
 
-- Error: `main.nf:104:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `main.nf:104:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   workflow.onComplete {

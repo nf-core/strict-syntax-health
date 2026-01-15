@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-01-14T09:16:35.790628998Z
+- Generated: 2026-01-15T01:19:55.476569029Z
 - Nextflow version: 25.12.0-edge
 - Summary: 31 errors, 51 warnings
 
@@ -83,7 +83,7 @@
                            ^
   ```
 
-- Error: `workflows/denovotranscript.nf:8:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/denovotranscript.nf:8:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (params.remove_ribo_rna) {

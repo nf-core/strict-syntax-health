@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-01-14T09:16:19.553534639Z
+- Generated: 2026-01-15T01:19:36.956570194Z
 - Nextflow version: 25.12.0-edge
 - Summary: 121 errors, 118 warnings
 
@@ -13,77 +13,77 @@
                 ^^^^^^
   ```
 
-- Error: `workflows/deepmutscan.nf:53:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/deepmutscan.nf:53:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   Channel
   ^^^^^^^
   ```
 
-- Error: `workflows/deepmutscan.nf:59:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/deepmutscan.nf:59:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   Channel
   ^^^^^^^
   ```
 
-- Error: `workflows/deepmutscan.nf:64:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/deepmutscan.nf:64:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   Channel
   ^^^^^^^
   ```
 
-- Error: `workflows/deepmutscan.nf:69:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/deepmutscan.nf:69:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   Channel
   ^^^^^^^
   ```
 
-- Error: `workflows/deepmutscan.nf:74:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/deepmutscan.nf:74:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   Channel
   ^^^^^^^
   ```
 
-- Error: `workflows/deepmutscan.nf:79:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/deepmutscan.nf:79:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   Channel
   ^^^^^^^
   ```
 
-- Error: `workflows/deepmutscan.nf:84:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/deepmutscan.nf:84:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   Channel
   ^^^^^^^
   ```
 
-- Error: `workflows/deepmutscan.nf:89:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/deepmutscan.nf:89:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   Channel
   ^^^^^^^
   ```
 
-- Error: `workflows/deepmutscan.nf:94:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/deepmutscan.nf:94:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   Channel
   ^^^^^^^
   ```
 
-- Error: `workflows/deepmutscan.nf:101:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/deepmutscan.nf:101:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   def R = { rel -> Channel.fromPath("${workflow.projectDir}/${rel}", checkIfExists: true) }
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/deepmutscan.nf:104:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/deepmutscan.nf:104:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   R("modules/local/dmsanalysis/bin/SeqDepth_simulation.R").set { seqdepth_simulation_script_ch }
@@ -97,7 +97,7 @@
   ^
   ```
 
-- Error: `workflows/deepmutscan.nf:105:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/deepmutscan.nf:105:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   R("modules/local/dmsanalysis/bin/aa_seq.R").set { aa_seq_script_ch }
@@ -111,7 +111,7 @@
   ^
   ```
 
-- Error: `workflows/deepmutscan.nf:106:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/deepmutscan.nf:106:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   R("modules/local/dmsanalysis/bin/complete_prefiltered_gatk.R").set { complete_gatk_script_ch }
@@ -125,7 +125,7 @@
   ^
   ```
 
-- Error: `workflows/deepmutscan.nf:107:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/deepmutscan.nf:107:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   R("modules/local/dmsanalysis/bin/counts_heatmap.R").set { counts_heatmap_script_ch }
@@ -139,7 +139,7 @@
   ^
   ```
 
-- Error: `workflows/deepmutscan.nf:108:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/deepmutscan.nf:108:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   R("modules/local/dmsanalysis/bin/counts_per_cov_heatmap.R").set { counts_per_cov_heatmap_script_ch }
@@ -153,7 +153,7 @@
   ^
   ```
 
-- Error: `workflows/deepmutscan.nf:109:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/deepmutscan.nf:109:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   R("modules/local/dmsanalysis/bin/detect_codons.R").set { detect_codons_script_ch }
@@ -167,7 +167,7 @@
   ^
   ```
 
-- Error: `workflows/deepmutscan.nf:110:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/deepmutscan.nf:110:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   R("modules/local/dmsanalysis/bin/filter_gatk_by_codon_library.R").set { filter_by_library_script_ch }
@@ -181,7 +181,7 @@
   ^
   ```
 
-- Error: `workflows/deepmutscan.nf:111:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/deepmutscan.nf:111:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   R("modules/local/dmsanalysis/bin/fitness_heatmap.R").set { fitness_heatmap_script_ch }
@@ -195,7 +195,7 @@
   ^
   ```
 
-- Error: `workflows/deepmutscan.nf:112:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/deepmutscan.nf:112:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   R("modules/local/dmsanalysis/bin/gatk_to_fitness.R").set { gatk_to_fitness_script_ch }
@@ -209,7 +209,7 @@
   ^
   ```
 
-- Error: `workflows/deepmutscan.nf:113:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/deepmutscan.nf:113:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   R("modules/local/dmsanalysis/bin/global_position_biases_counts_and_counts_per_cov.R").set { global_bias_counts_cov_script_ch }
@@ -223,7 +223,7 @@
   ^
   ```
 
-- Error: `workflows/deepmutscan.nf:114:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/deepmutscan.nf:114:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   R("modules/local/dmsanalysis/bin/global_position_biases_cov.R").set { global_bias_cov_script_ch }
@@ -237,7 +237,7 @@
   ^
   ```
 
-- Error: `workflows/deepmutscan.nf:115:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/deepmutscan.nf:115:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   R("modules/local/dmsanalysis/bin/install_packages.R").set { install_packages_script_ch }
@@ -251,7 +251,7 @@
   ^
   ```
 
-- Error: `workflows/deepmutscan.nf:116:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/deepmutscan.nf:116:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   R("modules/local/dmsanalysis/bin/logdiff.R").set { logdiff_script_ch }
@@ -265,7 +265,7 @@
   ^
   ```
 
-- Error: `workflows/deepmutscan.nf:117:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/deepmutscan.nf:117:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   R("modules/local/dmsanalysis/bin/low_count_variants.R").set { low_count_variants_script_ch }
@@ -279,7 +279,7 @@
   ^
   ```
 
-- Error: `workflows/deepmutscan.nf:118:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/deepmutscan.nf:118:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   R("modules/local/dmsanalysis/bin/possible_mutations.R").set { possible_mutations_script_ch }
@@ -293,7 +293,7 @@
   ^
   ```
 
-- Error: `workflows/deepmutscan.nf:119:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/deepmutscan.nf:119:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   R("modules/local/dmsanalysis/bin/prepare_gatk_data_for_count_heatmaps.R").set { prepare_counts_heatmap_script_ch }
@@ -307,7 +307,7 @@
   ^
   ```
 
-- Error: `workflows/deepmutscan.nf:120:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/deepmutscan.nf:120:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   R("modules/local/dmsanalysis/bin/prepare_gatk_data_for_fitness_heatmap.R").set { prepare_fitness_heatmap_script_ch }
@@ -321,7 +321,7 @@
   ^
   ```
 
-- Error: `workflows/deepmutscan.nf:121:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/deepmutscan.nf:121:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   R("modules/local/dmsanalysis/bin/process_raw_gatk.R").set { process_raw_gatk_script_ch }
@@ -335,7 +335,7 @@
   ^
   ```
 
-- Error: `workflows/deepmutscan.nf:122:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/deepmutscan.nf:122:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   R("modules/local/dmsanalysis/bin/merge_counts.R").set { merge_counts_script_ch }
@@ -349,7 +349,7 @@
   ^
   ```
 
-- Error: `workflows/deepmutscan.nf:123:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/deepmutscan.nf:123:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   R("modules/local/dmsanalysis/bin/dimsum_experimentalDesign.R").set { exp_design_ch }
@@ -363,7 +363,7 @@
   ^
   ```
 
-- Error: `workflows/deepmutscan.nf:124:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/deepmutscan.nf:124:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   R("modules/local/dmsanalysis/bin/fitness_calculation.R").set { fitness_calculation_script_ch }
@@ -377,7 +377,7 @@
   ^
   ```
 
-- Error: `workflows/deepmutscan.nf:125:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/deepmutscan.nf:125:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   R("modules/local/dmsanalysis/bin/fitness_QC.R").set { fitness_QC_script_ch }
@@ -391,7 +391,7 @@
   ^
   ```
 
-- Error: `workflows/deepmutscan.nf:126:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/deepmutscan.nf:126:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   R("modules/local/dmsanalysis/bin/fitness_heatmap.R").set { fitness_heatmap_script_ch }
@@ -405,7 +405,7 @@
   ^
   ```
 
-- Error: `workflows/deepmutscan.nf:127:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/deepmutscan.nf:127:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   R("modules/local/dmsanalysis/bin/find_syn_mutation.R").set { syn_mut_ch }

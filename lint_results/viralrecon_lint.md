@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-01-14T09:27:59.349668232Z
+- Generated: 2026-01-15T01:32:59.533615061Z
 - Nextflow version: 25.12.0-edge
 - Summary: 43 errors, 98 warnings
 
@@ -139,49 +139,49 @@
   ^
   ```
 
-- Error: `main.nf:18:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `main.nf:18:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   def primer_set         = ''
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `main.nf:19:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `main.nf:19:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   def primer_set_version = 0
   ^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `main.nf:22:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `main.nf:22:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if( !params.platform ) {
   ^
   ```
 
-- Error: `main.nf:27:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `main.nf:27:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   def valid_platforms = ["illumina","nanopore"]
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `main.nf:28:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `main.nf:28:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if( !(params.platform in valid_platforms) ) {
   ^
   ```
 
-- Error: `main.nf:32:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `main.nf:32:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (params.platform == 'illumina' && params.protocol == 'amplicon') {
   ^
   ```
 
-- Error: `main.nf:41:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `main.nf:41:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   def artic_scheme = params.platform == 'nanopore' ? params.artic_scheme : null

@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-01-14T09:25:57.165277517Z
+- Generated: 2026-01-15T01:30:38.114134146Z
 - Nextflow version: 25.12.0-edge
 - Summary: 22 errors, 111 warnings
 
@@ -90,7 +90,7 @@
                                    ^
   ```
 
-- Error: `subworkflows/local/kallisto_bustools.nf:8:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `subworkflows/local/kallisto_bustools.nf:8:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   def multiqc_report    = []

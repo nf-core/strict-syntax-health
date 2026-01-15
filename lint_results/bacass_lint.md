@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-01-14T09:09:30.896759305Z
+- Generated: 2026-01-15T01:17:31.484635315Z
 - Nextflow version: 25.12.0-edge
 - Summary: 27 errors, 131 warnings
 
@@ -97,7 +97,7 @@
                   ^^^^^^^^^^^^
   ```
 
-- Error: `workflows/bacass.nf:65:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/bacass.nf:65:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   def checkPathParamList = [ params.input, params.multiqc_config, params.kraken2db, params.dfast_config, params.reference_fasta, params.reference_gff ]
@@ -111,7 +111,7 @@
   ^^^
   ```
 
-- Error: `workflows/bacass.nf:66:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/bacass.nf:66:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   for (param in checkPathParamList) { if (param) { file(param, checkIfExists: true) } }
@@ -139,14 +139,14 @@
                                                         ^^^^^
   ```
 
-- Error: `workflows/bacass.nf:68:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/bacass.nf:68:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (params.reference_fasta) {
   ^
   ```
 
-- Error: `workflows/bacass.nf:71:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/bacass.nf:71:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (params.reference_gff) {

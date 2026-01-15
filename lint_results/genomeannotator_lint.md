@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-01-14T09:18:05.455688684Z
+- Generated: 2026-01-15T01:21:39.387317373Z
 - Nextflow version: 25.12.0-edge
 - Summary: 85 errors, 148 warnings
 
@@ -139,7 +139,7 @@
                      ^^^^^^^^^
   ```
 
-- Error: `main.nf:28:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `main.nf:28:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   WorkflowMain.initialise(workflow, params, log)
@@ -244,7 +244,7 @@
              ^^^^^
   ```
 
-- Error: `workflows/genomeannotator.nf:7:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/genomeannotator.nf:7:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   def summary_params = NfcoreSchema.paramsSummaryMap(workflow, params)
@@ -258,7 +258,7 @@
                        ^^^^^^^^^^^^
   ```
 
-- Error: `workflows/genomeannotator.nf:10:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/genomeannotator.nf:10:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   WorkflowGenomeannotator.initialise(params, log)
@@ -272,7 +272,7 @@
   ^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/genomeannotator.nf:12:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/genomeannotator.nf:12:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   def checkPathParamList = [ params.multiqc_config, params.assembly ]
@@ -286,7 +286,7 @@
   ^^^
   ```
 
-- Error: `workflows/genomeannotator.nf:13:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/genomeannotator.nf:13:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   for (param in checkPathParamList) { if (param) { file(param, checkIfExists: true) } }
@@ -314,112 +314,112 @@
                                                         ^^^^^
   ```
 
-- Error: `workflows/genomeannotator.nf:16:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/genomeannotator.nf:16:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (params.assembly) { ch_genome = file(params.assembly, checkIfExists: true) } else { exit 1, 'No assembly specified!' }
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/genomeannotator.nf:19:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/genomeannotator.nf:19:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (params.proteins) { ch_proteins = file(params.proteins, checkIfExists: true) } else { ch_proteins = Channel.empty() }
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/genomeannotator.nf:20:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/genomeannotator.nf:20:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (params.proteins_targeted) { ch_proteins_targeted = file(params.proteins_targeted, checkIfExists: true) } else { ch_proteins_targeted = Channel.empty() }
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/genomeannotator.nf:21:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/genomeannotator.nf:21:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (params.transcripts) { ch_t = file(params.transcripts) } else { ch_transcripts = Channel.empty() }
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/genomeannotator.nf:22:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/genomeannotator.nf:22:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (params.rnaseq_samples) { ch_samplesheet = file(params.rnaseq_samples, checkIfExists: true) } else { ch_samplesheet = Channel.empty() }
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/genomeannotator.nf:23:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/genomeannotator.nf:23:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (params.rm_lib) { ch_repeats = Channel.fromPath(file(params.rm_lib, checkIfExists: true)) } else { ch_repeats = Channel.fromPath("${workflow.projectDir}/assets/repeatmasker/repeats.fa") }
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/genomeannotator.nf:24:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/genomeannotator.nf:24:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (params.aug_config_dir) { ch_aug_config_folder = file(params.aug_config_dir, checkIfExists: true) } else { ch_aug_config_folder = Channel.from(params.aug_config_container) }
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/genomeannotator.nf:25:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/genomeannotator.nf:25:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (params.references) { ch_ref_genomes = Channel.fromPath(params.references, checkIfExists: true)  } else { ch_ref_genomes = Channel.empty() }
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/genomeannotator.nf:26:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/genomeannotator.nf:26:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (params.rm_db)  { ch_rm_db = file(params.rm_db) } else { ch_rm_db = Channel.empty() }
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/genomeannotator.nf:34:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/genomeannotator.nf:34:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_multiqc_config        = file("$projectDir/assets/multiqc_config.yaml", checkIfExists: true)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/genomeannotator.nf:35:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/genomeannotator.nf:35:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_multiqc_custom_config = params.multiqc_config ? Channel.fromPath(params.multiqc_config) : Channel.empty()
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/genomeannotator.nf:36:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/genomeannotator.nf:36:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_aug_extrinsic_cfg = params.aug_extrinsic_cfg ? Channel.from( file(params.aug_extrinsic_cfg, checkIfExists: true) ) : Channel.from( file("${workflow.projectDir}/assets/augustus/augustus_default.cfg"))
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/genomeannotator.nf:37:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/genomeannotator.nf:37:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_evm_weights = Channel.from(file(params.evm_weights, checkIfExists: true))
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/genomeannotator.nf:38:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/genomeannotator.nf:38:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_rfam_cm = file("${workflow.projectDir}/assets/rfam/14.2/Rfam.cm.gz", checkIfExists: true)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/genomeannotator.nf:39:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/genomeannotator.nf:39:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_rfam_family = file("${workflow.projectDir}/assets/rfam/14.2/family.txt.gz", checkIfExists: true)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/genomeannotator.nf:88:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/genomeannotator.nf:88:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   def multiqc_report = []
@@ -580,7 +580,7 @@
                                               ^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/genomeannotator.nf:380:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/genomeannotator.nf:380:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   workflow.onComplete {

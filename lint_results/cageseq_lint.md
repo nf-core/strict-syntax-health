@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-01-14T09:09:48.757159617Z
+- Generated: 2026-01-15T01:17:52.662448394Z
 - Nextflow version: 25.12.0-edge
 - Summary: 62 errors, 69 warnings
 
@@ -419,7 +419,7 @@
                                                     ^^^^
   ```
 
-- Error: `workflows/customcage.nf:98:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/customcage.nf:98:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   def multiqc_report = []

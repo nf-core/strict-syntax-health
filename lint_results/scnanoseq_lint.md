@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-01-14T09:25:49.215102146Z
+- Generated: 2026-01-15T01:30:29.228912607Z
 - Nextflow version: 25.12.0-edge
 - Summary: 74 errors, 140 warnings
 
@@ -293,35 +293,35 @@
                               ^^^^^^^^
   ```
 
-- Error: `workflows/scnanoseq.nf:8:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/scnanoseq.nf:8:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (params.whitelist) {
   ^
   ```
 
-- Error: `workflows/scnanoseq.nf:29:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/scnanoseq.nf:29:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   GENOME_QUANT_OPTS = [ 'isoquant' ]
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/scnanoseq.nf:30:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/scnanoseq.nf:30:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   TRANSCRIPT_QUANT_OPTS = [ 'oarfish' ]
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/scnanoseq.nf:32:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/scnanoseq.nf:32:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   genome_quants = []
   ^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/scnanoseq.nf:33:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/scnanoseq.nf:33:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   transcript_quants = []
@@ -335,7 +335,7 @@
   ^^^
   ```
 
-- Error: `workflows/scnanoseq.nf:34:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/scnanoseq.nf:34:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   for (quantifier in params.quantifier.split(',')) {
@@ -377,28 +377,28 @@
                                 ^^^^^^^^^^
   ```
 
-- Error: `workflows/scnanoseq.nf:51:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/scnanoseq.nf:51:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_multiqc_config                       = Channel.fromPath("$projectDir/assets/multiqc_config.yml", checkIfExists: true)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/scnanoseq.nf:52:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/scnanoseq.nf:52:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_multiqc_custom_config                = params.multiqc_config ? Channel.fromPath( params.multiqc_config, checkIfExists: true ) : Channel.empty()
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/scnanoseq.nf:53:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/scnanoseq.nf:53:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_multiqc_logo                         = params.multiqc_logo   ? Channel.fromPath( params.multiqc_logo, checkIfExists: true ) : Channel.empty()
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/scnanoseq.nf:54:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/scnanoseq.nf:54:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_multiqc_custom_methods_description   = params.multiqc_methods_description ? file(params.multiqc_methods_description, checkIfExists: true) : file("$projectDir/assets/methods_description_template.yml", checkIfExists: true)

@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-01-14T09:27:32.733029622Z
+- Generated: 2026-01-15T01:32:27.193235017Z
 - Nextflow version: 25.12.0-edge
 - Summary: 6 errors, 14 warnings
 
@@ -13,7 +13,7 @@
           ^^^
   ```
 
-- Error: `subworkflows/local/format_files.nf:18:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `subworkflows/local/format_files.nf:18:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   pcgr_header = Channel.fromPath("${projectDir}/bin/pcgr_header.txt", checkIfExists:true)

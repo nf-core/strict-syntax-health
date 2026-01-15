@@ -1,12 +1,12 @@
 # Nextflow lint results
 
-- Generated: 2026-01-14T09:26:17.264006314Z
+- Generated: 2026-01-15T01:31:01.286621148Z
 - Nextflow version: 25.12.0-edge
 - Summary: 11 errors, 74 warnings
 
 ## :x: Errors
 
-- Error: `modules/local/format_fasta_mirna/main.nf:1:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `modules/local/format_fasta_mirna/main.nf:1:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   def VERSION = '0.0.14'
@@ -55,28 +55,28 @@
               ^^^^^
   ```
 
-- Error: `workflows/smrnaseq.nf:34:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/smrnaseq.nf:34:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_multiqc_config                     = channel.fromPath("$projectDir/assets/multiqc_config.yml", checkIfExists: true)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/smrnaseq.nf:35:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/smrnaseq.nf:35:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_multiqc_custom_config              = params.multiqc_config ? channel.fromPath( params.multiqc_config, checkIfExists: true ) : channel.empty()
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/smrnaseq.nf:36:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/smrnaseq.nf:36:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_multiqc_logo                       = params.multiqc_logo   ? channel.fromPath( params.multiqc_logo, checkIfExists: true ) : channel.empty()
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/smrnaseq.nf:37:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/smrnaseq.nf:37:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_fastp_adapters                     = channel.fromPath(params.fastp_known_mirna_adapters, checkIfExists: true).collect() // collect to consume for all incoming samples to FASTP

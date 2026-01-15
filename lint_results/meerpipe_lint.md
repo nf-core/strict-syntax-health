@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-01-14T09:20:03.815766382Z
+- Generated: 2026-01-15T01:23:56.213057448Z
 - Nextflow version: 25.12.0-edge
 - Summary: 44 errors, 84 warnings
 
@@ -300,14 +300,14 @@
                   ^
   ```
 
-- Error: `tests/nextflow.config:9:20`: `PSRDB_URL` is not defined
+- Error: `tests/nextflow.config:9:20`: `PSRDB_URL` is not defined (hint: use `env('...')` to access environment variable)
 
   ```nextflow
       psrdb_url   = "$PSRDB_URL"
                      ^^^^^^^^^^
   ```
 
-- Error: `tests/nextflow.config:10:20`: `PSRDB_TOKEN` is not defined
+- Error: `tests/nextflow.config:10:20`: `PSRDB_TOKEN` is not defined (hint: use `env('...')` to access environment variable)
 
   ```nextflow
       psrdb_token = "$PSRDB_TOKEN"

@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-01-14T09:19:48.958213019Z
+- Generated: 2026-01-15T01:23:38.912066632Z
 - Nextflow version: 25.12.0-edge
 - Summary: 26 errors, 70 warnings
 
@@ -34,7 +34,7 @@
       ^
   ```
 
-- Error: `modules/nf-core/custom/dumpsoftwareversions/main.nf:1:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `modules/nf-core/custom/dumpsoftwareversions/main.nf:1:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   def deprecation_message = """

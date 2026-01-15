@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-01-14T09:18:53.925127575Z
+- Generated: 2026-01-15T01:22:35.863668944Z
 - Nextflow version: 25.12.0-edge
 - Summary: 52 errors, 14 warnings
 
@@ -111,7 +111,7 @@
                   ^
   ```
 
-- Error: `main.nf:20:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `main.nf:20:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   WorkflowMain.initialise(workflow, params, log)
@@ -132,7 +132,7 @@
       ^
   ```
 
-- Error: `workflows/imcyto.nf:7:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/imcyto.nf:7:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   def summary_params = NfcoreSchema.paramsSummaryMap(workflow, params)
@@ -146,7 +146,7 @@
                        ^^^^^^^^^^^^
   ```
 
-- Error: `workflows/imcyto.nf:10:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/imcyto.nf:10:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   WorkflowImcyto.initialise(params, log)
@@ -160,7 +160,7 @@
   ^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/imcyto.nf:13:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/imcyto.nf:13:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   def checkPathParamList = [
@@ -174,7 +174,7 @@
   ^^^
   ```
 
-- Error: `workflows/imcyto.nf:23:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/imcyto.nf:23:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   for (param in checkPathParamList) { if (param) { file(param, checkIfExists: true) } }
@@ -202,56 +202,56 @@
                                                         ^^^^^
   ```
 
-- Error: `workflows/imcyto.nf:26:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/imcyto.nf:26:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (params.input) {
   ^
   ```
 
-- Error: `workflows/imcyto.nf:36:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/imcyto.nf:36:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (params.metadata)             { ch_metadata             = file(params.metadata)             }
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/imcyto.nf:37:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/imcyto.nf:37:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (params.full_stack_cppipe)    { ch_full_stack_cppipe    = file(params.full_stack_cppipe)    }
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/imcyto.nf:38:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/imcyto.nf:38:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (params.ilastik_stack_cppipe) { ch_ilastik_stack_cppipe = file(params.ilastik_stack_cppipe) }
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/imcyto.nf:39:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/imcyto.nf:39:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (params.segmentation_cppipe)  { ch_segmentation_cppipe  = file(params.segmentation_cppipe)  }
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/imcyto.nf:41:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/imcyto.nf:41:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (!params.skip_ilastik) {
   ^
   ```
 
-- Error: `workflows/imcyto.nf:47:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/imcyto.nf:47:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_compensation_tiff = params.compensation_tiff ? file(params.compensation_tiff) : []
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/imcyto.nf:50:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/imcyto.nf:50:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_plugins_dir = file(params.plugins_dir)
@@ -349,7 +349,7 @@
           ^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/imcyto.nf:193:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/imcyto.nf:193:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   workflow.onComplete {

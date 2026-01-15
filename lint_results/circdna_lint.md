@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-01-14T09:10:13.275013710Z
+- Generated: 2026-01-15T01:18:21.655399499Z
 - Nextflow version: 25.12.0-edge
 - Summary: 38 errors, 30 warnings
 
@@ -174,7 +174,7 @@
                  ^^^^^^^^^^^^
   ```
 
-- Error: `main.nf:33:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `main.nf:33:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (params.help) {
@@ -202,14 +202,14 @@
                                                        ^^^^^^^^^^^^^^
   ```
 
-- Error: `main.nf:42:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `main.nf:42:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (params.validate_params) {
   ^
   ```
 
-- Error: `main.nf:46:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `main.nf:46:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   WorkflowMain.initialise(workflow, params, log, args)

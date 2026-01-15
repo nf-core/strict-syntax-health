@@ -11,10 +11,10 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 > See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline.
 > **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**
 
-- **Last updated:** 2026-01-14 09:28:10 UTC
+- **Last updated:** 2026-01-15 01:33:10 UTC
 - **Nextflow version:** 25.12.0-edge
-- **Total:** 4 parse errors, 3326 errors, 9511 warnings across 129 pipelines
-- **Zero errors:** 14 pipelines (10.9%)
+- **Total:** 0 parse errors, 3646 errors, 10365 warnings across 129 pipelines
+- **Zero errors:** 15 pipelines (11.6%)
 
 ## Trends
 
@@ -30,11 +30,9 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 
 | Pipeline                                                                              | Parse Error | Errors | Warnings |                      Lint Output                       |
 | ------------------------------------------------------------------------------------- | :---------: | -----: | -------: | :----------------------------------------------------: |
-| :x: [airrflow](https://github.com/nf-core/airrflow)                                   |     Yes     |      - |        - |         [View](lint_results/airrflow_lint.md)          |
-| :x: [deepmodeloptim](https://github.com/nf-core/deepmodeloptim)                       |     Yes     |      - |        - |      [View](lint_results/deepmodeloptim_lint.md)       |
-| :x: [pixelator](https://github.com/nf-core/pixelator)                                 |     Yes     |      - |        - |         [View](lint_results/pixelator_lint.md)         |
-| :x: [sarek](https://github.com/nf-core/sarek)                                         |     Yes     |      - |        - |           [View](lint_results/sarek_lint.md)           |
 | :x: [oncoanalyser](https://github.com/nf-core/oncoanalyser)                           |     No      |    305 |      102 |       [View](lint_results/oncoanalyser_lint.md)        |
+| :x: [sarek](https://github.com/nf-core/sarek)                                         |     No      |    152 |      608 |           [View](lint_results/sarek_lint.md)           |
+| :x: [airrflow](https://github.com/nf-core/airrflow)                                   |     No      |    151 |      141 |         [View](lint_results/airrflow_lint.md)          |
 | :x: [eager](https://github.com/nf-core/eager)                                         |     No      |    121 |      380 |           [View](lint_results/eager_lint.md)           |
 | :x: [deepmutscan](https://github.com/nf-core/deepmutscan)                             |     No      |    121 |      118 |        [View](lint_results/deepmutscan_lint.md)        |
 | :x: [rnaseq](https://github.com/nf-core/rnaseq)                                       |     No      |     89 |      284 |          [View](lint_results/rnaseq_lint.md)           |
@@ -60,7 +58,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :x: [meerpipe](https://github.com/nf-core/meerpipe)                                   |     No      |     44 |       84 |         [View](lint_results/meerpipe_lint.md)          |
 | :x: [omicsgenetraitassociation](https://github.com/nf-core/omicsgenetraitassociation) |     No      |     44 |       30 | [View](lint_results/omicsgenetraitassociation_lint.md) |
 | :x: [viralrecon](https://github.com/nf-core/viralrecon)                               |     No      |     43 |       98 |        [View](lint_results/viralrecon_lint.md)         |
-| :x: [riboseq](https://github.com/nf-core/riboseq)                                     |     No      |     41 |      187 |          [View](lint_results/riboseq_lint.md)          |
+| :x: [riboseq](https://github.com/nf-core/riboseq)                                     |     No      |     42 |      195 |          [View](lint_results/riboseq_lint.md)          |
 | :x: [callingcards](https://github.com/nf-core/callingcards)                           |     No      |     41 |      168 |       [View](lint_results/callingcards_lint.md)        |
 | :x: [pathogensurveillance](https://github.com/nf-core/pathogensurveillance)           |     No      |     40 |      486 |   [View](lint_results/pathogensurveillance_lint.md)    |
 | :x: [lncpipe](https://github.com/nf-core/lncpipe)                                     |     No      |     40 |      176 |          [View](lint_results/lncpipe_lint.md)          |
@@ -114,6 +112,8 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :x: [smrnaseq](https://github.com/nf-core/smrnaseq)                                   |     No      |     11 |       74 |         [View](lint_results/smrnaseq_lint.md)          |
 | :x: [metapep](https://github.com/nf-core/metapep)                                     |     No      |     11 |       34 |          [View](lint_results/metapep_lint.md)          |
 | :x: [hgtseq](https://github.com/nf-core/hgtseq)                                       |     No      |     10 |       69 |          [View](lint_results/hgtseq_lint.md)           |
+| :x: [pixelator](https://github.com/nf-core/pixelator)                                 |     No      |     10 |       65 |         [View](lint_results/pixelator_lint.md)         |
+| :x: [deepmodeloptim](https://github.com/nf-core/deepmodeloptim)                       |     No      |     10 |       49 |      [View](lint_results/deepmodeloptim_lint.md)       |
 | :x: [proteinfamilies](https://github.com/nf-core/proteinfamilies)                     |     No      |     10 |       19 |      [View](lint_results/proteinfamilies_lint.md)      |
 | :x: [mhcquant](https://github.com/nf-core/mhcquant)                                   |     No      |      9 |       60 |         [View](lint_results/mhcquant_lint.md)          |
 | :x: [tumourevo](https://github.com/nf-core/tumourevo)                                 |     No      |      9 |       56 |         [View](lint_results/tumourevo_lint.md)         |
@@ -134,14 +134,13 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :x: [troughgraph](https://github.com/nf-core/troughgraph)                             |     No      |      6 |       16 |        [View](lint_results/troughgraph_lint.md)        |
 | :x: [variantprioritization](https://github.com/nf-core/variantprioritization)         |     No      |      6 |       14 |   [View](lint_results/variantprioritization_lint.md)   |
 | :x: [ampliseq](https://github.com/nf-core/ampliseq)                                   |     No      |      4 |      148 |         [View](lint_results/ampliseq_lint.md)          |
-| :x: [nanostring](https://github.com/nf-core/nanostring)                               |     No      |      4 |       23 |        [View](lint_results/nanostring_lint.md)         |
 | :x: [methylseq](https://github.com/nf-core/methylseq)                                 |     No      |      3 |       65 |         [View](lint_results/methylseq_lint.md)         |
 | :x: [methylarray](https://github.com/nf-core/methylarray)                             |     No      |      3 |       19 |        [View](lint_results/methylarray_lint.md)        |
 | :x: [reportho](https://github.com/nf-core/reportho)                                   |     No      |      2 |       90 |         [View](lint_results/reportho_lint.md)          |
 | :x: [dualrnaseq](https://github.com/nf-core/dualrnaseq)                               |     No      |      2 |       48 |        [View](lint_results/dualrnaseq_lint.md)         |
 | :x: [pairgenomealign](https://github.com/nf-core/pairgenomealign)                     |     No      |      2 |       36 |      [View](lint_results/pairgenomealign_lint.md)      |
 | :x: [scdownstream](https://github.com/nf-core/scdownstream)                           |     No      |      2 |       30 |       [View](lint_results/scdownstream_lint.md)        |
-| :x: [taxprofiler](https://github.com/nf-core/taxprofiler)                             |     No      |      1 |      140 |        [View](lint_results/taxprofiler_lint.md)        |
+| :x: [taxprofiler](https://github.com/nf-core/taxprofiler)                             |     No      |      1 |      146 |        [View](lint_results/taxprofiler_lint.md)        |
 | :x: [phaseimpute](https://github.com/nf-core/phaseimpute)                             |     No      |      1 |      128 |        [View](lint_results/phaseimpute_lint.md)        |
 | :x: [seqsubmit](https://github.com/nf-core/seqsubmit)                                 |     No      |      1 |       32 |         [View](lint_results/seqsubmit_lint.md)         |
 | :x: [seqinspector](https://github.com/nf-core/seqinspector)                           |     No      |      1 |       14 |       [View](lint_results/seqinspector_lint.md)        |
@@ -159,6 +158,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :white_check_mark: [createpanelrefs](https://github.com/nf-core/createpanelrefs)      |     No      |      0 |       15 |      [View](lint_results/createpanelrefs_lint.md)      |
 | :white_check_mark: [rnavar](https://github.com/nf-core/rnavar)                        |     No      |      0 |       14 |          [View](lint_results/rnavar_lint.md)           |
 | :white_check_mark: [proteinannotator](https://github.com/nf-core/proteinannotator)    |     No      |      0 |        9 |     [View](lint_results/proteinannotator_lint.md)      |
+| :white_check_mark: [nanostring](https://github.com/nf-core/nanostring)                |     No      |      0 |        0 |        [View](lint_results/nanostring_lint.md)         |
 
 ## About
 
@@ -177,8 +177,7 @@ You can run `nextflow lint` on your own pipeline to check for strict syntax issu
 nextflow lint .
 ```
 
-> [!NOTE]
-> Until [this fix](https://github.com/nextflow-io/nextflow/pull/6716) is included in a Nextflow edge release, you may need to exclude nf-test files manually:
+> **Note:** Until [this fix](https://github.com/nextflow-io/nextflow/pull/6716) is included in a Nextflow edge release, you may need to exclude nf-test files manually:
 >
 > ```bash
 > nextflow lint . -exclude ".git,.nf-test,nf-test.config"

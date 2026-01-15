@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-01-14T09:18:39.504214746Z
+- Generated: 2026-01-15T01:22:19.081662138Z
 - Nextflow version: 25.12.0-edge
 - Summary: 27 errors, 73 warnings
 
@@ -118,42 +118,42 @@
                   ^^^^
   ```
 
-- Error: `workflows/hic.nf:26:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/hic.nf:26:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_map_res = Channel.from( params.bin_size ).splitCsv().flatten().toInteger()
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/hic.nf:28:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/hic.nf:28:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (params.res_zoomify){
   ^
   ```
 
-- Error: `workflows/hic.nf:33:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/hic.nf:33:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (params.res_tads && !params.skip_tads){
   ^
   ```
 
-- Error: `workflows/hic.nf:43:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/hic.nf:43:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (params.res_dist_decay && !params.skip_dist_decay){
   ^
   ```
 
-- Error: `workflows/hic.nf:53:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/hic.nf:53:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (params.res_compartments && !params.skip_compartments){
   ^
   ```
 
-- Error: `workflows/hic.nf:63:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/hic.nf:63:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_map_res = ch_map_res.unique()

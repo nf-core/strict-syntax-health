@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-01-14T09:25:09.885004857Z
+- Generated: 2026-01-15T01:29:45.183314612Z
 - Nextflow version: 25.12.0-edge
 - Summary: 21 errors, 148 warnings
 
@@ -13,7 +13,7 @@
                   ^
   ```
 
-- Error: `modules/nf-core/untarfiles/main.nf:1:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `modules/nf-core/untarfiles/main.nf:1:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   def deprecation_message = """
@@ -55,42 +55,42 @@
                                 ^^^
   ```
 
-- Error: `workflows/sammyseq.nf:50:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/sammyseq.nf:50:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (params.fasta) { ch_fasta =  Channel.fromPath(params.fasta) } else { exit 1, 'Fasta reference genome not specified!' }
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/sammyseq.nf:53:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/sammyseq.nf:53:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_fasta_meta = ch_fasta.map{ it -> [[id:it[0].baseName], it] }.collect()
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/sammyseq.nf:61:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/sammyseq.nf:61:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_multiqc_config          = Channel.fromPath("$projectDir/assets/multiqc_config.yml", checkIfExists: true)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/sammyseq.nf:62:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/sammyseq.nf:62:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_multiqc_custom_config   = params.multiqc_config ? Channel.fromPath( params.multiqc_config, checkIfExists: true ) : Channel.empty()
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/sammyseq.nf:63:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/sammyseq.nf:63:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_multiqc_logo            = params.multiqc_logo   ? Channel.fromPath( params.multiqc_logo, checkIfExists: true ) : Channel.empty()
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/sammyseq.nf:64:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/sammyseq.nf:64:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_multiqc_custom_methods_description = params.multiqc_methods_description ? file(params.multiqc_methods_description, checkIfExists: true) : file("$projectDir/assets/methods_description_template.yml", checkIfExists: true)

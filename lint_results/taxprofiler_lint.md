@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-14T09:26:51.966390029Z
+- Generated: 2026-01-15T01:31:40.822731368Z
 - Nextflow version: 25.12.0-edge
-- Summary: 1 error, 140 warnings
+- Summary: 1 error, 146 warnings
 
 ## :x: Errors
 
@@ -813,7 +813,49 @@
       ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_taxprofiler_pipeline/main.nf:105:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/utils_nfcore_taxprofiler_pipeline/main.nf:128:22`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .map { meta, run_accession, instrument_platform, fastq_1, fastq_2, fasta -> [ meta.id, meta.single_end ] }  // Adjust field names
+                       ^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_taxprofiler_pipeline/main.nf:128:37`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .map { meta, run_accession, instrument_platform, fastq_1, fastq_2, fasta -> [ meta.id, meta.single_end ] }  // Adjust field names
+                                      ^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_taxprofiler_pipeline/main.nf:128:58`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .map { meta, run_accession, instrument_platform, fastq_1, fastq_2, fasta -> [ meta.id, meta.single_end ] }  // Adjust field names
+                                                           ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_taxprofiler_pipeline/main.nf:128:67`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .map { meta, run_accession, instrument_platform, fastq_1, fastq_2, fasta -> [ meta.id, meta.single_end ] }  // Adjust field names
+                                                                    ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_taxprofiler_pipeline/main.nf:128:76`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .map { meta, run_accession, instrument_platform, fastq_1, fastq_2, fasta -> [ meta.id, meta.single_end ] }  // Adjust field names
+                                                                             ^^^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_taxprofiler_pipeline/main.nf:130:41`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          .map { validateInputSamplesheet(it) }
+                                          ^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_taxprofiler_pipeline/main.nf:135:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       Channel.fromList(samplesheetToList(databases, "assets/schema_database.json"))
@@ -925,70 +967,70 @@
                                                                                                          ^^
   ```
 
-- Warning: `workflows/taxprofiler.nf:308:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/taxprofiler.nf:284:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       def topic_versions = Channel.topic("versions")
                            ^^^^^^^
   ```
 
-- Warning: `workflows/taxprofiler.nf:375:78`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/taxprofiler.nf:351:78`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files = ch_multiqc_files.mix(FASTQC.out.zip.collect { it[1] }.ifEmpty([]))
                                                                                ^^
   ```
 
-- Warning: `workflows/taxprofiler.nf:380:91`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/taxprofiler.nf:356:91`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(SHORTREAD_PREPROCESSING.out.mqc.collect { it[1] }.ifEmpty([]))
                                                                                             ^^
   ```
 
-- Warning: `workflows/taxprofiler.nf:384:90`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/taxprofiler.nf:360:90`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(LONGREAD_PREPROCESSING.out.mqc.collect { it[1] }.ifEmpty([]))
                                                                                            ^^
   ```
 
-- Warning: `workflows/taxprofiler.nf:388:77`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/taxprofiler.nf:364:77`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(NONPAREIL.out.mqc.collect { it[1] }.ifEmpty([]))
                                                                               ^^
   ```
 
-- Warning: `workflows/taxprofiler.nf:392:97`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/taxprofiler.nf:368:97`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(SHORTREAD_COMPLEXITYFILTERING.out.mqc.collect { it[1] }.ifEmpty([]))
                                                                                                   ^^
   ```
 
-- Warning: `workflows/taxprofiler.nf:396:89`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/taxprofiler.nf:372:89`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(SHORTREAD_HOSTREMOVAL.out.mqc.collect { it[1] }.ifEmpty([]))
                                                                                           ^^
   ```
 
-- Warning: `workflows/taxprofiler.nf:400:88`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/taxprofiler.nf:376:88`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(LONGREAD_HOSTREMOVAL.out.mqc.collect { it[1] }.ifEmpty([]))
                                                                                          ^^
   ```
 
-- Warning: `workflows/taxprofiler.nf:403:73`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/taxprofiler.nf:379:73`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(PROFILING.out.mqc.collect { it[1] }.ifEmpty([]))
                                                                           ^^
   ```
 
-- Warning: `workflows/taxprofiler.nf:406:92`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/taxprofiler.nf:382:92`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(STANDARDISATION_PROFILES.out.mqc.collect { it[1] }.ifEmpty([]))

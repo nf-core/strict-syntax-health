@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-01-14T09:18:45.328521305Z
+- Generated: 2026-01-15T01:22:25.824052104Z
 - Nextflow version: 25.12.0-edge
 - Summary: 89 errors, 122 warnings
 
@@ -188,7 +188,7 @@
                       ^^^^^^^^^^^^
   ```
 
-- Error: `main.nf:26:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `main.nf:26:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   anno_readme       = WorkflowMain.getGenomeAttribute(params, 'readme')
@@ -202,14 +202,14 @@
                       ^^^^^^^^^^^^
   ```
 
-- Error: `main.nf:28:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `main.nf:28:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (anno_readme && file(anno_readme).exists()) {
   ^
   ```
 
-- Error: `main.nf:42:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `main.nf:42:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (params.help) {
@@ -237,14 +237,14 @@
                                                        ^^^^^^^^^^^^^^
   ```
 
-- Error: `main.nf:51:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `main.nf:51:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (params.validate_params) {
   ^
   ```
 
-- Error: `main.nf:55:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `main.nf:55:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   WorkflowMain.initialise(workflow, params, log)

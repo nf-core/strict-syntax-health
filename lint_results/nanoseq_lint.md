@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-01-14T09:21:16.328252965Z
+- Generated: 2026-01-15T01:25:20.177374311Z
 - Nextflow version: 25.12.0-edge
 - Summary: 36 errors, 43 warnings
 
@@ -55,7 +55,7 @@
       ^^^^^^^^^
   ```
 
-- Error: `modules/nf-core/custom/dumpsoftwareversions/main.nf:1:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `modules/nf-core/custom/dumpsoftwareversions/main.nf:1:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   def deprecation_message = """
@@ -139,7 +139,7 @@
              ^^^^^^^^^^
   ```
 
-- Error: `workflows/nanoseq.nf:14:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/nanoseq.nf:14:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   checkPathParamList = [ params.input, params.multiqc_config ]
@@ -153,7 +153,7 @@
   ^^^
   ```
 
-- Error: `workflows/nanoseq.nf:15:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/nanoseq.nf:15:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   for (param in checkPathParamList) { if (param) { file(param, checkIfExists: true) } }
@@ -181,21 +181,21 @@
                                                         ^^^^^
   ```
 
-- Error: `workflows/nanoseq.nf:18:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/nanoseq.nf:18:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (params.input) {
   ^
   ```
 
-- Error: `workflows/nanoseq.nf:24:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/nanoseq.nf:24:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (params.fasta){
   ^
   ```
 
-- Error: `workflows/nanoseq.nf:34:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/nanoseq.nf:34:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (params.gtf){
@@ -209,42 +209,42 @@
                  ^^^^^^^^^^^
   ```
 
-- Error: `workflows/nanoseq.nf:52:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/nanoseq.nf:52:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (params.protocol != 'DNA' && params.protocol != 'cDNA' && params.protocol != 'directRNA') {
   ^
   ```
 
-- Error: `workflows/nanoseq.nf:56:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/nanoseq.nf:56:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (!params.skip_demultiplexing) {
   ^
   ```
 
-- Error: `workflows/nanoseq.nf:81:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/nanoseq.nf:81:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (!params.skip_alignment) {
   ^
   ```
 
-- Error: `workflows/nanoseq.nf:90:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/nanoseq.nf:90:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (!params.skip_quantification) {
   ^
   ```
 
-- Error: `workflows/nanoseq.nf:103:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/nanoseq.nf:103:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_multiqc_config        = file("$baseDir/assets/multiqc_config.yml", checkIfExists: true)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/nanoseq.nf:104:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/nanoseq.nf:104:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_multiqc_custom_config = params.multiqc_config ? Channel.fromPath(params.multiqc_config) : Channel.empty()

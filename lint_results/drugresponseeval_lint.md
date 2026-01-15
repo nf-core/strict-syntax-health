@@ -1,12 +1,12 @@
 # Nextflow lint results
 
-- Generated: 2026-01-14T09:17:10.745686938Z
+- Generated: 2026-01-15T01:20:36.108565336Z
 - Nextflow version: 25.12.0-edge
 - Summary: 7 errors, 29 warnings
 
 ## :x: Errors
 
-- Error: `modules/nf-core/custom/dumpsoftwareversions/main.nf:1:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `modules/nf-core/custom/dumpsoftwareversions/main.nf:1:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   def deprecation_message = """
@@ -20,14 +20,14 @@
                    ^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/drugresponseeval.nf:24:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/drugresponseeval.nf:24:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   def test_modes = params.test_mode.split(",")
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/drugresponseeval.nf:25:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/drugresponseeval.nf:25:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   def randomizations = params.randomization_mode.split(",")

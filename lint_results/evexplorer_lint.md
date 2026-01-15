@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-01-14T09:17:36.741743939Z
+- Generated: 2026-01-15T01:21:06.293558889Z
 - Nextflow version: 25.12.0-edge
 - Summary: 75 errors, 53 warnings
 
@@ -153,28 +153,28 @@
                  ^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `main.nf:41:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `main.nf:41:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_gtf_1     = Channel.fromPath(params.gtf_1)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `main.nf:42:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `main.nf:42:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_gtf_2     = Channel.fromPath(params.gtf_2)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `main.nf:43:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `main.nf:43:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_chr_names = Channel.fromPath(params.chr_names)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `main.nf:44:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `main.nf:44:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_fasta     = Channel.fromPath(params.fasta, checkIfExists: true)

@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-01-14T09:20:49.683708517Z
+- Generated: 2026-01-15T01:24:49.191250102Z
 - Nextflow version: 25.12.0-edge
 - Summary: 9 errors, 60 warnings
 
@@ -41,7 +41,7 @@
                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/quant/main.nf:18:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `subworkflows/local/quant/main.nf:18:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   def sortById = { a, b -> a.id <=> b.id }

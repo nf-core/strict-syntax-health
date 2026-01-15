@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-01-14T09:16:41.802986323Z
+- Generated: 2026-01-15T01:20:02.455535054Z
 - Nextflow version: 25.12.0-edge
 - Summary: 13 errors, 61 warnings
 
@@ -55,28 +55,28 @@
                                                                  ^^^^^^^^^^
   ```
 
-- Error: `workflows/detaxizer.nf:46:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/detaxizer.nf:46:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   def ch_fasta_blastn = Channel.empty()
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/detaxizer.nf:48:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/detaxizer.nf:48:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if ( !params.fasta_blastn && params.validation_blastn ) {
   ^
   ```
 
-- Error: `workflows/detaxizer.nf:57:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/detaxizer.nf:57:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   def ch_fasta_bbduk = Channel.empty()
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/detaxizer.nf:59:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/detaxizer.nf:59:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if ( !params.fasta_bbduk && params.classification_bbduk ) {

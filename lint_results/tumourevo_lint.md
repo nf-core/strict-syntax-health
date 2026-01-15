@@ -1,12 +1,12 @@
 # Nextflow lint results
 
-- Generated: 2026-01-14T09:27:13.965706660Z
+- Generated: 2026-01-15T01:32:05.953821996Z
 - Nextflow version: 25.12.0-edge
 - Summary: 9 errors, 56 warnings
 
 ## :x: Errors
 
-- Error: `main.nf:45:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `main.nf:45:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   input = params.input ? Channel.fromList(samplesheetToList(params.input, "assets/schema_input.json")) : Channel.empty()

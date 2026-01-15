@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-01-14T09:24:45.351051240Z
+- Generated: 2026-01-15T01:29:17.563288509Z
 - Nextflow version: 25.12.0-edge
 - Summary: 89 errors, 284 warnings
 
@@ -90,70 +90,70 @@
   ^
   ```
 
-- Error: `modules/nf-core/sentieon/rsemcalculateexpression/tests/nextflow.config:17:25`: `SENTIEON_LICSRVR_IP` is not defined
+- Error: `modules/nf-core/sentieon/rsemcalculateexpression/tests/nextflow.config:17:25`: `SENTIEON_LICSRVR_IP` is not defined (hint: use `env('...')` to access environment variable)
 
   ```nextflow
       SENTIEON_LICENSE = "$SENTIEON_LICSRVR_IP"
                           ^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `modules/nf-core/sentieon/rsemcalculateexpression/tests/nextflow.config:19:27`: `SENTIEON_AUTH_MECH` is not defined
+- Error: `modules/nf-core/sentieon/rsemcalculateexpression/tests/nextflow.config:19:27`: `SENTIEON_AUTH_MECH` is not defined (hint: use `env('...')` to access environment variable)
 
   ```nextflow
       SENTIEON_AUTH_MECH = "$SENTIEON_AUTH_MECH"
                             ^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `modules/nf-core/sentieon/rsempreparereference/tests/nextflow.config:3:25`: `SENTIEON_LICSRVR_IP` is not defined
+- Error: `modules/nf-core/sentieon/rsempreparereference/tests/nextflow.config:3:25`: `SENTIEON_LICSRVR_IP` is not defined (hint: use `env('...')` to access environment variable)
 
   ```nextflow
       SENTIEON_LICENSE = "$SENTIEON_LICSRVR_IP"
                           ^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `modules/nf-core/sentieon/rsempreparereference/tests/nextflow.config:5:27`: `SENTIEON_AUTH_MECH` is not defined
+- Error: `modules/nf-core/sentieon/rsempreparereference/tests/nextflow.config:5:27`: `SENTIEON_AUTH_MECH` is not defined (hint: use `env('...')` to access environment variable)
 
   ```nextflow
       SENTIEON_AUTH_MECH = "$SENTIEON_AUTH_MECH"
                             ^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `modules/nf-core/sentieon/staralign/tests/nextflow.arriba.config:15:25`: `SENTIEON_LICSRVR_IP` is not defined
+- Error: `modules/nf-core/sentieon/staralign/tests/nextflow.arriba.config:15:25`: `SENTIEON_LICSRVR_IP` is not defined (hint: use `env('...')` to access environment variable)
 
   ```nextflow
       SENTIEON_LICENSE = "$SENTIEON_LICSRVR_IP"
                           ^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `modules/nf-core/sentieon/staralign/tests/nextflow.arriba.config:17:27`: `SENTIEON_AUTH_MECH` is not defined
+- Error: `modules/nf-core/sentieon/staralign/tests/nextflow.arriba.config:17:27`: `SENTIEON_AUTH_MECH` is not defined (hint: use `env('...')` to access environment variable)
 
   ```nextflow
       SENTIEON_AUTH_MECH = "$SENTIEON_AUTH_MECH"
                             ^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `modules/nf-core/sentieon/staralign/tests/nextflow.config:15:25`: `SENTIEON_LICSRVR_IP` is not defined
+- Error: `modules/nf-core/sentieon/staralign/tests/nextflow.config:15:25`: `SENTIEON_LICSRVR_IP` is not defined (hint: use `env('...')` to access environment variable)
 
   ```nextflow
       SENTIEON_LICENSE = "$SENTIEON_LICSRVR_IP"
                           ^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `modules/nf-core/sentieon/staralign/tests/nextflow.config:17:27`: `SENTIEON_AUTH_MECH` is not defined
+- Error: `modules/nf-core/sentieon/staralign/tests/nextflow.config:17:27`: `SENTIEON_AUTH_MECH` is not defined (hint: use `env('...')` to access environment variable)
 
   ```nextflow
       SENTIEON_AUTH_MECH = "$SENTIEON_AUTH_MECH"
                             ^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `modules/nf-core/sentieon/staralign/tests/nextflow.starfusion.config:15:25`: `SENTIEON_LICSRVR_IP` is not defined
+- Error: `modules/nf-core/sentieon/staralign/tests/nextflow.starfusion.config:15:25`: `SENTIEON_LICSRVR_IP` is not defined (hint: use `env('...')` to access environment variable)
 
   ```nextflow
       SENTIEON_LICENSE = "$SENTIEON_LICSRVR_IP"
                           ^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `modules/nf-core/sentieon/staralign/tests/nextflow.starfusion.config:17:27`: `SENTIEON_AUTH_MECH` is not defined
+- Error: `modules/nf-core/sentieon/staralign/tests/nextflow.starfusion.config:17:27`: `SENTIEON_AUTH_MECH` is not defined (hint: use `env('...')` to access environment variable)
 
   ```nextflow
       SENTIEON_AUTH_MECH = "$SENTIEON_AUTH_MECH"
@@ -440,35 +440,35 @@
   ^
   ```
 
-- Error: `workflows/rnaseq/main.nf:77:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/rnaseq/main.nf:77:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_pca_header_multiqc           = file("$projectDir/workflows/rnaseq/assets/multiqc/deseq2_pca_header.txt", checkIfExists: true)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/rnaseq/main.nf:78:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/rnaseq/main.nf:78:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   sample_status_header_multiqc    = file("$projectDir/workflows/rnaseq/assets/multiqc/sample_status_header.txt", checkIfExists: true)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/rnaseq/main.nf:79:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/rnaseq/main.nf:79:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_clustering_header_multiqc    = file("$projectDir/workflows/rnaseq/assets/multiqc/deseq2_clustering_header.txt", checkIfExists: true)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/rnaseq/main.nf:80:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/rnaseq/main.nf:80:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_biotypes_header_multiqc      = file("$projectDir/workflows/rnaseq/assets/multiqc/biotypes_header.txt", checkIfExists: true)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/rnaseq/main.nf:81:1`: Statements cannot be mixed with script declarations -- move statements into a process or workflow
+- Error: `workflows/rnaseq/main.nf:81:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_dummy_file                   = ch_pca_header_multiqc
