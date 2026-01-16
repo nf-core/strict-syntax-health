@@ -1,716 +1,615 @@
-[
-  {
-    "name": "abundance_differential_filter",
+{
+  "_repo_commit": "a46713779030a5f508117080cbf4b693dd4c6e33",
+  "abundance_differential_filter": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/abundance_differential_filter",
     "errors": 0,
     "warnings": 16,
     "parse_error": false
   },
-  {
-    "name": "archive_extract",
+  "archive_extract": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/archive_extract",
     "errors": 0,
     "warnings": 2,
     "parse_error": false
   },
-  {
-    "name": "bam_cnv_wisecondorx",
+  "bam_cnv_wisecondorx": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_cnv_wisecondorx",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
   },
-  {
-    "name": "bam_create_som_pon_gatk",
+  "bam_create_som_pon_gatk": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_create_som_pon_gatk",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
-  {
-    "name": "bam_dedup_stats_samtools_umicollapse",
+  "bam_dedup_stats_samtools_umicollapse": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_dedup_stats_samtools_umicollapse",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
   },
-  {
-    "name": "bam_dedup_stats_samtools_umitools",
+  "bam_dedup_stats_samtools_umitools": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_dedup_stats_samtools_umitools",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
   },
-  {
-    "name": "bam_dedup_umi",
+  "bam_dedup_umi": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_dedup_umi",
     "errors": 0,
     "warnings": 2,
     "parse_error": false
   },
-  {
-    "name": "bam_docounts_contamination_angsd",
+  "bam_docounts_contamination_angsd": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_docounts_contamination_angsd",
     "errors": 0,
     "warnings": 2,
     "parse_error": false
   },
-  {
-    "name": "bam_impute_quilt",
+  "bam_impute_quilt": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_impute_quilt",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
-  {
-    "name": "bam_impute_stitch",
+  "bam_impute_stitch": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_impute_stitch",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
-  {
-    "name": "bam_markduplicates_picard",
+  "bam_markduplicates_picard": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_markduplicates_picard",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
   },
-  {
-    "name": "bam_markduplicates_samtools",
+  "bam_markduplicates_samtools": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_markduplicates_samtools",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
   },
-  {
-    "name": "bam_methyldackel",
+  "bam_methyldackel": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_methyldackel",
     "errors": 0,
     "warnings": 8,
     "parse_error": false
   },
-  {
-    "name": "bam_ngscheckmate",
+  "bam_ngscheckmate": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_ngscheckmate",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
-  {
-    "name": "bam_qc_picard",
+  "bam_qc_picard": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_qc_picard",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
-  {
-    "name": "bam_rseqc",
+  "bam_rseqc": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_rseqc",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
-  {
-    "name": "bam_sort_stats_samtools",
+  "bam_sort_stats_samtools": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_sort_stats_samtools",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
   },
-  {
-    "name": "bam_split_by_region",
+  "bam_split_by_region": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_split_by_region",
     "errors": 1,
     "warnings": 0,
     "parse_error": false
   },
-  {
-    "name": "bam_stats_mirna_mirtop",
+  "bam_stats_mirna_mirtop": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_stats_mirna_mirtop",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
   },
-  {
-    "name": "bam_stats_samtools",
+  "bam_stats_samtools": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_stats_samtools",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
   },
-  {
-    "name": "bam_stringtie_merge",
+  "bam_stringtie_merge": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_stringtie_merge",
     "errors": 0,
     "warnings": 3,
     "parse_error": false
   },
-  {
-    "name": "bam_subsampledepth_samtools",
+  "bam_subsampledepth_samtools": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_subsampledepth_samtools",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
   },
-  {
-    "name": "bam_taps_conversion",
+  "bam_taps_conversion": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_taps_conversion",
     "errors": 0,
     "warnings": 5,
     "parse_error": false
   },
-  {
-    "name": "bam_tumor_normal_somatic_variant_calling_gatk",
+  "bam_tumor_normal_somatic_variant_calling_gatk": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_tumor_normal_somatic_variant_calling_gatk",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
   },
-  {
-    "name": "bam_tumor_normal_somatic_variant_calling_strelka",
+  "bam_tumor_normal_somatic_variant_calling_strelka": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_tumor_normal_somatic_variant_calling_strelka",
     "errors": 0,
     "warnings": 6,
     "parse_error": false
   },
-  {
-    "name": "bam_tumor_only_somatic_variant_calling_gatk",
+  "bam_tumor_only_somatic_variant_calling_gatk": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_tumor_only_somatic_variant_calling_gatk",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
   },
-  {
-    "name": "bam_variant_calling_sort_freebayes_bcftools",
+  "bam_variant_calling_sort_freebayes_bcftools": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_variant_calling_sort_freebayes_bcftools",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
   },
-  {
-    "name": "bam_variant_demix_boot_freyja",
+  "bam_variant_demix_boot_freyja": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_variant_demix_boot_freyja",
     "errors": 0,
     "warnings": 4,
     "parse_error": false
   },
-  {
-    "name": "bam_vcf_impute_glimpse2",
+  "bam_vcf_impute_glimpse2": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_vcf_impute_glimpse2",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
-  {
-    "name": "bcl_demultiplex",
+  "bcl_demultiplex": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bcl_demultiplex",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
-  {
-    "name": "bed_scatter_bedtools",
+  "bed_scatter_bedtools": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bed_scatter_bedtools",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
   },
-  {
-    "name": "bedgraph_bedclip_bedgraphtobigwig",
+  "bedgraph_bedclip_bedgraphtobigwig": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bedgraph_bedclip_bedgraphtobigwig",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
   },
-  {
-    "name": "deepvariant",
+  "deepvariant": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/deepvariant",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
   },
-  {
-    "name": "dia_proteomics_analysis",
+  "dia_proteomics_analysis": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/dia_proteomics_analysis",
     "errors": 1,
     "warnings": 7,
     "parse_error": false
   },
-  {
-    "name": "differential_functional_enrichment",
+  "differential_functional_enrichment": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/differential_functional_enrichment",
     "errors": 0,
     "warnings": 26,
     "parse_error": false
   },
-  {
-    "name": "faa_seqfu_seqkit",
+  "faa_seqfu_seqkit": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/faa_seqfu_seqkit",
     "errors": 0,
     "warnings": 2,
     "parse_error": false
   },
-  {
-    "name": "fasta_binning_concoct",
+  "fasta_binning_concoct": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fasta_binning_concoct",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
   },
-  {
-    "name": "fasta_build_add_kraken2",
+  "fasta_build_add_kraken2": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fasta_build_add_kraken2",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
-  {
-    "name": "fasta_build_add_kraken2_bracken",
+  "fasta_build_add_kraken2_bracken": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fasta_build_add_kraken2_bracken",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
-  {
-    "name": "fasta_clean_fcs",
+  "fasta_clean_fcs": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fasta_clean_fcs",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
   },
-  {
-    "name": "fasta_explore_search_plot_tidk",
+  "fasta_explore_search_plot_tidk": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fasta_explore_search_plot_tidk",
     "errors": 0,
     "warnings": 9,
     "parse_error": false
   },
-  {
-    "name": "fasta_gxf_busco_plot",
+  "fasta_gxf_busco_plot": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fasta_gxf_busco_plot",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
-  {
-    "name": "fasta_hmmsearch_rank_fastas",
+  "fasta_hmmsearch_rank_fastas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fasta_hmmsearch_rank_fastas",
     "errors": 0,
     "warnings": 15,
     "parse_error": false
   },
-  {
-    "name": "fasta_index_bismark_bwameth",
+  "fasta_index_bismark_bwameth": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fasta_index_bismark_bwameth",
     "errors": 0,
     "warnings": 3,
     "parse_error": false
   },
-  {
-    "name": "fasta_index_dna",
+  "fasta_index_dna": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fasta_index_dna",
     "errors": 1,
     "warnings": 0,
     "parse_error": false
   },
-  {
-    "name": "fasta_index_methylseq",
+  "fasta_index_methylseq": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fasta_index_methylseq",
     "errors": 0,
     "warnings": 4,
     "parse_error": false
   },
-  {
-    "name": "fasta_newick_epang_gappa",
+  "fasta_newick_epang_gappa": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fasta_newick_epang_gappa",
     "errors": 0,
     "warnings": 6,
     "parse_error": false
   },
-  {
-    "name": "fasta_vclust_prefilter_align_cluster",
+  "fasta_vclust_prefilter_align_cluster": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fasta_vclust_prefilter_align_cluster",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
   },
-  {
-    "name": "fastq_align_bamcmp_bwa",
+  "fastq_align_bamcmp_bwa": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_align_bamcmp_bwa",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
   },
-  {
-    "name": "fastq_align_bowtie2",
+  "fastq_align_bowtie2": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_align_bowtie2",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
   },
-  {
-    "name": "fastq_align_bwa",
+  "fastq_align_bwa": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_align_bwa",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
   },
-  {
-    "name": "fastq_align_bwaaln",
+  "fastq_align_bwaaln": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_align_bwaaln",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
   },
-  {
-    "name": "fastq_align_chromap",
+  "fastq_align_chromap": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_align_chromap",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
   },
-  {
-    "name": "fastq_align_dedup_bismark",
+  "fastq_align_dedup_bismark": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_align_dedup_bismark",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
-  {
-    "name": "fastq_align_dedup_bwamem",
+  "fastq_align_dedup_bwamem": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_align_dedup_bwamem",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
-  {
-    "name": "fastq_align_dedup_bwameth",
+  "fastq_align_dedup_bwameth": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_align_dedup_bwameth",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
-  {
-    "name": "fastq_align_dna",
+  "fastq_align_dna": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_align_dna",
     "errors": 0,
     "warnings": 4,
     "parse_error": false
   },
-  {
-    "name": "fastq_align_hisat2",
+  "fastq_align_hisat2": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_align_hisat2",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
   },
-  {
-    "name": "fastq_align_mapad",
+  "fastq_align_mapad": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_align_mapad",
     "errors": 0,
     "warnings": 2,
     "parse_error": false
   },
-  {
-    "name": "fastq_align_star",
+  "fastq_align_star": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_align_star",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
   },
-  {
-    "name": "fastq_contam_seqtk_kraken",
+  "fastq_contam_seqtk_kraken": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_contam_seqtk_kraken",
     "errors": 0,
     "warnings": 2,
     "parse_error": false
   },
-  {
-    "name": "fastq_create_umi_consensus_fgbio",
+  "fastq_create_umi_consensus_fgbio": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_create_umi_consensus_fgbio",
     "errors": 0,
     "warnings": 3,
     "parse_error": false
   },
-  {
-    "name": "fastq_decontaminate_deacon_hostile",
+  "fastq_decontaminate_deacon_hostile": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_decontaminate_deacon_hostile",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
-  {
-    "name": "fastq_download_prefetch_fasterqdump_sratools",
+  "fastq_download_prefetch_fasterqdump_sratools": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_download_prefetch_fasterqdump_sratools",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
   },
-  {
-    "name": "fastq_extract_kraken_krakentools",
+  "fastq_extract_kraken_krakentools": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_extract_kraken_krakentools",
     "errors": 0,
     "warnings": 2,
     "parse_error": false
   },
-  {
-    "name": "fastq_fastqc_umitools_fastp",
+  "fastq_fastqc_umitools_fastp": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_fastqc_umitools_fastp",
     "errors": 0,
     "warnings": 16,
     "parse_error": false
   },
-  {
-    "name": "fastq_fastqc_umitools_trimgalore",
+  "fastq_fastqc_umitools_trimgalore": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_fastqc_umitools_trimgalore",
     "errors": 1,
     "warnings": 9,
     "parse_error": false
   },
-  {
-    "name": "fastq_fetch_clean_hostile",
+  "fastq_fetch_clean_hostile": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_fetch_clean_hostile",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
   },
-  {
-    "name": "fastq_find_mirna_mirdeep2",
+  "fastq_find_mirna_mirdeep2": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_find_mirna_mirdeep2",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
   },
-  {
-    "name": "fastq_index_filter_deacon",
+  "fastq_index_filter_deacon": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_index_filter_deacon",
     "errors": 0,
     "warnings": 3,
     "parse_error": false
   },
-  {
-    "name": "fastq_ngscheckmate",
+  "fastq_ngscheckmate": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_ngscheckmate",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
-  {
-    "name": "fastq_preprocess_seqkit",
+  "fastq_preprocess_seqkit": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_preprocess_seqkit",
     "errors": 0,
     "warnings": 2,
     "parse_error": false
   },
-  {
-    "name": "fastq_qc_stats",
+  "fastq_qc_stats": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_qc_stats",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
-  {
-    "name": "fastq_qc_trim_filter_setstrandedness",
+  "fastq_qc_trim_filter_setstrandedness": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness",
     "errors": 0,
     "warnings": 15,
     "parse_error": false
   },
-  {
-    "name": "fastq_remove_rrna",
+  "fastq_remove_rrna": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_remove_rrna",
     "errors": 0,
     "warnings": 7,
     "parse_error": false
   },
-  {
-    "name": "fastq_removeadapters_merge",
+  "fastq_removeadapters_merge": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_removeadapters_merge",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
-  {
-    "name": "fastq_sanitise_seqkit",
+  "fastq_sanitise_seqkit": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_sanitise_seqkit",
     "errors": 0,
     "warnings": 2,
     "parse_error": false
   },
-  {
-    "name": "fastq_subsample_fq_salmon",
+  "fastq_subsample_fq_salmon": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_subsample_fq_salmon",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
   },
-  {
-    "name": "fastq_taxonomic_profile_metaphlan",
+  "fastq_taxonomic_profile_metaphlan": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_taxonomic_profile_metaphlan",
     "errors": 4,
     "warnings": 3,
     "parse_error": false
   },
-  {
-    "name": "fastq_trim_fastp_fastqc",
+  "fastq_trim_fastp_fastqc": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_trim_fastp_fastqc",
     "errors": 0,
     "warnings": 11,
     "parse_error": false
   },
-  {
-    "name": "h5ad_removebackground_barcodes_cellbender_anndata",
+  "h5ad_removebackground_barcodes_cellbender_anndata": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/h5ad_removebackground_barcodes_cellbender_anndata",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
   },
-  {
-    "name": "homer_groseq",
+  "homer_groseq": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/homer_groseq",
     "errors": 0,
     "warnings": 3,
     "parse_error": false
   },
-  {
-    "name": "mafft_align",
+  "mafft_align": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/mafft_align",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
-  {
-    "name": "mmseqs_contig_taxonomy",
+  "mmseqs_contig_taxonomy": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/mmseqs_contig_taxonomy",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
-  {
-    "name": "mmseqs_fasta_cluster",
+  "mmseqs_fasta_cluster": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/mmseqs_fasta_cluster",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
-  {
-    "name": "quantify_pseudo_alignment",
+  "quantify_pseudo_alignment": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/quantify_pseudo_alignment",
     "errors": 0,
     "warnings": 10,
     "parse_error": false
   },
-  {
-    "name": "tiff_segmentation_vpt",
+  "tiff_segmentation_vpt": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/tiff_segmentation_vpt",
     "errors": 0,
     "warnings": 3,
     "parse_error": false
   },
-  {
-    "name": "utils_nextflow_pipeline",
+  "utils_nextflow_pipeline": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/utils_nextflow_pipeline",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
-  {
-    "name": "utils_nfcore_pipeline",
+  "utils_nfcore_pipeline": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/utils_nfcore_pipeline",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
-  {
-    "name": "utils_nfschema_plugin",
+  "utils_nfschema_plugin": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/utils_nfschema_plugin",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
-  {
-    "name": "utils_nfvalidation_plugin",
+  "utils_nfvalidation_plugin": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/utils_nfvalidation_plugin",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
-  {
-    "name": "utils_references",
+  "utils_references": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/utils_references",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
   },
-  {
-    "name": "vcf_annotate_ensemblvep",
+  "vcf_annotate_ensemblvep": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/vcf_annotate_ensemblvep",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
-  {
-    "name": "vcf_annotate_ensemblvep_snpeff",
+  "vcf_annotate_ensemblvep_snpeff": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/vcf_annotate_ensemblvep_snpeff",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
-  {
-    "name": "vcf_annotate_snpeff",
+  "vcf_annotate_snpeff": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/vcf_annotate_snpeff",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
-  {
-    "name": "vcf_extract_relate_somalier",
+  "vcf_extract_relate_somalier": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/vcf_extract_relate_somalier",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
   },
-  {
-    "name": "vcf_filter_bcftools_ensemblvep",
+  "vcf_filter_bcftools_ensemblvep": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/vcf_filter_bcftools_ensemblvep",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
-  {
-    "name": "vcf_gather_bcftools",
+  "vcf_gather_bcftools": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/vcf_gather_bcftools",
     "errors": 1,
     "warnings": 1,
     "parse_error": false
   },
-  {
-    "name": "vcf_impute_beagle5",
+  "vcf_impute_beagle5": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/vcf_impute_beagle5",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
-  {
-    "name": "vcf_impute_glimpse",
+  "vcf_impute_glimpse": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/vcf_impute_glimpse",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
-  {
-    "name": "vcf_impute_minimac4",
+  "vcf_impute_minimac4": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/vcf_impute_minimac4",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
-  {
-    "name": "vcf_phase_shapeit5",
+  "vcf_phase_shapeit5": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/vcf_phase_shapeit5",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   }
-]
+}
