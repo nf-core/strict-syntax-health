@@ -27,10 +27,10 @@ PIPELINES_JSON_PATH = PIPELINES_DIR / "pipelines.json"
 # README path
 README_PATH = Path("README.md")
 
-# Lint results subdirectories
-PIPELINES_LINT_RESULTS_DIR = LINT_RESULTS_DIR / "pipelines"
-MODULES_LINT_RESULTS_DIR = LINT_RESULTS_DIR / "modules"
-SUBWORKFLOWS_LINT_RESULTS_DIR = LINT_RESULTS_DIR / "subworkflows"
+# Lint results subdirectories (named to avoid gitignore patterns matching "pipelines/" and "modules/")
+PIPELINES_LINT_RESULTS_DIR = LINT_RESULTS_DIR / "pipeline-results"
+MODULES_LINT_RESULTS_DIR = LINT_RESULTS_DIR / "module-results"
+SUBWORKFLOWS_LINT_RESULTS_DIR = LINT_RESULTS_DIR / "subworkflow-results"
 
 console = Console()
 
@@ -941,7 +941,10 @@ def _create_stacked_chart(
 
 
 def generate_charts_for_type(history: list[dict], output_dir: Path, type_name: str) -> None:
-    """Generate error and warning charts for a specific type (pipelines, modules, subworkflows)."""
+    """Generate error and warning charts for a specific type (pipelines, modules, subworkflows).
+
+    Charts are saved to LINT_RESULTS_DIR with type-prefixed filenames (e.g., pipelines_errors.png).
+    """
     if not history:
         console.print(f"[yellow]Not enough history to generate {type_name} charts[/yellow]")
         return
@@ -959,7 +962,7 @@ def generate_charts_for_type(history: list[dict], output_dir: Path, type_name: s
             ([h.get("parse_errors", 0) for h in history], "Parse errors", "#8e44ad", "rgba(142, 68, 173, 0.7)"),
         ],
         f"{type_name.title()} Errors Over Time",
-        output_dir / "errors_chart.png",
+        LINT_RESULTS_DIR / f"{type_name}_errors.png",
         y_label,
     )
 
@@ -972,7 +975,7 @@ def generate_charts_for_type(history: list[dict], output_dir: Path, type_name: s
             ([h.get("parse_errors", 0) for h in history], "Parse errors", "#8e44ad", "rgba(142, 68, 173, 0.7)"),
         ],
         f"{type_name.title()} Warnings Over Time",
-        output_dir / "warnings_chart.png",
+        LINT_RESULTS_DIR / f"{type_name}_warnings.png",
         y_label,
     )
 
@@ -1015,9 +1018,9 @@ def _generate_results_section(
         "",
     ]
 
-    # Add charts in a side-by-side table
-    errors_chart = lint_results_dir / "errors_chart.png"
-    warnings_chart = lint_results_dir / "warnings_chart.png"
+    # Add charts in a side-by-side table (charts are in LINT_RESULTS_DIR with type-prefixed names)
+    errors_chart = LINT_RESULTS_DIR / f"{type_name}_errors.png"
+    warnings_chart = LINT_RESULTS_DIR / f"{type_name}_warnings.png"
     if include_charts and errors_chart.exists() and warnings_chart.exists():
         lines.extend(
             [
