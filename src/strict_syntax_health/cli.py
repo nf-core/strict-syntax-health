@@ -661,7 +661,15 @@ def run_pipeline_lint(pipelines: list[dict], no_cache: bool = False) -> list[dic
             if remote_commit is None:
                 remote_commit = get_remote_commit_hash(pipeline["html_url"], "HEAD")
 
-            if remote_commit and remote_commit == cached.get("commit"):
+            # Check if we need to run prints_help test for pipelines with zero errors
+            # that were cached before this feature was added
+            needs_prints_help = (
+                cached.get("errors", 0) == 0
+                and not cached.get("parse_error", False)
+                and cached.get("prints_help") is None
+            )
+
+            if remote_commit and remote_commit == cached.get("commit") and not needs_prints_help:
                 console.print(f"[dim]Skipping {name} (unchanged at {remote_commit[:8]})[/dim]")
                 results.append(
                     {
@@ -989,13 +997,17 @@ def _run_subworkflows_lint_bulk(subworkflows: list[dict], nextflow_version: str)
     return results
 
 
-def display_results(results: list[dict], title: str = "nf-core Strict Syntax Health") -> None:
+def display_results(
+    results: list[dict], title: str = "nf-core Strict Syntax Health", show_prints_help: bool = False
+) -> None:
     """Display results in a rich table."""
     table = Table(title=title)
     table.add_column("Pipeline", style="cyan")
     table.add_column("Parse Error", justify="right")
     table.add_column("Errors", justify="right")
     table.add_column("Warnings", justify="right")
+    if show_prints_help:
+        table.add_column("Prints Help", justify="right")
 
     sorted_results = _sort_results(results)
 
@@ -1020,7 +1032,17 @@ def display_results(results: list[dict], title: str = "nf-core Strict Syntax Hea
             error_str = f"[red]{errors}[/red]" if errors > 0 else "[green]0[/green]"
             warning_str = f"[yellow]{warnings}[/yellow]" if warnings > 0 else "[green]0[/green]"
 
-        table.add_row(result["name"], parse_error_str, error_str, warning_str)
+        if show_prints_help:
+            prints_help = result.get("prints_help")
+            if prints_help is None:
+                prints_help_str = "-"
+            elif prints_help:
+                prints_help_str = "[green]Yes[/green]"
+            else:
+                prints_help_str = "[red]No[/red]"
+            table.add_row(result["name"], parse_error_str, error_str, warning_str, prints_help_str)
+        else:
+            table.add_row(result["name"], parse_error_str, error_str, warning_str)
 
     console.print(table)
     console.print(
@@ -1652,7 +1674,7 @@ def main(
             console.print(f"Filtering to {len(pipelines)} pipeline(s): {', '.join(p['name'] for p in pipelines)}")
 
         pipeline_results = run_pipeline_lint(pipelines, no_cache=no_cache)
-        display_results(pipeline_results, title="nf-core Pipeline Strict Syntax Health")
+        display_results(pipeline_results, title="nf-core Pipeline Strict Syntax Health", show_prints_help=True)
         # Save results for aggregation (only when not filtering specific pipelines)
         if not pipeline:
             save_results_for_type("pipelines", pipeline_results)
