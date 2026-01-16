@@ -1,6 +1,7 @@
 """CLI for strict-syntax-health."""
 
 import json
+import os
 import subprocess
 import sys
 from datetime import datetime, timezone
@@ -578,6 +579,33 @@ def lint_pipeline(repo_path: Path) -> dict:
     return lint_component(repo_path)
 
 
+def test_prints_help(repo_path: Path) -> bool:
+    """Test if a pipeline can print help using the v2 syntax parser.
+
+    Runs: NXF_SYNTAX_PARSER=v2 nextflow run . --help
+
+    Args:
+        repo_path: Path to the cloned pipeline repository.
+
+    Returns:
+        True if the command succeeds (exit code 0), False otherwise.
+    """
+    try:
+        env = {**os.environ, "NXF_SYNTAX_PARSER": "v2"}
+        result = subprocess.run(
+            ["nextflow", "run", ".", "--help"],
+            cwd=repo_path,
+            capture_output=True,
+            text=True,
+            timeout=120,
+            env=env,
+        )
+        return result.returncode == 0
+    except (subprocess.TimeoutExpired, Exception) as e:
+        console.print(f"[dim]  --help test failed: {e}[/dim]")
+        return False
+
+
 def lint_component_markdown(repo_path: Path, name: str, output_dir: Path, target_path: Path | None = None) -> None:
     """Run nextflow lint on a component and save markdown output to file."""
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -644,6 +672,7 @@ def run_pipeline_lint(pipelines: list[dict], no_cache: bool = False) -> list[dic
                         "errors": cached["errors"],
                         "warnings": cached["warnings"],
                         "parse_error": cached.get("parse_error", False),
+                        "prints_help": cached.get("prints_help"),
                         "lint_details": {},  # Don't store full details in cache
                     }
                 )
@@ -663,6 +692,16 @@ def run_pipeline_lint(pipelines: list[dict], no_cache: bool = False) -> list[dic
             warning_count = len(lint_result.get("warnings", []))
             parse_error = lint_result.get("parse_error", False)
 
+            # Run prints_help test only if there are no errors
+            prints_help = None
+            if not parse_error and error_count == 0:
+                console.print("  Testing --help with v2 parser...")
+                prints_help = test_prints_help(repo_path)
+                if prints_help:
+                    console.print("  [green]--help test passed[/green]")
+                else:
+                    console.print("  [yellow]--help test failed[/yellow]")
+
             results.append(
                 {
                     "name": name,
@@ -672,6 +711,7 @@ def run_pipeline_lint(pipelines: list[dict], no_cache: bool = False) -> list[dic
                     "errors": error_count,
                     "warnings": warning_count,
                     "parse_error": parse_error,
+                    "prints_help": prints_help,
                     "lint_details": lint_result,
                 }
             )
@@ -687,6 +727,7 @@ def run_pipeline_lint(pipelines: list[dict], no_cache: bool = False) -> list[dic
                     "errors": 0,
                     "warnings": 0,
                     "parse_error": True,
+                    "prints_help": None,
                     "lint_details": {},
                 }
             )
@@ -1253,6 +1294,7 @@ def _generate_results_section(
     lint_results_dir: Path,
     include_charts: bool,
     show_only_errors: bool = False,
+    show_prints_help: bool = False,
 ) -> list[str]:
     """Generate a results section for a specific type (pipelines, modules, subworkflows).
 
@@ -1263,6 +1305,7 @@ def _generate_results_section(
         lint_results_dir: Path to lint results directory
         include_charts: Whether to include chart images
         show_only_errors: If True, only show items with errors in the table (for modules/subworkflows)
+        show_prints_help: If True, show the "Prints Help" column (for pipelines only)
     """
     if not results:
         return []
@@ -1308,13 +1351,20 @@ def _generate_results_section(
         summary_text = f"{type_singular.title()} Results ({table_count} {type_name})"
 
     # Results table in a collapsible details section
+    if show_prints_help:
+        table_header = f"| {type_singular.title()} | Parse Error | Errors | Warnings | Prints Help | Lint Output |"
+        table_separator = "|----------|:-----------:|-------:|---------:|:-----------:|:-----------:|"
+    else:
+        table_header = f"| {type_singular.title()} | Parse Error | Errors | Warnings | Lint Output |"
+        table_separator = "|----------|:-----------:|-------:|---------:|:-----------:|"
+
     lines.extend(
         [
             "<details>",
             f"<summary>{summary_text}</summary>",
             "",
-            f"| {type_singular.title()} | Parse Error | Errors | Warnings | Lint Output |",
-            "|----------|:-----------:|-------:|---------:|:-----------:|",
+            table_header,
+            table_separator,
         ]
     )
 
@@ -1336,7 +1386,22 @@ def _generate_results_section(
 
         name_link = f"{status_emoji} [{result['name']}]({result['html_url']})"
         lint_file_link = f"[View]({lint_results_dir}/{result['name']}_lint.md)"
-        lines.append(f"| {name_link} | {parse_error_str} | {error_str} | {warning_str} | {lint_file_link} |")
+
+        if show_prints_help:
+            prints_help = result.get("prints_help")
+            if prints_help is None:
+                prints_help_str = "-"
+            elif prints_help:
+                prints_help_str = ":white_check_mark:"
+            else:
+                prints_help_str = ":x:"
+            row = (
+                f"| {name_link} | {parse_error_str} | {error_str} | {warning_str} "
+                f"| {prints_help_str} | {lint_file_link} |"
+            )
+            lines.append(row)
+        else:
+            lines.append(f"| {name_link} | {parse_error_str} | {error_str} | {warning_str} | {lint_file_link} |")
 
     # Add note about hidden zero-error items if filtering
     if show_only_errors and zero_error_count > 0:
@@ -1398,7 +1463,12 @@ def generate_readme(
     if pipeline_results:
         lines.extend(
             _generate_results_section(
-                pipeline_results, "pipelines", "pipeline", PIPELINES_LINT_RESULTS_DIR, include_charts
+                pipeline_results,
+                "pipelines",
+                "pipeline",
+                PIPELINES_LINT_RESULTS_DIR,
+                include_charts,
+                show_prints_help=True,
             )
         )
 
@@ -1434,6 +1504,9 @@ def generate_readme(
             "- **Errors** indicate syntax issues that will cause problems in future Nextflow versions",
             "- **Warnings** indicate deprecated patterns that should be updated, "
             "but having warnings is fine (though it's nice to fix those as well if possible)",
+            "- **Prints Help** (pipelines only) tests whether the pipeline can print its help message "
+            "using the v2 syntax parser (`NXF_SYNTAX_PARSER=v2 nextflow run . --help`). "
+            "This test only runs for pipelines with zero lint errors.",
             "",
             "## Running Locally",
             "",
