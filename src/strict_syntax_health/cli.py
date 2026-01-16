@@ -785,13 +785,13 @@ def _get_type_dir(type_name: str) -> Path:
 
 
 def _get_history_path_for_type(type_name: str) -> Path:
-    """Get the history file path for a specific type."""
-    return _get_type_dir(type_name) / "history.json"
+    """Get the history file path for a specific type (stored in lint_results/ root)."""
+    return LINT_RESULTS_DIR / f"{type_name}_history.json"
 
 
 def _get_results_path_for_type(type_name: str) -> Path:
-    """Get the results file path for a specific type (for aggregation)."""
-    return _get_type_dir(type_name) / "results.json"
+    """Get the results file path for a specific type (stored in lint_results/ root)."""
+    return LINT_RESULTS_DIR / f"{type_name}_results.json"
 
 
 def save_results_for_type(type_name: str, results: list[dict]) -> None:
