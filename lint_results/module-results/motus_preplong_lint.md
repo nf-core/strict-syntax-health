@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/motus/preplong/main.nf:49:9`: Variable was declared but not used
 
-    ```nextflow
-        def refdb = db ? "-db ${db}" : ""
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def refdb = db ? "-db ${db}" : ""
+          ^^^^^^^^^^
+  ```

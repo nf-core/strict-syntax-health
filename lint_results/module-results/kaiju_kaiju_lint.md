@@ -8,14 +8,14 @@
 
 - Warning: `modules/nf-core/kaiju/kaiju/main.nf:43:9`: Variable was declared but not used
 
-    ```nextflow
-        def args = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/kaiju/kaiju/main.nf:45:9`: Variable was declared but not used
 
-    ```nextflow
-        def input = meta.single_end ? "-i ${reads}" : "-i ${reads[0]} -j ${reads[1]}"
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def input = meta.single_end ? "-i ${reads}" : "-i ${reads[0]} -j ${reads[1]}"
+          ^^^^^^^^^^
+  ```

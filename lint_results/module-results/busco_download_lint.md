@@ -8,14 +8,14 @@
 
 - Warning: `modules/nf-core/busco/download/main.nf:22:9`: Variable was declared but not used
 
-    ```nextflow
-        def prefix = task.ext.prefix ?: "${lineage}"
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def prefix = task.ext.prefix ?: "${lineage}"
+          ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/busco/download/main.nf:35:9`: Variable was declared but not used
 
-    ```nextflow
-        def args = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^^^^^^^
+  ```

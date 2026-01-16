@@ -8,14 +8,14 @@
 
 - Warning: `modules/nf-core/happy/prepy/main.nf:44:9`: Variable was declared but not used
 
-    ```nextflow
-        def args = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/happy/prepy/main.nf:46:9`: Variable was declared but not used
 
-    ```nextflow
-        def restrict_region = bed ? "-R ${bed}": ""
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def restrict_region = bed ? "-R ${bed}": ""
+          ^^^^^^^^^^
+  ```

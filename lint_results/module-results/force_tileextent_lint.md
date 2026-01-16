@@ -8,14 +8,14 @@
 
 - Warning: `modules/nf-core/force/tileextent/main.nf:23:9`: Variable was declared but not used
 
-    ```nextflow
-        def args = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/force/tileextent/main.nf:35:9`: Variable was declared but not used
 
-    ```nextflow
-        def args = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^^^^^^^
+  ```

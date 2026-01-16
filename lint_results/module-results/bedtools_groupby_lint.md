@@ -8,7 +8,7 @@
 
 - Error: `modules/nf-core/bedtools/groupby/main.nf:24:9`: `summary_col` is already declared
 
-    ```nextflow
-        def summary_col = task.ext.summary_col ? "-c ${task.ext.summary_col}" : "-c 5"
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def summary_col = task.ext.summary_col ? "-c ${task.ext.summary_col}" : "-c 5"
+          ^^^^^^^^^^
+  ```

@@ -8,17 +8,16 @@
 
 - Error: `modules/nf-core/sam2lca/analyze/main.nf:28:9`: `database` is already declared
 
-    ```nextflow
-        def database = database ? "${database}" : "sam2lca_db"
-            ^^^^^^^^^^
-    ```
-
+  ```nextflow
+      def database = database ? "${database}" : "sam2lca_db"
+          ^^^^^^^^^^
+  ```
 
 ## :warning: Warnings
 
 - Warning: `modules/nf-core/sam2lca/analyze/main.nf:45:9`: Variable was declared but not used
 
-    ```nextflow
-        def args = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^^^^^^^
+  ```

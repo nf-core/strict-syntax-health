@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/salmon/quant/main.nf:34:58`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        meta.single_end ? [reads].flatten().each { reads1 << it } : reads.eachWithIndex { v, ix -> (ix & 1 ? reads2 : reads1) << v }
-                                                             ^^^^^^^^^^
-    ```
+  ```nextflow
+      meta.single_end ? [reads].flatten().each { reads1 << it } : reads.eachWithIndex { v, ix -> (ix & 1 ? reads2 : reads1) << v }
+                                                           ^^^^^^^^^^
+  ```

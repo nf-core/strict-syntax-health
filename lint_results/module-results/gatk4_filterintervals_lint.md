@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/gatk4/filterintervals/main.nf:26:78`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        def read_counts_command = read_counts ? read_counts.collect { "--input ${it}" }.join(" ") : ""
-                                                                                 ^^^^^^^^^^
-    ```
+  ```nextflow
+      def read_counts_command = read_counts ? read_counts.collect { "--input ${it}" }.join(" ") : ""
+                                                                               ^^^^^^^^^^
+  ```

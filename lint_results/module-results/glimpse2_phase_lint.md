@@ -8,21 +8,21 @@
 
 - Warning: `modules/nf-core/glimpse2/phase/main.nf:45:9`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-            it.toString().endsWithAny("cram", "bam")          ? "bam" :
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+          it.toString().endsWithAny("cram", "bam")          ? "bam" :
+          ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/glimpse2/phase/main.nf:46:9`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-            it.toString().endsWithAny("vcf", "bcf", "vcf.gz") ? "gl"  :
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+          it.toString().endsWithAny("vcf", "bcf", "vcf.gz") ? "gl"  :
+          ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/glimpse2/phase/main.nf:47:9`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-            it.getExtension()
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+          it.getExtension()
+          ^^^^^^^^^^
+  ```

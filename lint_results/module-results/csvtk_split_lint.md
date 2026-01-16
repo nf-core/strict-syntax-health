@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/csvtk/split/main.nf:24:9`: Variable was declared but not used
 
-    ```nextflow
-        def prefix = task.ext.prefix ?: "${meta.id}"
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def prefix = task.ext.prefix ?: "${meta.id}"
+          ^^^^^^^^^^
+  ```

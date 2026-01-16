@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/bcftools/merge/main.nf:28:58`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        def input = (vcfs.collect().size() > 1) ? vcfs.sort{ it.name } : vcfs
-                                                             ^^^^^^^^^^
-    ```
+  ```nextflow
+      def input = (vcfs.collect().size() > 1) ? vcfs.sort{ it.name } : vcfs
+                                                           ^^^^^^^^^^
+  ```

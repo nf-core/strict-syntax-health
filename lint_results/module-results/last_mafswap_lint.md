@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/last/mafswap/main.nf:30:9`: Variable was declared but not used
 
-    ```nextflow
-        def args = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^^^^^^^
+  ```

@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/metaphlan3/mergemetaphlantables/main.nf:22:31`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        def input = profiles.sort{it.toString()}.join(" ")
-                                  ^^^^^^^^^^
-    ```
+  ```nextflow
+      def input = profiles.sort{it.toString()}.join(" ")
+                                ^^^^^^^^^^
+  ```

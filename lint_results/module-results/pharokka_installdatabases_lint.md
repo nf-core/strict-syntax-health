@@ -8,7 +8,7 @@
 
 - Error: `modules/nf-core/pharokka/installdatabases/main.nf:1:1`: Invalid process definition -- check for missing or out-of-order section labels
 
-    ```nextflow
-    process PHAROKKA_INSTALLDATABASES {
-    ^^^^^^^^^^
-    ```
+  ```nextflow
+  process PHAROKKA_INSTALLDATABASES {
+  ^^^^^^^^^^
+  ```

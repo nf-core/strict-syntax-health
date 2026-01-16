@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/samtools/samples/main.nf:25:61`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        def fasta_arg = fasta ? [fasta].flatten().collect { "-f $it" }.join(' ') : ''
-                                                                ^^^^^^^^^^
-    ```
+  ```nextflow
+      def fasta_arg = fasta ? [fasta].flatten().collect { "-f $it" }.join(' ') : ''
+                                                              ^^^^^^^^^^
+  ```

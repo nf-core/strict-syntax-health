@@ -8,7 +8,7 @@
 
 - Error: `modules/nf-core/vcfpgloader/load/main.nf:28:26`: `ROWS_LOADED` is not defined
 
-    ```nextflow
-        tuple val(meta), env(ROWS_LOADED), emit: row_count
-                             ^^^^^^^^^^
-    ```
+  ```nextflow
+      tuple val(meta), env(ROWS_LOADED), emit: row_count
+                           ^^^^^^^^^^
+  ```

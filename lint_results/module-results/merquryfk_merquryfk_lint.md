@@ -8,21 +8,21 @@
 
 - Warning: `modules/nf-core/merquryfk/merquryfk/main.nf:45:52`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        fk_ktab     = fastk_ktab ? "${fastk_ktab.find{ it.toString().endsWith(".ktab") }}" : ''
-                                                       ^^^^^^^^^^
-    ```
+  ```nextflow
+      fk_ktab     = fastk_ktab ? "${fastk_ktab.find{ it.toString().endsWith(".ktab") }}" : ''
+                                                     ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/merquryfk/merquryfk/main.nf:46:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        mat_hapktab = mathaptab  ? "${mathaptab.find{ it.toString().endsWith(".ktab") }}"  : ''
-                                                      ^^^^^^^^^^
-    ```
+  ```nextflow
+      mat_hapktab = mathaptab  ? "${mathaptab.find{ it.toString().endsWith(".ktab") }}"  : ''
+                                                    ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/merquryfk/merquryfk/main.nf:47:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        pat_hapktab = pathaptab  ? "${pathaptab.find{ it.toString().endsWith(".ktab") }}"  : ''
-                                                      ^^^^^^^^^^
-    ```
+  ```nextflow
+      pat_hapktab = pathaptab  ? "${pathaptab.find{ it.toString().endsWith(".ktab") }}"  : ''
+                                                    ^^^^^^^^^^
+  ```

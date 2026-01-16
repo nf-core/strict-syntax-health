@@ -8,14 +8,14 @@
 
 - Warning: `modules/nf-core/custom/addmostsevereconsequence/main.nf:48:9`: Variable was declared but not used
 
-    ```nextflow
-        def args = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/custom/addmostsevereconsequence/main.nf:49:9`: Variable was declared but not used
 
-    ```nextflow
-        def args2 = task.ext.args2 ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args2 = task.ext.args2 ?: ''
+          ^^^^^^^^^^
+  ```

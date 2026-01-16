@@ -8,31 +8,30 @@
 
 - Error: `modules/nf-core/sentieon/qualcal/tests/nextflow.config:3:25`: `SENTIEON_LICSRVR_IP` is not defined (hint: use `env('...')` to access environment variable)
 
-    ```nextflow
-        SENTIEON_LICENSE = "$SENTIEON_LICSRVR_IP"
-                            ^^^^^^^^^^
-    ```
+  ```nextflow
+      SENTIEON_LICENSE = "$SENTIEON_LICSRVR_IP"
+                          ^^^^^^^^^^
+  ```
 
 - Error: `modules/nf-core/sentieon/qualcal/tests/nextflow.config:5:27`: `SENTIEON_AUTH_MECH` is not defined (hint: use `env('...')` to access environment variable)
 
-    ```nextflow
-        SENTIEON_AUTH_MECH = "$SENTIEON_AUTH_MECH"
-                              ^^^^^^^^^^
-    ```
-
+  ```nextflow
+      SENTIEON_AUTH_MECH = "$SENTIEON_AUTH_MECH"
+                            ^^^^^^^^^^
+  ```
 
 ## :warning: Warnings
 
 - Warning: `modules/nf-core/sentieon/qualcal/main.nf:33:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        def input_list = input.collect { "-i ${it}" }.join(' ')
-                                               ^^^^^^^^^^
-    ```
+  ```nextflow
+      def input_list = input.collect { "-i ${it}" }.join(' ')
+                                             ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/sentieon/qualcal/main.nf:34:64`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        def knownSites = known_sites ? known_sites.collect { "-k ${it}" }.join(' ') : ""
-                                                                   ^^^^^^^^^^
-    ```
+  ```nextflow
+      def knownSites = known_sites ? known_sites.collect { "-k ${it}" }.join(' ') : ""
+                                                                 ^^^^^^^^^^
+  ```

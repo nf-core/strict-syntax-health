@@ -8,14 +8,14 @@
 
 - Warning: `modules/nf-core/ganon/classify/main.nf:48:9`: Variable was declared but not used
 
-    ```nextflow
-        def args = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/ganon/classify/main.nf:50:9`: Variable was declared but not used
 
-    ```nextflow
-        def input = meta.single_end ? "--single-reads ${fastqs}" : "--paired-reads ${fastqs}"
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def input = meta.single_end ? "--single-reads ${fastqs}" : "--paired-reads ${fastqs}"
+          ^^^^^^^^^^
+  ```

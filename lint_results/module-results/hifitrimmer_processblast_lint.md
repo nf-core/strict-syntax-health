@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/hifitrimmer/processblast/main.nf:25:8`: Variable was declared but not used
 
-    ```nextflow
-       def prefix = task.ext.prefix ?: "${meta.id}"
-           ^^^^^^^^^^
-    ```
+  ```nextflow
+     def prefix = task.ext.prefix ?: "${meta.id}"
+         ^^^^^^^^^^
+  ```

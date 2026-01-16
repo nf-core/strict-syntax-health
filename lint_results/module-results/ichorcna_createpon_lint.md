@@ -8,7 +8,7 @@
 
 - Error: `modules/nf-core/ichorcna/createpon/main.nf:31:9`: `exons` is already declared
 
-    ```nextflow
-        def exons  = exons           ? "exons.bed='${exons}',"                : ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def exons  = exons           ? "exons.bed='${exons}',"                : ''
+          ^^^^^^^^^^
+  ```

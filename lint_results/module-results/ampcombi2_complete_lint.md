@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/ampcombi2/complete/main.nf:25:49`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-            --summaries_files '${summaries.collect{"$it"}.join("' '")}' \\
-                                                    ^^^^^^^^^^
-    ```
+  ```nextflow
+          --summaries_files '${summaries.collect{"$it"}.join("' '")}' \\
+                                                  ^^^^^^^^^^
+  ```

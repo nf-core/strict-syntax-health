@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/minimap2/align/main.nf:67:9`: Variable was declared but not used
 
-    ```nextflow
-        def target = reference ?: (bam_input ? error("BAM input requires reference") : reads)
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def target = reference ?: (bam_input ? error("BAM input requires reference") : reads)
+          ^^^^^^^^^^
+  ```

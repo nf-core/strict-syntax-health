@@ -8,7 +8,7 @@
 
 - Error: `modules/nf-core/cnvnator/cnvnator/main.nf:53:9`: `calls_cmd` is already declared
 
-    ```nextflow
-        def calls_cmd = args.contains("-call") ? "touch ${prefix}.tab" : ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def calls_cmd = args.contains("-call") ? "touch ${prefix}.tab" : ''
+          ^^^^^^^^^^
+  ```

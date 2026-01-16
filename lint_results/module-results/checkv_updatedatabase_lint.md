@@ -8,21 +8,21 @@
 
 - Warning: `modules/nf-core/checkv/updatedatabase/main.nf:40:9`: Variable was declared but not used
 
-    ```nextflow
-        def args = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/checkv/updatedatabase/main.nf:42:9`: Variable was declared but not used
 
-    ```nextflow
-        def checkv_db = db ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def checkv_db = db ?: ''
+          ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/checkv/updatedatabase/main.nf:43:9`: Variable was declared but not used
 
-    ```nextflow
-        def update_sequence = fasta ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def update_sequence = fasta ?: ''
+          ^^^^^^^^^^
+  ```

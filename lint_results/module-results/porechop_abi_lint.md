@@ -8,14 +8,14 @@
 
 - Warning: `modules/nf-core/porechop/abi/main.nf:44:9`: Variable was declared but not used
 
-    ```nextflow
-        def args = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/porechop/abi/main.nf:46:9`: Variable was declared but not used
 
-    ```nextflow
-        def adapters_list = custom_adapters ? "--custom_adapters ${custom_adapters}" : ""
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def adapters_list = custom_adapters ? "--custom_adapters ${custom_adapters}" : ""
+          ^^^^^^^^^^
+  ```

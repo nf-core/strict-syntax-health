@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/gatk4/baserecalibrator/main.nf:29:64`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        def sites_command = known_sites.collect { "--known-sites ${it}" }.join(' ')
-                                                                   ^^^^^^^^^^
-    ```
+  ```nextflow
+      def sites_command = known_sites.collect { "--known-sites ${it}" }.join(' ')
+                                                                 ^^^^^^^^^^
+  ```

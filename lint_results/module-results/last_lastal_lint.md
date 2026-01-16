@@ -8,14 +8,14 @@
 
 - Warning: `modules/nf-core/last/lastal/main.nf:94:9`: Variable was declared but not used
 
-    ```nextflow
-        def args = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/last/lastal/main.nf:96:9`: Variable was declared but not used
 
-    ```nextflow
-        def trained_params = param_file ? "-p ${param_file}"  : ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def trained_params = param_file ? "-p ${param_file}"  : ''
+          ^^^^^^^^^^
+  ```

@@ -8,14 +8,14 @@
 
 - Warning: `modules/nf-core/isoseq/refine/main.nf:44:9`: Variable was declared but not used
 
-    ```nextflow
-        def args = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/isoseq/refine/main.nf:45:9`: Variable was declared but not used
 
-    ```nextflow
-        def prefix = task.ext.prefix ?: "${meta.id}"
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def prefix = task.ext.prefix ?: "${meta.id}"
+          ^^^^^^^^^^
+  ```

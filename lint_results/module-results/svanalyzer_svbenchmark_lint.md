@@ -8,17 +8,16 @@
 
 - Error: `modules/nf-core/svanalyzer/svbenchmark/main.nf:36:9`: `bed` is already declared
 
-    ```nextflow
-        def bed = bed ? "-includebed $bed" : ""
-            ^^^^^^^^^^
-    ```
-
+  ```nextflow
+      def bed = bed ? "-includebed $bed" : ""
+          ^^^^^^^^^^
+  ```
 
 ## :warning: Warnings
 
 - Warning: `modules/nf-core/svanalyzer/svbenchmark/main.nf:63:9`: Variable was declared but not used
 
-    ```nextflow
-        def args = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^^^^^^^
+  ```

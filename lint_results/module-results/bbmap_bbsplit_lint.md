@@ -8,24 +8,23 @@
 
 - Error: `modules/nf-core/bbmap/bbsplit/main.nf:41:43`: `index` is already declared
 
-    ```nextflow
-        other_ref_names.eachWithIndex { name, index ->
-                                              ^^^^^^^^
-    ```
+  ```nextflow
+      other_ref_names.eachWithIndex { name, index ->
+                                            ^^^^^^^^
+  ```
 
 - Error: `modules/nf-core/bbmap/bbsplit/main.nf:116:43`: `index` is already declared
 
-    ```nextflow
-        other_ref_names.eachWithIndex { name, index ->
-                                              ^^^^^^^^
-    ```
-
+  ```nextflow
+      other_ref_names.eachWithIndex { name, index ->
+                                            ^^^^^^^^
+  ```
 
 ## :warning: Warnings
 
 - Warning: `modules/nf-core/bbmap/bbsplit/main.nf:116:43`: Parameter was not used -- prefix with `_` to suppress warning
 
-    ```nextflow
-        other_ref_names.eachWithIndex { name, index ->
-                                              ^^^^^^^^
-    ```
+  ```nextflow
+      other_ref_names.eachWithIndex { name, index ->
+                                            ^^^^^^^^
+  ```

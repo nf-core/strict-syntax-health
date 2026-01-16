@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/blast/blastn/main.nf:65:9`: Variable was declared but not used
 
-    ```nextflow
-        def args = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^^^^^^^
+  ```

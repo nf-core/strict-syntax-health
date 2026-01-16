@@ -8,14 +8,14 @@
 
 - Warning: `modules/nf-core/rseqc/tin/main.nf:24:9`: Variable was declared but not used
 
-    ```nextflow
-        def prefix = task.ext.prefix ?: "${meta.id}"
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def prefix = task.ext.prefix ?: "${meta.id}"
+          ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/rseqc/tin/main.nf:33:9`: Variable was declared but not used
 
-    ```nextflow
-        def prefix = task.ext.prefix ?: "${meta.id}"
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def prefix = task.ext.prefix ?: "${meta.id}"
+          ^^^^^^^^^^
+  ```

@@ -8,14 +8,14 @@
 
 - Warning: `modules/nf-core/survivor/merge/main.nf:30:13`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-            if (it.getExtension() == "gz"){
-                ^^^^^^^^^^
-    ```
+  ```nextflow
+          if (it.getExtension() == "gz"){
+              ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/survivor/merge/main.nf:57:13`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-            if (it.getExtension() == "gz"){
-                ^^^^^^^^^^
-    ```
+  ```nextflow
+          if (it.getExtension() == "gz"){
+              ^^^^^^^^^^
+  ```

@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/gatk4/germlinecnvcaller/main.nf:28:47`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        def input_list = tsv.collect { "--input ${it}" }.join(' ')
-                                                  ^^^^^^^^^^
-    ```
+  ```nextflow
+      def input_list = tsv.collect { "--input ${it}" }.join(' ')
+                                                ^^^^^^^^^^
+  ```

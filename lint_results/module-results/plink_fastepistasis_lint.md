@@ -8,38 +8,37 @@
 
 - Error: `modules/nf-core/plink/fastepistasis/main.nf:74:60`: `pheno` is not defined
 
-    ```nextflow
-            prefix = task.ext.prefix ?: "${meta2.id} --pheno ${pheno}"
-                                                               ^^^^^^^
-    ```
+  ```nextflow
+          prefix = task.ext.prefix ?: "${meta2.id} --pheno ${pheno}"
+                                                             ^^^^^^^
+  ```
 
 - Error: `modules/nf-core/plink/fastepistasis/main.nf:77:49`: `pheno` is not defined
 
-    ```nextflow
-            input_command = "--bcf ${bcf} --pheno ${pheno}"
-                                                    ^^^^^^^
-    ```
-
+  ```nextflow
+          input_command = "--bcf ${bcf} --pheno ${pheno}"
+                                                  ^^^^^^^
+  ```
 
 ## :warning: Warnings
 
 - Warning: `modules/nf-core/plink/fastepistasis/main.nf:33:9`: Variable was declared but not used
 
-    ```nextflow
-        def outmeta = ""
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def outmeta = ""
+          ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/plink/fastepistasis/main.nf:63:9`: Variable was declared but not used
 
-    ```nextflow
-        def args = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/plink/fastepistasis/main.nf:68:9`: Variable was declared but not used
 
-    ```nextflow
-        def outmeta = ""
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def outmeta = ""
+          ^^^^^^^^^^
+  ```

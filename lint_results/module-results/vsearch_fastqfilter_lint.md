@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/vsearch/fastqfilter/main.nf:39:9`: Variable was declared but not used
 
-    ```nextflow
-        def args = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^^^^^^^
+  ```

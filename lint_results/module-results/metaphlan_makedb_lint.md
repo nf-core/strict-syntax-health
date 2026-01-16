@@ -8,7 +8,7 @@
 
 - Error: `modules/nf-core/metaphlan/makedb/main.nf:1:1`: Invalid process definition -- check for missing or out-of-order section labels
 
-    ```nextflow
-    process METAPHLAN_MAKEDB {
-    ^^^^^^^^^^
-    ```
+  ```nextflow
+  process METAPHLAN_MAKEDB {
+  ^^^^^^^^^^
+  ```

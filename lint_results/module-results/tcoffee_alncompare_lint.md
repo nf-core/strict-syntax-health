@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/tcoffee/alncompare/main.nf:58:9`: Variable was declared but not used
 
-    ```nextflow
-        def args = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^^^^^^^
+  ```

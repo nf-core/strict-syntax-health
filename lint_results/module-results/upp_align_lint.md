@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/upp/align/main.nf:23:9`: Variable was declared but not used
 
-    ```nextflow
-        def tree_args = tree ? "-t $tree" : ""
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def tree_args = tree ? "-t $tree" : ""
+          ^^^^^^^^^^
+  ```

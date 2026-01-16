@@ -8,7 +8,7 @@
 
 - Error: `modules/nf-core/cellrangeratac/mkfastq/main.nf:7:5`: Invalid process directive
 
-    ```nextflow
-        if (workflow.profile.tokenize(',').intersect(['conda', 'mamba']).size() >= 1) {
-        ^^^^^^^^^^
-    ```
+  ```nextflow
+      if (workflow.profile.tokenize(',').intersect(['conda', 'mamba']).size() >= 1) {
+      ^^^^^^^^^^
+  ```

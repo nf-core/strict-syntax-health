@@ -8,17 +8,16 @@
 
 - Error: `modules/nf-core/ribotish/predict/main.nf:41:12`: `para_tis` is not defined
 
-    ```nextflow
-            if (para_tis){
-               ^^^^^^^^^^
-    ```
-
+  ```nextflow
+          if (para_tis){
+             ^^^^^^^^^^
+  ```
 
 ## :warning: Warnings
 
 - Warning: `modules/nf-core/ribotish/predict/main.nf:64:9`: Variable was declared but not used
 
-    ```nextflow
-        def args = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^^^^^^^
+  ```

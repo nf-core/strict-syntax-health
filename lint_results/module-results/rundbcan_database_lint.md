@@ -8,14 +8,14 @@
 
 - Warning: `modules/nf-core/rundbcan/database/main.nf:17:9`: Variable was declared but not used
 
-    ```nextflow
-        def args   = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args   = task.ext.args ?: ''
+          ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/rundbcan/database/main.nf:29:9`: Variable was declared but not used
 
-    ```nextflow
-        def args        = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args        = task.ext.args ?: ''
+          ^^^^^^^^^^
+  ```

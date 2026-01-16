@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/cnvpytor/callcnvs/main.nf:22:9`: Variable was declared but not used
 
-    ```nextflow
-        def bins = bin_sizes ? "-call $bin_sizes" : '-call 1000'
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def bins = bin_sizes ? "-call $bin_sizes" : '-call 1000'
+          ^^^^^^^^^^
+  ```

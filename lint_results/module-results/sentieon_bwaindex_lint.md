@@ -8,14 +8,14 @@
 
 - Error: `modules/nf-core/sentieon/bwaindex/tests/nextflow.config:3:24`: `$SENTIEON_LICSRVR_IP` is not defined
 
-    ```nextflow
-        SENTIEON_LICENSE = $SENTIEON_LICSRVR_IP
-                           ^^^^^^^^^^
-    ```
+  ```nextflow
+      SENTIEON_LICENSE = $SENTIEON_LICSRVR_IP
+                         ^^^^^^^^^^
+  ```
 
 - Error: `modules/nf-core/sentieon/bwaindex/tests/nextflow.config:5:26`: `$SENTIEON_AUTH_MECH` is not defined
 
-    ```nextflow
-        SENTIEON_AUTH_MECH = $SENTIEON_AUTH_MECH
-                             ^^^^^^^^^^
-    ```
+  ```nextflow
+      SENTIEON_AUTH_MECH = $SENTIEON_AUTH_MECH
+                           ^^^^^^^^^^
+  ```

@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/parabricks/applybqsr/main.nf:32:86`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        def interval_command = intervals        ? intervals.collect { "--interval-file ${it}" }.join(' ') : ""
-                                                                                         ^^^^^^^^^^
-    ```
+  ```nextflow
+      def interval_command = intervals        ? intervals.collect { "--interval-file ${it}" }.join(' ') : ""
+                                                                                       ^^^^^^^^^^
+  ```

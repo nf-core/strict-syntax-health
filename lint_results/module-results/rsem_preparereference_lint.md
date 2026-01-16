@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/rsem/preparereference/main.nf:27:30`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-            args_list.removeIf { it.contains('--star') }
-                                 ^^^^^^^^^^
-    ```
+  ```nextflow
+          args_list.removeIf { it.contains('--star') }
+                               ^^^^^^^^^^
+  ```

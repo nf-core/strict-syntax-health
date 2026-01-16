@@ -8,14 +8,14 @@
 
 - Warning: `modules/nf-core/wipertools/reportgather/main.nf:25:22`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        if (report.any { it.name == "${prefix}.report" }) {
-                         ^^^^^^^^^^
-    ```
+  ```nextflow
+      if (report.any { it.name == "${prefix}.report" }) {
+                       ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/wipertools/reportgather/main.nf:46:22`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        if (report.any { it.name == "${prefix}.report" }) {
-                         ^^^^^^^^^^
-    ```
+  ```nextflow
+      if (report.any { it.name == "${prefix}.report" }) {
+                       ^^^^^^^^^^
+  ```

@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/gatk4/sitedepthtobaf/main.nf:29:66`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        def site_depth_input = site_depths.collect { "--site-depth ${it}" }.join(" ")
-                                                                     ^^^^^^^^^^
-    ```
+  ```nextflow
+      def site_depth_input = site_depths.collect { "--site-depth ${it}" }.join(" ")
+                                                                   ^^^^^^^^^^
+  ```

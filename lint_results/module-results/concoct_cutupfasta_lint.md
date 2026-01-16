@@ -8,14 +8,14 @@
 
 - Warning: `modules/nf-core/concoct/cutupfasta/main.nf:43:9`: Variable was declared but not used
 
-    ```nextflow
-        def args = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/concoct/cutupfasta/main.nf:45:9`: Variable was declared but not used
 
-    ```nextflow
-        def bedfile = bed ? "-b ${prefix}.bed" : ""
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def bedfile = bed ? "-b ${prefix}.bed" : ""
+          ^^^^^^^^^^
+  ```

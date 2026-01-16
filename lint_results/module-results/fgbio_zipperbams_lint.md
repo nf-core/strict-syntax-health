@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/fgbio/zipperbams/main.nf:25:9`: Variable was declared but not used
 
-    ```nextflow
-        def args2 = task.ext.args2 ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args2 = task.ext.args2 ?: ''
+          ^^^^^^^^^^
+  ```

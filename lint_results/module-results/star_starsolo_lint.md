@@ -8,7 +8,7 @@
 
 - Error: `modules/nf-core/star/starsolo/main.nf:33:30`: Unexpected input: '\n'
 
-    ```nextflow
-            case "CB_UMI_Simple":
-                                 ^
-    ```
+  ```nextflow
+          case "CB_UMI_Simple":
+                               ^
+  ```

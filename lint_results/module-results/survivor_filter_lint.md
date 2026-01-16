@@ -8,14 +8,14 @@
 
 - Warning: `modules/nf-core/survivor/filter/main.nf:25:9`: Variable was declared but not used
 
-    ```nextflow
-        def args = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/survivor/filter/main.nf:51:9`: Variable was declared but not used
 
-    ```nextflow
-        def bed_file = bed ? "${bed}" : "NA"
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def bed_file = bed ? "${bed}" : "NA"
+          ^^^^^^^^^^
+  ```

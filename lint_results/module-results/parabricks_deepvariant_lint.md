@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/parabricks/deepvariant/main.nf:31:92`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        def interval_file_command = interval_file ? interval_file.collect { "--interval-file ${it}" }.join(' ') : ""
-                                                                                               ^^^^^^^^^^
-    ```
+  ```nextflow
+      def interval_file_command = interval_file ? interval_file.collect { "--interval-file ${it}" }.join(' ') : ""
+                                                                                             ^^^^^^^^^^
+  ```

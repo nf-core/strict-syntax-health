@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/cellbender/merge/main.nf:22:5`: Variable was declared but not used
 
-    ```nextflow
-        output_layer = task.ext.output_layer ?: "cellbender"
-        ^^^^^^^^^^
-    ```
+  ```nextflow
+      output_layer = task.ext.output_layer ?: "cellbender"
+      ^^^^^^^^^^
+  ```

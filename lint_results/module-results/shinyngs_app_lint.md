@@ -8,17 +8,16 @@
 
 - Error: `modules/nf-core/shinyngs/app/tests/nextflow.config:6:32`: Unexpected input: ':'
 
-    ```nextflow
-        withName: test_shinyngs_app:SHINYNGS_APP {
-                                   ^^^^^^^^^^
-    ```
-
+  ```nextflow
+      withName: test_shinyngs_app:SHINYNGS_APP {
+                                 ^^^^^^^^^^
+  ```
 
 ## :warning: Warnings
 
 - Warning: `modules/nf-core/shinyngs/app/main.nf:56:9`: Variable was declared but not used
 
-    ```nextflow
-        def args = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^^^^^^^
+  ```

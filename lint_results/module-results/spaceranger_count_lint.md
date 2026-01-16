@@ -8,49 +8,49 @@
 
 - Error: `modules/nf-core/spaceranger/count/main.nf:27:9`: `probeset` is already declared
 
-    ```nextflow
-        def probeset = probeset ? "--probe-set=\"${probeset}\"" : ""
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def probeset = probeset ? "--probe-set=\"${probeset}\"" : ""
+          ^^^^^^^^^^
+  ```
 
 - Error: `modules/nf-core/spaceranger/count/main.nf:28:9`: `alignment` is already declared
 
-    ```nextflow
-        def alignment = alignment ? "--loupe-alignment=\"${alignment}\"" : ""
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def alignment = alignment ? "--loupe-alignment=\"${alignment}\"" : ""
+          ^^^^^^^^^^
+  ```
 
 - Error: `modules/nf-core/spaceranger/count/main.nf:29:9`: `slidefile` is already declared
 
-    ```nextflow
-        def slidefile = slidefile ? "--slidefile=\"${slidefile}\"" : ""
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def slidefile = slidefile ? "--slidefile=\"${slidefile}\"" : ""
+          ^^^^^^^^^^
+  ```
 
 - Error: `modules/nf-core/spaceranger/count/main.nf:30:9`: `image` is already declared
 
-    ```nextflow
-        def image = image ? "--image=\"${image}\"" : ""
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def image = image ? "--image=\"${image}\"" : ""
+          ^^^^^^^^^^
+  ```
 
 - Error: `modules/nf-core/spaceranger/count/main.nf:31:9`: `cytaimage` is already declared
 
-    ```nextflow
-        def cytaimage = cytaimage ? "--cytaimage=\"${cytaimage}\"" : ""
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def cytaimage = cytaimage ? "--cytaimage=\"${cytaimage}\"" : ""
+          ^^^^^^^^^^
+  ```
 
 - Error: `modules/nf-core/spaceranger/count/main.nf:32:9`: `darkimage` is already declared
 
-    ```nextflow
-        def darkimage = darkimage ? "--darkimage=\"${darkimage}\"" : ""
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def darkimage = darkimage ? "--darkimage=\"${darkimage}\"" : ""
+          ^^^^^^^^^^
+  ```
 
 - Error: `modules/nf-core/spaceranger/count/main.nf:33:9`: `colorizedimage` is already declared
 
-    ```nextflow
-        def colorizedimage = colorizedimage ? "--colorizedimage=\"${colorizedimage}\"" : ""
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def colorizedimage = colorizedimage ? "--colorizedimage=\"${colorizedimage}\"" : ""
+          ^^^^^^^^^^
+  ```

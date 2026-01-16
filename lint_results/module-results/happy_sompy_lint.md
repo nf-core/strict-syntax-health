@@ -8,7 +8,7 @@
 
 - Error: `modules/nf-core/happy/sompy/main.nf:35:9`: `bams` is already declared
 
-    ```nextflow
-        def bams = bams ? "--bam ${bams}" : ""
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def bams = bams ? "--bam ${bams}" : ""
+          ^^^^^^^^^^
+  ```

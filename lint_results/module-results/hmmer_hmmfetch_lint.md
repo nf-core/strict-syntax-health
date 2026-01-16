@@ -8,17 +8,16 @@
 
 - Error: `modules/nf-core/hmmer/hmmfetch/main.nf:32:9`: `index` is already declared
 
-    ```nextflow
-        def index   = ! key && ! keyfile ? '--index' : ''
-            ^^^^^^^^^^
-    ```
-
+  ```nextflow
+      def index   = ! key && ! keyfile ? '--index' : ''
+          ^^^^^^^^^^
+  ```
 
 ## :warning: Warnings
 
 - Warning: `modules/nf-core/hmmer/hmmfetch/main.nf:52:9`: Variable was declared but not used
 
-    ```nextflow
-        def args = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^^^^^^^
+  ```

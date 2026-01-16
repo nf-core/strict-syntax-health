@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/ampcombi2/parsetables/main.nf:43:47`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-            --path_list '${amp_input.collect { "${it}" }.join("' '")}' \\
-                                                  ^^^^^^^^^^
-    ```
+  ```nextflow
+          --path_list '${amp_input.collect { "${it}" }.join("' '")}' \\
+                                                ^^^^^^^^^^
+  ```

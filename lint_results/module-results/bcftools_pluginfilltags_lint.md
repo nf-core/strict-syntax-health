@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/bcftools/pluginfilltags/main.nf:39:16`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-            assert it.name != "${prefix}.${extension}" : "Input and output names are the same, set prefix in module configuration to disambiguate!"
-                   ^^^^^^^^^^
-    ```
+  ```nextflow
+          assert it.name != "${prefix}.${extension}" : "Input and output names are the same, set prefix in module configuration to disambiguate!"
+                 ^^^^^^^^^^
+  ```

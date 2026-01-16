@@ -8,17 +8,16 @@
 
 - Error: `modules/nf-core/cellrangerarc/mkref/main.nf:30:9`: `reference_config` is already declared
 
-    ```nextflow
-        def reference_config = reference_config.name
-            ^^^^^^^^^^
-    ```
-
+  ```nextflow
+      def reference_config = reference_config.name
+          ^^^^^^^^^^
+  ```
 
 ## :warning: Warnings
 
 - Warning: `modules/nf-core/cellrangerarc/mkref/main.nf:90:9`: Variable was declared but not used
 
-    ```nextflow
-        def args = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^^^^^^^
+  ```

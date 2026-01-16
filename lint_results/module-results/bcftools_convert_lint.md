@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/bcftools/convert/main.nf:87:39`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-            hap = args_split.findIndexOf{ it == '--haplegendsample'}
-                                          ^^^^^^^^^^
-    ```
+  ```nextflow
+          hap = args_split.findIndexOf{ it == '--haplegendsample'}
+                                        ^^^^^^^^^^
+  ```

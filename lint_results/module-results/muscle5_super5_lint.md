@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/muscle5/super5/main.nf:52:9`: Variable was declared but not used
 
-    ```nextflow
-        def args = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^^^^^^^
+  ```

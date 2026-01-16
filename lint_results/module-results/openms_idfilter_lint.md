@@ -8,14 +8,14 @@
 
 - Warning: `modules/nf-core/openms/idfilter/main.nf:43:9`: Variable was declared but not used
 
-    ```nextflow
-        def args = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/openms/idfilter/main.nf:49:9`: Variable was declared but not used
 
-    ```nextflow
-        def filter = filter_file ? "${filter_citerion} ${filter_file}" : ""
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def filter = filter_file ? "${filter_citerion} ${filter_file}" : ""
+          ^^^^^^^^^^
+  ```

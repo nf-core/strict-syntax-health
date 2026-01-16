@@ -8,14 +8,14 @@
 
 - Warning: `modules/nf-core/viennarna/rnafold/main.nf:23:9`: Variable was declared but not used
 
-    ```nextflow
-        def prefix = meta.id ?: "${fasta.getName()}"
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def prefix = meta.id ?: "${fasta.getName()}"
+          ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/viennarna/rnafold/main.nf:38:9`: Variable was declared but not used
 
-    ```nextflow
-        def args = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^^^^^^^
+  ```

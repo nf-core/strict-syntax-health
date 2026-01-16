@@ -8,7 +8,7 @@
 
 - Error: `modules/nf-core/vsearch/sort/main.nf:40:13`: `prefix` is not defined
 
-    ```nextflow
-        touch ${prefix}.fasta
-                ^^^^^^^^^^
-    ```
+  ```nextflow
+      touch ${prefix}.fasta
+              ^^^^^^^^^^
+  ```

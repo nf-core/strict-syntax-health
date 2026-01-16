@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/vg/construct/main.nf:28:60`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        input_files = mode == 'vcf' ? input.collect { "--vcf ${it}" }.join(" ") : "--msa ${input}"
-                                                               ^^^^^^^^^^
-    ```
+  ```nextflow
+      input_files = mode == 'vcf' ? input.collect { "--vcf ${it}" }.join(" ") : "--msa ${input}"
+                                                             ^^^^^^^^^^
+  ```

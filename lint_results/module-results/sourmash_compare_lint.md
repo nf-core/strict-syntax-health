@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/sourmash/compare/main.nf:32:48`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        def sigs = signatures ? "${signatures.sort{it.toString()}.join(' ')}" : ''
-                                                   ^^^^^^^^^^
-    ```
+  ```nextflow
+      def sigs = signatures ? "${signatures.sort{it.toString()}.join(' ')}" : ''
+                                                 ^^^^^^^^^^
+  ```

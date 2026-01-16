@@ -8,14 +8,14 @@
 
 - Warning: `modules/nf-core/biscuit/align/main.nf:49:9`: Variable was declared but not used
 
-    ```nextflow
-        def args = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/biscuit/align/main.nf:50:9`: Variable was declared but not used
 
-    ```nextflow
-        def args2 = task.ext.args2 ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args2 = task.ext.args2 ?: ''
+          ^^^^^^^^^^
+  ```

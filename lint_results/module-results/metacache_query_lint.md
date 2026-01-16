@@ -8,14 +8,14 @@
 
 - Warning: `modules/nf-core/metacache/query/main.nf:47:9`: Variable was declared but not used
 
-    ```nextflow
-        def args = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/metacache/query/main.nf:49:9`: Variable was declared but not used
 
-    ```nextflow
-        def input_file = meta.single_end ? reads : "${reads[0]} ${reads[1]} -pairfiles"
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def input_file = meta.single_end ? reads : "${reads[0]} ${reads[1]} -pairfiles"
+          ^^^^^^^^^^
+  ```

@@ -8,14 +8,14 @@
 
 - Warning: `modules/nf-core/megan/rma2info/main.nf:40:9`: Variable was declared but not used
 
-    ```nextflow
-        def args = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/megan/rma2info/main.nf:42:9`: Variable was declared but not used
 
-    ```nextflow
-        def summary = megan_summary ? "-es ${prefix}.megan" : ""
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def summary = megan_summary ? "-es ${prefix}.megan" : ""
+          ^^^^^^^^^^
+  ```

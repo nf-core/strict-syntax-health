@@ -8,24 +8,23 @@
 
 - Error: `modules/nf-core/cellranger/count/main.nf:32:9`: `prefix` is already declared
 
-    ```nextflow
-        def prefix = task.ext.prefix ?: "${meta.id}"
-            ^^^^^^^^^^
-    ```
-
+  ```nextflow
+      def prefix = task.ext.prefix ?: "${meta.id}"
+          ^^^^^^^^^^
+  ```
 
 ## :warning: Warnings
 
 - Warning: `modules/nf-core/cellranger/count/main.nf:23:5`: Variable was declared but not used
 
-    ```nextflow
-        args = task.ext.args ?: ''
-        ^^^^^^^^^^
-    ```
+  ```nextflow
+      args = task.ext.args ?: ''
+      ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/cellranger/count/main.nf:24:5`: Variable was declared but not used
 
-    ```nextflow
-        prefix = task.ext.prefix ?: "${meta.id}"
-        ^^^^^^^^^^
-    ```
+  ```nextflow
+      prefix = task.ext.prefix ?: "${meta.id}"
+      ^^^^^^^^^^
+  ```

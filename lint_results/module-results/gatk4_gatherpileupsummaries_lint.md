@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/gatk4/gatherpileupsummaries/main.nf:24:46`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        def input_list = pileup.collect { "--I ${it}" }.join(' ')
-                                                 ^^^^^^^^^^
-    ```
+  ```nextflow
+      def input_list = pileup.collect { "--I ${it}" }.join(' ')
+                                               ^^^^^^^^^^
+  ```

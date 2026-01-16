@@ -8,21 +8,21 @@
 
 - Warning: `modules/nf-core/gatk4/filtermutectcalls/main.nf:29:117`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        def orientationbias_command = orientationbias ? orientationbias.collect { "--orientation-bias-artifact-priors ${it}" }.join(' ') : ''
-                                                                                                                        ^^^^^^^^^^
-    ```
+  ```nextflow
+      def orientationbias_command = orientationbias ? orientationbias.collect { "--orientation-bias-artifact-priors ${it}" }.join(' ') : ''
+                                                                                                                      ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/gatk4/filtermutectcalls/main.nf:30:94`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        def segmentation_command = segmentation ? segmentation.collect { "--tumor-segmentation ${it}" }.join(' ') : ''
-                                                                                                 ^^^^^^^^^^
-    ```
+  ```nextflow
+      def segmentation_command = segmentation ? segmentation.collect { "--tumor-segmentation ${it}" }.join(' ') : ''
+                                                                                               ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/gatk4/filtermutectcalls/main.nf:32:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        def table_command = table ? table.collect { "--contamination-table ${it}" }.join(' ') : ''
-                                                                             ^^^^^^^^^^
-    ```
+  ```nextflow
+      def table_command = table ? table.collect { "--contamination-table ${it}" }.join(' ') : ''
+                                                                           ^^^^^^^^^^
+  ```

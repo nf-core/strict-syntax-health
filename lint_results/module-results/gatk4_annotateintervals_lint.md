@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/gatk4/annotateintervals/main.nf:31:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        def inputs = intervals.collect { "--intervals ${it}" }.join(" ")
-                                                        ^^^^^^^^^^
-    ```
+  ```nextflow
+      def inputs = intervals.collect { "--intervals ${it}" }.join(" ")
+                                                      ^^^^^^^^^^
+  ```

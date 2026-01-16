@@ -8,7 +8,7 @@
 
 - Error: `modules/nf-core/dragen/germline/main.nf:282:22`: Unexpected input: 'i'
 
-    ```nextflow
-                for (int i = 1; i < qc_coverage_region.size() + 1; i++) {
-                         ^^^^^^^^^^
-    ```
+  ```nextflow
+              for (int i = 1; i < qc_coverage_region.size() + 1; i++) {
+                       ^^^^^^^^^^
+  ```

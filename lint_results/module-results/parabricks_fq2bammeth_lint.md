@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/parabricks/fq2bammeth/main.nf:35:83`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        def known_sites_command = known_sites ? known_sites.collect { "--knownSites ${it}" }.join(' ') : ""
-                                                                                      ^^^^^^^^^^
-    ```
+  ```nextflow
+      def known_sites_command = known_sites ? known_sites.collect { "--knownSites ${it}" }.join(' ') : ""
+                                                                                    ^^^^^^^^^^
+  ```

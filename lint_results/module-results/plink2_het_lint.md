@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/plink2/het/main.nf:41:9`: Variable was declared but not used
 
-    ```nextflow
-        def args = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^^^^^^^
+  ```

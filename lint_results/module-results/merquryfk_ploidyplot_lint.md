@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/merquryfk/ploidyplot/main.nf:34:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-            ${fastk_ktab.find{ it.toString().endsWith(".ktab") }} \\
-                               ^^^^^^^^^^
-    ```
+  ```nextflow
+          ${fastk_ktab.find{ it.toString().endsWith(".ktab") }} \\
+                             ^^^^^^^^^^
+  ```

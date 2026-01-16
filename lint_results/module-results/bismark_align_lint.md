@@ -8,14 +8,14 @@
 
 - Warning: `modules/nf-core/bismark/align/main.nf:51:18`: Parameter was not used -- prefix with `_` to suppress warning
 
-    ```nextflow
-            } catch (all) {
-                     ^^^^^^
-    ```
+  ```nextflow
+          } catch (all) {
+                   ^^^^^^
+  ```
 
 - Warning: `modules/nf-core/bismark/align/main.nf:67:9`: Variable was declared but not used
 
-    ```nextflow
-        def args = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^^^^^^^
+  ```

@@ -8,17 +8,16 @@
 
 - Error: `modules/nf-core/cellrangerarc/mkgtf/main.nf:8:5`: Invalid process directive
 
-    ```nextflow
-        if (workflow.profile.tokenize(',').intersect(['conda', 'mamba']).size() >= 1) {
-        ^^^^^^^^^^
-    ```
-
+  ```nextflow
+      if (workflow.profile.tokenize(',').intersect(['conda', 'mamba']).size() >= 1) {
+      ^^^^^^^^^^
+  ```
 
 ## :warning: Warnings
 
 - Warning: `modules/nf-core/cellrangerarc/mkgtf/main.nf:38:9`: Variable was declared but not used
 
-    ```nextflow
-        def args = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^^^^^^^
+  ```

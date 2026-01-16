@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/parabricks/indexgvcf/main.nf:46:33`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        def output_cmd = gvcf.any { it.name.endsWith(".gz") } ? "touch ${prefix}.g.vcf.gz.tbi" : "touch ${prefix}.g.vcf.idx"
-                                    ^^^^^^^^^^
-    ```
+  ```nextflow
+      def output_cmd = gvcf.any { it.name.endsWith(".gz") } ? "touch ${prefix}.g.vcf.gz.tbi" : "touch ${prefix}.g.vcf.idx"
+                                  ^^^^^^^^^^
+  ```

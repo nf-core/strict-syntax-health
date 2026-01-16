@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/gatk4/mergemutectstats/main.nf:23:49`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        def input_list = stats.collect { "--stats ${it}" }.join(' ')
-                                                    ^^^^^^^^^^
-    ```
+  ```nextflow
+      def input_list = stats.collect { "--stats ${it}" }.join(' ')
+                                                  ^^^^^^^^^^
+  ```

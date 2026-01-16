@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/stadeniolib/scramble/main.nf:67:9`: Variable was declared but not used
 
-    ```nextflow
-        def inputformat = reads.extension
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def inputformat = reads.extension
+          ^^^^^^^^^^
+  ```

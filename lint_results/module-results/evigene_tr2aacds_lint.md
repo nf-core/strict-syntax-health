@@ -8,14 +8,14 @@
 
 - Warning: `modules/nf-core/evigene/tr2aacds/main.nf:68:9`: Variable was declared but not used
 
-    ```nextflow
-        def args        = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args        = task.ext.args ?: ''
+          ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/evigene/tr2aacds/main.nf:70:9`: Variable was declared but not used
 
-    ```nextflow
-        def max_memory  = 7*1024
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def max_memory  = 7*1024
+          ^^^^^^^^^^
+  ```

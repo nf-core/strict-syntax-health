@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/graphtyper/vcfconcatenate/main.nf:27:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        input_vcfs = vcf.collate(1000).collect{it.join(' ')} // Batching needed because if there are too many VCFs the shell cannot run the command
-                                               ^^^^^^^^^^
-    ```
+  ```nextflow
+      input_vcfs = vcf.collate(1000).collect{it.join(' ')} // Batching needed because if there are too many VCFs the shell cannot run the command
+                                             ^^^^^^^^^^
+  ```

@@ -8,7 +8,7 @@
 
 - Error: `modules/nf-core/segemehl/align/main.nf:28:9`: `reads` is already declared
 
-    ```nextflow
-        def reads = meta.single_end ? "-q ${reads}" : "-q ${reads[0]} -p ${reads[1]}"
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def reads = meta.single_end ? "-q ${reads}" : "-q ${reads[0]} -p ${reads[1]}"
+          ^^^^^^^^^^
+  ```

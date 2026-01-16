@@ -8,14 +8,14 @@
 
 - Error: `modules/nf-core/sentieon/gvcftyper/tests/nextflow.config:3:25`: `SENTIEON_LICSRVR_IP` is not defined (hint: use `env('...')` to access environment variable)
 
-    ```nextflow
-        SENTIEON_LICENSE = "$SENTIEON_LICSRVR_IP"
-                            ^^^^^^^^^^
-    ```
+  ```nextflow
+      SENTIEON_LICENSE = "$SENTIEON_LICSRVR_IP"
+                          ^^^^^^^^^^
+  ```
 
 - Error: `modules/nf-core/sentieon/gvcftyper/tests/nextflow.config:5:27`: `SENTIEON_AUTH_MECH` is not defined (hint: use `env('...')` to access environment variable)
 
-    ```nextflow
-        SENTIEON_AUTH_MECH = "$SENTIEON_AUTH_MECH"
-                              ^^^^^^^^^^
-    ```
+  ```nextflow
+      SENTIEON_AUTH_MECH = "$SENTIEON_AUTH_MECH"
+                            ^^^^^^^^^^
+  ```

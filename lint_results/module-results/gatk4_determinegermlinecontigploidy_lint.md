@@ -8,14 +8,14 @@
 
 - Warning: `modules/nf-core/gatk4/determinegermlinecontigploidy/main.nf:27:80`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        def exclude = exclude_beds ? exclude_beds.collect { "--exclude-intervals ${it}" }.join(" ") : ""
-                                                                                   ^^^^^^^^^^
-    ```
+  ```nextflow
+      def exclude = exclude_beds ? exclude_beds.collect { "--exclude-intervals ${it}" }.join(" ") : ""
+                                                                                 ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/gatk4/determinegermlinecontigploidy/main.nf:30:50`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        def input_list = counts.collect { "--input ${it}" }.join(" ")
-                                                     ^^^^^^^^^^
-    ```
+  ```nextflow
+      def input_list = counts.collect { "--input ${it}" }.join(" ")
+                                                   ^^^^^^^^^^
+  ```

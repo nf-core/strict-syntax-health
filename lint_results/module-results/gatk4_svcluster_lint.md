@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/gatk4/svcluster/main.nf:29:45`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        def input = vcfs.collect { "--variant ${it}" }.join(" ")
-                                                ^^^^^^^^^^
-    ```
+  ```nextflow
+      def input = vcfs.collect { "--variant ${it}" }.join(" ")
+                                              ^^^^^^^^^^
+  ```

@@ -8,14 +8,14 @@
 
 - Warning: `modules/nf-core/cat/cat/main.nf:23:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        def file_list = files_in.collect { it.toString() }
-                                           ^^^^^^^^^^
-    ```
+  ```nextflow
+      def file_list = files_in.collect { it.toString() }
+                                         ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/cat/cat/main.nf:58:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        def file_list   = files_in.collect { it.toString() }
-                                             ^^^^^^^^^^
-    ```
+  ```nextflow
+      def file_list   = files_in.collect { it.toString() }
+                                           ^^^^^^^^^^
+  ```

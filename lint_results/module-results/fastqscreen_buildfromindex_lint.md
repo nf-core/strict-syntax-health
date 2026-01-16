@@ -8,49 +8,49 @@
 
 - Warning: `modules/nf-core/fastqscreen/buildfromindex/main.nf:22:32`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        folder = indexes.collect { it.toString() }
-                                   ^^^^^^^^^^
-    ```
+  ```nextflow
+      folder = indexes.collect { it.toString() }
+                                 ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/fastqscreen/buildfromindex/main.nf:24:46`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        copy_indexes = folder.collect { "cp -r ${it} $dir/${it}"}.join(" && ")
-                                                 ^^^^^^^^^^
-    ```
+  ```nextflow
+      copy_indexes = folder.collect { "cp -r ${it} $dir/${it}"}.join(" && ")
+                                               ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/fastqscreen/buildfromindex/main.nf:24:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        copy_indexes = folder.collect { "cp -r ${it} $dir/${it}"}.join(" && ")
-                                                            ^^^^^^^^^^
-    ```
+  ```nextflow
+      copy_indexes = folder.collect { "cp -r ${it} $dir/${it}"}.join(" && ")
+                                                          ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/fastqscreen/buildfromindex/main.nf:28:34`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-            .collect { "########## ${it[0]} \nDATABASE ${it[0]} $dir/${it[1]}/${it[1] + '_to_be_replaced'}" }
-                                     ^^^^^^^^^^
-    ```
+  ```nextflow
+          .collect { "########## ${it[0]} \nDATABASE ${it[0]} $dir/${it[1]}/${it[1] + '_to_be_replaced'}" }
+                                   ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/fastqscreen/buildfromindex/main.nf:28:54`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-            .collect { "########## ${it[0]} \nDATABASE ${it[0]} $dir/${it[1]}/${it[1] + '_to_be_replaced'}" }
-                                                         ^^^^^^^^^^
-    ```
+  ```nextflow
+          .collect { "########## ${it[0]} \nDATABASE ${it[0]} $dir/${it[1]}/${it[1] + '_to_be_replaced'}" }
+                                                       ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/fastqscreen/buildfromindex/main.nf:28:68`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-            .collect { "########## ${it[0]} \nDATABASE ${it[0]} $dir/${it[1]}/${it[1] + '_to_be_replaced'}" }
-                                                                       ^^^^^^^^^^
-    ```
+  ```nextflow
+          .collect { "########## ${it[0]} \nDATABASE ${it[0]} $dir/${it[1]}/${it[1] + '_to_be_replaced'}" }
+                                                                     ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/fastqscreen/buildfromindex/main.nf:28:77`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-            .collect { "########## ${it[0]} \nDATABASE ${it[0]} $dir/${it[1]}/${it[1] + '_to_be_replaced'}" }
-                                                                                ^^^^^^^^^^
-    ```
+  ```nextflow
+          .collect { "########## ${it[0]} \nDATABASE ${it[0]} $dir/${it[1]}/${it[1] + '_to_be_replaced'}" }
+                                                                              ^^^^^^^^^^
+  ```

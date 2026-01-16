@@ -8,14 +8,14 @@
 
 - Warning: `modules/nf-core/gatk4/postprocessgermlinecnvcalls/main.nf:25:71`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        def calls_command = calls ? calls.collect { "--calls-shard-path ${it}" }.join(' ') : ""
-                                                                          ^^^^^^^^^^
-    ```
+  ```nextflow
+      def calls_command = calls ? calls.collect { "--calls-shard-path ${it}" }.join(' ') : ""
+                                                                        ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/gatk4/postprocessgermlinecnvcalls/main.nf:26:71`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        def model_command = model ? model.collect { "--model-shard-path ${it}" }.join(' ') : ""
-                                                                          ^^^^^^^^^^
-    ```
+  ```nextflow
+      def model_command = model ? model.collect { "--model-shard-path ${it}" }.join(' ') : ""
+                                                                        ^^^^^^^^^^
+  ```

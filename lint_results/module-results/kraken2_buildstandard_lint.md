@@ -8,17 +8,16 @@
 
 - Error: `modules/nf-core/kraken2/buildstandard/main.nf:21:57`: `db` is not defined
 
-    ```nextflow
-        runclean = cleaning ? "kraken2-build --clean --db ${db}" : ""
-                                                            ^^^^^^^^^
-    ```
-
+  ```nextflow
+      runclean = cleaning ? "kraken2-build --clean --db ${db}" : ""
+                                                          ^^^^^^^^^
+  ```
 
 ## :warning: Warnings
 
 - Warning: `modules/nf-core/kraken2/buildstandard/main.nf:36:9`: Variable was declared but not used
 
-    ```nextflow
-        def args = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^^^^^^^
+  ```

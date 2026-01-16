@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/gatk4/estimatelibrarycomplexity/main.nf:26:49`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        def input_list = input.collect { "--INPUT ${it}" }.join(" ")
-                                                    ^^^^^^^^^^
-    ```
+  ```nextflow
+      def input_list = input.collect { "--INPUT ${it}" }.join(" ")
+                                                  ^^^^^^^^^^
+  ```

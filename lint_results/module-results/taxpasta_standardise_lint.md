@@ -8,14 +8,14 @@
 
 - Warning: `modules/nf-core/taxpasta/standardise/main.nf:42:9`: Variable was declared but not used
 
-    ```nextflow
-        def args = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/taxpasta/standardise/main.nf:44:9`: Variable was declared but not used
 
-    ```nextflow
-        def taxonomy_option = taxonomy ? "--taxonomy ${taxonomy}" : ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def taxonomy_option = taxonomy ? "--taxonomy ${taxonomy}" : ''
+          ^^^^^^^^^^
+  ```

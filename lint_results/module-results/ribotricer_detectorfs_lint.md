@@ -8,7 +8,7 @@
 
 - Error: `modules/nf-core/ribotricer/detectorfs/main.nf:36:24`: Unexpected input: '\n'
 
-    ```nextflow
-            case "forward":
-                           ^
-    ```
+  ```nextflow
+          case "forward":
+                         ^
+  ```

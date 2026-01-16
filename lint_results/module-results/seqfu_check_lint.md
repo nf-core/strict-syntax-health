@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/seqfu/check/main.nf:24:58`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        def dirFlag = (reads instanceof List ? reads.every { it.isDirectory() } : reads.isDirectory()) ? "--dir" : ""
-                                                             ^^^^^^^^^^
-    ```
+  ```nextflow
+      def dirFlag = (reads instanceof List ? reads.every { it.isDirectory() } : reads.isDirectory()) ? "--dir" : ""
+                                                           ^^^^^^^^^^
+  ```

@@ -8,14 +8,14 @@
 
 - Warning: `modules/nf-core/hostile/clean/main.nf:25:75`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        def sorted_reads = meta.single_end ? [reads].flatten() : reads.sort { it.simpleName }
-                                                                              ^^^^^^^^^^
-    ```
+  ```nextflow
+      def sorted_reads = meta.single_end ? [reads].flatten() : reads.sort { it.simpleName }
+                                                                            ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/hostile/clean/main.nf:52:75`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        def sorted_reads = meta.single_end ? [reads].flatten() : reads.sort { it.simpleName }
-                                                                              ^^^^^^^^^^
-    ```
+  ```nextflow
+      def sorted_reads = meta.single_end ? [reads].flatten() : reads.sort { it.simpleName }
+                                                                            ^^^^^^^^^^
+  ```

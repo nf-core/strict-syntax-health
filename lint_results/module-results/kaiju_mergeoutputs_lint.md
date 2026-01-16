@@ -8,7 +8,7 @@
 
 - Error: `modules/nf-core/kaiju/mergeoutputs/main.nf:1:1`: Invalid process definition -- check for missing or out-of-order section labels
 
-    ```nextflow
-    process KAIJU_MERGEOUTPUTS {
-    ^^^^^^^^^^
-    ```
+  ```nextflow
+  process KAIJU_MERGEOUTPUTS {
+  ^^^^^^^^^^
+  ```

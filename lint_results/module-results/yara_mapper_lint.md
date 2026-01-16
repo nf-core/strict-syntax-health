@@ -8,14 +8,14 @@
 
 - Warning: `modules/nf-core/yara/mapper/main.nf:68:9`: Variable was declared but not used
 
-    ```nextflow
-        def args = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/yara/mapper/main.nf:70:9`: Variable was declared but not used
 
-    ```nextflow
-        def index_prefix = index[0].baseName.substring(0,index[0].baseName.lastIndexOf('.'))
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def index_prefix = index[0].baseName.substring(0,index[0].baseName.lastIndexOf('.'))
+          ^^^^^^^^^^
+  ```

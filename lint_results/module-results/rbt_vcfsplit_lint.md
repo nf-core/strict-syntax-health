@@ -8,14 +8,14 @@
 
 - Warning: `modules/nf-core/rbt/vcfsplit/main.nf:22:9`: Variable was declared but not used
 
-    ```nextflow
-        def args   = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args   = task.ext.args ?: ''
+          ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/rbt/vcfsplit/main.nf:39:56`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        def bcf_files = (0..chunks).collect { "${prefix}.${it}.bcf" }.join(' ')
-                                                           ^^^^^^^^^^
-    ```
+  ```nextflow
+      def bcf_files = (0..chunks).collect { "${prefix}.${it}.bcf" }.join(' ')
+                                                         ^^^^^^^^^^
+  ```

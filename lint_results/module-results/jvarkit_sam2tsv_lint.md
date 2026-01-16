@@ -8,7 +8,7 @@
 
 - Error: `modules/nf-core/jvarkit/sam2tsv/main.nf:24:9`: `regions_file` is already declared
 
-    ```nextflow
-        def regions_file = regions_file ? " --regions" + " '${regions_file}' " : ""
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def regions_file = regions_file ? " --regions" + " '${regions_file}' " : ""
+          ^^^^^^^^^^
+  ```

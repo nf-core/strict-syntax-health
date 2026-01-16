@@ -8,21 +8,21 @@
 
 - Warning: `modules/nf-core/motus/profile/main.nf:58:9`: Variable was declared but not used
 
-    ```nextflow
-        def args = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/motus/profile/main.nf:60:9`: Variable was declared but not used
 
-    ```nextflow
-        def inputs = reads[0].getExtension() == 'bam' ?
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def inputs = reads[0].getExtension() == 'bam' ?
+          ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/motus/profile/main.nf:65:9`: Variable was declared but not used
 
-    ```nextflow
-        def refdb = db ? "-db ${db}" : ""
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def refdb = db ? "-db ${db}" : ""
+          ^^^^^^^^^^
+  ```

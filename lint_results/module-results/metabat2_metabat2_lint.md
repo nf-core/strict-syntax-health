@@ -8,21 +8,21 @@
 
 - Warning: `modules/nf-core/metabat2/metabat2/main.nf:51:9`: Variable was declared but not used
 
-    ```nextflow
-        def args             = task.ext.args   ?: ''
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def args             = task.ext.args   ?: ''
+          ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/metabat2/metabat2/main.nf:53:9`: Variable was declared but not used
 
-    ```nextflow
-        def decompress_depth = depth           ? "gzip -d -f $depth"    : ""
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def decompress_depth = depth           ? "gzip -d -f $depth"    : ""
+          ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/metabat2/metabat2/main.nf:54:9`: Variable was declared but not used
 
-    ```nextflow
-        def depth_file       = depth           ? "-a ${depth.baseName}" : ""
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def depth_file       = depth           ? "-a ${depth.baseName}" : ""
+          ^^^^^^^^^^
+  ```

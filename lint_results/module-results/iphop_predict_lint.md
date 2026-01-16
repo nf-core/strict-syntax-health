@@ -8,14 +8,14 @@
 
 - Warning: `modules/nf-core/iphop/predict/main.nf:25:9`: Variable was declared but not used
 
-    ```nextflow
-        def prefix = task.ext.prefix ?: "${meta.id}"
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def prefix = task.ext.prefix ?: "${meta.id}"
+          ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/iphop/predict/main.nf:48:9`: Variable was declared but not used
 
-    ```nextflow
-        def prefix    = task.ext.prefix ?: "${meta.id}"
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def prefix    = task.ext.prefix ?: "${meta.id}"
+          ^^^^^^^^^^
+  ```

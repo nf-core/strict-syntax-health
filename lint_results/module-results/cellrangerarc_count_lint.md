@@ -8,14 +8,14 @@
 
 - Error: `modules/nf-core/cellrangerarc/count/main.nf:8:5`: Invalid process directive
 
-    ```nextflow
-        if (workflow.profile.tokenize(',').intersect(['conda', 'mamba']).size() >= 1) {
-        ^^^^^^^^^^
-    ```
+  ```nextflow
+      if (workflow.profile.tokenize(',').intersect(['conda', 'mamba']).size() >= 1) {
+      ^^^^^^^^^^
+  ```
 
 - Error: `modules/nf-core/cellrangerarc/count/tests/nextflow.config:2:33`: Unexpected input: ':'
 
-    ```nextflow
-    	withName: 'CELLRANGERARC_COUNT': {
-                                    ^^^
-    ```
+  ```nextflow
+  	withName: 'CELLRANGERARC_COUNT': {
+                                  ^^^
+  ```
