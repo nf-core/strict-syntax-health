@@ -1,17 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-15T01:31:40.822731368Z
+- Generated: 2026-01-16T00:32:58.906492201Z
 - Nextflow version: 25.12.0-edge
-- Summary: 1 error, 146 warnings
-
-## :x: Errors
-
-- Error: `modules/nf-core/samtools/view/main.nf:66:9`: `index` is already declared
-
-  ```nextflow
-      def index = args.contains("--write-index") ? "touch ${prefix}.${file_type}.csi" : ""
-          ^^^^^
-  ```
+- Summary: 113 warnings
 
 ## :warning: Warnings
 
@@ -414,13 +405,6 @@
           ^^^^
   ```
 
-- Warning: `modules/nf-core/samtools/stats/main.nf:22:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
 - Warning: `modules/nf-core/taxpasta/merge/main.nf:46:9`: Variable was declared but not used
 
   ```nextflow
@@ -454,90 +438,6 @@
   ```nextflow
       def taxonomy_option = taxonomy ? "--taxonomy ${taxonomy}" : ''
           ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/longread_adapterremoval.nf:13:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/longread_adapterremoval.nf:14:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_multiqc_files = Channel.empty()
-                         ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/longread_filtering.nf:13:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/longread_filtering.nf:14:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_multiqc_files = Channel.empty()
-                         ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/longread_hostremoval.nf:18:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/longread_hostremoval.nf:19:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_multiqc_files = Channel.empty()
-                         ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/nonpareil.nf:11:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/nonpareil.nf:12:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_multiqc_files = Channel.empty()
-                         ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/profiling.nf:29:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/profiling.nf:30:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_multiqc_files = Channel.empty()
-                         ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/profiling.nf:31:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_raw_classifications = Channel.empty()
-                               ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/profiling.nf:33:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_raw_profiles = Channel.empty()
-                        ^^^^^^^
   ```
 
 - Warning: `subworkflows/local/profiling.nf:237:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -582,27 +482,6 @@
                    ^^
   ```
 
-- Warning: `subworkflows/local/profiling.nf:488:79`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      motus_version   = params.run_motus ? MOTUS_PROFILE.out.versions.first() : Channel.empty()
-                                                                                ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/shortread_adapterremoval.nf:15:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/shortread_adapterremoval.nf:16:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_multiqc_files = Channel.empty()
-                         ^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/shortread_adapterremoval.nf:19:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
@@ -617,48 +496,6 @@
                    ^^
   ```
 
-- Warning: `subworkflows/local/shortread_adapterremoval.nf:33:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          ch_concat_fastq = Channel.empty()
-                            ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/shortread_adapterremoval.nf:54:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          ch_concat_fastq = Channel.empty()
-                            ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/shortread_complexityfiltering.nf:13:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/shortread_complexityfiltering.nf:14:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_multiqc_files = Channel.empty()
-                         ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/shortread_fastp.nf:14:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/shortread_fastp.nf:15:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_multiqc_files = Channel.empty()
-                         ^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/shortread_fastp.nf:18:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
@@ -671,41 +508,6 @@
   ```nextflow
           paired: it[0]['single_end'] == false
                   ^^
-  ```
-
-- Warning: `subworkflows/local/shortread_hostremoval.nf:17:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/shortread_hostremoval.nf:18:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_multiqc_files = Channel.empty()
-                         ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/standardisation_profiles.nf:23:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/standardisation_profiles.nf:24:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_multiqc_files = Channel.empty()
-                         ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/standardisation_profiles.nf:45:58`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_taxpasta_tax_dir = params.taxpasta_taxonomy_dir ? Channel.fromPath(params.taxpasta_taxonomy_dir, checkIfExists: true).collect() : []
-                                                           ^^^^^^^
   ```
 
 - Warning: `subworkflows/local/standardisation_profiles.nf:74:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -802,15 +604,8 @@
 - Warning: `subworkflows/local/utils_nfcore_taxprofiler_pipeline/main.nf:31:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      monochrome_logs   // boolean: Do not use coloured log outputs
+      monochrome_logs // boolean: Do not use coloured log outputs
       ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_taxprofiler_pipeline/main.nf:99:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      Channel.fromList(samplesheetToList(input, "assets/schema_input.json"))
-      ^^^^^^^
   ```
 
 - Warning: `subworkflows/local/utils_nfcore_taxprofiler_pipeline/main.nf:128:22`: Parameter was not used -- prefix with `_` to suppress warning
@@ -853,34 +648,6 @@
   ```nextflow
           .map { validateInputSamplesheet(it) }
                                           ^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_taxprofiler_pipeline/main.nf:135:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      Channel.fromList(samplesheetToList(databases, "assets/schema_database.json"))
-      ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/visualization_krona.nf:20:21`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_krona_text = Channel.empty()
-                      ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/visualization_krona.nf:21:21`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_krona_html = Channel.empty()
-                      ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/visualization_krona.nf:22:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
   ```
 
 - Warning: `subworkflows/local/visualization_krona.nf:28:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -967,70 +734,63 @@
                                                                                                          ^^
   ```
 
-- Warning: `workflows/taxprofiler.nf:284:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      def topic_versions = Channel.topic("versions")
-                           ^^^^^^^
-  ```
-
-- Warning: `workflows/taxprofiler.nf:351:78`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/taxprofiler.nf:357:78`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files = ch_multiqc_files.mix(FASTQC.out.zip.collect { it[1] }.ifEmpty([]))
                                                                                ^^
   ```
 
-- Warning: `workflows/taxprofiler.nf:356:91`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/taxprofiler.nf:362:91`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(SHORTREAD_PREPROCESSING.out.mqc.collect { it[1] }.ifEmpty([]))
                                                                                             ^^
   ```
 
-- Warning: `workflows/taxprofiler.nf:360:90`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/taxprofiler.nf:366:90`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(LONGREAD_PREPROCESSING.out.mqc.collect { it[1] }.ifEmpty([]))
                                                                                            ^^
   ```
 
-- Warning: `workflows/taxprofiler.nf:364:77`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/taxprofiler.nf:370:77`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(NONPAREIL.out.mqc.collect { it[1] }.ifEmpty([]))
                                                                               ^^
   ```
 
-- Warning: `workflows/taxprofiler.nf:368:97`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/taxprofiler.nf:374:97`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(SHORTREAD_COMPLEXITYFILTERING.out.mqc.collect { it[1] }.ifEmpty([]))
                                                                                                   ^^
   ```
 
-- Warning: `workflows/taxprofiler.nf:372:89`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/taxprofiler.nf:378:89`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(SHORTREAD_HOSTREMOVAL.out.mqc.collect { it[1] }.ifEmpty([]))
                                                                                           ^^
   ```
 
-- Warning: `workflows/taxprofiler.nf:376:88`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/taxprofiler.nf:382:88`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(LONGREAD_HOSTREMOVAL.out.mqc.collect { it[1] }.ifEmpty([]))
                                                                                          ^^
   ```
 
-- Warning: `workflows/taxprofiler.nf:379:73`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/taxprofiler.nf:385:73`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(PROFILING.out.mqc.collect { it[1] }.ifEmpty([]))
                                                                           ^^
   ```
 
-- Warning: `workflows/taxprofiler.nf:382:92`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/taxprofiler.nf:388:92`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(STANDARDISATION_PROFILES.out.mqc.collect { it[1] }.ifEmpty([]))

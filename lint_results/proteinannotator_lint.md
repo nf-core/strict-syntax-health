@@ -1,17 +1,10 @@
 # Nextflow lint results
 
-- Generated: 2026-01-15T01:26:59.074381100Z
+- Generated: 2026-01-16T00:28:14.565645070Z
 - Nextflow version: 25.12.0-edge
-- Summary: 9 warnings
+- Summary: 8 warnings
 
 ## :warning: Warnings
-
-- Warning: `modules/nf-core/mmseqs/search/main.nf:53:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
 
 - Warning: `modules/nf-core/mtmalign/align/main.nf:25:9`: Variable was declared but not used
 

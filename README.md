@@ -11,10 +11,10 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 > See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline.
 > **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**
 
-- **Last updated:** 2026-01-15 01:33:10 UTC
+- **Last updated:** 2026-01-16 00:34:33 UTC
 - **Nextflow version:** 25.12.0-edge
-- **Total:** 0 parse errors, 3646 errors, 10365 warnings across 129 pipelines
-- **Zero errors:** 15 pipelines (11.6%)
+- **Total:** 0 parse errors, 3645 errors, 10331 warnings across 129 pipelines
+- **Zero errors:** 16 pipelines (12.4%)
 
 ## Trends
 
@@ -140,10 +140,10 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :x: [dualrnaseq](https://github.com/nf-core/dualrnaseq)                               |     No      |      2 |       48 |        [View](lint_results/dualrnaseq_lint.md)         |
 | :x: [pairgenomealign](https://github.com/nf-core/pairgenomealign)                     |     No      |      2 |       36 |      [View](lint_results/pairgenomealign_lint.md)      |
 | :x: [scdownstream](https://github.com/nf-core/scdownstream)                           |     No      |      2 |       30 |       [View](lint_results/scdownstream_lint.md)        |
-| :x: [taxprofiler](https://github.com/nf-core/taxprofiler)                             |     No      |      1 |      146 |        [View](lint_results/taxprofiler_lint.md)        |
 | :x: [phaseimpute](https://github.com/nf-core/phaseimpute)                             |     No      |      1 |      128 |        [View](lint_results/phaseimpute_lint.md)        |
 | :x: [seqsubmit](https://github.com/nf-core/seqsubmit)                                 |     No      |      1 |       32 |         [View](lint_results/seqsubmit_lint.md)         |
 | :x: [seqinspector](https://github.com/nf-core/seqinspector)                           |     No      |      1 |       14 |       [View](lint_results/seqinspector_lint.md)        |
+| :white_check_mark: [taxprofiler](https://github.com/nf-core/taxprofiler)              |     No      |      0 |      113 |        [View](lint_results/taxprofiler_lint.md)        |
 | :white_check_mark: [spatialxe](https://github.com/nf-core/spatialxe)                  |     No      |      0 |       98 |         [View](lint_results/spatialxe_lint.md)         |
 | :white_check_mark: [methylong](https://github.com/nf-core/methylong)                  |     No      |      0 |       81 |         [View](lint_results/methylong_lint.md)         |
 | :white_check_mark: [molkart](https://github.com/nf-core/molkart)                      |     No      |      0 |       63 |          [View](lint_results/molkart_lint.md)          |
@@ -157,7 +157,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :white_check_mark: [alleleexpression](https://github.com/nf-core/alleleexpression)    |     No      |      0 |       20 |     [View](lint_results/alleleexpression_lint.md)      |
 | :white_check_mark: [createpanelrefs](https://github.com/nf-core/createpanelrefs)      |     No      |      0 |       15 |      [View](lint_results/createpanelrefs_lint.md)      |
 | :white_check_mark: [rnavar](https://github.com/nf-core/rnavar)                        |     No      |      0 |       14 |          [View](lint_results/rnavar_lint.md)           |
-| :white_check_mark: [proteinannotator](https://github.com/nf-core/proteinannotator)    |     No      |      0 |        9 |     [View](lint_results/proteinannotator_lint.md)      |
+| :white_check_mark: [proteinannotator](https://github.com/nf-core/proteinannotator)    |     No      |      0 |        8 |     [View](lint_results/proteinannotator_lint.md)      |
 | :white_check_mark: [nanostring](https://github.com/nf-core/nanostring)                |     No      |      0 |        0 |        [View](lint_results/nanostring_lint.md)         |
 
 ## About
