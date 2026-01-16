@@ -11,20 +11,20 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 > See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline.
 > **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**
 
-- **Last updated:** 2026-01-16 13:59:16 UTC
+- **Last updated:** 2026-01-16 15:18:01 UTC
 - **Nextflow version:** 25.12.0-edge
 
 ## Pipelines
 
-- **Total:** 0 parse errors, 3645 errors, 10331 warnings across 129 pipelines
-- **Zero errors:** 16 pipelines (12.4%)
+- **Total:** 0 parse errors, 3652 errors, 10444 warnings across 130 pipelines
+- **Zero errors:** 16 pipelines (12.3%)
 
 |                    Errors                    |                     Warnings                     |
 | :------------------------------------------: | :----------------------------------------------: |
 | ![Errors](lint_results/pipelines_errors.png) | ![Warnings](lint_results/pipelines_warnings.png) |
 
 <details>
-<summary>Pipeline Results (129 pipelines)</summary>
+<summary>Pipeline Results (130 pipelines)</summary>
 
 | Pipeline                                                                              | Parse Error | Errors | Warnings |                               Lint Output                               |
 | ------------------------------------------------------------------------------------- | :---------: | -----: | -------: | :---------------------------------------------------------------------: |
@@ -116,6 +116,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :x: [mhcquant](https://github.com/nf-core/mhcquant)                                   |     No      |      9 |       60 |         [View](lint_results/pipeline-results/mhcquant_lint.md)          |
 | :x: [tumourevo](https://github.com/nf-core/tumourevo)                                 |     No      |      9 |       56 |         [View](lint_results/pipeline-results/tumourevo_lint.md)         |
 | :x: [fastqrepair](https://github.com/nf-core/fastqrepair)                             |     No      |      9 |       32 |        [View](lint_results/pipeline-results/fastqrepair_lint.md)        |
+| :x: [pacsomatic](https://github.com/nf-core/pacsomatic)                               |     No      |      7 |      113 |        [View](lint_results/pipeline-results/pacsomatic_lint.md)         |
 | :x: [drugresponseeval](https://github.com/nf-core/drugresponseeval)                   |     No      |      7 |       29 |     [View](lint_results/pipeline-results/drugresponseeval_lint.md)      |
 | :x: [longraredisease](https://github.com/nf-core/longraredisease)                     |     No      |      6 |      121 |      [View](lint_results/pipeline-results/longraredisease_lint.md)      |
 | :x: [funcscan](https://github.com/nf-core/funcscan)                                   |     No      |      6 |      115 |         [View](lint_results/pipeline-results/funcscan_lint.md)          |
