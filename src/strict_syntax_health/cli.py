@@ -1447,6 +1447,7 @@ def _generate_results_section(
         errors = result["errors"]
         warnings = result["warnings"]
         parse_error = result.get("parse_error", False)
+        prints_help = result.get("prints_help")
 
         if parse_error:
             parse_error_str = "Yes"
@@ -1457,19 +1458,23 @@ def _generate_results_section(
             parse_error_str = "No"
             error_str = str(errors)
             warning_str = str(warnings)
-            status_emoji = ":white_check_mark:" if errors == 0 else ":x:"
+            # For pipelines: only show checkmark if no errors AND prints_help passes
+            # For other types (no prints_help test): show checkmark if no errors
+            if show_prints_help:
+                status_emoji = ":white_check_mark:" if errors == 0 and prints_help is True else ":x:"
+            else:
+                status_emoji = ":white_check_mark:" if errors == 0 else ":x:"
 
         name_link = f"{status_emoji} [{result['name']}]({result['html_url']})"
         lint_file_link = f"[View]({lint_results_dir}/{result['name']}_lint.md)"
 
         if show_prints_help:
-            prints_help = result.get("prints_help")
             if prints_help is None:
                 prints_help_str = "-"
             elif prints_help:
-                prints_help_str = ":white_check_mark:"
+                prints_help_str = "Yes"
             else:
-                prints_help_str = ":x:"
+                prints_help_str = "No"
             row = (
                 f"| {name_link} | {parse_error_str} | {error_str} | {warning_str} "
                 f"| {prints_help_str} | {lint_file_link} |"

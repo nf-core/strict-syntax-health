@@ -11,7 +11,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 > See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline.
 > **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**
 
-- **Last updated:** 2026-01-16 17:26:23 UTC
+- **Last updated:** 2026-01-16 17:39:46 UTC
 - **Nextflow version:** 25.12.0-edge
 
 ## Pipelines
@@ -142,22 +142,22 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :x: [phaseimpute](https://github.com/nf-core/phaseimpute)                             |     No      |      1 |      128 |      -      |        [View](lint_results/pipeline-results/phaseimpute_lint.md)        |
 | :x: [seqsubmit](https://github.com/nf-core/seqsubmit)                                 |     No      |      1 |       32 |      -      |         [View](lint_results/pipeline-results/seqsubmit_lint.md)         |
 | :x: [seqinspector](https://github.com/nf-core/seqinspector)                           |     No      |      1 |       14 |      -      |       [View](lint_results/pipeline-results/seqinspector_lint.md)        |
-| :white_check_mark: [taxprofiler](https://github.com/nf-core/taxprofiler)              |     No      |      0 |      113 |     :x:     |        [View](lint_results/pipeline-results/taxprofiler_lint.md)        |
-| :white_check_mark: [spatialxe](https://github.com/nf-core/spatialxe)                  |     No      |      0 |       98 |     :x:     |         [View](lint_results/pipeline-results/spatialxe_lint.md)         |
-| :white_check_mark: [methylong](https://github.com/nf-core/methylong)                  |     No      |      0 |       81 |     :x:     |         [View](lint_results/pipeline-results/methylong_lint.md)         |
-| :white_check_mark: [molkart](https://github.com/nf-core/molkart)                      |     No      |      0 |       63 |     :x:     |          [View](lint_results/pipeline-results/molkart_lint.md)          |
-| :white_check_mark: [mag](https://github.com/nf-core/mag)                              |     No      |      0 |       35 |     :x:     |            [View](lint_results/pipeline-results/mag_lint.md)            |
-| :white_check_mark: [createtaxdb](https://github.com/nf-core/createtaxdb)              |     No      |      0 |       33 |     :x:     |        [View](lint_results/pipeline-results/createtaxdb_lint.md)        |
-| :white_check_mark: [isoseq](https://github.com/nf-core/isoseq)                        |     No      |      0 |       31 |     :x:     |          [View](lint_results/pipeline-results/isoseq_lint.md)           |
-| :white_check_mark: [references](https://github.com/nf-core/references)                |     No      |      0 |       31 |     :x:     |        [View](lint_results/pipeline-results/references_lint.md)         |
-| :white_check_mark: [ribomsqc](https://github.com/nf-core/ribomsqc)                    |     No      |      0 |       27 |     :x:     |         [View](lint_results/pipeline-results/ribomsqc_lint.md)          |
-| :white_check_mark: [proteinfold](https://github.com/nf-core/proteinfold)              |     No      |      0 |       25 |     :x:     |        [View](lint_results/pipeline-results/proteinfold_lint.md)        |
-| :white_check_mark: [bamtofastq](https://github.com/nf-core/bamtofastq)                |     No      |      0 |       21 |     :x:     |        [View](lint_results/pipeline-results/bamtofastq_lint.md)         |
-| :white_check_mark: [alleleexpression](https://github.com/nf-core/alleleexpression)    |     No      |      0 |       20 |     :x:     |     [View](lint_results/pipeline-results/alleleexpression_lint.md)      |
-| :white_check_mark: [createpanelrefs](https://github.com/nf-core/createpanelrefs)      |     No      |      0 |       15 |     :x:     |      [View](lint_results/pipeline-results/createpanelrefs_lint.md)      |
-| :white_check_mark: [rnavar](https://github.com/nf-core/rnavar)                        |     No      |      0 |       14 |     :x:     |          [View](lint_results/pipeline-results/rnavar_lint.md)           |
-| :white_check_mark: [proteinannotator](https://github.com/nf-core/proteinannotator)    |     No      |      0 |        8 |     :x:     |     [View](lint_results/pipeline-results/proteinannotator_lint.md)      |
-| :white_check_mark: [nanostring](https://github.com/nf-core/nanostring)                |     No      |      0 |        0 |     :x:     |        [View](lint_results/pipeline-results/nanostring_lint.md)         |
+| :x: [taxprofiler](https://github.com/nf-core/taxprofiler)                             |     No      |      0 |      113 |     No      |        [View](lint_results/pipeline-results/taxprofiler_lint.md)        |
+| :x: [spatialxe](https://github.com/nf-core/spatialxe)                                 |     No      |      0 |       98 |     No      |         [View](lint_results/pipeline-results/spatialxe_lint.md)         |
+| :x: [methylong](https://github.com/nf-core/methylong)                                 |     No      |      0 |       81 |     No      |         [View](lint_results/pipeline-results/methylong_lint.md)         |
+| :x: [molkart](https://github.com/nf-core/molkart)                                     |     No      |      0 |       63 |     No      |          [View](lint_results/pipeline-results/molkart_lint.md)          |
+| :x: [mag](https://github.com/nf-core/mag)                                             |     No      |      0 |       35 |     No      |            [View](lint_results/pipeline-results/mag_lint.md)            |
+| :x: [createtaxdb](https://github.com/nf-core/createtaxdb)                             |     No      |      0 |       33 |     No      |        [View](lint_results/pipeline-results/createtaxdb_lint.md)        |
+| :x: [isoseq](https://github.com/nf-core/isoseq)                                       |     No      |      0 |       31 |     No      |          [View](lint_results/pipeline-results/isoseq_lint.md)           |
+| :x: [references](https://github.com/nf-core/references)                               |     No      |      0 |       31 |     No      |        [View](lint_results/pipeline-results/references_lint.md)         |
+| :x: [ribomsqc](https://github.com/nf-core/ribomsqc)                                   |     No      |      0 |       27 |     No      |         [View](lint_results/pipeline-results/ribomsqc_lint.md)          |
+| :x: [proteinfold](https://github.com/nf-core/proteinfold)                             |     No      |      0 |       25 |     No      |        [View](lint_results/pipeline-results/proteinfold_lint.md)        |
+| :x: [bamtofastq](https://github.com/nf-core/bamtofastq)                               |     No      |      0 |       21 |     No      |        [View](lint_results/pipeline-results/bamtofastq_lint.md)         |
+| :x: [alleleexpression](https://github.com/nf-core/alleleexpression)                   |     No      |      0 |       20 |     No      |     [View](lint_results/pipeline-results/alleleexpression_lint.md)      |
+| :x: [createpanelrefs](https://github.com/nf-core/createpanelrefs)                     |     No      |      0 |       15 |     No      |      [View](lint_results/pipeline-results/createpanelrefs_lint.md)      |
+| :x: [rnavar](https://github.com/nf-core/rnavar)                                       |     No      |      0 |       14 |     No      |          [View](lint_results/pipeline-results/rnavar_lint.md)           |
+| :x: [proteinannotator](https://github.com/nf-core/proteinannotator)                   |     No      |      0 |        8 |     No      |     [View](lint_results/pipeline-results/proteinannotator_lint.md)      |
+| :x: [nanostring](https://github.com/nf-core/nanostring)                               |     No      |      0 |        0 |     No      |        [View](lint_results/pipeline-results/nanostring_lint.md)         |
 
 </details>
 
