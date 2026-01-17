@@ -1,17 +1,10 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T10:29:19.033775111Z
+- Generated: 2026-01-17T00:18:20.402207395Z
 - Nextflow version: 25.12.0-edge
-- Summary: 2 errors, 30 warnings
+- Summary: 1 error, 30 warnings
 
 ## :x: Errors
-
-- Error: `modules/local/liana/rankaggregate/main.nf:7:9`: `https` is not defined
-
-  ```nextflow
-          https://community-cr-prod.seqera.io/docker/registry/v2/blobs/sha256/e8/e83ce3d883af5a7be7f05e740fffaf0fff63b5f13e9bf175af9465e91c8cfda2/data':
-          ^^^^^
-  ```
 
 - Error: `nextflow.config:237:9`: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/scdownstream/conf/test_offline.config'
 

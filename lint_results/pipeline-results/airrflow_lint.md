@@ -1,17 +1,10 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T10:16:52.499138121Z
+- Generated: 2026-01-17T00:17:10.991908994Z
 - Nextflow version: 25.12.0-edge
-- Summary: 151 errors, 141 warnings
+- Summary: 150 errors, 141 warnings
 
 ## :x: Errors
-
-- Error: `conf/base.config:66:9`: If statements cannot be mixed with config statements
-
-  ```nextflow
-          if (params.use_gpu){
-          ^
-  ```
 
 - Error: `conf/test.config:26:13`: `pipelines_testdata_base_path` is not defined
 

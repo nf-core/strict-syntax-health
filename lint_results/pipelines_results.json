@@ -11,8 +11,8 @@
   "airrflow": {
     "full_name": "nf-core/airrflow",
     "html_url": "https://github.com/nf-core/airrflow",
-    "commit": "5edeb68336e6f05c117bd432c4f6e97b4ba3dad1",
-    "errors": 151,
+    "commit": "876750855ce041b68e2727b561f4aecc98157ff5",
+    "errors": 150,
     "warnings": 141,
     "parse_error": false,
     "prints_help": null
@@ -938,11 +938,11 @@
   "rnavar": {
     "full_name": "nf-core/rnavar",
     "html_url": "https://github.com/nf-core/rnavar",
-    "commit": "92a9008fada8f74309a201cff94720f042dd0088",
+    "commit": "9715506fc7868640b757a31baa4ba038c1c360dd",
     "errors": 0,
     "warnings": 14,
     "parse_error": false,
-    "prints_help": false
+    "prints_help": true
   },
   "sammyseq": {
     "full_name": "nf-core/sammyseq",
@@ -965,8 +965,8 @@
   "scdownstream": {
     "full_name": "nf-core/scdownstream",
     "html_url": "https://github.com/nf-core/scdownstream",
-    "commit": "566308ff6b643586c759f3a40142f46dbc85fd40",
-    "errors": 2,
+    "commit": "220de91ed1ce4f10a65c38521baaf90f3539aafc",
+    "errors": 1,
     "warnings": 30,
     "parse_error": false,
     "prints_help": null

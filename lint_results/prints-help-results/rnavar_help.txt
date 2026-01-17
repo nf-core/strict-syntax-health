@@ -3,8 +3,155 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 25.12.0-edge
 
-Launching `./main.nf` [crazy_jennings] DSL2 - revision: 5856071a2c
+Downloading plugin nf-core-utils@0.4.0
+Downloading plugin nf-schema@2.6.1
+Launching `./main.nf` [shrivelled_bhaskara] DSL2 - revision: 5856071a2c
 
-ERROR ~ Unable to create help message: Specified param 'true' does not exist in JSON schema.
 
- -- Check script 'subworkflows/local/utils_nfcore_rnavar_pipeline/main.nf' at line: 98 or see '.nextflow.log' file for more details
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/rnavar 1.3.0dev
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/rnavar -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input                       [string]  Path to comma-separated file containing information about the samples in the experiment. 
+  --outdir                      [string]  The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --save_merged_fastq           [boolean] Save FastQ files after merging re-sequenced libraries in the results directory. 
+
+Preprocessing of alignment
+  --extract_umi                 [boolean] Specify whether to remove UMIs from the reads with UMI-tools extract. 
+  --umitools_extract_method     [string]  UMI pattern to use. Can be either 'string' (default) or 'regex'.  (accepted: string, regex) 
+[default: string]  
+  --umitools_bc_pattern         [string]  The UMI barcode pattern to use e.g. 'NNNNNN' indicates that the first 6 nucleotides of the read are 
+from the UMI.  
+  --umitools_bc_pattern2        [string]  The UMI barcode pattern to use if the UMI is located in read 2. 
+  --umitools_umi_separator      [string]  The character that separates the UMI in the read name. Most likely a colon if you skipped the 
+extraction with UMI-tools and used other software.  
+
+Alignment options
+  --aligner                     [string]          Specifies the alignment algorithm to use.  (accepted: star) [default: star] 
+  --star_index                  [string]          Path to STAR index folder or compressed file (tar.gz) 
+  --star_twopass                [boolean]         Enable STAR 2-pass mapping mode. [default: true] 
+  --star_ignore_sjdbgtf         [boolean]         Do not use GTF file during STAR index building step 
+  --star_max_memory_bamsort     [integer]         Option to limit RAM when sorting BAM file. Value to be specified in bytes. If 0, will be set to the 
+genome index size. [default: 0]  
+  --star_bins_bamsort           [integer]         Specifies the number of genome bins for coordinate-sorting [default: 50] 
+  --star_max_collapsed_junc     [integer]         Specifies the maximum number of collapsed junctions [default: 1000000] 
+  --star_max_intron_size        [integer, string] Specifies the maximum intron size 
+  --seq_center                  [string]          Sequencing center information to be added to read group of BAM files. 
+  --seq_platform                [string]          Specify the sequencing platform used [default: illumina] 
+  --save_unaligned              [boolean]         Where possible, save unaligned reads from aligner to the results directory. 
+  --save_align_intermeds        [boolean]         Save the intermediate BAM files from the alignment step. 
+  --bam_csi_index               [boolean]         Create a CSI index for BAM files instead of the traditional BAI index. This will be required for 
+genomes with larger chromosome sizes.  
+
+Postprocessing of alignment
+  --remove_duplicates           [boolean] Specify whether to remove duplicates from the BAM during Picard MarkDuplicates step. 
+
+Variant calling
+  --gatk_hc_call_conf           [integer] The minimum phred-scaled confidence threshold at which variants should be called. [default: 20] 
+ 
+  --generate_gvcf               [boolean] Enable generation of GVCFs by sample additionnaly to the VCFs. 
+  --gatk_interval_scatter_count [integer] Number of times the gene interval list to be split in order to run GATK haplotype caller in parallel 
+[default: 25]  
+  --no_intervals                [boolean] Do not use gene interval file during variant calling 
+
+Variant filtering
+  --gatk_vf_qd_filter           [number]  Value to be used for the QualByDepth (QD) filter [default: 2] 
+  --gatk_vf_fs_filter           [number]  Value to be used for the FisherStrand (FS) filter [default: 30] 
+  --gatk_vf_window_size         [integer] The window size (in bases) in which to evaluate clustered SNPs. [default: 35] 
+  --gatk_vf_cluster_size        [integer] The number of SNPs which make up a cluster. Must be at least 2. [default: 3] 
+
+Variant Annotation
+  --vep_cache                   [string]  Path to VEP cache. [default: s3://annotation-cache/vep_cache/] 
+  --snpeff_cache                [string]  Path to snpEff cache. [default: s3://annotation-cache/snpeff_cache/] 
+  --vep_dbnsfp                  [boolean] Enable the use of the VEP dbNSFP plugin. 
+  --dbnsfp                      [string]  Path to dbNSFP processed file. 
+  --dbnsfp_tbi                  [string]  Path to dbNSFP tabix indexed file. 
+  --dbnsfp_consequence          [string]  Consequence to annotate with 
+  --dbnsfp_fields               [string]  Fields to annotate with [default: 
+rs_dbSNP,HGVSc_VEP,HGVSp_VEP,1000Gp3_EAS_AF,1000Gp3_AMR_AF,LRT_score,GERP++_RS,gnomAD_exomes_AF] 
+ 
+  --vep_loftee                  [boolean] Enable the use of the VEP LOFTEE plugin. 
+  --vep_spliceai                [boolean] Enable the use of the VEP SpliceAI plugin. 
+  --spliceai_snv                [string]  Path to spliceai raw scores snv file. 
+  --spliceai_snv_tbi            [string]  Path to spliceai raw scores snv tabix indexed file. 
+  --spliceai_indel              [string]  Path to spliceai raw scores indel file. 
+  --spliceai_indel_tbi          [string]  Path to spliceai raw scores indel tabix indexed file. 
+  --vep_spliceregion            [boolean] Enable the use of the VEP SpliceRegion plugin. 
+  --vep_custom_args             [string]  Add an extra custom argument to VEP. [default: --everything --filter_common --per_gene 
+--total_length --offline --format vcf]  
+  --bcftools_annotations        [string]  A vcf file containing custom annotations to be used with bcftools annotate. Needs to be bgzipped. 
+ 
+  --bcftools_annotations_tbi    [string]  Index file for `bcftools_annotations` 
+  --bcftools_columns            [string]  Optional text file with list of columns to use from `bcftools_annotations`, one name per row 
+ 
+  --bcftools_header_lines       [string]  Text file with the header lines of `bcftools_annotations` 
+
+Pipeline stage options
+  --skip_baserecalibration      [boolean] Skip the process of base recalibration steps i.e., GATK BaseRecalibrator and GATK ApplyBQSR. 
+ 
+  --skip_intervallisttools      [boolean] Skip the process of preparing interval lists for the GATK variant calling step 
+  --skip_variantfiltration      [boolean] Skip variant filtering of GATK 
+  --skip_variantannotation      [boolean] Skip variant annotation 
+  --skip_multiqc                [boolean] Skip MultiQC reports 
+  --skip_exon_bed_check         [boolean] Skip the check of the exon bed 
+
+General reference genome options
+  --igenomes_base               [string]  The base path to the igenomes reference files [default: s3://ngi-igenomes/igenomes/] 
+  --igenomes_ignore             [boolean] Do not load the iGenomes reference config. 
+  --save_reference              [boolean] Save built references. 
+  --download_cache              [boolean] Download annotation cache. 
+
+Reference genome options
+  --genome                      [string]          Name of iGenomes reference. [default: GRCh38] 
+  --fasta                       [string]          Path to FASTA genome file. 
+  --dict                        [string]          Path to FASTA dictionary file. 
+  --fasta_fai                   [string]          Path to FASTA reference index. 
+  --gtf                         [string]          Path to GTF annotation file. 
+  --gff                         [string]          Path to GFF3 annotation file. 
+  --exon_bed                    [string]          Path to BED file containing exon intervals. This will be created from the GTF file if not specified. 
+ 
+  --read_length                 [number]          Read length [default: 150] 
+  --known_indels                [string]          Path to known indels file. 
+  --known_indels_tbi            [string]          Path to known indels file index. 
+  --dbsnp                       [string]          Path to dbsnp file. 
+  --dbsnp_tbi                   [string]          Path to dbsnp index. 
+  --snpeff_db                   [string]          snpEff DB version. 
+  --vep_genome                  [string]          VEP genome. 
+  --vep_species                 [string]          VEP species. 
+  --vep_cache_version           [integer, string] VEP cache version. 
+  --feature_type                [string]          Type of feature to parse from annotation file  (accepted: exon, transcript, gene) [default: 
+exon]  
+
+Generic options
+  --email                       [string]          Email address for completion summary. 
+  --multiqc_methods_description [string]          Custom MultiQC yaml file containing HTML including a methods description. 
+  --multiqc_title               [string]          MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+  --help                        [boolean, string] Display the help message. 
+  --help_full                   [boolean]         Display the full detailed help message. 
+  --show_hidden                 [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 23 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The pipeline
+    https://doi.org/10.5281/zenodo.6669636
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/rnavar/blob/master/CITATIONS.md
+
