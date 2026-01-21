@@ -1827,26 +1827,20 @@ def main(
 
     # Update history and generate charts
     # History is updated per-type when all items of that type are linted (no -p/-m/-s filters)
-    # This allows parallel jobs to each update their own history file
     include_charts = False
-    history = {}
 
     # Update history for each type that was fully linted
     if pipeline_results is not None and not pipeline:
         update_history(pipeline_results=pipeline_results)
-        history["pipelines"] = load_history_for_type("pipelines")
 
     if module_results is not None and not module:
         update_history(module_results=module_results)
-        history["modules"] = load_history_for_type("modules")
 
     if subworkflow_results is not None and not subworkflow:
         update_history(subworkflow_results=subworkflow_results)
-        history["subworkflows"] = load_history_for_type("subworkflows")
 
-    # Generate charts if any history was updated
-    if history:
-        # Load full history for chart generation
+    # Generate charts if any results were produced
+    if pipeline_results is not None or module_results is not None or subworkflow_results is not None:
         full_history = load_history()
         generate_all_charts(full_history)
         include_charts = True

@@ -98,18 +98,9 @@ jobs:
           path: nextflow-src/build/releases/
           retention-days: 1
 
-  # Lint jobs running in parallel
   lint:
     runs-on: ubuntu-latest
     needs: [setup, build-nextflow]
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - type: pipelines
-            skip_flag: "--skip-modules --skip-subworkflows"
-          - type: modules-subworkflows
-            skip_flag: "--skip-pipelines"
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -139,43 +130,24 @@ jobs:
       - name: Install dependencies
         run: pip install .
 
-      - name: Check if job should run
-        id: should-run
-        run: |
-          # Check if this job type should be skipped based on inputs
-          if [[ "${{ matrix.type }}" == "pipelines" ]]; then
-            if [[ "${{ inputs.skip_pipelines }}" == "true" ]]; then
-              echo "skip=true" >> $GITHUB_OUTPUT
-            else
-              echo "skip=false" >> $GITHUB_OUTPUT
-            fi
-          else
-            # modules-subworkflows
-            if [[ "${{ inputs.skip_modules }}" == "true" && "${{ inputs.skip_subworkflows }}" == "true" ]]; then
-              echo "skip=true" >> $GITHUB_OUTPUT
-            else
-              echo "skip=false" >> $GITHUB_OUTPUT
-            fi
-          fi
-
       - name: Build linting command
         id: build-cmd
-        if: steps.should-run.outputs.skip != 'true'
         run: |
-          CMD="strict-syntax-health --update-pipelines ${{ matrix.skip_flag }}"
+          CMD="strict-syntax-health --update-pipelines --update-readme"
 
-          # Add additional skip flags for modules-subworkflows job
-          if [[ "${{ matrix.type }}" == "modules-subworkflows" ]]; then
-            if [[ "${{ inputs.skip_modules }}" == "true" ]]; then
-              CMD="$CMD --skip-modules"
-            fi
-            if [[ "${{ inputs.skip_subworkflows }}" == "true" ]]; then
-              CMD="$CMD --skip-subworkflows"
-            fi
+          # Add skip flags based on inputs
+          if [[ "${{ inputs.skip_pipelines }}" == "true" ]]; then
+            CMD="$CMD --skip-pipelines"
+          fi
+          if [[ "${{ inputs.skip_modules }}" == "true" ]]; then
+            CMD="$CMD --skip-modules"
+          fi
+          if [[ "${{ inputs.skip_subworkflows }}" == "true" ]]; then
+            CMD="$CMD --skip-subworkflows"
           fi
 
           # Add specific filters if provided
-          if [[ "${{ matrix.type }}" == "pipelines" && -n "${{ inputs.pipelines }}" ]]; then
+          if [[ -n "${{ inputs.pipelines }}" ]]; then
             IFS=',' read -ra ITEMS <<< "${{ inputs.pipelines }}"
             for item in "${ITEMS[@]}"; do
               item=$(echo "$item" | xargs)
@@ -183,95 +155,27 @@ jobs:
             done
           fi
 
-          if [[ "${{ matrix.type }}" == "modules-subworkflows" ]]; then
-            if [[ -n "${{ inputs.modules }}" ]]; then
-              IFS=',' read -ra ITEMS <<< "${{ inputs.modules }}"
-              for item in "${ITEMS[@]}"; do
-                item=$(echo "$item" | xargs)
-                [[ -n "$item" ]] && CMD="$CMD -m $item"
-              done
-            fi
-            if [[ -n "${{ inputs.subworkflows }}" ]]; then
-              IFS=',' read -ra ITEMS <<< "${{ inputs.subworkflows }}"
-              for item in "${ITEMS[@]}"; do
-                item=$(echo "$item" | xargs)
-                [[ -n "$item" ]] && CMD="$CMD -s $item"
-              done
-            fi
+          if [[ -n "${{ inputs.modules }}" ]]; then
+            IFS=',' read -ra ITEMS <<< "${{ inputs.modules }}"
+            for item in "${ITEMS[@]}"; do
+              item=$(echo "$item" | xargs)
+              [[ -n "$item" ]] && CMD="$CMD -m $item"
+            done
+          fi
+
+          if [[ -n "${{ inputs.subworkflows }}" ]]; then
+            IFS=',' read -ra ITEMS <<< "${{ inputs.subworkflows }}"
+            for item in "${ITEMS[@]}"; do
+              item=$(echo "$item" | xargs)
+              [[ -n "$item" ]] && CMD="$CMD -s $item"
+            done
           fi
 
           echo "cmd=$CMD" >> $GITHUB_OUTPUT
           echo "Running: $CMD"
 
       - name: Run linting
-        if: steps.should-run.outputs.skip != 'true'
         run: ${{ steps.build-cmd.outputs.cmd }}
-
-      - name: Upload lint results
-        if: steps.should-run.outputs.skip != 'true'
-        uses: actions/upload-artifact@v4
-        with:
-          name: lint-results-${{ matrix.type }}
-          path: lint_results/
-          retention-days: 1
-
-  # Aggregation job: merge results, generate README, commit
-  aggregate:
-    runs-on: ubuntu-latest
-    needs: lint
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-
-      - name: Download Nextflow binary
-        uses: actions/download-artifact@v4
-        with:
-          name: nextflow-binary
-          path: nextflow-src/build/releases
-
-      - name: Add Nextflow to PATH
-        run: |
-          chmod +x nextflow-src/build/releases/nextflow*
-          cd nextflow-src/build/releases
-          if [ -L nextflow ] && [ ! -e nextflow ]; then
-            rm nextflow
-            ln -s nextflow-*-dist nextflow
-          fi
-          echo "${{ github.workspace }}/nextflow-src/build/releases" >> $GITHUB_PATH
-
-      - name: Download all lint results
-        uses: actions/download-artifact@v4
-        with:
-          pattern: lint-results-*
-          path: downloaded-results/
-          merge-multiple: false
-
-      - name: Merge lint results
-        run: |
-          # Merge results from all matrix jobs
-          # Each job uploaded to downloaded-results/lint-results-<type>/
-          mkdir -p lint_results
-          for artifact_dir in downloaded-results/lint-results-*/; do
-            if [ -d "$artifact_dir" ]; then
-              echo "Merging from $artifact_dir"
-              # Copy all files and directories from artifact to lint_results
-              cp -r "$artifact_dir"* lint_results/ 2>/dev/null || true
-            fi
-          done
-          echo "Merged lint_results structure:"
-          ls -la lint_results/
-          find lint_results -type f | head -30
-
-      - name: Install dependencies
-        run: pip install .
-
-      - name: Generate charts and README
-        run: strict-syntax-health --generate-charts-only --update-readme
 
       - name: Run prek on all files to fix formatting
         uses: j178/prek-action@v1
