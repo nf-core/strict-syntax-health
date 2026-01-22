@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T10:20:30.972057769Z
+- Generated: 2026-01-22T00:19:18.967622724Z
 - Nextflow version: 25.12.0-edge
-- Summary: 121 errors, 380 warnings
+- Summary: 115 errors, 361 warnings
 
 ## :x: Errors
 
@@ -55,21 +55,21 @@
       ^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `main.nf:86:9`: `PIPELINE_INITIALISATION` is not defined
+- Error: `main.nf:89:9`: `PIPELINE_INITIALISATION` is not defined
 
   ```nextflow
           PIPELINE_INITIALISATION.out.samplesheet_fastqs,
           ^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `main.nf:87:9`: `PIPELINE_INITIALISATION` is not defined
+- Error: `main.nf:90:9`: `PIPELINE_INITIALISATION` is not defined
 
   ```nextflow
           PIPELINE_INITIALISATION.out.samplesheet_bams,
           ^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `main.nf:92:5`: `PIPELINE_COMPLETION` is not defined
+- Error: `main.nf:95:5`: `PIPELINE_COMPLETION` is not defined
 
   ```nextflow
       PIPELINE_COMPLETION (
@@ -95,48 +95,6 @@
   ```nextflow
       def index = args.contains("--write-index") ? "touch ${prefix}.csi" : ""
           ^^^^^
-  ```
-
-- Error: `nextflow.config:632:29`: `manifest` is not defined
-
-  ```nextflow
-  \033[0;35m  nf-core/eager ${manifest.version}\033[0m
-                              ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:635:36`: `manifest` is not defined
-
-  ```nextflow
-          afterText           = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/', '')}" }.join("\n")}${manifest.doi ? "\n" : ""}
-                                     ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:635:79`: `manifest` is not defined
-
-  ```nextflow
-          afterText           = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/', '')}" }.join("\n")}${manifest.doi ? "\n" : ""}
-                                                                                ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:635:198`: `manifest` is not defined
-
-  ```nextflow
-          afterText           = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/', '')}" }.join("\n")}${manifest.doi ? "\n" : ""}
-                                                                                                                                                                                                       ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:644:22`: `validation` is not defined
-
-  ```nextflow
-          beforeText = validation.help.beforeText
-                       ^^^^^^^^^^
-  ```
-
-- Error: `nextflow.config:645:22`: `validation` is not defined
-
-  ```nextflow
-          afterText  = validation.help.afterText
-                       ^^^^^^^^^^
   ```
 
 - Error: `subworkflows/local/calculate_damage.nf:5:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/eager/subworkflows/local/utils_nfcore_eager_pipeline/main.nf'
@@ -769,7 +727,7 @@
                   ^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/utils_nfcore_eager_pipeline/main.nf:391:22`: Unexpected input: 'i'
+- Error: `subworkflows/local/utils_nfcore_eager_pipeline/main.nf:420:22`: Unexpected input: 'i'
 
   ```nextflow
               for (int i = 0; i < source_attributes.size(); i++) {
@@ -846,10 +804,10 @@
                   ^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/eager.nf:602:9`: `methodsDescriptionText` is not defined
+- Error: `workflows/eager.nf:615:9`: `methodsDescriptionText` is not defined
 
   ```nextflow
-          methodsDescriptionText(ch_multiqc_custom_methods_description)
+          methodsDescriptionText(ch_multiqc_custom_methods_description))
           ^^^^^^^^^^^^^^^^^^^^^^
   ```
 
@@ -1028,13 +986,6 @@
   ```nextflow
       def prefix = task.ext.prefix ?: "${meta.id}"
           ^^^^^^
-  ```
-
-- Warning: `nextflow.config:635:139`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          afterText           = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/', '')}" }.join("\n")}${manifest.doi ? "\n" : ""}
-                                                                                                                                            ^^
   ```
 
 - Warning: `subworkflows/local/bamfiltering.nf:21:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -2990,27 +2941,6 @@
                                            ^^^
   ```
 
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      return ch_versions.unique().map { version -> processVersionsFromYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
-                                                                                                   ^^^^^^^
-  ```
-
-- Warning: `workflows/eager.nf:81:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `workflows/eager.nf:82:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_multiqc_files = Channel.empty()
-                         ^^^^^^^
-  ```
-
 - Warning: `workflows/eager.nf:112:29`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
@@ -3067,20 +2997,6 @@
                                                                     ^^
   ```
 
-- Warning: `workflows/eager.nf:213:51`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          ch_bams_from_input_lanemerged           = Channel.empty()
-                                                    ^^^^^^^
-  ```
-
-- Warning: `workflows/eager.nf:214:51`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          ch_flagstat_bams_from_input_lanemerged  = Channel.empty()
-                                                    ^^^^^^^
-  ```
-
 - Warning: `workflows/eager.nf:231:78`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
@@ -3100,13 +3016,6 @@
   ```nextflow
       ch_fasta_for_deduplication = REFERENCE_INDEXING.out.reference.multiMap { meta, fasta, fai, dict, index ->
                                                                                                        ^^^^^
-  ```
-
-- Warning: `workflows/eager.nf:258:32`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          ch_dedupped_flagstat = Channel.empty()
-                                 ^^^^^^^
   ```
 
 - Warning: `workflows/eager.nf:268:79`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -3219,41 +3128,6 @@
   ```nextflow
               .map { meta_join, meta_bam, bam, bai, meta_fastq, fastqs ->
                      ^^^^^^^^^
-  ```
-
-- Warning: `workflows/eager.nf:348:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          ch_database = Channel.fromPath(params.metagenomics_profiling_database)
-                        ^^^^^^^
-  ```
-
-- Warning: `workflows/eager.nf:351:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          ch_tax_list = Channel.empty()
-                        ^^^^^^^
-  ```
-
-- Warning: `workflows/eager.nf:352:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          ch_ncbi_dir = Channel.empty()
-                        ^^^^^^^
-  ```
-
-- Warning: `workflows/eager.nf:355:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-              ch_tax_list = Channel.fromPath(params.metagenomics_maltextract_taxonlist, checkIfExists: true)
-                            ^^^^^^^
-  ```
-
-- Warning: `workflows/eager.nf:356:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-              ch_ncbi_dir = Channel.fromPath(params.metagenomics_maltextract_ncbidir, checkIfExists: true)
-                            ^^^^^^^
   ```
 
 - Warning: `workflows/eager.nf:370:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -3459,56 +3333,7 @@
                                                                              ^^
   ```
 
-- Warning: `workflows/eager.nf:579:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_multiqc_config = Channel.fromPath(
-                          ^^^^^^^
-  ```
-
-- Warning: `workflows/eager.nf:584:11`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          ? Channel.fromPath(params.multiqc_config, checkIfExists: true)
-            ^^^^^^^
-  ```
-
-- Warning: `workflows/eager.nf:585:11`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          : Channel.empty()
-            ^^^^^^^
-  ```
-
-- Warning: `workflows/eager.nf:587:11`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          ? Channel.fromPath(params.multiqc_logo, checkIfExists: true)
-            ^^^^^^^
-  ```
-
-- Warning: `workflows/eager.nf:588:11`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          : Channel.empty()
-            ^^^^^^^
-  ```
-
-- Warning: `workflows/eager.nf:594:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_params))
-                            ^^^^^^^
-  ```
-
-- Warning: `workflows/eager.nf:601:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_methods_description = Channel.value(
-                               ^^^^^^^
-  ```
-
-- Warning: `workflows/eager.nf:614:78`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/eager.nf:626:78`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(ch_qualimap_output.collect { it[1] }.ifEmpty([]))

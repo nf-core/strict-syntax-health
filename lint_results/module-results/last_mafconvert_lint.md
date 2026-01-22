@@ -1,12 +1,12 @@
 # Nextflow lint results
 
-- Generated: 2026-01-21T13:35:22.795513+00:00
+- Generated: 2026-01-22T00:21:30.720887+00:00
 - Nextflow version: 25.12.0-edge
 - Summary: 1 warning
 
 ## :warning: Warnings
 
-- Warning: `modules/nf-core/last/mafconvert/main.nf:100:9`: Variable was declared but not used
+- Warning: `modules/nf-core/last/mafconvert/main.nf:89:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''

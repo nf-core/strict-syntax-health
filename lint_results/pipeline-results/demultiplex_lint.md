@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T10:19:30.741826969Z
+- Generated: 2026-01-22T00:19:04.370299534Z
 - Nextflow version: 25.12.0-edge
 - Summary: 54 errors, 67 warnings
 
@@ -680,11 +680,11 @@
                                                                 ^^^^
   ```
 
-- Warning: `workflows/demultiplex.nf:116:26`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/demultiplex.nf:116:54`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-              .map { meta, samplesheet, flowcell, lane, samplesheet_formatted -> [meta, samplesheet_formatted, flowcell, lane] }
-                           ^^^^^^^^^^^
+              .map{ meta, samplesheet, flowcell, lane, samplesheet_formatted -> [ meta, samplesheet, flowcell, lane ] }
+                                                       ^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/demultiplex.nf:120:86`: Implicit closure parameter is deprecated, declare an explicit parameter instead

@@ -1,12 +1,12 @@
 # Nextflow lint results
 
-- Generated: 2026-01-18T00:18:11.195467955Z
+- Generated: 2026-01-22T00:20:54.291664629Z
 - Nextflow version: 25.12.0-edge
-- Summary: 1 error, 24 warnings
+- Summary: 1 error, 23 warnings
 
 ## :x: Errors
 
-- Error: `nextflow.config:237:9`: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/scdownstream/conf/test_offline.config'
+- Error: `nextflow.config:239:9`: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/scdownstream/conf/test_offline.config'
 
   ```nextflow
           includeConfig 'conf/test_offline.config'
@@ -58,13 +58,6 @@
   ```
 
 - Warning: `modules/local/scanpy/paga/main.nf:25:5`: Variable was declared but not used
-
-  ```nextflow
-      obs_key = meta.obs_key ?: "leiden"
-      ^^^^^^^
-  ```
-
-- Warning: `modules/local/scanpy/rankgenesgroups/main.nf:24:5`: Variable was declared but not used
 
   ```nextflow
       obs_key = meta.obs_key ?: "leiden"

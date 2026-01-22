@@ -218,7 +218,7 @@
   "demultiplex": {
     "full_name": "nf-core/demultiplex",
     "html_url": "https://github.com/nf-core/demultiplex",
-    "commit": "f64a19bcd9ddc093cf34d063a6281ecbd0913c72",
+    "commit": "032da8db94b3ad03918114eda024537112c71c3f",
     "errors": 54,
     "warnings": 67,
     "parse_error": false,
@@ -299,9 +299,9 @@
   "eager": {
     "full_name": "nf-core/eager",
     "html_url": "https://github.com/nf-core/eager",
-    "commit": "52da7b420a47b3703cc1bf12941409ad9ab61455",
-    "errors": 121,
-    "warnings": 380,
+    "commit": "18f10105719880c5cd4ba7215dc6703bb1737dec",
+    "errors": 115,
+    "warnings": 361,
     "parse_error": false,
     "prints_help": null
   },
@@ -497,7 +497,7 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "4c7bfadb0ceead21f6a375779fddc3a411960195",
+    "commit": "e3556980aa3299bd11e3b26787e2f3a9dbe7b78d",
     "errors": 0,
     "warnings": 35,
     "parse_error": false,
@@ -920,11 +920,11 @@
   "rnaseq": {
     "full_name": "nf-core/rnaseq",
     "html_url": "https://github.com/nf-core/rnaseq",
-    "commit": "20fde25e67040b05c5b4691092c1b82526b0bf0b",
-    "errors": 89,
-    "warnings": 284,
+    "commit": "5bc823af0753519428447f8b2fc6148ff6aebf4e",
+    "errors": 0,
+    "warnings": 0,
     "parse_error": false,
-    "prints_help": null
+    "prints_help": false
   },
   "rnasplice": {
     "full_name": "nf-core/rnasplice",
@@ -965,9 +965,9 @@
   "scdownstream": {
     "full_name": "nf-core/scdownstream",
     "html_url": "https://github.com/nf-core/scdownstream",
-    "commit": "40b00dfcca8e9822df88895389ebad965ee1b38b",
+    "commit": "7d5dc457039ab8e314ea5430818aa7e951cc0a55",
     "errors": 1,
-    "warnings": 24,
+    "warnings": 23,
     "parse_error": false,
     "prints_help": null
   },
