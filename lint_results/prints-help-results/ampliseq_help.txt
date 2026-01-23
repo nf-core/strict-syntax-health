@@ -1,0 +1,244 @@
+$ NXF_SYNTAX_PARSER=v2 nextflow run . --help
+
+
+ N E X T F L O W   ~  version 25.12.0-edge
+
+Downloading plugin nf-schema@2.5.1
+Launching `./main.nf` [condescending_brazil]revision: 989f5de55d
+
+WARN: Unrecognized config option 'validation.defaultIgnoreParams'
+WARN: Unrecognized config option 'validation.monochromeLogs'
+
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/ampliseq 2.16.1
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/ampliseq -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Main arguments
+  --input                                  [string]  Path to tab-separated sample sheet 
+  --input_fasta                            [string]  Path to ASV/OTU fasta file 
+  --input_folder                           [string]  Path to folder containing zipped FastQ files 
+  --FW_primer                              [string]  Forward primer sequence 
+  --RV_primer                              [string]  Reverse primer sequence 
+  --metadata                               [string]  Path to metadata sheet, when missing most downstream analysis are skipped (barplots, PCoA plots, 
+...).  
+  --multiregion                            [string]  Path to multi-region definition sheet, for multi-region analysis with Sidle 
+  --outdir                                 [string]  The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --save_intermediates                     [boolean] Save intermediate results such as QIIME2's qza and qzv files 
+  --email                                  [string]  Email address for completion summary. 
+
+Sequencing input
+  --illumina_novaseq                       [boolean] If data has binned quality scores such as Illumina NovaSeq 
+  --pacbio                                 [boolean] If data is single-ended PacBio reads instead of Illumina 
+  --iontorrent                             [boolean] If data is single-ended IonTorrent reads instead of Illumina 
+  --single_end                             [boolean] If data is single-ended Illumina reads instead of paired-end 
+  --illumina_pe_its                        [boolean] If analysing ITS amplicons or any other region with large length variability with Illumina paired 
+end reads  
+  --quality_type                           [string]  Type of quality scores in raw read data  (accepted: Auto, FastqQuality, SFastqQuality) [default: 
+Auto]  
+  --multiple_sequencing_runs               [boolean] If using `--input_folder`: samples were sequenced in multiple sequencing runs 
+  --extension                              [string]  If using `--input_folder`: naming of sequencing files [default: /*_R{1,2}_001.fastq.gz] 
+  --min_read_counts                        [integer] Set read count threshold for failed samples. [default: 1] 
+  --ignore_empty_input_files               [boolean] Ignore input files with too few reads. 
+
+Primer removal
+  --retain_untrimmed                       [boolean] Cutadapt will retain untrimmed reads, choose only if input reads are not expected to contain primer 
+sequences.  
+  --cutadapt_min_overlap                   [integer] Sets the minimum overlap for valid matches of primer sequences with reads for cutadapt (-O). 
+[default: 3]  
+  --cutadapt_max_error_rate                [number]  Sets the maximum error rate for valid matches of primer sequences with reads for cutadapt (-e). 
+[default: 0.1]  
+  --double_primer                          [boolean] Cutadapt will be run twice to ensure removal of potential double primers 
+  --ignore_failed_trimming                 [boolean] Ignore files with too few reads after trimming. 
+
+Read trimming and quality filtering
+  --truncq                                 [integer] Truncate each read at the first instance of a quality score less than or equal to `--truncq`. 
+[default: 2]  
+  --trunclenf                              [integer] DADA2 read truncation value for forward strand, set this to 0 for no truncation 
+  --trunclenr                              [integer] DADA2 read truncation value for reverse strand, set this to 0 for no truncation 
+  --trunc_qmin                             [integer] If --trunclenf and --trunclenr are not set, these values will be automatically determined using this 
+median quality score [default: 25]  
+  --trunc_rmin                             [number]  Assures that values chosen with --trunc_qmin will retain a fraction of reads. [default: 0.75] 
+ 
+  --max_ee                                 [integer] DADA2 read filtering option [default: 2] 
+  --min_len                                [integer] DADA2 read filtering option [default: 50] 
+  --max_len                                [integer] DADA2 read filtering option 
+  --ignore_failed_filtering                [boolean] Ignore files with too few reads after quality filtering. 
+
+Amplicon Sequence Variants (ASV) calculation
+  --sample_inference                       [string]  Mode of sample inference: "independent", "pooled" or "pseudo"  (accepted: independent, pooled, 
+pseudo) [default: independent]  
+  --mergepairs_strategy                    [string]  Strategy to merge paired end reads. When paired end reads are not sufficiently overlapping for 
+merging, you can use "concatenate" (not recommended). When you have a mix of overlapping and non 
+overlapping reads use "consensus"  (accepted: merge, concatenate, consensus) [default: merge] 
+ 
+  --mergepairs_consensus_match             [integer] The score assigned for each matching base pair during sequence alignment. [default: 1] 
+  --mergepairs_consensus_mismatch          [integer] The penalty score assigned for each mismatched base pair during sequence alignment. [default: 
+-2]  
+  --mergepairs_consensus_gap               [integer] The penalty score assigned for each gap introduced during sequence alignment. [default: -4] 
+  --mergepairs_consensus_minoverlap        [integer] The minimum number of overlapping base pairs required to merge forward and reverse reads. 
+[default: 12]  
+  --mergepairs_consensus_maxmismatch       [integer] The maximum number of mismatches allowed within the overlapping region for merging reads. 
+[default: 0]  
+  --mergepairs_consensus_percentile_cutoff [number]  The percentile used to determine a stringent cutoff which will correspond to the minimum observed 
+overlap in the dataset. This ensures that only read pairs with high overlap are merged into 
+consensus sequences. Those with insufficient overlap are concatenated. [default: 0.001]  
+
+ASV post processing
+  --vsearch_cluster                        [boolean] Post-cluster ASVs with VSEARCH 
+  --vsearch_cluster_id                     [number]  Pairwise Identity value used when post-clustering ASVs if `--vsearch_cluster` option is used 
+(default: 0.97). [default: 0.97]  
+  --raise_filter_stacksize                 [boolean] Raise stack size when filtering VSEARCH clusters [default: true] 
+  --filter_ssu                             [string]  Enable SSU filtering. Comma separated list of kingdoms (domains) in Barrnap, a combination (or one) 
+of "bac", "arc", "mito", and "euk". ASVs that have their lowest evalue in that kingdoms are kept. 
+ (accepted: bac,arc,mito,euk, bac, arc, mito, euk, bac,arc, bac,mito, bac,euk, arc,mito, 
+arc,euk, mito,euk, bac, ...)  
+  --min_len_asv                            [integer] Minimal ASV length 
+  --max_len_asv                            [integer] Maximum ASV length 
+  --filter_codons                          [boolean] Filter ASVs based on codon usage 
+  --orf_start                              [integer] Starting position of codon tripletts [default: 1] 
+  --orf_end                                [integer] Ending position of codon tripletts 
+  --stop_codons                            [string]  Define stop codons [default: TAA,TAG] 
+
+Taxonomic assignment
+  --dada_ref_taxonomy                      [string]  Name of supported database, and optionally also version number  (accepted: coidb, coidb=221216, 
+greengenes2, greengenes2=2024.09, gtdb, gtdb=R05-RS95, gtdb=R06-RS202, ...) [default: silva=138.2] 
+ 
+  --dada_ref_tax_custom                    [string]  Path to a custom DADA2 reference taxonomy database 
+  --dada_ref_tax_custom_sp                 [string]  Path to a custom DADA2 reference taxonomy database for species assignment 
+  --dada_min_boot                          [integer] The minimum bootstrap confidence (out of 100 trials) for assigning a taxonomic level with DADA2. 
+Matches `minBoot` in DADA2's assignTaxonomy method. [default: 50]  
+  --dada_assign_taxlevels                  [string]  Comma separated list of taxonomic levels used in DADA2's assignTaxonomy function 
+  --cut_dada_ref_taxonomy                  [boolean] If the expected amplified sequences are extracted from the DADA2 reference taxonomy database 
+ 
+  --dada_addspecies_allowmultiple          [boolean] If multiple exact matches against different species are returned 
+  --dada_taxonomy_rc                       [boolean] If reverse-complement of each sequences will be also tested for classification 
+  --dada_assign_chunksize                  [integer] ASV fasta will be subset into chunks of this size for classification [default: 10000] 
+  --pplace_tree                            [string]  Newick file with reference phylogenetic tree. Requires also `--pplace_aln` and `--pplace_model`. 
+ 
+  --pplace_aln                             [string]  File with reference sequences. Requires also `--pplace_tree` and `--pplace_model`. 
+  --pplace_model                           [string]  Phylogenetic model to use in placement, e.g. 'LG+F' or 'GTR+I+F'. Requires also `--pplace_tree` and 
+`--pplace_aln`.  
+  --pplace_alnmethod                       [string]  Method used for alignment, "hmmer" or "mafft"  (accepted: hmmer, mafft) [default: hmmer] 
+  --pplace_taxonomy                        [string]  Tab-separated file with taxonomy assignments of reference sequences. 
+  --qiime_ref_taxonomy                     [string]  Name of supported database, and optionally also version number  (accepted: silva=138, silva, 
+greengenes85, greengenes2, greengenes2=2024.09, greengenes2=2022.10)  
+  --qiime_ref_tax_custom                   [string]  Path to files of a custom QIIME2 reference taxonomy database (tarball, or two comma-separated files) 
+ 
+  --classifier                             [string]  Path to QIIME2 trained classifier file (typically *-classifier.qza) 
+  --kraken2_ref_taxonomy                   [string]  Name of supported database, and optionally also version number  (accepted: silva, silva=138, 
+silva=132, rdp, rdp=18, greengenes, greengenes=13.5, standard, standard=20240904, ...)  
+  --kraken2_ref_tax_custom                 [string]  Path to a custom Kraken2 reference taxonomy database (*.tar.gz|*.tgz archive or folder) 
+  --kraken2_assign_taxlevels               [string]  Comma separated list of taxonomic levels used in Kraken2. Will overwrite default values. 
+  --kraken2_confidence                     [number]  Confidence score threshold for taxonomic classification. [default: 0.0] 
+  --sintax_ref_taxonomy                    [string]  Name of supported database, and optionally also version number  (accepted: coidb, coidb=221216, 
+unite-fungi, unite-fungi=10.0, unite-fungi=9.0, unite-fungi=8.3, ...)  
+  --addsh                                  [boolean] If ASVs should be assigned to UNITE species hypotheses (SHs). Only relevant for ITS data. 
+  --cut_its                                [string]  Part of ITS region to use for taxonomy assignment: "full", "its1", or "its2"  (accepted: none, 
+full, its1, its2) [default: none]  
+  --its_partial                            [integer] Cutoff for partial ITS sequences. Only full sequences by default. [default: 0] 
+
+Multi-region taxonomic database
+  --sidle_ref_taxonomy                     [string]  Name of supported database, and optionally also version number  (accepted: silva, silva=128, 
+greengenes, greengenes=13_8, greengenes88)  
+  --sidle_ref_tax_custom                   [string]  Path to reference taxonomy strings (headerless, *.txt) 
+  --sidle_ref_seq_custom                   [string]  Path to reference taxonomy sequences in fasta format 
+  --sidle_ref_aln_custom                   [string]  Path to multiple sequence alignment of reference taxonomy sequences in fasta format 
+  --sidle_ref_tree_custom                  [string]  Path to SIDLE reference taxonomy tree (*.qza) 
+  --sidle_ref_degenerates                  [integer] Exclude reference sequences with more than this much degenerates [default: 5] 
+  --sidle_ref_cleaning                     [string]  Arguments for `qiime sidle reconstruct-taxonomy` regarding ad-hoc cleaning 
+
+ASV filtering
+  --exclude_taxa                           [string]  Comma separated list of unwanted taxa, to skip taxa filtering use "none" [default: 
+mitochondria,chloroplast]  
+  --min_frequency                          [integer] Abundance filtering [default: 1] 
+  --min_samples                            [integer] Prevalence filtering [default: 1] 
+
+Downstream analysis
+  --metadata_category                      [string]  Comma separated list of metadata column headers for statistics. 
+  --metadata_category_barplot              [string]  Comma separated list of metadata column headers for plotting average relative abundance barplots. 
+ 
+  --qiime_adonis_formula                   [string]  Formula for QIIME2 ADONIS metadata feature importance test for beta diversity distances 
+  --picrust                                [boolean] If the functional potential of the bacterial community is predicted. 
+  --sbdiexport                             [boolean] If data should be exported in SBDI (Swedish biodiversity infrastructure) Excel format. 
+  --diversity_rarefaction_depth            [integer] Minimum rarefaction depth for diversity analysis. Any sample below that threshold will be removed. 
+[default: 500]  
+  --tax_agglom_min                         [integer] Minimum taxonomy agglomeration level for taxonomic classifications [default: 2] 
+  --tax_agglom_max                         [integer] Maximum taxonomy agglomeration level for taxonomic classifications [default: 6] 
+
+Differential abundance analysis
+  --ancom_sample_min_count                 [integer] Minimum sample counts to retain a sample for ANCOM analysis. Any sample below that threshold will be 
+removed. [default: 1]  
+  --ancom                                  [boolean] Perform differential abundance analysis with ANCOM 
+  --ancombc                                [boolean] Perform differential abundance analysis with ANCOMBC 
+  --ancombc_formula                        [string]  Formula to perform differential abundance analysis with ANCOMBC 
+  --ancombc_formula_reflvl                 [string]  Reference level for `--ancombc_formula` 
+  --ancombc_effect_size                    [number]  Effect size threshold for differential abundance barplot for `--ancombc` and `--ancombc_formula` 
+[default: 1]  
+  --ancombc_significance                   [number]  Significance threshold for differential abundance barplot for `--ancombc` and `--ancombc_formula` 
+[default: 0.05]  
+
+Pipeline summary report
+  --report_template                        [string] Path to Markdown file (Rmd) [default: ${projectDir}/assets/report_template.Rmd] 
+  --report_css                             [string] Path to style file (css) [default: ${projectDir}/assets/nf-core_style.css] 
+  --report_logo                            [string] Path to logo file (png) [default: ${projectDir}/assets/nf-core-ampliseq_logo_light_long.png] 
+ 
+  --report_title                           [string] String used as report title [default: Summary of analysis results] 
+  --report_abstract                        [string] Path to Markdown file (md) that replaces the 'Abstract' section 
+
+Skipping specific steps
+  --skip_fastqc                            [boolean] Skip FastQC 
+  --skip_cutadapt                          [boolean] Skip primer trimming with cutadapt. This is not recommended! Use only in case primer sequences were 
+removed before and the data does not contain any primer sequences.  
+  --skip_dada_quality                      [boolean] Skip quality check with DADA2. Can only be skipped when `--trunclenf` and `--trunclenr` are set. 
+ 
+  --skip_barrnap                           [boolean] Skip annotating SSU matches. 
+  --skip_qiime                             [boolean] Skip all steps that are executed by QIIME2, including QIIME2 software download, taxonomy assignment 
+by QIIME2, barplots, relative abundance tables, diversity analysis, differential abundance testing. 
+ 
+  --skip_qiime_downstream                  [boolean] Skip steps that are executed by QIIME2 except for taxonomic classification. Skip steps including 
+barplots, relative abundance tables, diversity analysis, differential abundance testing.  
+  --skip_taxonomy                          [boolean] Skip taxonomic classification. Incompatible with `--sbdiexport` 
+  --skip_dada_taxonomy                     [boolean] Skip taxonomic classification with DADA2 
+  --skip_dada_addspecies                   [boolean] Skip species level when using DADA2 for taxonomic classification. This reduces the required memory 
+dramatically under certain conditions. Incompatible with `--sbdiexport`  
+  --skip_barplot                           [boolean] Skip producing barplot 
+  --skip_abundance_tables                  [boolean] Skip producing any relative abundance tables 
+  --skip_alpha_rarefaction                 [boolean] Skip alpha rarefaction 
+  --skip_diversity_indices                 [boolean] Skip alpha and beta diversity analysis 
+  --skip_phyloseq                          [boolean] Skip exporting phyloseq rds object(s) 
+  --skip_tse                               [boolean] Skip exporting TreeSummarizedExperiment rds object(s) 
+  --skip_multiqc                           [boolean] Skip MultiQC reporting 
+  --skip_report                            [boolean] Skip Markdown summary report 
+
+Generic options
+  --seed                                   [integer]         Specifies the random seed. [default: 100] 
+  --multiqc_methods_description            [string]          Custom MultiQC yaml file containing HTML including a methods description. 
+  --help                                   [boolean, string] Display the help message. 
+  --help_full                              [boolean]         Display the full detailed help message. 
+  --show_hidden                            [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 20 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The pipeline
+    https://doi.org/10.5281/zenodo.1493841
+    https://doi.org/10.3389/fmicb.2020.550420
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/ampliseq/blob/master/CITATIONS.md
+

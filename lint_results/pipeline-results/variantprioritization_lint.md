@@ -1,14 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-01-20T00:19:48.850671860Z
+- Generated: 2026-01-23T00:21:34.529612225Z
 - Nextflow version: 25.12.0-edge
-- Summary: 1 warning
-
-## :warning: Warnings
-
-- Warning: `subworkflows/local/utils_nfcore_variantprioritization_pipeline/main.nf:31:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      monochrome_logs // boolean: Do not use coloured log outputs
-      ^^^^^^^^^^^^^^^
-  ```
+- Summary: No issues found

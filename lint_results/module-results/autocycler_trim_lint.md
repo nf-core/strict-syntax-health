@@ -1,12 +1,12 @@
 # Nextflow lint results
 
-- Generated: 2026-01-22T00:21:30.633903+00:00
+- Generated: 2026-01-23T00:22:21.894041+00:00
 - Nextflow version: 25.12.0-edge
 - Summary: 1 warning
 
 ## :warning: Warnings
 
-- Warning: `modules/nf-core/autocycler/trim/main.nf:40:9`: Variable was declared but not used
+- Warning: `modules/nf-core/autocycler/trim/main.nf:35:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args   ?: ''

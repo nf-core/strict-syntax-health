@@ -1,12 +1,12 @@
 # Nextflow lint results
 
-- Generated: 2026-01-22T00:21:30.729175+00:00
+- Generated: 2026-01-23T00:22:21.987778+00:00
 - Nextflow version: 25.12.0-edge
 - Summary: 1 warning
 
 ## :warning: Warnings
 
-- Warning: `modules/nf-core/merquryfk/katgc/main.nf:34:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `modules/nf-core/merquryfk/katgc/main.nf:31:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ${fastk_ktab.find{ it.toString().endsWith(".ktab") }} \\

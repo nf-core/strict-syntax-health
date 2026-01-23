@@ -1,14 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-01-22T00:21:30.750052+00:00
+- Generated: 2026-01-23T00:22:22.007948+00:00
 - Nextflow version: 25.12.0-edge
-- Summary: 1 warning
-
-## :warning: Warnings
-
-- Warning: `modules/nf-core/parabricks/fq2bammeth/main.nf:35:83`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def known_sites_command = known_sites ? known_sites.collect { "--knownSites ${it}" }.join(' ') : ""
-                                                                                    ^^^^^^^^^^
-  ```
+- Summary: No issues found

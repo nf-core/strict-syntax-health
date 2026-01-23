@@ -4,8 +4,64 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 25.12.0-edge
 
 Downloading plugin nf-schema@2.6.1
-Launching `./main.nf` [pensive_ekeblad] DSL2 - revision: d10c34efd7
+Launching `./main.nf` [happy_mestorf]revision: 27db91f577
 
-ERROR ~ Unable to create help message: Specified param 'true' does not exist in JSON schema.
 
- -- Check script 'subworkflows/nf-core/utils_nfschema_plugin/main.nf' at line: 41 or see '.nextflow.log' file for more details
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/bamtofastq 2.3.0dev
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/bamtofastq -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input                       [string] Path to comma-separated file containing information about the samples in the experiment. 
+  --outdir                      [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+
+Main options
+  --chr                         [string]  Only use reads mapping to a specific chromosome/region. Has to be specified as in bam: i.e chr1, 
+chr{1..22} (gets all reads mapping to chr1 to 22), 1, "X Y", incorrect naming will lead to a 
+potentially silent error.  
+  --no_read_QC                  [boolean] If specified, no quality control will be performed on extracted reads. Useful, if this is done 
+anyways in the subsequent workflow.  
+  --no_stats                    [boolean] If specified, skips all quality control and stats computation, including `FastQC` on both input bam 
+and output reads, `samtools flagstat`, `samtools idxstats`, and `samtools stats`.  
+  --reads_in_memory             [integer] Reads to store in memory [default = '100000']. Only relevant for use with `--samtools_collate_fast`. 
+[default: 100000]  
+  --samtools_collate_fast       [boolean] Uses fast mode for samtools collate in `sortExtractMapped`, `sortExtractUnmapped` and 
+`sortExtractSingleEnd`.  
+
+Reference genome options
+  --genome                      [string] Name of iGenomes reference. 
+  --fasta                       [string] Path to FASTA genome file. 
+  --fasta_fai                   [string] Path to FASTA FAI genome index file. 
+
+Generic options
+  --email                       [string]          Email address for completion summary. 
+  --multiqc_title               [string]          MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+  --multiqc_methods_description [string]          Custom MultiQC yaml file containing HTML including a methods description. 
+  --help                        [boolean, string] Display the help message. 
+  --help_full                   [boolean]         Display the full detailed help message. 
+  --show_hidden                 [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 20 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The pipeline
+    https://doi.org/10.5281/zenodo.4710628
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/bamtofastq/blob/master/CITATIONS.md
+

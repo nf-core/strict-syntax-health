@@ -3,8 +3,112 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 25.12.0-edge
 
-Launching `./main.nf` [jovial_boyd] DSL2 - revision: d5c5cc81da
+Launching `./main.nf` [voluminous_carson]revision: fb7b8319f4
 
-ERROR ~ Unable to create help message: Specified param 'true' does not exist in JSON schema.
 
- -- Check script 'subworkflows/nf-core/utils_nfschema_plugin/main.nf' at line: 41 or see '.nextflow.log' file for more details
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/variantprioritization 1.0.0dev
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/variantprioritization -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+--save_intermediates                [boolean]         
+--panel_id                          [integer]         [default: 0] 
+--diagnostic_grade_only             [boolean]         
+--ignore_noncoding                  [boolean]         
+--pop_gnomad                        [string]          [default: nfe] 
+--maf_upper_threshold               [number]          [default: 0.9] 
+--classify_all                      [boolean]         
+--clinvar_ignore_noncancer          [boolean]         
+--vcf2maf                           [boolean]         
+--assay                             [string]          
+--cpsr_report                       [string]          
+--tumor_site                        [integer]         [default: 0] 
+--tumor_purity                      [string]          
+--tumor_ploidy                      [string]          
+--cna_analysis                      [boolean]         
+--cna_overlap_pct                   [integer]         [default: 50] 
+--effective_target_size_mb          [integer]         [default: 34] 
+--estimate_tmb                      [boolean]         
+--estimate_msi                      [boolean]         
+--tmb_display                       [string]          [default: coding_and_silent] 
+--estimate_signatures               [boolean]         
+--min_mutations_signatures          [integer]         [default: 200] 
+--all_reference_signatures          [boolean]         
+--include_artefact_signatures       [boolean]         
+--prevalence_reference_signatures   [integer]         [default: 5] 
+--include_trials                    [boolean]         [default: true] 
+--tumor_dp_min                      [integer]         [default: 0] 
+--tumor_af_min                      [integer]         [default: 0] 
+--control_dp_min                    [integer]         [default: 0] 
+--control_af_max                    [integer]         [default: 1] 
+--tumor_only                        [boolean]         
+--pon_vcf                           [string]          
+--exclude_pon                       [boolean]         
+--exclude_likely_hom_germline       [boolean]         
+--exclude_likely_het_germline       [boolean]         
+--exclude_dbsnp_nonsomatic          [boolean]         
+--exclude_nonexonic                 [boolean]         
+--maf_gnomad_nfe                    [number]          [default: 0.002] 
+--maf_gnomad_fin                    [number]          [default: 0.002] 
+--maf_gnomad_asj                    [number]          [default: 0.002] 
+--maf_gnomad_oth                    [number]          [default: 0.002] 
+--maf_gnomad_amr                    [number]          [default: 0.002] 
+--maf_gnomad_afr                    [number]          [default: 0.002] 
+--maf_gnomad_eas                    [number]          [default: 0.002] 
+--maf_gnomad_sas                    [number]          [default: 0.002] 
+--maf_gnomad_global                 [number]          [default: 0.002] 
+--filter_haplotypecaller            [string]          [default: -i\'FORMAT/DP>10\] 
+--filter_deepvariant                [string]          [default: -i\'FORMAT/DP>10\] 
+--filter_strelka_variants           [string]          [default: -i\'FORMAT/DP>10\] 
+--filter_freebayes_germline         [string]          [default: -i\'FORMAT/DP>10\] 
+--filter_mutect2                    [string]          [default: -i\'FORMAT/DP>10\] 
+--filter_freebayes_somatic          [string]          [default: -i\'FORMAT/DP>10\] 
+--filter_strelka_indels             [string]          [default: -i\'FORMAT/DP>10\] 
+--filter_strelka_snvs               [string]          [default: -i\'FORMAT/DP>10\] 
+--vep_n_forks                       [integer]         [default: 4] 
+--vep_buffer_size                   [integer]         [default: 500] 
+--vep_gencode_all                   [boolean]         [default: true] 
+--vep_pick_order                    [string]          [default: mane_select,mane_plus_clinical,canonical,biotype,ccds,rank,tsl,appris,length] 
+--vep_no_intergenic                 [boolean]         
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input                           [string] Path to comma-separated file containing information about the samples in the experiment. 
+  --outdir                          [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --email                           [string] Email address for completion summary. 
+  --multiqc_title                   [string] MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+
+Reference genome options
+  --genome                          [string] Name of iGenomes reference. 
+
+Reference database options
+  --vep_cache                       [string]  [default: s3://annotation-cache/vep_cache/] 
+  --vep_cache_version               [integer] [default: 113] 
+  --pcgr_download                   [boolean] [default: true] 
+  --pcgr_bundleversion              [integer] [default: 20250314] 
+  --pcgr_database_dir               [string]  
+
+Generic options
+  --multiqc_methods_description     [string]          Custom MultiQC yaml file containing HTML including a methods description. 
+  --help                            [boolean, string] Display the help message. 
+  --help_full                       [boolean]         Display the full detailed help message. 
+  --show_hidden                     [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 21 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/variantprioritization/blob/master/CITATIONS.md
+

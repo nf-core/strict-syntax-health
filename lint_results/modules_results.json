@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "1f966905b442fa623130663471eac3b9c5d35527",
+  "_repo_commit": "d9c84ed4564744313bb586928885ebf05f40ad98",
   "abricate_run": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abricate/run",
     "errors": 0,
@@ -2607,7 +2607,7 @@
   "gatk4_annotateintervals": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gatk4/annotateintervals",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "gatk4_applybqsr": {
@@ -2631,7 +2631,7 @@
   "gatk4_baserecalibrator": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gatk4/baserecalibrator",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "gatk4_bedtointervallist": {
@@ -2985,13 +2985,13 @@
   "gatk4spark_baserecalibrator": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gatk4spark/baserecalibrator",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "gatk4spark_markduplicates": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gatk4spark/markduplicates",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "gecco_convert": {
@@ -3088,6 +3088,12 @@
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/genotyphi/parse",
     "errors": 0,
     "warnings": 1,
+    "parse_error": false
+  },
+  "gens_preparecovandbaf": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gens/preparecovandbaf",
+    "errors": 0,
+    "warnings": 0,
     "parse_error": false
   },
   "geoquery_getgeo": {
@@ -5211,7 +5217,7 @@
   "parabricks_applybqsr": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/parabricks/applybqsr",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "parabricks_dbsnp": {
@@ -5223,49 +5229,49 @@
   "parabricks_deepvariant": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/parabricks/deepvariant",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "parabricks_fq2bam": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/parabricks/fq2bam",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "parse_error": false
   },
   "parabricks_fq2bammeth": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/parabricks/fq2bammeth",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "parabricks_genotypegvcf": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/parabricks/genotypegvcf",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "parabricks_haplotypecaller": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/parabricks/haplotypecaller",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "parabricks_indexgvcf": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/parabricks/indexgvcf",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "parabricks_minimap2": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/parabricks/minimap2",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "parse_error": false
   },
   "parabricks_mutectcaller": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/parabricks/mutectcaller",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "parabricks_rnafq2bam": {
@@ -6699,7 +6705,7 @@
   "sentieon_readwriter": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/sentieon/readwriter",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "parse_error": false
   },
   "sentieon_rsemcalculateexpression": {
@@ -6723,13 +6729,13 @@
   "sentieon_tnfilter": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/sentieon/tnfilter",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "parse_error": false
   },
   "sentieon_tnhaplotyper2": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/sentieon/tnhaplotyper2",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "sentieon_tnscope": {

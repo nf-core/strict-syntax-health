@@ -1,24 +1,10 @@
 # Nextflow lint results
 
-- Generated: 2026-01-21T10:18:51.404200947Z
+- Generated: 2026-01-23T00:21:29.294950627Z
 - Nextflow version: 25.12.0-edge
-- Summary: 12 errors, 143 warnings
+- Summary: 10 errors, 144 warnings
 
 ## :x: Errors
-
-- Error: `modules/local/bcftools/rename_chr/main.nf:59:9`: `index` is already declared
-
-  ```nextflow
-      def index = args.contains("--write-index=tbi") || args.contains("-W=tbi") ? "tbi" :
-          ^^^^^
-  ```
-
-- Error: `modules/nf-core/bcftools/annotate/main.nf:64:9`: `index` is already declared
-
-  ```nextflow
-      def index = args.contains("--write-index=tbi") || args.contains("-W=tbi") ? "tbi" :
-          ^^^^^
-  ```
 
 - Error: `modules/nf-core/bcftools/view/main.nf:60:9`: `index` is already declared
 
@@ -610,35 +596,42 @@
                         ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/sv_vcf_conversion/main.nf:22:18`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/sv_vcf_conversion/main.nf:23:18`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       versions   = Channel.empty()
                    ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/sv_vcf_conversion/main.nf:44:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/sv_vcf_conversion/main.nf:45:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           out_vcf_ch = Channel.empty()
                        ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/sv_vcf_conversion/main.nf:100:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/sv_vcf_conversion/main.nf:93:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              compressed:   it[1].getName().endsWith('.gz')
+                            ^^
+  ```
+
+- Warning: `subworkflows/local/sv_vcf_conversion/main.nf:112:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           out_vcf_ch = Channel.empty()
                        ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/sv_vcf_conversion/main.nf:133:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/sv_vcf_conversion/main.nf:145:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   def meta = it[0]
                              ^^
   ```
 
-- Warning: `subworkflows/local/sv_vcf_conversion/main.nf:134:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/sv_vcf_conversion/main.nf:146:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   def vcf = it[1]

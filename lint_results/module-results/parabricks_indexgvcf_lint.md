@@ -1,14 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-01-22T00:21:30.750568+00:00
+- Generated: 2026-01-23T00:22:22.008287+00:00
 - Nextflow version: 25.12.0-edge
-- Summary: 1 warning
-
-## :warning: Warnings
-
-- Warning: `modules/nf-core/parabricks/indexgvcf/main.nf:46:33`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def output_cmd = gvcf.any { it.name.endsWith(".gz") } ? "touch ${prefix}.g.vcf.gz.tbi" : "touch ${prefix}.g.vcf.idx"
-                                  ^^^^^^^^^^
-  ```
+- Summary: No issues found

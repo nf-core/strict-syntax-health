@@ -1,14 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-01-22T00:21:30.749633+00:00
+- Generated: 2026-01-23T00:22:22.007749+00:00
 - Nextflow version: 25.12.0-edge
-- Summary: 1 warning
-
-## :warning: Warnings
-
-- Warning: `modules/nf-core/parabricks/deepvariant/main.nf:31:92`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def interval_file_command = interval_file ? interval_file.collect { "--interval-file ${it}" }.join(' ') : ""
-                                                                                             ^^^^^^^^^^
-  ```
+- Summary: No issues found

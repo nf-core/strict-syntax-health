@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T10:27:02.409002370Z
+- Generated: 2026-01-23T00:20:35.094104949Z
 - Nextflow version: 25.12.0-edge
-- Summary: 30 errors, 55 warnings
+- Summary: 29 errors, 54 warnings
 
 ## :x: Errors
 
@@ -193,13 +193,6 @@
   ```nextflow
       SENTIEON_AUTH_MECH = "$SENTIEON_AUTH_MECH"
                             ^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/call_snv.nf:112:54`: `run_mt_for_wes` is not defined
-
-  ```nextflow
-          if (val_analysis_type.matches("wgs|mito") || run_mt_for_wes) {
-                                                       ^^^^^^^^^^^^^^
   ```
 
 - Error: `tests/nextflow.config:28:27`: `SENTIEON_AUTH_MECH` is not defined (hint: use `env('...')` to access environment variable)
@@ -580,13 +573,6 @@
   ```nextflow
       def blacklist = blacklist_bed ? "--blacklist ${blacklist_bed}" : ''
           ^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/call_snv.nf:41:9`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          val_run_mt_for_wes        // boolean
-          ^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/nf-core/vcf_filter_bcftools_ensemblvep/main.nf:14:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead

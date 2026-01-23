@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T10:31:50.197418164Z
+- Generated: 2026-01-23T00:21:53.360416555Z
 - Nextflow version: 25.12.0-edge
-- Summary: 43 errors, 98 warnings
+- Summary: 49 errors, 104 warnings
 
 ## :x: Errors
 
@@ -62,14 +62,14 @@
   ^
   ```
 
-- Error: `conf/modules_illumina.config:736:1`: If statements cannot be mixed with config statements
+- Error: `conf/modules_illumina.config:983:1`: If statements cannot be mixed with config statements
 
   ```nextflow
   if (!params.skip_assembly) {
   ^
   ```
 
-- Error: `conf/modules_illumina.config:1083:1`: If statements cannot be mixed with config statements
+- Error: `conf/modules_illumina.config:1330:1`: If statements cannot be mixed with config statements
 
   ```nextflow
   if (!params.skip_multiqc) {
@@ -251,7 +251,49 @@
                       ^^^^^^^^
   ```
 
-- Error: `nextflow.config:253:26`: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/viralrecon/conf/test_full_sispa.config'
+- Error: `modules/local/sierralocal/main.nf:28:9`: `hivdb_xml` is already declared
+
+  ```nextflow
+      def hivdb_xml           = params.hivdb_xml    ? "-xml  ${params.hivdb_xml}"            : ''
+          ^^^^^^^^^
+  ```
+
+- Error: `modules/local/sierralocal/main.nf:29:9`: `apobec_drm` is already declared
+
+  ```nextflow
+      def apobec_drm          = params.apobec_drm   ? "-json ${params.apobec_drm}"           : ''
+          ^^^^^^^^^^
+  ```
+
+- Error: `modules/local/sierralocal/main.nf:30:9`: `apobec_csv` is already declared
+
+  ```nextflow
+      def apobec_csv          = params.apobec_csv   ? "-apobec_csv ${params.apobec_csv}"     : ''
+          ^^^^^^^^^^
+  ```
+
+- Error: `modules/local/sierralocal/main.nf:31:9`: `unusual_csv` is already declared
+
+  ```nextflow
+      def unusual_csv         = params.unusual_csv  ? "-unusual_csv ${params.unusual_csv}"   : ''
+          ^^^^^^^^^^^
+  ```
+
+- Error: `modules/local/sierralocal/main.nf:32:9`: `sdrms_csv` is already declared
+
+  ```nextflow
+      def sdrms_csv           = params.sdrms_csv    ? "-sdrms_csv ${params.sdrms_csv}"       : ''
+          ^^^^^^^^^
+  ```
+
+- Error: `modules/local/sierralocal/main.nf:33:9`: `mutation_csv` is already declared
+
+  ```nextflow
+      def mutation_csv        = params.mutation_csv ? "-mutation_csv ${params.mutation_csv}" : ''
+          ^^^^^^^^^^^^
+  ```
+
+- Error: `nextflow.config:262:26`: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/viralrecon/conf/test_full_sispa.config'
 
   ```nextflow
       test_full_sispa    { includeConfig 'conf/test_full_sispa.config'    }
@@ -484,28 +526,21 @@
           ^^^^^
   ```
 
-- Warning: `subworkflows/local/additional_annotation/main.nf:35:54`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          ch_annot       = GUNZIP_GFF.out.gunzip.map { it[1] }
-                                                       ^^
-  ```
-
-- Warning: `subworkflows/local/additional_annotation/main.nf:82:43`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/additional_annotation/main.nf:66:43`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           BCFTOOLS_QUERY.out.output.collect{it[1]},
                                             ^^
   ```
 
-- Warning: `subworkflows/local/additional_annotation/main.nf:83:47`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/additional_annotation/main.nf:67:47`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           SNPSIFT_EXTRACTFIELDS.out.txt.collect{it[1]}.ifEmpty([]),
                                                 ^^
   ```
 
-- Warning: `subworkflows/local/additional_annotation/main.nf:84:26`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/additional_annotation/main.nf:68:26`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           pangolin.collect{it[1]}.ifEmpty([])
@@ -561,28 +596,28 @@
                                                 ^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/assembly_spades/main.nf:69:19`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/assembly_spades/main.nf:71:19`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .filter { meta, scaffold -> scaffold.size() > 0 }
                     ^^^^
   ```
 
-- Warning: `subworkflows/local/assembly_spades/main.nf:75:19`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/assembly_spades/main.nf:77:19`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .filter { meta, gfa -> gfa.size() > 0 }
                     ^^^^
   ```
 
-- Warning: `subworkflows/local/assembly_unicycler/main.nf:55:19`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/assembly_unicycler/main.nf:57:19`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .filter { meta, scaffold -> scaffold.size() > 0 }
                     ^^^^
   ```
 
-- Warning: `subworkflows/local/assembly_unicycler/main.nf:61:19`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/assembly_unicycler/main.nf:63:19`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .filter { meta, gfa -> gfa.size() > 0 }
@@ -615,6 +650,55 @@
   ```nextflow
           bam_bai.map { it[2].getName().tokenize('.')[-1] }
                         ^^
+  ```
+
+- Warning: `subworkflows/local/hiv_resitance_detection/main.nf:68:36`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              LIFTOFF.out.gff3.map { it[1] },
+                                     ^^
+  ```
+
+- Warning: `subworkflows/local/hiv_resitance_detection/main.nf:98:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          SIERRALOCAL.out.json.collect{it[1]},
+                                       ^^
+  ```
+
+- Warning: `subworkflows/local/hiv_resitance_detection/main.nf:99:52`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          RESISTANCE_TABLES.out.mutation_csv.collect{it[1]},
+                                                     ^^
+  ```
+
+- Warning: `subworkflows/local/hiv_resitance_detection/main.nf:100:54`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          RESISTANCE_TABLES.out.resistance_csv.collect{it[1]},
+                                                       ^^
+  ```
+
+- Warning: `subworkflows/local/hiv_resitance_detection/main.nf:101:34`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          nextclade_report.collect{it[1]},
+                                   ^^
+  ```
+
+- Warning: `subworkflows/local/hiv_resitance_detection/main.nf:102:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          consensus.collect{it[1]},
+                            ^^
+  ```
+
+- Warning: `subworkflows/local/hiv_resitance_detection/main.nf:103:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          CONSENSUS_LIFTOFF.out.gff3.collect{it[1]}
+                                             ^^
   ```
 
 - Warning: `subworkflows/local/prepare_genome_illumina/main.nf:45:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
