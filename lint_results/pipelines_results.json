@@ -11,7 +11,7 @@
   "airrflow": {
     "full_name": "nf-core/airrflow",
     "html_url": "https://github.com/nf-core/airrflow",
-    "commit": "5c59e0576dd3044dea9bd745c68f1835cb5fbc78",
+    "commit": "0ca2c448ab2ce8270b3ebe3fd410e494f7552282",
     "errors": 150,
     "warnings": 135,
     "parse_error": false,
@@ -848,7 +848,7 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "9be4c5dde504afa408006ada14c92f0f9fe9e2cd",
+    "commit": "8edcee62ebbb43a1cc800a3dc3966a2b6241c5ec",
     "errors": 29,
     "warnings": 54,
     "parse_error": false,
