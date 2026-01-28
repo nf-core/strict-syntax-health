@@ -254,7 +254,7 @@
   "differentialabundance": {
     "full_name": "nf-core/differentialabundance",
     "html_url": "https://github.com/nf-core/differentialabundance",
-    "commit": "c4588164c11ac7e3532e5746146f8e3e9d99e0ad",
+    "commit": "9b538e0f37d6b5cdb0584e1912dbad97498a03e5",
     "errors": 14,
     "warnings": 50,
     "parse_error": false,
@@ -713,9 +713,9 @@
   "pairgenomealign": {
     "full_name": "nf-core/pairgenomealign",
     "html_url": "https://github.com/nf-core/pairgenomealign",
-    "commit": "190fc3e33f96f7a2941de805faaf12402ddbead0",
+    "commit": "94af0c6ac4641a8913030cb10ede5eca0d68285d",
     "errors": 2,
-    "warnings": 24,
+    "warnings": 22,
     "parse_error": false,
     "prints_help": null
   },
@@ -803,9 +803,9 @@
   "proteinfold": {
     "full_name": "nf-core/proteinfold",
     "html_url": "https://github.com/nf-core/proteinfold",
-    "commit": "d0de5359b90575098d440f41fd177e8758b8432d",
+    "commit": "62c64dc7879f479cd25cb1829573f8f2bb25d30f",
     "errors": 0,
-    "warnings": 25,
+    "warnings": 0,
     "parse_error": false,
     "prints_help": false
   },
