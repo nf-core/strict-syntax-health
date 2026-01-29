@@ -47,11 +47,11 @@
   "bacass": {
     "full_name": "nf-core/bacass",
     "html_url": "https://github.com/nf-core/bacass",
-    "commit": "b36f07cef58ee3ec46793f22b7a597ea1a0319ab",
-    "errors": 21,
-    "warnings": 126,
+    "commit": "691dd6d3b861ffe8befc596c54380279afd96423",
+    "errors": 0,
+    "warnings": 15,
     "parse_error": false,
-    "prints_help": null
+    "prints_help": true
   },
   "bactmap": {
     "full_name": "nf-core/bactmap",
@@ -443,7 +443,7 @@
   "hlatyping": {
     "full_name": "nf-core/hlatyping",
     "html_url": "https://github.com/nf-core/hlatyping",
-    "commit": "2d7d92f0e231a4091f76864d016f132766dd721f",
+    "commit": "64d7a5d5026b5ccf0be8cc2e64fafa9878ca6c8e",
     "errors": 17,
     "warnings": 16,
     "parse_error": false,
@@ -542,7 +542,7 @@
   "meerpipe": {
     "full_name": "nf-core/meerpipe",
     "html_url": "https://github.com/nf-core/meerpipe",
-    "commit": "e0a9036a0398ff58b6dd646cc6310e818812d50f",
+    "commit": "76b676212bdf0a9de91ac1497d237211a492f153",
     "errors": 44,
     "warnings": 84,
     "parse_error": false,
@@ -740,9 +740,9 @@
   "pathogensurveillance": {
     "full_name": "nf-core/pathogensurveillance",
     "html_url": "https://github.com/nf-core/pathogensurveillance",
-    "commit": "0618739f2e98020cfc54f46d4b18ee3e0c93eea1",
-    "errors": 36,
-    "warnings": 488,
+    "commit": "7ccd32142850b2c5e62c6a3033a8382289b8967a",
+    "errors": 16,
+    "warnings": 471,
     "parse_error": false,
     "prints_help": null
   },
@@ -803,7 +803,7 @@
   "proteinfold": {
     "full_name": "nf-core/proteinfold",
     "html_url": "https://github.com/nf-core/proteinfold",
-    "commit": "62c64dc7879f479cd25cb1829573f8f2bb25d30f",
+    "commit": "3d9a87b849880907bf41c95f07f54da84ab1906c",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -965,16 +965,16 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "2f541dfec6dccac4d1a9a6de2b494bd2b793e460",
+    "commit": "e3eb8adee2785c239416ed671048b5cf2c504774",
     "errors": 152,
-    "warnings": 614,
+    "warnings": 616,
     "parse_error": false,
     "prints_help": null
   },
   "scdownstream": {
     "full_name": "nf-core/scdownstream",
     "html_url": "https://github.com/nf-core/scdownstream",
-    "commit": "7d5dc457039ab8e314ea5430818aa7e951cc0a55",
+    "commit": "9294a45f74e1f37bf116b6b097a32e162c22c0ff",
     "errors": 1,
     "warnings": 23,
     "parse_error": false,
@@ -1037,7 +1037,7 @@
   "sopa": {
     "full_name": "nf-core/sopa",
     "html_url": "https://github.com/nf-core/sopa",
-    "commit": "84af361974a041638364e717bd3c263b0eb94d04",
+    "commit": "36b2b5bee4cfba1646c2d1ea17b76273f8303b92",
     "errors": 13,
     "warnings": 17,
     "parse_error": false,

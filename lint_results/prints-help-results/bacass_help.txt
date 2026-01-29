@@ -1,0 +1,131 @@
+$ NXF_SYNTAX_PARSER=v2 nextflow run . --help
+
+
+ N E X T F L O W   ~  version 25.12.0-edge
+
+Downloading plugin nf-schema@2.5.1
+Launching `./main.nf` [hopeful_koch]revision: a18b2be4cd
+
+WARN: Unrecognized config option 'validation.defaultIgnoreParams'
+WARN: Unrecognized config option 'validation.monochromeLogs'
+
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/bacass 2.6.0dev
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/bacass -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input                       [string] Path to tab-separated sample sheet 
+  --outdir                      [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --email                       [string] Email address for completion summary. 
+
+QC and Trim
+  --fastp_args                  [string]  This can be used to pass arguments to [Fastp](https://github.com/OpenGene/fastp) 
+  --save_trimmed                [boolean] save trimmed files 
+  --save_trimmed_fail           [boolean] save files that failed to pass trimming thresholds ending in `*.fail.fastq.gz` 
+  --skip_fastqc                 [boolean] Skip FastQC 
+  --skip_nanoplot               [boolean] Skip Nanoplot 
+  --skip_toulligqc              [boolean] Skip ToulligQC 
+  --skip_fastp                  [boolean] Skip FastP 
+  --discard_trimmed_pass        [boolean] Specify true to not write any reads that pass trimming thresholds.This can be used to use fastp for 
+the output report only. [default: false]  
+  --long_reads_filtering        [string]  Tool for ONT read filtering [default: porechop] 
+  --filtlong_args               [string]  Arguments for running Filtlong 
+  --filtlong_minlen             [integer] Minimun length for Filtlong to work [default: 10] 
+
+Contamination Screening
+  --kraken2db                   [string] Path to Kraken2 database. 
+  --kmerfinderdb                [string] Path to the Kmerfinder bacteria database (ie: '/path_to/kmerfinder/bacteria/ or 
+'/path_to/kmerfinder/bacteria.tar.gz'). Only taxonomic group 'bacteria' is allowed. See database 
+installation (guidelines)[https://bitbucket.org/genomicepidemiology/kmerfinder_db/src/master/] for 
+details. The latest version can be downloaded from the KmerFinder Database FTP site  or directly 
+during pipeline execution with. Example:
+
+```--kmerfinderdb 
+'ftp://ftp.cbs.dtu.dk/public/CGE/databases/KmerFinder/version/latest/bacteria.tar.gz'```
+(Note: 
+Downloading the KmerFinder database (~30GB) via FTP can be time-consuming. It's recommended to 
+pre-download the database and provide the *.tar.gz file using this parameter instead of URL 
+site.).
+An older version is available on 
+(Zenodo)[https://zenodo.org/records/13447056/files/20190108_kmerfinder_stable_dirs.tar.gz].  
+  --reference_fasta             [string] Reference FASTA file. 
+  --reference_gff               [string] Reference GFF file. 
+
+Assembly parameters
+  --assembler                   [string] The assembler to use for assembly. Use the appropriate assembler according to the chosen 
+assembly_type. Refer to the README.md for further clarification.  (accepted: unicycler, canu, 
+miniasm, dragonflye) [default: unicycler]  
+  --assembly_type               [string] Which type of assembly to perform.  (accepted: short, long, hybrid) 
+  --unicycler_args              [string] Extra arguments for Unicycler 
+  --canu_mode                   [string] Allowed technologies for long read assembly.  (accepted: -pacbio, -nanopore, -pacbio-hifi, null) 
+ 
+  --canu_args                   [string] This can be used to supply [extra options](https://canu.readthedocs.io/en/latest/quick-start.html) 
+to the Canu assembler. Will be ignored when other assemblers are used.  
+  --dragonflye_args             [string] Extra arguments for [Dragonflye](https://github.com/rpetit3/dragonflye#usage) 
+
+BUSCO options
+  --busco_lineage               [string]       BUSCO lineage to use, you can use other BUSCO lineages, these are available in: 
+https://busco.ezlab.org/list_of_lineages.html [default: bacteria_odb10]  
+  --busco_mode                  [string]       BUSCO mode to use  (accepted: genome, proteins, transcriptome) [default: genome] 
+  --busco_db_path               [string, null] Path to BUSCO database 
+  --busco_config_file           [string, null] Path to BUSCO config file 
+  --busco_clean_intermediates   [boolean]      Clean intermediate BUSCO files [default: false] 
+
+Assembly Polishing
+  --polish_method               [string] Which assembly polishing method to use.  (accepted: medaka, nanopolish) [default: medaka] 
+
+Annotation
+  --annotation_tool             [string]  The annotation method to annotate the final assembly.  (accepted: prokka, bakta, dfast, liftoff) 
+[default: prokka]  
+  --prokka_args                 [string]  Extra arguments for prokka annotation tool. 
+  --prokka_proteins             [string]  FASTA file with protein sequences to be used as reference by PROKKA. 
+  --baktadb                     [string]  Path to Bakta database 
+  --baktadb_download            [boolean] Download Bakta database 
+  --baktadb_download_args       [string]  This can be used to supply [extra options](https://github.com/oschwengers/bakta#database-download) 
+to the Bakta download module  (accepted: --type light, --type full) [default: --type light]  
+  --dfast_config                [string]  Specifies a configuration file for the [DFAST](https://github.com/nigyta/dfast_core) annotation 
+method. [default: assets/test_config_dfast.py]  
+  --liftoff_ref_from_kmerfinder [boolean] Use the reference files (.fasta, .gff) from kmerfinder step for LIFTOFF. 
+
+Skipping Options
+  --skip_kraken2                [boolean] Skip running Kraken2 classifier on reads. 
+  --skip_kmerfinder             [boolean] Skip contamination analysis with 
+[Kmerfinder](https://bitbucket.org/genomicepidemiology/kmerfinder/src/master/)  
+  --skip_annotation             [boolean] Skip annotating the assembly with Prokka /DFAST. 
+  --skip_pycoqc                 [boolean] Skip running `PycoQC` on long read input. 
+  --skip_busco                  [boolean] Skip BUSCO 
+  --skip_polish                 [boolean] Skip polishing the long-read assembly with fast5 input. Will not affect short/hybrid assemblies. 
+ 
+  --skip_multiqc                [boolean] Skip MultiQC 
+
+Generic options
+  --multiqc_title               [string]          MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+  --multiqc_methods_description [string]          Custom MultiQC yaml file containing HTML including a methods description. 
+  --help                        [boolean, string] Display the help message. 
+  --help_full                   [boolean]         Display the full detailed help message. 
+  --show_hidden                 [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 18 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The pipeline
+    https://doi.org/10.5281/zenodo.2669428
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/bacass/blob/main/CITATIONS.md
+

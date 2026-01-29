@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-23T00:21:11.445832419Z
+- Generated: 2026-01-29T00:21:58.771623308Z
 - Nextflow version: 25.12.0-edge
-- Summary: 152 errors, 614 warnings
+- Summary: 152 errors, 616 warnings
 
 ## :x: Errors
 
@@ -1539,6 +1539,13 @@
   ```nextflow
           params.varlociraptor_scenario_tumor_only ? Channel.fromPath(params.varlociraptor_scenario_tumor_only).map { it -> [[id: it.baseName - '.yte'], it] }.collect() : Channel.fromPath("${projectDir}/assets/varlociraptor_tumor_only.yte.yaml").collect(),
                                                                                                                                                                            ^^^^^^^
+  ```
+
+- Warning: `modules/local/consensus_from_sites/main.nf:27:9`: Variable was declared but not used
+
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^
   ```
 
 - Warning: `modules/nf-core/bbmap/bbsplit/main.nf:116:43`: Parameter was not used -- prefix with `_` to suppress warning
@@ -5167,39 +5174,46 @@
                  ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/vcf_consensus/main.nf:14:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/vcf_consensus/main.nf:15:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_versions = Channel.empty()
                     ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/vcf_consensus/main.nf:17:24`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/vcf_consensus/main.nf:18:24`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .branch{ meta, vcf, tbi ->
                          ^^^
   ```
 
-- Warning: `subworkflows/local/vcf_consensus/main.nf:17:29`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/vcf_consensus/main.nf:18:29`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .branch{ meta, vcf, tbi ->
                               ^^^
   ```
 
-- Warning: `subworkflows/local/vcf_consensus/main.nf:65:36`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/vcf_consensus/main.nf:54:70`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-              def vcf = files.find { it.name == '0000.vcf.gz' }
-                                     ^^
+                              def sorted_vcfs = sorted_pairs.collect { it[0] }
+                                                                       ^^
   ```
 
-- Warning: `subworkflows/local/vcf_consensus/main.nf:66:36`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/vcf_consensus/main.nf:55:66`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-              def tbi = files.find { it.name == '0000.vcf.gz.tbi' }
-                                     ^^
+                              def callers = sorted_pairs.collect { it[1] }
+                                                                   ^^
+  ```
+
+- Warning: `subworkflows/local/vcf_consensus/main.nf:65:19`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .filter { meta, dir ->
+                    ^^^^
   ```
 
 - Warning: `subworkflows/local/vcf_normalization/main.nf:16:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead

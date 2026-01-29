@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-27T00:17:56.210638856Z
+- Generated: 2026-01-29T00:21:03.592692494Z
 - Nextflow version: 25.12.0-edge
-- Summary: 36 errors, 488 warnings
+- Summary: 16 errors, 471 warnings
 
 ## :x: Errors
 
@@ -34,146 +34,6 @@
                                ^^^^^^^^^
   ```
 
-- Error: `modules/nf-core/mafft/align/main.nf:29:9`: `add` is already declared
-
-  ```nextflow
-      def add          = add             ? "--add <(unpigz -cdf ${add})"                   : ''
-          ^^^
-  ```
-
-- Error: `modules/nf-core/mafft/align/main.nf:30:9`: `addfragments` is already declared
-
-  ```nextflow
-      def addfragments = addfragments    ? "--addfragments <(unpigz -cdf ${addfragments})" : ''
-          ^^^^^^^^^^^^
-  ```
-
-- Error: `modules/nf-core/mafft/align/main.nf:31:9`: `addfull` is already declared
-
-  ```nextflow
-      def addfull      = addfull         ? "--addfull <(unpigz -cdf ${addfull})"           : ''
-          ^^^^^^^
-  ```
-
-- Error: `modules/nf-core/mafft/align/main.nf:32:9`: `addprofile` is already declared
-
-  ```nextflow
-      def addprofile   = addprofile      ? "--addprofile <(unpigz -cdf ${addprofile})"     : ''
-          ^^^^^^^^^^
-  ```
-
-- Error: `modules/nf-core/mafft/align/main.nf:33:9`: `addlong` is already declared
-
-  ```nextflow
-      def addlong      = addlong         ? "--addlong <(unpigz -cdf ${addlong})"           : ''
-          ^^^^^^^
-  ```
-
-- Error: `modules/nf-core/mafft/align/main.nf:59:9`: `add` is already declared
-
-  ```nextflow
-      def add          = add             ? "--add ${add}"                   : ''
-          ^^^
-  ```
-
-- Error: `modules/nf-core/mafft/align/main.nf:60:9`: `addfragments` is already declared
-
-  ```nextflow
-      def addfragments = addfragments    ? "--addfragments ${addfragments}" : ''
-          ^^^^^^^^^^^^
-  ```
-
-- Error: `modules/nf-core/mafft/align/main.nf:61:9`: `addfull` is already declared
-
-  ```nextflow
-      def addfull      = addfull         ? "--addfull ${addfull}"           : ''
-          ^^^^^^^
-  ```
-
-- Error: `modules/nf-core/mafft/align/main.nf:62:9`: `addprofile` is already declared
-
-  ```nextflow
-      def addprofile   = addprofile      ? "--addprofile ${addprofile}"     : ''
-          ^^^^^^^^^^
-  ```
-
-- Error: `modules/nf-core/mafft/align/main.nf:63:9`: `addlong` is already declared
-
-  ```nextflow
-      def addlong      = addlong         ? "--addlong ${addlong}"           : ''
-          ^^^^^^^
-  ```
-
-- Error: `modules/nf-core/mafft/main.nf:29:9`: `add` is already declared
-
-  ```nextflow
-      def add          = add             ? "--add <(unpigz -cdf ${add})"                   : ''
-          ^^^
-  ```
-
-- Error: `modules/nf-core/mafft/main.nf:30:9`: `addfragments` is already declared
-
-  ```nextflow
-      def addfragments = addfragments    ? "--addfragments <(unpigz -cdf ${addfragments})" : ''
-          ^^^^^^^^^^^^
-  ```
-
-- Error: `modules/nf-core/mafft/main.nf:31:9`: `addfull` is already declared
-
-  ```nextflow
-      def addfull      = addfull         ? "--addfull <(unpigz -cdf ${addfull})"           : ''
-          ^^^^^^^
-  ```
-
-- Error: `modules/nf-core/mafft/main.nf:32:9`: `addprofile` is already declared
-
-  ```nextflow
-      def addprofile   = addprofile      ? "--addprofile <(unpigz -cdf ${addprofile})"     : ''
-          ^^^^^^^^^^
-  ```
-
-- Error: `modules/nf-core/mafft/main.nf:33:9`: `addlong` is already declared
-
-  ```nextflow
-      def addlong      = addlong         ? "--addlong <(unpigz -cdf ${addlong})"           : ''
-          ^^^^^^^
-  ```
-
-- Error: `modules/nf-core/mafft/main.nf:59:9`: `add` is already declared
-
-  ```nextflow
-      def add          = add             ? "--add ${add}"                   : ''
-          ^^^
-  ```
-
-- Error: `modules/nf-core/mafft/main.nf:60:9`: `addfragments` is already declared
-
-  ```nextflow
-      def addfragments = addfragments    ? "--addfragments ${addfragments}" : ''
-          ^^^^^^^^^^^^
-  ```
-
-- Error: `modules/nf-core/mafft/main.nf:61:9`: `addfull` is already declared
-
-  ```nextflow
-      def addfull      = addfull         ? "--addfull ${addfull}"           : ''
-          ^^^^^^^
-  ```
-
-- Error: `modules/nf-core/mafft/main.nf:62:9`: `addprofile` is already declared
-
-  ```nextflow
-      def addprofile   = addprofile      ? "--addprofile ${addprofile}"     : ''
-          ^^^^^^^^^^
-  ```
-
-- Error: `modules/nf-core/mafft/main.nf:63:9`: `addlong` is already declared
-
-  ```nextflow
-      def addlong      = addlong         ? "--addlong ${addlong}"           : ''
-          ^^^^^^^
-  ```
-
 - Error: `modules/nf-core/sratools/fasterqdump/main.nf:58:9`: `prefix` is already declared
 
   ```nextflow
@@ -202,7 +62,7 @@
                                       ^^^^^
   ```
 
-- Error: `subworkflows/local/genome_assembly/main.nf:110:28`: `sample_data` is already declared
+- Error: `subworkflows/local/genome_assembly/main.nf:106:28`: `sample_data` is already declared
 
   ```nextflow
           .map{ sample_meta, sample_data, paths ->
@@ -216,28 +76,28 @@
                                                       ^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/utils_nfcore_pathogensurveillance_pipeline/main.nf:107:5`: `for` loops are no longer supported
+- Error: `subworkflows/local/utils_nfcore_pathogensurveillance_pipeline/main.nf:101:5`: `for` loops are no longer supported
 
   ```nextflow
       for (param in checkPathParamList) {
       ^^^
   ```
 
-- Error: `subworkflows/local/utils_nfcore_pathogensurveillance_pipeline/main.nf:107:10`: `param` is not defined
+- Error: `subworkflows/local/utils_nfcore_pathogensurveillance_pipeline/main.nf:101:10`: `param` is not defined
 
   ```nextflow
       for (param in checkPathParamList) {
            ^^^^^
   ```
 
-- Error: `subworkflows/local/utils_nfcore_pathogensurveillance_pipeline/main.nf:108:12`: `param` is not defined
+- Error: `subworkflows/local/utils_nfcore_pathogensurveillance_pipeline/main.nf:102:12`: `param` is not defined
 
   ```nextflow
           if (param) { file(param, checkIfExists: true) }
              ^^^^^^^
   ```
 
-- Error: `subworkflows/local/utils_nfcore_pathogensurveillance_pipeline/main.nf:108:27`: `param` is not defined
+- Error: `subworkflows/local/utils_nfcore_pathogensurveillance_pipeline/main.nf:102:27`: `param` is not defined
 
   ```nextflow
           if (param) { file(param, checkIfExists: true) }
@@ -372,112 +232,21 @@
           ^^^^^^^^^^^^
   ```
 
-- Warning: `modules/nf-core/mafft/align/main.nf:57:9`: Variable was declared but not used
-
-  ```nextflow
-      def args         = task.ext.args   ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/mafft/align/main.nf:59:9`: Variable was declared but not used
-
-  ```nextflow
-      def add          = add             ? "--add ${add}"                   : ''
-          ^^^
-  ```
-
-- Warning: `modules/nf-core/mafft/align/main.nf:60:9`: Variable was declared but not used
-
-  ```nextflow
-      def addfragments = addfragments    ? "--addfragments ${addfragments}" : ''
-          ^^^^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/mafft/align/main.nf:61:9`: Variable was declared but not used
-
-  ```nextflow
-      def addfull      = addfull         ? "--addfull ${addfull}"           : ''
-          ^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/mafft/align/main.nf:62:9`: Variable was declared but not used
-
-  ```nextflow
-      def addprofile   = addprofile      ? "--addprofile ${addprofile}"     : ''
-          ^^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/mafft/align/main.nf:63:9`: Variable was declared but not used
-
-  ```nextflow
-      def addlong      = addlong         ? "--addlong ${addlong}"           : ''
-          ^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/mafft/main.nf:57:9`: Variable was declared but not used
-
-  ```nextflow
-      def args         = task.ext.args   ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/mafft/main.nf:59:9`: Variable was declared but not used
-
-  ```nextflow
-      def add          = add             ? "--add ${add}"                   : ''
-          ^^^
-  ```
-
-- Warning: `modules/nf-core/mafft/main.nf:60:9`: Variable was declared but not used
-
-  ```nextflow
-      def addfragments = addfragments    ? "--addfragments ${addfragments}" : ''
-          ^^^^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/mafft/main.nf:61:9`: Variable was declared but not used
-
-  ```nextflow
-      def addfull      = addfull         ? "--addfull ${addfull}"           : ''
-          ^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/mafft/main.nf:62:9`: Variable was declared but not used
-
-  ```nextflow
-      def addprofile   = addprofile      ? "--addprofile ${addprofile}"     : ''
-          ^^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/mafft/main.nf:63:9`: Variable was declared but not used
-
-  ```nextflow
-      def addlong      = addlong         ? "--addlong ${addlong}"           : ''
-          ^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/picard/sortsam/main.nf:22:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/quast/main.nf:52:9`: Variable was declared but not used
+- Warning: `modules/nf-core/quast/main.nf:48:9`: Variable was declared but not used
 
   ```nextflow
       def args      = task.ext.args   ?: ''
           ^^^^
   ```
 
-- Warning: `modules/nf-core/quast/main.nf:54:9`: Variable was declared but not used
+- Warning: `modules/nf-core/quast/main.nf:50:9`: Variable was declared but not used
 
   ```nextflow
       def features  = gff             ? "--features $gff" : ''
           ^^^^^^^^
   ```
 
-- Warning: `modules/nf-core/quast/main.nf:55:9`: Variable was declared but not used
+- Warning: `modules/nf-core/quast/main.nf:51:9`: Variable was declared but not used
 
   ```nextflow
       def reference = fasta           ? "-r $fasta" : ''
@@ -489,34 +258,6 @@
   ```nextflow
       def sigs = signatures ? "${signatures.sort{it.toString()}.join(' ')}" : ''
                                                  ^^
-  ```
-
-- Warning: `modules/nf-core/spades/main.nf:80:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/spades/main.nf:82:9`: Variable was declared but not used
-
-  ```nextflow
-      def maxmem = task.memory.toGiga()
-          ^^^^^^
-  ```
-
-- Warning: `modules/nf-core/spades/main.nf:86:9`: Variable was declared but not used
-
-  ```nextflow
-      def custom_hmms = hmm ? "--custom-hmms $hmm" : ""
-          ^^^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/spades/main.nf:87:9`: Variable was declared but not used
-
-  ```nextflow
-      def reads = yml ? "--dataset $yml" : "$illumina_reads $pacbio_reads $nanopore_reads"
-          ^^^^^
   ```
 
 - Warning: `subworkflows/local/align_reads/main.nf:12:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -862,14 +603,14 @@
                   ^^
   ```
 
-- Warning: `subworkflows/local/busco_phylogeny/main.nf:141:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/busco_phylogeny/main.nf:140:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { [it[0].group_id, it[1]] } // group_meta, tree
                   ^^
   ```
 
-- Warning: `subworkflows/local/busco_phylogeny/main.nf:141:33`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/busco_phylogeny/main.nf:140:33`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { [it[0].group_id, it[1]] } // group_meta, tree
@@ -1149,280 +890,280 @@
                                                                                ^^^^
   ```
 
-- Warning: `subworkflows/local/call_variants/main.nf:75:45`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/call_variants/main.nf:74:45`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_ref_grouped.map { combined_meta, sample_meta, bam, bai, ref, fai, dict, region_file ->
                                               ^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/call_variants/main.nf:75:58`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/call_variants/main.nf:74:58`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_ref_grouped.map { combined_meta, sample_meta, bam, bai, ref, fai, dict, region_file ->
                                                            ^^^
   ```
 
-- Warning: `subworkflows/local/call_variants/main.nf:75:63`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/call_variants/main.nf:74:63`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_ref_grouped.map { combined_meta, sample_meta, bam, bai, ref, fai, dict, region_file ->
                                                                 ^^^
   ```
 
-- Warning: `subworkflows/local/call_variants/main.nf:75:73`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/call_variants/main.nf:74:73`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_ref_grouped.map { combined_meta, sample_meta, bam, bai, ref, fai, dict, region_file ->
                                                                           ^^^
   ```
 
-- Warning: `subworkflows/local/call_variants/main.nf:75:78`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/call_variants/main.nf:74:78`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_ref_grouped.map { combined_meta, sample_meta, bam, bai, ref, fai, dict, region_file ->
                                                                                ^^^^
   ```
 
-- Warning: `subworkflows/local/call_variants/main.nf:75:84`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/call_variants/main.nf:74:84`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_ref_grouped.map { combined_meta, sample_meta, bam, bai, ref, fai, dict, region_file ->
                                                                                      ^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/call_variants/main.nf:85:49`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/call_variants/main.nf:84:49`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               ch_ref_grouped.map { combined_meta, sample_meta, bam, bai, ref, fai, dict, region_file ->
                                                   ^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/call_variants/main.nf:85:62`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/call_variants/main.nf:84:62`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               ch_ref_grouped.map { combined_meta, sample_meta, bam, bai, ref, fai, dict, region_file ->
                                                                ^^^
   ```
 
-- Warning: `subworkflows/local/call_variants/main.nf:85:67`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/call_variants/main.nf:84:67`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               ch_ref_grouped.map { combined_meta, sample_meta, bam, bai, ref, fai, dict, region_file ->
                                                                     ^^^
   ```
 
-- Warning: `subworkflows/local/call_variants/main.nf:85:88`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/call_variants/main.nf:84:88`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               ch_ref_grouped.map { combined_meta, sample_meta, bam, bai, ref, fai, dict, region_file ->
                                                                                          ^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/call_variants/main.nf:91:49`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/call_variants/main.nf:90:49`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           vf_input.map { combined_meta, vcf, tbi, ref, fai, dict, gzi ->
                                                   ^^^
   ```
 
-- Warning: `subworkflows/local/call_variants/main.nf:91:54`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/call_variants/main.nf:90:54`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           vf_input.map { combined_meta, vcf, tbi, ref, fai, dict, gzi ->
                                                        ^^^
   ```
 
-- Warning: `subworkflows/local/call_variants/main.nf:91:59`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/call_variants/main.nf:90:59`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           vf_input.map { combined_meta, vcf, tbi, ref, fai, dict, gzi ->
                                                             ^^^^
   ```
 
-- Warning: `subworkflows/local/call_variants/main.nf:91:65`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/call_variants/main.nf:90:65`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           vf_input.map { combined_meta, vcf, tbi, ref, fai, dict, gzi ->
                                                                   ^^^
   ```
 
-- Warning: `subworkflows/local/call_variants/main.nf:94:39`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/call_variants/main.nf:93:39`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           vf_input.map { combined_meta, vcf, tbi, ref, fai, dict, gzi ->
                                         ^^^
   ```
 
-- Warning: `subworkflows/local/call_variants/main.nf:94:44`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/call_variants/main.nf:93:44`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           vf_input.map { combined_meta, vcf, tbi, ref, fai, dict, gzi ->
                                              ^^^
   ```
 
-- Warning: `subworkflows/local/call_variants/main.nf:94:54`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/call_variants/main.nf:93:54`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           vf_input.map { combined_meta, vcf, tbi, ref, fai, dict, gzi ->
                                                        ^^^
   ```
 
-- Warning: `subworkflows/local/call_variants/main.nf:94:59`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/call_variants/main.nf:93:59`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           vf_input.map { combined_meta, vcf, tbi, ref, fai, dict, gzi ->
                                                             ^^^^
   ```
 
-- Warning: `subworkflows/local/call_variants/main.nf:94:65`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/call_variants/main.nf:93:65`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           vf_input.map { combined_meta, vcf, tbi, ref, fai, dict, gzi ->
                                                                   ^^^
   ```
 
-- Warning: `subworkflows/local/call_variants/main.nf:97:39`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/call_variants/main.nf:96:39`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           vf_input.map { combined_meta, vcf, tbi, ref, fai, dict, gzi ->
                                         ^^^
   ```
 
-- Warning: `subworkflows/local/call_variants/main.nf:97:44`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/call_variants/main.nf:96:44`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           vf_input.map { combined_meta, vcf, tbi, ref, fai, dict, gzi ->
                                              ^^^
   ```
 
-- Warning: `subworkflows/local/call_variants/main.nf:97:49`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/call_variants/main.nf:96:49`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           vf_input.map { combined_meta, vcf, tbi, ref, fai, dict, gzi ->
                                                   ^^^
   ```
 
-- Warning: `subworkflows/local/call_variants/main.nf:97:59`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/call_variants/main.nf:96:59`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           vf_input.map { combined_meta, vcf, tbi, ref, fai, dict, gzi ->
                                                             ^^^^
   ```
 
-- Warning: `subworkflows/local/call_variants/main.nf:97:65`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/call_variants/main.nf:96:65`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           vf_input.map { combined_meta, vcf, tbi, ref, fai, dict, gzi ->
                                                                   ^^^
   ```
 
-- Warning: `subworkflows/local/call_variants/main.nf:100:39`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/call_variants/main.nf:99:39`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           vf_input.map { combined_meta, vcf, tbi, ref, fai, dict, gzi ->
                                         ^^^
   ```
 
-- Warning: `subworkflows/local/call_variants/main.nf:100:44`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/call_variants/main.nf:99:44`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           vf_input.map { combined_meta, vcf, tbi, ref, fai, dict, gzi ->
                                              ^^^
   ```
 
-- Warning: `subworkflows/local/call_variants/main.nf:100:49`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/call_variants/main.nf:99:49`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           vf_input.map { combined_meta, vcf, tbi, ref, fai, dict, gzi ->
                                                   ^^^
   ```
 
-- Warning: `subworkflows/local/call_variants/main.nf:100:54`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/call_variants/main.nf:99:54`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           vf_input.map { combined_meta, vcf, tbi, ref, fai, dict, gzi ->
                                                        ^^^
   ```
 
-- Warning: `subworkflows/local/call_variants/main.nf:100:65`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/call_variants/main.nf:99:65`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           vf_input.map { combined_meta, vcf, tbi, ref, fai, dict, gzi ->
                                                                   ^^^
   ```
 
-- Warning: `subworkflows/local/call_variants/main.nf:103:39`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/call_variants/main.nf:102:39`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           vf_input.map { combined_meta, vcf, tbi, ref, fai, dict, gzi ->
                                         ^^^
   ```
 
-- Warning: `subworkflows/local/call_variants/main.nf:103:44`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/call_variants/main.nf:102:44`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           vf_input.map { combined_meta, vcf, tbi, ref, fai, dict, gzi ->
                                              ^^^
   ```
 
-- Warning: `subworkflows/local/call_variants/main.nf:103:49`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/call_variants/main.nf:102:49`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           vf_input.map { combined_meta, vcf, tbi, ref, fai, dict, gzi ->
                                                   ^^^
   ```
 
-- Warning: `subworkflows/local/call_variants/main.nf:103:54`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/call_variants/main.nf:102:54`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           vf_input.map { combined_meta, vcf, tbi, ref, fai, dict, gzi ->
                                                        ^^^
   ```
 
-- Warning: `subworkflows/local/call_variants/main.nf:103:59`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/call_variants/main.nf:102:59`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           vf_input.map { combined_meta, vcf, tbi, ref, fai, dict, gzi ->
                                                             ^^^^
   ```
 
-- Warning: `subworkflows/local/call_variants/main.nf:116:44`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/call_variants/main.nf:115:44`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { combined_meta, sample_meta, bam, bai, ref, fai, dict, region_file ->
                                              ^^^
   ```
 
-- Warning: `subworkflows/local/call_variants/main.nf:116:49`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/call_variants/main.nf:115:49`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { combined_meta, sample_meta, bam, bai, ref, fai, dict, region_file ->
                                                   ^^^
   ```
 
-- Warning: `subworkflows/local/call_variants/main.nf:116:54`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/call_variants/main.nf:115:54`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { combined_meta, sample_meta, bam, bai, ref, fai, dict, region_file ->
                                                        ^^^
   ```
 
-- Warning: `subworkflows/local/call_variants/main.nf:116:59`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/call_variants/main.nf:115:59`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { combined_meta, sample_meta, bam, bai, ref, fai, dict, region_file ->
                                                             ^^^
   ```
 
-- Warning: `subworkflows/local/call_variants/main.nf:116:64`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/call_variants/main.nf:115:64`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { combined_meta, sample_meta, bam, bai, ref, fai, dict, region_file ->
                                                                  ^^^^
   ```
 
-- Warning: `subworkflows/local/call_variants/main.nf:116:70`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/call_variants/main.nf:115:70`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { combined_meta, sample_meta, bam, bai, ref, fai, dict, region_file ->
@@ -1681,28 +1422,28 @@
                      ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/core_genome_phylogeny/main.nf:216:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/core_genome_phylogeny/main.nf:215:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { [it[0].group_id, it[1]] } // group_meta, tree
                   ^^
   ```
 
-- Warning: `subworkflows/local/core_genome_phylogeny/main.nf:216:33`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/core_genome_phylogeny/main.nf:215:33`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { [it[0].group_id, it[1]] } // group_meta, tree
                                   ^^
   ```
 
-- Warning: `subworkflows/local/core_genome_phylogeny/main.nf:221:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/core_genome_phylogeny/main.nf:220:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { [it[1], null] }
                   ^^
   ```
 
-- Warning: `subworkflows/local/core_genome_phylogeny/main.nf:224:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/core_genome_phylogeny/main.nf:223:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { [it[1], null] }
@@ -1782,81 +1523,81 @@
 - Warning: `subworkflows/local/genome_assembly/main.nf:36:86`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-              [sample_meta, read_paths.size() <= 2 ? read_paths : read_paths.findAll { it ==~ /.+_[12]\..+$/ }]
+              [sample_meta, read_paths.size() <= 2 ? read_paths : read_paths.findAll { it ==~ /.+_[12]\..+$/ }, [] ]
                                                                                        ^^
   ```
 
-- Warning: `subworkflows/local/genome_assembly/main.nf:44:18`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/genome_assembly/main.nf:43:18`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .filter{ sample_meta, json ->
                    ^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/genome_assembly/main.nf:58:29`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/genome_assembly/main.nf:57:29`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { sample_meta, read_paths1, base_count, report_meta, read_paths2 ->
                               ^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/genome_assembly/main.nf:58:67`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/genome_assembly/main.nf:57:67`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { sample_meta, read_paths1, base_count, report_meta, read_paths2 ->
                                                                     ^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/genome_assembly/main.nf:73:19`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/genome_assembly/main.nf:72:19`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .filter { sample_meta, read_paths, scaffolds ->
                     ^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/genome_assembly/main.nf:73:32`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/genome_assembly/main.nf:72:32`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .filter { sample_meta, read_paths, scaffolds ->
                                  ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/genome_assembly/main.nf:77:29`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/genome_assembly/main.nf:76:29`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { sample_meta, read_paths, scaffolds, report_meta, read_paths2 ->
                               ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/genome_assembly/main.nf:77:41`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/genome_assembly/main.nf:76:41`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { sample_meta, read_paths, scaffolds, report_meta, read_paths2 ->
                                           ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/genome_assembly/main.nf:77:65`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/genome_assembly/main.nf:76:65`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { sample_meta, read_paths, scaffolds, report_meta, read_paths2 ->
                                                                   ^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/genome_assembly/main.nf:108:22`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/genome_assembly/main.nf:104:22`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { [[id: it.sample_id], it] }
                        ^^
   ```
 
-- Warning: `subworkflows/local/genome_assembly/main.nf:108:37`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/genome_assembly/main.nf:104:37`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { [[id: it.sample_id], it] }
                                       ^^
   ```
 
-- Warning: `subworkflows/local/genome_assembly/main.nf:110:41`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/genome_assembly/main.nf:106:41`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map{ sample_meta, sample_data, paths ->
@@ -1905,28 +1646,28 @@
                                       ^^
   ```
 
-- Warning: `subworkflows/local/initial_qc_checks/main.nf:23:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/initial_qc_checks/main.nf:22:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .filter { it.sequence_type == "nanopore" || it.sequence_type == "pacbio" }
                     ^^
   ```
 
-- Warning: `subworkflows/local/initial_qc_checks/main.nf:23:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/initial_qc_checks/main.nf:22:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .filter { it.sequence_type == "nanopore" || it.sequence_type == "pacbio" }
                                                       ^^
   ```
 
-- Warning: `subworkflows/local/initial_qc_checks/main.nf:24:22`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/initial_qc_checks/main.nf:23:22`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { [[id: it.sample_id], it.paths] }
                        ^^
   ```
 
-- Warning: `subworkflows/local/initial_qc_checks/main.nf:24:37`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/initial_qc_checks/main.nf:23:37`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { [[id: it.sample_id], it.paths] }
@@ -2465,21 +2206,21 @@
                 ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_pathogensurveillance_pipeline/main.nf:32:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_pathogensurveillance_pipeline/main.nf:26:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       monochrome_logs   // boolean: Do not use coloured log outputs
       ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_pathogensurveillance_pipeline/main.nf:35:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_pathogensurveillance_pipeline/main.nf:29:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       input             //  string: Path to input samplesheet
       ^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_pathogensurveillance_pipeline/main.nf:39:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_pathogensurveillance_pipeline/main.nf:33:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       reference_data    //  string: Path to reference data samplesheet
