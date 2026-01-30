@@ -3,9 +3,64 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 25.12.0-edge
 
-Downloading plugin nf-schema@2.6.1
-Launching `./main.nf` [crazy_mendel] DSL2 - revision: 9d0cb85655
+Launching `./main.nf` [furious_ramanujan]revision: 9d0cb85655
 
-ERROR ~ Unable to create help message: Specified param 'true' does not exist in JSON schema.
 
- -- Check script 'subworkflows/nf-core/utils_nfschema_plugin/main.nf' at line: 41 or see '.nextflow.log' file for more details
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/nanostring 1.3.3
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/nanostring -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input                       [string] Path to comma-separated file containing information about the samples in the experiment. 
+  --outdir                      [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+
+Processing options
+  --heatmap_id_column           [string] The column used for heatmap generation, specifying the rows. The values in this column have to be 
+unique. [default: SAMPLE_ID]  
+  --heatmap_genes_to_filter     [string] Path to YAML file (list, one item per line) to specify which genes should be used for the gene-count 
+heatmap.  
+
+Normalization Parameters
+  --normalization_method        [string] The method to use for normalization of nCounter data.  (accepted: GEO, GLM) [default: GEO] 
+
+Gene Score Computation
+  --gene_score_method           [string] This selects the algorithm for computing the respective gene score. Default is 'plage.dir'. 
+[default: plage.dir]  
+  --gene_score_yaml                      This sets the YAML to be used for computing the gene scores. Needs both a name for each set of genes 
+and respective genes to be selected.  
+
+Skipping Options
+  --skip_heatmap                [boolean] Skip creating the heatmap 
+
+Reference genome options
+  --genome                      [string] Name of iGenomes reference. 
+
+Generic options
+  --email                       [string]          Email address for completion summary. 
+  --multiqc_title               [string]          MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+  --multiqc_methods_description [string]          Custom MultiQC yaml file containing HTML including a methods description. 
+  --help                        [boolean, string] Display the help message. 
+  --help_full                   [boolean]         Display the full detailed help message. 
+  --show_hidden                 [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 20 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/nanostring/blob/master/CITATIONS.md
+

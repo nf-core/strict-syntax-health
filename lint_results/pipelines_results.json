@@ -11,7 +11,7 @@
   "airrflow": {
     "full_name": "nf-core/airrflow",
     "html_url": "https://github.com/nf-core/airrflow",
-    "commit": "0ca2c448ab2ce8270b3ebe3fd410e494f7552282",
+    "commit": "61e98f05cbe773d70e323624ee7e2bf94bf7d16e",
     "errors": 150,
     "warnings": 135,
     "parse_error": false,
@@ -218,11 +218,11 @@
   "demultiplex": {
     "full_name": "nf-core/demultiplex",
     "html_url": "https://github.com/nf-core/demultiplex",
-    "commit": "032da8db94b3ad03918114eda024537112c71c3f",
-    "errors": 54,
-    "warnings": 67,
+    "commit": "f4c03dd7e24bb5734456aa12d01948f3bdb67a71",
+    "errors": 0,
+    "warnings": 0,
     "parse_error": false,
-    "prints_help": null
+    "prints_help": true
   },
   "denovotranscript": {
     "full_name": "nf-core/denovotranscript",
@@ -254,9 +254,9 @@
   "differentialabundance": {
     "full_name": "nf-core/differentialabundance",
     "html_url": "https://github.com/nf-core/differentialabundance",
-    "commit": "9b538e0f37d6b5cdb0584e1912dbad97498a03e5",
-    "errors": 14,
-    "warnings": 50,
+    "commit": "df4a4300cda728740e342e262c1b31317d41f6a7",
+    "errors": 13,
+    "warnings": 48,
     "parse_error": false,
     "prints_help": null
   },
@@ -506,9 +506,9 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "63ecfcf0e41d74431bdf060765cbbeb3dc589fcc",
+    "commit": "0a20f5d3896bd701fb86d5feeadd19238b67fcfc",
     "errors": 0,
-    "warnings": 35,
+    "warnings": 32,
     "parse_error": false,
     "prints_help": true
   },
@@ -659,11 +659,11 @@
   "nanostring": {
     "full_name": "nf-core/nanostring",
     "html_url": "https://github.com/nf-core/nanostring",
-    "commit": "361a1c7e4b64b45ebb806547d48b26ab912e718a",
+    "commit": "d139c2a96f7bdce34c18628b50c48f94383d5f37",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
-    "prints_help": false
+    "prints_help": true
   },
   "nascent": {
     "full_name": "nf-core/nascent",
@@ -794,7 +794,7 @@
   "proteinfamilies": {
     "full_name": "nf-core/proteinfamilies",
     "html_url": "https://github.com/nf-core/proteinfamilies",
-    "commit": "ecdfd67f10f03c62475fb3f411a6c9b1332d15fc",
+    "commit": "31ce548b840d81dd10b8e2477ac89bb085ab0b7d",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -839,11 +839,11 @@
   "rangeland": {
     "full_name": "nf-core/rangeland",
     "html_url": "https://github.com/nf-core/rangeland",
-    "commit": "4965400fdee4fff78959ad1e5635f2747458efa9",
-    "errors": 21,
-    "warnings": 43,
+    "commit": "3e498c915b5090140edc2f7aeb4aa9abe51cad3d",
+    "errors": 0,
+    "warnings": 1,
     "parse_error": false,
-    "prints_help": null
+    "prints_help": false
   },
   "raredisease": {
     "full_name": "nf-core/raredisease",
@@ -965,16 +965,16 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "e3eb8adee2785c239416ed671048b5cf2c504774",
-    "errors": 152,
-    "warnings": 616,
+    "commit": "acdd0362b83079727317b304234464cc1f8ac34c",
+    "errors": 150,
+    "warnings": 615,
     "parse_error": false,
     "prints_help": null
   },
   "scdownstream": {
     "full_name": "nf-core/scdownstream",
     "html_url": "https://github.com/nf-core/scdownstream",
-    "commit": "9294a45f74e1f37bf116b6b097a32e162c22c0ff",
+    "commit": "1fc97f0fb32fb9cf798aa1e56e54d293b7477d7c",
     "errors": 1,
     "warnings": 23,
     "parse_error": false,

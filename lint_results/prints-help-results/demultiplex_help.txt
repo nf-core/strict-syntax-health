@@ -1,0 +1,75 @@
+$ NXF_SYNTAX_PARSER=v2 nextflow run . --help
+
+
+ N E X T F L O W   ~  version 25.12.0-edge
+
+Downloading plugin nf-schema@2.6.1
+Launching `./main.nf` [stoic_magritte]revision: 71c2693885
+
+
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/demultiplex 1.7.1dev
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/demultiplex -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Workflow options
+  --trim_fastq                  [boolean] Whether or not to skip trimming [default: true] 
+  --skip_tools                  [string]  Comma-separated list of tools to skip (fastp,fastqc,kraken,multiqc,checkqc,falco,md5sum,samshee) 
+ 
+  --sample_size                 [integer] Number of reads to subsample for contamination detection. [default: 100000] 
+  --kraken_db                   [string]  Path to Kraken2 DB to use for screening 
+  --json_schema_validator       [string]  String in JSON format to be passed to samshee module for samplesheet validation 
+  --name_schema_validator       [string]  Schema name to be passed to samshee module for samplesheet validation 
+  --file_schema_validator       [string]  Local JSON file to be passed to samshee module for samplesheet validation 
+  --v1_schema                   [boolean] Whether or not illumina samplesheet is v1  
+
+Input/output options
+  --input                       [string] Path to comma-separated file containing information about the samples in the experiment. 
+  --outdir                      [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --email                       [string] Email address for completion summary. 
+  --multiqc_title               [string] MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+
+Demultiplexing options
+  --demultiplexer               [string] Demultiplexer to use.  (accepted: bases2fastq, bcl2fastq, bclconvert, fqtk, sgdemux, mkfastq, 
+mgikit) [default: bclconvert]  
+
+Downstream CSV options
+  --strandedness                [string] Specifies the strandedness of RNA-Seq data for downstream sample sheet generation. This parameter 
+does not affect the demultiplexing process but is used to generate the appropriate field in the 
+nf-core/rnaseq samplesheet  (accepted: unstranded, auto, reverse, forward) [default: auto]  
+
+CheckQC options
+  --checkqc_config              [string] Path to the checkqc config yml file. 
+
+Generic options
+  --multiqc_methods_description [string]          Custom MultiQC yaml file containing HTML including a methods description. 
+  --remove_samplesheet_adapter  [boolean]         Boolean whether to remove adapter information from Illumina samplesheet. If adapter information is 
+present, the various bcl conversion tools will perform adapter trimming already at the 
+demultiplexing step. [default: true]  
+  --help                        [boolean, string] Display the help message. 
+  --help_full                   [boolean]         Display the full detailed help message. 
+  --show_hidden                 [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 18 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The pipeline
+    https://doi.org/10.5281/zenodo.7153103
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/demultiplex/blob/master/CITATIONS.md
+

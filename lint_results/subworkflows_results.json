@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "ad3b4e0a48ddcf8a30e95e0f74d382adf6cf19d4",
+  "_repo_commit": "ef89a1a8d54ebdcf391c6bb55266bc199c03a7e8",
   "abundance_differential_filter": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/abundance_differential_filter",
     "errors": 0,
@@ -238,6 +238,12 @@
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fasta_clean_fcs",
     "errors": 0,
     "warnings": 1,
+    "parse_error": false
+  },
+  "fasta_consensus_autocycler": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fasta_consensus_autocycler",
+    "errors": 0,
+    "warnings": 0,
     "parse_error": false
   },
   "fasta_explore_search_plot_tidk": {
@@ -489,7 +495,7 @@
   "h5ad_removebackground_barcodes_cellbender_anndata": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/h5ad_removebackground_barcodes_cellbender_anndata",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "homer_groseq": {

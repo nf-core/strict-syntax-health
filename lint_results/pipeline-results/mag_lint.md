@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-27T00:17:19.589486755Z
+- Generated: 2026-01-30T00:21:28.803634847Z
 - Nextflow version: 25.12.0-edge
-- Summary: 35 warnings
+- Summary: 32 warnings
 
 ## :warning: Warnings
 
@@ -144,27 +144,6 @@
   ```nextflow
       def reads_command = meta.single_end || !reads2 ? "-r ${reads1}" : "-1 ${reads1.join(',')} -2 ${reads2.join(',')}"
           ^^^^^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/metabat2/metabat2/main.nf:51:9`: Variable was declared but not used
-
-  ```nextflow
-      def args             = task.ext.args   ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/metabat2/metabat2/main.nf:53:9`: Variable was declared but not used
-
-  ```nextflow
-      def decompress_depth = depth           ? "gzip -d -f $depth"    : ""
-          ^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/metabat2/metabat2/main.nf:54:9`: Variable was declared but not used
-
-  ```nextflow
-      def depth_file       = depth           ? "-a ${depth.baseName}" : ""
-          ^^^^^^^^^^
   ```
 
 - Warning: `modules/nf-core/metamdbg/asm/main.nf:47:9`: Variable was declared but not used

@@ -1,14 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-01-29T00:23:01.589898+00:00
+- Generated: 2026-01-30T00:24:02.514866+00:00
 - Nextflow version: 25.12.0-edge
-- Summary: 1 warning
-
-## :warning: Warnings
-
-- Warning: `subworkflows/nf-core/h5ad_removebackground_barcodes_cellbender_anndata/main.nf:13:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^^^^
-  ```
+- Summary: No issues found

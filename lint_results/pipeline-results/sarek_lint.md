@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-29T00:21:58.771623308Z
+- Generated: 2026-01-30T00:23:06.018803467Z
 - Nextflow version: 25.12.0-edge
-- Summary: 152 errors, 616 warnings
+- Summary: 150 errors, 615 warnings
 
 ## :x: Errors
 
@@ -193,20 +193,6 @@
   ```nextflow
       versions = versions.mix(PREPARE_INTERVALS.out.versions)
                               ^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `modules/nf-core/bbmap/bbsplit/main.nf:41:43`: `index` is already declared
-
-  ```nextflow
-      other_ref_names.eachWithIndex { name, index ->
-                                            ^^^^^
-  ```
-
-- Error: `modules/nf-core/bbmap/bbsplit/main.nf:116:43`: `index` is already declared
-
-  ```nextflow
-      other_ref_names.eachWithIndex { name, index ->
-                                            ^^^^^
   ```
 
 - Error: `subworkflows/local/bam_baserecalibrator/main.nf:26:21`: `cram` is already declared
@@ -1546,13 +1532,6 @@
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
-  ```
-
-- Warning: `modules/nf-core/bbmap/bbsplit/main.nf:116:43`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      other_ref_names.eachWithIndex { name, index ->
-                                            ^^^^^
   ```
 
 - Warning: `modules/nf-core/bcftools/concat/main.nf:32:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -4425,140 +4404,140 @@
                          ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/fastq_preprocess_gatk/main.nf:185:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/fastq_preprocess_gatk/main.nf:183:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           aligned_bam = Channel.empty()
                         ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/fastq_preprocess_gatk/main.nf:186:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/fastq_preprocess_gatk/main.nf:184:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           aligned_bai = Channel.empty()
                         ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/fastq_preprocess_gatk/main.nf:267:40`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/fastq_preprocess_gatk/main.nf:265:40`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           cram_markduplicates_no_spark = Channel.empty()
                                          ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/fastq_preprocess_gatk/main.nf:268:40`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/fastq_preprocess_gatk/main.nf:266:40`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           cram_sentieon_dedup          = Channel.empty()
                                          ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/fastq_preprocess_gatk/main.nf:269:40`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/fastq_preprocess_gatk/main.nf:267:40`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           cram_markduplicates_spark    = Channel.empty()
                                          ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/fastq_preprocess_gatk/main.nf:285:36`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/fastq_preprocess_gatk/main.nf:283:36`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           cram_skip_markduplicates = Channel.empty()
                                      ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/fastq_preprocess_gatk/main.nf:298:44`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/fastq_preprocess_gatk/main.nf:296:44`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
                   cram_skip_markduplicates = Channel.empty().mix(input_sample)
                                              ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/fastq_preprocess_gatk/main.nf:362:34`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/fastq_preprocess_gatk/main.nf:360:34`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_md_cram_for_restart = Channel.empty().mix(cram_markduplicates_no_spark, cram_markduplicates_spark, cram_sentieon_dedup)
                                    ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/fastq_preprocess_gatk/main.nf:383:48`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/fastq_preprocess_gatk/main.nf:381:48`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               ch_cram_for_bam_baserecalibrator = Channel.empty().mix(input_sample)
                                                  ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/fastq_preprocess_gatk/main.nf:395:48`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/fastq_preprocess_gatk/main.nf:393:48`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               ch_cram_for_bam_baserecalibrator = Channel.empty().mix(ch_md_cram_for_restart, cram_skip_markduplicates )
                                                  ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/fastq_preprocess_gatk/main.nf:404:38`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/fastq_preprocess_gatk/main.nf:402:38`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               ch_table_bqsr_no_spark = Channel.empty()
                                        ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/fastq_preprocess_gatk/main.nf:405:38`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/fastq_preprocess_gatk/main.nf:403:38`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               ch_table_bqsr_spark    = Channel.empty()
                                        ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/fastq_preprocess_gatk/main.nf:441:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/fastq_preprocess_gatk/main.nf:439:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               ch_table_bqsr = Channel.empty().mix(
                               ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/fastq_preprocess_gatk/main.nf:460:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/fastq_preprocess_gatk/main.nf:458:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               cram_applybqsr = Channel.empty().mix(input_sample)
                                ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/fastq_preprocess_gatk/main.nf:465:45`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/fastq_preprocess_gatk/main.nf:463:45`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               cram_variant_calling_no_spark = Channel.empty()
                                               ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/fastq_preprocess_gatk/main.nf:466:45`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/fastq_preprocess_gatk/main.nf:464:45`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               cram_variant_calling_spark    = Channel.empty()
                                               ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/fastq_preprocess_gatk/main.nf:497:36`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/fastq_preprocess_gatk/main.nf:495:36`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               cram_variant_calling = Channel.empty().mix(
                                      ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/fastq_preprocess_gatk/main.nf:506:33`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/fastq_preprocess_gatk/main.nf:504:33`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               csv_recalibration = Channel.empty()
                                   ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/fastq_preprocess_gatk/main.nf:516:36`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/fastq_preprocess_gatk/main.nf:514:36`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               cram_variant_calling = Channel.empty().mix(input_sample.map{ meta, cram, crai, _table -> [ meta, cram, crai ] })
                                      ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/fastq_preprocess_gatk/main.nf:520:36`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/fastq_preprocess_gatk/main.nf:518:36`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               cram_variant_calling = Channel.empty().mix(ch_cram_for_bam_baserecalibrator)
@@ -4747,308 +4726,308 @@
                               ^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:151:54`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:150:54`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       bcftools_annotations = bcftools_annotations_in ? Channel.fromPath(bcftools_annotations_in).collect() : Channel.value([])
                                                        ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:151:108`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:150:108`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       bcftools_annotations = bcftools_annotations_in ? Channel.fromPath(bcftools_annotations_in).collect() : Channel.value([])
                                                                                                              ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:152:62`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:151:62`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       bcftools_annotations_tbi = bcftools_annotations_tbi_in ? Channel.fromPath(bcftools_annotations_tbi_in).collect() : Channel.value([])
                                                                ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:152:120`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:151:120`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       bcftools_annotations_tbi = bcftools_annotations_tbi_in ? Channel.fromPath(bcftools_annotations_tbi_in).collect() : Channel.value([])
                                                                                                                          ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:160:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:159:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       dbsnp = dbsnp_in ? Channel.fromPath(dbsnp_in).collect() : Channel.value([])
                          ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:160:63`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:159:63`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       dbsnp = dbsnp_in ? Channel.fromPath(dbsnp_in).collect() : Channel.value([])
                                                                 ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:161:32`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:160:32`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       dbsnp_tbi = dbsnp_tbi_in ? Channel.fromPath(dbsnp_tbi_in).collect() : Channel.value([])
                                  ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:161:75`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:160:75`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       dbsnp_tbi = dbsnp_tbi_in ? Channel.fromPath(dbsnp_tbi_in).collect() : Channel.value([])
                                                                             ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:169:48`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:168:48`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       germline_resource = germline_resource_in ? Channel.fromPath(germline_resource_in).collect() : Channel.value([])
                                                  ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:169:99`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:168:99`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       germline_resource = germline_resource_in ? Channel.fromPath(germline_resource_in).collect() : Channel.value([])
                                                                                                     ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:170:56`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:169:56`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       germline_resource_tbi = germline_resource_tbi_in ? Channel.fromPath(germline_resource_tbi_in).collect() : Channel.value([])
                                                          ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:170:111`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:169:111`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       germline_resource_tbi = germline_resource_tbi_in ? Channel.fromPath(germline_resource_tbi_in).collect() : Channel.value([])
                                                                                                                 ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:178:38`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:177:38`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       known_indels = known_indels_in ? Channel.fromPath(known_indels_in).collect() : Channel.value([])
                                        ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:178:84`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:177:84`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       known_indels = known_indels_in ? Channel.fromPath(known_indels_in).collect() : Channel.value([])
                                                                                      ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:179:46`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:178:46`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       known_indels_tbi = known_indels_tbi_in ? Channel.fromPath(known_indels_tbi_in).collect() : Channel.value([])
                                                ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:179:96`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:178:96`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       known_indels_tbi = known_indels_tbi_in ? Channel.fromPath(known_indels_tbi_in).collect() : Channel.value([])
                                                                                                  ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:187:34`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:186:34`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       known_snps = known_snps_in ? Channel.fromPath(known_snps_in).collect() : Channel.value([])
                                    ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:187:78`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:186:78`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       known_snps = known_snps_in ? Channel.fromPath(known_snps_in).collect() : Channel.value([])
                                                                                ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:188:42`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:187:42`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       known_snps_tbi = known_snps_tbi_in ? Channel.fromPath(known_snps_tbi_in).collect() : Channel.value([])
                                            ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:188:90`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:187:90`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       known_snps_tbi = known_snps_tbi_in ? Channel.fromPath(known_snps_tbi_in).collect() : Channel.value([])
                                                                                            ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:196:20`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:195:20`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       pon = pon_in ? Channel.fromPath(pon_in).collect() : Channel.value([])
                      ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:196:57`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:195:57`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       pon = pon_in ? Channel.fromPath(pon_in).collect() : Channel.value([])
                                                           ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:197:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:196:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       pon_tbi = pon_tbi_in ? Channel.fromPath(pon_tbi_in).collect() : Channel.value([])
                              ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:197:69`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:196:69`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       pon_tbi = pon_tbi_in ? Channel.fromPath(pon_tbi_in).collect() : Channel.value([])
                                                                       ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:214:33`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:213:33`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           UNTAR_MSISENSOR2_MODELS(Channel.fromPath(file(msisensor2_models_in)).map { archive -> [[id: archive.baseName], archive] })
                                   ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:219:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:218:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           msisensor2_models = Channel.fromPath(msisensor2_models_in).map { model -> [[id:model.baseName], model] }.collect()
                               ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:222:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:221:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           msisensor2_models = Channel.value([])
                               ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:226:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:225:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           msisensorpro_scan = Channel.fromPath(msisensorpro_scan_in)
                               ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:234:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:233:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           msisensorpro_scan = Channel.value([])
                               ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:239:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:238:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ascat_alleles = Channel.empty()
                           ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:242:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:241:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           UNZIP_ALLELES(Channel.fromPath(file(ascat_alleles_in)).map { archive -> [[id: archive.baseName], archive] })
                         ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:247:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:246:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ascat_alleles = Channel.fromPath(ascat_alleles_in).collect()
                           ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:251:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:250:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ascat_loci = Channel.empty()
                        ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:254:20`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:253:20`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           UNZIP_LOCI(Channel.fromPath(file(ascat_loci_in)).map { archive -> [[id: archive.baseName], archive] })
                      ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:259:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:258:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ascat_loci = Channel.fromPath(ascat_loci_in).collect()
                        ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:263:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:262:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ascat_loci_gc = Channel.value([])
                           ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:266:18`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:265:18`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           UNZIP_GC(Channel.fromPath(file(ascat_loci_gc_in)).map { archive -> [[id: archive.baseName], archive] })
                    ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:271:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:270:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ascat_loci_gc = Channel.fromPath(ascat_loci_gc_in).collect()
                           ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:275:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:274:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ascat_loci_rt = Channel.value([])
                           ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:278:18`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:277:18`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           UNZIP_RT(Channel.fromPath(file(ascat_loci_rt_in)).map { archive -> [[id: archive.baseName], archive] })
                    ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:283:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:282:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ascat_loci_rt = Channel.fromPath(ascat_loci_rt_in).collect()
                           ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:287:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:286:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           chr_dir = Channel.value([])
                     ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:290:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:289:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           UNTAR_CHR_DIR(Channel.fromPath(file(chr_dir_in)).map { archive -> [[id: archive.baseName], archive] })
                         ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:295:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:294:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           chr_dir = Channel.fromPath(chr_dir_in).collect()

@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-28T00:18:23.998269762Z
+- Generated: 2026-01-30T00:21:05.212534410Z
 - Nextflow version: 25.12.0-edge
-- Summary: 14 errors, 50 warnings
+- Summary: 13 errors, 48 warnings
 
 ## :x: Errors
 
@@ -69,13 +69,6 @@
       ^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `modules/nf-core/affy/justrma/main.nf:28:9`: `prefix` is already declared
-
-  ```nextflow
-      def prefix = task.ext.prefix ?: "${meta.id}"
-          ^^^^^^
-  ```
-
 - Error: `modules/nf-core/quartonotebook/main.nf:45:5`: `yamlBuilder` is not defined
 
   ```nextflow
@@ -106,34 +99,6 @@
 
 ## :warning: Warnings
 
-- Warning: `modules/nf-core/affy/justrma/main.nf:24:5`: Variable was declared but not used
-
-  ```nextflow
-      prefix = task.ext.prefix ?: "${meta.id}"
-      ^^^^^^
-  ```
-
-- Warning: `modules/nf-core/atlasgeneannotationmanipulation/gtf2featureannotation/main.nf:42:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/atlasgeneannotationmanipulation/gtf2featureannotation/main.nf:43:9`: Variable was declared but not used
-
-  ```nextflow
-      def prefix = task.ext.prefix ?: meta.id
-          ^^^^^^
-  ```
-
-- Warning: `modules/nf-core/atlasgeneannotationmanipulation/gtf2featureannotation/main.nf:44:9`: Variable was declared but not used
-
-  ```nextflow
-      def reference_cdna = fasta ? "--parse-cdnas $fasta" : ""
-          ^^^^^^^^^^^^^^
-  ```
-
 - Warning: `modules/nf-core/custom/filterdifferentialtable/main.nf:25:9`: Variable was declared but not used
 
   ```nextflow
@@ -144,7 +109,7 @@
 - Warning: `modules/nf-core/gunzip/main.nf:43:9`: Variable was declared but not used
 
   ```nextflow
-      def args        = task.ext.args ?: ''
+      def args = task.ext.args ?: ''
           ^^^^
   ```
 
@@ -162,112 +127,126 @@
           ^^^^
   ```
 
-- Warning: `subworkflows/nf-core/abundance_differential_filter/main.nf:33:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/nf-core/abundance_differential_filter/main.nf:34:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_versions = Channel.empty()
                     ^^^^^^^
   ```
 
-- Warning: `subworkflows/nf-core/abundance_differential_filter/main.nf:92:60`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/nf-core/abundance_differential_filter/main.nf:93:60`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           norm_inputs.contrasts_for_norm_with_formula.filter{it[0].differential_method == 'limma'},
                                                              ^^
   ```
 
-- Warning: `subworkflows/nf-core/abundance_differential_filter/main.nf:93:47`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/nf-core/abundance_differential_filter/main.nf:94:47`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           norm_inputs.samples_and_matrix.filter{it[0].differential_method == 'limma'}
                                                 ^^
   ```
 
-- Warning: `subworkflows/nf-core/abundance_differential_filter/main.nf:99:56`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/nf-core/abundance_differential_filter/main.nf:100:56`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           inputs.contrasts_for_diff_with_formula.filter{ it[0].differential_method == 'limma' },
                                                          ^^
   ```
 
-- Warning: `subworkflows/nf-core/abundance_differential_filter/main.nf:100:43`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/nf-core/abundance_differential_filter/main.nf:101:43`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           inputs.samples_and_matrix.filter{ it[0].differential_method == 'limma' }
                                             ^^
   ```
 
-- Warning: `subworkflows/nf-core/abundance_differential_filter/main.nf:117:60`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/nf-core/abundance_differential_filter/main.nf:118:60`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           norm_inputs.contrasts_for_norm_with_formula.filter{it[0].differential_method == 'deseq2'},
                                                              ^^
   ```
 
-- Warning: `subworkflows/nf-core/abundance_differential_filter/main.nf:118:47`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/nf-core/abundance_differential_filter/main.nf:119:47`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           norm_inputs.samples_and_matrix.filter{it[0].differential_method == 'deseq2'},
                                                 ^^
   ```
 
-- Warning: `subworkflows/nf-core/abundance_differential_filter/main.nf:119:45`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/nf-core/abundance_differential_filter/main.nf:120:45`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           norm_inputs.control_features.filter{it[0].differential_method == 'deseq2'},
                                               ^^
   ```
 
-- Warning: `subworkflows/nf-core/abundance_differential_filter/main.nf:120:46`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/nf-core/abundance_differential_filter/main.nf:121:46`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           norm_inputs.transcript_length.filter{it[0].differential_method == 'deseq2'}
                                                ^^
   ```
 
-- Warning: `subworkflows/nf-core/abundance_differential_filter/main.nf:126:55`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/nf-core/abundance_differential_filter/main.nf:127:55`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           inputs.contrasts_for_diff_with_formula.filter{it[0].differential_method == 'deseq2'},
                                                         ^^
   ```
 
-- Warning: `subworkflows/nf-core/abundance_differential_filter/main.nf:127:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/nf-core/abundance_differential_filter/main.nf:128:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           inputs.samples_and_matrix.filter{it[0].differential_method == 'deseq2'},
                                            ^^
   ```
 
-- Warning: `subworkflows/nf-core/abundance_differential_filter/main.nf:128:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/nf-core/abundance_differential_filter/main.nf:129:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           inputs.control_features.filter{it[0].differential_method == 'deseq2'},
                                          ^^
   ```
 
-- Warning: `subworkflows/nf-core/abundance_differential_filter/main.nf:129:41`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/nf-core/abundance_differential_filter/main.nf:130:41`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           inputs.transcript_length.filter{it[0].differential_method == 'deseq2'}
                                           ^^
   ```
 
-- Warning: `subworkflows/nf-core/abundance_differential_filter/main.nf:142:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/nf-core/abundance_differential_filter/main.nf:143:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           inputs.contrasts_for_diff.filter{it[0].differential_method == 'propd'},
                                            ^^
   ```
 
-- Warning: `subworkflows/nf-core/abundance_differential_filter/main.nf:143:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/nf-core/abundance_differential_filter/main.nf:144:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           inputs.samples_and_matrix.filter { it[0].differential_method == 'propd' }
                                              ^^
   ```
 
-- Warning: `subworkflows/nf-core/abundance_differential_filter/main.nf:160:43`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/nf-core/abundance_differential_filter/main.nf:166:60`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          norm_inputs.contrasts_for_norm_with_formula.filter{it[0].differential_method == 'dream'},
+                                                             ^^
+  ```
+
+- Warning: `subworkflows/nf-core/abundance_differential_filter/main.nf:167:47`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          norm_inputs.samples_and_matrix.filter{it[0].differential_method == 'dream'}
+                                                ^^
+  ```
+
+- Warning: `subworkflows/nf-core/abundance_differential_filter/main.nf:172:43`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           inputs.samples_and_matrix.filter{ it[0].differential_method == 'dream' }

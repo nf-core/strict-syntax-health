@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-01-25T00:17:29.541225763Z
+- Generated: 2026-01-30T00:20:30.658914669Z
 - Nextflow version: 25.12.0-edge
 - Summary: 150 errors, 135 warnings
 
@@ -706,7 +706,7 @@
                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/clonal_analysis.nf:86:38`: Unexpected input: '"'
+- Error: `subworkflows/local/clonal_analysis.nf:85:38`: Unexpected input: '"'
 
   ```nextflow
       ch_repertoire.map{ it -> [ it[0]."${params.cloneby}",
