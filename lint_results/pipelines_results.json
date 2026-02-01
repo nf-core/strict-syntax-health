@@ -218,7 +218,7 @@
   "demultiplex": {
     "full_name": "nf-core/demultiplex",
     "html_url": "https://github.com/nf-core/demultiplex",
-    "commit": "f4c03dd7e24bb5734456aa12d01948f3bdb67a71",
+    "commit": "cb4c5035b7f55977a9ffd21a19d579cfefad7d6b",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
