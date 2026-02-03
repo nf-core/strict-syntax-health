@@ -11,7 +11,7 @@
   "airrflow": {
     "full_name": "nf-core/airrflow",
     "html_url": "https://github.com/nf-core/airrflow",
-    "commit": "61e98f05cbe773d70e323624ee7e2bf94bf7d16e",
+    "commit": "0fb09ebadeb6141fce896b63df9e37d5deacb4aa",
     "errors": 150,
     "warnings": 135,
     "parse_error": false,
@@ -74,7 +74,7 @@
   "cageseq": {
     "full_name": "nf-core/cageseq",
     "html_url": "https://github.com/nf-core/cageseq",
-    "commit": "0e9e11e574331a3752f48bfe5d1eee68551b7815",
+    "commit": "7bd1b5847e2d705b7a80edd105ca00ca5f4577b5",
     "errors": 62,
     "warnings": 69,
     "parse_error": false,
@@ -155,7 +155,7 @@
   "createtaxdb": {
     "full_name": "nf-core/createtaxdb",
     "html_url": "https://github.com/nf-core/createtaxdb",
-    "commit": "5d71a424e69d206b728d0a9a35e62fc8b2108f1a",
+    "commit": "4eb34b86639b839b10874d78af410070e5a3ecba",
     "errors": 0,
     "warnings": 33,
     "parse_error": false,
@@ -254,7 +254,7 @@
   "differentialabundance": {
     "full_name": "nf-core/differentialabundance",
     "html_url": "https://github.com/nf-core/differentialabundance",
-    "commit": "df4a4300cda728740e342e262c1b31317d41f6a7",
+    "commit": "962f41a1a36d8d418666b311211ee9e07f5e34a0",
     "errors": 13,
     "warnings": 48,
     "parse_error": false,
@@ -353,7 +353,7 @@
   "funcscan": {
     "full_name": "nf-core/funcscan",
     "html_url": "https://github.com/nf-core/funcscan",
-    "commit": "cb51e03087019e46e73958e028029317e72f223e",
+    "commit": "1652072470fd73569a8a0453fa7aa322eda3ea1b",
     "errors": 0,
     "warnings": 73,
     "parse_error": false,
@@ -506,7 +506,7 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "0a20f5d3896bd701fb86d5feeadd19238b67fcfc",
+    "commit": "223ef48a15aca8cf398b07fd47cb9a787b3045c1",
     "errors": 0,
     "warnings": 32,
     "parse_error": false,
@@ -578,7 +578,7 @@
   "methylarray": {
     "full_name": "nf-core/methylarray",
     "html_url": "https://github.com/nf-core/methylarray",
-    "commit": "a394b2dbb15d512ca317d53d7a7b1eef559884f1",
+    "commit": "af28c20a59c2d1a2ddf5d419740b4ce998212b3d",
     "errors": 3,
     "warnings": 19,
     "parse_error": false,
@@ -848,8 +848,8 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "8edcee62ebbb43a1cc800a3dc3966a2b6241c5ec",
-    "errors": 29,
+    "commit": "429f104cfa577e74099830e1e68df6731827b81e",
+    "errors": 28,
     "warnings": 54,
     "parse_error": false,
     "prints_help": null
@@ -965,9 +965,9 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "acdd0362b83079727317b304234464cc1f8ac34c",
+    "commit": "8356eb346f2c9e47e8d76584b9f03d6a54640619",
     "errors": 150,
-    "warnings": 615,
+    "warnings": 614,
     "parse_error": false,
     "prints_help": null
   },
@@ -1082,7 +1082,7 @@
   "taxprofiler": {
     "full_name": "nf-core/taxprofiler",
     "html_url": "https://github.com/nf-core/taxprofiler",
-    "commit": "a7b9a116b270ea22ac2ae42ec1be684f3413de5f",
+    "commit": "63c3a21eba6a7a02756408e1f990fbdaa4aeb4b1",
     "errors": 0,
     "warnings": 113,
     "parse_error": false,
@@ -1163,7 +1163,7 @@
   "viralmetagenome": {
     "full_name": "nf-core/viralmetagenome",
     "html_url": "https://github.com/nf-core/viralmetagenome",
-    "commit": "cdaa9dfcf159250ca1c8b06ed091d2c337a897a6",
+    "commit": "38c40ecfa9377cc6fc1d99c6ac5ceb07f64150b2",
     "errors": 18,
     "warnings": 207,
     "parse_error": false,

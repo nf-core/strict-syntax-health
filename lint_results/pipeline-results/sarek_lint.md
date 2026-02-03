@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-30T00:23:06.018803467Z
+- Generated: 2026-02-03T00:24:20.058781573Z
 - Nextflow version: 25.12.0-edge
-- Summary: 150 errors, 615 warnings
+- Summary: 150 errors, 614 warnings
 
 ## :x: Errors
 
@@ -1366,161 +1366,161 @@
                         ^^^^^^^
   ```
 
-- Warning: `main.nf:242:35`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:249:35`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.bcftools_columns ? Channel.fromPath(params.bcftools_columns).collect() : Channel.value([]),
                                     ^^^^^^^
   ```
 
-- Warning: `main.nf:242:89`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:249:89`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.bcftools_columns ? Channel.fromPath(params.bcftools_columns).collect() : Channel.value([]),
                                                                                           ^^^^^^^
   ```
 
-- Warning: `main.nf:243:40`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:250:40`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.bcftools_header_lines ? Channel.fromPath(params.bcftools_header_lines).collect() : Channel.empty(),
                                          ^^^^^^^
   ```
 
-- Warning: `main.nf:243:99`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:250:99`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.bcftools_header_lines ? Channel.fromPath(params.bcftools_header_lines).collect() : Channel.empty(),
                                                                                                     ^^^^^^^
   ```
 
-- Warning: `main.nf:244:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:251:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.cf_chrom_len ? Channel.fromPath(params.cf_chrom_len).collect() : [],
                                 ^^^^^^^
   ```
 
-- Warning: `main.nf:249:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:256:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.dbsnp_vqsr ? Channel.value(params.dbsnp_vqsr) : Channel.empty(),
                               ^^^^^^^
   ```
 
-- Warning: `main.nf:249:64`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:256:64`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.dbsnp_vqsr ? Channel.value(params.dbsnp_vqsr) : Channel.empty(),
                                                                  ^^^^^^^
   ```
 
-- Warning: `main.nf:262:36`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:269:36`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.known_indels_vqsr ? Channel.value(params.known_indels_vqsr) : Channel.empty(),
                                      ^^^^^^^
   ```
 
-- Warning: `main.nf:262:78`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:269:78`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.known_indels_vqsr ? Channel.value(params.known_indels_vqsr) : Channel.empty(),
                                                                                ^^^^^^^
   ```
 
-- Warning: `main.nf:267:34`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:274:34`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.known_snps_vqsr ? Channel.value(params.known_snps_vqsr) : Channel.empty(),
                                    ^^^^^^^
   ```
 
-- Warning: `main.nf:267:74`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:274:74`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.known_snps_vqsr ? Channel.value(params.known_snps_vqsr) : Channel.empty(),
                                                                            ^^^^^^^
   ```
 
-- Warning: `main.nf:268:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:275:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.mappability ? Channel.fromPath(params.mappability).collect() : Channel.value([]),
                                ^^^^^^^
   ```
 
-- Warning: `main.nf:268:79`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:275:79`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.mappability ? Channel.fromPath(params.mappability).collect() : Channel.value([]),
                                                                                 ^^^^^^^
   ```
 
-- Warning: `main.nf:271:35`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:278:35`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.ngscheckmate_bed ? Channel.value(params.ngscheckmate_bed) : Channel.empty(),
                                     ^^^^^^^
   ```
 
-- Warning: `main.nf:271:76`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:278:76`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.ngscheckmate_bed ? Channel.value(params.ngscheckmate_bed) : Channel.empty(),
                                                                              ^^^^^^^
   ```
 
-- Warning: `main.nf:274:42`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:281:42`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.sentieon_dnascope_model ? Channel.fromPath(params.sentieon_dnascope_model).collect() : Channel.value([]),
                                            ^^^^^^^
   ```
 
-- Warning: `main.nf:274:103`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:281:103`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.sentieon_dnascope_model ? Channel.fromPath(params.sentieon_dnascope_model).collect() : Channel.value([]),
                                                                                                         ^^^^^^^
   ```
 
-- Warning: `main.nf:275:50`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:282:50`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.varlociraptor_scenario_germline ? Channel.fromPath(params.varlociraptor_scenario_germline).map { it -> [[id: it.baseName - '.yte'], it] }.collect() : Channel.fromPath("${projectDir}/assets/varlociraptor_germline.yte.yaml").collect(),
                                                    ^^^^^^^
   ```
 
-- Warning: `main.nf:275:166`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:282:166`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.varlociraptor_scenario_germline ? Channel.fromPath(params.varlociraptor_scenario_germline).map { it -> [[id: it.baseName - '.yte'], it] }.collect() : Channel.fromPath("${projectDir}/assets/varlociraptor_germline.yte.yaml").collect(),
                                                                                                                                                                        ^^^^^^^
   ```
 
-- Warning: `main.nf:276:49`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:283:49`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.varlociraptor_scenario_somatic ? Channel.fromPath(params.varlociraptor_scenario_somatic).map { it -> [[id: it.baseName - '.yte'], it] }.collect() : Channel.fromPath("${projectDir}/assets/varlociraptor_somatic.yte.yaml").collect(),
                                                   ^^^^^^^
   ```
 
-- Warning: `main.nf:276:164`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:283:164`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.varlociraptor_scenario_somatic ? Channel.fromPath(params.varlociraptor_scenario_somatic).map { it -> [[id: it.baseName - '.yte'], it] }.collect() : Channel.fromPath("${projectDir}/assets/varlociraptor_somatic.yte.yaml").collect(),
                                                                                                                                                                      ^^^^^^^
   ```
 
-- Warning: `main.nf:277:52`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:284:52`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.varlociraptor_scenario_tumor_only ? Channel.fromPath(params.varlociraptor_scenario_tumor_only).map { it -> [[id: it.baseName - '.yte'], it] }.collect() : Channel.fromPath("${projectDir}/assets/varlociraptor_tumor_only.yte.yaml").collect(),
                                                      ^^^^^^^
   ```
 
-- Warning: `main.nf:277:170`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:284:170`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.varlociraptor_scenario_tumor_only ? Channel.fromPath(params.varlociraptor_scenario_tumor_only).map { it -> [[id: it.baseName - '.yte'], it] }.collect() : Channel.fromPath("${projectDir}/assets/varlociraptor_tumor_only.yte.yaml").collect(),
@@ -5272,13 +5272,6 @@
                     ^^^^^^^
   ```
 
-- Warning: `subworkflows/nf-core/vcf_annotate_ensemblvep/main.nf:19:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
 - Warning: `subworkflows/nf-core/vcf_annotate_snpeff/main.nf:15:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -5356,7 +5349,7 @@
                                                                                 ^^^^^
   ```
 
-- Warning: `workflows/sarek/main.nf:688:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/sarek/main.nf:690:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def InputStream gzipStream = new java.util.zip.GZIPInputStream(it)

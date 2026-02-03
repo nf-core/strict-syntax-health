@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-25T00:18:18.129941315Z
+- Generated: 2026-02-03T00:23:54.559993635Z
 - Nextflow version: 25.12.0-edge
-- Summary: 29 errors, 54 warnings
+- Summary: 28 errors, 54 warnings
 
 ## :x: Errors
 
@@ -200,13 +200,6 @@
   ```nextflow
       SENTIEON_AUTH_MECH = "$SENTIEON_AUTH_MECH"
                             ^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/raredisease.nf:771:23`: `analysis_type` is not defined
-
-  ```nextflow
-      if (!skip_gens && analysis_type.equals("wgs")) {
-                        ^^^^^^^^^^^^^
   ```
 
 ## :warning: Warnings

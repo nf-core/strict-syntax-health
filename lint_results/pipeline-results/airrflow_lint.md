@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-01-30T00:20:30.658914669Z
+- Generated: 2026-02-03T00:22:00.745176490Z
 - Nextflow version: 25.12.0-edge
 - Summary: 150 errors, 135 warnings
 
@@ -706,7 +706,7 @@
                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/clonal_analysis.nf:85:38`: Unexpected input: '"'
+- Error: `subworkflows/local/clonal_analysis.nf:83:38`: Unexpected input: '"'
 
   ```nextflow
       ch_repertoire.map{ it -> [ it[0]."${params.cloneby}",
@@ -720,7 +720,7 @@
   ^
   ```
 
-- Error: `subworkflows/local/fastq_input_check.nf:67:35`: Unexpected input: '"'
+- Error: `subworkflows/local/fastq_input_check.nf:66:35`: Unexpected input: '"'
 
   ```nextflow
       meta.collapseby_group   = col."${params.collapseby}"
@@ -783,7 +783,7 @@
                  ^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/rnaseq_input.nf:128:19`: `FASTQ_INPUT_CHECK` is not defined
+- Error: `subworkflows/local/rnaseq_input.nf:129:19`: `FASTQ_INPUT_CHECK` is not defined
 
   ```nextflow
       samplesheet = FASTQ_INPUT_CHECK.out.samplesheet
@@ -986,70 +986,70 @@
               ^^^^^^^^^
   ```
 
-- Error: `workflows/airrflow.nf:254:13`: `CLONAL_ANALYSIS` is not defined
+- Error: `workflows/airrflow.nf:251:13`: `CLONAL_ANALYSIS` is not defined
 
   ```nextflow
               CLONAL_ANALYSIS(
               ^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/airrflow.nf:257:17`: `ch_report_logo_img` is not defined
+- Error: `workflows/airrflow.nf:254:17`: `ch_report_logo_img` is not defined
 
   ```nextflow
                   ch_report_logo_img.collect().ifEmpty([])
                   ^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/airrflow.nf:259:44`: `CLONAL_ANALYSIS` is not defined
+- Error: `workflows/airrflow.nf:256:44`: `CLONAL_ANALYSIS` is not defined
 
   ```nextflow
               ch_versions = ch_versions.mix( CLONAL_ANALYSIS.out.versions)
                                              ^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/airrflow.nf:266:17`: `DATABASES` is not defined
+- Error: `workflows/airrflow.nf:263:17`: `DATABASES` is not defined
 
   ```nextflow
                   DATABASES.out.igblast.collect()
                   ^^^^^^^^^
   ```
 
-- Error: `workflows/airrflow.nf:295:17`: `ch_report_rmd` is not defined
+- Error: `workflows/airrflow.nf:292:17`: `ch_report_rmd` is not defined
 
   ```nextflow
                   ch_report_rmd.collect(),
                   ^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/airrflow.nf:296:17`: `ch_report_css` is not defined
+- Error: `workflows/airrflow.nf:293:17`: `ch_report_css` is not defined
 
   ```nextflow
                   ch_report_css.collect(),
                   ^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/airrflow.nf:297:17`: `ch_report_logo` is not defined
+- Error: `workflows/airrflow.nf:294:17`: `ch_report_logo` is not defined
 
   ```nextflow
                   ch_report_logo.collect(),
                   ^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/airrflow.nf:352:17`: `ch_multiqc_config` is not defined
+- Error: `workflows/airrflow.nf:349:17`: `ch_multiqc_config` is not defined
 
   ```nextflow
                   ch_multiqc_config.toList(),
                   ^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/airrflow.nf:353:17`: `ch_multiqc_custom_config` is not defined
+- Error: `workflows/airrflow.nf:350:17`: `ch_multiqc_custom_config` is not defined
 
   ```nextflow
                   ch_multiqc_custom_config.toList(),
                   ^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/airrflow.nf:354:17`: `ch_report_logo` is not defined
+- Error: `workflows/airrflow.nf:351:17`: `ch_report_logo` is not defined
 
   ```nextflow
                   ch_report_logo.toList(),
@@ -1226,28 +1226,28 @@
                 ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/rnaseq_input.nf:95:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/rnaseq_input.nf:96:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       return [ meta, out_files.find { it.endsWith("${meta.id}_airr.tsv") } ]
                                                       ^^
   ```
 
-- Warning: `subworkflows/local/rnaseq_input.nf:97:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/rnaseq_input.nf:98:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       return [ meta, out_files.find { it.endsWith("${meta.id}_barcode_airr.tsv") } ]
                                                       ^^
   ```
 
-- Warning: `subworkflows/local/rnaseq_input.nf:120:48`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/rnaseq_input.nf:121:48`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       fastp_reads_json = FASTP.out.json.collect{ meta,json -> json }
                                                  ^^^^
   ```
 
-- Warning: `subworkflows/local/rnaseq_input.nf:121:48`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/rnaseq_input.nf:122:48`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       fastp_reads_html = FASTP.out.html.collect{ meta,html -> html }
@@ -1961,42 +1961,42 @@
                                                      ^^^^^^^
   ```
 
-- Warning: `workflows/airrflow.nf:306:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/airrflow.nf:303:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       def topic_versions = Channel.topic("versions")
                            ^^^^^^^
   ```
 
-- Warning: `workflows/airrflow.nf:337:35`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/airrflow.nf:334:35`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_params))
                                     ^^^^^^^
   ```
 
-- Warning: `workflows/airrflow.nf:340:39`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/airrflow.nf:337:39`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               ch_methods_description  = Channel.value(methodsDescriptionText(ch_multiqc_custom_methods_description))
                                         ^^^^^^^
   ```
 
-- Warning: `workflows/airrflow.nf:342:32`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/airrflow.nf:339:32`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               ch_multiqc_files = Channel.empty()
                                  ^^^^^^^
   ```
 
-- Warning: `workflows/airrflow.nf:348:88`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/airrflow.nf:345:88`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files = ch_multiqc_files.mix(ch_fastqc_postassembly_mqc.collect{it[1]}.ifEmpty([]))
                                                                                          ^^
   ```
 
-- Warning: `workflows/airrflow.nf:360:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/airrflow.nf:357:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               multiqc_report = Channel.empty()
