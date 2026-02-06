@@ -1,14 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-02-05T00:23:58.579882+00:00
+- Generated: 2026-02-06T00:20:52.478115+00:00
 - Nextflow version: 25.12.0-edge
-- Summary: 1 warning
-
-## :warning: Warnings
-
-- Warning: `modules/nf-core/merquryfk/ploidyplot/main.nf:31:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          ${fastk_ktab.find{ it.toString().endsWith(".ktab") }} \\
-                             ^^^^^^^^^^
-  ```
+- Summary: No issues found

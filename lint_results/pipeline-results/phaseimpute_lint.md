@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-02-05T00:22:50.045542076Z
+- Generated: 2026-02-06T00:18:36.240393681Z
 - Nextflow version: 25.12.0-edge
 - Summary: 2 errors, 76 warnings
 
@@ -190,7 +190,7 @@
                                   ^^
   ```
 
-- Warning: `subworkflows/local/vcf_concordance_glimpse2/main.nf:70:55`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/vcf_concordance_glimpse2/main.nf:80:55`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   def all_files = sorted_list.collect { it[1] }

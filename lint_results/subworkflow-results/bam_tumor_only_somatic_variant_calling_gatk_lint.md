@@ -1,14 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-02-05T00:24:11.408948+00:00
+- Generated: 2026-02-06T00:21:05.257069+00:00
 - Nextflow version: 25.12.0-edge
-- Summary: 1 warning
-
-## :warning: Warnings
-
-- Warning: `subworkflows/nf-core/bam_tumor_only_somatic_variant_calling_gatk/main.nf:23:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      versions = Channel.empty()
-                 ^^^^^^^^^^
-  ```
+- Summary: No issues found

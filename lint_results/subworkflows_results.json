@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "e4ddbdf46b37c889dfce35c96e87ace2e790b1ef",
+  "_repo_commit": "52b7843bd92ccf833cc12e71cd84aeccf2583852",
   "abundance_differential_filter": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/abundance_differential_filter",
     "errors": 0,
@@ -69,7 +69,7 @@
   "bam_markduplicates_samtools": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_markduplicates_samtools",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "bam_methyldackel": {
@@ -129,7 +129,7 @@
   "bam_subsampledepth_samtools": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_subsampledepth_samtools",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "bam_taps_conversion": {
@@ -141,7 +141,7 @@
   "bam_tumor_normal_somatic_variant_calling_gatk": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_tumor_normal_somatic_variant_calling_gatk",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "bam_tumor_normal_somatic_variant_calling_strelka": {
@@ -153,7 +153,7 @@
   "bam_tumor_only_somatic_variant_calling_gatk": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_tumor_only_somatic_variant_calling_gatk",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "bam_variant_calling_sort_freebayes_bcftools": {

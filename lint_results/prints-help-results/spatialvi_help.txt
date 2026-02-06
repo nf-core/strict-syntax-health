@@ -3,10 +3,79 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 25.12.0-edge
 
-Launching `./main.nf` [magical_brahmagupta]revision: 29c9b239a2
+Launching `./main.nf` [dreamy_williams]revision: 29c9b239a2
 
-WARN: Unrecognized config option 'validation.defaultIgnoreParams'
-WARN: Unrecognized config option 'validation.monochromeLogs'
-ERROR ~ Unable to create help message: Specified param 'true' does not exist in JSON schema.
 
- -- Check script 'subworkflows/nf-core/utils_nfschema_plugin/main.nf' at line: 41 or see '.nextflow.log' file for more details
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/spatialvi 1.0dev
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/spatialvi -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input                          [string] Path to comma-separated file containing information about the samples in the experiment. 
+  --outdir                         [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --email                          [string] Email address for completion summary. 
+  --multiqc_title                  [string] MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+
+Space Ranger options
+  --spaceranger_probeset           [string] Location of Space Ranger probeset file. 
+  --spaceranger_reference          [string] Location of Space Ranger reference directory. May be packed as `tar.gz` file. [default: 
+https://cf.10xgenomics.com/supp/spatial-exp/refdata-gex-GRCh38-2020-A.tar.gz]  
+
+Optional outputs
+  --spaceranger_save_reference     [boolean] Save the extracted tar archive of the Space Ranger reference. 
+  --save_untar_output              [boolean] Save extracted tar archives of input data. 
+
+Analysis options
+  --hd_bin_size                    [integer] Bin size for Visium HD data. Only used for Visium HD. Allowed values: 2, 8, 16.  (accepted: 2, 
+8, 16) [default: 8]  
+  --qc_min_counts                  [integer] The minimum number of UMIs needed in a spot for that spot to pass the filtering. [default: 500] 
+ 
+  --qc_min_genes                   [integer] The minimum number of expressed genes in a spot needed for that spot to pass the filtering. 
+[default: 250]  
+  --qc_min_spots                   [integer] The minimum number of spots in which a gene is expressed for that gene to pass the filtering. 
+[default: 1]  
+  --qc_mito_threshold              [number]  The maximum proportion of mitochondrial content that a spot is allowed to have to pass the 
+filtering. [default: 20]  
+  --qc_ribo_threshold              [number]  The minimum proportion of ribosomal content that a spot is needs to have to pass the filtering (no 
+filtering is done by default). [default: 0]  
+  --qc_hb_threshold                [number]  The maximum proportion of haemoglobin content that a spot is allowed to have to pass the filtering 
+(no filtering is done by default). [default: 100]  
+  --cluster_n_hvgs                 [integer] The number of top highly variable genes to use for the analyses. [default: 2000] 
+  --cluster_resolution             [number]  The resolution for the clustering of the spots. [default: 1] 
+  --svg_autocorr_method            [string]  The method to use for spatially variable gene autocorrelation.  (accepted: moran, geary) 
+[default: moran]  
+  --n_top_svgs                     [integer] The number of top spatially variable genes to plot. [default: 14] 
+
+Data aggregation options
+  --merge_sdata                    [boolean] Merge per-sample SpatialData objects into one. 
+  --integrate_sdata                [boolean] Integrate per-sample SpatialData objects into one and output a integration report. 
+  --integration_cluster_resolution [number]  The resolution for the clustering of the spots after integration of samples. [default: 1] 
+  --integration_n_hvgs             [integer] Number of highly variable genes to use for integration of samples. [default: 2000] 
+
+Generic options
+  --multiqc_methods_description    [string]          Custom MultiQC yaml file containing HTML including a methods description. 
+  --help                           [boolean, string] Display the help message. 
+  --help_full                      [boolean]         Display the full detailed help message. 
+  --show_hidden                    [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 18 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/spatialvi/blob/master/CITATIONS.md
+

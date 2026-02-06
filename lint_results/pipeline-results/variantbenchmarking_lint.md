@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-23T00:21:29.294950627Z
+- Generated: 2026-02-06T00:20:09.706814123Z
 - Nextflow version: 25.12.0-edge
-- Summary: 10 errors, 144 warnings
+- Summary: 10 errors, 143 warnings
 
 ## :x: Errors
 
@@ -124,20 +124,6 @@
 
   ```nextflow
       def args  = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/local/custom/reformat_header/main.nf:21:9`: Variable was declared but not used
-
-  ```nextflow
-      def args  = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/local/custom/sort_bed/main.nf:21:9`: Variable was declared but not used
-
-  ```nextflow
-      def args    = task.ext.args ?: ''
           ^^^^
   ```
 
@@ -274,25 +260,32 @@
                         ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/compare_benchmark_results/main.nf:22:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/compare_benchmark_results/main.nf:24:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       versions    = Channel.empty()
                     ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/compare_benchmark_results/main.nf:23:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/compare_benchmark_results/main.nf:25:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       merged_vcfs = Channel.empty()
                     ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/compare_benchmark_results/main.nf:24:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/compare_benchmark_results/main.nf:26:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_plots    = Channel.empty()
                     ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/compare_benchmark_results/main.nf:32:42`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              evaluations.map { meta, vcf, tbi -> [meta, vcf] },
+                                           ^^^
   ```
 
 - Warning: `subworkflows/local/happy_benchmark/main.nf:27:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -337,7 +330,7 @@
                                                     ^^^
   ```
 
-- Warning: `subworkflows/local/liftover_vcfs/main.nf:24:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/liftover_vcfs/main.nf:25:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       versions = Channel.empty()

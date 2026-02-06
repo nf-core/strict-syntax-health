@@ -1,21 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-02-05T00:23:58.623002+00:00
+- Generated: 2026-02-06T00:20:52.520485+00:00
 - Nextflow version: 25.12.0-edge
-- Summary: 2 warnings
-
-## :warning: Warnings
-
-- Warning: `modules/nf-core/samtools/getrg/main.nf:28:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/samtools/getrg/main.nf:41:9`: Variable was declared but not used
-
-  ```nextflow
-      def prefix = task.ext.prefix ?: "${meta.id}"
-          ^^^^^^^^^^
-  ```
+- Summary: No issues found

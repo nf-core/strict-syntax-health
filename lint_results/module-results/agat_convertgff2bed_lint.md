@@ -1,14 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-02-05T00:23:58.490112+00:00
+- Generated: 2026-02-06T00:20:52.371762+00:00
 - Nextflow version: 25.12.0-edge
-- Summary: 1 warning
-
-## :warning: Warnings
-
-- Warning: `modules/nf-core/agat/convertgff2bed/main.nf:36:9`: Variable was declared but not used
-
-  ```nextflow
-      def args   = task.ext.args   ?: ''
-          ^^^^^^^^^^
-  ```
+- Summary: No issues found

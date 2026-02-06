@@ -1,21 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-02-05T00:23:58.545729+00:00
+- Generated: 2026-02-06T00:20:52.437499+00:00
 - Nextflow version: 25.12.0-edge
-- Summary: 2 warnings
-
-## :warning: Warnings
-
-- Warning: `modules/nf-core/gatk4/determinegermlinecontigploidy/main.nf:27:80`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def exclude = exclude_beds ? exclude_beds.collect { "--exclude-intervals ${it}" }.join(" ") : ""
-                                                                                 ^^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/gatk4/determinegermlinecontigploidy/main.nf:30:50`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def input_list = counts.collect { "--input ${it}" }.join(" ")
-                                                   ^^^^^^^^^^
-  ```
+- Summary: No issues found
