@@ -30,6 +30,10 @@ on:
         description: "Skip linting subworkflows"
         type: boolean
         default: false
+      no_cache:
+        description: "Skip linting cache to force fresh linting of all files"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -144,6 +148,9 @@ jobs:
           fi
           if [[ "${{ inputs.skip_subworkflows }}" == "true" ]]; then
             CMD="$CMD --skip-subworkflows"
+          fi
+          if [[ "${{ inputs.no_cache }}" == "true" ]]; then
+            CMD="$CMD --no-cache"
           fi
 
           # Add specific filters if provided
