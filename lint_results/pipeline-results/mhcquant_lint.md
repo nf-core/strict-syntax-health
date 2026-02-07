@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-24T00:18:41.368919489Z
+- Generated: 2026-02-07T00:22:36.016597829Z
 - Nextflow version: 25.12.0-edge
-- Summary: 9 errors, 62 warnings
+- Summary: 10 errors, 63 warnings
 
 ## :x: Errors
 
@@ -41,6 +41,13 @@
                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
+- Error: `subworkflows/local/process_feature/main.nf:33:23`: `ch_versions` is not defined
+
+  ```nextflow
+          ch_versions = ch_versions.mix(OPENMS_FILECONVERTER.out.versions)
+                        ^^^^^^^^^^^
+  ```
+
 - Error: `subworkflows/local/quant/main.nf:18:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
@@ -48,21 +55,21 @@
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/quant/main.nf:83:30`: `mzml` is already declared
+- Error: `subworkflows/local/quant/main.nf:77:30`: `mzml` is already declared
 
   ```nextflow
                   .map { meta, mzml, idxml -> [ groupKey([id: "${meta.sample}_${meta.condition}"], meta.group_count), meta, mzml, idxml] }
                                ^^^^
   ```
 
-- Error: `subworkflows/local/quant/main.nf:85:42`: `mzml` is already declared
+- Error: `subworkflows/local/quant/main.nf:79:42`: `mzml` is already declared
 
   ```nextflow
                   .map { group_meta, meta, mzml, idxml -> [group_meta, meta, mzml, idxml] }
                                            ^^^^
   ```
 
-- Error: `subworkflows/local/quant/main.nf:87:42`: `mzml` is already declared
+- Error: `subworkflows/local/quant/main.nf:81:42`: `mzml` is already declared
 
   ```nextflow
                   .map { group_meta, meta, mzml, idxml, merged_idxml -> [meta, mzml, idxml, merged_idxml] }
@@ -71,7 +78,14 @@
 
 ## :warning: Warnings
 
-- Warning: `modules/local/epicore/main.nf:43:9`: Variable was declared but not used
+- Warning: `modules/local/epicore/main.nf:38:9`: Variable was declared but not used
+
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^
+  ```
+
+- Warning: `modules/local/openms/idmassaccuracy/main.nf:35:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
@@ -92,7 +106,7 @@
                                              ^^
   ```
 
-- Warning: `modules/local/openms/maprttransformer/main.nf:41:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `modules/local/openms/maprttransformer/main.nf:36:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       def fileExt = alignment_file.collect { it.name.tokenize("\\.")[1] }.join(' ')
@@ -120,49 +134,35 @@
           ^^^^^^
   ```
 
-- Warning: `modules/nf-core/gunzip/main.nf:43:9`: Variable was declared but not used
+- Warning: `modules/nf-core/openms/decoydatabase/main.nf:33:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
   ```
 
-- Warning: `modules/nf-core/openms/decoydatabase/main.nf:39:9`: Variable was declared but not used
+- Warning: `modules/nf-core/openms/filefilter/main.nf:37:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
   ```
 
-- Warning: `modules/nf-core/openms/filefilter/main.nf:42:9`: Variable was declared but not used
+- Warning: `modules/nf-core/openms/idfilter/main.nf:38:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
   ```
 
-- Warning: `modules/nf-core/openms/idfilter/main.nf:43:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/openms/idfilter/main.nf:49:9`: Variable was declared but not used
+- Warning: `modules/nf-core/openms/idfilter/main.nf:44:9`: Variable was declared but not used
 
   ```nextflow
       def filter = filter_file ? "${filter_citerion} ${filter_file}" : ""
           ^^^^^^
   ```
 
-- Warning: `modules/nf-core/openms/idmassaccuracy/main.nf:40:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/openms/idmerger/main.nf:38:9`: Variable was declared but not used
+- Warning: `modules/nf-core/openms/idmerger/main.nf:33:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
@@ -176,95 +176,102 @@
           ^^^^^^
   ```
 
-- Warning: `modules/nf-core/openms/idripper/main.nf:38:9`: Variable was declared but not used
+- Warning: `modules/nf-core/openms/idripper/main.nf:33:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
   ```
 
-- Warning: `modules/nf-core/openms/idscoreswitcher/main.nf:39:9`: Variable was declared but not used
+- Warning: `modules/nf-core/openms/idscoreswitcher/main.nf:34:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
   ```
 
-- Warning: `modules/nf-core/openms/peakpickerhires/main.nf:38:9`: Variable was declared but not used
+- Warning: `modules/nf-core/openms/peakpickerhires/main.nf:33:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
   ```
 
-- Warning: `modules/nf-core/openms/peptideindexer/main.nf:41:9`: Variable was declared but not used
+- Warning: `modules/nf-core/openms/peptideindexer/main.nf:36:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
   ```
 
-- Warning: `modules/nf-core/openmsthirdparty/cometadapter/main.nf:42:9`: Variable was declared but not used
+- Warning: `modules/nf-core/openmsthirdparty/cometadapter/main.nf:36:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
   ```
 
-- Warning: `subworkflows/local/map_alignment/main.nf:25:24`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/map_alignment/main.nf:22:24`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .flatMap { group_meta, metas -> metas }
                          ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/map_alignment/main.nf:28:32`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/map_alignment/main.nf:25:32`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                       .flatMap { group_meta, trafoxmls -> [trafoxmls].flatten().collect { trafoxml -> [[spectra: trafoxml.baseName], trafoxml] } })
                                  ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/map_alignment/main.nf:29:20`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/map_alignment/main.nf:26:20`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map { spectra, meta, trafoxml -> [meta, trafoxml] }
                      ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/map_alignment/main.nf:39:24`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/map_alignment/main.nf:35:24`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .flatMap { group_meta, idxmls -> [idxmls].flatten().collect { idxml -> [[spectra: idxml.baseName.replace("_fdr_filtered","")], idxml] } }
                          ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/map_alignment/main.nf:41:32`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/map_alignment/main.nf:37:32`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                       .flatMap { group_meta, metas -> metas }
                                  ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/map_alignment/main.nf:43:20`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/map_alignment/main.nf:39:20`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map { group_meta, idxml, meta -> [meta, idxml] }
                      ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/process_feature/main.nf:26:29`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/process_feature/main.nf:23:29`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       single: it[1].size() == 1
                               ^^
   ```
 
-- Warning: `subworkflows/local/process_feature/main.nf:27:31`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/process_feature/main.nf:24:31`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       multiple: it[1].size() > 1
                                 ^^
+  ```
+
+- Warning: `subworkflows/local/process_feature/main.nf:33:9`: Variable was declared but not used
+
+  ```nextflow
+          ch_versions = ch_versions.mix(OPENMS_FILECONVERTER.out.versions)
+          ^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/quant/main.nf:18:5`: Variable was declared but not used
@@ -274,70 +281,70 @@
       ^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/quant/main.nf:34:24`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/quant/main.nf:33:24`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .flatMap { group_meta, idxmls -> [idxmls].flatten().collect { idxml -> [[spectra: idxml.baseName], idxml] } }
                          ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/quant/main.nf:37:32`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/quant/main.nf:36:32`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                       .flatMap { group_meta, metas -> metas }
                                  ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/quant/main.nf:39:20`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/quant/main.nf:38:20`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map { spectra, idxmls, meta -> [meta, idxmls] }
                      ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/quant/main.nf:56:20`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/quant/main.nf:53:20`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map { group_meta, meta, idxml, q_value -> [meta, idxml, q_value] }
                      ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/quant/main.nf:87:24`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/quant/main.nf:81:24`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   .map { group_meta, meta, mzml, idxml, merged_idxml -> [meta, mzml, idxml, merged_idxml] }
                          ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/rescore/main.nf:60:99`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/rescore/main.nf:53:99`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(OPENMS_PERCOLATORADAPTER.out.feature_weights.map{ meta, feature_weights -> feature_weights })
                                                                                                     ^^^^
   ```
 
-- Warning: `subworkflows/local/rescore/main.nf:65:78`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/rescore/main.nf:58:78`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               OPENMS_IDMERGER_GLOBAL(OPENMS_PSMFEATUREEXTRACTOR.out.idxml.map {group_meta, idxml -> [[id:'global'], idxml] }.groupTuple())
                                                                                ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/rescore/main.nf:73:101`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/rescore/main.nf:65:101`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               OPENMS_IDFILTER_GLOBAL(ch_pout.combine(OPENMS_IDFILTER_Q_VALUE_GLOBAL.out.filtered.map{ it[1] }))
                                                                                                       ^^
   ```
 
-- Warning: `subworkflows/local/speclib/main.nf:49:20`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/speclib/main.nf:45:20`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map { meta, psmpkl -> [[id: "global"], psmpkl] }
                      ^^^^
   ```
 
-- Warning: `subworkflows/local/speclib/main.nf:53:20`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/speclib/main.nf:49:20`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map { meta, peakpkl -> [[id: "global"], peakpkl] }
@@ -421,84 +428,91 @@
                      ^^^^
   ```
 
-- Warning: `workflows/mhcquant.nf:89:89`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/mhcquant.nf:60:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+      ch_multiqc_files = Channel.empty()
+                         ^^^^^^^
+  ```
+
+- Warning: `workflows/mhcquant.nf:85:89`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(PYOPENMS_CHROMATOGRAMEXTRACTOR.out.csv.map{ meta, mzml -> mzml })
                                                                                           ^^^^
   ```
 
-- Warning: `workflows/mhcquant.nf:93:53`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/mhcquant.nf:89:53`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_clean_mzml_file.combine(ch_decoy_db.map{ meta, fasta -> [fasta] }) :
                                                       ^^^^
   ```
 
-- Warning: `workflows/mhcquant.nf:97:20`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/mhcquant.nf:93:20`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map { groupKey, meta, mzml, fasta -> [meta, mzml, fasta] }
                      ^^^^^^^^
   ```
 
-- Warning: `workflows/mhcquant.nf:105:74`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/mhcquant.nf:100:74`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           OPENMSTHIRDPARTY_COMETADAPTER.out.idxml.combine(ch_decoy_db.map{ meta, fasta -> [fasta] }) :
                                                                            ^^^^
   ```
 
-- Warning: `workflows/mhcquant.nf:109:20`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/mhcquant.nf:104:20`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map { groupKey, meta, idxml, fasta -> [meta, idxml, fasta] }
                      ^^^^^^^^
   ```
 
-- Warning: `workflows/mhcquant.nf:117:85`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/mhcquant.nf:110:85`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(OPENMS_IDMASSACCURACY.out.frag_err.map{ meta, frag_err -> frag_err })
                                                                                       ^^^^
   ```
 
-- Warning: `workflows/mhcquant.nf:121:22`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/mhcquant.nf:114:22`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { meta, idxml -> [ groupKey([id: "${meta.sample}_${meta.condition}"], meta.group_count), meta] }
                        ^^^^^
   ```
 
-- Warning: `workflows/mhcquant.nf:154:24`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/mhcquant.nf:145:24`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   .map { groupKey, meta, comet_idxml, fdr_filtered_idxml -> [meta, comet_idxml, fdr_filtered_idxml] }
                          ^^^^^^^^
   ```
 
-- Warning: `workflows/mhcquant.nf:160:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/mhcquant.nf:151:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .filter { meta, idxml -> idxml.countLines() > 130 }
                         ^^^^
   ```
 
-- Warning: `workflows/mhcquant.nf:212:31`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/mhcquant.nf:198:31`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           EPICORE(ch_fasta.map{ it.last()}, SUMMARIZE_RESULTS.out.epicore_input)
                                 ^^
   ```
 
-- Warning: `workflows/mhcquant.nf:230:88`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/mhcquant.nf:215:88`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           params.epicore ? EPICORE.out.stats : SUMMARIZE_RESULTS.out.epicore_input.map { meta, tsv, stats -> stats }
                                                                                          ^^^^
   ```
 
-- Warning: `workflows/mhcquant.nf:230:94`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/mhcquant.nf:215:94`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           params.epicore ? EPICORE.out.stats : SUMMARIZE_RESULTS.out.epicore_input.map { meta, tsv, stats -> stats }

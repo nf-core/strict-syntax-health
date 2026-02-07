@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-02-06T00:20:09.706814123Z
+- Generated: 2026-02-07T00:23:46.539477976Z
 - Nextflow version: 25.12.0-edge
-- Summary: 10 errors, 143 warnings
+- Summary: 10 errors, 142 warnings
 
 ## :x: Errors
 
@@ -100,13 +100,6 @@
   ```
 
 - Warning: `modules/local/custom/merge_sompy_features/main.nf:21:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/local/custom/plots/main.nf:21:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''

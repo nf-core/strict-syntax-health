@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-02-04T00:19:34.740458196Z
+- Generated: 2026-02-07T00:23:33.740023153Z
 - Nextflow version: 25.12.0-edge
 - Summary: 150 errors, 614 warnings
 
@@ -5349,7 +5349,7 @@
                                                                                 ^^^^^
   ```
 
-- Warning: `workflows/sarek/main.nf:690:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/sarek/main.nf:698:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def InputStream gzipStream = new java.util.zip.GZIPInputStream(it)

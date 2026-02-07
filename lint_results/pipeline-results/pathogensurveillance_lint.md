@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-29T00:21:03.592692494Z
+- Generated: 2026-02-07T00:22:48.347860471Z
 - Nextflow version: 25.12.0-edge
-- Summary: 16 errors, 471 warnings
+- Summary: 16 errors, 437 warnings
 
 ## :x: Errors
 
@@ -260,13 +260,6 @@
                                                  ^^
   ```
 
-- Warning: `subworkflows/local/align_reads/main.nf:12:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      versions = Channel.empty()
-                 ^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/align_reads/main.nf:22:31`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
@@ -407,20 +400,6 @@
                                                                                                        ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/busco_phylogeny/main.nf:17:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      versions = Channel.empty()
-                 ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/busco_phylogeny/main.nf:18:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      messages = Channel.empty()
-                 ^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/busco_phylogeny/main.nf:22:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
@@ -519,13 +498,6 @@
                                           ^^
   ```
 
-- Warning: `subworkflows/local/busco_phylogeny/main.nf:74:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      BUSCO_DOWNLOAD ( Channel.from( "eukaryota_odb10" ) )
-                       ^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/busco_phylogeny/main.nf:80:25`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
@@ -615,13 +587,6 @@
   ```nextflow
           .map { [it[0].group_id, it[1]] } // group_meta, tree
                                   ^^
-  ```
-
-- Warning: `subworkflows/local/call_variants/main.nf:15:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      versions = Channel.empty()
-                 ^^^^^^^
   ```
 
 - Warning: `subworkflows/local/call_variants/main.nf:29:30`: Parameter was not used -- prefix with `_` to suppress warning
@@ -1170,20 +1135,6 @@
                                                                        ^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/core_genome_phylogeny/main.nf:22:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      versions = Channel.empty()
-                 ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/core_genome_phylogeny/main.nf:23:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      messages = Channel.empty()
-                 ^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/core_genome_phylogeny/main.nf:27:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
@@ -1289,17 +1240,10 @@
                                            ^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/core_genome_phylogeny/main.nf:81:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-              bakta_db_tar = Channel.fromPath(params.bakta_db).map{ [ [id: 'baktadb'], it] }
-                             ^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/core_genome_phylogeny/main.nf:81:86`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-              bakta_db_tar = Channel.fromPath(params.bakta_db).map{ [ [id: 'baktadb'], it] }
+              bakta_db_tar = channel.fromPath(params.bakta_db).map{ [ [id: 'baktadb'], it] }
                                                                                        ^^
   ```
 
@@ -1308,13 +1252,6 @@
   ```nextflow
               bakta_db = UNTAR.out.untar.map{ meta, db -> db }.first()
                                               ^^^^
-  ```
-
-- Warning: `subworkflows/local/core_genome_phylogeny/main.nf:86:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-              bakta_db = Channel.fromPath(params.bakta_db).first()
-                         ^^^^^^^
   ```
 
 - Warning: `subworkflows/local/core_genome_phylogeny/main.nf:96:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -1448,20 +1385,6 @@
   ```nextflow
           .map { [it[1], null] }
                   ^^
-  ```
-
-- Warning: `subworkflows/local/genome_assembly/main.nf:14:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      versions = Channel.empty()
-                 ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/genome_assembly/main.nf:15:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      messages = Channel.empty()
-                 ^^^^^^^
   ```
 
 - Warning: `subworkflows/local/genome_assembly/main.nf:17:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -1604,20 +1527,6 @@
                                           ^^^^^
   ```
 
-- Warning: `subworkflows/local/initial_qc_checks/main.nf:10:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      versions = Channel.empty()
-                 ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/initial_qc_checks/main.nf:11:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      messages = Channel.empty()
-                 ^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/initial_qc_checks/main.nf:15:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
@@ -1672,20 +1581,6 @@
   ```nextflow
           .map { [[id: it.sample_id], it.paths] }
                                       ^^
-  ```
-
-- Warning: `subworkflows/local/prepare_input/main.nf:23:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      versions = Channel.empty()
-                 ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/prepare_input/main.nf:24:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      messages = Channel.empty()
-                 ^^^^^^^
   ```
 
 - Warning: `subworkflows/local/prepare_input/main.nf:31:47`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -2101,27 +1996,6 @@
                  ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/reference_index/main.nf:32:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/sketch_comparison/main.nf:12:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      versions = Channel.empty()
-                 ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/sketch_comparison/main.nf:13:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      messages = Channel.empty()
-                 ^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/sketch_comparison/main.nf:17:22`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
@@ -2225,20 +2099,6 @@
   ```nextflow
       reference_data    //  string: Path to reference data samplesheet
       ^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/variant_analysis/main.nf:16:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      versions = Channel.empty()
-                 ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/variant_analysis/main.nf:17:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      messages = Channel.empty()
-                 ^^^^^^^
   ```
 
 - Warning: `subworkflows/local/variant_analysis/main.nf:21:20`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -2927,83 +2787,6 @@
                                            ^^
   ```
 
-- Warning: `workflows/pathogensurveillance.nf:41:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      versions = Channel.empty()
-                 ^^^^^^^
-  ```
-
-- Warning: `workflows/pathogensurveillance.nf:42:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      messages = Channel.empty()
-                 ^^^^^^^
-  ```
-
-- Warning: `workflows/pathogensurveillance.nf:90:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          core_selected_refs = Channel.empty()
-                               ^^^^^^^
-  ```
-
-- Warning: `workflows/pathogensurveillance.nf:91:21`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          core_pocp = Channel.empty()
-                      ^^^^^^^
-  ```
-
-- Warning: `workflows/pathogensurveillance.nf:92:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          core_phylogeny = Channel.empty()
-                           ^^^^^^^
-  ```
-
-- Warning: `workflows/pathogensurveillance.nf:105:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      def topic_versions = Channel.topic("versions")
-                           ^^^^^^^
-  ```
-
-- Warning: `workflows/pathogensurveillance.nf:132:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      multiqc_config          = Channel.fromPath("$projectDir/assets/multiqc_config.yml", checkIfExists: true)
-                                ^^^^^^^
-  ```
-
-- Warning: `workflows/pathogensurveillance.nf:133:55`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      multiqc_custom_config   = params.multiqc_config ? Channel.fromPath( params.multiqc_config, checkIfExists: true ) : Channel.empty()
-                                                        ^^^^^^^
-  ```
-
-- Warning: `workflows/pathogensurveillance.nf:133:120`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      multiqc_custom_config   = params.multiqc_config ? Channel.fromPath( params.multiqc_config, checkIfExists: true ) : Channel.empty()
-                                                                                                                         ^^^^^^^
-  ```
-
-- Warning: `workflows/pathogensurveillance.nf:134:55`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      multiqc_logo            = params.multiqc_logo   ? Channel.fromPath( params.multiqc_logo, checkIfExists: true ) : Channel.empty()
-                                                        ^^^^^^^
-  ```
-
-- Warning: `workflows/pathogensurveillance.nf:134:118`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      multiqc_logo            = params.multiqc_logo   ? Channel.fromPath( params.multiqc_logo, checkIfExists: true ) : Channel.empty()
-                                                                                                                       ^^^^^^^
-  ```
-
 - Warning: `workflows/pathogensurveillance.nf:150:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
@@ -3331,27 +3114,6 @@
   ```nextflow
           .map{ it.collect{ it ?: [] } }
                             ^^
-  ```
-
-- Warning: `workflows/pathogensurveillance.nf:294:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          Channel.fromPath("${projectDir}/assets/.pathogensurveillance_output.json", checkIfExists: true).first()
-          ^^^^^^^
-  ```
-
-- Warning: `workflows/pathogensurveillance.nf:299:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          Channel.fromPath("${projectDir}/assets/main_report", checkIfExists: true).first()
-          ^^^^^^^
-  ```
-
-- Warning: `workflows/pathogensurveillance.nf:318:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      Channel.value(
-      ^^^^^^^
   ```
 
 - Warning: `workflows/pathogensurveillance.nf:337:34`: Implicit closure parameter is deprecated, declare an explicit parameter instead

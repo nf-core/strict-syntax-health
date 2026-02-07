@@ -29,7 +29,7 @@
   "ampliseq": {
     "full_name": "nf-core/ampliseq",
     "html_url": "https://github.com/nf-core/ampliseq",
-    "commit": "9efd22f9175d9140abf65e245f6aed0fe6c1d2c7",
+    "commit": "bcefe645fd43cb25bcd5560a892dcae6483c5c9e",
     "errors": 0,
     "warnings": 66,
     "parse_error": false,
@@ -137,7 +137,7 @@
   "coproid": {
     "full_name": "nf-core/coproid",
     "html_url": "https://github.com/nf-core/coproid",
-    "commit": "6d50b9377be5fbb1ad647ca0acbbd20f3a0a37e6",
+    "commit": "974980f8382bd87248c9e8b32a06b9c489f42504",
     "errors": 38,
     "warnings": 58,
     "parse_error": false,
@@ -200,9 +200,9 @@
   "deepmutscan": {
     "full_name": "nf-core/deepmutscan",
     "html_url": "https://github.com/nf-core/deepmutscan",
-    "commit": "e7a21ec8fd0a30e9d8d9839f948eaf8f482c28b7",
-    "errors": 121,
-    "warnings": 118,
+    "commit": "595e1691667e441bca3d9b742d32e89511ba73a0",
+    "errors": 43,
+    "warnings": 90,
     "parse_error": false,
     "prints_help": null
   },
@@ -605,9 +605,9 @@
   "mhcquant": {
     "full_name": "nf-core/mhcquant",
     "html_url": "https://github.com/nf-core/mhcquant",
-    "commit": "5fcace66d746ee688e99ab9acf86a61dd3da9eec",
-    "errors": 9,
-    "warnings": 62,
+    "commit": "83dba10313664a87045ee7db0e01dfce0ae66b43",
+    "errors": 10,
+    "warnings": 63,
     "parse_error": false,
     "prints_help": null
   },
@@ -740,9 +740,9 @@
   "pathogensurveillance": {
     "full_name": "nf-core/pathogensurveillance",
     "html_url": "https://github.com/nf-core/pathogensurveillance",
-    "commit": "7ccd32142850b2c5e62c6a3033a8382289b8967a",
+    "commit": "5f014fc23b8e8dcf7189adced52157f07fdfdcb6",
     "errors": 16,
-    "warnings": 471,
+    "warnings": 437,
     "parse_error": false,
     "prints_help": null
   },
@@ -947,9 +947,9 @@
   "rnavar": {
     "full_name": "nf-core/rnavar",
     "html_url": "https://github.com/nf-core/rnavar",
-    "commit": "e8b1e58cb08d32bd6ac0f23dd897b94b55ba3ef6",
+    "commit": "f38407dbed9254f80c7f00deea4e692fac0f33c6",
     "errors": 0,
-    "warnings": 14,
+    "warnings": 0,
     "parse_error": false,
     "prints_help": true
   },
@@ -965,7 +965,7 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "882d030ffcdac7b596cbf03d4d4c30e99e5b2b22",
+    "commit": "c5a9a70c577caeac04105f1f9de162208119eaa9",
     "errors": 150,
     "warnings": 614,
     "parse_error": false,
@@ -1127,9 +1127,9 @@
   "variantbenchmarking": {
     "full_name": "nf-core/variantbenchmarking",
     "html_url": "https://github.com/nf-core/variantbenchmarking",
-    "commit": "f9835e2ceca14fc686be525dd5b44e5c27a269f1",
+    "commit": "cd439de36b66779ddd138d681a4e7dedee89fa0a",
     "errors": 10,
-    "warnings": 143,
+    "warnings": 142,
     "parse_error": false,
     "prints_help": null
   },

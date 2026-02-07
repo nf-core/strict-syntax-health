@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 25.12.0-edge
 
 Downloading plugin nf-schema@2.5.1
-Launching `./main.nf` [ecstatic_bell]revision: 989f5de55d
+Launching `./main.nf` [sick_woese]revision: 989f5de55d
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -100,6 +100,14 @@ ASV post processing
   --vsearch_cluster_id                     [number]  Pairwise Identity value used when post-clustering ASVs if `--vsearch_cluster` option is used 
 (default: 0.97). [default: 0.97]  
   --raise_filter_stacksize                 [boolean] Raise stack size when filtering VSEARCH clusters [default: true] 
+  --decontam                               [string]  Choose whether decontamination with `decontam` is applied to features.  (accepted: none, 
+decontaminate, notcontaminant) [default: none]  
+  --decontam_decontaminate_method          [string]  Choose the decontamination method for `--decontam decontaminate`.  (accepted: auto, frequency, 
+prevalence, combined, minimum, either, both) [default: auto]  
+  --decontam_decontaminate_threshold       [number]  Choose the contamination likelihood threshold for `--decontam decontaminate`. [default: 0.1] 
+ 
+  --decontam_notcontaminant_threshold      [number]  Choose the non-contaminant likelihood threshold for `--decontam notcontaminant`. [default: 0.5] 
+ 
   --filter_ssu                             [string]  Enable SSU filtering. Comma separated list of kingdoms (domains) in Barrnap, a combination (or one) 
 of "bac", "arc", "mito", and "euk". ASVs that have their lowest evalue in that kingdoms are kept. 
  (accepted: bac,arc,mito,euk, bac, arc, mito, euk, bac,arc, bac,mito, bac,euk, arc,mito, 

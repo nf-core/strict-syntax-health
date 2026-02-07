@@ -1,21 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-02-06T00:20:52.546709+00:00
+- Generated: 2026-02-07T00:24:15.274971+00:00
 - Nextflow version: 25.12.0-edge
-- Summary: 2 warnings
-
-## :warning: Warnings
-
-- Warning: `modules/nf-core/varlociraptor/callvariants/main.nf:26:120`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def scenario_samples = vcfs instanceof List && vcfs.size() > 1 ? [scenario_aliases, vcfs].transpose().collect { "${it[0]}=${it[1]}" }.join(' ') : "${scenario_aliases}=${vcfs}"
-                                                                                                                         ^^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/varlociraptor/callvariants/main.nf:26:129`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def scenario_samples = vcfs instanceof List && vcfs.size() > 1 ? [scenario_aliases, vcfs].transpose().collect { "${it[0]}=${it[1]}" }.join(' ') : "${scenario_aliases}=${vcfs}"
-                                                                                                                                  ^^^^^^^^^^
-  ```
+- Summary: No issues found
