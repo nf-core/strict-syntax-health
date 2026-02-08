@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "bc9a0cda04e88011116cfefb079404b04fce4b45",
+  "_repo_commit": "b0bd00e83b18957bd409cd9e31e98b965ebc593b",
   "abricate_run": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abricate/run",
     "errors": 0,
@@ -417,7 +417,7 @@
   "bamstats_generalstats": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bamstats/generalstats",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "bamtools_convert": {
@@ -429,7 +429,7 @@
   "bamtools_split": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bamtools/split",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "bamtools_stats": {
@@ -441,7 +441,7 @@
   "bamutil_clipoverlap": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bamutil/clipoverlap",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "bamutil_trimbam": {
@@ -465,13 +465,13 @@
   "bbmap_bbduk": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bbmap/bbduk",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "bbmap_bbmerge": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bbmap/bbmerge",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "bbmap_bbnorm": {
@@ -681,7 +681,7 @@
   "bedops_convert2bed": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bedops/convert2bed",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "bedops_gtf2bed": {
@@ -825,7 +825,7 @@
   "bftools_showinf": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bftools/showinf",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "biobambam_bammarkduplicates2": {
@@ -842,20 +842,20 @@
   },
   "biobambam_bamsormadup": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/biobambam/bamsormadup",
-    "errors": 2,
+    "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
   "biomformat_convert": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/biomformat/convert",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "biscuit_align": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/biscuit/align",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "parse_error": false
   },
   "biscuit_biscuitblaster": {
@@ -867,7 +867,7 @@
   "biscuit_bsconv": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/biscuit/bsconv",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "biscuit_epiread": {
@@ -879,7 +879,7 @@
   "biscuit_index": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/biscuit/index",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "biscuit_mergecg": {
@@ -897,7 +897,7 @@
   "biscuit_qc": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/biscuit/qc",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "biscuit_vcf2bed": {
@@ -909,43 +909,43 @@
   "bismark_align": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bismark/align",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "parse_error": false
   },
   "bismark_coverage2cytosine": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bismark/coverage2cytosine",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "bismark_deduplicate": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bismark/deduplicate",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "parse_error": false
   },
   "bismark_genomepreparation": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bismark/genomepreparation",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "bismark_methylationextractor": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bismark/methylationextractor",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "bismark_report": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bismark/report",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "bismark_summary": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bismark/summary",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "parse_error": false
   },
   "blast_blastdbcmd": {
@@ -957,31 +957,31 @@
   "blast_blastn": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/blast/blastn",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "blast_blastp": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/blast/blastp",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "blast_makeblastdb": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/blast/makeblastdb",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "blast_tblastn": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/blast/tblastn",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "blast_updateblastdb": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/blast/updateblastdb",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "blobtk_depth": {
@@ -1035,7 +1035,7 @@
   "bracken_combinebrackenoutputs": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bracken/combinebrackenoutputs",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "busco_busco": {
@@ -1047,7 +1047,7 @@
   "busco_download": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/busco/download",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "parse_error": false
   },
   "busco_generateplot": {
@@ -1059,7 +1059,7 @@
   "busco_phylogenomics": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/busco/phylogenomics",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "bwa_aln": {
@@ -1113,7 +1113,7 @@
   "bwameme_mem": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bwameme/mem",
     "errors": 0,
-    "warnings": 3,
+    "warnings": 0,
     "parse_error": false
   },
   "bwameth_align": {
@@ -1125,7 +1125,7 @@
   "bwameth_index": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bwameth/index",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "parse_error": false
   },
   "cat_cat": {

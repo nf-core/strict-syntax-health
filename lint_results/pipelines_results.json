@@ -965,9 +965,9 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "c5a9a70c577caeac04105f1f9de162208119eaa9",
+    "commit": "b310982ef91b23a1b97b58853a1deb518882a131",
     "errors": 150,
-    "warnings": 614,
+    "warnings": 635,
     "parse_error": false,
     "prints_help": null
   },

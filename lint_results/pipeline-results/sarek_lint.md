@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-02-07T00:23:33.740023153Z
+- Generated: 2026-02-08T00:28:37.856570446Z
 - Nextflow version: 25.12.0-edge
-- Summary: 150 errors, 614 warnings
+- Summary: 150 errors, 635 warnings
 
 ## :x: Errors
 
@@ -146,49 +146,49 @@
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `main.nf:129:5`: `PREPARE_INTERVALS` is not defined
+- Error: `main.nf:131:5`: `PREPARE_INTERVALS` is not defined
 
   ```nextflow
       PREPARE_INTERVALS(PREPARE_GENOME.out.fasta_fai, params.intervals, params.no_intervals, params.nucleotides_per_second, params.outdir, params.step)
       ^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `main.nf:133:72`: `PREPARE_INTERVALS` is not defined
+- Error: `main.nf:135:72`: `PREPARE_INTERVALS` is not defined
 
   ```nextflow
       intervals_bed_combined = params.no_intervals ? Channel.value([]) : PREPARE_INTERVALS.out.intervals_bed_combined
                                                                          ^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `main.nf:134:79`: `PREPARE_INTERVALS` is not defined
+- Error: `main.nf:136:79`: `PREPARE_INTERVALS` is not defined
 
   ```nextflow
       intervals_bed_gz_tbi_combined = params.no_intervals ? Channel.value([]) : PREPARE_INTERVALS.out.intervals_bed_gz_tbi_combined
                                                                                 ^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `main.nf:135:50`: `PREPARE_INTERVALS` is not defined
+- Error: `main.nf:137:50`: `PREPARE_INTERVALS` is not defined
 
   ```nextflow
       intervals_bed_combined_for_variant_calling = PREPARE_INTERVALS.out.intervals_bed_combined
                                                    ^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `main.nf:142:17`: `PREPARE_INTERVALS` is not defined
+- Error: `main.nf:144:17`: `PREPARE_INTERVALS` is not defined
 
   ```nextflow
       intervals = PREPARE_INTERVALS.out.intervals_bed
                   ^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `main.nf:144:28`: `PREPARE_INTERVALS` is not defined
+- Error: `main.nf:146:28`: `PREPARE_INTERVALS` is not defined
 
   ```nextflow
       intervals_bed_gz_tbi = PREPARE_INTERVALS.out.intervals_bed_gz_tbi
                              ^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `main.nf:169:29`: `PREPARE_INTERVALS` is not defined
+- Error: `main.nf:171:29`: `PREPARE_INTERVALS` is not defined
 
   ```nextflow
       versions = versions.mix(PREPARE_INTERVALS.out.versions)
@@ -1310,217 +1310,224 @@
                                                                                                  ^^
   ```
 
-- Warning: `main.nf:91:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:93:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       versions = Channel.empty()
                  ^^^^^^^
   ```
 
-- Warning: `main.nf:133:52`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:135:52`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       intervals_bed_combined = params.no_intervals ? Channel.value([]) : PREPARE_INTERVALS.out.intervals_bed_combined
                                                      ^^^^^^^
   ```
 
-- Warning: `main.nf:134:59`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:136:59`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       intervals_bed_gz_tbi_combined = params.no_intervals ? Channel.value([]) : PREPARE_INTERVALS.out.intervals_bed_gz_tbi_combined
                                                             ^^^^^^^
   ```
 
-- Warning: `main.nf:140:11`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:142:11`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           : Channel.value([[id: 'null'], []])
             ^^^^^^^
   ```
 
-- Warning: `main.nf:156:32`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:158:32`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               cnvkit_reference = Channel.fromPath(params.cnvkit_reference).collect()
                                  ^^^^^^^
   ```
 
-- Warning: `main.nf:165:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:167:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           cnvkit_reference = Channel.value([])
                              ^^^^^^^
   ```
 
-- Warning: `main.nf:180:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:182:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ensemblvep_info = Channel.of([[id: "${params.vep_cache_version}_${params.vep_genome}"], params.vep_genome, params.vep_species, params.vep_cache_version])
                             ^^^^^^^
   ```
 
-- Warning: `main.nf:181:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:183:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           snpeff_info = Channel.of([[id: "${params.snpeff_db}"], params.snpeff_db])
                         ^^^^^^^
   ```
 
-- Warning: `main.nf:249:35`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:270:21`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+      ch_snpsift_db = Channel.value([[], [], [], [], []])
+                      ^^^^^^^
+  ```
+
+- Warning: `main.nf:292:35`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.bcftools_columns ? Channel.fromPath(params.bcftools_columns).collect() : Channel.value([]),
                                     ^^^^^^^
   ```
 
-- Warning: `main.nf:249:89`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:292:89`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.bcftools_columns ? Channel.fromPath(params.bcftools_columns).collect() : Channel.value([]),
                                                                                           ^^^^^^^
   ```
 
-- Warning: `main.nf:250:40`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:293:40`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.bcftools_header_lines ? Channel.fromPath(params.bcftools_header_lines).collect() : Channel.empty(),
                                          ^^^^^^^
   ```
 
-- Warning: `main.nf:250:99`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:293:99`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.bcftools_header_lines ? Channel.fromPath(params.bcftools_header_lines).collect() : Channel.empty(),
                                                                                                     ^^^^^^^
   ```
 
-- Warning: `main.nf:251:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:294:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.cf_chrom_len ? Channel.fromPath(params.cf_chrom_len).collect() : [],
                                 ^^^^^^^
   ```
 
-- Warning: `main.nf:256:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:299:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.dbsnp_vqsr ? Channel.value(params.dbsnp_vqsr) : Channel.empty(),
                               ^^^^^^^
   ```
 
-- Warning: `main.nf:256:64`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:299:64`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.dbsnp_vqsr ? Channel.value(params.dbsnp_vqsr) : Channel.empty(),
                                                                  ^^^^^^^
   ```
 
-- Warning: `main.nf:269:36`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:312:36`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.known_indels_vqsr ? Channel.value(params.known_indels_vqsr) : Channel.empty(),
                                      ^^^^^^^
   ```
 
-- Warning: `main.nf:269:78`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:312:78`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.known_indels_vqsr ? Channel.value(params.known_indels_vqsr) : Channel.empty(),
                                                                                ^^^^^^^
   ```
 
-- Warning: `main.nf:274:34`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:317:34`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.known_snps_vqsr ? Channel.value(params.known_snps_vqsr) : Channel.empty(),
                                    ^^^^^^^
   ```
 
-- Warning: `main.nf:274:74`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:317:74`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.known_snps_vqsr ? Channel.value(params.known_snps_vqsr) : Channel.empty(),
                                                                            ^^^^^^^
   ```
 
-- Warning: `main.nf:275:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:318:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.mappability ? Channel.fromPath(params.mappability).collect() : Channel.value([]),
                                ^^^^^^^
   ```
 
-- Warning: `main.nf:275:79`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:318:79`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.mappability ? Channel.fromPath(params.mappability).collect() : Channel.value([]),
                                                                                 ^^^^^^^
   ```
 
-- Warning: `main.nf:278:35`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:321:35`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.ngscheckmate_bed ? Channel.value(params.ngscheckmate_bed) : Channel.empty(),
                                     ^^^^^^^
   ```
 
-- Warning: `main.nf:278:76`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:321:76`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.ngscheckmate_bed ? Channel.value(params.ngscheckmate_bed) : Channel.empty(),
                                                                              ^^^^^^^
   ```
 
-- Warning: `main.nf:281:42`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:324:42`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.sentieon_dnascope_model ? Channel.fromPath(params.sentieon_dnascope_model).collect() : Channel.value([]),
                                            ^^^^^^^
   ```
 
-- Warning: `main.nf:281:103`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:324:103`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.sentieon_dnascope_model ? Channel.fromPath(params.sentieon_dnascope_model).collect() : Channel.value([]),
                                                                                                         ^^^^^^^
   ```
 
-- Warning: `main.nf:282:50`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:325:50`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.varlociraptor_scenario_germline ? Channel.fromPath(params.varlociraptor_scenario_germline).map { it -> [[id: it.baseName - '.yte'], it] }.collect() : Channel.fromPath("${projectDir}/assets/varlociraptor_germline.yte.yaml").collect(),
                                                    ^^^^^^^
   ```
 
-- Warning: `main.nf:282:166`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:325:166`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.varlociraptor_scenario_germline ? Channel.fromPath(params.varlociraptor_scenario_germline).map { it -> [[id: it.baseName - '.yte'], it] }.collect() : Channel.fromPath("${projectDir}/assets/varlociraptor_germline.yte.yaml").collect(),
                                                                                                                                                                        ^^^^^^^
   ```
 
-- Warning: `main.nf:283:49`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:326:49`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.varlociraptor_scenario_somatic ? Channel.fromPath(params.varlociraptor_scenario_somatic).map { it -> [[id: it.baseName - '.yte'], it] }.collect() : Channel.fromPath("${projectDir}/assets/varlociraptor_somatic.yte.yaml").collect(),
                                                   ^^^^^^^
   ```
 
-- Warning: `main.nf:283:164`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:326:164`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.varlociraptor_scenario_somatic ? Channel.fromPath(params.varlociraptor_scenario_somatic).map { it -> [[id: it.baseName - '.yte'], it] }.collect() : Channel.fromPath("${projectDir}/assets/varlociraptor_somatic.yte.yaml").collect(),
                                                                                                                                                                      ^^^^^^^
   ```
 
-- Warning: `main.nf:284:52`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:327:52`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.varlociraptor_scenario_tumor_only ? Channel.fromPath(params.varlociraptor_scenario_tumor_only).map { it -> [[id: it.baseName - '.yte'], it] }.collect() : Channel.fromPath("${projectDir}/assets/varlociraptor_tumor_only.yte.yaml").collect(),
                                                      ^^^^^^^
   ```
 
-- Warning: `main.nf:284:170`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:327:170`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.varlociraptor_scenario_tumor_only ? Channel.fromPath(params.varlociraptor_scenario_tumor_only).map { it -> [[id: it.baseName - '.yte'], it] }.collect() : Channel.fromPath("${projectDir}/assets/varlociraptor_tumor_only.yte.yaml").collect(),
@@ -5041,6 +5048,139 @@
                  ^^^^^^^
   ```
 
+- Warning: `subworkflows/local/prepare_snpsift_databases/main.nf:16:20`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          has_vardb: it.vardb != null
+                     ^^
+  ```
+
+- Warning: `subworkflows/local/prepare_snpsift_databases/main.nf:23:45`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          ch_branched.needs_vardb.map { [[id: it.vcf.baseName], it.vcf, it.tbi, it.fields ? it.fields.replace(';', ',') : ''] }
+                                              ^^
+  ```
+
+- Warning: `subworkflows/local/prepare_snpsift_databases/main.nf:23:63`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          ch_branched.needs_vardb.map { [[id: it.vcf.baseName], it.vcf, it.tbi, it.fields ? it.fields.replace(';', ',') : ''] }
+                                                                ^^
+  ```
+
+- Warning: `subworkflows/local/prepare_snpsift_databases/main.nf:23:71`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          ch_branched.needs_vardb.map { [[id: it.vcf.baseName], it.vcf, it.tbi, it.fields ? it.fields.replace(';', ',') : ''] }
+                                                                        ^^
+  ```
+
+- Warning: `subworkflows/local/prepare_snpsift_databases/main.nf:23:79`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          ch_branched.needs_vardb.map { [[id: it.vcf.baseName], it.vcf, it.tbi, it.fields ? it.fields.replace(';', ',') : ''] }
+                                                                                ^^
+  ```
+
+- Warning: `subworkflows/local/prepare_snpsift_databases/main.nf:23:91`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          ch_branched.needs_vardb.map { [[id: it.vcf.baseName], it.vcf, it.tbi, it.fields ? it.fields.replace(';', ',') : ''] }
+                                                                                            ^^
+  ```
+
+- Warning: `subworkflows/local/prepare_snpsift_databases/main.nf:29:46`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          .join(ch_branched.needs_vardb.map { [it.vcf.baseName, it] })
+                                               ^^
+  ```
+
+- Warning: `subworkflows/local/prepare_snpsift_databases/main.nf:29:63`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          .join(ch_branched.needs_vardb.map { [it.vcf.baseName, it] })
+                                                                ^^
+  ```
+
+- Warning: `subworkflows/local/prepare_snpsift_databases/main.nf:34:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          .map { [it.vcf, it.tbi, it.vardb, it.fields ? it.fields.replace(';', ',') : '', it.prefix ?: ''] }
+                  ^^
+  ```
+
+- Warning: `subworkflows/local/prepare_snpsift_databases/main.nf:34:25`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          .map { [it.vcf, it.tbi, it.vardb, it.fields ? it.fields.replace(';', ',') : '', it.prefix ?: ''] }
+                          ^^
+  ```
+
+- Warning: `subworkflows/local/prepare_snpsift_databases/main.nf:34:33`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          .map { [it.vcf, it.tbi, it.vardb, it.fields ? it.fields.replace(';', ',') : '', it.prefix ?: ''] }
+                                  ^^
+  ```
+
+- Warning: `subworkflows/local/prepare_snpsift_databases/main.nf:34:43`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          .map { [it.vcf, it.tbi, it.vardb, it.fields ? it.fields.replace(';', ',') : '', it.prefix ?: ''] }
+                                            ^^
+  ```
+
+- Warning: `subworkflows/local/prepare_snpsift_databases/main.nf:34:55`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          .map { [it.vcf, it.tbi, it.vardb, it.fields ? it.fields.replace(';', ',') : '', it.prefix ?: ''] }
+                                                        ^^
+  ```
+
+- Warning: `subworkflows/local/prepare_snpsift_databases/main.nf:34:89`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          .map { [it.vcf, it.tbi, it.vardb, it.fields ? it.fields.replace(';', ',') : '', it.prefix ?: ''] }
+                                                                                          ^^
+  ```
+
+- Warning: `subworkflows/local/prepare_snpsift_databases/main.nf:42:32`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  list.collect { it[0] },  // db_vcf
+                                 ^^
+  ```
+
+- Warning: `subworkflows/local/prepare_snpsift_databases/main.nf:43:32`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  list.collect { it[1] },  // db_vcf_tbi
+                                 ^^
+  ```
+
+- Warning: `subworkflows/local/prepare_snpsift_databases/main.nf:44:32`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  list.collect { it[2] },  // db_vardb
+                                 ^^
+  ```
+
+- Warning: `subworkflows/local/prepare_snpsift_databases/main.nf:45:32`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  list.collect { it[3] },  // db_fields
+                                 ^^
+  ```
+
+- Warning: `subworkflows/local/prepare_snpsift_databases/main.nf:46:32`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  list.collect { it[4] }   // db_prefixes
+                                 ^^
+  ```
+
 - Warning: `subworkflows/local/samplesheet_to_channel/main.nf:13:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
@@ -5111,39 +5251,46 @@
                                         ^^
   ```
 
-- Warning: `subworkflows/local/vcf_annotate_all/main.nf:28:15`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/vcf_annotate_all/main.nf:30:15`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       reports = Channel.empty()
                 ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/vcf_annotate_all/main.nf:29:15`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/vcf_annotate_all/main.nf:31:15`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       vcf_ann = Channel.empty()
                 ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/vcf_annotate_all/main.nf:30:15`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/vcf_annotate_all/main.nf:32:15`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       tab_ann = Channel.empty()
                 ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/vcf_annotate_all/main.nf:31:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/vcf_annotate_all/main.nf:33:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       json_ann = Channel.empty()
                  ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/vcf_annotate_all/main.nf:32:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/vcf_annotate_all/main.nf:34:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       versions = Channel.empty()
                  ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/vcf_annotate_all/main.nf:75:105`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          def has_other_annotators = ['merge', 'snpeff', 'vep', 'bcfann'].any { tools.split(',').contains(it) }
+                                                                                                          ^^
   ```
 
 - Warning: `subworkflows/local/vcf_concatenate_germline/main.nf:17:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -5279,77 +5426,77 @@
                     ^^^^^^^
   ```
 
-- Warning: `workflows/sarek/main.nf:140:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/sarek/main.nf:141:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               bam: it[0].data_type == "bam"
                    ^^
   ```
 
-- Warning: `workflows/sarek/main.nf:141:23`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/sarek/main.nf:142:23`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               fastq_gz: it[0].data_type == "fastq_gz"
                         ^^
   ```
 
-- Warning: `workflows/sarek/main.nf:142:34`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/sarek/main.nf:143:34`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               one_fastq_gz_spring: it[0].data_type == "one_fastq_gz_spring"
                                    ^^
   ```
 
-- Warning: `workflows/sarek/main.nf:143:34`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/sarek/main.nf:144:34`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               two_fastq_gz_spring: it[0].data_type == "two_fastq_gz_spring"
                                    ^^
   ```
 
-- Warning: `workflows/sarek/main.nf:286:77`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/sarek/main.nf:287:77`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               cram_variant_calling_status_tmp = cram_variant_calling.branch { meta, file, index ->
                                                                               ^^^^
   ```
 
-- Warning: `workflows/sarek/main.nf:286:89`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/sarek/main.nf:287:89`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               cram_variant_calling_status_tmp = cram_variant_calling.branch { meta, file, index ->
                                                                                           ^^^^^
   ```
 
-- Warning: `workflows/sarek/main.nf:306:75`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/sarek/main.nf:307:75`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           cram_variant_calling_status = cram_variant_calling.branch { meta, file, index ->
                                                                             ^^^^
   ```
 
-- Warning: `workflows/sarek/main.nf:306:81`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/sarek/main.nf:307:81`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           cram_variant_calling_status = cram_variant_calling.branch { meta, file, index ->
                                                                                   ^^^^^
   ```
 
-- Warning: `workflows/sarek/main.nf:312:73`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/sarek/main.nf:313:73`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           bam_variant_calling_status = bam_variant_calling.branch { meta, file, index ->
                                                                           ^^^^
   ```
 
-- Warning: `workflows/sarek/main.nf:312:79`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/sarek/main.nf:313:79`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           bam_variant_calling_status = bam_variant_calling.branch { meta, file, index ->
                                                                                 ^^^^^
   ```
 
-- Warning: `workflows/sarek/main.nf:698:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/sarek/main.nf:700:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def InputStream gzipStream = new java.util.zip.GZIPInputStream(it)

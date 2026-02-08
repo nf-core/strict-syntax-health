@@ -1,14 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-02-07T00:24:15.162027+00:00
+- Generated: 2026-02-08T00:29:10.268230+00:00
 - Nextflow version: 25.12.0-edge
-- Summary: 1 warning
-
-## :warning: Warnings
-
-- Warning: `modules/nf-core/bismark/methylationextractor/main.nf:54:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^^^^^^^
-  ```
+- Summary: No issues found

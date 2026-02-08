@@ -1,21 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-02-07T00:24:15.161819+00:00
+- Generated: 2026-02-08T00:29:10.268113+00:00
 - Nextflow version: 25.12.0-edge
-- Summary: 2 warnings
-
-## :warning: Warnings
-
-- Warning: `modules/nf-core/bismark/deduplicate/main.nf:23:9`: Variable was declared but not used
-
-  ```nextflow
-      def prefix  = task.ext.prefix ?: "${meta.id}"
-          ^^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/bismark/deduplicate/main.nf:38:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^^^^^^^
-  ```
+- Summary: No issues found

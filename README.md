@@ -11,12 +11,12 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 > See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline.
 > **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**
 
-- **Last updated:** 2026-02-07 00:24:44 UTC
+- **Last updated:** 2026-02-08 00:29:37 UTC
 - **Nextflow version:** 25.12.0-edge
 
 ## Pipelines
 
-- **Total:** 0 parse errors, 3243 errors, 9443 warnings across 131 pipelines
+- **Total:** 0 parse errors, 3243 errors, 9464 warnings across 131 pipelines
 - **Zero errors:** 30 pipelines (22.9%)
 
 |                    Errors                    |                     Warnings                     |
@@ -29,7 +29,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | Pipeline                                                                                     | Parse Error | Errors | Warnings | Prints Help |                               Lint Output                               |                               Help Output                               |
 | -------------------------------------------------------------------------------------------- | :---------: | -----: | -------: | :---------: | :---------------------------------------------------------------------: | :---------------------------------------------------------------------: |
 | :x: [oncoanalyser](https://github.com/nf-core/oncoanalyser)                                  |     No      |    305 |      102 |      -      |       [View](lint_results/pipeline-results/oncoanalyser_lint.md)        |                                    -                                    |
-| :x: [sarek](https://github.com/nf-core/sarek)                                                |     No      |    150 |      614 |      -      |           [View](lint_results/pipeline-results/sarek_lint.md)           |                                    -                                    |
+| :x: [sarek](https://github.com/nf-core/sarek)                                                |     No      |    150 |      635 |      -      |           [View](lint_results/pipeline-results/sarek_lint.md)           |                                    -                                    |
 | :x: [airrflow](https://github.com/nf-core/airrflow)                                          |     No      |    150 |      135 |      -      |         [View](lint_results/pipeline-results/airrflow_lint.md)          |                                    -                                    |
 | :x: [eager](https://github.com/nf-core/eager)                                                |     No      |    115 |      362 |      -      |           [View](lint_results/pipeline-results/eager_lint.md)           |                                    -                                    |
 | :x: [hicar](https://github.com/nf-core/hicar)                                                |     No      |     89 |      122 |      -      |           [View](lint_results/pipeline-results/hicar_lint.md)           |                                    -                                    |
@@ -164,22 +164,21 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 
 ## Modules
 
-- **Total:** 0 parse errors, 29 errors, 544 warnings across 1369 modules
-- **Zero errors:** 1348 modules (98.5%)
+- **Total:** 0 parse errors, 27 errors, 507 warnings across 1369 modules
+- **Zero errors:** 1349 modules (98.5%)
 
 |                   Errors                   |                    Warnings                    |
 | :----------------------------------------: | :--------------------------------------------: |
 | ![Errors](lint_results/modules_errors.png) | ![Warnings](lint_results/modules_warnings.png) |
 
 <details>
-<summary>Module Results (21 modules with errors)</summary>
+<summary>Module Results (20 modules with errors)</summary>
 
 | Module                                                                                                                    | Parse Error | Errors | Warnings |                              Lint Output                              |
 | ------------------------------------------------------------------------------------------------------------------------- | :---------: | -----: | -------: | :-------------------------------------------------------------------: |
 | :x: [cellranger_multi](https://github.com/nf-core/modules/tree/master/modules/nf-core/cellranger/multi)                   |     No      |      4 |       39 |     [View](lint_results/module-results/cellranger_multi_lint.md)      |
 | :x: [plink_epistasis](https://github.com/nf-core/modules/tree/master/modules/nf-core/plink/epistasis)                     |     No      |      2 |        3 |      [View](lint_results/module-results/plink_epistasis_lint.md)      |
 | :x: [plink_fastepistasis](https://github.com/nf-core/modules/tree/master/modules/nf-core/plink/fastepistasis)             |     No      |      2 |        3 |    [View](lint_results/module-results/plink_fastepistasis_lint.md)    |
-| :x: [biobambam_bamsormadup](https://github.com/nf-core/modules/tree/master/modules/nf-core/biobambam/bamsormadup)         |     No      |      2 |        0 |   [View](lint_results/module-results/biobambam_bamsormadup_lint.md)   |
 | :x: [cellrangerarc_count](https://github.com/nf-core/modules/tree/master/modules/nf-core/cellrangerarc/count)             |     No      |      2 |        0 |    [View](lint_results/module-results/cellrangerarc_count_lint.md)    |
 | :x: [rastair_mbiasparser](https://github.com/nf-core/modules/tree/master/modules/nf-core/rastair/mbiasparser)             |     No      |      2 |        0 |    [View](lint_results/module-results/rastair_mbiasparser_lint.md)    |
 | :x: [cellrangerarc_mkgtf](https://github.com/nf-core/modules/tree/master/modules/nf-core/cellrangerarc/mkgtf)             |     No      |      1 |        1 |    [View](lint_results/module-results/cellrangerarc_mkgtf_lint.md)    |
@@ -198,7 +197,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :x: [vg_deconstruct](https://github.com/nf-core/modules/tree/master/modules/nf-core/vg/deconstruct)                       |     No      |      1 |        0 |      [View](lint_results/module-results/vg_deconstruct_lint.md)       |
 | :x: [vsearch_sort](https://github.com/nf-core/modules/tree/master/modules/nf-core/vsearch/sort)                           |     No      |      1 |        0 |       [View](lint_results/module-results/vsearch_sort_lint.md)        |
 
-_Modules with zero errors are not shown above (1348 modules). They may still have warnings. See the [modules results directory](lint_results/module-results/) for all lint outputs._
+_Modules with zero errors are not shown above (1349 modules). They may still have warnings. See the [modules results directory](lint_results/module-results/) for all lint outputs._
 
 </details>
 
