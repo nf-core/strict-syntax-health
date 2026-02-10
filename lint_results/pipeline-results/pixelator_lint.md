@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-20T00:18:30.923957462Z
-- Nextflow version: 25.12.0-edge
-- Summary: 10 errors, 65 warnings
+- Generated: 2026-02-10T00:25:11.419944599Z
+- Nextflow version: 26.01.0-edge
+- Summary: 10 errors, 38 warnings
 
 ## :x: Errors
 
@@ -13,53 +13,53 @@
           ^
   ```
 
-- Error: `nextflow.config:205:1`: Variable declarations cannot be mixed with config statements
+- Error: `nextflow.config:130:1`: Variable declarations cannot be mixed with config statements
 
   ```nextflow
   def container_env_options = [
   ^
   ```
 
-- Error: `nextflow.config:253:34`: `container_env_options` is not defined
+- Error: `nextflow.config:178:32`: `container_env_options` is not defined
+
+  ```nextflow
+          env                  = container_env_options
+                                 ^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `nextflow.config:203:34`: `container_env_options` is not defined
 
   ```nextflow
           env                    = container_env_options
                                    ^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `nextflow.config:278:34`: `container_env_options` is not defined
+- Error: `nextflow.config:214:32`: `container_env_options` is not defined
 
   ```nextflow
-          env                    = container_env_options
-                                   ^^^^^^^^^^^^^^^^^^^^^
+          env                  = container_env_options
+                                 ^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `nextflow.config:289:34`: `container_env_options` is not defined
+- Error: `nextflow.config:224:32`: `container_env_options` is not defined
 
   ```nextflow
-          env                    = container_env_options
-                                   ^^^^^^^^^^^^^^^^^^^^^
+          env                  = container_env_options
+                                 ^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `nextflow.config:299:35`: `container_env_options` is not defined
+- Error: `nextflow.config:234:32`: `container_env_options` is not defined
 
   ```nextflow
-          env                     = container_env_options
-                                    ^^^^^^^^^^^^^^^^^^^^^
+          env                  = container_env_options
+                                 ^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `nextflow.config:309:35`: `container_env_options` is not defined
+- Error: `nextflow.config:245:32`: `container_env_options` is not defined
 
   ```nextflow
-          env                     = container_env_options
-                                    ^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `nextflow.config:320:34`: `container_env_options` is not defined
-
-  ```nextflow
-          env                    = container_env_options
-                                   ^^^^^^^^^^^^^^^^^^^^^
+          env                  = container_env_options
+                                 ^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Error: `workflows/pixelator.nf:12:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
@@ -69,7 +69,7 @@
   ^
   ```
 
-- Error: `workflows/pixelator.nf:108:22`: `_` is not allowed as an identifier because it is reserved for future use
+- Error: `workflows/pixelator.nf:107:22`: `_` is not allowed as an identifier because it is reserved for future use
 
   ```nextflow
           .map { meta, _ -> [meta.id, meta] }
@@ -77,174 +77,6 @@
   ```
 
 ## :warning: Warnings
-
-- Warning: `conf/modules.config:61:77`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  saveAs: { (params.save_amplicon_reads || params.save_all) ? it : null }
-                                                                              ^^
-  ```
-
-- Warning: `conf/modules.config:72:65`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  saveAs: { params.save_json || params.save_all ? it : null }
-                                                                  ^^
-  ```
-
-- Warning: `conf/modules.config:105:78`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  saveAs: { (params.save_qc_passed_reads || params.save_all) ? it : null }
-                                                                               ^^
-  ```
-
-- Warning: `conf/modules.config:111:78`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  saveAs: { (params.save_qc_failed_reads || params.save_all) ? it : null }
-                                                                               ^^
-  ```
-
-- Warning: `conf/modules.config:122:65`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  saveAs: { params.save_json || params.save_all ? it : null }
-                                                                  ^^
-  ```
-
-- Warning: `conf/modules.config:128:47`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  saveAs: { (params.save_all) ? it : null }
-                                                ^^
-  ```
-
-- Warning: `conf/modules.config:147:84`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  saveAs: { (params.save_demux_processed_reads || params.save_all) ? it : null }
-                                                                                     ^^
-  ```
-
-- Warning: `conf/modules.config:153:81`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  saveAs: { (params.save_demux_failed_reads || params.save_all) ? it : null }
-                                                                                  ^^
-  ```
-
-- Warning: `conf/modules.config:164:65`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  saveAs: { params.save_json || params.save_all ? it : null }
-                                                                  ^^
-  ```
-
-- Warning: `conf/modules.config:185:78`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  saveAs: { (params.save_collapsed_reads || params.save_all) ? it : null }
-                                                                               ^^
-  ```
-
-- Warning: `conf/modules.config:196:65`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  saveAs: { params.save_json || params.save_all ? it : null }
-                                                                  ^^
-  ```
-
-- Warning: `conf/modules.config:216:71`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  saveAs: { (params.save_edgelist || params.save_all) ? it : null }
-                                                                        ^^
-  ```
-
-- Warning: `conf/modules.config:227:65`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  saveAs: { params.save_json || params.save_all ? it : null }
-                                                                  ^^
-  ```
-
-- Warning: `conf/modules.config:250:41`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                          return new File(it).name
-                                          ^^
-  ```
-
-- Warning: `conf/modules.config:253:32`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                          return it
-                                 ^^
-  ```
-
-- Warning: `conf/modules.config:262:84`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  saveAs: { (params.save_raw_component_metrics || params.save_all) ? it : null }
-                                                                                     ^^
-  ```
-
-- Warning: `conf/modules.config:273:65`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  saveAs: { params.save_json || params.save_all ? it : null }
-                                                                  ^^
-  ```
-
-- Warning: `conf/modules.config:304:41`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                          return new File(it).name
-                                          ^^
-  ```
-
-- Warning: `conf/modules.config:307:32`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                          return it
-                                 ^^
-  ```
-
-- Warning: `conf/modules.config:321:65`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  saveAs: { params.save_json || params.save_all ? it : null }
-                                                                  ^^
-  ```
-
-- Warning: `conf/modules.config:342:30`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                      new File(it).name
-                               ^^
-  ```
-
-- Warning: `conf/modules.config:354:65`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  saveAs: { params.save_json || params.save_all ? it : null }
-                                                                  ^^
-  ```
-
-- Warning: `conf/modules.config:368:30`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                      new File(it).name
-                               ^^
-  ```
-
-- Warning: `conf/modules.config:380:65`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  saveAs: { params.save_json || params.save_all ? it : null }
-                                                                  ^^
-  ```
 
 - Warning: `conf/modules.pna.config:35:79`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
@@ -288,11 +120,11 @@
                                                                   ^^
   ```
 
-- Warning: `conf/modules.pna.config:105:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.pna.config:105:80`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-                  saveAs: { params.save_collapsed_reads || params.save_all ? it : null },
-                                                                             ^^
+                  saveAs: { params.save_pna_collapsed_reads || params.save_all ? it : null },
+                                                                                 ^^
   ```
 
 - Warning: `conf/modules.pna.config:116:65`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -358,13 +190,6 @@
                                                                   ^^
   ```
 
-- Warning: `modules/local/pixelator/single-cell-mpx/amplicon/main.nf:37:49`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      def renamed_reads = old_new_pairs.collect { old_name, new_name -> new_name }.join(' ')
-                                                  ^^^^^^^^
-  ```
-
 - Warning: `modules/local/pixelator/single-cell-pna/amplicon/main.nf:28:9`: Variable was declared but not used
 
   ```nextflow
@@ -391,20 +216,6 @@
   ```nextflow
       def readList = reads instanceof List ? reads.collect { it.toString() } : [reads.toString()]
                                                              ^^
-  ```
-
-- Warning: `subworkflows/local/generate_reports/main.nf:37:43`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  data.forEach { newMeta += it }
-                                            ^^
-  ```
-
-- Warning: `subworkflows/local/mpx/main.nf:69:5`: Variable was declared but not used
-
-  ```nextflow
-      ch_amplicon_input = fastq.map { meta, reads ->
-      ^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/pna/generate_reports/main.nf:36:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -505,28 +316,28 @@
       ^^^^^^
   ```
 
-- Warning: `workflows/pixelator.nf:70:49`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/pixelator.nf:69:49`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_reads       = ch_samplesheet.map { meta, panel, reads -> [ meta, reads ] }
                                                   ^^^^^
   ```
 
-- Warning: `workflows/pixelator.nf:71:56`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/pixelator.nf:70:56`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_panel_files = ch_samplesheet.map { meta, panel, reads -> [ meta, panel ] }
                                                          ^^^^^
   ```
 
-- Warning: `workflows/pixelator.nf:110:16`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/pixelator.nf:109:16`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { id, meta, panel_files -> [meta, panel_files] }
                  ^^
   ```
 
-- Warning: `workflows/pixelator.nf:167:17`: Variable was declared but not used
+- Warning: `workflows/pixelator.nf:157:17`: Variable was declared but not used
 
   ```nextflow
           ).set { ch_collated_versions }

@@ -1,14 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-02-09T00:23:26.187030+00:00
+- Generated: 2026-02-10T00:27:01.494813+00:00
 - Nextflow version: 26.01.0-edge
-- Summary: 1 warning
-
-## :warning: Warnings
-
-- Warning: `modules/nf-core/minimap2/align/main.nf:62:9`: Variable was declared but not used
-
-  ```nextflow
-      def target = reference ?: (bam_input ? error("BAM input requires reference") : reads)
-          ^^^^^^^^^^
-  ```
+- Summary: No issues found

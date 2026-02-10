@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T10:29:43.196462028Z
-- Nextflow version: 25.12.0-edge
-- Summary: 1 error, 14 warnings
+- Generated: 2026-02-10T00:26:27.025227522Z
+- Nextflow version: 26.01.0-edge
+- Summary: 1 error, 16 warnings
 
 ## :x: Errors
 
@@ -111,4 +111,18 @@
   ```nextflow
               tag_lowercase, tags ->
               ^^^^^^^^^^^^^
+  ```
+
+- Warning: `workflows/seqinspector.nf:69:29`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              .branch { meta, reads ->
+                              ^^^^^
+  ```
+
+- Warning: `workflows/seqinspector.nf:77:27`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              .view { meta, reads ->
+                            ^^^^^
   ```

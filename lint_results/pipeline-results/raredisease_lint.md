@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-02-05T00:23:20.211113269Z
-- Nextflow version: 25.12.0-edge
-- Summary: 5 errors, 43 warnings
+- Generated: 2026-02-10T00:25:43.071635229Z
+- Nextflow version: 26.01.0-edge
+- Summary: 3 errors, 37 warnings
 
 ## :x: Errors
 
@@ -13,25 +13,11 @@
                             ^^^
   ```
 
-- Error: `modules/nf-core/cnvnator/cnvnator/main.nf:59:9`: `calls_cmd` is already declared
-
-  ```nextflow
-      def calls_cmd = args.contains("-call") ? "touch ${prefix}.tab" : ''
-          ^^^^^^^^^
-  ```
-
 - Error: `modules/nf-core/eklipse/main.nf:28:9`: `ref_gb` is already declared
 
   ```nextflow
       def ref_gb = ref_gb ? "$ref_gb" : "/usr/local/bin/data/NC_012920.1.gb"
           ^^^^^^
-  ```
-
-- Error: `modules/nf-core/picard/renamesampleinvcf/main.nf:23:62`: `$args` is not defined
-
-  ```nextflow
-      def extended_args = args.contains("--NEW_SAMPLE_NAME") ? $args : "${args} --NEW_SAMPLE_NAME ${meta.id}"
-                                                               ^^^^^
   ```
 
 - Error: `tests/nextflow.config:28:27`: `SENTIEON_AUTH_MECH` is not defined (hint: use `env('...')` to access environment variable)
@@ -120,20 +106,6 @@
                                            ^^
   ```
 
-- Warning: `modules/nf-core/chromograph/main.nf:70:9`: Variable was declared but not used
-
-  ```nextflow
-      def args               = task.ext.args   ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/cnvnator/convert2vcf/main.nf:36:9`: Variable was declared but not used
-
-  ```nextflow
-      def args   = task.ext.args ?: ''
-          ^^^^
-  ```
-
 - Warning: `modules/nf-core/custom/addmostsevereconsequence/main.nf:48:9`: Variable was declared but not used
 
   ```nextflow
@@ -162,13 +134,6 @@
           ^^^^^
   ```
 
-- Warning: `modules/nf-core/gatk4/denoisereadcounts/main.nf:49:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
 - Warning: `modules/nf-core/gatk4/determinegermlinecontigploidy/main.nf:27:80`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
@@ -183,25 +148,25 @@
                                                    ^^
   ```
 
-- Warning: `modules/nf-core/gatk4/filtermutectcalls/main.nf:29:113`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `modules/nf-core/gatk4/filtermutectcalls/main.nf:29:117`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-      def orientationbias_command = orientationbias ? orientationbias.collect{"--orientation-bias-artifact-priors $it"}.join(' ') : ''
-                                                                                                                  ^^
+      def orientationbias_command = orientationbias ? orientationbias.collect { "--orientation-bias-artifact-priors ${it}" }.join(' ') : ''
+                                                                                                                      ^^
   ```
 
-- Warning: `modules/nf-core/gatk4/filtermutectcalls/main.nf:30:96`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `modules/nf-core/gatk4/filtermutectcalls/main.nf:30:94`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-      def segmentation_command    = segmentation    ? segmentation.collect{"--tumor-segmentation $it"}.join(' ')                  : ''
-                                                                                                 ^^
+      def segmentation_command = segmentation ? segmentation.collect { "--tumor-segmentation ${it}" }.join(' ') : ''
+                                                                                               ^^
   ```
 
-- Warning: `modules/nf-core/gatk4/filtermutectcalls/main.nf:32:90`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `modules/nf-core/gatk4/filtermutectcalls/main.nf:32:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-      def table_command           = table           ? table.collect{"--contamination-table $it"}.join(' ')                        : ''
-                                                                                           ^^
+      def table_command = table ? table.collect { "--contamination-table ${it}" }.join(' ') : ''
+                                                                           ^^
   ```
 
 - Warning: `modules/nf-core/gatk4/germlinecnvcaller/main.nf:28:47`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -211,39 +176,25 @@
                                                 ^^
   ```
 
-- Warning: `modules/nf-core/gatk4/mergevcfs/main.nf:25:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `modules/nf-core/gatk4/mergevcfs/main.nf:25:47`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-      def input_list = vcf.collect{ "--INPUT $it"}.join(' ')
-                                             ^^
+      def input_list = vcf.collect { "--INPUT ${it}" }.join(' ')
+                                                ^^
   ```
 
-- Warning: `modules/nf-core/gatk4/mutect2/main.nf:33:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `modules/nf-core/gatk4/postprocessgermlinecnvcalls/main.nf:25:71`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-      def inputs = input.collect{ "--input $it"}.join(" ")
-                                           ^^
+      def calls_command = calls ? calls.collect { "--calls-shard-path ${it}" }.join(' ') : ""
+                                                                        ^^
   ```
 
-- Warning: `modules/nf-core/gatk4/postprocessgermlinecnvcalls/main.nf:25:9`: Variable was declared but not used
+- Warning: `modules/nf-core/gatk4/postprocessgermlinecnvcalls/main.nf:26:71`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/gatk4/postprocessgermlinecnvcalls/main.nf:27:70`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def calls_command  = calls   ? calls.collect{"--calls-shard-path $it"}.join(' ')  : ""
-                                                                       ^^
-  ```
-
-- Warning: `modules/nf-core/gatk4/postprocessgermlinecnvcalls/main.nf:28:70`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def model_command  = model   ? model.collect{"--model-shard-path $it"}.join(' ')  : ""
-                                                                       ^^
+      def model_command = model ? model.collect { "--model-shard-path ${it}" }.join(' ') : ""
+                                                                        ^^
   ```
 
 - Warning: `modules/nf-core/glnexus/main.nf:27:33`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -260,42 +211,35 @@
           ^^^^
   ```
 
-- Warning: `modules/nf-core/picard/renamesampleinvcf/main.nf:47:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/svdb/merge/main.nf:38:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `modules/nf-core/svdb/merge/main.nf:40:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def pairs = vcfs.indices.collect { [vcfs[it], input_priority[it]] }
                                                       ^^
   ```
 
-- Warning: `modules/nf-core/svdb/merge/main.nf:38:73`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `modules/nf-core/svdb/merge/main.nf:40:73`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def pairs = vcfs.indices.collect { [vcfs[it], input_priority[it]] }
                                                                           ^^
   ```
 
-- Warning: `modules/nf-core/svdb/merge/main.nf:40:36`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `modules/nf-core/svdb/merge/main.nf:42:36`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               vcfs = pairs.collect { it[0] }
                                      ^^
   ```
 
-- Warning: `modules/nf-core/svdb/merge/main.nf:41:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `modules/nf-core/svdb/merge/main.nf:43:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               priority = pairs.collect { it[1] }
                                          ^^
   ```
 
-- Warning: `modules/nf-core/svdb/merge/main.nf:55:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `modules/nf-core/svdb/merge/main.nf:57:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           input = (vcfs.collect().size() > 1 && sort_inputs) ? vcfs.sort { it.name } : vcfs

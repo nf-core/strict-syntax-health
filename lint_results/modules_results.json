@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "80038983b51f8c767e7d5dc2c1dab3b8efdf4890",
+  "_repo_commit": "14980f759266eec42dac401fcafeb83d6c957b41",
   "abricate_run": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abricate/run",
     "errors": 0,
@@ -1131,7 +1131,7 @@
   "cat_cat": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cat/cat",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "parse_error": false
   },
   "cat_fastq": {
@@ -1191,7 +1191,7 @@
   "cdhit_cdhitest": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cdhit/cdhitest",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "parse_error": false
   },
   "cellbender_merge": {
@@ -1995,7 +1995,7 @@
   "deepvariant_vcfstatsreport": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/deepvariant/vcfstatsreport",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "delly_call": {
@@ -4581,7 +4581,7 @@
   "minimap2_align": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/minimap2/align",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "minimap2_index": {
@@ -6045,7 +6045,7 @@
   "rbt_vcfsplit": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/rbt/vcfsplit",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "parse_error": false
   },
   "regtools_junctionsextract": {
@@ -6813,7 +6813,7 @@
   "seqkit_grep": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/seqkit/grep",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "seqkit_head": {

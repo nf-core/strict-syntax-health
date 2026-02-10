@@ -1,9 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 25.12.0-edge
+ N E X T F L O W   ~  version 26.01.0-edge
 
-Launching `./main.nf` [crazy_tuckerman]revision: 20d596471e
+Downloading plugin nf-schema@2.6.1
+Launching `./main.nf` [pedantic_woese]revision: 20d596471e
 
 
 ------------------------------------------------------
@@ -12,7 +13,7 @@ Launching `./main.nf` [crazy_tuckerman]revision: 20d596471e
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/proteinannotator 1.0.0
+  nf-core/proteinannotator 1.1.0dev
 ------------------------------------------------------
 Typical pipeline command:
 
@@ -53,7 +54,8 @@ https://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.hmm.gz]
   --funfam_latest_link            [string]  CATH hosted link to the latest available (v4_3_0) FunFam HMM database file. [default: 
 https://download.cathdb.info/cath/releases/all-releases/v4_3_0/sequence-data/funfam-hmm3-v4_3_0.lib.gz] 
  
-  --hmmsearch_evalue_cutoff       [number]  hmmsearch e-value cutoff threshold for reported results [default: 0.001] 
+  --hmmsearch_evalue_cutoff       [number]  hmmsearch e-value cutoff threshold for reported results. Modifies the -E parameter of hmmsearch. 
+[default: 0.001]  
 
 Functional annotation parameters
   --skip_interproscan             [boolean] Run InterProScan [default: false] 
@@ -68,7 +70,8 @@ Hamap,PANTHER,PIRSF,TIGRFAM,sfld]
 Prediction parameters
   --skip_s4pred                   [boolean] Skip the secondary structure prediction. 
   --s4pred_outfmt                 [string]  Choose the output format (i.e., 'ss2', 'fas', 'horiz') for the s4pred per amino acid probability 
-predictions (i.e., α-helix, β-strand, coil).  (accepted: ss2, fas, horiz) [default: ss2]  
+predictions (i.e., α-helix, β-strand, coil). Modifies the --outfmt parameter of s4pred run_model. 
+ (accepted: ss2, fas, horiz) [default: ss2]  
  !! Hiding 18 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
 

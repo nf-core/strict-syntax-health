@@ -11,12 +11,12 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 > See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline.
 > **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**
 
-- **Last updated:** 2026-02-09 00:23:49 UTC
+- **Last updated:** 2026-02-10 00:27:28 UTC
 - **Nextflow version:** 26.01.0-edge
 
 ## Pipelines
 
-- **Total:** 0 parse errors, 3243 errors, 9464 warnings across 131 pipelines
+- **Total:** 0 parse errors, 3241 errors, 9433 warnings across 131 pipelines
 - **Zero errors:** 30 pipelines (22.9%)
 
 |                    Errors                    |                     Warnings                     |
@@ -102,9 +102,9 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :x: [metapep](https://github.com/nf-core/metapep)                                            |     No      |     11 |       34 |      -      |          [View](lint_results/pipeline-results/metapep_lint.md)          |                                    -                                    |
 | :x: [variantbenchmarking](https://github.com/nf-core/variantbenchmarking)                    |     No      |     10 |      142 |      -      |    [View](lint_results/pipeline-results/variantbenchmarking_lint.md)    |                                    -                                    |
 | :x: [hgtseq](https://github.com/nf-core/hgtseq)                                              |     No      |     10 |       69 |      -      |          [View](lint_results/pipeline-results/hgtseq_lint.md)           |                                    -                                    |
-| :x: [pixelator](https://github.com/nf-core/pixelator)                                        |     No      |     10 |       65 |      -      |         [View](lint_results/pipeline-results/pixelator_lint.md)         |                                    -                                    |
 | :x: [mhcquant](https://github.com/nf-core/mhcquant)                                          |     No      |     10 |       63 |      -      |         [View](lint_results/pipeline-results/mhcquant_lint.md)          |                                    -                                    |
 | :x: [deepmodeloptim](https://github.com/nf-core/deepmodeloptim)                              |     No      |     10 |       49 |      -      |      [View](lint_results/pipeline-results/deepmodeloptim_lint.md)       |                                    -                                    |
+| :x: [pixelator](https://github.com/nf-core/pixelator)                                        |     No      |     10 |       38 |      -      |         [View](lint_results/pipeline-results/pixelator_lint.md)         |                                    -                                    |
 | :x: [tumourevo](https://github.com/nf-core/tumourevo)                                        |     No      |      9 |       55 |      -      |         [View](lint_results/pipeline-results/tumourevo_lint.md)         |                                    -                                    |
 | :x: [fastqrepair](https://github.com/nf-core/fastqrepair)                                    |     No      |      9 |       32 |      -      |        [View](lint_results/pipeline-results/fastqrepair_lint.md)        |                                    -                                    |
 | :x: [hlatyping](https://github.com/nf-core/hlatyping)                                        |     No      |      9 |       15 |      -      |         [View](lint_results/pipeline-results/hlatyping_lint.md)         |                                    -                                    |
@@ -120,15 +120,15 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :x: [mitodetect](https://github.com/nf-core/mitodetect)                                      |     No      |      6 |       16 |      -      |        [View](lint_results/pipeline-results/mitodetect_lint.md)         |                                    -                                    |
 | :x: [panoramaseq](https://github.com/nf-core/panoramaseq)                                    |     No      |      6 |       16 |      -      |        [View](lint_results/pipeline-results/panoramaseq_lint.md)        |                                    -                                    |
 | :x: [troughgraph](https://github.com/nf-core/troughgraph)                                    |     No      |      6 |       16 |      -      |        [View](lint_results/pipeline-results/troughgraph_lint.md)        |                                    -                                    |
-| :x: [raredisease](https://github.com/nf-core/raredisease)                                    |     No      |      5 |       43 |      -      |        [View](lint_results/pipeline-results/raredisease_lint.md)        |                                    -                                    |
 | :x: [methylseq](https://github.com/nf-core/methylseq)                                        |     No      |      3 |       65 |      -      |         [View](lint_results/pipeline-results/methylseq_lint.md)         |                                    -                                    |
+| :x: [raredisease](https://github.com/nf-core/raredisease)                                    |     No      |      3 |       37 |      -      |        [View](lint_results/pipeline-results/raredisease_lint.md)        |                                    -                                    |
 | :x: [methylarray](https://github.com/nf-core/methylarray)                                    |     No      |      3 |       19 |      -      |        [View](lint_results/pipeline-results/methylarray_lint.md)        |                                    -                                    |
 | :x: [reportho](https://github.com/nf-core/reportho)                                          |     No      |      2 |       90 |      -      |         [View](lint_results/pipeline-results/reportho_lint.md)          |                                    -                                    |
 | :x: [phaseimpute](https://github.com/nf-core/phaseimpute)                                    |     No      |      2 |       76 |      -      |        [View](lint_results/pipeline-results/phaseimpute_lint.md)        |                                    -                                    |
 | :x: [dualrnaseq](https://github.com/nf-core/dualrnaseq)                                      |     No      |      2 |       48 |      -      |        [View](lint_results/pipeline-results/dualrnaseq_lint.md)         |                                    -                                    |
 | :x: [pairgenomealign](https://github.com/nf-core/pairgenomealign)                            |     No      |      2 |       22 |      -      |      [View](lint_results/pipeline-results/pairgenomealign_lint.md)      |                                    -                                    |
 | :x: [seqsubmit](https://github.com/nf-core/seqsubmit)                                        |     No      |      1 |       32 |      -      |         [View](lint_results/pipeline-results/seqsubmit_lint.md)         |                                    -                                    |
-| :x: [seqinspector](https://github.com/nf-core/seqinspector)                                  |     No      |      1 |       14 |      -      |       [View](lint_results/pipeline-results/seqinspector_lint.md)        |                                    -                                    |
+| :x: [seqinspector](https://github.com/nf-core/seqinspector)                                  |     No      |      1 |       16 |      -      |       [View](lint_results/pipeline-results/seqinspector_lint.md)        |                                    -                                    |
 | :white_check_mark: [taxprofiler](https://github.com/nf-core/taxprofiler)                     |     No      |      0 |      113 |     Yes     |        [View](lint_results/pipeline-results/taxprofiler_lint.md)        |      [View](lint_results/prints-help-results/taxprofiler_help.txt)      |
 | :x: [spatialxe](https://github.com/nf-core/spatialxe)                                        |     No      |      0 |       98 |     No      |         [View](lint_results/pipeline-results/spatialxe_lint.md)         |       [View](lint_results/prints-help-results/spatialxe_help.txt)       |
 | :x: [methylong](https://github.com/nf-core/methylong)                                        |     No      |      0 |       81 |     No      |         [View](lint_results/pipeline-results/methylong_lint.md)         |       [View](lint_results/prints-help-results/methylong_help.txt)       |
@@ -164,7 +164,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 
 ## Modules
 
-- **Total:** 0 parse errors, 27 errors, 507 warnings across 1369 modules
+- **Total:** 0 parse errors, 27 errors, 498 warnings across 1369 modules
 - **Zero errors:** 1349 modules (98.5%)
 
 |                   Errors                   |                    Warnings                    |

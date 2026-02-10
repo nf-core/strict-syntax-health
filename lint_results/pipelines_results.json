@@ -155,7 +155,7 @@
   "createtaxdb": {
     "full_name": "nf-core/createtaxdb",
     "html_url": "https://github.com/nf-core/createtaxdb",
-    "commit": "4eb34b86639b839b10874d78af410070e5a3ecba",
+    "commit": "c2800630a78e2acd2e039e74a3cc1c41c1b0bc42",
     "errors": 0,
     "warnings": 33,
     "parse_error": false,
@@ -254,7 +254,7 @@
   "differentialabundance": {
     "full_name": "nf-core/differentialabundance",
     "html_url": "https://github.com/nf-core/differentialabundance",
-    "commit": "962f41a1a36d8d418666b311211ee9e07f5e34a0",
+    "commit": "dde86ca018c007563e85f3decaa0e73767acb4e3",
     "errors": 13,
     "warnings": 48,
     "parse_error": false,
@@ -506,7 +506,7 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "223ef48a15aca8cf398b07fd47cb9a787b3045c1",
+    "commit": "665d5e306d005275b91e2402cda11542e022c4d4",
     "errors": 0,
     "warnings": 32,
     "parse_error": false,
@@ -776,16 +776,16 @@
   "pixelator": {
     "full_name": "nf-core/pixelator",
     "html_url": "https://github.com/nf-core/pixelator",
-    "commit": "0b6ec1b2b166b7d1452b95cfe2c4216d3f908ff4",
+    "commit": "604a72e01e0af9bdf9a1816ad31d5aefd9675d46",
     "errors": 10,
-    "warnings": 65,
+    "warnings": 38,
     "parse_error": false,
     "prints_help": null
   },
   "proteinannotator": {
     "full_name": "nf-core/proteinannotator",
     "html_url": "https://github.com/nf-core/proteinannotator",
-    "commit": "26f4d3d65084a379a495bc3bd20d500315357903",
+    "commit": "f02fbba9d1564fb4619179f08f01946453dd436a",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -848,9 +848,9 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "e2028be342590be8b7b6cce472580c7029e2a639",
-    "errors": 5,
-    "warnings": 43,
+    "commit": "fce7bcf32dc6ad4f1d904085c647dcefc2d53443",
+    "errors": 3,
+    "warnings": 37,
     "parse_error": false,
     "prints_help": null
   },
@@ -920,7 +920,7 @@
   "rnafusion": {
     "full_name": "nf-core/rnafusion",
     "html_url": "https://github.com/nf-core/rnafusion",
-    "commit": "92396571a0cf6006e1c470af9b2c6a70f45cca70",
+    "commit": "ccbf55dc7b4db787120e9f08b6b271bf9c3bd434",
     "errors": 13,
     "warnings": 116,
     "parse_error": false,
@@ -965,7 +965,7 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "b310982ef91b23a1b97b58853a1deb518882a131",
+    "commit": "5c602ea589a4a1c8ad9fc65b285d17a7cbb016ec",
     "errors": 150,
     "warnings": 635,
     "parse_error": false,
@@ -1001,9 +1001,9 @@
   "seqinspector": {
     "full_name": "nf-core/seqinspector",
     "html_url": "https://github.com/nf-core/seqinspector",
-    "commit": "a4ba47c71a2f15f92b340b37b2dd2358df54d0cc",
+    "commit": "c4052c6d4c32998a1b1604ca20c69f53286bb632",
     "errors": 1,
-    "warnings": 14,
+    "warnings": 16,
     "parse_error": false,
     "prints_help": null
   },

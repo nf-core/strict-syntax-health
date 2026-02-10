@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-02-08T00:28:37.856570446Z
-- Nextflow version: 25.12.0-edge
+- Generated: 2026-02-10T00:26:19.616767666Z
+- Nextflow version: 26.01.0-edge
 - Summary: 150 errors, 635 warnings
 
 ## :x: Errors
@@ -5216,35 +5216,35 @@
                                           ^^
   ```
 
-- Warning: `subworkflows/local/samplesheet_to_channel/main.nf:242:23`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/samplesheet_to_channel/main.nf:245:23`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .filter { it[0].status == 1 }
                         ^^
   ```
 
-- Warning: `subworkflows/local/samplesheet_to_channel/main.nf:260:23`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/samplesheet_to_channel/main.nf:263:23`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .filter { it[0].status == 0 }
                         ^^
   ```
 
-- Warning: `subworkflows/local/samplesheet_to_channel/main.nf:430:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/samplesheet_to_channel/main.nf:433:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               if (it[0].sex == 'NA') {
                   ^^
   ```
 
-- Warning: `subworkflows/local/samplesheet_to_channel/main.nf:439:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/samplesheet_to_channel/main.nf:442:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               if (it[0].status == 1 && !it[0].containsKey('contamination')) {
                   ^^
   ```
 
-- Warning: `subworkflows/local/samplesheet_to_channel/main.nf:439:39`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/samplesheet_to_channel/main.nf:442:39`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               if (it[0].status == 1 && !it[0].containsKey('contamination')) {
