@@ -1,21 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-02-10T00:27:01.446355+00:00
+- Generated: 2026-02-11T00:30:24.101378+00:00
 - Nextflow version: 26.01.0-edge
-- Summary: 2 errors
-
-## :x: Errors
-
-- Error: `modules/nf-core/cellrangerarc/count/main.nf:8:5`: Invalid process directive
-
-  ```nextflow
-      if (workflow.profile.tokenize(',').intersect(['conda', 'mamba']).size() >= 1) {
-      ^^^^^^^^^^
-  ```
-
-- Error: `modules/nf-core/cellrangerarc/count/tests/nextflow.config:2:33`: Unexpected input: ':'
-
-  ```nextflow
-  	withName: 'CELLRANGERARC_COUNT': {
-                                  ^^^
-  ```
+- Summary: No issues found

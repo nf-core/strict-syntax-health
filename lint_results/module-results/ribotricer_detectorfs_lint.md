@@ -1,14 +1,14 @@
 # Nextflow lint results
 
-- Generated: 2026-02-10T00:27:01.521215+00:00
+- Generated: 2026-02-11T00:30:24.218865+00:00
 - Nextflow version: 26.01.0-edge
-- Summary: 1 error
+- Summary: 1 warning
 
-## :x: Errors
+## :warning: Warnings
 
-- Error: `modules/nf-core/ribotricer/detectorfs/main.nf:36:24`: Unexpected input: '\n'
+- Warning: `modules/nf-core/ribotricer/detectorfs/main.nf:64:9`: Variable was declared but not used
 
   ```nextflow
-          case "forward":
-                         ^
+      def args = task.ext.args ?: ''
+          ^^^^^^^^^^
   ```

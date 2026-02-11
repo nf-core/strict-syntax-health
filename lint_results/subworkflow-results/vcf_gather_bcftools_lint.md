@@ -1,14 +1,14 @@
 # Nextflow lint results
 
-- Generated: 2026-02-10T00:27:13.423751+00:00
+- Generated: 2026-02-11T00:30:37.457437+00:00
 - Nextflow version: 26.01.0-edge
-- Summary: 1 error
+- Summary: 1 warning
 
-## :x: Errors
+## :warning: Warnings
 
-- Error: `subworkflows/nf-core/vcf_gather_bcftools/main.nf:14:79`: Unexpected input: '['
+- Warning: `subworkflows/nf-core/vcf_gather_bcftools/main.nf:35:32`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      if (!(arr_common_meta instanceof List || arr_common_meta instanceof Object[])) {
-                                                                                ^^^^^^
+                  m.findAll { k, v -> !(k in arr_common_meta) }
+                                 ^^^^^^^^^^
   ```

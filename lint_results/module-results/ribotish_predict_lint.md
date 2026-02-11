@@ -1,17 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-02-10T00:27:01.520944+00:00
+- Generated: 2026-02-11T00:30:24.218544+00:00
 - Nextflow version: 26.01.0-edge
-- Summary: 1 error, 1 warning
-
-## :x: Errors
-
-- Error: `modules/nf-core/ribotish/predict/main.nf:41:12`: `para_tis` is not defined
-
-  ```nextflow
-          if (para_tis){
-             ^^^^^^^^^^
-  ```
+- Summary: 1 warning
 
 ## :warning: Warnings
 

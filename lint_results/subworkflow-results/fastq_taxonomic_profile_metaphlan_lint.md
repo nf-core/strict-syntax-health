@@ -1,38 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-02-10T00:27:13.421637+00:00
+- Generated: 2026-02-11T00:30:37.454429+00:00
 - Nextflow version: 26.01.0-edge
-- Summary: 4 errors, 3 warnings
-
-## :x: Errors
-
-- Error: `subworkflows/nf-core/fastq_taxonomic_profile_metaphlan/main.nf:1:1`: Included name 'METAPHLAN_MAKEDB' is not defined in module '/home/runner/work/strict-syntax-health/strict-syntax-health/modules/modules/nf-core/metaphlan/makedb/main.nf'
-
-  ```nextflow
-  include { METAPHLAN_MAKEDB               } from '../../../modules/nf-core/metaphlan/makedb/main'
-  ^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/nf-core/fastq_taxonomic_profile_metaphlan/main.nf:14:5`: `METAPHLAN_MAKEDB` is not defined
-
-  ```nextflow
-      METAPHLAN_MAKEDB()
-      ^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/nf-core/fastq_taxonomic_profile_metaphlan/main.nf:15:35`: `METAPHLAN_MAKEDB` is not defined
-
-  ```nextflow
-      ch_versions = ch_versions.mix(METAPHLAN_MAKEDB.out.versions.first())
-                                    ^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/nf-core/fastq_taxonomic_profile_metaphlan/main.nf:17:35`: `METAPHLAN_MAKEDB` is not defined
-
-  ```nextflow
-      METAPHLAN_METAPHLAN(ch_fastq, METAPHLAN_MAKEDB.out.db, false)
-                                    ^^^^^^^^^^
-  ```
+- Summary: 3 warnings
 
 ## :warning: Warnings
 

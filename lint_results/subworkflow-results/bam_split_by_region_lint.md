@@ -1,14 +1,35 @@
 # Nextflow lint results
 
-- Generated: 2026-02-10T00:27:13.413840+00:00
+- Generated: 2026-02-11T00:30:37.442451+00:00
 - Nextflow version: 26.01.0-edge
-- Summary: 1 error
+- Summary: 4 warnings
 
-## :x: Errors
+## :warning: Warnings
 
-- Error: `subworkflows/nf-core/bam_split_by_region/main.nf:29:44`: Unexpected input: '='
+- Warning: `subworkflows/nf-core/bam_split_by_region/main.nf:15:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-              if (! stats['start'] ) [ chrom = stats['seq_name'] ]
-                                             ^^^^^^^^^^
+      ch_versions = Channel.empty()
+                    ^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/bam_split_by_region/main.nf:23:19`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              meta, bam, bai, regions_file ->
+                    ^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/bam_split_by_region/main.nf:23:24`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              meta, bam, bai, regions_file ->
+                         ^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/bam_split_by_region/main.nf:50:31`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .map{ meta, bam, bai, regions, chrom -> [ meta + [ genomic_region:chrom ], bam, bai ] }
+                                ^^^^^^^^^^
   ```

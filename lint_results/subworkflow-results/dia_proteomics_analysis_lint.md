@@ -1,17 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-02-10T00:27:13.415542+00:00
+- Generated: 2026-02-11T00:30:37.445158+00:00
 - Nextflow version: 26.01.0-edge
-- Summary: 1 error, 7 warnings
-
-## :x: Errors
-
-- Error: `subworkflows/nf-core/dia_proteomics_analysis/main.nf:110:21`: Unexpected input: ','
-
-  ```nextflow
-      def mass_acc_ms1, mass_acc_ms2, scan_window
-                      ^^^^^^^^^^
-  ```
+- Summary: 7 warnings
 
 ## :warning: Warnings
 

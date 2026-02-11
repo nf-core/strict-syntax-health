@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "14980f759266eec42dac401fcafeb83d6c957b41",
+  "_repo_commit": "b94c7919bfb4668610bc055bee2703af329749d9",
   "abricate_run": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abricate/run",
     "errors": 0,
@@ -1250,7 +1250,7 @@
   },
   "cellrangerarc_count": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cellrangerarc/count",
-    "errors": 2,
+    "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
@@ -1262,8 +1262,8 @@
   },
   "cellrangerarc_mkgtf": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cellrangerarc/mkgtf",
-    "errors": 1,
-    "warnings": 1,
+    "errors": 0,
+    "warnings": 0,
     "parse_error": false
   },
   "cellrangerarc_mkref": {
@@ -1280,7 +1280,7 @@
   },
   "cellrangeratac_mkfastq": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cellrangeratac/mkfastq",
-    "errors": 1,
+    "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
@@ -1850,7 +1850,7 @@
   },
   "dastool_scaffolds2bin": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/dastool/scaffolds2bin",
-    "errors": 1,
+    "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
@@ -2042,7 +2042,7 @@
   },
   "dragen_germline": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/dragen/germline",
-    "errors": 1,
+    "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
@@ -3866,7 +3866,7 @@
   },
   "kaiju_mergeoutputs": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/kaiju/mergeoutputs",
-    "errors": 1,
+    "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
@@ -3986,7 +3986,7 @@
   },
   "kraken2_buildstandard": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/kraken2/buildstandard",
-    "errors": 1,
+    "errors": 0,
     "warnings": 1,
     "parse_error": false
   },
@@ -4484,7 +4484,7 @@
   },
   "metaphlan_makedb": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/metaphlan/makedb",
-    "errors": 1,
+    "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
@@ -5384,14 +5384,14 @@
   },
   "pharokka_installdatabases": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pharokka/installdatabases",
-    "errors": 1,
+    "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
   "pharokka_pharokka": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pharokka/pharokka",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "picard_addorreplacereadgroups": {
@@ -5565,7 +5565,7 @@
   "pigz_compress": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pigz/compress",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "pigz_uncompress": {
@@ -5612,8 +5612,8 @@
   },
   "plink_epistasis": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plink/epistasis",
-    "errors": 2,
-    "warnings": 3,
+    "errors": 0,
+    "warnings": 0,
     "parse_error": false
   },
   "plink_exclude": {
@@ -5630,8 +5630,8 @@
   },
   "plink_fastepistasis": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plink/fastepistasis",
-    "errors": 2,
-    "warnings": 3,
+    "errors": 0,
+    "warnings": 0,
     "parse_error": false
   },
   "plink_genome": {
@@ -6032,7 +6032,7 @@
   },
   "rastair_mbiasparser": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/rastair/mbiasparser",
-    "errors": 2,
+    "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
@@ -6134,7 +6134,7 @@
   },
   "ribotish_predict": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ribotish/predict",
-    "errors": 1,
+    "errors": 0,
     "warnings": 1,
     "parse_error": false
   },
@@ -6146,8 +6146,8 @@
   },
   "ribotricer_detectorfs": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ribotricer/detectorfs",
-    "errors": 1,
-    "warnings": 0,
+    "errors": 0,
+    "warnings": 1,
     "parse_error": false
   },
   "ribotricer_prepareorfs": {
@@ -6992,8 +6992,8 @@
   },
   "shinyngs_app": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/shinyngs/app",
-    "errors": 1,
-    "warnings": 1,
+    "errors": 0,
+    "warnings": 0,
     "parse_error": false
   },
   "shinyngs_staticdifferential": {
@@ -7274,7 +7274,7 @@
   },
   "star_starsolo": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/star/starsolo",
-    "errors": 1,
+    "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
@@ -7898,7 +7898,7 @@
   },
   "vcfpgloader_load": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/vcfpgloader/load",
-    "errors": 1,
+    "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
@@ -7958,7 +7958,7 @@
   },
   "vg_deconstruct": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/vg/deconstruct",
-    "errors": 1,
+    "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
@@ -8048,7 +8048,7 @@
   },
   "vsearch_sort": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/vsearch/sort",
-    "errors": 1,
+    "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
