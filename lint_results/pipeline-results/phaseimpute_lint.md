@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-02-11T00:28:05.712088459Z
-- Nextflow version: 26.01.0-edge
-- Summary: 1 error, 23 warnings
+- Generated: 2026-02-12T00:21:55.848060152Z
+- Nextflow version: 26.01.1-edge
+- Summary: 1 error, 17 warnings
 
 ## :x: Errors
 
@@ -62,48 +62,6 @@
   ```nextflow
           } else if (['--write-index=tbi', '-W=tbi', '--write-index=csi', '-W=csi', '--write-index', '-W'].any { args.contains(it) }) {
                                                                                                                                ^^
-  ```
-
-- Warning: `modules/nf-core/gawk/main.nf:26:54`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      suffix    = task.ext.suffix ?: "${input.collect{ it.getExtension()}.get(0)}" // use the first extension of the input files
-                                                       ^^
-  ```
-
-- Warning: `modules/nf-core/gawk/main.nf:29:37`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      lst_gz     = input.findResults{ it.getExtension().endsWith("gz") ? it.toString() : null }
-                                      ^^
-  ```
-
-- Warning: `modules/nf-core/gawk/main.nf:29:72`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      lst_gz     = input.findResults{ it.getExtension().endsWith("gz") ? it.toString() : null }
-                                                                         ^^
-  ```
-
-- Warning: `modules/nf-core/gawk/main.nf:31:34`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      input_cmd  = input.collect { it.toString() - ~/\.gz$/ }.join(" ")
-                                   ^^
-  ```
-
-- Warning: `modules/nf-core/gawk/main.nf:34:49`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      cleanup    = lst_gz ? "rm ${lst_gz.collect{ it - ~/\.gz$/ }.join(" ")}" : ""
-                                                  ^^
-  ```
-
-- Warning: `modules/nf-core/gawk/main.nf:37:16`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          assert it.name != "${prefix}.${suffix}" : "Input and output names are the same, set prefix in module configuration to disambiguate!"
-                 ^^
   ```
 
 - Warning: `modules/nf-core/glimpse/chunk/main.nf:40:9`: Variable was declared but not used

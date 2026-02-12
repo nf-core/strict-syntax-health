@@ -146,16 +146,16 @@
   "createpanelrefs": {
     "full_name": "nf-core/createpanelrefs",
     "html_url": "https://github.com/nf-core/createpanelrefs",
-    "commit": "ab14ab0ba9138ca8cc43fde611b5b02c48364c2c",
+    "commit": "1168e3fd768e5fa5898f8ef27628e8806cccf947",
     "errors": 0,
-    "warnings": 15,
+    "warnings": 16,
     "parse_error": false,
     "prints_help": false
   },
   "createtaxdb": {
     "full_name": "nf-core/createtaxdb",
     "html_url": "https://github.com/nf-core/createtaxdb",
-    "commit": "70f5de205e9a5c5f21d97e11dbe94acf8c017ed4",
+    "commit": "e2325aedfbb7325b0dad1103519ff364723ced43",
     "errors": 0,
     "warnings": 33,
     "parse_error": false,
@@ -758,9 +758,9 @@
   "phaseimpute": {
     "full_name": "nf-core/phaseimpute",
     "html_url": "https://github.com/nf-core/phaseimpute",
-    "commit": "b46cd3fd07c62a636d87774a760dd21c1a1e0c63",
+    "commit": "be96529cd4e020cd27f475b62fdac7f9dad687de",
     "errors": 1,
-    "warnings": 23,
+    "warnings": 17,
     "parse_error": false,
     "prints_help": null
   },
@@ -803,9 +803,9 @@
   "proteinfold": {
     "full_name": "nf-core/proteinfold",
     "html_url": "https://github.com/nf-core/proteinfold",
-    "commit": "99d65e293be25c51b0321f4d37280f5d4eb8e9dc",
+    "commit": "bde31a88538b6e3d10d9d7f3976e71e199872350",
     "errors": 0,
-    "warnings": 0,
+    "warnings": 1,
     "parse_error": false,
     "prints_help": false
   },
@@ -929,7 +929,7 @@
   "rnaseq": {
     "full_name": "nf-core/rnaseq",
     "html_url": "https://github.com/nf-core/rnaseq",
-    "commit": "915bd474f42495101550826a4f73020cacd19e5c",
+    "commit": "530c22f55c05eac0d3f600cb3d12596084bad06b",
     "errors": 0,
     "warnings": 3,
     "parse_error": false,
@@ -965,7 +965,7 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "7e2ccbfbed20f3f564a39edb2be73bd861e470bd",
+    "commit": "d00bf06194b368e58deaf9696dce8d83d1fb03c4",
     "errors": 150,
     "warnings": 635,
     "parse_error": false,
@@ -1001,7 +1001,7 @@
   "seqinspector": {
     "full_name": "nf-core/seqinspector",
     "html_url": "https://github.com/nf-core/seqinspector",
-    "commit": "9da961c542b80d4c560d301807bcfbfec08326fd",
+    "commit": "2a59538a55a061d61efe342be944939b78e7912a",
     "errors": 0,
     "warnings": 9,
     "parse_error": false,
@@ -1082,9 +1082,9 @@
   "taxprofiler": {
     "full_name": "nf-core/taxprofiler",
     "html_url": "https://github.com/nf-core/taxprofiler",
-    "commit": "63c3a21eba6a7a02756408e1f990fbdaa4aeb4b1",
+    "commit": "8997d959cfd48e93915543b13f5765eb2580b257",
     "errors": 0,
-    "warnings": 113,
+    "warnings": 112,
     "parse_error": false,
     "prints_help": true
   },
@@ -1145,11 +1145,11 @@
   "variantprioritization": {
     "full_name": "nf-core/variantprioritization",
     "html_url": "https://github.com/nf-core/variantprioritization",
-    "commit": "080f5c3bbd4083af129b0260092f3ecf7bb6a448",
-    "errors": 0,
+    "commit": "ddce7106ad9689f66fe821832f23d3457e8d4d9a",
+    "errors": 5,
     "warnings": 0,
     "parse_error": false,
-    "prints_help": true
+    "prints_help": null
   },
   "viralintegration": {
     "full_name": "nf-core/viralintegration",

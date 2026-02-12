@@ -1,28 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-02-11T00:30:24.103629+00:00
-- Nextflow version: 26.01.0-edge
-- Summary: 3 warnings
-
-## :warning: Warnings
-
-- Warning: `modules/nf-core/checkv/updatedatabase/main.nf:40:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/checkv/updatedatabase/main.nf:42:9`: Variable was declared but not used
-
-  ```nextflow
-      def checkv_db = db ?: ''
-          ^^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/checkv/updatedatabase/main.nf:43:9`: Variable was declared but not used
-
-  ```nextflow
-      def update_sequence = fasta ?: ''
-          ^^^^^^^^^^
-  ```
+- Generated: 2026-02-12T00:24:23.115684+00:00
+- Nextflow version: 26.01.1-edge
+- Summary: No issues found

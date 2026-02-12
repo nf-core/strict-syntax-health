@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-02-11T00:29:33.156400404Z
-- Nextflow version: 26.01.0-edge
+- Generated: 2026-02-12T00:23:17.436858503Z
+- Nextflow version: 26.01.1-edge
 - Summary: 9 warnings
 
 ## :warning: Warnings
@@ -55,16 +55,16 @@
                                                                               ^^
   ```
 
-- Warning: `workflows/seqinspector.nf:69:29`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/seqinspector.nf:71:29`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .branch { meta, reads ->
                               ^^^^^
   ```
 
-- Warning: `workflows/seqinspector.nf:77:27`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/seqinspector.nf:78:56`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-              .view { meta, reads ->
-                            ^^^^^
+          ch_rundir_branched.without_rundir.view { meta, reads ->
+                                                         ^^^^^
   ```

@@ -1,10 +1,24 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T17:20:40.433822347Z
-- Nextflow version: 25.12.0-edge
-- Summary: 15 warnings
+- Generated: 2026-02-12T00:21:04.568540407Z
+- Nextflow version: 26.01.1-edge
+- Summary: 16 warnings
 
 ## :warning: Warnings
+
+- Warning: `modules/nf-core/cat/cat/main.nf:23:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      def file_list = files_in.collect { it.toString() }
+                                         ^^
+  ```
+
+- Warning: `modules/nf-core/cat/cat/main.nf:58:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      def file_list   = files_in.collect { it.toString() }
+                                           ^^
+  ```
 
 - Warning: `modules/nf-core/gatk4/annotateintervals/main.nf:31:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
@@ -88,13 +102,6 @@
   ```nextflow
           assert it.name != "${prefix}.${suffix}" : "Input and output names are the same, set prefix in module configuration to disambiguate!"
                  ^^
-  ```
-
-- Warning: `subworkflows/local/gens_pon/main.nf:45:20`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          .collect { it[1] }
-                     ^^
   ```
 
 - Warning: `subworkflows/local/germlinecnvcaller_cohort/main.nf:124:20`: Implicit closure parameter is deprecated, declare an explicit parameter instead
