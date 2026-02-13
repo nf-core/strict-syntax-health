@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "7e59ce4c7009b22ba63bca8a92da70bd0e5008d9",
+  "_repo_commit": "a6da46de17d2e921b4575d68390f21040c93b886",
   "abundance_differential_filter": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/abundance_differential_filter",
     "errors": 0,
@@ -524,6 +524,12 @@
   },
   "mmseqs_fasta_cluster": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/mmseqs_fasta_cluster",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "quant_tximport_summarizedexperiment": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/quant_tximport_summarizedexperiment",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

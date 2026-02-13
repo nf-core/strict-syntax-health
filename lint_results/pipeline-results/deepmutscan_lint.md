@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-02-07T00:22:20.380911889Z
-- Nextflow version: 25.12.0-edge
-- Summary: 43 errors, 90 warnings
+- Generated: 2026-02-13T00:21:18.639632899Z
+- Nextflow version: 26.01.1-edge
+- Summary: 49 errors, 90 warnings
 
 ## :x: Errors
 
@@ -11,6 +11,48 @@
   ```nextflow
       tuple val(sample), path(wt_seq)   		      // WT sequence
                 ^^^^^^
+  ```
+
+- Error: `nextflow.config:324:35`: `manifest` is not defined
+
+  ```nextflow
+  \033[0;35m  nf-core/deepmutscan ${manifest.version}\033[0m
+                                    ^^^^^^^^
+  ```
+
+- Error: `nextflow.config:327:26`: `manifest` is not defined
+
+  ```nextflow
+          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+                           ^^^^^^^^
+  ```
+
+- Error: `nextflow.config:327:69`: `manifest` is not defined
+
+  ```nextflow
+          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+                                                                      ^^^^^^^^
+  ```
+
+- Error: `nextflow.config:327:186`: `manifest` is not defined
+
+  ```nextflow
+          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+                                                                                                                                                                                           ^^^^^^^^
+  ```
+
+- Error: `nextflow.config:336:22`: `validation` is not defined
+
+  ```nextflow
+          beforeText = validation.help.beforeText
+                       ^^^^^^^^^^
+  ```
+
+- Error: `nextflow.config:337:21`: `validation` is not defined
+
+  ```nextflow
+          afterText = validation.help.afterText
+                      ^^^^^^^^^^
   ```
 
 - Error: `workflows/deepmutscan.nf:38:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
@@ -358,6 +400,13 @@
           ^^^^^^
   ```
 
+- Warning: `nextflow.config:327:129`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+                                                                                                                                  ^^
+  ```
+
 - Warning: `subworkflows/local/calculatefitness.nf:30:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -484,35 +533,28 @@
                                                       ^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_deepmutscan_pipeline/main.nf:32:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_deepmutscan_pipeline/main.nf:31:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       monochrome_logs   // boolean: Do not use coloured log outputs
       ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_deepmutscan_pipeline/main.nf:35:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_deepmutscan_pipeline/main.nf:34:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       input             //  string: Path to input samplesheet
       ^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_deepmutscan_pipeline/main.nf:42:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/utils_nfcore_deepmutscan_pipeline/main.nf:38:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_versions = Channel.empty()
                     ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_deepmutscan_pipeline/main.nf:67:144`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      after_text = """${workflow.manifest.doi ? "\n* The pipeline\n" : ""}${workflow.manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${workflow.manifest.doi ? "\n" : ""}
-                                                                                                                                                 ^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_deepmutscan_pipeline/main.nf:104:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/utils_nfcore_deepmutscan_pipeline/main.nf:75:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       Channel

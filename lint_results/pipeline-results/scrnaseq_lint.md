@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-21T00:20:10.980199471Z
-- Nextflow version: 25.12.0-edge
-- Summary: 22 errors, 111 warnings
+- Generated: 2026-02-13T00:23:42.526964998Z
+- Nextflow version: 26.01.1-edge
+- Summary: 22 errors, 94 warnings
 
 ## :x: Errors
 
@@ -645,20 +645,6 @@
       ^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_scrnaseq_pipeline/main.nf:42:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_scrnaseq_pipeline/main.nf:67:144`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      after_text = """${workflow.manifest.doi ? "\n* The pipeline\n" : ""}${workflow.manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${workflow.manifest.doi ? "\n" : ""}
-                                                                                                                                                 ^^
-  ```
-
 - Warning: `subworkflows/local/utils_nfcore_scrnaseq_pipeline/main.nf:104:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -750,41 +736,6 @@
                     ^^^^^^^
   ```
 
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      return ch_versions.unique().map { version -> processVersionsFromYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
-                                                                                                   ^^^^^^^
-  ```
-
-- Warning: `workflows/scrnaseq.nf:33:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_multiqc_files = Channel.empty()
-                         ^^^^^^^
-  ```
-
-- Warning: `workflows/scrnaseq.nf:34:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions      = Channel.empty()
-                         ^^^^^^^
-  ```
-
-- Warning: `workflows/scrnaseq.nf:35:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_mtx_matrices  = Channel.empty()
-                         ^^^^^^^
-  ```
-
-- Warning: `workflows/scrnaseq.nf:71:38`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_star_index     = star_index ? Channel.value( [[id: star_index.baseName], star_index] ) : []
-                                       ^^^^^^^
-  ```
-
 - Warning: `workflows/scrnaseq.nf:96:89`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
@@ -792,25 +743,11 @@
                                                                                           ^^
   ```
 
-- Warning: `workflows/scrnaseq.nf:99:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-              ch_genome_fasta = Channel.value( ch_genome_fasta )
-                                ^^^^^^^
-  ```
-
 - Warning: `workflows/scrnaseq.nf:108:71`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_gtf      = GUNZIP_GTF ( [ [:], ch_gtf ] ).gunzip.map { it[1] }
                                                                         ^^
-  ```
-
-- Warning: `workflows/scrnaseq.nf:111:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-              ch_gtf = Channel.value( ch_gtf )
-                       ^^^^^^^
   ```
 
 - Warning: `workflows/scrnaseq.nf:193:13`: Parameter was not used -- prefix with `_` to suppress warning
@@ -881,60 +818,4 @@
   ```nextflow
                   .filter { meta, mtx_files -> meta.input_type == 'raw' }
                                   ^^^^^^^^^
-  ```
-
-- Warning: `workflows/scrnaseq.nf:330:36`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          ch_multiqc_config        = Channel.fromPath(
-                                     ^^^^^^^
-  ```
-
-- Warning: `workflows/scrnaseq.nf:333:13`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-              Channel.fromPath(params.multiqc_config, checkIfExists: true) :
-              ^^^^^^^
-  ```
-
-- Warning: `workflows/scrnaseq.nf:334:13`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-              Channel.empty()
-              ^^^^^^^
-  ```
-
-- Warning: `workflows/scrnaseq.nf:336:13`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-              Channel.fromPath(params.multiqc_logo, checkIfExists: true) :
-              ^^^^^^^
-  ```
-
-- Warning: `workflows/scrnaseq.nf:337:13`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-              Channel.empty()
-              ^^^^^^^
-  ```
-
-- Warning: `workflows/scrnaseq.nf:341:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_params))
-                                ^^^^^^^
-  ```
-
-- Warning: `workflows/scrnaseq.nf:347:49`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          ch_methods_description                = Channel.value(
-                                                  ^^^^^^^
-  ```
-
-- Warning: `workflows/scrnaseq.nf:368:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          ch_multiqc_report = Channel.empty()
-                              ^^^^^^^
   ```

@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-02-12T00:23:10.917990513Z
+- Generated: 2026-02-13T00:23:33.429672497Z
 - Nextflow version: 26.01.1-edge
-- Summary: 150 errors, 635 warnings
+- Summary: 143 errors, 609 warnings
 
 ## :x: Errors
 
@@ -776,48 +776,6 @@
           ^^^^^^^
   ```
 
-- Error: `subworkflows/local/channel_align_create_csv/main.nf:14:13`: Variables in a closure should be declared with `def`
-
-  ```nextflow
-              patient = meta.patient
-              ^^^^^^^
-  ```
-
-- Error: `subworkflows/local/channel_align_create_csv/main.nf:15:13`: Variables in a closure should be declared with `def`
-
-  ```nextflow
-              sample  = meta.sample
-              ^^^^^^
-  ```
-
-- Error: `subworkflows/local/channel_align_create_csv/main.nf:16:13`: Variables in a closure should be declared with `def`
-
-  ```nextflow
-              sex     = meta.sex
-              ^^^
-  ```
-
-- Error: `subworkflows/local/channel_align_create_csv/main.nf:17:13`: Variables in a closure should be declared with `def`
-
-  ```nextflow
-              status  = meta.status
-              ^^^^^^
-  ```
-
-- Error: `subworkflows/local/channel_align_create_csv/main.nf:21:13`: Variables in a closure should be declared with `def`
-
-  ```nextflow
-              type = save_output_as_bam ? "bam" : "cram"
-              ^^^^
-  ```
-
-- Error: `subworkflows/local/channel_align_create_csv/main.nf:22:13`: Variables in a closure should be declared with `def`
-
-  ```nextflow
-              type_index = save_output_as_bam ? "bai" : "crai"
-              ^^^^^^^^^^
-  ```
-
 - Error: `subworkflows/local/channel_applybqsr_create_csv/main.nf:14:13`: Variables in a closure should be declared with `def`
 
   ```nextflow
@@ -993,13 +951,6 @@
               ^^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/cram_merge_index_samtools/main.nf:20:41`: `cram` is already declared
-
-  ```nextflow
-      cram_to_merge = cram.branch { meta, cram ->
-                                          ^^^^
-  ```
-
 - Error: `subworkflows/local/fastq_align/main.nf:38:62`: `bam` is already declared
 
   ```nextflow
@@ -1057,6 +1008,34 @@
   ```
 
 ## :warning: Warnings
+
+- Warning: `conf/modules/aligner_parabricks.config:31:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              saveAs: { params.save_mapped ? it : null }
+                                             ^^
+  ```
+
+- Warning: `conf/modules/aligner_parabricks.config:41:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              saveAs: { params.save_mapped ? it : null }
+                                             ^^
+  ```
+
+- Warning: `conf/modules/aligner_parabricks.config:50:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              saveAs: { params.save_mapped ? it : null }
+                                             ^^
+  ```
+
+- Warning: `conf/modules/aligner_parabricks.config:60:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              saveAs: { params.save_output_as_bam ? it : null }
+                                                    ^^
+  ```
 
 - Warning: `conf/modules/contamination.config:17:55`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
@@ -1301,13 +1280,6 @@
   ```nextflow
                   saveAs: { params.save_trimmed || params.save_split_fastqs ?  "fastp/${meta.sample}/${it}" : null }
                                                                                                        ^^
-  ```
-
-- Warning: `conf/modules/varlociraptor.config:67:96`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-              saveAs: { params.varlociraptor_chunk_size > 1 ? null : "varlociraptor/${meta.id}/${it}" }
-                                                                                                 ^^
   ```
 
 - Warning: `main.nf:93:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -1842,34 +1814,6 @@
           ^^^^
   ```
 
-- Warning: `modules/nf-core/parabricks/fq2bam/main.nf:43:119`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def known_sites_command    = known_sites   ? (known_sites instanceof List ? known_sites.collect { "--knownSites ${it}" }.join(' ') : "--knownSites ${known_sites}") : ""
-                                                                                                                        ^^
-  ```
-
-- Warning: `modules/nf-core/parabricks/fq2bam/main.nf:45:126`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def interval_file_command  = interval_file ? (interval_file instanceof List ? interval_file.collect { "--interval-file ${it}" }.join(' ') : "--interval-file ${interval_file}") : ""
-                                                                                                                               ^^
-  ```
-
-- Warning: `modules/nf-core/rbt/vcfsplit/main.nf:22:9`: Variable was declared but not used
-
-  ```nextflow
-      def args   = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/rbt/vcfsplit/main.nf:39:56`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def bcf_files = (0..chunks).collect { "${prefix}.${it}.bcf" }.join(' ')
-                                                         ^^
-  ```
-
 - Warning: `modules/nf-core/sentieon/dedup/main.nf:36:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
@@ -1933,20 +1877,6 @@
           ^^^^
   ```
 
-- Warning: `modules/nf-core/varlociraptor/callvariants/main.nf:28:118`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def scenario_samples = vcfs instanceof List &&  vcfs.size() > 1 ? [scenario_aliases,vcfs].transpose().collect{"${it[0]}=${it[1]}"}.join(' ') : "${scenario_aliases}=${vcfs}"
-                                                                                                                       ^^
-  ```
-
-- Warning: `modules/nf-core/varlociraptor/callvariants/main.nf:28:127`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def scenario_samples = vcfs instanceof List &&  vcfs.size() > 1 ? [scenario_aliases,vcfs].transpose().collect{"${it[0]}=${it[1]}"}.join(' ') : "${scenario_aliases}=${vcfs}"
-                                                                                                                                ^^
-  ```
-
 - Warning: `modules/nf-core/vcftools/main.nf:97:26`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
@@ -2003,20 +1933,6 @@
                            ^^
   ```
 
-- Warning: `modules/nf-core/yte/main.nf:23:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/yte/main.nf:39:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
 - Warning: `subworkflows/local/annotation_cache_initialisation/main.nf:37:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -2029,76 +1945,6 @@
   ```nextflow
           ensemblvep_cache = Channel.fromPath(file("${vep_cache}/${vep_annotation_cache_key}"), checkIfExists: true).collect()
                              ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/bam_applybqsr/main.nf:20:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      versions = Channel.empty()
-                 ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/bam_applybqsr/main.nf:21:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      bam_applybqsr_single = Channel.empty()
-                             ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/bam_applybqsr/main.nf:22:20`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      bam_to_merge = Channel.empty()
-                     ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/bam_applybqsr/main.nf:44:25`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  single: it[0].num_intervals == 1
-                          ^^
-  ```
-
-- Warning: `subworkflows/local/bam_applybqsr/main.nf:45:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  multiple: it[0].num_intervals > 1
-                            ^^
-  ```
-
-- Warning: `subworkflows/local/bam_applybqsr_spark/main.nf:20:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      versions = Channel.empty()
-                 ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/bam_applybqsr_spark/main.nf:21:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      bam_applybqsr_single = Channel.empty()
-                             ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/bam_applybqsr_spark/main.nf:22:20`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      bam_to_merge = Channel.empty()
-                     ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/bam_applybqsr_spark/main.nf:44:25`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  single: it[0].num_intervals == 1
-                          ^^
-  ```
-
-- Warning: `subworkflows/local/bam_applybqsr_spark/main.nf:45:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  multiple: it[0].num_intervals > 1
-                            ^^
   ```
 
 - Warning: `subworkflows/local/bam_baserecalibrator/main.nf:21:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -4306,13 +4152,6 @@
               ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/cram_merge_index_samtools/main.nf:17:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      versions = Channel.empty()
-                 ^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/cram_qc_mosdepth_samtools/main.nf:17:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -4549,27 +4388,6 @@
   ```nextflow
               cram_variant_calling = Channel.empty().mix(ch_cram_for_bam_baserecalibrator)
                                      ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/fastq_preprocess_parabricks/main.nf:15:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/fastq_preprocess_parabricks/main.nf:16:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_reports  = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/fastq_preprocess_parabricks/main.nf:25:16`: Variable was declared but not used
-
-  ```nextflow
-          .set { reads_grouping_key }
-                 ^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/post_variantcalling/main.nf:36:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -5363,55 +5181,6 @@
                  ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/vcf_varlociraptor_single/main.nf:20:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/vcf_varlociraptor_somatic/main.nf:26:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/vcf_varlociraptor_somatic/main.nf:67:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          strelka: it[0].variantcaller == 'strelka'
-                   ^^
-  ```
-
-- Warning: `subworkflows/local/vcf_varlociraptor_somatic/main.nf:68:16`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          other: it[0].variantcaller != 'strelka'
-                 ^^
-  ```
-
-- Warning: `subworkflows/local/vcf_varlociraptor_somatic/main.nf:105:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          matched: it.size() == 7
-                   ^^
-  ```
-
-- Warning: `subworkflows/local/vcf_varlociraptor_somatic/main.nf:106:20`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          unmatched: it.size() == 4
-                     ^^
-  ```
-
-- Warning: `subworkflows/local/vcf_varlociraptor_somatic/main.nf:214:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          Channel.value(["normal", "tumor"]),
-          ^^^^^^^
-  ```
-
 - Warning: `subworkflows/nf-core/bam_ngscheckmate/main.nf:13:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -5454,49 +5223,49 @@
                                    ^^
   ```
 
-- Warning: `workflows/sarek/main.nf:287:77`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/sarek/main.nf:291:77`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               cram_variant_calling_status_tmp = cram_variant_calling.branch { meta, file, index ->
                                                                               ^^^^
   ```
 
-- Warning: `workflows/sarek/main.nf:287:89`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/sarek/main.nf:291:89`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               cram_variant_calling_status_tmp = cram_variant_calling.branch { meta, file, index ->
                                                                                           ^^^^^
   ```
 
-- Warning: `workflows/sarek/main.nf:307:75`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/sarek/main.nf:311:75`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           cram_variant_calling_status = cram_variant_calling.branch { meta, file, index ->
                                                                             ^^^^
   ```
 
-- Warning: `workflows/sarek/main.nf:307:81`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/sarek/main.nf:311:81`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           cram_variant_calling_status = cram_variant_calling.branch { meta, file, index ->
                                                                                   ^^^^^
   ```
 
-- Warning: `workflows/sarek/main.nf:313:73`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/sarek/main.nf:317:73`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           bam_variant_calling_status = bam_variant_calling.branch { meta, file, index ->
                                                                           ^^^^
   ```
 
-- Warning: `workflows/sarek/main.nf:313:79`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/sarek/main.nf:317:79`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           bam_variant_calling_status = bam_variant_calling.branch { meta, file, index ->
                                                                                 ^^^^^
   ```
 
-- Warning: `workflows/sarek/main.nf:700:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/sarek/main.nf:704:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def InputStream gzipStream = new java.util.zip.GZIPInputStream(it)

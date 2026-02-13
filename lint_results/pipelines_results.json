@@ -200,8 +200,8 @@
   "deepmutscan": {
     "full_name": "nf-core/deepmutscan",
     "html_url": "https://github.com/nf-core/deepmutscan",
-    "commit": "595e1691667e441bca3d9b742d32e89511ba73a0",
-    "errors": 43,
+    "commit": "762281c58fa7ba88a0ff10cf2ba18b0b3238e8be",
+    "errors": 49,
     "warnings": 90,
     "parse_error": false,
     "prints_help": null
@@ -218,7 +218,7 @@
   "demultiplex": {
     "full_name": "nf-core/demultiplex",
     "html_url": "https://github.com/nf-core/demultiplex",
-    "commit": "63f3376f820efda10fa6043a6b640212afd3f0cd",
+    "commit": "177547436fd6f38aaa50f83201a975340488329b",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -254,7 +254,7 @@
   "differentialabundance": {
     "full_name": "nf-core/differentialabundance",
     "html_url": "https://github.com/nf-core/differentialabundance",
-    "commit": "dde86ca018c007563e85f3decaa0e73767acb4e3",
+    "commit": "9feacecb63b3b454d0c0d1604c0d85acb951366a",
     "errors": 13,
     "warnings": 48,
     "parse_error": false,
@@ -413,6 +413,15 @@
     "parse_error": false,
     "prints_help": null
   },
+  "hadge": {
+    "full_name": "nf-core/hadge",
+    "html_url": "https://github.com/nf-core/hadge",
+    "commit": "5c19f6ac183c610247715d2adf4a585e0eff541e",
+    "errors": 8,
+    "warnings": 81,
+    "parse_error": false,
+    "prints_help": null
+  },
   "hgtseq": {
     "full_name": "nf-core/hgtseq",
     "html_url": "https://github.com/nf-core/hgtseq",
@@ -533,7 +542,7 @@
   "mcmicro": {
     "full_name": "nf-core/mcmicro",
     "html_url": "https://github.com/nf-core/mcmicro",
-    "commit": "f901085f18b42194a0e430721e3a6d466212744a",
+    "commit": "9604c7598a67ded8637f5dac3936aa5f6e9ac50c",
     "errors": 21,
     "warnings": 42,
     "parse_error": false,
@@ -776,7 +785,7 @@
   "pixelator": {
     "full_name": "nf-core/pixelator",
     "html_url": "https://github.com/nf-core/pixelator",
-    "commit": "604a72e01e0af9bdf9a1816ad31d5aefd9675d46",
+    "commit": "70948006877b3c3fc551409559a387c8924de29e",
     "errors": 10,
     "warnings": 38,
     "parse_error": false,
@@ -803,7 +812,7 @@
   "proteinfold": {
     "full_name": "nf-core/proteinfold",
     "html_url": "https://github.com/nf-core/proteinfold",
-    "commit": "bde31a88538b6e3d10d9d7f3976e71e199872350",
+    "commit": "ad39e09a911156b5347e8a911a939e0cbd542bf9",
     "errors": 0,
     "warnings": 1,
     "parse_error": false,
@@ -929,7 +938,7 @@
   "rnaseq": {
     "full_name": "nf-core/rnaseq",
     "html_url": "https://github.com/nf-core/rnaseq",
-    "commit": "530c22f55c05eac0d3f600cb3d12596084bad06b",
+    "commit": "dff959df9fcbe4179fc12348481ab9058b042c60",
     "errors": 0,
     "warnings": 3,
     "parse_error": false,
@@ -965,9 +974,9 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "d00bf06194b368e58deaf9696dce8d83d1fb03c4",
-    "errors": 150,
-    "warnings": 635,
+    "commit": "2ad5dfdc794b4d2c1b8b882e77d94f9c72863940",
+    "errors": 143,
+    "warnings": 609,
     "parse_error": false,
     "prints_help": null
   },
@@ -992,9 +1001,9 @@
   "scrnaseq": {
     "full_name": "nf-core/scrnaseq",
     "html_url": "https://github.com/nf-core/scrnaseq",
-    "commit": "f8906394e49523abed4e251b26182f25e33e22f1",
+    "commit": "f052357ee89485ff65dbb44bf3335e093ce0d0f1",
     "errors": 22,
-    "warnings": 111,
+    "warnings": 94,
     "parse_error": false,
     "prints_help": null
   },
@@ -1046,7 +1055,7 @@
   "spatialvi": {
     "full_name": "nf-core/spatialvi",
     "html_url": "https://github.com/nf-core/spatialvi",
-    "commit": "20d92062a38fbed67ac00b4af3beb4adc5d5765f",
+    "commit": "a4bd0e61b628d6117fbc897f6c62182ad85c4fe5",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1082,7 +1091,7 @@
   "taxprofiler": {
     "full_name": "nf-core/taxprofiler",
     "html_url": "https://github.com/nf-core/taxprofiler",
-    "commit": "8997d959cfd48e93915543b13f5765eb2580b257",
+    "commit": "f220561b2b3021a7fe6f965b13cc9f3d0bb9f309",
     "errors": 0,
     "warnings": 112,
     "parse_error": false,
@@ -1145,7 +1154,7 @@
   "variantprioritization": {
     "full_name": "nf-core/variantprioritization",
     "html_url": "https://github.com/nf-core/variantprioritization",
-    "commit": "ddce7106ad9689f66fe821832f23d3457e8d4d9a",
+    "commit": "d081f86392a38d423296430b47f9a8dbdd564af7",
     "errors": 5,
     "warnings": 0,
     "parse_error": false,

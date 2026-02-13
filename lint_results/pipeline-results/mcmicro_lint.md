@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-02-11T00:27:50.602269395Z
-- Nextflow version: 26.01.0-edge
+- Generated: 2026-02-13T00:22:02.749251140Z
+- Nextflow version: 26.01.1-edge
 - Summary: 21 errors, 42 warnings
 
 ## :x: Errors
@@ -146,7 +146,7 @@
       ^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/mcmicro.nf:82:42`: Unexpected input: '\*'
+- Error: `workflows/mcmicro.nf:80:42`: Unexpected input: '\*'
 
   ```nextflow
               .map{ meta, cycles -> [meta, *cycles.collect{ it[1..-1] }.transpose()]}
