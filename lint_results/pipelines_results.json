@@ -164,7 +164,7 @@
   "crisprseq": {
     "full_name": "nf-core/crisprseq",
     "html_url": "https://github.com/nf-core/crisprseq",
-    "commit": "4f074fa788f570333158ee197836699a564d11e3",
+    "commit": "3acc8e07ae05bb8c6a0493f3f6ae0f26f04ea99f",
     "errors": 13,
     "warnings": 45,
     "parse_error": false,
@@ -254,7 +254,7 @@
   "differentialabundance": {
     "full_name": "nf-core/differentialabundance",
     "html_url": "https://github.com/nf-core/differentialabundance",
-    "commit": "9feacecb63b3b454d0c0d1604c0d85acb951366a",
+    "commit": "0f3ba71ac604027e5f923004e0f815bf01aa0992",
     "errors": 13,
     "warnings": 48,
     "parse_error": false,
@@ -506,9 +506,9 @@
   "lsmquant": {
     "full_name": "nf-core/lsmquant",
     "html_url": "https://github.com/nf-core/lsmquant",
-    "commit": "de18eb7d1dbfc0313b965ed0d00af49ae5fa19d7",
+    "commit": "c20dc5a7017455909e122de62a98db57fe009bcf",
     "errors": 0,
-    "warnings": 48,
+    "warnings": 49,
     "parse_error": false,
     "prints_help": false
   },
@@ -542,7 +542,7 @@
   "mcmicro": {
     "full_name": "nf-core/mcmicro",
     "html_url": "https://github.com/nf-core/mcmicro",
-    "commit": "9604c7598a67ded8637f5dac3936aa5f6e9ac50c",
+    "commit": "d15ddc4c4c1c37be46cba5166c6ea0cc682c364b",
     "errors": 21,
     "warnings": 42,
     "parse_error": false,
@@ -749,7 +749,7 @@
   "pathogensurveillance": {
     "full_name": "nf-core/pathogensurveillance",
     "html_url": "https://github.com/nf-core/pathogensurveillance",
-    "commit": "5f014fc23b8e8dcf7189adced52157f07fdfdcb6",
+    "commit": "f9a0d73b990e050f13545c071f9eb7d16ca683e1",
     "errors": 16,
     "warnings": 437,
     "parse_error": false,
@@ -938,7 +938,7 @@
   "rnaseq": {
     "full_name": "nf-core/rnaseq",
     "html_url": "https://github.com/nf-core/rnaseq",
-    "commit": "dff959df9fcbe4179fc12348481ab9058b042c60",
+    "commit": "f6f990b8639d8efca3fbc7f04b6126210636cea6",
     "errors": 0,
     "warnings": 3,
     "parse_error": false,
@@ -974,9 +974,9 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "2ad5dfdc794b4d2c1b8b882e77d94f9c72863940",
+    "commit": "f342d7bda1b60f48098d25a4a4f5f7b84500bfb6",
     "errors": 143,
-    "warnings": 609,
+    "warnings": 589,
     "parse_error": false,
     "prints_help": null
   },
@@ -1091,7 +1091,7 @@
   "taxprofiler": {
     "full_name": "nf-core/taxprofiler",
     "html_url": "https://github.com/nf-core/taxprofiler",
-    "commit": "f220561b2b3021a7fe6f965b13cc9f3d0bb9f309",
+    "commit": "23536cb0ab2ce839fc1108685673a0d40b184cbc",
     "errors": 0,
     "warnings": 112,
     "parse_error": false,

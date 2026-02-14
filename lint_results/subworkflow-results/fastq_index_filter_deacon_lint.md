@@ -1,26 +1,19 @@
 # Nextflow lint results
 
-- Generated: 2026-02-13T00:25:10.841415+00:00
+- Generated: 2026-02-14T00:22:50.968574+00:00
 - Nextflow version: 26.01.1-edge
-- Summary: 3 warnings
+- Summary: 2 warnings
 
 ## :warning: Warnings
 
-- Warning: `subworkflows/nf-core/fastq_index_filter_deacon/main.nf:11:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/fastq_index_filter_deacon/main.nf:14:30`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/nf-core/fastq_index_filter_deacon/main.nf:12:30`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map  { meta, fasta, reads -> [ meta, fasta ] }
                                ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/nf-core/fastq_index_filter_deacon/main.nf:17:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/nf-core/fastq_index_filter_deacon/main.nf:15:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map  { meta, fasta, reads ->

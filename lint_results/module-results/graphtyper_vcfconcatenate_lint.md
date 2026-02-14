@@ -1,14 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-02-13T00:24:57.219339+00:00
+- Generated: 2026-02-14T00:22:37.695548+00:00
 - Nextflow version: 26.01.1-edge
-- Summary: 1 warning
-
-## :warning: Warnings
-
-- Warning: `modules/nf-core/graphtyper/vcfconcatenate/main.nf:27:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      input_vcfs = vcf.collate(1000).collect{it.join(' ')} // Batching needed because if there are too many VCFs the shell cannot run the command
-                                             ^^^^^^^^^^
-  ```
+- Summary: No issues found

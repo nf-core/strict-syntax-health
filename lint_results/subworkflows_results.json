@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "a6da46de17d2e921b4575d68390f21040c93b886",
+  "_repo_commit": "5f07370a6947595982045eed08cb3c6731a34df2",
   "abundance_differential_filter": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/abundance_differential_filter",
     "errors": 0,
@@ -429,7 +429,7 @@
   "fastq_index_filter_deacon": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_index_filter_deacon",
     "errors": 0,
-    "warnings": 3,
+    "warnings": 2,
     "parse_error": false
   },
   "fastq_ngscheckmate": {
@@ -538,6 +538,12 @@
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/quantify_pseudo_alignment",
     "errors": 0,
     "warnings": 0,
+    "parse_error": false
+  },
+  "quantify_rsem": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/quantify_rsem",
+    "errors": 0,
+    "warnings": 2,
     "parse_error": false
   },
   "tiff_segmentation_vpt": {

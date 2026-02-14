@@ -11,12 +11,12 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 > See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline.
 > **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**
 
-- **Last updated:** 2026-02-13 00:25:36 UTC
+- **Last updated:** 2026-02-14 00:23:11 UTC
 - **Nextflow version:** 26.01.1-edge
 
 ## Pipelines
 
-- **Total:** 0 parse errors, 3216 errors, 9301 warnings across 132 pipelines
+- **Total:** 0 parse errors, 3216 errors, 9282 warnings across 132 pipelines
 - **Zero errors:** 32 pipelines (24.2%)
 
 |                    Errors                    |                     Warnings                     |
@@ -30,7 +30,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | ------------------------------------------------------------------------------------- | :---------: | -----: | -------: | :---------: | :---------------------------------------------------------------------: | :------------------------------------------------------------------: |
 | :x: [oncoanalyser](https://github.com/nf-core/oncoanalyser)                           |     No      |    305 |      102 |      -      |       [View](lint_results/pipeline-results/oncoanalyser_lint.md)        |                                  -                                   |
 | :x: [airrflow](https://github.com/nf-core/airrflow)                                   |     No      |    150 |      135 |      -      |         [View](lint_results/pipeline-results/airrflow_lint.md)          |                                  -                                   |
-| :x: [sarek](https://github.com/nf-core/sarek)                                         |     No      |    143 |      609 |      -      |           [View](lint_results/pipeline-results/sarek_lint.md)           |                                  -                                   |
+| :x: [sarek](https://github.com/nf-core/sarek)                                         |     No      |    143 |      589 |      -      |           [View](lint_results/pipeline-results/sarek_lint.md)           |                                  -                                   |
 | :x: [eager](https://github.com/nf-core/eager)                                         |     No      |    115 |      362 |      -      |           [View](lint_results/pipeline-results/eager_lint.md)           |                                  -                                   |
 | :x: [hicar](https://github.com/nf-core/hicar)                                         |     No      |     89 |      122 |      -      |           [View](lint_results/pipeline-results/hicar_lint.md)           |                                  -                                   |
 | :x: [genomeannotator](https://github.com/nf-core/genomeannotator)                     |     No      |     85 |      148 |      -      |      [View](lint_results/pipeline-results/genomeannotator_lint.md)      |                                  -                                   |
@@ -134,7 +134,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :white_check_mark: [funcscan](https://github.com/nf-core/funcscan)                    |     No      |      0 |       73 |     Yes     |         [View](lint_results/pipeline-results/funcscan_lint.md)          |      [View](lint_results/prints-help-results/funcscan_help.txt)      |
 | :white_check_mark: [ampliseq](https://github.com/nf-core/ampliseq)                    |     No      |      0 |       66 |     Yes     |         [View](lint_results/pipeline-results/ampliseq_lint.md)          |      [View](lint_results/prints-help-results/ampliseq_help.txt)      |
 | :x: [molkart](https://github.com/nf-core/molkart)                                     |     No      |      0 |       63 |     No      |          [View](lint_results/pipeline-results/molkart_lint.md)          |      [View](lint_results/prints-help-results/molkart_help.txt)       |
-| :x: [lsmquant](https://github.com/nf-core/lsmquant)                                   |     No      |      0 |       48 |     No      |         [View](lint_results/pipeline-results/lsmquant_lint.md)          |      [View](lint_results/prints-help-results/lsmquant_help.txt)      |
+| :x: [lsmquant](https://github.com/nf-core/lsmquant)                                   |     No      |      0 |       49 |     No      |         [View](lint_results/pipeline-results/lsmquant_lint.md)          |      [View](lint_results/prints-help-results/lsmquant_help.txt)      |
 | :white_check_mark: [createtaxdb](https://github.com/nf-core/createtaxdb)              |     No      |      0 |       33 |     Yes     |        [View](lint_results/pipeline-results/createtaxdb_lint.md)        |    [View](lint_results/prints-help-results/createtaxdb_help.txt)     |
 | :white_check_mark: [mag](https://github.com/nf-core/mag)                              |     No      |      0 |       32 |     Yes     |            [View](lint_results/pipeline-results/mag_lint.md)            |        [View](lint_results/prints-help-results/mag_help.txt)         |
 | :x: [isoseq](https://github.com/nf-core/isoseq)                                       |     No      |      0 |       31 |     No      |          [View](lint_results/pipeline-results/isoseq_lint.md)           |       [View](lint_results/prints-help-results/isoseq_help.txt)       |
@@ -165,8 +165,8 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 
 ## Modules
 
-- **Total:** 0 parse errors, 4 errors, 386 warnings across 1370 modules
-- **Zero errors:** 1369 modules (99.9%)
+- **Total:** 0 parse errors, 4 errors, 291 warnings across 1373 modules
+- **Zero errors:** 1372 modules (99.9%)
 
 |                   Errors                   |                    Warnings                    |
 | :----------------------------------------: | :--------------------------------------------: |
@@ -179,14 +179,14 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | ------------------------------------------------------------------------------------------------------- | :---------: | -----: | -------: | :----------------------------------------------------------: |
 | :x: [cellranger_multi](https://github.com/nf-core/modules/tree/master/modules/nf-core/cellranger/multi) |     No      |      4 |       39 | [View](lint_results/module-results/cellranger_multi_lint.md) |
 
-_Modules with zero errors are not shown above (1369 modules). They may still have warnings. See the [modules results directory](lint_results/module-results/) for all lint outputs._
+_Modules with zero errors are not shown above (1372 modules). They may still have warnings. See the [modules results directory](lint_results/module-results/) for all lint outputs._
 
 </details>
 
 ## Subworkflows
 
-- **Total:** 0 parse errors, 0 errors, 161 warnings across 106 subworkflows
-- **Zero errors:** 106 subworkflows (100.0%)
+- **Total:** 0 parse errors, 0 errors, 162 warnings across 107 subworkflows
+- **Zero errors:** 107 subworkflows (100.0%)
 
 |                     Errors                      |                      Warnings                       |
 | :---------------------------------------------: | :-------------------------------------------------: |
@@ -198,7 +198,7 @@ _Modules with zero errors are not shown above (1369 modules). They may still hav
 | Subworkflow | Parse Error | Errors | Warnings | Lint Output |
 | ----------- | :---------: | -----: | -------: | :---------: |
 
-_Subworkflows with zero errors are not shown above (106 subworkflows). They may still have warnings. See the [subworkflows results directory](lint_results/subworkflow-results/) for all lint outputs._
+_Subworkflows with zero errors are not shown above (107 subworkflows). They may still have warnings. See the [subworkflows results directory](lint_results/subworkflow-results/) for all lint outputs._
 
 </details>
 

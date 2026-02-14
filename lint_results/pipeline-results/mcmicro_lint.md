@@ -1,16 +1,16 @@
 # Nextflow lint results
 
-- Generated: 2026-02-13T00:22:02.749251140Z
+- Generated: 2026-02-14T00:20:34.741718180Z
 - Nextflow version: 26.01.1-edge
 - Summary: 21 errors, 42 warnings
 
 ## :x: Errors
 
-- Error: `conf/modules.config:71:41`: Unexpected input: '\n'
+- Error: `conf/modules.config:92:39`: Unexpected input: '/'
 
   ```nextflow
-                      case 'versions.yml':
-                                          ^
+                  else if (filename ==~ /${meta.id}(_backsub)?_${meta2.id}(_mask)?\.csv/) { "${meta.id}.csv" }
+                                        ^
   ```
 
 - Error: `main.nf:18:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/mcmicro/workflows/mcmicro.nf'

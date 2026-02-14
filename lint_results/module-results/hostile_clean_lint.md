@@ -1,21 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-02-13T00:24:57.228429+00:00
+- Generated: 2026-02-14T00:22:37.701401+00:00
 - Nextflow version: 26.01.1-edge
-- Summary: 2 warnings
-
-## :warning: Warnings
-
-- Warning: `modules/nf-core/hostile/clean/main.nf:25:75`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def sorted_reads = meta.single_end ? [reads].flatten() : reads.sort { it.simpleName }
-                                                                            ^^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/hostile/clean/main.nf:52:75`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def sorted_reads = meta.single_end ? [reads].flatten() : reads.sort { it.simpleName }
-                                                                            ^^^^^^^^^^
-  ```
+- Summary: No issues found

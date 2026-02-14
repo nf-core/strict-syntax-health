@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-02-13T00:23:33.429672497Z
+- Generated: 2026-02-14T00:21:43.733854291Z
 - Nextflow version: 26.01.1-edge
-- Summary: 143 errors, 609 warnings
+- Summary: 143 errors, 589 warnings
 
 ## :x: Errors
 
@@ -3235,139 +3235,6 @@
                                                            ^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_somatic_all/main.nf:55:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      versions = Channel.empty()
-                 ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/bam_variant_calling_somatic_all/main.nf:58:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      out_indexcov     = Channel.empty()
-                         ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/bam_variant_calling_somatic_all/main.nf:59:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      out_msisensorpro = Channel.empty()
-                         ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/bam_variant_calling_somatic_all/main.nf:60:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      vcf_freebayes    = Channel.empty()
-                         ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/bam_variant_calling_somatic_all/main.nf:61:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      vcf_manta        = Channel.empty()
-                         ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/bam_variant_calling_somatic_all/main.nf:62:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      vcf_muse         = Channel.empty()
-                         ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/bam_variant_calling_somatic_all/main.nf:63:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      vcf_mutect2      = Channel.empty()
-                         ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/bam_variant_calling_somatic_all/main.nf:64:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      vcf_strelka      = Channel.empty()
-                         ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/bam_variant_calling_somatic_all/main.nf:65:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      vcf_tiddit       = Channel.empty()
-                         ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/bam_variant_calling_somatic_all/main.nf:66:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      vcf_tnscope      = Channel.empty()
-                         ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/bam_variant_calling_somatic_all/main.nf:67:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      tbi_freebayes    = Channel.empty()
-                         ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/bam_variant_calling_somatic_all/main.nf:68:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      tbi_manta        = Channel.empty()
-                         ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/bam_variant_calling_somatic_all/main.nf:69:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      tbi_muse         = Channel.empty()
-                         ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/bam_variant_calling_somatic_all/main.nf:70:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      tbi_mutect2      = Channel.empty()
-                         ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/bam_variant_calling_somatic_all/main.nf:71:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      tbi_strelka      = Channel.empty()
-                         ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/bam_variant_calling_somatic_all/main.nf:72:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      tbi_tiddit       = Channel.empty()
-                         ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/bam_variant_calling_somatic_all/main.nf:73:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      tbi_tnscope      = Channel.empty()
-                         ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/bam_variant_calling_somatic_all/main.nf:289:15`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      vcf_all = Channel.empty()
-                ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/bam_variant_calling_somatic_all/main.nf:300:15`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      tbi_all = Channel.empty()
-                ^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/bam_variant_calling_somatic_ascat/main.nf:22:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -3422,13 +3289,6 @@
   ```nextflow
       tbi = Channel.empty().mix(diploid_sv_vcf_tbi, somatic_sv_vcf_tbi).map{ meta, tbi -> [ meta + [ variantcaller:'manta' ], tbi ] }
             ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/bam_variant_calling_somatic_muse/main.nf:19:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      versions = Channel.empty()
-                 ^^^^^^^
   ```
 
 - Warning: `subworkflows/local/bam_variant_calling_somatic_mutect2/main.nf:31:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead

@@ -1,14 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-02-13T00:24:57.216401+00:00
+- Generated: 2026-02-14T00:22:37.693497+00:00
 - Nextflow version: 26.01.1-edge
-- Summary: 1 warning
-
-## :warning: Warnings
-
-- Warning: `modules/nf-core/gfatools/gfa2fa/main.nf:37:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^^^^^^^
-  ```
+- Summary: No issues found

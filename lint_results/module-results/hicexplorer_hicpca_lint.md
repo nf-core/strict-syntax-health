@@ -1,42 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-02-13T00:24:57.224013+00:00
+- Generated: 2026-02-14T00:22:37.698752+00:00
 - Nextflow version: 26.01.1-edge
-- Summary: 5 warnings
-
-## :warning: Warnings
-
-- Warning: `modules/nf-core/hicexplorer/hicpca/main.nf:26:34`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def idx  = args.findIndexOf{ it == '--format' | it == '-f' }
-                                   ^^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/hicexplorer/hicpca/main.nf:26:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def idx  = args.findIndexOf{ it == '--format' | it == '-f' }
-                                                      ^^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/hicexplorer/hicpca/main.nf:40:68`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      outfilenames = eigenvectors.tokenize().collect{"${prefix}_pca${it}.${format}"}.join(' ')
-                                                                     ^^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/hicexplorer/hicpca/main.nf:59:34`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def idx  = args.findIndexOf{ it == '--format' | it == '-f' }
-                                   ^^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/hicexplorer/hicpca/main.nf:59:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def idx  = args.findIndexOf{ it == '--format' | it == '-f' }
-                                                      ^^^^^^^^^^
-  ```
+- Summary: No issues found

@@ -1,28 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-02-13T00:24:57.218276+00:00
+- Generated: 2026-02-14T00:22:37.694939+00:00
 - Nextflow version: 26.01.1-edge
-- Summary: 3 warnings
-
-## :warning: Warnings
-
-- Warning: `modules/nf-core/goleft/indexcov/main.nf:31:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def input_files = bams.findAll { it.name.endsWith(".bam") } + indexes.findAll { it.name.endsWith(".crai") }
-                                       ^^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/goleft/indexcov/main.nf:31:85`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def input_files = bams.findAll { it.name.endsWith(".bam") } + indexes.findAll { it.name.endsWith(".crai") }
-                                                                                      ^^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/goleft/indexcov/main.nf:32:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def extranormalize = input_files.any { it.name.endsWith(".crai") } ? " --extranormalize " : ""
-                                             ^^^^^^^^^^
-  ```
+- Summary: No issues found

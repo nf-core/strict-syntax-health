@@ -1,21 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-02-13T00:24:57.230894+00:00
+- Generated: 2026-02-14T00:22:37.703018+00:00
 - Nextflow version: 26.01.1-edge
-- Summary: 2 warnings
-
-## :warning: Warnings
-
-- Warning: `modules/nf-core/iphop/predict/main.nf:25:9`: Variable was declared but not used
-
-  ```nextflow
-      def prefix = task.ext.prefix ?: "${meta.id}"
-          ^^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/iphop/predict/main.nf:48:9`: Variable was declared but not used
-
-  ```nextflow
-      def prefix    = task.ext.prefix ?: "${meta.id}"
-          ^^^^^^^^^^
-  ```
+- Summary: No issues found
