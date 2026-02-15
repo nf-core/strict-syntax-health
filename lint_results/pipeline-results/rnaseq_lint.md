@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-02-14T00:21:05.206755500Z
+- Generated: 2026-02-15T00:20:37.370310777Z
 - Nextflow version: 26.01.1-edge
-- Summary: 3 warnings
+- Summary: 5 warnings
 
 ## :warning: Warnings
 
@@ -25,4 +25,18 @@
   ```nextflow
               ch_bowtie2_index = BOWTIE2_BUILD.out.index.map { meta, index -> index }
                                                                ^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/quantify_rsem/main.nf:46:33`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          ch_counts_gene.collect{ it[1] }.map { results -> [ ['id': 'all_samples'], results ] },
+                                  ^^
+  ```
+
+- Warning: `subworkflows/nf-core/quantify_rsem/main.nf:47:39`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          ch_counts_transcript.collect{ it[1] }
+                                        ^^
   ```

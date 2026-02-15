@@ -11,12 +11,12 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 > See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline.
 > **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**
 
-- **Last updated:** 2026-02-14 00:23:11 UTC
+- **Last updated:** 2026-02-15 00:21:16 UTC
 - **Nextflow version:** 26.01.1-edge
 
 ## Pipelines
 
-- **Total:** 0 parse errors, 3216 errors, 9282 warnings across 132 pipelines
+- **Total:** 0 parse errors, 3216 errors, 9284 warnings across 132 pipelines
 - **Zero errors:** 32 pipelines (24.2%)
 
 |                    Errors                    |                     Warnings                     |
@@ -149,7 +149,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :x: [hlatyping](https://github.com/nf-core/hlatyping)                                 |     No      |      0 |        9 |     No      |         [View](lint_results/pipeline-results/hlatyping_lint.md)         |     [View](lint_results/prints-help-results/hlatyping_help.txt)      |
 | :x: [seqinspector](https://github.com/nf-core/seqinspector)                           |     No      |      0 |        9 |     No      |       [View](lint_results/pipeline-results/seqinspector_lint.md)        |    [View](lint_results/prints-help-results/seqinspector_help.txt)    |
 | :x: [epitopeprediction](https://github.com/nf-core/epitopeprediction)                 |     No      |      0 |        5 |     No      |     [View](lint_results/pipeline-results/epitopeprediction_lint.md)     | [View](lint_results/prints-help-results/epitopeprediction_help.txt)  |
-| :white_check_mark: [rnaseq](https://github.com/nf-core/rnaseq)                        |     No      |      0 |        3 |     Yes     |          [View](lint_results/pipeline-results/rnaseq_lint.md)           |       [View](lint_results/prints-help-results/rnaseq_help.txt)       |
+| :white_check_mark: [rnaseq](https://github.com/nf-core/rnaseq)                        |     No      |      0 |        5 |     Yes     |          [View](lint_results/pipeline-results/rnaseq_lint.md)           |       [View](lint_results/prints-help-results/rnaseq_help.txt)       |
 | :x: [proteinfold](https://github.com/nf-core/proteinfold)                             |     No      |      0 |        1 |     No      |        [View](lint_results/pipeline-results/proteinfold_lint.md)        |    [View](lint_results/prints-help-results/proteinfold_help.txt)     |
 | :white_check_mark: [rangeland](https://github.com/nf-core/rangeland)                  |     No      |      0 |        1 |     Yes     |         [View](lint_results/pipeline-results/rangeland_lint.md)         |     [View](lint_results/prints-help-results/rangeland_help.txt)      |
 | :white_check_mark: [bamtofastq](https://github.com/nf-core/bamtofastq)                |     No      |      0 |        0 |     Yes     |        [View](lint_results/pipeline-results/bamtofastq_lint.md)         |     [View](lint_results/prints-help-results/bamtofastq_help.txt)     |

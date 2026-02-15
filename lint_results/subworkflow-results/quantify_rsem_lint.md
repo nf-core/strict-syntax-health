@@ -8,14 +8,14 @@
 
 - Warning: `subworkflows/nf-core/quantify_rsem/main.nf:46:33`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-            ch_counts_gene.collect{ it[1] }.map { results -> [ ['id': 'all_samples'], results ] },
-                                    ^^^^^^^^^^
-    ```
+  ```nextflow
+          ch_counts_gene.collect{ it[1] }.map { results -> [ ['id': 'all_samples'], results ] },
+                                  ^^^^^^^^^^
+  ```
 
 - Warning: `subworkflows/nf-core/quantify_rsem/main.nf:47:39`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-            ch_counts_transcript.collect{ it[1] }
-                                          ^^^^^^^
-    ```
+  ```nextflow
+          ch_counts_transcript.collect{ it[1] }
+                                        ^^^^^^^
+  ```

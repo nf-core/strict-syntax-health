@@ -938,9 +938,9 @@
   "rnaseq": {
     "full_name": "nf-core/rnaseq",
     "html_url": "https://github.com/nf-core/rnaseq",
-    "commit": "f6f990b8639d8efca3fbc7f04b6126210636cea6",
+    "commit": "f83c774ebf79b9df9dbffcec8004b4231edc848f",
     "errors": 0,
-    "warnings": 3,
+    "warnings": 5,
     "parse_error": false,
     "prints_help": true
   },

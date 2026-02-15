@@ -5581,13 +5581,13 @@
     "parse_error": false
   },
   "plastid_make_wiggle": {
-    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/make_wiggle",
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/make/wiggle",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
   "plastid_metagene_generate": {
-    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/metagene_generate",
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/metagene/generate",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -5839,7 +5839,7 @@
     "parse_error": false
   },
   "proseg_proseg_to_baysor": {
-    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/proseg/proseg_to_baysor",
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/proseg/proseg/to/baysor",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
