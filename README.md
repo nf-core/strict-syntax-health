@@ -11,12 +11,12 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 > See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline.
 > **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**
 
-- **Last updated:** 2026-02-15 00:21:16 UTC
+- **Last updated:** 2026-02-16 00:21:32 UTC
 - **Nextflow version:** 26.01.1-edge
 
 ## Pipelines
 
-- **Total:** 0 parse errors, 3216 errors, 9284 warnings across 132 pipelines
+- **Total:** 0 parse errors, 3190 errors, 9272 warnings across 132 pipelines
 - **Zero errors:** 32 pipelines (24.2%)
 
 |                    Errors                    |                     Warnings                     |
@@ -58,7 +58,6 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :x: [callingcards](https://github.com/nf-core/callingcards)                           |     No      |     41 |      168 |      -      |       [View](lint_results/pipeline-results/callingcards_lint.md)        |                                  -                                   |
 | :x: [lncpipe](https://github.com/nf-core/lncpipe)                                     |     No      |     40 |      176 |      -      |          [View](lint_results/pipeline-results/lncpipe_lint.md)          |                                  -                                   |
 | :x: [genomeskim](https://github.com/nf-core/genomeskim)                               |     No      |     40 |       13 |      -      |        [View](lint_results/pipeline-results/genomeskim_lint.md)         |                                  -                                   |
-| :x: [coproid](https://github.com/nf-core/coproid)                                     |     No      |     38 |       58 |      -      |          [View](lint_results/pipeline-results/coproid_lint.md)          |                                  -                                   |
 | :x: [circdna](https://github.com/nf-core/circdna)                                     |     No      |     38 |       30 |      -      |          [View](lint_results/pipeline-results/circdna_lint.md)          |                                  -                                   |
 | :x: [marsseq](https://github.com/nf-core/marsseq)                                     |     No      |     37 |       64 |      -      |          [View](lint_results/pipeline-results/marsseq_lint.md)          |                                  -                                   |
 | :x: [nanoseq](https://github.com/nf-core/nanoseq)                                     |     No      |     36 |       43 |      -      |          [View](lint_results/pipeline-results/nanoseq_lint.md)          |                                  -                                   |
@@ -96,6 +95,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :x: [crisprseq](https://github.com/nf-core/crisprseq)                                 |     No      |     13 |       45 |      -      |         [View](lint_results/pipeline-results/crisprseq_lint.md)         |                                  -                                   |
 | :x: [sopa](https://github.com/nf-core/sopa)                                           |     No      |     13 |       16 |      -      |           [View](lint_results/pipeline-results/sopa_lint.md)            |                                  -                                   |
 | :x: [pacvar](https://github.com/nf-core/pacvar)                                       |     No      |     12 |       54 |      -      |          [View](lint_results/pipeline-results/pacvar_lint.md)           |                                  -                                   |
+| :x: [coproid](https://github.com/nf-core/coproid)                                     |     No      |     12 |       46 |      -      |          [View](lint_results/pipeline-results/coproid_lint.md)          |                                  -                                   |
 | :x: [smrnaseq](https://github.com/nf-core/smrnaseq)                                   |     No      |     11 |       74 |      -      |         [View](lint_results/pipeline-results/smrnaseq_lint.md)          |                                  -                                   |
 | :x: [metapep](https://github.com/nf-core/metapep)                                     |     No      |     11 |       34 |      -      |          [View](lint_results/pipeline-results/metapep_lint.md)          |                                  -                                   |
 | :x: [hgtseq](https://github.com/nf-core/hgtseq)                                       |     No      |     10 |       69 |      -      |          [View](lint_results/pipeline-results/hgtseq_lint.md)           |                                  -                                   |

@@ -137,9 +137,9 @@
   "coproid": {
     "full_name": "nf-core/coproid",
     "html_url": "https://github.com/nf-core/coproid",
-    "commit": "974980f8382bd87248c9e8b32a06b9c489f42504",
-    "errors": 38,
-    "warnings": 58,
+    "commit": "1c63bc8fe75e3ee3c0b884e2bcb94d23dc3b281f",
+    "errors": 12,
+    "warnings": 46,
     "parse_error": false,
     "prints_help": null
   },
@@ -803,7 +803,7 @@
   "proteinfamilies": {
     "full_name": "nf-core/proteinfamilies",
     "html_url": "https://github.com/nf-core/proteinfamilies",
-    "commit": "31ce548b840d81dd10b8e2477ac89bb085ab0b7d",
+    "commit": "036488db55a97a89a03a96494d268d02bdcd7adb",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -983,7 +983,7 @@
   "scdownstream": {
     "full_name": "nf-core/scdownstream",
     "html_url": "https://github.com/nf-core/scdownstream",
-    "commit": "d24bddeabe225070d27577a99e5f6a65e546642d",
+    "commit": "16160a5dc73df094765fe755c445ecccc7556f66",
     "errors": 0,
     "warnings": 19,
     "parse_error": false,
