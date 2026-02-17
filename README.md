@@ -11,12 +11,12 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 > See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline.
 > **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**
 
-- **Last updated:** 2026-02-16 00:21:32 UTC
+- **Last updated:** 2026-02-17 00:24:56 UTC
 - **Nextflow version:** 26.01.1-edge
 
 ## Pipelines
 
-- **Total:** 0 parse errors, 3190 errors, 9272 warnings across 132 pipelines
+- **Total:** 0 parse errors, 3191 errors, 9272 warnings across 132 pipelines
 - **Zero errors:** 32 pipelines (24.2%)
 
 |                    Errors                    |                     Warnings                     |
@@ -46,10 +46,10 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :x: [readsimulator](https://github.com/nf-core/readsimulator)                         |     No      |     53 |       49 |      -      |       [View](lint_results/pipeline-results/readsimulator_lint.md)       |                                  -                                   |
 | :x: [metaboigniter](https://github.com/nf-core/metaboigniter)                         |     No      |     52 |      123 |      -      |       [View](lint_results/pipeline-results/metaboigniter_lint.md)       |                                  -                                   |
 | :x: [imcyto](https://github.com/nf-core/imcyto)                                       |     No      |     52 |       14 |      -      |          [View](lint_results/pipeline-results/imcyto_lint.md)           |                                  -                                   |
+| :x: [deepmutscan](https://github.com/nf-core/deepmutscan)                             |     No      |     50 |       90 |      -      |        [View](lint_results/pipeline-results/deepmutscan_lint.md)        |                                  -                                   |
 | :x: [spinningjenny](https://github.com/nf-core/spinningjenny)                         |     No      |     50 |        9 |      -      |       [View](lint_results/pipeline-results/spinningjenny_lint.md)       |                                  -                                   |
 | :x: [rnasplice](https://github.com/nf-core/rnasplice)                                 |     No      |     49 |      190 |      -      |         [View](lint_results/pipeline-results/rnasplice_lint.md)         |                                  -                                   |
 | :x: [viralrecon](https://github.com/nf-core/viralrecon)                               |     No      |     49 |      104 |      -      |        [View](lint_results/pipeline-results/viralrecon_lint.md)         |                                  -                                   |
-| :x: [deepmutscan](https://github.com/nf-core/deepmutscan)                             |     No      |     49 |       90 |      -      |        [View](lint_results/pipeline-results/deepmutscan_lint.md)        |                                  -                                   |
 | :x: [chipseq](https://github.com/nf-core/chipseq)                                     |     No      |     47 |      181 |      -      |          [View](lint_results/pipeline-results/chipseq_lint.md)          |                                  -                                   |
 | :x: [riboseq](https://github.com/nf-core/riboseq)                                     |     No      |     45 |      146 |      -      |          [View](lint_results/pipeline-results/riboseq_lint.md)          |                                  -                                   |
 | :x: [radseq](https://github.com/nf-core/radseq)                                       |     No      |     45 |       42 |      -      |          [View](lint_results/pipeline-results/radseq_lint.md)           |                                  -                                   |
@@ -165,7 +165,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 
 ## Modules
 
-- **Total:** 0 parse errors, 4 errors, 291 warnings across 1373 modules
+- **Total:** 0 parse errors, 4 errors, 269 warnings across 1373 modules
 - **Zero errors:** 1372 modules (99.9%)
 
 |                   Errors                   |                    Warnings                    |
@@ -185,7 +185,7 @@ _Modules with zero errors are not shown above (1372 modules). They may still hav
 
 ## Subworkflows
 
-- **Total:** 0 parse errors, 0 errors, 162 warnings across 107 subworkflows
+- **Total:** 0 parse errors, 0 errors, 154 warnings across 107 subworkflows
 - **Zero errors:** 107 subworkflows (100.0%)
 
 |                     Errors                      |                      Warnings                       |

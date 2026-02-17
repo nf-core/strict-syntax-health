@@ -1,17 +1,10 @@
 # Nextflow lint results
 
-- Generated: 2026-02-14T00:22:50.961265+00:00
+- Generated: 2026-02-17T00:24:41.075358+00:00
 - Nextflow version: 26.01.1-edge
-- Summary: 26 warnings
+- Summary: 18 warnings
 
 ## :warning: Warnings
-
-- Warning: `subworkflows/nf-core/differential_functional_enrichment/main.nf:36:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^^^^
-  ```
 
 - Warning: `subworkflows/nf-core/differential_functional_enrichment/main.nf:58:62`: Parameter was not used -- prefix with `_` to suppress warning
 
@@ -53,55 +46,6 @@
   ```nextflow
       def criteria = multiMapCriteria { meta, input, genesets, background, method, samplesheet, featuresheet, features_id, features_symbol, meta_contrast, variable, reference, target, formula, comparison ->
                                                                                                                                                                                                  ^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/differential_functional_enrichment/main.nf:75:19`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .filter { meta, contrastMap, variable, reference, target, formula, comparison ->
-                    ^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/differential_functional_enrichment/main.nf:75:25`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .filter { meta, contrastMap, variable, reference, target, formula, comparison ->
-                          ^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/differential_functional_enrichment/main.nf:75:48`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .filter { meta, contrastMap, variable, reference, target, formula, comparison ->
-                                                 ^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/differential_functional_enrichment/main.nf:75:59`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .filter { meta, contrastMap, variable, reference, target, formula, comparison ->
-                                                            ^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/differential_functional_enrichment/main.nf:75:67`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .filter { meta, contrastMap, variable, reference, target, formula, comparison ->
-                                                                    ^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/differential_functional_enrichment/main.nf:75:76`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .filter { meta, contrastMap, variable, reference, target, formula, comparison ->
-                                                                             ^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/differential_functional_enrichment/main.nf:80:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          .filter{ it[4] == 'gsea' }
-                   ^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/nf-core/differential_functional_enrichment/main.nf:91:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead

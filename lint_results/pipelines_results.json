@@ -29,7 +29,7 @@
   "ampliseq": {
     "full_name": "nf-core/ampliseq",
     "html_url": "https://github.com/nf-core/ampliseq",
-    "commit": "bcefe645fd43cb25bcd5560a892dcae6483c5c9e",
+    "commit": "c36625c76ef4210252918d4b049e0f68ea898855",
     "errors": 0,
     "warnings": 66,
     "parse_error": false,
@@ -200,8 +200,8 @@
   "deepmutscan": {
     "full_name": "nf-core/deepmutscan",
     "html_url": "https://github.com/nf-core/deepmutscan",
-    "commit": "762281c58fa7ba88a0ff10cf2ba18b0b3238e8be",
-    "errors": 49,
+    "commit": "f571ae591c5612fdb0afcc35ee316e997dea81d8",
+    "errors": 50,
     "warnings": 90,
     "parse_error": false,
     "prints_help": null
@@ -506,7 +506,7 @@
   "lsmquant": {
     "full_name": "nf-core/lsmquant",
     "html_url": "https://github.com/nf-core/lsmquant",
-    "commit": "c20dc5a7017455909e122de62a98db57fe009bcf",
+    "commit": "33c68f455b1dec331e14c451ecf644d674f34ef6",
     "errors": 0,
     "warnings": 49,
     "parse_error": false,
@@ -812,7 +812,7 @@
   "proteinfold": {
     "full_name": "nf-core/proteinfold",
     "html_url": "https://github.com/nf-core/proteinfold",
-    "commit": "ad39e09a911156b5347e8a911a939e0cbd542bf9",
+    "commit": "6deb32855113215e908b1d6fe6e8a0fac4d2ee18",
     "errors": 0,
     "warnings": 1,
     "parse_error": false,
@@ -1010,7 +1010,7 @@
   "seqinspector": {
     "full_name": "nf-core/seqinspector",
     "html_url": "https://github.com/nf-core/seqinspector",
-    "commit": "2a59538a55a061d61efe342be944939b78e7912a",
+    "commit": "abe112d9befbb3514543443a0e874281476fd1db",
     "errors": 0,
     "warnings": 9,
     "parse_error": false,
@@ -1091,7 +1091,7 @@
   "taxprofiler": {
     "full_name": "nf-core/taxprofiler",
     "html_url": "https://github.com/nf-core/taxprofiler",
-    "commit": "23536cb0ab2ce839fc1108685673a0d40b184cbc",
+    "commit": "8767b3dfce73f95ff72fa45bd8b398c0e3bf3e09",
     "errors": 0,
     "warnings": 112,
     "parse_error": false,

@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "5f07370a6947595982045eed08cb3c6731a34df2",
+  "_repo_commit": "6f78c19f2a45b5953dc72804136ff3bfa16377f9",
   "abricate_run": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abricate/run",
     "errors": 0,
@@ -4893,7 +4893,7 @@
   "nail_search": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/nail/search",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "nanomonsv_parse": {
@@ -4983,25 +4983,25 @@
   "nonpareil_curve": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/nonpareil/curve",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "nonpareil_nonpareil": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/nonpareil/nonpareil",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "nonpareil_nonpareilcurvesr": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/nonpareil/nonpareilcurvesr",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "nonpareil_set": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/nonpareil/set",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "odgi_build": {
@@ -5061,85 +5061,85 @@
   "openms_decoydatabase": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/openms/decoydatabase",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "openms_filefilter": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/openms/filefilter",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "openms_idfilter": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/openms/idfilter",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "parse_error": false
   },
   "openms_idmassaccuracy": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/openms/idmassaccuracy",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "openms_idmerger": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/openms/idmerger",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "openms_idripper": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/openms/idripper",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "parse_error": false
   },
   "openms_idscoreswitcher": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/openms/idscoreswitcher",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "openms_peakpickerhires": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/openms/peakpickerhires",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "openms_peptideindexer": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/openms/peptideindexer",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "openmsthirdparty_cometadapter": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/openmsthirdparty/cometadapter",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "opt_flip": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/opt/flip",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "opt_stat": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/opt/stat",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "opt_track": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/opt/track",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "osfclient_fetch": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/osfclient/fetch",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "paftools_sam2paf": {
@@ -5581,13 +5581,13 @@
     "parse_error": false
   },
   "plastid_make_wiggle": {
-    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/make/wiggle",
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/make_wiggle",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
   "plastid_metagene_generate": {
-    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/metagene/generate",
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/metagene_generate",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -5839,7 +5839,7 @@
     "parse_error": false
   },
   "proseg_proseg_to_baysor": {
-    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/proseg/proseg/to/baysor",
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/proseg/proseg_to_baysor",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -7731,7 +7731,7 @@
   "truvari_segment": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/truvari/segment",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "trycycler_cluster": {
