@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-02-07T00:22:36.016597829Z
-- Nextflow version: 25.12.0-edge
+- Generated: 2026-02-18T00:22:36.115124190Z
+- Nextflow version: 26.01.1-edge
 - Summary: 10 errors, 63 warnings
 
 ## :x: Errors
@@ -505,14 +505,14 @@
                                 ^^
   ```
 
-- Warning: `workflows/mhcquant.nf:215:88`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/mhcquant.nf:216:88`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           params.epicore ? EPICORE.out.stats : SUMMARIZE_RESULTS.out.epicore_input.map { meta, tsv, stats -> stats }
                                                                                          ^^^^
   ```
 
-- Warning: `workflows/mhcquant.nf:215:94`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/mhcquant.nf:216:94`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           params.epicore ? EPICORE.out.stats : SUMMARIZE_RESULTS.out.epicore_input.map { meta, tsv, stats -> stats }

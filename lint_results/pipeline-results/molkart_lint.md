@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T17:22:35.572275744Z
-- Nextflow version: 25.12.0-edge
-- Summary: 63 warnings
+- Generated: 2026-02-18T00:22:42.332104795Z
+- Nextflow version: 26.01.1-edge
+- Summary: 42 warnings
 
 ## :warning: Warnings
 
@@ -62,27 +62,6 @@
       ^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_molkart_pipeline/main.nf:42:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_molkart_pipeline/main.nf:67:144`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      after_text = """${workflow.manifest.doi ? "\n* The pipeline\n" : ""}${workflow.manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${workflow.manifest.doi ? "\n" : ""}
-                                                                                                                                                 ^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_molkart_pipeline/main.nf:104:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      Channel
-      ^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/utils_nfcore_molkart_pipeline/main.nf:185:10`: Variable was declared but not used
 
   ```nextflow
@@ -95,27 +74,6 @@
   ```nextflow
       def (meta, files) = input
                  ^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      return ch_versions.unique().map { version -> processVersionsFromYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
-                                                                                                   ^^^^^^^
-  ```
-
-- Warning: `workflows/molkart.nf:43:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `workflows/molkart.nf:44:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_multiqc_files = Channel.empty()
-                         ^^^^^^^
   ```
 
 - Warning: `workflows/molkart.nf:49:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -195,13 +153,6 @@
                                           ^^
   ```
 
-- Warning: `workflows/molkart.nf:145:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      segmentation_masks = Channel.empty()
-                           ^^^^^^^
-  ```
-
 - Warning: `workflows/molkart.nf:148:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
@@ -237,39 +188,11 @@
                                                           ^^
   ```
 
-- Warning: `workflows/molkart.nf:156:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-                  .combine(Channel.of('mesmer')))
-                           ^^^^^^^
-  ```
-
-- Warning: `workflows/molkart.nf:168:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-                  .combine(Channel.of('stardist')))
-                           ^^^^^^^
-  ```
-
-- Warning: `workflows/molkart.nf:173:78`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      cellpose_custom_model = params.cellpose_custom_model ? stack_mix.combine(Channel.fromPath(params.cellpose_custom_model)) : []
-                                                                               ^^^^^^^
-  ```
-
 - Warning: `workflows/molkart.nf:177:63`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               cellpose_custom_model ? cellpose_custom_model.map{it[2]} : []
                                                                 ^^
-  ```
-
-- Warning: `workflows/molkart.nf:182:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-                  .combine(Channel.of('cellpose')))
-                           ^^^^^^^
   ```
 
 - Warning: `workflows/molkart.nf:193:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -291,13 +214,6 @@
   ```nextflow
                   it[2] == null ? tuple(it[0], 1) : tuple(it[0], 2)
                                                           ^^
-  ```
-
-- Warning: `workflows/molkart.nf:200:13`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-              Channel.fromPath(params.ilastik_pixel_project)
-              ^^^^^^^
   ```
 
 - Warning: `workflows/molkart.nf:203:30`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -326,13 +242,6 @@
   ```nextflow
               ilastik_in.map{ [it[0], it[2]] }
                                       ^^
-  ```
-
-- Warning: `workflows/molkart.nf:212:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-              .combine(Channel.fromPath(params.ilastik_multicut_project))
-                       ^^^^^^^
   ```
 
 - Warning: `workflows/molkart.nf:216:36`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -377,70 +286,14 @@
                                             ^^
   ```
 
-- Warning: `workflows/molkart.nf:223:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-                  .combine(Channel.of('ilastik')))
-                           ^^^^^^^
-  ```
-
-- Warning: `workflows/molkart.nf:298:32`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_multiqc_config        = Channel.fromPath(
-                                 ^^^^^^^
-  ```
-
-- Warning: `workflows/molkart.nf:301:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          Channel.fromPath(params.multiqc_config, checkIfExists: true) :
-          ^^^^^^^
-  ```
-
-- Warning: `workflows/molkart.nf:302:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          Channel.empty()
-          ^^^^^^^
-  ```
-
-- Warning: `workflows/molkart.nf:304:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          Channel.fromPath(params.multiqc_logo, checkIfExists: true) :
-          ^^^^^^^
-  ```
-
-- Warning: `workflows/molkart.nf:305:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          Channel.fromPath("$projectDir/assets/nf-core-molkart_logo_light.png", checkIfExists: true)
-          ^^^^^^^
-  ```
-
-- Warning: `workflows/molkart.nf:309:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_params))
-                            ^^^^^^^
-  ```
-
-- Warning: `workflows/molkart.nf:315:45`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_methods_description                = Channel.value(
-                                              ^^^^^^^
-  ```
-
-- Warning: `workflows/molkart.nf:330:43`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/molkart.nf:348:43`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               CROPHDF5.out.crop_summary.map{it[1]}
                                             ^^
   ```
 
-- Warning: `workflows/molkart.nf:335:34`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/molkart.nf:353:34`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               MOLKARTQC.out.qc.map{it[1]}

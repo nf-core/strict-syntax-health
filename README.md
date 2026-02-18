@@ -11,12 +11,12 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 > See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline.
 > **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**
 
-- **Last updated:** 2026-02-17 00:24:56 UTC
+- **Last updated:** 2026-02-18 00:24:44 UTC
 - **Nextflow version:** 26.01.1-edge
 
 ## Pipelines
 
-- **Total:** 0 parse errors, 3191 errors, 9272 warnings across 132 pipelines
+- **Total:** 0 parse errors, 3192 errors, 9255 warnings across 132 pipelines
 - **Zero errors:** 32 pipelines (24.2%)
 
 |                    Errors                    |                     Warnings                     |
@@ -120,9 +120,9 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :x: [panoramaseq](https://github.com/nf-core/panoramaseq)                             |     No      |      6 |       16 |      -      |        [View](lint_results/pipeline-results/panoramaseq_lint.md)        |                                  -                                   |
 | :x: [troughgraph](https://github.com/nf-core/troughgraph)                             |     No      |      6 |       16 |      -      |        [View](lint_results/pipeline-results/troughgraph_lint.md)        |                                  -                                   |
 | :x: [variantprioritization](https://github.com/nf-core/variantprioritization)         |     No      |      5 |        0 |      -      |   [View](lint_results/pipeline-results/variantprioritization_lint.md)   |                                  -                                   |
+| :x: [methylarray](https://github.com/nf-core/methylarray)                             |     No      |      4 |       19 |      -      |        [View](lint_results/pipeline-results/methylarray_lint.md)        |                                  -                                   |
 | :x: [methylseq](https://github.com/nf-core/methylseq)                                 |     No      |      3 |       65 |      -      |         [View](lint_results/pipeline-results/methylseq_lint.md)         |                                  -                                   |
-| :x: [raredisease](https://github.com/nf-core/raredisease)                             |     No      |      3 |       37 |      -      |        [View](lint_results/pipeline-results/raredisease_lint.md)        |                                  -                                   |
-| :x: [methylarray](https://github.com/nf-core/methylarray)                             |     No      |      3 |       19 |      -      |        [View](lint_results/pipeline-results/methylarray_lint.md)        |                                  -                                   |
+| :x: [raredisease](https://github.com/nf-core/raredisease)                             |     No      |      3 |       41 |      -      |        [View](lint_results/pipeline-results/raredisease_lint.md)        |                                  -                                   |
 | :x: [reportho](https://github.com/nf-core/reportho)                                   |     No      |      2 |       90 |      -      |         [View](lint_results/pipeline-results/reportho_lint.md)          |                                  -                                   |
 | :x: [dualrnaseq](https://github.com/nf-core/dualrnaseq)                               |     No      |      2 |       48 |      -      |        [View](lint_results/pipeline-results/dualrnaseq_lint.md)         |                                  -                                   |
 | :x: [pairgenomealign](https://github.com/nf-core/pairgenomealign)                     |     No      |      2 |       22 |      -      |      [View](lint_results/pipeline-results/pairgenomealign_lint.md)      |                                  -                                   |
@@ -133,8 +133,8 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :x: [methylong](https://github.com/nf-core/methylong)                                 |     No      |      0 |       81 |     No      |         [View](lint_results/pipeline-results/methylong_lint.md)         |     [View](lint_results/prints-help-results/methylong_help.txt)      |
 | :white_check_mark: [funcscan](https://github.com/nf-core/funcscan)                    |     No      |      0 |       73 |     Yes     |         [View](lint_results/pipeline-results/funcscan_lint.md)          |      [View](lint_results/prints-help-results/funcscan_help.txt)      |
 | :white_check_mark: [ampliseq](https://github.com/nf-core/ampliseq)                    |     No      |      0 |       66 |     Yes     |         [View](lint_results/pipeline-results/ampliseq_lint.md)          |      [View](lint_results/prints-help-results/ampliseq_help.txt)      |
-| :x: [molkart](https://github.com/nf-core/molkart)                                     |     No      |      0 |       63 |     No      |          [View](lint_results/pipeline-results/molkart_lint.md)          |      [View](lint_results/prints-help-results/molkart_help.txt)       |
 | :x: [lsmquant](https://github.com/nf-core/lsmquant)                                   |     No      |      0 |       49 |     No      |         [View](lint_results/pipeline-results/lsmquant_lint.md)          |      [View](lint_results/prints-help-results/lsmquant_help.txt)      |
+| :x: [molkart](https://github.com/nf-core/molkart)                                     |     No      |      0 |       42 |     No      |          [View](lint_results/pipeline-results/molkart_lint.md)          |      [View](lint_results/prints-help-results/molkart_help.txt)       |
 | :white_check_mark: [createtaxdb](https://github.com/nf-core/createtaxdb)              |     No      |      0 |       33 |     Yes     |        [View](lint_results/pipeline-results/createtaxdb_lint.md)        |    [View](lint_results/prints-help-results/createtaxdb_help.txt)     |
 | :white_check_mark: [mag](https://github.com/nf-core/mag)                              |     No      |      0 |       32 |     Yes     |            [View](lint_results/pipeline-results/mag_lint.md)            |        [View](lint_results/prints-help-results/mag_help.txt)         |
 | :x: [isoseq](https://github.com/nf-core/isoseq)                                       |     No      |      0 |       31 |     No      |          [View](lint_results/pipeline-results/isoseq_lint.md)           |       [View](lint_results/prints-help-results/isoseq_help.txt)       |
@@ -165,8 +165,8 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 
 ## Modules
 
-- **Total:** 0 parse errors, 4 errors, 269 warnings across 1373 modules
-- **Zero errors:** 1372 modules (99.9%)
+- **Total:** 0 parse errors, 4 errors, 153 warnings across 1374 modules
+- **Zero errors:** 1373 modules (99.9%)
 
 |                   Errors                   |                    Warnings                    |
 | :----------------------------------------: | :--------------------------------------------: |
@@ -179,7 +179,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | ------------------------------------------------------------------------------------------------------- | :---------: | -----: | -------: | :----------------------------------------------------------: |
 | :x: [cellranger_multi](https://github.com/nf-core/modules/tree/master/modules/nf-core/cellranger/multi) |     No      |      4 |       39 | [View](lint_results/module-results/cellranger_multi_lint.md) |
 
-_Modules with zero errors are not shown above (1372 modules). They may still have warnings. See the [modules results directory](lint_results/module-results/) for all lint outputs._
+_Modules with zero errors are not shown above (1373 modules). They may still have warnings. See the [modules results directory](lint_results/module-results/) for all lint outputs._
 
 </details>
 

@@ -587,8 +587,8 @@
   "methylarray": {
     "full_name": "nf-core/methylarray",
     "html_url": "https://github.com/nf-core/methylarray",
-    "commit": "af28c20a59c2d1a2ddf5d419740b4ce998212b3d",
-    "errors": 3,
+    "commit": "eb5fb7db5015069030bc6c0cf0d2f0985b93cefb",
+    "errors": 4,
     "warnings": 19,
     "parse_error": false,
     "prints_help": null
@@ -614,7 +614,7 @@
   "mhcquant": {
     "full_name": "nf-core/mhcquant",
     "html_url": "https://github.com/nf-core/mhcquant",
-    "commit": "83dba10313664a87045ee7db0e01dfce0ae66b43",
+    "commit": "a5a892fea8b4b500e22bcdd7abc214f46e4a8161",
     "errors": 10,
     "warnings": 63,
     "parse_error": false,
@@ -641,9 +641,9 @@
   "molkart": {
     "full_name": "nf-core/molkart",
     "html_url": "https://github.com/nf-core/molkart",
-    "commit": "101df3c477f0c801afd788808c1fdcf2ec4534a4",
+    "commit": "fdbb5802a4de87ada9c7aa4b85423726c461db41",
     "errors": 0,
-    "warnings": 63,
+    "warnings": 42,
     "parse_error": false,
     "prints_help": false
   },
@@ -857,9 +857,9 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "fce7bcf32dc6ad4f1d904085c647dcefc2d53443",
+    "commit": "2a54fabdf94647fccbd3c1b74650d9d45dd8fcfc",
     "errors": 3,
-    "warnings": 37,
+    "warnings": 41,
     "parse_error": false,
     "prints_help": null
   },
@@ -1091,7 +1091,7 @@
   "taxprofiler": {
     "full_name": "nf-core/taxprofiler",
     "html_url": "https://github.com/nf-core/taxprofiler",
-    "commit": "8767b3dfce73f95ff72fa45bd8b398c0e3bf3e09",
+    "commit": "3b1d36676b1523d78e1c111f1e89dab8009fce31",
     "errors": 0,
     "warnings": 112,
     "parse_error": false,

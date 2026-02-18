@@ -1,35 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-02-17T00:24:27.790978+00:00
+- Generated: 2026-02-18T00:24:12.965794+00:00
 - Nextflow version: 26.01.1-edge
-- Summary: 4 warnings
-
-## :warning: Warnings
-
-- Warning: `modules/nf-core/scimap/mcmicro/main.nf:24:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/scimap/mcmicro/main.nf:25:9`: Variable was declared but not used
-
-  ```nextflow
-      def prefix = task.ext.prefix ?: "${meta.id}"
-          ^^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/scimap/mcmicro/main.nf:44:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/scimap/mcmicro/main.nf:45:9`: Variable was declared but not used
-
-  ```nextflow
-      def prefix = task.ext.prefix ?: "${meta.id}"
-          ^^^^^^^^^^
-  ```
+- Summary: No issues found

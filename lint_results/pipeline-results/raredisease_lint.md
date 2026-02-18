@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-02-10T00:25:43.071635229Z
-- Nextflow version: 26.01.0-edge
-- Summary: 3 errors, 37 warnings
+- Generated: 2026-02-18T00:23:15.080886230Z
+- Nextflow version: 26.01.1-edge
+- Summary: 3 errors, 41 warnings
 
 ## :x: Errors
 
@@ -13,18 +13,18 @@
                             ^^^
   ```
 
-- Error: `modules/nf-core/eklipse/main.nf:28:9`: `ref_gb` is already declared
-
-  ```nextflow
-      def ref_gb = ref_gb ? "$ref_gb" : "/usr/local/bin/data/NC_012920.1.gb"
-          ^^^^^^
-  ```
-
 - Error: `tests/nextflow.config:28:27`: `SENTIEON_AUTH_MECH` is not defined (hint: use `env('...')` to access environment variable)
 
   ```nextflow
       SENTIEON_AUTH_MECH = "$SENTIEON_AUTH_MECH"
                             ^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `workflows/raredisease.nf:645:50`: `run_mt_for_wes` is not defined
+
+  ```nextflow
+      if (val_analysis_type.matches("wgs|mito") || run_mt_for_wes) {
+                                                   ^^^^^^^^^^^^^^
   ```
 
 ## :warning: Warnings
@@ -211,6 +211,13 @@
           ^^^^
   ```
 
+- Warning: `modules/nf-core/last/lastdb/main.nf:38:9`: Variable was declared but not used
+
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^
+  ```
+
 - Warning: `modules/nf-core/svdb/merge/main.nf:40:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
@@ -279,6 +286,27 @@
   ```nextflow
       def blacklist = blacklist_bed ? "--blacklist ${blacklist_bed}" : ''
           ^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/call_structural_variants.nf:18:9`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          ch_mt_bam_bai          // channel: [mandatory] [ val(meta), path(bam), path(bai) ]
+          ^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/call_structural_variants.nf:30:9`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          run_mt_for_wes         // boolean
+          ^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/call_sv_MT/main.nf:39:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+          ch_versions = Channel.empty()
+                        ^^^^^^^
   ```
 
 - Warning: `subworkflows/nf-core/vcf_filter_bcftools_ensemblvep/main.nf:14:5`: Variable was declared but not used

@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.01.1-edge
 
-Launching `./main.nf` [astonishing_goodall] revision: 88a6ba0e18
+Launching `./main.nf` [astonishing_goldstine] revision: 88a6ba0e18
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -14,7 +14,7 @@ WARN: Unrecognized config option 'validation.monochromeLogs'
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/taxprofiler 1.2.6
+  nf-core/taxprofiler 1.2.7dev
 ------------------------------------------------------
 Typical pipeline command:
 

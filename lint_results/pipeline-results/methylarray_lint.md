@@ -1,10 +1,17 @@
 # Nextflow lint results
 
-- Generated: 2026-02-03T00:23:32.048769757Z
-- Nextflow version: 25.12.0-edge
-- Summary: 3 errors, 19 warnings
+- Generated: 2026-02-18T00:22:28.714109033Z
+- Nextflow version: 26.01.1-edge
+- Summary: 4 errors, 19 warnings
 
 ## :x: Errors
+
+- Error: `conf/test_full.config:22:29`: Unexpected character: '#'
+
+  ```nextflow
+      remove_xreactive = true # TODO: removes too many probes
+                              ^
+  ```
 
 - Error: `modules/local/remove_confounding_probes/main.nf:10:15`: `samplesheet_name` is already declared
 
