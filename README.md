@@ -11,12 +11,12 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 > See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline.
 > **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**
 
-- **Last updated:** 2026-02-18 00:24:44 UTC
+- **Last updated:** 2026-02-19 00:25:22 UTC
 - **Nextflow version:** 26.01.1-edge
 
 ## Pipelines
 
-- **Total:** 0 parse errors, 3192 errors, 9255 warnings across 132 pipelines
+- **Total:** 0 parse errors, 3192 errors, 9256 warnings across 132 pipelines
 - **Zero errors:** 32 pipelines (24.2%)
 
 |                    Errors                    |                     Warnings                     |
@@ -150,7 +150,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :x: [seqinspector](https://github.com/nf-core/seqinspector)                           |     No      |      0 |        9 |     No      |       [View](lint_results/pipeline-results/seqinspector_lint.md)        |    [View](lint_results/prints-help-results/seqinspector_help.txt)    |
 | :x: [epitopeprediction](https://github.com/nf-core/epitopeprediction)                 |     No      |      0 |        5 |     No      |     [View](lint_results/pipeline-results/epitopeprediction_lint.md)     | [View](lint_results/prints-help-results/epitopeprediction_help.txt)  |
 | :white_check_mark: [rnaseq](https://github.com/nf-core/rnaseq)                        |     No      |      0 |        5 |     Yes     |          [View](lint_results/pipeline-results/rnaseq_lint.md)           |       [View](lint_results/prints-help-results/rnaseq_help.txt)       |
-| :x: [proteinfold](https://github.com/nf-core/proteinfold)                             |     No      |      0 |        1 |     No      |        [View](lint_results/pipeline-results/proteinfold_lint.md)        |    [View](lint_results/prints-help-results/proteinfold_help.txt)     |
+| :white_check_mark: [proteinfold](https://github.com/nf-core/proteinfold)              |     No      |      0 |        2 |     Yes     |        [View](lint_results/pipeline-results/proteinfold_lint.md)        |    [View](lint_results/prints-help-results/proteinfold_help.txt)     |
 | :white_check_mark: [rangeland](https://github.com/nf-core/rangeland)                  |     No      |      0 |        1 |     Yes     |         [View](lint_results/pipeline-results/rangeland_lint.md)         |     [View](lint_results/prints-help-results/rangeland_help.txt)      |
 | :white_check_mark: [bamtofastq](https://github.com/nf-core/bamtofastq)                |     No      |      0 |        0 |     Yes     |        [View](lint_results/pipeline-results/bamtofastq_lint.md)         |     [View](lint_results/prints-help-results/bamtofastq_help.txt)     |
 | :white_check_mark: [demo](https://github.com/nf-core/demo)                            |     No      |      0 |        0 |     Yes     |           [View](lint_results/pipeline-results/demo_lint.md)            |        [View](lint_results/prints-help-results/demo_help.txt)        |
@@ -165,7 +165,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 
 ## Modules
 
-- **Total:** 0 parse errors, 4 errors, 153 warnings across 1374 modules
+- **Total:** 0 parse errors, 4 errors, 73 warnings across 1374 modules
 - **Zero errors:** 1373 modules (99.9%)
 
 |                   Errors                   |                    Warnings                    |
@@ -185,8 +185,8 @@ _Modules with zero errors are not shown above (1373 modules). They may still hav
 
 ## Subworkflows
 
-- **Total:** 0 parse errors, 0 errors, 154 warnings across 107 subworkflows
-- **Zero errors:** 107 subworkflows (100.0%)
+- **Total:** 0 parse errors, 0 errors, 152 warnings across 108 subworkflows
+- **Zero errors:** 108 subworkflows (100.0%)
 
 |                     Errors                      |                      Warnings                       |
 | :---------------------------------------------: | :-------------------------------------------------: |
@@ -198,7 +198,7 @@ _Modules with zero errors are not shown above (1373 modules). They may still hav
 | Subworkflow | Parse Error | Errors | Warnings | Lint Output |
 | ----------- | :---------: | -----: | -------: | :---------: |
 
-_Subworkflows with zero errors are not shown above (107 subworkflows). They may still have warnings. See the [subworkflows results directory](lint_results/subworkflow-results/) for all lint outputs._
+_Subworkflows with zero errors are not shown above (108 subworkflows). They may still have warnings. See the [subworkflows results directory](lint_results/subworkflow-results/) for all lint outputs._
 
 </details>
 

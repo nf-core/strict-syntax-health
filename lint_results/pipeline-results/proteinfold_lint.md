@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-02-17T00:23:04.108785328Z
+- Generated: 2026-02-19T00:23:32.140160449Z
 - Nextflow version: 26.01.1-edge
-- Summary: 1 warning
+- Summary: 2 warnings
 
 ## :warning: Warnings
 
@@ -11,4 +11,11 @@
   ```nextflow
                   saveAs: { filename -> "${meta.id}.pdb" },
                             ^^^^^^^^
+  ```
+
+- Warning: `modules/local/run_helixfold3/main.nf:107:9`: Variable was declared but not used
+
+  ```nextflow
+      def VERSION = '705c2974a833cdc3a4420f4e3379da596091c97f'
+          ^^^^^^^
   ```

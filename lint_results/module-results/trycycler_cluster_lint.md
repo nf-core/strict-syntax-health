@@ -1,14 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-02-18T00:24:12.989393+00:00
+- Generated: 2026-02-19T00:24:59.447803+00:00
 - Nextflow version: 26.01.1-edge
-- Summary: 1 warning
-
-## :warning: Warnings
-
-- Warning: `modules/nf-core/trycycler/cluster/main.nf:43:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^^^^^^^
-  ```
+- Summary: No issues found

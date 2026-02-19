@@ -1,26 +1,26 @@
 # Nextflow lint results
 
-- Generated: 2026-01-23T00:21:19.388459774Z
-- Nextflow version: 25.12.0-edge
+- Generated: 2026-02-19T00:24:27.160618928Z
+- Nextflow version: 26.01.1-edge
 - Summary: 9 errors, 55 warnings
 
 ## :x: Errors
 
-- Error: `main.nf:45:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
+- Error: `main.nf:35:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   input = params.input ? Channel.fromList(samplesheetToList(params.input, "assets/schema_input.json")) : Channel.empty()
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `main.nf:74:51`: `path` is already declared
+- Error: `main.nf:64:51`: `path` is already declared
 
   ```nextflow
               vep_cache = UNTAR.out.untar.map{meta, path ->
                                                     ^^^^
   ```
 
-- Error: `main.nf:114:9`: `input` is not defined
+- Error: `main.nf:104:9`: `input` is not defined
 
   ```nextflow
           input
@@ -71,91 +71,91 @@
 
 ## :warning: Warnings
 
-- Warning: `conf/modules/cnaqc.config:28:20`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:39:20`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-          .findAll { it }      // remove empty strings
+          .findAll { it }
                      ^^
   ```
 
-- Warning: `main.nf:45:1`: Variable was declared but not used
+- Warning: `main.nf:35:1`: Variable was declared but not used
 
   ```nextflow
   input = params.input ? Channel.fromList(samplesheetToList(params.input, "assets/schema_input.json")) : Channel.empty()
   ^^^^^
   ```
 
-- Warning: `main.nf:45:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:35:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
   input = params.input ? Channel.fromList(samplesheetToList(params.input, "assets/schema_input.json")) : Channel.empty()
                          ^^^^^^^
   ```
 
-- Warning: `main.nf:45:104`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:35:104`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
   input = params.input ? Channel.fromList(samplesheetToList(params.input, "assets/schema_input.json")) : Channel.empty()
                                                                                                          ^^^^^^^
   ```
 
-- Warning: `main.nf:62:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:52:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       fasta = params.fasta ? Channel.fromPath(params.fasta).map{ it -> [ [id:it.baseName], it ] }.collect() : Channel.empty()
                              ^^^^^^^
   ```
 
-- Warning: `main.nf:62:109`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:52:109`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       fasta = params.fasta ? Channel.fromPath(params.fasta).map{ it -> [ [id:it.baseName], it ] }.collect() : Channel.empty()
                                                                                                               ^^^^^^^
   ```
 
-- Warning: `main.nf:63:45`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:53:45`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       drivers_table =  params.drivers_table ? Channel.fromPath(params.drivers_table).map{ it -> [ it ] }.collect() : Channel.empty()
                                               ^^^^^^^
   ```
 
-- Warning: `main.nf:63:116`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:53:116`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       drivers_table =  params.drivers_table ? Channel.fromPath(params.drivers_table).map{ it -> [ it ] }.collect() : Channel.empty()
                                                                                                                      ^^^^^^^
   ```
 
-- Warning: `main.nf:66:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:56:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ensemblvep_info = Channel.of([ [ id:"${params.vep_cache_version}_${params.vep_genome}" ], params.vep_genome, params.vep_species, params.vep_cache_version ])
                             ^^^^^^^
   ```
 
-- Warning: `main.nf:68:66`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `main.nf:58:66`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           vep_cache = ENSEMBLVEP_DOWNLOAD.out.cache.collect().map{ meta, cache -> [ cache ] }
                                                                    ^^^^
   ```
 
-- Warning: `main.nf:72:39`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:62:39`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               path = params.vep_cache ? Channel.fromPath(params.vep_cache).map{ it -> [ [id:it.baseName], it ] }.collect() : Channel.empty()
                                         ^^^^^^^
   ```
 
-- Warning: `main.nf:72:124`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:62:124`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               path = params.vep_cache ? Channel.fromPath(params.vep_cache).map{ it -> [ [id:it.baseName], it ] }.collect() : Channel.empty()
                                                                                                                              ^^^^^^^
   ```
 
-- Warning: `main.nf:74:45`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `main.nf:64:45`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               vep_cache = UNTAR.out.untar.map{meta, path ->

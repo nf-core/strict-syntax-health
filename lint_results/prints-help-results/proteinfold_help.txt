@@ -4,8 +4,312 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.01.1-edge
 
 Downloading plugin nf-schema@2.6.1
-Launching `./main.nf` [fabulous_montalcini] revision: 5c00516248
+Launching `./main.nf` [awesome_hopper] revision: 5c00516248
 
-ERROR ~ Unable to create help message: Specified param 'true' does not exist in JSON schema.
 
- -- Check script 'subworkflows/nf-core/utils_nfschema_plugin/main.nf' at line: 41 or see '.nextflow.log' file for more details
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/rnaseq 1.2.0dev
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/proteinfold -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Global options
+  --input                                   [string]  Path to comma-separated file containing information about the samples in the experiment. 
+  --outdir                                  [string]  The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --mode                                    [string]  Specifies the mode in which the pipeline will be run. mode can be any combination of ['alphafold2', 
+'alphafold3', 'colabfold', 'esmfold', 'rosettafold_all_atom', 'boltz', 'helixfold3', 
+'rosettafold2na'] separated by a comma (',') with no spaces. [default: alphafold2]  
+  --use_gpu                                 [boolean] Run on CPUs (default) or GPUs 
+  --save_intermediates                      [boolean] Keep raw intermediate files 
+  --split_fasta                             [boolean] Split input multi-fasta file in separated fasta files each of them containing one sequence to be 
+folded  
+  --email                                   [string]  Email address for completion summary. 
+  --multiqc_title                           [string]  MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+  --db                                      [string]  The directory where reference data is stored. Individual methods can be overwritten with 
+method-specific paths.  
+  --full_dbs                                [boolean] Global toggle for full database usage. 
+  --uniref30_prefix                         [string]  UniRef major release  (accepted: UniRef30_2023_02, UniRef30_2022_02, UniRef30_2021_03) [default: 
+UniRef30_2023_02]  
+  --use_msa_server                          [boolean] Use the cloud MSA server 
+  --msa_server_url                          [string]  Specify your custom MMSeqs2 API server url 
+
+AlphaFold2 options
+  --alphafold2_max_template_date            [string]  Maximum date of the PDB templates used by 'AlphaFold2' mode [default: 2038-01-19] 
+  --alphafold2_full_dbs                     [boolean] If true uses the full version of the BFD database otherwise, otherwise it uses its reduced version, 
+small bfd  
+  --alphafold2_mode                         [string]  Specifies the mode in which AlphaFold2 will be run  (accepted: standard, split_msa_prediction) 
+[default: split_msa_prediction]  
+  --alphafold2_model_preset                 [string]  Model preset for 'AlphaFold2' mode  (accepted: monomer, monomer_casp14, monomer_ptm, multimer) 
+[default: monomer_ptm]  
+  --alphafold2_random_seed                  [string]  Random seed to control stochastic alphafold inference. 
+  --alphafold2_params_prefix                [string]  Alphafold2 parameters version  (accepted: alphafold_params_2022-12-06, 
+alphafold_params_2022-03-02, alphafold_params_2022-01-19, ...) [default: 
+alphafold_params_2022-12-06]  
+
+ColabFold options
+  --colabfold_model_preset                  [string]  Model preset for 'colabfold' mode  (accepted: alphafold2_ptm, alphafold2_multimer_v1, 
+alphafold2_multimer_v2, alphafold2_multimer_v3) [default: alphafold2_ptm]  
+  --colabfold_num_recycles                  [integer] Number of recycles for ColabFold [default: 3] 
+  --colabfold_use_amber                     [boolean] Use Amber minimization to refine the predicted structures [default: true] 
+  --colabfold_db_load_mode                  [integer] Specify the way that MMSeqs2 will load the required databases in memory  (accepted: 0, 1, 2, 3) 
+ 
+  --colabfold_use_templates                 [boolean] Use PDB templates [default: false] 
+  --colabfold_create_index                  [boolean] Create databases indexes when running colabfold_local mode 
+
+ESMFold options
+  --esmfold_num_recycles                    [integer] Specifies the number of recycles used by ESMFold [default: 4] 
+  --esmfold_model_preset                    [string]  Specifies whether is a 'monomer' or 'multimer' prediction  (accepted: monomer, multimer) 
+[default: monomer]  
+
+RosettaFold2NA options
+  --rosettafold2na_db                       [string] Specifies the DB and PARAMS path used by 'RosettaFold2NA' mode 
+
+Boltz options
+  --boltz_use_potentials                    [boolean] run Boltz-2 using inference time potentials 
+  --boltz_use_kernels                       [boolean] Use optimized Triton-based CUDA kernels for Boltz inference [default: true] 
+  --boltz_model                             [string]  Sets the model to use for prediction. Default is boltz2 
+
+Foldseek options
+  --foldseek_search                         [string] Specifies the mode of foldseek search.  (accepted: null, easysearch) 
+  --foldseek_db                             [string] The ID of Foldseek databases 
+  --foldseek_db_path                        [string] Specifies the path to foldseek databases used by 'foldseek'. 
+  --foldseek_easysearch_arg                 [string] Specifies the arguments to be passed to foldseek easysearch command 
+
+HelixFold3 options
+  --helixfold3_precision                    [string]  The numerical precision used by the HelixFold3 model.  (accepted: bf16, fp32) [default: bf16] 
+ 
+  --helixfold3_infer_times                  [integer] Number of independent predictions made with the HelixFold3 model [default: 4] 
+  --helixfold3_max_template_date            [string]  No PDB template released after this date will be used to guide predictions. [default: 
+2038-01-19]  
+
+Process skipping options
+  --skip_multiqc                            [boolean] Skip MultiQC. 
+  --skip_visualisation                      [boolean] Skip visualisation reports. 
+
+AlphaFold2 DBs and parameters links options
+  --alphafold2_bfd_link                     [string] Link to BFD dababase [default: 
+https://storage.googleapis.com/alphafold-databases/casp14_versions/bfd_metaclust_clu_complete_id30_c90_final_seq.sorted_opt.tar.gz] 
+ 
+  --alphafold2_small_bfd_link               [string] Link to a reduced version of the BFD dababase [default: 
+https://storage.googleapis.com/alphafold-databases/reduced_dbs/bfd-first_non_consensus_sequences.fasta.gz] 
+ 
+  --alphafold2_params_link                  [string] Link to the AlphaFold2 parameters [default: 
+https://storage.googleapis.com/alphafold/alphafold_params_2022-12-06.tar]  
+  --alphafold2_mgnify_link                  [string] Link to the MGnify database [default: 
+https://ftp.ebi.ac.uk/pub/databases/metagenomics/peptide_database/2024_04/mgy_clusters.fa.gz]  
+  --alphafold2_pdb70_link                   [string] Link to the PDB70 database [default: 
+https://wwwuser.gwdguser.de/~compbiol/data/hhsuite/databases/hhsuite_dbs/pdb70_from_mmcif_220313.tar.gz] 
+ 
+  --alphafold2_pdb_mmcif_link               [string] Link to the PDB mmCIF database [default: rsync.rcsb.org::ftp_data/structures/divided/mmCIF/] 
+ 
+  --alphafold2_pdb_obsolete_link            [string] Link to the PDB obsolete database [default: 
+https://files.wwpdb.org/pub/pdb/data/status/obsolete.dat]  
+  --alphafold2_uniref30_link                [string] Link to the Uniclust30 database [default: 
+https://wwwuser.gwdguser.de/~compbiol/uniclust/2023_02/UniRef30_2023_02_hhsuite.tar.gz]  
+  --alphafold2_uniref90_link                [string] Link to the UniRef90 database [default: 
+https://ftp.ebi.ac.uk/pub/databases/uniprot/uniref/uniref90/uniref90.fasta.gz]  
+  --alphafold2_pdb_seqres_link              [string] Link to the PDB SEQRES database [default: 
+https://files.wwpdb.org/pub/pdb/derived_data/pdb_seqres.txt]  
+  --alphafold2_uniprot_sprot_link           [string] Link to the SwissProt UniProt database [default: 
+https://ftp.ebi.ac.uk/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.fasta.gz] 
+ 
+  --alphafold2_uniprot_trembl_link          [string] Link to the TrEMBL UniProt database [default: 
+https://ftp.ebi.ac.uk/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_trembl.fasta.gz] 
+ 
+
+AlphaFold2 DBs and parameters paths options
+  --alphafold2_db                           [string] Specifies the DB and PARAMS path used by 'AlphaFold2' mode 
+  --alphafold2_bfd_path                     [string] Path to BFD dababase [default: null/bfd/*] 
+  --alphafold2_small_bfd_path               [string] Path to a reduced version of the BFD database [default: null/small_bfd/*] 
+  --alphafold2_params_path                  [string] Path to the AlphaFold2 parameters [default: null/params/alphafold_params_2022-12-06/*] 
+  --alphafold2_mgnify_path                  [string] Path to the MGnify database [default: null/mgnify/*] 
+  --alphafold2_pdb70_path                   [string] Path to the PDB70 database [default: null/pdb70/**] 
+  --alphafold2_pdb_mmcif_path               [string] Path to the PDB mmCIF database [default: null/pdb_mmcif/mmcif_files] 
+  --alphafold2_pdb_obsolete_path            [string] Path to the PDB obsolete file [default: null/pdb_mmcif/obsolete.dat] 
+  --alphafold2_uniref30_path                [string] Path to the Uniref30 database [default: null/uniref30/*] 
+  --alphafold2_uniref90_path                [string] Path to the UniRef90 database [default: null/uniref90/*] 
+  --alphafold2_pdb_seqres_path              [string] Path to the PDB SEQRES database [default: null/pdb_seqres/*] 
+  --alphafold2_uniprot_path                 [string] Path to UniProt database containing the SwissProt and the TrEMBL databases [default: 
+null/uniprot/*]  
+
+Alphafold3 DBs and parameters links options
+  --alphafold3_small_bfd_path               [string] Path to the reduced version of the BFD database [default: null/small_bfd/*] 
+  --alphafold3_params_path                  [string] Path to the Alphafold3 parameters 
+  --alphafold3_mgnify_path                  [string] Path to the MGnify database [default: null/mgnify/*] 
+  --alphafold3_pdb_mmcif_path               [string] Path to the PDB mmCIF database [default: null/pdb_mmcif/mmcif_files] 
+  --alphafold3_uniref90_path                [string] Path to the UniRef90 database [default: null/uniref90/*] 
+  --alphafold3_pdb_seqres_path              [string] Path to the PDB SEQRES database [default: null/pdb_seqres/*] 
+  --alphafold3_uniprot_path                 [string] Path to UniProt database containing the SwissProt and the TrEMBL databases [default: 
+null/uniprot/*]  
+  --alphafold3_rnacentral_path              [string] Path to the RNAcentral database [default: null/rnacentral/*] 
+  --alphafold3_nt_rna_path                  [string] Path to the nt_rna database [default: null/nt_rna/*] 
+  --alphafold3_rfam_path                    [string] Path to the Rfam database [default: null/rfam/*] 
+
+ColabFold DBs and parameters links options
+  --colabfold_db_link                       [string] Link to the ColabFold database [default: 
+https://opendata.mmseqs.org/colabfold/colabfold_envdb_202108.db.tar.gz]  
+  --colabfold_uniref30_link                 [string] Link to the UniRef30 database [default: 
+https://opendata.mmseqs.org/colabfold/uniref30_2302.db.tar.gz]  
+  --colabfold_alphafold2_params_link        [string] Link to the Alphafold2 parameters for Colabfold 
+
+ColabFold DBs and parameters paths options
+  --colabfold_db                            [string] Specifies the PARAMS and DB path used by 'colabfold'  mode 
+  --colabfold_envdb_path                    [string] Link to the ColabFold database [default: null/colabfold_envdb/*] 
+  --colabfold_uniref30_path                 [string] Link to the UniRef30 database [default: null/colabfold_uniref30/*] 
+  --colabfold_alphafold2_params_path        [string] Link to the Alphafold2 parameters for Colabfold 
+  --colabfold_alphafold2_params_tags        [object] Dictionary with Alphafold2 parameters tags 
+
+ESMFold parameters links options
+  --esmfold_3B_v1                           [string] Link to the ESMFold 3B-v1 model [default: 
+https://dl.fbaipublicfiles.com/fair-esm/models/esmfold_3B_v1.pt]  
+  --esm2_t36_3B_UR50D                       [string] Link to the ESMFold t36-3B-UR50D model [default: 
+https://dl.fbaipublicfiles.com/fair-esm/models/esm2_t36_3B_UR50D.pt]  
+  --esm2_t36_3B_UR50D_contact_regression    [string] Link to the ESMFold t36-3B-UR50D-contact-regression model [default: 
+https://dl.fbaipublicfiles.com/fair-esm/regression/esm2_t36_3B_UR50D-contact-regression.pt]  
+
+ESMFold parameters paths options
+  --esmfold_db                              [string] Specifies the PARAMS path used by 'esmfold' mode 
+  --esmfold_params_path                     [string] Link to the ESMFold parameters [default: null/params/*] 
+
+Boltz DBs and model links options
+  --boltz_ccd_link                          [string] Link to download CCD file [default: 
+https://huggingface.co/boltz-community/boltz-1/resolve/main/ccd.pkl]  
+  --boltz_model_link                        [string] Link to download model file [default: 
+https://huggingface.co/boltz-community/boltz-1/resolve/main/boltz1_conf.ckpt]  
+  --boltz2_aff_link                         [string] Link to download boltz affinity file [default: 
+https://huggingface.co/boltz-community/boltz-2/resolve/main/boltz2_aff.ckpt]  
+  --boltz2_conf_link                        [string] Link to download boltz-2 conf file [default: 
+https://huggingface.co/boltz-community/boltz-2/resolve/main/boltz2_conf.ckpt]  
+  --boltz2_mols_link                        [string] Link to download boltz-2 mols [default: 
+https://huggingface.co/boltz-community/boltz-2/resolve/main/mols.tar]  
+
+Boltz DBs and model paths options
+  --boltz_db                                [string] Path to boltz databases 
+  --boltz_ccd_path                          [string] Path to CCD file [default: null/params/ccd.pkl] 
+  --boltz_model_path                        [string] Path to boltz Model file [default: null/params/boltz1_conf.ckpt] 
+  --boltz2_aff_path                         [string] Path to boltz affinity file [default: null/params/boltz2_aff.ckpt] 
+  --boltz2_conf_path                        [string] Path to boltz-2 conf file [default: null/params/boltz2_conf.ckpt] 
+  --boltz2_mols_path                        [string] Path to boltz-2 mols [default: null/params/mols/] 
+
+RosettaFold2NA DBs and parameters links options
+  --rosettafold2na_uniref30_link            [string] [default: http://wwwuser.gwdg.de/~compbiol/uniclust/2020_06/UniRef30_2020_06_hhsuite.tar.gz] 
+ 
+  --rosettafold2na_bfd_link                 [string] [default: 
+https://bfd.mmseqs.com/bfd_metaclust_clu_complete_id30_c90_final_seq.sorted_opt.tar.gz]  
+  --rosettafold2na_pdb100_link              [string] [default: https://files.ipd.uw.edu/pub/RoseTTAFold/pdb100_2021Mar03.tar.gz] 
+  --rosettafold2na_weights_link             [string] [default: https://files.ipd.uw.edu/dimaio/RF2NA_apr23.tgz] 
+  --rfam_full_region_link                   [string] [default: ftp://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/Rfam.full_region.gz] 
+  --rfam_cm_link                            [string] [default: ftp://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/Rfam.cm.gz] 
+  --rnacentral_rfam_annotations_link        [string] [default: 
+ftp://ftp.ebi.ac.uk/pub/databases/RNAcentral/current_release/rfam/rfam_annotations.tsv.gz]  
+  --rnacentral_id_mapping_link              [string] [default: 
+ftp://ftp.ebi.ac.uk/pub/databases/RNAcentral/current_release/id_mapping/id_mapping.tsv.gz]  
+  --rnacentral_sequences_link               [string] [default: 
+ftp://ftp.ebi.ac.uk/pub/databases/RNAcentral/current_release/sequences/rnacentral_species_specific_ids.fasta.gz] 
+ 
+
+RosettaFold2NA DBs and parameters paths options
+  --rosettafold2na_uniref30_path            [string] [default: null/UniRef30_2020_06/*] 
+  --rosettafold2na_bfd_path                 [string] [default: null/bfd/*] 
+  --rosettafold2na_pdb100_path              [string] [default: null/pdb100/*] 
+  --rosettafold2na_weights_path             [string] [default: null/params/network/weights/RF2NA_apr23.pt] 
+  --rosettafold2na_rna_path                 [string] Path to the RNA folder containing all necessary RNA databases for RF2NA [default: null/RNA/*] 
+ 
+
+Generic options
+  --multiqc_methods_description             [string]          Custom MultiQC yaml file containing HTML including a methods description. 
+  --help                                    [boolean, string] Display the help message. 
+  --help_full                               [boolean]         Display the full detailed help message. 
+  --show_hidden                             [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+
+RoseTTAFold All Atom DBs and parameters links options
+  --rosettafold_all_atom_uniref30_link      [string] Link to the UniRef30 database for RoseTTAFold All Atom [default: 
+https://wwwuser.gwdguser.de/~compbiol/uniclust/2023_02/UniRef30_2023_02_hhsuite.tar.gz]  
+  --rosettafold_all_atom_bfd_link           [string] Link to the BFD database for RoseTTAFold All Atom [default: 
+https://bfd.mmseqs.com/bfd_metaclust_clu_complete_id30_c90_final_seq.sorted_opt.tar.gz]  
+  --rosettafold_all_atom_pdb100_link        [string] Link to the PDB100 database for RoseTTAFold All Atom [default: 
+https://files.ipd.uw.edu/pub/RoseTTAFold/pdb100_2021Mar03.tar.gz]  
+  --rosettafold_all_atom_paper_weights_link [string] Link to the RoseTTAFold All Atom paper weights [default: 
+http://files.ipd.uw.edu/pub/RF-All-Atom/weights/RFAA_paper_weights.pt]  
+
+RoseTTAFold All Atom DBs and parameters paths options
+  --rosettafold_all_atom_db                 [string] Path to RoseTTAFold All Atom database 
+  --rosettafold_all_atom_uniref30_path      [string] Path to UniRef30 database for RoseTTAFold All Atom [default: null/uniref30/*] 
+  --rosettafold_all_atom_bfd_path           [string] Path to BFD database for RoseTTAFold All Atom [default: null/bfd/*] 
+  --rosettafold_all_atom_pdb100_path        [string] Path to PDB100 database for RoseTTAFold All Atom [default: null/pdb100/*] 
+  --rosettafold_all_atom_paper_weights_path [string] Path to RoseTTAFold All Atom paper weights [default: null/params/RFAA_paper_weights.pt] 
+
+HelixFold3 dbs and parameters paths options
+  --helixfold3_db                           [string] Path to HelixFold3 database 
+  --helixfold3_init_models_path             [string] Path to HelixFold3 init models [default: null/params/HelixFold3-240814.pdparams] 
+  --helixfold3_uniclust30_path              [string] Path to UniRef30 database for HelixFold3 [default: null/uniref30/*] 
+  --helixfold3_ccd_preprocessed_path        [string] Path to CCD preprocessed file for HelixFold3 [default: 
+null/params/ccd_preprocessed_etkdg.pkl.gz]  
+  --helixfold3_rfam_path                    [string] Path to Rfam database for HelixFold3 [default: null/rfam/Rfam-14.9_rep_seq.fasta] 
+  --helixfold3_bfd_path                     [string] Path to BFD database for HelixFold3 [default: null/bfd/*] 
+  --helixfold3_small_bfd_path               [string] Path to reduced BFD database for HelixFold3 [default: null/small_bfd/*] 
+  --helixfold3_uniprot_path                 [string] Path to UniProt database for HelixFold3 [default: null/uniprot/*] 
+  --helixfold3_pdb_seqres_path              [string] Path to PDB SEQRES database for HelixFold3 [default: null/pdb_seqres/*] 
+  --helixfold3_uniref90_path                [string] Path to UniRef90 database for HelixFold3 [default: null/uniref90/*] 
+  --helixfold3_mgnify_path                  [string] Path to MGnify database for HelixFold3 [default: null/mgnify/*] 
+  --helixfold3_pdb_mmcif_path               [string] Path to PDB mmCIF database for HelixFold3 [default: null/pdb_mmcif/mmcif_files] 
+  --helixfold3_maxit_src_path               [string] Path to Maxit Suite for HelixFold3 [default: null/maxit-v11.200-prod-src] 
+  --helixfold3_obsolete_path                [string] Path to obsolete PDB file for HelixFold3 [default: null/pdb_mmcif/obsolete.dat] 
+
+HelixFold3 dbs and parameters link options
+  --helixfold3_init_models_link             [string] Link to HelixFold3 init models [default: 
+https://paddlehelix.bd.bcebos.com/HelixFold3/params/HelixFold3-params-240814.zip]  
+  --helixfold3_uniclust30_link              [string] Link to UniRef30 database for HelixFold3 [default: 
+https://wwwuser.gwdguser.de/~compbiol/uniclust/2023_02/UniRef30_2023_02_hhsuite.tar.gz]  
+  --helixfold3_ccd_preprocessed_link        [string] Link to CCD preprocessed file for HelixFold3 [default: 
+https://paddlehelix.bd.bcebos.com/HelixFold3/CCD/ccd_preprocessed_etkdg.pkl.gz]  
+  --helixfold3_rfam_link                    [string] Link to Rfam database for HelixFold3 [default: 
+https://paddlehelix.bd.bcebos.com/HelixFold3/MSA/Rfam-14.9_rep_seq.fasta]  
+  --helixfold3_bfd_link                     [string] Link to BFD database for HelixFold3 [default: 
+https://storage.googleapis.com/alphafold-databases/casp14_versions/bfd_metaclust_clu_complete_id30_c90_final_seq.sorted_opt.tar.gz] 
+ 
+  --helixfold3_small_bfd_link               [string] Link to reduced BFD database for HelixFold3 [default: 
+https://storage.googleapis.com/alphafold-databases/reduced_dbs/bfd-first_non_consensus_sequences.fasta.gz] 
+ 
+  --helixfold3_pdb_seqres_link              [string] Link to PDB SEQRES database for HelixFold3 [default: 
+https://files.wwpdb.org/pub/pdb/derived_data/pdb_seqres.txt]  
+  --helixfold3_uniref90_link                [string] Link to UniRef90 database for HelixFold3 [default: 
+ftp://ftp.uniprot.org/pub/databases/uniprot/uniref/uniref90/uniref90.fasta.gz]  
+  --helixfold3_mgnify_link                  [string] Link to MGnify database for HelixFold3 [default: 
+https://ftp.ebi.ac.uk/pub/databases/metagenomics/peptide_database/2024_04/mgy_clusters.fa.gz]  
+  --helixfold3_pdb_mmcif_link               [string] Link to PDB mmCIF database for HelixFold3 [default: 
+rsync.rcsb.org::ftp_data/structures/divided/mmCIF/]  
+  --helixfold3_uniprot_sprot_link           [string] Link to UniProt SwissProt database for HelixFold3 [default: 
+ftp://ftp.ebi.ac.uk/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.fasta.gz] 
+ 
+  --helixfold3_uniprot_trembl_link          [string] Link to UniProt TrEMBL database for HelixFold3 [default: 
+ftp://ftp.ebi.ac.uk/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_trembl.fasta.gz] 
+ 
+  --helixfold3_obsolete_link                [string] Link to obsolete PDB file for HelixFold3 [default: 
+https://files.rcsb.org/pub/pdb/data/status/obsolete.dat]  
+  --helixfold3_maxit_src_link               [string] Link to Maxit Suite for HelixFold3 [default: 
+https://proteinfold-dataset.s3.amazonaws.com/test-data/db/helixfold3/maxit-v11.200-prod-src.tar.gz] 
+ 
+ !! Hiding 18 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The pipeline
+    https://doi.org/10.5281/zenodo.7629996
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/proteinfold/blob/master/CITATIONS.md
+

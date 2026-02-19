@@ -506,7 +506,7 @@
   "lsmquant": {
     "full_name": "nf-core/lsmquant",
     "html_url": "https://github.com/nf-core/lsmquant",
-    "commit": "33c68f455b1dec331e14c451ecf644d674f34ef6",
+    "commit": "37c8f948966e1eb2b178629931f9e69c319292e8",
     "errors": 0,
     "warnings": 49,
     "parse_error": false,
@@ -812,11 +812,11 @@
   "proteinfold": {
     "full_name": "nf-core/proteinfold",
     "html_url": "https://github.com/nf-core/proteinfold",
-    "commit": "6deb32855113215e908b1d6fe6e8a0fac4d2ee18",
+    "commit": "c36513c2493bdcdb39a054c4cb13b14c57c7a43a",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 2,
     "parse_error": false,
-    "prints_help": false
+    "prints_help": true
   },
   "proteogenomicsdb": {
     "full_name": "nf-core/proteogenomicsdb",
@@ -974,7 +974,7 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "f342d7bda1b60f48098d25a4a4f5f7b84500bfb6",
+    "commit": "83a4be18613724fcf40cc765b5cada35646bef15",
     "errors": 143,
     "warnings": 589,
     "parse_error": false,
@@ -1127,7 +1127,7 @@
   "tumourevo": {
     "full_name": "nf-core/tumourevo",
     "html_url": "https://github.com/nf-core/tumourevo",
-    "commit": "bbadc75f23293ade36c078de4c4dcc4fec37d85f",
+    "commit": "6433335b8f82aac1571609d6d049a7d95bbe45cd",
     "errors": 9,
     "warnings": 55,
     "parse_error": false,

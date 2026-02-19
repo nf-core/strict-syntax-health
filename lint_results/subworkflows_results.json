@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "4b38c845df6aad0e3615146deec2084003327472",
+  "_repo_commit": "7060b0e4af2ebdb22e26df8d0501fca1988f5095",
   "abundance_differential_filter": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/abundance_differential_filter",
     "errors": 0,
@@ -345,7 +345,7 @@
   "fastq_align_dna": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_align_dna",
     "errors": 0,
-    "warnings": 4,
+    "warnings": 3,
     "parse_error": false
   },
   "fastq_align_hisat2": {
@@ -546,6 +546,12 @@
     "warnings": 2,
     "parse_error": false
   },
+  "tif_registration_stainwarpy": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/tif_registration_stainwarpy",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "tiff_segmentation_vpt": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/tiff_segmentation_vpt",
     "errors": 0,
@@ -603,7 +609,7 @@
   "vcf_extract_relate_somalier": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/vcf_extract_relate_somalier",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "vcf_filter_bcftools_ensemblvep": {

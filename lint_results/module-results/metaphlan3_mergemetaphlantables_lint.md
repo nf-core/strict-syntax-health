@@ -1,14 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-02-18T00:24:12.922832+00:00
+- Generated: 2026-02-19T00:24:59.394365+00:00
 - Nextflow version: 26.01.1-edge
-- Summary: 1 warning
-
-## :warning: Warnings
-
-- Warning: `modules/nf-core/metaphlan3/mergemetaphlantables/main.nf:22:31`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def input = profiles.sort{it.toString()}.join(" ")
-                                ^^^^^^^^^^
-  ```
+- Summary: No issues found

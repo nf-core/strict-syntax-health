@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "4b38c845df6aad0e3615146deec2084003327472",
+  "_repo_commit": "7060b0e4af2ebdb22e26df8d0501fca1988f5095",
   "abricate_run": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abricate/run",
     "errors": 0,
@@ -4227,13 +4227,13 @@
   "macs2_callpeak": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/macs2/callpeak",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "parse_error": false
   },
   "macs3_callpeak": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/macs3/callpeak",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "parse_error": false
   },
   "mafft_align": {
@@ -4245,13 +4245,13 @@
   "mafft_guidetree": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mafft/guidetree",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "mageck_count": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mageck/count",
     "errors": 0,
-    "warnings": 3,
+    "warnings": 0,
     "parse_error": false
   },
   "mageck_mle": {
@@ -4263,31 +4263,31 @@
   "mageck_test": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mageck/test",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "magus_align": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/magus/align",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "magus_guidetree": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/magus/guidetree",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "malt_build": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/malt/build",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "malt_run": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/malt/run",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "manta_convertinversion": {
@@ -4317,7 +4317,7 @@
   "mapad_index": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mapad/index",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "mapad_map": {
@@ -4335,13 +4335,13 @@
   "mash_screen": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mash/screen",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "mash_sketch": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mash/sketch",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "maxquant_lfq": {
@@ -4371,7 +4371,7 @@
   "megan_rma2info": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/megan/rma2info",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "parse_error": false
   },
   "merfin_hist": {
@@ -4461,7 +4461,7 @@
   "metacache_query": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/metacache/query",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "parse_error": false
   },
   "metaeuk_easypredict": {
@@ -4473,7 +4473,7 @@
   "metamaps_classify": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/metamaps/classify",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "parse_error": false
   },
   "metamaps_mapdirectly": {
@@ -4497,19 +4497,19 @@
   "metaphlan_mergemetaphlantables": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/metaphlan/mergemetaphlantables",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "metaphlan_metaphlan": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/metaphlan/metaphlan",
     "errors": 0,
-    "warnings": 3,
+    "warnings": 0,
     "parse_error": false
   },
   "metaphlan3_mergemetaphlantables": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/metaphlan3/mergemetaphlantables",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "metaphlan3_metaphlan3": {
@@ -4611,43 +4611,43 @@
   "mirdeep2_mapper": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mirdeep2/mapper",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "mirdeep2_mirdeep2": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mirdeep2/mirdeep2",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "mirtop_counts": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mirtop/counts",
     "errors": 0,
-    "warnings": 3,
+    "warnings": 0,
     "parse_error": false
   },
   "mirtop_export": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mirtop/export",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "parse_error": false
   },
   "mirtop_gff": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mirtop/gff",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "parse_error": false
   },
   "mirtop_stats": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mirtop/stats",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "parse_error": false
   },
   "mirtrace_qc": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mirtrace/qc",
     "errors": 0,
-    "warnings": 3,
+    "warnings": 0,
     "parse_error": false
   },
   "mitohifi_findmitoreference": {
@@ -4785,7 +4785,7 @@
   "motus_merge": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/motus/merge",
     "errors": 0,
-    "warnings": 3,
+    "warnings": 0,
     "parse_error": false
   },
   "motus_preplong": {
@@ -4839,25 +4839,25 @@
   "mtmalign_align": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mtmalign/align",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "mudskipper_bulk": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mudskipper/bulk",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "mudskipper_index": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mudskipper/index",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "parse_error": false
   },
   "muscle5_super5": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/muscle5/super5",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "muse_call": {
@@ -4875,7 +4875,7 @@
   "mykrobe_predict": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mykrobe/predict",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "nacho_normalize": {
@@ -7539,31 +7539,31 @@
   "taxonkit_lineage": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/taxonkit/lineage",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "taxonkit_list": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/taxonkit/list",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "taxonkit_name2taxid": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/taxonkit/name2taxid",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "taxpasta_merge": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/taxpasta/merge",
     "errors": 0,
-    "warnings": 3,
+    "warnings": 0,
     "parse_error": false
   },
   "taxpasta_standardise": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/taxpasta/standardise",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "parse_error": false
   },
   "tbprofiler_profile": {
@@ -7581,7 +7581,7 @@
   "tcoffee_alncompare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/tcoffee/alncompare",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "tcoffee_consensus": {
@@ -7593,13 +7593,13 @@
   "tcoffee_extractfrompdb": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/tcoffee/extractfrompdb",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "tcoffee_irmsd": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/tcoffee/irmsd",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "tcoffee_regressive": {
@@ -7611,13 +7611,13 @@
   "tcoffee_seqreformat": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/tcoffee/seqreformat",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "tcoffee_tcs": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/tcoffee/tcs",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "parse_error": false
   },
   "td2_longorfs": {
@@ -7653,13 +7653,13 @@
   "tidk_explore": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/tidk/explore",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "tidk_plot": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/tidk/plot",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "tidk_search": {
@@ -7707,7 +7707,7 @@
   "trgt_genotype": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/trgt/genotype",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "trgt_merge": {
@@ -7719,7 +7719,7 @@
   "trgt_plot": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/trgt/plot",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "truvari_bench": {
@@ -7743,7 +7743,7 @@
   "trycycler_cluster": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/trycycler/cluster",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "trycycler_subsample": {
@@ -7851,7 +7851,7 @@
   "vamb_bin": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/vamb/bin",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "variancepartition_dream": {
@@ -7887,7 +7887,7 @@
   "varscan_processsomatic": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/varscan/processsomatic",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "varscan_somatic": {
@@ -7935,19 +7935,19 @@
   "vclust_align": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/vclust/align",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "vclust_cluster": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/vclust/cluster",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "vclust_prefilter": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/vclust/prefilter",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "vembrane_filter": {
@@ -7983,7 +7983,7 @@
   "vg_construct": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/vg/construct",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "vg_deconstruct": {
@@ -7995,7 +7995,7 @@
   "vg_index": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/vg/index",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "viennarna_rnacofold": {
@@ -8007,7 +8007,7 @@
   "viennarna_rnafold": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/viennarna/rnafold",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "parse_error": false
   },
   "viennarna_rnalfold": {
@@ -8043,7 +8043,7 @@
   "vrhyme_linkbins": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/vrhyme/linkbins",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "vrhyme_vrhyme": {
@@ -8061,7 +8061,7 @@
   "vsearch_dereplicate": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/vsearch/dereplicate",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "vsearch_fastqfilter": {
