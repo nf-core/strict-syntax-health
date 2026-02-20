@@ -74,7 +74,7 @@
   "cageseq": {
     "full_name": "nf-core/cageseq",
     "html_url": "https://github.com/nf-core/cageseq",
-    "commit": "6884bcab7b826916aceb4c59a67e4411b605fefd",
+    "commit": "4cba41ca1a8fc6711be5f1072b53cd1d1a070568",
     "errors": 62,
     "warnings": 69,
     "parse_error": false,
@@ -506,7 +506,7 @@
   "lsmquant": {
     "full_name": "nf-core/lsmquant",
     "html_url": "https://github.com/nf-core/lsmquant",
-    "commit": "37c8f948966e1eb2b178629931f9e69c319292e8",
+    "commit": "996e6bf4cf5fa7948bd81cb565e2641129245ac4",
     "errors": 0,
     "warnings": 49,
     "parse_error": false,
@@ -767,9 +767,9 @@
   "phaseimpute": {
     "full_name": "nf-core/phaseimpute",
     "html_url": "https://github.com/nf-core/phaseimpute",
-    "commit": "be96529cd4e020cd27f475b62fdac7f9dad687de",
+    "commit": "ba97fa06de065191d13750a8dce9486e85e89e21",
     "errors": 1,
-    "warnings": 17,
+    "warnings": 15,
     "parse_error": false,
     "prints_help": null
   },
@@ -938,7 +938,7 @@
   "rnaseq": {
     "full_name": "nf-core/rnaseq",
     "html_url": "https://github.com/nf-core/rnaseq",
-    "commit": "f83c774ebf79b9df9dbffcec8004b4231edc848f",
+    "commit": "ed686cd3a6d15868cd62e2d8507ec463abb45a53",
     "errors": 0,
     "warnings": 5,
     "parse_error": false,
@@ -1010,9 +1010,9 @@
   "seqinspector": {
     "full_name": "nf-core/seqinspector",
     "html_url": "https://github.com/nf-core/seqinspector",
-    "commit": "abe112d9befbb3514543443a0e874281476fd1db",
+    "commit": "25269d27127fa092086827ce25ff7871f93daa50",
     "errors": 0,
-    "warnings": 9,
+    "warnings": 0,
     "parse_error": false,
     "prints_help": false
   },
@@ -1136,7 +1136,7 @@
   "variantbenchmarking": {
     "full_name": "nf-core/variantbenchmarking",
     "html_url": "https://github.com/nf-core/variantbenchmarking",
-    "commit": "8ae74738ebb35302649a253b5c36c3edb6df6e7b",
+    "commit": "7aa5b6fa619545fd5237fdf6869a8c7552c9e174",
     "errors": 10,
     "warnings": 69,
     "parse_error": false,

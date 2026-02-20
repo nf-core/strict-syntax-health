@@ -1,28 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-02-19T00:25:12.768027+00:00
+- Generated: 2026-02-20T00:23:00.646659+00:00
 - Nextflow version: 26.01.1-edge
-- Summary: 3 warnings
-
-## :warning: Warnings
-
-- Warning: `subworkflows/nf-core/homer_groseq/main.nf:20:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/homer_groseq/main.nf:22:18`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_uniqmap = Channel.empty()
-                   ^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/homer_groseq/main.nf:28:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          ch_uniqmap = UNZIP([[:], uniqmap]).unzipped_archive.map { it[1] }
-                                                                    ^^^^^^^
-  ```
+- Summary: No issues found

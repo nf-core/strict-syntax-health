@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-02-11T00:29:54.573452656Z
-- Nextflow version: 26.01.0-edge
+- Generated: 2026-02-20T00:22:17.100375158Z
+- Nextflow version: 26.01.1-edge
 - Summary: 10 errors, 69 warnings
 
 ## :x: Errors
@@ -48,28 +48,28 @@
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/variantbenchmarking.nf:235:7`: `CONCORDANCE_ANALYSIS` is not defined
+- Error: `workflows/variantbenchmarking.nf:236:7`: `CONCORDANCE_ANALYSIS` is not defined
 
   ```nextflow
         CONCORDANCE_ANALYSIS(
         ^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/variantbenchmarking.nf:242:44`: `CONCORDANCE_ANALYSIS` is not defined
+- Error: `workflows/variantbenchmarking.nf:243:44`: `CONCORDANCE_ANALYSIS` is not defined
 
   ```nextflow
           ch_versions      = ch_versions.mix(CONCORDANCE_ANALYSIS.out.versions)
                                              ^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/variantbenchmarking.nf:243:43`: `CONCORDANCE_ANALYSIS` is not defined
+- Error: `workflows/variantbenchmarking.nf:244:43`: `CONCORDANCE_ANALYSIS` is not defined
 
   ```nextflow
           ch_reports       = ch_reports.mix(CONCORDANCE_ANALYSIS.out.summary_reports)
                                             ^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/variantbenchmarking.nf:244:41`: `CONCORDANCE_ANALYSIS` is not defined
+- Error: `workflows/variantbenchmarking.nf:245:41`: `CONCORDANCE_ANALYSIS` is not defined
 
   ```nextflow
           evals_ch         = evals_ch.mix(CONCORDANCE_ANALYSIS.out.tagged_variants)
@@ -484,77 +484,77 @@
                              ^^
   ```
 
-- Warning: `workflows/variantbenchmarking.nf:266:85`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/variantbenchmarking.nf:271:85`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(SV_GERMLINE_BENCHMARK.out.logs.map{ meta, log -> log })
                                                                                       ^^^^
   ```
 
-- Warning: `workflows/variantbenchmarking.nf:341:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/variantbenchmarking.nf:346:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       def topic_versions = Channel.topic("versions")
                            ^^^^^^^
   ```
 
-- Warning: `workflows/variantbenchmarking.nf:371:45`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/variantbenchmarking.nf:376:45`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_multiqc_config                     = Channel.fromPath("$projectDir/assets/multiqc_config.yml", checkIfExists: true)
                                               ^^^^^^^
   ```
 
-- Warning: `workflows/variantbenchmarking.nf:372:69`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/variantbenchmarking.nf:377:69`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_multiqc_custom_config              = params.multiqc_config ? Channel.fromPath(params.multiqc_config, checkIfExists: true) :Channel.empty()
                                                                       ^^^^^^^
   ```
 
-- Warning: `workflows/variantbenchmarking.nf:372:131`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/variantbenchmarking.nf:377:131`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_multiqc_custom_config              = params.multiqc_config ? Channel.fromPath(params.multiqc_config, checkIfExists: true) :Channel.empty()
                                                                                                                                     ^^^^^^^
   ```
 
-- Warning: `workflows/variantbenchmarking.nf:373:67`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/variantbenchmarking.nf:378:67`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_multiqc_logo                       = params.multiqc_logo ? Channel.fromPath(params.multiqc_logo, checkIfExists: true) : Channel.empty()
                                                                     ^^^^^^^
   ```
 
-- Warning: `workflows/variantbenchmarking.nf:373:128`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/variantbenchmarking.nf:378:128`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_multiqc_logo                       = params.multiqc_logo ? Channel.fromPath(params.multiqc_logo, checkIfExists: true) : Channel.empty()
                                                                                                                                  ^^^^^^^
   ```
 
-- Warning: `workflows/variantbenchmarking.nf:375:45`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/variantbenchmarking.nf:380:45`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_workflow_summary                   = Channel.value(paramsSummaryMultiqc(summary_params))
                                               ^^^^^^^
   ```
 
-- Warning: `workflows/variantbenchmarking.nf:378:45`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/variantbenchmarking.nf:383:45`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_methods_description                = Channel.value(methodsDescriptionText(ch_multiqc_custom_methods_description))
                                               ^^^^^^^
   ```
 
-- Warning: `workflows/variantbenchmarking.nf:384:118`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/variantbenchmarking.nf:389:118`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_multiqc_files                      = ch_multiqc_files.mix(REPORT_BENCHMARK_STATISTICS.out.merged_reports.map{ meta, report -> report }.flatten())
                                                                                                                        ^^^^
   ```
 
-- Warning: `workflows/variantbenchmarking.nf:385:82`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/variantbenchmarking.nf:390:82`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_multiqc_files                      = ch_multiqc_files.mix(ch_reports.map{ meta, report -> report }.flatten())

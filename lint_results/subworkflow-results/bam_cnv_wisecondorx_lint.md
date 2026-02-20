@@ -1,14 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-02-19T00:25:12.752781+00:00
+- Generated: 2026-02-20T00:23:00.641787+00:00
 - Nextflow version: 26.01.1-edge
-- Summary: 1 warning
-
-## :warning: Warnings
-
-- Warning: `subworkflows/nf-core/bam_cnv_wisecondorx/main.nf:15:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^^^^
-  ```
+- Summary: No issues found

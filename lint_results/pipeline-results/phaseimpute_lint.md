@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-02-12T00:21:55.848060152Z
+- Generated: 2026-02-20T00:21:07.520388149Z
 - Nextflow version: 26.01.1-edge
-- Summary: 1 error, 17 warnings
+- Summary: 1 error, 15 warnings
 
 ## :x: Errors
 
@@ -111,20 +111,6 @@
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
-  ```
-
-- Warning: `modules/nf-core/minimac4/compressref/main.nf:37:9`: Variable was declared but not used
-
-  ```nextflow
-      def args   = task.ext.args   ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/quilt/quilt/main.nf:28:56`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def extensions                  =   bams.collect { it.extension }
-                                                         ^^
   ```
 
 - Warning: `subworkflows/local/vcf_phase_shapeit5/main.nf:75:30`: Implicit closure parameter is deprecated, declare an explicit parameter instead

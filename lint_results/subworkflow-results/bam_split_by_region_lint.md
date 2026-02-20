@@ -1,35 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-02-19T00:25:12.755117+00:00
+- Generated: 2026-02-20T00:23:00.642688+00:00
 - Nextflow version: 26.01.1-edge
-- Summary: 4 warnings
-
-## :warning: Warnings
-
-- Warning: `subworkflows/nf-core/bam_split_by_region/main.nf:15:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/bam_split_by_region/main.nf:23:19`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-              meta, bam, bai, regions_file ->
-                    ^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/bam_split_by_region/main.nf:23:24`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-              meta, bam, bai, regions_file ->
-                         ^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/bam_split_by_region/main.nf:50:31`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .map{ meta, bam, bai, regions, chrom -> [ meta + [ genomic_region:chrom ], bam, bai ] }
-                                ^^^^^^^^^^
-  ```
+- Summary: No issues found

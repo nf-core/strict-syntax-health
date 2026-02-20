@@ -1,9 +1,9 @@
 {
-  "_repo_commit": "7060b0e4af2ebdb22e26df8d0501fca1988f5095",
+  "_repo_commit": "96398d76ad719f9b57f27ff39c09834b7815461b",
   "abundance_differential_filter": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/abundance_differential_filter",
     "errors": 0,
-    "warnings": 18,
+    "warnings": 0,
     "parse_error": false
   },
   "archive_extract": {
@@ -15,7 +15,7 @@
   "bam_cnv_wisecondorx": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_cnv_wisecondorx",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "bam_create_som_pon_gatk": {
@@ -45,7 +45,7 @@
   "bam_docounts_contamination_angsd": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_docounts_contamination_angsd",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "parse_error": false
   },
   "bam_impute_quilt": {
@@ -75,7 +75,7 @@
   "bam_methyldackel": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_methyldackel",
     "errors": 0,
-    "warnings": 8,
+    "warnings": 0,
     "parse_error": false
   },
   "bam_ngscheckmate": {
@@ -105,13 +105,13 @@
   "bam_split_by_region": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_split_by_region",
     "errors": 0,
-    "warnings": 4,
+    "warnings": 0,
     "parse_error": false
   },
   "bam_stats_mirna_mirtop": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_stats_mirna_mirtop",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "bam_stats_samtools": {
@@ -123,7 +123,7 @@
   "bam_stringtie_merge": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_stringtie_merge",
     "errors": 0,
-    "warnings": 3,
+    "warnings": 0,
     "parse_error": false
   },
   "bam_subsampledepth_samtools": {
@@ -135,7 +135,7 @@
   "bam_taps_conversion": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_taps_conversion",
     "errors": 0,
-    "warnings": 5,
+    "warnings": 0,
     "parse_error": false
   },
   "bam_tumor_normal_somatic_variant_calling_gatk": {
@@ -147,7 +147,7 @@
   "bam_tumor_normal_somatic_variant_calling_strelka": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_tumor_normal_somatic_variant_calling_strelka",
     "errors": 0,
-    "warnings": 6,
+    "warnings": 0,
     "parse_error": false
   },
   "bam_tumor_only_somatic_variant_calling_gatk": {
@@ -165,7 +165,7 @@
   "bam_variant_demix_boot_freyja": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_variant_demix_boot_freyja",
     "errors": 0,
-    "warnings": 4,
+    "warnings": 0,
     "parse_error": false
   },
   "bam_vcf_impute_glimpse2": {
@@ -201,13 +201,13 @@
   "dia_proteomics_analysis": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/dia_proteomics_analysis",
     "errors": 0,
-    "warnings": 7,
+    "warnings": 0,
     "parse_error": false
   },
   "differential_functional_enrichment": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/differential_functional_enrichment",
     "errors": 0,
-    "warnings": 18,
+    "warnings": 0,
     "parse_error": false
   },
   "faa_seqfu_seqkit": {
@@ -219,7 +219,7 @@
   "fasta_binning_concoct": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fasta_binning_concoct",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "fasta_build_add_kraken2": {
@@ -237,7 +237,7 @@
   "fasta_clean_fcs": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fasta_clean_fcs",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "fasta_consensus_autocycler": {
@@ -249,7 +249,7 @@
   "fasta_explore_search_plot_tidk": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fasta_explore_search_plot_tidk",
     "errors": 0,
-    "warnings": 9,
+    "warnings": 0,
     "parse_error": false
   },
   "fasta_gxf_busco_plot": {
@@ -261,7 +261,7 @@
   "fasta_hmmsearch_rank_fastas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fasta_hmmsearch_rank_fastas",
     "errors": 0,
-    "warnings": 15,
+    "warnings": 0,
     "parse_error": false
   },
   "fasta_index_bismark_bwameth": {
@@ -285,13 +285,13 @@
   "fasta_newick_epang_gappa": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fasta_newick_epang_gappa",
     "errors": 0,
-    "warnings": 6,
+    "warnings": 0,
     "parse_error": false
   },
   "fasta_vclust_prefilter_align_cluster": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fasta_vclust_prefilter_align_cluster",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "fastq_align_bamcmp_bwa": {
@@ -303,13 +303,13 @@
   "fastq_align_bowtie2": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_align_bowtie2",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "fastq_align_bwa": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_align_bwa",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "fastq_align_bwaaln": {
@@ -321,7 +321,7 @@
   "fastq_align_chromap": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_align_chromap",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "fastq_align_dedup_bismark": {
@@ -345,7 +345,7 @@
   "fastq_align_dna": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_align_dna",
     "errors": 0,
-    "warnings": 3,
+    "warnings": 0,
     "parse_error": false
   },
   "fastq_align_hisat2": {
@@ -357,7 +357,7 @@
   "fastq_align_mapad": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_align_mapad",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "parse_error": false
   },
   "fastq_align_star": {
@@ -393,7 +393,7 @@
   "fastq_download_prefetch_fasterqdump_sratools": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_download_prefetch_fasterqdump_sratools",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "fastq_extract_kraken_krakentools": {
@@ -417,19 +417,19 @@
   "fastq_fetch_clean_hostile": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_fetch_clean_hostile",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "fastq_find_mirna_mirdeep2": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_find_mirna_mirdeep2",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "fastq_index_filter_deacon": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_index_filter_deacon",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "parse_error": false
   },
   "fastq_ngscheckmate": {
@@ -441,7 +441,7 @@
   "fastq_preprocess_seqkit": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_preprocess_seqkit",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "parse_error": false
   },
   "fastq_qc_stats": {
@@ -471,7 +471,7 @@
   "fastq_sanitise_seqkit": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_sanitise_seqkit",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "parse_error": false
   },
   "fastq_shortreads_preprocess_qc": {
@@ -489,13 +489,13 @@
   "fastq_taxonomic_profile_metaphlan": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_taxonomic_profile_metaphlan",
     "errors": 0,
-    "warnings": 3,
+    "warnings": 1,
     "parse_error": false
   },
   "fastq_trim_fastp_fastqc": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_trim_fastp_fastqc",
     "errors": 0,
-    "warnings": 11,
+    "warnings": 0,
     "parse_error": false
   },
   "h5ad_removebackground_barcodes_cellbender_anndata": {
@@ -507,7 +507,7 @@
   "homer_groseq": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/homer_groseq",
     "errors": 0,
-    "warnings": 3,
+    "warnings": 0,
     "parse_error": false
   },
   "mafft_align": {
@@ -542,8 +542,8 @@
   },
   "quantify_rsem": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/quantify_rsem",
-    "errors": 0,
-    "warnings": 2,
+    "errors": 2,
+    "warnings": 0,
     "parse_error": false
   },
   "tif_registration_stainwarpy": {
@@ -555,7 +555,7 @@
   "tiff_segmentation_vpt": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/tiff_segmentation_vpt",
     "errors": 0,
-    "warnings": 3,
+    "warnings": 0,
     "parse_error": false
   },
   "utils_nextflow_pipeline": {
@@ -585,7 +585,7 @@
   "utils_references": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/utils_references",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "vcf_annotate_ensemblvep": {
@@ -615,13 +615,13 @@
   "vcf_filter_bcftools_ensemblvep": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/vcf_filter_bcftools_ensemblvep",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "vcf_gather_bcftools": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/vcf_gather_bcftools",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "vcf_impute_beagle5": {

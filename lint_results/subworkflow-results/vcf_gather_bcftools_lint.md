@@ -1,14 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-02-19T00:25:12.770525+00:00
+- Generated: 2026-02-20T00:23:00.647927+00:00
 - Nextflow version: 26.01.1-edge
-- Summary: 1 warning
-
-## :warning: Warnings
-
-- Warning: `subworkflows/nf-core/vcf_gather_bcftools/main.nf:35:32`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-                  m.findAll { k, v -> !(k in arr_common_meta) }
-                                 ^^^^^^^^^^
-  ```
+- Summary: No issues found

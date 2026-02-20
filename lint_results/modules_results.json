@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "7060b0e4af2ebdb22e26df8d0501fca1988f5095",
+  "_repo_commit": "96398d76ad719f9b57f27ff39c09834b7815461b",
   "abricate_run": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abricate/run",
     "errors": 0,
@@ -1227,7 +1227,7 @@
   "cellranger_mkref": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cellranger/mkref",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "cellranger_mkvdjref": {
@@ -1413,7 +1413,7 @@
   "clustalo_guidetree": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/clustalo/guidetree",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "cmseq_polymut": {
@@ -1485,7 +1485,7 @@
   "cnvpytor_callcnvs": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cnvpytor/callcnvs",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "cnvpytor_histogram": {
@@ -1749,7 +1749,7 @@
   "ctatsplicing_prepgenomelib": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ctatsplicing/prepgenomelib",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "parse_error": false
   },
   "ctatsplicing_startocancerintrons": {
@@ -1785,7 +1785,7 @@
   "custom_filterdifferentialtable": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/custom/filterdifferentialtable",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "custom_getchromsizes": {
@@ -3038,6 +3038,12 @@
   },
   "gem3_gem3mapper": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gem3/gem3mapper",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "gemmi_cif2json": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gemmi/cif2json",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -4383,13 +4389,13 @@
   "merqury_hapmers": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/merqury/hapmers",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "parse_error": false
   },
   "merqury_merqury": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/merqury/merqury",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "merquryfk_hapmaker": {
@@ -4431,13 +4437,13 @@
   "meryl_histogram": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/meryl/histogram",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "meryl_unionsum": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/meryl/unionsum",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "metabat2_jgisummarizebamcontigdepths": {
@@ -4479,7 +4485,7 @@
   "metamaps_mapdirectly": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/metamaps/mapdirectly",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "metamdbg_asm": {
@@ -4773,7 +4779,7 @@
   "molkartgarage_clahe": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/molkartgarage/clahe",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "motus_downloaddb": {
@@ -4791,13 +4797,13 @@
   "motus_preplong": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/motus/preplong",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "motus_profile": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/motus/profile",
     "errors": 0,
-    "warnings": 3,
+    "warnings": 0,
     "parse_error": false
   },
   "msisensor_msi": {
@@ -5376,6 +5382,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "pharmcat_matcher": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pharmcat/matcher",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "pharmcat_vcfpreprocessor": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pharmcat/vcfpreprocessor",
     "errors": 0,
@@ -5715,7 +5727,7 @@
   "plink2_remove": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plink2/remove",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "plink2_score": {
@@ -8102,6 +8114,12 @@
   },
   "vt_normalize": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/vt/normalize",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "whatshap_haplotag": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/whatshap/haplotag",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
