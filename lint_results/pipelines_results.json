@@ -353,7 +353,7 @@
   "funcscan": {
     "full_name": "nf-core/funcscan",
     "html_url": "https://github.com/nf-core/funcscan",
-    "commit": "1652072470fd73569a8a0453fa7aa322eda3ea1b",
+    "commit": "0bad92a542142b6129354cbb64f7c100fb27638d",
     "errors": 0,
     "warnings": 73,
     "parse_error": false,
@@ -812,7 +812,7 @@
   "proteinfold": {
     "full_name": "nf-core/proteinfold",
     "html_url": "https://github.com/nf-core/proteinfold",
-    "commit": "c36513c2493bdcdb39a054c4cb13b14c57c7a43a",
+    "commit": "c341a08011ba82a896eeaec15bf6f00c118ea6cc",
     "errors": 0,
     "warnings": 2,
     "parse_error": false,
@@ -938,7 +938,7 @@
   "rnaseq": {
     "full_name": "nf-core/rnaseq",
     "html_url": "https://github.com/nf-core/rnaseq",
-    "commit": "ed686cd3a6d15868cd62e2d8507ec463abb45a53",
+    "commit": "fb3a9525fe8603a250063ded1ac4d188c5ed6451",
     "errors": 0,
     "warnings": 5,
     "parse_error": false,
@@ -974,9 +974,9 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "83a4be18613724fcf40cc765b5cada35646bef15",
+    "commit": "bb1aba60e7fccdffe9b7797e44a776e234f008fa",
     "errors": 143,
-    "warnings": 589,
+    "warnings": 578,
     "parse_error": false,
     "prints_help": null
   },
@@ -1010,11 +1010,11 @@
   "seqinspector": {
     "full_name": "nf-core/seqinspector",
     "html_url": "https://github.com/nf-core/seqinspector",
-    "commit": "25269d27127fa092086827ce25ff7871f93daa50",
+    "commit": "78ad48b6885d30b625607f2a9b9db6e4faa3ecff",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
-    "prints_help": false
+    "prints_help": true
   },
   "seqsubmit": {
     "full_name": "nf-core/seqsubmit",
@@ -1154,7 +1154,7 @@
   "variantprioritization": {
     "full_name": "nf-core/variantprioritization",
     "html_url": "https://github.com/nf-core/variantprioritization",
-    "commit": "d081f86392a38d423296430b47f9a8dbdd564af7",
+    "commit": "2c0aeb55d54710e436185f7cf12c10dc28d1542e",
     "errors": 5,
     "warnings": 0,
     "parse_error": false,

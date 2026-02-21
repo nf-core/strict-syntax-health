@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.01.1-edge
 
 Downloading plugin nf-schema@2.6.1
-Launching `./main.nf` [awesome_hopper] revision: 5c00516248
+Launching `./main.nf` [desperate_rubens] revision: 32e3cb20be
 
 
 ------------------------------------------------------
@@ -80,10 +80,10 @@ Boltz options
   --boltz_model                             [string]  Sets the model to use for prediction. Default is boltz2 
 
 Foldseek options
-  --foldseek_search                         [string] Specifies the mode of foldseek search.  (accepted: null, easysearch) 
-  --foldseek_db                             [string] The ID of Foldseek databases 
-  --foldseek_db_path                        [string] Specifies the path to foldseek databases used by 'foldseek'. 
-  --foldseek_easysearch_arg                 [string] Specifies the arguments to be passed to foldseek easysearch command 
+  --skip_foldseek                           [boolean] Skip foldseek structural similarity search. [default: true] 
+  --foldseek_db                             [string]  The ID of Foldseek databases 
+  --foldseek_db_path                        [string]  Specifies the path to foldseek databases used by 'foldseek'. 
+  --foldseek_easysearch_arg                 [string]  Specifies the arguments to be passed to foldseek easysearch command 
 
 HelixFold3 options
   --helixfold3_precision                    [string]  The numerical precision used by the HelixFold3 model.  (accepted: bf16, fp32) [default: bf16] 
