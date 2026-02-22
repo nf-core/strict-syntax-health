@@ -308,7 +308,7 @@
   "epitopeprediction": {
     "full_name": "nf-core/epitopeprediction",
     "html_url": "https://github.com/nf-core/epitopeprediction",
-    "commit": "9ac3059ea92536e119cef638d5b3dc59185e1a0c",
+    "commit": "6b6647dba40bcbae9b603c1cef4535e4f68bb85a",
     "errors": 0,
     "warnings": 5,
     "parse_error": false,
