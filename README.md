@@ -11,12 +11,12 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 > See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline.
 > **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**
 
-- **Last updated:** 2026-02-22 00:20:54 UTC
+- **Last updated:** 2026-02-23 00:22:48 UTC
 - **Nextflow version:** 26.01.1-edge
 
 ## Pipelines
 
-- **Total:** 0 parse errors, 3192 errors, 9234 warnings across 132 pipelines
+- **Total:** 0 parse errors, 3192 errors, 9198 warnings across 132 pipelines
 - **Zero errors:** 32 pipelines (24.2%)
 
 |                    Errors                    |                     Warnings                     |
@@ -105,7 +105,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :x: [pixelator](https://github.com/nf-core/pixelator)                                 |     No      |     10 |       38 |      -      |         [View](lint_results/pipeline-results/pixelator_lint.md)         |                                  -                                   |
 | :x: [tumourevo](https://github.com/nf-core/tumourevo)                                 |     No      |      9 |       55 |      -      |         [View](lint_results/pipeline-results/tumourevo_lint.md)         |                                  -                                   |
 | :x: [fastqrepair](https://github.com/nf-core/fastqrepair)                             |     No      |      9 |       32 |      -      |        [View](lint_results/pipeline-results/fastqrepair_lint.md)        |                                  -                                   |
-| :x: [hadge](https://github.com/nf-core/hadge)                                         |     No      |      8 |       81 |      -      |           [View](lint_results/pipeline-results/hadge_lint.md)           |                                  -                                   |
+| :x: [hadge](https://github.com/nf-core/hadge)                                         |     No      |      8 |       45 |      -      |           [View](lint_results/pipeline-results/hadge_lint.md)           |                                  -                                   |
 | :x: [pacsomatic](https://github.com/nf-core/pacsomatic)                               |     No      |      7 |      115 |      -      |        [View](lint_results/pipeline-results/pacsomatic_lint.md)         |                                  -                                   |
 | :x: [drugresponseeval](https://github.com/nf-core/drugresponseeval)                   |     No      |      7 |       29 |      -      |     [View](lint_results/pipeline-results/drugresponseeval_lint.md)      |                                  -                                   |
 | :x: [longraredisease](https://github.com/nf-core/longraredisease)                     |     No      |      6 |      121 |      -      |      [View](lint_results/pipeline-results/longraredisease_lint.md)      |                                  -                                   |

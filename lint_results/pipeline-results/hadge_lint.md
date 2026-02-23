@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-02-13T00:21:54.528341502Z
+- Generated: 2026-02-23T00:22:00.522865043Z
 - Nextflow version: 26.01.1-edge
-- Summary: 8 errors, 81 warnings
+- Summary: 8 errors, 45 warnings
 
 ## :x: Errors
 
@@ -281,69 +281,6 @@
           ^^^^^^
   ```
 
-- Warning: `subworkflows/local/bam_qc/main.nf:12:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/genetic_demultiplexing/main.nf:21:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/genetic_demultiplexing/main.nf:22:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_vireo = Channel.empty()
-                 ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/genetic_demultiplexing/main.nf:23:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_demuxlet = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/genetic_demultiplexing/main.nf:24:21`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_freemuxlet = Channel.empty()
-                      ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/genetic_demultiplexing/main.nf:25:21`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_souporcell = Channel.empty()
-                      ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/genetic_demultiplexing/main.nf:26:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_gt_cells = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/genetic_demultiplexing/main.nf:27:21`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_gt_donors =  Channel.empty()
-                      ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/genetic_demultiplexing/main.nf:28:34`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_vireo_filtered_variants = Channel.empty()
-                                   ^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/genetic_demultiplexing/main.nf:134:41`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
@@ -356,83 +293,6 @@
   ```nextflow
           .map { tuple -> tuple.collect { it == null ? [] : it } }
                                                             ^^
-  ```
-
-- Warning: `subworkflows/local/hash_demultiplexing/main.nf:22:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/hash_demultiplexing/main.nf:24:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_htodemux_assignments = Channel.empty()
-                                ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/hash_demultiplexing/main.nf:25:35`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_htodemux_classifications = Channel.empty()
-                                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/hash_demultiplexing/main.nf:26:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_multiseq = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/hash_demultiplexing/main.nf:27:14`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_bff = Channel.empty()
-               ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/hash_demultiplexing/main.nf:28:18`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_demuxem = Channel.empty()
-                   ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/hash_demultiplexing/main.nf:29:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_gmmdemux_results = Channel.empty()
-                            ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/hash_demultiplexing/main.nf:30:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_gmmdemux_config = Channel.empty()
-                           ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/hash_demultiplexing/main.nf:31:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_hasheddrops_results = Channel.empty()
-                               ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/hash_demultiplexing/main.nf:32:33`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_hasheddrops_id_to_hash = Channel.empty()
-                                  ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/hash_demultiplexing/main.nf:33:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_hashsolo = Channel.empty()
-                    ^^^^^^^
   ```
 
 - Warning: `subworkflows/local/hash_demultiplexing/main.nf:51:13`: Variable was declared but not used
@@ -484,27 +344,6 @@
       ^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_hadge_pipeline/main.nf:41:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_hadge_pipeline/main.nf:66:144`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      after_text = """${workflow.manifest.doi ? "\n* The pipeline\n" : ""}${workflow.manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${workflow.manifest.doi ? "\n" : ""}
-                                                                                                                                                 ^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_hadge_pipeline/main.nf:103:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      Channel.fromList(samplesheetToList(params.input, "${projectDir}/assets/schema_input.json"))
-      ^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/utils_nfcore_hadge_pipeline/main.nf:217:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
@@ -517,48 +356,6 @@
   ```nextflow
           def bad = meta.hto_names.split(",").findAll { it.contains('_') }.join(', ')
                                                         ^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      return ch_versions.unique().map { version -> processVersionsFromYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
-                                                                                                   ^^^^^^^
-  ```
-
-- Warning: `workflows/hadge.nf:36:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `workflows/hadge.nf:37:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_donor_match = Channel.empty()
-                       ^^^^^^^
-  ```
-
-- Warning: `workflows/hadge.nf:38:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_find_variants = Channel.empty()
-                         ^^^^^^^
-  ```
-
-- Warning: `workflows/hadge.nf:39:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_subset_gt_donors = Channel.empty()
-                            ^^^^^^^
-  ```
-
-- Warning: `workflows/hadge.nf:40:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_multiqc_files = Channel.empty()
-                         ^^^^^^^
   ```
 
 - Warning: `workflows/hadge.nf:84:46`: Parameter was not used -- prefix with `_` to suppress warning
@@ -580,53 +377,4 @@
   ```nextflow
                   if (params.mode == 'genetic'){ tuple.collect { it == null ? [] : it } }
                                                                                    ^^
-  ```
-
-- Warning: `workflows/hadge.nf:268:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_multiqc_config = Channel.fromPath(
-                          ^^^^^^^
-  ```
-
-- Warning: `workflows/hadge.nf:273:11`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          ? Channel.fromPath(params.multiqc_config, checkIfExists: true)
-            ^^^^^^^
-  ```
-
-- Warning: `workflows/hadge.nf:274:11`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          : Channel.empty()
-            ^^^^^^^
-  ```
-
-- Warning: `workflows/hadge.nf:276:11`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          ? Channel.fromPath(params.multiqc_logo, checkIfExists: true)
-            ^^^^^^^
-  ```
-
-- Warning: `workflows/hadge.nf:277:11`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          : Channel.empty()
-            ^^^^^^^
-  ```
-
-- Warning: `workflows/hadge.nf:283:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_params))
-                            ^^^^^^^
-  ```
-
-- Warning: `workflows/hadge.nf:290:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_methods_description = Channel.value(
-                               ^^^^^^^
   ```
