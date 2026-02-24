@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "87c89378f0b3dbddc410087c7d11cd428909f3f5",
+  "_repo_commit": "d0f9532dae469e28598157211ec67deb05dcb49f",
   "abricate_run": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abricate/run",
     "errors": 0,
@@ -590,6 +590,12 @@
   },
   "bcftools_norm": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bcftools/norm",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "bcftools_plotvcfstats": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bcftools/plotvcfstats",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -5388,6 +5394,18 @@
     "warnings": 0,
     "parse_error": false
   },
+  "pharmcat_phenotyper": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pharmcat/phenotyper",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "pharmcat_reporter": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pharmcat/reporter",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "pharmcat_vcfpreprocessor": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pharmcat/vcfpreprocessor",
     "errors": 0,
@@ -5599,13 +5617,13 @@
     "parse_error": false
   },
   "plastid_make_wiggle": {
-    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/make/wiggle",
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/make_wiggle",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
   "plastid_metagene_generate": {
-    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/metagene/generate",
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/metagene_generate",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -5857,7 +5875,7 @@
     "parse_error": false
   },
   "proseg_proseg_to_baysor": {
-    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/proseg/proseg/to/baysor",
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/proseg/proseg_to_baysor",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

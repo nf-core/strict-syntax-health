@@ -29,7 +29,7 @@
   "ampliseq": {
     "full_name": "nf-core/ampliseq",
     "html_url": "https://github.com/nf-core/ampliseq",
-    "commit": "c36625c76ef4210252918d4b049e0f68ea898855",
+    "commit": "f388639ffa991c46179819aff6b9bc3e0324b57a",
     "errors": 0,
     "warnings": 66,
     "parse_error": false,
@@ -47,9 +47,9 @@
   "bacass": {
     "full_name": "nf-core/bacass",
     "html_url": "https://github.com/nf-core/bacass",
-    "commit": "691dd6d3b861ffe8befc596c54380279afd96423",
+    "commit": "857aa8fbb117f0d0baebea56340d6900e2c4ed02",
     "errors": 0,
-    "warnings": 15,
+    "warnings": 25,
     "parse_error": false,
     "prints_help": true
   },
@@ -254,7 +254,7 @@
   "differentialabundance": {
     "full_name": "nf-core/differentialabundance",
     "html_url": "https://github.com/nf-core/differentialabundance",
-    "commit": "0f3ba71ac604027e5f923004e0f815bf01aa0992",
+    "commit": "c28cb0c9c67efb676dc710b6c5a93de2249b5da6",
     "errors": 13,
     "warnings": 48,
     "parse_error": false,
@@ -785,7 +785,7 @@
   "pixelator": {
     "full_name": "nf-core/pixelator",
     "html_url": "https://github.com/nf-core/pixelator",
-    "commit": "70948006877b3c3fc551409559a387c8924de29e",
+    "commit": "7c7cfc9f77a2449273a8c4ae02bfc4cc4ffec311",
     "errors": 10,
     "warnings": 38,
     "parse_error": false,
@@ -1010,7 +1010,7 @@
   "seqinspector": {
     "full_name": "nf-core/seqinspector",
     "html_url": "https://github.com/nf-core/seqinspector",
-    "commit": "78ad48b6885d30b625607f2a9b9db6e4faa3ecff",
+    "commit": "dc46c62df37f23753ebc0a770632fd8a62524c91",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1181,9 +1181,9 @@
   "viralrecon": {
     "full_name": "nf-core/viralrecon",
     "html_url": "https://github.com/nf-core/viralrecon",
-    "commit": "69492e556bb234f7997e238d775a601425fb1882",
+    "commit": "c725a5abd4a2ebec947ce927e9fc402f4f4683b3",
     "errors": 49,
-    "warnings": 104,
+    "warnings": 99,
     "parse_error": false,
     "prints_help": null
   }

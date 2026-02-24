@@ -1,16 +1,16 @@
 # Nextflow lint results
 
-- Generated: 2026-01-23T00:21:53.360416555Z
-- Nextflow version: 25.12.0-edge
-- Summary: 49 errors, 104 warnings
+- Generated: 2026-02-24T00:23:41.013608682Z
+- Nextflow version: 26.01.1-edge
+- Summary: 49 errors, 99 warnings
 
 ## :x: Errors
 
-- Error: `conf/modules.config:43:5`: Unexpected input: 'includeConfig'
+- Error: `conf/modules.config:42:1`: If statements cannot be mixed with config statements
 
   ```nextflow
-      includeConfig 'modules_nanopore.config'
-      ^
+  if (params.platform == 'nanopore') {
+  ^
   ```
 
 - Error: `conf/modules_illumina.config:13:1`: Variable declarations cannot be mixed with config statements
@@ -62,14 +62,14 @@
   ^
   ```
 
-- Error: `conf/modules_illumina.config:983:1`: If statements cannot be mixed with config statements
+- Error: `conf/modules_illumina.config:986:1`: If statements cannot be mixed with config statements
 
   ```nextflow
   if (!params.skip_assembly) {
   ^
   ```
 
-- Error: `conf/modules_illumina.config:1330:1`: If statements cannot be mixed with config statements
+- Error: `conf/modules_illumina.config:1333:1`: If statements cannot be mixed with config statements
 
   ```nextflow
   if (!params.skip_multiqc) {
@@ -118,21 +118,21 @@
   ^
   ```
 
-- Error: `conf/modules_nanopore.config:283:1`: If statements cannot be mixed with config statements
+- Error: `conf/modules_nanopore.config:286:1`: If statements cannot be mixed with config statements
 
   ```nextflow
   if (!params.skip_variants_quast) {
   ^
   ```
 
-- Error: `conf/modules_nanopore.config:295:1`: If statements cannot be mixed with config statements
+- Error: `conf/modules_nanopore.config:298:1`: If statements cannot be mixed with config statements
 
   ```nextflow
   if (!params.skip_snpeff) {
   ^
   ```
 
-- Error: `conf/modules_nanopore.config:381:1`: If statements cannot be mixed with config statements
+- Error: `conf/modules_nanopore.config:384:1`: If statements cannot be mixed with config statements
 
   ```nextflow
   if (!params.skip_multiqc) {
@@ -293,7 +293,7 @@
           ^^^^^^^^^^^^
   ```
 
-- Error: `nextflow.config:262:26`: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/viralrecon/conf/test_full_sispa.config'
+- Error: `nextflow.config:263:26`: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/viralrecon/conf/test_full_sispa.config'
 
   ```nextflow
       test_full_sispa    { includeConfig 'conf/test_full_sispa.config'    }
@@ -422,13 +422,6 @@
   ```
 
 - Warning: `modules/nf-core/custom/getchromsizes/main.nf:23:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/freyja/update/main.nf:24:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
@@ -1042,34 +1035,6 @@
   ```nextflow
       ch_versions = Channel.empty()
                     ^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/bam_variant_demix_boot_freyja/main.nf:18:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/bam_variant_demix_boot_freyja/main.nf:51:5`: Variable was declared but not used
-
-  ```nextflow
-      ch_freyja_demix = FREYJA_DEMIX.out.demix
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/bam_variant_demix_boot_freyja/main.nf:58:21`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_lineages   = Channel.empty()
-                      ^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/bam_variant_demix_boot_freyja/main.nf:59:21`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_summarized = Channel.empty()
-                      ^^^^^^^
   ```
 
 - Warning: `subworkflows/nf-core/fastq_align_bowtie2/main.nf:18:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead

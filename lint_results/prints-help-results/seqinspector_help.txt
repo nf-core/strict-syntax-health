@@ -4,7 +4,8 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.01.1-edge
 
 Downloading plugin nf-core-utils@0.4.0
-Launching `./main.nf` [kickass_kowalevski] revision: 1394aa34c0
+Downloading plugin nf-schema@2.6.1
+Launching `./main.nf` [small_gautier] revision: 1394aa34c0
 
 
 ------------------------------------------------------
@@ -23,29 +24,33 @@ help message of that parameter will be printed.
 or `--helpFull`.  
 
 Input/output options
-  --input                       [string] Path to comma-separated file containing information about the samples in the experiment. 
-  --sample_size                 [number] Take a subset of reads for analysis. [default: 0] 
-  --outdir                      [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
+  --input                       [string]  Path to comma-separated file containing information about the samples in the experiment. 
+  --sample_size                 [number]  Take a subset of reads for analysis. [default: 0] 
+  --outdir                      [string]  The output directory where the results will be saved. You have to use absolute paths to storage on 
 Cloud infrastructure.  
-  --email                       [string] Email address for completion summary. 
-  --multiqc_title               [string] MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
-  --skip_tools                  [string] Comma-separated string of tools to skip 
+  --email                       [string]  Email address for completion summary. 
+  --multiqc_title               [string]  MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+  --run_picard_collecthsmetrics [boolean] Run picard_collecthsmetrics for QC of bam files. 
+  --skip_tools                  [string]  Comma-separated string of tools to skip 
+  --sort_bam                    [boolean] Sort BAM files after alignment [default: true] 
 
 Reference genome options
   --genome                      [string] Name of iGenomes reference. 
   --fasta                       [string] Path to FASTA genome file. 
   --fastq_screen_references     [string] A .csv of reference genomes to be mapped against by FastQ Screen [default: 
 ${projectDir}/assets/example_fastq_screen_references.csv]  
-  --bwamem2                     [string] Path to BWA mem indices. 
+  --bwamem2                     [string] Path to bwamem2 indices. 
+  --dict                        [string] Sequence dictionary for the reference fasta file provided. 
+  --target_intervals            [string] Path to target intervals file. 
+  --bait_intervals              [string] Path to bait intervals file. 
 
 Generic options
-  --sort_bam                    [boolean]         Sort BAM files after alignment [default: true] 
   --multiqc_methods_description [string]          Custom MultiQC yaml file containing HTML including a methods description. 
   --help                        [boolean, string] Display the help message. 
   --help_full                   [boolean]         Display the full detailed help message. 
   --show_hidden                 [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
  
- !! Hiding 25 param(s), use the `--showHidden` parameter to show them !!
+ !! Hiding 21 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
 
 * The nf-core framework
