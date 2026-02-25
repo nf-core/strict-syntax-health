@@ -11,7 +11,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 > See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline.
 > **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**
 
-- **Last updated:** 2026-02-24 00:24:54 UTC
+- **Last updated:** 2026-02-25 00:26:12 UTC
 - **Nextflow version:** 26.01.1-edge
 
 ## Pipelines
@@ -165,21 +165,20 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 
 ## Modules
 
-- **Total:** 0 parse errors, 4 errors, 55 warnings across 1381 modules
-- **Zero errors:** 1380 modules (99.9%)
+- **Total:** 0 parse errors, 0 errors, 0 warnings across 1381 modules
+- **Zero errors:** 1381 modules (100.0%)
 
 |                   Errors                   |                    Warnings                    |
 | :----------------------------------------: | :--------------------------------------------: |
 | ![Errors](lint_results/modules_errors.png) | ![Warnings](lint_results/modules_warnings.png) |
 
 <details>
-<summary>Module Results (1 modules with errors)</summary>
+<summary>Module Results (0 modules with errors)</summary>
 
-| Module                                                                                                  | Parse Error | Errors | Warnings |                         Lint Output                          |
-| ------------------------------------------------------------------------------------------------------- | :---------: | -----: | -------: | :----------------------------------------------------------: |
-| :x: [cellranger_multi](https://github.com/nf-core/modules/tree/master/modules/nf-core/cellranger/multi) |     No      |      4 |       39 | [View](lint_results/module-results/cellranger_multi_lint.md) |
+| Module | Parse Error | Errors | Warnings | Lint Output |
+| ------ | :---------: | -----: | -------: | :---------: |
 
-_Modules with zero errors are not shown above (1380 modules). They may still have warnings. See the [modules results directory](lint_results/module-results/) for all lint outputs._
+_Modules with zero errors are not shown above (1381 modules). They may still have warnings. See the [modules results directory](lint_results/module-results/) for all lint outputs._
 
 </details>
 

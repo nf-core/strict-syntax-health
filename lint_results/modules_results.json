@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "d0f9532dae469e28598157211ec67deb05dcb49f",
+  "_repo_commit": "cebe21bbd158c15c8fab172e37cfe97a239f4b77",
   "abricate_run": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abricate/run",
     "errors": 0,
@@ -1203,7 +1203,7 @@
   "cellbender_merge": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cellbender/merge",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "cellbender_removebackground": {
@@ -1215,7 +1215,7 @@
   "cellranger_count": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cellranger/count",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "cellranger_mkfastq": {
@@ -1244,8 +1244,8 @@
   },
   "cellranger_multi": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cellranger/multi",
-    "errors": 4,
-    "warnings": 39,
+    "errors": 0,
+    "warnings": 0,
     "parse_error": false
   },
   "cellranger_vdj": {
@@ -1821,7 +1821,7 @@
   "custom_sratoolsncbisettings": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/custom/sratoolsncbisettings",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "parse_error": false
   },
   "custom_tabulartogseachip": {
@@ -4533,7 +4533,7 @@
   "metaspace_converter": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/metaspace/converter",
     "errors": 0,
-    "warnings": 5,
+    "warnings": 0,
     "parse_error": false
   },
   "metaspace_download": {
@@ -4917,7 +4917,7 @@
   "narfmap_align": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/narfmap/align",
     "errors": 0,
-    "warnings": 4,
+    "warnings": 0,
     "parse_error": false
   },
   "narfmap_hashtable": {
@@ -6303,7 +6303,7 @@
   "rtn_tni": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/rtn/tni",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "rundbcan_cazymeannotation": {
@@ -7275,7 +7275,7 @@
   "sratools_prefetch": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/sratools/prefetch",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "parse_error": false
   },
   "srst2_srst2": {

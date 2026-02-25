@@ -812,7 +812,7 @@
   "proteinfold": {
     "full_name": "nf-core/proteinfold",
     "html_url": "https://github.com/nf-core/proteinfold",
-    "commit": "c341a08011ba82a896eeaec15bf6f00c118ea6cc",
+    "commit": "ce80ab470e3fbf309cbbbabff7a63eab61966cbb",
     "errors": 0,
     "warnings": 2,
     "parse_error": false,
@@ -938,7 +938,7 @@
   "rnaseq": {
     "full_name": "nf-core/rnaseq",
     "html_url": "https://github.com/nf-core/rnaseq",
-    "commit": "fb3a9525fe8603a250063ded1ac4d188c5ed6451",
+    "commit": "e1498122dc085c8c4a602d2b4714234d221ce999",
     "errors": 0,
     "warnings": 5,
     "parse_error": false,
@@ -1010,7 +1010,7 @@
   "seqinspector": {
     "full_name": "nf-core/seqinspector",
     "html_url": "https://github.com/nf-core/seqinspector",
-    "commit": "dc46c62df37f23753ebc0a770632fd8a62524c91",
+    "commit": "ed5d23cb3e5b2d88327f57c6cdf35a8befbf933c",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,

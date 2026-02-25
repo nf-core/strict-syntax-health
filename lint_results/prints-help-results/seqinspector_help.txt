@@ -4,8 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.01.1-edge
 
 Downloading plugin nf-core-utils@0.4.0
-Downloading plugin nf-schema@2.6.1
-Launching `./main.nf` [small_gautier] revision: 1394aa34c0
+Launching `./main.nf` [berserk_watson] revision: 1394aa34c0
 
 
 ------------------------------------------------------
@@ -14,7 +13,7 @@ Launching `./main.nf` [small_gautier] revision: 1394aa34c0
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/seqinspector 1.0.0
+  nf-core/seqinspector 1.1.0dev
 ------------------------------------------------------
 Typical pipeline command:
 
@@ -52,6 +51,9 @@ Generic options
  
  !! Hiding 21 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
+
+* The pipeline
+    https://doi.org/10.5281/zenodo.18757486
 
 * The nf-core framework
     https://doi.org/10.1038/s41587-020-0439-x
