@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-02-13T00:23:42.526964998Z
+- Generated: 2026-02-26T00:20:58.480176573Z
 - Nextflow version: 26.01.1-edge
 - Summary: 22 errors, 94 warnings
 
@@ -125,35 +125,35 @@
                         ^^^^^
   ```
 
-- Error: `workflows/scrnaseq.nf:264:9`: `CELLRANGER_MULTI_ALIGN` is not defined
+- Error: `workflows/scrnaseq.nf:265:9`: `CELLRANGER_MULTI_ALIGN` is not defined
 
   ```nextflow
           CELLRANGER_MULTI_ALIGN(
           ^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/scrnaseq.nf:272:39`: `CELLRANGER_MULTI_ALIGN` is not defined
+- Error: `workflows/scrnaseq.nf:273:39`: `CELLRANGER_MULTI_ALIGN` is not defined
 
   ```nextflow
           ch_versions = ch_versions.mix(CELLRANGER_MULTI_ALIGN.out.ch_versions)
                                         ^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/scrnaseq.nf:273:50`: `CELLRANGER_MULTI_ALIGN` is not defined
+- Error: `workflows/scrnaseq.nf:274:50`: `CELLRANGER_MULTI_ALIGN` is not defined
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix( CELLRANGER_MULTI_ALIGN.out.cellrangermulti_out.map{
                                                    ^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/scrnaseq.nf:276:48`: `CELLRANGER_MULTI_ALIGN` is not defined
+- Error: `workflows/scrnaseq.nf:277:48`: `CELLRANGER_MULTI_ALIGN` is not defined
 
   ```nextflow
           ch_mtx_matrices = ch_mtx_matrices.mix( CELLRANGER_MULTI_ALIGN.out.cellrangermulti_mtx_raw, CELLRANGER_MULTI_ALIGN.out.cellrangermulti_mtx_filtered )
                                                  ^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/scrnaseq.nf:276:100`: `CELLRANGER_MULTI_ALIGN` is not defined
+- Error: `workflows/scrnaseq.nf:277:100`: `CELLRANGER_MULTI_ALIGN` is not defined
 
   ```nextflow
           ch_mtx_matrices = ch_mtx_matrices.mix( CELLRANGER_MULTI_ALIGN.out.cellrangermulti_mtx_raw, CELLRANGER_MULTI_ALIGN.out.cellrangermulti_mtx_filtered )
@@ -757,63 +757,63 @@
               ^^^^
   ```
 
-- Warning: `workflows/scrnaseq.nf:251:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scrnaseq.nf:252:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               if (!map_collection_clone.any{ it.feature_type == 'gex' })    { map_collection_clone.add( [id: sample_id, feature_type: 'gex'   , gex:    empty_file, options:[:] ] ) }
                                              ^^
   ```
 
-- Warning: `workflows/scrnaseq.nf:252:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scrnaseq.nf:253:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               if (!map_collection_clone.any{ it.feature_type == 'vdj' })    { map_collection_clone.add( [id: sample_id, feature_type: 'vdj'   , vdj:    empty_file, options:[:] ] ) }
                                              ^^
   ```
 
-- Warning: `workflows/scrnaseq.nf:253:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scrnaseq.nf:254:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               if (!map_collection_clone.any{ it.feature_type == 'ab' })     { map_collection_clone.add( [id: sample_id, feature_type: 'ab'    , ab:     empty_file, options:[:] ] ) }
                                              ^^
   ```
 
-- Warning: `workflows/scrnaseq.nf:254:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scrnaseq.nf:255:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               if (!map_collection_clone.any{ it.feature_type == 'beam' })   { map_collection_clone.add( [id: sample_id, feature_type: 'beam'  , beam:   empty_file, options:[:] ] ) } // currently not implemented, the input samplesheet checking will not allow it.
                                              ^^
   ```
 
-- Warning: `workflows/scrnaseq.nf:255:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scrnaseq.nf:256:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               if (!map_collection_clone.any{ it.feature_type == 'crispr' }) { map_collection_clone.add( [id: sample_id, feature_type: 'crispr', crispr: empty_file, options:[:] ] ) }
                                              ^^
   ```
 
-- Warning: `workflows/scrnaseq.nf:256:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scrnaseq.nf:257:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               if (!map_collection_clone.any{ it.feature_type == 'cmo' })    { map_collection_clone.add( [id: sample_id, feature_type: 'cmo'   , cmo:    empty_file, options:[:] ] ) }
                                              ^^
   ```
 
-- Warning: `workflows/scrnaseq.nf:274:13`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/scrnaseq.nf:275:13`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               meta, outs -> outs.findAll{ it -> it.name == "web_summary.html" }
               ^^^^
   ```
 
-- Warning: `workflows/scrnaseq.nf:286:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scrnaseq.nf:287:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           star_index ? ch_star_index.map{it[1]} : [],
                                          ^^
   ```
 
-- Warning: `workflows/scrnaseq.nf:299:33`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/scrnaseq.nf:300:33`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   .filter { meta, mtx_files -> meta.input_type == 'raw' }

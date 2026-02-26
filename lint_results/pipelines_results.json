@@ -308,7 +308,7 @@
   "epitopeprediction": {
     "full_name": "nf-core/epitopeprediction",
     "html_url": "https://github.com/nf-core/epitopeprediction",
-    "commit": "6b6647dba40bcbae9b603c1cef4535e4f68bb85a",
+    "commit": "085fdbeb00b12c37e4f0e29b1a7811d47bb24c3b",
     "errors": 0,
     "warnings": 5,
     "parse_error": false,
@@ -938,7 +938,7 @@
   "rnaseq": {
     "full_name": "nf-core/rnaseq",
     "html_url": "https://github.com/nf-core/rnaseq",
-    "commit": "e1498122dc085c8c4a602d2b4714234d221ce999",
+    "commit": "23b63b7c72b65f1c1397b8d913beb2d1e7704f75",
     "errors": 0,
     "warnings": 5,
     "parse_error": false,
@@ -1001,7 +1001,7 @@
   "scrnaseq": {
     "full_name": "nf-core/scrnaseq",
     "html_url": "https://github.com/nf-core/scrnaseq",
-    "commit": "f052357ee89485ff65dbb44bf3335e093ce0d0f1",
+    "commit": "1f657d0874c0f9f853b8491da11a8e01594d568b",
     "errors": 22,
     "warnings": 94,
     "parse_error": false,
@@ -1172,7 +1172,7 @@
   "viralmetagenome": {
     "full_name": "nf-core/viralmetagenome",
     "html_url": "https://github.com/nf-core/viralmetagenome",
-    "commit": "38c40ecfa9377cc6fc1d99c6ac5ceb07f64150b2",
+    "commit": "ed3bebc9218aed3f9d952246ffb000e7e96f9e20",
     "errors": 18,
     "warnings": 207,
     "parse_error": false,
