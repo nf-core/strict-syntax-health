@@ -254,7 +254,7 @@
   "differentialabundance": {
     "full_name": "nf-core/differentialabundance",
     "html_url": "https://github.com/nf-core/differentialabundance",
-    "commit": "c28cb0c9c67efb676dc710b6c5a93de2249b5da6",
+    "commit": "aa8c7098ef760c05b785d7d0eceac95d19f405b4",
     "errors": 13,
     "warnings": 48,
     "parse_error": false,
@@ -767,9 +767,9 @@
   "phaseimpute": {
     "full_name": "nf-core/phaseimpute",
     "html_url": "https://github.com/nf-core/phaseimpute",
-    "commit": "ba97fa06de065191d13750a8dce9486e85e89e21",
+    "commit": "50a4867a83dcf50985fe3592d9c0897316186a68",
     "errors": 1,
-    "warnings": 15,
+    "warnings": 16,
     "parse_error": false,
     "prints_help": null
   },
@@ -785,9 +785,9 @@
   "pixelator": {
     "full_name": "nf-core/pixelator",
     "html_url": "https://github.com/nf-core/pixelator",
-    "commit": "7c7cfc9f77a2449273a8c4ae02bfc4cc4ffec311",
-    "errors": 10,
-    "warnings": 38,
+    "commit": "380c4d35dbd2d1badea28b0c35420d3638101a9a",
+    "errors": 11,
+    "warnings": 36,
     "parse_error": false,
     "prints_help": null
   },
@@ -812,7 +812,7 @@
   "proteinfold": {
     "full_name": "nf-core/proteinfold",
     "html_url": "https://github.com/nf-core/proteinfold",
-    "commit": "ce80ab470e3fbf309cbbbabff7a63eab61966cbb",
+    "commit": "33720557e64642ac52674f04523de761f4333746",
     "errors": 0,
     "warnings": 2,
     "parse_error": false,
@@ -911,9 +911,9 @@
   "riboseq": {
     "full_name": "nf-core/riboseq",
     "html_url": "https://github.com/nf-core/riboseq",
-    "commit": "d542c1c9e96742bd76baf8ca31fb828d09da7172",
-    "errors": 45,
-    "warnings": 146,
+    "commit": "cb67334e06b6c45eca3494d85bc82e10936d06b7",
+    "errors": 46,
+    "warnings": 143,
     "parse_error": false,
     "prints_help": null
   },
@@ -938,11 +938,11 @@
   "rnaseq": {
     "full_name": "nf-core/rnaseq",
     "html_url": "https://github.com/nf-core/rnaseq",
-    "commit": "23b63b7c72b65f1c1397b8d913beb2d1e7704f75",
+    "commit": "c4a380cf1ed3da3e3bdf0d28b0c9cc49c5b2498d",
     "errors": 0,
     "warnings": 5,
     "parse_error": false,
-    "prints_help": true
+    "prints_help": false
   },
   "rnasplice": {
     "full_name": "nf-core/rnasplice",
@@ -1136,9 +1136,9 @@
   "variantbenchmarking": {
     "full_name": "nf-core/variantbenchmarking",
     "html_url": "https://github.com/nf-core/variantbenchmarking",
-    "commit": "7aa5b6fa619545fd5237fdf6869a8c7552c9e174",
+    "commit": "2d64c586852985edc8c6b6c12f1ed4cfdd9bcef4",
     "errors": 10,
-    "warnings": 69,
+    "warnings": 74,
     "parse_error": false,
     "prints_help": null
   },

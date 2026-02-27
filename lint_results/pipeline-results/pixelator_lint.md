@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-02-24T00:23:05.355143633Z
+- Generated: 2026-02-27T00:23:35.819496172Z
 - Nextflow version: 26.01.1-edge
-- Summary: 10 errors, 38 warnings
+- Summary: 11 errors, 36 warnings
 
 ## :x: Errors
 
@@ -13,49 +13,56 @@
           ^
   ```
 
-- Error: `nextflow.config:130:1`: Variable declarations cannot be mixed with config statements
+- Error: `conf/modules.config:50:9`: If statements cannot be mixed with config statements
+
+  ```nextflow
+          if (params.experiment_summary_container) {
+          ^
+  ```
+
+- Error: `nextflow.config:132:1`: Variable declarations cannot be mixed with config statements
 
   ```nextflow
   def container_env_options = [
   ^
   ```
 
-- Error: `nextflow.config:178:32`: `container_env_options` is not defined
+- Error: `nextflow.config:180:32`: `container_env_options` is not defined
 
   ```nextflow
           env                  = container_env_options
                                  ^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `nextflow.config:203:34`: `container_env_options` is not defined
+- Error: `nextflow.config:205:34`: `container_env_options` is not defined
 
   ```nextflow
           env                    = container_env_options
                                    ^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `nextflow.config:214:32`: `container_env_options` is not defined
+- Error: `nextflow.config:216:32`: `container_env_options` is not defined
 
   ```nextflow
           env                  = container_env_options
                                  ^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `nextflow.config:224:32`: `container_env_options` is not defined
+- Error: `nextflow.config:226:32`: `container_env_options` is not defined
 
   ```nextflow
           env                  = container_env_options
                                  ^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `nextflow.config:234:32`: `container_env_options` is not defined
+- Error: `nextflow.config:236:32`: `container_env_options` is not defined
 
   ```nextflow
           env                  = container_env_options
                                  ^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `nextflow.config:245:32`: `container_env_options` is not defined
+- Error: `nextflow.config:247:32`: `container_env_options` is not defined
 
   ```nextflow
           env                  = container_env_options
@@ -202,20 +209,6 @@
   ```nextflow
       def renamed_reads = old_new_pairs.collect { old_name, new_name -> new_name }.join(' ')
                                                   ^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/cat/fastq/main.nf:22:60`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def readList = reads instanceof List ? reads.collect { it.toString() } : [reads.toString()]
-                                                             ^^
-  ```
-
-- Warning: `modules/nf-core/cat/fastq/main.nf:48:60`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def readList = reads instanceof List ? reads.collect { it.toString() } : [reads.toString()]
-                                                             ^^
   ```
 
 - Warning: `subworkflows/local/pna/generate_reports/main.nf:36:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead

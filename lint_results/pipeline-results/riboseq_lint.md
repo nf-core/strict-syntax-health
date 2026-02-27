@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-23T00:20:46.708845298Z
-- Nextflow version: 25.12.0-edge
-- Summary: 45 errors, 146 warnings
+- Generated: 2026-02-27T00:24:18.335431394Z
+- Nextflow version: 26.01.1-edge
+- Summary: 46 errors, 143 warnings
 
 ## :x: Errors
 
@@ -76,56 +76,56 @@
   ^
   ```
 
-- Error: `conf/modules.config:900:1`: If statements cannot be mixed with config statements
+- Error: `conf/modules.config:913:1`: If statements cannot be mixed with config statements
 
   ```nextflow
   if (!params.skip_coverage_tracks) {
   ^
   ```
 
-- Error: `conf/modules.config:925:1`: If statements cannot be mixed with config statements
+- Error: `conf/modules.config:938:1`: If statements cannot be mixed with config statements
 
   ```nextflow
   if (!params.skip_multiqc) {
   ^
   ```
 
-- Error: `conf/modules.config:942:1`: If statements cannot be mixed with config statements
+- Error: `conf/modules.config:955:1`: If statements cannot be mixed with config statements
 
   ```nextflow
   if (!params.skip_ribotish) {
   ^
   ```
 
-- Error: `conf/modules.config:971:1`: If statements cannot be mixed with config statements
+- Error: `conf/modules.config:984:1`: If statements cannot be mixed with config statements
 
   ```nextflow
   if (!params.skip_ribotricer) {
   ^
   ```
 
-- Error: `conf/modules.config:1002:1`: If statements cannot be mixed with config statements
+- Error: `conf/modules.config:1015:1`: If statements cannot be mixed with config statements
 
   ```nextflow
   if (!params.skip_ribocode) {
   ^
   ```
 
-- Error: `conf/modules.config:1039:1`: If statements cannot be mixed with config statements
+- Error: `conf/modules.config:1052:1`: If statements cannot be mixed with config statements
 
   ```nextflow
   if (!params.skip_ribowaltz) {
   ^
   ```
 
-- Error: `conf/modules.config:1052:1`: If statements cannot be mixed with config statements
+- Error: `conf/modules.config:1065:1`: If statements cannot be mixed with config statements
 
   ```nextflow
   if (!params.skip_plastid) {
   ^
   ```
 
-- Error: `conf/modules.config:1094:1`: If statements cannot be mixed with config statements
+- Error: `conf/modules.config:1107:1`: If statements cannot be mixed with config statements
 
   ```nextflow
   if (params.contrasts) {
@@ -214,6 +214,13 @@
   ```nextflow
                   .flatMap { id, fasta -> [ [ 'id', id ], [ 'fasta', file(fasta, checkIfExists: true) ] ] } // Flatten entries to be able to groupTuple by a common key
                                  ^^^^^
+  ```
+
+- Error: `subworkflows/nf-core/bam_dedup_umi/main.nf:93:5`: Incorrect number of call arguments, expected 2 but received 3
+
+  ```nextflow
+      SAMTOOLS_SORT (
+      ^
   ```
 
 - Error: `subworkflows/nf-core/fastq_align_star/main.nf:1:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/riboseq/modules/nf-core/star/align/main.nf'
@@ -314,7 +321,7 @@
                                ^^^^^
   ```
 
-- Error: `workflows/riboseq/main.nf:290:64`: Unexpected input: '\n'
+- Error: `workflows/riboseq/main.nf:311:64`: Unexpected input: '\n'
 
   ```nextflow
                           [meta + [strand: strand, strand_filter:
@@ -895,27 +902,6 @@
   ```nextflow
       ch_versions = Channel.empty()
                     ^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/bam_dedup_stats_samtools_umitools/main.nf:16:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/bam_dedup_umi/main.nf:25:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/bam_dedup_umi/main.nf:114:14`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          .map{it[1]}
-               ^^
   ```
 
 - Warning: `subworkflows/nf-core/bam_sort_stats_samtools/main.nf:16:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead

@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-02-20T00:21:07.520388149Z
+- Generated: 2026-02-27T00:23:29.230052426Z
 - Nextflow version: 26.01.1-edge
-- Summary: 1 error, 15 warnings
+- Summary: 1 error, 16 warnings
 
 ## :x: Errors
 
@@ -113,9 +113,16 @@
           ^^^^
   ```
 
-- Warning: `subworkflows/local/vcf_phase_shapeit5/main.nf:75:30`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/phaseimpute/main.nf:240:63`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-                      .collect{it.first()},
-                               ^^
+                  VCF_NORMALIZE_BCFTOOLS.out.vcf_tbi.map{ meta, vcf, index -> [meta, [], []]}, // No scaffold
+                                                                ^^^
+  ```
+
+- Warning: `workflows/phaseimpute/main.nf:240:68`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+                  VCF_NORMALIZE_BCFTOOLS.out.vcf_tbi.map{ meta, vcf, index -> [meta, [], []]}, // No scaffold
+                                                                     ^^^^^
   ```
