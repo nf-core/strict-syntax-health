@@ -1,16 +1,16 @@
 # Nextflow lint results
 
-- Generated: 2026-02-17T00:22:31.315568838Z
+- Generated: 2026-02-28T00:18:40.158085308Z
 - Nextflow version: 26.01.1-edge
 - Summary: 50 errors, 90 warnings
 
 ## :x: Errors
 
-- Error: `conf/test.config:30:24`: `max_diff_to_wt` is not defined
+- Error: `conf/test.config:30:24`: `nnk_nns` is not defined
 
   ```nextflow
-      mutagenesis_type = max_diff_to_wt
-                         ^^^^^^^^^^^^^^
+      mutagenesis_type = nnk_nns
+                         ^^^^^^^
   ```
 
 - Error: `modules/local/fitness/fitness_standard.nf:76:15`: `sample` is already declared

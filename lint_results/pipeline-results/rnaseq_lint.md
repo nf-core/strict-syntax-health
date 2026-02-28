@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-02-27T00:24:34.813230860Z
+- Generated: 2026-02-28T00:20:53.927884486Z
 - Nextflow version: 26.01.1-edge
-- Summary: 5 warnings
+- Summary: 8 warnings
 
 ## :warning: Warnings
 
@@ -20,7 +20,7 @@
                                                                                                                          ^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:398:62`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/prepare_genome/main.nf:397:62`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               ch_bowtie2_index = BOWTIE2_BUILD.out.index.map { meta, index -> index }
@@ -39,4 +39,25 @@
   ```nextflow
           ch_counts_transcript.collect{ it[1] }
                                         ^^
+  ```
+
+- Warning: `workflows/rnaseq/main.nf:530:23`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              .filter { meta, bam, gtf, biotype_ok -> biotype_ok }
+                        ^^^^
+  ```
+
+- Warning: `workflows/rnaseq/main.nf:530:29`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              .filter { meta, bam, gtf, biotype_ok -> biotype_ok }
+                              ^^^
+  ```
+
+- Warning: `workflows/rnaseq/main.nf:530:34`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              .filter { meta, bam, gtf, biotype_ok -> biotype_ok }
+                                   ^^^
   ```

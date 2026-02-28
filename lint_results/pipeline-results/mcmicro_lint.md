@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-02-14T00:20:34.741718180Z
+- Generated: 2026-02-28T00:19:43.147774163Z
 - Nextflow version: 26.01.1-edge
-- Summary: 21 errors, 42 warnings
+- Summary: 21 errors, 48 warnings
 
 ## :x: Errors
 
@@ -69,21 +69,21 @@
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/prelude/main.nf:14:41`: `SUMMARY_XML` is not defined
+- Error: `subworkflows/local/prelude/main.nf:22:41`: `SUMMARY_XML` is not defined
 
   ```nextflow
                                       } | SUMMARY_XML ).output
                                           ^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/prelude/main.nf:18:41`: `SUMMARY_MARKERSHEET_LITERAL` is not defined
+- Error: `subworkflows/local/prelude/main.nf:26:41`: `SUMMARY_MARKERSHEET_LITERAL` is not defined
 
   ```nextflow
                                       } | SUMMARY_MARKERSHEET_LITERAL ).output
                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/prelude/main.nf:23:41`: `SUMMARY_SAMPLESHEET` is not defined
+- Error: `subworkflows/local/prelude/main.nf:31:41`: `SUMMARY_SAMPLESHEET` is not defined
 
   ```nextflow
                                       } | SUMMARY_SAMPLESHEET).output
@@ -97,14 +97,14 @@
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/update_from_ome/main.nf:10:48`: `OMEVALIDATION` is not defined
+- Error: `subworkflows/local/update_from_ome/main.nf:15:48`: `OMEVALIDATION` is not defined
 
   ```nextflow
       val_data = xml.map{meta, x -> [meta, x]} | OMEVALIDATION
                                                  ^^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/update_from_ome/main.nf:31:13`: Variables in a closure should be declared with `def`
+- Error: `subworkflows/local/update_from_ome/main.nf:36:13`: Variables in a closure should be declared with `def`
 
   ```nextflow
               temp = [cn, c_sum]
@@ -211,105 +211,147 @@
           ^^^^^^
   ```
 
-- Warning: `subworkflows/local/prelude/main.nf:17:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/prelude/main.nf:14:9`: Variable was declared but not used
+
+  ```nextflow
+          output_file_xml         = Channel.of([])
+          ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/prelude/main.nf:14:35`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+          output_file_xml         = Channel.of([])
+                                    ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/prelude/main.nf:15:9`: Variable was declared but not used
+
+  ```nextflow
+          output_file_samplesheet = Channel.of([])
+          ^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/prelude/main.nf:15:35`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+          output_file_samplesheet = Channel.of([])
+                                    ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/prelude/main.nf:16:9`: Variable was declared but not used
+
+  ```nextflow
+          output_file_markersheet = Channel.of([])
+          ^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/prelude/main.nf:16:35`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+          output_file_markersheet = Channel.of([])
+                                    ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/prelude/main.nf:25:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                                       [["id": "markers"], it]
                                                           ^^
   ```
 
-- Warning: `subworkflows/local/update_from_ome/main.nf:13:65`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/update_from_ome/main.nf:18:65`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
            .map { original_meta, image_tiles, dfp, ffp, xml_meta, marker_data ->
                                                                   ^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/update_from_ome/main.nf:24:19`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/update_from_ome/main.nf:29:19`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               meta, image_tiles, dfp, ffp -> [meta.cycle_number, meta.channel_count]
                     ^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/update_from_ome/main.nf:24:32`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/update_from_ome/main.nf:29:32`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               meta, image_tiles, dfp, ffp -> [meta.cycle_number, meta.channel_count]
                                  ^^^
   ```
 
-- Warning: `subworkflows/local/update_from_ome/main.nf:24:37`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/update_from_ome/main.nf:29:37`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               meta, image_tiles, dfp, ffp -> [meta.cycle_number, meta.channel_count]
                                       ^^^
   ```
 
-- Warning: `subworkflows/local/update_from_ome/main.nf:40:19`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/update_from_ome/main.nf:45:19`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               meta, xml_meta, marker_meta -> marker_meta.collect{ meta.subMap('id') + it }
                     ^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/update_from_ome/main.nf:40:85`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/update_from_ome/main.nf:45:85`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               meta, xml_meta, marker_meta -> marker_meta.collect{ meta.subMap('id') + it }
                                                                                       ^^
   ```
 
-- Warning: `subworkflows/local/update_from_ome/main.nf:48:13`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/update_from_ome/main.nf:53:13`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               key, meta, counter ->
               ^^^
   ```
 
-- Warning: `subworkflows/local/update_from_ome/main.nf:66:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/update_from_ome/main.nf:71:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .combine(samplesheet_meta.map{ it[0].subMap('id') }.unique())
                                          ^^
   ```
 
-- Warning: `subworkflows/local/update_from_ome/main.nf:67:15`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/update_from_ome/main.nf:72:15`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map{ it[0] + it[1] }
                 ^^
   ```
 
-- Warning: `subworkflows/local/update_from_ome/main.nf:67:23`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/update_from_ome/main.nf:72:23`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map{ it[0] + it[1] }
                         ^^
   ```
 
-- Warning: `subworkflows/local/update_from_ome/main.nf:69:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/update_from_ome/main.nf:74:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map{ e -> [e.subMap('id', 'channel_number', 'cycle_number'), e.findAll{ it.value != null }] }
                                                                                    ^^
   ```
 
-- Warning: `subworkflows/local/update_from_ome/main.nf:74:15`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/update_from_ome/main.nf:79:15`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map{ it.drop(1) }
                 ^^
   ```
 
-- Warning: `subworkflows/local/update_from_ome/main.nf:77:24`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/update_from_ome/main.nf:82:24`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               if (e.any{ it == null }) {
                          ^^
   ```
 
-- Warning: `subworkflows/local/update_from_ome/main.nf:96:13`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/update_from_ome/main.nf:101:13`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               key, values ->

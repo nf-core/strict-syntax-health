@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-02-27T00:22:53.290487438Z
+- Generated: 2026-02-28T00:18:47.473280208Z
 - Nextflow version: 26.01.1-edge
 - Summary: 13 errors, 48 warnings
 
@@ -83,7 +83,7 @@
                                  ^
   ```
 
-- Error: `subworkflows/local/utils_nfcore_differentialabundance_pipeline/main.nf:434:43`: Unexpected input: '('
+- Error: `subworkflows/local/utils_nfcore_differentialabundance_pipeline/main.nf:431:43`: Unexpected input: '('
 
   ```nextflow
       yaml_content = yaml_content.replaceAll(/\$projectDir/, projectDir.toString())

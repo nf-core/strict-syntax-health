@@ -200,7 +200,7 @@
   "deepmutscan": {
     "full_name": "nf-core/deepmutscan",
     "html_url": "https://github.com/nf-core/deepmutscan",
-    "commit": "f571ae591c5612fdb0afcc35ee316e997dea81d8",
+    "commit": "1fb8762a99e45c070a58ea93365566ac1078fec3",
     "errors": 50,
     "warnings": 90,
     "parse_error": false,
@@ -254,7 +254,7 @@
   "differentialabundance": {
     "full_name": "nf-core/differentialabundance",
     "html_url": "https://github.com/nf-core/differentialabundance",
-    "commit": "aa8c7098ef760c05b785d7d0eceac95d19f405b4",
+    "commit": "8e3c3e33bcac5f4116bfc5f69e3b8301fea96bd5",
     "errors": 13,
     "warnings": 48,
     "parse_error": false,
@@ -308,7 +308,7 @@
   "epitopeprediction": {
     "full_name": "nf-core/epitopeprediction",
     "html_url": "https://github.com/nf-core/epitopeprediction",
-    "commit": "085fdbeb00b12c37e4f0e29b1a7811d47bb24c3b",
+    "commit": "dc0107e1671b287b6a2911ecac167da691d25905",
     "errors": 0,
     "warnings": 5,
     "parse_error": false,
@@ -452,7 +452,7 @@
   "hlatyping": {
     "full_name": "nf-core/hlatyping",
     "html_url": "https://github.com/nf-core/hlatyping",
-    "commit": "28585aa8923bd1dc0a909319ba1f7179ad890493",
+    "commit": "12b9403c5e672b2ab045becbf090a82334c320e9",
     "errors": 0,
     "warnings": 9,
     "parse_error": false,
@@ -506,7 +506,7 @@
   "lsmquant": {
     "full_name": "nf-core/lsmquant",
     "html_url": "https://github.com/nf-core/lsmquant",
-    "commit": "996e6bf4cf5fa7948bd81cb565e2641129245ac4",
+    "commit": "6f373ba57ccaa9ae09489185e85d77e2048cd941",
     "errors": 0,
     "warnings": 49,
     "parse_error": false,
@@ -542,9 +542,9 @@
   "mcmicro": {
     "full_name": "nf-core/mcmicro",
     "html_url": "https://github.com/nf-core/mcmicro",
-    "commit": "d15ddc4c4c1c37be46cba5166c6ea0cc682c364b",
+    "commit": "811df80beffe0731d9b32d65a116c875d1f6e82f",
     "errors": 21,
-    "warnings": 42,
+    "warnings": 48,
     "parse_error": false,
     "prints_help": null
   },
@@ -614,9 +614,9 @@
   "mhcquant": {
     "full_name": "nf-core/mhcquant",
     "html_url": "https://github.com/nf-core/mhcquant",
-    "commit": "a5a892fea8b4b500e22bcdd7abc214f46e4a8161",
-    "errors": 10,
-    "warnings": 63,
+    "commit": "951739d44d073a4b0ac905e2494f8cbef118daac",
+    "errors": 18,
+    "warnings": 49,
     "parse_error": false,
     "prints_help": null
   },
@@ -803,16 +803,16 @@
   "proteinfamilies": {
     "full_name": "nf-core/proteinfamilies",
     "html_url": "https://github.com/nf-core/proteinfamilies",
-    "commit": "036488db55a97a89a03a96494d268d02bdcd7adb",
+    "commit": "a49ee5e42e05bf26244157407ef620045af21d6c",
     "errors": 0,
-    "warnings": 0,
+    "warnings": 3,
     "parse_error": false,
     "prints_help": true
   },
   "proteinfold": {
     "full_name": "nf-core/proteinfold",
     "html_url": "https://github.com/nf-core/proteinfold",
-    "commit": "33720557e64642ac52674f04523de761f4333746",
+    "commit": "70db4a90c099b424e4d20d53218c60c5aff5da6e",
     "errors": 0,
     "warnings": 2,
     "parse_error": false,
@@ -938,11 +938,11 @@
   "rnaseq": {
     "full_name": "nf-core/rnaseq",
     "html_url": "https://github.com/nf-core/rnaseq",
-    "commit": "c4a380cf1ed3da3e3bdf0d28b0c9cc49c5b2498d",
+    "commit": "e8ba853ac715c5913ea13c9e1028ef9a5523a4cb",
     "errors": 0,
-    "warnings": 5,
+    "warnings": 8,
     "parse_error": false,
-    "prints_help": false
+    "prints_help": true
   },
   "rnasplice": {
     "full_name": "nf-core/rnasplice",
@@ -974,7 +974,7 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "bb1aba60e7fccdffe9b7797e44a776e234f008fa",
+    "commit": "e30dad3a5deee0aa6f53e875695c06147555d8fe",
     "errors": 143,
     "warnings": 578,
     "parse_error": false,
