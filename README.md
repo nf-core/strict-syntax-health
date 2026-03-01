@@ -11,20 +11,20 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 > See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline.
 > **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**
 
-- **Last updated:** 2026-02-28 00:22:41 UTC
-- **Nextflow version:** 26.01.1-edge
+- **Last updated:** 2026-03-01 00:24:15 UTC
+- **Nextflow version:** 26.02.0-edge
 
 ## Pipelines
 
-- **Total:** 0 parse errors, 3202 errors, 9202 warnings across 132 pipelines
-- **Zero errors:** 32 pipelines (24.2%)
+- **Total:** 0 parse errors, 3166 errors, 9202 warnings across 131 pipelines
+- **Zero errors:** 32 pipelines (24.4%)
 
 |                    Errors                    |                     Warnings                     |
 | :------------------------------------------: | :----------------------------------------------: |
 | ![Errors](lint_results/pipelines_errors.png) | ![Warnings](lint_results/pipelines_warnings.png) |
 
 <details>
-<summary>Pipeline Results (132 pipelines)</summary>
+<summary>Pipeline Results (131 pipelines)</summary>
 
 | Pipeline                                                                              | Parse Error | Errors | Warnings | Prints Help |                               Lint Output                               |                             Help Output                              |
 | ------------------------------------------------------------------------------------- | :---------: | -----: | -------: | :---------: | :---------------------------------------------------------------------: | :------------------------------------------------------------------: |
@@ -61,7 +61,6 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :x: [circdna](https://github.com/nf-core/circdna)                                     |     No      |     38 |       30 |      -      |          [View](lint_results/pipeline-results/circdna_lint.md)          |                                  -                                   |
 | :x: [marsseq](https://github.com/nf-core/marsseq)                                     |     No      |     37 |       64 |      -      |          [View](lint_results/pipeline-results/marsseq_lint.md)          |                                  -                                   |
 | :x: [nanoseq](https://github.com/nf-core/nanoseq)                                     |     No      |     36 |       43 |      -      |          [View](lint_results/pipeline-results/nanoseq_lint.md)          |                                  -                                   |
-| :x: [proteomicslfq](https://github.com/nf-core/proteomicslfq)                         |     No      |     36 |        0 |      -      |       [View](lint_results/pipeline-results/proteomicslfq_lint.md)       |                                  -                                   |
 | :x: [nascent](https://github.com/nf-core/nascent)                                     |     No      |     34 |      162 |      -      |          [View](lint_results/pipeline-results/nascent_lint.md)          |                                  -                                   |
 | :x: [genomeqc](https://github.com/nf-core/genomeqc)                                   |     No      |     34 |      114 |      -      |         [View](lint_results/pipeline-results/genomeqc_lint.md)          |                                  -                                   |
 | :x: [rarevariantburden](https://github.com/nf-core/rarevariantburden)                 |     No      |     33 |       22 |      -      |     [View](lint_results/pipeline-results/rarevariantburden_lint.md)     |                                  -                                   |
@@ -165,18 +164,19 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 
 ## Modules
 
-- **Total:** 0 parse errors, 0 errors, 0 warnings across 1383 modules
-- **Zero errors:** 1383 modules (100.0%)
+- **Total:** 0 parse errors, 1 errors, 0 warnings across 1384 modules
+- **Zero errors:** 1383 modules (99.9%)
 
 |                   Errors                   |                    Warnings                    |
 | :----------------------------------------: | :--------------------------------------------: |
 | ![Errors](lint_results/modules_errors.png) | ![Warnings](lint_results/modules_warnings.png) |
 
 <details>
-<summary>Module Results (0 modules with errors)</summary>
+<summary>Module Results (1 modules with errors)</summary>
 
-| Module | Parse Error | Errors | Warnings | Lint Output |
-| ------ | :---------: | -----: | -------: | :---------: |
+| Module                                                                                                            | Parse Error | Errors | Warnings |                            Lint Output                            |
+| ----------------------------------------------------------------------------------------------------------------- | :---------: | -----: | -------: | :---------------------------------------------------------------: |
+| :x: [samtools_addreplacerg](https://github.com/nf-core/modules/tree/master/modules/nf-core/samtools/addreplacerg) |     No      |      1 |        0 | [View](lint_results/module-results/samtools_addreplacerg_lint.md) |
 
 _Modules with zero errors are not shown above (1383 modules). They may still have warnings. See the [modules results directory](lint_results/module-results/) for all lint outputs._
 

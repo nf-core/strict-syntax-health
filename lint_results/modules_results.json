@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "f0b535b3ae20080f8db03dd5388876ad1ec29d70",
+  "_repo_commit": "a3a12a5bf8fb088f5bc68bbb053811b51762abea",
   "abricate_run": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abricate/run",
     "errors": 0,
@@ -6387,6 +6387,12 @@
   "sambamba_markdup": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/sambamba/markdup",
     "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "samtools_addreplacerg": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/samtools/addreplacerg",
+    "errors": 1,
     "warnings": 0,
     "parse_error": false
   },

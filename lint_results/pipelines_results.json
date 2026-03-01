@@ -827,15 +827,6 @@
     "parse_error": false,
     "prints_help": null
   },
-  "proteomicslfq": {
-    "full_name": "nf-core/proteomicslfq",
-    "html_url": "https://github.com/nf-core/proteomicslfq",
-    "commit": "69a0b9fc99bdc82faaae36f5e830dbfef52927b5",
-    "errors": 36,
-    "warnings": 0,
-    "parse_error": false,
-    "prints_help": null
-  },
   "radseq": {
     "full_name": "nf-core/radseq",
     "html_url": "https://github.com/nf-core/radseq",
