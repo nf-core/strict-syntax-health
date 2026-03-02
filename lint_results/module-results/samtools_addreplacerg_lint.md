@@ -8,7 +8,7 @@
 
 - Error: `modules/nf-core/samtools/addreplacerg/main.nf:49:9`: `file_type` is already declared
 
-    ```nextflow
-        def file_type = input.getExtension()
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def file_type = input.getExtension()
+          ^^^^^^^^^^
+  ```
