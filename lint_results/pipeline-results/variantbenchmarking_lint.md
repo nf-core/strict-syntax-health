@@ -1,40 +1,33 @@
 # Nextflow lint results
 
-- Generated: 2026-02-27T00:26:55.392649076Z
-- Nextflow version: 26.01.1-edge
-- Summary: 10 errors, 74 warnings
+- Generated: 2026-03-03T00:24:09.191002694Z
+- Nextflow version: 26.02.0-edge
+- Summary: 8 errors, 29 warnings
 
 ## :x: Errors
 
-- Error: `modules/nf-core/wittyer/main.nf:8:5`: Invalid process directive
-
-  ```nextflow
-      if (workflow.profile.tokenize(',').intersect(['conda', 'mamba']).size() >= 1) {
-      ^
-  ```
-
-- Error: `subworkflows/local/concordance_analysis/main.nf:38:22`: Unexpected input: 'i'
+- Error: `subworkflows/local/concordance_analysis/main.nf:37:22`: Unexpected input: 'i'
 
   ```nextflow
               for (int i = 0; i < items.size(); i++) {
                        ^
   ```
 
-- Error: `subworkflows/local/sv_vcf_conversion/main.nf:90:19`: `input` is already declared
+- Error: `subworkflows/local/sv_vcf_conversion/main.nf:86:19`: `input` is already declared
 
   ```nextflow
           .branch { input ->
                     ^^^^^
   ```
 
-- Error: `subworkflows/local/sv_vcf_conversion/main.nf:142:19`: `input` is already declared
+- Error: `subworkflows/local/sv_vcf_conversion/main.nf:135:19`: `input` is already declared
 
   ```nextflow
               .map{ input ->
                     ^^^^^
   ```
 
-- Error: `subworkflows/local/wittyer_benchmark/main.nf:42:41`: `bed` is already declared
+- Error: `subworkflows/local/wittyer_benchmark/main.nf:36:41`: `bed` is already declared
 
   ```nextflow
               .map{ meta, vcf, truth_vcf, bed -> [meta, vcf, truth_vcf, bed, []] }
@@ -48,28 +41,21 @@
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/variantbenchmarking.nf:256:7`: `CONCORDANCE_ANALYSIS` is not defined
+- Error: `workflows/variantbenchmarking.nf:249:7`: `CONCORDANCE_ANALYSIS` is not defined
 
   ```nextflow
         CONCORDANCE_ANALYSIS(
         ^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/variantbenchmarking.nf:263:44`: `CONCORDANCE_ANALYSIS` is not defined
-
-  ```nextflow
-          ch_versions      = ch_versions.mix(CONCORDANCE_ANALYSIS.out.versions)
-                                             ^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/variantbenchmarking.nf:264:43`: `CONCORDANCE_ANALYSIS` is not defined
+- Error: `workflows/variantbenchmarking.nf:256:43`: `CONCORDANCE_ANALYSIS` is not defined
 
   ```nextflow
           ch_reports       = ch_reports.mix(CONCORDANCE_ANALYSIS.out.summary_reports)
                                             ^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/variantbenchmarking.nf:265:41`: `CONCORDANCE_ANALYSIS` is not defined
+- Error: `workflows/variantbenchmarking.nf:257:41`: `CONCORDANCE_ANALYSIS` is not defined
 
   ```nextflow
           evals_ch         = evals_ch.mix(CONCORDANCE_ANALYSIS.out.tagged_variants)
@@ -106,13 +92,6 @@
           ^^^^
   ```
 
-- Warning: `modules/nf-core/bedops/convert2bed/main.nf:38:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
 - Warning: `modules/nf-core/happy/happy/main.nf:64:9`: Variable was declared but not used
 
   ```nextflow
@@ -120,98 +99,35 @@
           ^^^^
   ```
 
-- Warning: `modules/nf-core/happy/prepy/main.nf:44:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/happy/prepy/main.nf:46:9`: Variable was declared but not used
-
-  ```nextflow
-      def restrict_region = bed ? "-R ${bed}": ""
-          ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/survivor/filter/main.nf:25:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/survivor/filter/main.nf:51:9`: Variable was declared but not used
-
-  ```nextflow
-      def bed_file = bed ? "${bed}" : "NA"
-          ^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/survivor/merge/main.nf:30:13`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          if (it.getExtension() == "gz"){
-              ^^
-  ```
-
-- Warning: `modules/nf-core/survivor/merge/main.nf:57:13`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          if (it.getExtension() == "gz"){
-              ^^
-  ```
-
-- Warning: `modules/nf-core/survivor/stats/main.nf:24:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/svanalyzer/svbenchmark/main.nf:63:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/wittyer/main.nf:62:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `subworkflows/local/ensemble_test_vcfs/main.nf:25:5`: Variable was declared but not used
+- Warning: `subworkflows/local/ensemble_test_vcfs/main.nf:24:5`: Variable was declared but not used
 
   ```nextflow
       merged_vcfs = channel.empty()
       ^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/ensemble_test_vcfs/main.nf:27:30`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/ensemble_test_vcfs/main.nf:26:30`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       test_vcfs.branch { meta, vcf, index ->
                                ^^^
   ```
 
-- Warning: `subworkflows/local/ensemble_test_vcfs/main.nf:27:35`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/ensemble_test_vcfs/main.nf:26:35`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       test_vcfs.branch { meta, vcf, index ->
                                     ^^^^^
   ```
 
-- Warning: `subworkflows/local/ensemble_test_vcfs/main.nf:34:51`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/ensemble_test_vcfs/main.nf:33:51`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           branched_vcfs.missing_gt.map { meta, vcf, index -> tuple(meta, vcf) },
                                                     ^^^^^
   ```
 
-- Warning: `subworkflows/local/ensemble_test_vcfs/main.nf:48:45`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/ensemble_test_vcfs/main.nf:47:45`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_test_vcfs = ch_ready_for_merge.map { meta, vcf, index ->
@@ -225,21 +141,21 @@
               ^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_vcfs_test/main.nf:60:14`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_vcfs_test/main.nf:59:14`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       vcf_ch = Channel.empty()
                ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/sompy_benchmark/main.nf:24:34`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/sompy_benchmark/main.nf:23:34`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           input_ch.map{meta, test, test_index, truth, truth_index, regions, target -> [meta, test, truth, regions, target]},
                                    ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/sompy_benchmark/main.nf:24:53`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/sompy_benchmark/main.nf:23:53`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           input_ch.map{meta, test, test_index, truth, truth_index, regions, target -> [meta, test, truth, regions, target]},
@@ -267,14 +183,14 @@
           ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/sv_vcf_conversion/main.nf:44:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/sv_vcf_conversion/main.nf:43:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           out_vcf_ch = Channel.empty()
                        ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/sv_vcf_conversion/main.nf:110:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/sv_vcf_conversion/main.nf:105:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           out_vcf_ch = Channel.empty()
@@ -302,294 +218,49 @@
       ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/vcf_variant_filtering/main.nf:30:36`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/vcf_variant_filtering/main.nf:28:36`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               vcf_ch.map{ meta, vcf, index -> tuple(meta, vcf)}
                                      ^^^^^
   ```
 
-- Warning: `workflows/variantbenchmarking.nf:56:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      fasta       = Channel.fromPath(params.fasta, checkIfExists: true)
-                    ^^^^^^^
-  ```
-
-- Warning: `workflows/variantbenchmarking.nf:58:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      fai         = Channel.fromPath(params.fai, checkIfExists: true)
-                    ^^^^^^^
-  ```
-
-- Warning: `workflows/variantbenchmarking.nf:62:42`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      truth_ch        = params.truth_vcf ? Channel.fromPath(params.truth_vcf, checkIfExists: true)
-                                           ^^^^^^^
-  ```
-
-- Warning: `workflows/variantbenchmarking.nf:64:43`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-                                          : Channel.empty()
-                                            ^^^^^^^
-  ```
-
-- Warning: `workflows/variantbenchmarking.nf:66:43`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      regions_bed_ch = params.regions_bed ? Channel.fromPath(params.regions_bed, checkIfExists: true).collect()
-                                            ^^^^^^^
-  ```
-
-- Warning: `workflows/variantbenchmarking.nf:67:43`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-                                          : Channel.empty()
-                                            ^^^^^^^
-  ```
-
-- Warning: `workflows/variantbenchmarking.nf:68:43`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      targets_bed_ch = params.targets_bed ? Channel.fromPath(params.targets_bed, checkIfExists: true).collect()
-                                            ^^^^^^^
-  ```
-
-- Warning: `workflows/variantbenchmarking.nf:69:43`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-                                          : Channel.empty()
-                                            ^^^^^^^
-  ```
-
-- Warning: `workflows/variantbenchmarking.nf:95:55`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      falsepositive_bed   = params.falsepositive_bed  ? Channel.fromPath(params.falsepositive_bed, checkIfExists: true).map{ bed -> tuple([id: "falsepositive"], bed) }.collect()
-                                                        ^^^^^^^
-  ```
-
-- Warning: `workflows/variantbenchmarking.nf:96:55`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-                                                      : Channel.of([[id: "falsepositive"],[]]).collect()
-                                                        ^^^^^^^
-  ```
-
-- Warning: `workflows/variantbenchmarking.nf:97:55`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ambiguous_beds      = params.ambiguous_beds     ? Channel.fromPath(params.ambiguous_beds, checkIfExists: true).map{ bed -> tuple([id: "ambiguous"], bed) }.collect()
-                                                        ^^^^^^^
-  ```
-
-- Warning: `workflows/variantbenchmarking.nf:98:55`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-                                                      : Channel.of([[id: "ambiguous"],[]]).collect()
-                                                        ^^^^^^^
-  ```
-
-- Warning: `workflows/variantbenchmarking.nf:100:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          stratification_bed  = Channel.fromPath(params.stratification_bed, checkIfExists: true, type: 'dir').map{ bed -> tuple([id: "stratification"], bed) }.collect()
-                                ^^^^^^^
-  ```
-
-- Warning: `workflows/variantbenchmarking.nf:101:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          stratification_tsv  = Channel.fromPath(params.stratification_tsv, checkIfExists: true).map{ tsv -> tuple([id: "stratification"], tsv) }.collect()
-                                ^^^^^^^
-  ```
-
-- Warning: `workflows/variantbenchmarking.nf:103:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          stratification_bed  = Channel.of([[id: "stratification"],[]]).collect()
-                                ^^^^^^^
-  ```
-
-- Warning: `workflows/variantbenchmarking.nf:104:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          stratification_tsv  = Channel.of([[id: "stratification"],[]]).collect()
-                                ^^^^^^^
-  ```
-
-- Warning: `workflows/variantbenchmarking.nf:108:43`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      sdf             = params.sdf        ? Channel.fromPath(params.sdf, checkIfExists: true).map{ sdf -> tuple([id: sdf.getSimpleName()], sdf) }.collect()
-                                            ^^^^^^^
-  ```
-
-- Warning: `workflows/variantbenchmarking.nf:109:43`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-                                          : Channel.empty()
-                                            ^^^^^^^
-  ```
-
-- Warning: `workflows/variantbenchmarking.nf:112:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          rename_chr = Channel.fromPath(params.rename_chr, checkIfExists: true).map{ txt -> tuple([id: txt.getSimpleName()], txt) }.collect()
-                       ^^^^^^^
-  ```
-
-- Warning: `workflows/variantbenchmarking.nf:120:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-              rename_chr = Channel.fromPath("${projectDir}/assets/rename_contigs/grch37_grch38.txt", checkIfExists: true).map{ txt -> tuple([id: txt.getSimpleName()], txt) }.collect()
-                           ^^^^^^^
-  ```
-
-- Warning: `workflows/variantbenchmarking.nf:124:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-              rename_chr = Channel.fromPath("${projectDir}/assets/rename_contigs/grch38_grch37.txt", checkIfExists: true).map{ txt -> tuple([id: txt.getSimpleName()], txt) }.collect()
-                           ^^^^^^^
-  ```
-
-- Warning: `workflows/variantbenchmarking.nf:127:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-              rename_chr = Channel.empty()
-                           ^^^^^^^
-  ```
-
-- Warning: `workflows/variantbenchmarking.nf:135:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-              chain           = Channel.fromPath(params.chain, checkIfExists: true).map{ bed -> tuple([id: bed.getSimpleName()], bed) }.collect()
-                                ^^^^^^^
-  ```
-
-- Warning: `workflows/variantbenchmarking.nf:141:47`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          dictionary      = params.dictionary ? Channel.fromPath(params.dictionary, checkIfExists: true).map{ dict -> tuple([id: dict.getSimpleName()], dict) }.collect()                                           : Channel.empty()
-                                                ^^^^^^^
-  ```
-
-- Warning: `workflows/variantbenchmarking.nf:141:213`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          dictionary      = params.dictionary ? Channel.fromPath(params.dictionary, checkIfExists: true).map{ dict -> tuple([id: dict.getSimpleName()], dict) }.collect()                                           : Channel.empty()
-                                                                                                                                                                                                                      ^^^^^^^
-  ```
-
-- Warning: `workflows/variantbenchmarking.nf:143:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          chain           = Channel.empty()
-                            ^^^^^^^
-  ```
-
-- Warning: `workflows/variantbenchmarking.nf:144:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          dictionary      = Channel.empty()
-                            ^^^^^^^
-  ```
-
-- Warning: `workflows/variantbenchmarking.nf:233:13`: Variable was declared but not used
+- Warning: `workflows/variantbenchmarking.nf:229:13`: Variable was declared but not used
 
   ```nextflow
           def meta = it[0]
               ^^^^
   ```
 
-- Warning: `workflows/variantbenchmarking.nf:233:20`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/variantbenchmarking.nf:229:20`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           def meta = it[0]
                      ^^
   ```
 
-- Warning: `workflows/variantbenchmarking.nf:234:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/variantbenchmarking.nf:230:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           def regions_file = it[2]
                              ^^
   ```
 
-- Warning: `workflows/variantbenchmarking.nf:291:85`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/variantbenchmarking.nf:283:85`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(SV_GERMLINE_BENCHMARK.out.logs.map{ meta, log -> log })
                                                                                       ^^^^
   ```
 
-- Warning: `workflows/variantbenchmarking.nf:366:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      def topic_versions = Channel.topic("versions")
-                           ^^^^^^^
-  ```
-
-- Warning: `workflows/variantbenchmarking.nf:396:45`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_multiqc_config                     = Channel.fromPath("$projectDir/assets/multiqc_config.yml", checkIfExists: true)
-                                              ^^^^^^^
-  ```
-
-- Warning: `workflows/variantbenchmarking.nf:397:69`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_multiqc_custom_config              = params.multiqc_config ? Channel.fromPath(params.multiqc_config, checkIfExists: true) :Channel.empty()
-                                                                      ^^^^^^^
-  ```
-
-- Warning: `workflows/variantbenchmarking.nf:397:131`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_multiqc_custom_config              = params.multiqc_config ? Channel.fromPath(params.multiqc_config, checkIfExists: true) :Channel.empty()
-                                                                                                                                    ^^^^^^^
-  ```
-
-- Warning: `workflows/variantbenchmarking.nf:398:67`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_multiqc_logo                       = params.multiqc_logo ? Channel.fromPath(params.multiqc_logo, checkIfExists: true) : Channel.empty()
-                                                                    ^^^^^^^
-  ```
-
-- Warning: `workflows/variantbenchmarking.nf:398:128`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_multiqc_logo                       = params.multiqc_logo ? Channel.fromPath(params.multiqc_logo, checkIfExists: true) : Channel.empty()
-                                                                                                                                 ^^^^^^^
-  ```
-
-- Warning: `workflows/variantbenchmarking.nf:400:45`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_workflow_summary                   = Channel.value(paramsSummaryMultiqc(summary_params))
-                                              ^^^^^^^
-  ```
-
-- Warning: `workflows/variantbenchmarking.nf:403:45`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_methods_description                = Channel.value(methodsDescriptionText(ch_multiqc_custom_methods_description))
-                                              ^^^^^^^
-  ```
-
-- Warning: `workflows/variantbenchmarking.nf:409:118`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/variantbenchmarking.nf:399:118`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_multiqc_files                      = ch_multiqc_files.mix(REPORT_BENCHMARK_STATISTICS.out.merged_reports.map{ meta, report -> report }.flatten())
                                                                                                                        ^^^^
   ```
 
-- Warning: `workflows/variantbenchmarking.nf:410:82`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/variantbenchmarking.nf:400:82`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_multiqc_files                      = ch_multiqc_files.mix(ch_reports.map{ meta, report -> report }.flatten())

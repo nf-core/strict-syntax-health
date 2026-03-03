@@ -47,9 +47,9 @@
   "bacass": {
     "full_name": "nf-core/bacass",
     "html_url": "https://github.com/nf-core/bacass",
-    "commit": "857aa8fbb117f0d0baebea56340d6900e2c4ed02",
+    "commit": "91dc73f8b0105b41d40d195cea3b8782fbb0cb8b",
     "errors": 0,
-    "warnings": 25,
+    "warnings": 37,
     "parse_error": false,
     "prints_help": true
   },
@@ -200,8 +200,8 @@
   "deepmutscan": {
     "full_name": "nf-core/deepmutscan",
     "html_url": "https://github.com/nf-core/deepmutscan",
-    "commit": "1fb8762a99e45c070a58ea93365566ac1078fec3",
-    "errors": 50,
+    "commit": "902778a7a0348de2437173e42cd74a24c2a637ef",
+    "errors": 49,
     "warnings": 90,
     "parse_error": false,
     "prints_help": null
@@ -515,7 +515,7 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "665d5e306d005275b91e2402cda11542e022c4d4",
+    "commit": "608db5c25fb7365178b7f222681c2f0aaf8ef628",
     "errors": 0,
     "warnings": 32,
     "parse_error": false,
@@ -812,7 +812,7 @@
   "proteinfold": {
     "full_name": "nf-core/proteinfold",
     "html_url": "https://github.com/nf-core/proteinfold",
-    "commit": "70db4a90c099b424e4d20d53218c60c5aff5da6e",
+    "commit": "2bcec65c389260deae19019841895c6a4edcc2e6",
     "errors": 0,
     "warnings": 2,
     "parse_error": false,
@@ -902,9 +902,9 @@
   "riboseq": {
     "full_name": "nf-core/riboseq",
     "html_url": "https://github.com/nf-core/riboseq",
-    "commit": "cb67334e06b6c45eca3494d85bc82e10936d06b7",
+    "commit": "72c723c315aa3c08e28bcff5ac0d18563579c802",
     "errors": 46,
-    "warnings": 143,
+    "warnings": 139,
     "parse_error": false,
     "prints_help": null
   },
@@ -1001,9 +1001,9 @@
   "seqinspector": {
     "full_name": "nf-core/seqinspector",
     "html_url": "https://github.com/nf-core/seqinspector",
-    "commit": "ed5d23cb3e5b2d88327f57c6cdf35a8befbf933c",
+    "commit": "d8cf330ca75cd4c2bafef620797a62e6589ab2ff",
     "errors": 0,
-    "warnings": 0,
+    "warnings": 1,
     "parse_error": false,
     "prints_help": true
   },
@@ -1127,9 +1127,9 @@
   "variantbenchmarking": {
     "full_name": "nf-core/variantbenchmarking",
     "html_url": "https://github.com/nf-core/variantbenchmarking",
-    "commit": "2d64c586852985edc8c6b6c12f1ed4cfdd9bcef4",
-    "errors": 10,
-    "warnings": 74,
+    "commit": "d94351887abe8deb4ffc14992259da3252a3b75d",
+    "errors": 8,
+    "warnings": 29,
     "parse_error": false,
     "prints_help": null
   },
@@ -1163,9 +1163,9 @@
   "viralmetagenome": {
     "full_name": "nf-core/viralmetagenome",
     "html_url": "https://github.com/nf-core/viralmetagenome",
-    "commit": "ed3bebc9218aed3f9d952246ffb000e7e96f9e20",
-    "errors": 18,
-    "warnings": 207,
+    "commit": "90bd8bbfec53df2678b8a59a692cf81845ae6198",
+    "errors": 4,
+    "warnings": 66,
     "parse_error": false,
     "prints_help": null
   },

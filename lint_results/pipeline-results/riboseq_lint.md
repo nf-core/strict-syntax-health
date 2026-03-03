@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-02-27T00:24:18.335431394Z
-- Nextflow version: 26.01.1-edge
-- Summary: 46 errors, 143 warnings
+- Generated: 2026-03-03T00:23:37.024455059Z
+- Nextflow version: 26.02.0-edge
+- Summary: 46 errors, 139 warnings
 
 ## :x: Errors
 
@@ -429,34 +429,6 @@
   ```
 
 - Warning: `modules/nf-core/gunzip/main.nf:43:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/ribocode/gtfupdate/main.nf:32:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/ribocode/metaplots/main.nf:34:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/ribocode/prepare/main.nf:33:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/ribocode/ribocode/main.nf:38:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''

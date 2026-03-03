@@ -1,9 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.01.1-edge
+ N E X T F L O W   ~  version 26.02.0-edge
 
-Launching `./main.nf` [admiring_maxwell] revision: a18b2be4cd
+Downloading plugin nf-schema@2.5.1
+Launching `./main.nf` [fabulous_easley] revision: a18b2be4cd
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -59,9 +60,7 @@ is ~30GB and can be slow; prefer pre-downloading and passing a local `.tar.gz`).
   --reference_gff                 [string] Reference GFF file. 
 
 Assembly parameters
-  --assembler                     [string]  The assembler to use for assembly. Use the appropriate assembler according to the chosen 
-assembly_type. Refer to the README.md for further clarification.  (accepted: unicycler, canu, 
-miniasm, dragonflye, autocycler) [default: unicycler]  
+  --assembler                     [string]  The assembler(s) to use for assembly. [default: unicycler] 
   --assembly_type                 [string]  Which type of assembly to perform.  (accepted: short, long, hybrid) 
   --unicycler_args                [string]  Extra arguments for Unicycler 
   --canu_mode                     [string]  Allowed technologies for long read assembly with CANU.  (accepted: -pacbio, -nanopore, 

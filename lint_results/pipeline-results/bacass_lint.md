@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-02-24T00:22:24.705956700Z
-- Nextflow version: 26.01.1-edge
-- Summary: 25 warnings
+- Generated: 2026-03-03T00:21:48.676283073Z
+- Nextflow version: 26.02.0-edge
+- Summary: 37 warnings
 
 ## :warning: Warnings
 
@@ -34,67 +34,67 @@
           ^^^^
   ```
 
-- Warning: `subworkflows/local/kmerfinder_summary_download/main.nf:71:16`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/kmerfinder_summary_download/main.nf:77:16`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { refmeta, winner_file ->
                  ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/kmerfinder_summary_download/main.nf:88:69`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/kmerfinder_summary_download/main.nf:94:69`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def first_line = report_txt[0].text.split('\n').find { !it.startsWith('#') && it.trim() }
                                                                       ^^
   ```
 
-- Warning: `subworkflows/local/kmerfinder_summary_download/main.nf:88:91`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/kmerfinder_summary_download/main.nf:94:91`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def first_line = report_txt[0].text.split('\n').find { !it.startsWith('#') && it.trim() }
                                                                                             ^^
   ```
 
-- Warning: `subworkflows/local/kmerfinder_summary_download/main.nf:93:35`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/kmerfinder_summary_download/main.nf:99:35`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .filter { base_accession, specie, meta, report_txt, fasta -> base_accession != null }
-                                    ^^^^^^
+          .filter { base_accession, species, meta, report_txt, fasta -> base_accession != null }
+                                    ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/kmerfinder_summary_download/main.nf:93:43`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/kmerfinder_summary_download/main.nf:99:44`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .filter { base_accession, specie, meta, report_txt, fasta -> base_accession != null }
-                                            ^^^^
+          .filter { base_accession, species, meta, report_txt, fasta -> base_accession != null }
+                                             ^^^^
   ```
 
-- Warning: `subworkflows/local/kmerfinder_summary_download/main.nf:93:49`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/kmerfinder_summary_download/main.nf:99:50`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .filter { base_accession, specie, meta, report_txt, fasta -> base_accession != null }
-                                                  ^^^^^^^^^^
+          .filter { base_accession, species, meta, report_txt, fasta -> base_accession != null }
+                                                   ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/kmerfinder_summary_download/main.nf:93:61`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/kmerfinder_summary_download/main.nf:99:62`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .filter { base_accession, specie, meta, report_txt, fasta -> base_accession != null }
-                                                              ^^^^^
+          .filter { base_accession, species, meta, report_txt, fasta -> base_accession != null }
+                                                               ^^^^^
   ```
 
-- Warning: `subworkflows/local/kmerfinder_summary_download/main.nf:103:29`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/kmerfinder_summary_download/main.nf:109:29`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-              base_accession, specie, meta, report_txt, fasta, fna, gff ->
-                              ^^^^^^
+              base_accession, species, meta, report_txt, fasta, fna, gff ->
+                              ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/kmerfinder_summary_download/main.nf:103:43`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/kmerfinder_summary_download/main.nf:109:44`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-              base_accession, specie, meta, report_txt, fasta, fna, gff ->
-                                            ^^^^^^^^^^
+              base_accession, species, meta, report_txt, fasta, fna, gff ->
+                                             ^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/nf-core/fastq_trim_fastp_fastqc/main.nf:34:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -174,9 +174,93 @@
                              ^^^^^^^
   ```
 
-- Warning: `workflows/bacass.nf:424:26`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/bacass.nf:320:28`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-                  .filter{ meta, assembly -> assembly.countLines() > 1 } // keep only non-empty assembly files
-                           ^^^^
+              .filter{ meta, sr, lr -> !meta.subsample } // subsamples are not entering. i.e. anything with "meta.subsample"
+                             ^^
+  ```
+
+- Warning: `workflows/bacass.nf:320:32`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              .filter{ meta, sr, lr -> !meta.subsample } // subsamples are not entering. i.e. anything with "meta.subsample"
+                                 ^^
+  ```
+
+- Warning: `workflows/bacass.nf:347:29`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              .filter { meta, lr ->
+                              ^^
+  ```
+
+- Warning: `workflows/bacass.nf:372:29`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              .filter { meta, lr ->
+                              ^^
+  ```
+
+- Warning: `workflows/bacass.nf:431:28`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              .filter{ meta, sr, lr -> !meta.subsample } // subsamples are not entering. i.e. anything with "meta.subsample"
+                             ^^
+  ```
+
+- Warning: `workflows/bacass.nf:431:32`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              .filter{ meta, sr, lr -> !meta.subsample } // subsamples are not entering. i.e. anything with "meta.subsample"
+                                 ^^
+  ```
+
+- Warning: `workflows/bacass.nf:452:29`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              .filter { meta, lr ->
+                              ^^
+  ```
+
+- Warning: `workflows/bacass.nf:475:29`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              .filter { meta, lr ->
+                              ^^
+  ```
+
+- Warning: `workflows/bacass.nf:492:28`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              .filter{ meta, assembly -> meta.subsample } // only assemblies of subsamples pass, i.e. anything with "meta.subsample"
+                             ^^^^^^^^
+  ```
+
+- Warning: `workflows/bacass.nf:500:22`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              .filter{ meta, assembly -> assembly.countLines() > 1 } // keep only non-empty assembly files
+                       ^^^^
+  ```
+
+- Warning: `workflows/bacass.nf:515:25`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .filter { meta, assembly -> !meta.subsample } // omit subsample assemblies
+                          ^^^^^^^^
+  ```
+
+- Warning: `workflows/bacass.nf:524:29`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              .filter { meta, sr, lr -> !meta.subsample } // remove any subsamples
+                              ^^
+  ```
+
+- Warning: `workflows/bacass.nf:524:33`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              .filter { meta, sr, lr -> !meta.subsample } // remove any subsamples
+                                  ^^
   ```

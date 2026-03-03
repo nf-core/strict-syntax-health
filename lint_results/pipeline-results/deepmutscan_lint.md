@@ -1,17 +1,10 @@
 # Nextflow lint results
 
-- Generated: 2026-02-28T00:18:40.158085308Z
-- Nextflow version: 26.01.1-edge
-- Summary: 50 errors, 90 warnings
+- Generated: 2026-03-03T00:22:11.903208906Z
+- Nextflow version: 26.02.0-edge
+- Summary: 49 errors, 90 warnings
 
 ## :x: Errors
-
-- Error: `conf/test.config:30:24`: `nnk_nns` is not defined
-
-  ```nextflow
-      mutagenesis_type = nnk_nns
-                         ^^^^^^^
-  ```
 
 - Error: `modules/local/fitness/fitness_standard.nf:76:15`: `sample` is already declared
 

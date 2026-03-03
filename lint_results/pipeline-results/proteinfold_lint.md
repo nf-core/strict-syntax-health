@@ -1,16 +1,16 @@
 # Nextflow lint results
 
-- Generated: 2026-02-28T00:20:24.102569872Z
-- Nextflow version: 26.01.1-edge
+- Generated: 2026-03-03T00:23:10.511409157Z
+- Nextflow version: 26.02.0-edge
 - Summary: 2 warnings
 
 ## :warning: Warnings
 
-- Warning: `conf/modules_boltz.config:63:27`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `modules/local/boltz_fasta/main.nf:21:9`: Variable was declared but not used
 
   ```nextflow
-                  saveAs: { filename -> "${meta.id}.pdb" },
-                            ^^^^^^^^
+      def args = task.ext.args ?: ''
+          ^^^^
   ```
 
 - Warning: `modules/local/run_helixfold3/main.nf:107:9`: Variable was declared but not used

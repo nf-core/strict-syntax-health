@@ -1,10 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.01.1-edge
+ N E X T F L O W   ~  version 26.02.0-edge
 
 Downloading plugin nf-core-utils@0.4.0
-Launching `./main.nf` [berserk_watson] revision: 1394aa34c0
+Launching `./main.nf` [goofy_hirsch] revision: eddfb403f1
 
 
 ------------------------------------------------------
@@ -13,7 +13,7 @@ Launching `./main.nf` [berserk_watson] revision: 1394aa34c0
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/seqinspector 1.1.0dev
+  nf-core/seqinspector 1.0.1
 ------------------------------------------------------
 Typical pipeline command:
 
@@ -49,7 +49,7 @@ Generic options
   --help_full                   [boolean]         Display the full detailed help message. 
   --show_hidden                 [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
  
- !! Hiding 21 param(s), use the `--showHidden` parameter to show them !!
+ !! Hiding 20 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
 
 * The pipeline

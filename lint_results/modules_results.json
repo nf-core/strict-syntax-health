@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "a3a12a5bf8fb088f5bc68bbb053811b51762abea",
+  "_repo_commit": "ce847fe701c746bafb1088b377abf807e3a1aca7",
   "abricate_run": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abricate/run",
     "errors": 0,
@@ -1746,6 +1746,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "csvtk_mutate2": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/csvtk/mutate2",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "csvtk_sort": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/csvtk/sort",
     "errors": 0,
@@ -2618,6 +2624,12 @@
   },
   "gatk4_addorreplacereadgroups": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gatk4/addorreplacereadgroups",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "gatk4_analyzecovariates": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gatk4/analyzecovariates",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -5629,13 +5641,13 @@
     "parse_error": false
   },
   "plastid_make_wiggle": {
-    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/make/wiggle",
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/make_wiggle",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
   "plastid_metagene_generate": {
-    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/metagene/generate",
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/metagene_generate",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -5887,7 +5899,7 @@
     "parse_error": false
   },
   "proseg_proseg_to_baysor": {
-    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/proseg/proseg/to/baysor",
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/proseg/proseg_to_baysor",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -6392,7 +6404,7 @@
   },
   "samtools_addreplacerg": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/samtools/addreplacerg",
-    "errors": 1,
+    "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
