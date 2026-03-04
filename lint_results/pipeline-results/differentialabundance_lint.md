@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-02-28T00:18:47.473280208Z
-- Nextflow version: 26.01.1-edge
-- Summary: 13 errors, 48 warnings
+- Generated: 2026-03-04T00:20:59.782489581Z
+- Nextflow version: 26.02.0-edge
+- Summary: 12 errors, 47 warnings
 
 ## :x: Errors
 
@@ -76,14 +76,7 @@
       ^^^^^^^^^^^
   ```
 
-- Error: `modules/nf-core/shinyngs/app/tests/nextflow.config:6:32`: Unexpected input: ':'
-
-  ```nextflow
-      withName: test_shinyngs_app:SHINYNGS_APP {
-                                 ^
-  ```
-
-- Error: `subworkflows/local/utils_nfcore_differentialabundance_pipeline/main.nf:431:43`: Unexpected input: '('
+- Error: `subworkflows/local/utils_nfcore_differentialabundance_pipeline/main.nf:441:43`: Unexpected input: '('
 
   ```nextflow
       yaml_content = yaml_content.replaceAll(/\$projectDir/, projectDir.toString())
@@ -107,13 +100,6 @@
   ```
 
 - Warning: `modules/nf-core/gunzip/main.nf:43:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/shinyngs/app/main.nf:56:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''

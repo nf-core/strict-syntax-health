@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.01.1-edge
+ N E X T F L O W   ~  version 26.02.0-edge
 
-Launching `./main.nf` [astonishing_goldstine] revision: 88a6ba0e18
+Launching `./main.nf` [awesome_cuvier] revision: fdca6dfe38
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -181,7 +181,7 @@ Generic options
   --help_full                                            [boolean]         Display the full detailed help message. 
   --show_hidden                                          [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
  
- !! Hiding 18 param(s), use the `--showHidden` parameter to show them !!
+ !! Hiding 17 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
 
 * The pipeline

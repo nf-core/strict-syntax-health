@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T10:29:28.654904848Z
-- Nextflow version: 25.12.0-edge
+- Generated: 2026-03-04T00:23:01.121152046Z
+- Nextflow version: 26.02.0-edge
 - Summary: 74 errors, 140 warnings
 
 ## :x: Errors
@@ -258,21 +258,21 @@
                       ^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/dedup_umis.nf:131:13`: `PICARD_MARKDUPLICATES` is not defined
+- Error: `subworkflows/local/dedup_umis.nf:129:13`: `PICARD_MARKDUPLICATES` is not defined
 
   ```nextflow
               PICARD_MARKDUPLICATES (
               ^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/dedup_umis.nf:136:28`: `PICARD_MARKDUPLICATES` is not defined
+- Error: `subworkflows/local/dedup_umis.nf:134:28`: `PICARD_MARKDUPLICATES` is not defined
 
   ```nextflow
               ch_dedup_bam = PICARD_MARKDUPLICATES.out.bam
                              ^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/dedup_umis.nf:137:43`: `PICARD_MARKDUPLICATES` is not defined
+- Error: `subworkflows/local/dedup_umis.nf:135:43`: `PICARD_MARKDUPLICATES` is not defined
 
   ```nextflow
               ch_versions = ch_versions.mix(PICARD_MARKDUPLICATES.out.versions)
@@ -792,21 +792,21 @@
                           ^^^^
   ```
 
-- Warning: `subworkflows/local/dedup_umis.nf:114:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/dedup_umis.nf:112:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_dedup_bam = Channel.empty()
                          ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/dedup_umis.nf:115:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/dedup_umis.nf:113:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_dedup_bai = Channel.empty()
                          ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/dedup_umis.nf:153:25`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/dedup_umis.nf:151:25`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                           meta, bam ->

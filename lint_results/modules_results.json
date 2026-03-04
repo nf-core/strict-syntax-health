@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "ce847fe701c746bafb1088b377abf807e3a1aca7",
+  "_repo_commit": "6a1e00108dbb63ac633e72029695b102d2019e04",
   "abricate_run": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abricate/run",
     "errors": 0,
@@ -4232,6 +4232,12 @@
   },
   "longphase_phase": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/longphase/phase",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "lsa_cosine": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/lsa/cosine",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

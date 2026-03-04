@@ -1,10 +1,11 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.01.0-edge
+ N E X T F L O W   ~  version 26.02.0-edge
 
 Downloading plugin nf-core-utils@0.4.0
-Launching `./main.nf` [naughty_watson]revision: 4703c63ba2
+Downloading plugin nf-schema@2.6.1
+Launching `./main.nf` [condescending_ekeblad] revision: f03f1d974e
 
 
 ------------------------------------------------------
@@ -142,7 +143,7 @@ Generic options
   --help_full                   [boolean]         Display the full detailed help message. 
   --show_hidden                 [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
  
- !! Hiding 23 param(s), use the `--showHidden` parameter to show them !!
+ !! Hiding 22 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
 
 * The pipeline

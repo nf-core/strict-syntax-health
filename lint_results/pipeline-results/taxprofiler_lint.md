@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-02-18T00:23:30.454952286Z
-- Nextflow version: 26.01.1-edge
+- Generated: 2026-03-04T00:23:26.371945311Z
+- Nextflow version: 26.02.0-edge
 - Summary: 112 warnings
 
 ## :warning: Warnings
@@ -601,49 +601,49 @@
                     ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_taxprofiler_pipeline/main.nf:31:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_taxprofiler_pipeline/main.nf:30:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       monochrome_logs // boolean: Do not use coloured log outputs
       ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_taxprofiler_pipeline/main.nf:128:22`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_taxprofiler_pipeline/main.nf:127:22`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .map { meta, run_accession, instrument_platform, fastq_1, fastq_2, fasta -> [ meta.id, meta.single_end ] }  // Adjust field names
+          .map { meta, run_accession, instrument_platform, fastq_1, fastq_2, fasta -> [meta.id, meta.single_end] }
                        ^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_taxprofiler_pipeline/main.nf:128:37`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_taxprofiler_pipeline/main.nf:127:37`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .map { meta, run_accession, instrument_platform, fastq_1, fastq_2, fasta -> [ meta.id, meta.single_end ] }  // Adjust field names
+          .map { meta, run_accession, instrument_platform, fastq_1, fastq_2, fasta -> [meta.id, meta.single_end] }
                                       ^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_taxprofiler_pipeline/main.nf:128:58`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_taxprofiler_pipeline/main.nf:127:58`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .map { meta, run_accession, instrument_platform, fastq_1, fastq_2, fasta -> [ meta.id, meta.single_end ] }  // Adjust field names
+          .map { meta, run_accession, instrument_platform, fastq_1, fastq_2, fasta -> [meta.id, meta.single_end] }
                                                            ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_taxprofiler_pipeline/main.nf:128:67`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_taxprofiler_pipeline/main.nf:127:67`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .map { meta, run_accession, instrument_platform, fastq_1, fastq_2, fasta -> [ meta.id, meta.single_end ] }  // Adjust field names
+          .map { meta, run_accession, instrument_platform, fastq_1, fastq_2, fasta -> [meta.id, meta.single_end] }
                                                                     ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_taxprofiler_pipeline/main.nf:128:76`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_taxprofiler_pipeline/main.nf:127:76`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .map { meta, run_accession, instrument_platform, fastq_1, fastq_2, fasta -> [ meta.id, meta.single_end ] }  // Adjust field names
+          .map { meta, run_accession, instrument_platform, fastq_1, fastq_2, fasta -> [meta.id, meta.single_end] }
                                                                              ^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_taxprofiler_pipeline/main.nf:130:41`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_taxprofiler_pipeline/main.nf:129:41`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { validateInputSamplesheet(it) }

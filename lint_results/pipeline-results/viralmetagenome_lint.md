@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-03-03T00:24:23.601791787Z
+- Generated: 2026-03-04T00:23:51.622796295Z
 - Nextflow version: 26.02.0-edge
-- Summary: 4 errors, 66 warnings
+- Summary: 4 errors, 52 warnings
 
 ## :x: Errors
 
@@ -35,90 +35,6 @@
   ```
 
 ## :warning: Warnings
-
-- Warning: `modules/local/blast_filter/main.nf:48:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/local/custom_mpileup/main.nf:39:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/local/custom_multiqc/main.nf:79:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/local/extract_cluster/main.nf:46:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/local/extract_precluster/main.nf:49:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/local/ivar_variants_to_vcf/main.nf:45:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/local/make_bed_mask/main.nf:50:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/local/make_bed_mask/main.nf:51:9`: Variable was declared but not used
-
-  ```nextflow
-      def args2 = task.ext.args2 ?: 5
-          ^^^^^
-  ```
-
-- Warning: `modules/local/make_bed_mask/main.nf:53:9`: Variable was declared but not used
-
-  ```nextflow
-      def mpileup = save_mpileup ? "| tee ${prefix}.mpileup" : ""
-          ^^^^^^^
-  ```
-
-- Warning: `modules/local/select_reference/main.nf:39:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/local/snpeff_build/main.nf:64:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/local/snpsift_extractfields/main.nf:55:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
 
 - Warning: `subworkflows/local/consensus_qc/main.nf:21:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
@@ -295,13 +211,6 @@
                                                            ^^^^^
   ```
 
-- Warning: `subworkflows/local/singleton_filtering/main.nf:12:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/utils_nfcore_viralmetagenome_pipeline/main.nf:29:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
@@ -363,13 +272,6 @@
   ```nextflow
           .map { meta, txt, fasta ->
                        ^^^
-  ```
-
-- Warning: `subworkflows/local/vcf_annotate/main.nf:12:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
   ```
 
 - Warning: `workflows/viralmetagenome.nf:70:100`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -442,56 +344,56 @@
                                                                                    ^^
   ```
 
-- Warning: `workflows/viralmetagenome.nf:349:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralmetagenome.nf:348:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_mash_screen = FASTQ_FASTA_MASH_SCREEN.out.json.collect{it[1]}
                                                                     ^^
   ```
 
-- Warning: `workflows/viralmetagenome.nf:411:83`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralmetagenome.nf:409:83`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files      = ch_multiqc_files.mix(CONSENSUS_QC.out.mqc.collect{it[1]}.ifEmpty([]))
                                                                                     ^^
   ```
 
-- Warning: `workflows/viralmetagenome.nf:412:65`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralmetagenome.nf:410:65`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_checkv_summary     = CONSENSUS_QC.out.checkv.collect{it[1]}.ifEmpty([])
                                                                   ^^
   ```
 
-- Warning: `workflows/viralmetagenome.nf:413:64`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralmetagenome.nf:411:64`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_quast_summary      = CONSENSUS_QC.out.quast.collect{it[1]}.ifEmpty([])
                                                                  ^^
   ```
 
-- Warning: `workflows/viralmetagenome.nf:414:64`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralmetagenome.nf:412:64`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_blast_summary      = CONSENSUS_QC.out.blast.collect{it[1]}.ifEmpty([])
                                                                  ^^
   ```
 
-- Warning: `workflows/viralmetagenome.nf:415:69`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralmetagenome.nf:413:69`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_annotation_summary = CONSENSUS_QC.out.annotation.collect{it[1]}.ifEmpty([])
                                                                       ^^
   ```
 
-- Warning: `workflows/viralmetagenome.nf:422:5`: Variable was declared but not used
+- Warning: `workflows/viralmetagenome.nf:420:5`: Variable was declared but not used
 
   ```nextflow
       ch_multiqc_custom_config              = params.multiqc_config              ? channel.fromPath(params.multiqc_config, checkIfExists: true) : channel.empty()
       ^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/viralmetagenome.nf:423:5`: Variable was declared but not used
+- Warning: `workflows/viralmetagenome.nf:421:5`: Variable was declared but not used
 
   ```nextflow
       ch_multiqc_logo                       = params.multiqc_logo                ? channel.fromPath(params.multiqc_logo, checkIfExists: true) : channel.empty()
