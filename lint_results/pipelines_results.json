@@ -200,7 +200,7 @@
   "deepmutscan": {
     "full_name": "nf-core/deepmutscan",
     "html_url": "https://github.com/nf-core/deepmutscan",
-    "commit": "902778a7a0348de2437173e42cd74a24c2a637ef",
+    "commit": "15e9fc902c73b62034addac9f2fb6fd46ae4ff4e",
     "errors": 49,
     "warnings": 90,
     "parse_error": false,
@@ -308,7 +308,7 @@
   "epitopeprediction": {
     "full_name": "nf-core/epitopeprediction",
     "html_url": "https://github.com/nf-core/epitopeprediction",
-    "commit": "dc0107e1671b287b6a2911ecac167da691d25905",
+    "commit": "5ccac9a14ec78c8d0b8740f32efe0046819616d9",
     "errors": 0,
     "warnings": 5,
     "parse_error": false,
@@ -515,7 +515,7 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "608db5c25fb7365178b7f222681c2f0aaf8ef628",
+    "commit": "4ae885236d9b063e81b1cd92d85b73f6be5c3c5e",
     "errors": 0,
     "warnings": 32,
     "parse_error": false,
@@ -614,7 +614,7 @@
   "mhcquant": {
     "full_name": "nf-core/mhcquant",
     "html_url": "https://github.com/nf-core/mhcquant",
-    "commit": "951739d44d073a4b0ac905e2494f8cbef118daac",
+    "commit": "29dc6f1cae75c10ca7a0b4ff10aeb87b3e0e2585",
     "errors": 18,
     "warnings": 49,
     "parse_error": false,
@@ -785,7 +785,7 @@
   "pixelator": {
     "full_name": "nf-core/pixelator",
     "html_url": "https://github.com/nf-core/pixelator",
-    "commit": "037895fdb033b3a04d12a49ec1e5200d2a7c7b02",
+    "commit": "5e74a960bdcd4155bf6c1bc75406e1edcc431908",
     "errors": 11,
     "warnings": 36,
     "parse_error": false,
@@ -803,7 +803,7 @@
   "proteinfamilies": {
     "full_name": "nf-core/proteinfamilies",
     "html_url": "https://github.com/nf-core/proteinfamilies",
-    "commit": "a49ee5e42e05bf26244157407ef620045af21d6c",
+    "commit": "ea9bd37eecc612bff2b4c7a3bd96722e27d0cf36",
     "errors": 0,
     "warnings": 3,
     "parse_error": false,
@@ -812,7 +812,7 @@
   "proteinfold": {
     "full_name": "nf-core/proteinfold",
     "html_url": "https://github.com/nf-core/proteinfold",
-    "commit": "2bcec65c389260deae19019841895c6a4edcc2e6",
+    "commit": "5516f9a3836c5d033ad00117f7edc2db08ca2b46",
     "errors": 0,
     "warnings": 2,
     "parse_error": false,
@@ -848,7 +848,7 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "f5ccf126fec844c2535e37c0b81b1d10fffd8327",
+    "commit": "6a63ade4631b999b1bd0c54d65fda891ffb59907",
     "errors": 1,
     "warnings": 0,
     "parse_error": false,

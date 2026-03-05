@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "6a1e00108dbb63ac633e72029695b102d2019e04",
+  "_repo_commit": "e4a7e011bee58ded839f4da6bf9bb3fbfbebdebd",
   "abricate_run": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abricate/run",
     "errors": 0,
@@ -5967,7 +5967,7 @@
   "purgedups_purgedups": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/purgedups/purgedups",
     "errors": 0,
-    "warnings": 0,
+    "warnings": 1,
     "parse_error": false
   },
   "purgedups_splitfa": {

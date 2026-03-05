@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-03-03T00:23:10.511409157Z
+- Generated: 2026-03-05T00:24:03.972837592Z
 - Nextflow version: 26.02.0-edge
 - Summary: 2 warnings
 
@@ -13,7 +13,7 @@
           ^^^^
   ```
 
-- Warning: `modules/local/run_helixfold3/main.nf:107:9`: Variable was declared but not used
+- Warning: `modules/local/run_helixfold3/main.nf:109:9`: Variable was declared but not used
 
   ```nextflow
       def VERSION = '705c2974a833cdc3a4420f4e3379da596091c97f'

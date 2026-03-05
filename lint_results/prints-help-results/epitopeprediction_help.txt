@@ -1,21 +1,107 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.01.1-edge
+ N E X T F L O W   ~  version 26.02.0-edge
 
 Downloading plugin nf-co2footprint@1.0.0
 Downloading plugin nf-schema@2.5.1
-Launching `./main.nf` [grave_picasso] revision: cdc1ab7aaa
+Launching `./main.nf` [desperate_carson] revision: cdc1ab7aaa
 
 WARN: Unrecognized config option 'co2footprint.traceFile'
 WARN: Unrecognized config option 'co2footprint.summaryFile'
 WARN: Unrecognized config option 'co2footprint.reportFile'
 WARN: Unrecognized config option 'validation.monochromeLogs'
 WARN: Unrecognized config option 'validation.help.enabled'
-[37mINFO - [nf-co2footprint] nf-co2footprint plugin  ~  version 1.0.0[0;39m
-[37mINFO - [nf-co2footprint] 🔕 Repeated task-specific messages (🔁) are only logged once in the console. Further occurrences are logged at DEBUG level, appearing only in the `.nextflow.log` file.[0;39m
-[33mWARN - [nf-co2footprint] 🔁 No location provided. Attempting to retrieve GLOBAL carbon intensity value.[0;39m
-[37mINFO - [nf-co2footprint] 🔁 Using carbon intensity for GLOBAL from fallback table: 480.0 gCO₂eq/kWh.[0;39m
+groovy.lang.MissingPropertyException: No such property: ansiLogObserver for class: nextflow.Session
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:68)
+	at org.codehaus.groovy.vmplugin.v8.IndyGuardsFiltersAndSignatures.unwrap(IndyGuardsFiltersAndSignatures.java:163)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.co2footprint.Logging.CustomCaptureAppender.append(CustomCaptureAppender.groovy:46)
+	at nextflow.co2footprint.Logging.CustomCaptureAppender.append(CustomCaptureAppender.groovy)
+	at ch.qos.logback.core.AppenderBase.doAppend(AppenderBase.java:85)
+	at ch.qos.logback.core.spi.AppenderAttachableImpl.appendLoopOnAppenders(AppenderAttachableImpl.java:51)
+	at ch.qos.logback.classic.Logger.appendLoopOnAppenders(Logger.java:272)
+	at ch.qos.logback.classic.Logger.callAppenders(Logger.java:259)
+	at ch.qos.logback.classic.Logger.buildLoggingEventAndAppend(Logger.java:431)
+	at ch.qos.logback.classic.Logger.filterAndLog_0_Or3Plus(Logger.java:388)
+	at ch.qos.logback.classic.Logger.info(Logger.java:589)
+	at nextflow.co2footprint.CO2FootprintFactory.create(CO2FootprintFactory.groovy:100)
+	at nextflow.Session.createObserversV1(Session.groovy:493)
+	at nextflow.Session.init(Session.groovy:461)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:119)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:435)
+	at nextflow.cli.Launcher.run(Launcher.groovy:515)
+	at nextflow.cli.Launcher.main(Launcher.groovy:675)
+groovy.lang.MissingPropertyException: No such property: ansiLogObserver for class: nextflow.Session
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:68)
+	at org.codehaus.groovy.vmplugin.v8.IndyGuardsFiltersAndSignatures.unwrap(IndyGuardsFiltersAndSignatures.java:163)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.co2footprint.Logging.CustomCaptureAppender.append(CustomCaptureAppender.groovy:46)
+	at nextflow.co2footprint.Logging.CustomCaptureAppender.append(CustomCaptureAppender.groovy)
+	at ch.qos.logback.core.AppenderBase.doAppend(AppenderBase.java:85)
+	at ch.qos.logback.core.spi.AppenderAttachableImpl.appendLoopOnAppenders(AppenderAttachableImpl.java:51)
+	at ch.qos.logback.classic.Logger.appendLoopOnAppenders(Logger.java:272)
+	at ch.qos.logback.classic.Logger.callAppenders(Logger.java:259)
+	at ch.qos.logback.classic.Logger.buildLoggingEventAndAppend(Logger.java:431)
+	at ch.qos.logback.classic.Logger.filterAndLog_0_Or3Plus(Logger.java:388)
+	at ch.qos.logback.classic.Logger.info(Logger.java:589)
+	at nextflow.co2footprint.CO2FootprintFactory.create(CO2FootprintFactory.groovy:101)
+	at nextflow.Session.createObserversV1(Session.groovy:493)
+	at nextflow.Session.init(Session.groovy:461)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:119)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:435)
+	at nextflow.cli.Launcher.run(Launcher.groovy:515)
+	at nextflow.cli.Launcher.main(Launcher.groovy:675)
+groovy.lang.MissingPropertyException: No such property: ansiLogObserver for class: nextflow.Session
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:68)
+	at org.codehaus.groovy.vmplugin.v8.IndyGuardsFiltersAndSignatures.unwrap(IndyGuardsFiltersAndSignatures.java:163)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.co2footprint.Logging.CustomCaptureAppender.append(CustomCaptureAppender.groovy:46)
+	at nextflow.co2footprint.Logging.CustomCaptureAppender.append(CustomCaptureAppender.groovy)
+	at ch.qos.logback.core.AppenderBase.doAppend(AppenderBase.java:85)
+	at ch.qos.logback.core.spi.AppenderAttachableImpl.appendLoopOnAppenders(AppenderAttachableImpl.java:51)
+	at ch.qos.logback.classic.Logger.appendLoopOnAppenders(Logger.java:272)
+	at ch.qos.logback.classic.Logger.callAppenders(Logger.java:259)
+	at ch.qos.logback.classic.Logger.buildLoggingEventAndAppend(Logger.java:431)
+	at ch.qos.logback.classic.Logger.filterAndLog_0_Or3Plus(Logger.java:388)
+	at ch.qos.logback.classic.Logger.warn(Logger.java:718)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.co2footprint.DataContainers.CIValueComputer.computeCI(CIValueComputer.groovy:110)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.co2footprint.CO2FootprintConfig.<init>(CO2FootprintConfig.groovy:109)
+	at nextflow.co2footprint.CO2FootprintFactory.create(CO2FootprintFactory.groovy:116)
+	at nextflow.Session.createObserversV1(Session.groovy:493)
+	at nextflow.Session.init(Session.groovy:461)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:119)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:435)
+	at nextflow.cli.Launcher.run(Launcher.groovy:515)
+	at nextflow.cli.Launcher.main(Launcher.groovy:675)
+groovy.lang.MissingPropertyException: No such property: ansiLogObserver for class: nextflow.Session
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:68)
+	at org.codehaus.groovy.vmplugin.v8.IndyGuardsFiltersAndSignatures.unwrap(IndyGuardsFiltersAndSignatures.java:163)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.co2footprint.Logging.CustomCaptureAppender.append(CustomCaptureAppender.groovy:46)
+	at nextflow.co2footprint.Logging.CustomCaptureAppender.append(CustomCaptureAppender.groovy)
+	at ch.qos.logback.core.AppenderBase.doAppend(AppenderBase.java:85)
+	at ch.qos.logback.core.spi.AppenderAttachableImpl.appendLoopOnAppenders(AppenderAttachableImpl.java:51)
+	at ch.qos.logback.classic.Logger.appendLoopOnAppenders(Logger.java:272)
+	at ch.qos.logback.classic.Logger.callAppenders(Logger.java:259)
+	at ch.qos.logback.classic.Logger.buildLoggingEventAndAppend(Logger.java:431)
+	at ch.qos.logback.classic.Logger.filterAndLog_1(Logger.java:406)
+	at ch.qos.logback.classic.Logger.info(Logger.java:613)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.co2footprint.DataContainers.CIDataMatrix.findCiInMatrix(CIDataMatrix.groovy:70)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.co2footprint.DataContainers.CIValueComputer.computeCI(CIValueComputer.groovy:114)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.co2footprint.CO2FootprintConfig.<init>(CO2FootprintConfig.groovy:109)
+	at nextflow.co2footprint.CO2FootprintFactory.create(CO2FootprintFactory.groovy:116)
+	at nextflow.Session.createObserversV1(Session.groovy:493)
+	at nextflow.Session.init(Session.groovy:461)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:119)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:435)
+	at nextflow.cli.Launcher.run(Launcher.groovy:515)
+	at nextflow.cli.Launcher.main(Launcher.groovy:675)
 ERROR ~ Unable to create help message: Specified param 'true' does not exist in JSON schema.
 
  -- Check script 'subworkflows/nf-core/utils_nfschema_plugin/main.nf' at line: 41 or see '.nextflow.log' file for more details

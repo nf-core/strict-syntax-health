@@ -1,5 +1,14 @@
 # Nextflow lint results
 
-- Generated: 2026-03-04T00:24:21.147609+00:00
+- Generated: 2026-03-05T00:25:15.656858+00:00
 - Nextflow version: 26.02.0-edge
-- Summary: No issues found
+- Summary: 1 warning
+
+## :warning: Warnings
+
+- Warning: `modules/nf-core/purgedups/purgedups/main.nf:24:9`: Variable was declared but not used
+
+  ```nextflow
+      def prefix = task.ext.prefix ?: "${meta.id}"
+          ^^^^^^^^^^
+  ```
