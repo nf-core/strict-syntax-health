@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.02.0-edge
 
-Launching `./main.nf` [awesome_cuvier] revision: fdca6dfe38
+Launching `./main.nf` [gigantic_jennings] revision: fdca6dfe38
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -71,6 +71,10 @@ Preprocessing long-read QC options
   --perform_longread_qc                                  [boolean] Turns on long read quality control steps (adapter clipping, length filtering etc.) 
   --longread_adapterremoval_tool                         [string]  Specify which tool to use for adapter trimming.  (accepted: porechop, porechop_abi) [default: 
 porechop_abi]  
+  --longread_qc_predictadapters                          [boolean] This option allows inference of adapters directly from the reads instead of relying on a static 
+database.  
+  --longread_qc_adapterlist                              [string]  Path to a custom adapter text file, if you want to manually specify a list of adapters to remove. 
+ 
   --longread_qc_skipadaptertrim                          [boolean] Skip long-read trimming 
   --longread_filter_tool                                 [string]  Specify which tool to use for long reads filtering  (accepted: filtlong, nanoq) [default: nanoq] 
  
@@ -144,8 +148,11 @@ Classifier) [default: BlastN]
   --run_motus                                            [boolean] Turn on profiling with mOTUs. Requires database to be present CSV file passed to --databases 
  
   --motus_use_relative_abundance                         [boolean] Turn on printing relative abundance instead of counts. 
-  --motus_save_mgc_read_counts                           [boolean] Turn on saving the mgc reads count. 
   --motus_remove_ncbi_ids                                [boolean] Turn on removing NCBI taxonomic IDs. 
+  --motus_save_mgc_read_counts                           [boolean] Turn on saving the mgc reads count. 
+  --motus_longprep_splittinglength                       [integer] Splitting length for the long reads. [default: 300] 
+  --motus_longprep_minlen                                [integer] Minimum read length, shorter are discarded. [default: 50] 
+  --motus_save_split_longreads                           [boolean] Turn on saving the output of synthetic long-reads 
   --run_kmcp                                             [boolean] Turn on classification with KMCP. 
   --kmcp_save_search                                     [boolean] Turn on saving the output of KMCP search 
   --run_ganon                                            [boolean] Turn on profiling with ganon. Requires database to be present CSV file passed to --databases. 
@@ -160,6 +167,16 @@ Classifier) [default: BlastN]
 0]  
   --ganon_report_maxcount                                [integer] Specify a maximum number of reads a hit must have to be retained in the ganon report. [default: 
 0]  
+  --run_sylph                                            [boolean] Turn on profiling with sylph. Requires database to be present CSV file passed to --databases 
+ 
+  --sylph_taxonomy                                       [string]  Specify path to sylph taxonomy to add taxonomic path to each hit. 
+  --sylph_data_type                                      [string]  Specifies which abundance metric to use  (accepted: relative_abundance, sequence_abundance, ANI) 
+[default: relative_abundance]  
+  --run_melon                                            [boolean] Turn on profiling with Melon. Requires a database to be present in the CSV file passed to 
+`--databases`.  
+  --melon_k2_db                                          [string]  Specify kraken2 database for prefiltering of non-prokaryotic reads with melon. 
+  --run_metacache                                        [boolean] Turn on profiling with metacache. Requires database to be present CSV file passed to --databases 
+ 
 
 Postprocessing and visualisation options
   --run_profile_standardisation                          [boolean] Turn on standardisation of taxon tables across profilers 

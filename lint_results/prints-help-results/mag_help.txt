@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.02.0-edge
 
-Launching `./main.nf` [angry_linnaeus] revision: 1762f92e8d
+Launching `./main.nf` [suspicious_sanger] revision: 1762f92e8d
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -236,7 +236,7 @@ raw_bins_only]
   --generate_bigmag_file                 [boolean] Make a BIgMAG input file including GUNC results. 
 
 Ancient DNA assembly
-  --ancient_dna                          [boolean] Turn on/off the ancient DNA subworfklow 
+  --ancient_dna                          [boolean] Turn on/off the ancient DNA subworkflow 
   --pydamage_accuracy                    [number]  PyDamage accuracy threshold [default: 0.5] 
   --skip_ancient_damagecorrection        [boolean] deactivate damage correction of ancient contigs using variant and consensus calling 
   --freebayes_ploidy                     [integer] Ploidy for variant calling [default: 1] 

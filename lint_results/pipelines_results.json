@@ -254,7 +254,7 @@
   "differentialabundance": {
     "full_name": "nf-core/differentialabundance",
     "html_url": "https://github.com/nf-core/differentialabundance",
-    "commit": "be94129da8dcd436a56a7a0eeab7d69941161881",
+    "commit": "787c8e93e44a476ecc4d4db20903102cc86f03c7",
     "errors": 12,
     "warnings": 47,
     "parse_error": false,
@@ -272,7 +272,7 @@
   "drop": {
     "full_name": "nf-core/drop",
     "html_url": "https://github.com/nf-core/drop",
-    "commit": "98993c002585f4e3db39aaa1811e9d226ea88f0b",
+    "commit": "d5d543f88a12d9fe32d2ed1141015af453c9ed9f",
     "errors": 6,
     "warnings": 68,
     "parse_error": false,
@@ -506,16 +506,16 @@
   "lsmquant": {
     "full_name": "nf-core/lsmquant",
     "html_url": "https://github.com/nf-core/lsmquant",
-    "commit": "6f373ba57ccaa9ae09489185e85d77e2048cd941",
+    "commit": "6cf2bd844adeede03a2227f9258245bfde769d28",
     "errors": 0,
-    "warnings": 49,
+    "warnings": 43,
     "parse_error": false,
     "prints_help": false
   },
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "4ae885236d9b063e81b1cd92d85b73f6be5c3c5e",
+    "commit": "0e39a923497535b0e87ed0a45e9fda86ea4d657a",
     "errors": 0,
     "warnings": 32,
     "parse_error": false,
@@ -812,11 +812,11 @@
   "proteinfold": {
     "full_name": "nf-core/proteinfold",
     "html_url": "https://github.com/nf-core/proteinfold",
-    "commit": "5516f9a3836c5d033ad00117f7edc2db08ca2b46",
-    "errors": 0,
+    "commit": "6e6d745da5cdc913b441ebd386396a43fb370a96",
+    "errors": 9,
     "warnings": 2,
     "parse_error": false,
-    "prints_help": true
+    "prints_help": null
   },
   "proteogenomicsdb": {
     "full_name": "nf-core/proteogenomicsdb",
@@ -848,7 +848,7 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "6a63ade4631b999b1bd0c54d65fda891ffb59907",
+    "commit": "0a21ec567c6d34786f80356f2c0faaf4b29d8ea7",
     "errors": 1,
     "warnings": 0,
     "parse_error": false,
@@ -947,7 +947,7 @@
   "rnavar": {
     "full_name": "nf-core/rnavar",
     "html_url": "https://github.com/nf-core/rnavar",
-    "commit": "a7eac8242cb6492df24f688d9ce0f42919cd5fe4",
+    "commit": "1189704b5ab3360c366e97fd201ce37240978be8",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1082,9 +1082,9 @@
   "taxprofiler": {
     "full_name": "nf-core/taxprofiler",
     "html_url": "https://github.com/nf-core/taxprofiler",
-    "commit": "b5f437a48c60a256be2385e3b13001b233e5f09d",
+    "commit": "9fc0f13f4dfe9283f4c042dec31cc6262f9af042",
     "errors": 0,
-    "warnings": 112,
+    "warnings": 96,
     "parse_error": false,
     "prints_help": true
   },
@@ -1127,9 +1127,9 @@
   "variantbenchmarking": {
     "full_name": "nf-core/variantbenchmarking",
     "html_url": "https://github.com/nf-core/variantbenchmarking",
-    "commit": "d94351887abe8deb4ffc14992259da3252a3b75d",
-    "errors": 8,
-    "warnings": 29,
+    "commit": "5bf25f1d19acaae99e84ecb8f56aaa307ad753cd",
+    "errors": 10,
+    "warnings": 28,
     "parse_error": false,
     "prints_help": null
   },
@@ -1145,7 +1145,7 @@
   "variantprioritization": {
     "full_name": "nf-core/variantprioritization",
     "html_url": "https://github.com/nf-core/variantprioritization",
-    "commit": "2c0aeb55d54710e436185f7cf12c10dc28d1542e",
+    "commit": "65335b2f8df7defbae8d10b2018fbc294fe105e5",
     "errors": 5,
     "warnings": 0,
     "parse_error": false,

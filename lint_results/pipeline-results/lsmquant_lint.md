@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-02-28T00:19:28.782789144Z
-- Nextflow version: 26.01.1-edge
-- Summary: 49 warnings
+- Generated: 2026-03-06T00:24:13.355399741Z
+- Nextflow version: 26.02.0-edge
+- Summary: 43 warnings
 
 ## :warning: Warnings
 
@@ -20,7 +20,7 @@
           ^^^^
   ```
 
-- Warning: `modules/local/numorph3dunet/main.nf:50:9`: Variable was declared but not used
+- Warning: `modules/local/numorph3dunet/main.nf:48:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
@@ -34,25 +34,11 @@
           ^^^^
   ```
 
-- Warning: `modules/local/numorphalign/main.nf:30:9`: Variable was declared but not used
-
-  ```nextflow
-      def prefix = task.ext.prefix ?: "${meta.id}"
-          ^^^^^^
-  ```
-
-- Warning: `modules/local/numorphalign/main.nf:56:9`: Variable was declared but not used
+- Warning: `modules/local/numorphalign/main.nf:59:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
-  ```
-
-- Warning: `modules/local/numorphalign/main.nf:57:9`: Variable was declared but not used
-
-  ```nextflow
-      def prefix = task.ext.prefix ?: "${meta.id}"
-          ^^^^^^
   ```
 
 - Warning: `modules/local/numorphintensity/main.nf:24:9`: Variable was declared but not used
@@ -62,25 +48,11 @@
           ^^^^
   ```
 
-- Warning: `modules/local/numorphintensity/main.nf:25:9`: Variable was declared but not used
-
-  ```nextflow
-      def prefix = task.ext.prefix ?: "${meta.id}"
-          ^^^^^^
-  ```
-
 - Warning: `modules/local/numorphintensity/main.nf:46:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
-  ```
-
-- Warning: `modules/local/numorphintensity/main.nf:47:9`: Variable was declared but not used
-
-  ```nextflow
-      def prefix = task.ext.prefix ?: "${meta.id}"
-          ^^^^^^
   ```
 
 - Warning: `modules/local/numorphregister/main.nf:22:9`: Variable was declared but not used
@@ -125,25 +97,11 @@
           ^^^^
   ```
 
-- Warning: `modules/local/numorphstitch/main.nf:27:9`: Variable was declared but not used
-
-  ```nextflow
-      def prefix = task.ext.prefix ?: "${meta.id}"
-          ^^^^^^
-  ```
-
-- Warning: `modules/local/numorphstitch/main.nf:75:9`: Variable was declared but not used
+- Warning: `modules/local/numorphstitch/main.nf:77:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
-  ```
-
-- Warning: `modules/local/numorphstitch/main.nf:76:9`: Variable was declared but not used
-
-  ```nextflow
-      def prefix = task.ext.prefix ?: "${meta.id}"
-          ^^^^^^
   ```
 
 - Warning: `modules/local/stagefiles/main.nf:20:9`: Variable was declared but not used
@@ -195,7 +153,7 @@
                                                        ^^^^^^
   ```
 
-- Warning: `subworkflows/local/araregistration/main.nf:26:33`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/araregistration/main.nf:27:33`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { meta, resampled, stitched_img_directory, parameter_file ->

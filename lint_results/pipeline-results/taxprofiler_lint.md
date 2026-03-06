@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-03-04T00:23:26.371945311Z
+- Generated: 2026-03-06T00:26:04.019487768Z
 - Nextflow version: 26.02.0-edge
-- Summary: 112 warnings
+- Summary: 96 warnings
 
 ## :warning: Warnings
 
@@ -48,56 +48,56 @@
                                                                                                                                                                                                                                                                                                                  ^^
   ```
 
-- Warning: `conf/modules.config:284:304`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:289:304`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   saveAs: { (params.perform_runmerging == false || (params.perform_runmerging && !meta.is_multirun)) && !params.perform_longread_hostremoval && params.longread_qc_skipqualityfilter && !params.longread_qc_skipadaptertrim && params.perform_longread_qc && params.save_analysis_ready_fastqs ? it : null },
                                                                                                                                                                                                                                                                                                                  ^^
   ```
 
-- Warning: `conf/modules.config:313:266`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:318:266`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   saveAs: { (params.perform_runmerging == false || (params.perform_runmerging && !meta.is_multirun)) && !params.perform_longread_hostremoval && !params.longread_qc_skipqualityfilter && params.perform_longread_qc && params.save_analysis_ready_fastqs ? it : null },
                                                                                                                                                                                                                                                                            ^^
   ```
 
-- Warning: `conf/modules.config:342:266`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:347:266`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   saveAs: { (params.perform_runmerging == false || (params.perform_runmerging && !meta.is_multirun)) && !params.perform_longread_hostremoval && !params.longread_qc_skipqualityfilter && params.perform_longread_qc && params.save_analysis_ready_fastqs ? it : null },
                                                                                                                                                                                                                                                                            ^^
   ```
 
-- Warning: `conf/modules.config:371:238`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:376:238`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   saveAs: { (params.perform_runmerging == false || (params.perform_runmerging && !meta.is_multirun)) && !params.perform_shortread_hostremoval && params.shortread_complexityfilter_tool && params.save_analysis_ready_fastqs ? it : null },
                                                                                                                                                                                                                                                ^^
   ```
 
-- Warning: `conf/modules.config:399:238`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:404:238`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   saveAs: { (params.perform_runmerging == false || (params.perform_runmerging && !meta.is_multirun)) && !params.perform_shortread_hostremoval && params.shortread_complexityfilter_tool && params.save_analysis_ready_fastqs ? it : null },
                                                                                                                                                                                                                                                ^^
   ```
 
-- Warning: `conf/modules.config:442:195`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:447:195`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   saveAs: { (params.perform_runmerging == false || (params.perform_runmerging && !meta.is_multirun)) && params.perform_shortread_hostremoval && params.save_analysis_ready_fastqs ? it : null },
                                                                                                                                                                                                     ^^
   ```
 
-- Warning: `conf/modules.config:502:194`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:507:194`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   saveAs: { (params.perform_runmerging == false || (params.perform_runmerging && !meta.is_multirun)) && params.perform_longread_hostremoval && params.save_analysis_ready_fastqs ? it : null },
                                                                                                                                                                                                    ^^
   ```
 
-- Warning: `conf/modules.config:564:99`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:569:99`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               saveAs: { !params.bracken_save_intermediatekraken2 && meta.tool == "bracken" ? null : it },
@@ -286,6 +286,13 @@
           ^^^^^^^
   ```
 
+- Warning: `modules/nf-core/melon/main.nf:45:9`: Variable was declared but not used
+
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^
+  ```
+
 - Warning: `modules/nf-core/metaphlan/mergemetaphlantables/main.nf:35:9`: Variable was declared but not used
 
   ```nextflow
@@ -340,6 +347,13 @@
   ```nextflow
       def suffix = task.ext.args?.contains("-B") ? "biom" : "txt"
           ^^^^^^
+  ```
+
+- Warning: `modules/nf-core/motus/preplong/main.nf:49:9`: Variable was declared but not used
+
+  ```nextflow
+      def refdb = db ? "-db ${db}" : ""
+          ^^^^^
   ```
 
 - Warning: `modules/nf-core/motus/profile/main.nf:58:9`: Variable was declared but not used
@@ -398,7 +412,35 @@
           ^^^^
   ```
 
-- Warning: `modules/nf-core/porechop/abi/main.nf:39:9`: Variable was declared but not used
+- Warning: `modules/nf-core/porechop/abi/main.nf:42:9`: Variable was declared but not used
+
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^
+  ```
+
+- Warning: `modules/nf-core/porechop/abi/main.nf:44:9`: Variable was declared but not used
+
+  ```nextflow
+      def adapters_list = custom_adapters ? "--custom_adapters ${custom_adapters}" : ""
+          ^^^^^^^^^^^^^
+  ```
+
+- Warning: `modules/nf-core/sylph/profile/main.nf:40:9`: Variable was declared but not used
+
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^
+  ```
+
+- Warning: `modules/nf-core/sylph/profile/main.nf:42:9`: Variable was declared but not used
+
+  ```nextflow
+      def input = meta.single_end ? "${reads}" : "-1 ${reads[0]} -2 ${reads[1]}"
+          ^^^^^
+  ```
+
+- Warning: `modules/nf-core/sylphtax/merge/main.nf:24:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
@@ -440,42 +482,91 @@
           ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/profiling.nf:237:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/profiling.nf:243:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   if (it[0].is_fasta) {
                       ^^
   ```
 
-- Warning: `subworkflows/local/profiling.nf:238:145`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/profiling.nf:244:145`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       log.warn("[nf-core/taxprofiler] Centrifuge currently does not accept FASTA files as input. Skipping Centrifuge for sample ${it[0].id}.")
                                                                                                                                                   ^^
   ```
 
-- Warning: `subworkflows/local/profiling.nf:240:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/profiling.nf:246:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   !it[0].is_fasta
                    ^^
   ```
 
-- Warning: `subworkflows/local/profiling.nf:325:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/profiling.nf:331:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   if (it[0].is_fasta) {
                       ^^
   ```
 
-- Warning: `subworkflows/local/profiling.nf:326:135`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/profiling.nf:332:135`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       log.warn("[nf-core/taxprofiler] mOTUs currently does not accept FASTA files as input. Skipping mOTUs for sample ${it[0].id}.")
                                                                                                                                         ^^
   ```
 
-- Warning: `subworkflows/local/profiling.nf:328:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/profiling.nf:334:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  !it[0].is_fasta
+                   ^^
+  ```
+
+- Warning: `subworkflows/local/profiling.nf:337:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  longread: it[0].instrument_platform == 'OXFORD_NANOPORE' || it[0].instrument_platform == 'PACBIO_SMRT'
+                            ^^
+  ```
+
+- Warning: `subworkflows/local/profiling.nf:337:77`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  longread: it[0].instrument_platform == 'OXFORD_NANOPORE' || it[0].instrument_platform == 'PACBIO_SMRT'
+                                                                              ^^
+  ```
+
+- Warning: `subworkflows/local/profiling.nf:338:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  shortread: it[0].instrument_platform != 'OXFORD_NANOPORE' && it[0].instrument_platform != 'PACBIO_SMRT'
+                             ^^
+  ```
+
+- Warning: `subworkflows/local/profiling.nf:338:78`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  shortread: it[0].instrument_platform != 'OXFORD_NANOPORE' && it[0].instrument_platform != 'PACBIO_SMRT'
+                                                                               ^^
+  ```
+
+- Warning: `subworkflows/local/profiling.nf:530:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  if (it[0].is_fasta) {
+                      ^^
+  ```
+
+- Warning: `subworkflows/local/profiling.nf:531:135`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                      log.warn("[nf-core/taxprofiler] sylph currently does not accept FASTA files as input. Skipping sylph for sample ${it[0].id}.")
+                                                                                                                                        ^^
+  ```
+
+- Warning: `subworkflows/local/profiling.nf:533:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   !it[0].is_fasta
@@ -508,146 +599,6 @@
   ```nextflow
           paired: it[0]['single_end'] == false
                   ^^
-  ```
-
-- Warning: `subworkflows/local/standardisation_profiles.nf:74:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          bracken: it[0]['tool'] == 'bracken'
-                   ^^
-  ```
-
-- Warning: `subworkflows/local/standardisation_profiles.nf:75:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          centrifuge: it[0]['tool'] == 'centrifuge'
-                      ^^
-  ```
-
-- Warning: `subworkflows/local/standardisation_profiles.nf:76:16`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          ganon: it[0]['tool'] == 'ganon'
-                 ^^
-  ```
-
-- Warning: `subworkflows/local/standardisation_profiles.nf:77:15`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          kmcp: it[0]['tool'] == 'kmcp'
-                ^^
-  ```
-
-- Warning: `subworkflows/local/standardisation_profiles.nf:78:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          kraken2: it[0]['tool'] == 'kraken2' || it[0]['tool'] == 'kraken2-bracken'
-                   ^^
-  ```
-
-- Warning: `subworkflows/local/standardisation_profiles.nf:78:48`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          kraken2: it[0]['tool'] == 'kraken2' || it[0]['tool'] == 'kraken2-bracken'
-                                                 ^^
-  ```
-
-- Warning: `subworkflows/local/standardisation_profiles.nf:79:20`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          metaphlan: it[0]['tool'] == 'metaphlan'
-                     ^^
-  ```
-
-- Warning: `subworkflows/local/standardisation_profiles.nf:80:16`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          motus: it[0]['tool'] == 'motus'
-                 ^^
-  ```
-
-- Warning: `subworkflows/local/standardisation_profiles.nf:85:16`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          kaiju: it[0]['tool'] == 'kaiju'
-                 ^^
-  ```
-
-- Warning: `subworkflows/local/standardisation_profiles.nf:90:16`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          motus: it[0]['tool'] == 'motus'
-                 ^^
-  ```
-
-- Warning: `subworkflows/local/standardisation_profiles.nf:91:16`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          kaiju: it[0]['tool'] == 'kaiju'
-                 ^^
-  ```
-
-- Warning: `subworkflows/local/standardisation_profiles.nf:112:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          [sort: { -it.size() }],
-                    ^^
-  ```
-
-- Warning: `subworkflows/local/standardisation_profiles.nf:141:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          [sort: { -it.size() }],
-                    ^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_taxprofiler_pipeline/main.nf:30:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      monochrome_logs // boolean: Do not use coloured log outputs
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_taxprofiler_pipeline/main.nf:127:22`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .map { meta, run_accession, instrument_platform, fastq_1, fastq_2, fasta -> [meta.id, meta.single_end] }
-                       ^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_taxprofiler_pipeline/main.nf:127:37`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .map { meta, run_accession, instrument_platform, fastq_1, fastq_2, fasta -> [meta.id, meta.single_end] }
-                                      ^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_taxprofiler_pipeline/main.nf:127:58`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .map { meta, run_accession, instrument_platform, fastq_1, fastq_2, fasta -> [meta.id, meta.single_end] }
-                                                           ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_taxprofiler_pipeline/main.nf:127:67`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .map { meta, run_accession, instrument_platform, fastq_1, fastq_2, fasta -> [meta.id, meta.single_end] }
-                                                                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_taxprofiler_pipeline/main.nf:127:76`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .map { meta, run_accession, instrument_platform, fastq_1, fastq_2, fasta -> [meta.id, meta.single_end] }
-                                                                             ^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_taxprofiler_pipeline/main.nf:129:41`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          .map { validateInputSamplesheet(it) }
-                                          ^^
   ```
 
 - Warning: `subworkflows/local/visualization_krona.nf:28:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -725,67 +676,4 @@
   ```nextflow
               .map { [[id: it[0]['db_name'], tool: it[0]['tool']], it[1]] }
                                                                    ^^
-  ```
-
-- Warning: `workflows/taxprofiler.nf:356:78`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-              ch_multiqc_files = ch_multiqc_files.mix(FASTQC.out.zip.collect { it[1] }.ifEmpty([]))
-                                                                               ^^
-  ```
-
-- Warning: `workflows/taxprofiler.nf:361:91`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          ch_multiqc_files = ch_multiqc_files.mix(SHORTREAD_PREPROCESSING.out.mqc.collect { it[1] }.ifEmpty([]))
-                                                                                            ^^
-  ```
-
-- Warning: `workflows/taxprofiler.nf:365:90`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          ch_multiqc_files = ch_multiqc_files.mix(LONGREAD_PREPROCESSING.out.mqc.collect { it[1] }.ifEmpty([]))
-                                                                                           ^^
-  ```
-
-- Warning: `workflows/taxprofiler.nf:369:77`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          ch_multiqc_files = ch_multiqc_files.mix(NONPAREIL.out.mqc.collect { it[1] }.ifEmpty([]))
-                                                                              ^^
-  ```
-
-- Warning: `workflows/taxprofiler.nf:373:97`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          ch_multiqc_files = ch_multiqc_files.mix(SHORTREAD_COMPLEXITYFILTERING.out.mqc.collect { it[1] }.ifEmpty([]))
-                                                                                                  ^^
-  ```
-
-- Warning: `workflows/taxprofiler.nf:377:89`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          ch_multiqc_files = ch_multiqc_files.mix(SHORTREAD_HOSTREMOVAL.out.mqc.collect { it[1] }.ifEmpty([]))
-                                                                                          ^^
-  ```
-
-- Warning: `workflows/taxprofiler.nf:381:88`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          ch_multiqc_files = ch_multiqc_files.mix(LONGREAD_HOSTREMOVAL.out.mqc.collect { it[1] }.ifEmpty([]))
-                                                                                         ^^
-  ```
-
-- Warning: `workflows/taxprofiler.nf:384:73`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      ch_multiqc_files = ch_multiqc_files.mix(PROFILING.out.mqc.collect { it[1] }.ifEmpty([]))
-                                                                          ^^
-  ```
-
-- Warning: `workflows/taxprofiler.nf:387:92`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          ch_multiqc_files = ch_multiqc_files.mix(STANDARDISATION_PROFILES.out.mqc.collect { it[1] }.ifEmpty([]))
-                                                                                             ^^
   ```

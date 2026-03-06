@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-03-03T00:24:09.191002694Z
+- Generated: 2026-03-06T00:26:27.659669487Z
 - Nextflow version: 26.02.0-edge
-- Summary: 8 errors, 29 warnings
+- Summary: 10 errors, 28 warnings
 
 ## :x: Errors
 
@@ -11,6 +11,20 @@
   ```nextflow
               for (int i = 0; i < items.size(); i++) {
                        ^
+  ```
+
+- Error: `subworkflows/local/prepare_vcfs_test/main.nf:162:25`: `vcf` is already declared
+
+  ```nextflow
+          .branch { meta, vcf, tbi ->
+                          ^^^
+  ```
+
+- Error: `subworkflows/local/prepare_vcfs_test/main.nf:173:45`: `vcf` is already declared
+
+  ```nextflow
+          ch_branched_vcf.needs_gt.map{ meta, vcf, _tbi -> tuple(meta, vcf) },
+                                              ^^^
   ```
 
 - Error: `subworkflows/local/sv_vcf_conversion/main.nf:86:19`: `input` is already declared
@@ -99,13 +113,6 @@
           ^^^^
   ```
 
-- Warning: `subworkflows/local/ensemble_test_vcfs/main.nf:24:5`: Variable was declared but not used
-
-  ```nextflow
-      merged_vcfs = channel.empty()
-      ^^^^^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/ensemble_test_vcfs/main.nf:26:30`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
@@ -120,18 +127,25 @@
                                     ^^^^^
   ```
 
-- Warning: `subworkflows/local/ensemble_test_vcfs/main.nf:33:51`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/ensemble_test_vcfs/main.nf:37:51`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           branched_vcfs.missing_gt.map { meta, vcf, index -> tuple(meta, vcf) },
                                                     ^^^^^
   ```
 
-- Warning: `subworkflows/local/ensemble_test_vcfs/main.nf:47:45`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/ensemble_test_vcfs/main.nf:53:49`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      ch_test_vcfs = ch_ready_for_merge.map { meta, vcf, index ->
-                                              ^^^^
+          ch_test_vcfs = ch_ready_for_merge.map { meta, vcf, index ->
+                                                  ^^^^
+  ```
+
+- Warning: `subworkflows/local/ensemble_test_vcfs/main.nf:96:37`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          ch_test_vcfs = vcf_ch.map { meta, vcf ->
+                                      ^^^^
   ```
 
 - Warning: `subworkflows/local/intersect_statistics/main.nf:20:13`: Variable was declared but not used
@@ -141,11 +155,25 @@
               ^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_vcfs_test/main.nf:59:14`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_vcfs_test/main.nf:61:14`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       vcf_ch = Channel.empty()
                ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/prepare_vcfs_test/main.nf:162:25`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .branch { meta, vcf, tbi ->
+                          ^^^
+  ```
+
+- Warning: `subworkflows/local/prepare_vcfs_test/main.nf:162:30`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .branch { meta, vcf, tbi ->
+                               ^^^
   ```
 
 - Warning: `subworkflows/local/sompy_benchmark/main.nf:23:34`: Parameter was not used -- prefix with `_` to suppress warning
@@ -160,27 +188,6 @@
   ```nextflow
           input_ch.map{meta, test, test_index, truth, truth_index, regions, target -> [meta, test, truth, regions, target]},
                                                       ^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/subsample_vcf_test/main.nf:30:25`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .branch { meta, vcf ->
-                          ^^^
-  ```
-
-- Warning: `subworkflows/local/subsample_vcf_test/main.nf:37:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          Channel.value('q'),
-          ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/subsample_vcf_test/main.nf:38:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          Channel.value('0p --include "1"'),
-          ^^^^^^^
   ```
 
 - Warning: `subworkflows/local/sv_vcf_conversion/main.nf:43:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
