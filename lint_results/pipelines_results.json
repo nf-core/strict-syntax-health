@@ -47,9 +47,9 @@
   "bacass": {
     "full_name": "nf-core/bacass",
     "html_url": "https://github.com/nf-core/bacass",
-    "commit": "91dc73f8b0105b41d40d195cea3b8782fbb0cb8b",
+    "commit": "52edd1ca873e321d74d54d76c72c19f53a0fbf9a",
     "errors": 0,
-    "warnings": 37,
+    "warnings": 44,
     "parse_error": false,
     "prints_help": true
   },
@@ -164,7 +164,7 @@
   "crisprseq": {
     "full_name": "nf-core/crisprseq",
     "html_url": "https://github.com/nf-core/crisprseq",
-    "commit": "3acc8e07ae05bb8c6a0493f3f6ae0f26f04ea99f",
+    "commit": "f41f53278e2ed8111db515831c1ef7456419fc99",
     "errors": 13,
     "warnings": 45,
     "parse_error": false,
@@ -200,7 +200,7 @@
   "deepmutscan": {
     "full_name": "nf-core/deepmutscan",
     "html_url": "https://github.com/nf-core/deepmutscan",
-    "commit": "15e9fc902c73b62034addac9f2fb6fd46ae4ff4e",
+    "commit": "2575a015359c352cc74a9df6c5500d032f6e3e7b",
     "errors": 49,
     "warnings": 90,
     "parse_error": false,
@@ -434,9 +434,9 @@
   "hic": {
     "full_name": "nf-core/hic",
     "html_url": "https://github.com/nf-core/hic",
-    "commit": "e2775312c11a5c6ac3c3c8ea5e7434be4c4f725d",
-    "errors": 27,
-    "warnings": 73,
+    "commit": "7f17ae41373b975aecdb7b7534554f11caadef1a",
+    "errors": 21,
+    "warnings": 61,
     "parse_error": false,
     "prints_help": null
   },
@@ -515,9 +515,9 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "0e39a923497535b0e87ed0a45e9fda86ea4d657a",
+    "commit": "ee6d96d511e836ef28105831a863245ebb2887db",
     "errors": 0,
-    "warnings": 32,
+    "warnings": 31,
     "parse_error": false,
     "prints_help": true
   },
@@ -902,9 +902,9 @@
   "riboseq": {
     "full_name": "nf-core/riboseq",
     "html_url": "https://github.com/nf-core/riboseq",
-    "commit": "72c723c315aa3c08e28bcff5ac0d18563579c802",
-    "errors": 46,
-    "warnings": 139,
+    "commit": "52244e56447fdfce9efe7c005a385ac7272a5ec3",
+    "errors": 26,
+    "warnings": 55,
     "parse_error": false,
     "prints_help": null
   },
@@ -929,7 +929,7 @@
   "rnaseq": {
     "full_name": "nf-core/rnaseq",
     "html_url": "https://github.com/nf-core/rnaseq",
-    "commit": "02a0a8f4032098a0b2dbb7e92684049d7b6ea348",
+    "commit": "d6f6145755be819a8527688dabd4668d501bf1a6",
     "errors": 0,
     "warnings": 8,
     "parse_error": false,
@@ -947,7 +947,7 @@
   "rnavar": {
     "full_name": "nf-core/rnavar",
     "html_url": "https://github.com/nf-core/rnavar",
-    "commit": "1189704b5ab3360c366e97fd201ce37240978be8",
+    "commit": "3750dd99bd34427596f9994d083f83cd5b6dd3da",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -965,9 +965,9 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "e30dad3a5deee0aa6f53e875695c06147555d8fe",
+    "commit": "4290797470b5b86ecc7962ec4d02cbd2a526efbb",
     "errors": 143,
-    "warnings": 578,
+    "warnings": 577,
     "parse_error": false,
     "prints_help": null
   },
@@ -1010,9 +1010,9 @@
   "seqsubmit": {
     "full_name": "nf-core/seqsubmit",
     "html_url": "https://github.com/nf-core/seqsubmit",
-    "commit": "c87eec57fbde48a1e3f2515cfc93d13d58b8ca25",
+    "commit": "5b46d4dec6bb3c610d524a98cf629f427f89ac14",
     "errors": 1,
-    "warnings": 32,
+    "warnings": 20,
     "parse_error": false,
     "prints_help": null
   },

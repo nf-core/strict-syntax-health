@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T10:21:48.841330284Z
-- Nextflow version: 25.12.0-edge
-- Summary: 27 errors, 73 warnings
+- Generated: 2026-03-07T00:18:57.703877690Z
+- Nextflow version: 26.02.0-edge
+- Summary: 21 errors, 61 warnings
 
 ## :x: Errors
 
@@ -18,48 +18,6 @@
   ```nextflow
       tuple val(meta), path(bwa) , emit: index
                             ^^^
-  ```
-
-- Error: `nextflow.config:365:27`: `manifest` is not defined
-
-  ```nextflow
-  \033[0;35m  nf-core/hic ${manifest.version}\033[0m
-                            ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:368:26`: `manifest` is not defined
-
-  ```nextflow
-          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
-                           ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:368:69`: `manifest` is not defined
-
-  ```nextflow
-          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
-                                                                      ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:368:186`: `manifest` is not defined
-
-  ```nextflow
-          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
-                                                                                                                                                                                           ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:377:22`: `validation` is not defined
-
-  ```nextflow
-          beforeText = validation.help.beforeText
-                       ^^^^^^^^^^
-  ```
-
-- Error: `nextflow.config:378:21`: `validation` is not defined
-
-  ```nextflow
-          afterText = validation.help.afterText
-                      ^^^^^^^^^^
   ```
 
 - Error: `subworkflows/local/compartments.nf:26:28`: `cool` is already declared
@@ -90,28 +48,28 @@
               ^^^^
   ```
 
-- Error: `subworkflows/local/utils_nfcore_hic_pipeline/main.nf:284:9`: `meta` was assigned but not declared
+- Error: `subworkflows/local/utils_nfcore_hic_pipeline/main.nf:314:9`: `meta` was assigned but not declared
 
   ```nextflow
           meta = row[0].clone()
           ^^^^
   ```
 
-- Error: `subworkflows/local/utils_nfcore_hic_pipeline/main.nf:285:9`: `meta` is not defined
+- Error: `subworkflows/local/utils_nfcore_hic_pipeline/main.nf:315:9`: `meta` is not defined
 
   ```nextflow
           meta.chunk = i
           ^^^^
   ```
 
-- Error: `subworkflows/local/utils_nfcore_hic_pipeline/main.nf:286:9`: `meta` is not defined
+- Error: `subworkflows/local/utils_nfcore_hic_pipeline/main.nf:316:9`: `meta` is not defined
 
   ```nextflow
           meta.part = row[1].size()
           ^^^^
   ```
 
-- Error: `subworkflows/local/utils_nfcore_hic_pipeline/main.nf:287:17`: `meta` is not defined
+- Error: `subworkflows/local/utils_nfcore_hic_pipeline/main.nf:317:17`: `meta` is not defined
 
   ```nextflow
           map += [meta, file]
@@ -251,13 +209,6 @@
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
-  ```
-
-- Warning: `nextflow.config:368:129`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
-                                                                                                                                  ^^
   ```
 
 - Warning: `subworkflows/local/compartments.nf:12:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -498,39 +449,18 @@
                 ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_hic_pipeline/main.nf:31:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_hic_pipeline/main.nf:32:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       monochrome_logs   // boolean: Do not use coloured log outputs
       ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_hic_pipeline/main.nf:34:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_hic_pipeline/main.nf:35:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       input             //  string: Path to input samplesheet
       ^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_hic_pipeline/main.nf:38:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_hic_pipeline/main.nf:74:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_input = Channel.fromList(samplesheetToList(params.input, "${projectDir}/assets/schema_input.json"))
-                 ^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      return ch_versions.unique().map { version -> processVersionsFromYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
-                                                                                                   ^^^^^^^
   ```
 
 - Warning: `workflows/hic.nf:26:14`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -596,20 +526,6 @@
       ^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/hic.nf:84:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `workflows/hic.nf:85:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_multiqc_files = Channel.empty()
-                         ^^^^^^^
-  ```
-
 - Warning: `workflows/hic.nf:92:68`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
@@ -659,51 +575,9 @@
                                            ^^
   ```
 
-- Warning: `workflows/hic.nf:199:32`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/hic.nf:187:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-      ch_multiqc_config        = Channel.fromPath(
-                                 ^^^^^^^
-  ```
-
-- Warning: `workflows/hic.nf:202:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          Channel.fromPath(params.multiqc_config, checkIfExists: true) :
-          ^^^^^^^
-  ```
-
-- Warning: `workflows/hic.nf:203:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          Channel.empty()
-          ^^^^^^^
-  ```
-
-- Warning: `workflows/hic.nf:205:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          Channel.fromPath(params.multiqc_logo, checkIfExists: true) :
-          ^^^^^^^
-  ```
-
-- Warning: `workflows/hic.nf:206:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          Channel.empty()
-          ^^^^^^^
-  ```
-
-- Warning: `workflows/hic.nf:210:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_params))
-                            ^^^^^^^
-  ```
-
-- Warning: `workflows/hic.nf:216:45`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_methods_description                = Channel.value(
-                                              ^^^^^^^
+      def topic_versions = Channel.topic("versions")
+                           ^^^^^^^
   ```

@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "9005e0926c528d3b8b8217a4c01a9657a4e26603",
+  "_repo_commit": "a039cea3fd78c17219897cf2f78d254b43ef33a8",
   "abundance_differential_filter": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/abundance_differential_filter",
     "errors": 0,
@@ -194,6 +194,12 @@
   },
   "bedgraph_bedclip_bedgraphtobigwig": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bedgraph_bedclip_bedgraphtobigwig",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "cache_download_ensemblvep_snpeff": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/cache_download_ensemblvep_snpeff",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -560,6 +566,12 @@
   },
   "tiff_segmentation_vpt": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/tiff_segmentation_vpt",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "utils_annotation_cache": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/utils_annotation_cache",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

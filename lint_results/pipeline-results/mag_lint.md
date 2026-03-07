@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-03-06T00:24:37.671594897Z
+- Generated: 2026-03-07T00:19:12.120402521Z
 - Nextflow version: 26.02.0-edge
-- Summary: 32 warnings
+- Summary: 31 warnings
 
 ## :warning: Warnings
 
@@ -151,13 +151,6 @@
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
-  ```
-
-- Warning: `modules/nf-core/minimap2/align/main.nf:67:9`: Variable was declared but not used
-
-  ```nextflow
-      def target = reference ?: (bam_input ? error("BAM input requires reference") : reads)
-          ^^^^^^
   ```
 
 - Warning: `modules/nf-core/nanolyse/main.nf:23:9`: Variable was declared but not used

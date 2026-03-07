@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-02-28T00:21:33.339854291Z
-- Nextflow version: 26.01.1-edge
-- Summary: 143 errors, 578 warnings
+- Generated: 2026-03-07T00:20:55.551747891Z
+- Nextflow version: 26.02.0-edge
+- Summary: 143 errors, 577 warnings
 
 ## :x: Errors
 
@@ -1273,13 +1273,6 @@
   ```nextflow
               saveAs: { meta.num_intervals > 1 ? null : "strelka/${meta.id}/${it}" }
                                                                               ^^
-  ```
-
-- Warning: `conf/modules/trimming.config:42:102`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  saveAs: { params.save_trimmed || params.save_split_fastqs ?  "fastp/${meta.sample}/${it}" : null }
-                                                                                                       ^^
   ```
 
 - Warning: `main.nf:93:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -4894,21 +4887,21 @@
                         ^^
   ```
 
-- Warning: `subworkflows/local/samplesheet_to_channel/main.nf:433:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/samplesheet_to_channel/main.nf:437:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               if (it[0].sex == 'NA') {
                   ^^
   ```
 
-- Warning: `subworkflows/local/samplesheet_to_channel/main.nf:442:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/samplesheet_to_channel/main.nf:446:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               if (it[0].status == 1 && !it[0].containsKey('contamination')) {
                   ^^
   ```
 
-- Warning: `subworkflows/local/samplesheet_to_channel/main.nf:442:39`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/samplesheet_to_channel/main.nf:446:39`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               if (it[0].status == 1 && !it[0].containsKey('contamination')) {

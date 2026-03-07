@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.02.0-edge
 
 Downloading plugin nf-schema@2.5.1
-Launching `./main.nf` [fabulous_easley] revision: a18b2be4cd
+Launching `./main.nf` [serene_heyrovsky] revision: a18b2be4cd
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -60,7 +60,8 @@ is ~30GB and can be slow; prefer pre-downloading and passing a local `.tar.gz`).
   --reference_gff                 [string] Reference GFF file. 
 
 Assembly parameters
-  --assembler                     [string]  The assembler(s) to use for assembly. [default: unicycler] 
+  --assembler                     [string]  The assembler(s) to use for assembly. [default: 
+autocycler,canu,dragonflye,flye,miniasm,unicycler,raven]  
   --assembly_type                 [string]  Which type of assembly to perform.  (accepted: short, long, hybrid) 
   --unicycler_args                [string]  Extra arguments for Unicycler 
   --canu_mode                     [string]  Allowed technologies for long read assembly with CANU.  (accepted: -pacbio, -nanopore, 
@@ -68,7 +69,7 @@ Assembly parameters
   --canu_args                     [string]  This can be used to supply [extra options](https://canu.readthedocs.io/en/latest/quick-start.html) 
 to the Canu assembler. Will be ignored when other assemblers are used.  
   --dragonflye_args               [string]  Extra arguments for [Dragonflye](https://github.com/rpetit3/dragonflye#usage) 
-  --autocycler_assemblers         [string]  What assemblers to use for autocycler [default: canu,flye,raven] 
+  --autocycler_assemblers         [string]  What assemblers to use for autocycler [default: canu,flye,miniasm,raven] 
   --autocycler_subsample_count    [integer] Number of subsets to assemble. [default: 4] 
   --autocycler_subsample_mindepth [integer] Minimum depth for subsets to assemble. [default: 25] 
   --autocycler_cluster_args       [string]  Arguments to autocycler cluster. 
