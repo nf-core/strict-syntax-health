@@ -11,12 +11,12 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 > See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline.
 > **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**
 
-- **Last updated:** 2026-03-07 00:22:04 UTC
+- **Last updated:** 2026-03-08 00:23:02 UTC
 - **Nextflow version:** 26.02.0-edge
 
 ## Pipelines
 
-- **Total:** 0 parse errors, 3120 errors, 8798 warnings across 131 pipelines
+- **Total:** 0 parse errors, 3114 errors, 8773 warnings across 131 pipelines
 - **Zero errors:** 32 pipelines (24.4%)
 
 |                    Errors                    |                     Warnings                     |
@@ -92,7 +92,6 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :x: [detaxizer](https://github.com/nf-core/detaxizer)                                 |     No      |     13 |       61 |      -      |         [View](lint_results/pipeline-results/detaxizer_lint.md)         |                                  -                                   |
 | :x: [crisprseq](https://github.com/nf-core/crisprseq)                                 |     No      |     13 |       45 |      -      |         [View](lint_results/pipeline-results/crisprseq_lint.md)         |                                  -                                   |
 | :x: [sopa](https://github.com/nf-core/sopa)                                           |     No      |     13 |       16 |      -      |           [View](lint_results/pipeline-results/sopa_lint.md)            |                                  -                                   |
-| :x: [pacvar](https://github.com/nf-core/pacvar)                                       |     No      |     12 |       54 |      -      |          [View](lint_results/pipeline-results/pacvar_lint.md)           |                                  -                                   |
 | :x: [differentialabundance](https://github.com/nf-core/differentialabundance)         |     No      |     12 |       47 |      -      |   [View](lint_results/pipeline-results/differentialabundance_lint.md)   |                                  -                                   |
 | :x: [coproid](https://github.com/nf-core/coproid)                                     |     No      |     12 |       46 |      -      |          [View](lint_results/pipeline-results/coproid_lint.md)          |                                  -                                   |
 | :x: [smrnaseq](https://github.com/nf-core/smrnaseq)                                   |     No      |     11 |       74 |      -      |         [View](lint_results/pipeline-results/smrnaseq_lint.md)          |                                  -                                   |
@@ -111,6 +110,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :x: [drop](https://github.com/nf-core/drop)                                           |     No      |      6 |       68 |      -      |           [View](lint_results/pipeline-results/drop_lint.md)            |                                  -                                   |
 | :x: [tfactivity](https://github.com/nf-core/tfactivity)                               |     No      |      6 |       57 |      -      |        [View](lint_results/pipeline-results/tfactivity_lint.md)         |                                  -                                   |
 | :x: [cellpainting](https://github.com/nf-core/cellpainting)                           |     No      |      6 |       35 |      -      |       [View](lint_results/pipeline-results/cellpainting_lint.md)        |                                  -                                   |
+| :x: [pacvar](https://github.com/nf-core/pacvar)                                       |     No      |      6 |       29 |      -      |          [View](lint_results/pipeline-results/pacvar_lint.md)           |                                  -                                   |
 | :x: [fastquorum](https://github.com/nf-core/fastquorum)                               |     No      |      6 |       28 |      -      |        [View](lint_results/pipeline-results/fastquorum_lint.md)         |                                  -                                   |
 | :x: [fetchngs](https://github.com/nf-core/fetchngs)                                   |     No      |      6 |       25 |      -      |         [View](lint_results/pipeline-results/fetchngs_lint.md)          |                                  -                                   |
 | :x: [gwas](https://github.com/nf-core/gwas)                                           |     No      |      6 |       16 |      -      |           [View](lint_results/pipeline-results/gwas_lint.md)            |                                  -                                   |

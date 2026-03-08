@@ -254,7 +254,7 @@
   "differentialabundance": {
     "full_name": "nf-core/differentialabundance",
     "html_url": "https://github.com/nf-core/differentialabundance",
-    "commit": "787c8e93e44a476ecc4d4db20903102cc86f03c7",
+    "commit": "13b3c1ac3ce4c8f30045c3cbc3c6df24532dca03",
     "errors": 12,
     "warnings": 47,
     "parse_error": false,
@@ -515,7 +515,7 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "ee6d96d511e836ef28105831a863245ebb2887db",
+    "commit": "577048b3821af932ca633b108495e9a0443b762a",
     "errors": 0,
     "warnings": 31,
     "parse_error": false,
@@ -713,9 +713,9 @@
   "pacvar": {
     "full_name": "nf-core/pacvar",
     "html_url": "https://github.com/nf-core/pacvar",
-    "commit": "52947a41469d61929dc81622ac8480bed82a0468",
-    "errors": 12,
-    "warnings": 54,
+    "commit": "187ab407dd6c5a2cf9e8e61827d54901c31e1715",
+    "errors": 6,
+    "warnings": 29,
     "parse_error": false,
     "prints_help": null
   },
