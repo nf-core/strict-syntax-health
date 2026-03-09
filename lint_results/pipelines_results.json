@@ -515,7 +515,7 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "577048b3821af932ca633b108495e9a0443b762a",
+    "commit": "8844b5109bacd83ad1fe9b2edf9be442ea93598f",
     "errors": 0,
     "warnings": 31,
     "parse_error": false,
@@ -713,7 +713,7 @@
   "pacvar": {
     "full_name": "nf-core/pacvar",
     "html_url": "https://github.com/nf-core/pacvar",
-    "commit": "187ab407dd6c5a2cf9e8e61827d54901c31e1715",
+    "commit": "5cfba990b3f48181571df2cb137edb096936f1e3",
     "errors": 6,
     "warnings": 29,
     "parse_error": false,
