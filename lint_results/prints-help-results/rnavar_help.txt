@@ -5,7 +5,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 Downloading plugin nf-core-utils@0.4.0
 Downloading plugin nf-schema@2.6.1
-Launching `./main.nf` [prickly_euler] revision: cf5ebfb860
+Launching `./main.nf` [romantic_mclean] revision: 70f8e93d0b
 
 
 ------------------------------------------------------
@@ -102,11 +102,10 @@ rs_dbSNP,HGVSc_VEP,HGVSp_VEP,1000Gp3_EAS_AF,1000Gp3_AMR_AF,LRT_score,GERP++_RS,g
 Pipeline stage options
   --skip_baserecalibration      [boolean] Skip the process of base recalibration steps i.e., GATK BaseRecalibrator and GATK ApplyBQSR. 
  
-  --skip_intervallisttools      [boolean] Skip the process of preparing interval lists for the GATK variant calling step 
-  --skip_variantfiltration      [boolean] Skip variant filtering of GATK 
-  --skip_variantannotation      [boolean] Skip variant annotation 
-  --skip_multiqc                [boolean] Skip MultiQC reports 
   --skip_exon_bed_check         [boolean] Skip the check of the exon bed 
+  --skip_intervallisttools      [boolean] Skip the process of preparing interval lists for the GATK variant calling step 
+  --skip_multiqc                [boolean] Skip MultiQC reports 
+  --skip_variantfiltration      [boolean] Skip variant filtering of GATK 
 
 General reference genome options
   --igenomes_base               [string]  The base path to the igenomes reference files [default: s3://ngi-igenomes/igenomes/] 

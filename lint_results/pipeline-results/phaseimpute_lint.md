@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-03-04T00:21:21.300046622Z
+- Generated: 2026-03-10T00:21:04.660367565Z
 - Nextflow version: 26.02.0-edge
 - Summary: 4 warnings
 
@@ -20,14 +20,14 @@
           ^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/phaseimpute/main.nf:233:63`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/phaseimpute/main.nf:238:63`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   VCF_NORMALIZE_BCFTOOLS.out.vcf_tbi.map{ meta, vcf, index -> [meta, [], []]}, // No scaffold
                                                                 ^^^
   ```
 
-- Warning: `workflows/phaseimpute/main.nf:233:68`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/phaseimpute/main.nf:238:68`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   VCF_NORMALIZE_BCFTOOLS.out.vcf_tbi.map{ meta, vcf, index -> [meta, [], []]}, // No scaffold

@@ -1,42 +1,14 @@
 # Nextflow lint results
 
-- Generated: 2026-03-06T00:26:33.573770652Z
+- Generated: 2026-03-10T00:22:28.182361145Z
 - Nextflow version: 26.02.0-edge
-- Summary: 5 errors
+- Summary: 1 warning
 
-## :x: Errors
+## :warning: Warnings
 
-- Error: `subworkflows/local/utils_nfcore_variantprioritization_pipeline/main.nf:4:1`: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
-
-  ```nextflow
-  import java.util.zip.GZIPInputStream
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/utils_nfcore_variantprioritization_pipeline/main.nf:5:1`: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
+- Warning: `subworkflows/local/utils_nfcore_variantprioritization_pipeline/main.nf:187:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-  import groovy.transform.Field
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/utils_nfcore_variantprioritization_pipeline/main.nf:193:24`: `GZIPInputStream` is not defined
-
-  ```nextflow
-              def gzis = new GZIPInputStream(fis)
-                         ^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/utils_nfcore_variantprioritization_pipeline/main.nf:217:43`: `GZIPInputStream` is not defined
-
-  ```nextflow
-          (vcf.toString().endsWith('.gz') ? new GZIPInputStream(vcf.newInputStream()) : vcf.newInputStream()).withReader { reader ->
-                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/utils_nfcore_variantprioritization_pipeline/main.nf:237:17`: `GZIPInputStream` is not defined
-
-  ```nextflow
-                  new GZIPInputStream(fis).withReader { reader ->
-                  ^^^^^^^^^^^^^^^^^^^^^^^^
+      def duplicates = germlineIds.countBy { it }.findAll { _k, v -> v > 1 }.keySet()
+                                             ^^
   ```

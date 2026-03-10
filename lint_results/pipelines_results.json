@@ -200,7 +200,7 @@
   "deepmutscan": {
     "full_name": "nf-core/deepmutscan",
     "html_url": "https://github.com/nf-core/deepmutscan",
-    "commit": "2575a015359c352cc74a9df6c5500d032f6e3e7b",
+    "commit": "80c1a7662939b2db5ad64ab22331ef276169bd1b",
     "errors": 49,
     "warnings": 90,
     "parse_error": false,
@@ -380,9 +380,9 @@
   "genomeqc": {
     "full_name": "nf-core/genomeqc",
     "html_url": "https://github.com/nf-core/genomeqc",
-    "commit": "9ded6b4d4879ce66936442f05a425f1b7ceadfb3",
-    "errors": 34,
-    "warnings": 114,
+    "commit": "e3400318fb2f4a5ef9c5ec6af6e59697a0439ecb",
+    "errors": 26,
+    "warnings": 102,
     "parse_error": false,
     "prints_help": null
   },
@@ -398,11 +398,11 @@
   "genomicrelatedness": {
     "full_name": "nf-core/genomicrelatedness",
     "html_url": "https://github.com/nf-core/genomicrelatedness",
-    "commit": "1d9689859adf36fc7ade260d097972824d5b45e9",
+    "commit": "53e5ea86cb5df87c4fb8e001b8519932fe79ce40",
     "errors": 0,
-    "warnings": 17,
+    "warnings": 3,
     "parse_error": false,
-    "prints_help": false
+    "prints_help": true
   },
   "gwas": {
     "full_name": "nf-core/gwas",
@@ -515,7 +515,7 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "8844b5109bacd83ad1fe9b2edf9be442ea93598f",
+    "commit": "9bf879d4bb7a241833dcd7eeb666d1759f5eaf93",
     "errors": 0,
     "warnings": 31,
     "parse_error": false,
@@ -767,7 +767,7 @@
   "phaseimpute": {
     "full_name": "nf-core/phaseimpute",
     "html_url": "https://github.com/nf-core/phaseimpute",
-    "commit": "087e123b087b62055564728c1f8c9f8c8b43027f",
+    "commit": "572f66d9d3dd8cebdbc8186ceeb4bb99b57f9edb",
     "errors": 0,
     "warnings": 4,
     "parse_error": false,
@@ -947,7 +947,7 @@
   "rnavar": {
     "full_name": "nf-core/rnavar",
     "html_url": "https://github.com/nf-core/rnavar",
-    "commit": "3750dd99bd34427596f9994d083f83cd5b6dd3da",
+    "commit": "ab169ae30a863711e6e904513eed951b8d42432a",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -983,7 +983,7 @@
   "scnanoseq": {
     "full_name": "nf-core/scnanoseq",
     "html_url": "https://github.com/nf-core/scnanoseq",
-    "commit": "60d94db48f7d3ee91b80a98dc2ec7b3e48028982",
+    "commit": "578e1830254bc67df10f86d943a5871eca76c960",
     "errors": 74,
     "warnings": 140,
     "parse_error": false,
@@ -1010,11 +1010,11 @@
   "seqsubmit": {
     "full_name": "nf-core/seqsubmit",
     "html_url": "https://github.com/nf-core/seqsubmit",
-    "commit": "5b46d4dec6bb3c610d524a98cf629f427f89ac14",
-    "errors": 1,
-    "warnings": 20,
+    "commit": "da122880213e5c247b4ef71f819e7d0a7fe8c952",
+    "errors": 0,
+    "warnings": 6,
     "parse_error": false,
-    "prints_help": null
+    "prints_help": false
   },
   "slamseq": {
     "full_name": "nf-core/slamseq",
@@ -1145,11 +1145,11 @@
   "variantprioritization": {
     "full_name": "nf-core/variantprioritization",
     "html_url": "https://github.com/nf-core/variantprioritization",
-    "commit": "65335b2f8df7defbae8d10b2018fbc294fe105e5",
-    "errors": 5,
-    "warnings": 0,
+    "commit": "b406ccff86009410f466c8d1756bda0e13555c60",
+    "errors": 0,
+    "warnings": 1,
     "parse_error": false,
-    "prints_help": null
+    "prints_help": true
   },
   "viralintegration": {
     "full_name": "nf-core/viralintegration",

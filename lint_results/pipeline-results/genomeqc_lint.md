@@ -1,30 +1,16 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T10:21:28.747978825Z
-- Nextflow version: 25.12.0-edge
-- Summary: 34 errors, 114 warnings
+- Generated: 2026-03-10T00:19:44.780400544Z
+- Nextflow version: 26.02.0-edge
+- Summary: 26 errors, 102 warnings
 
 ## :x: Errors
-
-- Error: `modules/local/extract_seqs.nf:6:5`: Invalid process directive
-
-  ```nextflow
-      container = 'community.wave.seqera.io/library/agat:1.4.1--304a47c62ae478b4'
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
 
 - Error: `modules/local/extract_seqs.nf:10:16`: `meta` is already declared
 
   ```nextflow
       tuple val (meta),  path(gff)
                  ^^^^
-  ```
-
-- Error: `modules/local/gene_overlaps.nf:4:5`: Invalid process directive
-
-  ```nextflow
-      container = 'ecoflowucl/gene_overlap:v1.0'
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Error: `modules/local/shiny_app/main.nf:12:15`: `meta` is already declared
@@ -53,48 +39,6 @@
   ```nextflow
       prefix = task.ext.prefix ?: "gxdb_${basename}"
                                           ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:340:32`: `manifest` is not defined
-
-  ```nextflow
-  \033[0;35m  nf-core/genomeqc ${manifest.version}\033[0m
-                                 ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:343:26`: `manifest` is not defined
-
-  ```nextflow
-          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
-                           ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:343:69`: `manifest` is not defined
-
-  ```nextflow
-          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
-                                                                      ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:343:186`: `manifest` is not defined
-
-  ```nextflow
-          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
-                                                                                                                                                                                           ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:352:22`: `validation` is not defined
-
-  ```nextflow
-          beforeText = validation.help.beforeText
-                       ^^^^^^^^^^
-  ```
-
-- Error: `nextflow.config:353:21`: `validation` is not defined
-
-  ```nextflow
-          afterText = validation.help.afterText
-                      ^^^^^^^^^^
   ```
 
 - Error: `workflows/genomeqc.nf:95:41`: `fasta` is already declared
@@ -223,21 +167,21 @@
                                                        ^^^^^
   ```
 
-- Error: `workflows/genomeqc.nf:422:4`: `multi_ch` was assigned but not declared
+- Error: `workflows/genomeqc.nf:439:4`: `multi_ch` was assigned but not declared
 
   ```nextflow
      multi_ch = input
      ^^^^^^^^
   ```
 
-- Error: `workflows/genomeqc.nf:423:15`: `multiMap` is not defined
+- Error: `workflows/genomeqc.nf:440:15`: `multiMap` is not defined
 
   ```nextflow
               | multiMap {
                 ^^^^^^^^
   ```
 
-- Error: `workflows/genomeqc.nf:429:12`: `multi_ch` is not defined
+- Error: `workflows/genomeqc.nf:446:12`: `multi_ch` is not defined
 
   ```nextflow
       return multi_ch
@@ -491,13 +435,6 @@
           ^^^^
   ```
 
-- Warning: `nextflow.config:343:129`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
-                                                                                                                                  ^^
-  ```
-
 - Warning: `subworkflows/local/decontamination.nf:22:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -624,32 +561,18 @@
                                                                                         ^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_genomeqc_pipeline/main.nf:31:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_genomeqc_pipeline/main.nf:32:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       monochrome_logs   // boolean: Do not use coloured log outputs
       ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_genomeqc_pipeline/main.nf:34:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_genomeqc_pipeline/main.nf:35:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       input             //  string: Path to input samplesheet
       ^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_genomeqc_pipeline/main.nf:38:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_genomeqc_pipeline/main.nf:75:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      Channel
-      ^^^^^^^
   ```
 
 - Warning: `subworkflows/nf-core/fasta_explore_search_plot_tidk/main.nf:19:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -713,27 +636,6 @@
   ```nextflow
           ch_aposteriori_inputs.map { meta, fasta, seq -> seq }
                                             ^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      return ch_versions.unique().map { version -> processVersionsFromYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
-                                                                                                   ^^^^^^^
-  ```
-
-- Warning: `workflows/genomeqc.nf:43:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `workflows/genomeqc.nf:44:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_multiqc_files = Channel.empty()
-                         ^^^^^^^
   ```
 
 - Warning: `workflows/genomeqc.nf:48:46`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -995,51 +897,9 @@
                          ^^^^^^^
   ```
 
-- Warning: `workflows/genomeqc.nf:357:32`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/genomeqc.nf:345:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-      ch_multiqc_config        = Channel.fromPath(
-                                 ^^^^^^^
-  ```
-
-- Warning: `workflows/genomeqc.nf:361:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          Channel.fromPath(params.multiqc_config, checkIfExists: true) :
-          ^^^^^^^
-  ```
-
-- Warning: `workflows/genomeqc.nf:362:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          Channel.empty()
-          ^^^^^^^
-  ```
-
-- Warning: `workflows/genomeqc.nf:365:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          Channel.fromPath(params.multiqc_logo, checkIfExists: true) :
-          ^^^^^^^
-  ```
-
-- Warning: `workflows/genomeqc.nf:366:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          Channel.empty()
-          ^^^^^^^
-  ```
-
-- Warning: `workflows/genomeqc.nf:371:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_params))
-                            ^^^^^^^
-  ```
-
-- Warning: `workflows/genomeqc.nf:379:45`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_methods_description                = Channel.value(
-                                              ^^^^^^^
+      def topic_versions = Channel.topic("versions")
+                           ^^^^^^^
   ```

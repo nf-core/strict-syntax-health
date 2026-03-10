@@ -1,26 +1,10 @@
 # Nextflow lint results
 
-- Generated: 2026-03-07T00:21:00.705388305Z
+- Generated: 2026-03-10T00:22:07.504833228Z
 - Nextflow version: 26.02.0-edge
-- Summary: 1 error, 20 warnings
-
-## :x: Errors
-
-- Error: `modules/local/registerstudy/main.nf:13:26`: `STUDY_ID` is not defined
-
-  ```nextflow
-      tuple val(meta), env(STUDY_ID), emit: study_accession
-                           ^^^^^^^^
-  ```
+- Summary: 6 warnings
 
 ## :warning: Warnings
-
-- Warning: `main.nf:37:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_multiqc_report = Channel.empty()
-                          ^^^^^^^
-  ```
 
 - Warning: `modules/local/generate_assembly_manifest/main.nf:20:9`: Variable was declared but not used
 
@@ -29,14 +13,14 @@
           ^^^^^^
   ```
 
-- Warning: `modules/local/generate_assembly_manifest/main.nf:36:9`: Variable was declared but not used
+- Warning: `modules/local/generate_assembly_manifest/main.nf:38:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
   ```
 
-- Warning: `modules/local/generate_assembly_manifest/main.nf:37:9`: Variable was declared but not used
+- Warning: `modules/local/generate_assembly_manifest/main.nf:39:9`: Variable was declared but not used
 
   ```nextflow
       def prefix = task.ext.prefix ?: "${meta.id}"
@@ -57,100 +41,9 @@
           ^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_seqsubmit_pipeline/main.nf:32:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      monochrome_logs   // boolean: Do not use coloured log outputs
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_seqsubmit_pipeline/main.nf:35:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      input             //  string: Path to input samplesheet
-      ^^^^^
-  ```
-
-- Warning: `workflows/genomesubmit.nf:29:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `workflows/genomesubmit.nf:30:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_multiqc_files = Channel.empty()
-                         ^^^^^^^
-  ```
-
 - Warning: `workflows/genomesubmit.nf:77:16`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { meta, file -> file }
                  ^^^^
-  ```
-
-- Warning: `workflows/genomesubmit.nf:119:32`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_multiqc_config        = Channel.fromPath(
-                                 ^^^^^^^
-  ```
-
-- Warning: `workflows/genomesubmit.nf:122:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          Channel.fromPath(params.multiqc_config, checkIfExists: true) :
-          ^^^^^^^
-  ```
-
-- Warning: `workflows/genomesubmit.nf:123:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          Channel.empty()
-          ^^^^^^^
-  ```
-
-- Warning: `workflows/genomesubmit.nf:125:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          Channel.fromPath(params.multiqc_logo, checkIfExists: true) :
-          ^^^^^^^
-  ```
-
-- Warning: `workflows/genomesubmit.nf:126:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          Channel.empty()
-          ^^^^^^^
-  ```
-
-- Warning: `workflows/genomesubmit.nf:130:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_params))
-                            ^^^^^^^
-  ```
-
-- Warning: `workflows/genomesubmit.nf:136:45`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_methods_description                = Channel.value(
-                                              ^^^^^^^
-  ```
-
-- Warning: `workflows/seqsubmit.nf:21:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      ch_samplesheet // channel: samplesheet read in from --input
-      ^^^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/seqsubmit.nf:30:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      def topic_versions = Channel.topic("versions")
-                           ^^^^^^^
   ```
