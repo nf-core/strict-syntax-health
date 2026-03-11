@@ -1,24 +1,10 @@
 # Nextflow lint results
 
-- Generated: 2026-03-05T00:23:34.345733185Z
+- Generated: 2026-03-11T00:19:11.876454938Z
 - Nextflow version: 26.02.0-edge
-- Summary: 11 errors, 36 warnings
+- Summary: 9 errors, 36 warnings
 
 ## :x: Errors
-
-- Error: `conf/modules.config:36:9`: If statements cannot be mixed with config statements
-
-  ```nextflow
-          if (params.pixelator_container) {
-          ^
-  ```
-
-- Error: `conf/modules.config:50:9`: If statements cannot be mixed with config statements
-
-  ```nextflow
-          if (params.experiment_summary_container) {
-          ^
-  ```
 
 - Error: `nextflow.config:132:1`: Variable declarations cannot be mixed with config statements
 
