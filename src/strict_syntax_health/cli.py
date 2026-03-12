@@ -222,24 +222,24 @@ def discover_modules() -> list[dict]:
     for tool_dir in sorted(modules_path.iterdir()):
         if not tool_dir.is_dir() or tool_dir.name.startswith("."):
             continue
-        # Walk through subcommand directories
-        for subcommand_dir in sorted(tool_dir.iterdir()):
-            if not subcommand_dir.is_dir() or subcommand_dir.name.startswith("."):
-                continue
-            main_nf = subcommand_dir / "main.nf"
-            if main_nf.exists():
-                # Module name is tool_subcommand (e.g., bwa_mem)
-                name = f"{tool_dir.name}_{subcommand_dir.name}"
-                modules.append(
-                    {
-                        "name": name,
-                        "path": subcommand_dir,
-                        "html_url": (
-                            f"https://github.com/nf-core/modules/tree/master/modules/nf-core/"
-                            f"{tool_dir.name}/{subcommand_dir.name}"
-                        ),
-                    }
-                )
+        # Single-level (e.g., nanoplot/main.nf) or two-level (e.g., bwa/mem/main.nf)
+        if (tool_dir / "main.nf").exists():
+            component_dirs = [(tool_dir, tool_dir.name)]
+        else:
+            component_dirs = []
+            for subcommand_dir in sorted(tool_dir.iterdir()):
+                if not subcommand_dir.is_dir() or subcommand_dir.name.startswith("."):
+                    continue
+                if (subcommand_dir / "main.nf").exists():
+                    component_dirs.append((subcommand_dir, f"{tool_dir.name}_{subcommand_dir.name}"))
+        for path, name in component_dirs:
+            modules.append(
+                {
+                    "name": name,
+                    "path": path,
+                    "html_url": f"https://github.com/nf-core/modules/tree/master/modules/nf-core/{path.relative_to(modules_path)}",
+                }
+            )
 
     console.print(f"Found {len(modules)} modules")
     return modules
