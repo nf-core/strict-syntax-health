@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-03-06T00:26:27.659669487Z
+- Generated: 2026-03-12T00:19:53.905446753Z
 - Nextflow version: 26.02.0-edge
 - Summary: 10 errors, 28 warnings
 
@@ -13,14 +13,14 @@
                        ^
   ```
 
-- Error: `subworkflows/local/prepare_vcfs_test/main.nf:162:25`: `vcf` is already declared
+- Error: `subworkflows/local/prepare_vcfs_test/main.nf:164:25`: `vcf` is already declared
 
   ```nextflow
           .branch { meta, vcf, tbi ->
                           ^^^
   ```
 
-- Error: `subworkflows/local/prepare_vcfs_test/main.nf:173:45`: `vcf` is already declared
+- Error: `subworkflows/local/prepare_vcfs_test/main.nf:175:45`: `vcf` is already declared
 
   ```nextflow
           ch_branched_vcf.needs_gt.map{ meta, vcf, _tbi -> tuple(meta, vcf) },
@@ -155,21 +155,21 @@
               ^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_vcfs_test/main.nf:61:14`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_vcfs_test/main.nf:62:14`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       vcf_ch = Channel.empty()
                ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_vcfs_test/main.nf:162:25`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/prepare_vcfs_test/main.nf:164:25`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .branch { meta, vcf, tbi ->
                           ^^^
   ```
 
-- Warning: `subworkflows/local/prepare_vcfs_test/main.nf:162:30`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/prepare_vcfs_test/main.nf:164:30`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .branch { meta, vcf, tbi ->

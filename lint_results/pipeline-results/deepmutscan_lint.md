@@ -1,58 +1,16 @@
 # Nextflow lint results
 
-- Generated: 2026-03-10T00:19:28.192281335Z
+- Generated: 2026-03-12T00:17:01.864006002Z
 - Nextflow version: 26.02.0-edge
-- Summary: 49 errors, 90 warnings
+- Summary: 43 errors, 89 warnings
 
 ## :x: Errors
 
-- Error: `modules/local/fitness/fitness_standard.nf:76:15`: `sample` is already declared
+- Error: `modules/local/fitness/fitness_heatmap/main.nf:12:15`: `sample` is already declared
 
   ```nextflow
       tuple val(sample), path(wt_seq)   		      // WT sequence
                 ^^^^^^
-  ```
-
-- Error: `nextflow.config:324:35`: `manifest` is not defined
-
-  ```nextflow
-  \033[0;35m  nf-core/deepmutscan ${manifest.version}\033[0m
-                                    ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:327:26`: `manifest` is not defined
-
-  ```nextflow
-          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
-                           ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:327:69`: `manifest` is not defined
-
-  ```nextflow
-          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
-                                                                      ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:327:186`: `manifest` is not defined
-
-  ```nextflow
-          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
-                                                                                                                                                                                           ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:336:22`: `validation` is not defined
-
-  ```nextflow
-          beforeText = validation.help.beforeText
-                       ^^^^^^^^^^
-  ```
-
-- Error: `nextflow.config:337:21`: `validation` is not defined
-
-  ```nextflow
-          afterText = validation.help.afterText
-                      ^^^^^^^^^^
   ```
 
 - Error: `workflows/deepmutscan.nf:38:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
@@ -351,60 +309,53 @@
 
 ## :warning: Warnings
 
-- Warning: `modules/local/bamprocessing/bamfilteringdms.nf:22:9`: Variable was declared but not used
+- Warning: `modules/local/bamprocessing/bam_filter/main.nf:22:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
   ```
 
-- Warning: `modules/local/bamprocessing/bamfilteringdms.nf:23:9`: Variable was declared but not used
+- Warning: `modules/local/bamprocessing/bam_filter/main.nf:23:9`: Variable was declared but not used
 
   ```nextflow
       def prefix = task.ext.prefix ?: "${meta.id}"
           ^^^^^^
   ```
 
-- Warning: `modules/local/bamprocessing/bamfilteringdms.nf:39:9`: Variable was declared but not used
+- Warning: `modules/local/bamprocessing/bam_filter/main.nf:39:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
   ```
 
-- Warning: `modules/local/bamprocessing/premerge.nf:41:9`: Variable was declared but not used
+- Warning: `modules/local/bamprocessing/premerge/main.nf:41:9`: Variable was declared but not used
 
   ```nextflow
       def prefix = task.ext.prefix ?: "${meta.id}"
           ^^^^^^
   ```
 
-- Warning: `modules/local/fitness/fitness_standard.nf:75:15`: Variable was declared but not used
+- Warning: `modules/local/fitness/fitness_heatmap/main.nf:11:15`: Variable was declared but not used
 
   ```nextflow
       tuple val(sample), path(fitness_estimation_tsv)   // from FITNESS_CALCULATION
                 ^^^^^^
   ```
 
-- Warning: `modules/local/gatk/saturationmutagenesis.nf:23:9`: Variable was declared but not used
+- Warning: `modules/local/gatk/saturationmutagenesis/main.nf:23:9`: Variable was declared but not used
 
   ```nextflow
       def prefix = task.ext.prefix ?: "${meta.id}"
           ^^^^^^
   ```
 
-- Warning: `modules/local/gatk/saturationmutagenesis.nf:51:9`: Variable was declared but not used
+- Warning: `modules/local/gatk/saturationmutagenesis/main.nf:51:9`: Variable was declared but not used
 
   ```nextflow
       def prefix = task.ext.prefix ?: "${meta.id}"
           ^^^^^^
-  ```
-
-- Warning: `nextflow.config:327:129`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
-                                                                                                                                  ^^
   ```
 
 - Warning: `subworkflows/local/calculatefitness.nf:30:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
