@@ -1,5 +1,17 @@
 {
-  "_repo_commit": "7cb6fcffaf25568cc74941aa199def0131a6d5c2",
+  "_repo_commit": "0a73bb6f4bff09edfb61ae355826dbf94908108c",
+  "abacas": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "abra2": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abra2",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "abricate_run": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abricate/run",
     "errors": 0,
@@ -14,6 +26,24 @@
   },
   "abritamr_run": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abritamr/run",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "adapterremoval": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/adapterremoval",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "adapterremovalfixprefix": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/adapterremovalfixprefix",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "admixture": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/admixture",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -108,6 +138,36 @@
     "warnings": 0,
     "parse_error": false
   },
+  "agrvate": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/agrvate",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "ale": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ale",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "alignoth": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/alignoth",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "allelecounter": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/allelecounter",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "ampcombi": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ampcombi",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "ampcombi2_cluster": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ampcombi2/cluster",
     "errors": 0,
@@ -126,8 +186,20 @@
     "warnings": 0,
     "parse_error": false
   },
+  "ampir": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ampir",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "amplify_predict": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/amplify/predict",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "amps": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/amps",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -210,6 +282,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "annosine": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/annosine",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "annotsv_annotsv": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/annotsv/annotsv",
     "errors": 0,
@@ -252,8 +330,26 @@
     "warnings": 0,
     "parse_error": false
   },
+  "apbs": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/apbs",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "arcashla_extract": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/arcashla/extract",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "argnorm": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/argnorm",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "aria2": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aria2",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -308,6 +404,24 @@
   },
   "artic_minion": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/artic/minion",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "ascat": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ascat",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "ashlar": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ashlar",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "assemblyscan": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/assemblyscan",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -396,6 +510,18 @@
     "warnings": 0,
     "parse_error": false
   },
+  "backsub": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/backsub",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "bacphlip": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bacphlip",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "bakta_bakta": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bakta/bakta",
     "errors": 0,
@@ -414,8 +540,38 @@
     "warnings": 0,
     "parse_error": false
   },
+  "bamaligncleaner": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bamaligncleaner",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "bamclipper": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bamclipper",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "bamcmp": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bamcmp",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "bamreadcount": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bamreadcount",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "bamstats_generalstats": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bamstats/generalstats",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "bamtofastq10x": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bamtofastq10x",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -452,6 +608,24 @@
   },
   "bandage_image": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bandage/image",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "barrnap": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/barrnap",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "bases2fastq": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bases2fastq",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "basicpy": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/basicpy",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -684,8 +858,26 @@
     "warnings": 0,
     "parse_error": false
   },
+  "bcl2fastq": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bcl2fastq",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "bclconvert": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bclconvert",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "beagle5_beagle": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/beagle5/beagle",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "bedgovcf": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bedgovcf",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -834,8 +1026,26 @@
     "warnings": 0,
     "parse_error": false
   },
+  "bff": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bff",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "bftools_showinf": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bftools/showinf",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "bigslice": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bigslice",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "bioawk": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bioawk",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -854,6 +1064,18 @@
   },
   "biobambam_bamsormadup": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/biobambam/bamsormadup",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "bioformats2raw": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bioformats2raw",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "biohansel": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/biohansel",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -996,6 +1218,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "blat": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/blat",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "blobtk_depth": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/blobtk/depth",
     "errors": 0,
@@ -1046,6 +1274,12 @@
   },
   "bracken_combinebrackenoutputs": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bracken/combinebrackenoutputs",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "braker3": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/braker3",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -1140,6 +1374,30 @@
     "warnings": 0,
     "parse_error": false
   },
+  "cadd": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cadd",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "cafe": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cafe",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "calder2": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/calder2",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "canu": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/canu",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "cat_cat": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cat/cat",
     "errors": 0,
@@ -1206,6 +1464,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "celesta": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/celesta",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "cellbender_merge": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cellbender/merge",
     "errors": 0,
@@ -1214,6 +1478,12 @@
   },
   "cellbender_removebackground": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cellbender/removebackground",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "cellpose": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cellpose",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -1350,6 +1620,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "checkqc": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/checkqc",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "checkv_downloaddatabase": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/checkv/downloaddatabase",
     "errors": 0,
@@ -1380,6 +1656,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "chopper": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/chopper",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "chromap_chromap": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/chromap/chromap",
     "errors": 0,
@@ -1388,6 +1670,12 @@
   },
   "chromap_index": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/chromap/index",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "chromograph": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/chromograph",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -1416,6 +1704,36 @@
     "warnings": 0,
     "parse_error": false
   },
+  "clair3": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/clair3",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "clame": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/clame",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "clipkit": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/clipkit",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "clippy": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/clippy",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "clonalframeml": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/clonalframeml",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "clustalo_align": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/clustalo/align",
     "errors": 0,
@@ -1428,8 +1746,26 @@
     "warnings": 0,
     "parse_error": false
   },
+  "clusty": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/clusty",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "cmaple": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cmaple",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "cmseq_polymut": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cmseq/polymut",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "cnaqc": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cnaqc",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -1524,6 +1860,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "cobrameta": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cobrameta",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "cobs_classicconstruct": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cobs/classicconstruct",
     "errors": 0,
@@ -1568,6 +1910,12 @@
   },
   "concoct_mergecutupclustering": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/concoct/mergecutupclustering",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "conifer": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/conifer",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -1692,6 +2040,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "coreograph": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/coreograph",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "coverm_contig": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/coverm/contig",
     "errors": 0,
@@ -1700,6 +2054,12 @@
   },
   "coverm_genome": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/coverm/genome",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "cowpy": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cowpy",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -1728,8 +2088,26 @@
     "warnings": 0,
     "parse_error": false
   },
+  "cramino": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cramino",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "crisprcleanr_normalize": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/crisprcleanr/normalize",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "crispresso2": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/crispresso2",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "crumble": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/crumble",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -1772,6 +2150,12 @@
   },
   "ctatsplicing_startocancerintrons": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ctatsplicing/startocancerintrons",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "ctree": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ctree",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -1860,6 +2244,24 @@
     "warnings": 0,
     "parse_error": false
   },
+  "cutadapt": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cutadapt",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "cutesv": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cutesv",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "damageprofiler": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/damageprofiler",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "dastool_dastool": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/dastool/dastool",
     "errors": 0,
@@ -1878,6 +2280,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "datavzrd": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/datavzrd",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "deacon_filter": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/deacon/filter",
     "errors": 0,
@@ -1892,6 +2300,12 @@
   },
   "decoupler_decoupler": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/decoupler/decoupler",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "dedup": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/dedup",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -1922,6 +2336,18 @@
   },
   "deepcell_mesmer": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/deepcell/mesmer",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
+  "deepsomatic": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/deepsomatic",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "deeptmhmm": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/deeptmhmm",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -1992,38 +2418,20 @@
     "warnings": 0,
     "parse_error": false
   },
-  "deepvariant_callvariants": {
-    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/deepvariant/callvariants",
-    "errors": 0,
-    "warnings": 0,
-    "parse_error": false
-  },
-  "deepvariant_makeexamples": {
-    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/deepvariant/makeexamples",
-    "errors": 0,
-    "warnings": 0,
-    "parse_error": false
-  },
-  "deepvariant_postprocessvariants": {
-    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/deepvariant/postprocessvariants",
-    "errors": 0,
-    "warnings": 0,
-    "parse_error": false
-  },
-  "deepvariant_rundeepvariant": {
-    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/deepvariant/rundeepvariant",
-    "errors": 0,
-    "warnings": 0,
-    "parse_error": false
-  },
-  "deepvariant_vcfstatsreport": {
-    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/deepvariant/vcfstatsreport",
+  "deepvariant": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/deepvariant",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
   "delly_call": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/delly/call",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "demuxem": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/demuxem",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -2058,8 +2466,14 @@
     "warnings": 0,
     "parse_error": false
   },
-  "diann_insilicolibrarygeneration": {
-    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/diann/insilicolibrarygeneration",
+  "diann": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/diann",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "doubletdetection": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/doubletdetection",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -2078,6 +2492,12 @@
   },
   "dragmap_hashtable": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/dragmap/hashtable",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "dragonflye": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/dragonflye",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -2130,8 +2550,38 @@
     "warnings": 0,
     "parse_error": false
   },
+  "duphold": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/duphold",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "dupradar": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/dupradar",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "dysgu_run": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/dysgu/run",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "eagle2": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/eagle2",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "ectyper": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ectyper",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "eggnogmapper": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/eggnogmapper",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -2150,6 +2600,12 @@
   },
   "eigenstratdatabasetools_eigenstratsnpcoverage": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/eigenstratdatabasetools/eigenstratsnpcoverage",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "eklipse": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/eklipse",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -2196,8 +2652,20 @@
     "warnings": 0,
     "parse_error": false
   },
+  "emmtyper": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/emmtyper",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "emu_abundance": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/emu/abundance",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "endorspy": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/endorspy",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -2250,8 +2718,20 @@
     "warnings": 0,
     "parse_error": false
   },
+  "estsfs": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/estsfs",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "evigene_tr2aacds": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/evigene/tr2aacds",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "expansionhunter": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/expansionhunter",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -2268,6 +2748,18 @@
     "warnings": 0,
     "parse_error": false
   },
+  "falco": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/falco",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "falint": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/falint",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "famsa_align": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/famsa/align",
     "errors": 0,
@@ -2276,6 +2768,48 @@
   },
   "famsa_guidetree": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/famsa/guidetree",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "faqcs": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/faqcs",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "fargene": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fargene",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "fast2q": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fast2q",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "fastani": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fastani",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "fastavalidator": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fastavalidator",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "fastawindows": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fastawindows",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "fastcov": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fastcov",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -2298,6 +2832,48 @@
     "warnings": 0,
     "parse_error": false
   },
+  "fastme": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fastme",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "fastp": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fastp",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "fastplong": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fastplong",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "fastqc": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fastqc",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "fastqdl": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fastqdl",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "fastqe": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fastqe",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "fastqscan": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fastqscan",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "fastqscreen_buildfromindex": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fastqscreen/buildfromindex",
     "errors": 0,
@@ -2312,6 +2888,12 @@
   },
   "fastqutils_info": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fastqutils/info",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "fasttree": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fasttree",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -2348,6 +2930,12 @@
   },
   "fcsgx_rungx": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fcsgx/rungx",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "ffq": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ffq",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -2424,6 +3012,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "filtlong": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/filtlong",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "find_concatenate": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/find/concatenate",
     "errors": 0,
@@ -2432,6 +3026,18 @@
   },
   "find_unpigz": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/find/unpigz",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "flash": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/flash",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "flye": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/flye",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -2508,6 +3114,18 @@
     "warnings": 0,
     "parse_error": false
   },
+  "fqtk": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fqtk",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "freebayes": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/freebayes",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "freyja_boot": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/freyja/boot",
     "errors": 0,
@@ -2544,6 +3162,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "fusioninspector": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fusioninspector",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "fusionreport_detect": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fusionreport/detect",
     "errors": 0,
@@ -2556,8 +3180,20 @@
     "warnings": 0,
     "parse_error": false
   },
+  "galah": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/galah",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "gamma_gamma": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gamma/gamma",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "gangstr": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gangstr",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -3024,6 +3660,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "gawk": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gawk",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "gecco_convert": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gecco/convert",
     "errors": 0,
@@ -3068,6 +3710,12 @@
   },
   "gemmi_cif2json": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gemmi/cif2json",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "genescopefk": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/genescopefk",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -3120,14 +3768,32 @@
     "warnings": 0,
     "parse_error": false
   },
+  "genomescope2": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/genomescope2",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "genotyphi_parse": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/genotyphi/parse",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
+  "genrich": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/genrich",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "gens_preparecovandbaf": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gens/preparecovandbaf",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "geofetch": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/geofetch",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -3150,6 +3816,18 @@
     "warnings": 0,
     "parse_error": false
   },
+  "gfaffix": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gfaffix",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "gfastats": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gfastats",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "gfatools_gfa2fa": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gfatools/gfa2fa",
     "errors": 0,
@@ -3158,6 +3836,18 @@
   },
   "gfatools_stat": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gfatools/stat",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "gffcompare": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gffcompare",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "gffread": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gffread",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -3224,6 +3914,18 @@
   },
   "glimpse2_splitreference": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/glimpse2/splitreference",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "glnexus": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/glnexus",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "gmmdemux": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gmmdemux",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -3378,6 +4080,18 @@
     "warnings": 0,
     "parse_error": false
   },
+  "gtfsort": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gtfsort",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "gubbins": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gubbins",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "gunc_downloaddb": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gunc/downloaddb",
     "errors": 0,
@@ -3396,8 +4110,20 @@
     "warnings": 0,
     "parse_error": false
   },
+  "gunzip": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gunzip",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "gvcftools_extractvariants": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gvcftools/extractvariants",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "gzrt": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gzrt",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -3438,6 +4164,18 @@
     "warnings": 0,
     "parse_error": false
   },
+  "hapibd": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/hapibd",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "haplocheck": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/haplocheck",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "haplogrep2_classify": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/haplogrep2/classify",
     "errors": 0,
@@ -3474,6 +4212,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "hasheddrops": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/hasheddrops",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "helitronscanner_draw": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/helitronscanner/draw",
     "errors": 0,
@@ -3504,8 +4248,26 @@
     "warnings": 0,
     "parse_error": false
   },
+  "hicap": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/hicap",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "hicexplorer_hicpca": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/hicexplorer/hicpca",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "hifiasm": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/hifiasm",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "hificnv": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/hificnv",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -3518,6 +4280,12 @@
   },
   "hifitrimmer_processblast": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/hifitrimmer/processblast",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "hiphase": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/hiphase",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -3690,6 +4458,18 @@
     "warnings": 0,
     "parse_error": false
   },
+  "hpsuissero": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/hpsuissero",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "htodemux": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/htodemux",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "htseq_count": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/htseq/count",
     "errors": 0,
@@ -3698,6 +4478,18 @@
   },
   "htsnimtools_vcfcheck": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/htsnimtools/vcfcheck",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "humid": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/humid",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "hypo": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/hypo",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -3744,8 +4536,26 @@
     "warnings": 0,
     "parse_error": false
   },
+  "idemux": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/idemux",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "idr": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/idr",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "igv_js": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/igv/js",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "igvreports": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/igvreports",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -3758,6 +4568,12 @@
   },
   "ilastik_pixelclassification": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ilastik/pixelclassification",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "immunedeconv": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/immunedeconv",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -3780,6 +4596,18 @@
     "warnings": 0,
     "parse_error": false
   },
+  "integronfinder": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/integronfinder",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "interproscan": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/interproscan",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "iphop_download": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/iphop/download",
     "errors": 0,
@@ -3788,6 +4616,30 @@
   },
   "iphop_predict": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/iphop/predict",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "iqtree": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/iqtree",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "irescue": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/irescue",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "islandpath": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/islandpath",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "ismapper": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ismapper",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -3828,6 +4680,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "jasminesv": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/jasminesv",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "jellyfish_count": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/jellyfish/count",
     "errors": 0,
@@ -3842,6 +4700,12 @@
   },
   "juicertools_pre": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/juicertools/pre",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "jupyternotebook": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/jupyternotebook",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -3966,6 +4830,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "kleborate": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/kleborate",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "kma_index": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/kma/index",
     "errors": 0,
@@ -4004,6 +4874,18 @@
   },
   "kmcp_search": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/kmcp/search",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "kmergenie": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/kmergenie",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "kofamscan": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/kofamscan",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -4152,6 +5034,18 @@
     "warnings": 0,
     "parse_error": false
   },
+  "leehom": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/leehom",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "legsta": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/legsta",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "leviosam2_index": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/leviosam2/index",
     "errors": 0,
@@ -4164,8 +5058,32 @@
     "warnings": 0,
     "parse_error": false
   },
+  "liftoff": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/liftoff",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "lima": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/lima",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "limma_differential": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/limma/differential",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "links": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/links",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "lissero": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/lissero",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -4236,8 +5154,26 @@
     "warnings": 0,
     "parse_error": false
   },
+  "longstitch": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/longstitch",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "lsa_cosine": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/lsa/cosine",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "ltrfinder": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ltrfinder",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "ltrharvest": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ltrharvest",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -4326,6 +5262,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "maltextract": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/maltextract",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "manta_convertinversion": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/manta/convertinversion",
     "errors": 0,
@@ -4362,6 +5304,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "mapdamage2": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mapdamage2",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "mash_dist": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mash/dist",
     "errors": 0,
@@ -4380,8 +5328,44 @@
     "warnings": 0,
     "parse_error": false
   },
+  "mashmap": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mashmap",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "mashtree": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mashtree",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "mat2json": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mat2json",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "maxbin2": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/maxbin2",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "maxquant_lfq": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/maxquant/lfq",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "mcquant": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mcquant",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "mcroni": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mcroni",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -4392,8 +5376,38 @@
     "warnings": 0,
     "parse_error": false
   },
+  "mcstaging_macsima2mc": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mcstaging/macsima2mc",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "mcstaging_phenoimager2mc": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mcstaging/phenoimager2mc",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "md5sum": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/md5sum",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "mdust": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mdust",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "medaka": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/medaka",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "megahit": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/megahit",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -4406,6 +5420,18 @@
   },
   "megan_rma2info": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/megan/rma2info",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "melon": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/melon",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "meningotype": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/meningotype",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -4608,6 +5634,18 @@
     "warnings": 0,
     "parse_error": false
   },
+  "minia": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/minia",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "miniasm": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/miniasm",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "minimac4_compressref": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/minimac4/compressref",
     "errors": 0,
@@ -4640,6 +5678,12 @@
   },
   "miniprot_index": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/miniprot/index",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "miranda": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/miranda",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -4700,6 +5744,12 @@
   },
   "mitorsaw_haplotype": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mitorsaw/haplotype",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "mlst": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mlst",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -4782,6 +5832,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "mobster": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mobster",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "mobsuite_recon": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mobsuite/recon",
     "errors": 0,
@@ -4814,6 +5870,12 @@
   },
   "molkartgarage_clahe": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/molkartgarage/clahe",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "mosdepth": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mosdepth",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -4884,6 +5946,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "mtnucratio": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mtnucratio",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "mudskipper_bulk": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mudskipper/bulk",
     "errors": 0,
@@ -4892,6 +5960,42 @@
   },
   "mudskipper_index": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mudskipper/index",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "multiqc": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/multiqc",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "multiqcsav": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/multiqcsav",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "multiseqdemux": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/multiseqdemux",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "multivcfanalyzer": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/multivcfanalyzer",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "mummer": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mummer",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "muscle": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/muscle",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -4914,8 +6018,20 @@
     "warnings": 0,
     "parse_error": false
   },
+  "mygene": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mygene",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "mykrobe_predict": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mykrobe/predict",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "myloasm": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/myloasm",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -4938,8 +6054,38 @@
     "warnings": 0,
     "parse_error": false
   },
+  "nanocomp": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/nanocomp",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "nanofilt": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/nanofilt",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "nanolyse": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/nanolyse",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "nanomonsv_parse": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/nanomonsv/parse",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "nanoplot": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/nanoplot",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "nanoq": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/nanoq",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -4952,6 +6098,12 @@
   },
   "narfmap_hashtable": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/narfmap/hashtable",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "ncbigenomedownload": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ncbigenomedownload",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -4970,6 +6122,24 @@
   },
   "nextclade_run": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/nextclade/run",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "nextgenmap": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/nextgenmap",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "ngmaster": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ngmaster",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "ngmerge": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ngmerge",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -5046,6 +6216,18 @@
     "warnings": 0,
     "parse_error": false
   },
+  "nucmer": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/nucmer",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "oatk": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/oatk",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "odgi_build": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/odgi/build",
     "errors": 0,
@@ -5096,6 +6278,12 @@
   },
   "odgi_viz": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/odgi/viz",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "oncocnv": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/oncocnv",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -5178,6 +6366,24 @@
     "warnings": 0,
     "parse_error": false
   },
+  "optitype": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/optitype",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "orfipy": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/orfipy",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "orthofinder": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/orthofinder",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "osfclient_fetch": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/osfclient/fetch",
     "errors": 0,
@@ -5186,6 +6392,12 @@
   },
   "paftools_sam2paf": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/paftools/sam2paf",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "pairix": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pairix",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -5346,6 +6558,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "paraclu": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/paraclu",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "paragraph_idxdepth": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/paragraph/idxdepth",
     "errors": 0,
@@ -5364,8 +6582,32 @@
     "warnings": 0,
     "parse_error": false
   },
+  "paraphase": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/paraphase",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "paraphrase": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/paraphrase",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "pasty": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pasty",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "pbbam_pbmerge": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pbbam/pbmerge",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "pbccs": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pbccs",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -5376,8 +6618,26 @@
     "warnings": 0,
     "parse_error": false
   },
+  "pbjasmine": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pbjasmine",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "pbmarkdup": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pbmarkdup",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "pbmm2_align": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pbmm2/align",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "pbptyper": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pbptyper",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -5418,6 +6678,42 @@
     "warnings": 0,
     "parse_error": false
   },
+  "pdb2pqr": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pdb2pqr",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "pear": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pear",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "peddy": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/peddy",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "peka": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/peka",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "perbase": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/perbase",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "phantompeakqualtools": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/phantompeakqualtools",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "pharmcat_matcher": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pharmcat/matcher",
     "errors": 0,
@@ -5450,6 +6746,18 @@
   },
   "pharokka_pharokka": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pharokka/pharokka",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "phispy": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/phispy",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "phyloflash": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/phyloflash",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -5634,6 +6942,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "pilon": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pilon",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "pindel_pindel": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pindel/pindel",
     "errors": 0,
@@ -5642,6 +6956,24 @@
   },
   "pints_caller": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pints/caller",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "pirate": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pirate",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "plasmidfinder": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plasmidfinder",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "plasmidid": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plasmidid",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -5660,6 +6992,12 @@
   },
   "plastid_psite": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/psite",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "platypus": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/platypus",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -5796,14 +7134,32 @@
     "warnings": 0,
     "parse_error": false
   },
+  "plotsr": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plotsr",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "pmdtools_filter": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pmdtools/filter",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
+  "pneumocat": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pneumocat",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "polypolish_polish": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/polypolish/polish",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "poolsnp": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/poolsnp",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -5856,8 +7212,44 @@
     "warnings": 0,
     "parse_error": false
   },
+  "president": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/president",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "presto_filterseq": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/presto/filterseq",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "pretextmap": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pretextmap",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "pretextsnapshot": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pretextsnapshot",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "prinseqplusplus": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/prinseqplusplus",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "prodigal": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/prodigal",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "prokka": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/prokka",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -5910,8 +7302,20 @@
     "warnings": 0,
     "parse_error": false
   },
+  "proteinortho": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/proteinortho",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "proteus_readproteingroups": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/proteus/readproteingroups",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "pureclip": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pureclip",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -5976,6 +7380,24 @@
     "warnings": 0,
     "parse_error": false
   },
+  "pychopper": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pychopper",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "pyclonevi": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pyclonevi",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "pycoqc": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pycoqc",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "pydamage_analyze": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pydamage/analyze",
     "errors": 0,
@@ -6030,6 +7452,24 @@
     "warnings": 0,
     "parse_error": false
   },
+  "pyrodigal": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pyrodigal",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "qcat": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/qcat",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "qcatch": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/qcatch",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "qsv_cat": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/qsv/cat",
     "errors": 0,
@@ -6072,8 +7512,26 @@
     "warnings": 0,
     "parse_error": false
   },
+  "quartonotebook": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/quartonotebook",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "quast": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/quast",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "quilt_quilt": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/quilt/quilt",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "racon": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/racon",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -6086,6 +7544,12 @@
   },
   "ragtag_scaffold": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ragtag/scaffold",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "rapidnj": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/rapidnj",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -6110,6 +7574,30 @@
   },
   "rastair_methylkit": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/rastair/methylkit",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "rasusa": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/rasusa",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "raven": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/raven",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "raw2ometiff": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/raw2ometiff",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "raxmlng": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/raxmlng",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -6210,6 +7698,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "ribodetector": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ribodetector",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "ribotish_predict": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ribotish/predict",
     "errors": 0,
@@ -6230,6 +7724,42 @@
   },
   "ribotricer_prepareorfs": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ribotricer/prepareorfs",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "ribowaltz": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ribowaltz",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "ripgrep": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ripgrep",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "rmarkdownnotebook": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/rmarkdownnotebook",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "rnaquast": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/rnaquast",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "roary": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/roary",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "rrnatranscripts": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/rrnatranscripts",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -6390,6 +7920,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "salsa2": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/salsa2",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "sam2lca_analyze": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/sam2lca/analyze",
     "errors": 0,
@@ -6410,6 +7946,24 @@
   },
   "sambamba_markdup": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/sambamba/markdup",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "samblaster": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/samblaster",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "samclip": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/samclip",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "samshee": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/samshee",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -6660,6 +8214,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "scds": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/scds",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "scimap_mcmicro": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/scimap/mcmicro",
     "errors": 0,
@@ -6668,6 +8228,12 @@
   },
   "scimap_spatiallda": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/scimap/spatiallda",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "scoary": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/scoary",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -6852,6 +8418,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "seq2hla": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/seq2hla",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "seqcluster_collapse": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/seqcluster/collapse",
     "errors": 0,
@@ -6972,6 +8544,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "seqsero2": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/seqsero2",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "seqtk_comp": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/seqtk/comp",
     "errors": 0,
@@ -7020,6 +8598,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "sequali": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/sequali",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "sequencetools_pileupcaller": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/sequencetools/pileupcaller",
     "errors": 0,
@@ -7050,6 +8634,24 @@
     "warnings": 0,
     "parse_error": false
   },
+  "severus": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/severus",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "sexdeterrmine": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/sexdeterrmine",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "sgdemux": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/sgdemux",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "shapeit5_ligate": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/shapeit5/ligate",
     "errors": 0,
@@ -7070,6 +8672,36 @@
   },
   "shapeit5_switch": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/shapeit5/switch",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "shasta": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/shasta",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "shasum": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/shasum",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "shigapass": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/shigapass",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "shigatyper": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/shigatyper",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "shigeifinder": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/shigeifinder",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -7098,6 +8730,24 @@
     "warnings": 0,
     "parse_error": false
   },
+  "shovill": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/shovill",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "sickle": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/sickle",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "sigprofiler": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/sigprofiler",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "simpleaf_index": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/simpleaf/index",
     "errors": 0,
@@ -7106,6 +8756,12 @@
   },
   "simpleaf_quant": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/simpleaf/quant",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "sistr": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/sistr",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -7158,8 +8814,32 @@
     "warnings": 0,
     "parse_error": false
   },
+  "slimfastq": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/slimfastq",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "smncopynumbercaller": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/smncopynumbercaller",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "smoothxg": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/smoothxg",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "smoove_call": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/smoove/call",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "snakemake": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/snakemake",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -7176,6 +8856,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "sniffles": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/sniffles",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "snippy_core": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/snippy/core",
     "errors": 0,
@@ -7184,6 +8870,12 @@
   },
   "snippy_run": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/snippy/run",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "snpdists": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/snpdists",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -7230,6 +8922,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "snpsites": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/snpsites",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "somalier_ancestry": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/somalier/ancestry",
     "errors": 0,
@@ -7244,6 +8942,24 @@
   },
   "somalier_relate": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/somalier/relate",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "sortmerna": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/sortmerna",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "souporcell": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/souporcell",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "sourcepredict": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/sourcepredict",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -7296,6 +9012,36 @@
     "warnings": 0,
     "parse_error": false
   },
+  "spades": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/spades",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "sparsesignatures": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/sparsesignatures",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "spatyper": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/spatyper",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "splitubam": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/splitubam",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "spotiflow": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/spotiflow",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "spring_compress": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/spring/compress",
     "errors": 0,
@@ -7326,6 +9072,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "ssuissero": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ssuissero",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "stadeniolib_scramble": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/stadeniolib/scramble",
     "errors": 0,
@@ -7346,6 +9098,12 @@
   },
   "stainwarpy_transformsegmask": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/stainwarpy/transformsegmask",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "staphopiasccmec": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/staphopiasccmec",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -7380,6 +9138,18 @@
     "warnings": 0,
     "parse_error": false
   },
+  "stardist": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/stardist",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "stare": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/stare",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "starfusion_build": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/starfusion/build",
     "errors": 0,
@@ -7392,6 +9162,24 @@
     "warnings": 0,
     "parse_error": false
   },
+  "stecfinder": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/stecfinder",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "stitch": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/stitch",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "stranger": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/stranger",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "strdrop_build": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/strdrop/build",
     "errors": 0,
@@ -7400,6 +9188,12 @@
   },
   "strdrop_call": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/strdrop/call",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "strdust": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/strdust",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -7424,6 +9218,12 @@
   },
   "stringtie_stringtie": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/stringtie/stringtie",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "strobealign": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/strobealign",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -7472,6 +9272,12 @@
   },
   "survivor_stats": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/survivor/stats",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "svaba": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/svaba",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -7548,6 +9354,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "svync": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/svync",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "sylph_profile": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/sylph/profile",
     "errors": 0,
@@ -7584,6 +9396,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "syri": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/syri",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "t1k_build": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/t1k/build",
     "errors": 0,
@@ -7610,6 +9428,24 @@
   },
   "tabix_tabix": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/tabix/tabix",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "tagbam": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/tagbam",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "tailfindr": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/tailfindr",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "tar": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/tar",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -7710,6 +9546,30 @@
     "warnings": 0,
     "parse_error": false
   },
+  "telseq": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/telseq",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "tesorter": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/tesorter",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "tetranscripts": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/tetranscripts",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "thermorawfileparser": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/thermorawfileparser",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "tiara_tiara": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/tiara/tiara",
     "errors": 0,
@@ -7746,6 +9606,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "tinc": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/tinc",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "tmb_pytmb": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/tmb/pytmb",
     "errors": 0,
@@ -7754,6 +9620,12 @@
   },
   "topas_gencons": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/topas/gencons",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "toulligqc": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/toulligqc",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -7800,6 +9672,42 @@
     "warnings": 0,
     "parse_error": false
   },
+  "trimal": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/trimal",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "trimgalore": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/trimgalore",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "trimmomatic": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/trimmomatic",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "trinity": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/trinity",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "trnascanse": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/trnascanse",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "trust4": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/trust4",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "truvari_bench": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/truvari/bench",
     "errors": 0,
@@ -7826,6 +9734,12 @@
   },
   "trycycler_subsample": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/trycycler/subsample",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "tsebra": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/tsebra",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -7896,6 +9810,18 @@
     "warnings": 0,
     "parse_error": false
   },
+  "ultraplex": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ultraplex",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "umicollapse": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/umicollapse",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "umitools_dedup": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/umitools/dedup",
     "errors": 0,
@@ -7920,6 +9846,48 @@
     "warnings": 0,
     "parse_error": false
   },
+  "unicycler": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/unicycler",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "universc": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/universc",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "untar": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/untar",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "untarfiles": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/untarfiles",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "unzip": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/unzip",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "unzipfiles": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/unzipfiles",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "upd": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/upd",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "upp_align": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/upp/align",
     "errors": 0,
@@ -7932,8 +9900,20 @@
     "warnings": 0,
     "parse_error": false
   },
+  "vardictjava": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/vardictjava",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "variancepartition_dream": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/variancepartition/dream",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "variantbam": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/variantbam",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -7974,8 +9954,32 @@
     "warnings": 0,
     "parse_error": false
   },
+  "vcf2cytosure": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/vcf2cytosure",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "vcf2db": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/vcf2db",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "vcf2maf": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/vcf2maf",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "vcf2zarr_convert": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/vcf2zarr/convert",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "vcfanno": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/vcfanno",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -8010,6 +10014,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "vcftools": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/vcftools",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "vclust_align": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/vclust/align",
     "errors": 0,
@@ -8024,6 +10034,12 @@
   },
   "vclust_prefilter": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/vclust/prefilter",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "velocyto": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/velocyto",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -8076,6 +10092,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "viber": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/viber",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "viennarna_rnacofold": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/viennarna/rnacofold",
     "errors": 0,
@@ -8090,6 +10112,12 @@
   },
   "viennarna_rnalfold": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/viennarna/rnalfold",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "vireo": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/vireo",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -8184,6 +10212,36 @@
     "warnings": 0,
     "parse_error": false
   },
+  "vuegen": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/vuegen",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "wfmash": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/wfmash",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "wget": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/wget",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "wgsim": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/wgsim",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "whamg": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/whamg",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "whatshap_haplotag": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/whatshap/haplotag",
     "errors": 0,
@@ -8268,6 +10326,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "wittyer": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/wittyer",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "xengsort_index": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/xengsort/index",
     "errors": 0,
@@ -8310,6 +10374,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "yahs": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/yahs",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "yak_count": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/yak/count",
     "errors": 0,
@@ -8324,6 +10394,18 @@
   },
   "yara_mapper": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/yara/mapper",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "yte": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/yte",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "zip": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/zip",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

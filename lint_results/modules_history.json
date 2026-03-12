@@ -573,13 +573,13 @@
   },
   {
     "date": "2026-03-12",
-    "total": 1388,
+    "total": 1735,
     "parse_errors": 0,
-    "errors_zero": 1388,
+    "errors_zero": 1735,
     "errors_low": 0,
     "errors_high": 0,
-    "warnings_zero": 1387,
-    "warnings_low": 1,
+    "warnings_zero": 1733,
+    "warnings_low": 2,
     "warnings_high": 0
   }
 ]
