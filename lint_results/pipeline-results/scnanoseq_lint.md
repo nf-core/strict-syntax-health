@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-03-12T00:18:47.006255742Z
+- Generated: 2026-03-13T00:23:56.338146029Z
 - Nextflow version: 26.02.0-edge
-- Summary: 74 errors, 140 warnings
+- Summary: 73 errors, 140 warnings
 
 ## :x: Errors
 
@@ -18,13 +18,6 @@
   ```nextflow
       tuple val(meta), path(gtf)
                 ^^^^
-  ```
-
-- Error: `modules/local/nanofilt.nf:40:13`: `prefix` is not defined
-
-  ```nextflow
-      touch ${prefix}.filtered.fastq
-              ^^^^^^
   ```
 
 - Error: `modules/nf-core/nanocomp/main.nf:48:5`: `for` loops are no longer supported
@@ -216,42 +209,42 @@
           ^^^^^
   ```
 
-- Error: `nextflow.config:311:33`: `manifest` is not defined
+- Error: `nextflow.config:312:33`: `manifest` is not defined
 
   ```nextflow
   \033[0;35m  nf-core/scnanoseq ${manifest.version}\033[0m
                                   ^^^^^^^^
   ```
 
-- Error: `nextflow.config:314:26`: `manifest` is not defined
+- Error: `nextflow.config:315:26`: `manifest` is not defined
 
   ```nextflow
           afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
                            ^^^^^^^^
   ```
 
-- Error: `nextflow.config:314:69`: `manifest` is not defined
+- Error: `nextflow.config:315:69`: `manifest` is not defined
 
   ```nextflow
           afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
                                                                       ^^^^^^^^
   ```
 
-- Error: `nextflow.config:314:186`: `manifest` is not defined
+- Error: `nextflow.config:315:186`: `manifest` is not defined
 
   ```nextflow
           afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
                                                                                                                                                                                            ^^^^^^^^
   ```
 
-- Error: `nextflow.config:323:22`: `validation` is not defined
+- Error: `nextflow.config:324:22`: `validation` is not defined
 
   ```nextflow
           beforeText = validation.help.beforeText
                        ^^^^^^^^^^
   ```
 
-- Error: `nextflow.config:324:21`: `validation` is not defined
+- Error: `nextflow.config:325:21`: `validation` is not defined
 
   ```nextflow
           afterText = validation.help.afterText
@@ -405,119 +398,119 @@
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/scnanoseq.nf:300:26`: `blaze_whitelist` is not defined
+- Error: `workflows/scnanoseq.nf:298:26`: `blaze_whitelist` is not defined
 
   ```nextflow
       ch_blaze_whitelist = blaze_whitelist
                            ^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/scnanoseq.nf:302:9`: `blaze_whitelist` is not defined
+- Error: `workflows/scnanoseq.nf:300:9`: `blaze_whitelist` is not defined
 
   ```nextflow
       if (blaze_whitelist.endsWith('.gz')){
           ^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/scnanoseq.nf:304:34`: `blaze_whitelist` is not defined
+- Error: `workflows/scnanoseq.nf:302:34`: `blaze_whitelist` is not defined
 
   ```nextflow
           GUNZIP_WHITELIST ( [[:], blaze_whitelist ])
                                    ^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/scnanoseq.nf:438:8`: `genome_quants` is not defined
+- Error: `workflows/scnanoseq.nf:435:8`: `genome_quants` is not defined
 
   ```nextflow
       if (genome_quants){
          ^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/scnanoseq.nf:446:13`: `genome_quants` is not defined
+- Error: `workflows/scnanoseq.nf:443:13`: `genome_quants` is not defined
 
   ```nextflow
               genome_quants,
               ^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/scnanoseq.nf:497:8`: `transcript_quants` is not defined
+- Error: `workflows/scnanoseq.nf:494:8`: `transcript_quants` is not defined
 
   ```nextflow
       if (transcript_quants) {
          ^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/scnanoseq.nf:505:13`: `transcript_quants` is not defined
+- Error: `workflows/scnanoseq.nf:502:13`: `transcript_quants` is not defined
 
   ```nextflow
               transcript_quants,
               ^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/scnanoseq.nf:562:61`: `ch_multiqc_config` is not defined
+- Error: `workflows/scnanoseq.nf:559:61`: `ch_multiqc_config` is not defined
 
   ```nextflow
           ch_multiqc_rawqc_files = ch_multiqc_rawqc_files.mix(ch_multiqc_config)
                                                               ^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/scnanoseq.nf:563:61`: `ch_multiqc_custom_config` is not defined
+- Error: `workflows/scnanoseq.nf:560:61`: `ch_multiqc_custom_config` is not defined
 
   ```nextflow
           ch_multiqc_rawqc_files = ch_multiqc_rawqc_files.mix(ch_multiqc_custom_config.collect().ifEmpty([]))
                                                               ^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/scnanoseq.nf:570:13`: `ch_multiqc_config` is not defined
+- Error: `workflows/scnanoseq.nf:567:13`: `ch_multiqc_config` is not defined
 
   ```nextflow
               ch_multiqc_config,
               ^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/scnanoseq.nf:571:13`: `ch_multiqc_custom_config` is not defined
+- Error: `workflows/scnanoseq.nf:568:13`: `ch_multiqc_custom_config` is not defined
 
   ```nextflow
               ch_multiqc_custom_config.collect().ifEmpty([]),
               ^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/scnanoseq.nf:572:13`: `ch_multiqc_logo` is not defined
+- Error: `workflows/scnanoseq.nf:569:13`: `ch_multiqc_logo` is not defined
 
   ```nextflow
               ch_multiqc_logo.collect().ifEmpty([]),
               ^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/scnanoseq.nf:583:65`: `ch_multiqc_config` is not defined
+- Error: `workflows/scnanoseq.nf:580:65`: `ch_multiqc_config` is not defined
 
   ```nextflow
           ch_multiqc_finalqc_files = ch_multiqc_finalqc_files.mix(ch_multiqc_config)
                                                                   ^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/scnanoseq.nf:584:65`: `ch_multiqc_custom_config` is not defined
+- Error: `workflows/scnanoseq.nf:581:65`: `ch_multiqc_custom_config` is not defined
 
   ```nextflow
           ch_multiqc_finalqc_files = ch_multiqc_finalqc_files.mix(ch_multiqc_custom_config.collect().ifEmpty([]))
                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/scnanoseq.nf:594:13`: `ch_multiqc_config` is not defined
+- Error: `workflows/scnanoseq.nf:591:13`: `ch_multiqc_config` is not defined
 
   ```nextflow
               ch_multiqc_config,
               ^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/scnanoseq.nf:595:13`: `ch_multiqc_custom_config` is not defined
+- Error: `workflows/scnanoseq.nf:592:13`: `ch_multiqc_custom_config` is not defined
 
   ```nextflow
               ch_multiqc_custom_config.collect().ifEmpty([]),
               ^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/scnanoseq.nf:596:13`: `ch_multiqc_logo` is not defined
+- Error: `workflows/scnanoseq.nf:593:13`: `ch_multiqc_logo` is not defined
 
   ```nextflow
               ch_multiqc_logo.collect().ifEmpty([]),
@@ -603,14 +596,7 @@
           ^^^^
   ```
 
-- Warning: `modules/nf-core/cat/fastq/main.nf:23:59`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def readList = reads instanceof List ? reads.collect{ it.toString() } : [reads.toString()]
-                                                            ^^
-  ```
-
-- Warning: `modules/nf-core/cat/fastq/main.nf:54:59`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `modules/nf-core/cat/fastq/main.nf:40:59`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       def readList = reads instanceof List ? reads.collect{ it.toString() } : [reads.toString()]
@@ -680,7 +666,7 @@
           ^^^^
   ```
 
-- Warning: `nextflow.config:314:129`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `nextflow.config:315:129`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
@@ -1226,14 +1212,14 @@
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/scnanoseq.nf:128:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/scnanoseq.nf:127:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_versions = Channel.empty()
                     ^^^^^^^
   ```
 
-- Warning: `workflows/scnanoseq.nf:129:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/scnanoseq.nf:128:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_multiqc_report = Channel.empty()
@@ -1289,217 +1275,224 @@
                      ^^^^^^^
   ```
 
-- Warning: `workflows/scnanoseq.nf:239:33`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/scnanoseq.nf:232:33`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_fastqc_multiqc_postrim = Channel.empty()
                                   ^^^^^^^
   ```
 
-- Warning: `workflows/scnanoseq.nf:240:33`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/scnanoseq.nf:233:33`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_trimmed_reads_combined = Channel.empty()
                                   ^^^^^^^
   ```
 
-- Warning: `workflows/scnanoseq.nf:309:21`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/scnanoseq.nf:254:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+          ch_trimmed_reads = Channel.empty()
+                             ^^^^^^^
+  ```
+
+- Warning: `workflows/scnanoseq.nf:307:21`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                       meta, whitelist ->
                       ^^^^
   ```
 
-- Warning: `workflows/scnanoseq.nf:392:37`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/scnanoseq.nf:389:37`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_fastqc_multiqc_postextract = Channel.empty()
                                       ^^^^^^^
   ```
 
-- Warning: `workflows/scnanoseq.nf:393:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/scnanoseq.nf:390:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_read_counts = Channel.empty()
                        ^^^^^^^
   ```
 
-- Warning: `workflows/scnanoseq.nf:407:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/scnanoseq.nf:404:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_pretrim_counts = Channel.empty()
                               ^^^^^^^
   ```
 
-- Warning: `workflows/scnanoseq.nf:408:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/scnanoseq.nf:405:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_posttrim_counts = Channel.empty()
                                ^^^^^^^
   ```
 
-- Warning: `workflows/scnanoseq.nf:409:33`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/scnanoseq.nf:406:33`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_postextract_counts = Channel.empty()
                                   ^^^^^^^
   ```
 
-- Warning: `workflows/scnanoseq.nf:411:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scnanoseq.nf:408:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_pretrim_counts = ch_fastqc_multiqc_pretrim.collect{it[0]}
                                                                     ^^
   ```
 
-- Warning: `workflows/scnanoseq.nf:412:68`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scnanoseq.nf:409:68`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_posttrim_counts = ch_fastqc_multiqc_postrim.collect{it[0]}
                                                                      ^^
   ```
 
-- Warning: `workflows/scnanoseq.nf:413:75`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scnanoseq.nf:410:75`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_postextract_counts = ch_fastqc_multiqc_postextract.collect{it[0]}
                                                                             ^^
   ```
 
-- Warning: `workflows/scnanoseq.nf:416:61`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scnanoseq.nf:413:61`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_pretrim_counts = ch_nanostat_pretrim.collect{it[1]}
                                                               ^^
   ```
 
-- Warning: `workflows/scnanoseq.nf:417:63`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scnanoseq.nf:414:63`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_posttrim_counts = ch_nanostat_posttrim.collect{it[1]}
                                                                 ^^
   ```
 
-- Warning: `workflows/scnanoseq.nf:418:69`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scnanoseq.nf:415:69`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_postextract_counts = ch_nanostat_postextract.collect{it[1]}
                                                                       ^^
   ```
 
-- Warning: `workflows/scnanoseq.nf:426:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scnanoseq.nf:423:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_corrected_bc_info.collect{it[1]})
                                            ^^
   ```
 
-- Warning: `workflows/scnanoseq.nf:436:32`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/scnanoseq.nf:433:32`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_multiqc_finalqc_files = Channel.empty()
                                  ^^^^^^^
   ```
 
-- Warning: `workflows/scnanoseq.nf:460:72`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scnanoseq.nf:457:72`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               PROCESS_LONGREAD_SCRNA_GENOME.out.minimap_flagstat.collect{it[1]}.ifEmpty([])
                                                                          ^^
   ```
 
-- Warning: `workflows/scnanoseq.nf:463:72`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scnanoseq.nf:460:72`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               PROCESS_LONGREAD_SCRNA_GENOME.out.minimap_idxstats.collect{it[1]}.ifEmpty([])
                                                                          ^^
   ```
 
-- Warning: `workflows/scnanoseq.nf:466:79`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scnanoseq.nf:463:79`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               PROCESS_LONGREAD_SCRNA_GENOME.out.minimap_rseqc_read_dist.collect{it[1]}.ifEmpty([])
                                                                                 ^^
   ```
 
-- Warning: `workflows/scnanoseq.nf:469:80`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scnanoseq.nf:466:80`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               PROCESS_LONGREAD_SCRNA_GENOME.out.minimap_nanocomp_bam_txt.collect{it[1]}.ifEmpty([])
                                                                                  ^^
   ```
 
-- Warning: `workflows/scnanoseq.nf:473:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scnanoseq.nf:470:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               PROCESS_LONGREAD_SCRNA_GENOME.out.bc_tagged_flagstat.collect{it[1]}.ifEmpty([])
                                                                            ^^
   ```
 
-- Warning: `workflows/scnanoseq.nf:478:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scnanoseq.nf:475:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   PROCESS_LONGREAD_SCRNA_GENOME.out.dedup_flagstat.collect{it[1]}.ifEmpty([])
                                                                            ^^
   ```
 
-- Warning: `workflows/scnanoseq.nf:481:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scnanoseq.nf:478:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   PROCESS_LONGREAD_SCRNA_GENOME.out.dedup_idxstats.collect{it[1]}.ifEmpty([])
                                                                            ^^
   ```
 
-- Warning: `workflows/scnanoseq.nf:520:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scnanoseq.nf:517:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               PROCESS_LONGREAD_SCRNA_TRANSCRIPT.out.minimap_flagstat.collect{it[1]}.ifEmpty([])
                                                                              ^^
   ```
 
-- Warning: `workflows/scnanoseq.nf:523:83`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scnanoseq.nf:520:83`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               PROCESS_LONGREAD_SCRNA_TRANSCRIPT.out.minimap_rseqc_read_dist.collect{it[1]}.ifEmpty([])
                                                                                     ^^
   ```
 
-- Warning: `workflows/scnanoseq.nf:526:84`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scnanoseq.nf:523:84`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               PROCESS_LONGREAD_SCRNA_TRANSCRIPT.out.minimap_nanocomp_bam_txt.collect{it[1]}.ifEmpty([])
                                                                                      ^^
   ```
 
-- Warning: `workflows/scnanoseq.nf:530:78`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scnanoseq.nf:527:78`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               PROCESS_LONGREAD_SCRNA_TRANSCRIPT.out.bc_tagged_flagstat.collect{it[1]}.ifEmpty([])
                                                                                ^^
   ```
 
-- Warning: `workflows/scnanoseq.nf:535:78`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scnanoseq.nf:532:78`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   PROCESS_LONGREAD_SCRNA_TRANSCRIPT.out.dedup_flagstat.collect{it[1]}.ifEmpty([])
                                                                                ^^
   ```
 
-- Warning: `workflows/scnanoseq.nf:561:34`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/scnanoseq.nf:558:34`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_multiqc_rawqc_files = Channel.empty()
                                    ^^^^^^^
   ```
 
-- Warning: `workflows/scnanoseq.nf:566:91`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scnanoseq.nf:563:91`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_rawqc_files = ch_multiqc_rawqc_files.mix(ch_nanocomp_fastq_txt.collect{it[1]}.ifEmpty([]))
                                                                                             ^^
   ```
 
-- Warning: `workflows/scnanoseq.nf:581:34`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/scnanoseq.nf:578:34`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_workflow_summary    = Channel.value(paramsSummaryMultiqc(summary_params))

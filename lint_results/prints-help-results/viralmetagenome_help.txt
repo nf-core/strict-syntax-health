@@ -1,0 +1,178 @@
+$ NXF_SYNTAX_PARSER=v2 nextflow run . --help
+
+
+ N E X T F L O W   ~  version 26.02.0-edge
+
+Launching `./main.nf` [peaceful_ride] revision: 0012afb0c7
+
+WARN: Unrecognized config option 'validation.defaultIgnoreParams'
+WARN: Unrecognized config option 'validation.monochromeLogs'
+WARN: Unrecognized config option 'validation.lenientMode'
+
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/viralmetagenome 1.1.1dev
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/viralmetagenome -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input                           [string] Path to comma-separated file containing information about the samples in the experiment. 
+  --outdir                          [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --metadata                        [string] Sample metadata that is included in the multiqc report 
+  --email                           [string] Email address for completion summary. 
+  --multiqc_title                   [string] MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+
+Preprocessing options
+  --skip_preprocessing              [boolean] Skip read preprocessing and use input reads for downstream analysis 
+  --skip_fastqc                     [boolean] Skip read quality statistics summary tool 'fastqc' 
+  --save_final_reads                [boolean] Save reads after the final preprocessing step [default: true] 
+  --save_intermediate_reads         [boolean] Save reads after every preprocessing step 
+  --with_umi                        [boolean] With or without UMI detection 
+  --skip_umi_extract                [boolean] With or without UMI extraction [default: true] 
+  --umi_deduplicate                 [string]  Specify at what level UMI deduplication should occur.  (accepted: read, mapping, both) [default: 
+read]  
+  --umi_discard_read                [integer] Discard R1 / R2 if required 0, meaning not to discard [default: 0] 
+  --trim_tool                       [string]  The used trimming tool  (accepted: fastp, trimmomatic) [default: fastp] 
+  --skip_trimming                   [boolean] Skip read trimming 
+  --adapter_fasta                   [string]  Fasta file of adapters 
+  --save_trimmed_fail               [boolean] Specify true to save files that failed to pass trimming thresholds ending in `*.fail.fastq.gz` 
+ 
+  --save_merged                     [boolean] Specify true to save all merged reads to a file ending in `*.merged.fastq.gz` 
+  --min_trimmed_reads               [integer] Input files with fewer than these reads will be filtered out of the "reads" output channel 
+[default: 1]  
+  --merge_reads                     [boolean] Specify if reads coming from the same group or original sample should be merged for the downstream 
+analyses  
+  --skip_complexity_filtering       [boolean] Skip filtering of low complexity regions in reads [default: true] 
+  --decomplexifier                  [string]  Specify the decomplexifier to use, bbduk or prinseq  (accepted: bbduk, prinseq) [default: 
+prinseq]  
+  --contaminants                    [string]  Reference files containing adapter and/or contaminant sequences for sequence kmer matching (used by 
+bbduk)  
+  --skip_hostremoval                [boolean] Skip the removal of host read sequences 
+  --host_k2_db                      [string]  Kraken2 database used to remove host and contamination [default: 
+s3://ngi-igenomes/test-data/viralrecon/kraken2_human.tar.gz]  
+  --arguments_kraken2_host          [string]  Arguments for Kraken2 tool for host removal 
+
+Metagenomic diversity
+  --skip_read_classification        [boolean] Skip determining the metagenomic diversity of the sample 
+  --read_classifiers                [string]  Specify the taxonomic read classifiers, choices are 'kaiju,kraken2' [default: kraken2,kaiju] 
+ 
+  --save_databases                  [boolean] Save the used databases 
+  --kraken2_db                      [string]  Location of the Kraken2 database [default: 
+https://genome-idx.s3.amazonaws.com/kraken/k2_viral_20230314.tar.gz]  
+  --kraken2_save_reads              [boolean] Save classified and unclassified reads as fastq files 
+  --kraken2_save_readclassification [boolean] Save summary overview of read classifications in a txt file 
+  --kraken2_save_minimizers         [boolean] Save kraken2's used minimizers 
+  --bracken_db                      [string]  Location of bracken database [default: 
+https://genome-idx.s3.amazonaws.com/kraken/k2_viral_20230314.tar.gz]  
+  --kaiju_db                        [string]  Location of Kaiju database [default: 
+https://kaiju-idx.s3.eu-central-1.amazonaws.com/2023/kaiju_db_rvdb_2023-05-26.tgz]  
+  --arguments_kreport2krona         [string]  Arguments for Kreport2Krona tool 
+
+Assembly
+  --skip_assembly                   [boolean] Skip de novo assembly of reads 
+  --assemblers                      [string]  The specified tools for de novo assembly, multiple options are possible [default: 
+spades,megahit]  
+  --spades_mode                     [string]  Specific SPAdes mode to run  (accepted: rnaviral, corona, metaviral, meta, metaplasmid, plasmid, 
+isolate, rna, bio) [default: rnaviral]  
+  --spades_hmm                      [string]  File or directory with amino acid HMMs for Spades HMM-guided mode. 
+  --skip_contig_prinseq             [boolean] Skip the filtering of low complexity contigs with prinseq 
+  --skip_sspace_basic               [boolean] Skip the contig extension with sspace_basic [default: true] 
+  --read_distance                   [integer] Specify the mean distance between the paired reads [default: 350] 
+  --read_distance_sd                [number]  Specify the deviation of the mean distance that is allowed. [default: 0.75] 
+  --arguments_prinseq_contig        [string]  Arguments for Prinseq tool for contigs [default: -out_format 1 -lc_dust .20] 
+
+Polishing
+  --skip_polishing                  [boolean] Skip the refinement/polishing of contigs through reference based scaffolding and read mapping 
+ 
+  --save_intermediate_polishing     [boolean] Save intermediate polishing files 
+  --reference_pool                  [string]  Set of fasta sequences used as potential references for the contigs [default: 
+https://rvdb.dbi.udel.edu/download/C-RVDBvCurrent.fasta.gz]  
+  --blacklist                       [string]  File containing identifiers to exclude from the scaffolding reference pool 
+  --skip_precluster                 [boolean] Skip the preclustering of assemblies to facilitate downstream processing of assemblies 
+  --keep_unclassified               [boolean] Keep the contigs that could not be classified with the taxonomic databases (`kaiju_db` & 
+`kraken2_db`) [default: true]  
+  --precluster_classifiers          [string]  Specify the metagenomic classifiers to use for contig taxonomy classification: 'kraken2,kaiju' 
+[default: kraken2,kaiju]  
+  --cluster_method                  [string]  Cluster algorithm used for contigs  (accepted: cdhitest, vsearch, mmseqs-linclust, 
+mmseqs-cluster, vrhyme, mash) [default: cdhitest]  
+  --network_clustering              [string]  (only with mash) Algorithm to partition the network.  (accepted: single, complete, uclust, 
+set-cover, cd-hit, leiden) [default: single]  
+  --identity_threshold              [number]  Identity threshold value used in clustering algorithms [default: 0.85] 
+  --perc_reads_contig               [integer] Minimum cumulated sum of mapped read percentages of each member from a cluster group, set to 0 to 
+disable [default: 5]  
+  --min_contig_size                 [integer] Minimum allowed contig size [default: 500] 
+  --max_contig_size                 [integer] Maximum allowed contig size [default: 10000000] 
+  --max_n_perc                      [integer] Define the maximum percentage of ambiguous bases in a contig [default: 50] 
+  --arguments_select_reference      [string]  Arguments for selecting reference 
+
+Iterative consensus refinement
+  --skip_iterative_refinement       [boolean] Don't realign reads to consensus sequences and redefine the consensus through (multiple) iterations 
+ 
+  --iterative_refinement_cycles     [integer] Number of iterations [default: 2] 
+  --intermediate_mapper             [string]  Mapping tool used during iterations  (accepted: bwamem2, bowtie2) [default: bwamem2] 
+  --intermediate_variant_caller     [string]  Variant caller used during iterations  (accepted: ivar, bcftools) [default: ivar] 
+  --call_intermediate_variants      [boolean] Call variants during the iterations 
+  --intermediate_consensus_caller   [string]  Consensus tool used for calling new consensus during iterations [default: bcftools] 
+  --intermediate_mapping_stats      [boolean] Calculate summary statistics during iterations [default: true] 
+
+Variant analysis
+  --skip_variant_calling            [boolean] Skip the analysis of variants for the external reference or contigs 
+  --skip_vcf_annotation             [boolean] Skip the annotation of the VCF file 
+  --mapper                          [string]  Define which mapping tool needs to be used when mapping reads to reference  (accepted: bwamem2, 
+bowtie2) [default: bwamem2]  
+  --mapping_constraints             [string]  Sequence(s) to use as a reference for mapping instead of the de novo contigs or scaffolds 
+  --deduplicate                     [boolean] Deduplicate the reads [default: true] 
+  --variant_caller                  [string]  Define the variant caller to use: 'ivar' or 'bcftools'  (accepted: ivar, bcftools) [default: 
+ivar]  
+  --consensus_caller                [string]  Consensus tool used for calling new consensus in final iteration  (accepted: ivar, bcftools) 
+[default: ivar]  
+  --min_mapped_reads                [integer] Define the minimum number of mapped reads in order to continue the variant and consensus calling 
+[default: 200]  
+  --min_consensus_depth             [integer] Define the minimum consensus depth [default: 5] 
+  --allele_frequency                [number]  Minimum allele frequency threshold for calling consensus [default: 0.75] 
+  --mapping_stats                   [boolean] Calculate summary statistics in final iteration [default: true] 
+  --arguments_snpsift_extractfields [string]  Arguments for SnpSift ExtractFields tool [default: -s "," -e ".] 
+
+Consensus QC
+  --skip_consensus_qc               [boolean] Skip the quality measurements on consensus genomes 
+  --skip_checkv                     [boolean] Skip the use of checkv for quality check 
+  --checkv_db                       [string]  Reference database used by checkv for consensus quality control 
+  --skip_consensus_annotation       [boolean] Skip the annotation of the consensus constructs 
+  --annotation_db                   [string]  Database used for annotation of the consensus constructs [default: 
+ftp://ftp.expasy.org/databases/viralzone/2020_4/virosaurus90_vertebrate-20200330.fas.gz]  
+  --skip_prokka                     [boolean] Skip gene estimation & annotation with prokka 
+  --prokka_db                       [string]  Define a prokka `--protein` database for protein annotation 
+  --skip_quast                      [boolean] Skip the use of QUAST for quality check 
+  --skip_blast_qc                   [boolean] Skip the blast search of contigs to the provided reference DB 
+  --skip_alignment_qc               [boolean] Skip creating an alignment of each the collapsed clusters and each iterative step [default: 
+true]  
+  --arguments_quast_qc              [string]  Arguments for QUAST quality control 
+
+Generic options
+  --multiqc_methods_description     [string]          Custom MultiQC yaml file containing HTML including a methods description. 
+  --help                            [boolean, string] Display the help message. 
+  --help_full                       [boolean]         Display the full detailed help message. 
+  --show_hidden                     [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 96 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The pipeline
+    https://doi.org/10.5281/zenodo.17524074
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/viralmetagenome/blob/master/CITATIONS.md
+

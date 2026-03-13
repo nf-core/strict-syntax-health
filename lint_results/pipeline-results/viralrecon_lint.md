@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-02-24T00:23:41.013608682Z
-- Nextflow version: 26.01.1-edge
+- Generated: 2026-03-13T00:25:44.588246187Z
+- Nextflow version: 26.02.0-edge
 - Summary: 49 errors, 99 warnings
 
 ## :x: Errors
@@ -149,8 +149,8 @@
 - Error: `main.nf:19:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
-  def primer_set_version = 0
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  def primer_set_version = ''
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Error: `main.nf:22:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function

@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-02-05T00:23:27.988113102Z
-- Nextflow version: 25.12.0-edge
-- Summary: 13 errors, 16 warnings
+- Generated: 2026-03-13T00:24:21.875539375Z
+- Nextflow version: 26.02.0-edge
+- Summary: 7 errors, 13 warnings
 
 ## :x: Errors
 
@@ -55,48 +55,6 @@
           ^^^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/spaceranger.nf:100:28`: `get_file_from_meta` is not defined
-
-  ```nextflow
-      def manual_alignment = get_file_from_meta("manual_alignment")
-                             ^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/spaceranger.nf:101:21`: `get_file_from_meta` is not defined
-
-  ```nextflow
-      def slidefile = get_file_from_meta("slidefile")
-                      ^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/spaceranger.nf:102:17`: `get_file_from_meta` is not defined
-
-  ```nextflow
-      def image = get_file_from_meta("image")
-                  ^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/spaceranger.nf:103:21`: `get_file_from_meta` is not defined
-
-  ```nextflow
-      def cytaimage = get_file_from_meta("cytaimage")
-                      ^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/spaceranger.nf:104:26`: `get_file_from_meta` is not defined
-
-  ```nextflow
-      def colorizedimage = get_file_from_meta("colorizedimage")
-                           ^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/spaceranger.nf:105:21`: `get_file_from_meta` is not defined
-
-  ```nextflow
-      def darkimage = get_file_from_meta("darkimage")
-                      ^^^^^^^^^^^^^^^^^^
-  ```
-
 ## :warning: Warnings
 
 - Warning: `modules/local/utils.nf:23:59`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -113,46 +71,25 @@
                                                     ^^
   ```
 
-- Warning: `subworkflows/local/spaceranger.nf:15:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/input_check/main.nf:15:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_versions = Channel.empty()
                     ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/spaceranger.nf:23:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/input_check/main.nf:23:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-              tar: it[1].name.contains(".tar.gz")
+              tar: it[1].name.contains(".gz")
                    ^^
   ```
 
-- Warning: `subworkflows/local/spaceranger.nf:24:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/input_check/main.nf:24:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-              dir: !it[1].name.contains(".tar.gz")
+              dir: !it[1].name.contains(".gz")
                     ^^
-  ```
-
-- Warning: `subworkflows/local/spaceranger.nf:42:20`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_reference = Channel.empty()
-                     ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/spaceranger.nf:61:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_probeset = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/spaceranger.nf:90:9`: Variable was declared but not used
-
-  ```nextflow
-      def get_file_from_meta = { key ->
-          ^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/utils_nfcore_sopa_pipeline/main.nf:31:5`: Parameter was not used -- prefix with `_` to suppress warning
@@ -197,14 +134,14 @@
                                                            ^^
   ```
 
-- Warning: `workflows/sopa.nf:148:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/sopa.nf:151:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       def topic_versions = Channel.topic("versions")
                            ^^^^^^^
   ```
 
-- Warning: `workflows/sopa.nf:172:17`: Variable was declared but not used
+- Warning: `workflows/sopa.nf:175:17`: Variable was declared but not used
 
   ```nextflow
           ).set { ch_collated_versions }

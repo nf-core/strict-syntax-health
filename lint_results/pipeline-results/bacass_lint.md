@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-03-12T00:16:39.892769633Z
+- Generated: 2026-03-13T00:19:53.985261487Z
 - Nextflow version: 26.02.0-edge
-- Summary: 44 warnings
+- Summary: 46 warnings
 
 ## :warning: Warnings
 
@@ -97,6 +97,20 @@
                                              ^^^^^^^^^^
   ```
 
+- Warning: `subworkflows/local/utils_nfcore_bacass_pipeline/main.nf:238:72`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      def selected_assemblers = params.assembler.tokenize(",").collect { it.trim() }.findAll { it }
+                                                                         ^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_bacass_pipeline/main.nf:238:94`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      def selected_assemblers = params.assembler.tokenize(",").collect { it.trim() }.findAll { it }
+                                                                                               ^^
+  ```
+
 - Warning: `subworkflows/nf-core/fastq_trim_fastp_fastqc/main.nf:34:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -174,74 +188,67 @@
                              ^^^^^^^
   ```
 
-- Warning: `workflows/bacass.nf:111:18`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/bacass.nf:112:18`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .filter{ meta, data -> data }
                    ^^^^
   ```
 
-- Warning: `workflows/bacass.nf:115:18`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/bacass.nf:116:18`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .filter{ meta, data -> data }
                    ^^^^
   ```
 
-- Warning: `workflows/bacass.nf:119:18`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/bacass.nf:120:18`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .filter{ meta, data -> data }
                    ^^^^
   ```
 
-- Warning: `workflows/bacass.nf:339:28`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/bacass.nf:340:28`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .filter{ meta, sr, lr -> !meta.subsample } // subsamples are not entering. i.e. anything with "meta.subsample"
                              ^^
   ```
 
-- Warning: `workflows/bacass.nf:339:32`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/bacass.nf:340:32`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .filter{ meta, sr, lr -> !meta.subsample } // subsamples are not entering. i.e. anything with "meta.subsample"
                                  ^^
   ```
 
-- Warning: `workflows/bacass.nf:366:29`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/bacass.nf:389:29`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .filter { meta, lr ->
                               ^^
   ```
 
-- Warning: `workflows/bacass.nf:391:29`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/bacass.nf:414:29`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .filter { meta, lr ->
                               ^^
   ```
 
-- Warning: `workflows/bacass.nf:448:28`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/bacass.nf:471:28`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .filter{ meta, sr, lr -> !meta.subsample } // subsamples are not entering. i.e. anything with "meta.subsample"
                              ^^
   ```
 
-- Warning: `workflows/bacass.nf:448:32`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/bacass.nf:471:32`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .filter{ meta, sr, lr -> !meta.subsample } // subsamples are not entering. i.e. anything with "meta.subsample"
                                  ^^
-  ```
-
-- Warning: `workflows/bacass.nf:469:29`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-              .filter { meta, lr ->
-                              ^^
   ```
 
 - Warning: `workflows/bacass.nf:492:29`: Parameter was not used -- prefix with `_` to suppress warning
@@ -251,63 +258,70 @@
                               ^^
   ```
 
-- Warning: `workflows/bacass.nf:509:28`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/bacass.nf:515:29`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              .filter { meta, lr ->
+                              ^^
+  ```
+
+- Warning: `workflows/bacass.nf:532:28`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .filter{ meta, assembly -> meta.subsample } // only assemblies of subsamples pass, i.e. anything with "meta.subsample"
                              ^^^^^^^^
   ```
 
-- Warning: `workflows/bacass.nf:517:22`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/bacass.nf:540:22`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .filter{ meta, assembly -> assembly.countLines() > 1 } // keep only non-empty assembly files
                        ^^^^
   ```
 
-- Warning: `workflows/bacass.nf:532:25`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/bacass.nf:555:25`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .filter { meta, assembly -> !meta.subsample } // omit subsample assemblies
                           ^^^^^^^^
   ```
 
-- Warning: `workflows/bacass.nf:541:29`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/bacass.nf:564:29`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .filter { meta, sr, lr -> !meta.subsample } // remove any subsamples
                               ^^
   ```
 
-- Warning: `workflows/bacass.nf:541:33`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/bacass.nf:564:33`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .filter { meta, sr, lr -> !meta.subsample } // remove any subsamples
                                   ^^
   ```
 
-- Warning: `workflows/bacass.nf:711:32`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/bacass.nf:734:32`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .filter { sample_name, meta, files, valid_sample -> sample_name == valid_sample }  // The previous step produced too many combinations, reduce to genuine entries
                                  ^^^^
   ```
 
-- Warning: `workflows/bacass.nf:711:38`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/bacass.nf:734:38`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .filter { sample_name, meta, files, valid_sample -> sample_name == valid_sample }  // The previous step produced too many combinations, reduce to genuine entries
                                        ^^^^^
   ```
 
-- Warning: `workflows/bacass.nf:712:43`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/bacass.nf:735:43`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { sample_name, metas, files, valid_sample -> [sample_name, metas, files] }
                                             ^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/bacass.nf:715:19`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/bacass.nf:738:19`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .filter { meta, files -> files.size() > 1 } // Only keep samples that have several assemblies

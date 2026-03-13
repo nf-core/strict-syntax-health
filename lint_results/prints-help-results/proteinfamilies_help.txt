@@ -3,8 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.02.0-edge
 
-Downloading plugin nf-schema@2.6.1
-Launching `./main.nf` [backstabbing_hoover] revision: e8cd8dfe37
+Launching `./main.nf` [distracted_chandrasekhar] revision: e8cd8dfe37
 
 
 ------------------------------------------------------
@@ -43,6 +42,13 @@ removal).
   --min_seq_length                               [integer] The minimum allowed sequence length [default: 30] 
   --max_seq_length                               [integer] The maximum allowed sequence length [default: 5000] 
   --remove_duplicates_on_sequence                [boolean] Remove duplicate input amino acid sequences, based on the sequence. 
+
+Update mechanism parameters
+  --save_update_families_pre_clipped_fasta       [boolean] Save intermediate FASTA files before clipping gappy ends (non-redundant --if 
+`skip_sequence_redundancy_removal` is false-- or all --if `skip_sequence_redundancy_removal` is 
+true--) in the update_families subworkflow [default: false]  
+  --save_update_families_clipped_fasta           [boolean] Save FASTA files derived from updated family MSAs (after re-alignment and clipping) [default: 
+true]  
 
 Clustering parameters
   --save_mmseqs_db                               [boolean] Save the db output folder of mmseqs createdb 

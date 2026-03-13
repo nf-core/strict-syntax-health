@@ -1,10 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.01.0-edge
+ N E X T F L O W   ~  version 26.02.0-edge
 
 Downloading plugin nf-schema@2.6.1
-Launching `./main.nf` [pedantic_woese]revision: 20d596471e
+Launching `./main.nf` [cheesy_meucci] revision: 20d596471e
 
 
 ------------------------------------------------------
@@ -74,6 +74,9 @@ predictions (i.e., α-helix, β-strand, coil). Modifies the --outfmt parameter o
  (accepted: ss2, fas, horiz) [default: ss2]  
  !! Hiding 18 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
+
+* The pipeline
+    https://doi.org/10.5281/zenodo.18547735
 
 * The nf-core framework
     https://doi.org/10.1038/s41587-020-0439-x
