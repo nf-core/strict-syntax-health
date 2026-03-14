@@ -1,5 +1,14 @@
 # Nextflow lint results
 
-- Generated: 2026-03-13T00:26:28.729013+00:00
+- Generated: 2026-03-14T00:24:56.936767+00:00
 - Nextflow version: 26.02.0-edge
-- Summary: No issues found
+- Summary: 1 warning
+
+## :warning: Warnings
+
+- Warning: `subworkflows/nf-core/bam_dedup_umi/main.nf:20:5`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      bam_csi_index // boolean: whether to generate CSI index
+      ^^^^^^^^^^
+  ```

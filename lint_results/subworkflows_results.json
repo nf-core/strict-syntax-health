@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "682459f8e79a06fd9d04040f7c16e3ead4f13f54",
+  "_repo_commit": "2e31b703b360a109d95b95baad7db63b9bccaa12",
   "abundance_differential_filter": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/abundance_differential_filter",
     "errors": 0,
@@ -39,7 +39,7 @@
   "bam_dedup_umi": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_dedup_umi",
     "errors": 0,
-    "warnings": 0,
+    "warnings": 1,
     "parse_error": false
   },
   "bam_docounts_contamination_angsd": {
@@ -242,6 +242,12 @@
   },
   "fasta_build_add_kraken2_bracken": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fasta_build_add_kraken2_bracken",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "fasta_classify_catpack": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fasta_classify_catpack",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

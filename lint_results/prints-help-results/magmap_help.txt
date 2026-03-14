@@ -1,0 +1,98 @@
+$ NXF_SYNTAX_PARSER=v2 nextflow run . --help
+
+
+ N E X T F L O W   ~  version 26.02.0-edge
+
+Launching `./main.nf` [lonely_wegener] revision: 699ed9d6af
+
+WARN: Unrecognized config option 'validation.defaultIgnoreParams'
+WARN: Unrecognized config option 'validation.monochromeLogs'
+
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/magmap 1.0.1dev
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/magmap -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input                       [string] Path to a file containing information about the samples in the experiment. 
+  --genomeinfo                  [string] Path to a file containing information about the genomes to map to, see [usage 
+docs](https://nf-co.re/magmap/usage#genome-input).  
+  --gtdb_metadata               [string] Comma-separated list of paths to tab-separated files containing information from GTDB. For column 
+description, see [usage docs](https://nf-co.re/magmap/usage#gtdb-metadata).  
+  --checkm_metadata             [string] Comma-separated list of path to tab-separated files containing the output from CheckM. For column 
+description, see [usage docs](https://nf-co.re/magmap/usage#checkmcheckm2-metadata).  
+  --gtdbtk_metadata             [string] Comma-separated list of paths to tab-separated files containing a .tsv file which has the same 
+columns as the output from GTDB-Tk, see [usage 
+docs](https://nf-co.re/magmap/usage#gtdb-tk-metadata).  
+  --remote_genome_sources       [string] Comma-separated list of paths to tsv files with information about genomes in NCBI 'assembly_summary' 
+format. The default are GenBank and RefSeq summary files. [default: 
+https://ftp.ncbi.nlm.nih.gov/genomes/ASSEMBLY_REPORTS/assembly_summary_refseq.txt,https://ftp.ncbi.nlm.nih.gov/genomes/ASSEMBLY_REPORTS/assembly_summary_genbank.txt] 
+ 
+  --genome_store_dir            [string] Path to a directory where downloaded genome files is stored. [default: magmap_genomes] 
+  --prokka_store_dir            [string] Path to a directory where prokka output is stored. [default: magmap_prokka] 
+  --indexes                     [string] Path to .sbt file. 
+  --email                       [string] Email address for completion summary. 
+  --multiqc_title               [string] MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+  --outdir                      [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+
+Quality control options
+  --skip_qc                     [boolean] Skip all QC steps except for MultiQC. 
+  --skip_fastqc                 [boolean] Skip FastQC. 
+
+Trimming options
+  --clip_r1                     [string]  Instructs Trim Galore to remove bp from the 5' end of read 1 (or single-end reads). 
+  --clip_r2                     [string]  Instructs Trim Galore to remove bp from the 5' end of read 2 (or single-end reads). 
+  --three_prime_clip_r1         [string]  Instructs Trim Galore to remove bp from the 3' end of read 1 AFTER adapter/quality trimming has been 
+performed.  
+  --three_prime_clip_r2         [string]  Instructs Trim Galore to remove bp from the 3' end of read 2 AFTER adapter/quality trimming has been 
+performed.  
+  --trim_reads                  [string]  Instructs Trim Galore to apply the --nextseq=X option, to trim based on quality after removing 
+poly-G tails.  
+  --save_trimmed                [boolean] Save the trimmed FastQ files in the results directory. 
+  --skip_trimming               [boolean] Skip the adapter trimming step. 
+
+Mapping options
+  --sequence_filter             [string]  Instructs BBduk to use a fasta file to filter away sequences before running further analysis. 
+ 
+  --bbmap_minid                 [number]  Minimal identity for BBmap [default: 0.9] 
+  --bbmap_ambiguous             [string]  Select how BBmap should treat ambiguous mapping  (accepted: best, all, random, toss) [default: 
+best]  
+  --bbmap_save_bam              [boolean] Save bam output file 
+  --bbmap_save_index            [boolean] Save ref folder containing the reference index 
+  --save_concatenated_genomes   [boolean] Save genomes concatenated file 
+
+FeatureCounts option
+  --features                    [string]  Specify which features to count [default: CDS,rRNA,tRNA,tmRNA] 
+  --featurecounts_fraction      [boolean] Allow featureCounts to handle multiple-mapping 
+
+Sourmash
+  --skip_sourmash               [boolean] Skip Sourmash filtering for user-provided genomes [default: true] 
+  --sourmash_ksize              [integer] K-mer size used by Sourmash [default: 21] 
+  --sourmash_save_sourmash      [boolean] Save Sourmash output 
+
+Generic options
+  --multiqc_methods_description [string]          Custom MultiQC yaml file containing HTML including a methods description. 
+  --help                        [boolean, string] Display the help message. 
+  --help_full                   [boolean]         Display the full detailed help message. 
+  --show_hidden                 [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 18 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/magmap/blob/master/CITATIONS.md
+

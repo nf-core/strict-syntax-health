@@ -1,47 +1,40 @@
 # Nextflow lint results
 
-- Generated: 2026-03-13T00:20:46.369640670Z
+- Generated: 2026-03-14T00:21:18.097161289Z
 - Nextflow version: 26.02.0-edge
-- Summary: 7 errors, 135 warnings
+- Summary: 6 errors, 169 warnings
 
 ## :x: Errors
 
-- Error: `nextflow.config:381:39`: `manifest` is not defined
-
-  ```nextflow
-  \033[0;35m  nf-core/longraredisease ${manifest.version}\033[0m
-                                        ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:384:26`: `manifest` is not defined
+- Error: `nextflow.config:401:26`: `manifest` is not defined
 
   ```nextflow
           afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
                            ^^^^^^^^
   ```
 
-- Error: `nextflow.config:384:69`: `manifest` is not defined
+- Error: `nextflow.config:401:69`: `manifest` is not defined
 
   ```nextflow
           afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
                                                                       ^^^^^^^^
   ```
 
-- Error: `nextflow.config:384:186`: `manifest` is not defined
+- Error: `nextflow.config:401:186`: `manifest` is not defined
 
   ```nextflow
           afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
                                                                                                                                                                                            ^^^^^^^^
   ```
 
-- Error: `nextflow.config:393:22`: `validation` is not defined
+- Error: `nextflow.config:410:22`: `validation` is not defined
 
   ```nextflow
           beforeText = validation.help.beforeText
                        ^^^^^^^^^^
   ```
 
-- Error: `nextflow.config:394:21`: `validation` is not defined
+- Error: `nextflow.config:411:21`: `validation` is not defined
 
   ```nextflow
           afterText = validation.help.afterText
@@ -57,7 +50,7 @@
 
 ## :warning: Warnings
 
-- Warning: `conf/modules.config:467:36`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:495:36`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           return args_list.findAll { it }.join(' ').trim()
@@ -218,7 +211,7 @@
           ^^^^
   ```
 
-- Warning: `nextflow.config:384:129`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `nextflow.config:401:129`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
@@ -267,81 +260,242 @@
                                                 ^^^^^
   ```
 
-- Warning: `subworkflows/local/annotate_sv.nf:17:44`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/annotate_sniffles.nf:17:44`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_candidate_genes = candidate_genes ? Channel.fromPath(candidate_genes).map{[[id:"candidate_genes"], it]}.collect() : Channel.value([[id:"empty"], []])
                                              ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/annotate_sv.nf:17:107`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/annotate_sniffles.nf:17:107`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_candidate_genes = candidate_genes ? Channel.fromPath(candidate_genes).map{[[id:"candidate_genes"], it]}.collect() : Channel.value([[id:"empty"], []])
                                                                                                             ^^
   ```
 
-- Warning: `subworkflows/local/annotate_sv.nf:17:124`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/annotate_sniffles.nf:17:124`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_candidate_genes = candidate_genes ? Channel.fromPath(candidate_genes).map{[[id:"candidate_genes"], it]}.collect() : Channel.value([[id:"empty"], []])
                                                                                                                              ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/annotate_sv.nf:18:50`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/annotate_sniffles.nf:18:50`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_false_positive_snv = false_positive_snv ? Channel.fromPath(false_positive_snv).map{[[id:"false_positive"], it]}.collect() : Channel.value([[id:"empty"], []])
                                                    ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/annotate_sv.nf:18:115`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/annotate_sniffles.nf:18:115`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_false_positive_snv = false_positive_snv ? Channel.fromPath(false_positive_snv).map{[[id:"false_positive"], it]}.collect() : Channel.value([[id:"empty"], []])
                                                                                                                     ^^
   ```
 
-- Warning: `subworkflows/local/annotate_sv.nf:18:132`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/annotate_sniffles.nf:18:132`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_false_positive_snv = false_positive_snv ? Channel.fromPath(false_positive_snv).map{[[id:"false_positive"], it]}.collect() : Channel.value([[id:"empty"], []])
                                                                                                                                      ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/annotate_sv.nf:19:46`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/annotate_sniffles.nf:19:46`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_gene_transcripts = gene_transcripts ? Channel.fromPath(gene_transcripts).map{[[id:"transcripts"], it]}.collect() : Channel.value([[id:"empty"], []])
                                                ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/annotate_sv.nf:19:106`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/annotate_sniffles.nf:19:106`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_gene_transcripts = gene_transcripts ? Channel.fromPath(gene_transcripts).map{[[id:"transcripts"], it]}.collect() : Channel.value([[id:"empty"], []])
                                                                                                            ^^
   ```
 
-- Warning: `subworkflows/local/annotate_sv.nf:19:123`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/annotate_sniffles.nf:19:123`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_gene_transcripts = gene_transcripts ? Channel.fromPath(gene_transcripts).map{[[id:"transcripts"], it]}.collect() : Channel.value([[id:"empty"], []])
                                                                                                                             ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/annotate_sv.nf:29:16`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/annotate_sniffles.nf:29:16`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { id, meta, sv_vcf, hpo ->
                  ^^
   ```
 
-- Warning: `subworkflows/local/annotate_sv.nf:41:16`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/annotate_sniffles.nf:41:16`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { id, meta, sv_vcf, snv_vcf ->
                  ^^
+  ```
+
+- Warning: `subworkflows/local/annotate_snv.nf:15:22`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .map { meta, vcf -> [meta, snpeff_db] }.first()
+                       ^^^
+  ```
+
+- Warning: `subworkflows/local/annotate_snv.nf:23:50`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .combine(SNPEFF_DOWNLOAD.out.cache.map { meta, cache -> cache })
+                                                   ^^^^
+  ```
+
+- Warning: `subworkflows/local/annotate_snv.nf:28:44`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          ch_vcf_with_cache.map { meta, vcf, meta2, cache -> [meta, vcf] },
+                                             ^^^^^
+  ```
+
+- Warning: `subworkflows/local/annotate_snv.nf:28:51`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          ch_vcf_with_cache.map { meta, vcf, meta2, cache -> [meta, vcf] },
+                                                    ^^^^^
+  ```
+
+- Warning: `subworkflows/local/annotate_snv.nf:30:33`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          ch_vcf_with_cache.map { meta, vcf, meta2, cache -> [meta2, cache] }
+                                  ^^^^
+  ```
+
+- Warning: `subworkflows/local/annotate_snv.nf:30:39`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          ch_vcf_with_cache.map { meta, vcf, meta2, cache -> [meta2, cache] }
+                                        ^^^
+  ```
+
+- Warning: `subworkflows/local/annotate_svim.nf:17:44`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+      ch_candidate_genes = candidate_genes ? Channel.fromPath(candidate_genes).map{[[id:"candidate_genes"], it]}.collect() : Channel.value([[id:"empty"], []])
+                                             ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/annotate_svim.nf:17:107`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      ch_candidate_genes = candidate_genes ? Channel.fromPath(candidate_genes).map{[[id:"candidate_genes"], it]}.collect() : Channel.value([[id:"empty"], []])
+                                                                                                            ^^
+  ```
+
+- Warning: `subworkflows/local/annotate_svim.nf:17:124`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+      ch_candidate_genes = candidate_genes ? Channel.fromPath(candidate_genes).map{[[id:"candidate_genes"], it]}.collect() : Channel.value([[id:"empty"], []])
+                                                                                                                             ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/annotate_svim.nf:18:50`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+      ch_false_positive_snv = false_positive_snv ? Channel.fromPath(false_positive_snv).map{[[id:"false_positive"], it]}.collect() : Channel.value([[id:"empty"], []])
+                                                   ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/annotate_svim.nf:18:115`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      ch_false_positive_snv = false_positive_snv ? Channel.fromPath(false_positive_snv).map{[[id:"false_positive"], it]}.collect() : Channel.value([[id:"empty"], []])
+                                                                                                                    ^^
+  ```
+
+- Warning: `subworkflows/local/annotate_svim.nf:18:132`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+      ch_false_positive_snv = false_positive_snv ? Channel.fromPath(false_positive_snv).map{[[id:"false_positive"], it]}.collect() : Channel.value([[id:"empty"], []])
+                                                                                                                                     ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/annotate_svim.nf:19:46`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+      ch_gene_transcripts = gene_transcripts ? Channel.fromPath(gene_transcripts).map{[[id:"transcripts"], it]}.collect() : Channel.value([[id:"empty"], []])
+                                               ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/annotate_svim.nf:19:106`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      ch_gene_transcripts = gene_transcripts ? Channel.fromPath(gene_transcripts).map{[[id:"transcripts"], it]}.collect() : Channel.value([[id:"empty"], []])
+                                                                                                           ^^
+  ```
+
+- Warning: `subworkflows/local/annotate_svim.nf:19:123`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+      ch_gene_transcripts = gene_transcripts ? Channel.fromPath(gene_transcripts).map{[[id:"transcripts"], it]}.collect() : Channel.value([[id:"empty"], []])
+                                                                                                                            ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/annotate_svim.nf:29:16`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .map { id, meta, sv_vcf, hpo ->
+                 ^^
+  ```
+
+- Warning: `subworkflows/local/annotate_svim.nf:41:16`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .map { id, meta, sv_vcf, snv_vcf ->
+                 ^^
+  ```
+
+- Warning: `subworkflows/local/annotate_unified.nf:15:22`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .map { meta, vcf -> [meta, snpeff_db] }.first()
+                       ^^^
+  ```
+
+- Warning: `subworkflows/local/annotate_unified.nf:23:58`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .combine(SNPEFF_DOWNLOAD_UNIFIED.out.cache.map { meta, cache -> cache })
+                                                           ^^^^
+  ```
+
+- Warning: `subworkflows/local/annotate_unified.nf:28:44`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          ch_vcf_with_cache.map { meta, vcf, meta2, cache -> [meta, vcf] },
+                                             ^^^^^
+  ```
+
+- Warning: `subworkflows/local/annotate_unified.nf:28:51`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          ch_vcf_with_cache.map { meta, vcf, meta2, cache -> [meta, vcf] },
+                                                    ^^^^^
+  ```
+
+- Warning: `subworkflows/local/annotate_unified.nf:30:33`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          ch_vcf_with_cache.map { meta, vcf, meta2, cache -> [meta2, cache] }
+                                  ^^^^
+  ```
+
+- Warning: `subworkflows/local/annotate_unified.nf:30:39`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          ch_vcf_with_cache.map { meta, vcf, meta2, cache -> [meta2, cache] }
+                                        ^^^
   ```
 
 - Warning: `subworkflows/local/annotsv_db.nf:14:37`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -491,20 +645,6 @@
                     ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/call_sv.nf:79:19`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .filter { meta, vcf, tbi -> vcf != null }
-                    ^^^^
-  ```
-
-- Warning: `subworkflows/local/call_sv.nf:79:30`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .filter { meta, vcf, tbi -> vcf != null }
-                               ^^^
-  ```
-
 - Warning: `subworkflows/local/call_sv.nf:82:19`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
@@ -513,6 +653,20 @@
   ```
 
 - Warning: `subworkflows/local/call_sv.nf:82:30`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .filter { meta, vcf, tbi -> vcf != null }
+                               ^^^
+  ```
+
+- Warning: `subworkflows/local/call_sv.nf:85:19`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .filter { meta, vcf, tbi -> vcf != null }
+                    ^^^^
+  ```
+
+- Warning: `subworkflows/local/call_sv.nf:85:30`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .filter { meta, vcf, tbi -> vcf != null }
@@ -771,6 +925,13 @@
                     ^^^^^^^^^
   ```
 
+- Warning: `subworkflows/local/unify_vcf.nf:16:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+      ch_versions = Channel.empty()
+                    ^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/utils_nfcore_longraredisease_pipeline/main.nf:31:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
@@ -813,191 +974,261 @@
                                                                                                    ^^^^^^^
   ```
 
-- Warning: `workflows/longraredisease.nf:96:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/longraredisease.nf:99:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_samplesheet = Channel.fromList(samplesheet_data)
                        ^^^^^^^
   ```
 
-- Warning: `workflows/longraredisease.nf:122:16`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/longraredisease.nf:125:16`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { meta, data ->
                  ^^^^
   ```
 
-- Warning: `workflows/longraredisease.nf:142:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/longraredisease.nf:145:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_versions = Channel.empty()
                     ^^^^^^^
   ```
 
-- Warning: `workflows/longraredisease.nf:144:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/longraredisease.nf:147:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_fasta = Channel
                  ^^^^^^^
   ```
 
-- Warning: `workflows/longraredisease.nf:169:20`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/longraredisease.nf:172:20`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map { meta, data -> data.family_id }
                      ^^^^
   ```
 
-- Warning: `workflows/longraredisease.nf:174:20`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/longraredisease.nf:177:20`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map { meta, sdf -> sdf }  // Extract just the SDF path
                      ^^^^
   ```
 
-- Warning: `workflows/longraredisease.nf:184:18`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/longraredisease.nf:187:18`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_trf = Channel
                    ^^^^^^^
   ```
 
-- Warning: `workflows/longraredisease.nf:193:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/longraredisease.nf:196:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
                   ch_trf = Channel.empty()
                            ^^^^^^^
   ```
 
-- Warning: `workflows/longraredisease.nf:220:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/longraredisease.nf:223:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       it.name.endsWith('.fastq.gz') || it.name.endsWith('.fq.gz')
                       ^^
   ```
 
-- Warning: `workflows/longraredisease.nf:220:54`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/longraredisease.nf:223:54`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       it.name.endsWith('.fastq.gz') || it.name.endsWith('.fq.gz')
                                                        ^^
   ```
 
-- Warning: `workflows/longraredisease.nf:293:68`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/longraredisease.nf:296:68`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       def bam_files = bam_path.listFiles().findAll { it.name.endsWith('.bam') }
                                                                      ^^
   ```
 
-- Warning: `workflows/longraredisease.nf:360:65`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/longraredisease.nf:363:65`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_final_sorted_bam = ch_aligned_input.map { meta, bam, bai -> [meta, bam] }
                                                                   ^^^
   ```
 
-- Warning: `workflows/longraredisease.nf:361:60`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/longraredisease.nf:364:60`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_final_sorted_bai = ch_aligned_input.map { meta, bam, bai -> [meta, bai] }
                                                              ^^^
   ```
 
-- Warning: `workflows/longraredisease.nf:568:31`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/longraredisease.nf:564:31`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                       .filter { meta, vcf, tbi -> vcf != null }
                                 ^^^^
   ```
 
-- Warning: `workflows/longraredisease.nf:568:42`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/longraredisease.nf:564:42`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                       .filter { meta, vcf, tbi -> vcf != null }
                                            ^^^
   ```
 
-- Warning: `workflows/longraredisease.nf:578:82`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/longraredisease.nf:574:82`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-              ch_final_sv_vcf = filter_sv_sniffles.out.ch_vcf_tbi.map { meta, vcf, tbi -> [meta, vcf] }
+              ch_sv_vcf_final = filter_sv_sniffles.out.ch_vcf_tbi.map { meta, vcf, tbi -> [meta, vcf] }
                                                                                    ^^^
   ```
 
-- Warning: `workflows/longraredisease.nf:585:31`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/longraredisease.nf:582:27`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-                      .filter { meta, vcf, tbi -> vcf != null }
-                                ^^^^
+                  .filter { meta, vcf, tbi -> vcf != null }
+                            ^^^^
   ```
 
-- Warning: `workflows/longraredisease.nf:585:42`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/longraredisease.nf:582:38`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-                      .filter { meta, vcf, tbi -> vcf != null }
-                                           ^^^
+                  .filter { meta, vcf, tbi -> vcf != null }
+                                       ^^^
   ```
 
-- Warning: `workflows/longraredisease.nf:595:74`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/longraredisease.nf:593:74`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               ch_svim_vcf = filter_sv_svim.out.ch_vcf_tbi.map { meta, vcf, tbi -> [meta, vcf] }
                                                                            ^^^
   ```
 
-- Warning: `workflows/longraredisease.nf:602:31`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/longraredisease.nf:599:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-                      .filter { meta, vcf, tbi -> vcf != null }
-                                ^^^^
+          ch_sv_vcf_final = Channel.empty()
+                            ^^^^^^^
   ```
 
-- Warning: `workflows/longraredisease.nf:602:42`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/longraredisease.nf:653:19`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-                      .filter { meta, vcf, tbi -> vcf != null }
-                                           ^^^
+          .filter { meta, data ->
+                    ^^^^
   ```
 
-- Warning: `workflows/longraredisease.nf:612:78`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/longraredisease.nf:668:16`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .map { sample_id, meta, vcf, hpo_terms ->
+                 ^^^^^^^^^
+  ```
+
+- Warning: `workflows/longraredisease.nf:675:43`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              ch_sv_svanna.map { meta, vcf, hpo_terms -> [meta, vcf] },
+                                            ^^^^^^^^^
+  ```
+
+- Warning: `workflows/longraredisease.nf:677:32`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              ch_sv_svanna.map { meta, vcf, hpo_terms -> hpo_terms }
+                                 ^^^^
+  ```
+
+- Warning: `workflows/longraredisease.nf:677:38`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              ch_sv_svanna.map { meta, vcf, hpo_terms -> hpo_terms }
+                                       ^^^
+  ```
+
+- Warning: `workflows/longraredisease.nf:762:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+              ch_str_vcf = Channel.empty()
+                           ^^^^^^^
+  ```
+
+- Warning: `workflows/longraredisease.nf:801:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+              ch_cnv_vcf = Channel.empty()
+                           ^^^^^^^
+  ```
+
+- Warning: `workflows/longraredisease.nf:850:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+              ch_cnv_vcf = Channel.empty()
+                           ^^^^^^^
+  ```
+
+- Warning: `workflows/longraredisease.nf:866:27`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+                  .filter { meta, vcf, tbi -> vcf != null }
+                            ^^^^
+  ```
+
+- Warning: `workflows/longraredisease.nf:866:38`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+                  .filter { meta, vcf, tbi -> vcf != null }
+                                       ^^^
+  ```
+
+- Warning: `workflows/longraredisease.nf:877:78`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               ch_cutesv_vcf = filter_sv_cutesv.out.ch_vcf_tbi.map { meta, vcf, tbi -> [meta, vcf] }
                                                                                ^^^
   ```
 
-- Warning: `workflows/longraredisease.nf:706:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/longraredisease.nf:941:37`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-              .filter { meta, data ->
-                        ^^^^
+          ch_combined.map { meta, sv, cnv, str -> [meta, sv] },
+                                      ^^^
   ```
 
-- Warning: `workflows/longraredisease.nf:724:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/longraredisease.nf:941:42`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          ch_svanna_db = Channel
-                         ^^^^^^^
+          ch_combined.map { meta, sv, cnv, str -> [meta, sv] },
+                                           ^^^
   ```
 
-- Warning: `workflows/longraredisease.nf:730:55`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/longraredisease.nf:942:33`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-              ch_sv_vcf_for_annotation.map { meta, vcf, hpo_terms -> [meta, vcf] },
-                                                        ^^^^^^^^^
+          ch_combined.map { meta, sv, cnv, str -> [meta, cnv ?: []] },
+                                  ^^
   ```
 
-- Warning: `workflows/longraredisease.nf:732:44`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/longraredisease.nf:942:42`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-              ch_sv_vcf_for_annotation.map { meta, vcf, hpo_terms -> hpo_terms }
-                                             ^^^^
+          ch_combined.map { meta, sv, cnv, str -> [meta, cnv ?: []] },
+                                           ^^^
   ```
 
-- Warning: `workflows/longraredisease.nf:732:50`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/longraredisease.nf:943:33`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-              ch_sv_vcf_for_annotation.map { meta, vcf, hpo_terms -> hpo_terms }
-                                                   ^^^
+          ch_combined.map { meta, sv, cnv, str -> [meta, str ?: []] },
+                                  ^^
+  ```
+
+- Warning: `workflows/longraredisease.nf:943:37`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          ch_combined.map { meta, sv, cnv, str -> [meta, str ?: []] },
+                                      ^^^
   ```

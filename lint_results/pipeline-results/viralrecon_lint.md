@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-03-13T00:25:44.588246187Z
+- Generated: 2026-03-14T00:24:11.992365946Z
 - Nextflow version: 26.02.0-edge
-- Summary: 49 errors, 99 warnings
+- Summary: 57 errors, 93 warnings
 
 ## :x: Errors
 
@@ -209,6 +209,20 @@
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
+- Error: `main.nf:59:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/viralrecon/subworkflows/local/utils_nfcore_viralrecon_pipeline/main.nf'
+
+  ```nextflow
+  include { PIPELINE_INITIALISATION } from './subworkflows/local/utils_nfcore_viralrecon_pipeline'
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `main.nf:60:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/viralrecon/subworkflows/local/utils_nfcore_viralrecon_pipeline/main.nf'
+
+  ```nextflow
+  include { PIPELINE_COMPLETION     } from './subworkflows/local/utils_nfcore_viralrecon_pipeline'
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
 - Error: `main.nf:83:9`: `VIRALRECON` is not defined
 
   ```nextflow
@@ -228,6 +242,27 @@
   ```nextflow
           multiqc_report = VIRALRECON.out.multiqc_report
                            ^^^^^^^^^^
+  ```
+
+- Error: `main.nf:119:5`: `PIPELINE_INITIALISATION` is not defined
+
+  ```nextflow
+      PIPELINE_INITIALISATION (
+      ^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `main.nf:135:9`: `PIPELINE_INITIALISATION` is not defined
+
+  ```nextflow
+          PIPELINE_INITIALISATION.out.samplesheet
+          ^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `main.nf:140:5`: `PIPELINE_COMPLETION` is not defined
+
+  ```nextflow
+      PIPELINE_COMPLETION (
+      ^^^^^^^^^^^^^^^^^^^
   ```
 
 - Error: `main.nf:176:29`: `Nextflow` is not defined
@@ -328,21 +363,42 @@
                            ^
   ```
 
-- Error: `subworkflows/local/variants_bcftools/main.nf:40:44`: `WorkflowCommons` is not defined
+- Error: `subworkflows/local/utils_nfcore_viralrecon_pipeline/main.nf:300:19`: Unexpected input: '+='
 
   ```nextflow
-          .filter { meta, vcf, tbi, stats -> WorkflowCommons.getNumVariantsFromBCFToolsStats(stats) > 0 }
-                                             ^^^^^^^^^^^^^^^
+              right += 1
+                    ^
   ```
 
-- Error: `subworkflows/local/variants_ivar/main.nf:43:32`: `WorkflowCommons` is not defined
+- Error: `subworkflows/local/variants_bcftools/main.nf:9:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/viralrecon/subworkflows/local/utils_nfcore_viralrecon_pipeline/main.nf'
 
   ```nextflow
-          .filter { meta, tsv -> WorkflowCommons.getNumLinesInFile(tsv) > 1 }
-                                 ^^^^^^^^^^^^^^^
+  include { getNumVariantsFromBCFToolsStats  } from '../../../subworkflows/local/utils_nfcore_viralrecon_pipeline'
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/viralrecon.nf:92:5`: Unexpected input: 'include'
+- Error: `subworkflows/local/variants_bcftools/main.nf:41:44`: `getNumVariantsFromBCFToolsStats` is not defined
+
+  ```nextflow
+          .filter { meta, vcf, tbi, stats -> getNumVariantsFromBCFToolsStats(stats) > 0 }
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `subworkflows/local/variants_ivar/main.nf:10:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/viralrecon/subworkflows/local/utils_nfcore_viralrecon_pipeline/main.nf'
+
+  ```nextflow
+  include { getNumLinesInFile     } from '../../../subworkflows/local/utils_nfcore_viralrecon_pipeline'
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `subworkflows/local/variants_ivar/main.nf:45:32`: `getNumLinesInFile` is not defined
+
+  ```nextflow
+          .filter { meta, tsv -> getNumLinesInFile(tsv) > 1 }
+                                 ^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `workflows/viralrecon.nf:108:5`: Unexpected input: 'include'
 
   ```nextflow
       include { PREPARE_GENOME_ILLUMINA as PREPARE_GENOME } from '../subworkflows/local/prepare_genome_illumina'
@@ -841,129 +897,87 @@
                                                           ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_viralrecon_pipeline/main.nf:32:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      monochrome_logs   // boolean: Do not use coloured log outputs
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_viralrecon_pipeline/main.nf:102:41`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-                  meta, fastq_1, fastq_2, barcode->
-                                          ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_viralrecon_pipeline/main.nf:111:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  validateInputSamplesheet(it)
-                                           ^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_viralrecon_pipeline/main.nf:124:27`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-                      meta, fastq_1, fastq_2, barcode->
-                            ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_viralrecon_pipeline/main.nf:124:36`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-                      meta, fastq_1, fastq_2, barcode->
-                                     ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_viralrecon_pipeline/main.nf:297:9`: Variable was declared but not used
-
-  ```nextflow
-      def logname = flagstat_file.getBaseName() - 'flagstat'
-          ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/variants_bcftools/main.nf:29:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/variants_bcftools/main.nf:30:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           fasta.map { [ [:], it ] },
                              ^^
   ```
 
-- Warning: `subworkflows/local/variants_bcftools/main.nf:40:19`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/variants_bcftools/main.nf:41:19`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .filter { meta, vcf, tbi, stats -> WorkflowCommons.getNumVariantsFromBCFToolsStats(stats) > 0 }
+          .filter { meta, vcf, tbi, stats -> getNumVariantsFromBCFToolsStats(stats) > 0 }
                     ^^^^
   ```
 
-- Warning: `subworkflows/local/variants_bcftools/main.nf:40:25`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/variants_bcftools/main.nf:41:25`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .filter { meta, vcf, tbi, stats -> WorkflowCommons.getNumVariantsFromBCFToolsStats(stats) > 0 }
+          .filter { meta, vcf, tbi, stats -> getNumVariantsFromBCFToolsStats(stats) > 0 }
                           ^^^
   ```
 
-- Warning: `subworkflows/local/variants_bcftools/main.nf:40:30`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/variants_bcftools/main.nf:41:30`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .filter { meta, vcf, tbi, stats -> WorkflowCommons.getNumVariantsFromBCFToolsStats(stats) > 0 }
+          .filter { meta, vcf, tbi, stats -> getNumVariantsFromBCFToolsStats(stats) > 0 }
                                ^^^
   ```
 
-- Warning: `subworkflows/local/variants_bcftools/main.nf:44:27`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/variants_bcftools/main.nf:45:27`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { meta, vcf, tbi, stats -> [ meta, vcf ] }
                             ^^^
   ```
 
-- Warning: `subworkflows/local/variants_bcftools/main.nf:44:32`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/variants_bcftools/main.nf:45:32`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { meta, vcf, tbi, stats -> [ meta, vcf ] }
                                  ^^^^^
   ```
 
-- Warning: `subworkflows/local/variants_bcftools/main.nf:48:22`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/variants_bcftools/main.nf:49:22`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { meta, vcf, tbi, stats -> [ meta, tbi ] }
                        ^^^
   ```
 
-- Warning: `subworkflows/local/variants_bcftools/main.nf:48:32`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/variants_bcftools/main.nf:49:32`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { meta, vcf, tbi, stats -> [ meta, tbi ] }
                                  ^^^^^
   ```
 
-- Warning: `subworkflows/local/variants_bcftools/main.nf:52:22`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/variants_bcftools/main.nf:53:22`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { meta, vcf, tbi, stats -> [ meta, stats ] }
                        ^^^
   ```
 
-- Warning: `subworkflows/local/variants_bcftools/main.nf:52:27`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/variants_bcftools/main.nf:53:27`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { meta, vcf, tbi, stats -> [ meta, stats ] }
                             ^^^
   ```
 
-- Warning: `subworkflows/local/variants_bcftools/main.nf:60:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/variants_bcftools/main.nf:61:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           fasta.map { [ [:], it ] }
                              ^^
   ```
 
-- Warning: `subworkflows/local/variants_ivar/main.nf:43:19`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/variants_ivar/main.nf:45:19`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .filter { meta, tsv -> WorkflowCommons.getNumLinesInFile(tsv) > 1 }
+          .filter { meta, tsv -> getNumLinesInFile(tsv) > 1 }
                     ^^^^
   ```
 

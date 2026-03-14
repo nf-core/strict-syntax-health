@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.02.0-edge
 
-Launching `./main.nf` [hopeful_fermi] revision: c8ac2747eb
+Launching `./main.nf` [mighty_yalow] revision: c8ac2747eb
 
 
 ------------------------------------------------------

@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.02.0-edge
 
-Launching `./main.nf` [peaceful_ride] revision: 0012afb0c7
+Launching `./main.nf` [fervent_euclid] revision: 0012afb0c7
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -15,7 +15,7 @@ WARN: Unrecognized config option 'validation.lenientMode'
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/viralmetagenome 1.1.1dev
+  nf-core/viralmetagenome 1.1.1
 ------------------------------------------------------
 Typical pipeline command:
 
@@ -25,12 +25,14 @@ help message of that parameter will be printed.
 or `--helpFull`.  
 
 Input/output options
-  --input                           [string] Path to comma-separated file containing information about the samples in the experiment. 
-  --outdir                          [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
+  --input                           [string]  Path to comma-separated file containing information about the samples in the experiment. 
+  --outdir                          [string]  The output directory where the results will be saved. You have to use absolute paths to storage on 
 Cloud infrastructure.  
-  --metadata                        [string] Sample metadata that is included in the multiqc report 
-  --email                           [string] Email address for completion summary. 
-  --multiqc_title                   [string] MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+  --metadata                        [string]  Sample metadata that is included in the multiqc report 
+  --email                           [string]  Email address for completion summary. 
+  --multiqc_title                   [string]  MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+  --transpose_overview_tables       [boolean] Transpose the samples overview table so samples become columns and result fields become rows. 
+[default: false]  
 
 Preprocessing options
   --skip_preprocessing              [boolean] Skip read preprocessing and use input reads for downstream analysis 
