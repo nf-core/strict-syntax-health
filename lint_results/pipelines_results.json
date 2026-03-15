@@ -506,8 +506,8 @@
   "longraredisease": {
     "full_name": "nf-core/longraredisease",
     "html_url": "https://github.com/nf-core/longraredisease",
-    "commit": "b7a9ea220097ed488ccc722066672191f64a9895",
-    "errors": 6,
+    "commit": "f40499d861e2f1b99336541bacd8d58bab97c483",
+    "errors": 5,
     "warnings": 169,
     "parse_error": false,
     "prints_help": null
@@ -803,7 +803,7 @@
   "proteinannotator": {
     "full_name": "nf-core/proteinannotator",
     "html_url": "https://github.com/nf-core/proteinannotator",
-    "commit": "5a7b85be46e2853bdc22c2aec83282614e01df94",
+    "commit": "68c1d7e8f54e075bd09921ea352f6a7c7cffd249",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -821,7 +821,7 @@
   "proteinfold": {
     "full_name": "nf-core/proteinfold",
     "html_url": "https://github.com/nf-core/proteinfold",
-    "commit": "89c2ce4a1f92c64601685e2bb8a64604a971d6d2",
+    "commit": "58fe56adcd227dd99c9d35f15ec12ff90a0de955",
     "errors": 9,
     "warnings": 2,
     "parse_error": false,
@@ -983,9 +983,9 @@
   "scdownstream": {
     "full_name": "nf-core/scdownstream",
     "html_url": "https://github.com/nf-core/scdownstream",
-    "commit": "d1e35ece1dedd206b9968795034ccf43308ec394",
+    "commit": "9f937683cc584e09a043eb8ed9b48b7900ec2f7f",
     "errors": 0,
-    "warnings": 19,
+    "warnings": 18,
     "parse_error": false,
     "prints_help": false
   },

@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-03-13T00:23:35.358780045Z
+- Generated: 2026-03-15T00:23:38.851250602Z
 - Nextflow version: 26.02.0-edge
-- Summary: 19 warnings
+- Summary: 18 warnings
 
 ## :warning: Warnings
 
@@ -25,13 +25,6 @@
   ```nextflow
       output_col = task.ext.output_col ?: "symbols"
       ^^^^^^^^^^
-  ```
-
-- Warning: `modules/local/adata/tords/main.nf:21:5`: Variable was declared but not used
-
-  ```nextflow
-      counts_layer = task.ext.counts_layer ?: 'X'
-      ^^^^^^^^^^^^
   ```
 
 - Warning: `modules/local/liana/rankaggregate/main.nf:22:5`: Variable was declared but not used

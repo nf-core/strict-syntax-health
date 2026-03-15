@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.02.0-edge
 
 Downloading plugin nf-schema@2.6.1
-Launching `./main.nf` [cheesy_meucci] revision: 20d596471e
+Launching `./main.nf` [astonishing_chandrasekhar] revision: 0c5aca65cf
 
 
 ------------------------------------------------------
@@ -54,6 +54,9 @@ https://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.hmm.gz]
   --funfam_latest_link            [string]  CATH hosted link to the latest available (v4_3_0) FunFam HMM database file. [default: 
 https://download.cathdb.info/cath/releases/all-releases/v4_3_0/sequence-data/funfam-hmm3-v4_3_0.lib.gz] 
  
+  --skip_nmpfams                  [boolean] Skip the domain annotation with the NMPFams database. 
+  --nmpfams_db                    [string]  Path to an already installed NMPFams HMM database. 
+  --nmpfams_latest_link           [string]  [default: https://pavlopoulos-lab.org/envofams/databases/hmmer/nmpfamsdb.hmm.gz] 
   --hmmsearch_evalue_cutoff       [number]  hmmsearch e-value cutoff threshold for reported results. Modifies the -E parameter of hmmsearch. 
 [default: 0.001]  
 
