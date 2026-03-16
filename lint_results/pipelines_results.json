@@ -776,7 +776,7 @@
   "phaseimpute": {
     "full_name": "nf-core/phaseimpute",
     "html_url": "https://github.com/nf-core/phaseimpute",
-    "commit": "a7e95367a9444a18a72592bc6d8e78bb4be4e1ca",
+    "commit": "bb0bcc83facc1ab5d37a8a10d376a77867eb6b50",
     "errors": 0,
     "warnings": 4,
     "parse_error": false,
@@ -821,7 +821,7 @@
   "proteinfold": {
     "full_name": "nf-core/proteinfold",
     "html_url": "https://github.com/nf-core/proteinfold",
-    "commit": "58fe56adcd227dd99c9d35f15ec12ff90a0de955",
+    "commit": "ef23f49a23314a0d720761d89c6bb9d44c611ca4",
     "errors": 9,
     "warnings": 2,
     "parse_error": false,
