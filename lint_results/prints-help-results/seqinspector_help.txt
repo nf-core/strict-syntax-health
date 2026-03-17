@@ -4,7 +4,8 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.02.0-edge
 
 Downloading plugin nf-core-utils@0.4.0
-Launching `./main.nf` [ecstatic_aryabhata] revision: ced0a985f6
+Downloading plugin nf-schema@2.6.1
+Launching `./main.nf` [chaotic_austin] revision: e9312db940
 
 
 ------------------------------------------------------
@@ -31,11 +32,13 @@ Cloud infrastructure.
   --multiqc_title                    [string] MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
   --tools                            [string] Comma-separated string of tools to run 
   --tools_bundle                     [string] Select some default setup for the tools to be run, tools can still be used to add tools 
+[default: default]  
   --skip_tools                       [string] Comma-separated string of tools to skip - overrides any other means of tools selection 
 
 Validation options
   --fq_lint_args                     [string]  Arguments to pass to FQ lint 
   --continue_with_lint_fail          [boolean] Whether to continue with the pipeline if linting fails for a single sample. [default: true] 
+  --checkqc_config                   [string]  Path to custom CheckQC config 
 
 Kraken2 options
   --kraken2_db                       [string]  Path to Kraken2 database file, either a gzipped file or the path to the uncompressed database. 

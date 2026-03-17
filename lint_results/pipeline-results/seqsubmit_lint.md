@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-03-14T00:22:56.545502782Z
+- Generated: 2026-03-17T00:28:25.509630919Z
 - Nextflow version: 26.02.0-edge
-- Summary: 1 error, 21 warnings
+- Summary: 1 error, 18 warnings
 
 ## :x: Errors
 
@@ -64,98 +64,77 @@
       ^^^^^^^^^^^
   ```
 
-- Warning: `workflows/genomesubmit.nf:30:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/nf-core/fasta_classify_catpack/main.nf:39:19`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .branch { meta, db ->
+                    ^^^^
+  ```
+
+- Warning: `workflows/genomesubmit.nf:32:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       mags_or_bins_flag
       ^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/genomesubmit.nf:76:33`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genomesubmit.nf:78:25`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .branch { meta, fasta ->
+                          ^^^^^
+  ```
+
+- Warning: `workflows/genomesubmit.nf:84:33`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       genome_reads.filter { meta, reads -> meta.genome_coverage == null }
                                   ^^^^^
   ```
 
-- Warning: `workflows/genomesubmit.nf:79:33`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genomesubmit.nf:109:25`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      genome_fasta.filter { meta, fasta -> meta.genome_coverage == null }
-                                  ^^^^^
+          .branch { meta, fasta ->
+                          ^^^^^
   ```
 
-- Warning: `workflows/genomesubmit.nf:82:33`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genomesubmit.nf:132:25`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      genome_fasta.filter { meta, fasta -> meta.genome_coverage != null }
-                                  ^^^^^
+          .branch { meta, fasta ->
+                          ^^^^^
   ```
 
-- Warning: `workflows/genomesubmit.nf:106:48`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genomesubmit.nf:163:25`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      fasta_updated_with_coverage.filter { meta, fasta -> meta.RNA_presence == null }
-                                                 ^^^^^
+          .branch { meta, fasta ->
+                          ^^^^^
   ```
 
-- Warning: `workflows/genomesubmit.nf:109:48`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genomesubmit.nf:203:5`: Variable was declared but not used
 
   ```nextflow
-      fasta_updated_with_coverage.filter { meta, fasta -> meta.RNA_presence != null }
-                                                 ^^^^^
-  ```
-
-- Warning: `workflows/genomesubmit.nf:130:43`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      fasta_updated_with_rna.filter { meta, fasta -> meta.completeness == null || meta.contamination == null || meta.stats_generation_software == null }
-                                            ^^^^^
-  ```
-
-- Warning: `workflows/genomesubmit.nf:133:43`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      fasta_updated_with_rna.filter { meta, fasta -> meta.completeness != null && meta.contamination != null && meta.stats_generation_software != null}
-                                            ^^^^^
-  ```
-
-- Warning: `workflows/genomesubmit.nf:143:16`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .map { process_name, tool_name, version_output -> return "${tool_name}_v${version_output}"
-                 ^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/genomesubmit.nf:161:5`: Variable was declared but not used
-
-  ```nextflow
-      genome_metadata_csv = fasta_updated_with_stats
+      genome_metadata_csv = fasta_updated_with_taxonomy
       ^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/genomesubmit.nf:163:17`: Variable was declared but not used
-
-  ```nextflow
-              def row = [
-                  ^^^
-  ```
-
-- Warning: `workflows/genomesubmit.nf:222:5`: Variable was declared but not used
+- Warning: `workflows/genomesubmit.nf:282:5`: Variable was declared but not used
 
   ```nextflow
       ch_multiqc_config        = channel.fromPath(
       ^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/genomesubmit.nf:224:5`: Variable was declared but not used
+- Warning: `workflows/genomesubmit.nf:284:5`: Variable was declared but not used
 
   ```nextflow
       ch_multiqc_custom_config = params.multiqc_config ?
       ^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/genomesubmit.nf:227:5`: Variable was declared but not used
+- Warning: `workflows/genomesubmit.nf:287:5`: Variable was declared but not used
 
   ```nextflow
       ch_multiqc_logo          = params.multiqc_logo ?

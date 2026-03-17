@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.02.0-edge
 
-Launching `./main.nf` [mighty_yalow] revision: c8ac2747eb
+Launching `./main.nf` [naughty_turing] revision: c8ac2747eb
 
 
 ------------------------------------------------------
@@ -12,7 +12,7 @@ Launching `./main.nf` [mighty_yalow] revision: c8ac2747eb
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/variantprioritization 1.0
+  nf-core/variantprioritization 1.0.0
 ------------------------------------------------------
 Typical pipeline command:
 
@@ -141,7 +141,7 @@ Generic options
   --help_full                       [boolean]         Display the full detailed help message. 
   --show_hidden                     [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
  
- !! Hiding 21 param(s), use the `--showHidden` parameter to show them !!
+ !! Hiding 22 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
 
 * The nf-core framework

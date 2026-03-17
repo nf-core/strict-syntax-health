@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-03-08T00:21:07.361584486Z
+- Generated: 2026-03-17T00:23:22.453582215Z
 - Nextflow version: 26.02.0-edge
 - Summary: 12 errors, 47 warnings
 
@@ -83,7 +83,7 @@
                                             ^
   ```
 
-- Error: `workflows/differentialabundance.nf:214:96`: Unexpected input: '='
+- Error: `workflows/differentialabundance.nf:213:96`: Unexpected input: '='
 
   ```nextflow
       ch_proteus_raw = prepareModuleOutput(PROTEUS.out.raw_tab, ch_paramsets, meta_keys_to_remove=['contrast'])

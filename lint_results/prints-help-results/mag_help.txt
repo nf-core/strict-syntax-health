@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.02.0-edge
 
-Launching `./main.nf` [tender_darwin] revision: 1762f92e8d
+Launching `./main.nf` [awesome_ride] revision: 1762f92e8d
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -230,8 +230,8 @@ quality control etc.  (accepted: raw_bins_only, refined_bins_only, both) [defaul
 raw_bins_only]  
   --run_gunc                             [boolean] Turn on GUNC genome chimerism checks 
   --gunc_db                              [string]  Specify a path to a pre-downloaded GUNC dmnd database file 
-  --gunc_database_type                   [string]  Specify which database to auto-download if not supplying own  (accepted: progenomes, gtdb) 
-[default: progenomes]  
+  --gunc_database_type                   [string]  Specify which database to auto-download if not supplying own  (accepted: progenomes, gtdb, 
+test_data) [default: progenomes]  
   --gunc_save_db                         [boolean] Save the used GUNC reference files downloaded when not using --gunc_db parameter. 
   --generate_bigmag_file                 [boolean] Make a BIgMAG input file including GUNC results. 
 

@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "be8a8b740b7e58b8b992774f26307f3d7df9a250",
+  "_repo_commit": "2406a1593c997c64b6bfc1ffd1031a84e7aed9b5",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -28,6 +28,12 @@
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abritamr/run",
     "errors": 0,
     "warnings": 0,
+    "parse_error": false
+  },
+  "abyss_abysspe": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abyss/abysspe",
+    "errors": 0,
+    "warnings": 1,
     "parse_error": false
   },
   "adapterremoval": {
@@ -1791,7 +1797,7 @@
   "cnvkit_batch": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cnvkit/batch",
     "errors": 0,
-    "warnings": 0,
+    "warnings": 2,
     "parse_error": false
   },
   "cnvkit_call": {
@@ -6234,6 +6240,18 @@
     "warnings": 0,
     "parse_error": false
   },
+  "numorph_intensity": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/numorph/intensity",
+    "errors": 0,
+    "warnings": 2,
+    "parse_error": false
+  },
+  "numorph_resample": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/numorph/resample",
+    "errors": 0,
+    "warnings": 3,
+    "parse_error": false
+  },
   "oatk": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/oatk",
     "errors": 0,
@@ -7940,6 +7958,12 @@
   },
   "salsa2": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/salsa2",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "saltshaker_call": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/saltshaker/call",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

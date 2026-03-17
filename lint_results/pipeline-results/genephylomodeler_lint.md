@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-03-14T00:20:51.524023439Z
+- Generated: 2026-03-17T00:23:27.951198376Z
 - Nextflow version: 26.02.0-edge
 - Summary: 10 warnings
 
@@ -48,28 +48,28 @@
                                                                                                    ^^^^^^^
   ```
 
-- Warning: `workflows/genephylomodeler.nf:30:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/genephylomodeler.nf:31:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_versions = Channel.empty()
                     ^^^^^^^
   ```
 
-- Warning: `workflows/genephylomodeler.nf:37:19`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genephylomodeler.nf:38:19`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               meta, alignment, tree ->
                     ^^^^^^^^^
   ```
 
-- Warning: `workflows/genephylomodeler.nf:37:30`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genephylomodeler.nf:38:30`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               meta, alignment, tree ->
                                ^^^^
   ```
 
-- Warning: `workflows/genephylomodeler.nf:113:17`: Variable was declared but not used
+- Warning: `workflows/genephylomodeler.nf:120:17`: Variable was declared but not used
 
   ```nextflow
           ).set { ch_collated_versions }

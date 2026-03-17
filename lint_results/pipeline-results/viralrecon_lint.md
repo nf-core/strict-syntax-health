@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-03-14T00:24:11.992365946Z
+- Generated: 2026-03-17T00:29:32.214256151Z
 - Nextflow version: 26.02.0-edge
 - Summary: 57 errors, 93 warnings
 
@@ -23,53 +23,53 @@
 - Error: `conf/modules_illumina.config:14:1`: If statements cannot be mixed with config statements
 
   ```nextflow
-  if (!variant_caller) { variant_caller = params.protocol == 'amplicon' ? 'ivar' : 'bcftools' }
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  if (!variant_caller) { variant_caller = params.trim_primers ? 'ivar' : 'bcftools' }
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `conf/modules_illumina.config:16:1`: Variable declarations cannot be mixed with config statements
+- Error: `conf/modules_illumina.config:15:1`: Variable declarations cannot be mixed with config statements
 
   ```nextflow
   def assemblers = params.assemblers ? params.assemblers.split(',').collect{ it.trim().toLowerCase() } : []
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `conf/modules_illumina.config:59:1`: If statements cannot be mixed with config statements
+- Error: `conf/modules_illumina.config:58:1`: If statements cannot be mixed with config statements
 
   ```nextflow
   if (!params.skip_fastqc) {
   ^
   ```
 
-- Error: `conf/modules_illumina.config:72:1`: If statements cannot be mixed with config statements
+- Error: `conf/modules_illumina.config:71:1`: If statements cannot be mixed with config statements
 
   ```nextflow
   if (!params.skip_fastp) {
   ^
   ```
 
-- Error: `conf/modules_illumina.config:111:1`: If statements cannot be mixed with config statements
+- Error: `conf/modules_illumina.config:110:1`: If statements cannot be mixed with config statements
 
   ```nextflow
   if (!params.skip_kraken2) {
   ^
   ```
 
-- Error: `conf/modules_illumina.config:137:1`: If statements cannot be mixed with config statements
+- Error: `conf/modules_illumina.config:136:1`: If statements cannot be mixed with config statements
 
   ```nextflow
   if (!params.skip_variants) {
   ^
   ```
 
-- Error: `conf/modules_illumina.config:986:1`: If statements cannot be mixed with config statements
+- Error: `conf/modules_illumina.config:985:1`: If statements cannot be mixed with config statements
 
   ```nextflow
   if (!params.skip_assembly) {
   ^
   ```
 
-- Error: `conf/modules_illumina.config:1333:1`: If statements cannot be mixed with config statements
+- Error: `conf/modules_illumina.config:1332:1`: If statements cannot be mixed with config statements
 
   ```nextflow
   if (!params.skip_multiqc) {
@@ -177,7 +177,7 @@
 - Error: `main.nf:32:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
-  if (params.platform == 'illumina' && params.protocol == 'amplicon') {
+  if (params.platform == 'illumina' && params.trim_primers) {
   ^
   ```
 
@@ -328,7 +328,7 @@
           ^^^^^^^^^^^^
   ```
 
-- Error: `nextflow.config:263:26`: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/viralrecon/conf/test_full_sispa.config'
+- Error: `nextflow.config:264:26`: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/viralrecon/conf/test_full_sispa.config'
 
   ```nextflow
       test_full_sispa    { includeConfig 'conf/test_full_sispa.config'    }
@@ -398,7 +398,7 @@
                                  ^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/viralrecon.nf:108:5`: Unexpected input: 'include'
+- Error: `workflows/viralrecon.nf:116:5`: Unexpected input: 'include'
 
   ```nextflow
       include { PREPARE_GENOME_ILLUMINA as PREPARE_GENOME } from '../subworkflows/local/prepare_genome_illumina'

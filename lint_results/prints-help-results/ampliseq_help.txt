@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.02.0-edge
 
 Downloading plugin nf-schema@2.5.1
-Launching `./main.nf` [desperate_tesla] revision: 989f5de55d
+Launching `./main.nf` [lonely_rutherford] revision: 989f5de55d
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -156,6 +156,8 @@ unite-fungi, unite-fungi=10.0, unite-fungi=9.0, unite-fungi=8.3, ...)
   --cut_its                                [string]  Part of ITS region to use for taxonomy assignment: "full", "its1", or "its2"  (accepted: none, 
 full, its1, its2) [default: none]  
   --its_partial                            [integer] Cutoff for partial ITS sequences. Only full sequences by default. [default: 0] 
+  --its_extractor                          [string]  Tool for ITS region extraction: "itsx" or "itsxrust".  (accepted: itsx, itsxrust) [default: 
+itsx]  
 
 Multi-region taxonomic database
   --sidle_ref_taxonomy                     [string]  Name of supported database, and optionally also version number  (accepted: silva, silva=128, 
@@ -193,7 +195,7 @@ removed. [default: 1]
   --ancombc_formula                        [string]  Formula to perform differential abundance analysis with ANCOMBC 
   --ancombc_formula_reflvl                 [string]  Reference level for `--ancombc_formula` 
   --ancombc_effect_size                    [number]  Effect size threshold for differential abundance barplot for `--ancombc` and `--ancombc_formula` 
-[default: 1]  
+[default: 1.0]  
   --ancombc_significance                   [number]  Significance threshold for differential abundance barplot for `--ancombc` and `--ancombc_formula` 
 [default: 0.05]  
 

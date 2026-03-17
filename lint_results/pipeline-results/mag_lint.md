@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-03-13T00:20:59.775602693Z
+- Generated: 2026-03-17T00:24:24.754616180Z
 - Nextflow version: 26.02.0-edge
-- Summary: 31 warnings
+- Summary: 28 warnings
 
 ## :warning: Warnings
 
@@ -95,27 +95,6 @@
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
-  ```
-
-- Warning: `modules/nf-core/gunc/downloaddb/main.nf:32:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/gunc/mergecheckm/main.nf:22:9`: Variable was declared but not used
-
-  ```nextflow
-      def prefix = task.ext.prefix ?: "${meta.id}"
-          ^^^^^^
-  ```
-
-- Warning: `modules/nf-core/gunc/run/main.nf:24:9`: Variable was declared but not used
-
-  ```nextflow
-      def prefix = task.ext.prefix ?: "${meta.id}"
-          ^^^^^^
   ```
 
 - Warning: `modules/nf-core/gunzip/main.nf:43:9`: Variable was declared but not used

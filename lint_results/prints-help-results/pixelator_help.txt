@@ -1,0 +1,149 @@
+$ NXF_SYNTAX_PARSER=v2 nextflow run . --help
+
+
+ N E X T F L O W   ~  version 26.02.0-edge
+
+Launching `./main.nf` [sad_bell] revision: 7b71272a23
+
+WARN: Unrecognized config option 'validation.defaultIgnoreParams'
+WARN: Unrecognized config option 'validation.monochromeLogs'
+
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/pixelator 3.1.0dev
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/pixelator -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input                                                   [string] Path to comma-separated file containing information about the samples in the experiment. 
+  --input_basedir                                           [string] Path to a local or remote directory that is the "current working directory" for relative paths 
+defined in the input samplesheet  
+  --outdir                                                  [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --email                                                   [string] Email address for completion summary. 
+
+Amplicon options
+  --save_pna_amplicon_reads                                 [boolean] Save intermediate amplicon reads generated from the raw input reads. 
+  --pna_amplicon_mismatches                                 [number]  The number of mismatches allowed while anchoring reads using LBS sequences (in percentage of seen 
+LBS length) [default: 0.1; 0.0<=x<=0.5] [default: 0.1]  
+  --pna_amplicon_remove_polyg                               [boolean] Remove PolyG sequences (length of 10 or more) [default: true] 
+  --pna_amplicon_quality_cutoff                             [integer] Minimum average quality a read must have. Pass 0 to disable quality filtering. [default: 20] 
+ 
+  --pna_amplicon_low_complexity_filter                      [boolean] Enable filtering of amplicons with low complexity UMI sequences. [default: true] 
+  --pna_amplicon_low_complexity_threshold                   [number]  The threshold for determining if a UMI sequence is of low complexity and will be removed. 
+[0.5<=x<=1.0] [default: 0.8]  
+  --pna_amplicon_lbs_filter                                 [boolean] Enable filtering of amplicons with UMI sequences that show similarity to the LBS sequence. 
+[default: true]  
+  --pna_amplicon_lbs_filter_min_overlap                     [integer] The minimum overlap required in a semi-global alignment of a UMI sequence with the LBS regions. 
+Reads with less overlap will not be removed by the LBS filter. [4<=x<=28] [default: 8]  
+  --pna_amplicon_lbs_filter_error_rate                      [number]  The allowed error-rate in a semi-global alignment of a UMI sequence with the LBS regions. The error 
+rate is defined as a percentage of UMI length. [0.0<=x<=1.0] [default: 0.1]  
+
+Demux options
+  --pna_demux_mismatches                                    [integer] The number of mismatches allowed in marker barcodes. [default: 1] 
+  --pna_demux_output_chunk_reads                            [string]  The target number of reads in a single file of the partitioned demux output. [default: 50M] 
+  --pna_demux_output_max_chunks                             [integer] The maximum number of chunks that the demuxed ouput for each umi region will be split into 
+[default: 8]  
+  --pna_demux_strategy                                      [string]  The demux and collapsing strategy to use  (accepted: paired, independent) [default: independent] 
+ 
+  --save_pna_demux_parquet                                  [boolean] Save intermediate parquet files containing embeddings of all reads that contain valid antibody 
+barcodes.  
+  --save_pna_demux_passed_reads                             [boolean] Save intermediate FASTQC read files containing all reads that contain valid antibody barcodes. 
+ 
+  --save_pna_demux_failed_reads                             [boolean] Save intermediate FASTQC read files containing all reads that do not contain valid antibody 
+barcodes.  
+
+Collapse options
+  --pna_collapse_algorithm                                  [string]  The algorithm to use for collapsing.  (accepted: cluster, directional) [default: directional] 
+ 
+  --pna_collapse_mismatches                                 [integer] The number of mismatches allowed when collapsing (adjacency) [default: 2] 
+  --save_pna_collapsed_reads                                [boolean] Save an intermediate parquet file containing collapsed read information. 
+
+Graph options
+  --save_pna_graph_pixelfile                                [boolean] Save the PXL dataset after the graph stage. 
+  --pna_graph_multiplet_recovery                            [boolean] Activate the multiplet recovery using leiden community detection [default: true] 
+  --pna_graph_leiden_iterations                             [integer] Number of iterations for the leiden algorithm. [default: 1] 
+  --pna_graph_initial_stage_leiden_resolution               [number]  The resolution parameter for the leiden algorithm at the initial stage. [default: 1] 
+  --pna_graph_refinement_stage_leiden_resolution            [number]  The resolution parameter for the leiden algorithm at the refinement stage. [default: 0.01] 
+  --pna_graph_min_count                                     [number]  Discard edges with a read count below given value. Set to 1 to disable filtering. [default: 1] 
+ 
+  --pna_graph_min_component_size_in_refinement              [integer] The minimum component size to consider for refinement [default: 1000] 
+  --pna_graph_max_refinement_recursion_depth                [integer] The maximum recursion depth for the refinement algorithm. Set to 1 to disable refinement. 
+[default: 5]  
+  --pna_graph_initial_stage_max_edges_to_remove             [integer] The maximum number of edges to remove between components during the initial stage (iteration == 0) 
+of multiplet recovery.  
+  --pna_graph_refinement_stage_max_edges_to_remove          [integer] The maximum number of edges to remove between components during the refinement stage (iteration > 0) 
+of multiplet recovery. [default: 4]  
+  --pna_graph_initial_stage_max_edges_to_remove_relative    [number]  The maximum number of edges to remove between two components relative to the number of nodes in the 
+smaller of the two when during the initial stage (iteration == 0) of multiplet recovery.  
+  --pna_graph_refinement_stage_max_edges_to_remove_relative [number]  The maximum number of edges to remove between two components relative to the number of nodes in the 
+smaller of the two when during the refinement stage (iteration > 0) of multiplet recovery.  
+  --pna_graph_graph_min_component_size_to_prune             [integer] The minimum number of nodes in an potential new components in order for it to be pruned. 
+[default: 100]  
+  --pna_graph_component_size_min_threshold                  [integer] Components with fewer nodes than this will be filtered from the output data. Set to null to enable 
+automatic size filtering based on the data. [default: 8000]  
+
+Denoise options
+  --skip_denoise                                            [boolean] Skip denoise step 
+  --save_pna_denoise_pixelfile                              [boolean] Save the PXL dataset after the denoise stage. 
+  --pna_denoise_run_one_core_graph_denoising                [boolean] Activate the one-core graph denoising algorithm [default: true] 
+  --pna_denoise_pval_threshold                              [number]  The p-value threshold for the a marker to be considered significantly over-expressed in the one-core 
+layer of a component [default: 0.05]  
+  --pna_denoise_inflate_factor                              [number]  The inflate factor for the number of nodes from over-expressed markers to be removed from the 
+one-core layer of a component [default: 1.5]  
+
+Analysis options
+  --skip_analysis                                           [boolean] Skip analysis step 
+  --save_pna_analysis_pixelfile                             [boolean] Save the PXL dataset after the analysis stage. 
+  --pna_analysis_compute_proximity                          [boolean] Compute proximity scores [default: true] 
+  --pna_analysis_compute_k_cores                            [boolean] Compute k-core summary tables for each component [default: true] 
+  --pna_analysis_proximity_nbr_of_permutations              [integer] Number of permutations to use when computing the expected proximity scores [default: 100] 
+  --pna_analysis_compute_svd_var_explained                  [boolean] Compute the variance explained by the SVD components [default: true] 
+  --pna_analysis_svd_nbr_of_pivots                          [integer] Number of pivots to use for the SVD decomposition [default: 50] 
+
+Layout options
+  --skip_layout                                             [boolean] Skip layout step 
+  --pna_layout_no_node_marker_counts                        [boolean] Skip adding marker counts to the layout. 
+  --pna_layout_layout_algorithm                             [string]  Select a layout algorithm to use. This can be specified as a comma separated list to compute 
+multiple layouts. Possible values are: pmds, pmds_3d, wpmds, wpmds_3d.  (accepted: pmds_3d, 
+wpmds_3d) [default: wpmds_3d]  
+  --pna_layout_pmds_pivots                                  [integer] Number of pivots to use for the PMDS layout algorithm. Default: 50. More gives better results, but 
+increases computation time. [default: 50]  
+  --pna_layout_wpmds_k                                      [integer] The window size used when computing probability weights for the wpmds layout method. Only used when 
+layout algorithm is set to wpmds. [default: 5]  
+
+Experiment Summary options
+  --skip_experiment_summary                                 [boolean] Skip experiment summary generation 
+
+Global options
+  --pixelator_container                                     [string]  Override the container image reference to use for all steps using the `pixelator` command. 
+  --experiment_summary_container                            [string]  Override the container image to use for the experiment summary step. 
+  --save_all                                                [boolean] Save all intermediate results. 
+  --save_json                                               [boolean] Save all JSON report and metadata files generated by pixelator. [default: true] 
+
+Generic options
+  --help                                                    [boolean, string] Display the help message. 
+  --help_full                                               [boolean]         Display the full detailed help message. 
+  --show_hidden                                             [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 15 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The pipeline
+    https://doi.org/10.1101/2023.06.05.543770
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/pixelator/blob/master/CITATIONS.md
+
