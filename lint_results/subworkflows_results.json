@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "2406a1593c997c64b6bfc1ffd1031a84e7aed9b5",
+  "_repo_commit": "f9d237f71f3820c8ae0fc6b2de8769edf713cec6",
   "abundance_differential_filter": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/abundance_differential_filter",
     "errors": 0,
@@ -39,7 +39,7 @@
   "bam_dedup_umi": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_dedup_umi",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "bam_docounts_contamination_angsd": {
@@ -549,7 +549,7 @@
   "quant_tximport_summarizedexperiment": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/quant_tximport_summarizedexperiment",
     "errors": 0,
-    "warnings": 0,
+    "warnings": 1,
     "parse_error": false
   },
   "quantify_pseudo_alignment": {

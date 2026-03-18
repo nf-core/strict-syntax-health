@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T10:23:38.922312820Z
-- Nextflow version: 25.12.0-edge
-- Summary: 64 errors, 157 warnings
+- Generated: 2026-03-18T00:25:26.348379678Z
+- Nextflow version: 26.02.0-edge
+- Summary: 59 errors, 152 warnings
 
 ## :x: Errors
 
@@ -34,46 +34,11 @@
           ^^^^^^^^^
   ```
 
-- Error: `nextflow.config:372:35`: `manifest` is not defined
+- Error: `modules/nf-core/taxonkit/lineage/main.nf:44:13`: `prefix` is not defined
 
   ```nextflow
-  \033[0;35m  nf-core/metatdenovo ${manifest.version}\033[0m
-                                    ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:375:26`: `manifest` is not defined
-
-  ```nextflow
-          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
-                           ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:375:69`: `manifest` is not defined
-
-  ```nextflow
-          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
-                                                                      ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:375:186`: `manifest` is not defined
-
-  ```nextflow
-          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
-                                                                                                                                                                                           ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:384:22`: `validation` is not defined
-
-  ```nextflow
-          beforeText = validation.help.beforeText
-                       ^^^^^^^^^^
-  ```
-
-- Error: `nextflow.config:385:21`: `validation` is not defined
-
-  ```nextflow
-          afterText = validation.help.afterText
-                      ^^^^^^^^^^
+      touch ${prefix}.tsv
+              ^^^^^^
   ```
 
 - Error: `subworkflows/local/eggnog/main.nf:5:1`: Included name 'EGGNOG_DOWNLOAD' is not defined in module '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/metatdenovo/modules/local/eggnog/download/main.nf'
@@ -251,203 +216,203 @@
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/metatdenovo.nf:237:22`: `fwd` is already declared
+- Error: `workflows/metatdenovo.nf:239:22`: `fwd` is already declared
 
   ```nextflow
           .map { meta, fwd, rev -> [ meta, [ fwd, rev ] ] }
                        ^^^
   ```
 
-- Error: `workflows/metatdenovo.nf:237:27`: `rev` is already declared
+- Error: `workflows/metatdenovo.nf:239:27`: `rev` is already declared
 
   ```nextflow
           .map { meta, fwd, rev -> [ meta, [ fwd, rev ] ] }
                             ^^^
   ```
 
-- Error: `workflows/metatdenovo.nf:257:26`: `assembly_name` is not defined
+- Error: `workflows/metatdenovo.nf:259:26`: `assembly_name` is not defined
 
   ```nextflow
           .map { [ [ id:"${assembly_name}.${orfs_name}" ], it ] }
                            ^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/metatdenovo.nf:257:43`: `orfs_name` is not defined
+- Error: `workflows/metatdenovo.nf:259:43`: `orfs_name` is not defined
 
   ```nextflow
           .map { [ [ id:"${assembly_name}.${orfs_name}" ], it ] }
                                             ^^^^^^^^^
   ```
 
-- Error: `workflows/metatdenovo.nf:343:34`: `assembly_name` is not defined
+- Error: `workflows/metatdenovo.nf:345:34`: `assembly_name` is not defined
 
   ```nextflow
                   .value ( [ [ id: assembly_name ], file(params.user_assembly) ] )
                                    ^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/metatdenovo.nf:345:17`: `assembler` is not defined
+- Error: `workflows/metatdenovo.nf:347:17`: `assembler` is not defined
 
   ```nextflow
       } else if ( assembler == 'spades' ) {
                   ^^^^^^^^^
   ```
 
-- Error: `workflows/metatdenovo.nf:357:34`: `assembly_name` is not defined
+- Error: `workflows/metatdenovo.nf:359:34`: `assembly_name` is not defined
 
   ```nextflow
               .map { it -> [ [ id: assembly_name ], it, [], [] ] }
                                    ^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/metatdenovo.nf:372:17`: `assembler` is not defined
+- Error: `workflows/metatdenovo.nf:374:17`: `assembler` is not defined
 
   ```nextflow
       } else if ( assembler == 'megahit' ) {
                   ^^^^^^^^^
   ```
 
-- Error: `workflows/metatdenovo.nf:379:34`: `assembly_name` is not defined
+- Error: `workflows/metatdenovo.nf:381:34`: `assembly_name` is not defined
 
   ```nextflow
               .map { it -> [ [ id: assembly_name ], it ] }
                                    ^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/metatdenovo.nf:416:10`: `orf_caller` is not defined
+- Error: `workflows/metatdenovo.nf:418:10`: `orf_caller` is not defined
 
   ```nextflow
       if ( orf_caller == 'prodigal' ) {
            ^^^^^^^^^^
   ```
 
-- Error: `workflows/metatdenovo.nf:417:72`: `assembly_name` is not defined
+- Error: `workflows/metatdenovo.nf:419:72`: `assembly_name` is not defined
 
   ```nextflow
           PRODIGAL( ch_assembly_contigs.map { meta, contigs -> [ [id: "${assembly_name}.${orfs_name}"], contigs  ] } )
                                                                          ^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/metatdenovo.nf:417:89`: `orfs_name` is not defined
+- Error: `workflows/metatdenovo.nf:419:89`: `orfs_name` is not defined
 
   ```nextflow
           PRODIGAL( ch_assembly_contigs.map { meta, contigs -> [ [id: "${assembly_name}.${orfs_name}"], contigs  ] } )
                                                                                           ^^^^^^^^^
   ```
 
-- Error: `workflows/metatdenovo.nf:430:10`: `orf_caller` is not defined
+- Error: `workflows/metatdenovo.nf:432:10`: `orf_caller` is not defined
 
   ```nextflow
       if ( orf_caller == 'transdecoder' ) {
            ^^^^^^^^^^
   ```
 
-- Error: `workflows/metatdenovo.nf:431:77`: `assembly_name` is not defined
+- Error: `workflows/metatdenovo.nf:433:77`: `assembly_name` is not defined
 
   ```nextflow
           TRANSDECODER ( ch_assembly_contigs.map { meta, contigs -> [ [id: "${assembly_name}.${orfs_name}" ], contigs ] } )
                                                                               ^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/metatdenovo.nf:431:94`: `orfs_name` is not defined
+- Error: `workflows/metatdenovo.nf:433:94`: `orfs_name` is not defined
 
   ```nextflow
           TRANSDECODER ( ch_assembly_contigs.map { meta, contigs -> [ [id: "${assembly_name}.${orfs_name}" ], contigs ] } )
                                                                                                ^^^^^^^^^
   ```
 
-- Error: `workflows/metatdenovo.nf:448:45`: `assembly_name` is not defined
+- Error: `workflows/metatdenovo.nf:450:45`: `assembly_name` is not defined
 
   ```nextflow
           ch_gff = Channel.value ( [ [ id: "${assembly_name}.${orfs_name}" ], file(params.user_orfs_gff) ] )
                                               ^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/metatdenovo.nf:448:62`: `orfs_name` is not defined
+- Error: `workflows/metatdenovo.nf:450:62`: `orfs_name` is not defined
 
   ```nextflow
           ch_gff = Channel.value ( [ [ id: "${assembly_name}.${orfs_name}" ], file(params.user_orfs_gff) ] )
                                                                ^^^^^^^^^
   ```
 
-- Error: `workflows/metatdenovo.nf:449:49`: `assembly_name` is not defined
+- Error: `workflows/metatdenovo.nf:451:49`: `assembly_name` is not defined
 
   ```nextflow
           ch_protein = Channel.value ( [ [ id: "${assembly_name}.${orfs_name}" ], file(params.user_orfs_faa) ] )
                                                   ^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/metatdenovo.nf:449:66`: `orfs_name` is not defined
+- Error: `workflows/metatdenovo.nf:451:66`: `orfs_name` is not defined
 
   ```nextflow
           ch_protein = Channel.value ( [ [ id: "${assembly_name}.${orfs_name}" ], file(params.user_orfs_faa) ] )
                                                                    ^^^^^^^^^
   ```
 
-- Error: `workflows/metatdenovo.nf:467:22`: `ch_hmmrs` is not defined
+- Error: `workflows/metatdenovo.nf:469:22`: `ch_hmmrs` is not defined
 
   ```nextflow
       ch_hmmclassify = ch_hmmrs
                        ^^^^^^^^
   ```
 
-- Error: `workflows/metatdenovo.nf:469:48`: `assembly_name` is not defined
+- Error: `workflows/metatdenovo.nf:471:48`: `assembly_name` is not defined
 
   ```nextflow
           .map { hmm, meta, protein ->[ [ id: "${assembly_name}.${orfs_name}" ], hmm, protein ] }
                                                  ^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/metatdenovo.nf:469:65`: `orfs_name` is not defined
+- Error: `workflows/metatdenovo.nf:471:65`: `orfs_name` is not defined
 
   ```nextflow
           .map { hmm, meta, protein ->[ [ id: "${assembly_name}.${orfs_name}" ], hmm, protein ] }
                                                                   ^^^^^^^^^
   ```
 
-- Error: `workflows/metatdenovo.nf:494:43`: `assembly_name` is not defined
+- Error: `workflows/metatdenovo.nf:496:43`: `assembly_name` is not defined
 
   ```nextflow
           .map { featurecounts -> [ [ id:"${assembly_name}.${orfs_name}" ], featurecounts ] }
                                             ^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/metatdenovo.nf:494:60`: `orfs_name` is not defined
+- Error: `workflows/metatdenovo.nf:496:60`: `orfs_name` is not defined
 
   ```nextflow
           .map { featurecounts -> [ [ id:"${assembly_name}.${orfs_name}" ], featurecounts ] }
                                                              ^^^^^^^^^
   ```
 
-- Error: `workflows/metatdenovo.nf:566:5`: `DIAMOND_TAXONOMY` is not defined
+- Error: `workflows/metatdenovo.nf:568:5`: `DIAMOND_TAXONOMY` is not defined
 
   ```nextflow
       DIAMOND_TAXONOMY(
       ^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/metatdenovo.nf:572:39`: `DIAMOND_TAXONOMY` is not defined
+- Error: `workflows/metatdenovo.nf:574:39`: `DIAMOND_TAXONOMY` is not defined
 
   ```nextflow
       ch_versions     = ch_versions.mix(DIAMOND_TAXONOMY.out.versions)
                                         ^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/metatdenovo.nf:576:27`: `DIAMOND_TAXONOMY` is not defined
+- Error: `workflows/metatdenovo.nf:578:27`: `DIAMOND_TAXONOMY` is not defined
 
   ```nextflow
       ch_taxonkit_lineage = DIAMOND_TAXONOMY.out.tsv
                             ^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/metatdenovo.nf:625:37`: `assembly_name` is not defined
+- Error: `workflows/metatdenovo.nf:627:37`: `assembly_name` is not defined
 
   ```nextflow
               .map { it -> [ [ id: "${assembly_name}.${orfs_name}" ], it ] }
                                       ^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/metatdenovo.nf:625:54`: `orfs_name` is not defined
+- Error: `workflows/metatdenovo.nf:627:54`: `orfs_name` is not defined
 
   ```nextflow
               .map { it -> [ [ id: "${assembly_name}.${orfs_name}" ], it ] }
@@ -729,25 +694,11 @@
           ^^^^^
   ```
 
-- Warning: `modules/nf-core/taxonkit/lineage/main.nf:43:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
 - Warning: `modules/nf-core/trimgalore/main.nf:47:31`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           args_list.removeAll { it.toLowerCase().contains('_r2 ') }
                                 ^^
-  ```
-
-- Warning: `nextflow.config:375:129`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
-                                                                                                                                  ^^
   ```
 
 - Warning: `subworkflows/local/eggnog/main.nf:15:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -974,42 +925,28 @@
                                                                        ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_metatdenovo_pipeline/main.nf:31:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_metatdenovo_pipeline/main.nf:32:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       monochrome_logs   // boolean: Do not use coloured log outputs
       ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_metatdenovo_pipeline/main.nf:34:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_metatdenovo_pipeline/main.nf:35:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       input             //  string: Path to input samplesheet
       ^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_metatdenovo_pipeline/main.nf:39:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_metatdenovo_pipeline/main.nf:76:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      Channel
-      ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_metatdenovo_pipeline/main.nf:99:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/utils_nfcore_metatdenovo_pipeline/main.nf:128:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_diamond_paths = Channel.empty()
                          ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_metatdenovo_pipeline/main.nf:101:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/utils_nfcore_metatdenovo_pipeline/main.nf:130:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_diamond_paths = Channel
@@ -1028,13 +965,6 @@
   ```nextflow
       ch_versions = Channel.empty()
                     ^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      return ch_versions.unique().map { version -> processVersionsFromYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
-                                                                                                   ^^^^^^^
   ```
 
 - Warning: `workflows/metatdenovo.nf:23:1`: Variable was declared but not used
@@ -1135,420 +1065,420 @@
                                           ^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:194:25`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/metatdenovo.nf:196:25`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .filter { meta, f -> ! meta.single_end }
                           ^
   ```
 
-- Warning: `workflows/metatdenovo.nf:208:25`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/metatdenovo.nf:210:25`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .filter { meta, f -> ! meta.single_end }
                           ^
   ```
 
-- Warning: `workflows/metatdenovo.nf:222:25`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/metatdenovo.nf:224:25`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .filter { meta, f -> meta.single_end }
                           ^
   ```
 
-- Warning: `workflows/metatdenovo.nf:256:26`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/metatdenovo.nf:258:26`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .collect { meta, fasta -> meta }
                            ^^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:257:58`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/metatdenovo.nf:259:58`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { [ [ id:"${assembly_name}.${orfs_name}" ], it ] }
                                                            ^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:267:32`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/metatdenovo.nf:269:32`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                       .collect { meta, report ->
                                  ^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:274:30`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/metatdenovo.nf:276:30`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       .map { [ it ] }
                                ^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:282:52`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/metatdenovo.nf:284:52`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           BBMAP_BBDUK ( FASTQC_TRIMGALORE.out.reads, Channel.fromPath(params.sequence_filter).first() )
                                                      ^^^^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:284:55`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/metatdenovo.nf:286:55`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_bbduk_logs = BBMAP_BBDUK.out.log.collect { meta, log ->  log }.map { [ it ] }
                                                         ^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:284:83`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/metatdenovo.nf:286:83`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_bbduk_logs = BBMAP_BBDUK.out.log.collect { meta, log ->  log }.map { [ it ] }
                                                                                     ^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:287:78`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/metatdenovo.nf:289:78`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(BBMAP_BBDUK.out.log.collect{ meta, log -> log })
                                                                                ^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:290:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/metatdenovo.nf:292:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_bbduk_logs = Channel.empty()
                           ^^^^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:298:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/metatdenovo.nf:300:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_interleaved = Channel.empty()
                        ^^^^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:312:32`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/metatdenovo.nf:314:32`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                       .collect { meta, fastq -> fastq }
                                  ^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:313:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/metatdenovo.nf:315:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       .map { [ [id:'all_samples', single_end:true], it ] }
                                                                     ^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:315:68`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/metatdenovo.nf:317:68`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               ch_pe_reads_to_assembly = BBMAP_BBNORM.out.fastq.map { meta, fasta -> fasta }
                                                                      ^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:316:39`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/metatdenovo.nf:318:39`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               ch_se_reads_to_assembly = Channel.empty()
                                         ^^^^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:320:33`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/metatdenovo.nf:322:33`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   .filter { meta, fastq -> ! meta.single_end }
                                   ^^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:321:24`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/metatdenovo.nf:323:24`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   .map { meta, fastq -> fastq }
                          ^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:323:33`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/metatdenovo.nf:325:33`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   .filter { meta, fastq -> meta.single_end }
                                   ^^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:324:24`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/metatdenovo.nf:326:24`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   .map { meta, fastq -> fastq }
                          ^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:336:17`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/metatdenovo.nf:338:17`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
                   Channel
                   ^^^^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:338:59`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/metatdenovo.nf:340:59`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       .map { [ [ id:params.user_assembly ], it ] }
                                                             ^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:342:35`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/metatdenovo.nf:344:35`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               ch_assembly_contigs = Channel
                                     ^^^^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:395:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/metatdenovo.nf:397:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_gff      = Channel.empty()
                     ^^^^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:396:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/metatdenovo.nf:398:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_protein  = Channel.empty()
                     ^^^^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:417:45`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/metatdenovo.nf:419:45`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           PRODIGAL( ch_assembly_contigs.map { meta, contigs -> [ [id: "${assembly_name}.${orfs_name}"], contigs  ] } )
                                               ^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:431:50`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/metatdenovo.nf:433:50`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           TRANSDECODER ( ch_assembly_contigs.map { meta, contigs -> [ [id: "${assembly_name}.${orfs_name}" ], contigs ] } )
                                                    ^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:448:18`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/metatdenovo.nf:450:18`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_gff = Channel.value ( [ [ id: "${assembly_name}.${orfs_name}" ], file(params.user_orfs_gff) ] )
                    ^^^^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:449:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/metatdenovo.nf:451:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_protein = Channel.value ( [ [ id: "${assembly_name}.${orfs_name}" ], file(params.user_orfs_faa) ] )
                        ^^^^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:455:43`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/metatdenovo.nf:457:43`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       BBMAP_INDEX(ch_assembly_contigs.map { meta, contigs -> contigs })
                                             ^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:469:21`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/metatdenovo.nf:471:21`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { hmm, meta, protein ->[ [ id: "${assembly_name}.${orfs_name}" ], hmm, protein ] }
                       ^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:481:31`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/metatdenovo.nf:483:31`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .combine(ch_gff.map { meta, bam -> bam } )
                                 ^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:484:65`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/metatdenovo.nf:486:65`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .combine(BAM_SORT_STATS_SAMTOOLS.out.idxstats.collect { meta, idxstats -> idxstats }.map { [ it ] } )
                                                                   ^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:484:102`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/metatdenovo.nf:486:102`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .combine(BAM_SORT_STATS_SAMTOOLS.out.idxstats.collect { meta, idxstats -> idxstats }.map { [ it ] } )
                                                                                                        ^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:493:22`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/metatdenovo.nf:495:22`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .collect() { meta, featurecounts -> featurecounts }
                        ^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:498:72`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/metatdenovo.nf:500:72`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_fcs_for_stats      = COLLECT_FEATURECOUNTS.out.counts.collect { meta, tsv -> tsv }.map { [ it ] }
                                                                          ^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:498:99`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/metatdenovo.nf:500:99`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_fcs_for_stats      = COLLECT_FEATURECOUNTS.out.counts.collect { meta, tsv -> tsv }.map { [ it ] }
                                                                                                     ^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:499:68`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/metatdenovo.nf:501:68`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_fcs_for_summary    = COLLECT_FEATURECOUNTS.out.counts.map { meta, tsv -> tsv }
                                                                      ^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:503:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/metatdenovo.nf:505:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_merge_tables = Channel.empty()
                         ^^^^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:511:75`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/metatdenovo.nf:513:75`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_merge_tables = ch_merge_tables.mix ( EGGNOG.out.sumtable.map { meta, tsv -> tsv } )
                                                                             ^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:521:87`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/metatdenovo.nf:523:87`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_merge_tables = ch_merge_tables.mix ( KOFAMSCAN.out.kofamscan_summary.map { meta, tsv -> tsv } )
                                                                                         ^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:538:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/metatdenovo.nf:540:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_eukulele_db = Channel.empty()
                        ^^^^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:548:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/metatdenovo.nf:550:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               ch_eukulele_db = Channel
                                ^^^^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:550:26`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/metatdenovo.nf:552:26`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   .map { [ it, file(params.eukulele_dbpath) ] }
                            ^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:552:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/metatdenovo.nf:554:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               ch_eukulele_db = Channel.fromPath(params.eukulele_dbpath, checkIfExists: true)
                                ^^^^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:553:30`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/metatdenovo.nf:555:30`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   .map { [ [], it ] }
                                ^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:560:89`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/metatdenovo.nf:562:89`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_merge_tables = ch_merge_tables.mix ( SUB_EUKULELE.out.taxonomy_summary.map { meta, tsv -> tsv } )
                                                                                           ^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:568:32`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/metatdenovo.nf:570:32`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_diamond_dbs.map { [ it[0], it[1] ] },
                                  ^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:568:39`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/metatdenovo.nf:570:39`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_diamond_dbs.map { [ it[0], it[1] ] },
                                         ^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:617:87`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/metatdenovo.nf:619:87`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_merge_tables = ch_merge_tables.mix ( SUM_DIAMONDTAX.out.taxonomy_summary.map { meta, tsv -> tsv } )
                                                                                         ^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:631:13`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/metatdenovo.nf:633:13`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               Channel.empty()
               ^^^^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:632:60`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/metatdenovo.nf:634:60`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   .mix ( MERGE_TABLES.out.merged_table.map { meta, tblout -> [ tblout ] } )
                                                              ^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:654:32`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/metatdenovo.nf:674:32`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_multiqc_config        = Channel.fromPath(
                                  ^^^^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:657:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/metatdenovo.nf:677:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           Channel.fromPath(params.multiqc_config, checkIfExists: true) :
           ^^^^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:658:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/metatdenovo.nf:678:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           Channel.empty()
           ^^^^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:660:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/metatdenovo.nf:680:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           Channel.fromPath(params.multiqc_logo, checkIfExists: true) :
           ^^^^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:661:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/metatdenovo.nf:681:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           Channel.empty()
           ^^^^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:665:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/metatdenovo.nf:685:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_params))
                             ^^^^^^^
   ```
 
-- Warning: `workflows/metatdenovo.nf:671:45`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/metatdenovo.nf:691:45`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_methods_description                = Channel.value(

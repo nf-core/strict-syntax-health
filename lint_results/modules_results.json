@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "2406a1593c997c64b6bfc1ffd1031a84e7aed9b5",
+  "_repo_commit": "f9d237f71f3820c8ae0fc6b2de8769edf713cec6",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -33,7 +33,7 @@
   "abyss_abysspe": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abyss/abysspe",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "adapterremoval": {
@@ -1485,7 +1485,7 @@
   "cellbender_merge": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cellbender/merge",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "cellbender_removebackground": {
@@ -1797,7 +1797,7 @@
   "cnvkit_batch": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cnvkit/batch",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "parse_error": false
   },
   "cnvkit_call": {
@@ -2349,7 +2349,7 @@
   "deepcell_mesmer": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/deepcell/mesmer",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "deepsomatic": {
@@ -5529,7 +5529,7 @@
   "metabuli_build": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/metabuli/build",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "metacache_build": {
@@ -5601,7 +5601,7 @@
   "metaspace_converter": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/metaspace/converter",
     "errors": 0,
-    "warnings": 5,
+    "warnings": 0,
     "parse_error": false
   },
   "metaspace_download": {
@@ -6243,13 +6243,13 @@
   "numorph_intensity": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/numorph/intensity",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "parse_error": false
   },
   "numorph_resample": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/numorph/resample",
     "errors": 0,
-    "warnings": 3,
+    "warnings": 0,
     "parse_error": false
   },
   "oatk": {
@@ -7401,7 +7401,7 @@
   "purgedups_purgedups": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/purgedups/purgedups",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "purgedups_splitfa": {
@@ -7964,6 +7964,18 @@
   },
   "saltshaker_call": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/saltshaker/call",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "saltshaker_classify": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/saltshaker/classify",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "saltshaker_plot": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/saltshaker/plot",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -10044,6 +10056,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "vcfexpress": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/vcfexpress",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "vcflib_vcfbreakmulti": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/vcflib/vcfbreakmulti",
     "errors": 0,
@@ -10172,6 +10190,12 @@
   },
   "viennarna_rnalfold": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/viennarna/rnalfold",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "viralconsensus": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/viralconsensus",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

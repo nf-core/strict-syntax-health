@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-03-17T00:22:38.526339808Z
+- Generated: 2026-03-18T00:23:52.731075303Z
 - Nextflow version: 26.02.0-edge
-- Summary: 66 warnings
+- Summary: 70 warnings
 
 ## :warning: Warnings
 
@@ -46,6 +46,34 @@
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_ampliseq_pipeline/main.nf:358:63`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          if (sectionValue instanceof Map && sectionValue.any { it.value instanceof Map && it.value.containsKey('file') }) {
+                                                                ^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_ampliseq_pipeline/main.nf:358:90`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          if (sectionValue instanceof Map && sectionValue.any { it.value instanceof Map && it.value.containsKey('file') }) {
+                                                                                           ^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_ampliseq_pipeline/main.nf:392:46`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                      occurrences.collect { "${it.section}['${it.key}']" }.join(", ")
+                                               ^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_ampliseq_pipeline/main.nf:392:61`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                      occurrences.collect { "${it.section}['${it.key}']" }.join(", ")
+                                                              ^^
   ```
 
 - Warning: `subworkflows/nf-core/fasta_newick_epang_gappa/main.nf:22:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead

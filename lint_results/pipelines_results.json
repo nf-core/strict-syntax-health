@@ -29,9 +29,9 @@
   "ampliseq": {
     "full_name": "nf-core/ampliseq",
     "html_url": "https://github.com/nf-core/ampliseq",
-    "commit": "bade6c43081c2c55cf25b34fd7765254ec043364",
+    "commit": "1e57860ac4195342391f1370c2c2df35887e1560",
     "errors": 0,
-    "warnings": 66,
+    "warnings": 70,
     "parse_error": false,
     "prints_help": true
   },
@@ -200,7 +200,7 @@
   "deepmutscan": {
     "full_name": "nf-core/deepmutscan",
     "html_url": "https://github.com/nf-core/deepmutscan",
-    "commit": "48c28ac7d867a1b68661f1ca7f40a5fd0b7c3f0d",
+    "commit": "58d322ebae8fcebcb6110d344cb63826049a8ec7",
     "errors": 43,
     "warnings": 89,
     "parse_error": false,
@@ -272,11 +272,11 @@
   "drop": {
     "full_name": "nf-core/drop",
     "html_url": "https://github.com/nf-core/drop",
-    "commit": "d5d543f88a12d9fe32d2ed1141015af453c9ed9f",
-    "errors": 6,
-    "warnings": 68,
+    "commit": "11452b2e3570868ad988800e883f09afd9778d5e",
+    "errors": 0,
+    "warnings": 0,
     "parse_error": false,
-    "prints_help": null
+    "prints_help": true
   },
   "drugresponseeval": {
     "full_name": "nf-core/drugresponseeval",
@@ -506,7 +506,7 @@
   "longraredisease": {
     "full_name": "nf-core/longraredisease",
     "html_url": "https://github.com/nf-core/longraredisease",
-    "commit": "1b8d1b6f89b20ddb1bcea8d510df1313d61ecde4",
+    "commit": "69d56269a83207ce74cdd3018a157b857f68eb8b",
     "errors": 0,
     "warnings": 177,
     "parse_error": false,
@@ -587,9 +587,9 @@
   "metatdenovo": {
     "full_name": "nf-core/metatdenovo",
     "html_url": "https://github.com/nf-core/metatdenovo",
-    "commit": "ed472fb6abf7987fcbc6314c1c8a9f49295ecd66",
-    "errors": 64,
-    "warnings": 157,
+    "commit": "6028fa0682a7176930e46eaa8fae2d51bdc7e1e5",
+    "errors": 59,
+    "warnings": 152,
     "parse_error": false,
     "prints_help": null
   },
@@ -623,9 +623,9 @@
   "mhcquant": {
     "full_name": "nf-core/mhcquant",
     "html_url": "https://github.com/nf-core/mhcquant",
-    "commit": "29dc6f1cae75c10ca7a0b4ff10aeb87b3e0e2585",
+    "commit": "dd9a7fda3f77743b53b3592f9db8a9343bf39f66",
     "errors": 18,
-    "warnings": 49,
+    "warnings": 47,
     "parse_error": false,
     "prints_help": null
   },
@@ -776,7 +776,7 @@
   "phaseimpute": {
     "full_name": "nf-core/phaseimpute",
     "html_url": "https://github.com/nf-core/phaseimpute",
-    "commit": "b0c9c99f8c6088f5c9b44d8aee7fabd7915e28a9",
+    "commit": "0d35515eb1c7c5a93ed30acad0a43c3a7888ecd3",
     "errors": 0,
     "warnings": 4,
     "parse_error": false,
@@ -794,7 +794,7 @@
   "pixelator": {
     "full_name": "nf-core/pixelator",
     "html_url": "https://github.com/nf-core/pixelator",
-    "commit": "4a80801d2a84ce3b822ecba642e6c839f37971e7",
+    "commit": "7baa67f080d636ae621ba136b15bc12bfb4b43d3",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -821,7 +821,7 @@
   "proteinfold": {
     "full_name": "nf-core/proteinfold",
     "html_url": "https://github.com/nf-core/proteinfold",
-    "commit": "cf05d5a047a7fb811e3316b69a458a36830f1369",
+    "commit": "708c10d9d3ad28a3d1d06ec9d68b80c1da439959",
     "errors": 9,
     "warnings": 2,
     "parse_error": false,
@@ -857,9 +857,9 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "b56676083d6b0768bd48e56359b635174b8aadce",
+    "commit": "b51dcf8af39cccc6b9268395e78d7a8850d04650",
     "errors": 1,
-    "warnings": 0,
+    "warnings": 3,
     "parse_error": false,
     "prints_help": null
   },
@@ -1001,7 +1001,7 @@
   "scrnaseq": {
     "full_name": "nf-core/scrnaseq",
     "html_url": "https://github.com/nf-core/scrnaseq",
-    "commit": "1f657d0874c0f9f853b8491da11a8e01594d568b",
+    "commit": "c09a60f532291eeeea894596cec69eaa5fd2e649",
     "errors": 22,
     "warnings": 94,
     "parse_error": false,
@@ -1082,7 +1082,7 @@
   "stableexpression": {
     "full_name": "nf-core/stableexpression",
     "html_url": "https://github.com/nf-core/stableexpression",
-    "commit": "c33e663439ba28793614258e13b4a1d860fbea76",
+    "commit": "16565c2e5dbaad4e564a322fe8b0953f4d0f29ec",
     "errors": 0,
     "warnings": 34,
     "parse_error": false,
@@ -1154,7 +1154,7 @@
   "variantprioritization": {
     "full_name": "nf-core/variantprioritization",
     "html_url": "https://github.com/nf-core/variantprioritization",
-    "commit": "5c1ce70e036569406cd14bf18997ef8549ddaed5",
+    "commit": "0746a52a584679c1b9c94b30e31e18c8e2c31ff5",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1181,8 +1181,8 @@
   "viralrecon": {
     "full_name": "nf-core/viralrecon",
     "html_url": "https://github.com/nf-core/viralrecon",
-    "commit": "6ed385bbdfbe181ccb235b50486399df2d1cd228",
-    "errors": 57,
+    "commit": "0278256d595709b011328a71b94d852b2dde081c",
+    "errors": 44,
     "warnings": 93,
     "parse_error": false,
     "prints_help": null

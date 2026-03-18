@@ -1,3 +1,17 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
-Error: Timeout after 120s
+
+ N E X T F L O W   ~  version 26.02.0-edge
+
+Downloading plugin nf-co2footprint@1.0.0-beta
+Launching `./main.nf` [loquacious_archimedes] revision: e673fbe6df
+
+WARN: Unrecognized config option 'co2footprint.traceFile'
+WARN: Unrecognized config option 'co2footprint.reportFile'
+WARN: Unrecognized config option 'co2footprint.summaryFile'
+WARN: Unrecognized config option 'validation.defaultIgnoreParams'
+WARN: Unrecognized config option 'validation.monochromeLogs'
+WARN: Failed to render CO2e footprint report -- see the log file for details
+ERROR ~ Unable to create help message: Specified param 'true' does not exist in JSON schema.
+
+ -- Check script 'subworkflows/nf-core/utils_nfschema_plugin/main.nf' at line: 41 or see '.nextflow.log' file for more details

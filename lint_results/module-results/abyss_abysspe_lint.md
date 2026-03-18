@@ -1,14 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-03-17T00:30:02.319553+00:00
+- Generated: 2026-03-18T00:28:25.103730+00:00
 - Nextflow version: 26.02.0-edge
-- Summary: 1 warning
-
-## :warning: Warnings
-
-- Warning: `modules/nf-core/abyss/abysspe/main.nf:54:9`: Variable was declared but not used
-
-    ```nextflow
-        def args = task.ext.args ?: ''
-            ^^^^^^^^^^
-    ```
+- Summary: No issues found

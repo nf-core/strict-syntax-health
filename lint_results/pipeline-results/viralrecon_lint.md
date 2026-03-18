@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-03-17T00:29:32.214256151Z
+- Generated: 2026-03-18T00:27:53.345941889Z
 - Nextflow version: 26.02.0-edge
-- Summary: 57 errors, 93 warnings
+- Summary: 44 errors, 93 warnings
 
 ## :x: Errors
 
@@ -263,97 +263,6 @@
   ```nextflow
       PIPELINE_COMPLETION (
       ^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `main.nf:176:29`: `Nextflow` is not defined
-
-  ```nextflow
-                              Nextflow.error("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
-                              ^^^^^^^^
-  ```
-
-- Error: `main.nf:186:25`: `Nextflow` is not defined
-
-  ```nextflow
-                          Nextflow.error("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
-                          ^^^^^^^^
-  ```
-
-- Error: `main.nf:195:21`: `Nextflow` is not defined
-
-  ```nextflow
-                      Nextflow.error("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
-                      ^^^^^^^^
-  ```
-
-- Error: `modules/local/sierralocal/main.nf:28:9`: `hivdb_xml` is already declared
-
-  ```nextflow
-      def hivdb_xml           = params.hivdb_xml    ? "-xml  ${params.hivdb_xml}"            : ''
-          ^^^^^^^^^
-  ```
-
-- Error: `modules/local/sierralocal/main.nf:29:9`: `apobec_drm` is already declared
-
-  ```nextflow
-      def apobec_drm          = params.apobec_drm   ? "-json ${params.apobec_drm}"           : ''
-          ^^^^^^^^^^
-  ```
-
-- Error: `modules/local/sierralocal/main.nf:30:9`: `apobec_csv` is already declared
-
-  ```nextflow
-      def apobec_csv          = params.apobec_csv   ? "-apobec_csv ${params.apobec_csv}"     : ''
-          ^^^^^^^^^^
-  ```
-
-- Error: `modules/local/sierralocal/main.nf:31:9`: `unusual_csv` is already declared
-
-  ```nextflow
-      def unusual_csv         = params.unusual_csv  ? "-unusual_csv ${params.unusual_csv}"   : ''
-          ^^^^^^^^^^^
-  ```
-
-- Error: `modules/local/sierralocal/main.nf:32:9`: `sdrms_csv` is already declared
-
-  ```nextflow
-      def sdrms_csv           = params.sdrms_csv    ? "-sdrms_csv ${params.sdrms_csv}"       : ''
-          ^^^^^^^^^
-  ```
-
-- Error: `modules/local/sierralocal/main.nf:33:9`: `mutation_csv` is already declared
-
-  ```nextflow
-      def mutation_csv        = params.mutation_csv ? "-mutation_csv ${params.mutation_csv}" : ''
-          ^^^^^^^^^^^^
-  ```
-
-- Error: `nextflow.config:264:26`: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/viralrecon/conf/test_full_sispa.config'
-
-  ```nextflow
-      test_full_sispa    { includeConfig 'conf/test_full_sispa.config'    }
-                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/consensus_bcftools/main.nf:73:26`: `vcf` is already declared
-
-  ```nextflow
-              .map { meta, vcf, tbi, fasta -> tuple(meta, vcf, tbi, fasta, []) }
-                           ^^^
-  ```
-
-- Error: `subworkflows/local/consensus_bcftools/main.nf:73:31`: `tbi` is already declared
-
-  ```nextflow
-              .map { meta, vcf, tbi, fasta -> tuple(meta, vcf, tbi, fasta, []) }
-                                ^^^
-  ```
-
-- Error: `subworkflows/local/consensus_bcftools/main.nf:73:36`: `fasta` is already declared
-
-  ```nextflow
-              .map { meta, vcf, tbi, fasta -> tuple(meta, vcf, tbi, fasta, []) }
-                                     ^^^^^
   ```
 
 - Error: `subworkflows/local/fastq_trim_fastp_fastqc/main.nf:15:26`: Unexpected input: 'new'

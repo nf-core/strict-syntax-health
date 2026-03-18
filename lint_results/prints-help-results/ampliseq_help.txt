@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.02.0-edge
 
 Downloading plugin nf-schema@2.5.1
-Launching `./main.nf` [lonely_rutherford] revision: 989f5de55d
+Launching `./main.nf` [ecstatic_allen] revision: 989f5de55d
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -35,6 +35,8 @@ Main arguments
   --multiregion                            [string]  Path to multi-region definition sheet, for multi-region analysis with Sidle 
   --outdir                                 [string]  The output directory where the results will be saved. You have to use absolute paths to storage on 
 Cloud infrastructure.  
+  --ref_taxonomy_storage                   [string]  The directory where the reference taxonomy databases will be saved for re-use. Absolute paths to 
+storage on Cloud infrastructure.  
   --save_intermediates                     [boolean] Save intermediate results such as QIIME2's qza and qzv files 
   --email                                  [string]  Email address for completion summary. 
 

@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-03-05T00:23:22.549094881Z
+- Generated: 2026-03-18T00:25:34.898277297Z
 - Nextflow version: 26.02.0-edge
-- Summary: 18 errors, 49 warnings
+- Summary: 18 errors, 47 warnings
 
 ## :x: Errors
 
@@ -365,32 +365,18 @@
                          ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/rescore/main.nf:53:99`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/rescore/main.nf:56:100`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          ch_multiqc_files = ch_multiqc_files.mix(OPENMS_PERCOLATORADAPTER.out.feature_weights.map{ meta, feature_weights -> feature_weights })
-                                                                                                    ^^^^
+          ch_multiqc_files = ch_multiqc_files.mix(OPENMS_PERCOLATORADAPTER.out.feature_weights.map { meta, feature_weights -> feature_weights })
+                                                                                                     ^^^^
   ```
 
-- Warning: `subworkflows/local/rescore/main.nf:80:28`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/rescore/main.nf:77:25`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-                      .map { preset, group_meta, local_idxml, global_filtered_idxml ->
-                             ^^^^^^
-  ```
-
-- Warning: `subworkflows/local/speclib/main.nf:45:20`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-              .map { meta, psmpkl -> [[id: "global"], psmpkl] }
-                     ^^^^
-  ```
-
-- Warning: `subworkflows/local/speclib/main.nf:49:20`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-              .map { meta, peakpkl -> [[id: "global"], peakpkl] }
-                     ^^^^
+                  ).map { preset, group_meta, local_idxml, global_filtered_idxml ->
+                          ^^^^^^
   ```
 
 - Warning: `workflows/mhcquant.nf:84:89`: Parameter was not used -- prefix with `_` to suppress warning
