@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.02.0-edge
+ N E X T F L O W   ~  version 26.03.0-edge
 
-Launching `./main.nf` [hungry_turing] revision: fdca6dfe38
+Launching `./main.nf` [high_brazil] revision: fdca6dfe38
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -208,5 +208,5 @@ Generic options
     https://doi.org/10.1038/s41587-020-0439-x
 
 * Software dependencies
-    https://github.com/nf-core/taxprofiler/blob/master/CITATIONS.md
+    https://github.com/nf-core/taxprofiler/blob/main/CITATIONS.md
 

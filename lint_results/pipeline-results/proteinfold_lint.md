@@ -1,19 +1,19 @@
 # Nextflow lint results
 
-- Generated: 2026-03-18T00:26:32.917741210Z
-- Nextflow version: 26.02.0-edge
+- Generated: 2026-03-19T00:24:17.498234542Z
+- Nextflow version: 26.03.0-edge
 - Summary: 9 errors, 2 warnings
 
 ## :x: Errors
 
-- Error: `conf/modules_alphafold2.config:96:9`: If statements cannot be mixed with config statements
+- Error: `conf/modules_alphafold2.config:94:9`: If statements cannot be mixed with config statements
 
   ```nextflow
           if (params.use_gpu) {
           ^
   ```
 
-- Error: `conf/modules_alphafold2.config:158:9`: If statements cannot be mixed with config statements
+- Error: `conf/modules_alphafold2.config:154:9`: If statements cannot be mixed with config statements
 
   ```nextflow
           if (params.use_gpu) {

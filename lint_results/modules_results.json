@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "f9d237f71f3820c8ae0fc6b2de8769edf713cec6",
+  "_repo_commit": "519a0a8df9196bdd4a45d5ba5757413bfd8de593",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -1868,6 +1868,12 @@
   },
   "cnvpytor_view": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cnvpytor/view",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "cobiontid_kmercounter": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cobiontid/kmercounter",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

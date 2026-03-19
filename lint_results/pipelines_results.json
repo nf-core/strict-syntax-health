@@ -11,8 +11,8 @@
   "airrflow": {
     "full_name": "nf-core/airrflow",
     "html_url": "https://github.com/nf-core/airrflow",
-    "commit": "aee871f52314f7bee723f8aef17db9e53abd692f",
-    "errors": 150,
+    "commit": "08871c62c57540cdfe79680abfcb31cc2e43fd33",
+    "errors": 188,
     "warnings": 135,
     "parse_error": false,
     "prints_help": null
@@ -218,11 +218,11 @@
   "demultiplex": {
     "full_name": "nf-core/demultiplex",
     "html_url": "https://github.com/nf-core/demultiplex",
-    "commit": "177547436fd6f38aaa50f83201a975340488329b",
+    "commit": "a0693e8baeb6e787795d1d3b400dacf5e3fc324c",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
-    "prints_help": true
+    "prints_help": false
   },
   "denovotranscript": {
     "full_name": "nf-core/denovotranscript",
@@ -362,7 +362,7 @@
   "genephylomodeler": {
     "full_name": "nf-core/genephylomodeler",
     "html_url": "https://github.com/nf-core/genephylomodeler",
-    "commit": "770821d7b4a3fe84135eba4df4f1dc28c3419011",
+    "commit": "3ee447ffeff31b0641e2ddedd2b69afa37c82127",
     "errors": 0,
     "warnings": 10,
     "parse_error": false,
@@ -506,9 +506,9 @@
   "longraredisease": {
     "full_name": "nf-core/longraredisease",
     "html_url": "https://github.com/nf-core/longraredisease",
-    "commit": "69d56269a83207ce74cdd3018a157b857f68eb8b",
+    "commit": "564e525a46c94e9bb817971eb32386b7ae2f5c6e",
     "errors": 0,
-    "warnings": 177,
+    "warnings": 181,
     "parse_error": false,
     "prints_help": false
   },
@@ -821,7 +821,7 @@
   "proteinfold": {
     "full_name": "nf-core/proteinfold",
     "html_url": "https://github.com/nf-core/proteinfold",
-    "commit": "708c10d9d3ad28a3d1d06ec9d68b80c1da439959",
+    "commit": "1f27d25afabd15b3c7932715eef040d85353d376",
     "errors": 9,
     "warnings": 2,
     "parse_error": false,
@@ -857,11 +857,11 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "b51dcf8af39cccc6b9268395e78d7a8850d04650",
-    "errors": 1,
+    "commit": "33a4ef34f5fd83294acef750032373d24b2a7873",
+    "errors": 0,
     "warnings": 3,
     "parse_error": false,
-    "prints_help": null
+    "prints_help": false
   },
   "rarevariantburden": {
     "full_name": "nf-core/rarevariantburden",
@@ -929,7 +929,7 @@
   "rnafusion": {
     "full_name": "nf-core/rnafusion",
     "html_url": "https://github.com/nf-core/rnafusion",
-    "commit": "b5e8c5e13595456537312ae2bf57cf63777ee792",
+    "commit": "34eb35b2ee44c4b39a7d3f10d9db37f4d355e9d9",
     "errors": 13,
     "warnings": 116,
     "parse_error": false,
@@ -1091,7 +1091,7 @@
   "taxprofiler": {
     "full_name": "nf-core/taxprofiler",
     "html_url": "https://github.com/nf-core/taxprofiler",
-    "commit": "23350ea6819ba60f825b8dc7ae8ec04b0b7ef800",
+    "commit": "96d561b3bd3d791ba35c21fd82a68f860fa3b4ef",
     "errors": 0,
     "warnings": 96,
     "parse_error": false,

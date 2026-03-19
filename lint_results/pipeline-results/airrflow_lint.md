@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-03-12T00:16:28.793339385Z
-- Nextflow version: 26.02.0-edge
-- Summary: 150 errors, 135 warnings
+- Generated: 2026-03-19T00:23:00.548913972Z
+- Nextflow version: 26.03.0-edge
+- Summary: 188 errors, 135 warnings
 
 ## :x: Errors
 
@@ -203,6 +203,27 @@
   ```
 
 - Error: `conf/test_full.config:29:25`: `pipelines_testdata_base_path` is not defined
+
+  ```nextflow
+      reference_igblast = pipelines_testdata_base_path + 'database-cache/igblast_base.zip'
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `conf/test_genotyping.config:24:13`: `pipelines_testdata_base_path` is not defined
+
+  ```nextflow
+      input = pipelines_testdata_base_path + 'testdata-genotyping/test_genotyping_metadata.tsv'
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `conf/test_genotyping.config:25:23`: `pipelines_testdata_base_path` is not defined
+
+  ```nextflow
+      reference_fasta = pipelines_testdata_base_path + 'database-cache/imgtdb_base.zip'
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `conf/test_genotyping.config:26:25`: `pipelines_testdata_base_path` is not defined
 
   ```nextflow
       reference_igblast = pipelines_testdata_base_path + 'database-cache/igblast_base.zip'
@@ -475,6 +496,41 @@
       ^
   ```
 
+- Error: `modules/local/enchantr/bayesian_genotype_inference.nf:6:13`: `for` loops are no longer supported
+
+  ```nextflow
+              for (param in args.keySet().sort()){
+              ^^^
+  ```
+
+- Error: `modules/local/enchantr/bayesian_genotype_inference.nf:6:18`: `param` is not defined
+
+  ```nextflow
+              for (param in args.keySet().sort()){
+                   ^^^^^
+  ```
+
+- Error: `modules/local/enchantr/bayesian_genotype_inference.nf:7:29`: `param` is not defined
+
+  ```nextflow
+                  value = args[param].toString()
+                              ^^^^^^^
+  ```
+
+- Error: `modules/local/enchantr/bayesian_genotype_inference.nf:11:30`: `param` is not defined
+
+  ```nextflow
+                  s = s + ",'"+param+"'="+value
+                               ^^^^^
+  ```
+
+- Error: `modules/local/enchantr/bayesian_genotype_inference.nf:24:5`: Invalid process directive
+
+  ```nextflow
+      if (workflow.profile.tokenize(',').intersect(['conda', 'mamba']).size() >= 1) {
+      ^
+  ```
+
 - Error: `modules/local/enchantr/clonal_assignment.nf:6:13`: `for` loops are no longer supported
 
   ```nextflow
@@ -517,11 +573,25 @@
       ^
   ```
 
+- Error: `modules/local/enchantr/collapse_duplicates.nf:23:32`: `asString` is not defined
+
+  ```nextflow
+      def args = task.ext.args ? asString(task.ext.args) : ''
+                                 ^^^^^^^^
+  ```
+
 - Error: `modules/local/enchantr/detect_contamination.nf:8:5`: Invalid process directive
 
   ```nextflow
       if (workflow.profile.tokenize(',').intersect(['conda', 'mamba']).size() >= 1) {
       ^
+  ```
+
+- Error: `modules/local/enchantr/detect_contamination.nf:23:32`: `asString` is not defined
+
+  ```nextflow
+      def args = task.ext.args ? asString(task.ext.args) : ''
+                                 ^^^^^^^^
   ```
 
 - Error: `modules/local/enchantr/dowser_lineages.nf:6:13`: `for` loops are no longer supported
@@ -594,7 +664,112 @@
       ^
   ```
 
+- Error: `modules/local/enchantr/novel_allele_inference.nf:6:13`: `for` loops are no longer supported
+
+  ```nextflow
+              for (param in args.keySet().sort()){
+              ^^^
+  ```
+
+- Error: `modules/local/enchantr/novel_allele_inference.nf:6:18`: `param` is not defined
+
+  ```nextflow
+              for (param in args.keySet().sort()){
+                   ^^^^^
+  ```
+
+- Error: `modules/local/enchantr/novel_allele_inference.nf:7:29`: `param` is not defined
+
+  ```nextflow
+                  value = args[param].toString()
+                              ^^^^^^^
+  ```
+
+- Error: `modules/local/enchantr/novel_allele_inference.nf:11:30`: `param` is not defined
+
+  ```nextflow
+                  s = s + ",'"+param+"'="+value
+                               ^^^^^
+  ```
+
+- Error: `modules/local/enchantr/novel_allele_inference.nf:24:5`: Invalid process directive
+
+  ```nextflow
+      if (workflow.profile.tokenize(',').intersect(['conda', 'mamba']).size() >= 1) {
+      ^
+  ```
+
+- Error: `modules/local/enchantr/reassign_alleles.nf:6:13`: `for` loops are no longer supported
+
+  ```nextflow
+              for (param in args.keySet().sort()){
+              ^^^
+  ```
+
+- Error: `modules/local/enchantr/reassign_alleles.nf:6:18`: `param` is not defined
+
+  ```nextflow
+              for (param in args.keySet().sort()){
+                   ^^^^^
+  ```
+
+- Error: `modules/local/enchantr/reassign_alleles.nf:7:29`: `param` is not defined
+
+  ```nextflow
+                  value = args[param].toString()
+                              ^^^^^^^
+  ```
+
+- Error: `modules/local/enchantr/reassign_alleles.nf:11:30`: `param` is not defined
+
+  ```nextflow
+                  s = s + ",'"+param+"'="+value
+                               ^^^^^
+  ```
+
+- Error: `modules/local/enchantr/reassign_alleles.nf:24:5`: Invalid process directive
+
+  ```nextflow
+      if (workflow.profile.tokenize(',').intersect(['conda', 'mamba']).size() >= 1) {
+      ^
+  ```
+
 - Error: `modules/local/enchantr/remove_chimeric.nf:9:5`: Invalid process directive
+
+  ```nextflow
+      if (workflow.profile.tokenize(',').intersect(['conda', 'mamba']).size() >= 1) {
+      ^
+  ```
+
+- Error: `modules/local/enchantr/repertoire_analysis.nf:6:13`: `for` loops are no longer supported
+
+  ```nextflow
+              for (param in args.keySet().sort()){
+              ^^^
+  ```
+
+- Error: `modules/local/enchantr/repertoire_analysis.nf:6:18`: `param` is not defined
+
+  ```nextflow
+              for (param in args.keySet().sort()){
+                   ^^^^^
+  ```
+
+- Error: `modules/local/enchantr/repertoire_analysis.nf:7:29`: `param` is not defined
+
+  ```nextflow
+                  value = args[param].toString()
+                              ^^^^^^^
+  ```
+
+- Error: `modules/local/enchantr/repertoire_analysis.nf:11:30`: `param` is not defined
+
+  ```nextflow
+                  s = s + ",'"+param+"'="+value
+                               ^^^^^
+  ```
+
+- Error: `modules/local/enchantr/repertoire_analysis.nf:25:5`: Invalid process directive
 
   ```nextflow
       if (workflow.profile.tokenize(',').intersect(['conda', 'mamba']).size() >= 1) {
@@ -648,6 +823,13 @@
   ```nextflow
       if (workflow.profile.tokenize(',').intersect(['conda', 'mamba']).size() >= 1) {
       ^
+  ```
+
+- Error: `modules/local/presto/presto_assemblepairs.nf:10:10`: Unexpected input: '}'
+
+  ```nextflow
+           }"
+           ^
   ```
 
 - Error: `modules/local/presto/presto_maskprimers_align.nf:28:9`: `barcode` is already declared
@@ -706,11 +888,11 @@
                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/clonal_analysis.nf:83:38`: Unexpected input: '"'
+- Error: `subworkflows/local/clonal_analysis.nf:81:48`: Unexpected input: '"'
 
   ```nextflow
-      ch_repertoire.map{ it -> [ it[0]."${params.cloneby}",
-                                       ^
+      ch_repertoire_reference.map{ it -> [ it[0]."${params.cloneby}",
+                                                 ^
   ```
 
 - Error: `subworkflows/local/databases.nf:5:1`: Invalid workflow definition -- check for missing or out-of-order section labels
@@ -720,39 +902,88 @@
   ^
   ```
 
-- Error: `subworkflows/local/fastq_input_check.nf:66:35`: Unexpected input: '"'
+- Error: `subworkflows/local/fastq_input_check.nf:67:35`: Unexpected input: '"'
 
   ```nextflow
       meta.collapseby_group   = col."${params.collapseby}"
                                     ^
   ```
 
-- Error: `subworkflows/local/presto_sans_umi.nf:67:13`: Incorrect number of call arguments, expected 8 but received 6
+- Error: `subworkflows/local/novel_alleles_and_genotyping.nf:26:24`: Unexpected input: '"'
 
   ```nextflow
-              PRESTO_MASKPRIMERS_ALIGN_SANSUMI_FWD(
-              ^
+                  [ meta."${genotypeby}",
+                         ^
   ```
 
-- Error: `subworkflows/local/presto_sans_umi.nf:75:13`: Incorrect number of call arguments, expected 8 but received 6
+- Error: `subworkflows/local/presto_sans_umi.nf:8:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/airrflow/modules/local/presto/presto_assemblepairs.nf'
 
   ```nextflow
-              PRESTO_MASKPRIMERS_ALIGN_SANSUMI_REV(
-              ^
+  include { PRESTO_ASSEMBLEPAIRS               as  PRESTO_ASSEMBLEPAIRS_SANS_UMI }               from '../../modules/local/presto/presto_assemblepairs'
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/presto_sans_umi.nf:84:13`: Incorrect number of call arguments, expected 8 but received 6
+- Error: `subworkflows/local/presto_sans_umi.nf:48:5`: `PRESTO_ASSEMBLEPAIRS_SANS_UMI` is not defined
 
   ```nextflow
-              PRESTO_MASKPRIMERS_ALIGN_SANSUMI_FWD(
-              ^
+      PRESTO_ASSEMBLEPAIRS_SANS_UMI (
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/presto_sans_umi.nf:92:13`: Incorrect number of call arguments, expected 8 but received 6
+- Error: `subworkflows/local/presto_sans_umi.nf:51:35`: `PRESTO_ASSEMBLEPAIRS_SANS_UMI` is not defined
 
   ```nextflow
-              PRESTO_MASKPRIMERS_ALIGN_SANSUMI_REV(
-              ^
+      ch_versions = ch_versions.mix(PRESTO_ASSEMBLEPAIRS_SANS_UMI.out.versions)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `subworkflows/local/presto_sans_umi.nf:55:9`: `PRESTO_ASSEMBLEPAIRS_SANS_UMI` is not defined
+
+  ```nextflow
+          PRESTO_ASSEMBLEPAIRS_SANS_UMI.out.reads
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `subworkflows/local/presto_sans_umi.nf:210:33`: `PRESTO_ASSEMBLEPAIRS_SANS_UMI` is not defined
+
+  ```nextflow
+      presto_assemblepairs_logs = PRESTO_ASSEMBLEPAIRS_SANS_UMI.out.logs.collect()
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `subworkflows/local/presto_umi.nf:31:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/airrflow/modules/local/presto/presto_assemblepairs.nf'
+
+  ```nextflow
+  include { PRESTO_ASSEMBLEPAIRS  as  PRESTO_ASSEMBLEPAIRS_UMI          }    from '../../modules/local/presto/presto_assemblepairs'
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `subworkflows/local/presto_umi.nf:480:9`: `PRESTO_ASSEMBLEPAIRS_UMI` is not defined
+
+  ```nextflow
+          PRESTO_ASSEMBLEPAIRS_UMI (
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `subworkflows/local/presto_umi.nf:483:39`: `PRESTO_ASSEMBLEPAIRS_UMI` is not defined
+
+  ```nextflow
+          ch_versions = ch_versions.mix(PRESTO_ASSEMBLEPAIRS_UMI.out.versions)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `subworkflows/local/presto_umi.nf:484:34`: `PRESTO_ASSEMBLEPAIRS_UMI` is not defined
+
+  ```nextflow
+          ch_assemblepairs_reads = PRESTO_ASSEMBLEPAIRS_UMI.out.reads
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `subworkflows/local/presto_umi.nf:485:33`: `PRESTO_ASSEMBLEPAIRS_UMI` is not defined
+
+  ```nextflow
+          ch_assemblepairs_logs = PRESTO_ASSEMBLEPAIRS_UMI.out.logs
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Error: `subworkflows/local/rnaseq_input.nf:3:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/airrflow/subworkflows/local/fastq_input_check.nf'
@@ -944,112 +1175,147 @@
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/airrflow.nf:45:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/airrflow/subworkflows/local/fastq_input_check.nf'
+- Error: `workflows/airrflow.nf:43:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/airrflow/subworkflows/local/novel_alleles_and_genotyping.nf'
+
+  ```nextflow
+  include { NOVEL_ALLELES_AND_GENOTYPING   } from '../subworkflows/local/novel_alleles_and_genotyping'
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `workflows/airrflow.nf:46:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/airrflow/subworkflows/local/fastq_input_check.nf'
 
   ```nextflow
   include { FASTQ_INPUT_CHECK             } from '../subworkflows/local/fastq_input_check'
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/airrflow.nf:82:9`: `DATABASES` is not defined
+- Error: `workflows/airrflow.nf:83:9`: `DATABASES` is not defined
 
   ```nextflow
           DATABASES()
           ^^^^^^^^^
   ```
 
-- Error: `workflows/airrflow.nf:119:21`: `DATABASES` is not defined
+- Error: `workflows/airrflow.nf:120:21`: `DATABASES` is not defined
 
   ```nextflow
                       DATABASES.out.igblast.collect()
                       ^^^^^^^^^
   ```
 
-- Error: `workflows/airrflow.nf:144:21`: `DATABASES` is not defined
+- Error: `workflows/airrflow.nf:145:21`: `DATABASES` is not defined
 
   ```nextflow
                       DATABASES.out.igblast.collect()
                       ^^^^^^^^^
   ```
 
-- Error: `workflows/airrflow.nf:214:13`: `DATABASES` is not defined
+- Error: `workflows/airrflow.nf:215:13`: `DATABASES` is not defined
 
   ```nextflow
               DATABASES.out.igblast.collect(),
               ^^^^^^^^^
   ```
 
-- Error: `workflows/airrflow.nf:215:13`: `DATABASES` is not defined
+- Error: `workflows/airrflow.nf:216:13`: `DATABASES` is not defined
 
   ```nextflow
               DATABASES.out.reference_fasta.collect()
               ^^^^^^^^^
   ```
 
-- Error: `workflows/airrflow.nf:251:13`: `CLONAL_ANALYSIS` is not defined
+- Error: `workflows/airrflow.nf:252:13`: `NOVEL_ALLELES_AND_GENOTYPING` is not defined
 
   ```nextflow
-              CLONAL_ANALYSIS(
-              ^^^^^^^^^^^^^^^
+              NOVEL_ALLELES_AND_GENOTYPING(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/airrflow.nf:254:17`: `ch_report_logo_img` is not defined
+- Error: `workflows/airrflow.nf:256:17`: `ch_report_logo_img` is not defined
 
   ```nextflow
                   ch_report_logo_img.collect().ifEmpty([])
                   ^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/airrflow.nf:256:44`: `CLONAL_ANALYSIS` is not defined
+- Error: `workflows/airrflow.nf:258:44`: `NOVEL_ALLELES_AND_GENOTYPING` is not defined
+
+  ```nextflow
+              ch_versions = ch_versions.mix( NOVEL_ALLELES_AND_GENOTYPING.out.versions )
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `workflows/airrflow.nf:259:39`: `NOVEL_ALLELES_AND_GENOTYPING` is not defined
+
+  ```nextflow
+              ch_repertoire_reference = NOVEL_ALLELES_AND_GENOTYPING.out.repertoire_reference
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `workflows/airrflow.nf:268:13`: `CLONAL_ANALYSIS` is not defined
+
+  ```nextflow
+              CLONAL_ANALYSIS(
+              ^^^^^^^^^^^^^^^
+  ```
+
+- Error: `workflows/airrflow.nf:270:17`: `ch_report_logo_img` is not defined
+
+  ```nextflow
+                  ch_report_logo_img.collect().ifEmpty([])
+                  ^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `workflows/airrflow.nf:272:44`: `CLONAL_ANALYSIS` is not defined
 
   ```nextflow
               ch_versions = ch_versions.mix( CLONAL_ANALYSIS.out.versions)
                                              ^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/airrflow.nf:263:17`: `DATABASES` is not defined
+- Error: `workflows/airrflow.nf:279:17`: `DATABASES` is not defined
 
   ```nextflow
                   DATABASES.out.igblast.collect()
                   ^^^^^^^^^
   ```
 
-- Error: `workflows/airrflow.nf:292:17`: `ch_report_rmd` is not defined
+- Error: `workflows/airrflow.nf:308:17`: `ch_report_rmd` is not defined
 
   ```nextflow
                   ch_report_rmd.collect(),
                   ^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/airrflow.nf:293:17`: `ch_report_css` is not defined
+- Error: `workflows/airrflow.nf:309:17`: `ch_report_css` is not defined
 
   ```nextflow
                   ch_report_css.collect(),
                   ^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/airrflow.nf:294:17`: `ch_report_logo` is not defined
+- Error: `workflows/airrflow.nf:310:17`: `ch_report_logo` is not defined
 
   ```nextflow
                   ch_report_logo.collect(),
                   ^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/airrflow.nf:349:17`: `ch_multiqc_config` is not defined
+- Error: `workflows/airrflow.nf:365:17`: `ch_multiqc_config` is not defined
 
   ```nextflow
                   ch_multiqc_config.toList(),
                   ^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/airrflow.nf:350:17`: `ch_multiqc_custom_config` is not defined
+- Error: `workflows/airrflow.nf:366:17`: `ch_multiqc_custom_config` is not defined
 
   ```nextflow
                   ch_multiqc_custom_config.toList(),
                   ^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/airrflow.nf:351:17`: `ch_report_logo` is not defined
+- Error: `workflows/airrflow.nf:367:17`: `ch_report_logo` is not defined
 
   ```nextflow
                   ch_report_logo.toList(),
@@ -1653,350 +1919,350 @@
                         ^^^^^^^
   ```
 
-- Warning: `workflows/airrflow.nf:77:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/airrflow.nf:78:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_versions = Channel.empty()
                         ^^^^^^^
   ```
 
-- Warning: `workflows/airrflow.nf:78:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/airrflow.nf:79:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_reassign_logs = Channel.empty()
                              ^^^^^^^
   ```
 
-- Warning: `workflows/airrflow.nf:79:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/airrflow.nf:80:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_input_check_logs = Channel.empty()
                                 ^^^^^^^
   ```
 
-- Warning: `workflows/airrflow.nf:95:17`: Variable was declared but not used
+- Warning: `workflows/airrflow.nf:96:17`: Variable was declared but not used
 
   ```nextflow
                   ch_cellranger_airr                      = SC_RAW_INPUT.out.airr
                   ^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/airrflow.nf:96:17`: Variable was declared but not used
+- Warning: `workflows/airrflow.nf:97:17`: Variable was declared but not used
 
   ```nextflow
                   ch_cellranger_out                       = SC_RAW_INPUT.out.outs
                   ^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/airrflow.nf:100:59`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-                  ch_presto_filterseq_logs                = Channel.empty()
-                                                            ^^^^^^^
-  ```
-
 - Warning: `workflows/airrflow.nf:101:59`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-                  ch_presto_maskprimers_logs              = Channel.empty()
+                  ch_presto_filterseq_logs                = Channel.empty()
                                                             ^^^^^^^
   ```
 
 - Warning: `workflows/airrflow.nf:102:59`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-                  ch_presto_pairseq_logs                  = Channel.empty()
+                  ch_presto_maskprimers_logs              = Channel.empty()
                                                             ^^^^^^^
   ```
 
 - Warning: `workflows/airrflow.nf:103:59`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-                  ch_presto_clustersets_logs              = Channel.empty()
+                  ch_presto_pairseq_logs                  = Channel.empty()
                                                             ^^^^^^^
   ```
 
 - Warning: `workflows/airrflow.nf:104:59`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-                  ch_presto_buildconsensus_logs           = Channel.empty()
+                  ch_presto_clustersets_logs              = Channel.empty()
                                                             ^^^^^^^
   ```
 
 - Warning: `workflows/airrflow.nf:105:59`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-                  ch_presto_postconsensus_pairseq_logs    = Channel.empty()
+                  ch_presto_buildconsensus_logs           = Channel.empty()
                                                             ^^^^^^^
   ```
 
 - Warning: `workflows/airrflow.nf:106:59`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-                  ch_presto_assemblepairs_logs            = Channel.empty()
+                  ch_presto_postconsensus_pairseq_logs    = Channel.empty()
                                                             ^^^^^^^
   ```
 
 - Warning: `workflows/airrflow.nf:107:59`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-                  ch_presto_collapseseq_logs              = Channel.empty()
+                  ch_presto_assemblepairs_logs            = Channel.empty()
                                                             ^^^^^^^
   ```
 
 - Warning: `workflows/airrflow.nf:108:59`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-                  ch_presto_splitseq_logs                 = Channel.empty()
+                  ch_presto_collapseseq_logs              = Channel.empty()
                                                             ^^^^^^^
   ```
 
 - Warning: `workflows/airrflow.nf:109:59`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-                  ch_fastp_html                           = Channel.empty()
+                  ch_presto_splitseq_logs                 = Channel.empty()
                                                             ^^^^^^^
   ```
 
 - Warning: `workflows/airrflow.nf:110:59`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-                  ch_fastp_json                           = Channel.empty()
+                  ch_fastp_html                           = Channel.empty()
                                                             ^^^^^^^
   ```
 
 - Warning: `workflows/airrflow.nf:111:59`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-                  ch_fastqc_postassembly_mqc              = Channel.empty()
+                  ch_fastp_json                           = Channel.empty()
                                                             ^^^^^^^
   ```
 
 - Warning: `workflows/airrflow.nf:112:59`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-                  ch_tsv_files                            = Channel.empty()
+                  ch_fastqc_postassembly_mqc              = Channel.empty()
                                                             ^^^^^^^
   ```
 
-- Warning: `workflows/airrflow.nf:127:59`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/airrflow.nf:113:59`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-                  ch_presto_filterseq_logs                = Channel.empty()
+                  ch_tsv_files                            = Channel.empty()
                                                             ^^^^^^^
   ```
 
 - Warning: `workflows/airrflow.nf:128:59`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-                  ch_presto_maskprimers_logs              = Channel.empty()
+                  ch_presto_filterseq_logs                = Channel.empty()
                                                             ^^^^^^^
   ```
 
 - Warning: `workflows/airrflow.nf:129:59`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-                  ch_presto_pairseq_logs                  = Channel.empty()
+                  ch_presto_maskprimers_logs              = Channel.empty()
                                                             ^^^^^^^
   ```
 
 - Warning: `workflows/airrflow.nf:130:59`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-                  ch_presto_clustersets_logs              = Channel.empty()
+                  ch_presto_pairseq_logs                  = Channel.empty()
                                                             ^^^^^^^
   ```
 
 - Warning: `workflows/airrflow.nf:131:59`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-                  ch_presto_buildconsensus_logs           = Channel.empty()
+                  ch_presto_clustersets_logs              = Channel.empty()
                                                             ^^^^^^^
   ```
 
 - Warning: `workflows/airrflow.nf:132:59`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-                  ch_presto_postconsensus_pairseq_logs    = Channel.empty()
+                  ch_presto_buildconsensus_logs           = Channel.empty()
                                                             ^^^^^^^
   ```
 
 - Warning: `workflows/airrflow.nf:133:59`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-                  ch_presto_assemblepairs_logs            = Channel.empty()
+                  ch_presto_postconsensus_pairseq_logs    = Channel.empty()
                                                             ^^^^^^^
   ```
 
 - Warning: `workflows/airrflow.nf:134:59`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-                  ch_presto_collapseseq_logs              = Channel.empty()
+                  ch_presto_assemblepairs_logs            = Channel.empty()
                                                             ^^^^^^^
   ```
 
 - Warning: `workflows/airrflow.nf:135:59`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-                  ch_presto_splitseq_logs                 = Channel.empty()
+                  ch_presto_collapseseq_logs              = Channel.empty()
                                                             ^^^^^^^
   ```
 
-- Warning: `workflows/airrflow.nf:138:59`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/airrflow.nf:136:59`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-                  ch_fastqc_postassembly_mqc              = Channel.empty()
+                  ch_presto_splitseq_logs                 = Channel.empty()
                                                             ^^^^^^^
   ```
 
 - Warning: `workflows/airrflow.nf:139:59`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-                  ch_tsv_files                            = Channel.empty()
+                  ch_fastqc_postassembly_mqc              = Channel.empty()
                                                             ^^^^^^^
   ```
 
-- Warning: `workflows/airrflow.nf:162:59`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/airrflow.nf:140:59`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
                   ch_tsv_files                            = Channel.empty()
                                                             ^^^^^^^
   ```
 
-- Warning: `workflows/airrflow.nf:183:32`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/airrflow.nf:163:59`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+                  ch_tsv_files                            = Channel.empty()
+                                                            ^^^^^^^
+  ```
+
+- Warning: `workflows/airrflow.nf:184:32`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
                   ch_tsv_files = Channel.empty()
                                  ^^^^^^^
   ```
 
-- Warning: `workflows/airrflow.nf:185:37`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/airrflow.nf:186:37`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
                   ch_fasta_from_tsv = Channel.empty()
                                       ^^^^^^^
   ```
 
-- Warning: `workflows/airrflow.nf:192:52`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/airrflow.nf:193:52`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               ch_presto_filterseq_logs             = Channel.empty()
                                                      ^^^^^^^
   ```
 
-- Warning: `workflows/airrflow.nf:193:52`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/airrflow.nf:194:52`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               ch_presto_maskprimers_logs           = Channel.empty()
                                                      ^^^^^^^
   ```
 
-- Warning: `workflows/airrflow.nf:194:52`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/airrflow.nf:195:52`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               ch_presto_pairseq_logs               = Channel.empty()
                                                      ^^^^^^^
   ```
 
-- Warning: `workflows/airrflow.nf:195:52`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/airrflow.nf:196:52`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               ch_presto_clustersets_logs           = Channel.empty()
                                                      ^^^^^^^
   ```
 
-- Warning: `workflows/airrflow.nf:196:52`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/airrflow.nf:197:52`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               ch_presto_buildconsensus_logs        = Channel.empty()
                                                      ^^^^^^^
   ```
 
-- Warning: `workflows/airrflow.nf:197:52`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/airrflow.nf:198:52`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               ch_presto_postconsensus_pairseq_logs = Channel.empty()
                                                      ^^^^^^^
   ```
 
-- Warning: `workflows/airrflow.nf:198:52`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/airrflow.nf:199:52`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               ch_presto_assemblepairs_logs         = Channel.empty()
                                                      ^^^^^^^
   ```
 
-- Warning: `workflows/airrflow.nf:199:52`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/airrflow.nf:200:52`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               ch_presto_collapseseq_logs           = Channel.empty()
                                                      ^^^^^^^
   ```
 
-- Warning: `workflows/airrflow.nf:200:52`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/airrflow.nf:201:52`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               ch_presto_splitseq_logs              = Channel.empty()
                                                      ^^^^^^^
   ```
 
-- Warning: `workflows/airrflow.nf:201:52`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/airrflow.nf:202:52`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               ch_fastp_html                        = Channel.empty()
                                                      ^^^^^^^
   ```
 
-- Warning: `workflows/airrflow.nf:202:52`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/airrflow.nf:203:52`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               ch_fastp_json                        = Channel.empty()
                                                      ^^^^^^^
   ```
 
-- Warning: `workflows/airrflow.nf:203:52`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/airrflow.nf:204:52`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               ch_fastqc_postassembly_mqc           = Channel.empty()
                                                      ^^^^^^^
   ```
 
-- Warning: `workflows/airrflow.nf:303:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/airrflow.nf:319:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       def topic_versions = Channel.topic("versions")
                            ^^^^^^^
   ```
 
-- Warning: `workflows/airrflow.nf:334:35`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/airrflow.nf:350:35`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_params))
                                     ^^^^^^^
   ```
 
-- Warning: `workflows/airrflow.nf:337:39`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/airrflow.nf:353:39`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               ch_methods_description  = Channel.value(methodsDescriptionText(ch_multiqc_custom_methods_description))
                                         ^^^^^^^
   ```
 
-- Warning: `workflows/airrflow.nf:339:32`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/airrflow.nf:355:32`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               ch_multiqc_files = Channel.empty()
                                  ^^^^^^^
   ```
 
-- Warning: `workflows/airrflow.nf:345:88`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/airrflow.nf:361:88`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files = ch_multiqc_files.mix(ch_fastqc_postassembly_mqc.collect{it[1]}.ifEmpty([]))
                                                                                          ^^
   ```
 
-- Warning: `workflows/airrflow.nf:357:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/airrflow.nf:373:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               multiqc_report = Channel.empty()
