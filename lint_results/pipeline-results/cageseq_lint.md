@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-02-20T00:20:13.974298489Z
-- Nextflow version: 26.01.1-edge
-- Summary: 62 errors, 69 warnings
+- Generated: 2026-03-20T00:23:40.837196161Z
+- Nextflow version: 26.03.0-edge
+- Summary: 56 errors, 61 warnings
 
 ## :x: Errors
 
@@ -48,7 +48,7 @@
       ^
   ```
 
-- Error: `modules/local/forge_bsgenome/main.nf:13:5`: The `script:` or `exec:` label is required when other sections are present
+- Error: `modules/local/forge_bsgenome/main.nf:14:5`: The `script:` or `exec:` label is required when other sections are present
 
   ```nextflow
       """
@@ -88,20 +88,6 @@
   ```nextflow
           line="${meta.id},${meta.single_end},${PWD}/${params.outdir}/samtools_sort/${bw_or_bam[0]},${meta.id}"
                                                 ^^^
-  ```
-
-- Error: `modules/nf-core/samtools/view/main.nf:64:9`: `index` is already declared
-
-  ```nextflow
-      def index = args.contains("--write-index") ? "touch ${prefix}.csi" : ""
-          ^^^^^
-  ```
-
-- Error: `modules/nf-core/star/align/main.nf:44:20`: Unexpected input: ','
-
-  ```nextflow
-      def reads1 = [], reads2 = []
-                     ^
   ```
 
 - Error: `subworkflows/local/cager/main.nf:93:5`: `id` was assigned but not declared
@@ -207,6 +193,20 @@
   ```nextflow
       return [id, single_end, str1_bw, new_name]
                                        ^^^^^^^^
+  ```
+
+- Error: `subworkflows/local/deduplication/main.nf:21:9`: Incorrect number of call arguments, expected 3 but received 1
+
+  ```nextflow
+          SORT_FOR_FIXMATE (
+          ^
+  ```
+
+- Error: `subworkflows/local/deduplication/main.nf:29:9`: Incorrect number of call arguments, expected 3 but received 1
+
+  ```nextflow
+          SORT_AFTER_FIXMATE(ch_bam_to_sort)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Error: `subworkflows/local/input_from_folder/main.nf:30:17`: Variables in a closure should be declared with `def`
@@ -356,63 +356,21 @@
                   ^^^
   ```
 
-- Error: `subworkflows/local/star/main.nf:5:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/cageseq/modules/nf-core/star/align/main.nf'
-
-  ```nextflow
-  include { STAR_ALIGN } from '../../../modules/nf-core/star/align/main.nf'
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/star/main.nf:37:9`: `STAR_ALIGN` is not defined
-
-  ```nextflow
-          STAR_ALIGN (
-          ^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/star/main.nf:45:39`: `STAR_ALIGN` is not defined
-
-  ```nextflow
-          ch_versions = ch_versions.mix(STAR_ALIGN.out.versions)
-                                        ^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/star/main.nf:47:22`: `STAR_ALIGN` is not defined
-
-  ```nextflow
-          ch_aligned = STAR_ALIGN.out.bam_sorted_aligned
-                       ^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/star/main.nf:49:49`: `STAR_ALIGN` is not defined
-
-  ```nextflow
-          ch_multiqc_files = ch_multiqc_files.mix(STAR_ALIGN.out.log_final.collect{it[1]})
-                                                  ^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/star/main.nf:55:16`: `STAR_ALIGN` is not defined
-
-  ```nextflow
-          wigs = STAR_ALIGN.out.wig
-                 ^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/star/main.nf:57:51`: `wigs` is already declared
+- Error: `subworkflows/local/star/main.nf:55:51`: `wigs` is already declared
 
   ```nextflow
               wigs_for_conversion = wigs.map{ meta, wigs ->
                                                     ^^^^
   ```
 
-- Error: `subworkflows/local/star/main.nf:59:17`: Variables in a closure should be declared with `def`
+- Error: `subworkflows/local/star/main.nf:57:17`: Variables in a closure should be declared with `def`
 
   ```nextflow
                   wigs_to_use = [wigs[0], wigs[1]]
                   ^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/star/main.nf:63:51`: `wigs` is already declared
+- Error: `subworkflows/local/star/main.nf:61:51`: `wigs` is already declared
 
   ```nextflow
               wigs_for_conversion = wigs.map{ meta, wigs ->
@@ -426,14 +384,14 @@
   ^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/customcage.nf:194:17`: Variables in a closure should be declared with `def`
+- Error: `workflows/customcage.nf:188:17`: Variables in a closure should be declared with `def`
 
   ```nextflow
                   file1 = paths[0]
                   ^^^^^
   ```
 
-- Error: `workflows/customcage.nf:195:17`: Variables in a closure should be declared with `def`
+- Error: `workflows/customcage.nf:189:17`: Variables in a closure should be declared with `def`
 
   ```nextflow
                   file2 = paths[1]
@@ -491,70 +449,42 @@
           ^^^^
   ```
 
-- Warning: `modules/nf-core/cat/fastq/main.nf:22:60`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `modules/nf-core/ucsc/wigtobigwig/main.nf:47:9`: Variable was declared but not used
 
   ```nextflow
-      def readList = reads instanceof List ? reads.collect { it.toString() } : [reads.toString()]
-                                                             ^^
+      def prefix = task.ext.prefix ?: "${meta.id}"
+          ^^^^^^
   ```
 
-- Warning: `modules/nf-core/cat/fastq/main.nf:58:60`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def readList = reads instanceof List ? reads.collect { it.toString() } : [reads.toString()]
-                                                             ^^
-  ```
-
-- Warning: `modules/nf-core/samtools/idxstats/main.nf:16:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/samtools/stats/main.nf:22:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/trimgalore/main.nf:41:31`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          args_list.removeAll { it.toLowerCase().contains('_r2 ') }
-                                ^^
-  ```
-
-- Warning: `subworkflows/local/bowtie2/main.nf:19:52`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/bowtie2/main.nf:18:52`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           sample_meta = ch_reads_to_align.map{ meta, fastq ->
                                                      ^^^^^
   ```
 
-- Warning: `subworkflows/local/bowtie2/main.nf:28:74`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/bowtie2/main.nf:26:74`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               ch_index = sample_meta.combine(BOWTIE2_BUILD.out.index.map { genome_name, index -> index } )
                                                                            ^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bowtie2/main.nf:30:59`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/bowtie2/main.nf:28:59`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               ch_index = sample_meta.combine(ch_index.map { genome_name, index -> index })
                                                             ^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bowtie2/main.nf:34:59`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/bowtie2/main.nf:32:59`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               ch_fasta = sample_meta.combine(ch_fasta.map { genome_name, fasta -> fasta } )
                                                             ^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bowtie2/main.nf:46:79`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/bowtie2/main.nf:44:79`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(BOWTIE2_ALIGN.out.log.collect{it[1]})
@@ -596,189 +526,147 @@
                                        ^^
   ```
 
-- Warning: `subworkflows/local/parameter_checks/main.nf:24:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/parameter_checks/main.nf:23:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               input_handler = Channel.fromPath(params.input, checkIfExists: true)
                               ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/parameter_checks/main.nf:30:45`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/parameter_checks/main.nf:29:45`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   .map { create_fastq_channel(it) }
                                               ^^
   ```
 
-- Warning: `subworkflows/local/parameter_checks/main.nf:44:43`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/parameter_checks/main.nf:43:43`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           sample_meta = ch_fastq.map{ meta, fastq ->
                                             ^^^^^
   ```
 
-- Warning: `subworkflows/local/parameter_checks/main.nf:48:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/parameter_checks/main.nf:47:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_genome_name = Channel.of(params.genome_name)
                            ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/parameter_checks/main.nf:54:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/parameter_checks/main.nf:53:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               ch_pre_idx = Channel.fromPath(params.index, checkIfExists: true)
                            ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/parameter_checks/main.nf:57:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/parameter_checks/main.nf:56:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
                   ch_pre_fa = Channel.fromPath(params.genome, checkIfExists: true)
                               ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/parameter_checks/main.nf:60:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/parameter_checks/main.nf:59:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
                   ch_fasta = Channel.empty()
                              ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/parameter_checks/main.nf:63:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/parameter_checks/main.nf:62:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               ch_pre_fa = Channel.fromPath(params.genome, checkIfExists: true)
                           ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/parameter_checks/main.nf:65:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/parameter_checks/main.nf:64:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               ch_index = Channel.empty()
                          ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_cager_metadata/main.nf:43:9`: Variable was declared but not used
+- Warning: `subworkflows/local/prepare_cager_metadata/main.nf:41:9`: Variable was declared but not used
 
   ```nextflow
           ch_txdb = GTF2TXDB(ch_gtf)
           ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_mapping_metadata/main.nf:18:43`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/prepare_mapping_metadata/main.nf:17:43`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               chrom_size_fa = ch_fasta.map{ meta, fasta ->
                                             ^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_mapping_metadata/main.nf:32:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_mapping_metadata/main.nf:30:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               ch_chrom_sizes = Channel.of([
                                ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/preprocessing/main.nf:45:72`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/preprocessing/main.nf:40:72`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(FASTQC.out.zip.collect{it[1]}.ifEmpty([]))
                                                                          ^^
   ```
 
-- Warning: `subworkflows/local/preprocessing/main.nf:46:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/preprocessing/main.nf:41:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(TRIMGALORE.out.log.collect{it[1]}.ifEmpty([]))
                                                                              ^^
   ```
 
-- Warning: `subworkflows/local/preprocessing/main.nf:47:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/preprocessing/main.nf:42:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(TRIMGALORE.out.zip.collect{it[1]}.ifEmpty([]))
                                                                              ^^
   ```
 
-- Warning: `subworkflows/local/samtools_statistics/main.nf:20:23`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/samtools/main.nf:16:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-                  .map{[it[3], it[4]]}
-                        ^^
+          ch_index_format = Channel.value("bai")
+                            ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/samtools_statistics/main.nf:20:30`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  .map{[it[3], it[4]]}
-                               ^^
-  ```
-
-- Warning: `subworkflows/local/samtools_statistics/main.nf:27:23`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  .map{[it[3], it[4]]}
-                        ^^
-  ```
-
-- Warning: `subworkflows/local/samtools_statistics/main.nf:27:30`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  .map{[it[3], it[4]]}
-                               ^^
-  ```
-
-- Warning: `subworkflows/local/samtools_statistics/main.nf:36:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          ch_multiqc_files = ch_multiqc_files.mix(SAMTOOLS_STATS.out.stats.collect{it[1]})
-                                                                                   ^^
-  ```
-
-- Warning: `subworkflows/local/samtools_statistics/main.nf:40:88`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          ch_multiqc_files = ch_multiqc_files.mix(SAMTOOLS_FLAGSTAT.out.flagstat.collect{it[1]})
-                                                                                         ^^
-  ```
-
-- Warning: `subworkflows/local/samtools_statistics/main.nf:44:88`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          ch_multiqc_files = ch_multiqc_files.mix(SAMTOOLS_IDXSTATS.out.idxstats.collect{it[1]})
-                                                                                         ^^
-  ```
-
-- Warning: `subworkflows/local/star/main.nf:22:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/star/main.nf:21:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_genome_name = Channel.of(params.genome_name)
                            ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/star/main.nf:24:52`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/star/main.nf:23:52`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           sample_meta = ch_reads_to_align.map{ meta, fastq ->
                                                      ^^^^^
   ```
 
-- Warning: `subworkflows/local/star/main.nf:34:80`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/star/main.nf:32:80`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_index = sample_meta.combine(STAR_GENOMEGENERATE.out.index.map { it[1] })
                                                                                  ^^
   ```
 
-- Warning: `subworkflows/local/star/main.nf:49:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/star/main.nf:46:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(STAR_ALIGN.out.log_final.collect{it[1]})
                                                                                    ^^
   ```
 
-- Warning: `subworkflows/local/star/main.nf:51:53`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/star/main.nf:48:53`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_chrom_sizes_for_wig = ch_chrom_sizes.map{meta, sizes ->
@@ -862,63 +750,77 @@
                      ^^^^^^^
   ```
 
-- Warning: `workflows/customcage.nf:189:49`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/customcage.nf:178:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              .map{[it[3], it[4]]}
+                    ^^
+  ```
+
+- Warning: `workflows/customcage.nf:178:26`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              .map{[it[3], it[4]]}
+                           ^^
+  ```
+
+- Warning: `workflows/customcage.nf:183:49`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               mapped_files_ch = ch_for_cager.map{ meta, paths ->
                                                   ^^^^
   ```
 
-- Warning: `workflows/customcage.nf:193:49`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/customcage.nf:187:49`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               mapped_files_ch = ch_for_cager.map{ meta, paths ->
                                                   ^^^^
   ```
 
-- Warning: `workflows/customcage.nf:252:32`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/customcage.nf:264:32`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_multiqc_config        = Channel.fromPath(
                                  ^^^^^^^
   ```
 
-- Warning: `workflows/customcage.nf:255:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/customcage.nf:267:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           Channel.fromPath(params.multiqc_config, checkIfExists: true) :
           ^^^^^^^
   ```
 
-- Warning: `workflows/customcage.nf:256:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/customcage.nf:268:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           Channel.empty()
           ^^^^^^^
   ```
 
-- Warning: `workflows/customcage.nf:258:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/customcage.nf:270:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           Channel.fromPath(params.multiqc_logo, checkIfExists: true) :
           ^^^^^^^
   ```
 
-- Warning: `workflows/customcage.nf:259:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/customcage.nf:271:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           Channel.empty()
           ^^^^^^^
   ```
 
-- Warning: `workflows/customcage.nf:263:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/customcage.nf:275:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_params))
                             ^^^^^^^
   ```
 
-- Warning: `workflows/customcage.nf:269:45`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/customcage.nf:281:45`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_methods_description                = Channel.value(

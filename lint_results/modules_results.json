@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "519a0a8df9196bdd4a45d5ba5757413bfd8de593",
+  "_repo_commit": "59bc05e50a67e2f15e722819b99734d93944c893",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -9992,6 +9992,12 @@
   },
   "variantbam": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/variantbam",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "variantextractor": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/variantextractor",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

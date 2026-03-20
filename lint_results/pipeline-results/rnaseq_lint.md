@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-03-17T00:27:49.164162542Z
-- Nextflow version: 26.02.0-edge
-- Summary: 8 warnings
+- Generated: 2026-03-20T00:26:07.063349122Z
+- Nextflow version: 26.03.0-edge
+- Summary: 7 warnings
 
 ## :warning: Warnings
 
@@ -27,35 +27,28 @@
                                                                ^^^^
   ```
 
-- Warning: `subworkflows/nf-core/quantify_rsem/main.nf:46:33`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/nf-core/quant_tximport_summarizedexperiment/main.nf:33:16`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          ch_counts_gene.collect{ it[1] }.map { results -> [ ['id': 'all_samples'], results ] },
-                                  ^^
+          .map { meta, results -> [ [:], results ] }
+                 ^^^^
   ```
 
-- Warning: `subworkflows/nf-core/quantify_rsem/main.nf:47:39`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          ch_counts_transcript.collect{ it[1] }
-                                        ^^
-  ```
-
-- Warning: `workflows/rnaseq/main.nf:530:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/rnaseq/main.nf:533:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .filter { meta, bam, gtf, biotype_ok -> biotype_ok }
                         ^^^^
   ```
 
-- Warning: `workflows/rnaseq/main.nf:530:29`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/rnaseq/main.nf:533:29`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .filter { meta, bam, gtf, biotype_ok -> biotype_ok }
                               ^^^
   ```
 
-- Warning: `workflows/rnaseq/main.nf:530:34`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/rnaseq/main.nf:533:34`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .filter { meta, bam, gtf, biotype_ok -> biotype_ok }

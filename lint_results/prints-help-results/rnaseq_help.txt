@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.02.0-edge
+ N E X T F L O W   ~  version 26.03.0-edge
 
-Launching `./main.nf` [silly_wilson] revision: ff377cb1d2
+Launching `./main.nf` [agitated_davinci] revision: ff377cb1d2
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -96,6 +96,7 @@ identifying the reads with the same mapping position, but treat similar yet noni
 differently.  (accepted: unique, percentile, cluster, adjacency, directional) [default: 
 directional]  
   --umitools_dedup_stats        [boolean] Generate output stats when running "umi_tools dedup". 
+  --umitools_dedup_primary_only [boolean] Filter to primary alignments before UMI-tools dedup. 
 
 Alignment options
   --aligner                     [string]  Specifies the alignment algorithm to use - available options are 'star_salmon', 'star_rsem', 
@@ -179,6 +180,9 @@ the pipeline run.
   --skip_trimming               [boolean] Skip the adapter trimming step. 
   --skip_alignment              [boolean] Skip all of the alignment-based processes within the pipeline. 
   --skip_pseudo_alignment       [boolean] Skip all of the pseudoalignment-based processes within the pipeline. 
+  --skip_quantification_merge   [boolean] Skip cross-sample count merging. Runs tximport per-sample instead of merged, producing individual 
+gene/transcript-level TSVs per sample. Skips SummarizedExperiment and RSEM merge counts. Useful for 
+very large cohorts.  
   --skip_markduplicates         [boolean] Skip picard MarkDuplicates step. 
   --skip_bigwig                 [boolean] Skip bigWig file creation. 
   --skip_stringtie              [boolean] Skip StringTie. 

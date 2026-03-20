@@ -1,12 +1,12 @@
 # Nextflow lint results
 
-- Generated: 2026-03-19T00:24:36.192114144Z
+- Generated: 2026-03-20T00:25:31.169815746Z
 - Nextflow version: 26.03.0-edge
 - Summary: 3 warnings
 
 ## :warning: Warnings
 
-- Warning: `main.nf:604:29`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `main.nf:608:29`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           path { destination, value -> destination }
