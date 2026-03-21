@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-03-20T00:22:54.359890738Z
+- Generated: 2026-03-21T00:20:47.863348799Z
 - Nextflow version: 26.03.0-edge
 - Summary: 16 warnings
 
@@ -90,28 +90,28 @@
                             ^^^^^^^
   ```
 
-- Warning: `workflows/ampliseq.nf:793:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/ampliseq.nf:800:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .filter { it.data.extract_hmm }
                     ^^
   ```
 
-- Warning: `workflows/ampliseq.nf:794:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/ampliseq.nf:801:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { [ it.meta, it.data.hmm, it.data.extract_hmm ] }
                    ^^
   ```
 
-- Warning: `workflows/ampliseq.nf:794:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/ampliseq.nf:801:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { [ it.meta, it.data.hmm, it.data.extract_hmm ] }
                             ^^
   ```
 
-- Warning: `workflows/ampliseq.nf:794:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/ampliseq.nf:801:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { [ it.meta, it.data.hmm, it.data.extract_hmm ] }

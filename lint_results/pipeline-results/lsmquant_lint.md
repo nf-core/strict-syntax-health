@@ -1,8 +1,17 @@
 # Nextflow lint results
 
-- Generated: 2026-03-06T00:24:13.355399741Z
-- Nextflow version: 26.02.0-edge
-- Summary: 43 warnings
+- Generated: 2026-03-21T00:23:23.404799177Z
+- Nextflow version: 26.03.0-edge
+- Summary: 1 error, 38 warnings
+
+## :x: Errors
+
+- Error: `workflows/lsmquant.nf:137:26`: `img_dir` is already declared
+
+  ```nextflow
+              .map { meta, img_dir, parameter_file, stitched_data ->
+                           ^^^^^^^
+  ```
 
 ## :warning: Warnings
 
@@ -20,35 +29,21 @@
           ^^^^
   ```
 
-- Warning: `modules/local/numorph3dunet/main.nf:48:9`: Variable was declared but not used
+- Warning: `modules/local/numorph3dunet/main.nf:45:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
   ```
 
-- Warning: `modules/local/numorphalign/main.nf:29:9`: Variable was declared but not used
+- Warning: `modules/local/numorphalign/main.nf:25:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
   ```
 
-- Warning: `modules/local/numorphalign/main.nf:59:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/local/numorphintensity/main.nf:24:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/local/numorphintensity/main.nf:46:9`: Variable was declared but not used
+- Warning: `modules/local/numorphalign/main.nf:48:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
@@ -69,35 +64,14 @@
           ^^^^
   ```
 
-- Warning: `modules/local/numorphresample/main.nf:18:9`: Variable was declared but not used
+- Warning: `modules/local/numorphstitch/main.nf:21:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
   ```
 
-- Warning: `modules/local/numorphresample/main.nf:19:9`: Variable was declared but not used
-
-  ```nextflow
-      def prefix = task.ext.prefix ?: "${meta.id}"
-          ^^^^^^
-  ```
-
-- Warning: `modules/local/numorphresample/main.nf:40:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/local/numorphstitch/main.nf:26:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/local/numorphstitch/main.nf:77:9`: Variable was declared but not used
+- Warning: `modules/local/numorphstitch/main.nf:50:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
@@ -123,6 +97,34 @@
   ```nextflow
       def prefix = task.ext.prefix ?: "${meta.id}"
           ^^^^^^
+  ```
+
+- Warning: `modules/nf-core/mat2json/main.nf:19:9`: Variable was declared but not used
+
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^
+  ```
+
+- Warning: `modules/nf-core/mat2json/main.nf:37:9`: Variable was declared but not used
+
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^
+  ```
+
+- Warning: `modules/nf-core/numorph/intensity/main.nf:22:9`: Variable was declared but not used
+
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^
+  ```
+
+- Warning: `modules/nf-core/numorph/intensity/main.nf:39:9`: Variable was declared but not used
+
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^
   ```
 
 - Warning: `modules/nf-core/unzip/main.nf:38:9`: Variable was declared but not used
@@ -153,53 +155,25 @@
                                                        ^^^^^^
   ```
 
-- Warning: `subworkflows/local/araregistration/main.nf:27:33`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/araregistration/main.nf:21:22`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .map { meta, resampled, stitched_img_directory, parameter_file ->
-                                  ^^^^^^^^^^^^^^^^^^^^^^
+          .map { meta, stitched_img_directory, parameter_file, resampled ->
+                       ^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/numorph_preprocessing/main.nf:17:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/numorph_preprocessing/main.nf:33:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
+                  .findAll { it.name.endsWith('.mat') }
+                             ^^
   ```
 
-- Warning: `subworkflows/local/numorph_preprocessing/main.nf:19:43`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/numorph_stitch/main.nf:28:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-      sample_meta = samplesheet.map { meta, img_dir, params -> meta }
-                                            ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/numorph_preprocessing/main.nf:19:52`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      sample_meta = samplesheet.map { meta, img_dir, params -> meta }
-                                                     ^^^^^^
-  ```
-
-- Warning: `subworkflows/local/numorph_stitch/main.nf:16:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/numorph_stitch/main.nf:18:43`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      sample_meta = samplesheet.map { meta, img_dir, params -> meta }
-                                            ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/numorph_stitch/main.nf:18:52`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      sample_meta = samplesheet.map { meta, img_dir, params -> meta }
-                                                     ^^^^^^
+                  .findAll { it.name.endsWith('.mat') }
+                             ^^
   ```
 
 - Warning: `subworkflows/local/utils_nfcore_lsmquant_pipeline/main.nf:32:5`: Parameter was not used -- prefix with `_` to suppress warning
@@ -223,13 +197,6 @@
                        ^^^^^^^
   ```
 
-- Warning: `workflows/lsmquant.nf:35:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
 - Warning: `workflows/lsmquant.nf:36:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -237,70 +204,77 @@
                          ^^^^^^^
   ```
 
-- Warning: `workflows/lsmquant.nf:50:27`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/lsmquant.nf:37:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+      ch_versions = Channel.empty()
+                    ^^^^^^^
+  ```
+
+- Warning: `workflows/lsmquant.nf:41:49`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      ch_parameter_file = samplesheet.map { meta, img_dir, parameter_file -> [meta, parameter_file] }
+                                                  ^^^^^^^
+  ```
+
+- Warning: `workflows/lsmquant.nf:57:27`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { meta, zip, parameter_file ->
                             ^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/lsmquant.nf:61:32`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/lsmquant.nf:67:32`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { meta, unzipped, zip, parameter_file ->
                                  ^^^
   ```
 
-- Warning: `workflows/lsmquant.nf:68:37`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/lsmquant.nf:74:37`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { meta, img_directory, parameter_file ->
                                       ^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/lsmquant.nf:79:30`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/lsmquant.nf:84:30`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { meta, staged, raw_img_directory, parameter_file ->
                                ^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/lsmquant.nf:85:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/lsmquant.nf:90:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_samplesheet = Channel.empty()
                        ^^^^^^^
   ```
 
-- Warning: `workflows/lsmquant.nf:114:36`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/lsmquant.nf:111:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-              .map { meta, stitched, raw_img_directory, parameter_file ->
-                                     ^^^^^^^^^^^^^^^^^
+                  .findAll { it.name.endsWith('.mat') }
+                             ^^
   ```
 
-- Warning: `workflows/lsmquant.nf:129:36`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/lsmquant.nf:137:26`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-              .map { meta, stitched, raw_img_directory, parameter_file ->
-                                     ^^^^^^^^^^^^^^^^^
+              .map { meta, img_dir, parameter_file, stitched_data ->
+                           ^^^^^^^
   ```
 
-- Warning: `workflows/lsmquant.nf:144:36`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/lsmquant.nf:144:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-              .map { meta, stitched, raw_img_directory, parameter_file ->
-                                     ^^^^^^^^^^^^^^^^^
+          def model_file = Channel.fromPath(params.model_file, checkIfExists: !params.model_file.startsWith('http'))
+                           ^^^^^^^
   ```
 
-- Warning: `workflows/lsmquant.nf:152:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          model_file = Channel.fromPath(params.model_file, checkIfExists: !params.model_file.startsWith('http'))
-                       ^^^^^^^
-  ```
-
-- Warning: `workflows/lsmquant.nf:165:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/lsmquant.nf:158:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       def topic_versions = Channel.topic("versions")

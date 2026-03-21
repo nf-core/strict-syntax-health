@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-03-10T00:19:44.780400544Z
-- Nextflow version: 26.02.0-edge
+- Generated: 2026-03-21T00:22:30.126903649Z
+- Nextflow version: 26.03.0-edge
 - Summary: 26 errors, 102 warnings
 
 ## :x: Errors
@@ -41,147 +41,147 @@
                                           ^^^^^^^^
   ```
 
-- Error: `workflows/genomeqc.nf:95:41`: `fasta` is already declared
+- Error: `workflows/genomeqc.nf:97:41`: `fasta` is already declared
 
   ```nextflow
       gz_fasta     = fasta.filter { meta, fasta -> fasta.name.endsWith(".gz") }
                                           ^^^^^
   ```
 
-- Error: `workflows/genomeqc.nf:96:41`: `fasta` is already declared
+- Error: `workflows/genomeqc.nf:98:41`: `fasta` is already declared
 
   ```nextflow
       non_gz_fasta = fasta.filter { meta, fasta -> !fasta.name.endsWith(".gz") }
                                           ^^^^^
   ```
 
-- Error: `workflows/genomeqc.nf:111:31`: `fasta` is already declared
+- Error: `workflows/genomeqc.nf:113:31`: `fasta` is already declared
 
   ```nextflow
                   | map { meta, fasta, gxf, fq ->  tuple( meta,  gxf) }
                                 ^^^^^
   ```
 
-- Error: `workflows/genomeqc.nf:115:38`: `gxf` is already declared
+- Error: `workflows/genomeqc.nf:117:38`: `gxf` is already declared
 
   ```nextflow
       gz_gxf      = gxf.filter { meta, gxf -> gxf  && gxf.name.endsWith(".gz")  } // Filter non empty and compressed gxf (channel to be uncompressed)
                                        ^^^
   ```
 
-- Error: `workflows/genomeqc.nf:116:38`: `gxf` is already declared
+- Error: `workflows/genomeqc.nf:118:38`: `gxf` is already declared
 
   ```nextflow
       non_gz_gxf  = gxf.filter { meta, gxf -> !gxf || !gxf.name.endsWith(".gz") } // Filter empty and uncompressed gxf (not uncompressed)
                                        ^^^
   ```
 
-- Error: `workflows/genomeqc.nf:133:51`: `fasta` is already declared
+- Error: `workflows/genomeqc.nf:135:51`: `fasta` is already declared
 
   ```nextflow
                   | mix( ch_input.local.map { meta, fasta, gxf, fq -> tuple( meta, fq ) } )
                                                     ^^^^^
   ```
 
-- Error: `workflows/genomeqc.nf:133:58`: `gxf` is already declared
+- Error: `workflows/genomeqc.nf:135:58`: `gxf` is already declared
 
   ```nextflow
                   | mix( ch_input.local.map { meta, fasta, gxf, fq -> tuple( meta, fq ) } )
                                                            ^^^
   ```
 
-- Error: `workflows/genomeqc.nf:149:46`: `fasta` is already declared
-
-  ```nextflow
-      ch_input_anno  = ch_input.filter { meta, fasta, gxf, fastq ->  gxf } // gxf is present. Channel will run on genome and annotation
-                                               ^^^^^
-  ```
-
-- Error: `workflows/genomeqc.nf:149:53`: `gxf` is already declared
-
-  ```nextflow
-      ch_input_anno  = ch_input.filter { meta, fasta, gxf, fastq ->  gxf } // gxf is present. Channel will run on genome and annotation
-                                                      ^^^
-  ```
-
-- Error: `workflows/genomeqc.nf:150:22`: `multimapChannel` is not defined
-
-  ```nextflow
-                     | multimapChannel // Notice only fasta channel and gxf are necessary here
-                       ^^^^^^^^^^^^^^^
-  ```
-
 - Error: `workflows/genomeqc.nf:151:46`: `fasta` is already declared
 
   ```nextflow
-      ch_input_geno  = ch_input.filter { meta, fasta, gxf, fastq ->  !gxf }// gxf is missing. Channel will run on genome only
+      ch_input_anno  = ch_input.filter { meta, fasta, gxf, fastq ->  gxf } // gxf is present. Channel will run on genome and annotation
                                                ^^^^^
   ```
 
 - Error: `workflows/genomeqc.nf:151:53`: `gxf` is already declared
 
   ```nextflow
-      ch_input_geno  = ch_input.filter { meta, fasta, gxf, fastq ->  !gxf }// gxf is missing. Channel will run on genome only
+      ch_input_anno  = ch_input.filter { meta, fasta, gxf, fastq ->  gxf } // gxf is present. Channel will run on genome and annotation
                                                       ^^^
   ```
 
 - Error: `workflows/genomeqc.nf:152:22`: `multimapChannel` is not defined
 
   ```nextflow
+                     | multimapChannel // Notice only fasta channel and gxf are necessary here
+                       ^^^^^^^^^^^^^^^
+  ```
+
+- Error: `workflows/genomeqc.nf:153:46`: `fasta` is already declared
+
+  ```nextflow
+      ch_input_geno  = ch_input.filter { meta, fasta, gxf, fastq ->  !gxf }// gxf is missing. Channel will run on genome only
+                                               ^^^^^
+  ```
+
+- Error: `workflows/genomeqc.nf:153:53`: `gxf` is already declared
+
+  ```nextflow
+      ch_input_geno  = ch_input.filter { meta, fasta, gxf, fastq ->  !gxf }// gxf is missing. Channel will run on genome only
+                                                      ^^^
+  ```
+
+- Error: `workflows/genomeqc.nf:154:22`: `multimapChannel` is not defined
+
+  ```nextflow
                      | multimapChannel // Notice only fasta channel is necessary here
                        ^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/genomeqc.nf:155:46`: `fasta` is already declared
+- Error: `workflows/genomeqc.nf:157:46`: `fasta` is already declared
 
   ```nextflow
       ch_input_merq  = ch_input.filter { meta, fasta, gxf, fastq -> fastq } // filter rows where fastq is present
                                                ^^^^^
   ```
 
-- Error: `workflows/genomeqc.nf:155:53`: `gxf` is already declared
+- Error: `workflows/genomeqc.nf:157:53`: `gxf` is already declared
 
   ```nextflow
       ch_input_merq  = ch_input.filter { meta, fasta, gxf, fastq -> fastq } // filter rows where fastq is present
                                                       ^^^
   ```
 
-- Error: `workflows/genomeqc.nf:156:22`: `multimapChannel` is not defined
+- Error: `workflows/genomeqc.nf:158:22`: `multimapChannel` is not defined
 
   ```nextflow
                      | multimapChannel // Notice only fasta and fastq channels are necessary here
                        ^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/genomeqc.nf:159:46`: `fasta` is already declared
+- Error: `workflows/genomeqc.nf:161:46`: `fasta` is already declared
 
   ```nextflow
       ch_input_decon = ch_fasta.filter { meta, fasta -> meta.taxid } // filter rows where taxid is present. Run decon on those
                                                ^^^^^
   ```
 
-- Error: `workflows/genomeqc.nf:184:54`: `fasta` is already declared
+- Error: `workflows/genomeqc.nf:186:54`: `fasta` is already declared
 
   ```nextflow
       ch_repeat = params.repeat ? ch_fasta.map { meta, fasta -> [ meta, params.repeat ] } : Channel.empty()
                                                        ^^^^^
   ```
 
-- Error: `workflows/genomeqc.nf:439:4`: `multi_ch` was assigned but not declared
+- Error: `workflows/genomeqc.nf:441:4`: `multi_ch` was assigned but not declared
 
   ```nextflow
      multi_ch = input
      ^^^^^^^^
   ```
 
-- Error: `workflows/genomeqc.nf:440:15`: `multiMap` is not defined
+- Error: `workflows/genomeqc.nf:442:15`: `multiMap` is not defined
 
   ```nextflow
               | multiMap {
                 ^^^^^^^^
   ```
 
-- Error: `workflows/genomeqc.nf:446:12`: `multi_ch` is not defined
+- Error: `workflows/genomeqc.nf:448:12`: `multi_ch` is not defined
 
   ```nextflow
       return multi_ch
@@ -645,259 +645,259 @@
                                                ^^
   ```
 
-- Warning: `workflows/genomeqc.nf:60:31`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genomeqc.nf:62:31`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           | map { meta, refseq, fq -> tuple( meta, refseq ) }
                                 ^^
   ```
 
-- Warning: `workflows/genomeqc.nf:91:39`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genomeqc.nf:93:39`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                    | map { meta, fasta, gxf, fq -> tuple( meta, fasta) }
                                         ^^^
   ```
 
-- Warning: `workflows/genomeqc.nf:91:44`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genomeqc.nf:93:44`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                    | map { meta, fasta, gxf, fq -> tuple( meta, fasta) }
                                              ^^
   ```
 
-- Warning: `workflows/genomeqc.nf:95:35`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genomeqc.nf:97:35`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       gz_fasta     = fasta.filter { meta, fasta -> fasta.name.endsWith(".gz") }
                                     ^^^^
   ```
 
-- Warning: `workflows/genomeqc.nf:96:35`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genomeqc.nf:98:35`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       non_gz_fasta = fasta.filter { meta, fasta -> !fasta.name.endsWith(".gz") }
                                     ^^^^
   ```
 
-- Warning: `workflows/genomeqc.nf:111:31`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genomeqc.nf:113:31`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   | map { meta, fasta, gxf, fq ->  tuple( meta,  gxf) }
                                 ^^^^^
   ```
 
-- Warning: `workflows/genomeqc.nf:111:43`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genomeqc.nf:113:43`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   | map { meta, fasta, gxf, fq ->  tuple( meta,  gxf) }
                                             ^^
   ```
 
-- Warning: `workflows/genomeqc.nf:115:32`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genomeqc.nf:117:32`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       gz_gxf      = gxf.filter { meta, gxf -> gxf  && gxf.name.endsWith(".gz")  } // Filter non empty and compressed gxf (channel to be uncompressed)
                                  ^^^^
   ```
 
-- Warning: `workflows/genomeqc.nf:116:32`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genomeqc.nf:118:32`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       non_gz_gxf  = gxf.filter { meta, gxf -> !gxf || !gxf.name.endsWith(".gz") } // Filter empty and uncompressed gxf (not uncompressed)
                                  ^^^^
   ```
 
-- Warning: `workflows/genomeqc.nf:132:30`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genomeqc.nf:134:30`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   | map{ meta, refseq, fq -> tuple( meta, fq ) }
                                ^^^^^^
   ```
 
-- Warning: `workflows/genomeqc.nf:133:51`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genomeqc.nf:135:51`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   | mix( ch_input.local.map { meta, fasta, gxf, fq -> tuple( meta, fq ) } )
                                                     ^^^^^
   ```
 
-- Warning: `workflows/genomeqc.nf:133:58`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genomeqc.nf:135:58`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   | mix( ch_input.local.map { meta, fasta, gxf, fq -> tuple( meta, fq ) } )
                                                            ^^^
   ```
 
-- Warning: `workflows/genomeqc.nf:149:40`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      ch_input_anno  = ch_input.filter { meta, fasta, gxf, fastq ->  gxf } // gxf is present. Channel will run on genome and annotation
-                                         ^^^^
-  ```
-
-- Warning: `workflows/genomeqc.nf:149:46`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      ch_input_anno  = ch_input.filter { meta, fasta, gxf, fastq ->  gxf } // gxf is present. Channel will run on genome and annotation
-                                               ^^^^^
-  ```
-
-- Warning: `workflows/genomeqc.nf:149:58`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      ch_input_anno  = ch_input.filter { meta, fasta, gxf, fastq ->  gxf } // gxf is present. Channel will run on genome and annotation
-                                                           ^^^^^
-  ```
-
 - Warning: `workflows/genomeqc.nf:151:40`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      ch_input_geno  = ch_input.filter { meta, fasta, gxf, fastq ->  !gxf }// gxf is missing. Channel will run on genome only
+      ch_input_anno  = ch_input.filter { meta, fasta, gxf, fastq ->  gxf } // gxf is present. Channel will run on genome and annotation
                                          ^^^^
   ```
 
 - Warning: `workflows/genomeqc.nf:151:46`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      ch_input_geno  = ch_input.filter { meta, fasta, gxf, fastq ->  !gxf }// gxf is missing. Channel will run on genome only
+      ch_input_anno  = ch_input.filter { meta, fasta, gxf, fastq ->  gxf } // gxf is present. Channel will run on genome and annotation
                                                ^^^^^
   ```
 
 - Warning: `workflows/genomeqc.nf:151:58`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
+      ch_input_anno  = ch_input.filter { meta, fasta, gxf, fastq ->  gxf } // gxf is present. Channel will run on genome and annotation
+                                                           ^^^^^
+  ```
+
+- Warning: `workflows/genomeqc.nf:153:40`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      ch_input_geno  = ch_input.filter { meta, fasta, gxf, fastq ->  !gxf }// gxf is missing. Channel will run on genome only
+                                         ^^^^
+  ```
+
+- Warning: `workflows/genomeqc.nf:153:46`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      ch_input_geno  = ch_input.filter { meta, fasta, gxf, fastq ->  !gxf }// gxf is missing. Channel will run on genome only
+                                               ^^^^^
+  ```
+
+- Warning: `workflows/genomeqc.nf:153:58`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
       ch_input_geno  = ch_input.filter { meta, fasta, gxf, fastq ->  !gxf }// gxf is missing. Channel will run on genome only
                                                            ^^^^^
   ```
 
-- Warning: `workflows/genomeqc.nf:155:40`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genomeqc.nf:157:40`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_input_merq  = ch_input.filter { meta, fasta, gxf, fastq -> fastq } // filter rows where fastq is present
                                          ^^^^
   ```
 
-- Warning: `workflows/genomeqc.nf:155:46`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genomeqc.nf:157:46`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_input_merq  = ch_input.filter { meta, fasta, gxf, fastq -> fastq } // filter rows where fastq is present
                                                ^^^^^
   ```
 
-- Warning: `workflows/genomeqc.nf:155:53`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genomeqc.nf:157:53`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_input_merq  = ch_input.filter { meta, fasta, gxf, fastq -> fastq } // filter rows where fastq is present
                                                       ^^^
   ```
 
-- Warning: `workflows/genomeqc.nf:159:46`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genomeqc.nf:161:46`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_input_decon = ch_fasta.filter { meta, fasta -> meta.taxid } // filter rows where taxid is present. Run decon on those
                                                ^^^^^
   ```
 
-- Warning: `workflows/genomeqc.nf:184:54`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genomeqc.nf:186:54`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_repeat = params.repeat ? ch_fasta.map { meta, fasta -> [ meta, params.repeat ] } : Channel.empty()
                                                        ^^^^^
   ```
 
-- Warning: `workflows/genomeqc.nf:184:91`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/genomeqc.nf:186:91`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_repeat = params.repeat ? ch_fasta.map { meta, fasta -> [ meta, params.repeat ] } : Channel.empty()
                                                                                             ^^^^^^^
   ```
 
-- Warning: `workflows/genomeqc.nf:219:5`: Variable was declared but not used
+- Warning: `workflows/genomeqc.nf:221:5`: Variable was declared but not used
 
   ```nextflow
       ch_merqury_outputs                      = ch_merqury_qv
       ^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/genomeqc.nf:224:57`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genomeqc.nf:226:57`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                                               | flatMap { meta, data -> data }
                                                           ^^^^
   ```
 
-- Warning: `workflows/genomeqc.nf:236:68`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genomeqc.nf:238:68`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                            | mix(GENOME_ONLY.out.quast_results.map { meta, results -> results })
                                                                      ^^^^
   ```
 
-- Warning: `workflows/genomeqc.nf:237:76`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genomeqc.nf:239:76`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                            | mix(GENOME_ONLY.out.busco_short_summaries.map { meta, txt -> txt })
                                                                              ^^^^
   ```
 
-- Warning: `workflows/genomeqc.nf:248:78`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genomeqc.nf:250:78`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                            | mix(GENOME_AND_ANNOTATION.out.quast_results.map { meta, results -> results })
                                                                                ^^^^
   ```
 
-- Warning: `workflows/genomeqc.nf:249:91`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genomeqc.nf:251:91`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                            | mix(GENOME_AND_ANNOTATION.out.busco_short_summaries_prot.map { meta, txt -> txt })
                                                                                             ^^^^
   ```
 
-- Warning: `workflows/genomeqc.nf:267:77`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genomeqc.nf:269:77`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                               | concat(BUSCO_SEQS_GENOME_ANNO.out.table.map { meta, table -> table})
                                                                               ^^^^
   ```
 
-- Warning: `workflows/genomeqc.nf:270:72`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genomeqc.nf:272:72`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                               | concat(BUSCO_SEQS_GENOME.out.table.map { meta, table -> table})
                                                                          ^^^^
   ```
 
-- Warning: `workflows/genomeqc.nf:279:37`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genomeqc.nf:281:37`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                               | map { meta, file -> file }
                                       ^^^^
   ```
 
-- Warning: `workflows/genomeqc.nf:284:37`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genomeqc.nf:286:37`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                               | map { meta, file -> file }
                                       ^^^^
   ```
 
-- Warning: `workflows/genomeqc.nf:320:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/genomeqc.nf:322:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_functions = Channel.fromPath("$projectDir/bin/tree_functions.R", checkIfExists: true)
                          ^^^^^^^
   ```
 
-- Warning: `workflows/genomeqc.nf:321:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/genomeqc.nf:323:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_app       = Channel.fromPath("$projectDir/bin/shiny_app.R", checkIfExists: true)
                          ^^^^^^^
   ```
 
-- Warning: `workflows/genomeqc.nf:345:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/genomeqc.nf:347:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       def topic_versions = Channel.topic("versions")

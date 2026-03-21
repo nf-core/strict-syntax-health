@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-03-18T00:27:05.677563651Z
-- Nextflow version: 26.02.0-edge
-- Summary: 22 errors, 94 warnings
+- Generated: 2026-03-21T00:24:14.044827469Z
+- Nextflow version: 26.03.0-edge
+- Summary: 23 errors, 95 warnings
 
 ## :x: Errors
 
@@ -76,7 +76,7 @@
           ^^^^^^^^^^^^^^^^
   ```
 
-- Error: `nextflow.config:231:28`: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/scrnaseq/conf/test_multiome.config'
+- Error: `nextflow.config:233:28`: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/scrnaseq/conf/test_multiome.config'
 
   ```nextflow
       test_multiome        { includeConfig 'conf/test_multiome.config'         }
@@ -125,35 +125,42 @@
                         ^^^^^
   ```
 
-- Error: `workflows/scrnaseq.nf:264:9`: `CELLRANGER_MULTI_ALIGN` is not defined
+- Error: `workflows/scrnaseq.nf:43:52`: `Utils` is not defined
+
+  ```nextflow
+      qcatch_config = params.aligner == "simpleaf" ? Utils.getProtocol(workflow, log, "qcatch", params.protocol) : [:]
+                                                     ^^^^^
+  ```
+
+- Error: `workflows/scrnaseq.nf:270:9`: `CELLRANGER_MULTI_ALIGN` is not defined
 
   ```nextflow
           CELLRANGER_MULTI_ALIGN(
           ^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/scrnaseq.nf:272:39`: `CELLRANGER_MULTI_ALIGN` is not defined
+- Error: `workflows/scrnaseq.nf:278:39`: `CELLRANGER_MULTI_ALIGN` is not defined
 
   ```nextflow
           ch_versions = ch_versions.mix(CELLRANGER_MULTI_ALIGN.out.ch_versions)
                                         ^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/scrnaseq.nf:273:50`: `CELLRANGER_MULTI_ALIGN` is not defined
+- Error: `workflows/scrnaseq.nf:279:50`: `CELLRANGER_MULTI_ALIGN` is not defined
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix( CELLRANGER_MULTI_ALIGN.out.cellrangermulti_out.map{
                                                    ^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/scrnaseq.nf:276:48`: `CELLRANGER_MULTI_ALIGN` is not defined
+- Error: `workflows/scrnaseq.nf:282:48`: `CELLRANGER_MULTI_ALIGN` is not defined
 
   ```nextflow
           ch_mtx_matrices = ch_mtx_matrices.mix( CELLRANGER_MULTI_ALIGN.out.cellrangermulti_mtx_raw, CELLRANGER_MULTI_ALIGN.out.cellrangermulti_mtx_filtered )
                                                  ^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/scrnaseq.nf:276:100`: `CELLRANGER_MULTI_ALIGN` is not defined
+- Error: `workflows/scrnaseq.nf:282:100`: `CELLRANGER_MULTI_ALIGN` is not defined
 
   ```nextflow
           ch_mtx_matrices = ch_mtx_matrices.mix( CELLRANGER_MULTI_ALIGN.out.cellrangermulti_mtx_raw, CELLRANGER_MULTI_ALIGN.out.cellrangermulti_mtx_filtered )
@@ -162,14 +169,14 @@
 
 ## :warning: Warnings
 
-- Warning: `conf/modules.config:160:25`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:162:25`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               saveAs: { (!it.endsWith('.bam') || params.save_align_intermeds) ? it : null }
                           ^^
   ```
 
-- Warning: `conf/modules.config:160:79`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:162:79`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               saveAs: { (!it.endsWith('.bam') || params.save_align_intermeds) ? it : null }
@@ -582,38 +589,45 @@
                     ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/simpleaf.nf:21:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/simpleaf.nf:23:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_versions = Channel.empty()
                     ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/simpleaf.nf:61:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/simpleaf.nf:63:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
                   txp2gene = Channel.of( txp2gene )
                              ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/simpleaf.nf:65:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/simpleaf.nf:67:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               simpleaf_index = Channel.of( [ [:], [] ] )
                                ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/simpleaf.nf:70:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/simpleaf.nf:72:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           simpleaf_index = Channel.of( [ [ id: simpleaf_index.getName() ], simpleaf_index ] )
                            ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/simpleaf.nf:74:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/simpleaf.nf:76:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               txp2gene = Channel.of( txp2gene )
+                         ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/simpleaf.nf:122:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+      ch_qcatch_report = Channel.empty()
                          ^^^^^^^
   ```
 
@@ -736,84 +750,84 @@
                     ^^^^^^^
   ```
 
-- Warning: `workflows/scrnaseq.nf:95:89`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scrnaseq.nf:99:89`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_genome_fasta    = GUNZIP_FASTA ( [ [:], ch_genome_fasta ] ).gunzip.map { it[1] }
                                                                                           ^^
   ```
 
-- Warning: `workflows/scrnaseq.nf:107:71`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scrnaseq.nf:111:71`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_gtf      = GUNZIP_GTF ( [ [:], ch_gtf ] ).gunzip.map { it[1] }
                                                                         ^^
   ```
 
-- Warning: `workflows/scrnaseq.nf:192:13`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/scrnaseq.nf:198:13`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               meta, outs -> outs.findAll{ it -> it.name == "web_summary.html"}
               ^^^^
   ```
 
-- Warning: `workflows/scrnaseq.nf:251:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scrnaseq.nf:257:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               if (!map_collection_clone.any{ it.feature_type == 'gex' })    { map_collection_clone.add( [id: sample_id, feature_type: 'gex'   , gex:    empty_file, options:[:] ] ) }
                                              ^^
   ```
 
-- Warning: `workflows/scrnaseq.nf:252:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scrnaseq.nf:258:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               if (!map_collection_clone.any{ it.feature_type == 'vdj' })    { map_collection_clone.add( [id: sample_id, feature_type: 'vdj'   , vdj:    empty_file, options:[:] ] ) }
                                              ^^
   ```
 
-- Warning: `workflows/scrnaseq.nf:253:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scrnaseq.nf:259:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               if (!map_collection_clone.any{ it.feature_type == 'ab' })     { map_collection_clone.add( [id: sample_id, feature_type: 'ab'    , ab:     empty_file, options:[:] ] ) }
                                              ^^
   ```
 
-- Warning: `workflows/scrnaseq.nf:254:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scrnaseq.nf:260:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               if (!map_collection_clone.any{ it.feature_type == 'beam' })   { map_collection_clone.add( [id: sample_id, feature_type: 'beam'  , beam:   empty_file, options:[:] ] ) } // currently not implemented, the input samplesheet checking will not allow it.
                                              ^^
   ```
 
-- Warning: `workflows/scrnaseq.nf:255:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scrnaseq.nf:261:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               if (!map_collection_clone.any{ it.feature_type == 'crispr' }) { map_collection_clone.add( [id: sample_id, feature_type: 'crispr', crispr: empty_file, options:[:] ] ) }
                                              ^^
   ```
 
-- Warning: `workflows/scrnaseq.nf:256:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scrnaseq.nf:262:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               if (!map_collection_clone.any{ it.feature_type == 'cmo' })    { map_collection_clone.add( [id: sample_id, feature_type: 'cmo'   , cmo:    empty_file, options:[:] ] ) }
                                              ^^
   ```
 
-- Warning: `workflows/scrnaseq.nf:274:13`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/scrnaseq.nf:280:13`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               meta, outs -> outs.findAll{ it -> it.name == "web_summary.html" }
               ^^^^
   ```
 
-- Warning: `workflows/scrnaseq.nf:286:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scrnaseq.nf:292:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           star_index ? ch_star_index.map{it[1]} : [],
                                          ^^
   ```
 
-- Warning: `workflows/scrnaseq.nf:299:33`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/scrnaseq.nf:305:33`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   .filter { meta, mtx_files -> meta.input_type == 'raw' }
