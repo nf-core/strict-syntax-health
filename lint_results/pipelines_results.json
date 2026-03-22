@@ -506,7 +506,7 @@
   "longraredisease": {
     "full_name": "nf-core/longraredisease",
     "html_url": "https://github.com/nf-core/longraredisease",
-    "commit": "cc17b65670203f1490eff1c7a91c21aa222d0852",
+    "commit": "def23c654bdfcfb7405d0a9d3a61ee4ce1805028",
     "errors": 0,
     "warnings": 182,
     "parse_error": false,

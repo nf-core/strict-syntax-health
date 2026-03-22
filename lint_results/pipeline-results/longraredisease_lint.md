@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-03-21T00:23:04.725738068Z
+- Generated: 2026-03-22T00:20:14.228783170Z
 - Nextflow version: 26.03.0-edge
 - Summary: 182 warnings
 
@@ -937,63 +937,63 @@
                     ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_longraredisease_pipeline/main.nf:155:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/utils_nfcore_longraredisease_pipeline/main.nf:157:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_samplesheet = Channel.fromList(samplesheet_data)
                        ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_longraredisease_pipeline/main.nf:350:21`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/utils_nfcore_longraredisease_pipeline/main.nf:352:21`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       def baseTools = Channel.from(['nextflow', 'nf_core', 'bioconda', 'biocontainers', 'multiqc'])
                       ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_longraredisease_pipeline/main.nf:377:33`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_longraredisease_pipeline/main.nf:379:33`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           paramsMap.each { param, paramStatus ->
                                   ^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_longraredisease_pipeline/main.nf:405:61`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_longraredisease_pipeline/main.nf:407:61`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       def dependentWorkflows = workflowDependencies.findAll { workflow, dependencies ->
                                                               ^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_longraredisease_pipeline/main.nf:409:41`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_longraredisease_pipeline/main.nf:411:41`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       dependentWorkflows.each { workflow, dependencies ->
                                           ^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_longraredisease_pipeline/main.nf:423:61`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_longraredisease_pipeline/main.nf:425:61`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           def requiringWorkflows = fileDependencies.findAll { workflow, files ->
                                                               ^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_longraredisease_pipeline/main.nf:427:45`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_longraredisease_pipeline/main.nf:429:45`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           requiringWorkflows.each { workflow, files ->
                                               ^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_longraredisease_pipeline/main.nf:440:20`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/utils_nfcore_longraredisease_pipeline/main.nf:442:20`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       return param ? Channel.fromPath(param, checkIfExists: true)
                      ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_longraredisease_pipeline/main.nf:447:20`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/utils_nfcore_longraredisease_pipeline/main.nf:449:20`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       return param ? Channel.fromList(samplesheetToList(param, schema)) : defaultValue
