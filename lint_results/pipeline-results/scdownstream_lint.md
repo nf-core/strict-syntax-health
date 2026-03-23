@@ -1,10 +1,17 @@
 # Nextflow lint results
 
-- Generated: 2026-03-15T00:23:38.851250602Z
-- Nextflow version: 26.02.0-edge
-- Summary: 18 warnings
+- Generated: 2026-03-23T00:22:29.486930156Z
+- Nextflow version: 26.03.0-edge
+- Summary: 27 warnings
 
 ## :warning: Warnings
+
+- Warning: `modules/local/adata/entropy/main.nf:25:5`: Variable was declared but not used
+
+  ```nextflow
+      args = task.ext.args ?: ''
+      ^^^^
+  ```
 
 - Warning: `modules/local/adata/merge/main.nf:27:5`: Variable was declared but not used
 
@@ -30,8 +37,36 @@
 - Warning: `modules/local/liana/rankaggregate/main.nf:22:5`: Variable was declared but not used
 
   ```nextflow
+      args    = task.ext.args   ?: ''
+      ^^^^
+  ```
+
+- Warning: `modules/local/liana/rankaggregate/main.nf:23:5`: Variable was declared but not used
+
+  ```nextflow
       obs_key = meta.obs_key ?: "leiden"
       ^^^^^^^
+  ```
+
+- Warning: `modules/local/scanpy/bbknn/main.nf:23:5`: Variable was declared but not used
+
+  ```nextflow
+      args   = task.ext.args ?: ''
+      ^^^^
+  ```
+
+- Warning: `modules/local/scanpy/combat/main.nf:25:5`: Variable was declared but not used
+
+  ```nextflow
+      args   = task.ext.args   ?: ''
+      ^^^^
+  ```
+
+- Warning: `modules/local/scanpy/harmony/main.nf:23:5`: Variable was declared but not used
+
+  ```nextflow
+      args   = task.ext.args ?: ''
+      ^^^^
   ```
 
 - Warning: `modules/local/scanpy/hvgs/main.nf:25:5`: Variable was declared but not used
@@ -41,11 +76,39 @@
       ^^^^^^^^^
   ```
 
+- Warning: `modules/local/scanpy/neighbors/main.nf:23:5`: Variable was declared but not used
+
+  ```nextflow
+      args   = task.ext.args ?: ''
+      ^^^^
+  ```
+
 - Warning: `modules/local/scanpy/paga/main.nf:25:5`: Variable was declared but not used
 
   ```nextflow
       obs_key = meta.obs_key ?: "leiden"
       ^^^^^^^
+  ```
+
+- Warning: `modules/local/scanpy/pca/main.nf:25:5`: Variable was declared but not used
+
+  ```nextflow
+      args   = task.ext.args ?: ''
+      ^^^^
+  ```
+
+- Warning: `modules/local/scanpy/rankgenesgroups/main.nf:28:5`: Variable was declared but not used
+
+  ```nextflow
+      args   = task.ext.args ?: ''
+      ^^^^
+  ```
+
+- Warning: `modules/local/scanpy/umap/main.nf:24:5`: Variable was declared but not used
+
+  ```nextflow
+      args   = task.ext.args ?: ''
+      ^^^^
   ```
 
 - Warning: `modules/local/scvitools/scanvi/main.nf:33:5`: Variable was declared but not used

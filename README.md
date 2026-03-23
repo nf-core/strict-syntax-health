@@ -11,12 +11,12 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 > See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline.
 > **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**
 
-- **Last updated:** 2026-03-22 00:21:49 UTC
+- **Last updated:** 2026-03-23 00:23:09 UTC
 - **Nextflow version:** 26.03.0-edge
 
 ## Pipelines
 
-- **Total:** 0 parse errors, 2963 errors, 8356 warnings across 132 pipelines
+- **Total:** 0 parse errors, 2963 errors, 8365 warnings across 132 pipelines
 - **Zero errors:** 42 pipelines (31.8%)
 
 |                    Errors                    |                     Warnings                     |
@@ -130,8 +130,8 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :x: [isoseq](https://github.com/nf-core/isoseq)                                              |     No      |      0 |       31 |     No      |          [View](lint_results/pipeline-results/isoseq_lint.md)           |        [View](lint_results/prints-help-results/isoseq_help.txt)         |
 | :x: [references](https://github.com/nf-core/references)                                      |     No      |      0 |       31 |     No      |        [View](lint_results/pipeline-results/references_lint.md)         |      [View](lint_results/prints-help-results/references_help.txt)       |
 | :white_check_mark: [mag](https://github.com/nf-core/mag)                                     |     No      |      0 |       28 |     Yes     |            [View](lint_results/pipeline-results/mag_lint.md)            |          [View](lint_results/prints-help-results/mag_help.txt)          |
+| :x: [scdownstream](https://github.com/nf-core/scdownstream)                                  |     No      |      0 |       27 |     No      |       [View](lint_results/pipeline-results/scdownstream_lint.md)        |     [View](lint_results/prints-help-results/scdownstream_help.txt)      |
 | :x: [alleleexpression](https://github.com/nf-core/alleleexpression)                          |     No      |      0 |       20 |     No      |     [View](lint_results/pipeline-results/alleleexpression_lint.md)      |   [View](lint_results/prints-help-results/alleleexpression_help.txt)    |
-| :x: [scdownstream](https://github.com/nf-core/scdownstream)                                  |     No      |      0 |       18 |     No      |       [View](lint_results/pipeline-results/scdownstream_lint.md)        |     [View](lint_results/prints-help-results/scdownstream_help.txt)      |
 | :white_check_mark: [ampliseq](https://github.com/nf-core/ampliseq)                           |     No      |      0 |       16 |     Yes     |         [View](lint_results/pipeline-results/ampliseq_lint.md)          |       [View](lint_results/prints-help-results/ampliseq_help.txt)        |
 | :x: [createpanelrefs](https://github.com/nf-core/createpanelrefs)                            |     No      |      0 |       16 |     No      |      [View](lint_results/pipeline-results/createpanelrefs_lint.md)      |    [View](lint_results/prints-help-results/createpanelrefs_help.txt)    |
 | :white_check_mark: [bacass](https://github.com/nf-core/bacass)                               |     No      |      0 |       15 |     Yes     |          [View](lint_results/pipeline-results/bacass_lint.md)           |        [View](lint_results/prints-help-results/bacass_help.txt)         |
