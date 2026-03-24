@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "4f6c351f7bbc62173b30f5a430e21ec907720676",
+  "_repo_commit": "3984c94cb6783f36e97df11b1b4ed0d32bfe0de7",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -2206,6 +2206,12 @@
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/custom/filterdifferentialtable",
     "errors": 0,
     "warnings": 0,
+    "parse_error": false
+  },
+  "custom_geneticmapconvert": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/custom/geneticmapconvert",
+    "errors": 0,
+    "warnings": 1,
     "parse_error": false
   },
   "custom_getchromsizes": {
@@ -7021,13 +7027,13 @@
     "parse_error": false
   },
   "plastid_make_wiggle": {
-    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/make/wiggle",
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/make_wiggle",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
   "plastid_metagene_generate": {
-    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/metagene/generate",
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/metagene_generate",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -7339,7 +7345,7 @@
     "parse_error": false
   },
   "proseg_proseg_to_baysor": {
-    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/proseg/proseg/to/baysor",
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/proseg/proseg_to_baysor",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

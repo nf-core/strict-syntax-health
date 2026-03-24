@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-03-14T00:23:19.447674531Z
-- Nextflow version: 26.02.0-edge
+- Generated: 2026-03-24T00:24:08.686835261Z
+- Nextflow version: 26.03.0-edge
 - Summary: 10 errors, 28 warnings
 
 ## :x: Errors
@@ -260,14 +260,14 @@
                                                                                       ^^^^
   ```
 
-- Warning: `workflows/variantbenchmarking.nf:399:118`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/variantbenchmarking.nf:416:118`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_multiqc_files                      = ch_multiqc_files.mix(REPORT_BENCHMARK_STATISTICS.out.merged_reports.map{ meta, report -> report }.flatten())
                                                                                                                        ^^^^
   ```
 
-- Warning: `workflows/variantbenchmarking.nf:400:82`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/variantbenchmarking.nf:417:82`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_multiqc_files                      = ch_multiqc_files.mix(ch_reports.map{ meta, report -> report }.flatten())

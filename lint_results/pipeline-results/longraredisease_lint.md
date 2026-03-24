@@ -1,16 +1,16 @@
 # Nextflow lint results
 
-- Generated: 2026-03-22T00:20:14.228783170Z
+- Generated: 2026-03-24T00:21:52.660503351Z
 - Nextflow version: 26.03.0-edge
 - Summary: 182 warnings
 
 ## :warning: Warnings
 
-- Warning: `conf/modules.config:496:36`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:496:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-          return args_list.findAll { it }.join(' ').trim()
-                                     ^^
+          ].findAll { it }.join(' ').trim()
+                      ^^
   ```
 
 - Warning: `main.nf:59:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead

@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-03-21T00:23:23.404799177Z
+- Generated: 2026-03-24T00:22:11.068488232Z
 - Nextflow version: 26.03.0-edge
-- Summary: 1 error, 38 warnings
+- Summary: 1 error, 41 warnings
 
 ## :x: Errors
 
@@ -57,7 +57,7 @@
           ^^^^
   ```
 
-- Warning: `modules/local/numorphregister/main.nf:48:9`: Variable was declared but not used
+- Warning: `modules/local/numorphregister/main.nf:43:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
@@ -134,11 +134,25 @@
           ^^^^
   ```
 
+- Warning: `subworkflows/local/araregistration/main.nf:14:5`: Variable was declared but not used
+
+  ```nextflow
+      ch_versions = Channel.empty()
+      ^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/araregistration/main.nf:14:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_versions = Channel.empty()
                     ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/araregistration/main.nf:15:5`: Variable was declared but not used
+
+  ```nextflow
+      sample_meta = stitched_data.map { meta, img_dir, params -> meta }
+      ^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/araregistration/main.nf:15:45`: Parameter was not used -- prefix with `_` to suppress warning
@@ -160,6 +174,13 @@
   ```nextflow
           .map { meta, stitched_img_directory, parameter_file, resampled ->
                        ^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/araregistration/main.nf:31:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  .findAll { it.name.endsWith('.mat') }
+                             ^^
   ```
 
 - Warning: `subworkflows/local/numorph_preprocessing/main.nf:33:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead

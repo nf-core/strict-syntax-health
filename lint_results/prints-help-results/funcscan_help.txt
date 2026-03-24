@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.03.0-edge
 
-Launching `./main.nf` [distracted_coulomb] revision: 67661b9bcf
+Launching `./main.nf` [scruffy_mccarthy] revision: 67661b9bcf
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -35,6 +35,7 @@ Screening type activation
   --run_amp_screening                               [boolean] Activate antimicrobial peptide genes screening tools. 
   --run_arg_screening                               [boolean] Activate antimicrobial resistance gene screening tools. 
   --run_bgc_screening                               [boolean] Activate biosynthetic gene cluster screening tools. 
+  --run_cazyme_screening                            [boolean] Activate CAZyme and CAZyme gene cluster screening tools. 
 
 Taxonomic classification: general options
   --run_taxa_classification                         [boolean] Activates the taxonomic classification of input nucleotide sequences. 
@@ -304,6 +305,12 @@ BGC: hmmsearch
   --bgc_hmmsearch_savealignments                    [boolean] Saves a multiple alignment of all significant hits to a file. 
   --bgc_hmmsearch_savetargets                       [boolean] Save a simple tabular file summarising the per-target output. 
   --bgc_hmmsearch_savedomains                       [boolean] Save a simple tabular file summarising the per-domain output. 
+
+dbCAN
+  --cazyme_skip_dbcan                               [boolean] Skip dbCAN during the CAZyme screening. 
+  --cazyme_dbcan_db                                 [string]  Path to local dbCAN database folder. 
+  --dbcan_skip_cgc                                  [boolean] Skip CGC during the dbCAN screening. 
+  --dbcan_skip_substrate                            [boolean] Skip substrate prediction during the dbCAN screening. 
 
 Generic options
   --multiqc_methods_description                     [string]          Custom MultiQC yaml file containing HTML including a methods description. 
