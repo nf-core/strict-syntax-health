@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.02.0-edge
+ N E X T F L O W   ~  version 26.03.0-edge
 
-Launching `./main.nf` [sick_tuckerman] revision: a18b2be4cd
+Launching `./main.nf` [evil_galileo] revision: a18b2be4cd
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -42,6 +42,8 @@ the output report only. [default: false]
   --long_reads_filtering          [string]  Tool for ONT read filtering [default: porechop] 
   --filtlong_args                 [string]  Arguments for running Filtlong 
   --filtlong_minlen               [integer] Minimun length for Filtlong to work [default: 10] 
+  --rasusa                        [boolean] Use Rasusa to downsample reads to a target coverage [default: false] 
+  --rasusa_coverage               [integer] Target coverage for Rasusa read downsampling [default: 100] 
 
 Contamination Screening
   --kraken2db                     [string] Path to Kraken2 database. 

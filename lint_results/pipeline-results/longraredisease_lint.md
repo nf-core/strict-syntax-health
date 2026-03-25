@@ -1,19 +1,19 @@
 # Nextflow lint results
 
-- Generated: 2026-03-24T00:21:52.660503351Z
+- Generated: 2026-03-25T00:25:05.933136234Z
 - Nextflow version: 26.03.0-edge
 - Summary: 182 warnings
 
 ## :warning: Warnings
 
-- Warning: `conf/modules.config:496:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:504:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ].findAll { it }.join(' ').trim()
                       ^^
   ```
 
-- Warning: `main.nf:59:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:61:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           Channel.empty()
@@ -930,13 +930,6 @@
       ^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_longraredisease_pipeline/main.nf:42:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/utils_nfcore_longraredisease_pipeline/main.nf:157:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -1019,13 +1012,6 @@
   ```nextflow
           .map { meta, data ->
                  ^^^^
-  ```
-
-- Warning: `workflows/longraredisease.nf:143:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
   ```
 
 - Warning: `workflows/longraredisease.nf:145:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -1278,4 +1264,18 @@
   ```nextflow
           ch_combined.map { meta, sv, cnv, str -> [meta, str ?: []] },
                                       ^^^
+  ```
+
+- Warning: `workflows/longraredisease.nf:854:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+      def topic_versions = Channel.topic("versions")
+                           ^^^^^^^
+  ```
+
+- Warning: `workflows/longraredisease.nf:878:17`: Variable was declared but not used
+
+  ```nextflow
+          ).set { ch_collated_versions }
+                  ^^^^^^^^^^^^^^^^^^^^
   ```

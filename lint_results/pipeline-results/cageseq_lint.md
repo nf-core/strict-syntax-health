@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-03-20T00:23:40.837196161Z
+- Generated: 2026-03-25T00:23:49.258135296Z
 - Nextflow version: 26.03.0-edge
-- Summary: 56 errors, 61 warnings
+- Summary: 56 errors, 50 warnings
 
 ## :x: Errors
 
@@ -377,21 +377,21 @@
                                                     ^^^^
   ```
 
-- Error: `workflows/customcage.nf:98:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
+- Error: `subworkflows/local/utils_nfcore_customcage_pipeline/main.nf:49:5`: Incorrect number of call arguments, expected 9 but received 3
 
   ```nextflow
-  def multiqc_report = []
-  ^^^^^^^^^^^^^^^^^^^^^^^
+      UTILS_NFSCHEMA_PLUGIN (
+      ^
   ```
 
-- Error: `workflows/customcage.nf:188:17`: Variables in a closure should be declared with `def`
+- Error: `workflows/cageseq.nf:122:17`: Variables in a closure should be declared with `def`
 
   ```nextflow
                   file1 = paths[0]
                   ^^^^^
   ```
 
-- Error: `workflows/customcage.nf:189:17`: Variables in a closure should be declared with `def`
+- Error: `workflows/cageseq.nf:123:17`: Variables in a closure should be declared with `def`
 
   ```nextflow
                   file2 = paths[1]
@@ -673,6 +673,20 @@
                                                       ^^^^
   ```
 
+- Warning: `subworkflows/local/utils_nfcore_cageseq_pipeline/main.nf:32:5`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      monochrome_logs   // boolean: Do not use coloured log outputs
+      ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_cageseq_pipeline/main.nf:35:5`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      input             //  string: Path to input samplesheet
+      ^^^^^
+  ```
+
 - Warning: `subworkflows/local/utils_nfcore_customcage_pipeline/main.nf:28:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
@@ -701,128 +715,37 @@
       ^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/cageseq.nf:40:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      return ch_versions.unique().map { version -> processVersionsFromYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
-                                                                                                   ^^^^^^^
-  ```
-
-- Warning: `workflows/customcage.nf:98:5`: Variable was declared but not used
-
-  ```nextflow
-  def multiqc_report = []
+      ch_samplesheet // channel: samplesheet read in from --input
       ^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/customcage.nf:108:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-              ch_gtf = Channel.fromPath(params.gtf, checkIfExists: true)
-                       ^^^^^^^
-  ```
-
-- Warning: `workflows/customcage.nf:119:32`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          ch_cager_sample_file = Channel.fromPath(params.cager_sample_file)
-                                 ^^^^^^^
-  ```
-
-- Warning: `workflows/customcage.nf:125:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_multiqc_files = Channel.empty()
-                         ^^^^^^^
-  ```
-
-- Warning: `workflows/customcage.nf:129:20`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          ch_fasta = Channel.empty()
-                     ^^^^^^^
-  ```
-
-- Warning: `workflows/customcage.nf:130:20`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          ch_index = Channel.empty()
-                     ^^^^^^^
-  ```
-
-- Warning: `workflows/customcage.nf:178:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/cageseq.nf:112:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .map{[it[3], it[4]]}
                     ^^
   ```
 
-- Warning: `workflows/customcage.nf:178:26`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/cageseq.nf:112:26`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .map{[it[3], it[4]]}
                            ^^
   ```
 
-- Warning: `workflows/customcage.nf:183:49`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/cageseq.nf:117:49`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               mapped_files_ch = ch_for_cager.map{ meta, paths ->
                                                   ^^^^
   ```
 
-- Warning: `workflows/customcage.nf:187:49`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/cageseq.nf:121:49`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               mapped_files_ch = ch_for_cager.map{ meta, paths ->
                                                   ^^^^
-  ```
-
-- Warning: `workflows/customcage.nf:264:32`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_multiqc_config        = Channel.fromPath(
-                                 ^^^^^^^
-  ```
-
-- Warning: `workflows/customcage.nf:267:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          Channel.fromPath(params.multiqc_config, checkIfExists: true) :
-          ^^^^^^^
-  ```
-
-- Warning: `workflows/customcage.nf:268:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          Channel.empty()
-          ^^^^^^^
-  ```
-
-- Warning: `workflows/customcage.nf:270:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          Channel.fromPath(params.multiqc_logo, checkIfExists: true) :
-          ^^^^^^^
-  ```
-
-- Warning: `workflows/customcage.nf:271:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          Channel.empty()
-          ^^^^^^^
-  ```
-
-- Warning: `workflows/customcage.nf:275:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_params))
-                            ^^^^^^^
-  ```
-
-- Warning: `workflows/customcage.nf:281:45`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_methods_description                = Channel.value(
-                                              ^^^^^^^
   ```

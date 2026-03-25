@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-02-19T00:24:27.160618928Z
-- Nextflow version: 26.01.1-edge
-- Summary: 9 errors, 55 warnings
+- Generated: 2026-03-25T00:28:23.350170655Z
+- Nextflow version: 26.03.0-edge
+- Summary: 9 errors, 60 warnings
 
 ## :x: Errors
 
@@ -13,56 +13,56 @@
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `main.nf:64:51`: `path` is already declared
+- Error: `main.nf:65:51`: `path` is already declared
 
   ```nextflow
               vep_cache = UNTAR.out.untar.map{meta, path ->
                                                     ^^^^
   ```
 
-- Error: `main.nf:104:9`: `input` is not defined
+- Error: `main.nf:107:9`: `input` is not defined
 
   ```nextflow
           input
           ^^^^^
   ```
 
-- Error: `subworkflows/local/lifter/main.nf:23:36`: `bam` is already declared
+- Error: `subworkflows/local/lifter/main.nf:24:36`: `bam` is already declared
 
   ```nextflow
           rds = data.map{ meta, rds, bam, bai ->
                                      ^^^
   ```
 
-- Error: `subworkflows/local/lifter/main.nf:27:35`: `rds` is already declared
+- Error: `subworkflows/local/lifter/main.nf:28:35`: `rds` is already declared
 
   ```nextflow
           all_rds = data.map{ meta, rds, bam, bai ->
                                     ^^^
   ```
 
-- Error: `subworkflows/local/lifter/main.nf:27:40`: `bam` is already declared
+- Error: `subworkflows/local/lifter/main.nf:28:40`: `bam` is already declared
 
   ```nextflow
           all_rds = data.map{ meta, rds, bam, bai ->
                                          ^^^
   ```
 
-- Error: `subworkflows/local/lifter/main.nf:33:72`: `rds` is already declared
+- Error: `subworkflows/local/lifter/main.nf:35:72`: `rds` is already declared
 
   ```nextflow
           all_pos = GET_POSITIONS_ALL.out.all_pos.transpose().map{ meta, rds ->
                                                                          ^^^
   ```
 
-- Error: `workflows/tumourevo.nf:36:17`: Variables in a closure should be declared with `def`
+- Error: `workflows/tumourevo.nf:39:17`: Variables in a closure should be declared with `def`
 
   ```nextflow
                   n = vcf.baseName.unique().size()
                   ^
   ```
 
-- Error: `workflows/tumourevo.nf:39:71`: `n` is already declared
+- Error: `workflows/tumourevo.nf:42:71`: `n` is already declared
 
   ```nextflow
               .map { id, meta, vcf, tbi, bam, bai, cna_segs, cna_extra, n  ->
@@ -99,63 +99,70 @@
                                                                                                          ^^^^^^^
   ```
 
-- Warning: `main.nf:52:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:52:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+      ch_versions = Channel.empty()
+                    ^^^^^^^
+  ```
+
+- Warning: `main.nf:53:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       fasta = params.fasta ? Channel.fromPath(params.fasta).map{ it -> [ [id:it.baseName], it ] }.collect() : Channel.empty()
                              ^^^^^^^
   ```
 
-- Warning: `main.nf:52:109`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:53:109`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       fasta = params.fasta ? Channel.fromPath(params.fasta).map{ it -> [ [id:it.baseName], it ] }.collect() : Channel.empty()
                                                                                                               ^^^^^^^
   ```
 
-- Warning: `main.nf:53:45`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:54:45`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       drivers_table =  params.drivers_table ? Channel.fromPath(params.drivers_table).map{ it -> [ it ] }.collect() : Channel.empty()
                                               ^^^^^^^
   ```
 
-- Warning: `main.nf:53:116`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:54:116`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       drivers_table =  params.drivers_table ? Channel.fromPath(params.drivers_table).map{ it -> [ it ] }.collect() : Channel.empty()
                                                                                                                      ^^^^^^^
   ```
 
-- Warning: `main.nf:56:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:57:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ensemblvep_info = Channel.of([ [ id:"${params.vep_cache_version}_${params.vep_genome}" ], params.vep_genome, params.vep_species, params.vep_cache_version ])
                             ^^^^^^^
   ```
 
-- Warning: `main.nf:58:66`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `main.nf:59:66`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           vep_cache = ENSEMBLVEP_DOWNLOAD.out.cache.collect().map{ meta, cache -> [ cache ] }
                                                                    ^^^^
   ```
 
-- Warning: `main.nf:62:39`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:63:39`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               path = params.vep_cache ? Channel.fromPath(params.vep_cache).map{ it -> [ [id:it.baseName], it ] }.collect() : Channel.empty()
                                         ^^^^^^^
   ```
 
-- Warning: `main.nf:62:124`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:63:124`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               path = params.vep_cache ? Channel.fromPath(params.vep_cache).map{ it -> [ [id:it.baseName], it ] }.collect() : Channel.empty()
                                                                                                                              ^^^^^^^
   ```
 
-- Warning: `main.nf:64:45`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `main.nf:65:45`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               vep_cache = UNTAR.out.untar.map{meta, path ->
@@ -218,13 +225,6 @@
           ^^^^
   ```
 
-- Warning: `modules/nf-core/pyclonevi/main.nf:26:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
 - Warning: `modules/nf-core/sigprofiler/main.nf:26:9`: Variable was declared but not used
 
   ```nextflow
@@ -246,6 +246,13 @@
                          ^^^^^^^
   ```
 
+- Warning: `subworkflows/local/formatter/main.nf:16:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+          ch_versions = Channel.empty()
+                        ^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/lifter/main.nf:17:15`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -253,67 +260,95 @@
                 ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/lifter/main.nf:19:31`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/lifter/main.nf:18:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+          ch_versions = Channel.empty()
+                        ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/lifter/main.nf:20:31`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           bam = data.map{ meta, rds, bam, bai ->
                                 ^^^
   ```
 
-- Warning: `subworkflows/local/lifter/main.nf:19:41`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/lifter/main.nf:20:41`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           bam = data.map{ meta, rds, bam, bai ->
                                           ^^^
   ```
 
-- Warning: `subworkflows/local/lifter/main.nf:23:36`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/lifter/main.nf:24:36`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           rds = data.map{ meta, rds, bam, bai ->
                                      ^^^
   ```
 
-- Warning: `subworkflows/local/lifter/main.nf:23:41`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/lifter/main.nf:24:41`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           rds = data.map{ meta, rds, bam, bai ->
                                           ^^^
   ```
 
-- Warning: `subworkflows/local/lifter/main.nf:27:40`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/lifter/main.nf:28:40`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           all_rds = data.map{ meta, rds, bam, bai ->
                                          ^^^
   ```
 
-- Warning: `subworkflows/local/lifter/main.nf:27:45`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/lifter/main.nf:28:45`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           all_rds = data.map{ meta, rds, bam, bai ->
                                               ^^^
   ```
 
-- Warning: `subworkflows/local/lifter/main.nf:33:66`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/lifter/main.nf:35:66`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           all_pos = GET_POSITIONS_ALL.out.all_pos.transpose().map{ meta, rds ->
                                                                    ^^^^
   ```
 
-- Warning: `subworkflows/local/signature_deconvolution/main.nf:27:79`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/qc/main.nf:15:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-          input_sparsesig = FORMATTER_RDS_SPARSESIGNATURES.out.map { meta, tsv, sample ->
-                                                                                ^^^^^^
+          ch_versions = Channel.empty()
+                        ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/signature_deconvolution/main.nf:52:76`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/signature_deconvolution/main.nf:16:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-          input_sigprofiler = FORMATTER_RDS_SIGPROFILER.out.map { meta, tsv, sample ->
-                                                                             ^^^^^^
+      ch_versions = Channel.empty()
+                    ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/signature_deconvolution/main.nf:30:88`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          input_sparsesig = FORMATTER_RDS_SPARSESIGNATURES.out.out_data.map { meta, tsv, sample ->
+                                                                                         ^^^^^^
+  ```
+
+- Warning: `subworkflows/local/signature_deconvolution/main.nf:57:85`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          input_sigprofiler = FORMATTER_RDS_SIGPROFILER.out.out_data.map { meta, tsv, sample ->
+                                                                                      ^^^^^^
+  ```
+
+- Warning: `subworkflows/local/subclonal_deconvolution/main.nf:16:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+      ch_versions = Channel.empty()
+                    ^^^^^^^
   ```
 
 - Warning: `subworkflows/local/utils_nfcore_tumourevo_pipeline/main.nf:32:5`: Parameter was not used -- prefix with `_` to suppress warning
@@ -330,126 +365,126 @@
       ^^^^^
   ```
 
-- Warning: `workflows/tumourevo.nf:39:20`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/tumourevo.nf:42:20`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map { id, meta, vcf, tbi, bam, bai, cna_segs, cna_extra, n  ->
                      ^^
   ```
 
-- Warning: `workflows/tumourevo.nf:48:44`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/tumourevo.nf:51:44`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       input_vcf = input.map{ meta, vcf, tbi, bam, bai, cna_segs, cna_extra  ->
                                              ^^^
   ```
 
-- Warning: `workflows/tumourevo.nf:48:49`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/tumourevo.nf:51:49`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       input_vcf = input.map{ meta, vcf, tbi, bam, bai, cna_segs, cna_extra  ->
                                                   ^^^
   ```
 
-- Warning: `workflows/tumourevo.nf:48:54`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/tumourevo.nf:51:54`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       input_vcf = input.map{ meta, vcf, tbi, bam, bai, cna_segs, cna_extra  ->
                                                        ^^^^^^^^
   ```
 
-- Warning: `workflows/tumourevo.nf:48:64`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/tumourevo.nf:51:64`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       input_vcf = input.map{ meta, vcf, tbi, bam, bai, cna_segs, cna_extra  ->
                                                                  ^^^^^^^^^
   ```
 
-- Warning: `workflows/tumourevo.nf:52:34`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/tumourevo.nf:55:34`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       input_cna = input.map{ meta, vcf, tbi, bam, bai, cna_segs, cna_extra  ->
                                    ^^^
   ```
 
-- Warning: `workflows/tumourevo.nf:52:39`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/tumourevo.nf:55:39`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       input_cna = input.map{ meta, vcf, tbi, bam, bai, cna_segs, cna_extra  ->
                                         ^^^
   ```
 
-- Warning: `workflows/tumourevo.nf:52:44`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/tumourevo.nf:55:44`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       input_cna = input.map{ meta, vcf, tbi, bam, bai, cna_segs, cna_extra  ->
                                              ^^^
   ```
 
-- Warning: `workflows/tumourevo.nf:52:49`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/tumourevo.nf:55:49`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       input_cna = input.map{ meta, vcf, tbi, bam, bai, cna_segs, cna_extra  ->
                                                   ^^^
   ```
 
-- Warning: `workflows/tumourevo.nf:56:34`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/tumourevo.nf:59:34`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       input_bam = input.map{ meta, vcf, tbi, bam, bai, cna_segs, cna_extra  ->
                                    ^^^
   ```
 
-- Warning: `workflows/tumourevo.nf:56:39`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/tumourevo.nf:59:39`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       input_bam = input.map{ meta, vcf, tbi, bam, bai, cna_segs, cna_extra  ->
                                         ^^^
   ```
 
-- Warning: `workflows/tumourevo.nf:56:54`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/tumourevo.nf:59:54`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       input_bam = input.map{ meta, vcf, tbi, bam, bai, cna_segs, cna_extra  ->
                                                        ^^^^^^^^
   ```
 
-- Warning: `workflows/tumourevo.nf:56:64`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/tumourevo.nf:59:64`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       input_bam = input.map{ meta, vcf, tbi, bam, bai, cna_segs, cna_extra  ->
                                                                  ^^^^^^^^^
   ```
 
-- Warning: `workflows/tumourevo.nf:85:29`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/tumourevo.nf:93:29`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .branch { meta, rds, bam, bai ->
                               ^^^
   ```
 
-- Warning: `workflows/tumourevo.nf:85:34`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/tumourevo.nf:93:34`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .branch { meta, rds, bam, bai ->
                                    ^^^
   ```
 
-- Warning: `workflows/tumourevo.nf:85:39`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/tumourevo.nf:93:39`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .branch { meta, rds, bam, bai ->
                                         ^^^
   ```
 
-- Warning: `workflows/tumourevo.nf:92:56`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/tumourevo.nf:102:56`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       rds_input = join_input.multisample.map{ meta, rds, bam, bai ->
                                                          ^^^
   ```
 
-- Warning: `workflows/tumourevo.nf:92:61`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/tumourevo.nf:102:61`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       rds_input = join_input.multisample.map{ meta, rds, bam, bai ->

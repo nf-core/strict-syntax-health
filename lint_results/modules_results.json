@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "3984c94cb6783f36e97df11b1b4ed0d32bfe0de7",
+  "_repo_commit": "4b21e2cd1a9ea70e22b502cb45ee147410824760",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -6390,6 +6390,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "openms_textexporter": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/openms/textexporter",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "openmsthirdparty_cometadapter": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/openmsthirdparty/cometadapter",
     "errors": 0,
@@ -9638,6 +9644,18 @@
   },
   "td2_predict": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/td2/predict",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "telogator2": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/telogator2",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "telomerehunter": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/telomerehunter",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

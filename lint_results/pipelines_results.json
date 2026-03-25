@@ -29,7 +29,7 @@
   "ampliseq": {
     "full_name": "nf-core/ampliseq",
     "html_url": "https://github.com/nf-core/ampliseq",
-    "commit": "7540963dc03e0ed828a0013e78db60b4d364d59e",
+    "commit": "e697fff950a6a7251475194afee6cd6f4ec59746",
     "errors": 0,
     "warnings": 16,
     "parse_error": false,
@@ -38,18 +38,18 @@
   "atacseq": {
     "full_name": "nf-core/atacseq",
     "html_url": "https://github.com/nf-core/atacseq",
-    "commit": "3ed86ea9d17ac24e9d0773a0e1f7263ba075f270",
+    "commit": "0a5dea186433e2992b0b4141325ab7ee9fd9d59b",
     "errors": 0,
-    "warnings": 193,
+    "warnings": 177,
     "parse_error": false,
     "prints_help": false
   },
   "bacass": {
     "full_name": "nf-core/bacass",
     "html_url": "https://github.com/nf-core/bacass",
-    "commit": "4be6cb976f4b6228718a0956be721c60e804559b",
+    "commit": "e21539091feb7b0ab567ef7987e0a6c61ea48e91",
     "errors": 0,
-    "warnings": 15,
+    "warnings": 17,
     "parse_error": false,
     "prints_help": true
   },
@@ -74,9 +74,9 @@
   "cageseq": {
     "full_name": "nf-core/cageseq",
     "html_url": "https://github.com/nf-core/cageseq",
-    "commit": "84279c0545406d8ba505b2b4946747c889688743",
+    "commit": "5cb0e320510fdfbd79f044b5ea34984cba306608",
     "errors": 56,
-    "warnings": 61,
+    "warnings": 50,
     "parse_error": false,
     "prints_help": null
   },
@@ -353,7 +353,7 @@
   "funcscan": {
     "full_name": "nf-core/funcscan",
     "html_url": "https://github.com/nf-core/funcscan",
-    "commit": "b6fe2c070e0e0ef4697db0e65ea4f6be4a6273e4",
+    "commit": "60385fe1cd0e152c8a0ba163b14ae2dd432b851f",
     "errors": 0,
     "warnings": 87,
     "parse_error": false,
@@ -389,7 +389,7 @@
   "genomeqc": {
     "full_name": "nf-core/genomeqc",
     "html_url": "https://github.com/nf-core/genomeqc",
-    "commit": "232370c537c0460bc3445d698f905d2d621561c6",
+    "commit": "787a0e6233aad60f98b5170ba1c2148b03cdc232",
     "errors": 26,
     "warnings": 102,
     "parse_error": false,
@@ -407,7 +407,7 @@
   "genomicrelatedness": {
     "full_name": "nf-core/genomicrelatedness",
     "html_url": "https://github.com/nf-core/genomicrelatedness",
-    "commit": "94a55bd8acbc11d34c1f23b63e9b3ea37047e3eb",
+    "commit": "5ff315c4c555cffe2f4a1cd87156bf2705784e0d",
     "errors": 0,
     "warnings": 3,
     "parse_error": false,
@@ -506,7 +506,7 @@
   "longraredisease": {
     "full_name": "nf-core/longraredisease",
     "html_url": "https://github.com/nf-core/longraredisease",
-    "commit": "2e96520eafaac65e93a39ea5c3be0c7247f172f2",
+    "commit": "55f9d0af0408c01eb98200cc9f2079ccc7f7d1b5",
     "errors": 0,
     "warnings": 182,
     "parse_error": false,
@@ -524,7 +524,7 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "593b5573ee0096998df93b79d25b8a99756f15c2",
+    "commit": "efaf6f9ed006a6eccd2026485d907c816bb7320d",
     "errors": 0,
     "warnings": 28,
     "parse_error": false,
@@ -587,9 +587,9 @@
   "metatdenovo": {
     "full_name": "nf-core/metatdenovo",
     "html_url": "https://github.com/nf-core/metatdenovo",
-    "commit": "6028fa0682a7176930e46eaa8fae2d51bdc7e1e5",
-    "errors": 59,
-    "warnings": 152,
+    "commit": "76dd69a847f514777b777de624169f2796aa49fd",
+    "errors": 62,
+    "warnings": 140,
     "parse_error": false,
     "prints_help": null
   },
@@ -692,6 +692,15 @@
     "parse_error": false,
     "prints_help": null
   },
+  "ncrnannotator": {
+    "full_name": "nf-core/ncrnannotator",
+    "html_url": "https://github.com/nf-core/ncrnannotator",
+    "commit": "1a57ac306827ace09b52473a1e8f64dcb33c55a5",
+    "errors": 0,
+    "warnings": 4,
+    "parse_error": false,
+    "prints_help": false
+  },
   "omicsgenetraitassociation": {
     "full_name": "nf-core/omicsgenetraitassociation",
     "html_url": "https://github.com/nf-core/omicsgenetraitassociation",
@@ -722,7 +731,7 @@
   "pacvar": {
     "full_name": "nf-core/pacvar",
     "html_url": "https://github.com/nf-core/pacvar",
-    "commit": "ea7122f5626c62f53bd77103663499d9d0c181f9",
+    "commit": "338f4d9fcb73bc3aa2f08127d6860d945b151e25",
     "errors": 6,
     "warnings": 29,
     "parse_error": false,
@@ -776,7 +785,7 @@
   "phaseimpute": {
     "full_name": "nf-core/phaseimpute",
     "html_url": "https://github.com/nf-core/phaseimpute",
-    "commit": "640ca14d2194457fcfb47a2f0862eeb4a301674a",
+    "commit": "b0adfc2331527c1630b7a1be4c6e8c9599f73dfe",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -848,7 +857,7 @@
   "rangeland": {
     "full_name": "nf-core/rangeland",
     "html_url": "https://github.com/nf-core/rangeland",
-    "commit": "fd80310dca04690e3a164a68c50979c094f6a244",
+    "commit": "21003c9efe984e91f7e43eea8de2c1466005105e",
     "errors": 0,
     "warnings": 1,
     "parse_error": false,
@@ -938,7 +947,7 @@
   "rnaseq": {
     "full_name": "nf-core/rnaseq",
     "html_url": "https://github.com/nf-core/rnaseq",
-    "commit": "c8d40034f81355011a1d0e92350edb86fad4f761",
+    "commit": "2bb2f658fd97fa69c9fe2777f8e1ceb8a8634da3",
     "errors": 0,
     "warnings": 7,
     "parse_error": false,
@@ -983,7 +992,7 @@
   "scdownstream": {
     "full_name": "nf-core/scdownstream",
     "html_url": "https://github.com/nf-core/scdownstream",
-    "commit": "583f92680c640f2b667fed0630bf6afc69a25d8c",
+    "commit": "753add55e9c8846a563bfb76151c6138ba25b521",
     "errors": 0,
     "warnings": 27,
     "parse_error": false,
@@ -1064,9 +1073,9 @@
   "spatialxe": {
     "full_name": "nf-core/spatialxe",
     "html_url": "https://github.com/nf-core/spatialxe",
-    "commit": "dc5adb535734480be85a5b0ca01181e71abebb5b",
-    "errors": 35,
-    "warnings": 103,
+    "commit": "fb0cb32bc31da4a6c1518ff0f3fed19dfefb5682",
+    "errors": 11,
+    "warnings": 116,
     "parse_error": false,
     "prints_help": null
   },
@@ -1127,18 +1136,18 @@
   "tumourevo": {
     "full_name": "nf-core/tumourevo",
     "html_url": "https://github.com/nf-core/tumourevo",
-    "commit": "6433335b8f82aac1571609d6d049a7d95bbe45cd",
+    "commit": "bbc663f7dcdd6ad67a8e184a42942be997abec9d",
     "errors": 9,
-    "warnings": 55,
+    "warnings": 60,
     "parse_error": false,
     "prints_help": null
   },
   "variantbenchmarking": {
     "full_name": "nf-core/variantbenchmarking",
     "html_url": "https://github.com/nf-core/variantbenchmarking",
-    "commit": "300995cfc4d34f301ca2232b1aea68ea8cd8d1ad",
+    "commit": "cbaec62b2e1f96e873c437656a4010ebd1a3df18",
     "errors": 10,
-    "warnings": 28,
+    "warnings": 29,
     "parse_error": false,
     "prints_help": null
   },

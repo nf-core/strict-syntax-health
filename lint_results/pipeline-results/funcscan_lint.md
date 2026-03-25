@@ -1,12 +1,12 @@
 # Nextflow lint results
 
-- Generated: 2026-03-24T00:21:16.696606848Z
+- Generated: 2026-03-25T00:24:09.826144640Z
 - Nextflow version: 26.03.0-edge
 - Summary: 87 warnings
 
 ## :warning: Warnings
 
-- Warning: `conf/modules.config:592:65`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:593:65`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               saveAs: { params.run_taxa_classification == false ? it : null },

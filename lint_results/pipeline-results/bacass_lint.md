@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-03-17T00:23:03.284476221Z
-- Nextflow version: 26.02.0-edge
-- Summary: 15 warnings
+- Generated: 2026-03-25T00:23:29.069995323Z
+- Nextflow version: 26.03.0-edge
+- Summary: 17 warnings
 
 ## :warning: Warnings
 
@@ -109,4 +109,18 @@
   ```nextflow
       ch_fastqc_trim_zip   = Channel.empty()
                              ^^^^^^^
+  ```
+
+- Warning: `workflows/bacass.nf:261:33`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+                  .branch { meta, reads ->
+                                  ^^^^^
+  ```
+
+- Warning: `workflows/bacass.nf:276:13`: Variable was declared but not used
+
+  ```nextflow
+              ch_rasusa_log = RASUSA.out.log
+              ^^^^^^^^^^^^^
   ```

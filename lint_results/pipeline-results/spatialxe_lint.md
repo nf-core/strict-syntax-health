@@ -1,142 +1,37 @@
 # Nextflow lint results
 
-- Generated: 2026-03-14T00:23:06.511508429Z
-- Nextflow version: 26.02.0-edge
-- Summary: 35 errors, 103 warnings
+- Generated: 2026-03-25T00:28:14.411997119Z
+- Nextflow version: 26.03.0-edge
+- Summary: 11 errors, 116 warnings
 
 ## :x: Errors
 
-- Error: `conf/base.config:14:28`: Unexpected input: 'Math'
+- Error: `conf/base.config:13:28`: Unexpected input: 'Math'
 
   ```nextflow
       cpus   = { 1    * (int)Math.pow(4, task.attempt - 1) }
                              ^
   ```
 
-- Error: `modules/local/segger/train/main.nf:28:35`: Unexpected input: 'Math'
+- Error: `conf/modules.config:98:57`: Unexpected input: 'Math'
+
+  ```nextflow
+          memory = { params.baysor_tiling ? 240.GB * (int)Math.pow(2, task.attempt - 1) : 720.GB }
+                                                          ^
+  ```
+
+- Error: `modules/local/segger/train/main.nf:29:35`: Unexpected input: 'Math'
 
   ```nextflow
       def gpu_count = Math.min((int)Math.pow(2, task.attempt + 1), params.devices as int)
                                     ^
   ```
 
-- Error: `subworkflows/local/baysor_run_transcripts_parquet/main.nf:191:14`: Unexpected input: 'i'
+- Error: `subworkflows/local/baysor_run_transcripts_parquet/main.nf:183:14`: Unexpected input: 'i'
 
   ```nextflow
       for (int i = 0; i < ids.size(); i++) {
                ^
-  ```
-
-- Error: `subworkflows/local/cellpose_baysor_import_segmentation/main.nf:8:1`: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/spatialxe/modules/local/utility/extract_dapi/main.nf'
-
-  ```nextflow
-  include { EXTRACT_DAPI                     } from '../../../modules/local/utility/extract_dapi/main'
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/cellpose_baysor_import_segmentation/main.nf:10:1`: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/spatialxe/modules/local/utility/convert_mask_uint32/main.nf'
-
-  ```nextflow
-  include { CONVERT_MASK_UINT32              } from '../../../modules/local/utility/convert_mask_uint32/main'
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/cellpose_baysor_import_segmentation/main.nf:61:9`: `EXTRACT_DAPI` is not defined
-
-  ```nextflow
-          EXTRACT_DAPI(ch_image)
-          ^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/cellpose_baysor_import_segmentation/main.nf:62:39`: `EXTRACT_DAPI` is not defined
-
-  ```nextflow
-          ch_versions = ch_versions.mix(EXTRACT_DAPI.out.versions)
-                                        ^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/cellpose_baysor_import_segmentation/main.nf:64:25`: `EXTRACT_DAPI` is not defined
-
-  ```nextflow
-          STARDIST_NUCLEI(EXTRACT_DAPI.out.dapi, [stardist_nuclei_model, []])
-                          ^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/cellpose_baysor_import_segmentation/main.nf:67:9`: `CONVERT_MASK_UINT32` is not defined
-
-  ```nextflow
-          CONVERT_MASK_UINT32(STARDIST_NUCLEI.out.mask)
-          ^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/cellpose_baysor_import_segmentation/main.nf:68:39`: `CONVERT_MASK_UINT32` is not defined
-
-  ```nextflow
-          ch_versions = ch_versions.mix(CONVERT_MASK_UINT32.out.versions)
-                                        ^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/cellpose_baysor_import_segmentation/main.nf:92:22`: `CONVERT_MASK_UINT32` is not defined
-
-  ```nextflow
-              .combine(CONVERT_MASK_UINT32.out.mask, by: 0)
-                       ^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/cellpose_resolift_morphology_ome_tif/main.nf:9:1`: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/spatialxe/modules/local/utility/extract_dapi/main.nf'
-
-  ```nextflow
-  include { EXTRACT_DAPI                     } from '../../../modules/local/utility/extract_dapi/main'
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/cellpose_resolift_morphology_ome_tif/main.nf:11:1`: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/spatialxe/modules/local/utility/convert_mask_uint32/main.nf'
-
-  ```nextflow
-  include { CONVERT_MASK_UINT32              } from '../../../modules/local/utility/convert_mask_uint32/main'
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/cellpose_resolift_morphology_ome_tif/main.nf:65:5`: `EXTRACT_DAPI` is not defined
-
-  ```nextflow
-      EXTRACT_DAPI(ch_image)
-      ^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/cellpose_resolift_morphology_ome_tif/main.nf:66:35`: `EXTRACT_DAPI` is not defined
-
-  ```nextflow
-      ch_versions = ch_versions.mix(EXTRACT_DAPI.out.versions)
-                                    ^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/cellpose_resolift_morphology_ome_tif/main.nf:68:21`: `EXTRACT_DAPI` is not defined
-
-  ```nextflow
-      STARDIST_NUCLEI(EXTRACT_DAPI.out.dapi, [stardist_nuclei_model, []])
-                      ^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/cellpose_resolift_morphology_ome_tif/main.nf:72:5`: `CONVERT_MASK_UINT32` is not defined
-
-  ```nextflow
-      CONVERT_MASK_UINT32(STARDIST_NUCLEI.out.mask)
-      ^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/cellpose_resolift_morphology_ome_tif/main.nf:73:35`: `CONVERT_MASK_UINT32` is not defined
-
-  ```nextflow
-      ch_versions = ch_versions.mix(CONVERT_MASK_UINT32.out.versions)
-                                    ^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/cellpose_resolift_morphology_ome_tif/main.nf:75:22`: `CONVERT_MASK_UINT32` is not defined
-
-  ```nextflow
-      ch_nuclei_mask = CONVERT_MASK_UINT32.out.mask
-                       ^^^^^^^^^^^^^^^^^^^
   ```
 
 - Error: `subworkflows/local/segger_create_train_predict/main.nf:6:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/spatialxe/modules/local/segger/train/main.nf'
@@ -146,81 +41,18 @@
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/segger_create_train_predict/main.nf:38:9`: `SEGGER_TRAIN` is not defined
+- Error: `subworkflows/local/segger_create_train_predict/main.nf:37:9`: `SEGGER_TRAIN` is not defined
 
   ```nextflow
           SEGGER_TRAIN(SEGGER_CREATE_DATASET.out.datasetdir)
           ^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/segger_create_train_predict/main.nf:39:39`: `SEGGER_TRAIN` is not defined
-
-  ```nextflow
-          ch_versions = ch_versions.mix(SEGGER_TRAIN.out.versions)
-                                        ^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/segger_create_train_predict/main.nf:41:19`: `SEGGER_TRAIN` is not defined
+- Error: `subworkflows/local/segger_create_train_predict/main.nf:39:19`: `SEGGER_TRAIN` is not defined
 
   ```nextflow
               .join(SEGGER_TRAIN.out.trained_models)
                     ^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/stardist_resolift_morphology_ome_tif/main.nf:6:1`: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/spatialxe/modules/local/utility/extract_dapi/main.nf'
-
-  ```nextflow
-  include { EXTRACT_DAPI                     } from '../../../modules/local/utility/extract_dapi/main'
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/stardist_resolift_morphology_ome_tif/main.nf:8:1`: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/spatialxe/modules/local/utility/convert_mask_uint32/main.nf'
-
-  ```nextflow
-  include { CONVERT_MASK_UINT32              } from '../../../modules/local/utility/convert_mask_uint32/main'
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/stardist_resolift_morphology_ome_tif/main.nf:39:5`: `EXTRACT_DAPI` is not defined
-
-  ```nextflow
-      EXTRACT_DAPI(ch_image)
-      ^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/stardist_resolift_morphology_ome_tif/main.nf:40:35`: `EXTRACT_DAPI` is not defined
-
-  ```nextflow
-      ch_versions = ch_versions.mix(EXTRACT_DAPI.out.versions)
-                                    ^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/stardist_resolift_morphology_ome_tif/main.nf:43:21`: `EXTRACT_DAPI` is not defined
-
-  ```nextflow
-      STARDIST_NUCLEI(EXTRACT_DAPI.out.dapi, [stardist_nuclei_model, []])
-                      ^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/stardist_resolift_morphology_ome_tif/main.nf:47:5`: `CONVERT_MASK_UINT32` is not defined
-
-  ```nextflow
-      CONVERT_MASK_UINT32(STARDIST_NUCLEI.out.mask)
-      ^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/stardist_resolift_morphology_ome_tif/main.nf:48:35`: `CONVERT_MASK_UINT32` is not defined
-
-  ```nextflow
-      ch_versions = ch_versions.mix(CONVERT_MASK_UINT32.out.versions)
-                                    ^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/stardist_resolift_morphology_ome_tif/main.nf:53:18`: `CONVERT_MASK_UINT32` is not defined
-
-  ```nextflow
-          .combine(CONVERT_MASK_UINT32.out.mask, by: 0)
-                   ^^^^^^^^^^^^^^^^^^^
   ```
 
 - Error: `workflows/spatialxe.nf:26:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/spatialxe/subworkflows/local/baysor_run_transcripts_parquet/main.nf'
@@ -274,14 +106,14 @@
           ^^^^^^
   ```
 
-- Warning: `modules/local/ficture/model/main.nf:45:9`: Variable was declared but not used
+- Warning: `modules/local/ficture/model/main.nf:40:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
   ```
 
-- Warning: `modules/local/ficture/model/main.nf:46:9`: Variable was declared but not used
+- Warning: `modules/local/ficture/model/main.nf:41:9`: Variable was declared but not used
 
   ```nextflow
       def prefix = task.ext.prefix ?: "${meta.id}"
@@ -293,13 +125,6 @@
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
-  ```
-
-- Warning: `modules/local/utility/split_transcripts/main.nf:24:9`: Variable was declared but not used
-
-  ```nextflow
-      def prefix = task.ext.prefix ?: "${meta.id}"
-          ^^^^^^
   ```
 
 - Warning: `subworkflows/local/baysor_generate_preview/main.nf:17:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -365,6 +190,41 @@
                             ^^^^^^^
   ```
 
+- Warning: `subworkflows/local/baysor_run_transcripts_parquet_tiled/main.nf:20:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+      ch_coordinate_space = Channel.value("microns")
+                            ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/baysor_run_transcripts_parquet_tiled/main.nf:64:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              def sorted = patch_data.sort { it[0] }
+                                             ^^
+  ```
+
+- Warning: `subworkflows/local/baysor_run_transcripts_parquet_tiled/main.nf:65:46`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              def patch_ids = sorted.collect { it[0] }
+                                               ^^
+  ```
+
+- Warning: `subworkflows/local/baysor_run_transcripts_parquet_tiled/main.nf:66:41`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              def csvs = sorted.collect { it[1] }
+                                          ^^
+  ```
+
+- Warning: `subworkflows/local/baysor_run_transcripts_parquet_tiled/main.nf:67:45`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              def geojsons = sorted.collect { it[2] }
+                                              ^^
+  ```
+
 - Warning: `subworkflows/local/cellpose_baysor_import_segmentation/main.nf:26:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -428,7 +288,7 @@
                             ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/cellpose_resolift_morphology_ome_tif/main.nf:55:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/cellpose_resolift_morphology_ome_tif/main.nf:53:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_scale_info = Channel.empty()
@@ -442,7 +302,7 @@
                     ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/ficture_preprocess_model/main.nf:31:77`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/ficture_preprocess_model/main.nf:29:77`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_features_clean = params.features ? FICTURE_PREPROCESS.out.features : Channel.value([])
@@ -491,28 +351,28 @@
                             ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/proseg_preset_proseg2baysor_tiled/main.nf:55:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/proseg_preset_proseg2baysor_tiled/main.nf:52:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def sorted = patch_data.sort { it[0] }
                                              ^^
   ```
 
-- Warning: `subworkflows/local/proseg_preset_proseg2baysor_tiled/main.nf:56:46`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/proseg_preset_proseg2baysor_tiled/main.nf:53:46`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def patch_ids = sorted.collect { it[0] }
                                                ^^
   ```
 
-- Warning: `subworkflows/local/proseg_preset_proseg2baysor_tiled/main.nf:57:41`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/proseg_preset_proseg2baysor_tiled/main.nf:54:41`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def csvs = sorted.collect { it[1] }
                                           ^^
   ```
 
-- Warning: `subworkflows/local/proseg_preset_proseg2baysor_tiled/main.nf:58:45`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/proseg_preset_proseg2baysor_tiled/main.nf:55:45`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def geojsons = sorted.collect { it[2] }
@@ -820,11 +680,11 @@
                               ^^^^^^^
   ```
 
-- Warning: `workflows/spatialxe.nf:86:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/spatialxe.nf:86:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-      ch_transcripts_parquet = Channel.empty()
-                               ^^^^^^^
+      ch_transcripts_file = Channel.empty()
+                            ^^^^^^^
   ```
 
 - Warning: `workflows/spatialxe.nf:87:32`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -925,51 +785,114 @@
                               ^^^^^^^
   ```
 
-- Warning: `workflows/spatialxe.nf:546:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/spatialxe.nf:552:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_multiqc_config = Channel.fromPath(
                           ^^^^^^^
   ```
 
-- Warning: `workflows/spatialxe.nf:552:11`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/spatialxe.nf:558:11`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ? Channel.fromPath(params.multiqc_config, checkIfExists: true)
             ^^^^^^^
   ```
 
-- Warning: `workflows/spatialxe.nf:553:11`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/spatialxe.nf:559:11`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           : Channel.empty()
             ^^^^^^^
   ```
 
-- Warning: `workflows/spatialxe.nf:556:11`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/spatialxe.nf:562:11`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ? Channel.fromPath(params.multiqc_logo, checkIfExists: true)
             ^^^^^^^
   ```
 
-- Warning: `workflows/spatialxe.nf:557:11`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/spatialxe.nf:563:11`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           : Channel.empty()
             ^^^^^^^
   ```
 
-- Warning: `workflows/spatialxe.nf:564:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/spatialxe.nf:573:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_params))
                             ^^^^^^^
   ```
 
-- Warning: `workflows/spatialxe.nf:574:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/spatialxe.nf:583:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_methods_description = Channel.value(
                                ^^^^^^^
+  ```
+
+- Warning: `workflows/spatialxe.nf:604:47`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              ch_multiqc_files.collect().map { [it] }
+                                                ^^
+  ```
+
+- Warning: `workflows/spatialxe.nf:605:52`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  .combine(ch_multiqc_configs.map { [it] })
+                                                     ^^
+  ```
+
+- Warning: `workflows/spatialxe.nf:606:58`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  .combine(ch_multiqc_logo.toList().map { [it] })
+                                                           ^^
+  ```
+
+- Warning: `workflows/spatialxe.nf:619:47`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              ch_multiqc_files.collect().map { [it] }
+                                                ^^
+  ```
+
+- Warning: `workflows/spatialxe.nf:620:52`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  .combine(ch_multiqc_configs.map { [it] })
+                                                     ^^
+  ```
+
+- Warning: `workflows/spatialxe.nf:621:58`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  .combine(ch_multiqc_logo.toList().map { [it] })
+                                                           ^^
+  ```
+
+- Warning: `workflows/spatialxe.nf:658:47`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              ch_multiqc_files.collect().map { [it] }
+                                                ^^
+  ```
+
+- Warning: `workflows/spatialxe.nf:659:52`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  .combine(ch_multiqc_configs.map { [it] })
+                                                     ^^
+  ```
+
+- Warning: `workflows/spatialxe.nf:660:58`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  .combine(ch_multiqc_logo.toList().map { [it] })
+                                                           ^^
   ```

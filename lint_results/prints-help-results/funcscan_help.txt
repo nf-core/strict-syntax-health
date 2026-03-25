@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.03.0-edge
 
-Launching `./main.nf` [scruffy_mccarthy] revision: 67661b9bcf
+Launching `./main.nf` [awesome_tuckerman] revision: 67661b9bcf
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -223,12 +223,13 @@ ARG: RGI
   --arg_rgi_savejson                                [boolean] Save RGI output .json file. 
   --arg_rgi_savetmpfiles                            [boolean] Specify to save intermediate temporary files in the results directory. 
   --arg_rgi_alignmenttool                           [string]  Specify the alignment tool to be used.  (accepted: BLAST, DIAMOND) [default: BLAST] 
-  --arg_rgi_includeloose                            [boolean] Include all of loose, strict and perfect hits (i.e. ≥ 95% identity) found by RGI. 
+  --arg_rgi_includeloose                            [boolean] Include all of loose, strict and perfect hits (i.e. more than 95% identity) found by RGI. 
   --arg_rgi_includenudge                            [boolean] Suppresses the default behaviour of RGI with `--arg_rgi_includeloose`. 
   --arg_rgi_lowquality                              [boolean] Include screening of low quality contigs for partial genes. 
   --arg_rgi_data                                    [string]  Specify a more specific data-type of input (e.g. plasmid, chromosome).  (accepted: NA, wgs, 
 plasmid, chromosome) [default: NA]  
   --arg_rgi_split_prodigal_jobs                     [boolean] Run multiple prodigal jobs simultaneously for contigs in a fasta file. [default: true] 
+  --arg_rgi_removetemporaryfiles                    [boolean] Specify to trigger RGI's internal cleanup of intermediate files. 
 
 ARG: ABRicate
   --arg_skip_abricate                               [boolean] Skip ABRicate during the ARG screening. 
