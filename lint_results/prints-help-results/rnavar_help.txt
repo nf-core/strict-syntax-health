@@ -1,11 +1,11 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.02.0-edge
+ N E X T F L O W   ~  version 26.03.0-edge
 
 Downloading plugin nf-core-utils@0.4.0
 Downloading plugin nf-schema@2.6.1
-Launching `./main.nf` [romantic_mclean] revision: 70f8e93d0b
+Launching `./main.nf` [spontaneous_shirley] revision: 86256fcf41
 
 
 ------------------------------------------------------
@@ -28,20 +28,26 @@ Input/output options
   --outdir                      [string]  The output directory where the results will be saved. You have to use absolute paths to storage on 
 Cloud infrastructure.  
   --save_merged_fastq           [boolean] Save FastQ files after merging re-sequenced libraries in the results directory. 
+  --skip_baserecalibration      [boolean] Skip the process of base recalibration steps i.e., GATK BaseRecalibrator and GATK ApplyBQSR. 
+ 
+  --skip_exon_bed_check         [boolean] Skip the check of the exon bed 
+  --skip_intervallisttools      [boolean] Skip the process of preparing interval lists for the GATK variant calling step 
+  --skip_multiqc                [boolean] Skip MultiQC reports 
+  --skip_variantfiltration      [boolean] Skip variant filtering of GATK 
+  --extract_umi                 [boolean] Specify whether to remove UMIs from the reads with UMI-tools extract. This parameter will be 
+replaced with `--tools umitools` in future release.  
 
-Preprocessing of alignment
-  --extract_umi                 [boolean] Specify whether to remove UMIs from the reads with UMI-tools extract. 
-  --umitools_extract_method     [string]  UMI pattern to use. Can be either 'string' (default) or 'regex'.  (accepted: string, regex) 
+Parameters for preprocessing FASTQ files before alignment using UMI-tools
+  --umitools_extract_method     [string] UMI pattern to use. Can be either 'string' (default) or 'regex'.  (accepted: string, regex) 
 [default: string]  
-  --umitools_bc_pattern         [string]  The UMI barcode pattern to use e.g. 'NNNNNN' indicates that the first 6 nucleotides of the read are 
+  --umitools_bc_pattern         [string] The UMI barcode pattern to use e.g. 'NNNNNN' indicates that the first 6 nucleotides of the read are 
 from the UMI.  
-  --umitools_bc_pattern2        [string]  The UMI barcode pattern to use if the UMI is located in read 2. 
-  --umitools_umi_separator      [string]  The character that separates the UMI in the read name. Most likely a colon if you skipped the 
+  --umitools_bc_pattern2        [string] The UMI barcode pattern to use if the UMI is located in read 2. 
+  --umitools_umi_separator      [string] The character that separates the UMI in the read name. Most likely a colon if you skipped the 
 extraction with UMI-tools and used other software.  
 
 Alignment options
   --aligner                     [string]          Specifies the alignment algorithm to use.  (accepted: star) [default: star] 
-  --star_index                  [string]          Path to STAR index folder or compressed file (tar.gz) 
   --star_twopass                [boolean]         Enable STAR 2-pass mapping mode. [default: true] 
   --star_ignore_sjdbgtf         [boolean]         Do not use GTF file during STAR index building step 
   --star_max_memory_bamsort     [integer]         Option to limit RAM when sorting BAM file. Value to be specified in bytes. If 0, will be set to the 
@@ -75,6 +81,7 @@ Variant filtering
 
 Variant Annotation
   --vep_cache                   [string]  Path to VEP cache. [default: s3://annotation-cache/vep_cache/] 
+  --vep_cache_preflight_check   [boolean] Force preflight check for local VEP cache download 
   --snpeff_cache                [string]  Path to snpEff cache. [default: s3://annotation-cache/snpeff_cache/] 
   --vep_dbnsfp                  [boolean] Enable the use of the VEP dbNSFP plugin. 
   --dbnsfp                      [string]  Path to dbNSFP processed file. 
@@ -99,14 +106,6 @@ rs_dbSNP,HGVSc_VEP,HGVSp_VEP,1000Gp3_EAS_AF,1000Gp3_AMR_AF,LRT_score,GERP++_RS,g
  
   --bcftools_header_lines       [string]  Text file with the header lines of `bcftools_annotations` 
 
-Pipeline stage options
-  --skip_baserecalibration      [boolean] Skip the process of base recalibration steps i.e., GATK BaseRecalibrator and GATK ApplyBQSR. 
- 
-  --skip_exon_bed_check         [boolean] Skip the check of the exon bed 
-  --skip_intervallisttools      [boolean] Skip the process of preparing interval lists for the GATK variant calling step 
-  --skip_multiqc                [boolean] Skip MultiQC reports 
-  --skip_variantfiltration      [boolean] Skip variant filtering of GATK 
-
 General reference genome options
   --igenomes_base               [string]  The base path to the igenomes reference files [default: s3://ngi-igenomes/igenomes/] 
   --igenomes_ignore             [boolean] Do not load the iGenomes reference config. 
@@ -120,6 +119,7 @@ Reference genome options
   --fasta_fai                   [string]          Path to FASTA reference index. 
   --gtf                         [string]          Path to GTF annotation file. 
   --gff                         [string]          Path to GFF3 annotation file. 
+  --star_index                  [string]          Path to STAR index folder or compressed file (tar.gz) 
   --exon_bed                    [string]          Path to BED file containing exon intervals. This will be created from the GTF file if not specified. 
  
   --read_length                 [number]          Read length [default: 150] 
@@ -142,7 +142,7 @@ Generic options
   --help_full                   [boolean]         Display the full detailed help message. 
   --show_hidden                 [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
  
- !! Hiding 22 param(s), use the `--showHidden` parameter to show them !!
+ !! Hiding 23 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
 
 * The pipeline

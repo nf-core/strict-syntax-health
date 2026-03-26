@@ -101,9 +101,9 @@
   "chipseq": {
     "full_name": "nf-core/chipseq",
     "html_url": "https://github.com/nf-core/chipseq",
-    "commit": "3ca264a327ba23e04504836341299e7075ab6212",
+    "commit": "643351e9bbc2a279188c4d5c9be675cf481f3b14",
     "errors": 0,
-    "warnings": 129,
+    "warnings": 69,
     "parse_error": false,
     "prints_help": true
   },
@@ -407,7 +407,7 @@
   "genomicrelatedness": {
     "full_name": "nf-core/genomicrelatedness",
     "html_url": "https://github.com/nf-core/genomicrelatedness",
-    "commit": "5ff315c4c555cffe2f4a1cd87156bf2705784e0d",
+    "commit": "449b8845402ad5ea875bc4a43210d027afbd7ba3",
     "errors": 0,
     "warnings": 3,
     "parse_error": false,
@@ -506,7 +506,7 @@
   "longraredisease": {
     "full_name": "nf-core/longraredisease",
     "html_url": "https://github.com/nf-core/longraredisease",
-    "commit": "55f9d0af0408c01eb98200cc9f2079ccc7f7d1b5",
+    "commit": "d6e1a120a696d2de5b5b3bef5ca93210131d2002",
     "errors": 0,
     "warnings": 182,
     "parse_error": false,
@@ -587,11 +587,11 @@
   "metatdenovo": {
     "full_name": "nf-core/metatdenovo",
     "html_url": "https://github.com/nf-core/metatdenovo",
-    "commit": "76dd69a847f514777b777de624169f2796aa49fd",
-    "errors": 62,
-    "warnings": 140,
+    "commit": "08f53fba82ef7ca9fd4499d003580629dd51178f",
+    "errors": 0,
+    "warnings": 0,
     "parse_error": false,
-    "prints_help": null
+    "prints_help": true
   },
   "methylarray": {
     "full_name": "nf-core/methylarray",
@@ -866,7 +866,7 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "26e1f00f5733ba8a198c9fe08734d293bb5893f7",
+    "commit": "bf25713006b417b77a588e8013f6894aebfa5003",
     "errors": 0,
     "warnings": 3,
     "parse_error": false,
@@ -965,7 +965,7 @@
   "rnavar": {
     "full_name": "nf-core/rnavar",
     "html_url": "https://github.com/nf-core/rnavar",
-    "commit": "ab169ae30a863711e6e904513eed951b8d42432a",
+    "commit": "c4e0f9ccdf057ac91599695ae1e169e83de64de2",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1028,9 +1028,9 @@
   "seqsubmit": {
     "full_name": "nf-core/seqsubmit",
     "html_url": "https://github.com/nf-core/seqsubmit",
-    "commit": "2b64c73fe36d56a8f81a289849249735e97bafd1",
+    "commit": "8c3e48d7c63a0fbdb957cd3d63a25ece53ab8853",
     "errors": 1,
-    "warnings": 18,
+    "warnings": 16,
     "parse_error": false,
     "prints_help": null
   },
@@ -1100,9 +1100,9 @@
   "taxprofiler": {
     "full_name": "nf-core/taxprofiler",
     "html_url": "https://github.com/nf-core/taxprofiler",
-    "commit": "9c4734f78e05ae9efdc40d2c2cc089c97c20a36e",
+    "commit": "6753c203cfd8c4ca88ec99e7960c90b1e28f1e50",
     "errors": 0,
-    "warnings": 96,
+    "warnings": 99,
     "parse_error": false,
     "prints_help": true
   },

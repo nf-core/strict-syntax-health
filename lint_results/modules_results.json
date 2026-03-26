@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "4b21e2cd1a9ea70e22b502cb45ee147410824760",
+  "_repo_commit": "51375e37aa1397b4a886d8270d3d53db96f57b47",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -2240,6 +2240,12 @@
   },
   "custom_sratoolsncbisettings": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/custom/sratoolsncbisettings",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "custom_summarisetelomereestimation": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/custom/summarisetelomereestimation",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -5228,6 +5234,12 @@
   },
   "macs3_callpeak": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/macs3/callpeak",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "macse_refinealignment": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/macse/refinealignment",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

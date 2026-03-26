@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.03.0-edge
 
-Launching `./main.nf` [marvelous_lattes] revision: a57f128388
+Launching `./main.nf` [hungry_kalam] revision: a57f128388
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'

@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "4b21e2cd1a9ea70e22b502cb45ee147410824760",
+  "_repo_commit": "51375e37aa1397b4a886d8270d3d53db96f57b47",
   "abundance_differential_filter": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/abundance_differential_filter",
     "errors": 0,
@@ -134,6 +134,12 @@
   },
   "bam_taps_conversion": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_taps_conversion",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "bam_telomere_estimation": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_telomere_estimation",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

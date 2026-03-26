@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.03.0-edge
 
-Launching `./main.nf` [adoring_woese] revision: fdca6dfe38
+Launching `./main.nf` [astonishing_mestorf] revision: fdca6dfe38
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -177,6 +177,7 @@ Classifier) [default: BlastN]
   --melon_k2_db                                          [string]  Specify kraken2 database for prefiltering of non-prokaryotic reads with melon. 
   --run_metacache                                        [boolean] Turn on profiling with metacache. Requires database to be present CSV file passed to --databases 
  
+  --metacache_abundances                                 [boolean] Print all mapping information in separate columns (rank, taxon name, taxon ids). 
 
 Postprocessing and visualisation options
   --run_profile_standardisation                          [boolean] Turn on standardisation of taxon tables across profilers 
