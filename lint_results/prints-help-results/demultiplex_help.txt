@@ -1,25 +1,25 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.03.0-edge
+ N E X T F L O W   ~  version 26.03.1-edge
 
 Downloading plugin nf-schema@2.6.1
-Launching `./main.nf` [cheesy_volta] revision: f498947135
+Launching `./main.nf` [sick_babbage] revision: d38d554a4b
 
 
-Error main.nf:158:9: Publish statements cannot be mixed with other statements in a dynamic publish path
-│ 158 |         path { meta, stat ->
+Error main.nf:160:9: Publish statements cannot be mixed with other statements in a dynamic publish path
+│ 160 |         path { meta, stat ->
 │     |         ^^^^^^^^^^^^^^^^^^^^
-│ 159 |             def lane_dir = meta.lane ? "${meta.id}/L00${meta.lane}" : 
-│ 160 |             stat >> "${lane_dir}/${stat.name}"
-╰ 161 |             }
+│ 161 |             def lane_dir = meta.lane ? "${meta.id}/L00${meta.lane}" : 
+│ 162 |             stat >> "${lane_dir}/${stat.name}"
+╰ 163 |             }
 
-Error main.nf:165:9: Publish statements cannot be mixed with other statements in a dynamic publish path
-│ 165 |         path { meta, log ->
+Error main.nf:167:9: Publish statements cannot be mixed with other statements in a dynamic publish path
+│ 167 |         path { meta, log ->
 │     |         ^^^^^^^^^^^^^^^^^^^
-│ 166 |             def lane_dir = meta.lane ? "${meta.id}/L00${meta.lane}" : 
-│ 167 |             log >> "${lane_dir}/${log.name}"
-╰ 168 |         }
+│ 168 |             def lane_dir = meta.lane ? "${meta.id}/L00${meta.lane}" : 
+│ 169 |             log >> "${lane_dir}/${log.name}"
+╰ 170 |         }
 
 
 ERROR ~ Script compilation failed

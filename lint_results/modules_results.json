@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "51375e37aa1397b4a886d8270d3d53db96f57b47",
+  "_repo_commit": "14ef8744d41b8322790f6c87c281b9e52de935e2",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -5240,6 +5240,18 @@
   },
   "macse_refinealignment": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/macse/refinealignment",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "macsyfinder_download": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/macsyfinder/download",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "macsyfinder_search": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/macsyfinder/search",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

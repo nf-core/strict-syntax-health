@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-03-21T00:23:47.928322340Z
-- Nextflow version: 26.03.0-edge
+- Generated: 2026-03-27T00:25:23.479321128Z
+- Nextflow version: 26.03.1-edge
 - Summary: 20 errors, 51 warnings
 
 ## :x: Errors
@@ -379,126 +379,126 @@
                                                     ^^^^
   ```
 
-- Warning: `workflows/metapep.nf:105:54`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/metapep.nf:113:54`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               PROCESS_INPUT.out.ch_weights.map { meta, file -> meta.id }.collect().ifEmpty([]),
                                                        ^^^^
   ```
 
-- Warning: `workflows/metapep.nf:106:48`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/metapep.nf:114:48`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               PROCESS_INPUT.out.ch_weights.map { meta, file -> file }.collect().ifEmpty([])
                                                  ^^^^
   ```
 
-- Warning: `workflows/metapep.nf:119:47`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/metapep.nf:127:47`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               ch_pred_proteins_sorted.collect { meta, file -> file }.ifEmpty([]),
                                                 ^^^^
   ```
 
-- Warning: `workflows/metapep.nf:120:53`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/metapep.nf:128:53`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               ch_pred_proteins_sorted.collect { meta, file -> meta }.ifEmpty([]),
                                                       ^^^^
   ```
 
-- Warning: `workflows/metapep.nf:197:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/metapep.nf:205:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .filter { base, txt, tsv, header_info -> header_info != null }
                         ^^^^
   ```
 
-- Warning: `workflows/metapep.nf:197:29`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/metapep.nf:205:29`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .filter { base, txt, tsv, header_info -> header_info != null }
                               ^^^
   ```
 
-- Warning: `workflows/metapep.nf:197:34`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/metapep.nf:205:34`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .filter { base, txt, tsv, header_info -> header_info != null }
                                    ^^^
   ```
 
-- Warning: `workflows/metapep.nf:198:26`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/metapep.nf:206:26`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map { base, txt, tsv, header_info ->
                            ^^^
   ```
 
-- Warning: `workflows/metapep.nf:234:65`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/metapep.nf:242:65`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .combine(MHC_BINDING_PREDICTION.out.predicted.map { meta, file -> file }.toSortedList().flatten())
                                                                   ^^^^
   ```
 
-- Warning: `workflows/metapep.nf:254:56`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/metapep.nf:262:56`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_merge_predictions_input.collect(sort: { it.baseName }),
                                                          ^^
   ```
 
-- Warning: `workflows/metapep.nf:332:32`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/metapep.nf:340:32`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_multiqc_config        = Channel.fromPath(
                                  ^^^^^^^
   ```
 
-- Warning: `workflows/metapep.nf:335:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/metapep.nf:343:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           Channel.fromPath(params.multiqc_config, checkIfExists: true) :
           ^^^^^^^
   ```
 
-- Warning: `workflows/metapep.nf:336:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/metapep.nf:344:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           Channel.empty()
           ^^^^^^^
   ```
 
-- Warning: `workflows/metapep.nf:338:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/metapep.nf:346:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           Channel.fromPath(params.multiqc_logo, checkIfExists: true) :
           ^^^^^^^
   ```
 
-- Warning: `workflows/metapep.nf:339:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/metapep.nf:347:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           Channel.fromPath("$projectDir/assets/nf-core-metapep_logo_light.png")
           ^^^^^^^
   ```
 
-- Warning: `workflows/metapep.nf:343:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/metapep.nf:351:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_params))
                             ^^^^^^^
   ```
 
-- Warning: `workflows/metapep.nf:349:45`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/metapep.nf:357:45`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_methods_description                = Channel.value(
                                               ^^^^^^^
   ```
 
-- Warning: `workflows/metapep.nf:372:5`: Variable was declared but not used
+- Warning: `workflows/metapep.nf:380:5`: Variable was declared but not used
 
   ```nextflow
       multiqc_report = MULTIQC.out.report.toList()

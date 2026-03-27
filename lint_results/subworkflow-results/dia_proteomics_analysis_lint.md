@@ -1,5 +1,28 @@
 # Nextflow lint results
 
-- Generated: 2026-03-26T00:28:24.134220+00:00
-- Nextflow version: 26.03.0-edge
-- Summary: No issues found
+- Generated: 2026-03-27T00:27:41.779332+00:00
+- Nextflow version: 26.03.1-edge
+- Summary: 3 warnings
+
+## :warning: Warnings
+
+- Warning: `subworkflows/nf-core/dia_proteomics_analysis/main.nf:343:70`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              [meta + mass_settings, ms_files, [], [], speclib.unique{ it.name }, diann_quant]
+                                                                       ^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/dia_proteomics_analysis/main.nf:396:70`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              [meta, [], ms_files.collect{ f -> f.name}, fasta.unique{ it.name }, empirical_library.unique{ it.name }, diann_quant] // Use ms_file_names instead of ms_files for final quant; deduplicate shared files
+                                                                       ^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/dia_proteomics_analysis/main.nf:396:107`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              [meta, [], ms_files.collect{ f -> f.name}, fasta.unique{ it.name }, empirical_library.unique{ it.name }, diann_quant] // Use ms_file_names instead of ms_files for final quant; deduplicate shared files
+                                                                                                            ^^^^^^^^^^
+  ```

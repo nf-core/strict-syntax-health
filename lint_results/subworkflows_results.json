@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "51375e37aa1397b4a886d8270d3d53db96f57b47",
+  "_repo_commit": "14ef8744d41b8322790f6c87c281b9e52de935e2",
   "abundance_differential_filter": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/abundance_differential_filter",
     "errors": 0,
@@ -219,7 +219,7 @@
   "dia_proteomics_analysis": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/dia_proteomics_analysis",
     "errors": 0,
-    "warnings": 0,
+    "warnings": 3,
     "parse_error": false
   },
   "differential_functional_enrichment": {
