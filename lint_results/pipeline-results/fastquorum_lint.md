@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-03-24T00:20:54.645840095Z
-- Nextflow version: 26.03.0-edge
-- Summary: 5 warnings
+- Generated: 2026-03-28T00:21:34.176025941Z
+- Nextflow version: 26.03.1-edge
+- Summary: 8 warnings
 
 ## :warning: Warnings
 
@@ -39,4 +39,25 @@
   ```nextflow
                   return [meta, it]
                                 ^^
+  ```
+
+- Warning: `workflows/fastquorum.nf:66:25`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .branch { meta, bam ->
+                          ^^^
+  ```
+
+- Warning: `workflows/fastquorum.nf:73:41`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      ch_fastqtobam.correct.first().map { meta, bam ->
+                                          ^^^^
+  ```
+
+- Warning: `workflows/fastquorum.nf:73:47`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      ch_fastqtobam.correct.first().map { meta, bam ->
+                                                ^^^
   ```
