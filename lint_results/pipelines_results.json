@@ -353,7 +353,7 @@
   "funcprofiler": {
     "full_name": "nf-core/funcprofiler",
     "html_url": "https://github.com/nf-core/funcprofiler",
-    "commit": "f792c4981384df0f8c88014f9c5462fac657c4c8",
+    "commit": "786b91b25c7dd4dc50362795f344f9dcd19309cf",
     "errors": 50,
     "warnings": 51,
     "parse_error": false,
