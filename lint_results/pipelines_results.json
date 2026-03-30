@@ -101,9 +101,9 @@
   "chipseq": {
     "full_name": "nf-core/chipseq",
     "html_url": "https://github.com/nf-core/chipseq",
-    "commit": "643351e9bbc2a279188c4d5c9be675cf481f3b14",
+    "commit": "a34559ccface02393c7bec884ad041432332c4b5",
     "errors": 0,
-    "warnings": 69,
+    "warnings": 71,
     "parse_error": false,
     "prints_help": true
   },
@@ -533,7 +533,7 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "264b8dcd34f065197e5eee190ff2e201dcdc1a75",
+    "commit": "957c2733a07df1ccc2ced226c3074dc9c5adf297",
     "errors": 0,
     "warnings": 28,
     "parse_error": false,
@@ -1127,11 +1127,11 @@
   "tfactivity": {
     "full_name": "nf-core/tfactivity",
     "html_url": "https://github.com/nf-core/tfactivity",
-    "commit": "32a583b1a784892934cf667395babfafc2674b38",
-    "errors": 6,
-    "warnings": 57,
+    "commit": "074ceb144ae178ffcdbb8d2e0e73db9e8b22757b",
+    "errors": 0,
+    "warnings": 11,
     "parse_error": false,
-    "prints_help": null
+    "prints_help": true
   },
   "troughgraph": {
     "full_name": "nf-core/troughgraph",

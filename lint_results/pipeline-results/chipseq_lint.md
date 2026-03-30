@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-03-26T00:24:47.222658004Z
-- Nextflow version: 26.03.0-edge
-- Summary: 69 warnings
+- Generated: 2026-03-30T00:24:57.384721308Z
+- Nextflow version: 26.03.1-edge
+- Summary: 71 warnings
 
 ## :warning: Warnings
 
@@ -48,18 +48,25 @@
                     ^^^^^^
   ```
 
-- Warning: `subworkflows/local/bam_peaks_call_qc_annotate_macs3_homer/main.nf:109:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/bam_peaks_call_qc_annotate_macs3_homer/main.nf:108:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   ch_macs3_peaks.collect{it[1]},
                                          ^^
   ```
 
-- Warning: `subworkflows/local/bam_peaks_call_qc_annotate_macs3_homer/main.nf:119:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/bam_peaks_call_qc_annotate_macs3_homer/main.nf:118:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   HOMER_ANNOTATEPEAKS.out.txt.collect{it[1]},
                                                       ^^
+  ```
+
+- Warning: `subworkflows/local/bed_consensus_quantify_qc_bedtools_featurecounts_deseq2/main.nf:26:5`: Variable was declared but not used
+
+  ```nextflow
+      ch_versions = channel.empty()
+      ^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/bed_consensus_quantify_qc_bedtools_featurecounts_deseq2/main.nf:40:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -88,6 +95,13 @@
   ```nextflow
           .map { create_fastq_channel(it, seq_center) }
                                       ^^
+  ```
+
+- Warning: `subworkflows/local/prepare_genome/main.nf:43:5`: Variable was declared but not used
+
+  ```nextflow
+      ch_versions = channel.empty()
+      ^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/prepare_genome/main.nf:50:63`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -132,35 +146,35 @@
                                                                              ^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:108:73`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:107:73`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_gene_bed = GUNZIP_GENE_BED([[:], gene_bed]).gunzip.map { it[1] }
                                                                           ^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:147:59`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:146:59`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_bwa_index = BWA_INDEX(ch_fasta.map { [[:], it] }).index
                                                             ^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:163:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:162:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_bowtie2_index = BOWTIE2_BUILD(ch_fasta.map { [[:], it] }).index
                                                                     ^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:179:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:178:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_chromap_index = CHROMAP_INDEX(ch_fasta.map { [[:], it] }).index
                                                                     ^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:190:81`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:189:81`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   ch_star_index = UNTAR_STAR_INDEX([[:], star_index]).untar.map { it[1] }
@@ -286,203 +300,203 @@
                           ^^^^
   ```
 
-- Warning: `workflows/chipseq.nf:478:31`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/chipseq.nf:477:31`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   meta, ip_bam, control_bam ->
                                 ^^^^^^^^^^^
   ```
 
-- Warning: `workflows/chipseq.nf:516:66`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/chipseq.nf:514:66`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               BAM_BEDGRAPH_BIGWIG_BEDTOOLS_UCSC.out.bigwig.collect{it[1]}.ifEmpty([]),
                                                                    ^^
   ```
 
-- Warning: `workflows/chipseq.nf:517:70`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/chipseq.nf:515:70`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               BAM_PEAKS_CALL_QC_ANNOTATE_MACS3_HOMER.out.peaks.collect{it[1]}.ifEmpty([]),
                                                                        ^^
   ```
 
-- Warning: `workflows/chipseq.nf:518:48`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/chipseq.nf:516:48`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_macs3_consensus_bed_lib.collect{it[1]}.ifEmpty([]),
                                                  ^^
   ```
 
-- Warning: `workflows/chipseq.nf:519:48`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/chipseq.nf:517:48`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_macs3_consensus_txt_lib.collect{it[1]}.ifEmpty([])
                                                  ^^
   ```
 
-- Warning: `workflows/chipseq.nf:559:69`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/chipseq.nf:554:69`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               FASTQ_FASTQC_UMITOOLS_TRIMGALORE.out.fastqc_zip.collect{it[1]}.ifEmpty([]),
                                                                       ^^
   ```
 
-- Warning: `workflows/chipseq.nf:560:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/chipseq.nf:555:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               FASTQ_FASTQC_UMITOOLS_TRIMGALORE.out.trim_zip.collect{it[1]}.ifEmpty([]),
                                                                     ^^
   ```
 
-- Warning: `workflows/chipseq.nf:561:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/chipseq.nf:556:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               FASTQ_FASTQC_UMITOOLS_TRIMGALORE.out.trim_log.collect{it[1]}.ifEmpty([]),
                                                                     ^^
   ```
 
-- Warning: `workflows/chipseq.nf:563:39`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/chipseq.nf:558:39`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_samtools_stats.collect{it[1]}.ifEmpty([]),
                                         ^^
   ```
 
-- Warning: `workflows/chipseq.nf:564:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/chipseq.nf:559:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_samtools_flagstat.collect{it[1]}.ifEmpty([]),
                                            ^^
   ```
 
-- Warning: `workflows/chipseq.nf:565:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/chipseq.nf:560:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_samtools_idxstats.collect{it[1]}.ifEmpty([]),
                                            ^^
   ```
 
-- Warning: `workflows/chipseq.nf:567:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/chipseq.nf:562:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               BAM_MARKDUPLICATES_PICARD.out.stats.collect{it[1]}.ifEmpty([]),
                                                           ^^
   ```
 
-- Warning: `workflows/chipseq.nf:568:60`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/chipseq.nf:563:60`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               BAM_MARKDUPLICATES_PICARD.out.flagstat.collect{it[1]}.ifEmpty([]),
                                                              ^^
   ```
 
-- Warning: `workflows/chipseq.nf:569:60`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/chipseq.nf:564:60`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               BAM_MARKDUPLICATES_PICARD.out.idxstats.collect{it[1]}.ifEmpty([]),
                                                              ^^
   ```
 
-- Warning: `workflows/chipseq.nf:570:59`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/chipseq.nf:565:59`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               BAM_MARKDUPLICATES_PICARD.out.metrics.collect{it[1]}.ifEmpty([]),
                                                             ^^
   ```
 
-- Warning: `workflows/chipseq.nf:572:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/chipseq.nf:567:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               BAM_FILTER_BAMTOOLS.out.stats.collect{it[1]}.ifEmpty([]),
                                                     ^^
   ```
 
-- Warning: `workflows/chipseq.nf:573:54`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/chipseq.nf:568:54`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               BAM_FILTER_BAMTOOLS.out.flagstat.collect{it[1]}.ifEmpty([]),
                                                        ^^
   ```
 
-- Warning: `workflows/chipseq.nf:574:54`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/chipseq.nf:569:54`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               BAM_FILTER_BAMTOOLS.out.idxstats.collect{it[1]}.ifEmpty([]),
                                                        ^^
   ```
 
-- Warning: `workflows/chipseq.nf:575:61`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/chipseq.nf:570:61`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_picardcollectmultiplemetrics_multiqc.collect{it[1]}.ifEmpty([]),
                                                               ^^
   ```
 
-- Warning: `workflows/chipseq.nf:577:39`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/chipseq.nf:572:39`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_preseq_multiqc.collect{it[1]}.ifEmpty([]),
                                         ^^
   ```
 
-- Warning: `workflows/chipseq.nf:579:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/chipseq.nf:574:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_deeptoolsplotprofile_multiqc.collect{it[1]}.ifEmpty([]),
                                                       ^^
   ```
 
-- Warning: `workflows/chipseq.nf:580:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/chipseq.nf:575:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_deeptoolsplotfingerprint_multiqc.collect{it[1]}.ifEmpty([]),
                                                           ^^
   ```
 
-- Warning: `workflows/chipseq.nf:582:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/chipseq.nf:577:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_phantompeakqualtools_spp_multiqc.collect{it[1]}.ifEmpty([]),
                                                           ^^
   ```
 
-- Warning: `workflows/chipseq.nf:583:65`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/chipseq.nf:578:65`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_phantompeakqualtools_nsc_multiqc.collect{it[1]}.ifEmpty([]),
                                                                   ^^
   ```
 
-- Warning: `workflows/chipseq.nf:584:65`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/chipseq.nf:579:65`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_phantompeakqualtools_rsc_multiqc.collect{it[1]}.ifEmpty([]),
                                                                   ^^
   ```
 
-- Warning: `workflows/chipseq.nf:585:73`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/chipseq.nf:580:73`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_phantompeakqualtools_correlation_multiqc.collect{it[1]}.ifEmpty([]),
                                                                           ^^
   ```
 
-- Warning: `workflows/chipseq.nf:587:77`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/chipseq.nf:582:77`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               BAM_PEAKS_CALL_QC_ANNOTATE_MACS3_HOMER.out.frip_multiqc.collect{it[1]}.ifEmpty([]),
                                                                               ^^
   ```
 
-- Warning: `workflows/chipseq.nf:588:83`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/chipseq.nf:583:83`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               BAM_PEAKS_CALL_QC_ANNOTATE_MACS3_HOMER.out.peak_count_multiqc.collect{it[1]}.ifEmpty([]),
                                                                                     ^^
   ```
 
-- Warning: `workflows/chipseq.nf:590:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/chipseq.nf:585:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_subreadfeaturecounts_multiqc.collect{it[1]}.ifEmpty([]),

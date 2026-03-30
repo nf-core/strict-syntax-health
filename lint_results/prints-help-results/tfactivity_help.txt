@@ -1,0 +1,115 @@
+$ NXF_SYNTAX_PARSER=v2 nextflow run . --help
+
+
+ N E X T F L O W   ~  version 26.03.1-edge
+
+Launching `./main.nf` [berserk_maxwell] revision: 7969d70882
+
+WARN: Unrecognized config option 'validation.defaultIgnoreParams'
+WARN: Unrecognized config option 'validation.monochromeLogs'
+
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/tfactivity 0.0.1dev
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/tfactivity -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input                   [string] Path to comma-separated file containing information about the samples in the experiment. 
+  --input_bam               [string] Path to comma-separated file containing information about the BAM files in the experiment. 
+  --counts                  [string] Path to comma-separated file containing the counts for the samples in the experiment. Can also be a 
+file containing just gene identifiers. In this case, count values need to be referenced in the 
+counts_design file.  
+  --counts_design           [string] Path to comma-separated file containing information about the counts file. 
+  --outdir                  [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --email                   [string] Email address for completion summary. 
+
+Expression options
+  --expression_aggregation  [string]  Method to aggregate expression values. [default: mean] 
+  --min_count               [integer] Minimum number of total counts to keep a gene in the analysis. [default: 50] 
+  --min_tpm                 [number]  Minimum TPM to keep a gene in the analysis. [default: 1] 
+  --min_count_tf            [integer] Minimum number of total counts to keep a transcription factor in the analysis. [default: 50] 
+ 
+  --min_tpm_tf              [number]  Minimum TPM to keep a transcription factor in the analysis. [default: 1] 
+
+Motif options
+  --duplicate_motifs        [string] Specifies how to handle duplicate motifs. Available options are `remove` (only keep first occurrence 
+of motif), `merge` (average motifs with same symbol), and `keep` (keep all motifs and adjust 
+background during statistical testing).  (accepted: remove, merge, keep) [default: remove]  
+
+Peak merging
+  --merge_samples           [boolean] Merge samples with the same condition and assay. 
+  --min_peak_occurrence     [integer] Minimum number of samples that a peak has to occur in to keep it while merging. [default: 1] 
+ 
+
+Ranking options
+  --alpha                   [number] Alpha value for the Mann-Whitney U test. [default: 0.05] 
+
+STARE options
+  --window_size             [integer] Size of the window to search for binding sites. [default: 50000] 
+  --decay                   [boolean] Use decay in STARE [default: true] 
+  --affinity_aggregation    [string]  Method to aggregate affinity values.  (accepted: mean, max, sum) [default: max] 
+
+ROSE options
+  --rose_tss_window         [integer] TSS window in base pairs [default: 2500] 
+  --rose_stitching_window   [integer] Stichting window in base pairs [default: 12500] 
+
+SNEEP options
+  --sneep_scale_file        [string] Path to SNEEP scale file. 
+  --sneep_motif_file        [string] Path to SNEEP motif file. 
+
+Optional steps
+  --skip_chromhmm           [boolean] Skip chromhmm. This also skips rose automatically since rose requires chromhmm input. 
+  --skip_rose               [boolean] Skip rose. 
+  --skip_fimo               [boolean] Skip fimo. This also skips sneep automatically since sneep requires fimo input. 
+  --skip_sneep              [boolean] Skip sneep. 
+
+FIMO options
+  --fimo_qvalue_threshold   [number] Q-value threshold for filtering significant FIMO results. [default: 0.05] 
+
+DYNAMITE options
+  --dynamite_ofolds         [integer] Number of outer folds for dynamite. [default: 3] 
+  --dynamite_ifolds         [integer] Number of inner folds for dynamite. [default: 6] 
+  --dynamite_alpha          [number]  Alpha value for dynamite. [default: 0.1] 
+  --dynamite_randomize      [boolean] Randomize the data for dynamite. [default: false] 
+  --dynamite_min_regression [number]  Minimum regression value for dynamite. [default: 0.1] 
+
+ChromHMM options
+  --chromhmm_states         [integer] Number of ChromHMM states. [default: 10] 
+  --chromhmm_threshold      [number]  Threshold for ChromHMM enhancer detection. [default: 0.75] 
+  --chromhmm_enhancer_marks [string]  Comma-separated ChromHMM enhancer marks. [default: H3K27ac,H3K4me1] 
+  --chromhmm_promoter_marks [string]  Comma-separated ChromHMM promoter marks. [default: H3K4me3] 
+
+Reference genome options
+  --genome                  [string]  Name of iGenomes reference. 
+  --fasta                   [string]  Path to FASTA genome file. 
+  --gtf                     [string]  Path to GTF gene annotation file. 
+  --blacklist               [string]  Path to blacklist regions file. 
+  --motifs                  [string]  Path to transcription factor motifs file. 
+  --snps                    [string]  File containing SNPs for organism. 
+  --taxon_id                [integer] NCBI Taxonomy ID. 
+
+Generic options
+  --help                    [boolean, string] Display the help message. 
+  --help_full               [boolean]         Display the full detailed help message. 
+  --show_hidden             [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 17 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/tfactivity/blob/master/CITATIONS.md
+
