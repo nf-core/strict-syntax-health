@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-03-25T00:28:33.667317390Z
-- Nextflow version: 26.03.0-edge
+- Generated: 2026-03-31T00:29:34.834577929Z
+- Nextflow version: 26.03.1-edge
 - Summary: 10 errors, 29 warnings
 
 ## :x: Errors
@@ -13,14 +13,14 @@
                        ^
   ```
 
-- Error: `subworkflows/local/prepare_vcfs_test/main.nf:164:25`: `vcf` is already declared
+- Error: `subworkflows/local/prepare_vcfs_test/main.nf:159:25`: `vcf` is already declared
 
   ```nextflow
           .branch { meta, vcf, tbi ->
                           ^^^
   ```
 
-- Error: `subworkflows/local/prepare_vcfs_test/main.nf:175:45`: `vcf` is already declared
+- Error: `subworkflows/local/prepare_vcfs_test/main.nf:170:45`: `vcf` is already declared
 
   ```nextflow
           ch_branched_vcf.needs_gt.map{ meta, vcf, _tbi -> tuple(meta, vcf) },
@@ -162,21 +162,21 @@
               ^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_vcfs_test/main.nf:62:14`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_vcfs_test/main.nf:59:14`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       vcf_ch = Channel.empty()
                ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_vcfs_test/main.nf:164:25`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/prepare_vcfs_test/main.nf:159:25`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .branch { meta, vcf, tbi ->
                           ^^^
   ```
 
-- Warning: `subworkflows/local/prepare_vcfs_test/main.nf:164:30`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/prepare_vcfs_test/main.nf:159:30`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .branch { meta, vcf, tbi ->
@@ -186,15 +186,15 @@
 - Warning: `subworkflows/local/sompy_benchmark/main.nf:22:34`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          input_ch.map{meta, test, test_index, truth, truth_index, regions, target -> [meta, test, truth, regions, target]},
-                                   ^^^^^^^^^^
+          input_ch.map{meta, test, test_index_, truth, truth_index_, regions, target -> [meta, test, truth, regions, target]},
+                                   ^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/sompy_benchmark/main.nf:22:53`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/sompy_benchmark/main.nf:22:54`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          input_ch.map{meta, test, test_index, truth, truth_index, regions, target -> [meta, test, truth, regions, target]},
-                                                      ^^^^^^^^^^^
+          input_ch.map{meta, test, test_index_, truth, truth_index_, regions, target -> [meta, test, truth, regions, target]},
+                                                       ^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/sv_vcf_conversion/main.nf:38:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead

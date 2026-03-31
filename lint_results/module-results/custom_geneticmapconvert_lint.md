@@ -1,14 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-03-29T00:25:45.630951+00:00
+- Generated: 2026-03-31T00:30:06.675499+00:00
 - Nextflow version: 26.03.1-edge
-- Summary: 1 warning
-
-## :warning: Warnings
-
-- Warning: `modules/nf-core/custom/geneticmapconvert/main.nf:25:5`: Variable was declared but not used
-
-  ```nextflow
-      args = task.ext.args ?: ''
-      ^^^^^^^^^^
-  ```
+- Summary: No issues found

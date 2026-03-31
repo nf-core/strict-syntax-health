@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T10:16:43.753524453Z
-- Nextflow version: 25.12.0-edge
-- Summary: 26 errors, 64 warnings
+- Generated: 2026-03-31T00:24:18.277395665Z
+- Nextflow version: 26.03.1-edge
+- Summary: 26 errors, 62 warnings
 
 ## :x: Errors
 
@@ -302,25 +302,11 @@
           ^^^^
   ```
 
-- Warning: `modules/local/abo/snps2pheno/main.nf:31:13`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
-
-  ```nextflow
-      python3 $projectDir/bin/aggregate_abo_reports.py \\
-              ^^^^^^^^^^
-  ```
-
-- Warning: `modules/local/mpileupstats/main.nf:36:9`: Variable was declared but not used
+- Warning: `modules/local/mpileupstats/main.nf:31:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
-  ```
-
-- Warning: `modules/local/mpileupstats/main.nf:40:13`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
-
-  ```nextflow
-      python3 $projectDir/bin/stats_from_pileup.py \\
-              ^^^^^^^^^^
   ```
 
 - Warning: `modules/nf-core/minimap2/align/main.nf:67:9`: Variable was declared but not used

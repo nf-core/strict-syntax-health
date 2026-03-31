@@ -1,0 +1,148 @@
+$ NXF_SYNTAX_PARSER=v2 nextflow run . --help
+
+
+ N E X T F L O W   ~  version 26.03.1-edge
+
+Downloading plugin nf-schema@2.5.1
+Launching `./main.nf` [nasty_caravaggio] revision: 28e9a76433
+
+WARN: Unrecognized config option 'validation.defaultIgnoreParams'
+WARN: Unrecognized config option 'validation.monochromeLogs'
+
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/circrna 0.0.1dev
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/circrna -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input                       [string]  Path to comma-separated file containing information about the samples in the experiment. 
+  --outdir                      [string]  The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --phenotype                   [string]  Phenotype CSV file specifying the experimental design. If provided, the pipeline will run CIRCTEST. 
+ 
+  --annotation                  [string]  Path to a CSV file containing BED files that should be used for annotation. 
+  --email                       [string]  Email address for completion summary. 
+  --multiqc_title               [string]  MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+  --longread                    [boolean] Whether to use long read data. [default: false] 
+
+BSJ Detection Options
+  --tools                       [string]  Comma separated list of circRNA quantification tools to use. Supported tools: ciri, circexplorer2, 
+find_circ, circrna_finder, mapsplice, circtools, segemehl [default: circexplorer2]  
+  --bsj_reads                   [integer] Minimum number of reads spanning circRNA back-splice junction required for circRNA to be output by 
+workflow. [default: 1]  
+  --max_shift                   [integer] If both start and end of a pair of BSJs are within max_shift bp, they are considered as the same 
+BSJ. [default: 0]  
+  --consider_strand             [boolean] Consider strand information when comparing BSJs. [default: true] 
+  --min_tools                   [integer] Specify the minimum number of tools circRNAs must be called by to be output by the workflow. 
+[default: 1]  
+  --min_samples                 [integer] Minimum number of samples a circRNA must be detected in to be output by the workflow. [default: 
+1]  
+  --exons_only                  [boolean] Only consider exons for circRNA sequence extraction. [default: true] 
+
+FLI Detection Options
+  --fli_tools                   [string] Comma separated list of FLI detection tools to use. Supported tools: psirc, circtools, cirifull 
+ 
+
+Quantification Options
+  --quantification_tools        [string]  Comma separated list of circRNA quantification tools to use. Supported tools: ciriquant, psirc 
+[default: ciriquant,psirc,sum,max]  
+  --bootstrap_samples           [integer] Number of bootstrap samples to use during psirc quantification. [default: 30] 
+
+miRNA options
+  --mirna_expression            [string]  path to tab-separated file providing the expression counts of mirnas, which are created in pipeline 
+'smrnaseq'. 
+
+mirna 	 sample1 	 sample2 	 sample3 	
+id1	 count_sample1 	 count_sample2 	 
+count_sample3 	
+id2 	 ...    	 ...    	 ...    	 
+  
+  --mirna_min_sample_percentage [number]  Minimum percentage of samples, a miRNA has to be expressed in to pass filtering. [default: 0.2] 
+ 
+  --mirna_min_reads             [integer] Minimum number of reads, a miRNA is required to have to pass filtering. [default: 5] 
+  --mirna_correlation           [string]  Specifies the type of correlation to be used when analyzing the relationship between miRNA and 
+transcript expression levels. Valid options are 'pearson' or 'spearman'. [default: pearson]  
+  --mirna_tools                 [string]  Comma separated list of miRNA bindingsite prediction tools to use. Supported tools: miranda, 
+targetscan. [default: miranda,targetscan]  
+  --mirna_min_tools             [integer] Specify the number of votes required for a miRNA to be further considered in downstream analysis.' 
+[default: 1]  
+
+Alignment Options
+  --sjdboverhang                [integer] *only used at the genome generation step* tells STAR how many bases to concatenate from donor and 
+acceptor sides of the junctions. [default: 100]  
+  --chimJunctionOverhangMin     [integer] Minimum overhang for a chimeric junction [default: 10] 
+  --alignSJDBoverhangMin        [integer] Minimum overhang for annotated junctions [default: 10] 
+  --limitSjdbInsertNsj          [integer] Maximum number of junction to be inserted to the genome on the fly at the mapping stage, including 
+those from annotations and those detected in the 1st step of the 2-pass run [default: 1000000] 
+ 
+  --chimSegmentMin              [integer] Minimum length of chimeric segment length. Must be set to a positive value to detect circular 
+junctions. [default: 10]  
+  --seglen                      [integer] Segment length. Default 25 [default: 25] 
+  --min_intron                  [integer] Minimum intron length. Default 20 [default: 20] 
+  --max_intron                  [integer] Maximum intron length. Default 1000000 [default: 1000000] 
+  --min_map_len                 [integer] Minimum alignment length. Default 40 [default: 40] 
+  --min_fusion_distance         [integer] Minimum distance between two gapped segments to be considered as fusion candidate. Must set to lower 
+values to be sensitive to circular candidates (e.g 200). [default: 200]  
+  --seq_center                  [string]  Sequencing center information to be added to read group of BAM files. 
+  --save_unaligned              [boolean] Where possible, save unaligned reads from either STAR, HISAT2 or Salmon to the results directory. 
+[default: false]  
+
+Reference genome options
+  --save_reference              [boolean] Save generated reference genome files such as indices, chromosome FASTA files. [default: true] 
+ 
+  --genome                      [string]  Name of iGenomes reference. 
+  --fasta                       [string]  Path to FASTA genome file. 
+  --gtf                         [string]  Path to reference GTF file. 
+  --blacklist                   [string]  Path to blacklist bed file. 
+  --mature                      [string]  Path to FASTA file with mature miRNAs. This parameter needs to be specified to perform miRNA 
+interaction analyses.  
+  --bowtie                      [string]  Path to Bowtie index files, surrounded by quotes. No glob pattern required. 
+  --bowtie2                     [string]  Path to Bowtie2 index files, surrounded by quotes. No glob pattern required. 
+  --bwa                         [string]  Path to BWA index directory, surrounded by quotes. No glob pattern required. 
+  --hisat2                      [string]  Path to Hisat2 index directory, surrounded by quotes. No glob pattern required. 
+  --hisat2_build_memory         [string]  Minimum memory required to use splice sites and exons in the HiSAT2 index build process. 
+[default: 200.GB]  
+  --segemehl                    [string]  Path to Segemehl Index **file**. 
+  --star                        [string]  Path to STAR index directory, surrounded by quotes. No glob pattern required. 
+
+Read trimming options
+  --skip_trimming               [boolean] Skip the adapter trimming step. [default: false] 
+  --save_trimmed                [boolean] Save the trimmed FastQ files in the results directory. [default: false] 
+  --skip_fastqc                 [boolean] Skip FastQC quality control of the sequencing reads. [default: false] 
+  --clip_r1                     [integer] Instructs Trim Galore to remove bp from the 5' end of read 1 (or single-end reads). 
+  --clip_r2                     [integer] Instructs Trim Galore to remove bp from the 5' end of read 2 (paired-end reads only). 
+  --three_prime_clip_r1         [integer] Instructs Trim Galore to remove bp from the 3' end of read 1 AFTER adapter/quality trimming has been 
+performed.  
+  --three_prime_clip_r2         [integer] Instructs Trim Galore to remove bp from the 3' end of read 2 AFTER adapter/quality trimming has been 
+performed.  
+  --trim_nextseq                [integer] Instructs Trim Galore to apply the --nextseq=X option, to trim based on quality after removing 
+poly-G tails.  
+  --min_trimmed_reads           [integer] Minimum number of trimmed reads below which samples are removed from further processing. Some 
+downstream steps in the pipeline will fail if this threshold is too low. [default: 10000]  
+
+Generic options
+  --save_intermediates          [boolean]         Save intermediate files. [default: false] 
+  --multiqc_methods_description [string]          Custom MultiQC yaml file containing HTML including a methods description. 
+  --help                        [boolean, string] Display the help message. 
+  --help_full                   [boolean]         Display the full detailed help message. 
+  --show_hidden                 [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 20 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/circrna/blob/master/CITATIONS.md
+

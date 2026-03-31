@@ -1,14 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-03-29T00:26:00.246162+00:00
+- Generated: 2026-03-31T00:30:20.866327+00:00
 - Nextflow version: 26.03.1-edge
-- Summary: 1 warning
-
-## :warning: Warnings
-
-- Warning: `subworkflows/nf-core/quant_tximport_summarizedexperiment/main.nf:33:16`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .map { meta, results -> [ [:], results ] }
-                 ^^^^^^^^^^
-  ```
+- Summary: No issues found
