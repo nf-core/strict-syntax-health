@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.03.0-edge
+ N E X T F L O W   ~  version 26.03.1-edge
 
-Launching `./main.nf` [silly_sammet] revision: ff377cb1d2
+Launching `./main.nf` [berserk_bartik] revision: 2981791ab0
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -160,8 +160,10 @@ Quality Control
   --rseqc_modules               [string]  Comma-separated list of RSeQC modules to run. [default: 
 bam_stat,inner_distance,infer_experiment,junction_annotation,junction_saturation,read_distribution,read_duplication] 
  
-  --contaminant_screening       [string]  Tool to use for detecting contaminants in unaligned reads - available options are 'sylph', 
-'kraken2', or 'kraken2_bracken'  (accepted: kraken2, kraken2_bracken, sylph)  
+  --contaminant_screening       [string]  Tool to use for detecting contaminants in the selected screening reads - available options are 
+'sylph', 'kraken2', or 'kraken2_bracken'  (accepted: kraken2, kraken2_bracken, sylph)  
+  --contaminant_screening_input [string]  Read set to screen for contaminants: aligner-unmapped reads (default) or trimmed/filter-passed reads 
+before alignment.  (accepted: trimmed, unmapped) [default: unmapped]  
   --kraken_db                   [string]  Database when using Kraken2/Bracken for contaminant screening. 
   --bracken_precision           [string]  Taxonomic level for Bracken abundance estimations.  (accepted: D, P, C, O, F, G, S) [default: S] 
  

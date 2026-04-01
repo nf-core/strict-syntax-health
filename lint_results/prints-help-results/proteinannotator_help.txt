@@ -3,8 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.03.1-edge
 
-Downloading plugin nf-schema@2.6.1
-Launching `./main.nf` [peaceful_bell] revision: 0c5aca65cf
+Launching `./main.nf` [nostalgic_hamilton] revision: 05c6c83c26
 
 
 ------------------------------------------------------
@@ -57,6 +56,10 @@ https://download.cathdb.info/cath/releases/all-releases/v4_3_0/sequence-data/fun
   --skip_nmpfams                  [boolean] Skip the domain annotation with the NMPFams database. 
   --nmpfams_db                    [string]  Path to an already installed NMPFams HMM database. 
   --nmpfams_latest_link           [string]  [default: https://pavlopoulos-lab.org/envofams/databases/hmmer/nmpfamsdb.hmm.gz] 
+  --skip_metagroot                [boolean] Skip the domain annotation with the metagRoot database. 
+  --metagroot_db                  [string]  Path to an already installed metagRoot HMM database (.hmm.gz). 
+  --metagroot_latest_link         [string]  metagRoot hosted link to the latest available metagRoot HMM database file. [default: 
+https://pavlopoulos-lab.org/envofams/databases/hmmer/metagroot.hmm.gz]  
   --hmmsearch_evalue_cutoff       [number]  hmmsearch e-value cutoff threshold for reported results. Modifies the -E parameter of hmmsearch. 
 [default: 0.001]  
 

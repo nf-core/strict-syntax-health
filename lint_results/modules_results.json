@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "b79e43fe0725b33009110a412463a040756fc077",
+  "_repo_commit": "94e6aa4ff8940cba63fa7ea5c09344af19e60025",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -1382,6 +1382,18 @@
   },
   "bwameth_index": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bwameth/index",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "caalm_caalm": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/caalm/caalm",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "caalm_downloadmodels": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/caalm/downloadmodels",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -10136,6 +10148,12 @@
   },
   "vcf2zarr_convert": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/vcf2zarr/convert",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "vcf2zarr_explode": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/vcf2zarr/explode",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

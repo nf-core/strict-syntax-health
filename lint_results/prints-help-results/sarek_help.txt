@@ -1,0 +1,14 @@
+$ NXF_SYNTAX_PARSER=v2 nextflow run . --help
+
+
+ N E X T F L O W   ~  version 26.03.1-edge
+
+Downloading plugin nf-fgbio@1.0.0
+Downloading plugin nf-prov@1.2.2
+Launching `./main.nf` [voluminous_majorana] revision: 66b0a34bf4
+
+WARN: Unrecognized config option 'prov.enabled'
+WARN: Unrecognized config option 'prov.formats.bco.file'
+ERROR ~ Unable to create help message: Specified param 'true' does not exist in JSON schema.
+
+ -- Check script 'subworkflows/nf-core/utils_nfschema_plugin/main.nf' at line: 41 or see '.nextflow.log' file for more details

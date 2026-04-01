@@ -1,845 +1,24 @@
 # Nextflow lint results
 
-- Generated: 2026-03-13T00:23:27.201999737Z
-- Nextflow version: 26.02.0-edge
-- Summary: 119 errors, 549 warnings
-
-## :x: Errors
-
-- Error: `conf/modules/aligner.config:19:17`: Unexpected input: ':'
-
-  ```nextflow
-          withName: 'BWAMEM1_MEM' {
-                  ^
-  ```
-
-- Error: `conf/modules/annotate.config:20:17`: Unexpected input: ':'
-
-  ```nextflow
-          withName: 'SNPEFF_SNPEFF' {
-                  ^
-  ```
-
-- Error: `conf/modules/freebayes.config:75:17`: Unexpected input: ':'
-
-  ```nextflow
-          withName: '.*:BAM_VARIANT_CALLING_SOMATIC_ALL:BAM_VARIANT_CALLING_FREEBAYES:FREEBAYES' {
-                  ^
-  ```
-
-- Error: `conf/modules/haplotypecaller.config:60:17`: Unexpected input: ':'
-
-  ```nextflow
-          withName: 'NFCORE_SAREK:SAREK:BAM_VARIANT_CALLING_GERMLINE_ALL:BAM_VARIANT_CALLING_HAPLOTYPECALLER:BAM_MERGE_INDEX_SAMTOOLS:(MERGE_BAM|INDEX_MERGE_BAM)' {
-                  ^
-  ```
-
-- Error: `conf/modules/joint_germline.config:36:17`: Unexpected input: ':'
-
-  ```nextflow
-          withName: 'NFCORE_SAREK:SAREK:BAM_VARIANT_CALLING_GERMLINE_ALL:BAM_JOINT_CALLING_GERMLINE_GATK:BCFTOOLS_SORT' {
-                  ^
-  ```
-
-- Error: `conf/modules/lofreq.config:19:17`: Unexpected input: ':'
-
-  ```nextflow
-          withName: "LOFREQ_CALLPARALLEL" {
-                  ^
-  ```
-
-- Error: `conf/modules/manta.config:18:17`: Unexpected input: ':'
-
-  ```nextflow
-          withName: 'MANTA_GERMLINE|MANTA_TUMORONLY|MANTA_SOMATIC' {
-                  ^
-  ```
-
-- Error: `conf/modules/markduplicates.config:122:9`: If statements cannot be mixed with config statements
-
-  ```nextflow
-          if (params.tools && params.tools.split(',').contains('sentieon_dedup')) {
-          ^
-  ```
-
-- Error: `conf/modules/modules.config:78:17`: Unexpected input: ':'
-
-  ```nextflow
-          withName: 'NFCORE_SAREK:SAREK:CRAM_SAMPLEQC:CRAM_QC_RECAL:MOSDEPTH' {
-                  ^
-  ```
-
-- Error: `conf/modules/mpileup.config:56:17`: Unexpected input: ':'
-
-  ```nextflow
-          withName: 'NFCORE_SAREK:SAREK:BAM_VARIANT_CALLING_GERMLINE_ALL:BAM_VARIANT_CALLING_MPILEUP:SAMTOOLS_MPILEUP' {
-                  ^
-  ```
-
-- Error: `conf/modules/mutect2.config:19:17`: Unexpected input: ':'
-
-  ```nextflow
-          withName: 'GATK4_MUTECT2' {
-                  ^
-  ```
-
-- Error: `conf/modules/prepare_recalibration.config:19:9`: If statements cannot be mixed with config statements
-
-  ```nextflow
-          if (params.use_gatk_spark) {
-          ^
-  ```
-
-- Error: `conf/modules/recalibrate.config:47:17`: Unexpected input: ':'
-
-  ```nextflow
-          withName: 'NFCORE_SAREK:SAREK:FASTQ_PREPROCESS_GATK:(BAM_APPLYBQSR|BAM_APPLYBQSR_SPARK):CRAM_MERGE_INDEX_SAMTOOLS:MERGE_CRAM' {
-                  ^
-  ```
-
-- Error: `conf/modules/sentieon_dedup.config:44:17`: Unexpected input: ':'
-
-  ```nextflow
-          withName: 'NFCORE_SAREK:SAREK:FASTQ_PREPROCESS_GATK:BAM_SENTIEON_DEDUP:CRAM_QC_MOSDEPTH_SAMTOOLS:SAMTOOLS_STATS' {
-                  ^
-  ```
-
-- Error: `conf/modules/sentieon_dnascope_joint_germline.config:28:17`: Unexpected input: ':'
-
-  ```nextflow
-          withName: 'NFCORE_SAREK:SAREK:BAM_VARIANT_CALLING_GERMLINE_ALL:BAM_JOINT_CALLING_GERMLINE_SENTIEON:BCFTOOLS_SORT' {
-                  ^
-  ```
-
-- Error: `conf/modules/sentieon_haplotyper.config:48:17`: Unexpected input: ':'
-
-  ```nextflow
-          withName: '.*:SENTIEON_HAPLOTYPER_VCF_VARIANT_FILTERING_GATK:FILTERVARIANTTRANCHES' {
-                  ^
-  ```
-
-- Error: `conf/modules/sentieon_haplotyper_joint_germline.config:27:17`: Unexpected input: ':'
-
-  ```nextflow
-          withName: 'NFCORE_SAREK:SAREK:BAM_VARIANT_CALLING_GERMLINE_ALL:BAM_JOINT_CALLING_GERMLINE_SENTIEON:BCFTOOLS_SORT' {
-                  ^
-  ```
-
-- Error: `conf/modules/tiddit.config:40:17`: Unexpected input: ':'
-
-  ```nextflow
-          withName: 'NFCORE_SAREK:SAREK:BAM_VARIANT_CALLING_SOMATIC_ALL:BAM_VARIANT_CALLING_SOMATIC_TIDDIT:TIDDIT_NORMAL:TABIX_BGZIP_TIDDIT_SV' {
-                  ^
-  ```
-
-- Error: `conf/modules/umi.config:38:17`: Unexpected input: ':'
-
-  ```nextflow
-          withName: 'NFCORE_SAREK:SAREK:FASTQ_PREPROCESS_GATK:FASTQ_CREATE_UMI_CONSENSUS_FGBIO:ALIGN_UMI:BWAMEM.*_MEM' {
-                  ^
-  ```
-
-- Error: `main.nf:76:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/sarek/subworkflows/local/prepare_intervals/main.nf'
-
-  ```nextflow
-  include { PREPARE_INTERVALS               } from './subworkflows/local/prepare_intervals'
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `main.nf:131:5`: `PREPARE_INTERVALS` is not defined
-
-  ```nextflow
-      PREPARE_INTERVALS(PREPARE_GENOME.out.fasta_fai, params.intervals, params.no_intervals, params.nucleotides_per_second, params.outdir, params.step)
-      ^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `main.nf:135:72`: `PREPARE_INTERVALS` is not defined
-
-  ```nextflow
-      intervals_bed_combined = params.no_intervals ? Channel.value([]) : PREPARE_INTERVALS.out.intervals_bed_combined
-                                                                         ^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `main.nf:136:79`: `PREPARE_INTERVALS` is not defined
-
-  ```nextflow
-      intervals_bed_gz_tbi_combined = params.no_intervals ? Channel.value([]) : PREPARE_INTERVALS.out.intervals_bed_gz_tbi_combined
-                                                                                ^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `main.nf:137:50`: `PREPARE_INTERVALS` is not defined
-
-  ```nextflow
-      intervals_bed_combined_for_variant_calling = PREPARE_INTERVALS.out.intervals_bed_combined
-                                                   ^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `main.nf:144:17`: `PREPARE_INTERVALS` is not defined
-
-  ```nextflow
-      intervals = PREPARE_INTERVALS.out.intervals_bed
-                  ^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `main.nf:146:28`: `PREPARE_INTERVALS` is not defined
-
-  ```nextflow
-      intervals_bed_gz_tbi = PREPARE_INTERVALS.out.intervals_bed_gz_tbi
-                             ^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `main.nf:171:29`: `PREPARE_INTERVALS` is not defined
-
-  ```nextflow
-      versions = versions.mix(PREPARE_INTERVALS.out.versions)
-                              ^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/bam_baserecalibrator/main.nf:26:21`: `cram` is already declared
-
-  ```nextflow
-          .map{ meta, cram, crai, intervals, num_intervals -> [ meta + [ num_intervals:num_intervals ], cram, crai, intervals ] }
-                      ^^^^
-  ```
-
-- Error: `subworkflows/local/bam_baserecalibrator/main.nf:26:33`: `intervals` is already declared
-
-  ```nextflow
-          .map{ meta, cram, crai, intervals, num_intervals -> [ meta + [ num_intervals:num_intervals ], cram, crai, intervals ] }
-                                  ^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/bam_baserecalibrator_spark/main.nf:26:21`: `cram` is already declared
-
-  ```nextflow
-          .map{ meta, cram, crai, intervals, num_intervals -> [ meta + [ num_intervals:num_intervals ], cram, crai, intervals ] }
-                      ^^^^
-  ```
-
-- Error: `subworkflows/local/bam_baserecalibrator_spark/main.nf:26:33`: `intervals` is already declared
-
-  ```nextflow
-          .map{ meta, cram, crai, intervals, num_intervals -> [ meta + [ num_intervals:num_intervals ], cram, crai, intervals ] }
-                                  ^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/bam_joint_calling_germline_gatk/main.nf:74:26`: `fasta` is already declared
-
-  ```nextflow
-          fasta.map{ meta, fasta -> [ fasta ] },
-                           ^^^^^
-  ```
-
-- Error: `subworkflows/local/bam_joint_calling_germline_gatk/main.nf:75:24`: `fai` is already declared
-
-  ```nextflow
-          fai.map{ meta, fai -> [ fai ] },
-                         ^^^
-  ```
-
-- Error: `subworkflows/local/bam_joint_calling_germline_gatk/main.nf:76:25`: `dict` is already declared
-
-  ```nextflow
-          dict.map{ meta, dict -> [ dict ] })
-                          ^^^^
-  ```
-
-- Error: `subworkflows/local/bam_joint_calling_germline_gatk/main.nf:83:26`: `fasta` is already declared
-
-  ```nextflow
-          fasta.map{ meta, fasta -> [ fasta ] },
-                           ^^^^^
-  ```
-
-- Error: `subworkflows/local/bam_joint_calling_germline_gatk/main.nf:84:24`: `fai` is already declared
-
-  ```nextflow
-          fai.map{ meta, fai -> [ fai ] },
-                         ^^^
-  ```
-
-- Error: `subworkflows/local/bam_joint_calling_germline_gatk/main.nf:85:25`: `dict` is already declared
-
-  ```nextflow
-          dict.map{ meta, dict -> [ dict ] })
-                          ^^^^
-  ```
-
-- Error: `subworkflows/local/bam_joint_calling_germline_gatk/main.nf:100:26`: `fasta` is already declared
-
-  ```nextflow
-          fasta.map{ meta, fasta -> [ fasta ] },
-                           ^^^^^
-  ```
-
-- Error: `subworkflows/local/bam_joint_calling_germline_gatk/main.nf:101:24`: `fai` is already declared
-
-  ```nextflow
-          fai.map{ meta, fai -> [ fai ] },
-                         ^^^
-  ```
-
-- Error: `subworkflows/local/bam_joint_calling_germline_gatk/main.nf:102:25`: `dict` is already declared
-
-  ```nextflow
-          dict.map{ meta, dict -> [ dict ] })
-                          ^^^^
-  ```
-
-- Error: `subworkflows/local/bam_joint_calling_germline_gatk/main.nf:114:26`: `fasta` is already declared
-
-  ```nextflow
-          fasta.map{ meta, fasta -> [ fasta ] },
-                           ^^^^^
-  ```
-
-- Error: `subworkflows/local/bam_joint_calling_germline_gatk/main.nf:115:24`: `fai` is already declared
-
-  ```nextflow
-          fai.map{ meta, fai -> [ fai ] },
-                         ^^^
-  ```
-
-- Error: `subworkflows/local/bam_joint_calling_germline_gatk/main.nf:116:25`: `dict` is already declared
-
-  ```nextflow
-          dict.map{ meta, dict -> [ dict ] })
-                          ^^^^
-  ```
-
-- Error: `subworkflows/local/bam_joint_calling_germline_gatk/main.nf:137:9`: Variables in a closure should be declared with `def`
-
-  ```nextflow
-          vcf_out = recal_vcf ?: joint_vcf
-          ^^^^^^^
-  ```
-
-- Error: `subworkflows/local/bam_joint_calling_germline_gatk/main.nf:145:9`: Variables in a closure should be declared with `def`
-
-  ```nextflow
-          tbi_out = recal_tbi ?: joint_tbi
-          ^^^^^^^
-  ```
-
-- Error: `subworkflows/local/bam_joint_calling_germline_sentieon/main.nf:125:13`: Variables in a closure should be declared with `def`
-
-  ```nextflow
-              vcf_out = recal_vcf ?: joint_vcf
-              ^^^^^^^
-  ```
-
-- Error: `subworkflows/local/bam_joint_calling_germline_sentieon/main.nf:133:13`: Variables in a closure should be declared with `def`
-
-  ```nextflow
-              tbi_out = recal_tbi ?: joint_tbi
-              ^^^^^^^
-  ```
-
-- Error: `subworkflows/local/bam_markduplicates/main.nf:22:48`: `fasta` is already declared
-
-  ```nextflow
-      GATK4_MARKDUPLICATES(bam, fasta.map{ meta, fasta -> [ fasta ] }, fasta_fai.map{ meta, fasta_fai -> [ fasta_fai ] })
-                                                 ^^^^^
-  ```
-
-- Error: `subworkflows/local/bam_markduplicates/main.nf:22:91`: `fasta_fai` is already declared
-
-  ```nextflow
-      GATK4_MARKDUPLICATES(bam, fasta.map{ meta, fasta -> [ fasta ] }, fasta_fai.map{ meta, fasta_fai -> [ fasta_fai ] })
-                                                                                            ^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/bam_markduplicates_spark/main.nf:25:53`: `fasta` is already declared
-
-  ```nextflow
-      GATK4SPARK_MARKDUPLICATES(bam, fasta.map{ meta, fasta -> [ fasta ] }, fasta_fai.map{ meta, fasta_fai -> [ fasta_fai ] }, dict.map{ meta, dict -> [ dict ] })
-                                                      ^^^^^
-  ```
-
-- Error: `subworkflows/local/bam_markduplicates_spark/main.nf:25:96`: `fasta_fai` is already declared
-
-  ```nextflow
-      GATK4SPARK_MARKDUPLICATES(bam, fasta.map{ meta, fasta -> [ fasta ] }, fasta_fai.map{ meta, fasta_fai -> [ fasta_fai ] }, dict.map{ meta, dict -> [ dict ] })
-                                                                                                 ^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/bam_markduplicates_spark/main.nf:25:142`: `dict` is already declared
-
-  ```nextflow
-      GATK4SPARK_MARKDUPLICATES(bam, fasta.map{ meta, fasta -> [ fasta ] }, fasta_fai.map{ meta, fasta_fai -> [ fasta_fai ] }, dict.map{ meta, dict -> [ dict ] })
-                                                                                                                                               ^^^^
-  ```
-
-- Error: `subworkflows/local/bam_markduplicates_spark/main.nf:37:59`: `fasta` is already declared
-
-  ```nextflow
-      GATK4_ESTIMATELIBRARYCOMPLEXITY(bam, fasta.map{ meta, fasta -> [ fasta ] }, fasta_fai.map{ meta, fasta_fai -> [ fasta_fai ] }, dict.map{ meta, dict -> [ dict ] })
-                                                            ^^^^^
-  ```
-
-- Error: `subworkflows/local/bam_markduplicates_spark/main.nf:37:102`: `fasta_fai` is already declared
-
-  ```nextflow
-      GATK4_ESTIMATELIBRARYCOMPLEXITY(bam, fasta.map{ meta, fasta -> [ fasta ] }, fasta_fai.map{ meta, fasta_fai -> [ fasta_fai ] }, dict.map{ meta, dict -> [ dict ] })
-                                                                                                       ^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/bam_markduplicates_spark/main.nf:37:148`: `dict` is already declared
-
-  ```nextflow
-      GATK4_ESTIMATELIBRARYCOMPLEXITY(bam, fasta.map{ meta, fasta -> [ fasta ] }, fasta_fai.map{ meta, fasta_fai -> [ fasta_fai ] }, dict.map{ meta, dict -> [ dict ] })
-                                                                                                                                                     ^^^^
-  ```
-
-- Error: `subworkflows/local/bam_sentieon_dedup/main.nf:19:26`: `bam` is already declared
-
-  ```nextflow
-      bam = bam.map{ meta, bam -> [ meta - meta.subMap('data_type'), bam ] }
-                           ^^^
-  ```
-
-- Error: `subworkflows/local/bam_sentieon_dedup/main.nf:20:26`: `bai` is already declared
-
-  ```nextflow
-      bai = bai.map{ meta, bai -> [ meta - meta.subMap('data_type'), bai ] }
-                           ^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_deepvariant/main.nf:26:21`: `cram` is already declared
-
-  ```nextflow
-          .map{ meta, cram, crai, intervals, num_intervals -> [ meta + [ num_intervals:num_intervals ], cram, crai, intervals ]}
-                      ^^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_deepvariant/main.nf:26:33`: `intervals` is already declared
-
-  ```nextflow
-          .map{ meta, cram, crai, intervals, num_intervals -> [ meta + [ num_intervals:num_intervals ], cram, crai, intervals ]}
-                                  ^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_germline_all/main.nf:98:29`: `cram` is already declared
-
-  ```nextflow
-              cram.map{ meta, cram, crai -> [ meta, [], cram ] },
-                              ^^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_germline_all/main.nf:127:29`: `cram` is already declared
-
-  ```nextflow
-              cram.map{ meta, cram, crai -> [ meta, cram, crai, [], [] ] },
-                              ^^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_germline_all/main.nf:181:38`: `fasta` is already declared
-
-  ```nextflow
-                      fasta.map{ meta, fasta -> [ fasta ] },
-                                       ^^^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_germline_all/main.nf:182:42`: `fasta_fai` is already declared
-
-  ```nextflow
-                      fasta_fai.map{ meta, fasta_fai -> [ fasta_fai ] },
-                                           ^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_germline_all/main.nf:183:37`: `dict` is already declared
-
-  ```nextflow
-                      dict.map{ meta, dict -> [ dict ] },
-                                      ^^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_germline_all/main.nf:334:37`: `dict` is already declared
-
-  ```nextflow
-                      dict.map{ meta, dict -> [ dict ] },
-                                      ^^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_germline_all/main.nf:354:30`: `fasta` is already declared
-
-  ```nextflow
-              fasta.map{ meta, fasta -> [ fasta ] },
-                               ^^^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_germline_all/main.nf:355:34`: `fasta_fai` is already declared
-
-  ```nextflow
-              fasta_fai.map{ meta, fasta_fai -> [ fasta_fai ] },
-                                   ^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_germline_manta/main.nf:22:9`: Variables in a closure should be declared with `def`
-
-  ```nextflow
-          bed_gz = it.size() > 3 ? it[3] : []
-          ^^^^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_germline_manta/main.nf:23:9`: Variables in a closure should be declared with `def`
-
-  ```nextflow
-          bed_tbi = it.size() > 3 ? it[4] : []
-          ^^^^^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_haplotypecaller/main.nf:31:21`: `cram` is already declared
-
-  ```nextflow
-          .map{ meta, cram, crai, intervals, num_intervals -> [ meta + [ interval_name:intervals.baseName, num_intervals:num_intervals, variantcaller:'haplotypecaller' ], cram, crai, intervals, [] ] }
-                      ^^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_haplotypecaller/main.nf:31:33`: `intervals` is already declared
-
-  ```nextflow
-          .map{ meta, cram, crai, intervals, num_intervals -> [ meta + [ interval_name:intervals.baseName, num_intervals:num_intervals, variantcaller:'haplotypecaller' ], cram, crai, intervals, [] ] }
-                                  ^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_haplotypecaller/main.nf:45:32`: `cram` is already declared
-
-  ```nextflow
-          .map{ meta, gvcf, tbi, cram, crai, intervals, dragstr_model -> [ meta, gvcf, tbi, intervals ] }
-                                 ^^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_haplotypecaller/main.nf:45:44`: `intervals` is already declared
-
-  ```nextflow
-          .map{ meta, gvcf, tbi, cram, crai, intervals, dragstr_model -> [ meta, gvcf, tbi, intervals ] }
-                                             ^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_haplotypecaller/main.nf:49:19`: `vcf` is already declared
-
-  ```nextflow
-              meta, vcf -> [ meta - meta.subMap('interval_name'), vcf]
-                    ^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_haplotypecaller/main.nf:76:68`: `vcf` is already declared
-
-  ```nextflow
-      MERGE_HAPLOTYPECALLER(haplotypecaller_vcf.intervals.map{ meta, vcf -> [ groupKey(meta, meta.num_intervals), vcf ] }.groupTuple(), dict)
-                                                                     ^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_haplotypecaller/main.nf:98:42`: `vcf` is already declared
-
-  ```nextflow
-      vcf = haplotypecaller_vcf.map{ meta, vcf -> [ meta - meta.subMap('num_intervals'), vcf ] }
-                                           ^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_sentieon_dnascope/main.nf:36:21`: `cram` is already declared
-
-  ```nextflow
-          .map{ meta, cram, crai, intervals, num_intervals -> [
-                      ^^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_sentieon_dnascope/main.nf:36:33`: `intervals` is already declared
-
-  ```nextflow
-          .map{ meta, cram, crai, intervals, num_intervals -> [
-                                  ^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_sentieon_dnascope/main.nf:66:25`: `gvcf` is already declared
-
-  ```nextflow
-              .map{ meta, gvcf, tbi, cram, crai, intervals -> [ meta, gvcf, tbi, intervals ] }
-                          ^^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_sentieon_dnascope/main.nf:66:36`: `cram` is already declared
-
-  ```nextflow
-              .map{ meta, gvcf, tbi, cram, crai, intervals -> [ meta, gvcf, tbi, intervals ] }
-                                     ^^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_sentieon_dnascope/main.nf:66:48`: `intervals` is already declared
-
-  ```nextflow
-              .map{ meta, gvcf, tbi, cram, crai, intervals -> [ meta, gvcf, tbi, intervals ] }
-                                                 ^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_sentieon_dnascope/main.nf:71:19`: `vcf` is already declared
-
-  ```nextflow
-              meta, vcf -> [ meta - meta.subMap('interval_name'), vcf]
-                    ^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_sentieon_dnascope/main.nf:87:19`: `gvcf` is already declared
-
-  ```nextflow
-              meta, gvcf -> [ meta - meta.subMap('interval_name'), gvcf]
-                    ^^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_sentieon_dnascope/main.nf:103:15`: `vcf` is already declared
-
-  ```nextflow
-          meta, vcf -> [ groupKey(meta, meta.num_intervals), vcf ]}
-                ^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_sentieon_dnascope/main.nf:106:15`: `vcf` is already declared
-
-  ```nextflow
-          meta, vcf -> [
-                ^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_sentieon_dnascope/main.nf:123:35`: `vcf` is already declared
-
-  ```nextflow
-      vcf = dnascope_vcf.map{ meta, vcf -> [ meta - meta.subMap('num_intervals'), vcf ] }
-                                    ^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_sentieon_dnascope/main.nf:129:15`: `vcf` is already declared
-
-  ```nextflow
-          meta, vcf -> [groupKey(meta, meta.num_intervals), vcf]}
-                ^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_sentieon_dnascope/main.nf:132:15`: `vcf` is already declared
-
-  ```nextflow
-          meta, vcf -> [ meta - meta.subMap('intervals_name'), vcf ]
-                ^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:34:21`: `cram` is already declared
-
-  ```nextflow
-          .map{ meta, cram, crai, intervals, num_intervals -> [
-                      ^^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:34:33`: `intervals` is already declared
-
-  ```nextflow
-          .map{ meta, cram, crai, intervals, num_intervals -> [
-                                  ^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:50:48`: `cram` is already declared
-
-  ```nextflow
-          cram_intervals_for_sentieon.map{ meta, cram, crai, intervals -> [ meta, cram, crai, intervals, [] ]},
-                                                 ^^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:50:60`: `intervals` is already declared
-
-  ```nextflow
-          cram_intervals_for_sentieon.map{ meta, cram, crai, intervals -> [ meta, cram, crai, intervals, [] ]},
-                                                             ^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:62:25`: `gvcf` is already declared
-
-  ```nextflow
-              .map{ meta, gvcf, tbi, cram, crai, intervals -> [ meta, gvcf, tbi, intervals ] }
-                          ^^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:62:36`: `cram` is already declared
-
-  ```nextflow
-              .map{ meta, gvcf, tbi, cram, crai, intervals -> [ meta, gvcf, tbi, intervals ] }
-                                     ^^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:62:48`: `intervals` is already declared
-
-  ```nextflow
-              .map{ meta, gvcf, tbi, cram, crai, intervals -> [ meta, gvcf, tbi, intervals ] }
-                                                 ^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:67:19`: `vcf` is already declared
-
-  ```nextflow
-              meta, vcf -> [ meta - meta.subMap('interval_name'), vcf]
-                    ^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:83:19`: `gvcf` is already declared
-
-  ```nextflow
-              meta, gvcf -> [ meta - meta.subMap('interval_name'), gvcf]
-                    ^^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:99:15`: `vcf` is already declared
-
-  ```nextflow
-          meta, vcf -> [ groupKey(meta, meta.num_intervals), vcf ]}
-                ^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:102:15`: `vcf` is already declared
-
-  ```nextflow
-          meta, vcf -> [
-                ^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:119:37`: `vcf` is already declared
-
-  ```nextflow
-      vcf = haplotyper_vcf.map{ meta, vcf -> [ meta - meta.subMap('num_intervals'), vcf ] }
-                                      ^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:125:15`: `vcf` is already declared
-
-  ```nextflow
-          meta, vcf -> [groupKey(meta, meta.num_intervals), vcf]}
-                ^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:128:15`: `vcf` is already declared
-
-  ```nextflow
-          meta, vcf -> [ meta - meta.subMap('intervals_name'), vcf ]
-                ^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_single_strelka/main.nf:25:21`: `cram` is already declared
-
-  ```nextflow
-          .map{ meta, cram, crai, intervals, intervals_index, num_intervals -> [ meta + [ num_intervals:num_intervals ], cram, crai, intervals, intervals_index ] }
-                      ^^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_single_strelka/main.nf:25:33`: `intervals` is already declared
-
-  ```nextflow
-          .map{ meta, cram, crai, intervals, intervals_index, num_intervals -> [ meta + [ num_intervals:num_intervals ], cram, crai, intervals, intervals_index ] }
-                                  ^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_somatic_manta/main.nf:21:9`: Variables in a closure should be declared with `def`
-
-  ```nextflow
-          bed_gz = it.size() > 5 ? it[5] : []
-          ^^^^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_somatic_manta/main.nf:22:9`: Variables in a closure should be declared with `def`
-
-  ```nextflow
-          bed_tbi = it.size() > 5 ? it[6] : []
-          ^^^^^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_somatic_strelka/main.nf:25:93`: `intervals` is already declared
-
-  ```nextflow
-          .map{ meta, normal_cram, normal_crai, tumor_cram, tumor_crai, manta_vcf, manta_tbi, intervals, intervals_index, num_intervals -> [ meta + [ num_intervals:num_intervals ], normal_cram, normal_crai, tumor_cram, tumor_crai, manta_vcf, manta_tbi, intervals, intervals_index ] }
-                                                                                              ^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_tumor_only_lofreq/main.nf:18:45`: `intervals` is already declared
-
-  ```nextflow
-          .map {meta, tumor_cram, tumor_crai, intervals, num_intervals -> [meta + [ num_intervals:num_intervals ], tumor_cram, tumor_crai, intervals]}
-                                              ^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_tumor_only_manta/main.nf:22:9`: Variables in a closure should be declared with `def`
-
-  ```nextflow
-          bed_gz = it.size() > 3 ? it[3] : []
-          ^^^^^^
-  ```
-
-- Error: `subworkflows/local/bam_variant_calling_tumor_only_manta/main.nf:23:9`: Variables in a closure should be declared with `def`
-
-  ```nextflow
-          bed_tbi = it.size() > 3 ? it[4] : []
-          ^^^^^^^
-  ```
-
-- Error: `subworkflows/local/channel_variant_calling_create_csv/main.nf:13:13`: Variables in a closure should be declared with `def`
-
-  ```nextflow
-              patient       = meta.patient
-              ^^^^^^^
-  ```
-
-- Error: `subworkflows/local/channel_variant_calling_create_csv/main.nf:14:13`: Variables in a closure should be declared with `def`
-
-  ```nextflow
-              sample        = meta.id
-              ^^^^^^
-  ```
-
-- Error: `subworkflows/local/channel_variant_calling_create_csv/main.nf:15:13`: Variables in a closure should be declared with `def`
-
-  ```nextflow
-              variantcaller = meta.variantcaller
-              ^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/prepare_intervals/main.nf:77:34`: Unexpected input: '='
-
-  ```nextflow
-                      final fields = line.split('\t')
-                                   ^
-  ```
-
-- Error: `subworkflows/local/vcf_variant_filtering_gatk/main.nf:20:61`: `vcf` is already declared
-
-  ```nextflow
-      cnn_in = vcf.combine(intervals_bed_combined).map{ meta, vcf, tbi, intervals -> [ meta, vcf, tbi, [], intervals ] }
-                                                              ^^^
-  ```
-
-- Error: `subworkflows/local/vcf_variant_filtering_gatk/main.nf:28:21`: `vcf` is already declared
-
-  ```nextflow
-          .map{ meta, vcf -> [ meta - meta.subMap('num_intervals'), vcf ] }
-                      ^^^
-  ```
-
-- Error: `tests/nextflow.config:22:1`: If statements cannot be mixed with config statements
-
-  ```nextflow
-  if (System.getenv('SENTIEON_LICSRVR_IP')) {
-  ^
-  ```
-
-- Error: `tests/nextflow.config:26:1`: If statements cannot be mixed with config statements
-
-  ```nextflow
-  if (System.getenv('SENTIEON_AUTH_MECH')) {
-  ^
-  ```
-
-- Error: `tests/nextflow.config:29:1`: If statements cannot be mixed with config statements
-
-  ```nextflow
-  if (secrets.SENTIEON_AUTH_DATA) {
-  ^
-  ```
+- Generated: 2026-04-01T00:30:48.012935183Z
+- Nextflow version: 26.03.1-edge
+- Summary: 585 warnings
 
 ## :warning: Warnings
+
+- Warning: `conf/modules/aligner.config:51:46`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                      ) { "mapped/${meta.id}/${it}" }
+                                               ^^
+  ```
+
+- Warning: `conf/modules/aligner.config:81:178`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              saveAs: { (params.save_output_as_bam && (params.save_mapped || params.skip_tools && params.skip_tools.split(',').contains('markduplicates'))) ? "mapped/${meta.id}/${it}" : null }
+                                                                                                                                                                                   ^^
+  ```
 
 - Warning: `conf/modules/aligner_parabricks.config:31:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
@@ -869,6 +48,27 @@
                                                     ^^
   ```
 
+- Warning: `conf/modules/annotate.config:27:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                      saveAs: { params.tools.split(',').contains('snpeff') ? it : null }
+                                                                             ^^
+  ```
+
+- Warning: `conf/modules/annotate.config:88:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  saveAs: { params.save_reference ? it : null }
+                                                    ^^
+  ```
+
+- Warning: `conf/modules/annotate.config:126:72`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  saveAs: { params.tools.split(',').contains('snpeff') ? it : null }
+                                                                         ^^
+  ```
+
 - Warning: `conf/modules/contamination.config:17:55`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
@@ -881,6 +81,27 @@
   ```nextflow
               saveAs: { meta.num_intervals > 1 ? null : "deepvariant/${meta.id}/${it}" }
                                                                                   ^^
+  ```
+
+- Warning: `conf/modules/freebayes.config:43:79`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              saveAs: { meta.num_intervals > 1 ? null : "freebayes/${meta.id}/${it}" }
+                                                                                ^^
+  ```
+
+- Warning: `conf/modules/haplotypecaller.config:29:85`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              saveAs: { meta.num_intervals > 1 ? null : "haplotypecaller/${meta.id}/${it}" }
+                                                                                      ^^
+  ```
+
+- Warning: `conf/modules/lofreq.config:26:80`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  saveAs: { meta.num_intervals > 1 ? null : "lofreq/${meta.id}/${it}" }
+                                                                                 ^^
   ```
 
 - Warning: `conf/modules/markduplicates.config:32:52`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -923,6 +144,41 @@
   ```nextflow
               saveAs: { !params.save_output_as_bam ? it : null }
                                                      ^^
+  ```
+
+- Warning: `conf/modules/markduplicates.config:130:55`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  saveAs: { params.save_output_as_bam ? it : null }
+                                                        ^^
+  ```
+
+- Warning: `conf/modules/markduplicates.config:136:55`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  saveAs: { params.save_output_as_bam ? it : null }
+                                                        ^^
+  ```
+
+- Warning: `conf/modules/mpileup.config:33:55`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              saveAs: { meta.num_intervals > 1 ? null : it }
+                                                        ^^
+  ```
+
+- Warning: `conf/modules/mutect2.config:26:81`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  saveAs: { meta.num_intervals > 1 ? null : "mutect2/${meta.id}/${it}" }
+                                                                                  ^^
+  ```
+
+- Warning: `conf/modules/mutect2.config:98:81`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  saveAs: { meta.num_intervals > 1 ? null : "mutect2/${meta.id}/${it}" }
+                                                                                  ^^
   ```
 
 - Warning: `conf/modules/prepare_genome.config:21:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -1079,11 +335,67 @@
                                                                                         ^^
   ```
 
-- Warning: `conf/modules/prepare_recalibration.config:27:81`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules/prepare_recalibration.config:25:81`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               saveAs: { meta.num_intervals > 1 ? null : "recal_table/${meta.id}/${it}" }
                                                                                   ^^
+  ```
+
+- Warning: `conf/modules/recalibrate.config:28:111`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              saveAs: { !params.save_output_as_bam ? meta.num_intervals > 1 ? null : "recalibrated/${meta.id}/${it}" : null }
+                                                                                                                ^^
+  ```
+
+- Warning: `conf/modules/recalibrate.config:34:110`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              saveAs: { params.save_output_as_bam ? meta.num_intervals > 1 ? null : "recalibrated/${meta.id}/${it}" : null }
+                                                                                                               ^^
+  ```
+
+- Warning: `conf/modules/recalibrate.config:40:110`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              saveAs: { params.save_output_as_bam ? meta.num_intervals > 1 ? null : "recalibrated/${meta.id}/${it.replace('.bai', '.bam.bai')}" : null }
+                                                                                                               ^^
+  ```
+
+- Warning: `conf/modules/recalibrate.config:51:56`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  saveAs: { !params.save_output_as_bam ? it : null }
+                                                         ^^
+  ```
+
+- Warning: `conf/modules/recalibrate.config:60:56`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  saveAs: { !params.save_output_as_bam ? it : null }
+                                                         ^^
+  ```
+
+- Warning: `conf/modules/recalibrate.config:71:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              saveAs: { params.save_output_as_bam ? it : null }
+                                                    ^^
+  ```
+
+- Warning: `conf/modules/sentieon_dedup.config:32:56`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  saveAs: { !params.save_output_as_bam ? it : null }
+                                                         ^^
+  ```
+
+- Warning: `conf/modules/sentieon_dedup.config:38:145`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  saveAs: { !(params.skip_tools && params.skip_tools.split(',').contains('sentieon_dedup_report')) ? "sentieon_dedup/${meta.id}/${it}" : null}
+                                                                                                                                                  ^^
   ```
 
 - Warning: `conf/modules/sentieon_dnascope.config:25:87`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -1091,6 +403,13 @@
   ```nextflow
               saveAs: { meta.num_intervals > 1 ? null : "sentieon_dnascope/${meta.id}/${it}" }
                                                                                         ^^
+  ```
+
+- Warning: `conf/modules/sentieon_haplotyper.config:25:89`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              saveAs: { meta.num_intervals > 1 ? null : "sentieon_haplotyper/${meta.id}/${it}" }
+                                                                                          ^^
   ```
 
 - Warning: `conf/modules/sentieon_tnscope.config:28:86`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -1852,84 +1171,84 @@
 - Warning: `subworkflows/local/bam_joint_calling_germline_gatk/main.nf:74:20`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          fasta.map{ meta, fasta -> [ fasta ] },
+          fasta.map{ meta, fasta_ -> [ fasta_ ] },
                      ^^^^
   ```
 
 - Warning: `subworkflows/local/bam_joint_calling_germline_gatk/main.nf:75:18`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          fai.map{ meta, fai -> [ fai ] },
+          fai.map{ meta, fai_ -> [ fai_ ] },
                    ^^^^
   ```
 
 - Warning: `subworkflows/local/bam_joint_calling_germline_gatk/main.nf:76:19`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          dict.map{ meta, dict -> [ dict ] })
+          dict.map{ meta, dict_ -> [ dict_ ] })
                     ^^^^
   ```
 
 - Warning: `subworkflows/local/bam_joint_calling_germline_gatk/main.nf:83:20`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          fasta.map{ meta, fasta -> [ fasta ] },
+          fasta.map{ meta, fasta_ -> [ fasta_ ] },
                      ^^^^
   ```
 
 - Warning: `subworkflows/local/bam_joint_calling_germline_gatk/main.nf:84:18`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          fai.map{ meta, fai -> [ fai ] },
+          fai.map{ meta, fai_ -> [ fai_ ] },
                    ^^^^
   ```
 
 - Warning: `subworkflows/local/bam_joint_calling_germline_gatk/main.nf:85:19`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          dict.map{ meta, dict -> [ dict ] })
+          dict.map{ meta, dict_ -> [ dict_ ] })
                     ^^^^
   ```
 
 - Warning: `subworkflows/local/bam_joint_calling_germline_gatk/main.nf:100:20`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          fasta.map{ meta, fasta -> [ fasta ] },
+          fasta.map{ meta, fasta_ -> [ fasta_ ] },
                      ^^^^
   ```
 
 - Warning: `subworkflows/local/bam_joint_calling_germline_gatk/main.nf:101:18`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          fai.map{ meta, fai -> [ fai ] },
+          fai.map{ meta, fai_ -> [ fai_ ] },
                    ^^^^
   ```
 
 - Warning: `subworkflows/local/bam_joint_calling_germline_gatk/main.nf:102:19`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          dict.map{ meta, dict -> [ dict ] })
+          dict.map{ meta, dict_ -> [ dict_ ] })
                     ^^^^
   ```
 
 - Warning: `subworkflows/local/bam_joint_calling_germline_gatk/main.nf:114:20`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          fasta.map{ meta, fasta -> [ fasta ] },
+          fasta.map{ meta, fasta_ -> [ fasta_ ] },
                      ^^^^
   ```
 
 - Warning: `subworkflows/local/bam_joint_calling_germline_gatk/main.nf:115:18`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          fai.map{ meta, fai -> [ fai ] },
+          fai.map{ meta, fai_ -> [ fai_ ] },
                    ^^^^
   ```
 
 - Warning: `subworkflows/local/bam_joint_calling_germline_gatk/main.nf:116:19`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          dict.map{ meta, dict -> [ dict ] })
+          dict.map{ meta, dict_ -> [ dict_ ] })
                     ^^^^
   ```
 
@@ -2069,15 +1388,15 @@
 - Warning: `subworkflows/local/bam_markduplicates/main.nf:22:42`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      GATK4_MARKDUPLICATES(bam, fasta.map{ meta, fasta -> [ fasta ] }, fasta_fai.map{ meta, fasta_fai -> [ fasta_fai ] })
+      GATK4_MARKDUPLICATES(bam, fasta.map{ meta, fasta_ -> [ fasta_ ] }, fasta_fai.map{ meta, fasta_fai_ -> [ fasta_fai_ ] })
                                            ^^^^
   ```
 
-- Warning: `subworkflows/local/bam_markduplicates/main.nf:22:85`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/bam_markduplicates/main.nf:22:87`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      GATK4_MARKDUPLICATES(bam, fasta.map{ meta, fasta -> [ fasta ] }, fasta_fai.map{ meta, fasta_fai -> [ fasta_fai ] })
-                                                                                      ^^^^
+      GATK4_MARKDUPLICATES(bam, fasta.map{ meta, fasta_ -> [ fasta_ ] }, fasta_fai.map{ meta, fasta_fai_ -> [ fasta_fai_ ] })
+                                                                                        ^^^^
   ```
 
 - Warning: `subworkflows/local/bam_markduplicates_spark/main.nf:21:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -2097,43 +1416,43 @@
 - Warning: `subworkflows/local/bam_markduplicates_spark/main.nf:25:47`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      GATK4SPARK_MARKDUPLICATES(bam, fasta.map{ meta, fasta -> [ fasta ] }, fasta_fai.map{ meta, fasta_fai -> [ fasta_fai ] }, dict.map{ meta, dict -> [ dict ] })
+      GATK4SPARK_MARKDUPLICATES(bam, fasta.map{ meta, fasta_ -> [ fasta_ ] }, fasta_fai.map{ meta, fasta_fai_ -> [ fasta_fai_ ] }, dict.map{ meta, dict_ -> [ dict_ ] })
                                                 ^^^^
   ```
 
-- Warning: `subworkflows/local/bam_markduplicates_spark/main.nf:25:90`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/bam_markduplicates_spark/main.nf:25:92`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      GATK4SPARK_MARKDUPLICATES(bam, fasta.map{ meta, fasta -> [ fasta ] }, fasta_fai.map{ meta, fasta_fai -> [ fasta_fai ] }, dict.map{ meta, dict -> [ dict ] })
-                                                                                           ^^^^
+      GATK4SPARK_MARKDUPLICATES(bam, fasta.map{ meta, fasta_ -> [ fasta_ ] }, fasta_fai.map{ meta, fasta_fai_ -> [ fasta_fai_ ] }, dict.map{ meta, dict_ -> [ dict_ ] })
+                                                                                             ^^^^
   ```
 
-- Warning: `subworkflows/local/bam_markduplicates_spark/main.nf:25:136`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/bam_markduplicates_spark/main.nf:25:140`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      GATK4SPARK_MARKDUPLICATES(bam, fasta.map{ meta, fasta -> [ fasta ] }, fasta_fai.map{ meta, fasta_fai -> [ fasta_fai ] }, dict.map{ meta, dict -> [ dict ] })
-                                                                                                                                         ^^^^
+      GATK4SPARK_MARKDUPLICATES(bam, fasta.map{ meta, fasta_ -> [ fasta_ ] }, fasta_fai.map{ meta, fasta_fai_ -> [ fasta_fai_ ] }, dict.map{ meta, dict_ -> [ dict_ ] })
+                                                                                                                                             ^^^^
   ```
 
 - Warning: `subworkflows/local/bam_markduplicates_spark/main.nf:37:53`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      GATK4_ESTIMATELIBRARYCOMPLEXITY(bam, fasta.map{ meta, fasta -> [ fasta ] }, fasta_fai.map{ meta, fasta_fai -> [ fasta_fai ] }, dict.map{ meta, dict -> [ dict ] })
+      GATK4_ESTIMATELIBRARYCOMPLEXITY(bam, fasta.map{ meta, fasta_ -> [ fasta_ ] }, fasta_fai.map{ meta, fasta_fai_ -> [ fasta_fai_ ] }, dict.map{ meta, dict_ -> [ dict_ ] })
                                                       ^^^^
   ```
 
-- Warning: `subworkflows/local/bam_markduplicates_spark/main.nf:37:96`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/bam_markduplicates_spark/main.nf:37:98`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      GATK4_ESTIMATELIBRARYCOMPLEXITY(bam, fasta.map{ meta, fasta -> [ fasta ] }, fasta_fai.map{ meta, fasta_fai -> [ fasta_fai ] }, dict.map{ meta, dict -> [ dict ] })
-                                                                                                 ^^^^
+      GATK4_ESTIMATELIBRARYCOMPLEXITY(bam, fasta.map{ meta, fasta_ -> [ fasta_ ] }, fasta_fai.map{ meta, fasta_fai_ -> [ fasta_fai_ ] }, dict.map{ meta, dict_ -> [ dict_ ] })
+                                                                                                   ^^^^
   ```
 
-- Warning: `subworkflows/local/bam_markduplicates_spark/main.nf:37:142`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/bam_markduplicates_spark/main.nf:37:146`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      GATK4_ESTIMATELIBRARYCOMPLEXITY(bam, fasta.map{ meta, fasta -> [ fasta ] }, fasta_fai.map{ meta, fasta_fai -> [ fasta_fai ] }, dict.map{ meta, dict -> [ dict ] })
-                                                                                                                                               ^^^^
+      GATK4_ESTIMATELIBRARYCOMPLEXITY(bam, fasta.map{ meta, fasta_ -> [ fasta_ ] }, fasta_fai.map{ meta, fasta_fai_ -> [ fasta_fai_ ] }, dict.map{ meta, dict_ -> [ dict_ ] })
+                                                                                                                                                   ^^^^
   ```
 
 - Warning: `subworkflows/local/bam_merge_index_samtools/main.nf:15:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -2416,31 +1735,31 @@
                                  ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_germline_all/main.nf:98:35`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/bam_variant_calling_germline_all/main.nf:98:36`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-              cram.map{ meta, cram, crai -> [ meta, [], cram ] },
-                                    ^^^^
+              cram.map{ meta, cram_, crai -> [ meta, [], cram_ ] },
+                                     ^^^^
   ```
 
 - Warning: `subworkflows/local/bam_variant_calling_germline_all/main.nf:181:32`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-                      fasta.map{ meta, fasta -> [ fasta ] },
+                      fasta.map{ meta, fasta_ -> [ fasta_ ] },
                                  ^^^^
   ```
 
 - Warning: `subworkflows/local/bam_variant_calling_germline_all/main.nf:182:36`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-                      fasta_fai.map{ meta, fasta_fai -> [ fasta_fai ] },
+                      fasta_fai.map{ meta, fasta_fai_ -> [ fasta_fai_ ] },
                                      ^^^^
   ```
 
 - Warning: `subworkflows/local/bam_variant_calling_germline_all/main.nf:183:31`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-                      dict.map{ meta, dict -> [ dict ] },
+                      dict.map{ meta, dict_ -> [ dict_ ] },
                                 ^^^^
   ```
 
@@ -2475,21 +1794,21 @@
 - Warning: `subworkflows/local/bam_variant_calling_germline_all/main.nf:334:31`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-                      dict.map{ meta, dict -> [ dict ] },
+                      dict.map{ meta, dict_ -> [ dict_ ] },
                                 ^^^^
   ```
 
 - Warning: `subworkflows/local/bam_variant_calling_germline_all/main.nf:354:24`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-              fasta.map{ meta, fasta -> [ fasta ] },
+              fasta.map{ meta, fasta_ -> [ fasta_ ] },
                          ^^^^
   ```
 
 - Warning: `subworkflows/local/bam_variant_calling_germline_all/main.nf:355:28`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-              fasta_fai.map{ meta, fasta_fai -> [ fasta_fai ] },
+              fasta_fai.map{ meta, fasta_fai_ -> [ fasta_fai_ ] },
                              ^^^^
   ```
 
@@ -2552,22 +1871,22 @@
 - Warning: `subworkflows/local/bam_variant_calling_haplotypecaller/main.nf:45:32`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .map{ meta, gvcf, tbi, cram, crai, intervals, dragstr_model -> [ meta, gvcf, tbi, intervals ] }
-                                 ^^^^
+          .map{ meta, gvcf, tbi, cram_, crai, intervals_, dragstr_model -> [ meta, gvcf, tbi, intervals_ ] }
+                                 ^^^^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_haplotypecaller/main.nf:45:38`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/bam_variant_calling_haplotypecaller/main.nf:45:39`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .map{ meta, gvcf, tbi, cram, crai, intervals, dragstr_model -> [ meta, gvcf, tbi, intervals ] }
-                                       ^^^^
+          .map{ meta, gvcf, tbi, cram_, crai, intervals_, dragstr_model -> [ meta, gvcf, tbi, intervals_ ] }
+                                        ^^^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_haplotypecaller/main.nf:45:55`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/bam_variant_calling_haplotypecaller/main.nf:45:57`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .map{ meta, gvcf, tbi, cram, crai, intervals, dragstr_model -> [ meta, gvcf, tbi, intervals ] }
-                                                        ^^^^^^^^^^^^^
+          .map{ meta, gvcf, tbi, cram_, crai, intervals_, dragstr_model -> [ meta, gvcf, tbi, intervals_ ] }
+                                                          ^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/bam_variant_calling_haplotypecaller/main.nf:53:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -2738,18 +2057,18 @@
                                ^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_sentieon_dnascope/main.nf:66:36`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/bam_variant_calling_sentieon_dnascope/main.nf:66:37`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-              .map{ meta, gvcf, tbi, cram, crai, intervals -> [ meta, gvcf, tbi, intervals ] }
-                                     ^^^^
+              .map{ meta, gvcf_, tbi, cram_, crai, intervals_ -> [ meta, gvcf_, tbi, intervals_ ] }
+                                      ^^^^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_sentieon_dnascope/main.nf:66:42`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/bam_variant_calling_sentieon_dnascope/main.nf:66:44`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-              .map{ meta, gvcf, tbi, cram, crai, intervals -> [ meta, gvcf, tbi, intervals ] }
-                                           ^^^^
+              .map{ meta, gvcf_, tbi, cram_, crai, intervals_ -> [ meta, gvcf_, tbi, intervals_ ] }
+                                             ^^^^
   ```
 
 - Warning: `subworkflows/local/bam_variant_calling_sentieon_dnascope/main.nf:74:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -2878,18 +2197,18 @@
                                ^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:62:36`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:62:37`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-              .map{ meta, gvcf, tbi, cram, crai, intervals -> [ meta, gvcf, tbi, intervals ] }
-                                     ^^^^
+              .map{ meta, gvcf_, tbi, cram_, crai, intervals_ -> [ meta, gvcf_, tbi, intervals_ ] }
+                                      ^^^^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:62:42`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:62:44`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-              .map{ meta, gvcf, tbi, cram, crai, intervals -> [ meta, gvcf, tbi, intervals ] }
-                                           ^^^^
+              .map{ meta, gvcf_, tbi, cram_, crai, intervals_ -> [ meta, gvcf_, tbi, intervals_ ] }
+                                             ^^^^
   ```
 
 - Warning: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:70:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -4332,6 +3651,104 @@
   ```nextflow
           chr_dir = Channel.fromPath(chr_dir_in).collect()
                     ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/prepare_intervals/main.nf:25:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+      versions = Channel.empty()
+                 ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/prepare_intervals/main.nf:27:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+      intervals_bed        = Channel.empty() // List of [ bed, num_intervals ], one for each region
+                             ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/prepare_intervals/main.nf:28:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+      intervals_bed_gz_tbi = Channel.empty() // List of [ bed.gz, bed,gz.tbi, num_intervals ], one for each region
+                             ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/prepare_intervals/main.nf:29:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+      intervals_combined   = Channel.empty() // Single bed file containing all intervals
+                             ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/prepare_intervals/main.nf:36:32`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+          intervals_bed        = Channel.fromPath(file("${outdir}/no_intervals.bed")).map{ it -> [ it, 0 ] }
+                                 ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/prepare_intervals/main.nf:37:32`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+          intervals_bed_gz_tbi = Channel.fromPath(file("${outdir}/no_intervals.bed.{gz,gz.tbi}")).collect().map{ it -> [ it, 0 ] }
+                                 ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/prepare_intervals/main.nf:38:32`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+          intervals_combined   = Channel.fromPath(file("${outdir}/no_intervals.bed")).map{ it -> [ [ id:it.simpleName ], it ] }
+                                 ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/prepare_intervals/main.nf:46:58`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              CREATE_INTERVALS_BED(intervals_combined.map{ meta, path -> path }, nucleotides_per_second)
+                                                           ^^^^
+  ```
+
+- Warning: `subworkflows/local/prepare_intervals/main.nf:53:34`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+              intervals_combined = Channel.fromPath(file(intervals)).map{it -> [ [ id:it.baseName ], it ] }
+                                   ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/prepare_intervals/main.nf:87:40`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              .flatten().collate(2).map{ duration, intervalFile -> intervalFile }.collect()
+                                         ^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/prepare_intervals/main.nf:93:66`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          TABIX_BGZIPTABIX_INTERVAL_SPLIT(intervals_bed.map{ file, num_intervals -> [ [ id:file.baseName], file ] })
+                                                                   ^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/prepare_intervals/main.nf:95:82`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          intervals_bed_gz_tbi = TABIX_BGZIPTABIX_INTERVAL_SPLIT.out.gz_index.map{ meta, bed, tbi -> [ bed, tbi ] }.toList()
+                                                                                   ^^^^
+  ```
+
+- Warning: `subworkflows/local/prepare_intervals/main.nf:103:60`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      intervals_bed_combined        = intervals_combined.map{meta, bed -> bed }.collect()
+                                                             ^^^^
+  ```
+
+- Warning: `subworkflows/local/prepare_intervals/main.nf:104:89`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      intervals_bed_gz_tbi_combined = TABIX_BGZIPTABIX_INTERVAL_COMBINED.out.gz_index.map{meta, gz, tbi -> [gz, tbi] }.collect()
+                                                                                          ^^^^
   ```
 
 - Warning: `subworkflows/local/prepare_reference_cnvkit/main.nf:10:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
