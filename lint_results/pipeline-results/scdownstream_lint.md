@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-03-25T00:27:50.166323627Z
-- Nextflow version: 26.03.0-edge
+- Generated: 2026-04-02T00:24:47.570171172Z
+- Nextflow version: 26.03.1-edge
 - Summary: 27 warnings
 
 ## :warning: Warnings
@@ -62,7 +62,7 @@
       ^^^^
   ```
 
-- Warning: `modules/local/scanpy/harmony/main.nf:23:5`: Variable was declared but not used
+- Warning: `modules/local/scanpy/harmony/main.nf:22:5`: Variable was declared but not used
 
   ```nextflow
       args   = task.ext.args ?: ''
@@ -90,7 +90,7 @@
       ^^^^^^^
   ```
 
-- Warning: `modules/local/scanpy/pca/main.nf:25:5`: Variable was declared but not used
+- Warning: `modules/local/scanpy/pca/main.nf:24:5`: Variable was declared but not used
 
   ```nextflow
       args   = task.ext.args ?: ''
@@ -104,7 +104,7 @@
       ^^^^
   ```
 
-- Warning: `modules/local/scanpy/umap/main.nf:24:5`: Variable was declared but not used
+- Warning: `modules/local/scanpy/umap/main.nf:23:5`: Variable was declared but not used
 
   ```nextflow
       args   = task.ext.args ?: ''

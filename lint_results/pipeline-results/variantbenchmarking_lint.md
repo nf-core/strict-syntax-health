@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-03-31T00:29:34.834577929Z
+- Generated: 2026-04-02T00:25:50.208102287Z
 - Nextflow version: 26.03.1-edge
 - Summary: 10 errors, 29 warnings
 
@@ -120,35 +120,35 @@
       ^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/ensemble_test_vcfs/main.nf:26:30`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/ensemble_test_vcfs/main.nf:33:86`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      test_vcfs.branch { meta, vcf, index ->
-                               ^^^
+      BCFTOOLS_UNIFY_HEADER.out.vcf.join(BCFTOOLS_UNIFY_HEADER.out.tbi).branch { meta, vcf, index ->
+                                                                                       ^^^
   ```
 
-- Warning: `subworkflows/local/ensemble_test_vcfs/main.nf:26:35`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/ensemble_test_vcfs/main.nf:33:91`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      test_vcfs.branch { meta, vcf, index ->
-                                    ^^^^^
+      BCFTOOLS_UNIFY_HEADER.out.vcf.join(BCFTOOLS_UNIFY_HEADER.out.tbi).branch { meta, vcf, index ->
+                                                                                            ^^^^^
   ```
 
-- Warning: `subworkflows/local/ensemble_test_vcfs/main.nf:37:51`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/ensemble_test_vcfs/main.nf:44:51`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           branched_vcfs.missing_gt.map { meta, vcf, index -> tuple(meta, vcf) },
                                                     ^^^^^
   ```
 
-- Warning: `subworkflows/local/ensemble_test_vcfs/main.nf:53:49`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/ensemble_test_vcfs/main.nf:60:49`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_test_vcfs = ch_ready_for_merge.map { meta, vcf, index ->
                                                   ^^^^
   ```
 
-- Warning: `subworkflows/local/ensemble_test_vcfs/main.nf:96:37`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/ensemble_test_vcfs/main.nf:103:37`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_test_vcfs = vcf_ch.map { meta, vcf ->
@@ -267,14 +267,14 @@
                                                                                       ^^^^
   ```
 
-- Warning: `workflows/variantbenchmarking.nf:408:118`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/variantbenchmarking.nf:400:118`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_multiqc_files                      = ch_multiqc_files.mix(REPORT_BENCHMARK_STATISTICS.out.merged_reports.map{ meta, report -> report }.flatten())
                                                                                                                        ^^^^
   ```
 
-- Warning: `workflows/variantbenchmarking.nf:409:82`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/variantbenchmarking.nf:401:82`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_multiqc_files                      = ch_multiqc_files.mix(ch_reports.map{ meta, report -> report }.flatten())

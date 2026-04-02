@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "94e6aa4ff8940cba63fa7ea5c09344af19e60025",
+  "_repo_commit": "e097fc9052999b636f7fb6e37eb474fc089108e4",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -1910,6 +1910,12 @@
   },
   "comebin_runcomebin": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/comebin/runcomebin",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "comet": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/comet",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

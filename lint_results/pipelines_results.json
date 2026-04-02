@@ -92,7 +92,7 @@
   "cellpainting": {
     "full_name": "nf-core/cellpainting",
     "html_url": "https://github.com/nf-core/cellpainting",
-    "commit": "acb76247439a92eda408307fdd49c2a99b480911",
+    "commit": "b0651e028736eae0cecaeb95df1f2cc9ae3c88a4",
     "errors": 6,
     "warnings": 35,
     "parse_error": false,
@@ -254,7 +254,7 @@
   "differentialabundance": {
     "full_name": "nf-core/differentialabundance",
     "html_url": "https://github.com/nf-core/differentialabundance",
-    "commit": "27702e94797784df3fad4537f6ed0a1497ec8bac",
+    "commit": "06d2d7bedd5abb2a2866e2e096215caad28fb66c",
     "errors": 12,
     "warnings": 28,
     "parse_error": false,
@@ -272,7 +272,7 @@
   "drop": {
     "full_name": "nf-core/drop",
     "html_url": "https://github.com/nf-core/drop",
-    "commit": "268ba76dcbf57d93408600a3e9f7f1e66f3bc9bb",
+    "commit": "9c7f7b844799c9e084d91e0fa1a2946a5d083488",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -308,7 +308,7 @@
   "epitopeprediction": {
     "full_name": "nf-core/epitopeprediction",
     "html_url": "https://github.com/nf-core/epitopeprediction",
-    "commit": "0a6436ff6dc699b836e55bce2828880da4f766a9",
+    "commit": "2a1c7f5e921d4964cfd102368bf76531abf32bd1",
     "errors": 0,
     "warnings": 5,
     "parse_error": false,
@@ -533,7 +533,7 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "69e200c96049ec02b21098ff77b19154e92c2f58",
+    "commit": "3d89ed3f9cd5a03a99879ff7bfda464ba2bb8f38",
     "errors": 0,
     "warnings": 28,
     "parse_error": false,
@@ -1001,7 +1001,7 @@
   "scdownstream": {
     "full_name": "nf-core/scdownstream",
     "html_url": "https://github.com/nf-core/scdownstream",
-    "commit": "753add55e9c8846a563bfb76151c6138ba25b521",
+    "commit": "540f4a07354061e8f6def0f8efdce8c1a429fffa",
     "errors": 0,
     "warnings": 27,
     "parse_error": false,
@@ -1028,7 +1028,7 @@
   "seqinspector": {
     "full_name": "nf-core/seqinspector",
     "html_url": "https://github.com/nf-core/seqinspector",
-    "commit": "c756e2e57c00384f1e11f10c70171b6eaec07103",
+    "commit": "89830601bd629b163fc006cea8a091e3c6064aae",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1109,7 +1109,7 @@
   "taxprofiler": {
     "full_name": "nf-core/taxprofiler",
     "html_url": "https://github.com/nf-core/taxprofiler",
-    "commit": "f554ba0733d26f2ec06098d7b9479b0629dc13da",
+    "commit": "46acfa467098cdcfa4ec98c2c971671e8c841d94",
     "errors": 0,
     "warnings": 99,
     "parse_error": false,
@@ -1154,7 +1154,7 @@
   "variantbenchmarking": {
     "full_name": "nf-core/variantbenchmarking",
     "html_url": "https://github.com/nf-core/variantbenchmarking",
-    "commit": "3dd43b3aaae391ab7e66c151cab4d2450333f2e2",
+    "commit": "dc414d31f6a7fed28cbc581de83ae0a209a45be9",
     "errors": 10,
     "warnings": 29,
     "parse_error": false,
@@ -1172,7 +1172,7 @@
   "variantprioritization": {
     "full_name": "nf-core/variantprioritization",
     "html_url": "https://github.com/nf-core/variantprioritization",
-    "commit": "5493796757fbfe42e68e2d1842a2707c7cb06100",
+    "commit": "7c4f3a16b1b51f8f791866a8f06a98d236730b0d",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,

@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-04-01T00:31:42.656663209Z
+- Generated: 2026-04-02T00:25:28.869733164Z
 - Nextflow version: 26.03.1-edge
 - Summary: 99 warnings
 
@@ -496,91 +496,91 @@
           ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/profiling/main.nf:246:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/profiling/main.nf:247:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   if (it[0].is_fasta) {
                       ^^
   ```
 
-- Warning: `subworkflows/local/profiling/main.nf:247:145`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/profiling/main.nf:248:145`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       log.warn("[nf-core/taxprofiler] Centrifuge currently does not accept FASTA files as input. Skipping Centrifuge for sample ${it[0].id}.")
                                                                                                                                                   ^^
   ```
 
-- Warning: `subworkflows/local/profiling/main.nf:249:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/profiling/main.nf:250:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   !it[0].is_fasta
                    ^^
   ```
 
-- Warning: `subworkflows/local/profiling/main.nf:334:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/profiling/main.nf:335:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   if (it[0].is_fasta) {
                       ^^
   ```
 
-- Warning: `subworkflows/local/profiling/main.nf:335:135`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/profiling/main.nf:336:135`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       log.warn("[nf-core/taxprofiler] mOTUs currently does not accept FASTA files as input. Skipping mOTUs for sample ${it[0].id}.")
                                                                                                                                         ^^
   ```
 
-- Warning: `subworkflows/local/profiling/main.nf:337:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/profiling/main.nf:338:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   !it[0].is_fasta
                    ^^
   ```
 
-- Warning: `subworkflows/local/profiling/main.nf:340:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/profiling/main.nf:341:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   longread: it[0].instrument_platform == 'OXFORD_NANOPORE' || it[0].instrument_platform == 'PACBIO_SMRT'
                             ^^
   ```
 
-- Warning: `subworkflows/local/profiling/main.nf:340:77`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/profiling/main.nf:341:77`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   longread: it[0].instrument_platform == 'OXFORD_NANOPORE' || it[0].instrument_platform == 'PACBIO_SMRT'
                                                                               ^^
   ```
 
-- Warning: `subworkflows/local/profiling/main.nf:341:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/profiling/main.nf:342:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   shortread: it[0].instrument_platform != 'OXFORD_NANOPORE' && it[0].instrument_platform != 'PACBIO_SMRT'
                              ^^
   ```
 
-- Warning: `subworkflows/local/profiling/main.nf:341:78`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/profiling/main.nf:342:78`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   shortread: it[0].instrument_platform != 'OXFORD_NANOPORE' && it[0].instrument_platform != 'PACBIO_SMRT'
                                                                                ^^
   ```
 
-- Warning: `subworkflows/local/profiling/main.nf:533:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/profiling/main.nf:534:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   if (it[0].is_fasta) {
                       ^^
   ```
 
-- Warning: `subworkflows/local/profiling/main.nf:534:135`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/profiling/main.nf:535:135`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       log.warn("[nf-core/taxprofiler] sylph currently does not accept FASTA files as input. Skipping sylph for sample ${it[0].id}.")
                                                                                                                                         ^^
   ```
 
-- Warning: `subworkflows/local/profiling/main.nf:536:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/profiling/main.nf:537:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   !it[0].is_fasta
@@ -615,7 +615,7 @@
                   ^^
   ```
 
-- Warning: `subworkflows/local/standardisation_profiles/main.nf:231:21`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/standardisation_profiles/main.nf:232:21`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .multiMap { key, meta, profile, db ->

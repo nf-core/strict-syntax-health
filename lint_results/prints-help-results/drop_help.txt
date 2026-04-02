@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.03.1-edge
 
 Downloading plugin nf-schema@2.6.1
-Launching `./main.nf` [pensive_wilson] revision: 64d4787d09
+Launching `./main.nf` [magical_pesquet] revision: 64d4787d09
 
 
 ------------------------------------------------------
@@ -22,7 +22,7 @@ Typical pipeline command:
 help message of that parameter will be printed.  
 or `--helpFull`.  
 
-Global parameters
+Parameters defining the input and output options of the pipeline
   --input                              [string]           Path to the samplesheet file used by the pipeline. The file should be a TSV file. Equivalent to the 
 `sampleAnnotation` parameter in the snakemake pipeline.  
   --outdir                             [string]           The output directory where the results will be saved. You have to use absolute paths to storage on 
