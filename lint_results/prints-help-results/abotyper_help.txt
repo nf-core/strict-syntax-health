@@ -1,0 +1,41 @@
+$ NXF_SYNTAX_PARSER=v2 nextflow run . --help
+
+
+ N E X T F L O W   ~  version 26.03.1-edge
+
+Downloading plugin nf-schema@2.5.1
+Launching `./main.nf` [cranky_magritte] revision: ff07d2912b
+
+WARN: Unrecognized config option 'validation.defaultIgnoreParams'
+WARN: Unrecognized config option 'validation.monochromeLogs'
+ABO-specific reference files
+  exon6fasta         : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/abotyper/assets/refs/A1_01_01_1_reference_Exon6.fasta
+  exon7fasta         : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/abotyper/assets/refs/A1_01_01_1_reference_Exon7.fasta
+  exon6fai           : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/abotyper/assets/refs/A1_01_01_1_reference_Exon6.fasta.fai
+  exon7fai           : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/abotyper/assets/refs/A1_01_01_1_reference_Exon7.fasta.fai
+  logo               : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/abotyper/assets/pathwest_logo.png
+
+Generic options
+  trace_report_suffix: 2026-04-03_00-25-04
+  help               : true
+
+Core Nextflow options
+  runName            : cranky_magritte
+  launchDir          : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/abotyper
+  workDir            : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/abotyper/work
+  projectDir         : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/abotyper
+  userName           : runner
+  profile            : standard
+  configFiles        : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/abotyper/nextflow.config
+
+!! Only displaying parameters that differ from the pipeline defaults !!
+------------------------------------------------------
+Downloading plugin nf-amazon@3.8.1
+ERROR ~ Validation of pipeline parameters failed!
+
+ -- Check '.nextflow.log' file for details
+The following invalid input values have been detected:
+
+* Missing required parameter(s): input, outdir
+
+ -- Check script 'subworkflows/nf-core/utils_nfschema_plugin/main.nf' at line: 37 or see '.nextflow.log' file for more details

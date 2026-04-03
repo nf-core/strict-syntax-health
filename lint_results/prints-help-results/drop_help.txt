@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.03.1-edge
 
 Downloading plugin nf-schema@2.6.1
-Launching `./main.nf` [magical_pesquet] revision: 64d4787d09
+Launching `./main.nf` [sharp_poisson] revision: 64d4787d09
 
 
 ------------------------------------------------------
@@ -13,7 +13,7 @@ Launching `./main.nf` [magical_pesquet] revision: 64d4787d09
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/drop 1.0.0
+  nf-core/drop 1.1.0dev
 ------------------------------------------------------
 Typical pipeline command:
 

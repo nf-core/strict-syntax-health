@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "e097fc9052999b636f7fb6e37eb474fc089108e4",
+  "_repo_commit": "32836839a2b98051aa246522431f6858e7cd55b7",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -332,6 +332,12 @@
   },
   "antismash_antismashlitedownloaddatabases": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/antismash/antismashlitedownloaddatabases",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "any2fasta": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/any2fasta",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -1616,6 +1622,12 @@
   },
   "centrifuge_kreport": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/centrifuge/kreport",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "centrifuger_build": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/centrifuger/build",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -4622,6 +4634,12 @@
   },
   "ilastik_pixelclassification": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ilastik/pixelclassification",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "imc2mc": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/imc2mc",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -8000,6 +8018,12 @@
   },
   "rundbcan_easysubstrate": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/rundbcan/easysubstrate",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "rustqc": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/rustqc",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

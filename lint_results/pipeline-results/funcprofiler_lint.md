@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-01T00:28:35.186152451Z
+- Generated: 2026-04-03T00:25:50.035852636Z
 - Nextflow version: 26.03.1-edge
-- Summary: 50 errors, 51 warnings
+- Summary: 49 errors, 51 warnings
 
 ## :x: Errors
 
@@ -41,14 +41,7 @@
                                                                                                                                            ^^^^
   ```
 
-- Error: `modules/local/humann/humann/base.nf:11:5`: Invalid process directive
-
-  ```nextflow
-      if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container)	{
-      ^
-  ```
-
-- Error: `modules/local/humann/humann/base.nf:18:15`: `meta` is already declared
+- Error: `modules/local/humann/humann/base.nf:14:15`: `meta` is already declared
 
   ```nextflow
       tuple val(meta), path(profile)
@@ -69,42 +62,42 @@
       ^
   ```
 
-- Error: `nextflow.config:310:36`: `manifest` is not defined
+- Error: `nextflow.config:313:36`: `manifest` is not defined
 
   ```nextflow
   \033[0;35m  nf-core/funcprofiler ${manifest.version}\033[0m
                                      ^^^^^^^^
   ```
 
-- Error: `nextflow.config:313:26`: `manifest` is not defined
+- Error: `nextflow.config:316:26`: `manifest` is not defined
 
   ```nextflow
           afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
                            ^^^^^^^^
   ```
 
-- Error: `nextflow.config:313:69`: `manifest` is not defined
+- Error: `nextflow.config:316:69`: `manifest` is not defined
 
   ```nextflow
           afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
                                                                       ^^^^^^^^
   ```
 
-- Error: `nextflow.config:313:186`: `manifest` is not defined
+- Error: `nextflow.config:316:186`: `manifest` is not defined
 
   ```nextflow
           afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
                                                                                                                                                                                            ^^^^^^^^
   ```
 
-- Error: `nextflow.config:322:22`: `validation` is not defined
+- Error: `nextflow.config:325:22`: `validation` is not defined
 
   ```nextflow
           beforeText = validation.help.beforeText
                        ^^^^^^^^^^
   ```
 
-- Error: `nextflow.config:323:21`: `validation` is not defined
+- Error: `nextflow.config:326:21`: `validation` is not defined
 
   ```nextflow
           afterText = validation.help.afterText
@@ -358,7 +351,7 @@
 
 ## :warning: Warnings
 
-- Warning: `modules/local/humann/humann/base.nf:17:15`: Variable was declared but not used
+- Warning: `modules/local/humann/humann/base.nf:13:15`: Variable was declared but not used
 
   ```nextflow
       tuple val(meta), path(input)
@@ -393,7 +386,7 @@
       ^^^^^
   ```
 
-- Warning: `nextflow.config:313:129`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `nextflow.config:316:129`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}

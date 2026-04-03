@@ -5,10 +5,246 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 Downloading plugin nf-fgbio@1.0.0
 Downloading plugin nf-prov@1.2.2
-Launching `./main.nf` [voluminous_majorana] revision: 66b0a34bf4
+Downloading plugin nf-core-utils@0.4.0
+Launching `./main.nf` [nice_sanger] revision: 66b0a34bf4
 
 WARN: Unrecognized config option 'prov.enabled'
 WARN: Unrecognized config option 'prov.formats.bco.file'
-ERROR ~ Unable to create help message: Specified param 'true' does not exist in JSON schema.
 
- -- Check script 'subworkflows/nf-core/utils_nfschema_plugin/main.nf' at line: 41 or see '.nextflow.log' file for more details
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+      ____
+    .´ _  `.
+   /  |\`-_ \      __        __   ___     
+  |   | \  `-|    |__`  /\  |__) |__  |__/
+   \ |   \  /     .__| /¯¯\ |  \ |___ |  \
+    `|____\´
+
+  nf-core/sarek 3.9.0dev
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/sarek -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input                             [string] Path to comma-separated file containing information about the samples in the experiment. 
+  --step                              [string] Starting step  (accepted: mapping, markduplicates, prepare_recalibration, recalibrate, 
+variant_calling, annotate) [default: mapping]  
+  --outdir                            [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+
+Main options
+  --split_fastq                       [integer] Specify how many reads each split of a FastQ file contains. Set 0 to turn off splitting at all. 
+[default: 50000000]  
+  --nucleotides_per_second            [integer] Estimate interval size. [default: 200000] 
+  --intervals                         [string]  Path to target bed file in case of whole exome or targeted sequencing or intervals file. 
+  --no_intervals                      [boolean] Disable usage of intervals. 
+  --wes                               [boolean] Enable when exome or panel data is provided. 
+  --tools                             [string]  Tools to use for contamination removal, duplicate marking, variant calling and/or for annotation. 
+ 
+  --skip_tools                        [string]  Disable specified tools. 
+
+FASTQ Preprocessing
+  --trim_fastq                        [boolean] Run FastP for read trimming 
+  --clip_r1                           [integer] Remove bp from the 5' end of read 1 [default: 0] 
+  --clip_r2                           [integer] Remove bp from the 5' end of read 2 [default: 0] 
+  --three_prime_clip_r1               [integer] Remove bp from the 3' end of read 1 [default: 0] 
+  --three_prime_clip_r2               [integer] Remove bp from the 3' end of read 2 [default: 0] 
+  --trim_nextseq                      [boolean] Removing poly-G tails. 
+  --length_required                   [integer] Minimum length of reads to keep [default: 15] 
+  --save_trimmed                      [boolean] Save trimmed FastQ file intermediates. 
+  --save_split_fastqs                 [boolean] If set, publishes split FASTQ files. Intended for testing purposes. 
+
+Unique Molecular Identifiers
+  --umi_read_structure                [string]  Specify UMI read structure for fgbio UMI consensus read generation 
+  --group_by_umi_strategy             [string]  Default strategy for fgbio UMI-based consensus read generation   (accepted: Identity, Edit, 
+Adjacency, Paired) [default: Adjacency]  
+  --umi_in_read_header                [boolean] Move UMIs from fastq read headers to a tag prior to deduplication. 
+  --umi_location                      [string]  Location of the UMI(s) to be extracted with fastp.  (accepted: read1, read2, per_read, index1, 
+index2, per_index)  
+  --umi_length                        [integer] Length of the UMI(s) in the read. 
+  --umi_base_skip                     [integer] Number of bases to skip after the UMI(s) in the read when extracting with fastp. 
+  --umi_tag                           [string]  Tag detailing where UMIs are present inside the bam/cram file (e.g. RX). 
+  --bbsplit_fasta_list                [string]  Path to comma-separated file containing a list of reference genomes to filter reads against with 
+BBSplit. You have to also explicitly set `--tools bbsplit` if you want to use BBSplit.  
+  --bbsplit_index                     [string]  Path to directory or tar.gz archive for pre-built BBSplit index. 
+  --save_bbsplit_reads                [boolean] If this option is specified, FastQ files split by reference will be saved in the results directory. 
+ 
+
+Preprocessing
+  --aligner                           [string]  Specify aligner to be used to map reads to reference genome.  (accepted: bwa-mem, bwa-mem2, 
+dragmap, sentieon-bwamem, parabricks) [default: bwa-mem]  
+  --save_mapped                       [boolean] Save mapped files. 
+  --save_output_as_bam                [boolean] Saves output from mapping (if `--save_mapped`), Markduplicates & Baserecalibration as BAM file 
+instead of CRAM  
+  --use_gatk_spark                    [string]  Enable usage of GATK Spark implementation for duplicate marking and/or base quality score 
+recalibration  
+  --markduplicates_pixel_distance     [integer] 
+  --sentieon_consensus                [boolean] Generate consensus reads with Sentieon dedup rather than choosing one best read. 
+
+Variant Calling
+  --only_paired_variant_calling       [boolean] If true, skips germline variant calling for matched normal to tumor sample. Normal samples without 
+matched tumor will still be processed through germline variant calling tools.  
+  --ascat_min_base_qual               [integer] Overwrite Ascat min base quality required for a read to be counted. [default: 20] 
+  --ascat_min_counts                  [integer] Overwrite Ascat minimum depth required in the normal for a SNP to be considered. [default: 10] 
+ 
+  --ascat_min_map_qual                [integer] Overwrite Ascat min mapping quality required for a read to be counted. [default: 35] 
+  --ascat_ploidy                      [number]  Overwrite ASCAT ploidy. 
+  --ascat_purity                      [number]  Overwrite ASCAT purity. 
+  --cf_chrom_len                      [string]  Specify a custom chromosome length file. 
+  --cf_coeff                          [number]  Overwrite Control-FREEC coefficientOfVariation [default: 0.05] 
+  --cf_contamination_adjustment       [boolean] Overwrite Control-FREEC contaminationAdjustement 
+  --cf_contamination                  [integer] Design known contamination value for Control-FREEC [default: 0] 
+  --cf_minqual                        [integer] Minimal sequencing quality for a position to be considered in BAF analysis. [default: 0] 
+  --cf_mincov                         [integer] Minimal read coverage for a position to be considered in BAF analysis. [default: 0] 
+  --cf_ploidy                         [string]  Genome ploidy used by ControlFREEC [default: 2] 
+  --cf_window                         [number]  Overwrite Control-FREEC window size. 
+  --cnvkit_reference                  [string]  Copy-number reference for CNVkit 
+  --freebayes_filter                  [string]  Filtering expression for vcflib/vcffilter [default: 30] 
+  --joint_germline                    [boolean] Turn on the joint germline variant calling for GATK haplotypecaller 
+  --joint_mutect2                     [boolean] Runs Mutect2 in joint (multi-sample) mode for better concordance among variant calls of tumor 
+samples from the same patient. Mutect2 outputs will be stored in a subfolder named with patient ID 
+under `variant_calling/mutect2/` folder. Only a single normal sample per patient is allowed. 
+Tumor-only mode is also supported.  
+  --ignore_soft_clipped_bases         [boolean] Do not analyze soft clipped bases in the reads for GATK Mutect2. 
+  --pon                               [string]  Panel-of-normals VCF (bgzipped) for GATK Mutect2 
+  --pon_tbi                           [string]  Index of PON panel-of-normals VCF. 
+  --sentieon_haplotyper_emit_mode     [string]  Option for selecting output and emit-mode of Sentieon's Haplotyper. [default: variant] 
+  --sentieon_dnascope_emit_mode       [string]  Option for selecting output and emit-mode of Sentieon's Dnascope. [default: variant] 
+  --sentieon_dnascope_pcr_indel_model [string]  Option for selecting the PCR indel model used by Sentieon Dnascope. [default: CONSERVATIVE] 
+  --gatk_pcr_indel_model              [string]  [default: CONSERVATIVE] 
+
+Post variant calling
+  --filter_vcfs                       [boolean] Enable filtering of VCFs with bcftools view 
+  --bcftools_filter_criteria          [string]  Filter criteria. Uses bcftools view filter options. To customize, follow instructions here: 
+https://samtools.github.io/bcftools/bcftools.html#view  [default: -f PASS,.]  
+  --normalize_vcfs                    [boolean] Option for normalization of vcf-files. 
+  --snv_consensus_calling             [boolean] Enable consensus calling of multiple VCF files from one sample 
+  --consensus_min_count               [integer] Minimum number of variant callers calling a variant for consensus results [default: 2] 
+  --concatenate_vcfs                  [boolean] Option for concatenating germline vcf-files. 
+  --varlociraptor_scenario_tumor_only [string]  Yte compatible scenario file for tumor only samples. Defaults to 
+assets/varlociraptor_tumor_only.yte.yaml  
+  --varlociraptor_scenario_somatic    [string]  Yte compatible scenario file for somatic samples. Defaults to assets/varlociraptor_somatic.yte.yaml 
+ 
+  --varlociraptor_scenario_germline   [string]  Yte compatible scenario file for germline samples. Defaults to 
+assets/varlociraptor_germline.yte.yaml  
+
+Annotation
+  --vep_include_fasta                 [boolean] Allow usage of fasta file for annotation with VEP 
+  --vep_condel                        [boolean] Enable the use of the VEP Condel plugin. 
+  --condel_config                     [string]  Path to Condel config file. 
+  --vep_dbnsfp                        [boolean] Enable the use of the VEP dbNSFP plugin. 
+  --dbnsfp                            [string]  Path to dbNSFP processed file. 
+  --dbnsfp_tbi                        [string]  Path to dbNSFP tabix indexed file. 
+  --dbnsfp_consequence                [string]  Consequence to annotate with 
+  --dbnsfp_fields                     [string]  Fields to annotate with [default: 
+rs_dbSNP,HGVSc_VEP,HGVSp_VEP,1000Gp3_EAS_AF,1000Gp3_AMR_AF,LRT_score,GERP++_RS,gnomAD_exomes_AF] 
+ 
+  --vep_loftee                        [boolean] Enable the use of the VEP LOFTEE plugin. 
+  --vep_mastermind                    [boolean] Enable the use of the VEP Mastermind plugin. 
+  --mastermind_file                   [string]  Path to Mastermind cited variants VCF file. 
+  --mastermind_mutations              [boolean] Mastermind plugin mutations parameter. 
+  --mastermind_var_iden               [boolean] Mastermind plugin var_iden parameter. 
+  --mastermind_url                    [boolean] Mastermind plugin url parameter. 
+  --vep_phenotypes                    [boolean] Enable the use of the VEP Phenotypes plugin. 
+  --phenotypes_file                   [string]  Path to phenotype annotation GFF/GVF file. 
+  --phenotypes_file_tbi               [string]  Path to phenotype annotation tabix indexed file. 
+  --phenotypes_include_types          [string]  Phenotypes plugin feature types to include. 
+  --vep_spliceai                      [boolean] Enable the use of the VEP SpliceAI plugin. 
+  --spliceai_snv                      [string]  Path to spliceai raw scores snv file. 
+  --spliceai_snv_tbi                  [string]  Path to spliceai raw scores snv tabix indexed file. 
+  --spliceai_indel                    [string]  Path to spliceai raw scores indel file. 
+  --spliceai_indel_tbi                [string]  Path to spliceai raw scores indel tabix indexed file. 
+  --vep_spliceregion                  [boolean] Enable the use of the VEP SpliceRegion plugin. 
+  --vep_custom_args                   [string]  Add an extra custom argument to VEP. [default: --everything --filter_common --per_gene 
+--total_length --offline --format vcf]  
+  --vep_version                       [string]  Should reflect the VEP version used in the container. [default: 115.0-0] 
+  --outdir_cache                      [string]  The output directory where the cache will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --vep_out_format                    [string]  VEP output-file format.  (accepted: json, tab, vcf) [default: vcf] 
+  --bcftools_annotations              [string]  A vcf file containing custom annotations to be used with bcftools annotate. Needs to be bgzipped. 
+ 
+  --bcftools_annotations_tbi          [string]  Index file for `bcftools_annotations` 
+  --bcftools_columns                  [string]  Optional text file with list of columns to use from `bcftools_annotations`, one name per row 
+ 
+  --bcftools_header_lines             [string]  Text file with the header lines of `bcftools_annotations` 
+  --snpsift_databases                 [string]  Path to CSV samplesheet specifying SnpSift annotation databases. 
+
+General reference genome options
+  --igenomes_base                     [string]  The base path to the igenomes reference files [default: s3://ngi-igenomes/igenomes/] 
+  --igenomes_ignore                   [boolean] Do not load the iGenomes reference config. 
+  --save_reference                    [boolean] Save built references. 
+  --build_only_index                  [boolean] Only built references. 
+  --download_cache                    [boolean] Download annotation cache. 
+
+Reference genome options
+  --genome                            [string] Name of iGenomes reference. [default: GATK.GRCh38] 
+  --ascat_genome                      [string] ASCAT genome.  (accepted: hg19, hg38) 
+  --ascat_alleles                     [string] Path to ASCAT allele zip file. 
+  --ascat_loci                        [string] Path to ASCAT loci zip file. 
+  --ascat_loci_gc                     [string] Path to ASCAT GC content correction file. 
+  --ascat_loci_rt                     [string] Path to ASCAT RT (replictiming) correction file. 
+  --bwa                               [string] Path to BWA mem indices. 
+  --bwamem2                           [string] Path to bwa-mem2 mem indices. 
+  --chr_dir                           [string] Path to chromosomes folder used with ControLFREEC. 
+  --dbsnp                             [string] Path to dbsnp file. 
+  --dbsnp_tbi                         [string] Path to dbsnp index. 
+  --dbsnp_vqsr                        [string] Label string for VariantRecalibration (haplotypecaller joint variant calling).
+
+If you use AWS 
+iGenomes, this has already been set for you appropriately.  
+  --dict                              [string] Path to FASTA dictionary file. 
+  --dragmap                           [string] Path to dragmap indices. 
+  --fasta                             [string] Path to FASTA genome file. 
+  --fasta_fai                         [string] Path to FASTA reference index. 
+  --germline_resource                 [string] Path to GATK Mutect2 Germline Resource File. 
+  --germline_resource_tbi             [string] Path to GATK Mutect2 Germline Resource Index. 
+  --known_indels                      [string] Path to known indels file. 
+  --known_indels_tbi                  [string] Path to known indels file index. 
+  --known_indels_vqsr                 [string] Label string for VariantRecalibration (haplotypecaller joint variant calling). If you use AWS 
+iGenomes, this has already been set for you appropriately.  
+  --known_snps                        [string] Path to known snps file. 
+  --known_snps_tbi                    [string] Path to known snps file snps. 
+  --known_snps_vqsr                   [string] Label string for VariantRecalibration (haplotypecaller joint variant calling).If you use AWS 
+iGenomes, this has already been set for you appropriately.  
+  --mappability                       [string] Path to Control-FREEC mappability file. 
+  --msisensor2_models                 [string] Path to models folder used with MSIsensor2. 
+  --msisensorpro_scan                 [string] Path to scan file used with MSIsensorPro. 
+  --ngscheckmate_bed                  [string] Path to SNP bed file for sample checking with NGSCheckMate 
+  --sentieon_dnascope_model           [string] Machine learning model for Sentieon Dnascope. 
+  --snpeff_cache                      [string] Path to snpEff cache. [default: s3://annotation-cache/snpeff_cache/] 
+  --snpeff_db                         [string] snpEff DB version. 
+  --vep_cache                         [string] Path to VEP cache. [default: s3://annotation-cache/vep_cache/] 
+  --vep_cache_version                 [string] VEP cache version. 
+  --vep_genome                        [string] VEP genome. 
+  --vep_species                       [string] VEP species. 
+
+Generic options
+  --email                             [string]          Email address for completion summary. 
+  --multiqc_title                     [string]          MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+  --multiqc_methods_description       [string]          Custom MultiQC yaml file containing HTML including a methods description. 
+  --help                              [boolean, string] Display the help message. 
+  --help_full                         [boolean]         Display the full detailed help message. 
+  --show_hidden                       [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 23 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The pipeline
+    https://doi.org/10.12688/f1000research.16665.2
+    https://doi.org/10.1093/nargab/lqae031
+    https://doi.org/10.5281/zenodo.3476425
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/sarek/blob/master/CITATIONS.md
+

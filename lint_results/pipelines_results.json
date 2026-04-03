@@ -2,11 +2,11 @@
   "abotyper": {
     "full_name": "nf-core/abotyper",
     "html_url": "https://github.com/nf-core/abotyper",
-    "commit": "78aad8d20a3a9c449a5ecf7a92d321a7957c29e5",
-    "errors": 6,
-    "warnings": 64,
+    "commit": "55eb6347d0dd90cf51f8df291bc634831c3ac013",
+    "errors": 0,
+    "warnings": 77,
     "parse_error": false,
-    "prints_help": null
+    "prints_help": false
   },
   "airrflow": {
     "full_name": "nf-core/airrflow",
@@ -272,7 +272,7 @@
   "drop": {
     "full_name": "nf-core/drop",
     "html_url": "https://github.com/nf-core/drop",
-    "commit": "9c7f7b844799c9e084d91e0fa1a2946a5d083488",
+    "commit": "95647c79eb5680a81c707e29b87ace4727521640",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -353,8 +353,8 @@
   "funcprofiler": {
     "full_name": "nf-core/funcprofiler",
     "html_url": "https://github.com/nf-core/funcprofiler",
-    "commit": "8cbc0ea39f89315f3db10e7ef6d2d7761049f1d1",
-    "errors": 50,
+    "commit": "815320f837d748046c519ab744492851e8d1c4e9",
+    "errors": 49,
     "warnings": 51,
     "parse_error": false,
     "prints_help": null
@@ -533,7 +533,7 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "3d89ed3f9cd5a03a99879ff7bfda464ba2bb8f38",
+    "commit": "b38d605fc1b55c5b60adaa956291b0df0ea7900e",
     "errors": 0,
     "warnings": 28,
     "parse_error": false,
@@ -722,8 +722,8 @@
   "oncoanalyser": {
     "full_name": "nf-core/oncoanalyser",
     "html_url": "https://github.com/nf-core/oncoanalyser",
-    "commit": "d214385c35a72fad26c184254bafd1d2094368b7",
-    "errors": 305,
+    "commit": "a2d25435924a88c52437c5574581f9fa9b784bcc",
+    "errors": 64,
     "warnings": 102,
     "parse_error": false,
     "prints_help": null
@@ -992,16 +992,16 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "b06822041ceb7430b34455aec5da994496a2bc92",
+    "commit": "75ea99558d5eea952cd163fc4f59487b4211a6f3",
     "errors": 0,
     "warnings": 585,
     "parse_error": false,
-    "prints_help": false
+    "prints_help": true
   },
   "scdownstream": {
     "full_name": "nf-core/scdownstream",
     "html_url": "https://github.com/nf-core/scdownstream",
-    "commit": "540f4a07354061e8f6def0f8efdce8c1a429fffa",
+    "commit": "f7f68aeee924e9def20bc371b7eb2150b5cad4eb",
     "errors": 0,
     "warnings": 27,
     "parse_error": false,
@@ -1145,7 +1145,7 @@
   "tumourevo": {
     "full_name": "nf-core/tumourevo",
     "html_url": "https://github.com/nf-core/tumourevo",
-    "commit": "bbc663f7dcdd6ad67a8e184a42942be997abec9d",
+    "commit": "6316bd7ae9c131e99aca5bc19aa1ad2ee0d99029",
     "errors": 9,
     "warnings": 60,
     "parse_error": false,
