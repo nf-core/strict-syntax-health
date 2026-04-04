@@ -542,7 +542,7 @@
   "magmap": {
     "full_name": "nf-core/magmap",
     "html_url": "https://github.com/nf-core/magmap",
-    "commit": "10aef9e908e539c9a76e9c68e76427a8af409af8",
+    "commit": "d8e2a33c2c76ab03ae834b0fcde85158c3d641f5",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1109,7 +1109,7 @@
   "taxprofiler": {
     "full_name": "nf-core/taxprofiler",
     "html_url": "https://github.com/nf-core/taxprofiler",
-    "commit": "46acfa467098cdcfa4ec98c2c971671e8c841d94",
+    "commit": "028e946610956c6aab150e6790c22d998f015eb7",
     "errors": 0,
     "warnings": 99,
     "parse_error": false,
