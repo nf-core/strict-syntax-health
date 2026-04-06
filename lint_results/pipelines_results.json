@@ -533,7 +533,7 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "b38d605fc1b55c5b60adaa956291b0df0ea7900e",
+    "commit": "75988cbe24bf76376ebcacfade48e18b6aa0c803",
     "errors": 0,
     "warnings": 28,
     "parse_error": false,
@@ -794,7 +794,7 @@
   "phaseimpute": {
     "full_name": "nf-core/phaseimpute",
     "html_url": "https://github.com/nf-core/phaseimpute",
-    "commit": "ad5d3941a6617ae6ce5c6eefa0d88badcba41c2a",
+    "commit": "158b28471d2e3da13e705795b658e786392c0bd3",
     "errors": 0,
     "warnings": 3,
     "parse_error": false,
