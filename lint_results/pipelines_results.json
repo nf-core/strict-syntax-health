@@ -533,9 +533,9 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "75988cbe24bf76376ebcacfade48e18b6aa0c803",
+    "commit": "caca54bf64278da6f7fb7e349d07f678799cbdd3",
     "errors": 0,
-    "warnings": 28,
+    "warnings": 29,
     "parse_error": false,
     "prints_help": true
   },
@@ -596,9 +596,9 @@
   "metatdenovo": {
     "full_name": "nf-core/metatdenovo",
     "html_url": "https://github.com/nf-core/metatdenovo",
-    "commit": "08f53fba82ef7ca9fd4499d003580629dd51178f",
+    "commit": "53618bf411392c9ef6c0d07ad063f984bf4cc227",
     "errors": 0,
-    "warnings": 0,
+    "warnings": 1,
     "parse_error": false,
     "prints_help": true
   },
@@ -794,9 +794,9 @@
   "phaseimpute": {
     "full_name": "nf-core/phaseimpute",
     "html_url": "https://github.com/nf-core/phaseimpute",
-    "commit": "158b28471d2e3da13e705795b658e786392c0bd3",
+    "commit": "cc311b47ea195ac368092a78429bec12f6c205a6",
     "errors": 0,
-    "warnings": 3,
+    "warnings": 6,
     "parse_error": false,
     "prints_help": false
   },

@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-06T00:24:00.912474314Z
+- Generated: 2026-04-07T00:25:54.562913161Z
 - Nextflow version: 26.03.1-edge
-- Summary: 28 warnings
+- Summary: 29 warnings
 
 ## :warning: Warnings
 
@@ -200,4 +200,11 @@
   ```nextflow
       ch_versions = Channel.empty()
                     ^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
+
+  ```nextflow
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
   ```

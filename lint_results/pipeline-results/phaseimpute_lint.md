@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-06T00:24:31.576576411Z
+- Generated: 2026-04-07T00:26:46.609289129Z
 - Nextflow version: 26.03.1-edge
-- Summary: 3 warnings
+- Summary: 6 warnings
 
 ## :warning: Warnings
 
@@ -11,6 +11,27 @@
   ```nextflow
       args = task.ext.args ?: ''
       ^^^^
+  ```
+
+- Warning: `subworkflows/local/prepare_genome/main.nf:42:5`: Variable was declared but not used
+
+  ```nextflow
+      ch_fasta_fai_gzi = ch_fasta
+      ^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:414:5`: Variable was declared but not used
+
+  ```nextflow
+      ch_fasta_index = ch_ref_gen.map{ meta, fasta, fai, gzi -> [
+      ^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
+
+  ```nextflow
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/phaseimpute/main.nf:129:19`: Parameter was not used -- prefix with `_` to suppress warning
