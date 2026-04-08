@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "4035779a49f3b28456da5a35f35639fba46c94f8",
+  "_repo_commit": "33614b74dee693be1b9f89785bd12db93a0202c2",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -254,6 +254,12 @@
   },
   "amulety_translate": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/amulety/translate",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "anarcii": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/anarcii",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

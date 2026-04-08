@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.03.1-edge
+ N E X T F L O W   ~  version 26.03.2-edge
 
-Launching `./main.nf` [berserk_bartik] revision: 2981791ab0
+Launching `./main.nf` [happy_swartz] revision: 2981791ab0
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -14,7 +14,7 @@ WARN: Unrecognized config option 'validation.monochromeLogs'
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/rnaseq 3.24.0dev
+  nf-core/rnaseq 3.24.0
 ------------------------------------------------------
 Typical pipeline command:
 
@@ -189,6 +189,8 @@ very large cohorts.
   --skip_bigwig                 [boolean] Skip bigWig file creation. 
   --skip_stringtie              [boolean] Skip StringTie. 
   --skip_fastqc                 [boolean] Skip FastQC. 
+  --use_rustqc                  [boolean] Experimental. Use RustQC instead of dupRadar, featureCounts biotype QC, RSeQC, Preseq, Qualimap, and 
+samtools stats/flagstat/idxstats. Recommend trialling on pilot data first. [default: false]  
   --skip_preseq                 [boolean] Skip Preseq. [default: true] 
   --skip_dupradar               [boolean] Skip dupRadar. 
   --skip_qualimap               [boolean] Skip Qualimap. 

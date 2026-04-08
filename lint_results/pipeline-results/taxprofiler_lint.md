@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-04T00:24:53.551427685Z
-- Nextflow version: 26.03.1-edge
-- Summary: 99 warnings
+- Generated: 2026-04-08T00:28:21.583266910Z
+- Nextflow version: 26.03.2-edge
+- Summary: 100 warnings
 
 ## :warning: Warnings
 
@@ -697,4 +697,11 @@
   ```nextflow
               .map { [[id: it[0]['db_name'], tool: it[0]['tool']], it[1]] }
                                                                    ^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
+
+  ```nextflow
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
   ```

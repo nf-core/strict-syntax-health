@@ -29,9 +29,9 @@
   "ampliseq": {
     "full_name": "nf-core/ampliseq",
     "html_url": "https://github.com/nf-core/ampliseq",
-    "commit": "86476e4990e66a7f2f9d8f83ca1f6c79f34b1173",
+    "commit": "bb61e362ab7869f9dcc8a8a9831631b6641055c3",
     "errors": 0,
-    "warnings": 16,
+    "warnings": 17,
     "parse_error": false,
     "prints_help": true
   },
@@ -200,9 +200,9 @@
   "deepmutscan": {
     "full_name": "nf-core/deepmutscan",
     "html_url": "https://github.com/nf-core/deepmutscan",
-    "commit": "5c1321b380782a3f02b3d5f24197be37a7bd5f09",
+    "commit": "f7571490b8a516782fa76133971b38132cc777bf",
     "errors": 43,
-    "warnings": 89,
+    "warnings": 90,
     "parse_error": false,
     "prints_help": null
   },
@@ -254,9 +254,9 @@
   "differentialabundance": {
     "full_name": "nf-core/differentialabundance",
     "html_url": "https://github.com/nf-core/differentialabundance",
-    "commit": "06d2d7bedd5abb2a2866e2e096215caad28fb66c",
+    "commit": "d1a2331adfaefc9ff7750e357362d374930025ff",
     "errors": 12,
-    "warnings": 28,
+    "warnings": 29,
     "parse_error": false,
     "prints_help": null
   },
@@ -614,9 +614,9 @@
   "methylong": {
     "full_name": "nf-core/methylong",
     "html_url": "https://github.com/nf-core/methylong",
-    "commit": "7e9b9eea37fad003528372831920d667763b66e3",
+    "commit": "7b03e9a9821d8ea9a137dc4b1bde7856d4e7ae1e",
     "errors": 0,
-    "warnings": 81,
+    "warnings": 66,
     "parse_error": false,
     "prints_help": false
   },
@@ -956,9 +956,9 @@
   "rnaseq": {
     "full_name": "nf-core/rnaseq",
     "html_url": "https://github.com/nf-core/rnaseq",
-    "commit": "3b866a39cbf74af3f10c69cdc087ab2055a44b87",
+    "commit": "6ea3511642fc4911bbdf6a3eefa3cd999baba6e4",
     "errors": 0,
-    "warnings": 7,
+    "warnings": 10,
     "parse_error": false,
     "prints_help": true
   },
@@ -1100,18 +1100,18 @@
   "stableexpression": {
     "full_name": "nf-core/stableexpression",
     "html_url": "https://github.com/nf-core/stableexpression",
-    "commit": "367bc85985b397a8f4671950d3381169939e3c0b",
+    "commit": "734cf2e0ac983d66a18f50be2d42e9eb1178caaf",
     "errors": 0,
-    "warnings": 34,
+    "warnings": 35,
     "parse_error": false,
     "prints_help": false
   },
   "taxprofiler": {
     "full_name": "nf-core/taxprofiler",
     "html_url": "https://github.com/nf-core/taxprofiler",
-    "commit": "028e946610956c6aab150e6790c22d998f015eb7",
+    "commit": "2229557bedef9515383615ce0be90a51ca3a5ff5",
     "errors": 0,
-    "warnings": 99,
+    "warnings": 100,
     "parse_error": false,
     "prints_help": true
   },

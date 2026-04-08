@@ -1,12 +1,12 @@
 # Nextflow lint results
 
-- Generated: 2026-03-21T00:21:39.092092464Z
-- Nextflow version: 26.03.0-edge
-- Summary: 43 errors, 89 warnings
+- Generated: 2026-04-08T00:26:48.286212058Z
+- Nextflow version: 26.03.2-edge
+- Summary: 43 errors, 90 warnings
 
 ## :x: Errors
 
-- Error: `modules/local/fitness/fitness_heatmap/main.nf:12:15`: `sample` is already declared
+- Error: `modules/local/fitness/fitness_heatmap/main.nf:13:15`: `sample` is already declared
 
   ```nextflow
       tuple val(sample), path(wt_seq)   		      // WT sequence
@@ -337,7 +337,7 @@
           ^^^^^^
   ```
 
-- Warning: `modules/local/fitness/fitness_heatmap/main.nf:11:15`: Variable was declared but not used
+- Warning: `modules/local/fitness/fitness_heatmap/main.nf:12:15`: Variable was declared but not used
 
   ```nextflow
       tuple val(sample), path(fitness_estimation_tsv)   // from FITNESS_CALCULATION
@@ -358,126 +358,126 @@
           ^^^^^^
   ```
 
-- Warning: `subworkflows/local/calculatefitness.nf:30:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/calculatefitness.nf:31:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_versions = Channel.empty()
                     ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/calculatefitness.nf:43:43`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/calculatefitness.nf:44:43`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def metas   = pairs.collect { it[0] }
                                             ^^
   ```
 
-- Warning: `subworkflows/local/calculatefitness.nf:44:43`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-              def inputs  = pairs.findAll { it[0].type == 'input'  }.sort { it[0].replicate }.collect { it[1] }
-                                            ^^
-  ```
-
-- Warning: `subworkflows/local/calculatefitness.nf:44:75`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-              def inputs  = pairs.findAll { it[0].type == 'input'  }.sort { it[0].replicate }.collect { it[1] }
-                                                                            ^^
-  ```
-
-- Warning: `subworkflows/local/calculatefitness.nf:44:103`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-              def inputs  = pairs.findAll { it[0].type == 'input'  }.sort { it[0].replicate }.collect { it[1] }
-                                                                                                        ^^
-  ```
-
 - Warning: `subworkflows/local/calculatefitness.nf:45:43`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-              def outputs = pairs.findAll { it[0].type == 'output' }.sort { it[0].replicate }.collect { it[1] }
+              def inputs  = pairs.findAll { it[0].type == 'input'  }.sort { it[0].replicate }.collect { it[1] }
                                             ^^
   ```
 
 - Warning: `subworkflows/local/calculatefitness.nf:45:75`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-              def outputs = pairs.findAll { it[0].type == 'output' }.sort { it[0].replicate }.collect { it[1] }
+              def inputs  = pairs.findAll { it[0].type == 'input'  }.sort { it[0].replicate }.collect { it[1] }
                                                                             ^^
   ```
 
 - Warning: `subworkflows/local/calculatefitness.nf:45:103`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
+              def inputs  = pairs.findAll { it[0].type == 'input'  }.sort { it[0].replicate }.collect { it[1] }
+                                                                                                        ^^
+  ```
+
+- Warning: `subworkflows/local/calculatefitness.nf:46:43`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              def outputs = pairs.findAll { it[0].type == 'output' }.sort { it[0].replicate }.collect { it[1] }
+                                            ^^
+  ```
+
+- Warning: `subworkflows/local/calculatefitness.nf:46:75`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              def outputs = pairs.findAll { it[0].type == 'output' }.sort { it[0].replicate }.collect { it[1] }
+                                                                            ^^
+  ```
+
+- Warning: `subworkflows/local/calculatefitness.nf:46:103`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
               def outputs = pairs.findAll { it[0].type == 'output' }.sort { it[0].replicate }.collect { it[1] }
                                                                                                         ^^
   ```
 
-- Warning: `subworkflows/local/calculatefitness.nf:48:19`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/calculatefitness.nf:49:19`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .filter { smeta, metas, ins, outs -> ins && outs }
                     ^^^^^
   ```
 
-- Warning: `subworkflows/local/calculatefitness.nf:48:26`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/calculatefitness.nf:49:26`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .filter { smeta, metas, ins, outs -> ins && outs }
                            ^^^^^
   ```
 
-- Warning: `subworkflows/local/calculatefitness.nf:61:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/calculatefitness.nf:62:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       def ch_fasta_path = ch_fasta.map { it[1] } // strip meta
                                          ^^
   ```
 
-- Warning: `subworkflows/local/calculatefitness.nf:65:69`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/calculatefitness.nf:66:69`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_fasta_path.combine(MERGE_COUNTS.out.merged_counts).map { it[0] },
                                                                       ^^
   ```
 
-- Warning: `subworkflows/local/calculatefitness.nf:66:73`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/calculatefitness.nf:67:73`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           val_reading_frame.combine(MERGE_COUNTS.out.merged_counts).map { it[0] }
                                                                           ^^
   ```
 
-- Warning: `subworkflows/local/calculatefitness.nf:82:16`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/calculatefitness.nf:83:16`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { key, smp, counts, wt -> tuple(smp, counts, wt) }
                  ^^^
   ```
 
-- Warning: `subworkflows/local/calculatefitness.nf:87:16`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/calculatefitness.nf:88:16`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { it[0] }
                  ^^
   ```
 
-- Warning: `subworkflows/local/calculatefitness.nf:90:61`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/calculatefitness.nf:91:61`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       def ch_run_counts_d = ch_counts_wt_d.map { smp, counts, wt -> tuple(smp, counts) }
                                                               ^^
   ```
 
-- Warning: `subworkflows/local/calculatefitness.nf:91:48`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/calculatefitness.nf:92:48`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       def ch_run_wt_d     = ch_counts_wt_d.map { smp, counts, wt -> wt }
                                                  ^^^
   ```
 
-- Warning: `subworkflows/local/calculatefitness.nf:91:53`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/calculatefitness.nf:92:53`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       def ch_run_wt_d     = ch_counts_wt_d.map { smp, counts, wt -> wt }
@@ -510,6 +510,13 @@
   ```nextflow
       Channel
       ^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
+
+  ```nextflow
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead

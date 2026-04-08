@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-02T00:23:24.690494725Z
-- Nextflow version: 26.03.1-edge
-- Summary: 12 errors, 28 warnings
+- Generated: 2026-04-08T00:26:55.102774177Z
+- Nextflow version: 26.03.2-edge
+- Summary: 12 errors, 29 warnings
 
 ## :x: Errors
 
@@ -286,4 +286,11 @@
   ```nextflow
           ch_input_for_other.genesets.filter{ it[0].functional_method == 'grea' }
                                               ^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
+
+  ```nextflow
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
   ```
