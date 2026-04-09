@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-03T00:25:50.035852636Z
-- Nextflow version: 26.03.1-edge
-- Summary: 49 errors, 51 warnings
+- Generated: 2026-04-09T00:21:55.328655003Z
+- Nextflow version: 26.03.2-edge
+- Summary: 49 errors, 53 warnings
 
 ## :x: Errors
 
@@ -393,6 +393,13 @@
                                                                                                                                   ^^
   ```
 
+- Warning: `subworkflows/local/concatall.nf:30:8`: Variable was declared but not used
+
+  ```nextflow
+         ch_input_reads_merged = CAT_FASTQ ( ch_input_singlefq.cat ).reads
+         ^^^^^^^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/profiling.nf:57:13`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
@@ -580,6 +587,13 @@
   ```nextflow
       hook_url //  string: hook URL for notifications
       ^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
+
+  ```nextflow
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/funcprofiler.nf:28:5`: Variable was declared but not used
