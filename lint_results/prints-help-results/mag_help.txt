@@ -1,10 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.03.1-edge
+ N E X T F L O W   ~  version 26.03.2-edge
 
-Downloading plugin nf-schema@2.5.1
-Launching `./main.nf` [sick_albattani] revision: 7d9d7cea21
+Launching `./main.nf` [big_hodgkin] revision: 7d9d7cea21
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -28,8 +27,7 @@ Input/output options
   --input                                [string]  CSV samplesheet file containing information about the samples in the experiment. 
   --single_end                           [boolean] Specifies that the input is single-end reads. 
   --assembly_input                       [string]  Additional input CSV samplesheet containing information about pre-computed assemblies. When set, 
-both read pre-processing and assembly are skipped and the pipeline begins at the binning stage. 
- 
+assembly is skipped and the supplied assemblies are used for downstream analysis.  
   --outdir                               [string]  The output directory where the results will be saved. You have to use absolute paths to storage on 
 Cloud infrastructure.  
   --email                                [string]  Email address for completion summary. 

@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-04-08T00:26:25.721401655Z
+- Generated: 2026-04-10T00:23:16.428969774Z
 - Nextflow version: 26.03.2-edge
 - Summary: 17 warnings
 
@@ -55,28 +55,28 @@
           ^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_ampliseq_pipeline/main.nf:362:63`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_ampliseq_pipeline/main.nf:374:63`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           if (sectionValue instanceof Map && sectionValue.any { it.value instanceof Map && it.value.containsKey('file') }) {
                                                                 ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_ampliseq_pipeline/main.nf:362:90`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_ampliseq_pipeline/main.nf:374:90`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           if (sectionValue instanceof Map && sectionValue.any { it.value instanceof Map && it.value.containsKey('file') }) {
                                                                                            ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_ampliseq_pipeline/main.nf:396:46`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_ampliseq_pipeline/main.nf:408:46`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       occurrences.collect { "${it.section}['${it.key}']" }.join(", ")
                                                ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_ampliseq_pipeline/main.nf:396:61`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_ampliseq_pipeline/main.nf:408:61`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       occurrences.collect { "${it.section}['${it.key}']" }.join(", ")
@@ -97,28 +97,28 @@
                             ^^^^^^^
   ```
 
-- Warning: `workflows/ampliseq.nf:792:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/ampliseq.nf:796:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .filter { it.data.extract_hmm }
                     ^^
   ```
 
-- Warning: `workflows/ampliseq.nf:793:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/ampliseq.nf:797:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { [ it.meta, it.data.hmm, it.data.extract_hmm ] }
                    ^^
   ```
 
-- Warning: `workflows/ampliseq.nf:793:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/ampliseq.nf:797:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { [ it.meta, it.data.hmm, it.data.extract_hmm ] }
                             ^^
   ```
 
-- Warning: `workflows/ampliseq.nf:793:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/ampliseq.nf:797:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { [ it.meta, it.data.hmm, it.data.extract_hmm ] }

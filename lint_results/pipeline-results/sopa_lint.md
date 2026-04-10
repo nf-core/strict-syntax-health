@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-03-21T00:24:38.288890772Z
-- Nextflow version: 26.03.0-edge
-- Summary: 7 errors, 13 warnings
+- Generated: 2026-04-10T00:26:47.248948436Z
+- Nextflow version: 26.03.2-edge
+- Summary: 7 errors, 20 warnings
 
 ## :x: Errors
 
@@ -92,6 +92,13 @@
                     ^^
   ```
 
+- Warning: `subworkflows/local/input_check/main.nf:35:5`: Variable was declared but not used
+
+  ```nextflow
+      ch_spaceranger_input = ch_spaceranger_combined.map { meta, dir -> create_channel_spaceranger(meta, dir) }
+      ^^^^^^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/utils_nfcore_sopa_pipeline/main.nf:31:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
@@ -134,6 +141,13 @@
                                                            ^^
   ```
 
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
+
+  ```nextflow
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
+  ```
+
 - Warning: `workflows/sopa.nf:151:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -146,4 +160,39 @@
   ```nextflow
           ).set { ch_collated_versions }
                   ^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `workflows/sopa.nf:206:6`: Variable was declared but not used
+
+  ```nextflow
+      (ch_resolved, versions) = RESOLVE_CELLPOSE(ch_segmented)
+       ^^^^^^^^^^^
+  ```
+
+- Warning: `workflows/sopa.nf:233:6`: Variable was declared but not used
+
+  ```nextflow
+      (ch_resolved, versions) = RESOLVE_STARDIST(ch_segmented)
+       ^^^^^^^^^^^
+  ```
+
+- Warning: `workflows/sopa.nf:261:6`: Variable was declared but not used
+
+  ```nextflow
+      (ch_resolved, versions) = RESOLVE_BAYSOR(ch_segmented, argsCLI("resolve"))
+       ^^^^^^^^^^^
+  ```
+
+- Warning: `workflows/sopa.nf:288:6`: Variable was declared but not used
+
+  ```nextflow
+      (ch_resolved, versions) = RESOLVE_COMSEG(ch_segmented, argsCLI("resolve"))
+       ^^^^^^^^^^^
+  ```
+
+- Warning: `workflows/sopa.nf:304:6`: Variable was declared but not used
+
+  ```nextflow
+      (ch_segmented, versions) = PATCH_SEGMENTATION_PROSEG(ch_patches, argsCLI("proseg"))
+       ^^^^^^^^^^^^
   ```

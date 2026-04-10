@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-07T00:25:54.562913161Z
-- Nextflow version: 26.03.1-edge
-- Summary: 29 warnings
+- Generated: 2026-04-10T00:25:07.421625511Z
+- Nextflow version: 26.03.2-edge
+- Summary: 22 warnings
 
 ## :warning: Warnings
 
@@ -49,48 +49,6 @@
   ```
 
 - Warning: `modules/nf-core/comebin/runcomebin/main.nf:59:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/concoct/concoct/main.nf:43:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/concoct/concoctcoveragetable/main.nf:37:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/concoct/cutupfasta/main.nf:43:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/concoct/cutupfasta/main.nf:45:9`: Variable was declared but not used
-
-  ```nextflow
-      def bedfile = bed ? "-b ${prefix}.bed" : ""
-          ^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/concoct/extractfastabins/main.nf:45:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/concoct/mergecutupclustering/main.nf:39:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
@@ -193,13 +151,6 @@
   ```nextflow
       def reads = yml ? "--dataset $yml" : "$illumina_reads $pacbio_reads $nanopore_reads"
           ^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/fasta_binning_concoct/main.nf:14:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
   ```
 
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used

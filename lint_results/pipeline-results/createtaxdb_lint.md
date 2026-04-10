@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-02-12T00:21:22.587073522Z
-- Nextflow version: 26.01.1-edge
-- Summary: 33 warnings
+- Generated: 2026-04-10T00:23:43.987239797Z
+- Nextflow version: 26.03.2-edge
+- Summary: 34 warnings
 
 ## :warning: Warnings
 
@@ -200,6 +200,13 @@
   ```nextflow
                   def not_unique_aa = fasta_aa.countBy { it }.grep { it.value > 1 }.collect { it.key }
                                                                                               ^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
+
+  ```nextflow
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/createtaxdb.nf:124:20`: Implicit closure parameter is deprecated, declare an explicit parameter instead

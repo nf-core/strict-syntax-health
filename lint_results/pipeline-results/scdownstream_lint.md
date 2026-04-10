@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-04-09T00:23:00.363363288Z
+- Generated: 2026-04-10T00:26:26.622956528Z
 - Nextflow version: 26.03.2-edge
 - Summary: 28 warnings
 
@@ -13,7 +13,7 @@
       ^^^^
   ```
 
-- Warning: `modules/local/adata/merge/main.nf:27:5`: Variable was declared but not used
+- Warning: `modules/local/adata/merge/main.nf:26:5`: Variable was declared but not used
 
   ```nextflow
       force_obs_cols = task.ext.force_obs_cols ?: params.force_obs_cols ?: ""

@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-09T00:21:55.328655003Z
+- Generated: 2026-04-10T00:24:32.054446492Z
 - Nextflow version: 26.03.2-edge
-- Summary: 49 errors, 53 warnings
+- Summary: 48 errors, 53 warnings
 
 ## :x: Errors
 
@@ -46,13 +46,6 @@
   ```nextflow
       tuple val(meta), path(profile)
                 ^^^^
-  ```
-
-- Error: `modules/local/humann/regroup/base.nf:10:5`: Invalid process directive
-
-  ```nextflow
-      if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container)	{
-      ^
   ```
 
 - Error: `modules/local/humann/renorm/main.nf:7:5`: Invalid process directive

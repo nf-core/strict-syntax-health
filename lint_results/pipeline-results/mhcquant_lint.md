@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-03-18T00:25:34.898277297Z
-- Nextflow version: 26.02.0-edge
-- Summary: 18 errors, 47 warnings
+- Generated: 2026-04-10T00:25:33.890515328Z
+- Nextflow version: 26.03.2-edge
+- Summary: 18 errors, 48 warnings
 
 ## :x: Errors
 
@@ -377,6 +377,13 @@
   ```nextflow
                   ).map { preset, group_meta, local_idxml, global_filtered_idxml ->
                           ^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
+
+  ```nextflow
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/mhcquant.nf:84:89`: Parameter was not used -- prefix with `_` to suppress warning

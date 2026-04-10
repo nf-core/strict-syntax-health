@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-08T00:28:21.583266910Z
+- Generated: 2026-04-10T00:27:00.192550962Z
 - Nextflow version: 26.03.2-edge
-- Summary: 100 warnings
+- Summary: 99 warnings
 
 ## :warning: Warnings
 
@@ -566,21 +566,21 @@
                                                                                ^^
   ```
 
-- Warning: `subworkflows/local/profiling/main.nf:534:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/profiling/main.nf:533:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   if (it[0].is_fasta) {
                       ^^
   ```
 
-- Warning: `subworkflows/local/profiling/main.nf:535:135`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/profiling/main.nf:534:135`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       log.warn("[nf-core/taxprofiler] sylph currently does not accept FASTA files as input. Skipping sylph for sample ${it[0].id}.")
                                                                                                                                         ^^
   ```
 
-- Warning: `subworkflows/local/profiling/main.nf:537:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/profiling/main.nf:536:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   !it[0].is_fasta
@@ -613,13 +613,6 @@
   ```nextflow
           paired: it[0]['single_end'] == false
                   ^^
-  ```
-
-- Warning: `subworkflows/local/standardisation_profiles/main.nf:232:21`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .multiMap { key, meta, profile, db ->
-                      ^^^
   ```
 
 - Warning: `subworkflows/local/visualization_krona/main.nf:27:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead

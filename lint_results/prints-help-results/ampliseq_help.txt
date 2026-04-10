@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.03.2-edge
 
 Downloading plugin nf-schema@2.5.1
-Launching `./main.nf` [furious_brenner] revision: 989f5de55d
+Launching `./main.nf` [cheeky_hoover] revision: 989f5de55d
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -157,6 +157,8 @@ silva=132, rdp, rdp=18, greengenes, greengenes=13.5, standard, standard=20240904
   --kraken2_confidence                     [number]  Confidence score threshold for taxonomic classification. [default: 0.0] 
   --sintax_ref_taxonomy                    [string]  Name of supported database, and optionally also version number  (accepted: coidb, coidb=221216, 
 unite-fungi, unite-fungi=10.0, unite-fungi=9.0, unite-fungi=8.3, ...)  
+  --sintax_ref_tax_custom                  [string]  Path to a custom SINTAX reference database (fasta) 
+  --sintax_assign_taxlevels                [string]  Comma separated list of taxonomic levels used in SINTAX with a custom reference database 
   --addsh                                  [boolean] If ASVs should be assigned to UNITE species hypotheses (SHs). Only relevant for ITS data. 
   --cut_its                                [string]  Part of ITS region to use for taxonomy assignment: "full", "its1", or "its2"  (accepted: none, 
 full, its1, its2) [default: none]  
