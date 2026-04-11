@@ -1,13 +1,91 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.01.1-edge
+ N E X T F L O W   ~  version 26.03.2-edge
 
-Downloading plugin nf-schema@2.5.1
-Launching `./main.nf` [jovial_minsky]revision: 70abb88cdd
+Downloading plugin nf-core-utils@0.4.0
+Downloading plugin nf-schema@2.7.1
+Launching `./main.nf` [peaceful_carlsson] revision: 8d063eea0e
 
-WARN: Unrecognized config option 'validation.defaultIgnoreParams'
-WARN: Unrecognized config option 'validation.monochromeLogs'
-ERROR ~ Unable to create help message: Specified param 'true' does not exist in JSON schema.
 
- -- Check script 'subworkflows/nf-core/utils_nfschema_plugin/main.nf' at line: 41 or see '.nextflow.log' file for more details
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/createpanelrefs 1.0.0
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/createpanelrefs -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input                               [string] Path to comma-separated file containing information about the samples in the experiment. 
+  --outdir                              [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --email                               [string] Email address for completion summary. 
+  --multiqc_title                       [string] MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+
+Main options
+  --tools                               [string] Tools to use for building Panel of Normals or models. 
+
+Reference genome options
+  --genome                              [string] Name of iGenomes reference. 
+  --fasta                               [string] Path to FASTA genome file. 
+  --dict                                [string] Path to sequence dictionary file 
+  --fai                                 [string] Path to fasta index file 
+  --gens_interval_list                  [string] Path to GENS interval list file 
+  --gcnv_exclude_bed                    [string] Path to directory for a bed file containing regions to be exluded from the analysis. 
+  --gcnv_exclude_interval_list          [string] Path to directory for exclude_interval_list file. 
+  --gcnv_mappable_regions               [string] Path to Umap single-read mappability track in .bed or .bed.gz format. Overlapping intervals must be 
+merged.  
+  --gcnv_ploidy_priors                  [string] Path to a file containing ploidy priors table. 
+  --gcnv_segmental_duplications         [string] Path to segmental-duplication track in .bed or .bed.gz format. Overlapping intervals must be merged. 
+ 
+  --gcnv_target_bed                     [string] Path to directory for target bed file. 
+  --gcnv_target_interval_list           [string] Path to directory for target interval_list file. 
+  --mutect2_target_bed                  [string] Path to target bed file 
+
+CNVkit options
+  --cnvkit_targets                      [string] Path to directory for target file. 
+
+GENS options
+  --gens_analysis_type                  [string] GENS panel of normals analysis type ('srs' or 'lrs').  (accepted: srs, lrs) [default: srs] 
+  --gens_bin_length                     [number] Length (in bp) of the bins. If zero, no binning will be performed. [default: 100] 
+  --gens_maximum_chunk_size             [number] Maximum chunk size when writing the HDF5 file [default: 167772150] 
+  --gens_min_interval_median_percentile [number] Minimum interval median percentile for gatk CreateReadCountPanelOfNormals [default: 5] 
+  --gens_pon_name                       [string] Name for panel of normals. [default: gens] 
+  --gens_readcount_format               [string] Output file format for count data  (accepted: HDF5, TSV) [default: HDF5] 
+
+Germlinecnvcaller options
+  --gcnv_analysis_type                  [string] Specifies which analysis type for the pipeline- either 'wgs' or 'wes'.  (accepted: wgs, wes) 
+[default: wgs]  
+  --gcnv_bin_length                     [number] Length (in bp) of the bins. If zero, no binning will be performed. [default: 1000] 
+  --gcnv_padding                        [number] Length (in bp) of the padding regions on each side of the intervals. [default: 0] 
+  --gcnv_model_name                     [string] Name for panel of normals. [default: germlinecnvcaller] 
+  --gcnv_readcount_format               [string] Output file format for count data  (accepted: HDF5, TSV) [default: HDF5] 
+  --gcnv_scatter_content                [number] When scattering with this argument, each of the resultant files will (ideally) have this amount of 
+interval-counts. [default: 5000]  
+
+Mutect2 options
+  --mutect2_pon_name                    [string] Name for panel of normals. 
+
+Generic options
+  --multiqc_methods_description         [string]          Custom MultiQC yaml file containing HTML including a methods description. 
+  --help                                [boolean, string] Display the help message. 
+  --help_full                           [boolean]         Display the full detailed help message. 
+  --show_hidden                         [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 20 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/createpanelrefs/blob/main/CITATIONS.md
+

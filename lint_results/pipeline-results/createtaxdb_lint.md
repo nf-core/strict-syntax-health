@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-04-10T00:23:43.987239797Z
+- Generated: 2026-04-11T00:25:19.924017899Z
 - Nextflow version: 26.03.2-edge
 - Summary: 34 warnings
 
@@ -237,7 +237,7 @@
                       ^^
   ```
 
-- Warning: `workflows/createtaxdb.nf:312:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/createtaxdb.nf:307:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       def topic_versions = Channel

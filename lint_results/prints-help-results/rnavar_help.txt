@@ -1,10 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.03.1-edge
+ N E X T F L O W   ~  version 26.03.2-edge
 
-Downloading plugin nf-core-utils@0.4.0
-Launching `./main.nf` [stoic_einstein] revision: 8ef98dc376
+Launching `./main.nf` [sad_pare] revision: 8ef98dc376
 
 
 ------------------------------------------------------

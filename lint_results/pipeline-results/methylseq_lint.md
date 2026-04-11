@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T10:24:01.003313220Z
-- Nextflow version: 25.12.0-edge
-- Summary: 3 errors, 65 warnings
+- Generated: 2026-04-11T00:26:47.727120789Z
+- Nextflow version: 26.03.2-edge
+- Summary: 3 errors, 66 warnings
 
 ## :x: Errors
 
@@ -190,21 +190,21 @@
                                 ^^
   ```
 
-- Warning: `subworkflows/local/targeted_sequencing/main.nf:28:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/targeted_sequencing/main.nf:29:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_versions = Channel.empty()
                     ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/targeted_sequencing/main.nf:29:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/targeted_sequencing/main.nf:30:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_picard_metrics = Channel.empty()
                           ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/targeted_sequencing/main.nf:70:72`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/targeted_sequencing/main.nf:83:72`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_intervals = PICARD_BEDTOINTERVALLIST.out.intervallist.map { it[1] }
@@ -435,6 +435,13 @@
                     ^^^^^^^
   ```
 
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
+
+  ```nextflow
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -442,44 +449,44 @@
                                                                                                    ^^^^^^^
   ```
 
-- Warning: `workflows/methylseq/main.nf:198:88`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/methylseq/main.nf:197:86`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-          ch_versions    = ch_versions.mix(FASTQ_ALIGN_DEDUP_BWAMEM.out.versions.unique{ it.baseName })
-                                                                                         ^^
-  ```
-
-- Warning: `workflows/methylseq/main.nf:368:89`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-              ch_multiqc_files = ch_multiqc_files.mix(QUALIMAP_BAMQC.out.results.collect{ it[1] }.ifEmpty([]))
-                                                                                          ^^
-  ```
-
-- Warning: `workflows/methylseq/main.nf:371:86`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-              ch_multiqc_files = ch_multiqc_files.mix(PRESEQ_LCEXTRAP.out.log.collect{ it[1] }.ifEmpty([]))
+          ch_versions = ch_versions.mix(FASTQ_ALIGN_DEDUP_BWAMEM.out.versions.unique { it.baseName })
                                                                                        ^^
   ```
 
-- Warning: `workflows/methylseq/main.nf:375:81`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/methylseq/main.nf:369:90`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-              ch_multiqc_files = ch_multiqc_files.mix(TRIMGALORE.out.log.collect{ it[1] })
-                                                                                  ^^
+              ch_multiqc_files = ch_multiqc_files.mix(QUALIMAP_BAMQC.out.results.collect { it[1] }.ifEmpty([]))
+                                                                                           ^^
   ```
 
-- Warning: `workflows/methylseq/main.nf:379:105`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/methylseq/main.nf:372:87`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-                  ch_multiqc_files = ch_multiqc_files.mix(TARGETED_SEQUENCING.out.picard_metrics.collect{ it[1] }.ifEmpty([]))
-                                                                                                          ^^
+              ch_multiqc_files = ch_multiqc_files.mix(PRESEQ_LCEXTRAP.out.log.collect { it[1] }.ifEmpty([]))
+                                                                                        ^^
   ```
 
-- Warning: `workflows/methylseq/main.nf:383:77`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/methylseq/main.nf:376:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-              ch_multiqc_files = ch_multiqc_files.mix(FASTQC.out.zip.collect{ it[1] }.ifEmpty([]))
-                                                                              ^^
+              ch_multiqc_files = ch_multiqc_files.mix(TRIMGALORE.out.log.collect { it[1] })
+                                                                                   ^^
+  ```
+
+- Warning: `workflows/methylseq/main.nf:380:106`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  ch_multiqc_files = ch_multiqc_files.mix(TARGETED_SEQUENCING.out.picard_metrics.collect { it[1] }.ifEmpty([]))
+                                                                                                           ^^
+  ```
+
+- Warning: `workflows/methylseq/main.nf:384:78`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              ch_multiqc_files = ch_multiqc_files.mix(FASTQC.out.zip.collect { it[1] }.ifEmpty([]))
+                                                                               ^^
   ```
