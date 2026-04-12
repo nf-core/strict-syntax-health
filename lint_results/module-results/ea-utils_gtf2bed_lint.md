@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/ea-utils/gtf2bed/main.nf:22:5`: Variable was declared but not used
 
-    ```nextflow
-        args   = task.ext.args ?: ''
-        ^^^^^^^^^^
-    ```
+  ```nextflow
+      args   = task.ext.args ?: ''
+      ^^^^^^^^^^
+  ```

@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-11T00:28:50.568393739Z
+- Generated: 2026-04-12T00:26:05.383619362Z
 - Nextflow version: 26.03.2-edge
-- Summary: 28 warnings
+- Summary: 29 warnings
 
 ## :warning: Warnings
 
@@ -105,6 +105,13 @@
   ```
 
 - Warning: `modules/local/scanpy/umap/main.nf:23:5`: Variable was declared but not used
+
+  ```nextflow
+      args   = task.ext.args ?: ''
+      ^^^^
+  ```
+
+- Warning: `modules/local/scarches/expimap/main.nf:26:5`: Variable was declared but not used
 
   ```nextflow
       args   = task.ext.args ?: ''

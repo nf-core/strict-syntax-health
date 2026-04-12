@@ -1001,9 +1001,9 @@
   "scdownstream": {
     "full_name": "nf-core/scdownstream",
     "html_url": "https://github.com/nf-core/scdownstream",
-    "commit": "7c6e3dc7ec4db25ee77684adab441cb3392f1fd4",
+    "commit": "b8aeaf2a301aae8e2af85a6eb26161ab80e7a56a",
     "errors": 0,
-    "warnings": 28,
+    "warnings": 29,
     "parse_error": false,
     "prints_help": false
   },
