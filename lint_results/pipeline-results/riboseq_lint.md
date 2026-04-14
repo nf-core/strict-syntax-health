@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-03-07T00:19:44.000366043Z
-- Nextflow version: 26.02.0-edge
-- Summary: 26 errors, 55 warnings
+- Generated: 2026-04-14T00:32:06.261472265Z
+- Nextflow version: 26.03.2-edge
+- Summary: 26 errors, 56 warnings
 
 ## :x: Errors
 
@@ -573,4 +573,11 @@
   ```nextflow
       hook_url        //  string: hook URL for notifications
       ^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
+
+  ```nextflow
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
   ```

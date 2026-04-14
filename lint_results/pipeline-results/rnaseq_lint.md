@@ -1,10 +1,24 @@
 # Nextflow lint results
 
-- Generated: 2026-04-11T00:27:16.762940017Z
+- Generated: 2026-04-14T00:32:21.342148964Z
 - Nextflow version: 26.03.2-edge
-- Summary: 10 warnings
+- Summary: 12 warnings
 
 ## :warning: Warnings
+
+- Warning: `modules/nf-core/custom/gtffilter/main.nf:24:5`: Variable was declared but not used
+
+  ```nextflow
+      args   = task.ext.args ?: ''
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/ea-utils/gtf2bed/main.nf:22:5`: Variable was declared but not used
+
+  ```nextflow
+      args   = task.ext.args ?: ''
+      ^^^^
+  ```
 
 - Warning: `subworkflows/local/bam_post_alignment_qc/main.nf:55:23`: Parameter was not used -- prefix with `_` to suppress warning
 
@@ -27,21 +41,21 @@
                                    ^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:193:79`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/prepare_genome/main.nf:198:79`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               ch_transcript_fasta = GFFREAD_TRANSCRIPTS.out.gffread_fasta.map { meta, fasta_file -> fasta_file }
                                                                                 ^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:379:120`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/prepare_genome/main.nf:384:120`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   ch_bowtie2_index = UNTAR_BOWTIE2_INDEX ([ [:], file(bowtie2_index, checkIfExists: true) ]).untar.map { meta, index -> index }
                                                                                                                          ^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:389:62`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/prepare_genome/main.nf:394:62`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               ch_bowtie2_index = BOWTIE2_BUILD.out.index.map { meta, index -> index }

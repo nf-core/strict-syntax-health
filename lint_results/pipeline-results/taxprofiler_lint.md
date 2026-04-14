@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-11T00:29:19.641767148Z
+- Generated: 2026-04-14T00:32:54.532053467Z
 - Nextflow version: 26.03.2-edge
-- Summary: 99 warnings
+- Summary: 94 warnings
 
 ## :warning: Warnings
 
@@ -459,41 +459,6 @@
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
-  ```
-
-- Warning: `modules/nf-core/taxpasta/merge/main.nf:46:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/taxpasta/merge/main.nf:48:9`: Variable was declared but not used
-
-  ```nextflow
-      def taxonomy_option = taxonomy ? "--taxonomy ${taxonomy}" : ''
-          ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/taxpasta/merge/main.nf:49:9`: Variable was declared but not used
-
-  ```nextflow
-      def samplesheet_input = samplesheet ? "-s ${samplesheet}" : ''
-          ^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/taxpasta/standardise/main.nf:42:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/taxpasta/standardise/main.nf:44:9`: Variable was declared but not used
-
-  ```nextflow
-      def taxonomy_option = taxonomy ? "--taxonomy ${taxonomy}" : ''
-          ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/profiling/main.nf:247:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead

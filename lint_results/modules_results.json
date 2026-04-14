@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "a30aa3fd25cc48b7612d53b749e9fcd879433f91",
+  "_repo_commit": "76f0d65e94ce2f8944d94f4fb4cd9f5e4c9ad5cf",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -2265,11 +2265,17 @@
   "custom_gtffilter": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/custom/gtffilter",
     "errors": 0,
-    "warnings": 0,
+    "warnings": 1,
     "parse_error": false
   },
   "custom_matrixfilter": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/custom/matrixfilter",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "custom_multiqccustombiotype": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/custom/multiqccustombiotype",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -8000,6 +8006,12 @@
   },
   "rtgtools_bndeval": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/rtgtools/bndeval",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "rtgtools_cnveval": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/rtgtools/cnveval",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

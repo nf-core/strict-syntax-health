@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-04-10T00:26:47.248948436Z
+- Generated: 2026-04-14T00:32:43.313007310Z
 - Nextflow version: 26.03.2-edge
 - Summary: 7 errors, 20 warnings
 
@@ -71,6 +71,27 @@
                                                     ^^
   ```
 
+- Warning: `subworkflows/local/baysor/main.nf:23:6`: Variable was declared but not used
+
+  ```nextflow
+      (ch_resolved, versions) = RESOLVE_BAYSOR(ch_segmented, argsCLI("resolve"))
+       ^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/cellpose/main.nf:23:6`: Variable was declared but not used
+
+  ```nextflow
+      (ch_resolved, versions) = RESOLVE_CELLPOSE(ch_segmented)
+       ^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/comseg/main.nf:23:6`: Variable was declared but not used
+
+  ```nextflow
+      (ch_resolved, versions) = RESOLVE_COMSEG(ch_segmented, argsCLI("resolve"))
+       ^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/input_check/main.nf:15:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -97,6 +118,20 @@
   ```nextflow
       ch_spaceranger_input = ch_spaceranger_combined.map { meta, dir -> create_channel_spaceranger(meta, dir) }
       ^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/proseg/main.nf:11:6`: Variable was declared but not used
+
+  ```nextflow
+      (ch_segmented, versions) = PATCH_SEGMENTATION_PROSEG(ch_patches, argsCLI("proseg"))
+       ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/stardist/main.nf:23:6`: Variable was declared but not used
+
+  ```nextflow
+      (ch_resolved, versions) = RESOLVE_STARDIST(ch_segmented)
+       ^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/utils_nfcore_sopa_pipeline/main.nf:31:5`: Parameter was not used -- prefix with `_` to suppress warning
@@ -148,51 +183,16 @@
       ^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/sopa.nf:151:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/sopa.nf:148:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       def topic_versions = Channel.topic("versions")
                            ^^^^^^^
   ```
 
-- Warning: `workflows/sopa.nf:175:17`: Variable was declared but not used
+- Warning: `workflows/sopa.nf:172:17`: Variable was declared but not used
 
   ```nextflow
           ).set { ch_collated_versions }
                   ^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/sopa.nf:206:6`: Variable was declared but not used
-
-  ```nextflow
-      (ch_resolved, versions) = RESOLVE_CELLPOSE(ch_segmented)
-       ^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/sopa.nf:233:6`: Variable was declared but not used
-
-  ```nextflow
-      (ch_resolved, versions) = RESOLVE_STARDIST(ch_segmented)
-       ^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/sopa.nf:261:6`: Variable was declared but not used
-
-  ```nextflow
-      (ch_resolved, versions) = RESOLVE_BAYSOR(ch_segmented, argsCLI("resolve"))
-       ^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/sopa.nf:288:6`: Variable was declared but not used
-
-  ```nextflow
-      (ch_resolved, versions) = RESOLVE_COMSEG(ch_segmented, argsCLI("resolve"))
-       ^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/sopa.nf:304:6`: Variable was declared but not used
-
-  ```nextflow
-      (ch_segmented, versions) = PATCH_SEGMENTATION_PROSEG(ch_patches, argsCLI("proseg"))
-       ^^^^^^^^^^^^
   ```

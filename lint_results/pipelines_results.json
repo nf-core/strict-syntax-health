@@ -47,9 +47,9 @@
   "bacass": {
     "full_name": "nf-core/bacass",
     "html_url": "https://github.com/nf-core/bacass",
-    "commit": "e21539091feb7b0ab567ef7987e0a6c61ea48e91",
+    "commit": "6b740763ceec1c17fa52447d840cb6c7c810e3ea",
     "errors": 0,
-    "warnings": 17,
+    "warnings": 18,
     "parse_error": false,
     "prints_help": true
   },
@@ -146,7 +146,7 @@
   "createpanelrefs": {
     "full_name": "nf-core/createpanelrefs",
     "html_url": "https://github.com/nf-core/createpanelrefs",
-    "commit": "6453ba17771bb197f8153869b2a56785e764fae2",
+    "commit": "792726796709726a89c49bf1f1f99ca4735ee8f9",
     "errors": 0,
     "warnings": 1,
     "parse_error": false,
@@ -155,7 +155,7 @@
   "createtaxdb": {
     "full_name": "nf-core/createtaxdb",
     "html_url": "https://github.com/nf-core/createtaxdb",
-    "commit": "7794256aa72e2aa423818dfb4c93758f983eb09b",
+    "commit": "c1ca215d3237d2879249ff1e5037b0befc918928",
     "errors": 0,
     "warnings": 34,
     "parse_error": false,
@@ -254,9 +254,9 @@
   "differentialabundance": {
     "full_name": "nf-core/differentialabundance",
     "html_url": "https://github.com/nf-core/differentialabundance",
-    "commit": "1f573a43018890148f77ad8b0c4eee163b3d2932",
-    "errors": 12,
-    "warnings": 29,
+    "commit": "35cc0c8b3e06789640feeb7c2e981e56e37d7eef",
+    "errors": 75,
+    "warnings": 9,
     "parse_error": false,
     "prints_help": null
   },
@@ -929,9 +929,9 @@
   "riboseq": {
     "full_name": "nf-core/riboseq",
     "html_url": "https://github.com/nf-core/riboseq",
-    "commit": "52244e56447fdfce9efe7c005a385ac7272a5ec3",
+    "commit": "12cf667e2b928506ae93ec47fb8dadaf04f83fd9",
     "errors": 26,
-    "warnings": 55,
+    "warnings": 56,
     "parse_error": false,
     "prints_help": null
   },
@@ -956,9 +956,9 @@
   "rnaseq": {
     "full_name": "nf-core/rnaseq",
     "html_url": "https://github.com/nf-core/rnaseq",
-    "commit": "b66b117d843f2492976a2a8769206bd1a1325085",
+    "commit": "ce276caf1f6e94381736a4949caac708da8c1252",
     "errors": 0,
-    "warnings": 10,
+    "warnings": 12,
     "parse_error": false,
     "prints_help": true
   },
@@ -1064,7 +1064,7 @@
   "sopa": {
     "full_name": "nf-core/sopa",
     "html_url": "https://github.com/nf-core/sopa",
-    "commit": "a0c097725e948232c3ecb39604271927eb2b4443",
+    "commit": "60b77214078bcfa789cfe6cf84aecf914138e266",
     "errors": 7,
     "warnings": 20,
     "parse_error": false,
@@ -1109,9 +1109,9 @@
   "taxprofiler": {
     "full_name": "nf-core/taxprofiler",
     "html_url": "https://github.com/nf-core/taxprofiler",
-    "commit": "98b132688ef4e60017c751c39c8571daccc06ccc",
+    "commit": "3b6e73c22538fe437180e2fd75af1409e6a2c00c",
     "errors": 0,
-    "warnings": 99,
+    "warnings": 94,
     "parse_error": false,
     "prints_help": true
   },
