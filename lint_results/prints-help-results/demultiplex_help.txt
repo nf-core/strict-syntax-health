@@ -3,8 +3,8 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.03.2-edge
 
-Downloading plugin nf-schema@2.6.1
-Launching `./main.nf` [focused_koch] revision: 3571cdcc10
+Downloading plugin nf-schema@2.7.0
+Launching `./main.nf` [deadly_ampere] revision: 3571cdcc10
 
 
 ------------------------------------------------------
@@ -19,7 +19,6 @@ Typical pipeline command:
 
   nextflow run nf-core/demultiplex -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
 
---optional_outputs                 [boolean]         
 help message of that parameter will be printed.  
 or `--helpFull`.  
 
@@ -43,6 +42,7 @@ Input/output options
   --flowcell_per_flowcell_manifest [string]  Per-flowcell manifest file for fqtk single-flowcell runs. 
   --outdir                         [string]  The output directory where the results will be saved. You have to use absolute paths to storage on 
 Cloud infrastructure.  
+  --optional_outputs               [boolean] Whether to publish optional outputs such as undertermined files. 
   --email                          [string]  Email address for completion summary. 
   --multiqc_title                  [string]  MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
 

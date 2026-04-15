@@ -1,152 +1,33 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T10:18:12.593034256Z
-- Nextflow version: 25.12.0-edge
-- Summary: 38 errors, 30 warnings
+- Generated: 2026-04-15T00:30:37.985074848Z
+- Nextflow version: 26.03.2-edge
+- Summary: 22 errors, 25 warnings
 
 ## :x: Errors
 
-- Error: `conf/base.config:13:16`: `check_max` is not defined
-
-  ```nextflow
-      cpus   = { check_max( 1    * task.attempt, 'cpus'   ) }
-                 ^^^^^^^^^
-  ```
-
-- Error: `conf/base.config:14:16`: `check_max` is not defined
-
-  ```nextflow
-      memory = { check_max( 6.GB * task.attempt, 'memory' ) }
-                 ^^^^^^^^^
-  ```
-
-- Error: `conf/base.config:15:16`: `check_max` is not defined
-
-  ```nextflow
-      time   = { check_max( 4.h  * task.attempt, 'time'   ) }
-                 ^^^^^^^^^
-  ```
-
-- Error: `conf/base.config:28:20`: `check_max` is not defined
-
-  ```nextflow
-          cpus   = { check_max( 1                  , 'cpus'    ) }
-                     ^^^^^^^^^
-  ```
-
-- Error: `conf/base.config:29:20`: `check_max` is not defined
-
-  ```nextflow
-          memory = { check_max( 6.GB * task.attempt, 'memory'  ) }
-                     ^^^^^^^^^
-  ```
-
-- Error: `conf/base.config:30:20`: `check_max` is not defined
-
-  ```nextflow
-          time   = { check_max( 4.h  * task.attempt, 'time'    ) }
-                     ^^^^^^^^^
-  ```
-
-- Error: `conf/base.config:33:20`: `check_max` is not defined
-
-  ```nextflow
-          cpus   = { check_max( 2     * task.attempt, 'cpus'    ) }
-                     ^^^^^^^^^
-  ```
-
-- Error: `conf/base.config:34:20`: `check_max` is not defined
-
-  ```nextflow
-          memory = { check_max( 12.GB * task.attempt, 'memory'  ) }
-                     ^^^^^^^^^
-  ```
-
-- Error: `conf/base.config:35:20`: `check_max` is not defined
-
-  ```nextflow
-          time   = { check_max( 4.h   * task.attempt, 'time'    ) }
-                     ^^^^^^^^^
-  ```
-
-- Error: `conf/base.config:38:20`: `check_max` is not defined
-
-  ```nextflow
-          cpus   = { check_max( 6     * task.attempt, 'cpus'    ) }
-                     ^^^^^^^^^
-  ```
-
-- Error: `conf/base.config:39:20`: `check_max` is not defined
-
-  ```nextflow
-          memory = { check_max( 36.GB * task.attempt, 'memory'  ) }
-                     ^^^^^^^^^
-  ```
-
-- Error: `conf/base.config:40:20`: `check_max` is not defined
-
-  ```nextflow
-          time   = { check_max( 8.h   * task.attempt, 'time'    ) }
-                     ^^^^^^^^^
-  ```
-
-- Error: `conf/base.config:43:20`: `check_max` is not defined
-
-  ```nextflow
-          cpus   = { check_max( 12    * task.attempt, 'cpus'    ) }
-                     ^^^^^^^^^
-  ```
-
-- Error: `conf/base.config:44:20`: `check_max` is not defined
-
-  ```nextflow
-          memory = { check_max( 72.GB * task.attempt, 'memory'  ) }
-                     ^^^^^^^^^
-  ```
-
-- Error: `conf/base.config:45:20`: `check_max` is not defined
-
-  ```nextflow
-          time   = { check_max( 16.h  * task.attempt, 'time'    ) }
-                     ^^^^^^^^^
-  ```
-
-- Error: `conf/base.config:48:20`: `check_max` is not defined
-
-  ```nextflow
-          time   = { check_max( 20.h  * task.attempt, 'time'    ) }
-                     ^^^^^^^^^
-  ```
-
-- Error: `conf/base.config:52:20`: `check_max` is not defined
+- Error: `conf/base.config:53:20`: `check_max` is not defined
 
   ```nextflow
           time   = { check_max( max_time, 'time'    ) }
                      ^^^^^^^^^
   ```
 
-- Error: `conf/base.config:56:20`: `check_max` is not defined
-
-  ```nextflow
-          memory = { check_max( 200.GB * task.attempt, 'memory' ) }
-                     ^^^^^^^^^
-  ```
-
-- Error: `conf/base.config:59:20`: `check_max` is not defined
+- Error: `conf/base.config:60:20`: `check_max` is not defined
 
   ```nextflow
           cpus   = { check_max( params.max_cpus, 'cpus'    ) }
                      ^^^^^^^^^
   ```
 
-- Error: `conf/base.config:60:20`: `check_max` is not defined
+- Error: `conf/base.config:61:20`: `check_max` is not defined
 
   ```nextflow
           memory = { check_max( params.max_memory, 'memory'  ) }
                      ^^^^^^^^^
   ```
 
-- Error: `conf/base.config:61:20`: `check_max` is not defined
+- Error: `conf/base.config:62:20`: `check_max` is not defined
 
   ```nextflow
           time   = { check_max( max_time, 'time'    ) }
@@ -160,81 +41,32 @@
   ^
   ```
 
-- Error: `conf/modules.config:515:1`: If statements cannot be mixed with config statements
+- Error: `conf/modules.config:520:1`: If statements cannot be mixed with config statements
 
   ```nextflow
   if (!params.skip_multiqc) {
   ^
   ```
 
-- Error: `main.nf:22:16`: `WorkflowMain` is not defined
+- Error: `main.nf:18:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/circdna/workflows/circdna.nf'
 
   ```nextflow
-  params.fasta = WorkflowMain.getGenomeAttribute(params, 'fasta')
-                 ^^^^^^^^^^^^
+  include { CIRCDNA  } from './workflows/circdna'
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `main.nf:33:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
+- Error: `main.nf:53:5`: `CIRCDNA` is not defined
 
   ```nextflow
-  if (params.help) {
-  ^
-  ```
-
-- Error: `main.nf:34:16`: `NfcoreTemplate` is not defined
-
-  ```nextflow
-      def logo = NfcoreTemplate.logo(workflow, params.monochrome_logs)
-                 ^^^^^^^^^^^^^^
-  ```
-
-- Error: `main.nf:35:27`: `WorkflowMain` is not defined
-
-  ```nextflow
-      def citation = '\n' + WorkflowMain.citation(workflow) + '\n'
-                            ^^^^^^^^^^^^
-  ```
-
-- Error: `main.nf:37:54`: `NfcoreTemplate` is not defined
-
-  ```nextflow
-      log.info logo + paramsHelp(command) + citation + NfcoreTemplate.dashedLine(params.monochrome_logs)
-                                                       ^^^^^^^^^^^^^^
-  ```
-
-- Error: `main.nf:42:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
-
-  ```nextflow
-  if (params.validate_params) {
-  ^
-  ```
-
-- Error: `main.nf:46:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
-
-  ```nextflow
-  WorkflowMain.initialise(workflow, params, log, args)
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `main.nf:46:1`: `WorkflowMain` is not defined
-
-  ```nextflow
-  WorkflowMain.initialise(workflow, params, log, args)
-  ^^^^^^^^^^^^
-  ```
-
-- Error: `main.nf:54:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/circdna/workflows/circdna.nf'
-
-  ```nextflow
-  include { CIRCDNA } from './workflows/circdna'
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `main.nf:60:5`: `CIRCDNA` is not defined
-
-  ```nextflow
-      CIRCDNA ()
+      CIRCDNA (
       ^^^^^^^
+  ```
+
+- Error: `main.nf:57:22`: `CIRCDNA` is not defined
+
+  ```nextflow
+      multiqc_report = CIRCDNA.out.multiqc_report // channel: /path/to/multiqc_report.html
+                       ^^^^^^^
   ```
 
 - Error: `modules/local/circexplorer2/parse.nf:6:5`: Invalid process directive
@@ -244,13 +76,6 @@
       ^
   ```
 
-- Error: `modules/nf-core/bwa/index/main.nf:14:27`: `bwa` is not defined
-
-  ```nextflow
-      tuple val(meta), path(bwa) , emit: index
-                            ^^^
-  ```
-
 - Error: `modules/nf-core/samtools/view/main.nf:64:9`: `index` is already declared
 
   ```nextflow
@@ -258,14 +83,77 @@
           ^^^^^
   ```
 
-- Error: `nextflow.config:109:5`: Unexpected input: 'includeConfig'
+- Error: `nextflow.config:342:31`: `manifest` is not defined
 
   ```nextflow
-      includeConfig "${params.custom_config_base}/nfcore_custom.config"
-      ^
+  \033[0;35m  nf-core/circdna ${manifest.version}\033[0m
+                                ^^^^^^^^
   ```
 
-- Error: `workflows/circdna.nf:329:21`: Unexpected input: 'map'
+- Error: `nextflow.config:345:26`: `manifest` is not defined
+
+  ```nextflow
+          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+                           ^^^^^^^^
+  ```
+
+- Error: `nextflow.config:345:69`: `manifest` is not defined
+
+  ```nextflow
+          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+                                                                      ^^^^^^^^
+  ```
+
+- Error: `nextflow.config:345:186`: `manifest` is not defined
+
+  ```nextflow
+          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+                                                                                                                                                                                           ^^^^^^^^
+  ```
+
+- Error: `nextflow.config:354:22`: `validation` is not defined
+
+  ```nextflow
+          beforeText = validation.help.beforeText
+                       ^^^^^^^^^^
+  ```
+
+- Error: `nextflow.config:355:21`: `validation` is not defined
+
+  ```nextflow
+          afterText = validation.help.afterText
+                      ^^^^^^^^^^
+  ```
+
+- Error: `subworkflows/local/utils_nfcore_circdna_pipeline/main.nf:95:20`: `parseBoolean` is not defined
+
+  ```nextflow
+              return parseBoolean(value[0])
+                     ^^^^^^^^^^^^
+  ```
+
+- Error: `subworkflows/local/utils_nfcore_circdna_pipeline/main.nf:105:25`: `parseBoolean` is not defined
+
+  ```nextflow
+                      if (parseBoolean(bam)) {
+                          ^^^^^^^^^^^^
+  ```
+
+- Error: `subworkflows/local/utils_nfcore_circdna_pipeline/main.nf:108:41`: `parseBoolean` is not defined
+
+  ```nextflow
+                      def is_single_end = parseBoolean(single_end) != null ? parseBoolean(single_end) : !fastq_2
+                                          ^^^^^^^^^^^^
+  ```
+
+- Error: `subworkflows/local/utils_nfcore_circdna_pipeline/main.nf:108:76`: `parseBoolean` is not defined
+
+  ```nextflow
+                      def is_single_end = parseBoolean(single_end) != null ? parseBoolean(single_end) : !fastq_2
+                                                                             ^^^^^^^^^^^^
+  ```
+
+- Error: `workflows/circdna.nf:326:21`: Unexpected input: 'map'
 
   ```nextflow
                       map { meta, bam, bai -> [meta, bam, bai] },
@@ -337,41 +225,6 @@
           ^^^^
   ```
 
-- Warning: `modules/local/cnvkit/batch/main.nf:47:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/local/cnvkit/batch/main.nf:49:9`: Variable was declared but not used
-
-  ```nextflow
-      def fasta_args = cnn ? "" : "--fasta $fasta"
-          ^^^^^^^^^^
-  ```
-
-- Warning: `modules/local/cnvkit/batch/main.nf:50:9`: Variable was declared but not used
-
-  ```nextflow
-      def reference_args = cnn ? "--reference $cnn" : ""
-          ^^^^^^^^^^^^^^
-  ```
-
-- Warning: `modules/local/cnvkit/segment.nf:18:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/local/cnvkit/segment.nf:35:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
 - Warning: `modules/local/getcircularreads.nf:15:9`: Variable was declared but not used
 
   ```nextflow
@@ -393,27 +246,6 @@
           ^^^^
   ```
 
-- Warning: `modules/nf-core/cat/fastq/main.nf:21:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/cat/fastq/main.nf:23:59`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def readList = reads instanceof List ? reads.collect{ it.toString() } : [reads.toString()]
-                                                            ^^
-  ```
-
-- Warning: `modules/nf-core/cat/fastq/main.nf:54:59`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def readList = reads instanceof List ? reads.collect{ it.toString() } : [reads.toString()]
-                                                            ^^
-  ```
-
 - Warning: `modules/nf-core/custom/dumpsoftwareversions/main.nf:22:9`: Variable was declared but not used
 
   ```nextflow
@@ -421,39 +253,18 @@
           ^^^^
   ```
 
-- Warning: `modules/nf-core/fastqc/main.nf:27:48`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `modules/nf-core/minimap2/align/main.nf:62:9`: Variable was declared but not used
 
   ```nextflow
-      def renamed_files = old_new_pairs.collect{ old_name, new_name -> new_name }.join(' ')
-                                                 ^^^^^^^^
+      def target = reference ?: (bam_input ? error("BAM input requires reference") : reads)
+          ^^^^^^
   ```
 
-- Warning: `modules/nf-core/samtools/flagstat/main.nf:21:9`: Variable was declared but not used
+- Warning: `nextflow.config:345:129`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/samtools/idxstats/main.nf:21:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/samtools/stats/main.nf:22:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/trimgalore/main.nf:41:31`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          args_list.removeAll { it.toLowerCase().contains('_r2 ') }
-                                ^^
+          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+                                                                                                                                  ^^
   ```
 
 - Warning: `subworkflows/local/input_check.nf:16:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -470,16 +281,58 @@
                                          ^^
   ```
 
-- Warning: `subworkflows/nf-core/bam_markduplicates_picard/main.nf:18:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/utils_nfcore_circdna_pipeline/main.nf:31:5`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      monochrome_logs   // boolean: Do not use coloured log outputs
+      ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_circdna_pipeline/main.nf:34:5`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      input             //  string: Path to input samplesheet
+      ^^^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_circdna_pipeline/main.nf:38:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_versions = Channel.empty()
                     ^^^^^^^
   ```
 
-- Warning: `subworkflows/nf-core/bam_stats_samtools/main.nf:15:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/utils_nfcore_circdna_pipeline/main.nf:81:9`: Variable was declared but not used
 
   ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
+      def parseBoolean = { value ->
+          ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_circdna_pipeline/main.nf:101:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+          Channel
+          ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_circdna_pipeline/main.nf:125:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+          Channel
+          ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_circdna_pipeline/main.nf:136:20`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              .map { id, metas, bams ->
+                     ^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
+
+  ```nextflow
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
   ```

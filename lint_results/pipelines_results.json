@@ -110,9 +110,9 @@
   "circdna": {
     "full_name": "nf-core/circdna",
     "html_url": "https://github.com/nf-core/circdna",
-    "commit": "20e8d761f6f2015e7b2f7ddf98c4a3495d1eab51",
-    "errors": 38,
-    "warnings": 30,
+    "commit": "50f4f9967837dec3d47914b2db297acef0104f82",
+    "errors": 22,
+    "warnings": 25,
     "parse_error": false,
     "prints_help": null
   },
@@ -218,7 +218,7 @@
   "demultiplex": {
     "full_name": "nf-core/demultiplex",
     "html_url": "https://github.com/nf-core/demultiplex",
-    "commit": "f50583c796a7dd9c707edd8bd209fc17365acf85",
+    "commit": "74390ce853cdf226642853fe63c3451659bd3c82",
     "errors": 0,
     "warnings": 3,
     "parse_error": false,
@@ -353,7 +353,7 @@
   "funcprofiler": {
     "full_name": "nf-core/funcprofiler",
     "html_url": "https://github.com/nf-core/funcprofiler",
-    "commit": "c481794012ffdfecb942a23359274cfff61e0953",
+    "commit": "8aa5eb9cf3562daee057dea7e6f1cab1c08770f4",
     "errors": 48,
     "warnings": 53,
     "parse_error": false,
@@ -929,7 +929,7 @@
   "riboseq": {
     "full_name": "nf-core/riboseq",
     "html_url": "https://github.com/nf-core/riboseq",
-    "commit": "12cf667e2b928506ae93ec47fb8dadaf04f83fd9",
+    "commit": "dcb9cde2c1750d04d175de3bf4d2a236ff408297",
     "errors": 26,
     "warnings": 56,
     "parse_error": false,
@@ -956,9 +956,9 @@
   "rnaseq": {
     "full_name": "nf-core/rnaseq",
     "html_url": "https://github.com/nf-core/rnaseq",
-    "commit": "ce276caf1f6e94381736a4949caac708da8c1252",
+    "commit": "09618edffd24a1023ff5d57643afcec5a0419a6f",
     "errors": 0,
-    "warnings": 12,
+    "warnings": 17,
     "parse_error": false,
     "prints_help": true
   },
@@ -1028,9 +1028,9 @@
   "seqinspector": {
     "full_name": "nf-core/seqinspector",
     "html_url": "https://github.com/nf-core/seqinspector",
-    "commit": "89830601bd629b163fc006cea8a091e3c6064aae",
+    "commit": "9f28624523fc0f91dd69b77c7b65a5a1a001532a",
     "errors": 0,
-    "warnings": 0,
+    "warnings": 1,
     "parse_error": false,
     "prints_help": true
   },
@@ -1109,7 +1109,7 @@
   "taxprofiler": {
     "full_name": "nf-core/taxprofiler",
     "html_url": "https://github.com/nf-core/taxprofiler",
-    "commit": "3b6e73c22538fe437180e2fd75af1409e6a2c00c",
+    "commit": "b7b52fd6133434e029aba65968b74d8f349fbfcc",
     "errors": 0,
     "warnings": 94,
     "parse_error": false,

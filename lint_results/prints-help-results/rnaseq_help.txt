@@ -3,7 +3,8 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.03.2-edge
 
-Launching `./main.nf` [stoic_aryabhata] revision: 2981791ab0
+Downloading plugin nf-schema@2.5.1
+Launching `./main.nf` [hungry_roentgen] revision: f7901f1d6d
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -76,6 +77,7 @@ BBSplit. You have to also explicitly set `--skip_bbsplit false` if you want to u
   --remove_ribo_rna             [boolean] Enable the removal of reads derived from ribosomal RNA. 
   --ribo_removal_tool           [string]  Tool to use for rRNA removal.  (accepted: sortmerna, ribodetector, bowtie2) [default: sortmerna] 
  
+  --use_gpu_ribodetector        [boolean] Enable GPU acceleration for ribodetector. 
   --ribo_database_manifest      [string]  Text file containing paths to fasta files (one per line) that will be used to create the database 
 for SortMeRNA. [default: ${projectDir}/workflows/rnaseq/assets/rrna-db-defaults.txt]  
 
