@@ -29,7 +29,7 @@
   "ampliseq": {
     "full_name": "nf-core/ampliseq",
     "html_url": "https://github.com/nf-core/ampliseq",
-    "commit": "f629e393071974c7bc1f40dacd9a2f7b1350a450",
+    "commit": "ec08e647c764bd048e499dae4814a4ac46b49f6d",
     "errors": 0,
     "warnings": 1,
     "parse_error": false,
@@ -155,7 +155,7 @@
   "createtaxdb": {
     "full_name": "nf-core/createtaxdb",
     "html_url": "https://github.com/nf-core/createtaxdb",
-    "commit": "c1ca215d3237d2879249ff1e5037b0befc918928",
+    "commit": "bc3291025131198da806ea4a6d96c68016bc3b4a",
     "errors": 0,
     "warnings": 34,
     "parse_error": false,
@@ -218,9 +218,9 @@
   "demultiplex": {
     "full_name": "nf-core/demultiplex",
     "html_url": "https://github.com/nf-core/demultiplex",
-    "commit": "74390ce853cdf226642853fe63c3451659bd3c82",
+    "commit": "54ce5cb4253c8ab3b494a4fa07da9e11a1c1f9f8",
     "errors": 0,
-    "warnings": 3,
+    "warnings": 1,
     "parse_error": false,
     "prints_help": true
   },
@@ -533,7 +533,7 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "1a5978a0a8751bc3c63f6904f0070ef3e9d55081",
+    "commit": "0aacd409e1895b0dd00351592dff3aa91f587ba2",
     "errors": 0,
     "warnings": 22,
     "parse_error": false,
@@ -587,9 +587,9 @@
   "metapep": {
     "full_name": "nf-core/metapep",
     "html_url": "https://github.com/nf-core/metapep",
-    "commit": "54d64f4a2f7dfb4d15d99e8dda7e269f626473f4",
+    "commit": "034ac0e8afd267c78cabef85b96dc6c8d3952098",
     "errors": 20,
-    "warnings": 51,
+    "warnings": 52,
     "parse_error": false,
     "prints_help": null
   },
@@ -1028,7 +1028,7 @@
   "seqinspector": {
     "full_name": "nf-core/seqinspector",
     "html_url": "https://github.com/nf-core/seqinspector",
-    "commit": "9f28624523fc0f91dd69b77c7b65a5a1a001532a",
+    "commit": "452fbc25ff1e85e124bb0c8cab3cd36bef7b055f",
     "errors": 0,
     "warnings": 1,
     "parse_error": false,
@@ -1109,7 +1109,7 @@
   "taxprofiler": {
     "full_name": "nf-core/taxprofiler",
     "html_url": "https://github.com/nf-core/taxprofiler",
-    "commit": "b7b52fd6133434e029aba65968b74d8f349fbfcc",
+    "commit": "c1ff448a0e87da577784736c503c2d202b45dca4",
     "errors": 0,
     "warnings": 94,
     "parse_error": false,
@@ -1154,9 +1154,9 @@
   "variantbenchmarking": {
     "full_name": "nf-core/variantbenchmarking",
     "html_url": "https://github.com/nf-core/variantbenchmarking",
-    "commit": "dc414d31f6a7fed28cbc581de83ae0a209a45be9",
+    "commit": "899b77787d5adb21d4bc8159ea84301d1f61a5cb",
     "errors": 10,
-    "warnings": 29,
+    "warnings": 40,
     "parse_error": false,
     "prints_help": null
   },

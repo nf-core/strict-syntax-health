@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.03.2-edge
 
 Downloading plugin nf-schema@2.7.0
-Launching `./main.nf` [deadly_ampere] revision: 3571cdcc10
+Launching `./main.nf` [lethal_church] revision: 1921f8e539
 
 
 ------------------------------------------------------
@@ -13,7 +13,7 @@ Launching `./main.nf` [deadly_ampere] revision: 3571cdcc10
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/demultiplex 1.7.1dev
+  nf-core/demultiplex 1.7.1
 ------------------------------------------------------
 Typical pipeline command:
 

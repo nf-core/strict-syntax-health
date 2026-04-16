@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-15T00:30:48.708888353Z
+- Generated: 2026-04-16T00:31:37.012202817Z
 - Nextflow version: 26.03.2-edge
-- Summary: 3 warnings
+- Summary: 1 warning
 
 ## :warning: Warnings
 
@@ -11,18 +11,4 @@
   ```nextflow
       valid_config = checkConfigProvided()
       ^^^^^^^^^^^^
-  ```
-
-- Warning: `tests/functions/csvToTSV/main.nf:8:5`: Variable was declared but not used
-
-  ```nextflow
-      captured = csvToTSV(ch_samplesheet)
-      ^^^^^^^^
-  ```
-
-- Warning: `tests/functions/generateFastqMeta/main.nf:11:5`: Variable was declared but not used
-
-  ```nextflow
-      captured = generateFastqMeta(ch_reads, sample_name_regex, platform, use_sanitized_id)
-      ^^^^^^^^
   ```
