@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "72348f04b265fb310f87db1c8d12e2151cbabe14",
+  "_repo_commit": "91d94af4aa6e48954670b1485fc729e392a51b43",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -2544,6 +2544,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "diamond_deepclust": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/diamond/deepclust",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "diamond_makedb": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/diamond/makedb",
     "errors": 0,
@@ -2840,6 +2846,12 @@
   },
   "expansionhunterdenovo_profile": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/expansionhunterdenovo/profile",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "fairy_sketch": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fairy/sketch",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -6908,6 +6920,12 @@
   },
   "pharokka_pharokka": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pharokka/pharokka",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "phenoimager2mc": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/phenoimager2mc",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

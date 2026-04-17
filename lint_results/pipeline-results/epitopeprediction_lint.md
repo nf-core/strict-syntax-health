@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-02T00:23:49.837592876Z
-- Nextflow version: 26.03.1-edge
-- Summary: 5 warnings
+- Generated: 2026-04-17T00:30:47.582701392Z
+- Nextflow version: 26.03.2-edge
+- Summary: 7 warnings
 
 ## :warning: Warnings
 
@@ -39,4 +39,18 @@
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
+
+  ```nextflow
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
+  ```
+
+- Warning: `workflows/epitopeprediction.nf:278:5`: Variable was declared but not used
+
+  ```nextflow
+      multiqc_report = MULTIQC.out.report.toList() // channel: /path/to/multiqc_report.html
+      ^^^^^^^^^^^^^^
   ```

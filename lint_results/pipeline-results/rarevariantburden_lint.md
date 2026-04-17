@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T10:27:07.757239844Z
-- Nextflow version: 25.12.0-edge
-- Summary: 33 errors, 22 warnings
+- Generated: 2026-04-17T00:31:26.949720134Z
+- Nextflow version: 26.03.2-edge
+- Summary: 14 errors, 23 warnings
 
 ## :x: Errors
 
@@ -60,139 +60,6 @@
   ```nextflow
   workflow.onComplete {
   ^
-  ```
-
-- Error: `modules/local/cocorv/main.nf:6:5`: Invalid process directive
-
-  ```nextflow
-      ext.singularity_pull_docker_container = true
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `modules/local/cocorv/main.nf:33:5`: Invalid process directive
-
-  ```nextflow
-      ext.singularity_pull_docker_container = true
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `modules/local/cocorv/main.nf:56:5`: Invalid process directive
-
-  ```nextflow
-      ext.singularity_pull_docker_container = true
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `modules/local/cocorv/main.nf:81:5`: Invalid process directive
-
-  ```nextflow
-      ext.singularity_pull_docker_container = true
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `modules/local/cocorv/main.nf:103:5`: Invalid process directive
-
-  ```nextflow
-      ext.singularity_pull_docker_container = true
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `modules/local/cocorv/main.nf:136:5`: Invalid process directive
-
-  ```nextflow
-      ext.singularity_pull_docker_container = true
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `modules/local/cocorv/main.nf:206:5`: Invalid process directive
-
-  ```nextflow
-      ext.singularity_pull_docker_container = true
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `modules/local/cocorv/main.nf:228:5`: Invalid process directive
-
-  ```nextflow
-      ext.singularity_pull_docker_container = true
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `modules/local/cocorv/main.nf:253:5`: Invalid process directive
-
-  ```nextflow
-      ext.singularity_pull_docker_container = true
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `modules/local/cocorv/main.nf:278:5`: Invalid process directive
-
-  ```nextflow
-      ext.singularity_pull_docker_container = true
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `modules/local/cocorv/main.nf:301:5`: Invalid process directive
-
-  ```nextflow
-      ext.singularity_pull_docker_container = true
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `modules/local/cocorv/main.nf:322:5`: Invalid process directive
-
-  ```nextflow
-      ext.singularity_pull_docker_container = true
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `modules/local/cocorv/main.nf:352:5`: Invalid process directive
-
-  ```nextflow
-      ext.singularity_pull_docker_container = true
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `modules/local/cocorv/main.nf:374:5`: Invalid process directive
-
-  ```nextflow
-      ext.singularity_pull_docker_container = true
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `modules/local/cocorv/main.nf:480:5`: Invalid process directive
-
-  ```nextflow
-      ext.singularity_pull_docker_container = true
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `modules/local/cocorv/main.nf:522:5`: Invalid process directive
-
-  ```nextflow
-      ext.singularity_pull_docker_container = true
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `modules/local/cocorv/main.nf:552:5`: Invalid process directive
-
-  ```nextflow
-      ext.singularity_pull_docker_container = true
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `modules/local/cocorv/main.nf:585:5`: Invalid process directive
-
-  ```nextflow
-      ext.singularity_pull_docker_container = true
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `modules/local/cocorv/main.nf:612:5`: Invalid process directive
-
-  ```nextflow
-      ext.singularity_pull_docker_container = true
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Error: `nextflow.config:337:41`: `manifest` is not defined
@@ -279,6 +146,13 @@
   ```nextflow
       monochrome_logs   // boolean: Do not use coloured log outputs
       ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
+
+  ```nextflow
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
