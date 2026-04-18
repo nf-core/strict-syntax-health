@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.03.2-edge
 
-Launching `./main.nf` [loving_keller] revision: e0562ae9bb
+Launching `./main.nf` [hopeful_carlsson] revision: e0562ae9bb
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'

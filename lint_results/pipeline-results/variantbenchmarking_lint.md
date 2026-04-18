@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-16T00:33:24.672898887Z
+- Generated: 2026-04-18T00:29:24.865311865Z
 - Nextflow version: 26.03.2-edge
-- Summary: 10 errors, 40 warnings
+- Summary: 10 errors, 36 warnings
 
 ## :x: Errors
 
@@ -55,21 +55,21 @@
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/variantbenchmarking.nf:246:7`: `CONCORDANCE_ANALYSIS` is not defined
+- Error: `workflows/variantbenchmarking.nf:245:7`: `CONCORDANCE_ANALYSIS` is not defined
 
   ```nextflow
         CONCORDANCE_ANALYSIS(
         ^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/variantbenchmarking.nf:253:43`: `CONCORDANCE_ANALYSIS` is not defined
+- Error: `workflows/variantbenchmarking.nf:252:43`: `CONCORDANCE_ANALYSIS` is not defined
 
   ```nextflow
           ch_reports       = ch_reports.mix(CONCORDANCE_ANALYSIS.out.summary_reports)
                                             ^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/variantbenchmarking.nf:254:41`: `CONCORDANCE_ANALYSIS` is not defined
+- Error: `workflows/variantbenchmarking.nf:253:41`: `CONCORDANCE_ANALYSIS` is not defined
 
   ```nextflow
           evals_ch         = evals_ch.mix(CONCORDANCE_ANALYSIS.out.tagged_variants)
@@ -78,13 +78,6 @@
 
 ## :warning: Warnings
 
-- Warning: `modules/local/custom/merge_reports/main.nf:22:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
 - Warning: `modules/local/plots/metrics/main.nf:22:9`: Variable was declared but not used
 
   ```nextflow
@@ -92,32 +85,11 @@
           ^^^^^^
   ```
 
-- Warning: `modules/local/sompy_features/merge/main.nf:21:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
 - Warning: `modules/nf-core/happy/happy/main.nf:64:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
-  ```
-
-- Warning: `modules/nf-core/variantextractor/main.nf:22:5`: Variable was declared but not used
-
-  ```nextflow
-      pass_only    = task.ext.args?.contains('--pass-only')       ? 'True'  : 'False'
-      ^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/variantextractor/main.nf:23:5`: Variable was declared but not used
-
-  ```nextflow
-      ensure_pairs = task.ext.args?.contains('--no-ensure-pairs') ? 'False' : 'True'
-      ^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/ensemble_test_vcfs/main.nf:33:86`: Parameter was not used -- prefix with `_` to suppress warning
@@ -309,49 +281,49 @@
       ^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/variantbenchmarking.nf:227:13`: Variable was declared but not used
+- Warning: `workflows/variantbenchmarking.nf:226:13`: Variable was declared but not used
 
   ```nextflow
           def meta = it[0]
               ^^^^
   ```
 
-- Warning: `workflows/variantbenchmarking.nf:227:20`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/variantbenchmarking.nf:226:20`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           def meta = it[0]
                      ^^
   ```
 
-- Warning: `workflows/variantbenchmarking.nf:228:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/variantbenchmarking.nf:227:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           def regions_file = it[2]
                              ^^
   ```
 
-- Warning: `workflows/variantbenchmarking.nf:277:76`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/variantbenchmarking.nf:275:76`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(SV_BENCHMARK.out.logs.map{ meta, log -> log })
                                                                              ^^^^
   ```
 
-- Warning: `workflows/variantbenchmarking.nf:307:77`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/variantbenchmarking.nf:305:77`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(CNV_BENCHMARK.out.logs.map{ meta, log -> log })
                                                                               ^^^^
   ```
 
-- Warning: `workflows/variantbenchmarking.nf:409:118`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/variantbenchmarking.nf:407:118`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_multiqc_files                      = ch_multiqc_files.mix(REPORT_BENCHMARK_STATISTICS.out.merged_reports.map{ meta, report -> report }.flatten())
                                                                                                                        ^^^^
   ```
 
-- Warning: `workflows/variantbenchmarking.nf:410:82`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/variantbenchmarking.nf:408:82`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_multiqc_files                      = ch_multiqc_files.mix(ch_reports.map{ meta, report -> report }.flatten())

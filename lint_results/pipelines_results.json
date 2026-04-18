@@ -29,7 +29,7 @@
   "ampliseq": {
     "full_name": "nf-core/ampliseq",
     "html_url": "https://github.com/nf-core/ampliseq",
-    "commit": "ec08e647c764bd048e499dae4814a4ac46b49f6d",
+    "commit": "7bf6429cdf9f80b21ed7a6c76922c9cdbb7432b1",
     "errors": 0,
     "warnings": 1,
     "parse_error": false,
@@ -146,7 +146,7 @@
   "createpanelrefs": {
     "full_name": "nf-core/createpanelrefs",
     "html_url": "https://github.com/nf-core/createpanelrefs",
-    "commit": "e41f124f240800dbebc7a53a66ffe39a3ed91819",
+    "commit": "b9687fddb36f9ae675cb42c066c30126d37a5e66",
     "errors": 0,
     "warnings": 1,
     "parse_error": false,
@@ -308,7 +308,7 @@
   "epitopeprediction": {
     "full_name": "nf-core/epitopeprediction",
     "html_url": "https://github.com/nf-core/epitopeprediction",
-    "commit": "27a4c56247274d9b97b1768f3be6e65600c65d97",
+    "commit": "e3e0200a437cae9c42b09e0cd42e0c8e202b431d",
     "errors": 0,
     "warnings": 7,
     "parse_error": false,
@@ -542,7 +542,7 @@
   "magmap": {
     "full_name": "nf-core/magmap",
     "html_url": "https://github.com/nf-core/magmap",
-    "commit": "efe47a98312ad27343200633c0cdda2b139726b4",
+    "commit": "395332490368dba89bfb3be5bac7b6d72d663b78",
     "errors": 0,
     "warnings": 1,
     "parse_error": false,
@@ -839,9 +839,9 @@
   "proteinfold": {
     "full_name": "nf-core/proteinfold",
     "html_url": "https://github.com/nf-core/proteinfold",
-    "commit": "447519b5018bb1e65c282e738cead336ea95f2e5",
+    "commit": "24272b4a22d553b2ba275b08cd7e31e95cfee3ff",
     "errors": 9,
-    "warnings": 2,
+    "warnings": 3,
     "parse_error": false,
     "prints_help": null
   },
@@ -956,9 +956,9 @@
   "rnaseq": {
     "full_name": "nf-core/rnaseq",
     "html_url": "https://github.com/nf-core/rnaseq",
-    "commit": "09618edffd24a1023ff5d57643afcec5a0419a6f",
+    "commit": "64a2e4497b760414609764a58eb0b2ca9dc670e0",
     "errors": 0,
-    "warnings": 17,
+    "warnings": 19,
     "parse_error": false,
     "prints_help": true
   },
@@ -1073,9 +1073,9 @@
   "spatialvi": {
     "full_name": "nf-core/spatialvi",
     "html_url": "https://github.com/nf-core/spatialvi",
-    "commit": "d88c2c673bc7093a2b3e3eacf4fd2798a7b10802",
+    "commit": "81b8ab05c018d84120b064eb0f29765bdb5a0a75",
     "errors": 0,
-    "warnings": 0,
+    "warnings": 3,
     "parse_error": false,
     "prints_help": true
   },
@@ -1100,9 +1100,9 @@
   "stableexpression": {
     "full_name": "nf-core/stableexpression",
     "html_url": "https://github.com/nf-core/stableexpression",
-    "commit": "3fda1119cef877659264f96bd63c627d1cb388b7",
+    "commit": "3c5669a174e0490923b094c1a72cd0523f71acf2",
     "errors": 0,
-    "warnings": 35,
+    "warnings": 32,
     "parse_error": false,
     "prints_help": false
   },
@@ -1154,9 +1154,9 @@
   "variantbenchmarking": {
     "full_name": "nf-core/variantbenchmarking",
     "html_url": "https://github.com/nf-core/variantbenchmarking",
-    "commit": "899b77787d5adb21d4bc8159ea84301d1f61a5cb",
+    "commit": "6f88c8bb3c0eb65baa4a6834cefac3cc4cb6477e",
     "errors": 10,
-    "warnings": 40,
+    "warnings": 36,
     "parse_error": false,
     "prints_help": null
   },

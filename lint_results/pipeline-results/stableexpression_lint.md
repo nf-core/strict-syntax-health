@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-09T00:23:20.199266196Z
+- Generated: 2026-04-18T00:29:05.856940928Z
 - Nextflow version: 26.03.2-edge
-- Summary: 35 warnings
+- Summary: 32 warnings
 
 ## :warning: Warnings
 
@@ -223,28 +223,7 @@
                                                                                                    ^^^^^^^
   ```
 
-- Warning: `workflows/stableexpression.nf:44:5`: Variable was declared but not used
-
-  ```nextflow
-      ch_most_stable_genes_summary           = channel.empty()
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/stableexpression.nf:45:5`: Variable was declared but not used
-
-  ```nextflow
-      ch_all_genes_statistics                = channel.empty()
-      ^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/stableexpression.nf:46:5`: Variable was declared but not used
-
-  ```nextflow
-      ch_most_stable_genes_transposed_counts = channel.empty()
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/stableexpression.nf:187:40`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/stableexpression.nf:183:40`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               ch_all_imputed_counts.map{ meta, file -> file },
