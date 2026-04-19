@@ -542,7 +542,7 @@
   "magmap": {
     "full_name": "nf-core/magmap",
     "html_url": "https://github.com/nf-core/magmap",
-    "commit": "395332490368dba89bfb3be5bac7b6d72d663b78",
+    "commit": "36f031ee69f9a7e94b858592bdab7cc68387008e",
     "errors": 0,
     "warnings": 1,
     "parse_error": false,
