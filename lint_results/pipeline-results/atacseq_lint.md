@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-03-25T00:23:05.260722582Z
-- Nextflow version: 26.03.0-edge
-- Summary: 177 warnings
+- Generated: 2026-04-21T00:29:44.381327197Z
+- Nextflow version: 26.03.3-edge
+- Summary: 165 warnings
 
 ## :warning: Warnings
 
@@ -363,6 +363,13 @@
                                       ^^
   ```
 
+- Warning: `subworkflows/local/input_check.nf:19:16`: Variable was declared but not used
+
+  ```nextflow
+          .set { reads }
+                 ^^^^^
+  ```
+
 - Warning: `subworkflows/local/prepare_genome.nf:53:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -377,45 +384,24 @@
                  ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome.nf:60:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          ch_fasta    = GUNZIP_FASTA ( [ [:], fasta ] ).gunzip.map{ it[1] }
-                                                                    ^^
-  ```
-
 - Warning: `subworkflows/local/prepare_genome.nf:63:20`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-          ch_fasta = Channel.value(file(fasta))
+          ch_fasta = Channel.value(file(fasta, checkIfExists: true))
                      ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/prepare_genome.nf:71:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-              ch_gtf      = GUNZIP_GTF ( [ [:], gtf ] ).gunzip.map{ it[1] }
-                                                                    ^^
   ```
 
 - Warning: `subworkflows/local/prepare_genome.nf:74:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-              ch_gtf = Channel.value(file(gtf))
+              ch_gtf = Channel.value(file(gtf, checkIfExists: true))
                        ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/prepare_genome.nf:78:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-              ch_gff      = GUNZIP_GFF ( [ [:], gff ] ).gunzip.map{ it[1] }
-                                                                    ^^
   ```
 
 - Warning: `subworkflows/local/prepare_genome.nf:81:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-              ch_gff = Channel.value(file(gff))
+              ch_gff = Channel.value(file(gff, checkIfExists: true))
                        ^^^^^^^
   ```
 
@@ -426,67 +412,25 @@
                      ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome.nf:93:80`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-              ch_blacklist = GUNZIP_BLACKLIST ( [ [:], blacklist ] ).gunzip.map{ it[1] }
-                                                                                 ^^
-  ```
-
 - Warning: `subworkflows/local/prepare_genome.nf:96:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-              ch_blacklist = Channel.value(file(blacklist))
+              ch_blacklist = Channel.value(file(blacklist, checkIfExists: true))
                              ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/prepare_genome.nf:118:84`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-              ch_gene_bed = GUNZIP_GENE_BED ( [ [:], params.gene_bed ] ).gunzip.map{ it[1] }
-                                                                                     ^^
   ```
 
 - Warning: `subworkflows/local/prepare_genome.nf:121:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-              ch_gene_bed = Channel.value(file(gene_bed))
+              ch_gene_bed = Channel.value(file(gene_bed, checkIfExists: true))
                             ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/prepare_genome.nf:130:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-              ch_tss_bed = GUNZIP_TSS_BED ( [ [:], tss_bed ] ).gunzip.map{ it[1] }
-                                                                           ^^
   ```
 
 - Warning: `subworkflows/local/prepare_genome.nf:133:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-              ch_tss_bed = Channel.value(file(tss_bed))
+              ch_tss_bed = Channel.value(file(tss_bed, checkIfExists: true))
                            ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/prepare_genome.nf:140:50`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      CUSTOM_GETCHROMSIZES ( ch_fasta.map { [ [:], it ] } )
-                                                   ^^
-  ```
-
-- Warning: `subworkflows/local/prepare_genome.nf:141:59`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      ch_chrom_sizes = CUSTOM_GETCHROMSIZES.out.sizes.map { it[1] }
-                                                            ^^
-  ```
-
-- Warning: `subworkflows/local/prepare_genome.nf:142:56`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      ch_fai         = CUSTOM_GETCHROMSIZES.out.fai.map{ it[1] }
-                                                         ^^
   ```
 
 - Warning: `subworkflows/local/prepare_genome.nf:148:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -510,25 +454,11 @@
                      ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome.nf:182:62`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-              ch_bwa_index = BWA_INDEX ( ch_fasta.map { [ [:], it ] } ).index
-                                                               ^^
-  ```
-
 - Warning: `subworkflows/local/prepare_genome.nf:189:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_bowtie2_index = Channel.empty()
                          ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/prepare_genome.nf:199:70`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-              ch_bowtie2_index = BOWTIE2_BUILD ( ch_fasta.map { [ [:], it ] } ).index
-                                                                       ^^
   ```
 
 - Warning: `subworkflows/local/prepare_genome.nf:207:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -538,13 +468,6 @@
                          ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome.nf:217:70`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-              ch_chromap_index = CHROMAP_INDEX ( ch_fasta.map { [ [:], it ] } ).index
-                                                                       ^^
-  ```
-
 - Warning: `subworkflows/local/prepare_genome.nf:225:21`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -552,25 +475,11 @@
                       ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome.nf:229:85`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  ch_star_index = UNTAR_STAR_INDEX ( [ [:], star_index ] ).untar.map{ it[1] }
-                                                                                      ^^
-  ```
-
 - Warning: `subworkflows/local/prepare_genome.nf:232:33`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-                  ch_star_index = Channel.value(file(star_index))
+                  ch_star_index = Channel.value(file(star_index, checkIfExists: true))
                                   ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/prepare_genome.nf:249:59`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          ch_macs_gsize = KHMER_UNIQUEKMERS.out.kmers.map { it.text.trim() }
-                                                            ^^
   ```
 
 - Warning: `subworkflows/local/utils_nfcore_atacseq_pipeline/main.nf:32:5`: Parameter was not used -- prefix with `_` to suppress warning
@@ -634,6 +543,13 @@
   ```nextflow
       ch_versions = Channel.empty()
                     ^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
+
+  ```nextflow
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/atacseq.nf:155:29`: Parameter was not used -- prefix with `_` to suppress warning

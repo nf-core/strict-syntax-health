@@ -38,18 +38,18 @@
   "atacseq": {
     "full_name": "nf-core/atacseq",
     "html_url": "https://github.com/nf-core/atacseq",
-    "commit": "0a5dea186433e2992b0b4141325ab7ee9fd9d59b",
+    "commit": "800e63409e2e941a1a55cac4dea5a48336a67e2d",
     "errors": 0,
-    "warnings": 177,
+    "warnings": 165,
     "parse_error": false,
     "prints_help": false
   },
   "bacass": {
     "full_name": "nf-core/bacass",
     "html_url": "https://github.com/nf-core/bacass",
-    "commit": "1f5e1f60e592b4fd1d8fc1dac1141d1a08a08336",
+    "commit": "3d9539e75ca01e5af546b16a25ab045cad0c6f0b",
     "errors": 0,
-    "warnings": 18,
+    "warnings": 17,
     "parse_error": false,
     "prints_help": true
   },
@@ -110,9 +110,9 @@
   "circdna": {
     "full_name": "nf-core/circdna",
     "html_url": "https://github.com/nf-core/circdna",
-    "commit": "50f4f9967837dec3d47914b2db297acef0104f82",
-    "errors": 22,
-    "warnings": 25,
+    "commit": "c877affee1c208fc7279aa4c2053035729bfdf2f",
+    "errors": 21,
+    "warnings": 26,
     "parse_error": false,
     "prints_help": null
   },
@@ -155,9 +155,9 @@
   "createtaxdb": {
     "full_name": "nf-core/createtaxdb",
     "html_url": "https://github.com/nf-core/createtaxdb",
-    "commit": "bc3291025131198da806ea4a6d96c68016bc3b4a",
+    "commit": "7ed112ea248670e7d94cef686cbc91d2eedc9cb2",
     "errors": 0,
-    "warnings": 34,
+    "warnings": 11,
     "parse_error": false,
     "prints_help": true
   },
@@ -254,7 +254,7 @@
   "differentialabundance": {
     "full_name": "nf-core/differentialabundance",
     "html_url": "https://github.com/nf-core/differentialabundance",
-    "commit": "35cc0c8b3e06789640feeb7c2e981e56e37d7eef",
+    "commit": "6a701b050e4884d81a85ef5e3e0c9f77ef316986",
     "errors": 75,
     "warnings": 9,
     "parse_error": false,
@@ -542,7 +542,7 @@
   "magmap": {
     "full_name": "nf-core/magmap",
     "html_url": "https://github.com/nf-core/magmap",
-    "commit": "36f031ee69f9a7e94b858592bdab7cc68387008e",
+    "commit": "b502022f74775282d1caa6a65a36abee17e483dc",
     "errors": 0,
     "warnings": 1,
     "parse_error": false,
@@ -875,11 +875,11 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "37e1f7c018e0916387b9b21e1e29d8f3d151fd7c",
-    "errors": 1,
-    "warnings": 5,
+    "commit": "84da5c05b35b7dc58538d64ccbe8194ab991b033",
+    "errors": 0,
+    "warnings": 1,
     "parse_error": false,
-    "prints_help": null
+    "prints_help": true
   },
   "rarevariantburden": {
     "full_name": "nf-core/rarevariantburden",
@@ -956,9 +956,9 @@
   "rnaseq": {
     "full_name": "nf-core/rnaseq",
     "html_url": "https://github.com/nf-core/rnaseq",
-    "commit": "64a2e4497b760414609764a58eb0b2ca9dc670e0",
+    "commit": "dbc39cf4c54d265f22f813504507d5c536ffe939",
     "errors": 0,
-    "warnings": 19,
+    "warnings": 25,
     "parse_error": false,
     "prints_help": true
   },
@@ -992,7 +992,7 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "0bb73e082be3d87a45c4ee128eeec99ffe27c3a8",
+    "commit": "8a88c8013fe250e08b883e58da0a2748debd62ad",
     "errors": 0,
     "warnings": 646,
     "parse_error": false,
@@ -1109,7 +1109,7 @@
   "taxprofiler": {
     "full_name": "nf-core/taxprofiler",
     "html_url": "https://github.com/nf-core/taxprofiler",
-    "commit": "c1ff448a0e87da577784736c503c2d202b45dca4",
+    "commit": "e2e313e7f56ba0306de32cd24aaca5a5795978da",
     "errors": 0,
     "warnings": 94,
     "parse_error": false,

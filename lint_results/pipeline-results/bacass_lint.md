@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-17T00:29:43.026916035Z
-- Nextflow version: 26.03.2-edge
-- Summary: 18 warnings
+- Generated: 2026-04-21T00:30:09.579083482Z
+- Nextflow version: 26.03.3-edge
+- Summary: 17 warnings
 
 ## :warning: Warnings
 
@@ -25,13 +25,6 @@
   ```nextflow
       def reference = fasta           ? "-r $fasta" : ''
           ^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/toulligqc/main.nf:46:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
   ```
 
 - Warning: `subworkflows/nf-core/fastq_trim_fastp_fastqc/main.nf:34:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -118,14 +111,14 @@
       ^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/bacass.nf:261:33`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/bacass.nf:260:33`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   .branch { meta, reads ->
                                   ^^^^^
   ```
 
-- Warning: `workflows/bacass.nf:276:13`: Variable was declared but not used
+- Warning: `workflows/bacass.nf:275:13`: Variable was declared but not used
 
   ```nextflow
               ch_rasusa_log = RASUSA.out.log

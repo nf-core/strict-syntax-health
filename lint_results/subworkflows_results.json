@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "c0c2de19671473eae364344b5f21ce0170f3d930",
+  "_repo_commit": "d028f51778711ac8c3838bb2cb5f1639b65c6968",
   "abundance_differential_filter": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/abundance_differential_filter",
     "errors": 0,
@@ -39,7 +39,7 @@
   "bam_dedup_umi": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_dedup_umi",
     "errors": 0,
-    "warnings": 0,
+    "warnings": 1,
     "parse_error": false
   },
   "bam_docounts_contamination_angsd": {
@@ -63,7 +63,7 @@
   "bam_markduplicates_picard": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_markduplicates_picard",
     "errors": 0,
-    "warnings": 0,
+    "warnings": 1,
     "parse_error": false
   },
   "bam_markduplicates_samtools": {
@@ -93,7 +93,7 @@
   "bam_qc_rnaseq": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bam_qc_rnaseq",
     "errors": 0,
-    "warnings": 3,
+    "warnings": 4,
     "parse_error": false
   },
   "bam_rseqc": {
@@ -483,7 +483,7 @@
   "fastq_qc_trim_filter_setstrandedness": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness",
     "errors": 0,
-    "warnings": 0,
+    "warnings": 1,
     "parse_error": false
   },
   "fastq_remove_rrna": {

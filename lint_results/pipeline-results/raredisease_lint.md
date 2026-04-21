@@ -1,51 +1,14 @@
 # Nextflow lint results
 
-- Generated: 2026-04-01T00:29:50.982164708Z
-- Nextflow version: 26.03.1-edge
-- Summary: 1 error, 5 warnings
-
-## :x: Errors
-
-- Error: `subworkflows/local/call_sv_MT/main.nf:145:48`: `_` is not allowed as an identifier because it is reserved for future use
-
-  ```nextflow
-                  .concat(ch_saltshaker_vcf.map{ _ -> ["mitosalt"] })
-                                                 ^
-  ```
+- Generated: 2026-04-21T00:31:49.664213439Z
+- Nextflow version: 26.03.3-edge
+- Summary: 1 warning
 
 ## :warning: Warnings
 
-- Warning: `main.nf:666:29`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
 
   ```nextflow
-          path { destination, value -> destination }
-                              ^^^^^
-  ```
-
-- Warning: `subworkflows/local/annotate_structural_variants/main.nf:98:54`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-              .mix(ENSEMBLVEP_SV.out.report.map{ meta, process, vep, html -> return [meta, html] })
-                                                       ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/annotate_structural_variants/main.nf:98:63`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-              .mix(ENSEMBLVEP_SV.out.report.map{ meta, process, vep, html -> return [meta, html] })
-                                                                ^^^
-  ```
-
-- Warning: `subworkflows/local/call_sv_cnvnator/main.nf:20:9`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          ch_fai       // channel: [mandatory] [ val(meta), path(fai) ]
-          ^^^^^^
-  ```
-
-- Warning: `subworkflows/local/qc_bam/main.nf:22:9`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          ch_bam                          // channel: [mandatory] [ val(meta), path(bam) ]
-          ^^^^^^
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
   ```

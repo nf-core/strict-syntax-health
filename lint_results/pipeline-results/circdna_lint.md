@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-15T00:30:37.985074848Z
-- Nextflow version: 26.03.2-edge
-- Summary: 22 errors, 25 warnings
+- Generated: 2026-04-21T00:30:27.640021817Z
+- Nextflow version: 26.03.3-edge
+- Summary: 21 errors, 26 warnings
 
 ## :x: Errors
 
@@ -41,7 +41,7 @@
   ^
   ```
 
-- Error: `conf/modules.config:520:1`: If statements cannot be mixed with config statements
+- Error: `conf/modules.config:511:1`: If statements cannot be mixed with config statements
 
   ```nextflow
   if (!params.skip_multiqc) {
@@ -69,13 +69,6 @@
                        ^^^^^^^
   ```
 
-- Error: `modules/local/circexplorer2/parse.nf:6:5`: Invalid process directive
-
-  ```nextflow
-      if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
-      ^
-  ```
-
 - Error: `modules/nf-core/samtools/view/main.nf:64:9`: `index` is already declared
 
   ```nextflow
@@ -83,70 +76,70 @@
           ^^^^^
   ```
 
-- Error: `nextflow.config:342:31`: `manifest` is not defined
+- Error: `nextflow.config:334:31`: `manifest` is not defined
 
   ```nextflow
   \033[0;35m  nf-core/circdna ${manifest.version}\033[0m
                                 ^^^^^^^^
   ```
 
-- Error: `nextflow.config:345:26`: `manifest` is not defined
+- Error: `nextflow.config:337:26`: `manifest` is not defined
 
   ```nextflow
           afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
                            ^^^^^^^^
   ```
 
-- Error: `nextflow.config:345:69`: `manifest` is not defined
+- Error: `nextflow.config:337:69`: `manifest` is not defined
 
   ```nextflow
           afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
                                                                       ^^^^^^^^
   ```
 
-- Error: `nextflow.config:345:186`: `manifest` is not defined
+- Error: `nextflow.config:337:186`: `manifest` is not defined
 
   ```nextflow
           afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
                                                                                                                                                                                            ^^^^^^^^
   ```
 
-- Error: `nextflow.config:354:22`: `validation` is not defined
+- Error: `nextflow.config:346:22`: `validation` is not defined
 
   ```nextflow
           beforeText = validation.help.beforeText
                        ^^^^^^^^^^
   ```
 
-- Error: `nextflow.config:355:21`: `validation` is not defined
+- Error: `nextflow.config:347:21`: `validation` is not defined
 
   ```nextflow
           afterText = validation.help.afterText
                       ^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/utils_nfcore_circdna_pipeline/main.nf:95:20`: `parseBoolean` is not defined
+- Error: `subworkflows/local/utils_nfcore_circdna_pipeline/main.nf:94:20`: `parseBoolean` is not defined
 
   ```nextflow
               return parseBoolean(value[0])
                      ^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/utils_nfcore_circdna_pipeline/main.nf:105:25`: `parseBoolean` is not defined
+- Error: `subworkflows/local/utils_nfcore_circdna_pipeline/main.nf:104:25`: `parseBoolean` is not defined
 
   ```nextflow
                       if (parseBoolean(bam)) {
                           ^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/utils_nfcore_circdna_pipeline/main.nf:108:41`: `parseBoolean` is not defined
+- Error: `subworkflows/local/utils_nfcore_circdna_pipeline/main.nf:107:41`: `parseBoolean` is not defined
 
   ```nextflow
                       def is_single_end = parseBoolean(single_end) != null ? parseBoolean(single_end) : !fastq_2
                                           ^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/utils_nfcore_circdna_pipeline/main.nf:108:76`: `parseBoolean` is not defined
+- Error: `subworkflows/local/utils_nfcore_circdna_pipeline/main.nf:107:76`: `parseBoolean` is not defined
 
   ```nextflow
                       def is_single_end = parseBoolean(single_end) != null ? parseBoolean(single_end) : !fastq_2
@@ -260,7 +253,7 @@
           ^^^^^^
   ```
 
-- Warning: `nextflow.config:345:129`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `nextflow.config:337:129`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
@@ -281,53 +274,60 @@
                                          ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_circdna_pipeline/main.nf:31:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_circdna_pipeline/main.nf:30:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       monochrome_logs   // boolean: Do not use coloured log outputs
       ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_circdna_pipeline/main.nf:34:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_circdna_pipeline/main.nf:33:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       input             //  string: Path to input samplesheet
       ^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_circdna_pipeline/main.nf:38:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/utils_nfcore_circdna_pipeline/main.nf:37:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_versions = Channel.empty()
                     ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_circdna_pipeline/main.nf:81:9`: Variable was declared but not used
+- Warning: `subworkflows/local/utils_nfcore_circdna_pipeline/main.nf:80:9`: Variable was declared but not used
 
   ```nextflow
       def parseBoolean = { value ->
           ^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_circdna_pipeline/main.nf:101:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/utils_nfcore_circdna_pipeline/main.nf:100:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           Channel
           ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_circdna_pipeline/main.nf:125:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/utils_nfcore_circdna_pipeline/main.nf:124:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           Channel
           ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_circdna_pipeline/main.nf:136:20`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_circdna_pipeline/main.nf:135:20`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map { id, metas, bams ->
                      ^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_circdna_pipeline/main.nf:160:5`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      hook_url        //  string: hook URL for notifications
+      ^^^^^^^^
   ```
 
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used

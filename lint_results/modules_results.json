@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "c0c2de19671473eae364344b5f21ce0170f3d930",
+  "_repo_commit": "d028f51778711ac8c3838bb2cb5f1639b65c6968",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -2846,6 +2846,12 @@
   },
   "expansionhunterdenovo_profile": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/expansionhunterdenovo/profile",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "fairy_coverage": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fairy/coverage",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

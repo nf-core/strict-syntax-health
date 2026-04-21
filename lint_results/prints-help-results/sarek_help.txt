@@ -1,14 +1,14 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.03.2-edge
+ N E X T F L O W   ~  version 26.03.3-edge
 
 Downloading plugin nf-fgbio@1.0.0
-Downloading plugin nf-prov@1.2.2
-Launching `./main.nf` [clever_gautier] revision: 66b0a34bf4
+Downloading plugin nf-core-utils@0.4.0
+Downloading plugin nf-prov@1.7.0
+Downloading plugin nf-schema@2.7.2
+Launching `./main.nf` [clever_monod] revision: 98b3f5f01d
 
-WARN: Unrecognized config option 'prov.enabled'
-WARN: Unrecognized config option 'prov.formats.bco.file'
 
 ------------------------------------------------------
                                         ,--./,-.

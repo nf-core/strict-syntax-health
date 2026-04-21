@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-18T00:28:31.107500641Z
-- Nextflow version: 26.03.2-edge
-- Summary: 19 warnings
+- Generated: 2026-04-21T00:32:26.461882300Z
+- Nextflow version: 26.03.3-edge
+- Summary: 25 warnings
 
 ## :warning: Warnings
 
@@ -20,14 +20,21 @@
       ^^^^
   ```
 
-- Warning: `subworkflows/local/multiqc_rnaseq/main.nf:78:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/multiqc_rnaseq/main.nf:108:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              [row[1], row.drop(2).findAll { it != null }.collectMany { entry -> (entry instanceof List) ? entry : [entry] }]
+                                             ^^
+  ```
+
+- Warning: `subworkflows/local/multiqc_rnaseq/main.nf:160:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       [mqc_default_config, dyn, mqc_custom_config].findAll { it },
                                                                              ^^
   ```
 
-- Warning: `subworkflows/local/multiqc_rnaseq/main.nf:101:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/multiqc_rnaseq/main.nf:186:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       [mqc_default_config, dyn, mqc_custom_config].findAll { it },
@@ -69,6 +76,20 @@
                                                      ^^
   ```
 
+- Warning: `subworkflows/nf-core/bam_dedup_umi/main.nf:129:54`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          .map { row -> [row[0], row.drop(1).findAll { it != null }.collectMany { e -> (e instanceof List) ? e : [e] }] }
+                                                       ^^
+  ```
+
+- Warning: `subworkflows/nf-core/bam_markduplicates_picard/main.nf:29:54`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          .map { row -> [row[0], row.drop(1).findAll { it != null }.collectMany { e -> (e instanceof List) ? e : [e] }] }
+                                                       ^^
+  ```
+
 - Warning: `subworkflows/nf-core/bam_qc_rnaseq/main.nf:25:41`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
@@ -90,6 +111,20 @@
                          ^^^^^^^
   ```
 
+- Warning: `subworkflows/nf-core/bam_qc_rnaseq/main.nf:113:54`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          .map { row -> [row[0], row.drop(1).findAll { it != null }.collectMany { e -> (e instanceof List) ? e : [e] }] }
+                                                       ^^
+  ```
+
+- Warning: `subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/main.nf:426:54`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          .map { row -> [row[0], row.drop(1).findAll { it != null }.collectMany { e -> (e instanceof List) ? e : [e] }] }
+                                                       ^^
+  ```
+
 - Warning: `subworkflows/nf-core/quant_tximport_summarizedexperiment/main.nf:33:16`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
@@ -104,35 +139,42 @@
       ^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/rnaseq/main.nf:510:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/rnaseq/main.nf:123:66`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      def collapseAgg = { row -> [row[0].id, row.drop(1).findAll { it != null }.collectMany { e -> (e instanceof List) ? e : [e] }] }
+                                                                   ^^
+  ```
+
+- Warning: `workflows/rnaseq/main.nf:556:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       def rseqc_modules = qc_tools.findAll { it.startsWith('rseqc_') }.collect { it.replace('rseqc_', '') }
                                              ^^
   ```
 
-- Warning: `workflows/rnaseq/main.nf:510:80`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/rnaseq/main.nf:556:80`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       def rseqc_modules = qc_tools.findAll { it.startsWith('rseqc_') }.collect { it.replace('rseqc_', '') }
                                                                                  ^^
   ```
 
-- Warning: `workflows/rnaseq/main.nf:545:79`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/rnaseq/main.nf:609:79`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       def ie = (files instanceof List ? files : [files]).find { it.name.endsWith('.infer_experiment.txt') }
                                                                                 ^^
   ```
 
-- Warning: `workflows/rnaseq/main.nf:548:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/rnaseq/main.nf:612:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   .filter { it != null }
                             ^^
   ```
 
-- Warning: `workflows/rnaseq/main.nf:558:17`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/rnaseq/main.nf:622:17`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
                   Channel.value([ [:], ch_biotypes_header_multiqc ]),
