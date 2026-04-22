@@ -3,7 +3,8 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.03.3-edge
 
-Launching `./main.nf` [prickly_meitner] revision: 919a29f303
+Downloading plugin nf-schema@2.5.1
+Launching `./main.nf` [mighty_kilby] revision: 919a29f303
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -62,6 +63,7 @@ input.
   --build_kmcp                       [boolean] Turn on building of KMCP database. Requires nucleotide FASTA file input. 
   --kmcp_compute_options             [string]  Specify parameters being given to kmcp compute. Parameters must be supplied in quotes: 
 `--<tool>_build_options "--your_param"`.  
+  --kmcp_compute_byfile              [boolean] Specify to use build k-mer sketch for whole file rather than per sequence. 
   --kmcp_index_options               [string]  Specify parameters being given to kmcp index. Parameters must be supplied in quotes: 
 `--<tool>_build_options "--your_param"`.  
   --build_kraken2                    [boolean] Turn on building of Kraken2 database. Requires nucleotide FASTA file input. 

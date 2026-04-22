@@ -11,12 +11,12 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 > See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline.
 > **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**
 
-- **Last updated:** 2026-04-21 00:35:02 UTC
+- **Last updated:** 2026-04-22 00:29:47 UTC
 - **Nextflow version:** 26.03.3-edge
 
 ## Pipelines
 
-- **Total:** 0 parse errors, 2510 errors, 8162 warnings across 134 pipelines
+- **Total:** 0 parse errors, 2510 errors, 8161 warnings across 134 pipelines
 - **Zero errors:** 49 pipelines (36.6%)
 
 |                    Errors                    |                     Warnings                     |
@@ -133,7 +133,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :white_check_mark: [circrna](https://github.com/nf-core/circrna)                             |     No      |      0 |       20 |     Yes     |          [View](lint_results/pipeline-results/circrna_lint.md)          |        [View](lint_results/prints-help-results/circrna_help.txt)        |
 | :white_check_mark: [bacass](https://github.com/nf-core/bacass)                               |     No      |      0 |       17 |     Yes     |          [View](lint_results/pipeline-results/bacass_lint.md)           |        [View](lint_results/prints-help-results/bacass_help.txt)         |
 | :white_check_mark: [tfactivity](https://github.com/nf-core/tfactivity)                       |     No      |      0 |       12 |     Yes     |        [View](lint_results/pipeline-results/tfactivity_lint.md)         |      [View](lint_results/prints-help-results/tfactivity_help.txt)       |
-| :white_check_mark: [createtaxdb](https://github.com/nf-core/createtaxdb)                     |     No      |      0 |       11 |     Yes     |        [View](lint_results/pipeline-results/createtaxdb_lint.md)        |      [View](lint_results/prints-help-results/createtaxdb_help.txt)      |
+| :white_check_mark: [createtaxdb](https://github.com/nf-core/createtaxdb)                     |     No      |      0 |       10 |     Yes     |        [View](lint_results/pipeline-results/createtaxdb_lint.md)        |      [View](lint_results/prints-help-results/createtaxdb_help.txt)      |
 | :x: [genephylomodeler](https://github.com/nf-core/genephylomodeler)                          |     No      |      0 |       10 |     No      |     [View](lint_results/pipeline-results/genephylomodeler_lint.md)      |   [View](lint_results/prints-help-results/genephylomodeler_help.txt)    |
 | :x: [hlatyping](https://github.com/nf-core/hlatyping)                                        |     No      |      0 |        9 |     No      |         [View](lint_results/pipeline-results/hlatyping_lint.md)         |       [View](lint_results/prints-help-results/hlatyping_help.txt)       |
 | :x: [fastquorum](https://github.com/nf-core/fastquorum)                                      |     No      |      0 |        8 |     No      |        [View](lint_results/pipeline-results/fastquorum_lint.md)         |      [View](lint_results/prints-help-results/fastquorum_help.txt)       |
@@ -167,8 +167,8 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 
 ## Modules
 
-- **Total:** 0 parse errors, 0 errors, 3 warnings across 1788 modules
-- **Zero errors:** 1788 modules (100.0%)
+- **Total:** 0 parse errors, 0 errors, 3 warnings across 1789 modules
+- **Zero errors:** 1789 modules (100.0%)
 
 |                   Errors                   |                    Warnings                    |
 | :----------------------------------------: | :--------------------------------------------: |
@@ -180,13 +180,13 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | Module | Parse Error | Errors | Warnings | Lint Output |
 | ------ | :---------: | -----: | -------: | :---------: |
 
-_Modules with zero errors are not shown above (1788 modules). They may still have warnings. See the [modules results directory](lint_results/module-results/) for all lint outputs._
+_Modules with zero errors are not shown above (1789 modules). They may still have warnings. See the [modules results directory](lint_results/module-results/) for all lint outputs._
 
 </details>
 
 ## Subworkflows
 
-- **Total:** 0 parse errors, 0 errors, 11 warnings across 114 subworkflows
+- **Total:** 0 parse errors, 0 errors, 10 warnings across 114 subworkflows
 - **Zero errors:** 114 subworkflows (100.0%)
 
 |                     Errors                      |                      Warnings                       |

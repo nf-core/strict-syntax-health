@@ -1,14 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-04-21T00:34:47.931152+00:00
+- Generated: 2026-04-22T00:29:32.853534+00:00
 - Nextflow version: 26.03.3-edge
-- Summary: 1 warning
-
-## :warning: Warnings
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
-
-  ```nextflow
-      valid_config = checkConfigProvided()
-      ^^^^^^^^^^
-  ```
+- Summary: No issues found

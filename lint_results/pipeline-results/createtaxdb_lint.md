@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-21T00:30:35.640865618Z
+- Generated: 2026-04-22T00:27:06.481996378Z
 - Nextflow version: 26.03.3-edge
-- Summary: 11 warnings
+- Summary: 10 warnings
 
 ## :warning: Warnings
 
@@ -25,13 +25,6 @@
   ```nextflow
       def genome_size_args = genome_size_files ? "--genome-size-files ${genome_size_files}" : ""
           ^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/kaiju/mkfmi/main.nf:44:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
   ```
 
 - Warning: `modules/nf-core/kmcp/compute/main.nf:40:9`: Variable was declared but not used

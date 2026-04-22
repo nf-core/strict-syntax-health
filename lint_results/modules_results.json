@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "d028f51778711ac8c3838bb2cb5f1639b65c6968",
+  "_repo_commit": "3dae462b403c0f479d0c729d40b2faf105cad4b0",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -4058,6 +4058,12 @@
   },
   "goat_taxonsearch": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/goat/taxonsearch",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "goatools_findenrichment": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/goatools/findenrichment",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

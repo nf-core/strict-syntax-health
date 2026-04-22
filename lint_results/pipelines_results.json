@@ -146,7 +146,7 @@
   "createpanelrefs": {
     "full_name": "nf-core/createpanelrefs",
     "html_url": "https://github.com/nf-core/createpanelrefs",
-    "commit": "b9687fddb36f9ae675cb42c066c30126d37a5e66",
+    "commit": "41354b89179c1272050a0c7374560532f93b57e8",
     "errors": 0,
     "warnings": 1,
     "parse_error": false,
@@ -155,9 +155,9 @@
   "createtaxdb": {
     "full_name": "nf-core/createtaxdb",
     "html_url": "https://github.com/nf-core/createtaxdb",
-    "commit": "7ed112ea248670e7d94cef686cbc91d2eedc9cb2",
+    "commit": "b6e948b414903f5ecbb9b40d320cb0ecceca8131",
     "errors": 0,
-    "warnings": 11,
+    "warnings": 10,
     "parse_error": false,
     "prints_help": true
   },
@@ -533,7 +533,7 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "0aacd409e1895b0dd00351592dff3aa91f587ba2",
+    "commit": "0dbed1b626260a15ed5a85050bd8f6f63e689619",
     "errors": 0,
     "warnings": 22,
     "parse_error": false,
@@ -956,7 +956,7 @@
   "rnaseq": {
     "full_name": "nf-core/rnaseq",
     "html_url": "https://github.com/nf-core/rnaseq",
-    "commit": "dbc39cf4c54d265f22f813504507d5c536ffe939",
+    "commit": "a17848f302184da665202f1a55b2cf67f5be46d8",
     "errors": 0,
     "warnings": 25,
     "parse_error": false,
