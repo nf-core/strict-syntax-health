@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-22T00:28:25.889044449Z
+- Generated: 2026-04-23T00:35:22.521657466Z
 - Nextflow version: 26.03.3-edge
-- Summary: 25 warnings
+- Summary: 26 warnings
 
 ## :warning: Warnings
 
@@ -20,25 +20,32 @@
       ^^^^
   ```
 
-- Warning: `subworkflows/local/multiqc_rnaseq/main.nf:108:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/multiqc_rnaseq/main.nf:134:79`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-              [row[1], row.drop(2).findAll { it != null }.collectMany { entry -> (entry instanceof List) ? entry : [entry] }]
-                                             ^^
+              [mqc_default_config, dynamic_config, mqc_custom_config].findAll { it },
+                                                                                ^^
   ```
 
-- Warning: `subworkflows/local/multiqc_rnaseq/main.nf:160:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/multiqc_rnaseq/main.nf:173:36`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-                      [mqc_default_config, dyn, mqc_custom_config].findAll { it },
-                                                                             ^^
+                          .findAll { it != null }
+                                     ^^
   ```
 
-- Warning: `subworkflows/local/multiqc_rnaseq/main.nf:186:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/multiqc_rnaseq/main.nf:358:24`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-                      [mqc_default_config, dyn, mqc_custom_config].findAll { it },
-                                                                             ^^
+  def strandSummaryCells(meta, provided, status, salmon, rseqc) {
+                         ^^^^
+  ```
+
+- Warning: `subworkflows/local/multiqc_rnaseq/main.nf:439:55`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          pconfig.data_labels = labels.collect { [name: it, ylab: pconfig.ylab] }
+                                                        ^^
   ```
 
 - Warning: `subworkflows/local/prepare_genome/main.nf:199:79`: Parameter was not used -- prefix with `_` to suppress warning
@@ -62,14 +69,14 @@
                                                                ^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_rnaseq_pipeline/main.nf:761:61`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_rnaseq_pipeline/main.nf:706:61`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   ? params.rseqc_modules.split(',').collect { it.trim().toLowerCase() }
                                                               ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_rnaseq_pipeline/main.nf:766:52`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_rnaseq_pipeline/main.nf:711:52`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               rseqc_modules.each { tools << "rseqc_${it}" }
@@ -139,42 +146,42 @@
       ^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/rnaseq/main.nf:123:66`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/rnaseq/main.nf:122:66`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       def collapseAgg = { row -> [row[0].id, row.drop(1).findAll { it != null }.collectMany { e -> (e instanceof List) ? e : [e] }] }
                                                                    ^^
   ```
 
-- Warning: `workflows/rnaseq/main.nf:556:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/rnaseq/main.nf:555:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       def rseqc_modules = qc_tools.findAll { it.startsWith('rseqc_') }.collect { it.replace('rseqc_', '') }
                                              ^^
   ```
 
-- Warning: `workflows/rnaseq/main.nf:556:80`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/rnaseq/main.nf:555:80`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       def rseqc_modules = qc_tools.findAll { it.startsWith('rseqc_') }.collect { it.replace('rseqc_', '') }
                                                                                  ^^
   ```
 
-- Warning: `workflows/rnaseq/main.nf:609:79`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/rnaseq/main.nf:608:79`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       def ie = (files instanceof List ? files : [files]).find { it.name.endsWith('.infer_experiment.txt') }
                                                                                 ^^
   ```
 
-- Warning: `workflows/rnaseq/main.nf:612:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/rnaseq/main.nf:611:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   .filter { it != null }
                             ^^
   ```
 
-- Warning: `workflows/rnaseq/main.nf:622:17`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/rnaseq/main.nf:621:17`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
                   Channel.value([ [:], ch_biotypes_header_multiqc ]),

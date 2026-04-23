@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "3dae462b403c0f479d0c729d40b2faf105cad4b0",
+  "_repo_commit": "4e8e48c04e24c2159a5589a36bae0f038809cd48",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -2271,7 +2271,7 @@
   "custom_gtffilter": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/custom/gtffilter",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "custom_matrixfilter": {

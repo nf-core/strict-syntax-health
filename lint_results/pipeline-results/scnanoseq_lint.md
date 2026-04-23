@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-03-13T00:23:56.338146029Z
-- Nextflow version: 26.02.0-edge
-- Summary: 73 errors, 140 warnings
+- Generated: 2026-04-23T00:35:46.166084301Z
+- Nextflow version: 26.03.3-edge
+- Summary: 67 errors, 137 warnings
 
 ## :x: Errors
 
@@ -13,7 +13,7 @@
                       ^
   ```
 
-- Error: `modules/local/group_transcripts.nf:12:15`: `meta` is already declared
+- Error: `modules/local/group_transcripts/main.nf:12:15`: `meta` is already declared
 
   ```nextflow
       tuple val(meta), path(gtf)
@@ -209,77 +209,35 @@
           ^^^^^
   ```
 
-- Error: `nextflow.config:312:33`: `manifest` is not defined
-
-  ```nextflow
-  \033[0;35m  nf-core/scnanoseq ${manifest.version}\033[0m
-                                  ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:315:26`: `manifest` is not defined
-
-  ```nextflow
-          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
-                           ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:315:69`: `manifest` is not defined
-
-  ```nextflow
-          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
-                                                                      ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:315:186`: `manifest` is not defined
-
-  ```nextflow
-          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
-                                                                                                                                                                                           ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:324:22`: `validation` is not defined
-
-  ```nextflow
-          beforeText = validation.help.beforeText
-                       ^^^^^^^^^^
-  ```
-
-- Error: `nextflow.config:325:21`: `validation` is not defined
-
-  ```nextflow
-          afterText = validation.help.afterText
-                      ^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/dedup_umis.nf:129:13`: `PICARD_MARKDUPLICATES` is not defined
+- Error: `subworkflows/local/dedup_umis/main.nf:129:13`: `PICARD_MARKDUPLICATES` is not defined
 
   ```nextflow
               PICARD_MARKDUPLICATES (
               ^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/dedup_umis.nf:134:28`: `PICARD_MARKDUPLICATES` is not defined
+- Error: `subworkflows/local/dedup_umis/main.nf:134:28`: `PICARD_MARKDUPLICATES` is not defined
 
   ```nextflow
               ch_dedup_bam = PICARD_MARKDUPLICATES.out.bam
                              ^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/dedup_umis.nf:135:43`: `PICARD_MARKDUPLICATES` is not defined
+- Error: `subworkflows/local/dedup_umis/main.nf:135:43`: `PICARD_MARKDUPLICATES` is not defined
 
   ```nextflow
               ch_versions = ch_versions.mix(PICARD_MARKDUPLICATES.out.versions)
                                             ^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/process_longread_scrna.nf:117:25`: Variables in a closure should be declared with `def`
+- Error: `subworkflows/local/process_longread_scrna/main.nf:117:25`: Variables in a closure should be declared with `def`
 
   ```nextflow
                           id = ['id': meta.id]
                           ^^
   ```
 
-- Error: `subworkflows/local/quantify_scrna_oarfish.nf:41:29`: Variables in a closure should be declared with `def`
+- Error: `subworkflows/local/quantify_scrna_oarfish/main.nf:41:29`: Variables in a closure should be declared with `def`
 
   ```nextflow
                               new_meta = [ 'id' : meta.id ]
@@ -519,49 +477,49 @@
 
 ## :warning: Warnings
 
-- Warning: `modules/local/group_transcripts.nf:11:15`: Variable was declared but not used
+- Warning: `modules/local/group_transcripts/main.nf:11:15`: Variable was declared but not used
 
   ```nextflow
       tuple val(meta), path(fasta)
                 ^^^^
   ```
 
-- Warning: `modules/local/group_transcripts.nf:23:9`: Variable was declared but not used
+- Warning: `modules/local/group_transcripts/main.nf:23:9`: Variable was declared but not used
 
   ```nextflow
       def args      = task.ext.args ?: ''
           ^^^^
   ```
 
-- Warning: `modules/local/merge_mtx.nf:21:9`: Variable was declared but not used
+- Warning: `modules/local/merge_mtx/main.nf:21:9`: Variable was declared but not used
 
   ```nextflow
       def args   = task.ext.args ?: ''
           ^^^^
   ```
 
-- Warning: `modules/local/split_fasta.nf:20:9`: Variable was declared but not used
+- Warning: `modules/local/split_fasta/main.nf:20:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
   ```
 
-- Warning: `modules/local/split_file.nf:23:9`: Variable was declared but not used
+- Warning: `modules/local/split_file/main.nf:23:9`: Variable was declared but not used
 
   ```nextflow
       def args   = task.ext.args ?: ''
           ^^^^
   ```
 
-- Warning: `modules/local/split_gtf.nf:20:9`: Variable was declared but not used
+- Warning: `modules/local/split_gtf/main.nf:20:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
   ```
 
-- Warning: `modules/local/tag_barcodes.nf:21:9`: Variable was declared but not used
+- Warning: `modules/local/tag_barcodes/main.nf:21:9`: Variable was declared but not used
 
   ```nextflow
       def args   = task.ext.args ?: ''
@@ -666,13 +624,6 @@
           ^^^^
   ```
 
-- Warning: `nextflow.config:315:129`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
-                                                                                                                                  ^^
-  ```
-
 - Warning: `subworkflows/local/align_longreads.nf:21:9`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
@@ -743,291 +694,277 @@
                                                         ^^
   ```
 
-- Warning: `subworkflows/local/dedup_umis.nf:36:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/dedup_umis/main.nf:36:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_versions = Channel.empty()
                         ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/dedup_umis.nf:38:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/dedup_umis/main.nf:38:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_undedup_bam = Channel.empty()
                            ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/dedup_umis.nf:39:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/dedup_umis/main.nf:39:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_undedup_bai = Channel.empty()
                            ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/dedup_umis.nf:42:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/dedup_umis/main.nf:42:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               ch_split_bam = Channel.empty()
                              ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/dedup_umis.nf:52:25`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/dedup_umis/main.nf:52:25`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                           meta, bam ->
                           ^^^^
   ```
 
-- Warning: `subworkflows/local/dedup_umis.nf:112:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/dedup_umis/main.nf:112:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_dedup_bam = Channel.empty()
                          ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/dedup_umis.nf:113:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/dedup_umis/main.nf:113:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_dedup_bai = Channel.empty()
                          ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/dedup_umis.nf:151:25`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/dedup_umis/main.nf:151:25`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                           meta, bam ->
                           ^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_reference_files.nf:22:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_reference_files/main.nf:22:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_versions = Channel.empty()
                         ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_reference_files.nf:29:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_reference_files/main.nf:29:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_genome_fasta = Channel.empty()
                             ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_reference_files.nf:30:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_reference_files/main.nf:30:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_genome_fai = Channel.empty()
                           ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_reference_files.nf:59:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_reference_files/main.nf:59:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_transcript_fasta = Channel.empty()
                                 ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_reference_files.nf:60:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_reference_files/main.nf:60:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_transcript_fai = Channel.empty()
                               ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_reference_files.nf:88:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_reference_files/main.nf:88:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_prepared_gtf = Channel.empty()
                             ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/process_longread_scrna.nf:43:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/process_longread_scrna/main.nf:43:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_versions = Channel.empty()
                         ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/process_longread_scrna.nf:88:18`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/process_longread_scrna/main.nf:88:18`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_bam = Channel.empty()
                    ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/process_longread_scrna.nf:89:18`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/process_longread_scrna/main.nf:89:18`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_bai = Channel.empty()
                    ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/process_longread_scrna.nf:90:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/process_longread_scrna/main.nf:90:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_flagstat = Channel.empty()
                         ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/process_longread_scrna.nf:91:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/process_longread_scrna/main.nf:91:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_idxstats = Channel.empty()
                         ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/process_longread_scrna.nf:126:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/process_longread_scrna/main.nf:126:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_gene_qc_stats = Channel.empty()
                              ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/process_longread_scrna.nf:127:34`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/process_longread_scrna/main.nf:127:34`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_transcript_qc_stats = Channel.empty()
                                    ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/qc_scrna.nf:15:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/qc_scrna/main.nf:15:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_versions = Channel.empty()
                         ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/qc_scrna.nf:26:64`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/qc_scrna/main.nf:26:64`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           COMBINE_SEURAT_STATS ( SEURAT.out.seurat_stats.collect{it[1]} )
                                                                  ^^
   ```
 
-- Warning: `subworkflows/local/quantify_scrna_isoquant.nf:19:9`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/quantify_scrna_isoquant/main.nf:19:9`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           in_bai
           ^^^^^^
   ```
 
-- Warning: `subworkflows/local/quantify_scrna_isoquant.nf:22:9`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/quantify_scrna_isoquant/main.nf:22:9`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           in_fai
           ^^^^^^
   ```
 
-- Warning: `subworkflows/local/quantify_scrna_isoquant.nf:24:9`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/quantify_scrna_isoquant/main.nf:24:9`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           skip_qc
           ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/quantify_scrna_isoquant.nf:25:9`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/quantify_scrna_isoquant/main.nf:25:9`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           skip_seurat
           ^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/quantify_scrna_isoquant.nf:28:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/quantify_scrna_isoquant/main.nf:28:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_versions = Channel.empty()
                         ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/quantify_scrna_isoquant.nf:70:17`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/quantify_scrna_isoquant/main.nf:70:17`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   meta, bam ->
                   ^^^^
   ```
 
-- Warning: `subworkflows/local/quantify_scrna_isoquant.nf:104:20`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/quantify_scrna_isoquant/main.nf:104:20`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map { chrom, meta, bam, bai, fasta, fai, gtf ->
                      ^^^^^
   ```
 
-- Warning: `subworkflows/local/quantify_scrna_isoquant.nf:148:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/quantify_scrna_isoquant/main.nf:148:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_gene_qc_stats = Channel.empty()
                              ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/quantify_scrna_isoquant.nf:149:34`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/quantify_scrna_isoquant/main.nf:149:34`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_transcript_qc_stats = Channel.empty()
                                    ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/quantify_scrna_oarfish.nf:12:9`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/quantify_scrna_oarfish/main.nf:12:9`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           in_bai
           ^^^^^^
   ```
 
-- Warning: `subworkflows/local/quantify_scrna_oarfish.nf:15:9`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/quantify_scrna_oarfish/main.nf:15:9`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           skip_qc
           ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/quantify_scrna_oarfish.nf:16:9`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/quantify_scrna_oarfish/main.nf:16:9`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           skip_seurat
           ^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/quantify_scrna_oarfish.nf:19:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/quantify_scrna_oarfish/main.nf:19:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_versions = Channel.empty()
                         ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/quantify_scrna_oarfish.nf:33:34`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/quantify_scrna_oarfish/main.nf:33:34`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_transcript_qc_stats = Channel.empty()
                                    ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_scnanoseq_pipeline/main.nf:31:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_scnanoseq_pipeline/main.nf:32:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       monochrome_logs   // boolean: Do not use coloured log outputs
       ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_scnanoseq_pipeline/main.nf:34:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_scnanoseq_pipeline/main.nf:35:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       input             //  string: Path to input samplesheet
       ^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_scnanoseq_pipeline/main.nf:38:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_scnanoseq_pipeline/main.nf:75:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      Channel
-      ^^^^^^^
   ```
 
 - Warning: `subworkflows/nf-core/bam_sort_stats_samtools/main.nf:16:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -1142,11 +1079,11 @@
                        ^^^^^^^
   ```
 
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
 
   ```nextflow
-      return ch_versions.unique().map { version -> processVersionsFromYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
-                                                                                                   ^^^^^^^
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/scnanoseq.nf:51:1`: Variable was declared but not used

@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-04-10T00:25:33.890515328Z
-- Nextflow version: 26.03.2-edge
+- Generated: 2026-04-23T00:34:11.011724528Z
+- Nextflow version: 26.03.3-edge
 - Summary: 18 errors, 48 warnings
 
 ## :x: Errors
@@ -69,14 +69,14 @@
       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `nextflow.config:234:25`: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/mhcquant/conf/test_percolator.config'
+- Error: `nextflow.config:235:25`: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/mhcquant/conf/test_percolator.config'
 
   ```nextflow
       test_percolator   { includeConfig 'conf/test_percolator.config'   }
                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `nextflow.config:236:25`: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/mhcquant/conf/test_epicore.config'
+- Error: `nextflow.config:237:25`: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/mhcquant/conf/test_epicore.config'
 
   ```nextflow
       test_epicore      { includeConfig 'conf/test_epicore.config'      }
@@ -111,7 +111,7 @@
                                            ^^^^
   ```
 
-- Error: `subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:255:52`: Unexpected input: '/'
+- Error: `subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:299:52`: Unexpected input: '/'
 
   ```nextflow
           def cliOverride = (workflow.commandLine =~ /--${key}[\s=]/).find()
