@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-04-23T00:35:22.521657466Z
+- Generated: 2026-04-24T00:32:59.833674076Z
 - Nextflow version: 26.03.3-edge
 - Summary: 26 warnings
 
@@ -48,21 +48,21 @@
                                                         ^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:199:79`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/prepare_genome/main.nf:195:79`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               ch_transcript_fasta = GFFREAD_TRANSCRIPTS.out.gffread_fasta.map { meta, fasta_file -> fasta_file }
                                                                                 ^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:396:120`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/prepare_genome/main.nf:392:120`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   ch_bowtie2_index = UNTAR_BOWTIE2_INDEX ([ [:], file(bowtie2_index, checkIfExists: true) ]).untar.map { meta, index -> index }
                                                                                                                          ^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:406:62`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/prepare_genome/main.nf:402:62`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               ch_bowtie2_index = BOWTIE2_BUILD.out.index.map { meta, index -> index }
@@ -146,42 +146,42 @@
       ^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/rnaseq/main.nf:122:66`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/rnaseq/main.nf:121:66`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       def collapseAgg = { row -> [row[0].id, row.drop(1).findAll { it != null }.collectMany { e -> (e instanceof List) ? e : [e] }] }
                                                                    ^^
   ```
 
-- Warning: `workflows/rnaseq/main.nf:555:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/rnaseq/main.nf:554:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       def rseqc_modules = qc_tools.findAll { it.startsWith('rseqc_') }.collect { it.replace('rseqc_', '') }
                                              ^^
   ```
 
-- Warning: `workflows/rnaseq/main.nf:555:80`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/rnaseq/main.nf:554:80`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       def rseqc_modules = qc_tools.findAll { it.startsWith('rseqc_') }.collect { it.replace('rseqc_', '') }
                                                                                  ^^
   ```
 
-- Warning: `workflows/rnaseq/main.nf:608:79`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/rnaseq/main.nf:607:79`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       def ie = (files instanceof List ? files : [files]).find { it.name.endsWith('.infer_experiment.txt') }
                                                                                 ^^
   ```
 
-- Warning: `workflows/rnaseq/main.nf:611:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/rnaseq/main.nf:610:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   .filter { it != null }
                             ^^
   ```
 
-- Warning: `workflows/rnaseq/main.nf:621:17`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/rnaseq/main.nf:620:17`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
                   Channel.value([ [:], ch_biotypes_header_multiqc ]),

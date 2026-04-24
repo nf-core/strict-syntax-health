@@ -11,12 +11,12 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 > See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline.
 > **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**
 
-- **Last updated:** 2026-04-23 00:37:03 UTC
+- **Last updated:** 2026-04-24 00:34:21 UTC
 - **Nextflow version:** 26.03.3-edge
 
 ## Pipelines
 
-- **Total:** 0 parse errors, 2499 errors, 8164 warnings across 135 pipelines
+- **Total:** 0 parse errors, 2499 errors, 8165 warnings across 135 pipelines
 - **Zero errors:** 50 pipelines (37.0%)
 
 |                    Errors                    |                     Warnings                     |
@@ -94,7 +94,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :x: [deepmodeloptim](https://github.com/nf-core/deepmodeloptim)                              |     No      |     10 |       49 |      -      |      [View](lint_results/pipeline-results/deepmodeloptim_lint.md)       |                                    -                                    |
 | :x: [tumourevo](https://github.com/nf-core/tumourevo)                                        |     No      |      9 |       60 |      -      |         [View](lint_results/pipeline-results/tumourevo_lint.md)         |                                    -                                    |
 | :x: [fastqrepair](https://github.com/nf-core/fastqrepair)                                    |     No      |      9 |       32 |      -      |        [View](lint_results/pipeline-results/fastqrepair_lint.md)        |                                    -                                    |
-| :x: [proteinfold](https://github.com/nf-core/proteinfold)                                    |     No      |      9 |        3 |      -      |        [View](lint_results/pipeline-results/proteinfold_lint.md)        |                                    -                                    |
+| :x: [proteinfold](https://github.com/nf-core/proteinfold)                                    |     No      |      9 |        4 |      -      |        [View](lint_results/pipeline-results/proteinfold_lint.md)        |                                    -                                    |
 | :x: [hadge](https://github.com/nf-core/hadge)                                                |     No      |      8 |       45 |      -      |           [View](lint_results/pipeline-results/hadge_lint.md)           |                                    -                                    |
 | :x: [pacsomatic](https://github.com/nf-core/pacsomatic)                                      |     No      |      7 |      115 |      -      |        [View](lint_results/pipeline-results/pacsomatic_lint.md)         |                                    -                                    |
 | :x: [drugresponseeval](https://github.com/nf-core/drugresponseeval)                          |     No      |      7 |       29 |      -      |     [View](lint_results/pipeline-results/drugresponseeval_lint.md)      |                                    -                                    |
@@ -168,8 +168,8 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 
 ## Modules
 
-- **Total:** 0 parse errors, 0 errors, 2 warnings across 1789 modules
-- **Zero errors:** 1789 modules (100.0%)
+- **Total:** 0 parse errors, 0 errors, 2 warnings across 1791 modules
+- **Zero errors:** 1791 modules (100.0%)
 
 |                   Errors                   |                    Warnings                    |
 | :----------------------------------------: | :--------------------------------------------: |
@@ -181,7 +181,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | Module | Parse Error | Errors | Warnings | Lint Output |
 | ------ | :---------: | -----: | -------: | :---------: |
 
-_Modules with zero errors are not shown above (1789 modules). They may still have warnings. See the [modules results directory](lint_results/module-results/) for all lint outputs._
+_Modules with zero errors are not shown above (1791 modules). They may still have warnings. See the [modules results directory](lint_results/module-results/) for all lint outputs._
 
 </details>
 

@@ -47,7 +47,7 @@
   "bacass": {
     "full_name": "nf-core/bacass",
     "html_url": "https://github.com/nf-core/bacass",
-    "commit": "f34eeec10d04a7c16fd883b772b9306799ee5064",
+    "commit": "7b90bc3aca3229f679d7bba19ebcb383e8f6affb",
     "errors": 0,
     "warnings": 17,
     "parse_error": false,
@@ -155,7 +155,7 @@
   "createtaxdb": {
     "full_name": "nf-core/createtaxdb",
     "html_url": "https://github.com/nf-core/createtaxdb",
-    "commit": "2583984a6f11af0025e3934ded09e45ffbefb2c4",
+    "commit": "d222e80191b3fb2afa9b5d2b8cf2f6e8aeea81dc",
     "errors": 0,
     "warnings": 10,
     "parse_error": false,
@@ -632,7 +632,7 @@
   "mhcquant": {
     "full_name": "nf-core/mhcquant",
     "html_url": "https://github.com/nf-core/mhcquant",
-    "commit": "1488e0faa75bc0e45445b5205d750dc5cb009395",
+    "commit": "d45466633106915f099ab736e43e848108562bc2",
     "errors": 18,
     "warnings": 48,
     "parse_error": false,
@@ -848,9 +848,9 @@
   "proteinfold": {
     "full_name": "nf-core/proteinfold",
     "html_url": "https://github.com/nf-core/proteinfold",
-    "commit": "24272b4a22d553b2ba275b08cd7e31e95cfee3ff",
+    "commit": "155536e358786180935b3ae0d7b99a4f92e9f50c",
     "errors": 9,
-    "warnings": 3,
+    "warnings": 4,
     "parse_error": false,
     "prints_help": null
   },
@@ -884,7 +884,7 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "cebd9dbf05cb2e4bc6e54fdce6c8f514eb42d6fd",
+    "commit": "8ee3032b45ca1e66c25647b65ea2d89235bafda6",
     "errors": 0,
     "warnings": 1,
     "parse_error": false,
@@ -965,7 +965,7 @@
   "rnaseq": {
     "full_name": "nf-core/rnaseq",
     "html_url": "https://github.com/nf-core/rnaseq",
-    "commit": "42199d63a18f29164a29ee3ada66d01b2a142b76",
+    "commit": "987729be02500ad5d84a521f74c607d7dfdb6872",
     "errors": 0,
     "warnings": 26,
     "parse_error": false,

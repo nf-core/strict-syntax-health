@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "4e8e48c04e24c2159a5589a36bae0f038809cd48",
+  "_repo_commit": "135d883a43b1a2324b4112cd270cf22e20835533",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -1446,6 +1446,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "canvas_germline": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/canvas/germline",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "cat_cat": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cat/cat",
     "errors": 0,
@@ -2546,6 +2552,12 @@
   },
   "diamond_deepclust": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/diamond/deepclust",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "diamond_linclust": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/diamond/linclust",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
