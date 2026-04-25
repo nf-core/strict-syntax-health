@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-03-24T00:22:11.068488232Z
-- Nextflow version: 26.03.0-edge
-- Summary: 1 error, 41 warnings
+- Generated: 2026-04-25T00:29:20.687179377Z
+- Nextflow version: 26.03.3-edge
+- Summary: 1 error, 43 warnings
 
 ## :x: Errors
 
@@ -218,6 +218,13 @@
                        ^^^^^^^
   ```
 
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
+
+  ```nextflow
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
+  ```
+
 - Warning: `workflows/lsmquant.nf:36:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -300,4 +307,11 @@
   ```nextflow
       def topic_versions = Channel.topic("versions")
                            ^^^^^^^
+  ```
+
+- Warning: `workflows/lsmquant.nf:221:5`: Variable was declared but not used
+
+  ```nextflow
+      multiqc_report = MULTIQC.out.report.toList()
+      ^^^^^^^^^^^^^^
   ```

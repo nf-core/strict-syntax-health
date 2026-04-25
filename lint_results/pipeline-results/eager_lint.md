@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-31T00:20:36.214050620Z
-- Nextflow version: 25.12.0-edge
-- Summary: 115 errors, 362 warnings
+- Generated: 2026-04-25T00:28:53.153451282Z
+- Nextflow version: 26.03.3-edge
+- Summary: 118 errors, 363 warnings
 
 ## :x: Errors
 
@@ -48,28 +48,35 @@
                  ^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `main.nf:73:5`: `PIPELINE_INITIALISATION` is not defined
+- Error: `main.nf:75:5`: `PIPELINE_INITIALISATION` is not defined
 
   ```nextflow
       PIPELINE_INITIALISATION (
       ^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `main.nf:89:9`: `PIPELINE_INITIALISATION` is not defined
+- Error: `main.nf:91:9`: `PIPELINE_INITIALISATION` is not defined
 
   ```nextflow
           PIPELINE_INITIALISATION.out.samplesheet_fastqs,
           ^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `main.nf:90:9`: `PIPELINE_INITIALISATION` is not defined
+- Error: `main.nf:92:9`: `PIPELINE_INITIALISATION` is not defined
 
   ```nextflow
           PIPELINE_INITIALISATION.out.samplesheet_bams,
           ^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `main.nf:95:5`: `PIPELINE_COMPLETION` is not defined
+- Error: `main.nf:93:9`: `PIPELINE_INITIALISATION` is not defined
+
+  ```nextflow
+          PIPELINE_INITIALISATION.out.samplesheet_vcfs
+          ^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `main.nf:98:5`: `PIPELINE_COMPLETION` is not defined
 
   ```nextflow
       PIPELINE_COMPLETION (
@@ -160,6 +167,13 @@
                                       ^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
+- Error: `subworkflows/local/consensus_sequence.nf:59:21`: Unexpected input: ':'
+
+  ```nextflow
+                  vcfs: [meta, vcf_inputs]
+                      ^
+  ```
+
 - Error: `subworkflows/local/deduplicate.nf:5:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/eager/subworkflows/local/utils_nfcore_eager_pipeline/main.nf'
 
   ```nextflow
@@ -181,102 +195,95 @@
           ^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/deduplicate.nf:40:9`: `addNewMetaFromAttributes` is not defined
-
-  ```nextflow
-          addNewMetaFromAttributes( it, "id" , "reference" , true )
-          ^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
 - Error: `subworkflows/local/deduplicate.nf:47:13`: `addNewMetaFromAttributes` is not defined
 
   ```nextflow
-              addNewMetaFromAttributes( it, "reference" , "reference" , false )
+              addNewMetaFromAttributes( it, "id" , "reference" , true )
               ^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/deduplicate.nf:59:5`: `BAM_SPLIT_BY_REGION` is not defined
-
-  ```nextflow
-      BAM_SPLIT_BY_REGION( ch_bam_for_split )
-      ^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/deduplicate.nf:60:38`: `BAM_SPLIT_BY_REGION` is not defined
-
-  ```nextflow
-      ch_versions   = ch_versions.mix( BAM_SPLIT_BY_REGION.out.versions )
-                                       ^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/deduplicate.nf:64:35`: `BAM_SPLIT_BY_REGION` is not defined
-
-  ```nextflow
-          ch_markduplicates_input = BAM_SPLIT_BY_REGION.out.bam_bai
-                                    ^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/deduplicate.nf:67:17`: `addNewMetaFromAttributes` is not defined
+- Error: `subworkflows/local/deduplicate.nf:54:17`: `addNewMetaFromAttributes` is not defined
 
   ```nextflow
                   addNewMetaFromAttributes( it, "reference" , "reference" , false )
                   ^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/deduplicate.nf:74:51`: `fasta` is already declared
+- Error: `subworkflows/local/deduplicate.nf:66:9`: `BAM_SPLIT_BY_REGION` is not defined
+
+  ```nextflow
+          BAM_SPLIT_BY_REGION( ch_bam_for_split )
+          ^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `subworkflows/local/deduplicate.nf:67:35`: `BAM_SPLIT_BY_REGION` is not defined
+
+  ```nextflow
+          input_for_deduplication = BAM_SPLIT_BY_REGION.out.bam_bai
+                                    ^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `subworkflows/local/deduplicate.nf:68:42`: `BAM_SPLIT_BY_REGION` is not defined
+
+  ```nextflow
+          ch_versions   = ch_versions.mix( BAM_SPLIT_BY_REGION.out.versions )
+                                           ^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `subworkflows/local/deduplicate.nf:77:17`: `addNewMetaFromAttributes` is not defined
+
+  ```nextflow
+                  addNewMetaFromAttributes( it, "reference" , "reference" , false )
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `subworkflows/local/deduplicate.nf:84:51`: `fasta` is already declared
 
   ```nextflow
                   ignore_me, meta, bam, bai, meta2, fasta, fasta_fai ->
                                                     ^^^^^
   ```
 
-- Error: `subworkflows/local/deduplicate.nf:74:58`: `fasta_fai` is already declared
+- Error: `subworkflows/local/deduplicate.nf:84:58`: `fasta_fai` is already declared
 
   ```nextflow
                   ignore_me, meta, bam, bai, meta2, fasta, fasta_fai ->
                                                            ^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/deduplicate.nf:91:26`: `BAM_SPLIT_BY_REGION` is not defined
+- Error: `subworkflows/local/deduplicate.nf:124:17`: Variables in a closure should be declared with `def`
 
   ```nextflow
-          ch_dedup_input = BAM_SPLIT_BY_REGION.out.bam_bai
-                           ^^^^^^^^^^^^^^^^^^^
+                  meta2 = meta.clone().findAll{ it.key != 'genomic_region' }
+                  ^^^^^
   ```
 
-- Error: `subworkflows/local/deduplicate.nf:106:13`: Variables in a closure should be declared with `def`
+- Error: `subworkflows/local/deduplicate.nf:130:17`: `addNewMetaFromAttributes` is not defined
 
   ```nextflow
-              meta2 = meta.clone().findAll{ it.key != 'genomic_region' }
-              ^^^^^
+                  addNewMetaFromAttributes( it, "reference" , "reference" , false )
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/deduplicate.nf:112:13`: `addNewMetaFromAttributes` is not defined
+- Error: `subworkflows/local/deduplicate.nf:138:39`: `meta2` is already declared
 
   ```nextflow
-              addNewMetaFromAttributes( it, "reference" , "reference" , false )
-              ^^^^^^^^^^^^^^^^^^^^^^^^
+                  ignore_me, meta, bam, meta2, fasta, fasta_fai ->
+                                        ^^^^^
   ```
 
-- Error: `subworkflows/local/deduplicate.nf:120:35`: `meta2` is already declared
+- Error: `subworkflows/local/deduplicate.nf:138:46`: `fasta` is already declared
 
   ```nextflow
-              ignore_me, meta, bam, meta2, fasta, fasta_fai ->
-                                    ^^^^^
+                  ignore_me, meta, bam, meta2, fasta, fasta_fai ->
+                                               ^^^^^
   ```
 
-- Error: `subworkflows/local/deduplicate.nf:120:42`: `fasta` is already declared
+- Error: `subworkflows/local/deduplicate.nf:138:53`: `fasta_fai` is already declared
 
   ```nextflow
-              ignore_me, meta, bam, meta2, fasta, fasta_fai ->
-                                           ^^^^^
-  ```
-
-- Error: `subworkflows/local/deduplicate.nf:120:49`: `fasta_fai` is already declared
-
-  ```nextflow
-              ignore_me, meta, bam, meta2, fasta, fasta_fai ->
-                                                  ^^^^^^^^^
+                  ignore_me, meta, bam, meta2, fasta, fasta_fai ->
+                                                      ^^^^^^^^^
   ```
 
 - Error: `subworkflows/local/elongate_reference.nf:8:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/eager/subworkflows/local/utils_nfcore_eager_pipeline/main.nf'
@@ -671,11 +678,11 @@
                            ^^^^^
   ```
 
-- Error: `subworkflows/local/preprocessing_fastp.nf:35:51`: `reads` is already declared
+- Error: `subworkflows/local/preprocessing_fastp.nf:32:79`: `reads` is already declared
 
   ```nextflow
-                                              meta, reads ->
-                                                    ^^^^^
+          ch_fastp_reads_prepped_pe = FASTP_PAIRED.out.reads_merged.map { meta, reads ->
+                                                                                ^^^^^
   ```
 
 - Error: `subworkflows/local/reference_indexing_single.nf:4:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/eager/subworkflows/local/utils_nfcore_eager_pipeline/main.nf'
@@ -699,10 +706,10 @@
                                             ^^^^^
   ```
 
-- Error: `subworkflows/local/reference_indexing_single.nf:108:43`: `fasta` is already declared
+- Error: `subworkflows/local/reference_indexing_single.nf:111:43`: `fasta` is already declared
 
   ```nextflow
-                                      meta, fasta, fai, dict, mapper_index, circular_target, mitochondrion_header, contamination_estimation_angsd_hapmap, pmd_masked_fasta, pmd_bed_for_masking, capture_bed, pileupcaller_bed, pileupcaller_snp, sexdet_bed, bedtools_feature, genotyping_gatk_dbsnp, circularmapper_elongated_fasta, circularmapper_elongated_index ->
+                                      meta, fasta, fai, dict, mapper_index, circular_target, mitochondrion_header, contamination_estimation_angsd_hapmap, pmd_masked_fasta, pmd_bed_for_masking, capture_bed, pileupcaller_bed, pileupcaller_snp, sexdet_bed, bedtools_feature, genotyping_gatk_dbsnp, circularmapper_elongated_fasta, circularmapper_elongated_index, consensus_multivcfanalyzer_reference_gff_annotations, consensus_multivcfanalyzer_reference_gff_exclude, consensus_multivcfanalyzer_reference_snpeff_results ->
                                             ^^^^^
   ```
 
@@ -727,7 +734,7 @@
                   ^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/utils_nfcore_eager_pipeline/main.nf:420:22`: Unexpected input: 'i'
+- Error: `subworkflows/local/utils_nfcore_eager_pipeline/main.nf:442:22`: Unexpected input: 'i'
 
   ```nextflow
               for (int i = 0; i < source_attributes.size(); i++) {
@@ -755,56 +762,70 @@
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/eager.nf:276:13`: `addNewMetaFromAttributes` is not defined
+- Error: `workflows/eager.nf:38:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/eager/subworkflows/local/consensus_sequence.nf'
+
+  ```nextflow
+  include { CONSENSUS_SEQUENCE                                  } from '../subworkflows/local/consensus_sequence'
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `workflows/eager.nf:279:13`: `addNewMetaFromAttributes` is not defined
 
   ```nextflow
               addNewMetaFromAttributes(it, "id", "reference", false)
               ^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/eager.nf:283:17`: `addNewMetaFromAttributes` is not defined
+- Error: `workflows/eager.nf:286:17`: `addNewMetaFromAttributes` is not defined
 
   ```nextflow
                   addNewMetaFromAttributes(it, "reference", "reference", false)
                   ^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/eager.nf:319:17`: Variables in a closure should be declared with `def`
+- Error: `workflows/eager.nf:322:17`: Variables in a closure should be declared with `def`
 
   ```nextflow
                   new_meta = meta.clone().findAll { it.key !in ['single_end', 'reference'] }
                   ^^^^^^^^
   ```
 
-- Error: `workflows/eager.nf:370:13`: `addNewMetaFromAttributes` is not defined
+- Error: `workflows/eager.nf:373:13`: `addNewMetaFromAttributes` is not defined
 
   ```nextflow
               addNewMetaFromAttributes(it, "id", "reference", false)
               ^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/eager.nf:374:17`: `addNewMetaFromAttributes` is not defined
+- Error: `workflows/eager.nf:377:17`: `addNewMetaFromAttributes` is not defined
 
   ```nextflow
                   addNewMetaFromAttributes(it, "reference", "reference", false)
                   ^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/eager.nf:449:13`: `addNewMetaFromAttributes` is not defined
+- Error: `workflows/eager.nf:451:13`: `addNewMetaFromAttributes` is not defined
 
   ```nextflow
               addNewMetaFromAttributes(it, "id", "reference", false)
               ^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/eager.nf:454:17`: `addNewMetaFromAttributes` is not defined
+- Error: `workflows/eager.nf:456:17`: `addNewMetaFromAttributes` is not defined
 
   ```nextflow
                   addNewMetaFromAttributes(it, "reference", "reference", false)
                   ^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/eager.nf:615:9`: `methodsDescriptionText` is not defined
+- Error: `workflows/eager.nf:570:9`: `CONSENSUS_SEQUENCE` is not defined
+
+  ```nextflow
+          CONSENSUS_SEQUENCE(
+          ^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `workflows/eager.nf:632:9`: `methodsDescriptionText` is not defined
 
   ```nextflow
           methodsDescriptionText(ch_multiqc_custom_methods_description))
@@ -1191,74 +1212,74 @@
                                     ^^
   ```
 
-- Warning: `subworkflows/local/deduplicate.nf:40:35`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          addNewMetaFromAttributes( it, "id" , "reference" , true )
-                                    ^^
-  ```
-
 - Warning: `subworkflows/local/deduplicate.nf:47:39`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-              addNewMetaFromAttributes( it, "reference" , "reference" , false )
+              addNewMetaFromAttributes( it, "id" , "reference" , true )
                                         ^^
   ```
 
-- Warning: `subworkflows/local/deduplicate.nf:54:13`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-              ignore_me, meta, bam, bai, regions ->
-              ^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/deduplicate.nf:67:43`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/deduplicate.nf:54:43`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   addNewMetaFromAttributes( it, "reference" , "reference" , false )
                                             ^^
   ```
 
-- Warning: `subworkflows/local/deduplicate.nf:74:17`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/deduplicate.nf:61:17`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+                  ignore_me, meta, bam, bai, regions ->
+                  ^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/deduplicate.nf:77:43`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  addNewMetaFromAttributes( it, "reference" , "reference" , false )
+                                            ^^
+  ```
+
+- Warning: `subworkflows/local/deduplicate.nf:84:17`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   ignore_me, meta, bam, bai, meta2, fasta, fasta_fai ->
                   ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/deduplicate.nf:74:39`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/deduplicate.nf:84:39`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   ignore_me, meta, bam, bai, meta2, fasta, fasta_fai ->
                                         ^^^
   ```
 
-- Warning: `subworkflows/local/deduplicate.nf:93:28`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/deduplicate.nf:103:28`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   meta, bam, bai ->
                              ^^^
   ```
 
-- Warning: `subworkflows/local/deduplicate.nf:106:43`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/deduplicate.nf:124:47`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-              meta2 = meta.clone().findAll{ it.key != 'genomic_region' }
+                  meta2 = meta.clone().findAll{ it.key != 'genomic_region' }
+                                                ^^
+  ```
+
+- Warning: `subworkflows/local/deduplicate.nf:130:43`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  addNewMetaFromAttributes( it, "reference" , "reference" , false )
                                             ^^
   ```
 
-- Warning: `subworkflows/local/deduplicate.nf:112:39`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/deduplicate.nf:138:17`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-              addNewMetaFromAttributes( it, "reference" , "reference" , false )
-                                        ^^
-  ```
-
-- Warning: `subworkflows/local/deduplicate.nf:120:13`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-              ignore_me, meta, bam, meta2, fasta, fasta_fai ->
-              ^^^^^^^^^
+                  ignore_me, meta, bam, meta2, fasta, fasta_fai ->
+                  ^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/elongate_reference.nf:16:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -2409,32 +2430,32 @@
                             ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/preprocessing_fastp.nf:14:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/preprocessing_fastp.nf:14:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-      ch_versions           = Channel.empty()
-                              ^^^^^^^
+      ch_versions = Channel.empty()
+                    ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/preprocessing_fastp.nf:15:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/preprocessing_fastp.nf:15:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-      ch_multiqc_files      = Channel.empty()
-                              ^^^^^^^
+      ch_multiqc_files = Channel.empty()
+                         ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/preprocessing_fastp.nf:19:41`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/preprocessing_fastp.nf:18:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-                                  single: it[0]['single_end'] == true
-                                          ^^
+          single: it[0]['single_end'] == true
+                  ^^
   ```
 
-- Warning: `subworkflows/local/preprocessing_fastp.nf:20:41`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/preprocessing_fastp.nf:19:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-                                  paired: it[0]['single_end'] == false
-                                          ^^
+          paired: it[0]['single_end'] == false
+                  ^^
   ```
 
 - Warning: `subworkflows/local/reference_indexing.nf:20:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -2444,133 +2465,133 @@
                     ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/reference_indexing.nf:60:30`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/reference_indexing.nf:62:30`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       .filter{ it[1] != "" }
                                ^^
   ```
 
-- Warning: `subworkflows/local/reference_indexing.nf:63:30`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/reference_indexing.nf:65:30`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       .filter{ it[1] != "" }
                                ^^
   ```
 
-- Warning: `subworkflows/local/reference_indexing.nf:67:25`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/reference_indexing.nf:69:25`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                           meta, pmd_masked_fasta ->
                           ^^^^
   ```
 
-- Warning: `subworkflows/local/reference_indexing.nf:73:25`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/reference_indexing.nf:75:25`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                           meta, pmd_masked_fasta ->
                           ^^^^
   ```
 
-- Warning: `subworkflows/local/reference_indexing.nf:83:25`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/reference_indexing.nf:85:25`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                           meta, pmd_bed_for_masking ->
                           ^^^^
   ```
 
-- Warning: `subworkflows/local/reference_indexing.nf:89:25`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/reference_indexing.nf:91:25`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                           meta, pmd_bed_for_masking ->
                           ^^^^
   ```
 
-- Warning: `subworkflows/local/reference_indexing.nf:102:25`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/reference_indexing.nf:104:25`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                           meta, capture_bed ->
                           ^^^^
   ```
 
-- Warning: `subworkflows/local/reference_indexing.nf:108:25`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/reference_indexing.nf:110:25`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                           meta, capture_bed ->
                           ^^^^
   ```
 
-- Warning: `subworkflows/local/reference_indexing.nf:117:31`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/reference_indexing.nf:119:31`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       .filter { it[1] != "" || it[2] != "" } // They go together or not at all.
                                 ^^
   ```
 
-- Warning: `subworkflows/local/reference_indexing.nf:117:46`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/reference_indexing.nf:119:46`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       .filter { it[1] != "" || it[2] != "" } // They go together or not at all.
                                                ^^
   ```
 
-- Warning: `subworkflows/local/reference_indexing.nf:120:30`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/reference_indexing.nf:122:30`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       .filter{ it != null } // Remove null channel which arises if empty cause error returns null.
                                ^^
   ```
 
-- Warning: `subworkflows/local/reference_indexing.nf:123:31`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/reference_indexing.nf:125:31`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       .filter { it[1] != "" }
                                 ^^
   ```
 
-- Warning: `subworkflows/local/reference_indexing.nf:126:31`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/reference_indexing.nf:128:31`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       .filter { it[1] != "" }
                                 ^^
   ```
 
-- Warning: `subworkflows/local/reference_indexing.nf:129:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/reference_indexing.nf:131:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .filter { it[1] != "" }
                     ^^
   ```
 
-- Warning: `subworkflows/local/reference_indexing.nf:135:9`: Variable was declared but not used
+- Warning: `subworkflows/local/reference_indexing.nf:137:9`: Variable was declared but not used
 
   ```nextflow
           ch_elongated_for_gunzip = ch_reference_to_elongate
           ^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/reference_indexing.nf:137:29`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/reference_indexing.nf:139:29`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                               meta, circular_target, circularmapper_elongatedfasta, circularmapper_elongatedindex ->
                               ^^^^
   ```
 
-- Warning: `subworkflows/local/reference_indexing.nf:137:52`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/reference_indexing.nf:139:52`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                               meta, circular_target, circularmapper_elongatedfasta, circularmapper_elongatedindex ->
                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/reference_indexing.nf:137:83`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/reference_indexing.nf:139:83`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                               meta, circular_target, circularmapper_elongatedfasta, circularmapper_elongatedindex ->
                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/reference_indexing.nf:150:33`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/reference_indexing.nf:152:33`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_elongated_chr_list = Channel.empty()
@@ -2591,133 +2612,133 @@
                                           ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/reference_indexing_multi.nf:70:75`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/reference_indexing_multi.nf:74:75`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_fasta_for_gunzip = ch_input_from_referencesheet.generated.branch { meta, fasta, fai, dict, mapper_index ->
                                                                             ^^^^
   ```
 
-- Warning: `subworkflows/local/reference_indexing_multi.nf:70:88`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/reference_indexing_multi.nf:74:88`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_fasta_for_gunzip = ch_input_from_referencesheet.generated.branch { meta, fasta, fai, dict, mapper_index ->
                                                                                          ^^^
   ```
 
-- Warning: `subworkflows/local/reference_indexing_multi.nf:70:93`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/reference_indexing_multi.nf:74:93`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_fasta_for_gunzip = ch_input_from_referencesheet.generated.branch { meta, fasta, fai, dict, mapper_index ->
                                                                                               ^^^^
   ```
 
-- Warning: `subworkflows/local/reference_indexing_multi.nf:70:99`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/reference_indexing_multi.nf:74:99`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_fasta_for_gunzip = ch_input_from_referencesheet.generated.branch { meta, fasta, fai, dict, mapper_index ->
                                                                                                     ^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/reference_indexing_multi.nf:94:60`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/reference_indexing_multi.nf:98:60`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_fasta_for_faidx = ch_fasta_for_faiindexing.branch { meta, fasta, fai, dict, mapper_index ->
                                                              ^^^^
   ```
 
-- Warning: `subworkflows/local/reference_indexing_multi.nf:94:66`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/reference_indexing_multi.nf:98:66`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_fasta_for_faidx = ch_fasta_for_faiindexing.branch { meta, fasta, fai, dict, mapper_index ->
                                                                    ^^^^^
   ```
 
-- Warning: `subworkflows/local/reference_indexing_multi.nf:94:78`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/reference_indexing_multi.nf:98:78`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_fasta_for_faidx = ch_fasta_for_faiindexing.branch { meta, fasta, fai, dict, mapper_index ->
                                                                                ^^^^
   ```
 
-- Warning: `subworkflows/local/reference_indexing_multi.nf:94:84`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/reference_indexing_multi.nf:98:84`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_fasta_for_faidx = ch_fasta_for_faiindexing.branch { meta, fasta, fai, dict, mapper_index ->
                                                                                      ^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/reference_indexing_multi.nf:100:74`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/reference_indexing_multi.nf:104:74`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_faidx_input = ch_fasta_for_faidx.forfaidx.multiMap { meta, fasta, fai, dict, mapper_index ->
                                                                            ^^^
   ```
 
-- Warning: `subworkflows/local/reference_indexing_multi.nf:123:60`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/reference_indexing_multi.nf:127:60`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_fasta_for_dict = ch_fasta_for_dictindexing.branch { meta, fasta, fai, dict, mapper_index ->
                                                              ^^^^
   ```
 
-- Warning: `subworkflows/local/reference_indexing_multi.nf:123:66`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/reference_indexing_multi.nf:127:66`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_fasta_for_dict = ch_fasta_for_dictindexing.branch { meta, fasta, fai, dict, mapper_index ->
                                                                    ^^^^^
   ```
 
-- Warning: `subworkflows/local/reference_indexing_multi.nf:123:73`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/reference_indexing_multi.nf:127:73`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_fasta_for_dict = ch_fasta_for_dictindexing.branch { meta, fasta, fai, dict, mapper_index ->
                                                                           ^^^
   ```
 
-- Warning: `subworkflows/local/reference_indexing_multi.nf:123:84`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/reference_indexing_multi.nf:127:84`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_fasta_for_dict = ch_fasta_for_dictindexing.branch { meta, fasta, fai, dict, mapper_index ->
                                                                                      ^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/reference_indexing_multi.nf:128:76`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/reference_indexing_multi.nf:132:76`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_dict_input = ch_fasta_for_dict.fordict.multiMap { meta, fasta, fai, dict, mapper_index ->
                                                                              ^^^^
   ```
 
-- Warning: `subworkflows/local/reference_indexing_multi.nf:151:67`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/reference_indexing_multi.nf:155:67`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_fasta_for_mapperindex = ch_dict_formapperindexing.branch { meta, fasta, fai, dict, mapper_index ->
                                                                     ^^^^
   ```
 
-- Warning: `subworkflows/local/reference_indexing_multi.nf:151:73`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/reference_indexing_multi.nf:155:73`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_fasta_for_mapperindex = ch_dict_formapperindexing.branch { meta, fasta, fai, dict, mapper_index ->
                                                                           ^^^^^
   ```
 
-- Warning: `subworkflows/local/reference_indexing_multi.nf:151:80`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/reference_indexing_multi.nf:155:80`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_fasta_for_mapperindex = ch_dict_formapperindexing.branch { meta, fasta, fai, dict, mapper_index ->
                                                                                  ^^^
   ```
 
-- Warning: `subworkflows/local/reference_indexing_multi.nf:151:85`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/reference_indexing_multi.nf:155:85`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_fasta_for_mapperindex = ch_dict_formapperindexing.branch { meta, fasta, fai, dict, mapper_index ->
                                                                                       ^^^^
   ```
 
-- Warning: `subworkflows/local/reference_indexing_multi.nf:156:94`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/reference_indexing_multi.nf:160:94`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_mapindex_input = ch_fasta_for_mapperindex.forindex.multiMap { meta, fasta, fai, dict, mapper_index ->
@@ -2948,399 +2969,406 @@
                                            ^^^
   ```
 
-- Warning: `workflows/eager.nf:112:29`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
+
+  ```nextflow
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
+  ```
+
+- Warning: `workflows/eager.nf:114:29`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .filter { meta, reads ->
                               ^^^^^
   ```
 
-- Warning: `workflows/eager.nf:124:83`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/eager.nf:126:83`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_paired_end_reads = SAMTOOLS_CONVERT_BAM_INPUT.out.fastq.filter { meta, reads ->
                                                                                     ^^^^^
   ```
 
-- Warning: `workflows/eager.nf:156:73`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/eager.nf:160:73`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(FALCO.out.txt.collect { it[1] }.ifEmpty([]))
                                                                           ^^
   ```
 
-- Warning: `workflows/eager.nf:161:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/eager.nf:165:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(FASTQC.out.zip.collect { it[1] }.ifEmpty([]))
                                                                            ^^
   ```
 
-- Warning: `workflows/eager.nf:172:81`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/eager.nf:176:81`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(PREPROCESSING.out.mqc.collect { it[1] }.ifEmpty([]))
                                                                                   ^^
   ```
 
-- Warning: `workflows/eager.nf:181:84`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/eager.nf:185:84`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_reference_for_mapping = REFERENCE_INDEXING.out.reference.map { meta, fasta, fai, dict, index ->
                                                                                      ^^^
   ```
 
-- Warning: `workflows/eager.nf:181:89`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/eager.nf:185:89`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_reference_for_mapping = REFERENCE_INDEXING.out.reference.map { meta, fasta, fai, dict, index ->
                                                                                           ^^^^
   ```
 
-- Warning: `workflows/eager.nf:188:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/eager.nf:192:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(MAP.out.mqc.collect { it[1] }.ifEmpty([]))
                                                                     ^^
   ```
 
-- Warning: `workflows/eager.nf:231:78`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/eager.nf:234:78`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(FILTER_BAM.out.mqc.collect { it[1] }.ifEmpty([]))
                                                                                ^^
   ```
 
-- Warning: `workflows/eager.nf:245:96`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/eager.nf:248:96`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_fasta_for_deduplication = REFERENCE_INDEXING.out.reference.multiMap { meta, fasta, fai, dict, index ->
                                                                                                  ^^^^
   ```
 
-- Warning: `workflows/eager.nf:245:102`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/eager.nf:248:102`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_fasta_for_deduplication = REFERENCE_INDEXING.out.reference.multiMap { meta, fasta, fai, dict, index ->
                                                                                                        ^^^^^
   ```
 
-- Warning: `workflows/eager.nf:268:79`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/eager.nf:271:79`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(MERGE_LIBRARIES.out.mqc.collect { it[1] }.ifEmpty([]))
                                                                                 ^^
   ```
 
-- Warning: `workflows/eager.nf:276:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/eager.nf:279:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               addNewMetaFromAttributes(it, "id", "reference", false)
                                        ^^
   ```
 
-- Warning: `workflows/eager.nf:279:31`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/eager.nf:282:31`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map { meta, bam, bai ->
                                 ^^^
   ```
 
-- Warning: `workflows/eager.nf:283:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/eager.nf:286:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   addNewMetaFromAttributes(it, "reference", "reference", false)
                                            ^^
   ```
 
-- Warning: `workflows/eager.nf:289:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/eager.nf:292:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .branch { ignore_meta, meta, bam, meta2, snp_capture_bed ->
                         ^^^^^^^^^^^
   ```
 
-- Warning: `workflows/eager.nf:289:36`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/eager.nf:292:36`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .branch { ignore_meta, meta, bam, meta2, snp_capture_bed ->
                                      ^^^^
   ```
 
-- Warning: `workflows/eager.nf:289:42`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/eager.nf:292:42`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .branch { ignore_meta, meta, bam, meta2, snp_capture_bed ->
                                            ^^^
   ```
 
-- Warning: `workflows/eager.nf:289:47`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/eager.nf:292:47`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .branch { ignore_meta, meta, bam, meta2, snp_capture_bed ->
                                                 ^^^^^
   ```
 
-- Warning: `workflows/eager.nf:293:71`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/eager.nf:296:71`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_qualimap_input_with = ch_qualimap_input.withbed.multiMap { ignore_meta, meta, bam, meta2, snp_capture_bed ->
                                                                         ^^^^^^^^^^^
   ```
 
-- Warning: `workflows/eager.nf:293:95`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/eager.nf:296:95`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_qualimap_input_with = ch_qualimap_input.withbed.multiMap { ignore_meta, meta, bam, meta2, snp_capture_bed ->
                                                                                                 ^^^^^
   ```
 
-- Warning: `workflows/eager.nf:299:67`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/eager.nf:302:67`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_qualimap_input_without = ch_qualimap_input.nobed.map { ignore_meta, meta, bam, meta2, snp_capture_bed ->
                                                                     ^^^^^^^^^^^
   ```
 
-- Warning: `workflows/eager.nf:299:91`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/eager.nf:302:91`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_qualimap_input_without = ch_qualimap_input.nobed.map { ignore_meta, meta, bam, meta2, snp_capture_bed ->
                                                                                             ^^^^^
   ```
 
-- Warning: `workflows/eager.nf:299:98`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/eager.nf:302:98`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_qualimap_input_without = ch_qualimap_input.nobed.map { ignore_meta, meta, bam, meta2, snp_capture_bed ->
                                                                                                    ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/eager.nf:319:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/eager.nf:322:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   new_meta = meta.clone().findAll { it.key !in ['single_end', 'reference'] }
                                                     ^^
   ```
 
-- Warning: `workflows/eager.nf:326:47`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/eager.nf:329:47`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               new_meta = meta.clone().findAll { it.key !in ['lane', 'colour_chemistry', 'single_end'] }
                                                 ^^
   ```
 
-- Warning: `workflows/eager.nf:333:20`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/eager.nf:336:20`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map { meta_join, meta_bam, bam, bai, meta_fastq, fastqs ->
                      ^^^^^^^^^
   ```
 
-- Warning: `workflows/eager.nf:370:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/eager.nf:373:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               addNewMetaFromAttributes(it, "id", "reference", false)
                                        ^^
   ```
 
-- Warning: `workflows/eager.nf:374:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/eager.nf:377:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   addNewMetaFromAttributes(it, "reference", "reference", false)
                                            ^^
   ```
 
-- Warning: `workflows/eager.nf:380:25`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/eager.nf:383:25`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .multiMap { ignore_meta, meta, bam, bai, meta2, mito_header ->
                           ^^^^^^^^^^^
   ```
 
-- Warning: `workflows/eager.nf:380:49`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/eager.nf:383:49`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .multiMap { ignore_meta, meta, bam, bai, meta2, mito_header ->
                                                   ^^^
   ```
 
-- Warning: `workflows/eager.nf:385:77`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/eager.nf:388:77`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           MTNUCRATIO(mtnucratio_input.bam, mtnucratio_input.mito_header.map { it[1] })
                                                                               ^^
   ```
 
-- Warning: `workflows/eager.nf:386:85`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/eager.nf:389:85`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(MTNUCRATIO.out.mtnucratio.collect { it[1] }.ifEmpty([]))
                                                                                       ^^
   ```
 
-- Warning: `workflows/eager.nf:425:73`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/eager.nf:427:73`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(ENDORSPY.out.json.collect { it[1] }.ifEmpty([]))
                                                                           ^^
   ```
 
-- Warning: `workflows/eager.nf:432:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/eager.nf:434:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           PRESEQ_CCURVE(ch_reads_for_deduplication.map { [it[0], it[1]] })
                                                           ^^
   ```
 
-- Warning: `workflows/eager.nf:432:64`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/eager.nf:434:64`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           PRESEQ_CCURVE(ch_reads_for_deduplication.map { [it[0], it[1]] })
                                                                  ^^
   ```
 
-- Warning: `workflows/eager.nf:433:85`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/eager.nf:435:85`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(PRESEQ_CCURVE.out.c_curve.collect { it[1] }.ifEmpty([]))
                                                                                       ^^
   ```
 
-- Warning: `workflows/eager.nf:437:59`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/eager.nf:439:59`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           PRESEQ_LCEXTRAP(ch_reads_for_deduplication.map { [it[0], it[1]] })
                                                             ^^
   ```
 
-- Warning: `workflows/eager.nf:437:66`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/eager.nf:439:66`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           PRESEQ_LCEXTRAP(ch_reads_for_deduplication.map { [it[0], it[1]] })
                                                                    ^^
   ```
 
-- Warning: `workflows/eager.nf:438:89`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/eager.nf:440:89`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(PRESEQ_LCEXTRAP.out.lc_extrap.collect { it[1] }.ifEmpty([]))
                                                                                           ^^
   ```
 
-- Warning: `workflows/eager.nf:449:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/eager.nf:451:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               addNewMetaFromAttributes(it, "id", "reference", false)
                                        ^^
   ```
 
-- Warning: `workflows/eager.nf:454:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/eager.nf:456:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   addNewMetaFromAttributes(it, "reference", "reference", false)
                                            ^^
   ```
 
-- Warning: `workflows/eager.nf:460:20`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/eager.nf:462:20`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map { ignore_meta, meta, bam, bai, meta2, bedtools_feature ->
                      ^^^^^^^^^^^
   ```
 
-- Warning: `workflows/eager.nf:460:49`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/eager.nf:462:49`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map { ignore_meta, meta, bam, bai, meta2, bedtools_feature ->
                                                   ^^^^^
   ```
 
-- Warning: `workflows/eager.nf:463:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/eager.nf:465:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .branch { meta, bedtools_feature, bam, bai ->
                         ^^^^
   ```
 
-- Warning: `workflows/eager.nf:463:47`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/eager.nf:465:47`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .branch { meta, bedtools_feature, bam, bai ->
                                                 ^^^
   ```
 
-- Warning: `workflows/eager.nf:463:52`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/eager.nf:465:52`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .branch { meta, bedtools_feature, bam, bai ->
                                                      ^^^
   ```
 
-- Warning: `workflows/eager.nf:489:100`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/eager.nf:491:100`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_fasta_for_damagecalculation = REFERENCE_INDEXING.out.reference.multiMap { meta, fasta, fai, dict, index ->
                                                                                                      ^^^^
   ```
 
-- Warning: `workflows/eager.nf:489:106`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/eager.nf:491:106`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_fasta_for_damagecalculation = REFERENCE_INDEXING.out.reference.multiMap { meta, fasta, fai, dict, index ->
                                                                                                            ^^^^^
   ```
 
-- Warning: `workflows/eager.nf:497:84`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/eager.nf:499:84`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(CALCULATE_DAMAGE.out.mqc.collect { it[1] }.ifEmpty([]))
                                                                                      ^^
   ```
 
-- Warning: `workflows/eager.nf:509:85`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/eager.nf:511:85`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(RUN_SEXDETERRMINE.out.mqc.collect { it[1] }.ifEmpty([]))
                                                                                       ^^
   ```
 
-- Warning: `workflows/eager.nf:521:90`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/eager.nf:523:90`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(ESTIMATE_CONTAMINATION.out.mqc.collect { it[1] }.ifEmpty([]))
                                                                                            ^^
   ```
 
-- Warning: `workflows/eager.nf:530:90`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/eager.nf:532:90`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(MANIPULATE_DAMAGE.out.flagstat.collect { it[1] }.ifEmpty([]))
                                                                                            ^^
   ```
 
-- Warning: `workflows/eager.nf:538:94`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/eager.nf:540:94`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(MERGE_LIBRARIES_GENOTYPING.out.mqc.collect { it[1] }.ifEmpty([]))
                                                                                                ^^
   ```
 
-- Warning: `workflows/eager.nf:549:102`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/eager.nf:551:102`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_reference_for_genotyping = REFERENCE_INDEXING.out.reference.map { meta, fasta, fai, dict, mapindex ->
                                                                                                        ^^^^^^^^
   ```
 
-- Warning: `workflows/eager.nf:560:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/eager.nf:562:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(GENOTYPE.out.mqc.collect { it[1] }.ifEmpty([]))
                                                                              ^^
   ```
 
-- Warning: `workflows/eager.nf:626:78`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/eager.nf:643:78`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(ch_qualimap_output.collect { it[1] }.ifEmpty([]))

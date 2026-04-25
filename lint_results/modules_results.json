@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "135d883a43b1a2324b4112cd270cf22e20835533",
+  "_repo_commit": "8098ab9d800821e8b18e17fd515ed1e4ebc523f4",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -1448,6 +1448,12 @@
   },
   "canvas_germline": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/canvas/germline",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "carveme_carve": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/carveme/carve",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

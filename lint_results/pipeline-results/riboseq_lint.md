@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-15T00:31:35.509955097Z
-- Nextflow version: 26.03.2-edge
-- Summary: 26 errors, 56 warnings
+- Generated: 2026-04-25T00:29:49.838293450Z
+- Nextflow version: 26.03.3-edge
+- Summary: 27 errors, 56 warnings
 
 ## :x: Errors
 
@@ -128,6 +128,13 @@
 - Error: `conf/modules.config:1119:1`: If statements cannot be mixed with config statements
 
   ```nextflow
+  if (params.te_quantification_method == 'plastid_psite') {
+  ^
+  ```
+
+- Error: `conf/modules.config:1142:1`: If statements cannot be mixed with config statements
+
+  ```nextflow
   if (params.contrasts) {
   ^
   ```
@@ -181,7 +188,7 @@
                                  ^^^^^
   ```
 
-- Error: `workflows/riboseq/main.nf:303:64`: Unexpected input: '\n'
+- Error: `workflows/riboseq/main.nf:306:64`: Unexpected input: '\n'
 
   ```nextflow
                           [meta + [strand: strand, strand_filter:

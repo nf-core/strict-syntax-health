@@ -3,7 +3,8 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.03.3-edge
 
-Launching `./main.nf` [pedantic_spence] revision: 919a29f303
+Downloading plugin nf-schema@2.5.1
+Launching `./main.nf` [pensive_venter] revision: 919a29f303
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -24,22 +25,26 @@ help message of that parameter will be printed.
 or `--helpFull`.  
 
 Input/output options
-  --input                            [string]  Path to comma-separated file containing information about the samples in the experiment. 
-  --outdir                           [string]  The output directory where the results will be saved. You have to use absolute paths to storage on 
+  --input                            [string] Path to comma-separated file containing information about the samples in the experiment. 
+  --outdir                           [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
 Cloud infrastructure.  
-  --email                            [string]  Email address for completion summary. 
-  --multiqc_title                    [string]  MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
-  --dbname                           [string]  Specify name that resulting databases will be prefixed with. 
-  --accession2taxid                  [string]  NCBI-style four-column accession to taxonomy ID map file 
-  --prot2taxid                       [string]  Two column protein sequence accession ID to taxonomy map file. 
-  --nucl2taxid                       [string]  Two column nucleotide sequence accession ID to taxonomy map file. 
-  --nodesdmp                         [string]  Path to NCBI-style taxonomy node dmp file. 
-  --namesdmp                         [string]  Path to NCBI-style taxonomy names dmp file. 
-  --genomesizes                      [string]  Path to NCBI or GTDB genome sizes file 
-  --malt_mapdb                       [string]  Path to MEGAN6/MALT mapping db file 
-  --malt_mapdb_format                [string]  Specify the type of MALT mapdb provided, based on the corresponding MALT flag.  (accepted: mdb, 
+  --email                            [string] Email address for completion summary. 
+  --multiqc_title                    [string] MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+  --dbname                           [string] Specify name that resulting databases will be prefixed with. 
+  --accession2taxid                  [string] NCBI-style four-column accession to taxonomy ID map file. 
+  --prot2taxid                       [string] Two column protein sequence accession ID to taxonomy map file. 
+  --nucl2taxid                       [string] Two column nucleotide sequence accession ID to taxonomy map file. 
+  --nodesdmp                         [string] Path to NCBI-style taxonomy node dmp file. 
+  --namesdmp                         [string] Path to NCBI-style taxonomy names dmp file. 
+  --genomesizes                      [string] Path to NCBI or GTDB genome sizes file. 
+  --malt_mapdb                       [string] Path to MEGAN6/MALT mapping db file. 
+  --malt_mapdb_format                [string] Specify the type of MALT mapdb provided, based on the corresponding MALT flag.  (accepted: mdb, 
 a2t, s2t, a2ec, s2ec, t4ec, a2eggnog, s2eggnog, t4eggnog, a2gtdb, s2gtdb, t4gtdb, ...)  
-  --save_concatenated_fastas         [boolean] Save concatenated input FASTAs 
+
+Input file preprocessing
+  --save_uncompressed_fastas         [boolean] Save uncompressed input FASTAs. 
+  --save_concatenated_fastas         [boolean] Save uncompressed concatenated input FASTAs. 
+  --save_uncompressed_auxfiles       [boolean] Save automatically unzipped input auxiliary files. 
 
 Database Building Options
   --build_bracken                    [boolean] Turn on extending of Kraken2 database to include Bracken files. Requires nucleotide FASTA File 
