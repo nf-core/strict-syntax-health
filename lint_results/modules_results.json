@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "8098ab9d800821e8b18e17fd515ed1e4ebc523f4",
+  "_repo_commit": "70ea099f53b6bcff84c77e7d7a211ebc6ca8be32",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -7189,13 +7189,13 @@
     "parse_error": false
   },
   "plastid_make_wiggle": {
-    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/make/wiggle",
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/make_wiggle",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
   "plastid_metagene_generate": {
-    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/metagene/generate",
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/metagene_generate",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -7513,7 +7513,7 @@
     "parse_error": false
   },
   "proseg_proseg_to_baysor": {
-    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/proseg/proseg/to/baysor",
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/proseg/proseg_to_baysor",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

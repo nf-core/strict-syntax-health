@@ -1,9 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.03.3-edge
+ N E X T F L O W   ~  version 26.03.4-edge
 
-Launching `./main.nf` [clever_noyce] revision: 423907abc8
+Downloading plugin nf-schema@2.5.1
+Launching `./main.nf` [elated_khorana] revision: ab3a8cb353
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -103,6 +104,8 @@ be treated as homoplasmic and assigned a 1/1 genotype. Range 0-1.0. [default: 1.
  
   --run_mt_for_wes                    [boolean] Specifies whether to run mitochondrial analysis for wes samples 
   --run_rtgvcfeval                    [boolean] Specifies whether to run rtgtools' vcfeval 
+  --run_vcfanno_db_sanity_check       [boolean] Specifies whether to check vcfanno database files for zero records and remove the corresponding 
+annotation blocks from the TOML config before running vcfanno  
   --save_all_mapped_as_cram           [boolean] Specifies whether to generate and publish all (unfiltered) alignment files as cram instead of bam 
  
   --save_noalt_mapped_as_cram         [boolean] Specifies whether to generate and publish alt-filtered alignment files as cram instead of bam. 
