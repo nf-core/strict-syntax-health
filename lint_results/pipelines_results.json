@@ -92,18 +92,18 @@
   "cellpainting": {
     "full_name": "nf-core/cellpainting",
     "html_url": "https://github.com/nf-core/cellpainting",
-    "commit": "b0651e028736eae0cecaeb95df1f2cc9ae3c88a4",
-    "errors": 6,
-    "warnings": 35,
+    "commit": "4b4bd43967e21f2e767b86fe964ca40e06246b32",
+    "errors": 2,
+    "warnings": 7,
     "parse_error": false,
     "prints_help": null
   },
   "chipseq": {
     "full_name": "nf-core/chipseq",
     "html_url": "https://github.com/nf-core/chipseq",
-    "commit": "a34559ccface02393c7bec884ad041432332c4b5",
+    "commit": "1d6a6bde4a2f17b72ec5c601b02032caf2d6ea8b",
     "errors": 0,
-    "warnings": 71,
+    "warnings": 73,
     "parse_error": false,
     "prints_help": true
   },
@@ -155,11 +155,11 @@
   "createtaxdb": {
     "full_name": "nf-core/createtaxdb",
     "html_url": "https://github.com/nf-core/createtaxdb",
-    "commit": "cab09ede625f0684e232fd8260d274d135b6b630",
-    "errors": 0,
-    "warnings": 10,
+    "commit": "82d6ac30998bc0bfb0dfdb033f3892308706d3e5",
+    "errors": 1,
+    "warnings": 8,
     "parse_error": false,
-    "prints_help": true
+    "prints_help": null
   },
   "crisprseq": {
     "full_name": "nf-core/crisprseq",
@@ -254,9 +254,9 @@
   "differentialabundance": {
     "full_name": "nf-core/differentialabundance",
     "html_url": "https://github.com/nf-core/differentialabundance",
-    "commit": "6a701b050e4884d81a85ef5e3e0c9f77ef316986",
+    "commit": "57f3b13a53f8833b0e42ace0475a46d6a7d0b408",
     "errors": 75,
-    "warnings": 9,
+    "warnings": 8,
     "parse_error": false,
     "prints_help": null
   },
@@ -749,9 +749,9 @@
   "pacvar": {
     "full_name": "nf-core/pacvar",
     "html_url": "https://github.com/nf-core/pacvar",
-    "commit": "338f4d9fcb73bc3aa2f08127d6860d945b151e25",
+    "commit": "136f83a3f306a978662096f93e6eaaf503342c18",
     "errors": 6,
-    "warnings": 29,
+    "warnings": 30,
     "parse_error": false,
     "prints_help": null
   },
@@ -884,7 +884,7 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "59a7eb2d3b3f6a81b3b9f74138377763cafc98d7",
+    "commit": "a68931d923998a59684004c0d0bad5cbe8e8dd9f",
     "errors": 0,
     "warnings": 1,
     "parse_error": false,
@@ -965,7 +965,7 @@
   "rnaseq": {
     "full_name": "nf-core/rnaseq",
     "html_url": "https://github.com/nf-core/rnaseq",
-    "commit": "22eb793ca87fd6eaee3069b9bdda2be96e491556",
+    "commit": "b4a4168d28e62486eaf5663e1701789ae24dc9b4",
     "errors": 0,
     "warnings": 16,
     "parse_error": false,

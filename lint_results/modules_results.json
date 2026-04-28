@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "70ea099f53b6bcff84c77e7d7a211ebc6ca8be32",
+  "_repo_commit": "e3e0c687eb5c129c011fca992af762ff2d4cb0f3",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -2595,7 +2595,7 @@
   "dragen_germline": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/dragen/germline",
     "errors": 0,
-    "warnings": 0,
+    "warnings": 1,
     "parse_error": false
   },
   "dragmap_align": {

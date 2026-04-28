@@ -3,8 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.03.4-edge
 
-Downloading plugin nf-schema@2.5.1
-Launching `./main.nf` [elated_khorana] revision: ab3a8cb353
+Launching `./main.nf` [cranky_caravaggio] revision: aa70ef43c3
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -112,6 +111,7 @@ annotation blocks from the TOML config before running vcfanno
 Requires exclude_alt to be set to true.  
   --scatter_count                     [integer] Number of intervals to split your genome into (used to parallelize annotations) [default: 20] 
  
+  --skip_split_multiallelics          [boolean] Skip the split multiallelics step in SNV calling. 
   --skip_subworkflows                 [string]  Disable specified subworkflows. 
   --skip_tools                        [string]  Disable specified tools. 
 

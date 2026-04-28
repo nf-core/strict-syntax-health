@@ -1,8 +1,17 @@
 # Nextflow lint results
 
-- Generated: 2026-04-25T00:28:24.437107481Z
-- Nextflow version: 26.03.3-edge
-- Summary: 10 warnings
+- Generated: 2026-04-28T00:34:21.536839944Z
+- Nextflow version: 26.03.4-edge
+- Summary: 1 error, 8 warnings
+
+## :x: Errors
+
+- Error: `conf/modules.config:118:24`: `$` is not defined
+
+  ```nextflow
+          ext.args   = { $ { params.kmcp_compute_options } }
+                         ^
+  ```
 
 ## :warning: Warnings
 
@@ -25,20 +34,6 @@
   ```nextflow
       def genome_size_args = genome_size_files ? "--genome-size-files ${genome_size_files}" : ""
           ^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/kmcp/compute/main.nf:40:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/kmcp/index/main.nf:39:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
   ```
 
 - Warning: `modules/nf-core/malt/build/main.nf:44:9`: Variable was declared but not used

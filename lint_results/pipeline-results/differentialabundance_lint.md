@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-21T00:30:55.198174451Z
-- Nextflow version: 26.03.3-edge
-- Summary: 75 errors, 9 warnings
+- Generated: 2026-04-28T00:34:31.408981409Z
+- Nextflow version: 26.03.4-edge
+- Summary: 75 errors, 8 warnings
 
 ## :x: Errors
 
@@ -576,13 +576,6 @@
   ```
 
 - Warning: `modules/nf-core/gunzip/main.nf:43:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/shinyngs/staticexploratory/main.nf:51:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
