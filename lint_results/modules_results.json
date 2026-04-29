@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "e3e0c687eb5c129c011fca992af762ff2d4cb0f3",
+  "_repo_commit": "e2d3f0ddf4a74a4a9031f3caea2e9deaec5a440b",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -1662,6 +1662,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "centrifuger_centrifuger": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/centrifuger/centrifuger",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "checkm_lineagewf": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/checkm/lineagewf",
     "errors": 0,
@@ -2595,7 +2601,7 @@
   "dragen_germline": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/dragen/germline",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "dragmap_align": {
@@ -2685,7 +2691,7 @@
   "ea-utils_gtf2bed": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ea-utils/gtf2bed",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "eagle2": {
@@ -6912,6 +6918,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "percolator": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/percolator",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "phantompeakqualtools": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/phantompeakqualtools",
     "errors": 0,
@@ -9849,7 +9861,7 @@
   "telescope_assign": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/telescope/assign",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "telogator2": {

@@ -1,52 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-25T00:29:00.402664209Z
-- Nextflow version: 26.03.3-edge
-- Summary: 6 errors, 26 warnings
-
-## :x: Errors
-
-- Error: `nextflow.config:344:32`: `manifest` is not defined
-
-  ```nextflow
-  \033[0;35m  nf-core/fetchngs ${manifest.version}\033[0m
-                                 ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:347:26`: `manifest` is not defined
-
-  ```nextflow
-          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
-                           ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:347:69`: `manifest` is not defined
-
-  ```nextflow
-          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
-                                                                      ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:347:186`: `manifest` is not defined
-
-  ```nextflow
-          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
-                                                                                                                                                                                           ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:356:22`: `validation` is not defined
-
-  ```nextflow
-          beforeText = validation.help.beforeText
-                       ^^^^^^^^^^
-  ```
-
-- Error: `nextflow.config:357:21`: `validation` is not defined
-
-  ```nextflow
-          afterText = validation.help.afterText
-                      ^^^^^^^^^^
-  ```
+- Generated: 2026-04-29T00:36:16.598245563Z
+- Nextflow version: 26.03.4-edge
+- Summary: 9 warnings
 
 ## :warning: Warnings
 
@@ -85,81 +41,18 @@
                                                                       ^^
   ```
 
-- Warning: `modules/nf-core/custom/sratoolsncbisettings/main.nf:20:5`: The `shell` block is deprecated, use `script` instead
+- Warning: `subworkflows/local/utils_nfcore_fetchngs_pipeline/main.nf:32:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      shell:
-      ^^^^^
-  ```
-
-- Warning: `modules/nf-core/custom/sratoolsncbisettings/main.nf:21:5`: Variable was declared but not used
-
-  ```nextflow
-      config = "/LIBS/GUID = \"${UUID.randomUUID().toString()}\"\\n/libs/cloud/report_instance_identity = \"true\"\\n"
-      ^^^^^^
-  ```
-
-- Warning: `modules/nf-core/fastqdl/main.nf:40:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/sratools/prefetch/main.nf:22:5`: The `shell` block is deprecated, use `script` instead
-
-  ```nextflow
-      shell:
-      ^^^^^
-  ```
-
-- Warning: `modules/nf-core/sratools/prefetch/main.nf:24:5`: Variable was declared but not used
-
-  ```nextflow
-      args2 = task.ext.args2 ?: '5 1 100'  // <num retries> <base delay in seconds> <max delay in seconds>
-      ^^^^^
-  ```
-
-- Warning: `nextflow.config:347:129`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
-                                                                                                                                  ^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_fetchngs_pipeline/main.nf:30:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      monochrome_logs     // boolean: Do not use coloured log outputs
+      monochrome_logs   // boolean: Do not use coloured log outputs
       ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_fetchngs_pipeline/main.nf:76:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      Channel.from(ch_input)
-      ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_fetchngs_pipeline/main.nf:78:16`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          .map { it[0] }
-                 ^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_fetchngs_pipeline/main.nf:172:101`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_fetchngs_pipeline/main.nf:202:101`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       def actual_ena_metadata_fields = ena_metadata_fields ? ena_metadata_fields.split(',').collect { it.trim().toLowerCase() } : valid_ena_metadata_fields
                                                                                                       ^^
-  ```
-
-- Warning: `subworkflows/nf-core/fastq_download_prefetch_fasterqdump_sratools/main.nf:15:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
   ```
 
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
@@ -169,65 +62,9 @@
       ^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/fetchngs.nf:217:17`: Variable was declared but not used
 
   ```nextflow
-      return ch_versions.unique().map { version -> processVersionsFromYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
-                                                                                                   ^^^^^^^
-  ```
-
-- Warning: `workflows/sra/main.nf:36:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `workflows/sra/main.nf:163:16`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          .map { it[1] }
-                 ^^
-  ```
-
-- Warning: `workflows/sra/main.nf:164:91`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          .collectFile(name:'tmp_samplesheet.csv', newLine: true, keepHeader: true, sort: { it.baseName })
-                                                                                            ^^
-  ```
-
-- Warning: `workflows/sra/main.nf:165:16`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          .map { it.text.tokenize('\n').join('\n') }
-                 ^^
-  ```
-
-- Warning: `workflows/sra/main.nf:172:16`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          .map { it[1] }
-                 ^^
-  ```
-
-- Warning: `workflows/sra/main.nf:173:91`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          .collectFile(name:'tmp_id_mappings.csv', newLine: true, keepHeader: true, sort: { it.baseName })
-                                                                                            ^^
-  ```
-
-- Warning: `workflows/sra/main.nf:174:16`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          .map { it.text.tokenize('\n').join('\n') }
-                 ^^
-  ```
-
-- Warning: `workflows/sra/main.nf:181:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_sample_mappings_yml = Channel.empty()
-                               ^^^^^^^
+          ).set { ch_collated_versions }
+                  ^^^^^^^^^^^^^^^^^^^^
   ```

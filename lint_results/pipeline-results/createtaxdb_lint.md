@@ -1,17 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-28T00:34:21.536839944Z
+- Generated: 2026-04-29T00:35:38.223873018Z
 - Nextflow version: 26.03.4-edge
-- Summary: 1 error, 8 warnings
-
-## :x: Errors
-
-- Error: `conf/modules.config:118:24`: `$` is not defined
-
-  ```nextflow
-          ext.args   = { $ { params.kmcp_compute_options } }
-                         ^
-  ```
+- Summary: 8 warnings
 
 ## :warning: Warnings
 

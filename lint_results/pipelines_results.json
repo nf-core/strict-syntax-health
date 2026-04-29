@@ -92,7 +92,7 @@
   "cellpainting": {
     "full_name": "nf-core/cellpainting",
     "html_url": "https://github.com/nf-core/cellpainting",
-    "commit": "4b4bd43967e21f2e767b86fe964ca40e06246b32",
+    "commit": "ad0ac2c525e70eff8818cbab032dc7d6fee38862",
     "errors": 2,
     "warnings": 7,
     "parse_error": false,
@@ -110,7 +110,7 @@
   "circdna": {
     "full_name": "nf-core/circdna",
     "html_url": "https://github.com/nf-core/circdna",
-    "commit": "c877affee1c208fc7279aa4c2053035729bfdf2f",
+    "commit": "b5e2fbe05c2892f963e7e02784efd657d429634d",
     "errors": 21,
     "warnings": 26,
     "parse_error": false,
@@ -155,11 +155,11 @@
   "createtaxdb": {
     "full_name": "nf-core/createtaxdb",
     "html_url": "https://github.com/nf-core/createtaxdb",
-    "commit": "82d6ac30998bc0bfb0dfdb033f3892308706d3e5",
-    "errors": 1,
+    "commit": "39872263ce98a7052586ca9c5533c737b433e333",
+    "errors": 0,
     "warnings": 8,
     "parse_error": false,
-    "prints_help": null
+    "prints_help": true
   },
   "crisprseq": {
     "full_name": "nf-core/crisprseq",
@@ -305,6 +305,15 @@
     "parse_error": false,
     "prints_help": null
   },
+  "epigenomesegmentation": {
+    "full_name": "nf-core/epigenomesegmentation",
+    "html_url": "https://github.com/nf-core/epigenomesegmentation",
+    "commit": "00154b9953b68f2ba3b475fd4a9ea76b0fecc3de",
+    "errors": 0,
+    "warnings": 78,
+    "parse_error": false,
+    "prints_help": false
+  },
   "epitopeprediction": {
     "full_name": "nf-core/epitopeprediction",
     "html_url": "https://github.com/nf-core/epitopeprediction",
@@ -344,18 +353,18 @@
   "fetchngs": {
     "full_name": "nf-core/fetchngs",
     "html_url": "https://github.com/nf-core/fetchngs",
-    "commit": "bc80aaf1837cebc0b6a40c450769879d17569024",
-    "errors": 6,
-    "warnings": 26,
+    "commit": "dc1918fe177350e8e5563d01a5cce0e36f5014dd",
+    "errors": 0,
+    "warnings": 9,
     "parse_error": false,
-    "prints_help": null
+    "prints_help": true
   },
   "funcprofiler": {
     "full_name": "nf-core/funcprofiler",
     "html_url": "https://github.com/nf-core/funcprofiler",
-    "commit": "8aa5eb9cf3562daee057dea7e6f1cab1c08770f4",
-    "errors": 48,
-    "warnings": 53,
+    "commit": "c5005828eae596a4959546d26a190b02fb5db004",
+    "errors": 26,
+    "warnings": 42,
     "parse_error": false,
     "prints_help": null
   },
@@ -803,7 +812,7 @@
   "phaseimpute": {
     "full_name": "nf-core/phaseimpute",
     "html_url": "https://github.com/nf-core/phaseimpute",
-    "commit": "cc311b47ea195ac368092a78429bec12f6c205a6",
+    "commit": "d4f26f583deaccdcc0ad59de51af625b781b8517",
     "errors": 0,
     "warnings": 6,
     "parse_error": false,
@@ -1046,7 +1055,7 @@
   "seqsubmit": {
     "full_name": "nf-core/seqsubmit",
     "html_url": "https://github.com/nf-core/seqsubmit",
-    "commit": "4a8d78aaf7be66cadecd886aca72f194a5750e7d",
+    "commit": "6a1152bd99ebc275c8fbd5d98a591531cea5bef6",
     "errors": 1,
     "warnings": 14,
     "parse_error": false,
@@ -1091,9 +1100,9 @@
   "spatialxe": {
     "full_name": "nf-core/spatialxe",
     "html_url": "https://github.com/nf-core/spatialxe",
-    "commit": "e0d45dd02ddb5fee31e984b3c71cc4410b1730e3",
+    "commit": "b33f30d5e56daef29f2bf2ea1b8a7ed0dc0382cf",
     "errors": 11,
-    "warnings": 116,
+    "warnings": 117,
     "parse_error": false,
     "prints_help": null
   },
