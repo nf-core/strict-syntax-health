@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-29T00:35:22.772779592Z
-- Nextflow version: 26.03.4-edge
-- Summary: 2 errors, 7 warnings
+- Generated: 2026-04-30T00:35:21.601857353Z
+- Nextflow version: 26.04.0
+- Summary: 2 errors, 8 warnings
 
 ## :x: Errors
 
@@ -64,7 +64,14 @@
                                                             ^^
   ```
 
-- Warning: `workflows/cellpainting.nf:162:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/cellpainting.nf:164:32`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                      .collect { it[1] }
+                                 ^^
+  ```
+
+- Warning: `workflows/cellpainting.nf:176:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       def topic_versions = Channel.topic("versions")

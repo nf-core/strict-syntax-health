@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "e2d3f0ddf4a74a4a9031f3caea2e9deaec5a440b",
+  "_repo_commit": "cbb7a6362981f07d2c26e43f8186025320569ffd",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -6492,6 +6492,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "openms_fileconverter": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/openms/fileconverter",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "openms_filefilter": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/openms/filefilter",
     "errors": 0,
@@ -7982,6 +7988,12 @@
   },
   "rmarkdownnotebook": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/rmarkdownnotebook",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "rmats_prep": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/rmats/prep",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

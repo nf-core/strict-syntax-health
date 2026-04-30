@@ -1,12 +1,66 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.01.1-edge
+ N E X T F L O W   ~  version 26.04.0
 
-Launching `./main.nf` [agitated_pike] revision: 18b206a432
+Launching `./main.nf` [fervent_mandelbrot] revision: 7a24b6780a
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
-ERROR ~ Unable to create help message: Specified param 'true' does not exist in JSON schema.
 
- -- Check script 'subworkflows/nf-core/utils_nfschema_plugin/main.nf' at line: 41 or see '.nextflow.log' file for more details
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/hlatyping 2.2.0dev
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/hlatyping -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input                       [string] Path to comma-separated file containing information about the samples in the experiment. 
+  --outdir                      [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --email                       [string] Email address for completion summary. 
+
+HLA typing options
+  --tools                       [string] Specifies the hlatyping tool(s) to use. [default: optitype] 
+
+OptiType Optimisation steps
+  --solver                      [string]  Specifies the integer programming solver. [default: glpk] 
+  --enumerations                [integer] Specifies the number of output solutions. [default: 1] 
+  --beta                        [number]  Specifies the weight of the regularisation term. [default: 0.009] 
+  --multiqc_title               [string]  MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+
+HLA-HD options
+  --hlahd_path                  [string]  Tarball file location of HLA-HD software distribution. 
+  --hlahd_update_reference_dict [boolean] Update HLA-HD reference dictionary to the latest version before running HLA-HD. [default: false] 
+ 
+
+Reference genome options
+  --genome                      [string] Name of iGenomes reference. 
+
+Optional outputs
+  --save_merged_fastq           [boolean] Save FastQ files after merging re-sequenced libraries in the results directory. 
+
+Generic options
+  --multiqc_methods_description [string]          Custom MultiQC yaml file containing HTML including a methods description. 
+  --help                        [boolean, string] Display the help message. 
+  --help_full                   [boolean]         Display the full detailed help message. 
+  --show_hidden                 [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 19 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/hlatyping/blob/master/CITATIONS.md
+

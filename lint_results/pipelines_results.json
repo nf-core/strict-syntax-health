@@ -2,11 +2,11 @@
   "abotyper": {
     "full_name": "nf-core/abotyper",
     "html_url": "https://github.com/nf-core/abotyper",
-    "commit": "55eb6347d0dd90cf51f8df291bc634831c3ac013",
+    "commit": "2271ad2d77960cbf1c478fb902fc62a2f23c8381",
     "errors": 0,
-    "warnings": 77,
+    "warnings": 71,
     "parse_error": false,
-    "prints_help": false
+    "prints_help": true
   },
   "airrflow": {
     "full_name": "nf-core/airrflow",
@@ -47,7 +47,7 @@
   "bacass": {
     "full_name": "nf-core/bacass",
     "html_url": "https://github.com/nf-core/bacass",
-    "commit": "7b90bc3aca3229f679d7bba19ebcb383e8f6affb",
+    "commit": "e539505eb38a441f84c19f1661c4fda929494a02",
     "errors": 0,
     "warnings": 17,
     "parse_error": false,
@@ -92,9 +92,9 @@
   "cellpainting": {
     "full_name": "nf-core/cellpainting",
     "html_url": "https://github.com/nf-core/cellpainting",
-    "commit": "ad0ac2c525e70eff8818cbab032dc7d6fee38862",
+    "commit": "6afb65595ae8801300b9c15528c6ce1bdecbbc6d",
     "errors": 2,
-    "warnings": 7,
+    "warnings": 8,
     "parse_error": false,
     "prints_help": null
   },
@@ -146,16 +146,16 @@
   "createpanelrefs": {
     "full_name": "nf-core/createpanelrefs",
     "html_url": "https://github.com/nf-core/createpanelrefs",
-    "commit": "e4dd4fa19e19599b6a979d1ca9cd131dd8f5ea85",
+    "commit": "56ae483501da971e02243fae6356aae053a97aa6",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
-    "prints_help": true
+    "prints_help": false
   },
   "createtaxdb": {
     "full_name": "nf-core/createtaxdb",
     "html_url": "https://github.com/nf-core/createtaxdb",
-    "commit": "39872263ce98a7052586ca9c5533c737b433e333",
+    "commit": "b3314a4dd6d3d62e17da62d3fb4400279bb88926",
     "errors": 0,
     "warnings": 8,
     "parse_error": false,
@@ -353,7 +353,7 @@
   "fetchngs": {
     "full_name": "nf-core/fetchngs",
     "html_url": "https://github.com/nf-core/fetchngs",
-    "commit": "dc1918fe177350e8e5563d01a5cce0e36f5014dd",
+    "commit": "918395bc8c8c018e8f531b89f88c058d052c0395",
     "errors": 0,
     "warnings": 9,
     "parse_error": false,
@@ -362,7 +362,7 @@
   "funcprofiler": {
     "full_name": "nf-core/funcprofiler",
     "html_url": "https://github.com/nf-core/funcprofiler",
-    "commit": "c5005828eae596a4959546d26a190b02fb5db004",
+    "commit": "37559e6b48916e75ddfba11245441bacdc2e02f8",
     "errors": 26,
     "warnings": 42,
     "parse_error": false,
@@ -380,9 +380,9 @@
   "genephylomodeler": {
     "full_name": "nf-core/genephylomodeler",
     "html_url": "https://github.com/nf-core/genephylomodeler",
-    "commit": "3ee447ffeff31b0641e2ddedd2b69afa37c82127",
+    "commit": "c812faefe0574c87ceab07bee654cb0052225872",
     "errors": 0,
-    "warnings": 10,
+    "warnings": 13,
     "parse_error": false,
     "prints_help": false
   },
@@ -479,11 +479,11 @@
   "hlatyping": {
     "full_name": "nf-core/hlatyping",
     "html_url": "https://github.com/nf-core/hlatyping",
-    "commit": "12b9403c5e672b2ab045becbf090a82334c320e9",
+    "commit": "2b67ab814b88f8d734ae0d7d4e8c50b9ee21c1b5",
     "errors": 0,
-    "warnings": 9,
+    "warnings": 0,
     "parse_error": false,
-    "prints_help": false
+    "prints_help": true
   },
   "imcyto": {
     "full_name": "nf-core/imcyto",
@@ -533,7 +533,7 @@
   "lsmquant": {
     "full_name": "nf-core/lsmquant",
     "html_url": "https://github.com/nf-core/lsmquant",
-    "commit": "b89f5fd6de5baccabad2e1a1d26fa2f115df6c7c",
+    "commit": "0e34819c727143a66070d5a111f8b0f83873aba6",
     "errors": 1,
     "warnings": 43,
     "parse_error": false,
@@ -542,7 +542,7 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "c2cce5dc7792098e059f92d912564abfb7248586",
+    "commit": "1f460f7e8b277c73fb024bdf9b873a6763f4a97d",
     "errors": 0,
     "warnings": 22,
     "parse_error": false,
@@ -776,9 +776,9 @@
   "pangenome": {
     "full_name": "nf-core/pangenome",
     "html_url": "https://github.com/nf-core/pangenome",
-    "commit": "96b54b9e95932d38b8250a2aa2830d874866d76b",
+    "commit": "e8e7ced9efc1484b3189bb2e2a1f137fec6642ec",
     "errors": 14,
-    "warnings": 63,
+    "warnings": 64,
     "parse_error": false,
     "prints_help": null
   },
@@ -992,9 +992,9 @@
   "rnavar": {
     "full_name": "nf-core/rnavar",
     "html_url": "https://github.com/nf-core/rnavar",
-    "commit": "42e6c29db87f8962104c9c6aa0f38f5e8d5f7878",
+    "commit": "b58e7539c64d18c46b8beffed64074422fce6ed3",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false,
     "prints_help": true
   },
@@ -1055,9 +1055,9 @@
   "seqsubmit": {
     "full_name": "nf-core/seqsubmit",
     "html_url": "https://github.com/nf-core/seqsubmit",
-    "commit": "6a1152bd99ebc275c8fbd5d98a591531cea5bef6",
+    "commit": "d8beefc7f25c0810493aa335db523497f2b5346c",
     "errors": 1,
-    "warnings": 14,
+    "warnings": 9,
     "parse_error": false,
     "prints_help": null
   },
@@ -1100,8 +1100,8 @@
   "spatialxe": {
     "full_name": "nf-core/spatialxe",
     "html_url": "https://github.com/nf-core/spatialxe",
-    "commit": "b33f30d5e56daef29f2bf2ea1b8a7ed0dc0382cf",
-    "errors": 11,
+    "commit": "1f248784469128bcf21d55f53ae41ed350b6685b",
+    "errors": 5,
     "warnings": 117,
     "parse_error": false,
     "prints_help": null

@@ -1,58 +1,16 @@
 # Nextflow lint results
 
-- Generated: 2026-04-29T00:37:42.685439465Z
-- Nextflow version: 26.03.4-edge
-- Summary: 11 errors, 117 warnings
+- Generated: 2026-04-30T00:40:30.743020509Z
+- Nextflow version: 26.04.0
+- Summary: 5 errors, 117 warnings
 
 ## :x: Errors
-
-- Error: `conf/base.config:13:28`: Unexpected input: 'Math'
-
-  ```nextflow
-      cpus   = { 1    * (int)Math.pow(4, task.attempt - 1) }
-                             ^
-  ```
-
-- Error: `conf/modules.config:98:57`: Unexpected input: 'Math'
-
-  ```nextflow
-          memory = { params.baysor_tiling ? 240.GB * (int)Math.pow(2, task.attempt - 1) : 720.GB }
-                                                          ^
-  ```
-
-- Error: `modules/local/segger/train/main.nf:29:35`: Unexpected input: 'Math'
-
-  ```nextflow
-      def gpu_count = Math.min((int)Math.pow(2, task.attempt + 1), params.devices as int)
-                                    ^
-  ```
 
 - Error: `subworkflows/local/baysor_run_transcripts_parquet/main.nf:183:14`: Unexpected input: 'i'
 
   ```nextflow
       for (int i = 0; i < ids.size(); i++) {
                ^
-  ```
-
-- Error: `subworkflows/local/segger_create_train_predict/main.nf:6:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/spatialxe/modules/local/segger/train/main.nf'
-
-  ```nextflow
-  include { SEGGER_TRAIN                     } from '../../../modules/local/segger/train/main'
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/segger_create_train_predict/main.nf:37:9`: `SEGGER_TRAIN` is not defined
-
-  ```nextflow
-          SEGGER_TRAIN(SEGGER_CREATE_DATASET.out.datasetdir)
-          ^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/segger_create_train_predict/main.nf:39:19`: `SEGGER_TRAIN` is not defined
-
-  ```nextflow
-              .join(SEGGER_TRAIN.out.trained_models)
-                    ^^^^^^^^^^^^
   ```
 
 - Error: `workflows/spatialxe.nf:26:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/spatialxe/subworkflows/local/baysor_run_transcripts_parquet/main.nf'

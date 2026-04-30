@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-29T00:37:32.315330453Z
-- Nextflow version: 26.03.4-edge
-- Summary: 1 error, 14 warnings
+- Generated: 2026-04-30T00:40:19.979884148Z
+- Nextflow version: 26.04.0
+- Summary: 1 error, 9 warnings
 
 ## :x: Errors
 
@@ -76,39 +76,4 @@
   ```nextflow
       valid_config = checkConfigProvided()
       ^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/genomesubmit.nf:138:25`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .branch { meta, fasta ->
-                          ^^^^^
-  ```
-
-- Warning: `workflows/genomesubmit.nf:163:25`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .branch { meta, fasta ->
-                          ^^^^^
-  ```
-
-- Warning: `workflows/genomesubmit.nf:205:25`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .branch { meta, fasta ->
-                          ^^^^^
-  ```
-
-- Warning: `workflows/genomesubmit.nf:311:38`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          fasta_updated_with_stats.map{meta, fasta -> fasta}.collect(),
-                                       ^^^^
-  ```
-
-- Warning: `workflows/genomesubmit.nf:336:12`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      .map { id, full_meta, fasta, manifest ->
-             ^^
   ```

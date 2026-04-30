@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-04-23T00:33:46.942597839Z
-- Nextflow version: 26.03.3-edge
+- Generated: 2026-04-30T00:39:11.094031129Z
+- Nextflow version: 26.04.0
 - Summary: 22 warnings
 
 ## :warning: Warnings

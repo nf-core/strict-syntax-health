@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-03T00:25:00.865544300Z
-- Nextflow version: 26.03.1-edge
-- Summary: 77 warnings
+- Generated: 2026-04-30T00:34:39.651893724Z
+- Nextflow version: 26.04.0
+- Summary: 71 warnings
 
 ## :warning: Warnings
 
@@ -307,41 +307,6 @@
                                                   ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_abotyper_pipeline/main.nf:30:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      monochrome_logs // boolean: Do not use coloured log outputs
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_abotyper_pipeline/main.nf:33:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      input //  string: Path to input samplesheet
-      ^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_abotyper_pipeline/main.nf:52:5`: Variable was declared but not used
-
-  ```nextflow
-      before_text = """
-      ^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_abotyper_pipeline/main.nf:62:5`: Variable was declared but not used
-
-  ```nextflow
-      after_text = """${workflow.manifest.doi ? "\n* The pipeline\n" : ""}${workflow.manifest.doi.tokenize(",").collect { doi -> "    https://doi.org/${doi.trim().replace('https://doi.org/','')}"}.join("\n")}${workflow.manifest.doi ? "\n" : ""}
-      ^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_abotyper_pipeline/main.nf:69:5`: Variable was declared but not used
-
-  ```nextflow
-      command = "nextflow run ${workflow.manifest.name} -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>"
-      ^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/variant_calling_mpileup/main.nf:33:29`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
@@ -524,23 +489,16 @@
       ^^^^
   ```
 
-- Warning: `workflows/abotyper.nf:149:35`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/abotyper.nf:72:68`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-          .mix(FASTQC.out.zip.map { meta, files -> files }.flatten())
-                                    ^^^^
+      ch_multiqc_files = ch_multiqc_files.mix(FASTQC.out.zip.collect{it[1]})
+                                                                     ^^
   ```
 
-- Warning: `workflows/abotyper.nf:150:54`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/abotyper.nf:113:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-          .mix(MINIMAP2_ALIGN_READS.out.coverage.map { meta, cov -> cov })
-                                                       ^^^^
-  ```
-
-- Warning: `workflows/abotyper.nf:151:56`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .mix(VARIANTS_QUANTIFICATION.out.metrics.map { meta, metrics -> metrics })
-                                                         ^^^^
+      def topic_versions = Channel.topic("versions")
+                           ^^^^^^^
   ```

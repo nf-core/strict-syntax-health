@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T10:25:19.606947454Z
-- Nextflow version: 25.12.0-edge
-- Summary: 14 errors, 63 warnings
+- Generated: 2026-04-30T00:39:41.380037181Z
+- Nextflow version: 26.04.0
+- Summary: 14 errors, 64 warnings
 
 ## :x: Errors
 
@@ -13,42 +13,42 @@
                                     ^
   ```
 
-- Error: `nextflow.config:396:33`: `manifest` is not defined
+- Error: `nextflow.config:395:33`: `manifest` is not defined
 
   ```nextflow
   \033[0;35m  nf-core/pangenome ${manifest.version}\033[0m
                                   ^^^^^^^^
   ```
 
-- Error: `nextflow.config:399:26`: `manifest` is not defined
+- Error: `nextflow.config:398:26`: `manifest` is not defined
 
   ```nextflow
           afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
                            ^^^^^^^^
   ```
 
-- Error: `nextflow.config:399:69`: `manifest` is not defined
+- Error: `nextflow.config:398:69`: `manifest` is not defined
 
   ```nextflow
           afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
                                                                       ^^^^^^^^
   ```
 
-- Error: `nextflow.config:399:186`: `manifest` is not defined
+- Error: `nextflow.config:398:186`: `manifest` is not defined
 
   ```nextflow
           afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
                                                                                                                                                                                            ^^^^^^^^
   ```
 
-- Error: `nextflow.config:408:22`: `validation` is not defined
+- Error: `nextflow.config:407:22`: `validation` is not defined
 
   ```nextflow
           beforeText = validation.help.beforeText
                        ^^^^^^^^^^
   ```
 
-- Error: `nextflow.config:409:21`: `validation` is not defined
+- Error: `nextflow.config:408:21`: `validation` is not defined
 
   ```nextflow
           afterText = validation.help.afterText
@@ -148,7 +148,7 @@
           ^^^^^^
   ```
 
-- Warning: `nextflow.config:399:129`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `nextflow.config:398:129`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
@@ -335,6 +335,13 @@
   ```nextflow
       def strandedness_ok = metas.collect{ it.strandedness }.unique().size == 1
                                            ^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
+
+  ```nextflow
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead

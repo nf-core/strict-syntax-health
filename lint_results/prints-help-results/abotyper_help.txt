@@ -1,41 +1,64 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.03.1-edge
+ N E X T F L O W   ~  version 26.04.0
 
 Downloading plugin nf-schema@2.5.1
-Launching `./main.nf` [cranky_magritte] revision: ff07d2912b
+Launching `./main.nf` [backstabbing_nobel] revision: 0c8a80211a
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
+
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/abotyper 1.1.0
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/abotyper -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input                       [string] Path to comma-separated file containing information about the samples in the experiment. 
+  --outdir                      [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --email                       [string] Email address for completion summary. 
+  --multiqc_title               [string] MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+
+Reference genome options
+  --genome                      [string] Name of iGenomes reference. 
+  --fasta                       [string] Path to FASTA genome file. [default: 
+/data/ABO-analysis-31-Oct-2023/nf-core-abotyper/assets/refs/ABO_Database.fasta]  
+  --fai                         [string] Path to FASTA index file. [default: 
+/data/ABO-analysis-31-Oct-2023/nf-core-abotyper/assets/refs/ABO_Database.fasta.fai]  
+
 ABO-specific reference files
-  exon6fasta         : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/abotyper/assets/refs/A1_01_01_1_reference_Exon6.fasta
-  exon7fasta         : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/abotyper/assets/refs/A1_01_01_1_reference_Exon7.fasta
-  exon6fai           : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/abotyper/assets/refs/A1_01_01_1_reference_Exon6.fasta.fai
-  exon7fai           : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/abotyper/assets/refs/A1_01_01_1_reference_Exon7.fasta.fai
-  logo               : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/abotyper/assets/pathwest_logo.png
+  --exon6fasta                  [string]  Path to ABO exon 6 FASTA reference file. 
+  --exon7fasta                  [string]  Path to ABO exon 7 FASTA reference file. 
+  --exon6fai                    [string]  Path to ABO exon 6 FASTA index file. 
+  --exon7fai                    [string]  Path to ABO exon 7 FASTA index file. 
+  --logo                        [string]  Path to custom logo file. 
+  --renaming_file               [string]  Path to file containing sample renaming information. 
+  --skip_renaming               [boolean] Skip sample renaming process. [default: true] 
 
 Generic options
-  trace_report_suffix: 2026-04-03_00-25-04
-  help               : true
-
-Core Nextflow options
-  runName            : cranky_magritte
-  launchDir          : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/abotyper
-  workDir            : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/abotyper/work
-  projectDir         : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/abotyper
-  userName           : runner
-  profile            : standard
-  configFiles        : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/abotyper/nextflow.config
-
-!! Only displaying parameters that differ from the pipeline defaults !!
+  --multiqc_methods_description [string]          Custom MultiQC yaml file containing HTML including a methods description. 
+  --help                        [boolean, string] Display the help message. 
+  --help_full                   [boolean]         Display the full detailed help message. 
+  --show_hidden                 [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 19 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
-Downloading plugin nf-amazon@3.8.1
-ERROR ~ Validation of pipeline parameters failed!
 
- -- Check '.nextflow.log' file for details
-The following invalid input values have been detected:
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
 
-* Missing required parameter(s): input, outdir
+* Software dependencies
+    https://github.com/nf-core/abotyper/blob/master/CITATIONS.md
 
- -- Check script 'subworkflows/nf-core/utils_nfschema_plugin/main.nf' at line: 37 or see '.nextflow.log' file for more details
