@@ -1,19 +1,19 @@
 # Nextflow lint results
 
-- Generated: 2026-04-30T00:35:21.601857353Z
+- Generated: 2026-05-01T00:34:55.111381993Z
 - Nextflow version: 26.04.0
-- Summary: 2 errors, 8 warnings
+- Summary: 2 errors, 10 warnings
 
 ## :x: Errors
 
-- Error: `workflows/cellpainting.nf:102:33`: `sortGroupedImages` is not defined
+- Error: `workflows/cellpainting.nf:104:33`: `sortGroupedImages` is not defined
 
   ```nextflow
               def (m, im, imgs) = sortGroupedImages(meta, images_meta, images)
                                   ^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/cellpainting.nf:133:37`: `sortGroupedImages` is not defined
+- Error: `workflows/cellpainting.nf:199:37`: `sortGroupedImages` is not defined
 
   ```nextflow
                   def (m, im, imgs) = sortGroupedImages(meta, images_meta, images)
@@ -50,28 +50,42 @@
       ^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/cellpainting.nf:41:33`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/cellpainting.nf:43:33`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           [meta, sorted.collect { it[0] }, sorted.collect { it[1] }]
                                   ^^
   ```
 
-- Warning: `workflows/cellpainting.nf:41:59`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/cellpainting.nf:43:59`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           [meta, sorted.collect { it[0] }, sorted.collect { it[1] }]
                                                             ^^
   ```
 
-- Warning: `workflows/cellpainting.nf:164:32`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/cellpainting.nf:155:54`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              [plate_key, plate_meta, sorted.collect { it[0] }, sorted.collect { it[1] }]
+                                                       ^^
+  ```
+
+- Warning: `workflows/cellpainting.nf:155:80`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              [plate_key, plate_meta, sorted.collect { it[0] }, sorted.collect { it[1] }]
+                                                                                 ^^
+  ```
+
+- Warning: `workflows/cellpainting.nf:230:32`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       .collect { it[1] }
                                  ^^
   ```
 
-- Warning: `workflows/cellpainting.nf:176:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/cellpainting.nf:242:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       def topic_versions = Channel.topic("versions")

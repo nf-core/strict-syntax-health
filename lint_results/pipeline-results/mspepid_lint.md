@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-23T00:34:16.835309539Z
-- Nextflow version: 26.03.3-edge
-- Summary: 10 warnings
+- Generated: 2026-05-01T00:35:31.712256132Z
+- Nextflow version: 26.04.0
+- Summary: 7 warnings
 
 ## :warning: Warnings
 
@@ -48,30 +48,9 @@
       ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_mspepid_pipeline/main.nf:31:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/mspepid.nf:110:9`: Variable was declared but not used
 
   ```nextflow
-      monochrome_logs // boolean: Do not use coloured log outputs
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_mspepid_pipeline/main.nf:34:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      input //  string: Path to input samplesheet
-      ^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
-
-  ```nextflow
-      valid_config = checkConfigProvided()
-      ^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/mspepid.nf:116:16`: Variable was declared but not used
-
-  ```nextflow
-          .set { ch_collated_versions }
-                 ^^^^^^^^^^^^^^^^^^^^
+      def ch_collated_versions = softwareVersionsToYAML(ch_versions.mix(topic_versions.versions_file))
+          ^^^^^^^^^^^^^^^^^^^^
   ```

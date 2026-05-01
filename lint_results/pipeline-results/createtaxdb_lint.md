@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-30T00:37:37.985166278Z
+- Generated: 2026-05-01T00:35:03.157111886Z
 - Nextflow version: 26.04.0
-- Summary: 8 warnings
+- Summary: 6 warnings
 
 ## :warning: Warnings
 
@@ -46,18 +46,4 @@
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_createtaxdb_pipeline/main.nf:31:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      monochrome_logs // boolean: Do not use coloured log outputs
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
-
-  ```nextflow
-      valid_config = checkConfigProvided()
-      ^^^^^^^^^^^^
   ```

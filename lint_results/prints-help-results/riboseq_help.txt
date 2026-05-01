@@ -1,0 +1,225 @@
+$ NXF_SYNTAX_PARSER=v2 nextflow run . --help
+
+
+ N E X T F L O W   ~  version 26.04.0
+
+Launching `./main.nf` [loquacious_pesquet] revision: e1f6be061f
+
+WARN: Unrecognized config option 'validation.defaultIgnoreParams'
+WARN: Unrecognized config option 'validation.monochromeLogs'
+WARN: Unrecognized config option 'validation.logging.unrecognisedHeaders'
+
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/riboseq 1.3.0dev
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/riboseq -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input                                [string] Path to comma-separated file containing information about the samples in the experiment. 
+  --contrasts                            [string] A CSV file describing sample contrasts 
+  --outdir                               [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --email                                [string] Email address for completion summary. 
+  --multiqc_title                        [string] MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+
+Reference genome options
+  --genome                               [string]  Name of iGenomes reference. 
+  --fasta                                [string]  Path to FASTA genome file. 
+  --gtf                                  [string]  Path to GTF annotation file. 
+  --gff                                  [string]  Path to GFF3 annotation file. 
+  --transcript_fasta                     [string]  Path to FASTA transcriptome file. 
+  --additional_fasta                     [string]  FASTA file to concatenate to genome FASTA file e.g. containing spike-in sequences. 
+  --star_index                           [string]  Path to directory or tar.gz archive for pre-built STAR index. 
+  --salmon_index                         [string]  Path to directory or tar.gz archive for pre-built Salmon index. 
+  --gencode                              [boolean] Specify if your GTF annotation is in GENCODE format. 
+  --gtf_extra_attributes                 [string]  By default, the pipeline uses the `gene_name` field to obtain additional gene identifiers from the 
+input GTF file when running Salmon. [default: gene_name]  
+  --gtf_group_features                   [string]  Define the attribute type used to group features in the GTF file when running Salmon. [default: 
+gene_id]  
+
+Read trimming options
+  --trimmer                              [string]  Specifies the trimming tool to use - available options are 'trimgalore' and 'fastp'.  (accepted: 
+trimgalore, fastp) [default: trimgalore]  
+  --extra_trimgalore_args                [string]  Extra arguments to pass to Trim Galore! command in addition to defaults defined by the pipeline. 
+ 
+  --extra_fastp_args                     [string]  Extra arguments to pass to fastp command in addition to defaults defined by the pipeline. 
+  --min_trimmed_reads                    [integer] Minimum number of trimmed reads below which samples are removed from further processing. Some 
+downstream steps in the pipeline will fail if this threshold is too low. [default: 10000]  
+  --fastp_merge                          [boolean] For paired-end data processed with fastp, merge overlapping read pairs into a single read. 
+[default: false]  
+
+Read filtering options
+  --extra_fqlint_args                    [string]  Extra arguments to pass to the fq lint command. [default: --disable-validator P001] 
+  --bbsplit_fasta_list                   [string]  Path to comma-separated file containing a list of reference genomes to filter reads against with 
+BBSplit. You have to also explicitly set `--skip_bbsplit false` if you want to use BBSplit.  
+  --bbsplit_index                        [string]  Path to directory or tar.gz archive for pre-built BBSplit index. 
+  --sortmerna_index                      [string]  Path to directory or tar.gz archive for pre-built sortmerna index. 
+  --remove_ribo_rna                      [boolean] Enable the removal of reads derived from ribosomal RNA. [default: true] 
+  --ribo_removal_tool                    [string]  Specifies which tool to use for ribosomal RNA removal.  (accepted: sortmerna, bowtie2, 
+ribodetector) [default: sortmerna]  
+  --ribo_database_manifest               [string]  Text file containing paths to fasta files (one per line) that will be used to create the database 
+for rRNA removal. [default: ${projectDir}/assets/rrna-db-defaults.txt]  
+  --ribodetector_chunk_size              [integer] Chunk size for RiboDetector to control memory usage. [default: 100] 
+
+UMI options
+  --with_umi                             [boolean] Enable UMI-based read deduplication. 
+  --umi_dedup_tool                       [string]  Specifies the tool to use for UMI deduplication - available options are 'umitools' and 
+'umicollapse'.  (accepted: umitools, umicollapse) [default: umitools]  
+  --umitools_extract_method              [string]  UMI pattern to use. Can be either 'string' (default) or 'regex'. [default: string] 
+  --umitools_bc_pattern                  [string]  The UMI barcode pattern to use e.g. 'NNNNNN' indicates that the first 6 nucleotides of the read are 
+from the UMI.  
+  --umitools_bc_pattern2                 [string]  The UMI barcode pattern to use if the UMI is located in read 2. 
+  --umi_discard_read                     [integer] After UMI barcode extraction discard either R1 or R2 by setting this parameter to 1 or 2, 
+respectively.  
+  --umitools_umi_separator               [string]  The character that separates the UMI in the read name. Most likely a colon if you skipped the 
+extraction with UMI-tools and used other software.  
+  --umitools_grouping_method             [string]  Method to use to determine read groups by subsuming those with similar UMIs. All methods start by 
+identifying the reads with the same mapping position, but treat similar yet nonidentical UMIs 
+differently.  (accepted: unique, percentile, cluster, adjacency, directional) [default: 
+directional]  
+  --umitools_dedup_stats                 [boolean] Generate output stats when running "umi_tools dedup". 
+  --umitools_dedup_primary_only          [boolean] Filter to primary alignments before UMI-tools dedup. [default: true] 
+
+Alignment options
+  --aligner                              [string]  Specifies the alignment algorithm to use - available options are currently 'star'.  (accepted: 
+star) [default: star]  
+  --pseudo_aligner                       [string]  Specifies the pseudo aligner to use - available options are 'salmon' or 'kallisto'. Runs in addition 
+to the main aligner.  (accepted: salmon, kallisto)  
+  --skip_pseudo_alignment                [boolean] Skip pseudo alignment and quantification. [default: true] 
+  --pseudo_aligner_kmer_size             [integer] Kmer length passed to Salmon indexing for pseudo-alignment quantification. [default: 23] 
+  --bam_csi_index                        [boolean] Create a CSI index for BAM files instead of the traditional BAI index. This will be required for 
+genomes with larger chromosome sizes.  
+  --star_ignore_sjdbgtf                  [boolean] When using pre-built STAR indices do not re-extract and use splice junctions from the GTF file. 
+ 
+  --salmon_quant_libtype                 [string]   Override Salmon library type inferred based on strandedness defined in meta object.  (accepted: 
+A, IS, ISF, ISR, IU, MS, MSF, MSR, MU, OS, OSF, OSR, OU, SF, SR, U)  
+  --min_mapped_reads                     [number]  Minimum percentage of uniquely mapped reads below which samples are removed from further processing. 
+[default: 5.0]  
+  --seq_center                           [string]  Sequencing center information to be added to read group of BAM files. 
+  --extra_star_align_args                [string]  Extra arguments to pass to STAR alignment command in addition to defaults defined by the pipeline. 
+Only available for the STAR-Salmon route.  
+  --extra_salmon_quant_args              [string]  Extra arguments to pass to Salmon quant command in addition to defaults defined by the pipeline. 
+ 
+  --stranded_threshold                   [number]  The fraction of stranded reads that must be assigned to a strandedness for confident assignment. 
+Must be at least 0.5. [default: 0.8]  
+  --unstranded_threshold                 [number]  The difference in fraction of stranded reads assigned to 'forward' and 'reverse' below which a 
+sample is classified as 'unstranded'. By default the forward and reverse fractions must differ by 
+less than 0.1 for the sample to be called as unstranded. [default: 0.1]  
+
+Riboseq-specific options
+  --extra_ribotish_quality_args          [string]  Extra arguments to pass to the ribotish quality command in addition to defaults defined by the 
+pipeline.  
+  --extra_ribotish_predict_args          [string]  Extra arguments to pass to the ribotish predict command in addition to defaults defined by the 
+pipeline.  
+  --extra_ribotricer_prepareorfs_args    [string]  Extra arguments to pass to the ribotricer prepare-orfs command in addition to defaults defined by 
+the pipeline.  
+  --extra_ribotricer_detectorfs_args     [string]  Extra arguments to pass to the ribotricer detect-orfs command in addition to defaults defined by the 
+pipeline.  
+  --extra_ribocode_gtfupdate_args        [string]  Extra arguments to pass to the RiboCode GTFupdate command in addition to defaults defined by the 
+pipeline.  
+  --extra_ribocode_prepare_args          [string]  Extra arguments to pass to the RiboCode prepare_transcripts command in addition to defaults defined 
+by the pipeline.  
+  --extra_ribocode_metaplots_args        [string]  Extra arguments to pass to the RiboCode metaplots command in addition to defaults defined by the 
+pipeline.  
+  --extra_ribocode_ribocode_args         [string]  Extra arguments to pass to the RiboCode command in addition to defaults defined by the pipeline. 
+ 
+  --extra_ribowaltz_args                 [string]  Extra arguments to pass to the riboWaltz command in addition to defaults defined by the pipeline. 
+ 
+  --extra_anota2seq_run_args             [string]  Extra arguments to pass to anota2seq in addition to defaults defined by the pipeline. Available 
+options include: --gene_id_col (column name for gene IDs in count table, default: 'gene_id'), 
+--exclude_samples_col and --exclude_samples_values (exclude samples by column value, 
+semicolon-separated). Note: --samples_pairing_col and --samples_batch_col are automatically set from 
+the 'pair' and 'batch' columns in the contrast file if present.  
+  --translational_efficiency_method      [string]  Method to use for translational efficiency analysis.  (accepted: anota2seq, deltate) [default: 
+anota2seq]  
+  --extra_deltate_args                   [string]  Extra arguments to pass to deltaTE (DESeq2) in addition to defaults defined by the pipeline. 
+ 
+  --te_lfc_threshold                     [number]  Minimum absolute log2 fold change for translational efficiency (TE) to be considered significant. 
+Genes must meet both p-value and effect size thresholds. Default is log2(1.2) matching anota2seq. 
+Maps to anota2seq selDeltaPT / deltaTE lfc_threshold_te. [default: 0.2630344]  
+  --rna_lfc_threshold                    [number]  Minimum absolute log2 fold change for total mRNA to be considered significant. Set to 0 to disable. 
+Maps to anota2seq selDeltaT / deltaTE lfc_threshold_rna. [default: 0]  
+  --ribo_lfc_threshold                   [number]  Minimum absolute log2 fold change for translated mRNA (Ribo-seq) to be considered significant. Set 
+to 0 to disable. Maps to anota2seq selDeltaP / deltaTE lfc_threshold_ribo. [default: 0]  
+  --extra_plastid_metagene_generate_args [string]  Extra arguments to pass to plastid/metagene_generate command in addition to defaults defined by the 
+pipeline.  
+  --extra_plastid_psite_args             [string]  Extra arguments to pass to plastid/psite command in addition to defaults defined by the pipeline. 
+ 
+  --extra_plastid_make_wiggle_args       [string]  Extra arguments to pass to plastid/make_wiggle command in addition to defaults defined by the 
+pipeline.  
+  --plastid_min_length                   [integer] Plastid only considers reads of at least the given length. [default: 15] 
+  --plastid_max_length                   [integer] Plastid only considers reads of at most the given length. [default: 50] 
+  --plastid_default_psite_offset         [integer] Default p-site offset to use for read lengths where the offset cannot be determined automatically 
+from the data. [default: 12]  
+  --equalise_read_lengths                [boolean] Trim RNA-seq reads to match Ribo-seq read lengths before quantification. This addresses potential 
+biases when comparing the two modalities due to different read lengths. [default: false]  
+  --equalise_read_lengths_target         [integer] Target read length for RNA-seq trimming. If not specified, the average Ribo-seq read length will be 
+derived from paired samples using seqkit stats. This parameter is required if RNA-seq samples have 
+no paired Ribo-seq sample.  
+  --te_quantification_method             [string]  Quantification method for translational efficiency analysis: 'alignment' (STAR → Salmon), 'pseudo' 
+(Salmon pseudo-alignment) or 'plastid_psite' (in-frame p-site counts from plastid).  (accepted: 
+alignment, pseudo, plastid_psite) [default: alignment]  
+
+Optional outputs
+  --save_merged_fastq                    [boolean] Save FastQ files after merging re-sequenced libraries in the results directory. 
+  --save_umi_intermeds                   [boolean] If this option is specified, intermediate FastQ and BAM files produced by UMI-tools are also saved 
+in the results directory.  
+  --save_non_ribo_reads                  [boolean] If this option is specified, intermediate FastQ files containing non-rRNA reads will be saved in the 
+results directory.  
+  --save_bbsplit_reads                   [boolean] If this option is specified, FastQ files split by reference will be saved in the results directory. 
+ 
+  --save_reference                       [boolean] If generated by the pipeline save the STAR index in the results directory. 
+  --save_trimmed                         [boolean] Save the trimmed FastQ files in the results directory. 
+  --save_align_intermeds                 [boolean] Save the intermediate BAM files from the alignment step. [default: true] 
+  --save_unaligned                       [boolean] Where possible, save unaligned reads from either STAR, HISAT2 or Salmon to the results directory. 
+ 
+
+Process skipping options
+  --skip_gtf_filter                      [boolean] Skip filtering of GTF for valid scaffolds and/ or transcript IDs. 
+  --skip_gtf_transcript_filter           [boolean] Skip the 'transcript_id' checking component of the GTF filtering script used in the pipeline. 
+ 
+  --skip_bbsplit                         [boolean] Skip BBSplit for removal of non-reference genome reads. [default: true] 
+  --skip_umi_extract                     [boolean] Skip the UMI extraction from the read in case the UMIs have been moved to the headers in advance of 
+the pipeline run.  
+  --skip_linting                         [boolean] Skip linting checks during FASTQ preprocessing and filtering. 
+  --skip_trimming                        [boolean] Skip the adapter trimming step. 
+  --skip_alignment                       [boolean] Skip all of the alignment-based processes within the pipeline. 
+  --skip_markduplicates                  [boolean] Skip picard MarkDuplicates step. 
+  --skip_fastqc                          [boolean] Skip FastQC. 
+  --skip_multiqc                         [boolean] Skip MultiQC. 
+  --skip_qc                              [boolean] Skip all QC steps except for MultiQC. 
+  --skip_coverage_tracks                 [boolean] Skip bigWig coverage track generation. 
+  --skip_ribotish                        [boolean] Skip Ribo-TISH. 
+  --skip_ribotricer                      [boolean] Skip Riboricer. 
+  --skip_ribocode                        [boolean] Skip RiboCode. 
+  --skip_ribowaltz                       [boolean] Skip riboWaltz. 
+  --skip_plastid                         [boolean] Skip plastid. 
+
+Generic options
+  --multiqc_methods_description          [string]          Custom MultiQC yaml file containing HTML including a methods description. 
+  --help                                 [boolean, string] Display the help message. 
+  --help_full                            [boolean]         Display the full detailed help message. 
+  --show_hidden                          [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 21 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The pipeline
+    https://doi.org/10.5281/zenodo.10966364
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/riboseq/blob/master/CITATIONS.md
+

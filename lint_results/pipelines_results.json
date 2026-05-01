@@ -92,9 +92,9 @@
   "cellpainting": {
     "full_name": "nf-core/cellpainting",
     "html_url": "https://github.com/nf-core/cellpainting",
-    "commit": "6afb65595ae8801300b9c15528c6ce1bdecbbc6d",
+    "commit": "eebfc70c4fc381335540854fefbc47c219cfa854",
     "errors": 2,
-    "warnings": 8,
+    "warnings": 10,
     "parse_error": false,
     "prints_help": null
   },
@@ -155,9 +155,9 @@
   "createtaxdb": {
     "full_name": "nf-core/createtaxdb",
     "html_url": "https://github.com/nf-core/createtaxdb",
-    "commit": "b3314a4dd6d3d62e17da62d3fb4400279bb88926",
+    "commit": "af3374a19a96b82ec1d74cb78fa9513bb940c07a",
     "errors": 0,
-    "warnings": 8,
+    "warnings": 6,
     "parse_error": false,
     "prints_help": true
   },
@@ -677,11 +677,11 @@
   "mspepid": {
     "full_name": "nf-core/mspepid",
     "html_url": "https://github.com/nf-core/mspepid",
-    "commit": "57a21cd22e6edb8015865f7f585373cd6995fbef",
+    "commit": "c4280cae808167a8a59cde0b025ba0db31cb80c8",
     "errors": 0,
-    "warnings": 10,
+    "warnings": 7,
     "parse_error": false,
-    "prints_help": false
+    "prints_help": true
   },
   "multiplesequencealign": {
     "full_name": "nf-core/multiplesequencealign",
@@ -947,11 +947,11 @@
   "riboseq": {
     "full_name": "nf-core/riboseq",
     "html_url": "https://github.com/nf-core/riboseq",
-    "commit": "f0cdd28876833ccdbab5aca4fb81e4712298806f",
-    "errors": 27,
-    "warnings": 56,
+    "commit": "d99e6dba7642b4e59c0e9c450740a1d9b34d14f1",
+    "errors": 0,
+    "warnings": 124,
     "parse_error": false,
-    "prints_help": null
+    "prints_help": true
   },
   "rnadnavar": {
     "full_name": "nf-core/rnadnavar",
@@ -1046,7 +1046,7 @@
   "seqinspector": {
     "full_name": "nf-core/seqinspector",
     "html_url": "https://github.com/nf-core/seqinspector",
-    "commit": "2057dc7a90fe5b253a40a1db2a6da59e709917c4",
+    "commit": "efbecc264ca9fd26719a0ec1ec1432b4d2505fd5",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1100,11 +1100,11 @@
   "spatialxe": {
     "full_name": "nf-core/spatialxe",
     "html_url": "https://github.com/nf-core/spatialxe",
-    "commit": "1f248784469128bcf21d55f53ae41ed350b6685b",
-    "errors": 5,
-    "warnings": 117,
+    "commit": "239d909d658fc3163777d2641c66e58f22c17b63",
+    "errors": 0,
+    "warnings": 28,
     "parse_error": false,
-    "prints_help": null
+    "prints_help": false
   },
   "spinningjenny": {
     "full_name": "nf-core/spinningjenny",
@@ -1127,7 +1127,7 @@
   "taxprofiler": {
     "full_name": "nf-core/taxprofiler",
     "html_url": "https://github.com/nf-core/taxprofiler",
-    "commit": "e2e313e7f56ba0306de32cd24aaca5a5795978da",
+    "commit": "8fc4897b7cb2559ea7ecd7ac91820cf6e59c4b3c",
     "errors": 0,
     "warnings": 94,
     "parse_error": false,
@@ -1208,9 +1208,9 @@
   "viralmetagenome": {
     "full_name": "nf-core/viralmetagenome",
     "html_url": "https://github.com/nf-core/viralmetagenome",
-    "commit": "d632fa03bf698064412ad6a43ce3c783c6256021",
+    "commit": "6a1a7a1375e1f19b9979688f9556a2f09f7823b5",
     "errors": 0,
-    "warnings": 0,
+    "warnings": 1,
     "parse_error": false,
     "prints_help": true
   },

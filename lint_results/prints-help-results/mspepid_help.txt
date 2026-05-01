@@ -1,12 +1,78 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.03.3-edge
+ N E X T F L O W   ~  version 26.04.0
 
-Launching `./main.nf` [zen_leavitt] revision: 9491937ecd
+Launching `./main.nf` [infallible_williams] revision: d08861aee3
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
-ERROR ~ Unable to create help message: Specified param 'true' does not exist in JSON schema.
 
- -- Check script 'subworkflows/nf-core/utils_nfschema_plugin/main.nf' at line: 41 or see '.nextflow.log' file for more details
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/mspepid 1.0.0dev
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/mspepid -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input                     [string] Path to comma-separated file containing information about the samples in the experiment. 
+  --outdir                    [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --email                     [string] Email address for completion summary. 
+
+Database Options
+  --fasta                     [string]  Input FASTA protein database 
+  --entrapment_fold           [integer] This parameter specifies for an entrapment search the fold of entrapment proteins per target 
+protein. No database will be created if 0. [default: 0]  
+  --skip_decoy_generation     [boolean] Add this parameter when you want to skip the generation of the decoy database. 
+
+General search parameters
+  --precursor_tol_ppm         [integer] The precursor tolerance in PPM [default: 10] 
+  --fragment_tol_da           [number]  The fragment tolerance in Dalton [default: 0.02] 
+
+Sage search parameters
+  --sage_config_template      [string]  Path to the Sage params file. If not set or null, the provided default in assets is used. 
+  --sage_prefilter            [boolean] Whether the database should be split during Sage search. This greatly reduces memory consumption 
+when using large databases (beta feature) [default: false]  
+  --sage_prefilter_chunk_size [integer] Number of proteins per database chunk when prefiltering is active. [default: 0] 
+
+Select search engines to be executed
+  --run_comet                 [boolean] Enables spectrum identification with Comet. [default: true] 
+  --run_sage                  [boolean] Enables spectrum identification with Sage. [default: true] 
+  --comet_config_template     [string]  This is the default comet parameters file. In this file, parameters can be set, which are neither 
+passed by common runtime (threads, fasta, ...) or by common search engine parameters. If not set or 
+null, the provided default in assets is used.  
+
+Select rescoring algorithms to be executed
+  --run_percolator            [boolean] Enables rescoring with Percolator. Some rescorings (MS2Rescore, Oktoberfest) depend on Percolator 
+results, so Percolator will be run if any of these are enabled, even if this parameter is set to 
+false. [default: true]  
+  --run_ms2rescore            [boolean] Enables rescoring with MS2Rescore. [default: true] 
+  --ms2rescore_model          [string]  The MS2PIP model to use for MS2Rescore. Models can be found here: 
+https://ms2pip.readthedocs.io/en/latest/prediction-models/ [default: HCD]  
+  --ms2rescore_model_dir      [string]  Optional directory with pre-downloaded MS2PIP model files. If set to null, the respective model is 
+downloaded and saved in the results directory.  
+
+Generic options
+  --help                      [boolean, string] Display the help message. 
+  --help_full                 [boolean]         Display the full detailed help message. 
+  --show_hidden               [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 14 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/mspepid/blob/main/CITATIONS.md
+

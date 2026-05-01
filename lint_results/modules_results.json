@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "cbb7a6362981f07d2c26e43f8186025320569ffd",
+  "_repo_commit": "6884a9d2fa4dca81b1c9c0641d2318d497700017",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -3156,6 +3156,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "finaletoolkit_fraglengthbins": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/finaletoolkit/fraglengthbins",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "find_concatenate": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/find/concatenate",
     "errors": 0,
@@ -5774,6 +5780,12 @@
   },
   "metaspace_download": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/metaspace/download",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "metator_pipeline": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/metator/pipeline",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
