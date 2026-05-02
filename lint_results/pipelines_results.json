@@ -848,9 +848,9 @@
   "proteinfamilies": {
     "full_name": "nf-core/proteinfamilies",
     "html_url": "https://github.com/nf-core/proteinfamilies",
-    "commit": "f58192c5669471c3f95f5b1e562543d08e0611f9",
+    "commit": "beff908fbd064d1c9947c210e0b301a0dc1356b6",
     "errors": 0,
-    "warnings": 3,
+    "warnings": 0,
     "parse_error": false,
     "prints_help": true
   },
@@ -974,7 +974,7 @@
   "rnaseq": {
     "full_name": "nf-core/rnaseq",
     "html_url": "https://github.com/nf-core/rnaseq",
-    "commit": "b4a4168d28e62486eaf5663e1701789ae24dc9b4",
+    "commit": "4039bd59efb7aa3e3265103ec6a03f4281ef00df",
     "errors": 0,
     "warnings": 16,
     "parse_error": false,

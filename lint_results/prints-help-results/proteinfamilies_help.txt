@@ -1,10 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.02.0-edge
+ N E X T F L O W   ~  version 26.04.0
 
 Downloading plugin nf-schema@2.6.1
-Launching `./main.nf` [angry_babbage] revision: e8cd8dfe37
+Launching `./main.nf` [cheeky_gautier] revision: 8dedb1d42a
 
 
 ------------------------------------------------------
@@ -13,7 +13,7 @@ Launching `./main.nf` [angry_babbage] revision: e8cd8dfe37
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/proteinfamilies 2.3.0dev
+  nf-core/proteinfamilies 2.3.0
 ------------------------------------------------------
 Typical pipeline command:
 
@@ -88,11 +88,11 @@ Redundancy removal parameters
   --cluster_cov_mode_for_redundancy              [integer] mmseqs parameter for coverage mode: 0 for both, 1 for target and 2 for query sequence [default: 
 0]  
   --save_non_redundant_seqs_fasta                [boolean] Save the final family fasta files with sequence redundancy removed 
- !! Hiding 29 param(s), use the `--showHidden` parameter to show them !!
+ !! Hiding 28 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
 
 * The pipeline
-    https://doi.org/10.1101/2025.08.12.670010
+    https://doi.org/10.1093/gigascience/giag009
     https://doi.org/10.5281/zenodo.14881993
 
 * The nf-core framework

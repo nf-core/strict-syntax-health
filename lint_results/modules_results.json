@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "6884a9d2fa4dca81b1c9c0641d2318d497700017",
+  "_repo_commit": "1b946a89c974712eddec32d7aed0c9415f779215",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -1070,6 +1070,18 @@
   },
   "bigslice": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bigslice",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "bio2zarr_vcf2zarrconvert": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bio2zarr/vcf2zarrconvert",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "bio2zarr_vcf2zarrexplode": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bio2zarr/vcf2zarrexplode",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -9632,6 +9644,12 @@
   },
   "svdb_query": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/svdb/query",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "svdss_index": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/svdss/index",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
