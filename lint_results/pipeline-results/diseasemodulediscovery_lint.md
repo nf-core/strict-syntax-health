@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-31T00:20:23.153189759Z
-- Nextflow version: 25.12.0-edge
-- Summary: 69 errors, 80 warnings
+- Generated: 2026-05-05T00:32:35.412693574Z
+- Nextflow version: 26.04.0
+- Summary: 69 errors, 81 warnings
 
 ## :x: Errors
 
@@ -720,6 +720,13 @@
   ```nextflow
           .map{network_id, meta, module, seeds, network ->
                ^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
+
+  ```nextflow
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/diseasemodulediscovery.nf:121:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead

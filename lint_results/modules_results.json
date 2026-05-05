@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "fed36ffa9a74871cf68840cc4def0d9239b388cb",
+  "_repo_commit": "36cd6ae607669767657ff5167dc6cc0508a5f349",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -5804,6 +5804,18 @@
   },
   "methbat_profile": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/methbat/profile",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "methurator_gtestimator": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/methurator/gtestimator",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "methurator_plot": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/methurator/plot",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

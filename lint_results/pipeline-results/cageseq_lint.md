@@ -1,73 +1,10 @@
 # Nextflow lint results
 
-- Generated: 2026-03-25T00:23:49.258135296Z
-- Nextflow version: 26.03.0-edge
-- Summary: 56 errors, 50 warnings
+- Generated: 2026-05-05T00:32:22.757324040Z
+- Nextflow version: 26.04.0
+- Summary: 51 errors, 44 warnings
 
 ## :x: Errors
-
-- Error: `modules/local/cagefightr/enhancer_calling/main.nf:18:5`: The `script:` or `exec:` label is required when other sections are present
-
-  ```nextflow
-      """
-      ^
-  ```
-
-- Error: `modules/local/cager/processing/main.nf:21:5`: The `script:` or `exec:` label is required when other sections are present
-
-  ```nextflow
-      """
-      ^
-  ```
-
-- Error: `modules/local/cager/readin/main.nf:18:5`: The `script:` or `exec:` label is required when other sections are present
-
-  ```nextflow
-      """
-      ^
-  ```
-
-- Error: `modules/local/cager/report/main.nf:20:5`: The `script:` or `exec:` label is required when other sections are present
-
-  ```nextflow
-      """
-      ^
-  ```
-
-- Error: `modules/local/cager/tag_qc/main.nf:21:5`: The `script:` or `exec:` label is required when other sections are present
-
-  ```nextflow
-      """
-      ^
-  ```
-
-- Error: `modules/local/cager/tagcluster_qc/main.nf:21:5`: The `script:` or `exec:` label is required when other sections are present
-
-  ```nextflow
-      """
-      ^
-  ```
-
-- Error: `modules/local/forge_bsgenome/main.nf:14:5`: The `script:` or `exec:` label is required when other sections are present
-
-  ```nextflow
-      """
-      ^
-  ```
-
-- Error: `modules/local/gtf2txdb/main.nf:12:5`: The `script:` or `exec:` label is required when other sections are present
-
-  ```nextflow
-      """
-      ^
-  ```
-
-- Error: `modules/local/relativisation/main.nf:15:5`: The `script:` or `exec:` label is required when other sections are present
-
-  ```nextflow
-      """
-      ^
-  ```
 
 - Error: `modules/local/write_sample_list/main.nf:16:48`: `PWD` is not defined
 
@@ -195,14 +132,14 @@
                                        ^^^^^^^^
   ```
 
-- Error: `subworkflows/local/deduplication/main.nf:21:9`: Incorrect number of call arguments, expected 3 but received 1
+- Error: `subworkflows/local/deduplication/main.nf:22:9`: Incorrect number of call arguments, expected 3 but received 1
 
   ```nextflow
           SORT_FOR_FIXMATE (
           ^
   ```
 
-- Error: `subworkflows/local/deduplication/main.nf:29:9`: Incorrect number of call arguments, expected 3 but received 1
+- Error: `subworkflows/local/deduplication/main.nf:30:9`: Incorrect number of call arguments, expected 3 but received 1
 
   ```nextflow
           SORT_AFTER_FIXMATE(ch_bam_to_sort)
@@ -377,11 +314,39 @@
                                                     ^^^^
   ```
 
-- Error: `subworkflows/local/utils_nfcore_customcage_pipeline/main.nf:49:5`: Incorrect number of call arguments, expected 9 but received 3
+- Error: `workflows/cageseq.nf:18:1`: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/cageseq/subworkflows/local/parameter_checks/main.nf'
 
   ```nextflow
-      UTILS_NFSCHEMA_PLUGIN (
-      ^
+  include { PARAMETER_CHECKS } from '../subworkflows/local/parameter_checks/main.nf'
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `workflows/cageseq.nf:66:9`: `PARAMETER_CHECKS` is not defined
+
+  ```nextflow
+          PARAMETER_CHECKS(ch_fasta, ch_index)
+          ^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `workflows/cageseq.nf:68:20`: `PARAMETER_CHECKS` is not defined
+
+  ```nextflow
+          ch_fasta = PARAMETER_CHECKS.out.ch_fasta
+                     ^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `workflows/cageseq.nf:69:20`: `PARAMETER_CHECKS` is not defined
+
+  ```nextflow
+          ch_index = PARAMETER_CHECKS.out.ch_index
+                     ^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `workflows/cageseq.nf:70:20`: `PARAMETER_CHECKS` is not defined
+
+  ```nextflow
+          ch_fastq = PARAMETER_CHECKS.out.ch_fastq
+                     ^^^^^^^^^^^^^^^^
   ```
 
 - Error: `workflows/cageseq.nf:122:17`: Variables in a closure should be declared with `def`
@@ -399,55 +364,6 @@
   ```
 
 ## :warning: Warnings
-
-- Warning: `modules/local/cagefightr/enhancer_calling/main.nf:29:25`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
-
-  ```nextflow
-          --project_dir ${projectDir}
-                          ^^^^^^^^^^
-  ```
-
-- Warning: `modules/local/cager/processing/main.nf:46:25`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
-
-  ```nextflow
-          --project_dir ${projectDir} \
-                          ^^^^^^^^^^
-  ```
-
-- Warning: `modules/local/cager/readin/main.nf:30:25`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
-
-  ```nextflow
-          --project_dir ${projectDir} \
-                          ^^^^^^^^^^
-  ```
-
-- Warning: `modules/local/cager/tag_qc/main.nf:35:25`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
-
-  ```nextflow
-          --project_dir ${projectDir}
-                          ^^^^^^^^^^
-  ```
-
-- Warning: `modules/local/cager/tagcluster_qc/main.nf:39:25`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
-
-  ```nextflow
-          --project_dir ${projectDir} \
-                          ^^^^^^^^^^
-  ```
-
-- Warning: `modules/local/samtools/dedup/main.nf:33:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/local/samtools/view_mapq/main.nf:37:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
 
 - Warning: `modules/nf-core/ucsc/wigtobigwig/main.nf:47:9`: Variable was declared but not used
 
@@ -491,6 +407,13 @@
                                                                                 ^^
   ```
 
+- Warning: `subworkflows/local/bowtie2/main.nf:53:9`: Variable was declared but not used
+
+  ```nextflow
+          ch_aligned = SAMTOOLS_VIEW.out.bam
+          ^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/cager/main.nf:26:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -519,6 +442,34 @@
                         ^^^^^^^
   ```
 
+- Warning: `subworkflows/local/cager/main.nf:76:9`: Variable was declared but not used
+
+  ```nextflow
+          ch_html = CAGER_REPORT(
+          ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/deduplication/main.nf:47:9`: Variable was declared but not used
+
+  ```nextflow
+          ch_bam_bai = SAMTOOLS_MARKDUP.out.bam.join(INDEX_DEDUP.out.bai)
+          ^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/input_from_folder/main.nf:23:5`: Variable was declared but not used
+
+  ```nextflow
+      ch_fastq = channel
+      ^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/mapped_inputs/main.nf:10:5`: Variable was declared but not used
+
+  ```nextflow
+      input_files = sample_file
+      ^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/mapped_inputs/main.nf:12:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
@@ -526,67 +477,25 @@
                                        ^^
   ```
 
-- Warning: `subworkflows/local/parameter_checks/main.nf:23:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_cager_metadata/main.nf:18:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-              input_handler = Channel.fromPath(params.input, checkIfExists: true)
-                              ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/parameter_checks/main.nf:29:45`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  .map { create_fastq_channel(it) }
-                                              ^^
-  ```
-
-- Warning: `subworkflows/local/parameter_checks/main.nf:43:43`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          sample_meta = ch_fastq.map{ meta, fastq ->
-                                            ^^^^^
-  ```
-
-- Warning: `subworkflows/local/parameter_checks/main.nf:47:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          ch_genome_name = Channel.of(params.genome_name)
+              seqs_fasta = Channel.fromPath("${params.sourcedir}/*", checkIfExists: true).collect()
                            ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/parameter_checks/main.nf:53:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_cager_metadata/main.nf:20:17`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-              ch_pre_idx = Channel.fromPath(params.index, checkIfExists: true)
-                           ^^^^^^^
+                  Channel.value([[id: 'bsgenome'], forge_seed]),
+                  ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/parameter_checks/main.nf:56:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_cager_metadata/main.nf:37:64`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-                  ch_pre_fa = Channel.fromPath(params.genome, checkIfExists: true)
-                              ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/parameter_checks/main.nf:59:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-                  ch_fasta = Channel.empty()
-                             ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/parameter_checks/main.nf:62:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-              ch_pre_fa = Channel.fromPath(params.genome, checkIfExists: true)
-                          ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/parameter_checks/main.nf:64:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-              ch_index = Channel.empty()
-                         ^^^^^^^
+              ch_bsgenome_file = FORGEBSGENOME.out.tarball.map { meta, tarball -> tarball }
+                                                                 ^^^^
   ```
 
 - Warning: `subworkflows/local/prepare_cager_metadata/main.nf:41:9`: Variable was declared but not used
@@ -594,6 +503,13 @@
   ```nextflow
           ch_txdb = GTF2TXDB(ch_gtf)
           ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/prepare_cager_metadata/main.nf:42:9`: Variable was declared but not used
+
+  ```nextflow
+          ch_txdb_file = GTF2TXDB.out.txdb
+          ^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/prepare_mapping_metadata/main.nf:17:43`: Parameter was not used -- prefix with `_` to suppress warning
@@ -631,11 +547,25 @@
                                                                              ^^
   ```
 
+- Warning: `subworkflows/local/preprocessing/main.nf:43:9`: Variable was declared but not used
+
+  ```nextflow
+          ch_reads_to_align = !params.nogtrim ? CUTADAPT.out.reads : TRIMGALORE.out.reads
+          ^^^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/samtools/main.nf:16:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_index_format = Channel.value("bai")
                             ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/samtools/main.nf:20:9`: Variable was declared but not used
+
+  ```nextflow
+          ch_bam_bai = SAMTOOLS_SORT.out.bam.join(SAMTOOLS_INDEX.out.bai)
+          ^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/star/main.nf:21:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -659,6 +589,13 @@
                                                                                  ^^
   ```
 
+- Warning: `subworkflows/local/star/main.nf:44:9`: Variable was declared but not used
+
+  ```nextflow
+          ch_aligned = STAR_ALIGN.out.bam_sorted_aligned
+          ^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/star/main.nf:46:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
@@ -673,46 +610,32 @@
                                                       ^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_cageseq_pipeline/main.nf:32:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/star/main.nf:73:9`: Variable was declared but not used
+
+  ```nextflow
+          bigwig_ch_for_cager = UCSC_WIGTOBIGWIG.out.bw
+          ^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_cageseq_pipeline/main.nf:33:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       monochrome_logs   // boolean: Do not use coloured log outputs
       ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_cageseq_pipeline/main.nf:35:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_cageseq_pipeline/main.nf:36:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       input             //  string: Path to input samplesheet
       ^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_customcage_pipeline/main.nf:28:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
 
   ```nextflow
-      monochrome_logs   // boolean: Do not use coloured log outputs
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_customcage_pipeline/main.nf:34:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_customcage_pipeline/main.nf:80:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      hook_url        //  string: hook URL for notifications
-      ^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_customcage_pipeline/main.nf:81:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      multiqc_report  //  string: Path to MultiQC report
-      ^^^^^^^^^^^^^^
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/cageseq.nf:40:5`: Parameter was not used -- prefix with `_` to suppress warning

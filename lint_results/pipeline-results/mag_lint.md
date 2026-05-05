@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-30T00:39:11.094031129Z
+- Generated: 2026-05-05T00:32:56.349818258Z
 - Nextflow version: 26.04.0
-- Summary: 22 warnings
+- Summary: 21 warnings
 
 ## :warning: Warnings
 
@@ -151,11 +151,4 @@
   ```nextflow
       def reads = yml ? "--dataset $yml" : "$illumina_reads $pacbio_reads $nanopore_reads"
           ^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
-
-  ```nextflow
-      valid_config = checkConfigProvided()
-      ^^^^^^^^^^^^
   ```

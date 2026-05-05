@@ -3,7 +3,8 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.04.0
 
-Launching `./main.nf` [wise_wescoff] revision: 7d9d7cea21
+Downloading plugin nf-schema@2.5.1
+Launching `./main.nf` [suspicious_minsky] revision: 71af2049ef
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -244,7 +245,7 @@ Ancient DNA assembly
   --bcftools_view_high_variant_quality   [integer] minimum genotype quality for considering a variant high quality [default: 30] 
   --bcftools_view_medium_variant_quality [integer] minimum genotype quality for considering a variant medium quality [default: 20] 
   --bcftools_view_minimal_allelesupport  [integer] minimum number of bases supporting the alternative allele [default: 3] 
- !! Hiding 22 param(s), use the `--showHidden` parameter to show them !!
+ !! Hiding 21 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
 
 * The pipeline

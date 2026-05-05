@@ -65,7 +65,7 @@
   "bamtofastq": {
     "full_name": "nf-core/bamtofastq",
     "html_url": "https://github.com/nf-core/bamtofastq",
-    "commit": "50db2deed7aaab461399479948e6a5718eb17f66",
+    "commit": "4efafd0b2b5d05f1397f3a8883a59595d196cad0",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -74,9 +74,9 @@
   "cageseq": {
     "full_name": "nf-core/cageseq",
     "html_url": "https://github.com/nf-core/cageseq",
-    "commit": "5cb0e320510fdfbd79f044b5ea34984cba306608",
-    "errors": 56,
-    "warnings": 50,
+    "commit": "32919158275728296c2a17d48313becf11b421a4",
+    "errors": 51,
+    "warnings": 44,
     "parse_error": false,
     "prints_help": null
   },
@@ -263,9 +263,9 @@
   "diseasemodulediscovery": {
     "full_name": "nf-core/diseasemodulediscovery",
     "html_url": "https://github.com/nf-core/diseasemodulediscovery",
-    "commit": "992cec334828cefb6478a8ee66ff676ad369c186",
+    "commit": "d231b19cb1d91a355240a61d1dc5735e5ebb333c",
     "errors": 69,
-    "warnings": 80,
+    "warnings": 81,
     "parse_error": false,
     "prints_help": null
   },
@@ -542,9 +542,9 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "1f460f7e8b277c73fb024bdf9b873a6763f4a97d",
+    "commit": "96c1fb174d6e0190c0326da9e894c6d16e169865",
     "errors": 0,
-    "warnings": 22,
+    "warnings": 21,
     "parse_error": false,
     "prints_help": true
   },
@@ -677,7 +677,7 @@
   "mspepid": {
     "full_name": "nf-core/mspepid",
     "html_url": "https://github.com/nf-core/mspepid",
-    "commit": "c4280cae808167a8a59cde0b025ba0db31cb80c8",
+    "commit": "7897fbfa42797b45abb738cb685edae0e0365ca3",
     "errors": 0,
     "warnings": 7,
     "parse_error": false,
@@ -920,9 +920,9 @@
   "references": {
     "full_name": "nf-core/references",
     "html_url": "https://github.com/nf-core/references",
-    "commit": "462662b7aa587db7af952eab36f9b016bd429539",
+    "commit": "8969df350de17a4f0e8382aa260e5d8683daeb83",
     "errors": 0,
-    "warnings": 31,
+    "warnings": 46,
     "parse_error": false,
     "prints_help": false
   },
@@ -992,7 +992,7 @@
   "rnavar": {
     "full_name": "nf-core/rnavar",
     "html_url": "https://github.com/nf-core/rnavar",
-    "commit": "b58e7539c64d18c46b8beffed64074422fce6ed3",
+    "commit": "99700e73fc95e7a8f7bd6d8bdba67ff987774690",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1046,7 +1046,7 @@
   "seqinspector": {
     "full_name": "nf-core/seqinspector",
     "html_url": "https://github.com/nf-core/seqinspector",
-    "commit": "efbecc264ca9fd26719a0ec1ec1432b4d2505fd5",
+    "commit": "cf6432f7a35f651b32daa42b8c255cbcd5f37c8c",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1100,7 +1100,7 @@
   "spatialxe": {
     "full_name": "nf-core/spatialxe",
     "html_url": "https://github.com/nf-core/spatialxe",
-    "commit": "239d909d658fc3163777d2641c66e58f22c17b63",
+    "commit": "27efcb1976d2d80adb18a617da446b3420e40019",
     "errors": 0,
     "warnings": 28,
     "parse_error": false,

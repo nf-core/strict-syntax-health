@@ -1,24 +1,10 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T17:23:50.065663022Z
-- Nextflow version: 25.12.0-edge
-- Summary: 31 warnings
+- Generated: 2026-05-05T00:33:37.435247462Z
+- Nextflow version: 26.04.0
+- Summary: 46 warnings
 
 ## :warning: Warnings
-
-- Warning: `modules/nf-core/gunzip/main.nf:43:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/unzip/main.nf:38:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
 
 - Warning: `modules/nf-side/gawk/main.nf:29:52`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
@@ -83,18 +69,116 @@
                                ^^
   ```
 
-- Warning: `subworkflows/nf-core/archive_extract/main.nf:10:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/datasheet_to_channel/main.nf:20:5`: Variable was declared but not used
 
   ```nextflow
-      versions = Channel.empty()
-                 ^^^^^^^
+      ascat_alleles = ascat_alleles_branch.file
+      ^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/nf-core/archive_extract/main.nf:28:17`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/datasheet_to_channel/main.nf:29:5`: Variable was declared but not used
 
   ```nextflow
-      extracted = Channel
-                  ^^^^^^^
+      ascat_loci = ascat_loci_branch.file
+      ^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/datasheet_to_channel/main.nf:38:5`: Variable was declared but not used
+
+  ```nextflow
+      ascat_loci_gc = ascat_loci_gc_branch.file
+      ^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/datasheet_to_channel/main.nf:47:5`: Variable was declared but not used
+
+  ```nextflow
+      ascat_loci_rt = ascat_loci_rt_branch.file
+      ^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/datasheet_to_channel/main.nf:56:5`: Variable was declared but not used
+
+  ```nextflow
+      chr_dir = chr_dir_branch.file
+      ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/datasheet_to_channel/main.nf:65:5`: Variable was declared but not used
+
+  ```nextflow
+      intervals_bed = intervals_bed_branch.file
+      ^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/datasheet_to_channel/main.nf:90:5`: Variable was declared but not used
+
+  ```nextflow
+      fasta = fasta_branch.file
+      ^^^^^
+  ```
+
+- Warning: `subworkflows/local/datasheet_to_channel/main.nf:99:5`: Variable was declared but not used
+
+  ```nextflow
+      fasta_dict = fasta_dict_branch.file
+      ^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/datasheet_to_channel/main.nf:111:5`: Variable was declared but not used
+
+  ```nextflow
+      fasta_fai = fasta_fai_branch.file
+      ^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/datasheet_to_channel/main.nf:120:5`: Variable was declared but not used
+
+  ```nextflow
+      fasta_sizes = fasta_sizes_branch.file
+      ^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/datasheet_to_channel/main.nf:133:5`: Variable was declared but not used
+
+  ```nextflow
+      gff = gff_branch.file
+      ^^^
+  ```
+
+- Warning: `subworkflows/local/datasheet_to_channel/main.nf:145:5`: Variable was declared but not used
+
+  ```nextflow
+      gtf = gtf_branch.file
+      ^^^
+  ```
+
+- Warning: `subworkflows/local/datasheet_to_channel/main.nf:154:5`: Variable was declared but not used
+
+  ```nextflow
+      splice_sites = splice_sites_branch.file
+      ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/datasheet_to_channel/main.nf:170:5`: Variable was declared but not used
+
+  ```nextflow
+      transcript_fasta = transcript_fasta_branch.file
+      ^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/datasheet_to_channel/main.nf:235:5`: Variable was declared but not used
+
+  ```nextflow
+      vcf = channel.empty().mix(dbsnp_branch.file, germline_resource_branch.file, known_indels_branch.file, known_snps_branch.file, pon_branch.file).transpose()
+      ^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_references_pipeline/main.nf:143:5`: Variable was declared but not used
+
+  ```nextflow
+      references = channel.fromList(
+      ^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/nf-side/prepare_genome_dnaseq/main.nf:29:21`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -221,4 +305,25 @@
   ```nextflow
       references = Channel.fromList(
                    ^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-side/utils_references/main.nf:28:5`: Variable was declared but not used
+
+  ```nextflow
+      references_file = get_references_file(references, param_file, attribute_file)
+      ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-side/utils_references/main.nf:29:5`: Variable was declared but not used
+
+  ```nextflow
+      references_value = get_references_value(references, param_value, attribute_value)
+      ^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `workflows/references.nf:86:5`: Variable was declared but not used
+
+  ```nextflow
+      references = channel.empty()
+      ^^^^^^^^^^
   ```

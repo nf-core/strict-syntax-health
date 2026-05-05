@@ -3,9 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.04.0
 
-Downloading plugin nf-core-utils@0.4.0
-Downloading plugin nf-schema@2.6.1
-Launching `./main.nf` [elated_tesla] revision: efea1192cc
+Launching `./main.nf` [insane_minsky] revision: efea1192cc
 
 
 ------------------------------------------------------
@@ -107,7 +105,6 @@ rs_dbSNP,HGVSc_VEP,HGVSp_VEP,1000Gp3_EAS_AF,1000Gp3_AMR_AF,LRT_score,GERP++_RS,g
   --bcftools_header_lines       [string]  Text file with the header lines of `bcftools_annotations` 
 
 General reference genome options
-  --igenomes_base               [string]  The base path to the igenomes reference files [default: s3://ngi-igenomes/igenomes/] 
   --igenomes_ignore             [boolean] Do not load the iGenomes reference config. 
   --save_reference              [boolean] Save built references. 
   --download_cache              [boolean] Download annotation cache. 
@@ -142,7 +139,7 @@ Generic options
   --help_full                   [boolean]         Display the full detailed help message. 
   --show_hidden                 [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
  
- !! Hiding 23 param(s), use the `--showHidden` parameter to show them !!
+ !! Hiding 24 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
 
 * The pipeline
