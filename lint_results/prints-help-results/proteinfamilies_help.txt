@@ -3,7 +3,8 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.04.0
 
-Launching `./main.nf` [jolly_lovelace] revision: 8dedb1d42a
+Downloading plugin nf-schema@2.6.1
+Launching `./main.nf` [amazing_caravaggio] revision: 8dedb1d42a
 
 
 ------------------------------------------------------
@@ -12,7 +13,7 @@ Launching `./main.nf` [jolly_lovelace] revision: 8dedb1d42a
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/proteinfamilies 2.3.0
+  nf-core/proteinfamilies 2.4.0dev
 ------------------------------------------------------
 Typical pipeline command:
 

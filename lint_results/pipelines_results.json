@@ -263,11 +263,11 @@
   "diseasemodulediscovery": {
     "full_name": "nf-core/diseasemodulediscovery",
     "html_url": "https://github.com/nf-core/diseasemodulediscovery",
-    "commit": "d231b19cb1d91a355240a61d1dc5735e5ebb333c",
-    "errors": 69,
-    "warnings": 81,
+    "commit": "59aa5e03a9a366e7a5057fcbf88b45e5bc33340e",
+    "errors": 0,
+    "warnings": 129,
     "parse_error": false,
-    "prints_help": null
+    "prints_help": true
   },
   "drop": {
     "full_name": "nf-core/drop",
@@ -461,9 +461,9 @@
   "hic": {
     "full_name": "nf-core/hic",
     "html_url": "https://github.com/nf-core/hic",
-    "commit": "7f17ae41373b975aecdb7b7534554f11caadef1a",
-    "errors": 21,
-    "warnings": 61,
+    "commit": "e0084aec16e0b5c6ce5f11e00a0a995585fde3ed",
+    "errors": 12,
+    "warnings": 26,
     "parse_error": false,
     "prints_help": null
   },
@@ -848,7 +848,7 @@
   "proteinfamilies": {
     "full_name": "nf-core/proteinfamilies",
     "html_url": "https://github.com/nf-core/proteinfamilies",
-    "commit": "2ed29020bc6f09e32b3d9af3918f0a4e8bc21cc9",
+    "commit": "86be6d21e8c30fcb70e4fe54af1b27c3da2888a3",
     "errors": 0,
     "warnings": 3,
     "parse_error": false,
@@ -974,7 +974,7 @@
   "rnaseq": {
     "full_name": "nf-core/rnaseq",
     "html_url": "https://github.com/nf-core/rnaseq",
-    "commit": "26aeb5df34063c37a5ed4c14b2e0550413d4dd42",
+    "commit": "e53df34ca1f7214f4ae6c4586ebe9fb63083a170",
     "errors": 0,
     "warnings": 15,
     "parse_error": false,
