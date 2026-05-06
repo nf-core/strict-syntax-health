@@ -35,97 +35,21 @@ permissions:
   contents: write
 
 jobs:
-  # Setup job: Get Nextflow commit SHA for caching
-  setup:
-    runs-on: ubuntu-latest
-    outputs:
-      nf-commit: ${{ steps.nf-commit.outputs.sha }}
-    steps:
-      - name: Get Nextflow latest commit
-        id: nf-commit
-        run: |
-          COMMIT=$(git ls-remote https://github.com/nextflow-io/nextflow.git HEAD | cut -f1)
-          echo "sha=$COMMIT" >> $GITHUB_OUTPUT
-
-  # Build Nextflow and upload as artifact
-  build-nextflow:
-    runs-on: ubuntu-latest
-    needs: setup
-    steps:
-      - name: Restore Nextflow build cache
-        id: cache-nextflow
-        uses: actions/cache/restore@v4
-        with:
-          path: nextflow-src/build/releases
-          key: nextflow-build-${{ needs.setup.outputs.nf-commit }}
-
-      - name: Set up Java
-        if: steps.cache-nextflow.outputs.cache-hit != 'true'
-        uses: actions/setup-java@v4
-        with:
-          distribution: "temurin"
-          java-version: "21"
-
-      - name: Clone and build Nextflow
-        id: build-nextflow
-        if: steps.cache-nextflow.outputs.cache-hit != 'true'
-        run: |
-          git clone --depth 1 https://github.com/nextflow-io/nextflow.git nextflow-src
-          cd nextflow-src
-          make pack
-          cd build/releases/
-          ln -s nextflow-*-dist nextflow
-
-      - name: Save Nextflow build cache
-        if: steps.cache-nextflow.outputs.cache-hit != 'true' && steps.build-nextflow.outcome == 'success'
-        uses: actions/cache/save@v4
-        with:
-          path: nextflow-src/build/releases
-          key: nextflow-build-${{ needs.setup.outputs.nf-commit }}
-
-      - name: Fix symlink if needed
-        run: |
-          cd nextflow-src/build/releases
-          if [ -L nextflow ] && [ ! -e nextflow ]; then
-            rm nextflow
-            ln -s nextflow-*-dist nextflow
-          fi
-
-      - name: Upload Nextflow binary
-        uses: actions/upload-artifact@v4
-        with:
-          name: nextflow-binary
-          path: nextflow-src/build/releases/
-          retention-days: 1
-
   lint:
     runs-on: ubuntu-latest
-    needs: [setup, build-nextflow]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Install Nextflow
+        uses: nf-core/setup-nextflow@b4ec1bc7c16a94435159de94a05253542fddf6ef # v3
+        with:
+          version: latest-everything
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-
-      - name: Download Nextflow binary
-        uses: actions/download-artifact@v4
-        with:
-          name: nextflow-binary
-          path: nextflow-src/build/releases
-
-      - name: Add Nextflow to PATH
-        run: |
-          chmod +x nextflow-src/build/releases/nextflow*
-          # Fix symlink if needed
-          cd nextflow-src/build/releases
-          if [ -L nextflow ] && [ ! -e nextflow ]; then
-            rm nextflow
-            ln -s nextflow-*-dist nextflow
-          fi
-          echo "${{ github.workspace }}/nextflow-src/build/releases" >> $GITHUB_PATH
 
       - name: Install dependencies
         run: pip install .
