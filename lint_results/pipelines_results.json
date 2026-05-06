@@ -47,7 +47,7 @@
   "bacass": {
     "full_name": "nf-core/bacass",
     "html_url": "https://github.com/nf-core/bacass",
-    "commit": "e539505eb38a441f84c19f1661c4fda929494a02",
+    "commit": "2d6008bac173baf737d8308af60e213b8a84ce9a",
     "errors": 0,
     "warnings": 17,
     "parse_error": false,
@@ -74,7 +74,7 @@
   "cageseq": {
     "full_name": "nf-core/cageseq",
     "html_url": "https://github.com/nf-core/cageseq",
-    "commit": "32919158275728296c2a17d48313becf11b421a4",
+    "commit": "2be102772d28b6009d7fa52f0329280bd7e723c6",
     "errors": 51,
     "warnings": 44,
     "parse_error": false,
@@ -758,9 +758,9 @@
   "pacvar": {
     "full_name": "nf-core/pacvar",
     "html_url": "https://github.com/nf-core/pacvar",
-    "commit": "136f83a3f306a978662096f93e6eaaf503342c18",
+    "commit": "c025c42297718ded01a6626a93cb826b5b18aa02",
     "errors": 6,
-    "warnings": 30,
+    "warnings": 32,
     "parse_error": false,
     "prints_help": null
   },
@@ -839,7 +839,7 @@
   "proteinannotator": {
     "full_name": "nf-core/proteinannotator",
     "html_url": "https://github.com/nf-core/proteinannotator",
-    "commit": "96885a27f01b5fd66632d33fa457a0d06c414f4b",
+    "commit": "04b092877714299f1e8139d6329ede606ed57f73",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -848,9 +848,9 @@
   "proteinfamilies": {
     "full_name": "nf-core/proteinfamilies",
     "html_url": "https://github.com/nf-core/proteinfamilies",
-    "commit": "beff908fbd064d1c9947c210e0b301a0dc1356b6",
+    "commit": "2ed29020bc6f09e32b3d9af3918f0a4e8bc21cc9",
     "errors": 0,
-    "warnings": 0,
+    "warnings": 3,
     "parse_error": false,
     "prints_help": true
   },
@@ -893,7 +893,7 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "a68931d923998a59684004c0d0bad5cbe8e8dd9f",
+    "commit": "356cbf11fbe336ff0c8e90c61906a31d6596396d",
     "errors": 0,
     "warnings": 1,
     "parse_error": false,
@@ -947,9 +947,9 @@
   "riboseq": {
     "full_name": "nf-core/riboseq",
     "html_url": "https://github.com/nf-core/riboseq",
-    "commit": "d99e6dba7642b4e59c0e9c450740a1d9b34d14f1",
+    "commit": "bbcd3aef5937b936fdf811611774e339036e1dc3",
     "errors": 0,
-    "warnings": 124,
+    "warnings": 125,
     "parse_error": false,
     "prints_help": true
   },
@@ -974,9 +974,9 @@
   "rnaseq": {
     "full_name": "nf-core/rnaseq",
     "html_url": "https://github.com/nf-core/rnaseq",
-    "commit": "4039bd59efb7aa3e3265103ec6a03f4281ef00df",
+    "commit": "26aeb5df34063c37a5ed4c14b2e0550413d4dd42",
     "errors": 0,
-    "warnings": 16,
+    "warnings": 15,
     "parse_error": false,
     "prints_help": true
   },
@@ -1028,9 +1028,9 @@
   "scnanoseq": {
     "full_name": "nf-core/scnanoseq",
     "html_url": "https://github.com/nf-core/scnanoseq",
-    "commit": "c67fe9e42b5d158d27cc147409fa0c3d8e30e5c2",
-    "errors": 67,
-    "warnings": 137,
+    "commit": "cea013b41d2cdbeca841c2954d9cf9625de5343c",
+    "errors": 1,
+    "warnings": 1,
     "parse_error": false,
     "prints_help": null
   },
@@ -1055,7 +1055,7 @@
   "seqsubmit": {
     "full_name": "nf-core/seqsubmit",
     "html_url": "https://github.com/nf-core/seqsubmit",
-    "commit": "d8beefc7f25c0810493aa335db523497f2b5346c",
+    "commit": "52ac46beebd106fbfaef9a3a068a79bfb56c013a",
     "errors": 1,
     "warnings": 9,
     "parse_error": false,
@@ -1163,9 +1163,9 @@
   "tumourevo": {
     "full_name": "nf-core/tumourevo",
     "html_url": "https://github.com/nf-core/tumourevo",
-    "commit": "6316bd7ae9c131e99aca5bc19aa1ad2ee0d99029",
+    "commit": "b45c74eff5d53b50063290715da3aa324dedf5e2",
     "errors": 9,
-    "warnings": 60,
+    "warnings": 62,
     "parse_error": false,
     "prints_help": null
   },

@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-28T00:34:51.857570012Z
-- Nextflow version: 26.03.4-edge
-- Summary: 6 errors, 30 warnings
+- Generated: 2026-05-06T00:34:43.520863789Z
+- Nextflow version: 26.04.0
+- Summary: 6 errors, 32 warnings
 
 ## :x: Errors
 
@@ -197,65 +197,79 @@
       ^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/pacvar.nf:71:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/pacvar.nf:73:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_barcode = Channel.value(file(params.barcodes))
                        ^^^^^^^
   ```
 
-- Warning: `workflows/pacvar.nf:95:59`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/pacvar.nf:97:59`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       pbmm2_input_filter_ch = pbmm2_input_ch.filter { meta, bam ->
                                                             ^^^
   ```
 
-- Warning: `workflows/pacvar.nf:122:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/pacvar.nf:124:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .filter { meta, bams -> bams.size() > 1 }
                         ^^^^
   ```
 
-- Warning: `workflows/pacvar.nf:127:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/pacvar.nf:129:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .filter { meta, bams -> bams.size() == 1 }
                         ^^^^
   ```
 
-- Warning: `workflows/pacvar.nf:147:50`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/pacvar.nf:149:50`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ordered_bam_ch = bam_bai_ch.map { meta, bam, bai -> [meta, bam] }
                                                    ^^^
   ```
 
-- Warning: `workflows/pacvar.nf:148:45`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/pacvar.nf:150:45`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ordered_bai_ch = bam_bai_ch.map { meta, bam, bai -> [meta, bai] }
                                               ^^^
   ```
 
-- Warning: `workflows/pacvar.nf:196:75`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/pacvar.nf:198:75`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                       ? orderd_bam_bai_vcf_tbi_snp.vcf_tbi.map { meta, vcf, tbi -> [ meta, vcf ] }
                                                                             ^^^
   ```
 
-- Warning: `workflows/pacvar.nf:221:90`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/pacvar.nf:223:90`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   cnv_input_bam_bai_maf_ch = bam_bai_vcf_snp_ch.map { meta, bam, bai, vcf, tbi ->
                                                                                            ^^^
   ```
 
-- Warning: `workflows/pacvar.nf:246:122`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/pacvar.nf:241:83`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              ch_cnv_vcf = BAM_CNV_VARIANT_CALLING.out.vcf_indexed.map { meta, vcf, tbi -> [ meta, vcf ] }
+                                                                                    ^^^
+  ```
+
+- Warning: `workflows/pacvar.nf:261:122`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   (sv_input_bam_ch, sv_input_bai_ch, sv_input_maf_ch) = bam_bai_vcf_snp_ch.multiMap { meta, bam, bai, vcf, tbi ->
                                                                                                                            ^^^
+  ```
+
+- Warning: `workflows/pacvar.nf:314:74`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+                      ? orderd_bam_bai_vcf_tbi_sv.vcf_tbi.map { meta, vcf, tbi -> [ meta, vcf ] }
+                                                                           ^^^
   ```

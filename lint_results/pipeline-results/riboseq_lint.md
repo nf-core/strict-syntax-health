@@ -1,145 +1,145 @@
 # Nextflow lint results
 
-- Generated: 2026-05-01T00:35:57.980724738Z
+- Generated: 2026-05-06T00:36:15.525078065Z
 - Nextflow version: 26.04.0
-- Summary: 124 warnings
+- Summary: 125 warnings
 
 ## :warning: Warnings
 
-- Warning: `conf/modules.config:256:49`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:258:49`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   saveAs: { params.save_trimmed ? it : null }
                                                   ^^
   ```
 
-- Warning: `conf/modules.config:283:49`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:285:49`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   saveAs: { params.save_trimmed ? it : null }
                                                   ^^
   ```
 
-- Warning: `conf/modules.config:309:45`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:311:45`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               saveAs: { params.save_trimmed ? it : null }
                                               ^^
   ```
 
-- Warning: `conf/modules.config:330:55`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:332:55`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   saveAs: { params.save_umi_intermeds ? it : null }
                                                         ^^
   ```
 
-- Warning: `conf/modules.config:351:55`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:353:55`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   saveAs: { params.save_bbsplit_reads ? it : null }
                                                         ^^
   ```
 
-- Warning: `conf/modules.config:368:56`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:370:56`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   saveAs: { params.save_non_ribo_reads ? it : null }
                                                          ^^
   ```
 
-- Warning: `conf/modules.config:393:56`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:395:56`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   saveAs: { params.save_non_ribo_reads ? it : null }
                                                          ^^
   ```
 
-- Warning: `conf/modules.config:424:52`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:426:52`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               saveAs: { params.save_non_ribo_reads ? it : null }
                                                      ^^
   ```
 
-- Warning: `conf/modules.config:453:56`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:455:56`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   saveAs: { params.save_non_ribo_reads ? it : null }
                                                          ^^
   ```
 
-- Warning: `conf/modules.config:513:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:515:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   ) || params.save_align_intermeds || params.skip_markduplicates ? it : null }
                                                                                    ^^
   ```
 
-- Warning: `conf/modules.config:587:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:589:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   saveAs: { params.save_align_intermeds ? it : null }
                                                           ^^
   ```
 
-- Warning: `conf/modules.config:598:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:600:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   saveAs: { params.save_unaligned ? it : null }
                                                     ^^
   ```
 
-- Warning: `conf/modules.config:746:86`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:748:86`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   saveAs: { params.save_align_intermeds || params.save_umi_intermeds ? it : null }
                                                                                        ^^
   ```
 
-- Warning: `conf/modules.config:758:101`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:760:101`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               saveAs: { params.save_align_intermeds || params.with_umi || params.save_umi_intermeds ? it : null }
                                                                                                       ^^
   ```
 
-- Warning: `conf/modules.config:780:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:782:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               saveAs: { params.save_align_intermeds || params.save_umi_intermeds ? it : null }
                                                                                    ^^
   ```
 
-- Warning: `conf/modules.config:796:86`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:798:86`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   saveAs: { params.save_align_intermeds || params.save_umi_intermeds ? it : null }
                                                                                        ^^
   ```
 
-- Warning: `conf/modules.config:807:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:809:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               saveAs: { params.save_align_intermeds || params.save_umi_intermeds ? it : null }
                                                                                    ^^
   ```
 
-- Warning: `conf/modules.config:816:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:818:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               saveAs: { params.save_align_intermeds || params.save_umi_intermeds ? it : null }
                                                                                    ^^
   ```
 
-- Warning: `conf/modules.config:826:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:828:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               saveAs: { params.save_align_intermeds || params.save_umi_intermeds ? it : null }
                                                                                    ^^
   ```
 
-- Warning: `conf/modules.config:835:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:837:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               saveAs: { params.save_align_intermeds || params.save_umi_intermeds ? it : null }
@@ -741,133 +741,140 @@
                                     ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:470:55`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:466:89`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          ch_multiqc_files = ch_multiqc_files.mix(RIBOWALTZ.out.ribowaltz_qc_data.collect{it[1]}.ifEmpty([]))
+                                                                                          ^^
+  ```
+
+- Warning: `workflows/riboseq/main.nf:471:55`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           PLASTID_METAGENE_GENERATE(ch_gtf.map { [ [:], it ] })
                                                         ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:492:37`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:493:37`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_samplesheet.map { [ [:], it ] },
                                       ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:506:86`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:507:86`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(QUANTIFY_STAR_SALMON.out.multiqc.collect{it[1]}.ifEmpty([]))
                                                                                        ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:518:29`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/riboseq/main.nf:519:29`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .filter { meta, reads -> meta.sample_type in ['riboseq', 'rnaseq'] }
                               ^^^^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:521:41`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:522:41`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_samplesheet.map { [ [:], it ] },
                                           ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:535:88`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:536:88`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(QUANTIFY_PSEUDO_TE.out.multiqc.collect{it[1]}.ifEmpty([]))
                                                                                          ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:560:67`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/riboseq/main.nf:561:67`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .collectFile(name: 'gene_inframe_psite_counts.tsv') { meta, file -> file }
                                                                     ^^^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:565:82`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/riboseq/main.nf:566:82`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   .combine(QUANTIFY_STAR_SALMON.out.counts_gene_length_scaled.map{ meta, counts -> counts })
                                                                                    ^^^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:582:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:583:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .map{[it, it.variable, it.reference, it.target]}
                     ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:582:23`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:583:23`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .map{[it, it.variable, it.reference, it.target]}
                         ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:582:36`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:583:36`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .map{[it, it.variable, it.reference, it.target]}
                                      ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:582:50`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:583:50`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .map{[it, it.variable, it.reference, it.target]}
                                                    ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:586:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:587:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .map{[it[0], it[2], it[1]]}
                     ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:586:26`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:587:26`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .map{[it[0], it[2], it[1]]}
                            ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:586:33`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:587:33`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .map{[it[0], it[2], it[1]]}
                                   ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:610:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:611:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_versions = ch_versions.filter{it != null}
                                        ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:622:49`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/riboseq/main.nf:623:49`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_workflow_summary                   = Channel.value(paramsSummaryMultiqc(summary_params))
                                                   ^^^^^^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:624:49`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/riboseq/main.nf:625:49`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_methods_description                = Channel.value(methodsDescriptionText(ch_multiqc_custom_methods_description))
                                                   ^^^^^^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:666:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/riboseq/main.nf:667:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_multiqc_report = Channel.empty()

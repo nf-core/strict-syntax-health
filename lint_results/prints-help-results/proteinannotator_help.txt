@@ -1,9 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.03.1-edge
+ N E X T F L O W   ~  version 26.04.0
 
-Launching `./main.nf` [nostalgic_hamilton] revision: 05c6c83c26
+Downloading plugin nf-schema@2.6.1
+Launching `./main.nf` [dreamy_lumiere] revision: d44713b7e7
 
 
 ------------------------------------------------------
@@ -12,7 +13,7 @@ Launching `./main.nf` [nostalgic_hamilton] revision: 05c6c83c26
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/proteinannotator 1.1.0dev
+  nf-core/proteinannotator 1.1.0
 ------------------------------------------------------
 Typical pipeline command:
 
@@ -78,7 +79,7 @@ Prediction parameters
   --s4pred_outfmt                 [string]  Choose the output format (i.e., 'ss2', 'fas', 'horiz') for the s4pred per amino acid probability 
 predictions (i.e., α-helix, β-strand, coil). Modifies the --outfmt parameter of s4pred run_model. 
  (accepted: ss2, fas, horiz) [default: ss2]  
- !! Hiding 18 param(s), use the `--showHidden` parameter to show them !!
+ !! Hiding 17 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
 
 * The pipeline

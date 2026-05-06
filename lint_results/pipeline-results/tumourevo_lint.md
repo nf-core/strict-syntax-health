@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-03T00:28:18.777144852Z
-- Nextflow version: 26.03.1-edge
-- Summary: 9 errors, 60 warnings
+- Generated: 2026-05-06T00:37:32.839072204Z
+- Nextflow version: 26.04.0
+- Summary: 9 errors, 62 warnings
 
 ## :x: Errors
 
@@ -239,6 +239,13 @@
                                                           ^^
   ```
 
+- Warning: `subworkflows/local/annotation_cache_initialisation/main.nf:22:5`: Variable was declared but not used
+
+  ```nextflow
+      ensemblvep_cache = Channel.fromPath(file("${vep_cache}/${vep_annotation_cache_key}"), checkIfExists: true).collect()
+      ^^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/annotation_cache_initialisation/main.nf:22:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -363,6 +370,13 @@
   ```nextflow
       input             //  string: Path to input samplesheet
       ^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
+
+  ```nextflow
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/tumourevo.nf:42:20`: Parameter was not used -- prefix with `_` to suppress warning

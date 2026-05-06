@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-05-02T00:32:50.319964146Z
+- Generated: 2026-05-06T00:36:45.605963950Z
 - Nextflow version: 26.04.0
-- Summary: 16 warnings
+- Summary: 15 warnings
 
 ## :warning: Warnings
 
@@ -102,13 +102,6 @@
   ```nextflow
           .map { meta, results -> [ [:], results ] }
                  ^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
-
-  ```nextflow
-      valid_config = checkConfigProvided()
-      ^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/rnaseq/main.nf:620:17`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
