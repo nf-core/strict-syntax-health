@@ -1,10 +1,17 @@
 # Nextflow lint results
 
-- Generated: 2026-05-06T00:35:41.268856498Z
+- Generated: 2026-05-07T00:33:31.204303008Z
 - Nextflow version: 26.04.0
-- Summary: 1 warning
+- Summary: 2 warnings
 
 ## :warning: Warnings
+
+- Warning: `subworkflows/local/call_sv_MT/main.nf:140:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  .filter{ !it.isEmpty() }
+                            ^^
+  ```
 
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
 

@@ -65,7 +65,7 @@
   "bamtofastq": {
     "full_name": "nf-core/bamtofastq",
     "html_url": "https://github.com/nf-core/bamtofastq",
-    "commit": "4efafd0b2b5d05f1397f3a8883a59595d196cad0",
+    "commit": "ae194e78b06222fca060686cbfa4097d417a700d",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -479,9 +479,9 @@
   "hlatyping": {
     "full_name": "nf-core/hlatyping",
     "html_url": "https://github.com/nf-core/hlatyping",
-    "commit": "2b67ab814b88f8d734ae0d7d4e8c50b9ee21c1b5",
+    "commit": "6a1d0b786212f24317e77a9dbe568b90a15f7ebc",
     "errors": 0,
-    "warnings": 0,
+    "warnings": 1,
     "parse_error": false,
     "prints_help": true
   },
@@ -830,9 +830,9 @@
   "pixelator": {
     "full_name": "nf-core/pixelator",
     "html_url": "https://github.com/nf-core/pixelator",
-    "commit": "e8717b169152a85c83a616518c13cc90e9c2683d",
+    "commit": "fb1e447f1f16e0510f30bf7577acbb154f87aa63",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false,
     "prints_help": true
   },
@@ -893,9 +893,9 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "356cbf11fbe336ff0c8e90c61906a31d6596396d",
+    "commit": "8d7bb35dacc42ca3e35467525bdde618994950e2",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 2,
     "parse_error": false,
     "prints_help": true
   },
@@ -974,9 +974,9 @@
   "rnaseq": {
     "full_name": "nf-core/rnaseq",
     "html_url": "https://github.com/nf-core/rnaseq",
-    "commit": "e53df34ca1f7214f4ae6c4586ebe9fb63083a170",
+    "commit": "e41eeaa069bfc5c15b8afa434bca610a904bb8ad",
     "errors": 0,
-    "warnings": 15,
+    "warnings": 16,
     "parse_error": false,
     "prints_help": true
   },
@@ -1055,11 +1055,11 @@
   "seqsubmit": {
     "full_name": "nf-core/seqsubmit",
     "html_url": "https://github.com/nf-core/seqsubmit",
-    "commit": "52ac46beebd106fbfaef9a3a068a79bfb56c013a",
-    "errors": 1,
-    "warnings": 9,
+    "commit": "1c3e027b8bdba546e63910cfad4d720683e1b26d",
+    "errors": 0,
+    "warnings": 15,
     "parse_error": false,
-    "prints_help": null
+    "prints_help": false
   },
   "slamseq": {
     "full_name": "nf-core/slamseq",

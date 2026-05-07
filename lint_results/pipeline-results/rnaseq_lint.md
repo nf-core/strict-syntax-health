@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-05-06T10:09:20.575370393Z
+- Generated: 2026-05-07T00:34:08.197980954Z
 - Nextflow version: 26.04.0
-- Summary: 15 warnings
+- Summary: 16 warnings
 
 ## :warning: Warnings
 
@@ -25,6 +25,20 @@
   ```nextflow
   def strandSummaryCells(meta, provided, status, salmon, rseqc) {
                          ^^^^
+  ```
+
+- Warning: `subworkflows/local/multiqc_rnaseq/main.nf:390:32`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      def data = rows.toSorted { it[0].id }.collectEntries { row ->
+                                 ^^
+  ```
+
+- Warning: `subworkflows/local/multiqc_rnaseq/main.nf:430:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      rows.toSorted { it[0].id }.each { row ->
+                      ^^
   ```
 
 - Warning: `subworkflows/local/prepare_genome/main.nf:205:79`: Parameter was not used -- prefix with `_` to suppress warning
@@ -97,14 +111,7 @@
                                                        ^^
   ```
 
-- Warning: `subworkflows/nf-core/quant_tximport_summarizedexperiment/main.nf:33:16`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .map { meta, results -> [ [:], results ] }
-                 ^^^^
-  ```
-
-- Warning: `workflows/rnaseq/main.nf:620:17`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/rnaseq/main.nf:622:17`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
                   Channel.value([ [:], ch_biotypes_header_multiqc ]),
