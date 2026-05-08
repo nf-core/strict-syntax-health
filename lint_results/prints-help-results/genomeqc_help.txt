@@ -1,0 +1,77 @@
+$ NXF_SYNTAX_PARSER=v2 nextflow run . --help
+
+
+ N E X T F L O W   ~  version 26.04.0
+
+Downloading plugin nf-schema@2.5.1
+Launching `./main.nf` [distracted_cray] revision: 9b061e3e24
+
+WARN: Unrecognized config option 'validation.defaultIgnoreParams'
+WARN: Unrecognized config option 'validation.monochromeLogs'
+
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/genomeqc 1.0dev
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/genomeqc -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input                       [string] Path to comma-separated file containing information about the samples in the experiment. 
+  --outdir                      [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --email                       [string] Email address for completion summary. 
+  --multiqc_title               [string] MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+
+Generic options
+  --multiqc_methods_description [string]          Custom MultiQC yaml file containing HTML including a methods description. 
+  --help                        [boolean, string] Display the help message. 
+  --help_full                   [boolean]         Display the full detailed help message. 
+  --show_hidden                 [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+  --groups                      [string]          A string with NCBI taxonomic groups of the assemblies. Can be a comma-separated list. [default: 
+all]  
+  --busco_mode                  [string]          A flag to set the busco mode for genome and annotation mode ('genome' is hardcoded in genome only 
+mode).  (accepted: proteins, genome) [default: proteins]  
+  --busco_lineage               [string]          A flag to set the busco lineage. [default: hymenoptera_odb10] 
+  --busco_lineages_path         [string]          A flag to set the BUSCO lineages directory (optional) 
+  --busco_config                [string]          A path to a BUSCO config file (optional) 
+  --busco_clean                 [boolean]         Remove intermediate files 
+  --min_buscos                  [integer]         Minimum number of Complete BUSCOs a sequence must have to be counted as significant 
+ortholog-containing sequences.  
+  --gxdb                        [string]          Path to FCS-GX contamination screening database. 
+  --gxdb_manifiest              [string]          Path to FCS GX contamination screening database 
+  --kvalue                      [integer]         k-mer size for meryl (merqury). [default: 21] 
+  --skip_tidk                   [boolean]         Do not run TIDK. 
+  --save_sorted_seqs            [boolean]         Publish sorted fasta genome files from seqkit. 
+  --save_validated_annotation   [boolean]         Publish gff files validated by AGAT. 
+  --save_assembly               [boolean]         Publish genomes and/or annotations of user-supplied RefSeq IDs. 
+  --save_extracted_seqs         [boolean]         Publish extracted protein fasta files by GFFREAD. 
+  --save_orthofinder_results    [boolean]         Publish orthofinder results. [default: true] 
+  --save_longest_isoform        [boolean]         Publish longest protein isoform fasta files. 
+  --save_filtered_seqs          [boolean]         Publish filtered fasta genome files from seqkit. 
+  --skip_plots_genome_anno      [string]          Skip these stat plots in the genome and annotation tree plot. [default: nseqs_plot] 
+  --skip_plots_genome_only      [string]          Skip these stat plots in the genome only tree plot. [default: nseqs_plot] 
+  --val_tool                    [string]          Tool for gxf validation.  (accepted: agat, gffread) [default: agat] 
+  --tree_scale                  [integer]         Modifies scale of the tree plot in the tree summary, default value is '0.0005'. Useful if tree tips 
+overlap with the concatenated plots. Very sensitive, increase/decrease by two-fold.  
+  --repeat                      [string]          DNA string for tidk motif search 
+  --ramdisk                     [string]          Path to RAM-backed tmpfs or ramfs location to store FCS-GX database 
+  --container_engine            [string]          Container engine to run shint app [default: docker] 
+ !! Hiding 19 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/genomeqc/blob/master/CITATIONS.md
+

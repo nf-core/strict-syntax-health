@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.03.3-edge
+ N E X T F L O W   ~  version 26.04.0
 
-Launching `./main.nf` [peaceful_solvay] revision: e0562ae9bb
+Launching `./main.nf` [chaotic_jones] revision: e0562ae9bb
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -34,7 +34,7 @@ description, see [usage docs](https://nf-co.re/magmap/usage#checkmcheckm2-metada
   --gtdbtk_metadata             [string] Comma-separated list of paths to tab-separated files containing a .tsv file which has the same 
 columns as the output from GTDB-Tk, see [usage 
 docs](https://nf-co.re/magmap/usage#gtdb-tk-metadata).  
-  --indexes                     [string] Path to Sourmash .sbt file. 
+  --indexes                     [string] Path to Sourmash .sbt/.sbt.zip file. 
   --remote_genome_sources       [string] Comma-separated list of paths to tsv files with information about genomes in NCBI 'assembly_summary' 
 format. The default are GenBank and RefSeq summary files. [default: 
 https://ftp.ncbi.nlm.nih.gov/genomes/ASSEMBLY_REPORTS/assembly_summary_refseq.txt,https://ftp.ncbi.nlm.nih.gov/genomes/ASSEMBLY_REPORTS/assembly_summary_genbank.txt] 

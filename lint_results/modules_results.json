@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "ce3424257de288c0ca25f097a68d3a289da23f12",
+  "_repo_commit": "fd67bc24ff4bd097b749dfcf4deb207d88f55fd3",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -1676,6 +1676,12 @@
   },
   "centrifuger_centrifuger": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/centrifuger/centrifuger",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "centrifuger_quantification": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/centrifuger/quantification",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -4650,6 +4656,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "huggingface_download": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/huggingface/download",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "humid": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/humid",
     "errors": 0,
@@ -5266,6 +5278,12 @@
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/lissero",
     "errors": 0,
     "warnings": 0,
+    "parse_error": false
+  },
+  "llamacpppython_run": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/llamacpppython/run",
+    "errors": 0,
+    "warnings": 1,
     "parse_error": false
   },
   "localcdsearch_annotate": {
@@ -7502,6 +7520,12 @@
   },
   "pretextsnapshot": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pretextsnapshot",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "pridepy_fetchsdrf": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pridepy/fetchsdrf",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

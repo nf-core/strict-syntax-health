@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-05-07T00:34:08.197980954Z
+- Generated: 2026-05-08T00:34:39.868377204Z
 - Nextflow version: 26.04.0
-- Summary: 16 warnings
+- Summary: 15 warnings
 
 ## :warning: Warnings
 
@@ -41,21 +41,21 @@
                       ^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:205:79`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/prepare_genome/main.nf:207:79`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               ch_transcript_fasta = GFFREAD_TRANSCRIPTS.out.gffread_fasta.map { meta, fasta_file -> fasta_file }
                                                                                 ^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:402:120`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/prepare_genome/main.nf:408:120`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   ch_bowtie2_index = UNTAR_BOWTIE2_INDEX ([ [:], file(bowtie2_index, checkIfExists: true) ]).untar.map { meta, index -> index }
                                                                                                                          ^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:412:62`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/prepare_genome/main.nf:418:62`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               ch_bowtie2_index = BOWTIE2_BUILD.out.index.map { meta, index -> index }
@@ -109,11 +109,4 @@
   ```nextflow
           .map { row -> [row[0], row.drop(1).findAll { it != null }.collectMany { e -> (e instanceof List) ? e : [e] }] }
                                                        ^^
-  ```
-
-- Warning: `workflows/rnaseq/main.nf:622:17`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-                  Channel.value([ [:], ch_biotypes_header_multiqc ]),
-                  ^^^^^^^
   ```

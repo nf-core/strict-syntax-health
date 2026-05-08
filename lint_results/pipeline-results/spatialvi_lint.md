@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-18T00:28:51.731320297Z
-- Nextflow version: 26.03.2-edge
-- Summary: 3 warnings
+- Generated: 2026-05-08T00:35:03.515309341Z
+- Nextflow version: 26.04.0
+- Summary: 2 warnings
 
 ## :warning: Warnings
 
@@ -18,11 +18,4 @@
   ```nextflow
       ch_downstream_input = ch_downstream_combined
       ^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
-
-  ```nextflow
-      valid_config = checkConfigProvided()
-      ^^^^^^^^^^^^
   ```

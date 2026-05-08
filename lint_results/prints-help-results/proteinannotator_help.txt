@@ -3,8 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.04.0
 
-Downloading plugin nf-schema@2.6.1
-Launching `./main.nf` [dreamy_lumiere] revision: d44713b7e7
+Launching `./main.nf` [clever_dijkstra] revision: d44713b7e7
 
 
 ------------------------------------------------------
@@ -13,7 +12,7 @@ Launching `./main.nf` [dreamy_lumiere] revision: d44713b7e7
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/proteinannotator 1.1.0
+  nf-core/proteinannotator 1.2.0dev
 ------------------------------------------------------
 Typical pipeline command:
 
@@ -56,7 +55,8 @@ https://download.cathdb.info/cath/releases/all-releases/v4_3_0/sequence-data/fun
  
   --skip_nmpfams                  [boolean] Skip the domain annotation with the NMPFams database. 
   --nmpfams_db                    [string]  Path to an already installed NMPFams HMM database. 
-  --nmpfams_latest_link           [string]  [default: https://pavlopoulos-lab.org/envofams/databases/hmmer/nmpfamsdb.hmm.gz] 
+  --nmpfams_latest_link           [string]  NMPFams hosted link to the latest NMPFams HMM database file. [default: 
+https://pavlopoulos-lab.org/envofams/databases/hmmer/nmpfamsdb.hmm.gz]  
   --skip_metagroot                [boolean] Skip the domain annotation with the metagRoot database. 
   --metagroot_db                  [string]  Path to an already installed metagRoot HMM database (.hmm.gz). 
   --metagroot_latest_link         [string]  metagRoot hosted link to the latest available metagRoot HMM database file. [default: 
@@ -65,7 +65,7 @@ https://pavlopoulos-lab.org/envofams/databases/hmmer/metagroot.hmm.gz]
 [default: 0.001]  
 
 Functional annotation parameters
-  --skip_interproscan             [boolean] Run InterProScan [default: false] 
+  --skip_interproscan             [boolean] Skip the functional annotation with InterProScan. 
   --interproscan_db_url           [string]  Change the database version used for annotation. [default: 
 https://ftp.ebi.ac.uk/pub/software/unix/iprscan/5/5.72-103.0/interproscan-5.72-103.0-64-bit.tar.gz] 
  
