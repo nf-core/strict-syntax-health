@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "fd67bc24ff4bd097b749dfcf4deb207d88f55fd3",
+  "_repo_commit": "4ade92bfb506b1137085777374598b6006afe549",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -6476,6 +6476,12 @@
   },
   "oatk": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/oatk",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "octopusv_correct": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/octopusv/correct",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

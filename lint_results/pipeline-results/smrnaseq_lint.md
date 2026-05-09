@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T10:29:59.227134598Z
-- Nextflow version: 25.12.0-edge
-- Summary: 11 errors, 74 warnings
+- Generated: 2026-05-09T00:35:58.310425189Z
+- Nextflow version: 26.04.0
+- Summary: 11 errors, 65 warnings
 
 ## :x: Errors
 
@@ -127,69 +127,6 @@
           ^^^^
   ```
 
-- Warning: `modules/nf-core/mirtop/counts/main.nf:24:9`: Variable was declared but not used
-
-  ```nextflow
-      def prefix = task.ext.prefix ?: "${meta.id}"
-          ^^^^^^
-  ```
-
-- Warning: `modules/nf-core/mirtop/counts/main.nf:42:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/mirtop/counts/main.nf:43:9`: Variable was declared but not used
-
-  ```nextflow
-      def prefix = task.ext.prefix ?: "${meta.id}"
-          ^^^^^^
-  ```
-
-- Warning: `modules/nf-core/mirtop/export/main.nf:26:9`: Variable was declared but not used
-
-  ```nextflow
-      def prefix = task.ext.prefix ?: "${meta.id}"
-          ^^^^^^
-  ```
-
-- Warning: `modules/nf-core/mirtop/export/main.nf:44:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/mirtop/gff/main.nf:44:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/mirtop/gff/main.nf:45:9`: Variable was declared but not used
-
-  ```nextflow
-      def prefix = task.ext.prefix ?: "${meta.id}"
-          ^^^^^^
-  ```
-
-- Warning: `modules/nf-core/mirtop/stats/main.nf:24:9`: Variable was declared but not used
-
-  ```nextflow
-      def prefix = task.ext.prefix ?: "${meta.id}"
-          ^^^^^^
-  ```
-
-- Warning: `modules/nf-core/mirtop/stats/main.nf:39:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
 - Warning: `modules/nf-core/mirtrace/qc/main.nf:26:9`: Variable was declared but not used
 
   ```nextflow
@@ -205,13 +142,6 @@
   ```
 
 - Warning: `modules/nf-core/mirtrace/qc/main.nf:45:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/seqcluster/collapse/main.nf:41:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
@@ -482,6 +412,13 @@
   ```nextflow
       ch_versions = Channel.empty()
                     ^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
+
+  ```nextflow
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead

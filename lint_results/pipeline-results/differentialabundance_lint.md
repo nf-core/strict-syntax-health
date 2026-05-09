@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-28T00:34:31.408981409Z
-- Nextflow version: 26.03.4-edge
-- Summary: 75 errors, 8 warnings
+- Generated: 2026-05-09T00:33:26.135111634Z
+- Nextflow version: 26.04.0
+- Summary: 75 errors, 7 warnings
 
 ## :x: Errors
 
@@ -524,7 +524,7 @@
                                             ^
   ```
 
-- Error: `workflows/differentialabundance.nf:213:96`: Unexpected input: '='
+- Error: `workflows/differentialabundance.nf:210:96`: Unexpected input: '='
 
   ```nextflow
       ch_proteus_raw = prepareModuleOutput(PROTEUS.out.raw_tab, ch_paramsets, meta_keys_to_remove=['contrast'])
@@ -573,13 +573,6 @@
   ```nextflow
           path { name, meta, file ->
                        ^^^^
-  ```
-
-- Warning: `modules/nf-core/gunzip/main.nf:43:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
   ```
 
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used

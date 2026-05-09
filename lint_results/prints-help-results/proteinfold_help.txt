@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.02.0-edge
+ N E X T F L O W   ~  version 26.04.0
 
-Launching `./main.nf` [sleepy_gilbert] revision: 32e3cb20be
+Launching `./main.nf` [tender_dijkstra] revision: d6484f4d90
 
 
 ------------------------------------------------------
@@ -12,7 +12,7 @@ Launching `./main.nf` [sleepy_gilbert] revision: 32e3cb20be
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/rnaseq 1.2.0dev
+  nf-core/proteinfold 2.1.0dev
 ------------------------------------------------------
 Typical pipeline command:
 
@@ -40,6 +40,8 @@ method-specific paths.
   --uniref30_prefix                         [string]  UniRef major release  (accepted: UniRef30_2023_02, UniRef30_2022_02, UniRef30_2021_03) [default: 
 UniRef30_2023_02]  
   --use_msa_server                          [boolean] Use the cloud MSA server 
+  --random_seed                             [integer] Global random seed for modules that natively support explicit seeding: alphafold2, boltz, and 
+colabfold.  
   --msa_server_url                          [string]  Specify your custom MMSeqs2 API server url 
 
 AlphaFold2 options
@@ -48,27 +50,26 @@ AlphaFold2 options
 small bfd  
   --alphafold2_mode                         [string]  Specifies the mode in which AlphaFold2 will be run  (accepted: standard, split_msa_prediction) 
 [default: split_msa_prediction]  
-  --alphafold2_model_preset                 [string]  Model preset for 'AlphaFold2' mode  (accepted: monomer, monomer_casp14, monomer_ptm, multimer) 
-[default: monomer_ptm]  
-  --alphafold2_random_seed                  [string]  Random seed to control stochastic alphafold inference. 
+  --alphafold2_model_preset                 [string]  Model preset used only for single-entry FASTA inputs in 'AlphaFold2' mode  (accepted: monomer, 
+monomer_casp14, monomer_ptm) [default: monomer_ptm]  
   --alphafold2_params_prefix                [string]  Alphafold2 parameters version  (accepted: alphafold_params_2022-12-06, 
 alphafold_params_2022-03-02, alphafold_params_2022-01-19, ...) [default: 
 alphafold_params_2022-12-06]  
 
 ColabFold options
-  --colabfold_model_preset                  [string]  Model preset for 'colabfold' mode  (accepted: alphafold2_ptm, alphafold2_multimer_v1, 
-alphafold2_multimer_v2, alphafold2_multimer_v3) [default: alphafold2_ptm]  
   --colabfold_num_recycles                  [integer] Number of recycles for ColabFold [default: 3] 
   --colabfold_use_amber                     [boolean] Use Amber minimization to refine the predicted structures [default: true] 
+  --colabfold_use_gpu_relax                 [boolean] Use GPU for Amber relaxation in ColabFold [default: false] 
   --colabfold_db_load_mode                  [integer] Specify the way that MMSeqs2 will load the required databases in memory  (accepted: 0, 1, 2, 3) 
  
   --colabfold_use_templates                 [boolean] Use PDB templates [default: false] 
   --colabfold_create_index                  [boolean] Create databases indexes when running colabfold_local mode 
+  --colabfold_params_prefix                 [string]  Alphafold2 parameters version  (accepted: alphafold_params_2022-12-06, 
+alphafold_params_2022-03-02, alphafold_params_2022-01-19, ...) [default: 
+alphafold_params_2022-12-06]  
 
 ESMFold options
   --esmfold_num_recycles                    [integer] Specifies the number of recycles used by ESMFold [default: 4] 
-  --esmfold_model_preset                    [string]  Specifies whether is a 'monomer' or 'multimer' prediction  (accepted: monomer, multimer) 
-[default: monomer]  
 
 RosettaFold2NA options
   --rosettafold2na_db                       [string] Specifies the DB and PARAMS path used by 'RosettaFold2NA' mode 
@@ -141,7 +142,7 @@ AlphaFold2 DBs and parameters paths options
   --alphafold2_uniprot_path                 [string] Path to UniProt database containing the SwissProt and the TrEMBL databases [default: 
 null/uniprot/*]  
 
-Alphafold3 DBs and parameters links options
+AlphaFold3 DBs and parameters links options
   --alphafold3_small_bfd_path               [string] Path to the reduced version of the BFD database [default: null/small_bfd/*] 
   --alphafold3_params_path                  [string] Path to the Alphafold3 parameters 
   --alphafold3_mgnify_path                  [string] Path to the MGnify database [default: null/mgnify/*] 
@@ -159,14 +160,15 @@ ColabFold DBs and parameters links options
 https://opendata.mmseqs.org/colabfold/colabfold_envdb_202108.db.tar.gz]  
   --colabfold_uniref30_link                 [string] Link to the UniRef30 database [default: 
 https://opendata.mmseqs.org/colabfold/uniref30_2302.db.tar.gz]  
-  --colabfold_alphafold2_params_link        [string] Link to the Alphafold2 parameters for Colabfold 
+  --colabfold_alphafold2_params_link        [string] Link to the Alphafold2 monomer parameters for ColabFold [default: 
+https://storage.googleapis.com/alphafold/alphafold_params_2022-12-06.tar]  
 
 ColabFold DBs and parameters paths options
   --colabfold_db                            [string] Specifies the PARAMS and DB path used by 'colabfold'  mode 
   --colabfold_envdb_path                    [string] Link to the ColabFold database [default: null/colabfold_envdb/*] 
   --colabfold_uniref30_path                 [string] Link to the UniRef30 database [default: null/colabfold_uniref30/*] 
-  --colabfold_alphafold2_params_path        [string] Link to the Alphafold2 parameters for Colabfold 
-  --colabfold_alphafold2_params_tags        [object] Dictionary with Alphafold2 parameters tags 
+  --colabfold_alphafold2_params_path        [string] Path to the AlphaFold2 parameters for Colabfold [default: 
+null/params/alphafold_params_2022-12-06]  
 
 ESMFold parameters links options
   --esmfold_3B_v1                           [string] Link to the ESMFold 3B-v1 model [default: 
@@ -300,7 +302,7 @@ https://files.rcsb.org/pub/pdb/data/status/obsolete.dat]
   --helixfold3_maxit_src_link               [string] Link to Maxit Suite for HelixFold3 [default: 
 https://proteinfold-dataset.s3.amazonaws.com/test-data/db/helixfold3/maxit-v11.200-prod-src.tar.gz] 
  
- !! Hiding 18 param(s), use the `--showHidden` parameter to show them !!
+ !! Hiding 17 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
 
 * The pipeline

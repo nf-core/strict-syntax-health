@@ -254,9 +254,9 @@
   "differentialabundance": {
     "full_name": "nf-core/differentialabundance",
     "html_url": "https://github.com/nf-core/differentialabundance",
-    "commit": "57f3b13a53f8833b0e42ace0475a46d6a7d0b408",
+    "commit": "beb977852e6110df5ee3a6033c72b5bf1f978c81",
     "errors": 75,
-    "warnings": 8,
+    "warnings": 7,
     "parse_error": false,
     "prints_help": null
   },
@@ -551,7 +551,7 @@
   "magmap": {
     "full_name": "nf-core/magmap",
     "html_url": "https://github.com/nf-core/magmap",
-    "commit": "ea927d363ba902547ddb25195d9ec897e0423e4c",
+    "commit": "eb710a0721d6e532edb81ec96c86544dc438f424",
     "errors": 0,
     "warnings": 1,
     "parse_error": false,
@@ -839,7 +839,7 @@
   "proteinannotator": {
     "full_name": "nf-core/proteinannotator",
     "html_url": "https://github.com/nf-core/proteinannotator",
-    "commit": "b8fac19406879e54d1dbcd8b3d85004e5641b948",
+    "commit": "6bcb8b0e40b8368e864d929cde63aa446020ee62",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -857,11 +857,11 @@
   "proteinfold": {
     "full_name": "nf-core/proteinfold",
     "html_url": "https://github.com/nf-core/proteinfold",
-    "commit": "155536e358786180935b3ae0d7b99a4f92e9f50c",
-    "errors": 9,
-    "warnings": 4,
+    "commit": "748acb6538988cb88fa51447928753cc702e109f",
+    "errors": 0,
+    "warnings": 3,
     "parse_error": false,
-    "prints_help": null
+    "prints_help": true
   },
   "proteogenomicsdb": {
     "full_name": "nf-core/proteogenomicsdb",
@@ -893,7 +893,7 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "23c1ef21ff6ef4f478419b132a0d0c6b244f7cbb",
+    "commit": "ef20cbe7c3c8f5f312592afd23ef9b9d6c0baaa2",
     "errors": 0,
     "warnings": 2,
     "parse_error": false,
@@ -974,7 +974,7 @@
   "rnaseq": {
     "full_name": "nf-core/rnaseq",
     "html_url": "https://github.com/nf-core/rnaseq",
-    "commit": "6d079afd7e1f6ee32db465fdc152dcd97b78898e",
+    "commit": "c8a688b4de27fb819bf5f89f24eaaa93a8151b43",
     "errors": 0,
     "warnings": 15,
     "parse_error": false,
@@ -1073,9 +1073,9 @@
   "smrnaseq": {
     "full_name": "nf-core/smrnaseq",
     "html_url": "https://github.com/nf-core/smrnaseq",
-    "commit": "fecd58589285ff03ef8def981bcf32b11e312a55",
+    "commit": "8a9a96e469caa25f56b74c6abb742c327ff4fb7f",
     "errors": 11,
-    "warnings": 74,
+    "warnings": 65,
     "parse_error": false,
     "prints_help": null
   },
@@ -1100,7 +1100,7 @@
   "spatialxe": {
     "full_name": "nf-core/spatialxe",
     "html_url": "https://github.com/nf-core/spatialxe",
-    "commit": "5c9acff3bc45a0c994dc13d7e3174efb8ff8f44c",
+    "commit": "2cfe25354ea30709b99e7bb5ab415c9f16587185",
     "errors": 0,
     "warnings": 28,
     "parse_error": false,
