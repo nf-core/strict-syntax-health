@@ -1145,9 +1145,9 @@
   "tfactivity": {
     "full_name": "nf-core/tfactivity",
     "html_url": "https://github.com/nf-core/tfactivity",
-    "commit": "0d13d2d1e990ae3688b3e846a81979df32ab7408",
+    "commit": "4ac627e7439087a4a8be3dfe7bcb6f6ed55a3d1d",
     "errors": 0,
-    "warnings": 12,
+    "warnings": 10,
     "parse_error": false,
     "prints_help": true
   },

@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-10T00:27:20.116553188Z
-- Nextflow version: 26.03.2-edge
-- Summary: 12 warnings
+- Generated: 2026-05-10T00:33:53.908128508Z
+- Nextflow version: 26.04.0
+- Summary: 10 warnings
 
 ## :warning: Warnings
 
@@ -74,18 +74,4 @@
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_tfactivity_pipeline/main.nf:137:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      hook_url        //  string: hook URL for notifications
-      ^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
-
-  ```nextflow
-      valid_config = checkConfigProvided()
-      ^^^^^^^^^^^^
   ```
