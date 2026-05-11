@@ -1019,11 +1019,11 @@
   "scdownstream": {
     "full_name": "nf-core/scdownstream",
     "html_url": "https://github.com/nf-core/scdownstream",
-    "commit": "083c1819b787adfe7961730d3860e9b239dc637a",
+    "commit": "3fc5a7e4244e81c3569d9023e4acef4cbc89069b",
     "errors": 0,
-    "warnings": 29,
+    "warnings": 28,
     "parse_error": false,
-    "prints_help": false
+    "prints_help": true
   },
   "scnanoseq": {
     "full_name": "nf-core/scnanoseq",

@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "4ade92bfb506b1137085777374598b6006afe549",
+  "_repo_commit": "9cc9ac3431911839826f062a5f0348835ebcc7ae",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -4434,6 +4434,18 @@
     "warnings": 0,
     "parse_error": false
   },
+  "hifiadapterfilt_downloaddb": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/hifiadapterfilt/downloaddb",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "hifiadapterfilt_hifiadapterfilt": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/hifiadapterfilt/hifiadapterfilt",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "hifiasm": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/hifiasm",
     "errors": 0,
@@ -7267,13 +7279,13 @@
     "parse_error": false
   },
   "plastid_make_wiggle": {
-    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/make/wiggle",
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/make_wiggle",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
   "plastid_metagene_generate": {
-    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/metagene/generate",
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/metagene_generate",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -7597,7 +7609,7 @@
     "parse_error": false
   },
   "proseg_proseg_to_baysor": {
-    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/proseg/proseg/to/baysor",
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/proseg/proseg_to_baysor",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

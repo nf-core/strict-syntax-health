@@ -1,13 +1,167 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.03.2-edge
+ N E X T F L O W   ~  version 26.04.0
 
 Downloading plugin nf-anndata@0.3.2
-Launching `./main.nf` [sharp_engelbart] revision: d806061af6
+Downloading plugin nf-schema@2.5.1
+Launching `./main.nf` [lonely_wescoff] revision: 4d733b55fe
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
-ERROR ~ Unable to create help message: Specified param 'true' does not exist in JSON schema.
 
- -- Check script 'subworkflows/nf-core/utils_nfschema_plugin/main.nf' at line: 41 or see '.nextflow.log' file for more details
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/scdownstream 0.0.1dev
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/scdownstream -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input                         [string]  Path to comma-separated file containing information about the samples in the experiment. 
+  --outdir                        [string]  The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --save_intermediates            [boolean] Save intermediate files to the output directory 
+  --email                         [string]  Email address for completion summary. 
+  --multiqc_title                 [string]  MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+
+Unify options
+  --unify_gene_symbols            [boolean] Unify gene symbols to the latest version of the Ensembl database 
+  --duplicate_var_resolution      [string]  Method to aggregate gene expression values for non-unique genes  (accepted: mean, sum, max, 
+make_unique) [default: sum]  
+  --force_obs_cols                [string]  Force keeping certain columns in the merged AnnData object, even if they are not present in all 
+samples  
+  --aggregate_isoforms            [boolean] Aggregate isoforms of the same gene. If set to true, genes like 'SOD2.1' will be renamed to 'SOD2' 
+before `duplicate_var_resolution` is applied. All numeric suffixes following a dot will be removed. 
+ 
+
+Quality control options
+  --species                       [string]  Species of the input data. Used to auto-select bundled cell cycle gene lists 
+(assets/cell_cycle_genes/<species>_s_genes.txt and _g2m_genes.txt). Bundled lists are provided for 
+'human' and 'mouse'. Ignored when --s_genes and --g2m_genes are set explicitly. [default: human] 
+ 
+  --cell_cycle_scoring            [boolean] Whether to perform cell cycle scoring. If true, S and G2M phase scores and a predicted phase label 
+are added to each cell in adata.obs. Requires the gene index (or symbol_col) to use standard gene 
+symbols matching the selected species. [default: true]  
+  --s_genes                       [string]  Optional path to a plain-text file of S phase gene symbols (one per line, # lines ignored). 
+Overrides the species-derived default from assets/cell_cycle_genes/. Only used when 
+cell_cycle_scoring is true.  
+  --g2m_genes                     [string]  Optional path to a plain-text file of G2M phase gene symbols (one per line, # lines ignored). 
+Overrides the species-derived default from assets/cell_cycle_genes/. Only used when 
+cell_cycle_scoring is true.  
+  --mito_genes                    [string]  Optional file containing a list of mitochondrial gene symbols (one per line). If provided, it 
+overrides the default 'mt-' prefix heuristic.  
+  --ambient_correction            [string]  Specify the tool to use for ambient RNA correction. If 'none' is selected, no ambient RNA correction 
+will be performed. If you want to use ambient RNA correction only for a subset of datasets, you can 
+use the 'ambient_correction' column in the sample sheet. By default, the ambient-corrected counts 
+will NOT be used for integration, but only stored as an additional layer in the final AnnData object 
+because of the findings in [this 
+publication](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-023-02978-x). If you 
+want to use the ambient-corrected counts for integration, set `ambient_corrected_integration` to 
+true in the sample sheet.  (accepted: none, decontx, cellbender, soupx, scar) [default: decontx] 
+ 
+  --ambient_corrected_integration [boolean] Whether to use the ambient-corrected counts for integration. Can be overridden by the 
+`ambient_corrected_integration` in the sample sheet. [default: false]  
+  --doublet_detection             [string]  Specify the tools to use for doublet detection. Setting to 'none' will skip this step [default: 
+scrublet]  
+  --doublet_detection_threshold   [integer] Number of tools that need to agree on a doublet for it to be called as such [default: 1] 
+  --cellbender_epochs             [integer] Number of epochs to train the CellBender model [default: 150] 
+
+Integration options
+  --integration_methods           [string]  Specify the tool to use for integration [default: scvi] 
+  --integration_hvgs              [integer] Number of highly variable genes to use for integration. If set to 0, the number of highly variable 
+genes will be automatically determined. If set to a negative number, all genes will be used. 
+[default: 0]  
+  --integration_excluded_genes    [string]  Optional file containing a list of gene symbols (one per line). If provided, these genes will be 
+excluded from highly variable genes selection for integration.  
+  --scvi_model                    [string]  Path to a pre-trained scVI model, only relevant if scVI is selected in `integration_methods`. If 
+provided, the model will be used for integration. Otherwise, a new model will be trained.  
+  --scanvi_model                  [string]  Path to a pre-trained scANVI model, only relevant if scANVI is selected in `integration_methods`. If 
+provided, the model will be used for integration. Otherwise, a new model will be trained.  
+  --scimilarity_model             [string]  Path to a pre-trained scimilarity model, only relevant if scimilarity is selected in 
+`integration_methods`. If provided, the model will be used for integration. Otherwise, a new model 
+will be trained. [default: https://zenodo.org/records/10685499/files/model_v1.1.tar.gz]  
+  --expimap_gmt                   [string]  Path to pathway database file (GMT format) for EXPIMAP, only relevant if expimap is selected in 
+`integration_methods`. If not provided, the default Reactome pathways will be used.  
+
+Extension options
+  --base_adata                    [string] If you want to project new data onto an already integrated object, specify the path to the base 
+AnnData object here  
+  --base_label_col                [string] The column in the base AnnData object that contains the label (e.g. cell type) information. 
+[default: label]  
+  --base_condition_col            [string] The column in the base AnnData object that contains the condition (e.g. disease state, treatment) 
+information. [default: condition]  
+  --base_embeddings               [string] The keys in the obsm of the base AnnData object that contain the embeddings (without leading `X_`). 
+Required if `input` is not provided - otherwise it is ignored.  
+
+Clustering options
+  --clustering_resolutions        [string]  Specify the resolutions for clustering [default: 0.5,1.0] 
+  --cluster_per_label             [boolean] Create a UMAP and a clustering for each unique value in the label column (and for each integration 
+method)  
+  --cluster_global                [boolean] Create a global UMAP and clustering (for each integration method) [default: true] 
+
+Tool options
+  --celltypist_model              [string] Specify the models to use for the celltypist cell type annotation 
+  --celldex_reference             [string] Path to comma-separated file containing information about the celldex references to use for the 
+singleR cell type annotation.  
+
+Resource options
+  --memory_scale                  [integer] Scale the memory requirements for each process by this factor. Should be increased if you have a 
+large number of cells. [default: 1]  
+
+Pipeline options
+  --qc_only                       [boolean] Only run the preprocessing steps, skip the integration and clustering steps 
+  --skip_liana                    [boolean] Skip the LIANA step. For large datasets, the pipeline might fail due to high memory usage in this 
+step. Use this option to skip it.  
+  --skip_rankgenesgroups          [boolean] Skip the rank_genes_groups step. For large datasets, the pipeline might fail due to high memory 
+usage in this step. Use this option to skip it.  
+  --rankgenesgroups_method        [string]  Statistical method for ranking genes in differential expression analysis.  (accepted: t-test, 
+t-test_overestim_var, wilcoxon, logreg) [default: wilcoxon]  
+  --pseudobulk                    [boolean] Perform pseudobulking 
+  --prep_cellxgene                [boolean] Prepare the output for visualisation in cellxgene 
+
+Sampling options
+  --sample_n                      [integer] Subsample to a constant number of cells. Cannot be used together with sample_fraction. 
+  --sample_fraction               [number]  Subsample to a fraction of cells. Use a float between 0 and 1 (e.g., 0.5 for 50% of cells). Cannot 
+be used together with sample_n.  
+
+scVI/scANVI options
+  --scvi_n_latent                 [integer] Number of latent dimensions for scVI/scANVI [default: 30] 
+  --scvi_n_hidden                 [integer] Number of hidden units in the neural network for scVI/scANVI [default: 128] 
+  --scvi_n_layers                 [integer] Number of layers in the neural network for scVI/scANVI [default: 2] 
+  --scvi_dispersion               [string]  Dispersion parameter for scVI/scANVI  (accepted: gene, gene-batch, gene-label, gene-cell) 
+[default: gene]  
+  --scvi_gene_likelihood          [string]  Gene likelihood for scVI/scANVI  (accepted: zinb, nb, poisson, normal) [default: zinb] 
+  --scvi_max_epochs               [integer] Maximum number of epochs for training scVI/scANVI. If not set, a heuristic provided by scVI/scANVI 
+will be used.  
+  --scvi_categorical_covariates   [string]  Categorical covariates for scVI/scANVI 
+  --scvi_continuous_covariates    [string]  Continuous covariates for scVI/scANVI 
+
+Pseudobulking options
+  --pseudobulk_groupby_labels     [string]  Group by labels for pseudobulking. If you want to use multiple labels, separate them with a comma. 
+[default: batch]  
+  --pseudobulk_min_num_cells      [integer] Minimum number of cells for pseudobulking [default: 5] 
+
+Generic options
+  --multiqc_methods_description   [string]          Custom MultiQC yaml file containing HTML including a methods description. 
+  --help                          [boolean, string] Display the help message. 
+  --help_full                     [boolean]         Display the full detailed help message. 
+  --show_hidden                   [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 18 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/scdownstream/blob/master/CITATIONS.md
+

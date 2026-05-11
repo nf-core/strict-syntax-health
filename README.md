@@ -11,12 +11,12 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 > See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline.
 > **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**
 
-- **Last updated:** 2026-05-10 00:34:26 UTC
+- **Last updated:** 2026-05-11 00:35:41 UTC
 - **Nextflow version:** 26.04.0
 
 ## Pipelines
 
-- **Total:** 0 parse errors, 2248 errors, 7933 warnings across 136 pipelines
+- **Total:** 0 parse errors, 2248 errors, 7932 warnings across 136 pipelines
 - **Zero errors:** 58 pipelines (42.6%)
 
 |                    Errors                    |                     Warnings                     |
@@ -121,7 +121,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :x: [references](https://github.com/nf-core/references)                                        |     No      |      0 |       46 |     No      |        [View](lint_results/pipeline-results/references_lint.md)         |       [View](lint_results/prints-help-results/references_help.txt)       |
 | :x: [molkart](https://github.com/nf-core/molkart)                                              |     No      |      0 |       42 |     No      |          [View](lint_results/pipeline-results/molkart_lint.md)          |        [View](lint_results/prints-help-results/molkart_help.txt)         |
 | :x: [stableexpression](https://github.com/nf-core/stableexpression)                            |     No      |      0 |       32 |     No      |     [View](lint_results/pipeline-results/stableexpression_lint.md)      |    [View](lint_results/prints-help-results/stableexpression_help.txt)    |
-| :x: [scdownstream](https://github.com/nf-core/scdownstream)                                    |     No      |      0 |       29 |     No      |       [View](lint_results/pipeline-results/scdownstream_lint.md)        |      [View](lint_results/prints-help-results/scdownstream_help.txt)      |
+| :white_check_mark: [scdownstream](https://github.com/nf-core/scdownstream)                     |     No      |      0 |       28 |     Yes     |       [View](lint_results/pipeline-results/scdownstream_lint.md)        |      [View](lint_results/prints-help-results/scdownstream_help.txt)      |
 | :x: [spatialxe](https://github.com/nf-core/spatialxe)                                          |     No      |      0 |       28 |     No      |         [View](lint_results/pipeline-results/spatialxe_lint.md)         |       [View](lint_results/prints-help-results/spatialxe_help.txt)        |
 | :x: [isoseq](https://github.com/nf-core/isoseq)                                                |     No      |      0 |       21 |     No      |          [View](lint_results/pipeline-results/isoseq_lint.md)           |         [View](lint_results/prints-help-results/isoseq_help.txt)         |
 | :white_check_mark: [mag](https://github.com/nf-core/mag)                                       |     No      |      0 |       21 |     Yes     |            [View](lint_results/pipeline-results/mag_lint.md)            |          [View](lint_results/prints-help-results/mag_help.txt)           |
@@ -169,8 +169,8 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 
 ## Modules
 
-- **Total:** 0 parse errors, 0 errors, 1 warnings across 1808 modules
-- **Zero errors:** 1808 modules (100.0%)
+- **Total:** 0 parse errors, 0 errors, 1 warnings across 1810 modules
+- **Zero errors:** 1810 modules (100.0%)
 
 |                   Errors                   |                    Warnings                    |
 | :----------------------------------------: | :--------------------------------------------: |
@@ -182,7 +182,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | Module | Parse Error | Errors | Warnings | Lint Output |
 | ------ | :---------: | -----: | -------: | :---------: |
 
-_Modules with zero errors are not shown above (1808 modules). They may still have warnings. See the [modules results directory](lint_results/module-results/) for all lint outputs._
+_Modules with zero errors are not shown above (1810 modules). They may still have warnings. See the [modules results directory](lint_results/module-results/) for all lint outputs._
 
 </details>
 

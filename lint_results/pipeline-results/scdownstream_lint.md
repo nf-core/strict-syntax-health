@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-17T00:31:40.467959992Z
-- Nextflow version: 26.03.2-edge
-- Summary: 29 warnings
+- Generated: 2026-05-11T00:34:20.511740060Z
+- Nextflow version: 26.04.0
+- Summary: 28 warnings
 
 ## :warning: Warnings
 
@@ -200,11 +200,4 @@
   ```nextflow
       max_epochs = task.ext.max_epochs ?: null
       ^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
-
-  ```nextflow
-      valid_config = checkConfigProvided()
-      ^^^^^^^^^^^^
   ```
