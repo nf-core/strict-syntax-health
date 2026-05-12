@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.04.0
+ N E X T F L O W   ~  version 26.04.1
 
-Launching `./main.nf` [small_torricelli] revision: aa70ef43c3
+Launching `./main.nf` [festering_almeida] revision: aa70ef43c3
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'

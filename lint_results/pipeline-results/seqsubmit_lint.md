@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-05-07T00:34:32.834328522Z
-- Nextflow version: 26.04.0
-- Summary: 15 warnings
+- Generated: 2026-05-12T00:36:57.920376751Z
+- Nextflow version: 26.04.1
+- Summary: 14 warnings
 
 ## :warning: Warnings
 
@@ -62,49 +62,42 @@
                     ^^^^
   ```
 
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
-
-  ```nextflow
-      valid_config = checkConfigProvided()
-      ^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/assemblysubmit.nf:37:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/assemblysubmit.nf:41:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       webin_cli_version    // val: WebinCLI tool version to download and use for submission
       ^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/assemblysubmit.nf:243:80`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/assemblysubmit.nf:235:80`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(CONCAT_ACCESSIONS.out.file_out.map{meta, file -> file})
                                                                                  ^^^^
   ```
 
-- Warning: `workflows/assemblysubmit.nf:244:78`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/assemblysubmit.nf:236:78`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(CONCAT_METADATA.out.file_out.map{meta, file -> file})
                                                                                ^^^^
   ```
 
-- Warning: `workflows/genomesubmit.nf:49:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genomesubmit.nf:53:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       webin_cli_version        // val: WebinCLI tool version to download and use for submission
       ^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/genomesubmit.nf:377:78`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genomesubmit.nf:369:78`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(CONCAT_METADATA.out.file_out.map{meta, file -> file})
                                                                                ^^^^
   ```
 
-- Warning: `workflows/genomesubmit.nf:379:80`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genomesubmit.nf:371:80`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(CONCAT_ACCESSIONS.out.file_out.map{meta, file -> file})

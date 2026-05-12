@@ -1,0 +1,127 @@
+$ NXF_SYNTAX_PARSER=v2 nextflow run . --help
+
+
+ N E X T F L O W   ~  version 26.04.1
+
+Launching `./main.nf` [loving_ride] revision: 08c5b91315
+
+WARN: Unrecognized config option 'validation.defaultIgnoreParams'
+WARN: Unrecognized config option 'validation.monochromeLogs'
+
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/rnafusion 4.2.0dev
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/rnafusion -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Skip steps
+  --skip_qc                            [boolean] Skip QC steps 
+  --skip_vcf                           [boolean] Skip vcf creation step 
+  --skip_vis                           [boolean] Skip visualisation steps 
+
+Input/output options
+  --input                              [string]  Path to samplesheet file containing information about the samples in the experiment. 
+  --outdir                             [string]  The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --email                              [string]  Email address for completion summary. 
+  --multiqc_title                      [string]  MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+  --cosmic_username                    [string]  COSMIC username 
+  --cosmic_passwd                      [string]  COSMIC password 
+  --genomes_base                       [string]  Path to reference folder 
+  --genomes_ignore                     [boolean] Don't automatically assign reference parameters to the correct references in --genomes_base 
+  --genome_gencode_version             [integer] gencode version 
+  --tools                              [string]  Comma-delimited list of tools to run 
+  --read_length                        [integer] The length of the reads provided to the pipeline. This is used for the '--sjdbOverhang' option of 
+STAR as read_length - 1. Providing 1 to this option will disable overhang handling. [default: 
+100]  
+  --arriba_ref_blacklist               [string]  Path to arriba reference blacklist 
+  --arriba_ref_cytobands               [string]  Path to arriba reference cytobands 
+  --arriba_ref_known_fusions           [string]  Path to arriba reference known fusions 
+  --arriba_ref_protein_domains         [string]  Path to arriba reference protein domain 
+  --arriba_fusions                     [string]  Path to arriba output 
+  --fusioncatcher_fusions              [string]  Path to fusioncatcher output 
+  --fusioncatcher_limitSjdbInsertNsj   [integer] Use limitSjdbInsertNsj with int for fusioncatcher [default: 2000000] 
+  --fusioncatcher_ref                  [string]  Path to fusioncatcher references 
+  --fusioninspector_limitSjdbInsertNsj [integer] Use limitSjdbInsertNsj with int for fusioninspector STAR process [default: 1000000] 
+  --fusioninspector_fusions            [string]  Path to a fusion list file built with format GENE1--GENE2 
+  --fusionreport_ref                   [string]  Path to fusionreport references 
+  --hgnc_ref                           [string]  Path to HGNC database file 
+  --hgnc_date                          [string]  Path to HGNC timestamp file for database retrieval 
+  --qiagen                             [boolean] Use QIAGEN instead of SANGER to download COSMIC database 
+  --salmon_index                       [string]  Path to salmon index 
+  --starfusion_fusions                 [string]  Path to starfusion output 
+  --starfusion_ref                     [string]  Path to starfusion references 
+  --ctatsplicing_cancer_introns        [string]  Path to the cancer introns CSV file to create the CTAT-SPLICING reference with [default: 
+https://data.broadinstitute.org/Trinity/CTAT_RESOURCE_LIB/CANCER_SPLICING_LIB_SUPPLEMENT/cancer_introns.GRCh38.Jun232020.tsv.gz] 
+ 
+  --dfam_hmm                           [string]  Path to Dfam HMM database file 
+  --dfam_h3f                           [string]  Path to Dfam H3F database file 
+  --dfam_h3i                           [string]  Path to Dfam H3I database file 
+  --dfam_h3m                           [string]  Path to Dfam H3M database file 
+  --dfam_h3p                           [string]  Path to Dfam H3P database file 
+  --pfam_file                          [string]  Path to Pfam database file 
+  --annot_filter_url                   [string]  URL to annotation filter rule file [default: 
+https://data.broadinstitute.org/Trinity/CTAT_RESOURCE_LIB/AnnotFilterRule.pm]  
+  --starindex_ref                      [string]  Path to starindex references 
+  --tools_cutoff                       [integer] Discard fusions identified by less than INT tools [default: 1] 
+  --whitelist                          [string]  Path to fusions to add to the input of fusioninspector 
+
+Read trimming options
+  --trim_tail                          [integer] The amount of bases to trim at the tail of each read, none will be trimmed by default 
+  --trim_tail_fusioncatcher            [integer] The amount of bases to trim at the tail of each read for fusioncatcher, none will be trimmed by 
+default  
+  --adapter_fasta                      [string]  Path to adapter fasta file: default: [] 
+  --save_trimmed_fail                  [boolean] FASTP: Specify true to save files that failed to pass trimming thresholds 
+  --min_trimmed_reads                  [integer] FASTP: Inputs with fewer than this reads will be filtered out of the "reads" output channel 
+[default: 1]  
+  --save_merged                        [boolean] FASTP: Specify true to save merged reads 
+
+Alignment compression options
+  --cram                               [boolean] Output CRAM files instead of BAM files. 
+
+Reference genome options
+  --references_only                    [boolean]      Skip running the analysis, only builds the references 
+  --fasta                              [string]       Path to FASTA genome file. 
+  --fai                                [string]       Path to FASTA genome index file. 
+  --genome                             [string]       Name of iGenomes reference. 
+  --gtf                                [string]       Path to GTF genome file. 
+  --refflat                            [string]       Path to GTF genome file. 
+  --rrna_intervals                     [string]       Path to ribosomal interval list. 
+  --no_cosmic                          [boolean]      Avoid using Cosmic DB (for example in clinical case applications where a paid license applies. 
+ 
+  --fusion_annot_lib                   [string]       Path to Fusion Annotation Library to be used in STARFUSION_BUILD. 
+  --species                            [string]       Which species dfam should automatically download, default: homo_sapiens. [default: homo_sapiens] 
+ 
+  --dfam_version                       [number, null] Version of dfam to use 
+  --pfam_version                       [number, null] Version of pfam to use 
+
+Generic options
+  --multiqc_methods_description        [string]  Custom MultiQC yaml file containing HTML including a methods description. 
+  --help_full                          [boolean] Display the full detailed help message. 
+  --show_hidden                        [boolean] Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+  --seq_center                         [string]  Sequencing center, used to fill in read group CN tag in the BAM header 
+  --seq_platform                       [string]  Sequencing platform, used to fill in read group PL tag in the BAM header 
+  --star_limit_bam_sort_ram            [integer] The maximum amount of RAM to use for sorting the BAM file in STAR. Should by in bits. Setting this 
+value to `0` will use the default amount of STAR.  
+ !! Hiding 18 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The pipeline
+    https://doi.org/10.5281/zenodo.17641566
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/rnafusion/blob/master/CITATIONS.md
+

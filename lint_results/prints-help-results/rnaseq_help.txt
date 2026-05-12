@@ -1,12 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.04.0
+ N E X T F L O W   ~  version 26.04.1
 
-Launching `./main.nf` [hungry_hypatia] revision: 90e80d6805
+Launching `./main.nf` [high_elion] revision: 90e80d6805
 
-WARN: Unrecognized config option 'validation.defaultIgnoreParams'
-WARN: Unrecognized config option 'validation.monochromeLogs'
 
 ------------------------------------------------------
                                         ,--./,-.

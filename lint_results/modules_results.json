@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "9cc9ac3431911839826f062a5f0348835ebcc7ae",
+  "_repo_commit": "268dd690f53fd7f7bb524648ef1144a9b4e963eb",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -6882,6 +6882,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "parsnp": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/parsnp",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "pasty": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pasty",
     "errors": 0,
@@ -6962,6 +6968,12 @@
   },
   "pcgr_getref": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pcgr/getref",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "pcne": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pcne",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -9494,6 +9506,12 @@
   },
   "staphopiasccmec": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/staphopiasccmec",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "staphscan": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/staphscan",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
