@@ -1,10 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.04.0
+ N E X T F L O W   ~  version 26.04.1
 
 Downloading plugin nf-slack@0.5.1
-Launching `./main.nf` [backstabbing_edison] revision: c6b45c301b
+Launching `./main.nf` [happy_lattes] revision: c6b45c301b
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'

@@ -11,9 +11,9 @@
   "airrflow": {
     "full_name": "nf-core/airrflow",
     "html_url": "https://github.com/nf-core/airrflow",
-    "commit": "08871c62c57540cdfe79680abfcb31cc2e43fd33",
-    "errors": 188,
-    "warnings": 135,
+    "commit": "bbbda4e8c6d43c3bcdb3ab2efb05d56160e13bb6",
+    "errors": 187,
+    "warnings": 136,
     "parse_error": false,
     "prints_help": null
   },
@@ -29,7 +29,7 @@
   "ampliseq": {
     "full_name": "nf-core/ampliseq",
     "html_url": "https://github.com/nf-core/ampliseq",
-    "commit": "c62b911c9bf6c868471ca6f9dfe93b3bd566121c",
+    "commit": "4d9bc7713fff6bddcb008e9e037b847b01598ac7",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -65,16 +65,16 @@
   "bamtofastq": {
     "full_name": "nf-core/bamtofastq",
     "html_url": "https://github.com/nf-core/bamtofastq",
-    "commit": "891ca2b843ff0a10b529507d7ad17861d7dfba2f",
+    "commit": "a6264a687ff25ae1309abbde47a7a1bcaafcff68",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
-    "prints_help": true
+    "prints_help": false
   },
   "cageseq": {
     "full_name": "nf-core/cageseq",
     "html_url": "https://github.com/nf-core/cageseq",
-    "commit": "2be102772d28b6009d7fa52f0329280bd7e723c6",
+    "commit": "e61344523c57b45290836ee7a1046a32a007ca63",
     "errors": 51,
     "warnings": 44,
     "parse_error": false,
@@ -254,7 +254,7 @@
   "differentialabundance": {
     "full_name": "nf-core/differentialabundance",
     "html_url": "https://github.com/nf-core/differentialabundance",
-    "commit": "beb977852e6110df5ee3a6033c72b5bf1f978c81",
+    "commit": "ca3204dd4c2ba89ade38207a237b219924cd1693",
     "errors": 75,
     "warnings": 7,
     "parse_error": false,
@@ -362,8 +362,8 @@
   "funcprofiler": {
     "full_name": "nf-core/funcprofiler",
     "html_url": "https://github.com/nf-core/funcprofiler",
-    "commit": "37559e6b48916e75ddfba11245441bacdc2e02f8",
-    "errors": 26,
+    "commit": "292e23195dd88fa9133200aed076900495b9cc06",
+    "errors": 21,
     "warnings": 42,
     "parse_error": false,
     "prints_help": null
@@ -830,7 +830,7 @@
   "pixelator": {
     "full_name": "nf-core/pixelator",
     "html_url": "https://github.com/nf-core/pixelator",
-    "commit": "fb1e447f1f16e0510f30bf7577acbb154f87aa63",
+    "commit": "56d448220522264e651f97dd38f097798d9e8594",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -857,7 +857,7 @@
   "proteinfold": {
     "full_name": "nf-core/proteinfold",
     "html_url": "https://github.com/nf-core/proteinfold",
-    "commit": "bcb150eee40e1f668f468a54868d96aeea62d8c2",
+    "commit": "4469144e20c7cd300c820da5e01b0fac821dc481",
     "errors": 0,
     "warnings": 3,
     "parse_error": false,
@@ -1019,9 +1019,9 @@
   "scdownstream": {
     "full_name": "nf-core/scdownstream",
     "html_url": "https://github.com/nf-core/scdownstream",
-    "commit": "3fc5a7e4244e81c3569d9023e4acef4cbc89069b",
+    "commit": "a293ddd9ba037ed62f8c4525e8a398a0dce44e6e",
     "errors": 0,
-    "warnings": 28,
+    "warnings": 19,
     "parse_error": false,
     "prints_help": true
   },
@@ -1037,11 +1037,11 @@
   "scrnaseq": {
     "full_name": "nf-core/scrnaseq",
     "html_url": "https://github.com/nf-core/scrnaseq",
-    "commit": "0ce78b02376c393d2904df6877dc2e9a68f3783d",
-    "errors": 23,
-    "warnings": 95,
+    "commit": "2b2c7ca73a641114bac2667c197720ccff25a31a",
+    "errors": 0,
+    "warnings": 60,
     "parse_error": false,
-    "prints_help": null
+    "prints_help": true
   },
   "seqinspector": {
     "full_name": "nf-core/seqinspector",
@@ -1100,9 +1100,9 @@
   "spatialxe": {
     "full_name": "nf-core/spatialxe",
     "html_url": "https://github.com/nf-core/spatialxe",
-    "commit": "2cfe25354ea30709b99e7bb5ab415c9f16587185",
+    "commit": "722ac140d412a27948806f9d716a94aca86dad0a",
     "errors": 0,
-    "warnings": 28,
+    "warnings": 4,
     "parse_error": false,
     "prints_help": false
   },
@@ -1190,9 +1190,9 @@
   "variantprioritization": {
     "full_name": "nf-core/variantprioritization",
     "html_url": "https://github.com/nf-core/variantprioritization",
-    "commit": "c5b5e231244121223760ec270b34dbd836008441",
+    "commit": "3313b3abff8d6b0d3eb324e434ee4debee9f2bbf",
     "errors": 0,
-    "warnings": 5,
+    "warnings": 6,
     "parse_error": false,
     "prints_help": true
   },

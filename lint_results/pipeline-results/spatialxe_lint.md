@@ -1,101 +1,10 @@
 # Nextflow lint results
 
-- Generated: 2026-05-09T00:36:07.795467866Z
-- Nextflow version: 26.04.0
-- Summary: 28 warnings
+- Generated: 2026-05-13T00:41:04.204243973Z
+- Nextflow version: 26.04.1
+- Summary: 4 warnings
 
 ## :warning: Warnings
-
-- Warning: `modules/local/baysor/run/main.nf:44:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      ].findAll { it }
-                  ^^
-  ```
-
-- Warning: `subworkflows/local/baysor_run_transcripts_parquet/main.nf:84:48`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  def sorted = patch_data.sort { it[0] }
-                                                 ^^
-  ```
-
-- Warning: `subworkflows/local/baysor_run_transcripts_parquet/main.nf:85:50`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  def patch_ids = sorted.collect { it[0] }
-                                                   ^^
-  ```
-
-- Warning: `subworkflows/local/baysor_run_transcripts_parquet/main.nf:86:45`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  def csvs = sorted.collect { it[1] }
-                                              ^^
-  ```
-
-- Warning: `subworkflows/local/baysor_run_transcripts_parquet/main.nf:87:49`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  def geojsons = sorted.collect { it[2] }
-                                                  ^^
-  ```
-
-- Warning: `subworkflows/local/baysor_run_transcripts_parquet_tiled/main.nf:69:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-              def sorted = patch_data.sort { it[0] }
-                                             ^^
-  ```
-
-- Warning: `subworkflows/local/baysor_run_transcripts_parquet_tiled/main.nf:70:46`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-              def patch_ids = sorted.collect { it[0] }
-                                               ^^
-  ```
-
-- Warning: `subworkflows/local/baysor_run_transcripts_parquet_tiled/main.nf:71:41`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-              def csvs = sorted.collect { it[1] }
-                                          ^^
-  ```
-
-- Warning: `subworkflows/local/baysor_run_transcripts_parquet_tiled/main.nf:72:45`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-              def geojsons = sorted.collect { it[2] }
-                                              ^^
-  ```
-
-- Warning: `subworkflows/local/proseg_preset_proseg2baysor_tiled/main.nf:51:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-              def sorted = patch_data.sort { it[0] }
-                                             ^^
-  ```
-
-- Warning: `subworkflows/local/proseg_preset_proseg2baysor_tiled/main.nf:52:46`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-              def patch_ids = sorted.collect { it[0] }
-                                               ^^
-  ```
-
-- Warning: `subworkflows/local/proseg_preset_proseg2baysor_tiled/main.nf:53:41`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-              def csvs = sorted.collect { it[1] }
-                                          ^^
-  ```
-
-- Warning: `subworkflows/local/proseg_preset_proseg2baysor_tiled/main.nf:54:45`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-              def geojsons = sorted.collect { it[2] }
-                                              ^^
-  ```
 
 - Warning: `subworkflows/local/utils_nfcore_spatialxe_pipeline/main.nf:30:5`: Parameter was not used -- prefix with `_` to suppress warning
 
@@ -111,13 +20,6 @@
                                                                                                                                                  ^^
   ```
 
-- Warning: `subworkflows/local/xeniumranger_resegment_morphology_ome_tif/main.nf:34:34`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-              .map { meta, bundle, reseg_bundle, cells_zarr ->
-                                   ^^^^^^^^^^^^
-  ```
-
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
 
   ```nextflow
@@ -130,74 +32,4 @@
   ```nextflow
       return ch_versions.unique().map { version -> processVersionsFromYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
                                                                                                    ^^^^^^^
-  ```
-
-- Warning: `workflows/spatialxe.nf:254:9`: Variable was declared but not used
-
-  ```nextflow
-          ch_cellpose_model = channel.fromPath(
-          ^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/spatialxe.nf:688:47`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-              ch_multiqc_files.collect().map { [it] }
-                                                ^^
-  ```
-
-- Warning: `workflows/spatialxe.nf:689:52`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  .combine(ch_multiqc_configs.map { [it] })
-                                                     ^^
-  ```
-
-- Warning: `workflows/spatialxe.nf:690:58`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  .combine(ch_multiqc_logo.toList().map { [it] })
-                                                           ^^
-  ```
-
-- Warning: `workflows/spatialxe.nf:703:47`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-              ch_multiqc_files.collect().map { [it] }
-                                                ^^
-  ```
-
-- Warning: `workflows/spatialxe.nf:704:52`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  .combine(ch_multiqc_configs.map { [it] })
-                                                     ^^
-  ```
-
-- Warning: `workflows/spatialxe.nf:705:58`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  .combine(ch_multiqc_logo.toList().map { [it] })
-                                                           ^^
-  ```
-
-- Warning: `workflows/spatialxe.nf:741:47`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-              ch_multiqc_files.collect().map { [it] }
-                                                ^^
-  ```
-
-- Warning: `workflows/spatialxe.nf:742:52`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  .combine(ch_multiqc_configs.map { [it] })
-                                                     ^^
-  ```
-
-- Warning: `workflows/spatialxe.nf:743:58`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  .combine(ch_multiqc_logo.toList().map { [it] })
-                                                           ^^
   ```

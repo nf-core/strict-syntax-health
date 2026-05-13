@@ -1,45 +1,10 @@
 # Nextflow lint results
 
-- Generated: 2026-04-30T00:38:16.221130157Z
-- Nextflow version: 26.04.0
-- Summary: 26 errors, 42 warnings
+- Generated: 2026-05-13T00:39:03.070738012Z
+- Nextflow version: 26.04.1
+- Summary: 21 errors, 42 warnings
 
 ## :x: Errors
-
-- Error: `conf/modules.config:59:55`: `meta` is not defined
-
-  ```nextflow
-          ext.prefix = params.perform_runmerging ? { "${meta.id}_${meta.db_name}.fmhfunprofiler" } : { "${meta.id}_${meta.run_accession}_${meta.db_name}.fmhfunprofiler" }
-                                                        ^^^^
-  ```
-
-- Error: `conf/modules.config:59:66`: `meta` is not defined
-
-  ```nextflow
-          ext.prefix = params.perform_runmerging ? { "${meta.id}_${meta.db_name}.fmhfunprofiler" } : { "${meta.id}_${meta.run_accession}_${meta.db_name}.fmhfunprofiler" }
-                                                                   ^^^^
-  ```
-
-- Error: `conf/modules.config:59:105`: `meta` is not defined
-
-  ```nextflow
-          ext.prefix = params.perform_runmerging ? { "${meta.id}_${meta.db_name}.fmhfunprofiler" } : { "${meta.id}_${meta.run_accession}_${meta.db_name}.fmhfunprofiler" }
-                                                                                                          ^^^^
-  ```
-
-- Error: `conf/modules.config:59:116`: `meta` is not defined
-
-  ```nextflow
-          ext.prefix = params.perform_runmerging ? { "${meta.id}_${meta.db_name}.fmhfunprofiler" } : { "${meta.id}_${meta.run_accession}_${meta.db_name}.fmhfunprofiler" }
-                                                                                                                     ^^^^
-  ```
-
-- Error: `conf/modules.config:59:138`: `meta` is not defined
-
-  ```nextflow
-          ext.prefix = params.perform_runmerging ? { "${meta.id}_${meta.db_name}.fmhfunprofiler" } : { "${meta.id}_${meta.run_accession}_${meta.db_name}.fmhfunprofiler" }
-                                                                                                                                           ^^^^
-  ```
 
 - Error: `modules/local/humann/humann/main.nf:14:15`: `meta` is already declared
 

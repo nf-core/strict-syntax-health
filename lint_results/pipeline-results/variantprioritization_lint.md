@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-11T00:29:40.847320436Z
-- Nextflow version: 26.03.2-edge
-- Summary: 5 warnings
+- Generated: 2026-05-13T00:41:25.636559246Z
+- Nextflow version: 26.04.1
+- Summary: 6 warnings
 
 ## :warning: Warnings
 
@@ -34,9 +34,16 @@
       ^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
+- Warning: `workflows/variantprioritization/main.nf:33:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      valid_config = checkConfigProvided()
-      ^^^^^^^^^^^^
+      multiqc_methods_description
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `workflows/variantprioritization/main.nf:34:5`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      outdir
+      ^^^^^^
   ```

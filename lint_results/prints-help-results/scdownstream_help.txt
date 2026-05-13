@@ -1,11 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.04.0
+ N E X T F L O W   ~  version 26.04.1
 
 Downloading plugin nf-anndata@0.3.2
-Downloading plugin nf-schema@2.5.1
-Launching `./main.nf` [lonely_wescoff] revision: 4d733b55fe
+Launching `./main.nf` [golden_franklin] revision: 1885d76243
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -123,6 +122,8 @@ Pipeline options
 step. Use this option to skip it.  
   --skip_rankgenesgroups          [boolean] Skip the rank_genes_groups step. For large datasets, the pipeline might fail due to high memory 
 usage in this step. Use this option to skip it.  
+  --scib                          [boolean] Run scib-metrics integration benchmarking on each integration output (samplesheet / --input runs 
+only; not run for base_adata-only extension without --input). [default: false]  
   --rankgenesgroups_method        [string]  Statistical method for ranking genes in differential expression analysis.  (accepted: t-test, 
 t-test_overestim_var, wilcoxon, logreg) [default: wilcoxon]  
   --pseudobulk                    [boolean] Perform pseudobulking 

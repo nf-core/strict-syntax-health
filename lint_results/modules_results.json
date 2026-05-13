@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "268dd690f53fd7f7bb524648ef1144a9b4e963eb",
+  "_repo_commit": "5576986983f7fcc592e0df1f9b2d2b87c313b05e",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -2478,6 +2478,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "deeptools_bamcompare": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/deeptools/bamcompare",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "deeptools_bamcoverage": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/deeptools/bamcoverage",
     "errors": 0,
@@ -2862,6 +2868,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "epic2_epic2": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/epic2/epic2",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "estsfs": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/estsfs",
     "errors": 0,
@@ -3146,6 +3158,12 @@
   },
   "fgbio_zipperbams": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fgbio/zipperbams",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "fgumi_extract": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fgumi/extract",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

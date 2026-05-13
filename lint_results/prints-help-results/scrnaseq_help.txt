@@ -1,0 +1,142 @@
+$ NXF_SYNTAX_PARSER=v2 nextflow run . --help
+
+
+ N E X T F L O W   ~  version 26.04.1
+
+Launching `./main.nf` [compassionate_planck] revision: 6fd7af12df
+
+WARN: Unrecognized config option 'validation.defaultIgnoreParams'
+WARN: Unrecognized config option 'validation.monochromeLogs'
+
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/scrnaseq 4.1.0
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/scrnaseq -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input                         [string] Path to comma-separated file containing information about the samples in the experiment. 
+  --outdir                        [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --email                         [string] Email address for completion summary. 
+  --multiqc_title                 [string] MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+
+Mandatory arguments
+  --barcode_whitelist             [string] If not using the 10X Genomics platform, a custom barcode whitelist can be used with 
+`--barcode_whitelist`.  
+  --aligner                       [string] Name of the tool to use for scRNA (pseudo-) alignment.  (accepted: kallisto, star, simpleaf, 
+cellranger, cellrangerarc, cellrangermulti) [default: simpleaf]  
+  --protocol                      [string] The protocol that was used to generate the single cell data, e.g. 10x Genomics v2 Chemistry.
+
+ Can 
+be 'auto' (cellranger only), '10XV1', '10XV2', '10XV3', '10XV4', or any other protocol string that 
+will get directly passed the respective aligner. [default: auto]  
+
+Skip Tools
+  --skip_multiqc                  [boolean] Skip MultiQC Report 
+  --skip_fastqc                   [boolean] Skip FastQC 
+  --skip_cellbender               [boolean] Skip cellbender empty drops filter subworkflow 
+  --skip_qcatch                   [boolean] Skip qcatch QC for simpleaf aligner 
+  --skip_emptydrops               [boolean] 
+
+Reference genome options
+  --genome                        [string]  Name of iGenomes reference. 
+  --fasta                         [string]  Path to FASTA genome file. 
+  --transcript_fasta              [string]  A cDNA FASTA file 
+  --gtf                           [string]  Reference GTF annotation file 
+  --save_reference                [boolean] Specify this parameter to save the indices created (STAR, Kallisto, Simpleaf) to the results. 
+ 
+  --save_align_intermeds          [boolean] Specify this parameter to save the intermediate alignment files (STAR, CellRanger) to the results. 
+ 
+  --txp2gene                      [string]  Path to transcript to gene mapping file. This allows the specification of a transcript to gene 
+mapping file for Kallisto/BUS and Alevin-fry with AlevinQC.  
+
+Simpleaf Options
+  --simpleaf_index                [string]  Path to pre-built Simpleaf index. 
+  --simpleaf_umi_resolution       [string]  UMI resolution strategy to deduplicate UMIs.  (accepted: cr-like, cr-like-em, parsimony, 
+parsimony-em, parsimony-gene, parsimony-gene-em) [default: cr-like]  
+  --remove_doublets               [boolean] Enable doublet detection and removal using Scrublet via QCatch. 
+
+STARSolo Options
+  --star_index                    [string] Specify a path to the precomputed STAR index. 
+  --star_ignore_sjdbgtf           [string] Ignore the SJDB GTF file. 
+  --seq_center                    [string] Name of sequencing center for BAM read group tag. 
+  --star_feature                  [string] Quantification type of different transcriptomic feature. Use `GeneFull` on pre-mRNA count for 
+single-nucleus RNA-seq reads. Use `Gene Velocyto` to generate RNA velocity matrix.  (accepted: 
+Gene, GeneFull, Gene Velocyto) [default: Gene]  
+
+Kallisto/BUS Options
+  --kallisto_index                [string] Specify a path to the precomputed Kallisto index. 
+  --kb_t1c                        [string] Specify a path to the cDNA transcripts-to-capture. 
+  --kb_t2c                        [string] Specify a path to the intron transcripts-to-capture. 
+  --kb_workflow                   [string] Type of workflow. Use `nac` for an index type that can quantify nascent and mature RNA. Use 
+`lamanno` for RNA velocity based on La Manno et al. 2018 logic. (default: standard)  (accepted: 
+standard, lamanno, nac) [default: standard]  
+
+Cellranger Options
+  --cellranger_index              [string]  Specify a pre-calculated cellranger index. Readily prepared indexes can be obtained from the 10x 
+Genomics website. Provide the base directory of the index (e.g., 
+'/PATH/TO/10X_REF/refdata-gex-GRCh38-2024-A/')  
+  --skip_cellranger_renaming      [boolean] Should it skip the automatic renaming included in cellranger-related modules? 
+
+Cellranger ARC Options
+  --motifs                        [string] Specify a motif file to create a cellranger-arc index. Can be taken, e.g., from the JASPAR database. 
+ 
+  --cellrangerarc_config          [string] Specify a config file to create the cellranger-arc index. 
+  --cellrangerarc_reference       [string] Specify the genome reference name used in the config file to create a cellranger-arc index. 
+
+Cellranger Multi options
+  --cellranger_vdj_index          [string]  Specify a pre-built Cell Ranger index for VDJ analysis. 
+  --skip_cellrangermulti_vdjref   [boolean] Skip mkvdjref if not using VDJ data with cellranger/multi 
+  --gex_frna_probe_set            [string]  Provide a probe set for fixed RNA-seq profiling (used with FFPE samples). Please refer to the [10x 
+documentation about 
+probesets](https://www.10xgenomics.com/support/single-cell-gene-expression-flex/documentation/steps/probe-sets/chromium-frp-probe-set-files) 
+for more details.  
+  --gex_reference_version         [string]  Reference version (e.g. GRCh38, GRCm39). Required if `gex_frna_probe_set` is used and 
+`cellranger_index` is not set. Must match the genome version in the `gex_frna_probe_set` file. 
+ 
+  --gex_target_panel              [string]  Provide a panel description for targeted sequencing. 
+  --gex_cmo_set                   [string]  Provide a Cell Multiplexing Oligo (CMO) description file when working with multiplexed samples. This 
+is only necessary if you with to override Cell Ranger's default CMO-set. Please refer to the [10x 
+documentation](https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/running-pipelines/cr-3p-multi#cmo-ref) 
+about CMO references for more details.  
+  --fb_reference                  [string]  Provide a reference file for feature barcoding (e.g. antibody measurements). Please refer to the 
+[Cell Ranger Feature Reference 
+documentation](https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/inputs/cr-feature-ref-csv) 
+for more details.  
+  --vdj_inner_enrichment_primers  [string]  This argument takes a .txt file containing primer sequences that were used to enrich cDNA for V(D)J 
+sequences. This is only necessary if you with to override Cell Ranger's defaults.  
+  --gex_barcode_sample_assignment [string]  This is only necessary to override Cell Ranger's default cell calling and tag calling steps. In most 
+cases, you need to only use the `cellranger_multi_barcodes` parameter. Please refer to the [10x 
+documentation](https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/running-pipelines/cr-3p-multi#barcode-asst) 
+for more information about this file.  
+  --cellranger_multi_barcodes     [string]  Additional samplesheet to provide information about multiplexed samples. See the 'Usage' section for 
+more details.  
+
+Generic options
+  --multiqc_methods_description   [string]          Custom MultiQC yaml file containing HTML including a methods description. 
+  --help                          [boolean, string] Display the help message. 
+  --help_full                     [boolean]         Display the full detailed help message. 
+  --show_hidden                   [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 19 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The pipeline
+    https://doi.org/10.5281/zenodo.3568187
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/scrnaseq/blob/master/CITATIONS.md
+

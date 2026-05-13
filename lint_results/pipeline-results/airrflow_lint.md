@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-03-19T00:23:00.548913972Z
-- Nextflow version: 26.03.0-edge
-- Summary: 188 errors, 135 warnings
+- Generated: 2026-05-13T00:35:49.315074641Z
+- Nextflow version: 26.04.1
+- Summary: 187 errors, 136 warnings
 
 ## :x: Errors
 
@@ -179,13 +179,6 @@
   ```nextflow
       reference_igblast = pipelines_testdata_base_path + 'database-cache/igblast_base.zip'
                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `conf/test_fetchimgt.config:26:13`: `pipelines_testdata_base_path` is not defined
-
-  ```nextflow
-      input = pipelines_testdata_base_path + 'testdata-reveal/test_assembled_metadata_hs.tsv'
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Error: `conf/test_full.config:25:13`: `pipelines_testdata_base_path` is not defined
@@ -895,7 +888,7 @@
                                                  ^
   ```
 
-- Error: `subworkflows/local/databases.nf:5:1`: Invalid workflow definition -- check for missing or out-of-order section labels
+- Error: `subworkflows/local/databases.nf:6:1`: Invalid workflow definition -- check for missing or out-of-order section labels
 
   ```nextflow
   workflow DATABASES {
@@ -1798,6 +1791,13 @@
   ```nextflow
       ch_logs = Channel.empty()
                 ^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
+
+  ```nextflow
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/airrflow.nf:14:1`: Variable was declared but not used
