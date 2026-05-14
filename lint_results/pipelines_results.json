@@ -11,8 +11,8 @@
   "airrflow": {
     "full_name": "nf-core/airrflow",
     "html_url": "https://github.com/nf-core/airrflow",
-    "commit": "bbbda4e8c6d43c3bcdb3ab2efb05d56160e13bb6",
-    "errors": 187,
+    "commit": "978a9c1e03d6e264ba4c7e85bda3c366c0713eec",
+    "errors": 190,
     "warnings": 136,
     "parse_error": false,
     "prints_help": null
@@ -65,11 +65,11 @@
   "bamtofastq": {
     "full_name": "nf-core/bamtofastq",
     "html_url": "https://github.com/nf-core/bamtofastq",
-    "commit": "a6264a687ff25ae1309abbde47a7a1bcaafcff68",
+    "commit": "665440cdcccfec66ceb8212589a3c6ee92920d49",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
-    "prints_help": false
+    "prints_help": true
   },
   "cageseq": {
     "full_name": "nf-core/cageseq",
@@ -254,11 +254,11 @@
   "differentialabundance": {
     "full_name": "nf-core/differentialabundance",
     "html_url": "https://github.com/nf-core/differentialabundance",
-    "commit": "ca3204dd4c2ba89ade38207a237b219924cd1693",
-    "errors": 75,
-    "warnings": 7,
+    "commit": "65640b283f711aa8b015ac24a24207ffc5fbf8d5",
+    "errors": 0,
+    "warnings": 104,
     "parse_error": false,
-    "prints_help": null
+    "prints_help": true
   },
   "diseasemodulediscovery": {
     "full_name": "nf-core/diseasemodulediscovery",
@@ -425,7 +425,7 @@
   "genomicrelatedness": {
     "full_name": "nf-core/genomicrelatedness",
     "html_url": "https://github.com/nf-core/genomicrelatedness",
-    "commit": "ffe00658c1c740ee01b13945a359705b26339d65",
+    "commit": "14c1035344db22683551b3455e42fddaed9ea60c",
     "errors": 0,
     "warnings": 10,
     "parse_error": false,
@@ -857,7 +857,7 @@
   "proteinfold": {
     "full_name": "nf-core/proteinfold",
     "html_url": "https://github.com/nf-core/proteinfold",
-    "commit": "4469144e20c7cd300c820da5e01b0fac821dc481",
+    "commit": "224a59f88a738b1a5b420ccc56319cab0dc5a45b",
     "errors": 0,
     "warnings": 3,
     "parse_error": false,
@@ -893,7 +893,7 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "1b18bd1a9aab26865aee79cd1d256d54bd121775",
+    "commit": "5b81ee115c90e57caeb88cf58b23e9a9c9ea93f2",
     "errors": 0,
     "warnings": 2,
     "parse_error": false,
@@ -965,7 +965,7 @@
   "rnafusion": {
     "full_name": "nf-core/rnafusion",
     "html_url": "https://github.com/nf-core/rnafusion",
-    "commit": "fd481762d4f99b531d349df0d972fcd31b0fa4de",
+    "commit": "02cc2f13317d3ffec072c6087ac63156b5e31986",
     "errors": 0,
     "warnings": 24,
     "parse_error": false,
@@ -1217,10 +1217,10 @@
   "viralrecon": {
     "full_name": "nf-core/viralrecon",
     "html_url": "https://github.com/nf-core/viralrecon",
-    "commit": "8d6b8136113208b334be9e27213115d85cf913e4",
+    "commit": "687bca385020f33126071d9f57018b613497d3a6",
     "errors": 0,
-    "warnings": 180,
+    "warnings": 152,
     "parse_error": false,
-    "prints_help": false
+    "prints_help": true
   }
 }

@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "5576986983f7fcc592e0df1f9b2d2b87c313b05e",
+  "_repo_commit": "fc45beb5b0fe0aee2dd20f70e4a787906b38f130",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -1272,6 +1272,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "blobtk_create": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/blobtk/create",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "blobtk_depth": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/blobtk/depth",
     "errors": 0,
@@ -1280,6 +1286,12 @@
   },
   "blobtk_plot": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/blobtk/plot",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "blobtk_snail": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/blobtk/snail",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -6506,6 +6518,12 @@
   },
   "oatk": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/oatk",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "octopusv_clean": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/octopusv/clean",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

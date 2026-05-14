@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-05-13T00:35:49.315074641Z
+- Generated: 2026-05-14T00:36:57.916284392Z
 - Nextflow version: 26.04.1
-- Summary: 187 errors, 136 warnings
+- Summary: 190 errors, 136 warnings
 
 ## :x: Errors
 
@@ -217,6 +217,27 @@
   ```
 
 - Error: `conf/test_genotyping.config:26:25`: `pipelines_testdata_base_path` is not defined
+
+  ```nextflow
+      reference_igblast = pipelines_testdata_base_path + 'database-cache/igblast_base.zip'
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `conf/test_genotyping_small.config:24:13`: `pipelines_testdata_base_path` is not defined
+
+  ```nextflow
+      input = pipelines_testdata_base_path + 'testdata-genotyping/test_genotyping_metadata_small.tsv'
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `conf/test_genotyping_small.config:25:23`: `pipelines_testdata_base_path` is not defined
+
+  ```nextflow
+      reference_fasta = pipelines_testdata_base_path + 'database-cache/imgtdb_base.zip'
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `conf/test_genotyping_small.config:26:25`: `pipelines_testdata_base_path` is not defined
 
   ```nextflow
       reference_igblast = pipelines_testdata_base_path + 'database-cache/igblast_base.zip'

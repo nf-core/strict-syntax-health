@@ -1,0 +1,315 @@
+$ NXF_SYNTAX_PARSER=v2 nextflow run . --help
+
+
+ N E X T F L O W   ~  version 26.04.1
+
+Downloading plugin nf-schema@2.5.1
+Launching `./main.nf` [sick_meninsky] revision: 4dc8224c6b
+
+WARN: Unrecognized config option 'validation.defaultIgnoreParams'
+WARN: Unrecognized config option 'validation.monochromeLogs'
+
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/differentialabundance 1.6.0dev
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/differentialabundance -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+[base] Input/output options
+  --study_name                              [string]  A string identifier used to name result files in the output directory [default: study] 
+  --study_type                              [string]  Input data format category used for input validation and routing (not for selecting analysis 
+methods).  (accepted: rnaseq, generic_matrix, affy_array, maxquant, geo_soft_file) [default: 
+rnaseq]  
+  --input                                   [string]  Path to CSV/TSV file containing information about the samples in the experiment. 
+  --contrasts                               [string]  A CSV/TSV/YML/YAML file describing sample contrasts to compare groups. 
+  --outdir                                  [string]  The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --round_digits                            [integer] To how many digits should numeric output in different modules be rounded? If -1 or null, will not 
+round. [default: -1]  
+  --seed                                    [integer] Global seed for stochastic methods 
+
+[base] Abundance values
+  --matrix                                  [string] TSV/CSV-format abundance matrix 
+  --feature_length_matrix                   [string] (RNA-seq only): optional transcript/gene length matrix with samples and transcript_ids/gene_ids as 
+in the abundance matrix.  
+  --affy_cel_files_archive                  [string] Alternative to matrix: a compressed CEL files archive such as often found in GEO 
+  --querygse                                [string] Use SOFT files from GEO by providing the GSE study identifier 
+
+[base] Observations (e.g. samples) options
+  --observations_id_col                     [string] Column in the sample sheet to be used as the primary sample identifier [default: sample] 
+  --observations_type                       [string] Type of observation [default: sample] 
+  --observations_name_col                   [string] Column in the sample sheet to be used as identifier for observations. If unset, the 
+--observations_id_col is used.  
+
+[base] Features options
+  --features_id_col                         [string]  Feature ID attribute in the abundance table as well as in the GTF file (e.g. the gene_id field) 
+[default: gene_id]  
+  --features_name_col                       [string]  Feature name attribute in the abundance table as well as in the GTF file (e.g. the gene symbol 
+field) [default: gene_name]  
+  --features_type                           [string]  Type of feature. Often 'gene' [default: gene] 
+  --sizefactors_from_controls               [boolean] When set, use the control features in scaling/ normalization (currently only supported for 
+differential_method deseq2) [default: false]  
+  --control_features                        [string]  A text file listing technical features (e.g. spikes) 
+  --features_metadata_cols                  [string]  Comma-separated string, specifies feature metadata columns to be used for exploratory analysis, 
+platform-specific [default: gene_id,gene_name,gene_biotype]  
+  --features                                [string]  Supply your own feature annotations. Can be derived from the GTF (rnaseq) or from the Bioconductor 
+annotation package (affy arrays).  
+
+[base] Paramsheet options
+  --paramset_name                           [string] Name of the paramset to run. In profile mode, set by the analysis profile for output directory 
+naming. In paramsheet mode, selects which paramset(s) to run (comma-separated).  
+  --paramsheet                              [string] Path to a paramsheet YAML file. Setting this activates multi-run (paramsheet) mode where paramsheet 
+values take priority over CLI flags.  
+
+[preprocessing] Affy input options
+  --affy_file_name_col                      [string]  Column of the sample sheet containing the Affymetrix CEL file name [default: file] 
+  --affy_background                         [boolean] logical value. If set to true, apply background correction using RMA. [default: true] 
+  --affy_bgversion                          [integer] integer value indicating which RMA background to use [default: 2] 
+  --affy_destructive                        [boolean] logical value. If TRUE, then works on the PM matrix in place as much as possible, good for large 
+datasets. [default: false]  
+  --affy_cdfname                            [string]  Used to specify the name of an alternative cdf package. If set to NULL, then the usual cdf package 
+based on Affymetrix' mappings will be used.  
+  --affy_build_annotation                   [boolean] logical value. If TRUE, a matrix of probe annotations will be derived. [default: true] 
+  --affy_rm_mask                            [boolean] should the spots marked as 'MASKS' set to NA? [default: false] 
+  --affy_rm_outliers                        [boolean] should the spots marked as 'OUTLIERS' set to NA? [default: false] 
+  --affy_rm_extra                           [boolean] if TRUE, then overrides what is in rm.mask and rm.oultiers. [default: false] 
+
+[preprocessing] GTF parsing options
+  --gtf                                     [string] Genome annotation file in GTF format 
+  --features_gtf_feature_type               [string] If a GTF file is supplied, which feature type to use [default: transcript] 
+  --features_gtf_table_first_field          [string] If a GTF file is supplied, which field should go first in the converted output table [default: 
+gene_id]  
+
+[preprocessing] Proteus input options
+  --proteus_measurecol_prefix               [string]  Prefix of the column names of the MaxQuant proteingroups table in which the intensity values are 
+saved; the prefix has to be followed by the sample names that are also found in the samplesheet. 
+Default: 'LFQ intensity'; will search for both the prefix as entered and the prefix followed by one 
+whitespace. [default: LFQ intensity]  
+  --proteus_norm_function                   [string]  Normalization function to use on the MaxQuant intensities.  (accepted: normalizeMedian, 
+normalizeQuantiles) [default: normalizeMedian]  
+  --proteus_plotsd_method                   [string]  Which method to use for plotting sample distributions of the MaxQuant intensities; one of 'violin', 
+'dist', 'box'.  (accepted: violin, dist, box) [default: violin]  
+  --proteus_plotmv_loess                    [boolean] Should a loess line be added to the plot of mean-variance relationship of the conditions? Default: 
+true. [default: true]  
+  --proteus_palette_name                    [string]  Valid R palette name [default: Set1] 
+
+[preprocessing] Filtering
+  --filtering_min_abundance                 [integer, boolean] Minimum abundance value. Set to false to disable abundance filtering. 
+  --filtering_min_samples                   [number]           Minimum observations that must pass the threshold to retain the row/ feature (e.g. gene). 
+[default: 1]  
+  --filtering_min_proportion                [number]           A minimum proportion of observations, given as a number between 0 and 1, that must pass the 
+threshold. Overrides  minimum_samples  
+  --filtering_grouping_var                  [string]           An optional grouping variable to be used to calculate a min_samples value 
+  --filtering_min_proportion_not_na         [number]           A minimum proportion of observations, given as a number between 0 and 1, that must have a value (not 
+NA) to retain the row/ feature (e.g. gene). [default: 0.5]  
+  --filtering_min_samples_not_na            [number]           Minimum observations that must have a value (not NA) to retain the row/ feature (e.g. gene). 
+Overrides filtering_min_proportion_not_na.  
+
+[exploratory] Exploratory analysis
+  --exploratory_clustering_method           [string]  Clustering method used in dendrogram creation [default: ward.D2] 
+  --exploratory_cor_method                  [string]  Correlation method used in dendrogram creation [default: spearman] 
+  --exploratory_n_features                  [integer] Number of features selected before certain exploratory analyses. If -1, will use all features. 
+[default: 500]  
+  --exploratory_whisker_distance            [number]  Length of the whiskers in boxplots as multiple of IQR. Defaults to 1.5. [default: 1.5] 
+  --exploratory_mad_threshold               [integer] Threshold on MAD score for outlier identification [default: -5] 
+  --exploratory_main_variable               [string]  How should the main grouping variable be selected? 'auto_pca', 'contrasts', or a valid column name 
+from the observations table. [default: auto_pca]  
+  --exploratory_log2_assays                 [string]  Of which assays to compute the log2 during exploratory analysis. Not necessary for maxquant data as 
+this is controlled by the pipeline. [default: raw,normalised]  
+  --exploratory_palette_name                [string]  Valid R palette name [default: Set1] 
+
+[differential] Differential analysis
+  --differential_method                     [string]  Differential analysis method  (accepted: deseq2, limma, dream) [default: deseq2] 
+  --differential_file_suffix                [string]  Advanced option: the suffix associated tabular differential results tables. Will by default use the 
+appropriate suffix according to the study_type.  
+  --differential_feature_id_column          [string]  The feature identifier column in differential results tables [default: gene_id] 
+  --differential_min_fold_change            [number]  Minimum fold change used to calculate differential feature numbers. Note that this number will be 
+log2 transformed [default: 2]  
+  --differential_max_pval                   [number]  Maximum p value used to calculate differential feature numbers [default: 1] 
+  --differential_max_qval                   [number]  Maximum q value used to calculate differential feature numbers [default: 0.05] 
+  --differential_palette_name               [string]  Valid R palette name [default: Set1] 
+  --differential_subset_to_contrast_samples [boolean] In differential analysis (DEseq2 or Limma), subset to the contrast samples before modelling 
+variance? [default: false]  
+
+[differential] DESeq2 specific options (RNA-seq only)
+  --deseq2_test                             [string]  `test` parameter passed to DESeq()  (accepted: Wald, LRT) [default: Wald] 
+  --deseq2_fit_type                         [string]  `fitType` parameter passed to DESeq()  (accepted: parametric, local, mean, glmGamPoi) [default: 
+parametric]  
+  --deseq2_sf_type                          [string]  `sfType` parameter passed to DESeq()  (accepted: ratio, poscounts, iterate) [default: ratio] 
+ 
+  --deseq2_min_replicates_for_replace       [integer] 'minReplicatesForReplace' parameter passed to DESeq() [default: 7] 
+  --deseq2_use_t                            [boolean] `useT` parameter passed to DESeq2 [default: false] 
+  --deseq2_independent_filtering            [boolean] `independentFiltering` parameter passed to results() [default: true] 
+  --deseq2_lfc_threshold                    [number]  `lfcThreshold` parameter passed to results() [default: 0] 
+  --deseq2_alt_hypothesis                   [string]  `altHypothesis` parameter passed to results() [default: greaterAbs] 
+  --deseq2_p_adjust_method                  [string]  `pAdjustMethod` parameter passed to results() [default: BH] 
+  --deseq2_alpha                            [number]  `alpha` parameter passed to results() [default: 0.1] 
+  --deseq2_minmu                            [number]  `minmu` parameter passed to results() [default: 0.5] 
+  --deseq2_vs_method                        [string]  variance stabilisation method to use when making a variance stabilised matrix  (accepted: rlog, 
+vst, rlog,vst) [default: vst]  
+  --deseq2_shrink_lfc                       [boolean] Shrink fold changes in results? [default: true] 
+  --deseq2_vs_blind                         [boolean] `blind` parameter for rlog() and/ or vst() [default: true] 
+  --deseq2_vst_nsub                         [integer] `nsub` parameter passed to vst() [default: 1000] 
+
+[differential] Limma specific options
+  --limma_ndups                             [number]  passed to lmFit(), positive integer giving the number of times each distinct probe is printed on 
+each array.  
+  --limma_spacing                           [string]  passed to lmFit(), positive integer giving the spacing between duplicate occurrences of the same 
+probe, spacing=1 for consecutive rows.  
+  --limma_block                             [string]  Sample sheet column to be used to derive a vector or factor specifying a blocking variable on the 
+arrays for limma::lmFit(); however, for random effects models, DREAM is the recommended approach in 
+this pipeline  
+  --limma_correlation                       [string]  passed to limma::lmFit(), the inter-duplicate or inter-technical replicate correlation; however for 
+random effects models, DREAM is the recommended approach in this pipeline  
+  --limma_method                            [string]  passed to lmFit(), the fitting method  (accepted: ls, robust) [default: ls] 
+  --limma_proportion                        [number]  passed to eBayes(), a numeric value between 0 and 1, assumed proportion of genes which are 
+differentially expressed [default: 0.01]  
+  --limma_trend                             [boolean] passed to eBayes(), logical, should an intensity-dependent trend be allowed for the prior variance? 
+[default: false]  
+  --limma_robust                            [boolean] passed to eBayes(), logical, should the estimation of df.prior and var.prior be robustified against 
+outlier sample variances? [default: false]  
+  --limma_stdev_coef_lim                    [string]  passed to eBayes, comma separated string of two values, assumed lower and upper limits for the 
+standard deviation of log2-fold-changes for differentially expressed genes [default: 0.1,4]  
+  --limma_winsor_tail_p                     [string]  passed to eBayes, comma separated string of length 1 or 2, giving left and right tail proportions of 
+x to Winsorize. Used only when robust=TRUE. [default: 0.05,0.1]  
+  --limma_lfc                               [integer] passed to topTable(), minimum absolute log2-fold-change required [default: 0] 
+  --limma_confint                           [boolean] passed to topTable(), logical, should confidence 95% intervals be output for logFC? Alternatively, 
+can take a numeric value between zero and one specifying the confidence level required. 
+[default: false]  
+  --limma_adjust_method                     [string]  passed to topTable(), method used to adjust the p-values for multiple testing.  (accepted: holm, 
+hochberg, hommel, bonferroni, BH, BY, fdr, null) [default: BH]  
+  --limma_p_value                           [number]  cutoff value for adjusted p-values. Only genes with lower p-values are listed. [default: 1] 
+  --limma_use_voom                          [boolean] Turns on and off usage of voom normalization in the Limma module. [default: false] 
+
+[differential] DREAM specific options
+  --dream_p_value                           [integer] [default: 1] 
+  --dream_lfc                               [integer] [default: 0] 
+  --dream_confint                           [boolean] passed to variancePartition::dream(), logical, should 95% confidence intervals be output for logFC? 
+Alternatively, can take a numeric value between zero and one specifying the confidence level 
+required. [default: false]  
+  --dream_proportion                        [number]  passed to variancePartition::dream() (via eBayes), assumed proportion of genes that are 
+differentially expressed (numeric 0-1). [default: 0.01]  
+  --dream_stdev_coef_lim                    [string]  passed to variancePartition::dream() (via eBayes), comma-separated numeric pair giving the lower and 
+upper limits of the standard deviation of the logFC values used in the prior. [default: 0.1,4] 
+ 
+  --dream_trend                             [boolean] passed to variancePartition::dream() (via eBayes), logical, should an intensity-dependent trend be 
+allowed for the prior variance? [default: false]  
+  --dream_robust                            [boolean] passed to variancePartition::dream() (via eBayes), logical, should the estimation of df.prior and 
+var.prior be robustified against outlier sample variances? [default: false]  
+  --dream_winsor_tail_p                     [string]  passed to variancePartition::dream() (via eBayes), comma-separated numeric pair giving the 
+proportion of the lower and upper tails to be winsorized before estimating the standard deviation. 
+[default: 0.05,0.1]  
+  --dream_ddf                               [string]  Method used to estimate effective degrees of freedom for hypothesis testing in the linear mixed 
+model. Allowed values: adaptive (default), Satterthwaite, Kenward-Roger.  (accepted: adaptive, 
+Satterthwaite, Kenward-Roger) [default: adaptive]  
+  --dream_reml                              [boolean] passed to variancePartition::dream(), logical, use REML estimation for mixed-model variance 
+components (passed through to lmer()). [default: false]  
+  --dream_apply_voom                        [boolean] Turns on and off usage of voomWithDreamWeights() normalization in the DREAM module. [default: 
+false]  
+  --dream_adjust_method                     [string]  Method used to adjust p-values for multiple testing (passed to p.adjust).  (accepted: BH, BY, 
+holm, hochberg, hommel, bonferroni, fdr, none) [default: BH]  
+
+[functional] Functional analysis options
+  --functional_method                       [string] Functional analysis method. Set to 'none' (default) to disable functional analysis.  (accepted: 
+none, gsea, gprofiler2, decoupler) [default: none]  
+  --gene_sets_files                         [string] Gene sets in [GMT or 
+GMX-format](https://docs.gsea-msigdb.org/#GSEA/Data_Formats/#gene-set-database-formats); for GSEA: 
+multiple comma-separated input files in either format are possible. For gprofiler2: A single file in 
+GMT format is possible; this has lowest priority and will be overridden by --gprofiler2_token and 
+--gprofiler2_organism.  
+
+[functional] GSEA
+  --gsea_permute                            [string]  Permutation type  (accepted: phenotype, gene_set) [default: phenotype] 
+  --gsea_nperm                              [integer] Number of permutations [default: 1000] 
+  --gsea_scoring_scheme                     [string]  Enrichment statistic  (accepted: weighted, weighted_p2, weighted_p1.5, classic) [default: 
+weighted]  
+  --gsea_metric                             [string]  Metric for ranking genes  (accepted: Signal2Noise, tTest, Ratio_of_Classes, Diff_of_Classes, 
+log2_Ratio_of_Classes) [default: Signal2Noise]  
+  --gsea_sort                               [string]  Gene list sorting mode  (accepted: real, absolute) [default: real] 
+  --gsea_order                              [string]  Gene list ordering mode  (accepted: descending, ascending) [default: descending] 
+  --gsea_set_max                            [integer] Max size: exclude larger sets [default: 500] 
+  --gsea_set_min                            [integer] Min size: exclude smaller sets [default: 15] 
+  --gsea_norm                               [string]  Normalisation mode  (accepted: meandiv, null) [default: meandiv] 
+  --gsea_rnd_type                           [string]  Randomization mode  (accepted: no_balance, equalize_and_balance) [default: no_balance] 
+  --gsea_make_sets                          [boolean] Make detailed geneset report? [default: true] 
+  --gsea_median                             [boolean] Use median for class metrics [default: false] 
+  --gsea_num                                [integer] Number of markers [default: 100] 
+  --gsea_plot_top_x                         [integer] Plot graphs for the top sets of each phenotype [default: 20] 
+  --gsea_save_rnd_lists                     [boolean] Save random ranked lists [default: false] 
+  --gsea_zip_report                         [boolean] Make a zipped file with all reports [default: false] 
+
+[functional] gprofiler2
+  --gprofiler2_organism                     [string]  Short name of the organism that is analyzed, e.g. hsapiens for homo sapiens. 
+  --gprofiler2_significant                  [boolean] Should only significant enrichment results be considered? [default: true] 
+  --gprofiler2_measure_underrepresentation  [boolean] Should underrepresentation be measured instead of overrepresentation? [default: false] 
+  --gprofiler2_correction_method            [string]  The method that should be used for multiple testing correction.  (accepted: gSCS, analytical, 
+g_SCS, fdr, false_discovery_rate, bonferroni) [default: gSCS]  
+  --gprofiler2_sources                      [string]  On which source databases to run the gprofiler query 
+  --gprofiler2_evcodes                      [boolean] Whether to include evcodes in the results. [default: false] 
+  --gprofiler2_max_qval                     [number]  Maximum q value used for significance testing. [default: 0.05] 
+  --gprofiler2_token                        [string]  Token that should be used as a query. 
+  --gprofiler2_background_file              [string]  Path to CSV/TSV/TXT file that should be used as a background list of genes for the query; 
+alternatively, 'auto' (default) or 'false'. [default: auto]  
+  --gprofiler2_background_column            [string]  Which column to use as gene IDs in the background matrix. 
+  --gprofiler2_domain_scope                 [string]  How to calculate the statistical domain size.  (accepted: annotated, known, custom, 
+custom_annotated) [default: annotated]  
+  --gprofiler2_min_diff                     [integer] How many genes must be differentially expressed in a pathway for it to be considered enriched? 
+Default 1. [default: 1]  
+  --gprofiler2_palette_name                 [string]  Valid R palette name [default: Blues] 
+
+[functional] decoupler
+  --decoupler_network                       [string]  Path to TSV file containing network file for decoupler 
+  --decoupler_min_n                         [integer] Removes sources of a net with less than min_n targets [default: 5] 
+  --decoupler_methods                       [string]  Comma-separated list of methods to use (e.g., 'ora,ulm') [default: ulm] 
+
+[shiny] Shiny app settings
+  --shinyngs_build_app                      [boolean] Should a Shiny app be built? [default: true] 
+  --shinyngs_deploy_to_shinyapps_io         [boolean] Should the app be deployed to shinyapps.io? [default: false] 
+  --shinyngs_shinyapps_account              [string]  Your shinyapps.io account name 
+  --shinyngs_shinyapps_app_name             [string]  The name of the app to push to in your shinyapps.io account 
+
+[report] Reporting options
+  --report_file                             [string]  Qmd/Rmd/ipynb report template(s) from which to create the pipeline report. Supply a single path or a 
+comma-separated list of paths to render multiple reports per paramset. [default: 
+${projectDir}/assets/differentialabundance_report.qmd]  
+  --email                                   [string]  Email address for completion summary. 
+  --citations_file                          [string]  A markdown file containing citations to include in the final report [default: 
+${projectDir}/CITATIONS.md]  
+  --report_title                            [string]  A title for reporting outputs 
+  --report_author                           [string]  An author for reporting outputs 
+  --report_contributors                     [string]  Semicolon-separated string of contributor info that should be listed in the report. 
+  --report_description                      [string]  A description for reporting outputs 
+  --skip_reports                            [boolean] Skip generation of reports [default: false] 
+
+Reference genome options
+  --genome                                  [string] Name of iGenomes reference. 
+
+Generic options
+  --publish_dir_mode                        [string]          Method used to save pipeline results to output directory.  (accepted: symlink, rellink, link, 
+copy, copyNoFollow, move) [default: copy]  
+  --email_on_fail                           [string]          Email address for completion summary, only when pipeline fails. 
+  --validate_params                         [boolean]         Boolean whether to validate parameters against the schema at runtime [default: true] 
+  --help                                    [boolean, string] Display the help message. 
+  --help_full                               [boolean]         Display the full detailed help message. 
+  --show_hidden                             [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 19 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The pipeline
+    https://doi.org/10.5281/zenodo.7568000
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+* Software dependencies
+    https://github.com/nf-core/differentialabundance/blob/master/CITATIONS.md
+
