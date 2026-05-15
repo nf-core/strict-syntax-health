@@ -1,129 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T10:19:03.993069384Z
-- Nextflow version: 25.12.0-edge
-- Summary: 17 errors, 152 warnings
-
-## :x: Errors
-
-- Error: `conf/flowswitch.config:32:1`: If statements cannot be mixed with config statements
-
-  ```nextflow
-  if(params.consensus_peak_mode == 'all') { params.run_consensus_all  = true  }
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `conf/flowswitch.config:33:1`: If statements cannot be mixed with config statements
-
-  ```nextflow
-  if(params.remove_linear_duplicates)     { params.run_remove_linear_dups = true  }
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `conf/flowswitch.config:35:1`: If statements cannot be mixed with config statements
-
-  ```nextflow
-  if(params.skip_removeduplicates || !params.run_mark_dups) { params.run_remove_dups        = false }
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `conf/flowswitch.config:36:1`: If statements cannot be mixed with config statements
-
-  ```nextflow
-  if(params.skip_removeduplicates)                          { params.run_remove_linear_dups = false }
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `conf/flowswitch.config:37:1`: If statements cannot be mixed with config statements
-
-  ```nextflow
-  if(params.skip_preseq)                                    { params.run_preseq             = false }
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `conf/flowswitch.config:38:1`: If statements cannot be mixed with config statements
-
-  ```nextflow
-  if(params.skip_heatmaps)                                  { params.run_deeptools_heatmaps = false }
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `conf/flowswitch.config:39:1`: If statements cannot be mixed with config statements
-
-  ```nextflow
-  if(params.skip_dt_qc)                                     { params.run_deeptools_qc       = false }
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `conf/flowswitch.config:40:1`: If statements cannot be mixed with config statements
-
-  ```nextflow
-  if(params.skip_peak_qc)                                   { params.run_peak_qc            = false }
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `conf/flowswitch.config:41:1`: If statements cannot be mixed with config statements
-
-  ```nextflow
-  if(params.skip_igv)                                       { params.run_igv                = false }
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `conf/flowswitch.config:42:1`: If statements cannot be mixed with config statements
-
-  ```nextflow
-  if(params.skip_reporting) {
-  ^
-  ```
-
-- Error: `conf/flowswitch.config:48:1`: If statements cannot be mixed with config statements
-
-  ```nextflow
-  if(params.only_input) {
-  ^
-  ```
-
-- Error: `conf/flowswitch.config:63:1`: If statements cannot be mixed with config statements
-
-  ```nextflow
-  if(params.only_genome) {
-  ^
-  ```
-
-- Error: `conf/flowswitch.config:77:1`: If statements cannot be mixed with config statements
-
-  ```nextflow
-  if(params.only_preqc) {
-  ^
-  ```
-
-- Error: `conf/flowswitch.config:90:1`: If statements cannot be mixed with config statements
-
-  ```nextflow
-  if(params.only_alignment) {
-  ^
-  ```
-
-- Error: `conf/flowswitch.config:101:1`: If statements cannot be mixed with config statements
-
-  ```nextflow
-  if(params.only_filtering) {
-  ^
-  ```
-
-- Error: `conf/flowswitch.config:107:1`: If statements cannot be mixed with config statements
-
-  ```nextflow
-  if(params.only_peak_calling) {
-  ^
-  ```
-
-- Error: `conf/flowswitch.config:112:1`: If statements cannot be mixed with config statements
-
-  ```nextflow
-  if(params.skip_multiqc) { params.run_multiqc = false }
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
+- Generated: 2026-05-15T00:34:56.468867307Z
+- Nextflow version: 26.04.1
+- Summary: 156 warnings
 
 ## :warning: Warnings
 
@@ -659,11 +538,25 @@
                                                                                                                                                  ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_cutandrun_pipeline/main.nf:103:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/utils_nfcore_cutandrun_pipeline/main.nf:101:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-      ch_samplesheet = Channel.fromList(samplesheetToList(input, "${projectDir}/assets/schema_input.json"))
+      ch_samplesheet = Channel.fromList(processSamplesheet(rows, params.use_control))
                        ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_cutandrun_pipeline/main.nf:188:46`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      def referenced_controls = rows.collect { it[0].control_group }.findAll { it } as Set
+                                               ^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_cutandrun_pipeline/main.nf:188:78`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      def referenced_controls = rows.collect { it[0].control_group }.findAll { it } as Set
+                                                                               ^^
   ```
 
 - Warning: `subworkflows/nf-core/bam_sort_stats_samtools/main.nf:16:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -678,6 +571,13 @@
   ```nextflow
       ch_versions = Channel.empty()
                     ^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
+
+  ```nextflow
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -1107,84 +1007,91 @@
                                                                                            ^^
   ```
 
-- Warning: `workflows/cutandrun.nf:803:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/cutandrun.nf:802:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+      multiqc_report = Channel.empty()
+                       ^^^^^^^
+  ```
+
+- Warning: `workflows/cutandrun.nf:804:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(ch_bowtie2_log.collect { it[1] }.ifEmpty([]))
                                                                            ^^
   ```
 
-- Warning: `workflows/cutandrun.nf:804:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/cutandrun.nf:805:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(ch_bowtie2_spikein_log.collect { it[1] }.ifEmpty([]))
                                                                                    ^^
   ```
 
-- Warning: `workflows/cutandrun.nf:805:80`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/cutandrun.nf:806:80`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(ch_samtools_flagstat.collect { it[1] }.ifEmpty([]))
                                                                                  ^^
   ```
 
-- Warning: `workflows/cutandrun.nf:806:85`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/cutandrun.nf:807:85`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(ch_markduplicates_metrics.collect { it[1] }.ifEmpty([]))
                                                                                       ^^
   ```
 
-- Warning: `workflows/cutandrun.nf:818:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/cutandrun.nf:819:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_multiqc_config = Channel.fromPath("${projectDir}/assets/multiqc_config.yml", checkIfExists: true)
                               ^^^^^^^
   ```
 
-- Warning: `workflows/cutandrun.nf:819:60`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/cutandrun.nf:820:60`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_multiqc_custom_config = params.multiqc_config ? Channel.fromPath(params.multiqc_config, checkIfExists: true) : Channel.empty()
                                                              ^^^^^^^
   ```
 
-- Warning: `workflows/cutandrun.nf:819:123`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/cutandrun.nf:820:123`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_multiqc_custom_config = params.multiqc_config ? Channel.fromPath(params.multiqc_config, checkIfExists: true) : Channel.empty()
                                                                                                                             ^^^^^^^
   ```
 
-- Warning: `workflows/cutandrun.nf:820:49`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/cutandrun.nf:821:49`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_multiqc_logo = params.multiqc_logo ? Channel.fromPath(params.multiqc_logo, checkIfExists: true) : Channel.empty()
                                                   ^^^^^^^
   ```
 
-- Warning: `workflows/cutandrun.nf:820:110`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/cutandrun.nf:821:110`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_multiqc_logo = params.multiqc_logo ? Channel.fromPath(params.multiqc_logo, checkIfExists: true) : Channel.empty()
                                                                                                                ^^^^^^^
   ```
 
-- Warning: `workflows/cutandrun.nf:822:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/cutandrun.nf:823:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_params))
                                 ^^^^^^^
   ```
 
-- Warning: `workflows/cutandrun.nf:824:34`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/cutandrun.nf:825:34`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_methods_description = Channel.value(methodsDescriptionText(ch_multiqc_custom_methods_description))
                                    ^^^^^^^
   ```
 
-- Warning: `workflows/cutandrun.nf:887:98`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/cutandrun.nf:888:98`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       return ch_versions.unique().map { version -> processVersionsFromYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))

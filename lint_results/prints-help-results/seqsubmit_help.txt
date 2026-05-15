@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.04.1
 
 WARN: Cannot read project manifest -- Cause:  Cannot get property 'ENA_WEBIN' on null object
-Launching `./main.nf` [insane_goodall] revision: f8928b7b47
+Launching `./main.nf` [loquacious_galileo] revision: 3ef3835571
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -61,7 +61,6 @@ Pipeline flow control parameters
   --study_metadata              [string]  Path to study metadata file (JSON, CSV, or TSV) for registering a new ENA study. Required when 
 submission_study is not provided.  
   --webincli_mode               [string]  Webin-CLI mode of operation  (accepted: submit, validate) [default: submit] 
-  --webin_cli_version           [string]  Version of webin-cli.jar to use for submission [default: 9.0.3] 
  !! Hiding 17 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
 

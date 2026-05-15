@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "fc45beb5b0fe0aee2dd20f70e4a787906b38f130",
+  "_repo_commit": "ff147c37ffff4b7d1a446acee2ec3daead3af97f",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -3854,6 +3854,12 @@
   },
   "gawk": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gawk",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "gcta_makegrmpart": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gcta/makegrmpart",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

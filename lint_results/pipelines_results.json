@@ -173,11 +173,11 @@
   "cutandrun": {
     "full_name": "nf-core/cutandrun",
     "html_url": "https://github.com/nf-core/cutandrun",
-    "commit": "dcaf19ac1bbd26daf321289a7ea6e1be24c19ddc",
-    "errors": 17,
-    "warnings": 152,
+    "commit": "d59714a50c67486951b480febb726e47a7833187",
+    "errors": 0,
+    "warnings": 156,
     "parse_error": false,
-    "prints_help": null
+    "prints_help": false
   },
   "datasync": {
     "full_name": "nf-core/datasync",
@@ -254,7 +254,7 @@
   "differentialabundance": {
     "full_name": "nf-core/differentialabundance",
     "html_url": "https://github.com/nf-core/differentialabundance",
-    "commit": "65640b283f711aa8b015ac24a24207ffc5fbf8d5",
+    "commit": "a7997bfd8156d3950ce9cd50460ac507ee75c0eb",
     "errors": 0,
     "warnings": 104,
     "parse_error": false,
@@ -308,9 +308,9 @@
   "epigenomesegmentation": {
     "full_name": "nf-core/epigenomesegmentation",
     "html_url": "https://github.com/nf-core/epigenomesegmentation",
-    "commit": "00154b9953b68f2ba3b475fd4a9ea76b0fecc3de",
+    "commit": "1ec638ada897f4ab00e105ad1561289bdea64b63",
     "errors": 0,
-    "warnings": 78,
+    "warnings": 59,
     "parse_error": false,
     "prints_help": false
   },
@@ -542,7 +542,7 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "96c1fb174d6e0190c0326da9e894c6d16e169865",
+    "commit": "c1d44bead454c6bdd52ca6610cc80ebc5e6f56f5",
     "errors": 0,
     "warnings": 21,
     "parse_error": false,
@@ -857,7 +857,7 @@
   "proteinfold": {
     "full_name": "nf-core/proteinfold",
     "html_url": "https://github.com/nf-core/proteinfold",
-    "commit": "224a59f88a738b1a5b420ccc56319cab0dc5a45b",
+    "commit": "c8628b56ac2c47996ea785069bccc4c3dbfd2ad0",
     "errors": 0,
     "warnings": 3,
     "parse_error": false,
@@ -1055,9 +1055,9 @@
   "seqsubmit": {
     "full_name": "nf-core/seqsubmit",
     "html_url": "https://github.com/nf-core/seqsubmit",
-    "commit": "ee59e44331a91000db605c701ab0cedf34efde06",
+    "commit": "f3c1546fe9df586d93e667d6ea5ffaef7f7ec9c5",
     "errors": 0,
-    "warnings": 14,
+    "warnings": 12,
     "parse_error": false,
     "prints_help": true
   },

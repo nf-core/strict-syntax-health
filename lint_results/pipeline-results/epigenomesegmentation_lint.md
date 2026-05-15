@@ -1,275 +1,177 @@
 # Nextflow lint results
 
-- Generated: 2026-04-29T00:36:01.554013461Z
-- Nextflow version: 26.03.4-edge
-- Summary: 78 warnings
+- Generated: 2026-05-15T00:35:39.986132856Z
+- Nextflow version: 26.04.1
+- Summary: 59 warnings
 
 ## :warning: Warnings
 
-- Warning: `modules/local/distfit_histone_assess/main.nf:10:30`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+- Warning: `modules/local/distfit_histone_assess/main.nf:11:35`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
 
   ```nextflow
-          export PATH=\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/build;
-                               ^^^^^^^^^^
+              export PATH="\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/pre-built/mac"
+                                    ^^^^^^^^^^
   ```
 
-- Warning: `modules/local/distfit_histone_assess/main.nf:10:52`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+- Warning: `modules/local/distfit_histone_assess/main.nf:11:57`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
 
   ```nextflow
-          export PATH=\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/build;
-                                                     ^^^^^^^^^^
+              export PATH="\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/pre-built/mac"
+                                                          ^^^^^^^^^^
   ```
 
-- Warning: `modules/local/distfit_histone_assess/main.nf:11:51`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+- Warning: `modules/local/distfit_histone_assess/main.nf:13:35`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
 
   ```nextflow
-          export PYTHONPATH=\$PYTHONPATH:/app/src:${projectDir}/bin/src
-                                                    ^^^^^^^^^^
+              export PATH="\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/pre-built/linux"
+                                    ^^^^^^^^^^
   ```
 
-- Warning: `modules/local/distfit_histone_assess/main.nf:30:17`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+- Warning: `modules/local/distfit_histone_assess/main.nf:13:57`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
 
   ```nextflow
-          bash "${projectDir}/bin/build.sh"
-                  ^^^^^^^^^^
+              export PATH="\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/pre-built/linux"
+                                                          ^^^^^^^^^^
   ```
 
-- Warning: `modules/local/distfit_histone_assess/main.nf:31:31`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+- Warning: `modules/local/distfit_histone_train/main.nf:11:35`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
 
   ```nextflow
-          export PATH="\$PATH:${projectDir}/bin/HMM/build"
-                                ^^^^^^^^^^
+              export PATH="\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/pre-built/mac"
+                                    ^^^^^^^^^^
   ```
 
-- Warning: `modules/local/distfit_histone_train/main.nf:10:30`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+- Warning: `modules/local/distfit_histone_train/main.nf:11:57`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
 
   ```nextflow
-          export PATH=\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/build;
-                               ^^^^^^^^^^
+              export PATH="\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/pre-built/mac"
+                                                          ^^^^^^^^^^
   ```
 
-- Warning: `modules/local/distfit_histone_train/main.nf:10:52`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+- Warning: `modules/local/distfit_histone_train/main.nf:13:35`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
 
   ```nextflow
-          export PATH=\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/build;
-                                                     ^^^^^^^^^^
+              export PATH="\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/pre-built/linux"
+                                    ^^^^^^^^^^
   ```
 
-- Warning: `modules/local/distfit_histone_train/main.nf:11:51`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+- Warning: `modules/local/distfit_histone_train/main.nf:13:57`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
 
   ```nextflow
-          export PYTHONPATH=\$PYTHONPATH:/app/src:${projectDir}/bin/src
-                                                    ^^^^^^^^^^
+              export PATH="\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/pre-built/linux"
+                                                          ^^^^^^^^^^
   ```
 
-- Warning: `modules/local/distfit_histone_train/main.nf:30:17`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+- Warning: `modules/local/dm_decode/main.nf:12:35`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
 
   ```nextflow
-          bash "${projectDir}/bin/build.sh"
-                  ^^^^^^^^^^
+              export PATH="\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/pre-built/mac"
+                                    ^^^^^^^^^^
   ```
 
-- Warning: `modules/local/dm_decode/main.nf:10:30`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+- Warning: `modules/local/dm_decode/main.nf:12:57`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
 
   ```nextflow
-          export PATH=\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/build
-                               ^^^^^^^^^^
+              export PATH="\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/pre-built/mac"
+                                                          ^^^^^^^^^^
   ```
 
-- Warning: `modules/local/dm_decode/main.nf:10:52`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+- Warning: `modules/local/dm_decode/main.nf:14:35`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
 
   ```nextflow
-          export PATH=\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/build
-                                                     ^^^^^^^^^^
+              export PATH="\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/pre-built/linux"
+                                    ^^^^^^^^^^
   ```
 
-- Warning: `modules/local/dm_decode/main.nf:11:51`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+- Warning: `modules/local/dm_decode/main.nf:14:57`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
 
   ```nextflow
-          export PYTHONPATH=\$PYTHONPATH:/app/src:${projectDir}/bin/src
-                                                    ^^^^^^^^^^
+              export PATH="\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/pre-built/linux"
+                                                          ^^^^^^^^^^
   ```
 
-- Warning: `modules/local/dm_decode/main.nf:31:17`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+- Warning: `modules/local/dm_train/main.nf:11:35`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
 
   ```nextflow
-          bash "${projectDir}/bin/build.sh"
-                  ^^^^^^^^^^
+              export PATH="\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/pre-built/mac"
+                                    ^^^^^^^^^^
   ```
 
-- Warning: `modules/local/dm_decode/main.nf:32:31`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+- Warning: `modules/local/dm_train/main.nf:11:57`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
 
   ```nextflow
-          export PATH="\$PATH:${projectDir}/bin/HMM/build"
-                                ^^^^^^^^^^
+              export PATH="\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/pre-built/mac"
+                                                          ^^^^^^^^^^
   ```
 
-- Warning: `modules/local/dm_prepare/main.nf:10:30`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+- Warning: `modules/local/dm_train/main.nf:13:35`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
 
   ```nextflow
-          export PATH=\$PATH:${projectDir}/bin/src;
-                               ^^^^^^^^^^
+              export PATH="\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/pre-built/linux"
+                                    ^^^^^^^^^^
   ```
 
-- Warning: `modules/local/dm_prepare/main.nf:11:51`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+- Warning: `modules/local/dm_train/main.nf:13:57`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
 
   ```nextflow
-          export PYTHONPATH=\$PYTHONPATH:/app/src:${projectDir}/bin/src
-                                                    ^^^^^^^^^^
+              export PATH="\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/pre-built/linux"
+                                                          ^^^^^^^^^^
   ```
 
-- Warning: `modules/local/dm_report/main.nf:10:30`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+- Warning: `modules/local/dna_decode/main.nf:11:35`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
 
   ```nextflow
-          export PATH=\$PATH:${projectDir}/bin/workflowTopology:${projectDir}/bin/src
-                               ^^^^^^^^^^
+              export PATH="\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/pre-built/mac"
+                                    ^^^^^^^^^^
   ```
 
-- Warning: `modules/local/dm_report/main.nf:10:65`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+- Warning: `modules/local/dna_decode/main.nf:11:57`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
 
   ```nextflow
-          export PATH=\$PATH:${projectDir}/bin/workflowTopology:${projectDir}/bin/src
-                                                                  ^^^^^^^^^^
+              export PATH="\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/pre-built/mac"
+                                                          ^^^^^^^^^^
   ```
 
-- Warning: `modules/local/dm_report/main.nf:11:51`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+- Warning: `modules/local/dna_decode/main.nf:13:35`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
 
   ```nextflow
-          export PYTHONPATH=\$PYTHONPATH:/app/src:${projectDir}/bin/src
-                                                    ^^^^^^^^^^
+              export PATH="\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/pre-built/linux"
+                                    ^^^^^^^^^^
   ```
 
-- Warning: `modules/local/dm_train/main.nf:10:30`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+- Warning: `modules/local/dna_decode/main.nf:13:57`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
 
   ```nextflow
-          export PATH=\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/build
-                               ^^^^^^^^^^
+              export PATH="\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/pre-built/linux"
+                                                          ^^^^^^^^^^
   ```
 
-- Warning: `modules/local/dm_train/main.nf:10:52`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+- Warning: `modules/local/dna_train/main.nf:11:35`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
 
   ```nextflow
-          export PATH=\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/build
-                                                     ^^^^^^^^^^
+              export PATH="\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/pre-built/mac"
+                                    ^^^^^^^^^^
   ```
 
-- Warning: `modules/local/dm_train/main.nf:11:51`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+- Warning: `modules/local/dna_train/main.nf:11:57`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
 
   ```nextflow
-          export PYTHONPATH=\$PYTHONPATH:/app/src:${projectDir}/bin/src
-                                                    ^^^^^^^^^^
+              export PATH="\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/pre-built/mac"
+                                                          ^^^^^^^^^^
   ```
 
-- Warning: `modules/local/dm_train/main.nf:34:17`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+- Warning: `modules/local/dna_train/main.nf:13:35`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
 
   ```nextflow
-          bash "${projectDir}/bin/build.sh"
-                  ^^^^^^^^^^
+              export PATH="\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/pre-built/linux"
+                                    ^^^^^^^^^^
   ```
 
-- Warning: `modules/local/dm_train/main.nf:35:31`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+- Warning: `modules/local/dna_train/main.nf:13:57`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
 
   ```nextflow
-          export PATH="\$PATH:${projectDir}/bin/HMM/build"
-                                ^^^^^^^^^^
-  ```
-
-- Warning: `modules/local/dna_decode/main.nf:10:30`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
-
-  ```nextflow
-          export PATH=\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/build;
-                               ^^^^^^^^^^
-  ```
-
-- Warning: `modules/local/dna_decode/main.nf:10:52`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
-
-  ```nextflow
-          export PATH=\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/build;
-                                                     ^^^^^^^^^^
-  ```
-
-- Warning: `modules/local/dna_decode/main.nf:11:51`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
-
-  ```nextflow
-          export PYTHONPATH=\$PYTHONPATH:/app/src:${projectDir}/bin/src
-                                                    ^^^^^^^^^^
-  ```
-
-- Warning: `modules/local/dna_decode/main.nf:29:17`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
-
-  ```nextflow
-          bash "${projectDir}/bin/build.sh"
-                  ^^^^^^^^^^
-  ```
-
-- Warning: `modules/local/dna_prepare/main.nf:10:30`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
-
-  ```nextflow
-          export PATH=\$PATH:${projectDir}/bin/src;
-                               ^^^^^^^^^^
-  ```
-
-- Warning: `modules/local/dna_prepare/main.nf:11:51`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
-
-  ```nextflow
-          export PYTHONPATH=\$PYTHONPATH:/app/src:${projectDir}/bin/src
-                                                    ^^^^^^^^^^
-  ```
-
-- Warning: `modules/local/dna_report/main.nf:10:30`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
-
-  ```nextflow
-          export PATH=\$PATH:${projectDir}/bin/workflowDNAMethylation:${projectDir}/bin/src
-                               ^^^^^^^^^^
-  ```
-
-- Warning: `modules/local/dna_report/main.nf:10:71`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
-
-  ```nextflow
-          export PATH=\$PATH:${projectDir}/bin/workflowDNAMethylation:${projectDir}/bin/src
-                                                                        ^^^^^^^^^^
-  ```
-
-- Warning: `modules/local/dna_report/main.nf:11:51`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
-
-  ```nextflow
-          export PYTHONPATH=\$PYTHONPATH:/app/src:${projectDir}/bin/src
-                                                    ^^^^^^^^^^
-  ```
-
-- Warning: `modules/local/dna_train/main.nf:10:30`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
-
-  ```nextflow
-          export PATH=\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/build;
-                               ^^^^^^^^^^
-  ```
-
-- Warning: `modules/local/dna_train/main.nf:10:52`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
-
-  ```nextflow
-          export PATH=\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/build;
-                                                     ^^^^^^^^^^
-  ```
-
-- Warning: `modules/local/dna_train/main.nf:11:51`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
-
-  ```nextflow
-          export PYTHONPATH=\$PYTHONPATH:/app/src:${projectDir}/bin/src
-                                                    ^^^^^^^^^^
-  ```
-
-- Warning: `modules/local/dna_train/main.nf:29:17`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
-
-  ```nextflow
-          bash "${projectDir}/bin/build.sh"
-                  ^^^^^^^^^^
-  ```
-
-- Warning: `modules/local/dna_train/main.nf:30:31`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
-
-  ```nextflow
-          export PATH="\$PATH:${projectDir}/bin/HMM/build"
-                                ^^^^^^^^^^
+              export PATH="\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/pre-built/linux"
+                                                          ^^^^^^^^^^
   ```
 
 - Warning: `modules/local/generate_methylation_bins/main.nf:28:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -279,95 +181,60 @@
                                          ^^
   ```
 
-- Warning: `modules/local/std_decode/main.nf:10:30`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+- Warning: `modules/local/std_decode/main.nf:11:35`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
 
   ```nextflow
-          export PATH=\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/build;
-                               ^^^^^^^^^^
+              export PATH="\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/pre-built/mac"
+                                    ^^^^^^^^^^
   ```
 
-- Warning: `modules/local/std_decode/main.nf:10:52`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+- Warning: `modules/local/std_decode/main.nf:11:57`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
 
   ```nextflow
-          export PATH=\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/build;
-                                                     ^^^^^^^^^^
-  ```
-
-- Warning: `modules/local/std_decode/main.nf:11:51`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
-
-  ```nextflow
-          export PYTHONPATH=\$PYTHONPATH:/app/src:${projectDir}/bin/src
-                                                    ^^^^^^^^^^
-  ```
-
-- Warning: `modules/local/std_decode/main.nf:29:17`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
-
-  ```nextflow
-          bash "${projectDir}/bin/build.sh"
-                  ^^^^^^^^^^
-  ```
-
-- Warning: `modules/local/std_prepare/main.nf:10:30`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
-
-  ```nextflow
-          export PATH=\$PATH:${projectDir}/bin/src;
-                               ^^^^^^^^^^
-  ```
-
-- Warning: `modules/local/std_prepare/main.nf:11:51`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
-
-  ```nextflow
-          export PYTHONPATH=\$PYTHONPATH:/app/src:${projectDir}/bin/src
-                                                    ^^^^^^^^^^
-  ```
-
-- Warning: `modules/local/std_report/main.nf:10:30`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
-
-  ```nextflow
-          export PATH=\$PATH:${projectDir}/bin/workflow:${projectDir}/bin/src
-                               ^^^^^^^^^^
-  ```
-
-- Warning: `modules/local/std_report/main.nf:10:57`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
-
-  ```nextflow
-          export PATH=\$PATH:${projectDir}/bin/workflow:${projectDir}/bin/src
+              export PATH="\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/pre-built/mac"
                                                           ^^^^^^^^^^
   ```
 
-- Warning: `modules/local/std_report/main.nf:11:51`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+- Warning: `modules/local/std_decode/main.nf:13:35`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
 
   ```nextflow
-          export PYTHONPATH=\$PYTHONPATH:/app/src:${projectDir}/bin/src
-                                                    ^^^^^^^^^^
+              export PATH="\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/pre-built/linux"
+                                    ^^^^^^^^^^
   ```
 
-- Warning: `modules/local/std_train/main.nf:10:30`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+- Warning: `modules/local/std_decode/main.nf:13:57`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
 
   ```nextflow
-          export PATH=\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/build;
-                               ^^^^^^^^^^
+              export PATH="\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/pre-built/linux"
+                                                          ^^^^^^^^^^
   ```
 
-- Warning: `modules/local/std_train/main.nf:10:52`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+- Warning: `modules/local/std_train/main.nf:11:35`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
 
   ```nextflow
-          export PATH=\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/build;
-                                                     ^^^^^^^^^^
+              export PATH="\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/pre-built/mac"
+                                    ^^^^^^^^^^
   ```
 
-- Warning: `modules/local/std_train/main.nf:11:51`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+- Warning: `modules/local/std_train/main.nf:11:57`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
 
   ```nextflow
-          export PYTHONPATH=\$PYTHONPATH:/app/src:${projectDir}/bin/src
-                                                    ^^^^^^^^^^
+              export PATH="\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/pre-built/mac"
+                                                          ^^^^^^^^^^
   ```
 
-- Warning: `modules/local/std_train/main.nf:31:17`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+- Warning: `modules/local/std_train/main.nf:13:35`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
 
   ```nextflow
-          bash "${projectDir}/bin/build.sh"
-                  ^^^^^^^^^^
+              export PATH="\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/pre-built/linux"
+                                    ^^^^^^^^^^
+  ```
+
+- Warning: `modules/local/std_train/main.nf:13:57`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+
+  ```nextflow
+              export PATH="\$PATH:${projectDir}/bin/src:${projectDir}/bin/HMM/pre-built/linux"
+                                                          ^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/distribution_fitting/main.nf:12:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead

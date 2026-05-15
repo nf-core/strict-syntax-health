@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-05-12T00:36:57.920376751Z
+- Generated: 2026-05-15T00:37:08.694803619Z
 - Nextflow version: 26.04.1
-- Summary: 14 warnings
+- Summary: 12 warnings
 
 ## :warning: Warnings
 
@@ -41,11 +41,11 @@
           ^^^^^^
   ```
 
-- Warning: `modules/nf-core/barrnap/main.nf:45:9`: Variable was declared but not used
+- Warning: `subworkflows/local/fasta_validation.nf:27:40`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
+      fasta_split = input_fasta.branch { meta, fasta ->
+                                         ^^^^
   ```
 
 - Warning: `subworkflows/local/genome_evaluation.nf:30:5`: Variable was declared but not used
@@ -62,42 +62,28 @@
                     ^^^^
   ```
 
-- Warning: `workflows/assemblysubmit.nf:41:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      webin_cli_version    // val: WebinCLI tool version to download and use for submission
-      ^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/assemblysubmit.nf:235:80`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/assemblysubmit.nf:229:80`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(CONCAT_ACCESSIONS.out.file_out.map{meta, file -> file})
                                                                                  ^^^^
   ```
 
-- Warning: `workflows/assemblysubmit.nf:236:78`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/assemblysubmit.nf:230:78`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(CONCAT_METADATA.out.file_out.map{meta, file -> file})
                                                                                ^^^^
   ```
 
-- Warning: `workflows/genomesubmit.nf:53:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      webin_cli_version        // val: WebinCLI tool version to download and use for submission
-      ^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/genomesubmit.nf:369:78`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genomesubmit.nf:361:78`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(CONCAT_METADATA.out.file_out.map{meta, file -> file})
                                                                                ^^^^
   ```
 
-- Warning: `workflows/genomesubmit.nf:371:80`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genomesubmit.nf:363:80`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(CONCAT_ACCESSIONS.out.file_out.map{meta, file -> file})
