@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-05-15T00:35:21.879795059Z
+- Generated: 2026-05-16T00:32:55.166871652Z
 - Nextflow version: 26.04.1
-- Summary: 104 warnings
+- Summary: 106 warnings
 
 ## :warning: Warnings
 
@@ -118,91 +118,91 @@
                                           ^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_differentialabundance_pipeline/main.nf:405:51`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_differentialabundance_pipeline/main.nf:418:51`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           def cleanparamset = paramset.findAll { k, v -> !(ignore + nonstaticparams).contains(k) } as Map
                                                     ^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_differentialabundance_pipeline/main.nf:409:53`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_differentialabundance_pipeline/main.nf:422:53`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           def notnullparams = cleanparamset.findAll { k, v -> v != null } as Map
                                                       ^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_differentialabundance_pipeline/main.nf:414:18`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_differentialabundance_pipeline/main.nf:427:18`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           } catch (e) {
                    ^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_differentialabundance_pipeline/main.nf:498:9`: Variable was declared but not used
+- Warning: `subworkflows/local/utils_nfcore_differentialabundance_pipeline/main.nf:511:9`: Variable was declared but not used
 
   ```nextflow
       def yaml_parser = new org.yaml.snakeyaml.Yaml()
           ^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_differentialabundance_pipeline/main.nf:515:56`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_differentialabundance_pipeline/main.nf:528:56`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def includedConfig = includeConfigs.find { it.paramset_name == paramsetName }
                                                          ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_differentialabundance_pipeline/main.nf:544:54`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_differentialabundance_pipeline/main.nf:557:54`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def simplifiedparams = getRelevantParams(it[0].params, category)
                                                        ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_differentialabundance_pipeline/main.nf:546:34`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_differentialabundance_pipeline/main.nf:559:34`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def simplifiedmeta = it[0] + [params: simplifiedparams]
                                    ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_differentialabundance_pipeline/main.nf:550:51`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_differentialabundance_pipeline/main.nf:563:51`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               def key = simplifiedmeta.findAll { k, v -> k != 'paramset_name' }
                                                     ^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_differentialabundance_pipeline/main.nf:551:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_differentialabundance_pipeline/main.nf:564:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               [key, it[1..-1]]  // [ key, [files] ]
                     ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_differentialabundance_pipeline/main.nf:585:76`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_differentialabundance_pipeline/main.nf:598:76`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               def meta_cleaned = meta_keys_to_remove ? meta_out.findAll { k, v -> !meta_keys_to_remove.contains(k) } : meta_out
                                                                              ^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_differentialabundance_pipeline/main.nf:634:67`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_differentialabundance_pipeline/main.nf:647:67`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           def matchingGroups = schema['$defs'].findAll { groupName, group ->
                                                                     ^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_differentialabundance_pipeline/main.nf:638:31`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_differentialabundance_pipeline/main.nf:651:31`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           matchingGroups.each { groupName, group ->
                                 ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_differentialabundance_pipeline/main.nf:640:52`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_differentialabundance_pipeline/main.nf:653:52`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   group.properties.each { paramName, paramProps ->
@@ -370,364 +370,378 @@
                                                 ^^^^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:519:16`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/differentialabundance.nf:520:16`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { meta_key, meta_with_contrast, results_file, features_file ->
                  ^^^^^^^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:535:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/differentialabundance.nf:536:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .filter{meta, matrix -> meta.params.study_type in ['rnaseq', 'generic_matrix']}
                         ^^^^^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:537:47`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/differentialabundance.nf:538:47`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .mix(ch_validated_assays.filter{meta, assay -> meta.params.study_type == 'geo_soft_file'})
                                                 ^^^^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:558:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/differentialabundance.nf:559:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .filter{meta, matrix -> meta.params.functional_method == 'gprofiler2' && meta.params.gprofiler2_background_file == "auto"}
                         ^^^^^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:575:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/differentialabundance.nf:577:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .filter{meta, matrix -> meta.params.functional_method == 'gsea'}
                         ^^^^^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:582:31`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/differentialabundance.nf:584:31`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   .filter{meta, meta_with_contrast, results -> meta.params.functional_method == 'gprofiler2'}
                                 ^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:582:51`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/differentialabundance.nf:584:51`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   .filter{meta, meta_with_contrast, results -> meta.params.functional_method == 'gprofiler2'}
                                                     ^^^^^^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:587:31`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/differentialabundance.nf:589:31`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   .filter{meta, meta_with_contrast, results -> meta.params.functional_method == 'decoupler'}
                                 ^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:587:51`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/differentialabundance.nf:589:51`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   .filter{meta, meta_with_contrast, results -> meta.params.functional_method == 'decoupler'}
                                                     ^^^^^^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:596:16`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/differentialabundance.nf:593:31`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+                  .filter{meta, meta_with_contrast, adjacency -> meta.params.functional_method == 'grea'}
+                                ^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `workflows/differentialabundance.nf:593:51`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+                  .filter{meta, meta_with_contrast, adjacency -> meta.params.functional_method == 'grea'}
+                                                    ^^^^^^^^^
+  ```
+
+- Warning: `workflows/differentialabundance.nf:602:16`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { it.tail() } // remove the meta without contrast info that is used as key
                  ^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:642:35`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/differentialabundance.nf:649:35`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_mat = ch_norm.filter{meta, matrix -> meta.params.study_type == 'geo_soft_file'}
                                     ^^^^^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:646:31`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/differentialabundance.nf:653:31`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   .filter{meta, raw -> meta.params.study_type != 'geo_soft_file'}
                                 ^^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:680:14`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/differentialabundance.nf:687:14`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map{it.tail()}  // remove the meta without contrast info that is used as key
                ^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:717:61`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/differentialabundance.nf:724:61`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { meta, meta_with_contrast, results, contrast, variable, reference, target, formula, comparison ->
                                                               ^^^^^^^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:717:71`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/differentialabundance.nf:724:71`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { meta, meta_with_contrast, results, contrast, variable, reference, target, formula, comparison ->
                                                                         ^^^^^^^^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:717:82`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/differentialabundance.nf:724:82`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { meta, meta_with_contrast, results, contrast, variable, reference, target, formula, comparison ->
                                                                                    ^^^^^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:717:90`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/differentialabundance.nf:724:90`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { meta, meta_with_contrast, results, contrast, variable, reference, target, formula, comparison ->
                                                                                            ^^^^^^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:717:99`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/differentialabundance.nf:724:99`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { meta, meta_with_contrast, results, contrast, variable, reference, target, formula, comparison ->
                                                                                                     ^^^^^^^^^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:721:62`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/differentialabundance.nf:728:62`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def contrast_maps = meta_with_contrast.collect { it.subMap(paramset_contrast_keys) }
                                                                ^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:733:50`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/differentialabundance.nf:740:50`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def content = contrast_map.collect { it.values().join(',') }.sort().reverse()
                                                    ^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:738:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/differentialabundance.nf:745:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { [it.baseName, it] }
                   ^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:738:30`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/differentialabundance.nf:745:30`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { [it.baseName, it] }
                                ^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:739:36`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/differentialabundance.nf:746:36`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .join( ch_paramsets.map { [it.paramset_name, it] } )
                                      ^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:739:54`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/differentialabundance.nf:746:54`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .join( ch_paramsets.map { [it.paramset_name, it] } )
                                                        ^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:740:16`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/differentialabundance.nf:747:16`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { paramset_name, contrast_file, meta ->
                  ^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:747:19`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/differentialabundance.nf:754:19`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .filter { meta, contrast, results -> contrast.variable?.trim() }
                     ^^^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:747:35`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/differentialabundance.nf:754:35`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .filter { meta, contrast, results -> contrast.variable?.trim() }
                                     ^^^^^^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:750:61`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/differentialabundance.nf:757:61`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { meta, meta_with_contrast, results, contrast, variable, reference, target, formula, comparison ->
                                                               ^^^^^^^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:750:71`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/differentialabundance.nf:757:71`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { meta, meta_with_contrast, results, contrast, variable, reference, target, formula, comparison ->
                                                                         ^^^^^^^^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:750:82`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/differentialabundance.nf:757:82`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { meta, meta_with_contrast, results, contrast, variable, reference, target, formula, comparison ->
                                                                                    ^^^^^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:750:90`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/differentialabundance.nf:757:90`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { meta, meta_with_contrast, results, contrast, variable, reference, target, formula, comparison ->
                                                                                            ^^^^^^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:750:99`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/differentialabundance.nf:757:99`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { meta, meta_with_contrast, results, contrast, variable, reference, target, formula, comparison ->
                                                                                                     ^^^^^^^^^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:752:62`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/differentialabundance.nf:759:62`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def contrast_maps = meta_with_contrast.collect { it.subMap(paramset_contrast_keys) }
                                                                ^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:764:50`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/differentialabundance.nf:771:50`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def content = contrast_map.collect { it.values().collect { val ->
                                                    ^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:770:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/differentialabundance.nf:777:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { [it.baseName.replaceAll('_shinyngs$', ''), it] }
                   ^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:770:59`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/differentialabundance.nf:777:59`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { [it.baseName.replaceAll('_shinyngs$', ''), it] }
                                                             ^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:771:36`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/differentialabundance.nf:778:36`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .join( ch_paramsets.map { [it.paramset_name, it] } )
                                      ^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:771:54`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/differentialabundance.nf:778:54`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .join( ch_paramsets.map { [it.paramset_name, it] } )
                                                        ^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:772:16`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/differentialabundance.nf:779:16`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { paramset_name, contrast_file, meta ->
                  ^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:783:27`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/differentialabundance.nf:790:27`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .multiMap { meta, meta_with_contrast, differential_results, contrast_file, samplesheet, features, matrices ->
                             ^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:786:96`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/differentialabundance.nf:793:96`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               contrast_stats_assay: meta.params.exploratory_assay_names.split(',').findIndexOf { it == meta.params.exploratory_final_assay } + 1
                                                                                                  ^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:801:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/differentialabundance.nf:808:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       def topic_versions = Channel.topic("versions")
                            ^^^^^^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:853:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/differentialabundance.nf:862:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-          .map { [it[0], it.tail().tail().flatten()] }  // [ meta, [differential results and models] ]
+          .map { [it[0], it.tail().tail().flatten().grep()] }  // [ meta, [differential results and models] ]
                   ^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:853:24`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/differentialabundance.nf:862:24`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-          .map { [it[0], it.tail().tail().flatten()] }  // [ meta, [differential results and models] ]
+          .map { [it[0], it.tail().tail().flatten().grep()] }  // [ meta, [differential results and models] ]
                          ^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:857:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/differentialabundance.nf:866:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { [it[0], it.tail().tail().flatten()] }  // [ meta, [functional results] ]
                   ^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:857:24`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/differentialabundance.nf:866:24`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { [it[0], it.tail().tail().flatten()] }  // [ meta, [functional results] ]
                          ^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:870:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/differentialabundance.nf:879:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { [it[0], it.tail().flatten().grep()] }  // [meta, [files]]   // note that grep() would remove null files from join with remainder true
                   ^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:870:24`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/differentialabundance.nf:879:24`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { [it[0], it.tail().flatten().grep()] }  // [meta, [files]]   // note that grep() would remove null files from join with remainder true
                          ^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:872:26`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/differentialabundance.nf:881:26`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .flatMap { meta, report_file, files ->
                            ^^^^^^^^^^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:889:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/differentialabundance.nf:898:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   paramset.exploratory_assay_names.split(',').collect { "${it}_matrix".toString() } +
                                                                            ^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:904:42`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/differentialabundance.nf:913:42`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_report_input.input_files.map{ meta, files -> files },
                                            ^^^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:905:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/differentialabundance.nf:914:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           Channel.value([])

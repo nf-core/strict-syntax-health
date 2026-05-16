@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.04.1
 
-Launching `./main.nf` [compassionate_gilbert] revision: 4dc8224c6b
+Launching `./main.nf` [reverent_mahavira] revision: 4dc8224c6b
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -127,7 +127,7 @@ this is controlled by the pipeline. [default: raw,normalised]
   --exploratory_palette_name                [string]  Valid R palette name [default: Set1] 
 
 [differential] Differential analysis
-  --differential_method                     [string]  Differential analysis method  (accepted: deseq2, limma, dream) [default: deseq2] 
+  --differential_method                     [string]  Differential analysis method  (accepted: deseq2, limma, dream, propd) [default: deseq2] 
   --differential_file_suffix                [string]  Advanced option: the suffix associated tabular differential results tables. Will by default use the 
 appropriate suffix according to the study_type.  
   --differential_feature_id_column          [string]  The feature identifier column in differential results tables [default: gene_id] 
@@ -217,9 +217,24 @@ false]
   --dream_adjust_method                     [string]  Method used to adjust p-values for multiple testing (passed to p.adjust).  (accepted: BH, BY, 
 holm, hochberg, hommel, bonferroni, fdr, none) [default: BH]  
 
+[differential] propd specific options
+  --propd_alpha                             [number]  Alpha value for the Box-Cox transformation used by propd. Leave unset to skip the transformation. 
+ 
+  --propd_moderated                         [boolean] Use moderated theta values in propd. [default: true] 
+  --propd_fdr                               [number]  False discovery rate threshold used to define significantly proportional pairs. [default: 0.05] 
+ 
+  --propd_permutation                       [integer] Number of permutations for FDR estimation. 0 uses the analytical FDR from F-statistic p-values. 
+[default: 0]  
+  --propd_number_of_cutoffs                 [integer] Number of theta cutoffs evaluated when estimating FDR by permutation. [default: 100] 
+  --propd_save_pairwise                     [boolean] Save the table of significant pairwise statistics. [default: false] 
+  --propd_save_pairwise_full                [boolean] Save the full table of pairwise statistics (very large). [default: false] 
+  --propd_save_adjacency                    [boolean] Save the gene-by-gene adjacency matrix. Must be set to true when pairing propd with 
+`--functional_method grea`, which consumes the adjacency. [default: false]  
+  --propd_save_rdata                        [boolean] Save the propd object as an RDS file. [default: false] 
+
 [functional] Functional analysis options
   --functional_method                       [string] Functional analysis method. Set to 'none' (default) to disable functional analysis.  (accepted: 
-none, gsea, gprofiler2, decoupler) [default: none]  
+none, gsea, gprofiler2, decoupler, grea) [default: none]  
   --gene_sets_files                         [string] Gene sets in [GMT or 
 GMX-format](https://docs.gsea-msigdb.org/#GSEA/Data_Formats/#gene-set-database-formats); for GSEA: 
 multiple comma-separated input files in either format are possible. For gprofiler2: A single file in 
@@ -269,6 +284,11 @@ Default 1. [default: 1]
   --decoupler_network                       [string]  Path to TSV file containing network file for decoupler 
   --decoupler_min_n                         [integer] Removes sources of a net with less than min_n targets [default: 5] 
   --decoupler_methods                       [string]  Comma-separated list of methods to use (e.g., 'ora,ulm') [default: ulm] 
+
+[functional] grea
+  --grea_set_min                            [integer] Minimum number of features in a gene set. [default: 15] 
+  --grea_set_max                            [integer] Maximum number of features in a gene set. [default: 500] 
+  --grea_permutation                        [integer] Number of permutations used by grea to estimate enrichment significance. [default: 100] 
 
 [shiny] Shiny app settings
   --shinyngs_build_app                      [boolean] Should a Shiny app be built? [default: true] 

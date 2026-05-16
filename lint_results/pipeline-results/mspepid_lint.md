@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-05-05T00:33:17.991399502Z
-- Nextflow version: 26.04.0
-- Summary: 7 warnings
+- Generated: 2026-05-16T00:33:19.255157101Z
+- Nextflow version: 26.04.1
+- Summary: 8 warnings
 
 ## :warning: Warnings
 
@@ -48,7 +48,14 @@
       ^^^^^^^^^^
   ```
 
-- Warning: `workflows/mspepid.nf:110:9`: Variable was declared but not used
+- Warning: `subworkflows/local/utils_nfcore_mspepid_pipeline/main.nf:134:41`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          .map { validateInputSamplesheet(it) }
+                                          ^^
+  ```
+
+- Warning: `workflows/mspepid.nf:121:9`: Variable was declared but not used
 
   ```nextflow
       def ch_collated_versions = softwareVersionsToYAML(ch_versions.mix(topic_versions.versions_file))

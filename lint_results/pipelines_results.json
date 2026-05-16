@@ -101,7 +101,7 @@
   "chipseq": {
     "full_name": "nf-core/chipseq",
     "html_url": "https://github.com/nf-core/chipseq",
-    "commit": "1d6a6bde4a2f17b72ec5c601b02032caf2d6ea8b",
+    "commit": "b6c5a4f88ad38a7430420876d3a57aa27c7d568c",
     "errors": 0,
     "warnings": 73,
     "parse_error": false,
@@ -254,9 +254,9 @@
   "differentialabundance": {
     "full_name": "nf-core/differentialabundance",
     "html_url": "https://github.com/nf-core/differentialabundance",
-    "commit": "a7997bfd8156d3950ce9cd50460ac507ee75c0eb",
+    "commit": "2b6f39c258ca13dc44975e0d36ec6e53abba266c",
     "errors": 0,
-    "warnings": 104,
+    "warnings": 106,
     "parse_error": false,
     "prints_help": true
   },
@@ -677,9 +677,9 @@
   "mspepid": {
     "full_name": "nf-core/mspepid",
     "html_url": "https://github.com/nf-core/mspepid",
-    "commit": "7897fbfa42797b45abb738cb685edae0e0365ca3",
+    "commit": "3296f7535f4f2e6aa3863416db542460bc3d222f",
     "errors": 0,
-    "warnings": 7,
+    "warnings": 8,
     "parse_error": false,
     "prints_help": true
   },
@@ -1019,7 +1019,7 @@
   "scdownstream": {
     "full_name": "nf-core/scdownstream",
     "html_url": "https://github.com/nf-core/scdownstream",
-    "commit": "a293ddd9ba037ed62f8c4525e8a398a0dce44e6e",
+    "commit": "80354b8b6148a767402bba2a46e14ea433b337d8",
     "errors": 0,
     "warnings": 19,
     "parse_error": false,

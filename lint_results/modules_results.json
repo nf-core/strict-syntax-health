@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "ff147c37ffff4b7d1a446acee2ec3daead3af97f",
+  "_repo_commit": "4b801f99cf081cfbc00d202272385817636e6dfd",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -6924,6 +6924,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "parsesdrf_convert": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/parsesdrf/convert",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "parsnp": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/parsnp",
     "errors": 0,
@@ -8372,6 +8378,18 @@
   },
   "samclip": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/samclip",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "samplesheetparser_info": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/samplesheetparser/info",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "samplesheetparser_validate": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/samplesheetparser/validate",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
