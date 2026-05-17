@@ -1,0 +1,50 @@
+$ NXF_SYNTAX_PARSER=v2 nextflow run . --help
+
+
+ N E X T F L O W   ~  version 26.04.1
+
+Downloading plugin nf-schema@2.5.1
+Launching `./main.nf` [friendly_mirzakhani] revision: ae3065a2fd
+
+
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/deepmutscan 1.0.0dev
+------------------------------------------------------
+
+Reference genome options
+  igenomes_ignore    : true
+
+Generic options
+  trace_report_suffix: 2026-05-17_00-35-05
+
+Core Nextflow options
+  runName            : friendly_mirzakhani
+  launchDir          : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/deepmutscan
+  workDir            : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/deepmutscan/work
+  projectDir         : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/deepmutscan
+  userName           : runner
+  profile            : standard
+  configFiles        : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/deepmutscan/nextflow.config
+
+!! Only displaying parameters that differ from the pipeline defaults !!
+------------------------------------------------------
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/deepmutscan/blob/master/CITATIONS.md
+
+ERROR ~ Validation of pipeline parameters failed!
+
+ -- Check '.nextflow.log' file for details
+The following invalid input values have been detected:
+
+* Missing required parameter(s): reading_frame, input, fasta, outdir
+
+ -- Check script 'subworkflows/nf-core/utils_nfschema_plugin/main.nf' at line: 72 or see '.nextflow.log' file for more details

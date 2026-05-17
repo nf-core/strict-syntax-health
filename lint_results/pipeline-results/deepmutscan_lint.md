@@ -1,311 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-08T00:26:48.286212058Z
-- Nextflow version: 26.03.2-edge
-- Summary: 43 errors, 90 warnings
-
-## :x: Errors
-
-- Error: `modules/local/fitness/fitness_heatmap/main.nf:13:15`: `sample` is already declared
-
-  ```nextflow
-      tuple val(sample), path(wt_seq)   		      // WT sequence
-                ^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:38:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
-
-  ```nextflow
-  Channel
-  ^^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:42:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
-
-  ```nextflow
-  Channel
-  ^^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:45:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
-
-  ```nextflow
-  Channel
-  ^^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:48:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
-
-  ```nextflow
-  Channel
-  ^^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:51:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
-
-  ```nextflow
-  Channel
-  ^^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:54:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
-
-  ```nextflow
-  Channel
-  ^^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:57:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
-
-  ```nextflow
-  Channel
-  ^^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:60:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
-
-  ```nextflow
-  Channel
-  ^^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:63:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
-
-  ```nextflow
-  Channel
-  ^^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:142:9`: `ch_fasta` is not defined
-
-  ```nextflow
-          ch_fasta
-          ^^^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:154:26`: `ch_fasta` is not defined
-
-  ```nextflow
-      ch_fasta_broadcast = ch_fasta
-                           ^^^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:174:31`: `ch_fasta` is not defined
-
-  ```nextflow
-      ch_fasta_path_broadcast = ch_fasta
-                                ^^^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:184:26`: `ch_fasta` is not defined
-
-  ```nextflow
-      ch_fasta_for_gatk  = ch_fasta.combine(PREMERGE.out.bam).map { it[1] }		// path -- N
-                           ^^^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:186:26`: `reading_frame_ch` is not defined
-
-  ```nextflow
-      ch_rf_for_gatk     = reading_frame_ch.combine(PREMERGE.out.bam).map { it[0] }	// val  -- N
-                           ^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:188:26`: `min_counts_ch` is not defined
-
-  ```nextflow
-      ch_min_for_gatk    = min_counts_ch.combine(PREMERGE.out.bam).map { it[0] }		// val  -- N
-                           ^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:198:5`: `ch_fasta` is not defined
-
-  ```nextflow
-      ch_fasta,
-      ^^^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:199:5`: `reading_frame_ch` is not defined
-
-  ```nextflow
-      reading_frame_ch
-      ^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:204:5`: `ch_fasta` is not defined
-
-  ```nextflow
-      ch_fasta,
-      ^^^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:205:5`: `reading_frame_ch` is not defined
-
-  ```nextflow
-      reading_frame_ch,			// pos_range (as val)
-      ^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:206:5`: `mutagenesis_type_ch` is not defined
-
-  ```nextflow
-      mutagenesis_type_ch,		// mutagenesis_type (as val)
-      ^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:207:5`: `custom_codon_library_ch` is not defined
-
-  ```nextflow
-      custom_codon_library_ch		// custom_codon_library (as path)
-      ^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:218:32`: `fanout` is not defined
-
-  ```nextflow
-      ch_possible_mut_for_proc = fanout( DMSANALYSIS_POSSIBLE_MUTATIONS.out.possible_mutations.map { it[1] } )
-                                 ^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:219:32`: `fanout` is not defined
-
-  ```nextflow
-      ch_aa_seq_for_proc       = fanout( DMSANALYSIS_AASEQ.out.aa_seq.map { it[1] } )
-                                 ^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:220:32`: `fanout` is not defined
-
-  ```nextflow
-      ch_min_counts_for_proc   = fanout( min_counts_ch )
-                                 ^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:220:40`: `min_counts_ch` is not defined
-
-  ```nextflow
-      ch_min_counts_for_proc   = fanout( min_counts_ch )
-                                         ^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:239:38`: `fanoutTo` is not defined
-
-  ```nextflow
-      min_counts_for_cov_ch          = fanoutTo(variantCounts_for_heatmaps_ch, min_counts_ch)
-                                       ^^^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:239:78`: `min_counts_ch` is not defined
-
-  ```nextflow
-      min_counts_for_cov_ch          = fanoutTo(variantCounts_for_heatmaps_ch, min_counts_ch)
-                                                                               ^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:242:38`: `fanoutTo` is not defined
-
-  ```nextflow
-      min_counts_for_heatmap_ch      = fanoutTo(variantCounts_for_heatmaps_ch, min_counts_ch)
-                                       ^^^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:242:78`: `min_counts_ch` is not defined
-
-  ```nextflow
-      min_counts_for_heatmap_ch      = fanoutTo(variantCounts_for_heatmaps_ch, min_counts_ch)
-                                                                               ^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:245:38`: `fanoutTo` is not defined
-
-  ```nextflow
-      aa_seq_for_bias_ch             = fanoutTo(variantCounts_filtered_by_library_ch, DMSANALYSIS_AASEQ.out.aa_seq.map { it[1] })
-                                       ^^^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:246:38`: `fanoutTo` is not defined
-
-  ```nextflow
-      sliding_window_size_N          = fanoutTo(variantCounts_filtered_by_library_ch, sliding_window_size_ch)
-                                       ^^^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:246:85`: `sliding_window_size_ch` is not defined
-
-  ```nextflow
-      sliding_window_size_N          = fanoutTo(variantCounts_filtered_by_library_ch, sliding_window_size_ch)
-                                                                                      ^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:247:38`: `fanoutTo` is not defined
-
-  ```nextflow
-      aimed_cov_N                    = fanoutTo(variantCounts_filtered_by_library_ch, aimed_cov_ch)
-                                       ^^^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:247:85`: `aimed_cov_ch` is not defined
-
-  ```nextflow
-      aimed_cov_N                    = fanoutTo(variantCounts_filtered_by_library_ch, aimed_cov_ch)
-                                                                                      ^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:250:38`: `fanoutTo` is not defined
-
-  ```nextflow
-      possible_mutations_N           = fanoutTo(variantCounts_filtered_by_library_ch, DMSANALYSIS_POSSIBLE_MUTATIONS.out.possible_mutations.map { it[1] })
-                                       ^^^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:251:38`: `fanoutTo` is not defined
-
-  ```nextflow
-      min_counts_for_seqdepth_ch     = fanoutTo(variantCounts_filtered_by_library_ch, min_counts_ch)
-                                       ^^^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:251:85`: `min_counts_ch` is not defined
-
-  ```nextflow
-      min_counts_for_seqdepth_ch     = fanoutTo(variantCounts_filtered_by_library_ch, min_counts_ch)
-                                                                                      ^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:289:31`: `ch_fasta` is not defined
-
-  ```nextflow
-      ch_fasta_for_fitness    = ch_fasta.combine(variantCounts_filtered_by_library_ch).map { it[1] }		// path(fasta) -- N
-                                ^^^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:290:31`: `reading_frame_ch` is not defined
-
-  ```nextflow
-      ch_rf_for_fitness       = reading_frame_ch.combine(variantCounts_filtered_by_library_ch).map { it[0] }	// val(range) -- N
-                                ^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:304:13`: `ch_samplesheet_csv` is not defined
-
-  ```nextflow
-              ch_samplesheet_csv,                   // Pfad zum Samplesheet
-              ^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:305:13`: `ch_fasta` is not defined
-
-  ```nextflow
-              ch_fasta,                             // Das originale Fasta Tuple
-              ^^^^^^^^
-  ```
-
-- Error: `workflows/deepmutscan.nf:306:13`: `reading_frame_ch` is not defined
-
-  ```nextflow
-              reading_frame_ch,                     // Reading frame value channel
-              ^^^^^^^^^^^^^^^^
-  ```
+- Generated: 2026-05-17T00:35:01.101500650Z
+- Nextflow version: 26.04.1
+- Summary: 76 warnings
 
 ## :warning: Warnings
 
@@ -337,13 +34,6 @@
           ^^^^^^
   ```
 
-- Warning: `modules/local/fitness/fitness_heatmap/main.nf:12:15`: Variable was declared but not used
-
-  ```nextflow
-      tuple val(sample), path(fitness_estimation_tsv)   // from FITNESS_CALCULATION
-                ^^^^^^
-  ```
-
 - Warning: `modules/local/gatk/saturationmutagenesis/main.nf:23:9`: Variable was declared but not used
 
   ```nextflow
@@ -358,583 +48,492 @@
           ^^^^^^
   ```
 
-- Warning: `subworkflows/local/calculatefitness.nf:31:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/calculate_fitness/main.nf:31:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_versions = Channel.empty()
                     ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/calculatefitness.nf:44:43`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/calculate_fitness/main.nf:44:43`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def metas   = pairs.collect { it[0] }
                                             ^^
   ```
 
-- Warning: `subworkflows/local/calculatefitness.nf:45:43`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/calculate_fitness/main.nf:45:43`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def inputs  = pairs.findAll { it[0].type == 'input'  }.sort { it[0].replicate }.collect { it[1] }
                                             ^^
   ```
 
-- Warning: `subworkflows/local/calculatefitness.nf:45:75`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/calculate_fitness/main.nf:45:75`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def inputs  = pairs.findAll { it[0].type == 'input'  }.sort { it[0].replicate }.collect { it[1] }
                                                                             ^^
   ```
 
-- Warning: `subworkflows/local/calculatefitness.nf:45:103`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/calculate_fitness/main.nf:45:103`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def inputs  = pairs.findAll { it[0].type == 'input'  }.sort { it[0].replicate }.collect { it[1] }
                                                                                                         ^^
   ```
 
-- Warning: `subworkflows/local/calculatefitness.nf:46:43`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/calculate_fitness/main.nf:46:43`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def outputs = pairs.findAll { it[0].type == 'output' }.sort { it[0].replicate }.collect { it[1] }
                                             ^^
   ```
 
-- Warning: `subworkflows/local/calculatefitness.nf:46:75`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/calculate_fitness/main.nf:46:75`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def outputs = pairs.findAll { it[0].type == 'output' }.sort { it[0].replicate }.collect { it[1] }
                                                                             ^^
   ```
 
-- Warning: `subworkflows/local/calculatefitness.nf:46:103`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/calculate_fitness/main.nf:46:103`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def outputs = pairs.findAll { it[0].type == 'output' }.sort { it[0].replicate }.collect { it[1] }
                                                                                                         ^^
   ```
 
-- Warning: `subworkflows/local/calculatefitness.nf:49:19`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/calculate_fitness/main.nf:49:19`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .filter { smeta, metas, ins, outs -> ins && outs }
                     ^^^^^
   ```
 
-- Warning: `subworkflows/local/calculatefitness.nf:49:26`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/calculate_fitness/main.nf:49:26`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .filter { smeta, metas, ins, outs -> ins && outs }
                            ^^^^^
   ```
 
-- Warning: `subworkflows/local/calculatefitness.nf:62:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/calculate_fitness/main.nf:62:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       def ch_fasta_path = ch_fasta.map { it[1] } // strip meta
                                          ^^
   ```
 
-- Warning: `subworkflows/local/calculatefitness.nf:66:69`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/calculate_fitness/main.nf:66:69`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_fasta_path.combine(MERGE_COUNTS.out.merged_counts).map { it[0] },
                                                                       ^^
   ```
 
-- Warning: `subworkflows/local/calculatefitness.nf:67:73`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/calculate_fitness/main.nf:67:73`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           val_reading_frame.combine(MERGE_COUNTS.out.merged_counts).map { it[0] }
                                                                           ^^
   ```
 
-- Warning: `subworkflows/local/calculatefitness.nf:83:16`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/calculate_fitness/main.nf:83:16`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { key, smp, counts, wt -> tuple(smp, counts, wt) }
                  ^^^
   ```
 
-- Warning: `subworkflows/local/calculatefitness.nf:88:16`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/calculate_fitness/main.nf:88:16`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { it[0] }
                  ^^
   ```
 
-- Warning: `subworkflows/local/calculatefitness.nf:91:61`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/calculate_fitness/main.nf:91:61`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       def ch_run_counts_d = ch_counts_wt_d.map { smp, counts, wt -> tuple(smp, counts) }
                                                               ^^
   ```
 
-- Warning: `subworkflows/local/calculatefitness.nf:92:48`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/calculate_fitness/main.nf:92:48`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       def ch_run_wt_d     = ch_counts_wt_d.map { smp, counts, wt -> wt }
                                                  ^^^
   ```
 
-- Warning: `subworkflows/local/calculatefitness.nf:92:53`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/calculate_fitness/main.nf:92:53`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       def ch_run_wt_d     = ch_counts_wt_d.map { smp, counts, wt -> wt }
                                                       ^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_deepmutscan_pipeline/main.nf:31:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      monochrome_logs   // boolean: Do not use coloured log outputs
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_deepmutscan_pipeline/main.nf:34:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_deepmutscan_pipeline/main.nf:32:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       input             //  string: Path to input samplesheet
       ^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_deepmutscan_pipeline/main.nf:38:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/utils_nfcore_deepmutscan_pipeline/main.nf:36:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_versions = Channel.empty()
                     ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_deepmutscan_pipeline/main.nf:75:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/utils_nfcore_deepmutscan_pipeline/main.nf:106:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       Channel
       ^^^^^^^
   ```
 
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
+- Warning: `workflows/deepmutscan.nf:48:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-      valid_config = checkConfigProvided()
-      ^^^^^^^^^^^^
+      def ch_versions = Channel.empty()
+                        ^^^^^^^
   ```
 
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/deepmutscan.nf:49:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-      return ch_versions.unique().map { version -> processVersionsFromYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
-                                                                                                   ^^^^^^^
+      def ch_multiqc_files = Channel.empty()
+                             ^^^^^^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:38:1`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/deepmutscan.nf:52:20`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-  Channel
-  ^^^^^^^
+      def ch_fasta = Channel
+                     ^^^^^^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:41:12`: Variable was declared but not used
+- Warning: `workflows/deepmutscan.nf:56:35`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-      .set { ch_fasta }
-             ^^^^^^^^
+      def reading_frame_ch        = Channel.value(params.reading_frame)
+                                    ^^^^^^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:42:1`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/deepmutscan.nf:57:35`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-  Channel
-  ^^^^^^^
+      def min_counts_ch           = Channel.value(params.min_counts)
+                                    ^^^^^^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:44:12`: Variable was declared but not used
+- Warning: `workflows/deepmutscan.nf:58:35`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-      .set { reading_frame_ch }
-             ^^^^^^^^^^^^^^^^
+      def custom_codon_library_ch = Channel.value(params.custom_codon_library)
+                                    ^^^^^^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:45:1`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/deepmutscan.nf:59:35`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-  Channel
-  ^^^^^^^
+      def mutagenesis_type_ch     = Channel.value(params.mutagenesis_type)
+                                    ^^^^^^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:47:12`: Variable was declared but not used
+- Warning: `workflows/deepmutscan.nf:60:35`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-      .set { min_counts_ch }
-             ^^^^^^^^^^^^^
+      def sliding_window_size_ch  = Channel.value(params.sliding_window_size)
+                                    ^^^^^^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:48:1`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/deepmutscan.nf:61:35`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-  Channel
-  ^^^^^^^
+      def aimed_cov_ch            = Channel.value(params.aimed_cov)
+                                    ^^^^^^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:50:12`: Variable was declared but not used
+- Warning: `workflows/deepmutscan.nf:62:9`: Variable was declared but not used
 
   ```nextflow
-      .set { custom_codon_library_ch }
-             ^^^^^^^^^^^^^^^^^^^^^^^
+      def run_seqdepth_ch         = Channel.value(params.run_seqdepth)
+          ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:51:1`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/deepmutscan.nf:62:35`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-  Channel
-  ^^^^^^^
+      def run_seqdepth_ch         = Channel.value(params.run_seqdepth)
+                                    ^^^^^^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:53:12`: Variable was declared but not used
+- Warning: `workflows/deepmutscan.nf:65:35`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-      .set { mutagenesis_type_ch }
-             ^^^^^^^^^^^^^^^^^^^
+      def ch_samplesheet_csv      = Channel.fromPath(params.input, checkIfExists: true)
+                                    ^^^^^^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:54:1`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-  Channel
-  ^^^^^^^
-  ```
-
-- Warning: `workflows/deepmutscan.nf:56:12`: Variable was declared but not used
-
-  ```nextflow
-      .set { sliding_window_size_ch }
-             ^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/deepmutscan.nf:57:1`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-  Channel
-  ^^^^^^^
-  ```
-
-- Warning: `workflows/deepmutscan.nf:59:12`: Variable was declared but not used
-
-  ```nextflow
-      .set { aimed_cov_ch }
-             ^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/deepmutscan.nf:60:1`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-  Channel
-  ^^^^^^^
-  ```
-
-- Warning: `workflows/deepmutscan.nf:62:12`: Variable was declared but not used
-
-  ```nextflow
-      .set { run_seqdepth_ch }
-             ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/deepmutscan.nf:63:1`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-  Channel
-  ^^^^^^^
-  ```
-
-- Warning: `workflows/deepmutscan.nf:65:10`: Variable was declared but not used
-
-  ```nextflow
-    .set { ch_samplesheet_csv }
-           ^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/deepmutscan.nf:74:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `workflows/deepmutscan.nf:75:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_multiqc_files = Channel.empty()
-                         ^^^^^^^
-  ```
-
-- Warning: `workflows/deepmutscan.nf:83:68`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      ch_multiqc_files = ch_multiqc_files.mix(FASTQC.out.zip.collect{it[1]})
-                                                                     ^^
-  ```
-
-- Warning: `workflows/deepmutscan.nf:101:32`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_multiqc_config        = Channel.fromPath(
-                                 ^^^^^^^
-  ```
-
-- Warning: `workflows/deepmutscan.nf:104:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          Channel.fromPath(params.multiqc_config, checkIfExists: true) :
-          ^^^^^^^
-  ```
-
-- Warning: `workflows/deepmutscan.nf:105:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          Channel.empty()
-          ^^^^^^^
-  ```
-
-- Warning: `workflows/deepmutscan.nf:107:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          Channel.fromPath(params.multiqc_logo, checkIfExists: true) :
-          ^^^^^^^
-  ```
-
-- Warning: `workflows/deepmutscan.nf:108:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          Channel.empty()
-          ^^^^^^^
-  ```
-
-- Warning: `workflows/deepmutscan.nf:112:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_params))
-                            ^^^^^^^
-  ```
-
-- Warning: `workflows/deepmutscan.nf:118:45`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_methods_description                = Channel.value(
-                                              ^^^^^^^
-  ```
-
-- Warning: `workflows/deepmutscan.nf:151:15`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/deepmutscan.nf:86:15`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
         .map { [it[2], it[3]] }
                 ^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:151:22`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/deepmutscan.nf:86:22`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
         .map { [it[2], it[3]] }
                        ^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:156:15`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/deepmutscan.nf:91:15`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
         .map { [it[0], it[1]] }
                 ^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:156:22`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/deepmutscan.nf:91:22`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
         .map { [it[0], it[1]] }
                        ^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:176:14`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/deepmutscan.nf:111:14`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
         .map { it[1] }                    // keep only the fasta path (N emissions)
                ^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:184:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/deepmutscan.nf:119:71`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-      ch_fasta_for_gatk  = ch_fasta.combine(PREMERGE.out.bam).map { it[1] }		// path -- N
-                                                                    ^^
+      def ch_fasta_for_gatk  = ch_fasta.combine(PREMERGE.out.bam).map { it[1] }       // path -- N
+                                                                        ^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:186:75`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/deepmutscan.nf:121:79`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-      ch_rf_for_gatk     = reading_frame_ch.combine(PREMERGE.out.bam).map { it[0] }	// val  -- N
-                                                                            ^^
+      def ch_rf_for_gatk     = reading_frame_ch.combine(PREMERGE.out.bam).map { it[0] }   // val  -- N
+                                                                                ^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:188:72`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/deepmutscan.nf:123:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-      ch_min_for_gatk    = min_counts_ch.combine(PREMERGE.out.bam).map { it[0] }		// val  -- N
-                                                                         ^^
+      def ch_min_for_gatk    = min_counts_ch.combine(PREMERGE.out.bam).map { it[0] }      // val  -- N
+                                                                             ^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:215:9`: Variable was declared but not used
+- Warning: `workflows/deepmutscan.nf:150:96`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-      def fanout = { ch_singleton -> ch_singleton.combine(ch_vc).map { it[0] } }
-          ^^^^^^
+      def ch_possible_mut_for_proc = DMSANALYSIS_POSSIBLE_MUTATIONS.out.possible_mutations.map { it[1] }.combine(ch_vc).map { it[0] }
+                                                                                                 ^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:215:70`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/deepmutscan.nf:150:125`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-      def fanout = { ch_singleton -> ch_singleton.combine(ch_vc).map { it[0] } }
-                                                                       ^^
+      def ch_possible_mut_for_proc = DMSANALYSIS_POSSIBLE_MUTATIONS.out.possible_mutations.map { it[1] }.combine(ch_vc).map { it[0] }
+                                                                                                                              ^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:218:100`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/deepmutscan.nf:151:71`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-      ch_possible_mut_for_proc = fanout( DMSANALYSIS_POSSIBLE_MUTATIONS.out.possible_mutations.map { it[1] } )
+      def ch_aa_seq_for_proc       = DMSANALYSIS_AASEQ.out.aa_seq.map { it[1] }.combine(ch_vc).map { it[0] }
+                                                                        ^^
+  ```
+
+- Warning: `workflows/deepmutscan.nf:151:100`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      def ch_aa_seq_for_proc       = DMSANALYSIS_AASEQ.out.aa_seq.map { it[1] }.combine(ch_vc).map { it[0] }
                                                                                                      ^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:219:75`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/deepmutscan.nf:152:71`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-      ch_aa_seq_for_proc       = fanout( DMSANALYSIS_AASEQ.out.aa_seq.map { it[1] } )
-                                                                            ^^
+      def ch_min_counts_for_proc   = min_counts_ch.combine(ch_vc).map { it[0] }
+                                                                        ^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:230:5`: Variable was declared but not used
+- Warning: `workflows/deepmutscan.nf:162:9`: Variable was declared but not used
 
   ```nextflow
-      annotated_variantCounts_ch = DMSANALYSIS_PROCESS_GATK.out.processed_variantCounts.map { meta, a, b, c, d -> tuple(meta, a) }
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      def annotated_variantCounts_ch           = DMSANALYSIS_PROCESS_GATK.out.processed_variantCounts.map { meta, a, b, c, d -> tuple(meta, a) }
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:230:102`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/deepmutscan.nf:162:116`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      annotated_variantCounts_ch = DMSANALYSIS_PROCESS_GATK.out.processed_variantCounts.map { meta, a, b, c, d -> tuple(meta, a) }
-                                                                                                       ^
-  ```
-
-- Warning: `workflows/deepmutscan.nf:230:105`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      annotated_variantCounts_ch = DMSANALYSIS_PROCESS_GATK.out.processed_variantCounts.map { meta, a, b, c, d -> tuple(meta, a) }
-                                                                                                          ^
-  ```
-
-- Warning: `workflows/deepmutscan.nf:230:108`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      annotated_variantCounts_ch = DMSANALYSIS_PROCESS_GATK.out.processed_variantCounts.map { meta, a, b, c, d -> tuple(meta, a) }
-                                                                                                             ^
-  ```
-
-- Warning: `workflows/deepmutscan.nf:231:109`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      variantCounts_filtered_by_library_ch = DMSANALYSIS_PROCESS_GATK.out.processed_variantCounts.map { meta, a, b, c, d -> tuple(meta, b) }
-                                                                                                              ^
-  ```
-
-- Warning: `workflows/deepmutscan.nf:231:115`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      variantCounts_filtered_by_library_ch = DMSANALYSIS_PROCESS_GATK.out.processed_variantCounts.map { meta, a, b, c, d -> tuple(meta, b) }
-                                                                                                                    ^
-  ```
-
-- Warning: `workflows/deepmutscan.nf:231:118`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      variantCounts_filtered_by_library_ch = DMSANALYSIS_PROCESS_GATK.out.processed_variantCounts.map { meta, a, b, c, d -> tuple(meta, b) }
-                                                                                                                       ^
-  ```
-
-- Warning: `workflows/deepmutscan.nf:232:107`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      library_completed_variantCounts_ch = DMSANALYSIS_PROCESS_GATK.out.processed_variantCounts.map { meta, a, b, c, d -> tuple(meta, c) }
-                                                                                                            ^
-  ```
-
-- Warning: `workflows/deepmutscan.nf:232:110`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      library_completed_variantCounts_ch = DMSANALYSIS_PROCESS_GATK.out.processed_variantCounts.map { meta, a, b, c, d -> tuple(meta, c) }
-                                                                                                               ^
-  ```
-
-- Warning: `workflows/deepmutscan.nf:232:116`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      library_completed_variantCounts_ch = DMSANALYSIS_PROCESS_GATK.out.processed_variantCounts.map { meta, a, b, c, d -> tuple(meta, c) }
+      def annotated_variantCounts_ch           = DMSANALYSIS_PROCESS_GATK.out.processed_variantCounts.map { meta, a, b, c, d -> tuple(meta, a) }
                                                                                                                      ^
   ```
 
-- Warning: `workflows/deepmutscan.nf:233:102`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/deepmutscan.nf:162:119`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      variantCounts_for_heatmaps_ch = DMSANALYSIS_PROCESS_GATK.out.processed_variantCounts.map { meta, a, b, c, d -> tuple(meta, d) }
-                                                                                                       ^
+      def annotated_variantCounts_ch           = DMSANALYSIS_PROCESS_GATK.out.processed_variantCounts.map { meta, a, b, c, d -> tuple(meta, a) }
+                                                                                                                        ^
   ```
 
-- Warning: `workflows/deepmutscan.nf:233:105`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/deepmutscan.nf:162:122`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      variantCounts_for_heatmaps_ch = DMSANALYSIS_PROCESS_GATK.out.processed_variantCounts.map { meta, a, b, c, d -> tuple(meta, d) }
-                                                                                                          ^
+      def annotated_variantCounts_ch           = DMSANALYSIS_PROCESS_GATK.out.processed_variantCounts.map { meta, a, b, c, d -> tuple(meta, a) }
+                                                                                                                           ^
   ```
 
-- Warning: `workflows/deepmutscan.nf:233:108`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/deepmutscan.nf:163:113`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      variantCounts_for_heatmaps_ch = DMSANALYSIS_PROCESS_GATK.out.processed_variantCounts.map { meta, a, b, c, d -> tuple(meta, d) }
-                                                                                                             ^
+      def variantCounts_filtered_by_library_ch = DMSANALYSIS_PROCESS_GATK.out.processed_variantCounts.map { meta, a, b, c, d -> tuple(meta, b) }
+                                                                                                                  ^
   ```
 
-- Warning: `workflows/deepmutscan.nf:236:9`: Variable was declared but not used
+- Warning: `workflows/deepmutscan.nf:163:119`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      def fanoutTo = { anchorN, singleton -> singleton.combine(anchorN).map { it[0] } }
-          ^^^^^^^^
+      def variantCounts_filtered_by_library_ch = DMSANALYSIS_PROCESS_GATK.out.processed_variantCounts.map { meta, a, b, c, d -> tuple(meta, b) }
+                                                                                                                        ^
   ```
 
-- Warning: `workflows/deepmutscan.nf:236:77`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/deepmutscan.nf:163:122`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      def fanoutTo = { anchorN, singleton -> singleton.combine(anchorN).map { it[0] } }
+      def variantCounts_filtered_by_library_ch = DMSANALYSIS_PROCESS_GATK.out.processed_variantCounts.map { meta, a, b, c, d -> tuple(meta, b) }
+                                                                                                                           ^
+  ```
+
+- Warning: `workflows/deepmutscan.nf:164:113`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      def library_completed_variantCounts_ch   = DMSANALYSIS_PROCESS_GATK.out.processed_variantCounts.map { meta, a, b, c, d -> tuple(meta, c) }
+                                                                                                                  ^
+  ```
+
+- Warning: `workflows/deepmutscan.nf:164:116`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      def library_completed_variantCounts_ch   = DMSANALYSIS_PROCESS_GATK.out.processed_variantCounts.map { meta, a, b, c, d -> tuple(meta, c) }
+                                                                                                                     ^
+  ```
+
+- Warning: `workflows/deepmutscan.nf:164:122`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      def library_completed_variantCounts_ch   = DMSANALYSIS_PROCESS_GATK.out.processed_variantCounts.map { meta, a, b, c, d -> tuple(meta, c) }
+                                                                                                                           ^
+  ```
+
+- Warning: `workflows/deepmutscan.nf:165:113`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      def variantCounts_for_heatmaps_ch        = DMSANALYSIS_PROCESS_GATK.out.processed_variantCounts.map { meta, a, b, c, d -> tuple(meta, d) }
+                                                                                                                  ^
+  ```
+
+- Warning: `workflows/deepmutscan.nf:165:116`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      def variantCounts_for_heatmaps_ch        = DMSANALYSIS_PROCESS_GATK.out.processed_variantCounts.map { meta, a, b, c, d -> tuple(meta, d) }
+                                                                                                                     ^
+  ```
+
+- Warning: `workflows/deepmutscan.nf:165:119`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      def variantCounts_for_heatmaps_ch        = DMSANALYSIS_PROCESS_GATK.out.processed_variantCounts.map { meta, a, b, c, d -> tuple(meta, d) }
+                                                                                                                        ^
+  ```
+
+- Warning: `workflows/deepmutscan.nf:168:101`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      def min_counts_for_cov_ch          = min_counts_ch.combine(variantCounts_for_heatmaps_ch).map { it[0] }
+                                                                                                      ^^
+  ```
+
+- Warning: `workflows/deepmutscan.nf:169:101`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      def min_counts_for_heatmap_ch      = min_counts_ch.combine(variantCounts_for_heatmaps_ch).map { it[0] }
+                                                                                                      ^^
+  ```
+
+- Warning: `workflows/deepmutscan.nf:172:77`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      def aa_seq_for_bias_ch             = DMSANALYSIS_AASEQ.out.aa_seq.map { it[1] }.combine(variantCounts_filtered_by_library_ch).map { it[0] }
                                                                               ^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:245:120`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/deepmutscan.nf:172:137`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-      aa_seq_for_bias_ch             = fanoutTo(variantCounts_filtered_by_library_ch, DMSANALYSIS_AASEQ.out.aa_seq.map { it[1] })
-                                                                                                                         ^^
+      def aa_seq_for_bias_ch             = DMSANALYSIS_AASEQ.out.aa_seq.map { it[1] }.combine(variantCounts_filtered_by_library_ch).map { it[0] }
+                                                                                                                                          ^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:250:145`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/deepmutscan.nf:173:117`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-      possible_mutations_N           = fanoutTo(variantCounts_filtered_by_library_ch, DMSANALYSIS_POSSIBLE_MUTATIONS.out.possible_mutations.map { it[1] })
-                                                                                                                                                  ^^
+      def sliding_window_size_N          = sliding_window_size_ch.combine(variantCounts_filtered_by_library_ch).map { it[0] }
+                                                                                                                      ^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:289:92`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/deepmutscan.nf:174:107`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-      ch_fasta_for_fitness    = ch_fasta.combine(variantCounts_filtered_by_library_ch).map { it[1] }		// path(fasta) -- N
-                                                                                             ^^
+      def aimed_cov_N                    = aimed_cov_ch.combine(variantCounts_filtered_by_library_ch).map { it[0] }
+                                                                                                            ^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:290:100`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/deepmutscan.nf:177:102`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-      ch_rf_for_fitness       = reading_frame_ch.combine(variantCounts_filtered_by_library_ch).map { it[0] }	// val(range) -- N
-                                                                                                     ^^
+      def possible_mutations_N           = DMSANALYSIS_POSSIBLE_MUTATIONS.out.possible_mutations.map { it[1] }.combine(variantCounts_filtered_by_library_ch).map { it[0] }
+                                                                                                       ^^
+  ```
+
+- Warning: `workflows/deepmutscan.nf:177:162`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      def possible_mutations_N           = DMSANALYSIS_POSSIBLE_MUTATIONS.out.possible_mutations.map { it[1] }.combine(variantCounts_filtered_by_library_ch).map { it[0] }
+                                                                                                                                                                   ^^
+  ```
+
+- Warning: `workflows/deepmutscan.nf:178:108`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      def min_counts_for_seqdepth_ch     = min_counts_ch.combine(variantCounts_filtered_by_library_ch).map { it[0] }
+                                                                                                             ^^
+  ```
+
+- Warning: `workflows/deepmutscan.nf:216:96`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      def ch_fasta_for_fitness    = ch_fasta.combine(variantCounts_filtered_by_library_ch).map { it[1] }      // path(fasta) -- N
+                                                                                                 ^^
+  ```
+
+- Warning: `workflows/deepmutscan.nf:217:104`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      def ch_rf_for_fitness       = reading_frame_ch.combine(variantCounts_filtered_by_library_ch).map { it[0] }  // val(range) -- N
+                                                                                                         ^^
   ```

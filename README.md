@@ -11,13 +11,13 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 > See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline.
 > **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**
 
-- **Last updated:** 2026-05-16 00:35:04 UTC
+- **Last updated:** 2026-05-17 00:36:04 UTC
 - **Nextflow version:** 26.04.1
 
 ## Pipelines
 
-- **Total:** 0 parse errors, 2117 errors, 7819 warnings across 136 pipelines
-- **Zero errors:** 62 pipelines (45.6%)
+- **Total:** 0 parse errors, 2074 errors, 7805 warnings across 136 pipelines
+- **Zero errors:** 63 pipelines (46.3%)
 
 |                    Errors                    |                     Warnings                     |
 | :------------------------------------------: | :----------------------------------------------: |
@@ -46,7 +46,6 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :x: [radseq](https://github.com/nf-core/radseq)                                                |     No      |     45 |       42 |      -      |          [View](lint_results/pipeline-results/radseq_lint.md)           |                                    -                                     |
 | :x: [meerpipe](https://github.com/nf-core/meerpipe)                                            |     No      |     44 |       84 |      -      |         [View](lint_results/pipeline-results/meerpipe_lint.md)          |                                    -                                     |
 | :x: [omicsgenetraitassociation](https://github.com/nf-core/omicsgenetraitassociation)          |     No      |     44 |       30 |      -      | [View](lint_results/pipeline-results/omicsgenetraitassociation_lint.md) |                                    -                                     |
-| :x: [deepmutscan](https://github.com/nf-core/deepmutscan)                                      |     No      |     43 |       90 |      -      |        [View](lint_results/pipeline-results/deepmutscan_lint.md)        |                                    -                                     |
 | :x: [callingcards](https://github.com/nf-core/callingcards)                                    |     No      |     41 |      168 |      -      |       [View](lint_results/pipeline-results/callingcards_lint.md)        |                                    -                                     |
 | :x: [lncpipe](https://github.com/nf-core/lncpipe)                                              |     No      |     40 |      176 |      -      |          [View](lint_results/pipeline-results/lncpipe_lint.md)          |                                    -                                     |
 | :x: [genomeskim](https://github.com/nf-core/genomeskim)                                        |     No      |     40 |       13 |      -      |        [View](lint_results/pipeline-results/genomeskim_lint.md)         |                                    -                                     |
@@ -112,6 +111,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :white_check_mark: [differentialabundance](https://github.com/nf-core/differentialabundance)   |     No      |      0 |      106 |     Yes     |   [View](lint_results/pipeline-results/differentialabundance_lint.md)   | [View](lint_results/prints-help-results/differentialabundance_help.txt)  |
 | :white_check_mark: [taxprofiler](https://github.com/nf-core/taxprofiler)                       |     No      |      0 |       94 |     Yes     |        [View](lint_results/pipeline-results/taxprofiler_lint.md)        |      [View](lint_results/prints-help-results/taxprofiler_help.txt)       |
 | :white_check_mark: [funcscan](https://github.com/nf-core/funcscan)                             |     No      |      0 |       87 |     Yes     |         [View](lint_results/pipeline-results/funcscan_lint.md)          |        [View](lint_results/prints-help-results/funcscan_help.txt)        |
+| :x: [deepmutscan](https://github.com/nf-core/deepmutscan)                                      |     No      |      0 |       76 |     No      |        [View](lint_results/pipeline-results/deepmutscan_lint.md)        |      [View](lint_results/prints-help-results/deepmutscan_help.txt)       |
 | :white_check_mark: [chipseq](https://github.com/nf-core/chipseq)                               |     No      |      0 |       73 |     Yes     |          [View](lint_results/pipeline-results/chipseq_lint.md)          |        [View](lint_results/prints-help-results/chipseq_help.txt)         |
 | :white_check_mark: [abotyper](https://github.com/nf-core/abotyper)                             |     No      |      0 |       71 |     Yes     |         [View](lint_results/pipeline-results/abotyper_lint.md)          |        [View](lint_results/prints-help-results/abotyper_help.txt)        |
 | :x: [methylong](https://github.com/nf-core/methylong)                                          |     No      |      0 |       66 |     No      |         [View](lint_results/pipeline-results/methylong_lint.md)         |       [View](lint_results/prints-help-results/methylong_help.txt)        |
