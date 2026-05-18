@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.04.1
 
 Downloading plugin nf-schema@2.5.1
-Launching `./main.nf` [friendly_mirzakhani] revision: ae3065a2fd
+Launching `./main.nf` [gloomy_einstein] revision: ae3065a2fd
 
 
 ------------------------------------------------------
@@ -20,10 +20,10 @@ Reference genome options
   igenomes_ignore    : true
 
 Generic options
-  trace_report_suffix: 2026-05-17_00-35-05
+  trace_report_suffix: 2026-05-18_00-36-00
 
 Core Nextflow options
-  runName            : friendly_mirzakhani
+  runName            : gloomy_einstein
   launchDir          : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/deepmutscan
   workDir            : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/deepmutscan/work
   projectDir         : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/deepmutscan

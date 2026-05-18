@@ -11,7 +11,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 > See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline.
 > **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**
 
-- **Last updated:** 2026-05-17 00:36:04 UTC
+- **Last updated:** 2026-05-18 00:37:56 UTC
 - **Nextflow version:** 26.04.1
 
 ## Pipelines
@@ -188,8 +188,8 @@ _Modules with zero errors are not shown above (1823 modules). They may still hav
 
 ## Subworkflows
 
-- **Total:** 0 parse errors, 0 errors, 0 warnings across 114 subworkflows
-- **Zero errors:** 114 subworkflows (100.0%)
+- **Total:** 0 parse errors, 0 errors, 0 warnings across 115 subworkflows
+- **Zero errors:** 115 subworkflows (100.0%)
 
 |                     Errors                      |                      Warnings                       |
 | :---------------------------------------------: | :-------------------------------------------------: |
@@ -201,7 +201,7 @@ _Modules with zero errors are not shown above (1823 modules). They may still hav
 | Subworkflow | Parse Error | Errors | Warnings | Lint Output |
 | ----------- | :---------: | -----: | -------: | :---------: |
 
-_Subworkflows with zero errors are not shown above (114 subworkflows). They may still have warnings. See the [subworkflows results directory](lint_results/subworkflow-results/) for all lint outputs._
+_Subworkflows with zero errors are not shown above (115 subworkflows). They may still have warnings. See the [subworkflows results directory](lint_results/subworkflow-results/) for all lint outputs._
 
 </details>
 

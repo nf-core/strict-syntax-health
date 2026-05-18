@@ -200,7 +200,7 @@
   "deepmutscan": {
     "full_name": "nf-core/deepmutscan",
     "html_url": "https://github.com/nf-core/deepmutscan",
-    "commit": "0e362db5c82043d7d2f5647c88761ea83311a1e7",
+    "commit": "283f4da4133bfc2176a53c6f54fb811682b77c4d",
     "errors": 0,
     "warnings": 76,
     "parse_error": false,
