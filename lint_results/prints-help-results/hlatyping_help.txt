@@ -1,10 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.04.0
+ N E X T F L O W   ~  version 26.04.1
 
-Downloading plugin nf-schema@2.5.1
-Launching `./main.nf` [elated_kimura] revision: 7a24b6780a
+Launching `./main.nf` [kickass_torvalds] revision: 7a24b6780a
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -43,6 +42,10 @@ HLA-HD options
   --hlahd_path                  [string]  Tarball file location of HLA-HD software distribution. 
   --hlahd_update_reference_dict [boolean] Update HLA-HD reference dictionary to the latest version before running HLA-HD. [default: false] 
  
+
+HLA*LA options
+  --hlala_graph_tarball         [string] Path to HLA*LA graph tarball (optional). 
+  --hlala_graph_dir             [string] Path to pre-built HLA*LA graph parent directory (optional). 
 
 Reference genome options
   --genome                      [string] Name of iGenomes reference. 

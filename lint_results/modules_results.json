@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "0c06dfb24cd33e404c2811c28d74dd9e4a1df5ce",
+  "_repo_commit": "be88320ad54c925e6223fad239926ad8e544f712",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -830,6 +830,12 @@
   },
   "bcftools_plugintag2tag": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bcftools/plugintag2tag",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "bcftools_pluginvcf2table": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bcftools/pluginvcf2table",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -3200,6 +3206,12 @@
   },
   "filtlong": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/filtlong",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "finaletoolkit_delfi": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/finaletoolkit/delfi",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

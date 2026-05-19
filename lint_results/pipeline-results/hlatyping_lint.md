@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-05-07T00:32:32.391323573Z
-- Nextflow version: 26.04.0
-- Summary: 1 warning
+- Generated: 2026-05-19T00:39:55.756432572Z
+- Nextflow version: 26.04.1
+- Summary: 2 warnings
 
 ## :warning: Warnings
 
@@ -11,4 +11,11 @@
   ```nextflow
       input //  string: Path to input samplesheet
       ^^^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_hlatyping_pipeline/main.nf:357:92`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      def actual = file.withInputStream { org.apache.commons.codec.digest.DigestUtils.md5Hex(it) }
+                                                                                             ^^
   ```

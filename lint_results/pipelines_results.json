@@ -29,7 +29,7 @@
   "ampliseq": {
     "full_name": "nf-core/ampliseq",
     "html_url": "https://github.com/nf-core/ampliseq",
-    "commit": "4d9bc7713fff6bddcb008e9e037b847b01598ac7",
+    "commit": "e2a474325fe2c648a7fc480b11ceb2a3ddce6297",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -146,16 +146,16 @@
   "createpanelrefs": {
     "full_name": "nf-core/createpanelrefs",
     "html_url": "https://github.com/nf-core/createpanelrefs",
-    "commit": "56ae483501da971e02243fae6356aae053a97aa6",
+    "commit": "67bc73da019f1f9b9ab23a67f97105986f962ce9",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
-    "prints_help": false
+    "prints_help": true
   },
   "createtaxdb": {
     "full_name": "nf-core/createtaxdb",
     "html_url": "https://github.com/nf-core/createtaxdb",
-    "commit": "af3374a19a96b82ec1d74cb78fa9513bb940c07a",
+    "commit": "4b2a7385eb29c56d56fe2947021216552c9eb4bb",
     "errors": 0,
     "warnings": 6,
     "parse_error": false,
@@ -254,7 +254,7 @@
   "differentialabundance": {
     "full_name": "nf-core/differentialabundance",
     "html_url": "https://github.com/nf-core/differentialabundance",
-    "commit": "2b6f39c258ca13dc44975e0d36ec6e53abba266c",
+    "commit": "35b15adcdc31e929277eccda889c7de52074216e",
     "errors": 0,
     "warnings": 106,
     "parse_error": false,
@@ -263,7 +263,7 @@
   "diseasemodulediscovery": {
     "full_name": "nf-core/diseasemodulediscovery",
     "html_url": "https://github.com/nf-core/diseasemodulediscovery",
-    "commit": "59aa5e03a9a366e7a5057fcbf88b45e5bc33340e",
+    "commit": "4d35338c037b7fc01b731a41f1e060f94129bfcc",
     "errors": 0,
     "warnings": 129,
     "parse_error": false,
@@ -479,9 +479,9 @@
   "hlatyping": {
     "full_name": "nf-core/hlatyping",
     "html_url": "https://github.com/nf-core/hlatyping",
-    "commit": "6a1d0b786212f24317e77a9dbe568b90a15f7ebc",
+    "commit": "900691ff2e239688d3d3c0ca3cdbae1a85fefe2a",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 2,
     "parse_error": false,
     "prints_help": true
   },
@@ -533,11 +533,11 @@
   "lsmquant": {
     "full_name": "nf-core/lsmquant",
     "html_url": "https://github.com/nf-core/lsmquant",
-    "commit": "0e34819c727143a66070d5a111f8b0f83873aba6",
-    "errors": 1,
+    "commit": "cae00d3b9c70123bd1c6f38b42317e225f2ed666",
+    "errors": 0,
     "warnings": 43,
     "parse_error": false,
-    "prints_help": null
+    "prints_help": false
   },
   "mag": {
     "full_name": "nf-core/mag",
@@ -830,9 +830,9 @@
   "pixelator": {
     "full_name": "nf-core/pixelator",
     "html_url": "https://github.com/nf-core/pixelator",
-    "commit": "56d448220522264e651f97dd38f097798d9e8594",
+    "commit": "125d096e4971a03c89e23129cd124788b4ba0967",
     "errors": 0,
-    "warnings": 0,
+    "warnings": 15,
     "parse_error": false,
     "prints_help": true
   },
@@ -893,9 +893,9 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "5b81ee115c90e57caeb88cf58b23e9a9c9ea93f2",
+    "commit": "a41090e0941bc1c0e0b41ae315bb43dd55a9564d",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 4,
     "parse_error": false,
     "prints_help": true
   },
@@ -1208,9 +1208,9 @@
   "viralmetagenome": {
     "full_name": "nf-core/viralmetagenome",
     "html_url": "https://github.com/nf-core/viralmetagenome",
-    "commit": "6a1a7a1375e1f19b9979688f9556a2f09f7823b5",
+    "commit": "9c38f452b8cdf6027270cfdc06e3adb01f07436c",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false,
     "prints_help": true
   },
