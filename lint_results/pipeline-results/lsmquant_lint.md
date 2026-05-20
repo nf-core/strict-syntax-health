@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-05-19T00:40:10.639534871Z
+- Generated: 2026-05-20T00:42:22.369994333Z
 - Nextflow version: 26.04.1
-- Summary: 43 warnings
+- Summary: 42 warnings
 
 ## :warning: Warnings
 
@@ -284,13 +284,6 @@
   ```nextflow
               .map { meta, img_directory, parameter_file, stitched_data ->
                            ^^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/lsmquant.nf:144:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          def model_file = Channel.fromPath(params.model_file, checkIfExists: !params.model_file.startsWith('http'))
-                           ^^^^^^^
   ```
 
 - Warning: `workflows/lsmquant.nf:158:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead

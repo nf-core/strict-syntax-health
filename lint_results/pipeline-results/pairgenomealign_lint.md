@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-31T00:21:15.231387284Z
-- Nextflow version: 25.12.0-edge
-- Summary: 2 errors, 22 warnings
+- Generated: 2026-05-20T00:43:20.736136729Z
+- Nextflow version: 26.04.1
+- Summary: 2 errors, 23 warnings
 
 ## :x: Errors
 
@@ -146,6 +146,13 @@
   ```nextflow
       input             //  string: Path to input samplesheet
       ^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
+
+  ```nextflow
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/pairgenomealign.nf:41:31`: Parameter was not used -- prefix with `_` to suppress warning

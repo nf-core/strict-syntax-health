@@ -1,24 +1,10 @@
 # Nextflow lint results
 
-- Generated: 2026-04-24T00:31:52.393146361Z
-- Nextflow version: 26.03.3-edge
-- Summary: 18 errors, 48 warnings
+- Generated: 2026-05-20T00:43:09.970942462Z
+- Nextflow version: 26.04.1
+- Summary: 14 errors, 50 warnings
 
 ## :x: Errors
-
-- Error: `conf/base.config:61:29`: Unexpected input: ':'
-
-  ```nextflow
-      withName:NFCORE_MHCQUANT:MHCQUANT:PREPARE_SPECTRA:TDF2MZML {
-                              ^
-  ```
-
-- Error: `conf/modules.config:277:17`: Unexpected input: ':'
-
-  ```nextflow
-          withName: 'NFCORE_MHCQUANT:MHCQUANT:QUANT:OPENMS_IDSCORESWITCHER' {
-                  ^
-  ```
 
 - Error: `main.nf:19:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/mhcquant/subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf'
 
@@ -69,20 +55,6 @@
       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `nextflow.config:235:25`: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/mhcquant/conf/test_percolator.config'
-
-  ```nextflow
-      test_percolator   { includeConfig 'conf/test_percolator.config'   }
-                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `nextflow.config:237:25`: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/mhcquant/conf/test_epicore.config'
-
-  ```nextflow
-      test_epicore      { includeConfig 'conf/test_epicore.config'      }
-                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
 - Error: `subworkflows/local/quant/main.nf:18:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
@@ -125,7 +97,7 @@
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/mhcquant.nf:278:9`: `methodsDescriptionText` is not defined
+- Error: `workflows/mhcquant.nf:276:9`: `methodsDescriptionText` is not defined
 
   ```nextflow
           methodsDescriptionText(ch_multiqc_custom_methods_description))
@@ -133,6 +105,20 @@
   ```
 
 ## :warning: Warnings
+
+- Warning: `conf/modules.config:109:106`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              "-fixed_modifications ${meta.fixed_mods.trim() ? meta.fixed_mods.tokenize(',').collect { "'${it.trim()}'" }.join(' ') : ''}",
+                                                                                                           ^^
+  ```
+
+- Warning: `conf/modules.config:110:115`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              meta.variable_mods.trim() ? "-variable_modifications ${meta.variable_mods.tokenize(',').collect { "'${it.trim()}'" }.join(' ')}" : "",
+                                                                                                                    ^^
+  ```
 
 - Warning: `modules/local/epicore/main.nf:38:9`: Variable was declared but not used
 
@@ -379,6 +365,13 @@
                           ^^^^^^
   ```
 
+- Warning: `subworkflows/local/rescore/main.nf:97:24`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              non_empty: it[1].countLines() > 130
+                         ^^
+  ```
+
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
 
   ```nextflow
@@ -442,28 +435,21 @@
                      ^^^^
   ```
 
-- Warning: `workflows/mhcquant.nf:149:24`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/mhcquant.nf:157:24`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   .map { groupKey, meta, comet_idxml, fdr_filtered_idxml -> [meta, comet_idxml, fdr_filtered_idxml] }
                          ^^^^^^^^
   ```
 
-- Warning: `workflows/mhcquant.nf:155:23`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-              .filter { meta, idxml -> idxml.countLines() > 130 }
-                        ^^^^
-  ```
-
-- Warning: `workflows/mhcquant.nf:225:88`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/mhcquant.nf:223:88`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           params.epicore ? EPICORE.out.stats : SUMMARIZE_RESULTS.out.epicore_input.map { meta, tsv, stats -> stats }
                                                                                          ^^^^
   ```
 
-- Warning: `workflows/mhcquant.nf:225:94`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/mhcquant.nf:223:94`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           params.epicore ? EPICORE.out.stats : SUMMARIZE_RESULTS.out.epicore_input.map { meta, tsv, stats -> stats }

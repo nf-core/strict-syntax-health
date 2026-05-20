@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "be88320ad54c925e6223fad239926ad8e544f712",
+  "_repo_commit": "85a3650c949d1146cdb576f986640e84775b7743",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -1810,6 +1810,12 @@
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/circularmapper/realignsamfile",
     "errors": 0,
     "warnings": 0,
+    "parse_error": false
+  },
+  "civicpy_annotate": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/civicpy/annotate",
+    "errors": 0,
+    "warnings": 1,
     "parse_error": false
   },
   "clair3": {
@@ -3888,6 +3894,18 @@
     "warnings": 0,
     "parse_error": false
   },
+  "gedi_indexgenome": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gedi/indexgenome",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "gedi_price": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gedi/price",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "gem2_gem2bedmappability": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gem2/gem2bedmappability",
     "errors": 0,
@@ -3926,6 +3944,12 @@
   },
   "genescopefk": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/genescopefk",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "genin2": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/genin2",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -4720,6 +4744,24 @@
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/huggingface/download",
     "errors": 0,
     "warnings": 0,
+    "parse_error": false
+  },
+  "humann3_humann": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/humann3/humann",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "humann3_regroup": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/humann3/regroup",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "humann3_renorm": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/humann3/renorm",
+    "errors": 0,
+    "warnings": 1,
     "parse_error": false
   },
   "humid": {

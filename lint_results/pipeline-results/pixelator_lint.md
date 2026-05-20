@@ -1,10 +1,24 @@
 # Nextflow lint results
 
-- Generated: 2026-05-19T00:40:32.845503297Z
+- Generated: 2026-05-20T00:43:56.112399741Z
 - Nextflow version: 26.04.1
-- Summary: 15 warnings
+- Summary: 17 warnings
 
 ## :warning: Warnings
+
+- Warning: `conf/modules.pna.config:171:89`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  saveAs: { params.save_pna_sample_calling_pixelfile || params.save_all ? it : null },
+                                                                                          ^^
+  ```
+
+- Warning: `conf/modules.pna.config:182:65`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  saveAs: { params.save_json || params.save_all ? it : null },
+                                                                  ^^
+  ```
 
 - Warning: `subworkflows/local/pna/v1/main.nf:93:5`: Variable was declared but not used
 
