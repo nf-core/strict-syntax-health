@@ -1,40 +1,10 @@
 # Nextflow lint results
 
-- Generated: 2026-05-20T00:43:20.736136729Z
+- Generated: 2026-05-21T00:41:44.627815518Z
 - Nextflow version: 26.04.1
-- Summary: 2 errors, 23 warnings
-
-## :x: Errors
-
-- Error: `conf/modules.config:130:22`: `publishDir` is not defined
-
-  ```nextflow
-          publishDir = publishDir + [
-                       ^^^^^^^^^^
-  ```
-
-- Error: `modules/local/multiqc_assemblyscan_plot_data/main.nf:60:40`: `meta` is not defined
-
-  ```nextflow
-      def prefix = task.ext.prefix ?: "${meta.id}"
-                                         ^^^^
-  ```
+- Summary: 18 warnings
 
 ## :warning: Warnings
-
-- Warning: `modules/local/multiqc_assemblyscan_plot_data/main.nf:59:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/local/multiqc_assemblyscan_plot_data/main.nf:60:9`: Variable was declared but not used
-
-  ```nextflow
-      def prefix = task.ext.prefix ?: "${meta.id}"
-          ^^^^^^
-  ```
 
 - Warning: `modules/nf-core/assemblyscan/main.nf:31:9`: Variable was declared but not used
 
@@ -134,51 +104,30 @@
                                                         ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_pairgenomealign_pipeline/main.nf:32:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      monochrome_logs   // boolean: Do not use coloured log outputs
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_pairgenomealign_pipeline/main.nf:35:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_pairgenomealign_pipeline/main.nf:34:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       input             //  string: Path to input samplesheet
       ^^^^^
   ```
 
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
-
-  ```nextflow
-      valid_config = checkConfigProvided()
-      ^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/pairgenomealign.nf:41:31`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/pairgenomealign.nf:46:31`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_targetgenome.map { meta, file -> [ [id:'targetGenome'] , file ] }
                                 ^^^^
   ```
 
-- Warning: `workflows/pairgenomealign.nf:53:55`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/pairgenomealign.nf:58:55`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
             .map { sorted_list -> sorted_list.collect { it[1] } }
                                                         ^^
   ```
 
-- Warning: `workflows/pairgenomealign.nf:106:39`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/pairgenomealign.nf:111:39`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               pairalign_out.o2o.combine(Channel.fromList(export_formats)),
                                         ^^^^^^^
-  ```
-
-- Warning: `workflows/pairgenomealign.nf:116:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      def topic_versions = Channel.topic("versions")
-                           ^^^^^^^
   ```

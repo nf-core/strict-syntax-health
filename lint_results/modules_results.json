@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "85a3650c949d1146cdb576f986640e84775b7743",
+  "_repo_commit": "77a353f5f9a174e9ddfc6aa4846d1e51ed0bdfd9",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -1904,6 +1904,12 @@
   },
   "cnvkit_call": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cnvkit/call",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "cnvkit_coverage": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cnvkit/coverage",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -5964,6 +5970,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "mifaser": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mifaser",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "mindagap_duplicatefinder": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mindagap/duplicatefinder",
     "errors": 0,
@@ -8042,6 +8054,12 @@
   },
   "rbt_vcfsplit": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/rbt/vcfsplit",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "regenie_step1": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/regenie/step1",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

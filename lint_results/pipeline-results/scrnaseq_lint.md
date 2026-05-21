@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-05-13T00:40:41.504733510Z
+- Generated: 2026-05-21T00:42:50.274301808Z
 - Nextflow version: 26.04.1
 - Summary: 60 warnings
 
@@ -363,63 +363,63 @@
                                                                                        ^^
   ```
 
-- Warning: `workflows/scrnaseq.nf:103:89`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scrnaseq.nf:112:89`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_genome_fasta    = GUNZIP_FASTA ( [ [:], ch_genome_fasta ] ).gunzip.map { it[1] }
                                                                                           ^^
   ```
 
-- Warning: `workflows/scrnaseq.nf:114:71`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scrnaseq.nf:123:71`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_gtf      = GUNZIP_GTF ( [ [:], ch_gtf ] ).gunzip.map { it[1] }
                                                                         ^^
   ```
 
-- Warning: `workflows/scrnaseq.nf:199:13`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/scrnaseq.nf:208:13`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               meta, outs -> outs.findAll{ it -> it.name == "web_summary.html"}
               ^^^^
   ```
 
-- Warning: `workflows/scrnaseq.nf:257:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scrnaseq.nf:266:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               if (!map_collection_clone.any{ it.feature_type == 'gex' })    { map_collection_clone.add( [id: sample_id, feature_type: 'gex'   , gex:    empty_file, options:[:] ] ) }
                                              ^^
   ```
 
-- Warning: `workflows/scrnaseq.nf:258:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scrnaseq.nf:267:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               if (!map_collection_clone.any{ it.feature_type == 'vdj' })    { map_collection_clone.add( [id: sample_id, feature_type: 'vdj'   , vdj:    empty_file, options:[:] ] ) }
                                              ^^
   ```
 
-- Warning: `workflows/scrnaseq.nf:259:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scrnaseq.nf:268:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               if (!map_collection_clone.any{ it.feature_type == 'ab' })     { map_collection_clone.add( [id: sample_id, feature_type: 'ab'    , ab:     empty_file, options:[:] ] ) }
                                              ^^
   ```
 
-- Warning: `workflows/scrnaseq.nf:260:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scrnaseq.nf:269:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               if (!map_collection_clone.any{ it.feature_type == 'beam' })   { map_collection_clone.add( [id: sample_id, feature_type: 'beam'  , beam:   empty_file, options:[:] ] ) } // currently not implemented, the input samplesheet checking will not allow it.
                                              ^^
   ```
 
-- Warning: `workflows/scrnaseq.nf:261:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scrnaseq.nf:270:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               if (!map_collection_clone.any{ it.feature_type == 'crispr' }) { map_collection_clone.add( [id: sample_id, feature_type: 'crispr', crispr: empty_file, options:[:] ] ) }
                                              ^^
   ```
 
-- Warning: `workflows/scrnaseq.nf:262:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/scrnaseq.nf:271:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               if (!map_collection_clone.any{ it.feature_type == 'cmo' })    { map_collection_clone.add( [id: sample_id, feature_type: 'cmo'   , cmo:    empty_file, options:[:] ] ) }

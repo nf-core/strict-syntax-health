@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-05-13T00:38:36.369283366Z
+- Generated: 2026-05-21T00:39:48.666637426Z
 - Nextflow version: 26.04.1
-- Summary: 51 errors, 44 warnings
+- Summary: 46 errors, 53 warnings
 
 ## :x: Errors
 
@@ -314,41 +314,6 @@
                                                     ^^^^
   ```
 
-- Error: `workflows/cageseq.nf:18:1`: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/cageseq/subworkflows/local/parameter_checks/main.nf'
-
-  ```nextflow
-  include { PARAMETER_CHECKS } from '../subworkflows/local/parameter_checks/main.nf'
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/cageseq.nf:66:9`: `PARAMETER_CHECKS` is not defined
-
-  ```nextflow
-          PARAMETER_CHECKS(ch_fasta, ch_index)
-          ^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/cageseq.nf:68:20`: `PARAMETER_CHECKS` is not defined
-
-  ```nextflow
-          ch_fasta = PARAMETER_CHECKS.out.ch_fasta
-                     ^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/cageseq.nf:69:20`: `PARAMETER_CHECKS` is not defined
-
-  ```nextflow
-          ch_index = PARAMETER_CHECKS.out.ch_index
-                     ^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/cageseq.nf:70:20`: `PARAMETER_CHECKS` is not defined
-
-  ```nextflow
-          ch_fastq = PARAMETER_CHECKS.out.ch_fastq
-                     ^^^^^^^^^^^^^^^^
-  ```
-
 - Error: `workflows/cageseq.nf:122:17`: Variables in a closure should be declared with `def`
 
   ```nextflow
@@ -475,6 +440,69 @@
   ```nextflow
           .map { create_sample_channel(it) }
                                        ^^
+  ```
+
+- Warning: `subworkflows/local/parameter_checks/main.nf:23:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+              input_handler = Channel.fromPath(params.input, checkIfExists: true)
+                              ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/parameter_checks/main.nf:29:45`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  .map { create_fastq_channel(it) }
+                                              ^^
+  ```
+
+- Warning: `subworkflows/local/parameter_checks/main.nf:43:43`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          sample_meta = ch_fastq.map{ meta, fastq ->
+                                            ^^^^^
+  ```
+
+- Warning: `subworkflows/local/parameter_checks/main.nf:47:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+          ch_genome_name = Channel.of(params.genome_name)
+                           ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/parameter_checks/main.nf:53:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+              ch_pre_idx = Channel.fromPath(params.index, checkIfExists: true)
+                           ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/parameter_checks/main.nf:56:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+                  ch_pre_fa = Channel.fromPath(params.genome, checkIfExists: true)
+                              ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/parameter_checks/main.nf:59:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+                  ch_fasta = Channel.empty()
+                             ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/parameter_checks/main.nf:62:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+              ch_pre_fa = Channel.fromPath(params.genome, checkIfExists: true)
+                          ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/parameter_checks/main.nf:64:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+              ch_index = Channel.empty()
+                         ^^^^^^^
   ```
 
 - Warning: `subworkflows/local/prepare_cager_metadata/main.nf:18:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead

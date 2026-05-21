@@ -1,108 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-05-20T00:43:09.970942462Z
+- Generated: 2026-05-21T00:41:27.643901957Z
 - Nextflow version: 26.04.1
-- Summary: 14 errors, 50 warnings
-
-## :x: Errors
-
-- Error: `main.nf:19:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/mhcquant/subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf'
-
-  ```nextflow
-  include { PIPELINE_INITIALISATION } from './subworkflows/local/utils_nfcore_mhcquant_pipeline'
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `main.nf:20:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/mhcquant/subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf'
-
-  ```nextflow
-  include { PIPELINE_COMPLETION     } from './subworkflows/local/utils_nfcore_mhcquant_pipeline'
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `main.nf:60:5`: `PIPELINE_INITIALISATION` is not defined
-
-  ```nextflow
-      PIPELINE_INITIALISATION (
-      ^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `main.nf:76:9`: `PIPELINE_INITIALISATION` is not defined
-
-  ```nextflow
-          PIPELINE_INITIALISATION.out.samplesheet,
-          ^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `main.nf:77:9`: `PIPELINE_INITIALISATION` is not defined
-
-  ```nextflow
-          PIPELINE_INITIALISATION.out.fasta
-          ^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `main.nf:82:5`: `PIPELINE_COMPLETION` is not defined
-
-  ```nextflow
-      PIPELINE_COMPLETION (
-      ^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `modules/local/ms2rescore/main.nf:11:5`: Invalid process directive
-
-  ```nextflow
-      containerOptions = (workflow.containerEngine == 'docker') ? '-u $(id -u) -e "HOME=${HOME}" -v /etc/passwd:/etc/passwd:ro -v /etc/shadow:/etc/shadow:ro -v /etc/group:/etc/group:ro -v $HOME:$HOME' : ''
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/quant/main.nf:18:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
-
-  ```nextflow
-  def sortById = { a, b -> a.id <=> b.id }
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/quant/main.nf:77:30`: `mzml` is already declared
-
-  ```nextflow
-                  .map { meta, mzml, idxml -> [ groupKey([id: "${meta.sample}_${meta.condition}"], meta.group_count), meta, mzml, idxml] }
-                               ^^^^
-  ```
-
-- Error: `subworkflows/local/quant/main.nf:79:42`: `mzml` is already declared
-
-  ```nextflow
-                  .map { group_meta, meta, mzml, idxml -> [group_meta, meta, mzml, idxml] }
-                                           ^^^^
-  ```
-
-- Error: `subworkflows/local/quant/main.nf:81:42`: `mzml` is already declared
-
-  ```nextflow
-                  .map { group_meta, meta, mzml, idxml, merged_idxml -> [meta, mzml, idxml, merged_idxml] }
-                                           ^^^^
-  ```
-
-- Error: `subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:299:52`: Unexpected input: '/'
-
-  ```nextflow
-          def cliOverride = (workflow.commandLine =~ /--${key}[\s=]/).find()
-                                                     ^
-  ```
-
-- Error: `workflows/mhcquant.nf:45:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/mhcquant/subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf'
-
-  ```nextflow
-  include { methodsDescriptionText                         } from '../subworkflows/local/utils_nfcore_mhcquant_pipeline'
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/mhcquant.nf:276:9`: `methodsDescriptionText` is not defined
-
-  ```nextflow
-          methodsDescriptionText(ch_multiqc_custom_methods_description))
-          ^^^^^^^^^^^^^^^^^^^^^^
-  ```
+- Summary: 57 warnings
 
 ## :warning: Warnings
 
@@ -295,59 +195,38 @@
                      ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/process_feature/main.nf:23:29`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                      single: it[1].size() == 1
-                              ^^
-  ```
-
-- Warning: `subworkflows/local/process_feature/main.nf:24:31`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                      multiple: it[1].size() > 1
-                                ^^
-  ```
-
-- Warning: `subworkflows/local/quant/main.nf:18:5`: Variable was declared but not used
-
-  ```nextflow
-  def sortById = { a, b -> a.id <=> b.id }
-      ^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/quant/main.nf:33:24`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/quant/main.nf:30:24`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .flatMap { group_meta, idxmls -> [idxmls].flatten().collect { idxml -> [[spectra: idxml.baseName], idxml] } }
                          ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/quant/main.nf:36:32`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/quant/main.nf:33:32`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                       .flatMap { group_meta, metas -> metas }
                                  ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/quant/main.nf:38:20`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/quant/main.nf:35:20`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map { spectra, idxmls, meta -> [meta, idxmls] }
                      ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/quant/main.nf:53:20`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/quant/main.nf:50:20`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map { group_meta, meta, idxml, q_value -> [meta, idxml, q_value] }
                      ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/quant/main.nf:81:24`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/quant/main.nf:78:24`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-                  .map { group_meta, meta, mzml, idxml, merged_idxml -> [meta, mzml, idxml, merged_idxml] }
+                  .map { group_meta, meta, aligned_mzml, idxml, merged_idxml -> [meta, aligned_mzml, idxml, merged_idxml] }
                          ^^^^^^^^^^
   ```
 
@@ -370,6 +249,76 @@
   ```nextflow
               non_empty: it[1].countLines() > 130
                          ^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:33:5`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      monochrome_logs   // boolean: Do not use coloured log outputs
+      ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:36:5`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      input             //  string: Path to input samplesheet
+      ^^^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:156:28`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .map { group_meta, metas, files, fastas -> [group_meta, files.size()] }
+                             ^^^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:156:42`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .map { group_meta, metas, files, fastas -> [group_meta, files.size()] }
+                                           ^^^^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:158:16`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .map { group_meta, group_count, meta, file, fasta ->
+                 ^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:166:28`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .map { meta, file, fasta, presetsMap ->
+                             ^^^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:179:19`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              .map{ meta, file, fasta -> fasta }
+                    ^^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:179:25`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              .map{ meta, file, fasta -> fasta }
+                          ^^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:191:51`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          ch_fasta = ch_samplesheet_raw.map { meta, file, fasta -> [groupKey([id: "${meta.sample}_${meta.condition}"], meta.group_count), fasta] }
+                                                    ^^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:193:20`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              .map { meta, fasta -> fasta }
+                     ^^^^
   ```
 
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used

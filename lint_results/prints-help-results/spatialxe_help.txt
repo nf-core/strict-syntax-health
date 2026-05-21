@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.04.1
 
-Launching `./main.nf` [serene_turing] revision: 2da4cbd273
+Launching `./main.nf` [lonely_archimedes] revision: dc5c524030
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'

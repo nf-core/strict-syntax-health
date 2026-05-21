@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-03-25T00:24:09.826144640Z
-- Nextflow version: 26.03.0-edge
-- Summary: 87 warnings
+- Generated: 2026-05-21T00:40:38.715975355Z
+- Nextflow version: 26.04.1
+- Summary: 86 warnings
 
 ## :warning: Warnings
 
@@ -391,224 +391,217 @@
       ^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_funcscan_pipeline/main.nf:31:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      monochrome_logs // boolean: Do not use coloured log outputs
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_funcscan_pipeline/main.nf:102:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/utils_nfcore_funcscan_pipeline/main.nf:108:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       Channel
       ^^^^^^^
   ```
 
-- Warning: `workflows/funcscan.nf:75:25`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/funcscan.nf:73:25`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               compressed: it[1].toString().endsWith('.gz')
                           ^^
   ```
 
-- Warning: `workflows/funcscan.nf:76:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/funcscan.nf:74:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               uncompressed: it[1]
                             ^^
   ```
 
-- Warning: `workflows/funcscan.nf:88:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/funcscan.nf:86:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def fasta_found = files.find { it.toString().tokenize('.').last().matches('fasta|fas|fna|fa') }
                                              ^^
   ```
 
-- Warning: `workflows/funcscan.nf:89:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/funcscan.nf:87:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def faa_found = files.find { it.toString().endsWith('.faa') }
                                            ^^
   ```
 
-- Warning: `workflows/funcscan.nf:90:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/funcscan.nf:88:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def gff_found = files.find { it.toString().endsWith('.gff') }
                                            ^^
   ```
 
-- Warning: `workflows/funcscan.nf:91:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/funcscan.nf:89:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def gbk_found = files.find { it.toString().tokenize('.').last().matches('gbk|gbff') }
                                            ^^
   ```
 
-- Warning: `workflows/funcscan.nf:99:19`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/funcscan.nf:97:19`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .branch { meta, fasta, faa, gff, gbk ->
                     ^^^^
   ```
 
-- Warning: `workflows/funcscan.nf:99:25`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/funcscan.nf:97:25`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .branch { meta, fasta, faa, gff, gbk ->
                           ^^^^^
   ```
 
-- Warning: `workflows/funcscan.nf:99:32`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/funcscan.nf:97:32`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .branch { meta, fasta, faa, gff, gbk ->
                                  ^^^
   ```
 
-- Warning: `workflows/funcscan.nf:107:75`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/funcscan.nf:105:75`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           SEQKIT_SEQ_LENGTH(ch_intermediate_input.fastas.map { meta, fasta, faa, gff, gbk -> [meta, fasta] })
                                                                             ^^^
   ```
 
-- Warning: `workflows/funcscan.nf:107:80`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/funcscan.nf:105:80`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           SEQKIT_SEQ_LENGTH(ch_intermediate_input.fastas.map { meta, fasta, faa, gff, gbk -> [meta, fasta] })
                                                                                  ^^^
   ```
 
-- Warning: `workflows/funcscan.nf:107:85`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/funcscan.nf:105:85`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           SEQKIT_SEQ_LENGTH(ch_intermediate_input.fastas.map { meta, fasta, faa, gff, gbk -> [meta, fasta] })
                                                                                       ^^^
   ```
 
-- Warning: `workflows/funcscan.nf:109:33`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/funcscan.nf:107:33`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map { meta, fasta, protein, gff, gbk -> [meta, fasta] }
                                   ^^^^^^^
   ```
 
-- Warning: `workflows/funcscan.nf:109:42`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/funcscan.nf:107:42`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map { meta, fasta, protein, gff, gbk -> [meta, fasta] }
                                            ^^^
   ```
 
-- Warning: `workflows/funcscan.nf:109:47`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/funcscan.nf:107:47`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map { meta, fasta, protein, gff, gbk -> [meta, fasta] }
                                                 ^^^
   ```
 
-- Warning: `workflows/funcscan.nf:120:83`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/funcscan.nf:118:83`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          ch_input_for_annotation = ch_intermediate_input.fastas.map { meta, fasta, protein, gff, gbk  -> [meta, fasta] }
+          ch_input_for_annotation = ch_intermediate_input.fastas.map { meta, fasta, protein, gff, gbk -> [meta, fasta] }
                                                                                     ^^^^^^^
   ```
 
-- Warning: `workflows/funcscan.nf:120:92`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/funcscan.nf:118:92`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          ch_input_for_annotation = ch_intermediate_input.fastas.map { meta, fasta, protein, gff, gbk  -> [meta, fasta] }
+          ch_input_for_annotation = ch_intermediate_input.fastas.map { meta, fasta, protein, gff, gbk -> [meta, fasta] }
                                                                                              ^^^
   ```
 
-- Warning: `workflows/funcscan.nf:120:97`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/funcscan.nf:118:97`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          ch_input_for_annotation = ch_intermediate_input.fastas.map { meta, fasta, protein, gff, gbk  -> [meta, fasta] }
+          ch_input_for_annotation = ch_intermediate_input.fastas.map { meta, fasta, protein, gff, gbk -> [meta, fasta] }
                                                                                                   ^^^
   ```
 
-- Warning: `workflows/funcscan.nf:143:25`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/funcscan.nf:140:64`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .filter { meta, fasta, faa, gff, gbk -> meta.category != 'long' }
-                          ^^^^^
+      ch_new_annotation_short = ch_new_annotation.filter { meta, fasta, faa, gff, gbk -> meta.category != 'long' }
+                                                                 ^^^^^
   ```
 
-- Warning: `workflows/funcscan.nf:143:32`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/funcscan.nf:140:71`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .filter { meta, fasta, faa, gff, gbk -> meta.category != 'long' }
-                                 ^^^
+      ch_new_annotation_short = ch_new_annotation.filter { meta, fasta, faa, gff, gbk -> meta.category != 'long' }
+                                                                        ^^^
   ```
 
-- Warning: `workflows/funcscan.nf:143:37`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/funcscan.nf:140:76`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .filter { meta, fasta, faa, gff, gbk -> meta.category != 'long' }
-                                      ^^^
+      ch_new_annotation_short = ch_new_annotation.filter { meta, fasta, faa, gff, gbk -> meta.category != 'long' }
+                                                                             ^^^
   ```
 
-- Warning: `workflows/funcscan.nf:143:42`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/funcscan.nf:140:81`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .filter { meta, fasta, faa, gff, gbk -> meta.category != 'long' }
-                                           ^^^
+      ch_new_annotation_short = ch_new_annotation.filter { meta, fasta, faa, gff, gbk -> meta.category != 'long' }
+                                                                                  ^^^
   ```
 
-- Warning: `workflows/funcscan.nf:167:29`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/funcscan.nf:166:29`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .filter { meta, fasta, faa, gff, gbk -> meta.category == 'long' }
                               ^^^^^
   ```
 
-- Warning: `workflows/funcscan.nf:167:36`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/funcscan.nf:166:36`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .filter { meta, fasta, faa, gff, gbk -> meta.category == 'long' }
                                      ^^^
   ```
 
-- Warning: `workflows/funcscan.nf:167:41`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/funcscan.nf:166:41`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .filter { meta, fasta, faa, gff, gbk -> meta.category == 'long' }
                                           ^^^
   ```
 
-- Warning: `workflows/funcscan.nf:167:46`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/funcscan.nf:166:46`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .filter { meta, fasta, faa, gff, gbk -> meta.category == 'long' }
                                                ^^^
   ```
 
-- Warning: `workflows/funcscan.nf:191:9`: Variable was declared but not used
+- Warning: `workflows/funcscan.nf:190:9`: Variable was declared but not used
 
   ```nextflow
           ch_mmseqs_db = channel.empty()
           ^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/funcscan.nf:192:9`: Variable was declared but not used
+- Warning: `workflows/funcscan.nf:191:9`: Variable was declared but not used
 
   ```nextflow
           ch_taxonomy_querydb = channel.empty()
           ^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/funcscan.nf:193:9`: Variable was declared but not used
+- Warning: `workflows/funcscan.nf:192:9`: Variable was declared but not used
 
   ```nextflow
           ch_taxonomy_querydb_taxdb = channel.empty()
           ^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/funcscan.nf:465:88`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/funcscan.nf:438:88`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(ANNOTATION.out.multiqc_files.collect { it[1] })

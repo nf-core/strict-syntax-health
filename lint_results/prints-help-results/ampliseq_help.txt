@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.04.1
 
 Downloading plugin nf-schema@2.5.1
-Launching `./main.nf` [maniac_knuth] revision: be54f69b2e
+Launching `./main.nf` [extravagant_williams] revision: be54f69b2e
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -159,6 +159,19 @@ silva=132, rdp, rdp=18, greengenes, greengenes=13.5, standard, standard=20240904
 unite-fungi, unite-fungi=10.0, unite-fungi=9.0, unite-fungi=8.3, ...)  
   --sintax_ref_tax_custom                  [string]  Path to a custom SINTAX reference database (fasta) 
   --sintax_assign_taxlevels                [string]  Comma separated list of taxonomic levels used in SINTAX with a custom reference database 
+  --vsearch_lca_ref_tax_custom             [string]  Path to a custom VSEARCH LCA reference database (SINTAX-compatible FASTA) 
+  --vsearch_lca_ref_taxonomy               [string]  Name of built-in VSEARCH LCA reference database, and optionally also version number  (accepted: 
+coidb, coidb=221216, midori2-co1, midori2-co1=gb270, unite-fungi, unite-fungi=10.0, unite-fungi=9.0, 
+...)  
+  --vsearch_lca_assign_taxlevels           [string]  Comma separated list of taxonomic levels for VSEARCH LCA with a custom reference database 
+  --vsearch_lca_id                         [number]  VSEARCH usearch_global identity cutoff (`--id`) used for VSEARCH LCA. [default: 0.9] 
+  --vsearch_lca_maxaccepts                 [integer] Maximum number of target sequences to accept per query for VSEARCH LCA (`--maxaccepts`). 
+[default: 0]  
+  --vsearch_lca_maxrejects                 [integer] Maximum number of non-matching target sequences to reject per query for VSEARCH LCA 
+(`--maxrejects`). [default: 0]  
+  --vsearch_lca_lca_cutoff                 [number]  LCA support threshold for VSEARCH LCA (`--lca_cutoff`). [default: 0.9] 
+  --vsearch_lca_query_cov                  [number]  Minimum fraction of the query that must align to a target for VSEARCH LCA (`--query_cov`). 
+[default: 1.0]  
   --addsh                                  [boolean] If ASVs should be assigned to UNITE species hypotheses (SHs). Only relevant for ITS data. 
   --cut_its                                [string]  Part of ITS region to use for taxonomy assignment: "full", "its1", or "its2"  (accepted: none, 
 full, its1, its2) [default: none]  

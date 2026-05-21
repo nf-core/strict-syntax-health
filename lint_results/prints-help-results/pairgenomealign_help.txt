@@ -1,0 +1,82 @@
+$ NXF_SYNTAX_PARSER=v2 nextflow run . --help
+
+
+ N E X T F L O W   ~  version 26.04.1
+
+Launching `./main.nf` [ridiculous_kowalevski] revision: 46ce8725e3
+
+WARN: Unrecognized config option 'validation.defaultIgnoreParams'
+WARN: Unrecognized config option 'validation.monochromeLogs'
+
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/pairgenomealign 2.2.3
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/pairgenomealign -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input                       [string]  Path to comma-separated file containing information about the samples in the experiment. 
+  --target                      [string]  Path or URL to a FASTA genome file for the _target_ genome. 
+  --targetName                  [string]  Target genome name. [default: target] 
+  --skip_assembly_qc            [boolean] Skip assembly QC. [default: false] 
+  --outdir                      [string]  The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --email                       [string]  Email address for completion summary. 
+  --multiqc_title               [string]  MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+
+Indexing options
+  --seed                        [string] Select the LAST seed to index the _target_ genome.  (accepted: YASS, NEAR, MAM4, MAM8, RY4, RY8, 
+RY16, RY32, RY64, RY128) [default: YASS]  
+  --softmask                    [string] Customise the way to mask the _target_ genome.  (accepted: tantan, original) [default: tantan] 
+ 
+
+Alignment options
+  --export_aln_to               [string]  Convert the final _one-to-one_ alignment to a different format than MAF. [default: no_export] 
+ 
+  --m2m                         [boolean] Make a many to many alignment 
+  --lastal_params               [string]  Path to a file containing alignment parameters or a scoring matrix. If this option is used, 
+`last-train` will be skipped and alignment parameters will be the same for each query.  
+  --lastal_args                 [string]  Arguments passed to both `last-train` and `lastal`. [default: -C2 -D1e9] 
+  --lastal_extr_args            [string]  Arguments passed only to `lastal` (useful when they are not recognised by `last-train`). 
+  --last_split_mismap           [string]  Mismap probability cutoff for `last-split`. [default: 0.00001] 
+
+Dotplot parameters
+  --dotplot_width               [integer] Maximum width of the dot plots, in pixels. [default: 1000] 
+  --dotplot_height              [integer] Maximum height of the dot plots, in pixels. [default: 10000] 
+  --dotplot_font_size           [integer] Font size of the sequence names on the dot plots. [default: 14] 
+  --dotplot_options             [string]  Extra arguments passed to `last-dotplot` to customise the output. See 
+<https://gitlab.com/mcfrith/last/-/blob/main/doc/last-dotplot.rst>.  
+  --skip_dotplot_o2m            [boolean] Do not generate the one-to-many alignment dot-plot. 
+  --skip_dotplot_o2o            [boolean] Do not generate the one-to-one alignment dot-plot. 
+  --skip_dotplot_m2o            [boolean] Do not generate the many-to-one alignment dot-plot. 
+  --skip_dotplot_m2m            [boolean] Do not generate the many-to-many alignment dot-plot. 
+  --dotplot_filter              [boolean] Remove isolated alignments with the `maf-filter` tool. 
+
+Reference genome options
+  --genome                      [string] Name of iGenomes reference. 
+  --fasta                       [string] Path to FASTA genome file. 
+
+Generic options
+  --multiqc_methods_description [string]          Custom MultiQC yaml file containing HTML including a methods description. 
+  --help                        [boolean, string] Display the help message. 
+  --help_full                   [boolean]         Display the full detailed help message. 
+  --show_hidden                 [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 19 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/pairgenomealign/blob/master/CITATIONS.md
+
