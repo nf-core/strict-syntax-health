@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-04-21T00:33:07.425221569Z
-- Nextflow version: 26.03.3-edge
+- Generated: 2026-05-22T00:43:10.416510529Z
+- Nextflow version: 26.04.1
 - Summary: 646 warnings
 
 ## :warning: Warnings
@@ -4451,77 +4451,77 @@
       ^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/sarek/main.nf:141:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/sarek/main.nf:138:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               bam: it[0].data_type == "bam"
                    ^^
   ```
 
-- Warning: `workflows/sarek/main.nf:142:23`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/sarek/main.nf:139:23`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               fastq_gz: it[0].data_type == "fastq_gz"
                         ^^
   ```
 
-- Warning: `workflows/sarek/main.nf:143:34`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/sarek/main.nf:140:34`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               one_fastq_gz_spring: it[0].data_type == "one_fastq_gz_spring"
                                    ^^
   ```
 
-- Warning: `workflows/sarek/main.nf:144:34`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/sarek/main.nf:141:34`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               two_fastq_gz_spring: it[0].data_type == "two_fastq_gz_spring"
                                    ^^
   ```
 
-- Warning: `workflows/sarek/main.nf:291:77`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/sarek/main.nf:288:77`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               cram_variant_calling_status_tmp = cram_variant_calling.branch { meta, file, index ->
                                                                               ^^^^
   ```
 
-- Warning: `workflows/sarek/main.nf:291:89`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/sarek/main.nf:288:89`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               cram_variant_calling_status_tmp = cram_variant_calling.branch { meta, file, index ->
                                                                                           ^^^^^
   ```
 
-- Warning: `workflows/sarek/main.nf:311:75`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/sarek/main.nf:308:75`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           cram_variant_calling_status = cram_variant_calling.branch { meta, file, index ->
                                                                             ^^^^
   ```
 
-- Warning: `workflows/sarek/main.nf:311:81`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/sarek/main.nf:308:81`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           cram_variant_calling_status = cram_variant_calling.branch { meta, file, index ->
                                                                                   ^^^^^
   ```
 
-- Warning: `workflows/sarek/main.nf:317:73`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/sarek/main.nf:314:73`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           bam_variant_calling_status = bam_variant_calling.branch { meta, file, index ->
                                                                           ^^^^
   ```
 
-- Warning: `workflows/sarek/main.nf:317:79`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/sarek/main.nf:314:79`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           bam_variant_calling_status = bam_variant_calling.branch { meta, file, index ->
                                                                                 ^^^^^
   ```
 
-- Warning: `workflows/sarek/main.nf:703:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/sarek/main.nf:704:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def InputStream gzipStream = new java.util.zip.GZIPInputStream(it)

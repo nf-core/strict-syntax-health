@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-05-21T00:40:38.715975355Z
+- Generated: 2026-05-22T00:40:48.274893356Z
 - Nextflow version: 26.04.1
-- Summary: 86 warnings
+- Summary: 80 warnings
 
 ## :warning: Warnings
 
@@ -147,41 +147,6 @@
   ```
 
 - Warning: `modules/nf-core/pyrodigal/main.nf:48:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/rundbcan/cazymeannotation/main.nf:47:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/rundbcan/database/main.nf:17:9`: Variable was declared but not used
-
-  ```nextflow
-      def args   = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/rundbcan/database/main.nf:30:9`: Variable was declared but not used
-
-  ```nextflow
-      def args        = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/rundbcan/easycgc/main.nf:63:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/rundbcan/easysubstrate/main.nf:71:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
@@ -363,21 +328,14 @@
                                                ^^
   ```
 
-- Warning: `subworkflows/local/cazyme.nf:18:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/cazyme.nf:28:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/cazyme.nf:25:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_dbcan_db = Channel
                         ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/cazyme.nf:48:33`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/cazyme.nf:43:33`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   .filter { meta, faa, gff ->
@@ -601,7 +559,7 @@
           ^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/funcscan.nf:438:88`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/funcscan.nf:437:88`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(ANNOTATION.out.multiqc_files.collect { it[1] })

@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "77a353f5f9a174e9ddfc6aa4846d1e51ed0bdfd9",
+  "_repo_commit": "e86b866e3d7432a8e154604e2e1feef6c0107429",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -6606,6 +6606,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "octopusv_merge": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/octopusv/merge",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "odgi_build": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/odgi/build",
     "errors": 0,
@@ -7670,6 +7676,12 @@
   },
   "pridepy_fetchsdrf": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pridepy/fetchsdrf",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "primerprospector_analyzeprimers": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/primerprospector/analyzeprimers",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -10718,6 +10730,12 @@
   },
   "vireo": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/vireo",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "virusrecom": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/virusrecom",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

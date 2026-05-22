@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-05-21T00:43:09.610685328Z
+- Generated: 2026-05-22T00:44:07.161155694Z
 - Nextflow version: 26.04.1
-- Summary: 6 warnings
+- Summary: 4 warnings
 
 ## :warning: Warnings
 
@@ -32,18 +32,4 @@
   ```nextflow
       return ch_versions.unique().map { version -> processVersionsFromYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
                                                                                                    ^^^^^^^
-  ```
-
-- Warning: `workflows/spatialxe.nf:208:88`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          def missing_required = bundle_required_files.findAll { !file("${bundle_path}/${it}").exists() }
-                                                                                         ^^
-  ```
-
-- Warning: `workflows/spatialxe.nf:213:88`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          def missing_optional = bundle_optional_files.findAll { !file("${bundle_path}/${it}").exists() }
-                                                                                         ^^
   ```
