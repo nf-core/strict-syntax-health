@@ -1,12 +1,127 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.04.1
+ N E X T F L O W   ~  version 26.04.2
 
-Launching `./main.nf` [wise_wiles] revision: 9c66ede854
+Launching `./main.nf` [soggy_fermat] revision: 05841bf155
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
-ERROR ~ Unable to create help message: Specified param 'true' does not exist in JSON schema.
 
- -- Check script 'subworkflows/nf-core/utils_nfschema_plugin/main.nf' at line: 41 or see '.nextflow.log' file for more details
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/mhcquant 3.2.0
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/mhcquant -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input                       [string] Input: samplesheet TSV, SDRF file (.sdrf.tsv), or PRIDE accession (PXD...) 
+  --outdir                      [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --email                       [string] Email address for completion summary. 
+  --multiqc_title               [string] MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+
+Database Options
+  --fasta                       [string]  Input FASTA protein database 
+  --skip_decoy_generation       [boolean] Add this parameter when you want to skip the generation of the decoy database. [default: false] 
+ 
+
+Spectrum preprocessing
+  --run_centroidisation         [boolean] Include the flag when the specified ms level is not centroided (default=false).  [default: 
+false]  
+  --pick_ms_levels              [integer] Specify the MS levels for which the peak picking is applied (unless you use 
+`--run_centroidisation`). [default: 2]  
+  --filter_mzml                 [boolean] Clean up spectrum files and remove artificial charge 0 peptides. [default: false] 
+
+Database Search Settings
+  --instrument                  [string]  Comets theoretical_fragment_ions parameter: theoretical fragment ion peak representation, high_res: 
+sum of intensities plus flanking bins, ion trap (low_res) ms/ms: sum of intensities of central M bin 
+only  (accepted: high_res, low_res) [default: high_res]  
+  --activation_method           [string]  Specify which fragmentation method was used in the MS acquisition  (accepted: ALL, CID, ECD, 
+ETD, PQD, HCD, IRMPD) [default: ALL]  
+  --digest_mass_range           [string]  Specify the mass range in Dalton that peptides should fulfill to be considered for peptide spectrum 
+matching. [default: 800:2500]  
+  --prec_charge                 [string]  Specify the precursor charge range that peptides should fulfill to be considered for peptide 
+spectrum matching. [default: 2:3]  
+  --precursor_mass_tolerance    [integer] Specify the precursor mass tolerance to be used for the Comet database search. [default: 5] 
+  --precursor_error_units       [string]  Specify the unit of the precursor mass tolerance to be used for the Comet database search.  
+(accepted: ppm, Da, amu) [default: ppm]  
+  --fragment_bin_offset         [number]  Specify the fragment bin offset to be used for the comet database search. [default: 0.0] 
+  --fragment_mass_tolerance     [number]  Specify the fragment mass tolerance to be used for the comet database search. [default: 0.01] 
+ 
+  --number_mods                 [integer] Specify the maximum number of modifications that should be contained in a peptide sequence match. 
+[default: 3]  
+  --fixed_mods                  [string]  Specify which fixed modifications should be applied to the database search 
+  --variable_mods               [string]  Specify which variable modifications should be applied to the database search [default: 
+Oxidation (M)]  
+  --num_hits                    [integer] Specify the number of hits that should be reported for each spectrum. [default: 1] 
+  --use_x_ions                  [boolean] Include x ions into the peptide spectrum matching [default: false] 
+  --use_z_ions                  [boolean] Include z ions into the peptide spectrum matching [default: false] 
+  --use_a_ions                  [boolean] Include a ions into the peptide spectrum matching [default: false] 
+  --use_c_ions                  [boolean] Include c ions into the peptide spectrum matching [default: false] 
+  --use_NL_ions                 [boolean] Include NL ions into the peptide spectrum matching [default: false] 
+  --remove_precursor_peak       [boolean] Include if you want to remove all peaks around precursor m/z [default: false] 
+  --search_presets              [string]  TSV file with search parameter presets. Users can supply a custom file to define their own presets. 
+ 
+
+Rescoring settings
+  --rescoring_engine            [string]  Specify the rescoring engine that should be used for rescoring. Either percolator or mokapot  
+(accepted: percolator, mokapot) [default: percolator]  
+  --feature_generators          [string]  Specify the feature generator that should be used for rescoring. One or multiple of 
+basic,ms2pip,deeplc,ionmob [default: deeplc,ms2pip]  
+  --ms2pip_model                [string]  Specify the MS²PIP model that should be used for rescoring. Checkout the MS²PIP documentation for 
+available models.  (accepted: Immuno-HCD, timsTOF, timsTOF2023, CID, CIDch2, CID-TMT, TMT, HCD, 
+HCDch2, TTOF5600, iTRAQ, ...) [default: Immuno-HCD]  
+  --fdr_level                   [string]  Specify the level at which the false discovery rate should be computed.  (accepted: 
+peptide_level_fdrs, psm_level_fdrs, protein_level_fdrs) [default: peptide_level_fdrs]  
+  --fdr_threshold               [number]  Specify the false discovery rate threshold at which peptide hits should be selected. [default: 
+0.01]  
+  --global_fdr                  [boolean] Compute global FDR and backfilter sample-specific FDRs [default: false] 
+
+Quantification Options
+  --quantify                    [boolean] Turn on quantification mode [default: false] 
+  --max_rt_alignment_shift      [integer] Set a maximum retention time shift for the linear RT alignment [default: 300] 
+
+Post Processing
+  --peptide_min_length          [integer] Specify the minimum length of peptides to be considered after processing [default: 8] 
+  --peptide_max_length          [integer] Specify the maximum length of peptides to be considered after processing [default: 12] 
+  --generate_speclib            [boolean] Generate a spectral library from the search results. If `global_fdr` is specified, an additional 
+global FDR-filtered library is generated from all MSruns in the samplesheet. [default: false] 
+ 
+  --annotate_ions               [boolean] Create tsv files containing information about the MS2 ion annotations after processing. 
+[default: false]  
+
+Epicore Options
+  --epicore                     [boolean] Compute core epitopes from overlapping peptides. [default: false] 
+  --epicore_min_overlap         [integer] Specify the minimal overlap of two peptides so they are grouped together. [default: 11] 
+  --epicore_max_step_size       [integer] Specify the maximal difference between the start position of two peptides so they are still grouped 
+together. [default: 5]  
+  --epicore_min_epi_length      [integer] Specify the minimal length of an core epitope. [default: 11] 
+
+Generic options
+  --multiqc_methods_description [string]          Custom MultiQC yaml file containing HTML including a methods description. 
+  --help                        [boolean, string] Display the help message. 
+  --help_full                   [boolean]         Display the full detailed help message. 
+  --show_hidden                 [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 30 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The pipeline
+    https://doi.org/10.1186/s13059-025-03763-8
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/mhcquant/blob/master/CITATIONS.md
+

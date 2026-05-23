@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-05-22T00:38:15.384584075Z
-- Nextflow version: 26.04.1
-- Summary: 106 warnings
+- Generated: 2026-05-23T00:37:11.922431172Z
+- Nextflow version: 26.04.2
+- Summary: 107 warnings
 
 ## :warning: Warnings
 
@@ -207,6 +207,27 @@
   ```nextflow
                   group.properties.each { paramName, paramProps ->
                                                      ^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_config = valid_config
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/differentialabundance.nf:69:25`: Parameter was not used -- prefix with `_` to suppress warning
@@ -671,13 +692,6 @@
                                                                                                  ^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:808:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      def topic_versions = Channel.topic("versions")
-                           ^^^^^^^
-  ```
-
 - Warning: `workflows/differentialabundance.nf:862:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
@@ -739,11 +753,4 @@
   ```nextflow
           ch_report_input.input_files.map{ meta, files -> files },
                                            ^^^^
-  ```
-
-- Warning: `workflows/differentialabundance.nf:914:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          Channel.value([])
-          ^^^^^^^
   ```

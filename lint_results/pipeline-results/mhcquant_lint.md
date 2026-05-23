@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-05-21T00:41:27.643901957Z
-- Nextflow version: 26.04.1
-- Summary: 57 warnings
+- Generated: 2026-05-23T00:37:55.930390403Z
+- Nextflow version: 26.04.2
+- Summary: 52 warnings
 
 ## :warning: Warnings
 
@@ -18,6 +18,13 @@
   ```nextflow
               meta.variable_mods.trim() ? "-variable_modifications ${meta.variable_mods.tokenize(',').collect { "'${it.trim()}'" }.join(' ')}" : "",
                                                                                                                     ^^
+  ```
+
+- Warning: `main.nf:50:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      multiqc_report = MHCQUANT.out.multiqc_report // channel: /path/to/multiqc_report.html
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `modules/local/epicore/main.nf:38:9`: Variable was declared but not used
@@ -76,83 +83,6 @@
           ^^^^^^
   ```
 
-- Warning: `modules/nf-core/openms/decoydatabase/main.nf:33:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/openms/filefilter/main.nf:37:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/openms/idfilter/main.nf:38:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/openms/idfilter/main.nf:44:9`: Variable was declared but not used
-
-  ```nextflow
-      def filter = filter_file ? "${filter_citerion} ${filter_file}" : ""
-          ^^^^^^
-  ```
-
-- Warning: `modules/nf-core/openms/idmerger/main.nf:33:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/openms/idripper/main.nf:22:9`: Variable was declared but not used
-
-  ```nextflow
-      def prefix = task.ext.prefix ?: "${meta.id}"
-          ^^^^^^
-  ```
-
-- Warning: `modules/nf-core/openms/idripper/main.nf:33:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/openms/idscoreswitcher/main.nf:34:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/openms/peakpickerhires/main.nf:33:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/openms/peptideindexer/main.nf:36:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/openmsthirdparty/cometadapter/main.nf:36:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
 - Warning: `subworkflows/local/map_alignment/main.nf:22:24`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
@@ -195,6 +125,20 @@
                      ^^^^^^^^^^
   ```
 
+- Warning: `subworkflows/local/prepare_spectra/main.nf:67:9`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+          mzml = ch_mzml_file
+          ^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/process_feature/main.nf:40:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      consensusxml = OPENMS_IDCONFLICTRESOLVER.out.consensusxml
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/quant/main.nf:30:24`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
@@ -230,6 +174,13 @@
                          ^^^^^^^^^^
   ```
 
+- Warning: `subworkflows/local/quant/main.nf:87:9`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+          consensusxml = PROCESS_FEATURE.out.consensusxml
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/rescore/main.nf:56:100`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
@@ -251,156 +202,170 @@
                          ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:33:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      monochrome_logs   // boolean: Do not use coloured log outputs
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:36:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:35:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       input             //  string: Path to input samplesheet
       ^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:156:28`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:160:28`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { group_meta, metas, files, fastas -> [group_meta, files.size()] }
                              ^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:156:42`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:160:42`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { group_meta, metas, files, fastas -> [group_meta, files.size()] }
                                            ^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:158:16`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:162:16`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { group_meta, group_count, meta, file, fasta ->
                  ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:166:28`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:170:28`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { meta, file, fasta, presetsMap ->
                              ^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:179:19`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:183:19`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map{ meta, file, fasta -> fasta }
                     ^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:179:25`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:183:25`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map{ meta, file, fasta -> fasta }
                           ^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:191:51`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:195:51`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_fasta = ch_samplesheet_raw.map { meta, file, fasta -> [groupKey([id: "${meta.sample}_${meta.condition}"], meta.group_count), fasta] }
                                                     ^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:193:20`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_mhcquant_pipeline/main.nf:197:20`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map { meta, fasta -> fasta }
                      ^^^^
   ```
 
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
-      valid_config = checkConfigProvided()
-      ^^^^^^^^^^^^
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/mhcquant.nf:84:89`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_config = valid_config
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `workflows/mhcquant.nf:89:89`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(PYOPENMS_CHROMATOGRAMEXTRACTOR.out.csv.map{ meta, mzml -> mzml })
                                                                                           ^^^^
   ```
 
-- Warning: `workflows/mhcquant.nf:88:53`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/mhcquant.nf:93:53`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_clean_mzml_file.combine(ch_decoy_db.map{ meta, fasta -> [fasta] }) :
                                                       ^^^^
   ```
 
-- Warning: `workflows/mhcquant.nf:92:20`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/mhcquant.nf:97:20`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map { groupKey, meta, mzml, fasta -> [meta, mzml, fasta] }
                      ^^^^^^^^
   ```
 
-- Warning: `workflows/mhcquant.nf:99:74`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/mhcquant.nf:104:74`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           OPENMSTHIRDPARTY_COMETADAPTER.out.idxml.combine(ch_decoy_db.map{ meta, fasta -> [fasta] }) :
                                                                            ^^^^
   ```
 
-- Warning: `workflows/mhcquant.nf:103:20`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/mhcquant.nf:108:20`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map { groupKey, meta, idxml, fasta -> [meta, idxml, fasta] }
                      ^^^^^^^^
   ```
 
-- Warning: `workflows/mhcquant.nf:109:85`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/mhcquant.nf:114:85`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(OPENMS_IDMASSACCURACY.out.frag_err.map{ meta, frag_err -> frag_err })
                                                                                       ^^^^
   ```
 
-- Warning: `workflows/mhcquant.nf:113:22`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/mhcquant.nf:118:22`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { meta, idxml -> [ groupKey([id: "${meta.sample}_${meta.condition}"], meta.group_count), meta] }
                        ^^^^^
   ```
 
-- Warning: `workflows/mhcquant.nf:130:20`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/mhcquant.nf:135:20`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map { gkey, metas, mzmls, idxml ->
                      ^^^^
   ```
 
-- Warning: `workflows/mhcquant.nf:157:24`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/mhcquant.nf:162:24`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   .map { groupKey, meta, comet_idxml, fdr_filtered_idxml -> [meta, comet_idxml, fdr_filtered_idxml] }
                          ^^^^^^^^
   ```
 
-- Warning: `workflows/mhcquant.nf:223:88`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/mhcquant.nf:228:88`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           params.epicore ? EPICORE.out.stats : SUMMARIZE_RESULTS.out.epicore_input.map { meta, tsv, stats -> stats }
                                                                                          ^^^^
   ```
 
-- Warning: `workflows/mhcquant.nf:223:94`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/mhcquant.nf:228:94`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           params.epicore ? EPICORE.out.stats : SUMMARIZE_RESULTS.out.epicore_input.map { meta, tsv, stats -> stats }
                                                                                                ^^^
+  ```
+
+- Warning: `workflows/mhcquant.nf:286:10`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      emit:multiqc_report = MULTIQC.out.report.map { _meta, report -> [report] }.toList() // channel: /path/to/multiqc_report.html
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```

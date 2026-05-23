@@ -1,5 +1,14 @@
 # Nextflow lint results
 
-- Generated: 2026-05-22T00:45:36.664744+00:00
-- Nextflow version: 26.04.1
-- Summary: No issues found
+- Generated: 2026-05-23T00:40:11.029776+00:00
+- Nextflow version: 26.04.2
+- Summary: 1 warning
+
+## :warning: Warnings
+
+- Warning: `subworkflows/nf-core/h5ad_removebackground_barcodes_cellbender_anndata/main.nf:18:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      h5ad = ANNDATA_BARCODES.out.h5ad  // channel: [ val(meta), path(h5ad) ]
+      ^^^^^^^^^^
+  ```

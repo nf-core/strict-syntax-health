@@ -1,10 +1,17 @@
 # Nextflow lint results
 
-- Generated: 2026-05-21T00:41:44.627815518Z
-- Nextflow version: 26.04.1
-- Summary: 18 warnings
+- Generated: 2026-05-23T00:38:16.148619080Z
+- Nextflow version: 26.04.2
+- Summary: 22 warnings
 
 ## :warning: Warnings
+
+- Warning: `main.nf:62:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      multiqc_report = PAIRGENOMEALIGN.out.multiqc_report // channel: /path/to/multiqc_report.html
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/assemblyscan/main.nf:31:9`: Variable was declared but not used
 
@@ -109,6 +116,27 @@
   ```nextflow
       input             //  string: Path to input samplesheet
       ^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_config = valid_config
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/pairgenomealign.nf:46:31`: Parameter was not used -- prefix with `_` to suppress warning

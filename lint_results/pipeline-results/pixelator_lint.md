@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-05-20T00:43:56.112399741Z
-- Nextflow version: 26.04.1
-- Summary: 17 warnings
+- Generated: 2026-05-23T00:38:32.975494022Z
+- Nextflow version: 26.04.2
+- Summary: 21 warnings
 
 ## :warning: Warnings
 
@@ -123,4 +123,32 @@
   ```nextflow
               def files = stageFilePairs.collect { it[1] }
                                                    ^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_config = valid_config
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:76:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `workflows/pixelator.nf:109:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      versions       = ch_versions                 // channel: [ path(versions.yml) ]
+      ^^^^^^^^^^^^^^^^^^^^
   ```

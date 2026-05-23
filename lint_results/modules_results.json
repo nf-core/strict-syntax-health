@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "e86b866e3d7432a8e154604e2e1feef6c0107429",
+  "_repo_commit": "69017e77fd733fb1d8db5add7ca34570223151b5",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -1074,8 +1074,14 @@
     "warnings": 0,
     "parse_error": false
   },
-  "bigslice": {
-    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bigslice",
+  "bigslice_bigslice": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bigslice/bigslice",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "bigslice_downloaddb": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bigslice/downloaddb",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -3234,6 +3240,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "finaletoolkit_wps": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/finaletoolkit/wps",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "find_concatenate": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/find/concatenate",
     "errors": 0,
@@ -3878,6 +3890,12 @@
   },
   "gawk": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gawk",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "gcta_makegrm": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gcta/makegrm",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -4736,6 +4754,12 @@
   },
   "htseq_count": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/htseq/count",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "htslib_bgziptabix": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/htslib/bgziptabix",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -6608,6 +6632,12 @@
   },
   "octopusv_merge": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/octopusv/merge",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "octopusv_plot": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/octopusv/plot",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

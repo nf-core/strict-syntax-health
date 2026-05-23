@@ -263,9 +263,9 @@
   "differentialabundance": {
     "full_name": "nf-core/differentialabundance",
     "html_url": "https://github.com/nf-core/differentialabundance",
-    "commit": "682e76de2afb63114de3b9f2888e46d4707e234c",
+    "commit": "996a07d69d221fcf10f77f95656fa2b4e123cdb0",
     "errors": 0,
-    "warnings": 106,
+    "warnings": 107,
     "parse_error": false,
     "prints_help": true
   },
@@ -371,9 +371,9 @@
   "funcprofiler": {
     "full_name": "nf-core/funcprofiler",
     "html_url": "https://github.com/nf-core/funcprofiler",
-    "commit": "292e23195dd88fa9133200aed076900495b9cc06",
+    "commit": "385a3cbea65befc1cfbf66836fafc1fedb2849ca",
     "errors": 21,
-    "warnings": 42,
+    "warnings": 48,
     "parse_error": false,
     "prints_help": null
   },
@@ -650,11 +650,11 @@
   "mhcquant": {
     "full_name": "nf-core/mhcquant",
     "html_url": "https://github.com/nf-core/mhcquant",
-    "commit": "ecbf21e65e7aa8c840afc96d57b422a218e3517e",
+    "commit": "5b6d0d5270c141d3985c4285a5f6776ac2f10c61",
     "errors": 0,
-    "warnings": 57,
+    "warnings": 52,
     "parse_error": false,
-    "prints_help": false
+    "prints_help": true
   },
   "mitodetect": {
     "full_name": "nf-core/mitodetect",
@@ -776,9 +776,9 @@
   "pairgenomealign": {
     "full_name": "nf-core/pairgenomealign",
     "html_url": "https://github.com/nf-core/pairgenomealign",
-    "commit": "af53d2eaa838e5a09a2b040e9cd5b34ee5981e25",
+    "commit": "c252c481a637fc1d987f4436d6f60ce9191b3019",
     "errors": 0,
-    "warnings": 18,
+    "warnings": 22,
     "parse_error": false,
     "prints_help": true
   },
@@ -839,9 +839,9 @@
   "pixelator": {
     "full_name": "nf-core/pixelator",
     "html_url": "https://github.com/nf-core/pixelator",
-    "commit": "2e422bc4245086b284641e883ba006b552239073",
+    "commit": "664ea5e8327e411283a2b0bf6a8467878b69db3c",
     "errors": 0,
-    "warnings": 17,
+    "warnings": 21,
     "parse_error": false,
     "prints_help": true
   },
@@ -866,9 +866,9 @@
   "proteinfold": {
     "full_name": "nf-core/proteinfold",
     "html_url": "https://github.com/nf-core/proteinfold",
-    "commit": "12e34355f429bce58b9c62c2776fcef78ddb04a8",
+    "commit": "d4e1cb858b5313b911b219a87349b65124368a82",
     "errors": 0,
-    "warnings": 3,
+    "warnings": 7,
     "parse_error": false,
     "prints_help": true
   },

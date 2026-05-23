@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-05-13T00:39:03.070738012Z
-- Nextflow version: 26.04.1
-- Summary: 21 errors, 42 warnings
+- Generated: 2026-05-23T00:37:36.814793629Z
+- Nextflow version: 26.04.2
+- Summary: 21 errors, 48 warnings
 
 ## :x: Errors
 
@@ -155,6 +155,13 @@
 
 ## :warning: Warnings
 
+- Warning: `main.nf:47:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      multiqc_report = FUNCPROFILER.out.multiqc_report // channel: /path/to/multiqc_report.html
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `modules/local/humann/humann/main.nf:13:15`: Variable was declared but not used
 
   ```nextflow
@@ -211,6 +218,13 @@
       ^^^^^^^^^^^^^^^^^^^^^
   ```
 
+- Warning: `subworkflows/local/concatall.nf:31:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      ch_input_reads_merged
+      ^^^^^^^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/dataprep/main.nf:46:16`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
@@ -230,6 +244,13 @@
   ```nextflow
           .filter { db_meta, db_path ->
                              ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/dbprep/main.nf:61:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dbs = ch_grouped_dbs
+      ^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/profile/main.nf:63:21`: Parameter was not used -- prefix with `_` to suppress warning
@@ -344,11 +365,32 @@
       ^^^^^^^^
   ```
 
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
 
   ```nextflow
       valid_config = checkConfigProvided()
       ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_config
+      ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:69:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/funcprofiler.nf:27:5`: Variable was declared but not used

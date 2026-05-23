@@ -1,5 +1,14 @@
 # Nextflow lint results
 
-- Generated: 2026-05-22T00:45:36.665823+00:00
-- Nextflow version: 26.04.1
-- Summary: No issues found
+- Generated: 2026-05-23T00:40:11.031223+00:00
+- Nextflow version: 26.04.2
+- Summary: 1 warning
+
+## :warning: Warnings
+
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^
+  ```
