@@ -1,0 +1,75 @@
+$ NXF_SYNTAX_PARSER=v2 nextflow run . --help
+
+
+ N E X T F L O W   ~  version 26.04.2
+
+Downloading plugin nf-schema@2.5.1
+Launching `./main.nf` [sharp_kimura] revision: a5653001ad
+
+WARN: Unrecognized config option 'validation.defaultIgnoreParams'
+WARN: Unrecognized config option 'validation.monochromeLogs'
+
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/funcprofiler 1.0.0
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/funcprofiler -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input                       [string]  Path to comma-separated file containing information about the samples in the experiment. 
+  --databases                   [string]  Path to comma-separated file containing information about databases and profiling parameters for 
+each taxonomic profiler  
+  --save_untarred_databases     [boolean] Specify to save decompressed user-supplied TAR archives of databases 
+  --outdir                      [string]  The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --email                       [string]  Email address for completion summary. 
+  --multiqc_title               [string]  MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+
+Preprocessing QC options
+  --skip_preprocessing_qc       [boolean] Skip quality control step when preprocessing 
+
+Preprocessing run merging options
+  --perform_runmerging          [boolean] Turn on run merging [default: true] 
+  --save_runmerged_reads        [boolean] Save reads from samples that went through the run-merging step 
+
+Profiling options
+  --run_fmhfunprofiler          [boolean] Turn on profiling with fmhfunprofiler; Requires database to be present CSV file passed to 
+--databases  
+  --run_humann_v3               [boolean] Turn on profiling with HUMAnN3. Requires `humann_v3`-tagged database to be present CSV file passed 
+to --databases  
+  --run_humann_v4               [boolean] Turn on profiling with HUMAnN4. Requires `humann_v4`-tagged database to be present CSV file passed 
+to --databases  
+  --run_diamond                 [boolean] Turn on translated alignment with DIAMOND blastx. Requires a .dmnd database to be present in the CSV 
+file passed to --databases  
+  --humann_renorm_to_cpm        [boolean] save copies-per-million outputs from HUMAaN 
+  --run_rgi                     [boolean] Turn on profiling with RGI. Requires database to be present CSV file passed to --databases 
+[default: false]  
+  --run_mifaser                 [boolean] Turn on profiling with mi-faser. Requires database to be present CSV file passed to --databases 
+[default: false]  
+  --run_eggnogmapper            [boolean] Turn on functional annotation with EggNOG-mapper. Requires `eggnogmapper`-tagged database entries in 
+the CSV file passed to --databases [default: false]  
+
+Generic options
+  --multiqc_methods_description [string]          Custom MultiQC yaml file containing HTML including a methods description. 
+  --help                        [boolean, string] Display the help message. 
+  --help_full                   [boolean]         Display the full detailed help message. 
+  --show_hidden                 [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 17 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/funcprofiler/blob/master/CITATIONS.md
+

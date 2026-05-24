@@ -371,11 +371,11 @@
   "funcprofiler": {
     "full_name": "nf-core/funcprofiler",
     "html_url": "https://github.com/nf-core/funcprofiler",
-    "commit": "385a3cbea65befc1cfbf66836fafc1fedb2849ca",
-    "errors": 21,
-    "warnings": 48,
+    "commit": "646f37cd1d47cde795fca5c470ff5ca7fed1189b",
+    "errors": 0,
+    "warnings": 25,
     "parse_error": false,
-    "prints_help": null
+    "prints_help": true
   },
   "funcscan": {
     "full_name": "nf-core/funcscan",
@@ -1037,9 +1037,9 @@
   "scnanoseq": {
     "full_name": "nf-core/scnanoseq",
     "html_url": "https://github.com/nf-core/scnanoseq",
-    "commit": "cea013b41d2cdbeca841c2954d9cf9625de5343c",
+    "commit": "d385704a43db49159c8ed2adc0869cc7dec59918",
     "errors": 1,
-    "warnings": 1,
+    "warnings": 5,
     "parse_error": false,
     "prints_help": null
   },
