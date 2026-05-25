@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "2dc23692bd1c3a23a12cfd959808a8fe7e3c6557",
+  "_repo_commit": "e49c41bed2a652f2859a3309e6609160408c321e",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -2316,6 +2316,18 @@
     "warnings": 0,
     "parse_error": false
   },
+  "custom_clustermetrics": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/custom/clustermetrics",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "custom_clustervisualization": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/custom/clustervisualization",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "custom_dumpsoftwareversions": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/custom/dumpsoftwareversions",
     "errors": 0,
@@ -2354,6 +2366,12 @@
   },
   "custom_multiqccustombiotype": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/custom/multiqccustombiotype",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "custom_pcaclustering": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/custom/pcaclustering",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -6642,6 +6660,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "octopusv_svcf2vcf": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/octopusv/svcf2vcf",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "odgi_build": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/odgi/build",
     "errors": 0,
@@ -7704,6 +7728,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "pridepy_downloadfile": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pridepy/downloadfile",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "pridepy_fetchsdrf": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pridepy/fetchsdrf",
     "errors": 0,
@@ -8720,6 +8750,12 @@
   },
   "samtools_view": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/samtools/view",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "savana_classify": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/savana/classify",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
