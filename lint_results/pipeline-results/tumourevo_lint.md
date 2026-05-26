@@ -1,73 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-05-06T00:37:32.839072204Z
-- Nextflow version: 26.04.0
-- Summary: 9 errors, 62 warnings
-
-## :x: Errors
-
-- Error: `main.nf:35:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
-
-  ```nextflow
-  input = params.input ? Channel.fromList(samplesheetToList(params.input, "assets/schema_input.json")) : Channel.empty()
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `main.nf:65:51`: `path` is already declared
-
-  ```nextflow
-              vep_cache = UNTAR.out.untar.map{meta, path ->
-                                                    ^^^^
-  ```
-
-- Error: `main.nf:107:9`: `input` is not defined
-
-  ```nextflow
-          input
-          ^^^^^
-  ```
-
-- Error: `subworkflows/local/lifter/main.nf:24:36`: `bam` is already declared
-
-  ```nextflow
-          rds = data.map{ meta, rds, bam, bai ->
-                                     ^^^
-  ```
-
-- Error: `subworkflows/local/lifter/main.nf:28:35`: `rds` is already declared
-
-  ```nextflow
-          all_rds = data.map{ meta, rds, bam, bai ->
-                                    ^^^
-  ```
-
-- Error: `subworkflows/local/lifter/main.nf:28:40`: `bam` is already declared
-
-  ```nextflow
-          all_rds = data.map{ meta, rds, bam, bai ->
-                                         ^^^
-  ```
-
-- Error: `subworkflows/local/lifter/main.nf:35:72`: `rds` is already declared
-
-  ```nextflow
-          all_pos = GET_POSITIONS_ALL.out.all_pos.transpose().map{ meta, rds ->
-                                                                         ^^^
-  ```
-
-- Error: `workflows/tumourevo.nf:39:17`: Variables in a closure should be declared with `def`
-
-  ```nextflow
-                  n = vcf.baseName.unique().size()
-                  ^
-  ```
-
-- Error: `workflows/tumourevo.nf:42:71`: `n` is already declared
-
-  ```nextflow
-              .map { id, meta, vcf, tbi, bam, bai, cna_segs, cna_extra, n  ->
-                                                                        ^
-  ```
+- Generated: 2026-05-26T00:40:35.045133410Z
+- Nextflow version: 26.04.2
+- Summary: 59 warnings
 
 ## :warning: Warnings
 
@@ -78,95 +13,95 @@
                      ^^
   ```
 
-- Warning: `main.nf:35:1`: Variable was declared but not used
-
-  ```nextflow
-  input = params.input ? Channel.fromList(samplesheetToList(params.input, "assets/schema_input.json")) : Channel.empty()
-  ^^^^^
-  ```
-
-- Warning: `main.nf:35:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-  input = params.input ? Channel.fromList(samplesheetToList(params.input, "assets/schema_input.json")) : Channel.empty()
-                         ^^^^^^^
-  ```
-
-- Warning: `main.nf:35:104`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-  input = params.input ? Channel.fromList(samplesheetToList(params.input, "assets/schema_input.json")) : Channel.empty()
-                                                                                                         ^^^^^^^
-  ```
-
-- Warning: `main.nf:52:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:44:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_versions = Channel.empty()
                     ^^^^^^^
   ```
 
-- Warning: `main.nf:53:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:45:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       fasta = params.fasta ? Channel.fromPath(params.fasta).map{ it -> [ [id:it.baseName], it ] }.collect() : Channel.empty()
                              ^^^^^^^
   ```
 
-- Warning: `main.nf:53:109`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:45:109`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       fasta = params.fasta ? Channel.fromPath(params.fasta).map{ it -> [ [id:it.baseName], it ] }.collect() : Channel.empty()
                                                                                                               ^^^^^^^
   ```
 
-- Warning: `main.nf:54:45`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:46:45`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       drivers_table =  params.drivers_table ? Channel.fromPath(params.drivers_table).map{ it -> [ it ] }.collect() : Channel.empty()
                                               ^^^^^^^
   ```
 
-- Warning: `main.nf:54:116`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:46:116`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       drivers_table =  params.drivers_table ? Channel.fromPath(params.drivers_table).map{ it -> [ it ] }.collect() : Channel.empty()
                                                                                                                      ^^^^^^^
   ```
 
-- Warning: `main.nf:57:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:49:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ensemblvep_info = Channel.of([ [ id:"${params.vep_cache_version}_${params.vep_genome}" ], params.vep_genome, params.vep_species, params.vep_cache_version ])
                             ^^^^^^^
   ```
 
-- Warning: `main.nf:59:66`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `main.nf:51:66`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           vep_cache = ENSEMBLVEP_DOWNLOAD.out.cache.collect().map{ meta, cache -> [ cache ] }
                                                                    ^^^^
   ```
 
-- Warning: `main.nf:63:39`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:55:46`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-              path = params.vep_cache ? Channel.fromPath(params.vep_cache).map{ it -> [ [id:it.baseName], it ] }.collect() : Channel.empty()
-                                        ^^^^^^^
+              def vep_tar = params.vep_cache ? Channel.fromPath(params.vep_cache).map{ it -> [ [id:it.baseName], it ] }.collect() : Channel.empty()
+                                               ^^^^^^^
   ```
 
-- Warning: `main.nf:63:124`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `main.nf:55:131`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-              path = params.vep_cache ? Channel.fromPath(params.vep_cache).map{ it -> [ [id:it.baseName], it ] }.collect() : Channel.empty()
-                                                                                                                             ^^^^^^^
+              def vep_tar = params.vep_cache ? Channel.fromPath(params.vep_cache).map{ it -> [ [id:it.baseName], it ] }.collect() : Channel.empty()
+                                                                                                                                    ^^^^^^^
   ```
 
-- Warning: `main.nf:65:45`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `main.nf:57:45`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-              vep_cache = UNTAR.out.untar.map{meta, path ->
+              vep_cache = UNTAR.out.untar.map{meta, cache_path ->
                                               ^^^^
+  ```
+
+- Warning: `main.nf:83:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      versions = ch_versions
+      ^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `main.nf:96:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+        ? Channel.fromList(samplesheetToList(params.input, "assets/schema_input.json"))
+          ^^^^^^^
+  ```
+
+- Warning: `main.nf:97:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+        : Channel.empty()
+          ^^^^^^^
   ```
 
 - Warning: `modules/local/annotate_driver/main.nf:19:9`: Variable was declared but not used
@@ -253,6 +188,13 @@
                          ^^^^^^^
   ```
 
+- Warning: `subworkflows/local/annotation_cache_initialisation/main.nf:25:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      ensemblvep_cache
+      ^^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/formatter/main.nf:16:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -260,67 +202,11 @@
                         ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/lifter/main.nf:17:15`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/lifter/main.nf:36:70`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          out = Channel.empty()
-                ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/lifter/main.nf:18:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          ch_versions = Channel.empty()
-                        ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/lifter/main.nf:20:31`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          bam = data.map{ meta, rds, bam, bai ->
-                                ^^^
-  ```
-
-- Warning: `subworkflows/local/lifter/main.nf:20:41`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          bam = data.map{ meta, rds, bam, bai ->
-                                          ^^^
-  ```
-
-- Warning: `subworkflows/local/lifter/main.nf:24:36`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          rds = data.map{ meta, rds, bam, bai ->
-                                     ^^^
-  ```
-
-- Warning: `subworkflows/local/lifter/main.nf:24:41`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          rds = data.map{ meta, rds, bam, bai ->
-                                          ^^^
-  ```
-
-- Warning: `subworkflows/local/lifter/main.nf:28:40`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          all_rds = data.map{ meta, rds, bam, bai ->
-                                         ^^^
-  ```
-
-- Warning: `subworkflows/local/lifter/main.nf:28:45`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          all_rds = data.map{ meta, rds, bam, bai ->
-                                              ^^^
-  ```
-
-- Warning: `subworkflows/local/lifter/main.nf:35:66`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          all_pos = GET_POSITIONS_ALL.out.all_pos.transpose().map{ meta, rds ->
-                                                                   ^^^^
+          def all_pos = GET_POSITIONS_ALL.out.all_pos.transpose().map{ meta, _rds ->
+                                                                       ^^^^
   ```
 
 - Warning: `subworkflows/local/qc/main.nf:15:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -372,11 +258,32 @@
       ^^^^^
   ```
 
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
 
   ```nextflow
       valid_config = checkConfigProvided()
       ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_config
+      ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/tumourevo.nf:42:20`: Parameter was not used -- prefix with `_` to suppress warning
@@ -503,4 +410,11 @@
   ```nextflow
       rds_input = join_input.multisample.map{ meta, rds, bam, bai ->
                                                               ^^^
+  ```
+
+- Warning: `workflows/tumourevo.nf:131:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      versions = ch_collated_versions
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```

@@ -326,11 +326,11 @@
   "epitopeprediction": {
     "full_name": "nf-core/epitopeprediction",
     "html_url": "https://github.com/nf-core/epitopeprediction",
-    "commit": "54385f03d9d03f1ab6e0a9bedca5efcb241d966c",
+    "commit": "2d0cf16db9f9e791438e06dc3a9ad7f246a35cf8",
     "errors": 0,
-    "warnings": 5,
+    "warnings": 4,
     "parse_error": false,
-    "prints_help": false
+    "prints_help": true
   },
   "evexplorer": {
     "full_name": "nf-core/evexplorer",
@@ -551,9 +551,9 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "4b0783d5e06ed3d82965da1f57c18230fcb6d2e5",
+    "commit": "c5bc88fd8f4f0a47362a2e843df0991a430b0c84",
     "errors": 0,
-    "warnings": 21,
+    "warnings": 25,
     "parse_error": false,
     "prints_help": true
   },
@@ -776,7 +776,7 @@
   "pairgenomealign": {
     "full_name": "nf-core/pairgenomealign",
     "html_url": "https://github.com/nf-core/pairgenomealign",
-    "commit": "c252c481a637fc1d987f4436d6f60ce9191b3019",
+    "commit": "3f23bf386bac965e4e04405917ea07188b8ce54a",
     "errors": 0,
     "warnings": 22,
     "parse_error": false,
@@ -821,9 +821,9 @@
   "phaseimpute": {
     "full_name": "nf-core/phaseimpute",
     "html_url": "https://github.com/nf-core/phaseimpute",
-    "commit": "120398a8bb68542699308792b75e407b5021fd34",
+    "commit": "0b54a875b93964872ce17d5c9ed7ff5e9d6f7915",
     "errors": 0,
-    "warnings": 4,
+    "warnings": 22,
     "parse_error": false,
     "prints_help": false
   },
@@ -839,7 +839,7 @@
   "pixelator": {
     "full_name": "nf-core/pixelator",
     "html_url": "https://github.com/nf-core/pixelator",
-    "commit": "664ea5e8327e411283a2b0bf6a8467878b69db3c",
+    "commit": "b98f6bcbf0f2c535938b7e21d72ec19df2d8ae37",
     "errors": 0,
     "warnings": 21,
     "parse_error": false,
@@ -992,11 +992,11 @@
   "rnasplice": {
     "full_name": "nf-core/rnasplice",
     "html_url": "https://github.com/nf-core/rnasplice",
-    "commit": "6e7d805a412854d42985d4356f4e08c85a367387",
-    "errors": 49,
-    "warnings": 190,
+    "commit": "68b6d5e28217e9a53f6f367ba4c703806da2808d",
+    "errors": 0,
+    "warnings": 35,
     "parse_error": false,
-    "prints_help": null
+    "prints_help": true
   },
   "rnavar": {
     "full_name": "nf-core/rnavar",
@@ -1019,9 +1019,9 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "1f51a563b43d83c31c67f8275b21c4afa6437749",
+    "commit": "c18335086e3b2a02872d8e0c0927bc3a200de47a",
     "errors": 0,
-    "warnings": 646,
+    "warnings": 651,
     "parse_error": false,
     "prints_help": true
   },
@@ -1172,11 +1172,11 @@
   "tumourevo": {
     "full_name": "nf-core/tumourevo",
     "html_url": "https://github.com/nf-core/tumourevo",
-    "commit": "b45c74eff5d53b50063290715da3aa324dedf5e2",
-    "errors": 9,
-    "warnings": 62,
+    "commit": "f143dd2a3d1b8815dec80fa511ab6d5e9073e263",
+    "errors": 0,
+    "warnings": 59,
     "parse_error": false,
-    "prints_help": null
+    "prints_help": false
   },
   "variantbenchmarking": {
     "full_name": "nf-core/variantbenchmarking",

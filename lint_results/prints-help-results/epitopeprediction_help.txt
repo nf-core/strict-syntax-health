@@ -1,3 +1,178 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
-Error: Timeout after 120s
+
+ N E X T F L O W   ~  version 26.04.2
+
+Downloading plugin nf-co2footprint@1.0.0
+Downloading plugin nf-schema@2.5.1
+Launching `./main.nf` [jolly_woese] revision: c9d3acc699
+
+WARN: Unrecognized config option 'co2footprint.traceFile'
+WARN: Unrecognized config option 'co2footprint.summaryFile'
+WARN: Unrecognized config option 'co2footprint.reportFile'
+WARN: Unrecognized config option 'validation.monochromeLogs'
+WARN: Unrecognized config option 'validation.help.enabled'
+groovy.lang.MissingPropertyException: No such property: ansiLogObserver for class: nextflow.Session
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:68)
+	at org.codehaus.groovy.vmplugin.v8.IndyGuardsFiltersAndSignatures.unwrap(IndyGuardsFiltersAndSignatures.java:163)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.co2footprint.Logging.CustomCaptureAppender.append(CustomCaptureAppender.groovy:46)
+	at nextflow.co2footprint.Logging.CustomCaptureAppender.append(CustomCaptureAppender.groovy)
+	at ch.qos.logback.core.AppenderBase.doAppend(AppenderBase.java:85)
+	at ch.qos.logback.core.spi.AppenderAttachableImpl.appendLoopOnAppenders(AppenderAttachableImpl.java:51)
+	at ch.qos.logback.classic.Logger.appendLoopOnAppenders(Logger.java:272)
+	at ch.qos.logback.classic.Logger.callAppenders(Logger.java:259)
+	at ch.qos.logback.classic.Logger.buildLoggingEventAndAppend(Logger.java:431)
+	at ch.qos.logback.classic.Logger.filterAndLog_0_Or3Plus(Logger.java:388)
+	at ch.qos.logback.classic.Logger.info(Logger.java:589)
+	at nextflow.co2footprint.CO2FootprintFactory.create(CO2FootprintFactory.groovy:100)
+	at nextflow.Session.createObserversV1(Session.groovy:502)
+	at nextflow.Session.init(Session.groovy:470)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:119)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:442)
+	at nextflow.cli.Launcher.run(Launcher.groovy:526)
+	at nextflow.cli.Launcher.main(Launcher.groovy:686)
+groovy.lang.MissingPropertyException: No such property: ansiLogObserver for class: nextflow.Session
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:68)
+	at org.codehaus.groovy.vmplugin.v8.IndyGuardsFiltersAndSignatures.unwrap(IndyGuardsFiltersAndSignatures.java:163)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.co2footprint.Logging.CustomCaptureAppender.append(CustomCaptureAppender.groovy:46)
+	at nextflow.co2footprint.Logging.CustomCaptureAppender.append(CustomCaptureAppender.groovy)
+	at ch.qos.logback.core.AppenderBase.doAppend(AppenderBase.java:85)
+	at ch.qos.logback.core.spi.AppenderAttachableImpl.appendLoopOnAppenders(AppenderAttachableImpl.java:51)
+	at ch.qos.logback.classic.Logger.appendLoopOnAppenders(Logger.java:272)
+	at ch.qos.logback.classic.Logger.callAppenders(Logger.java:259)
+	at ch.qos.logback.classic.Logger.buildLoggingEventAndAppend(Logger.java:431)
+	at ch.qos.logback.classic.Logger.filterAndLog_0_Or3Plus(Logger.java:388)
+	at ch.qos.logback.classic.Logger.info(Logger.java:589)
+	at nextflow.co2footprint.CO2FootprintFactory.create(CO2FootprintFactory.groovy:101)
+	at nextflow.Session.createObserversV1(Session.groovy:502)
+	at nextflow.Session.init(Session.groovy:470)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:119)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:442)
+	at nextflow.cli.Launcher.run(Launcher.groovy:526)
+	at nextflow.cli.Launcher.main(Launcher.groovy:686)
+groovy.lang.MissingPropertyException: No such property: ansiLogObserver for class: nextflow.Session
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:68)
+	at org.codehaus.groovy.vmplugin.v8.IndyGuardsFiltersAndSignatures.unwrap(IndyGuardsFiltersAndSignatures.java:163)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.co2footprint.Logging.CustomCaptureAppender.append(CustomCaptureAppender.groovy:46)
+	at nextflow.co2footprint.Logging.CustomCaptureAppender.append(CustomCaptureAppender.groovy)
+	at ch.qos.logback.core.AppenderBase.doAppend(AppenderBase.java:85)
+	at ch.qos.logback.core.spi.AppenderAttachableImpl.appendLoopOnAppenders(AppenderAttachableImpl.java:51)
+	at ch.qos.logback.classic.Logger.appendLoopOnAppenders(Logger.java:272)
+	at ch.qos.logback.classic.Logger.callAppenders(Logger.java:259)
+	at ch.qos.logback.classic.Logger.buildLoggingEventAndAppend(Logger.java:431)
+	at ch.qos.logback.classic.Logger.filterAndLog_0_Or3Plus(Logger.java:388)
+	at ch.qos.logback.classic.Logger.warn(Logger.java:718)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.co2footprint.DataContainers.CIValueComputer.computeCI(CIValueComputer.groovy:110)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.co2footprint.CO2FootprintConfig.<init>(CO2FootprintConfig.groovy:109)
+	at nextflow.co2footprint.CO2FootprintFactory.create(CO2FootprintFactory.groovy:116)
+	at nextflow.Session.createObserversV1(Session.groovy:502)
+	at nextflow.Session.init(Session.groovy:470)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:119)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:442)
+	at nextflow.cli.Launcher.run(Launcher.groovy:526)
+	at nextflow.cli.Launcher.main(Launcher.groovy:686)
+groovy.lang.MissingPropertyException: No such property: ansiLogObserver for class: nextflow.Session
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:68)
+	at org.codehaus.groovy.vmplugin.v8.IndyGuardsFiltersAndSignatures.unwrap(IndyGuardsFiltersAndSignatures.java:163)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.co2footprint.Logging.CustomCaptureAppender.append(CustomCaptureAppender.groovy:46)
+	at nextflow.co2footprint.Logging.CustomCaptureAppender.append(CustomCaptureAppender.groovy)
+	at ch.qos.logback.core.AppenderBase.doAppend(AppenderBase.java:85)
+	at ch.qos.logback.core.spi.AppenderAttachableImpl.appendLoopOnAppenders(AppenderAttachableImpl.java:51)
+	at ch.qos.logback.classic.Logger.appendLoopOnAppenders(Logger.java:272)
+	at ch.qos.logback.classic.Logger.callAppenders(Logger.java:259)
+	at ch.qos.logback.classic.Logger.buildLoggingEventAndAppend(Logger.java:431)
+	at ch.qos.logback.classic.Logger.filterAndLog_1(Logger.java:406)
+	at ch.qos.logback.classic.Logger.info(Logger.java:613)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.co2footprint.DataContainers.CIDataMatrix.findCiInMatrix(CIDataMatrix.groovy:70)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.co2footprint.DataContainers.CIValueComputer.computeCI(CIValueComputer.groovy:114)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.co2footprint.CO2FootprintConfig.<init>(CO2FootprintConfig.groovy:109)
+	at nextflow.co2footprint.CO2FootprintFactory.create(CO2FootprintFactory.groovy:116)
+	at nextflow.Session.createObserversV1(Session.groovy:502)
+	at nextflow.Session.init(Session.groovy:470)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:119)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:442)
+	at nextflow.cli.Launcher.run(Launcher.groovy:526)
+	at nextflow.cli.Launcher.main(Launcher.groovy:686)
+
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/epitopeprediction 3.2.0dev
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/epitopeprediction -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input                       [string] Path to comma-separated file containing information about the samples in the experiment. 
+  --outdir                      [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --email                       [string] Email address for completion summary. 
+  --multiqc_title               [string] MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+
+Reference options
+  --genome                      [string] Path to genome, that is the variant reference fasta. Can be compressed (.gz). 
+  --genome_reference            [string] Specifies the genome reference (human: grch38, grch37, hg38, hg19; mouse: grcm39, grcm38, mm39, 
+mm10) or an Ensembl URL. [default: grch38]  
+  --proteome_reference          [string] Specifies the reference proteome fasta file that is used for self-filtering peptides derived from 
+provided genomic variants.  
+
+Peptide prediction options
+  --biomart_dump_path           [string]  Specifies the path to a local Biomart dump (CSV/TSV) for offline usage of the pipeline. 
+  --peptide_col_name            [string]  Specifies the column name in the input file that contains the peptide sequences. [default: 
+sequence]  
+  --min_peptide_length_classI   [integer] Specifies the minimum peptide length. [default: 8] 
+  --max_peptide_length_classI   [integer] Specifies the maximum peptide length. [default: 12] 
+  --min_peptide_length_classII  [integer] Specifies the minimum peptide length for MHC class II peptides. [default: 8] 
+  --max_peptide_length_classII  [integer] Specifies the maximum peptide length for MHC class II peptides. [default: 25] 
+  --tools                       [string]  Specifies the prediction tool(s) to use. [default: mhcnuggets] 
+  --wild_type                   [boolean] Specifies whether wild-type sequences should be predicted. 
+  --fasta_output                [boolean] Specifies that sequences of proteins, affected by provided variants, will be written to a FASTA 
+file. [default: false]  
+  --wide_format_output          [boolean] Specifies that the output file will be in wide format. [default: false] 
+  --binder_only                 [boolean] Filter out non-binders from the final results. [default: false] 
+
+Run optimisation
+  --split_by_variants           [boolean] Split VCF file into multiple files by number of variants. 
+  --peptides_split_maxchunks    [integer] Specifies the maximum number of peptide chunks. [default: 100] 
+  --peptides_split_minchunksize [integer] Specifies the minimum number of peptides that should be written into one chunk. [default: 5000] 
+ 
+
+External software
+  --netmhc_system               [string] Specifies the operating system in use (Linux or Darwin). This is only necessary if conda is used. 
+ (accepted: linux, darwin) [default: linux]  
+  --netmhcpan_path              [string] To use the 'netmhcpan' tool, specify the path to the original software tarball for NetMHCpan 4.0 
+here.  
+  --netmhciipan_path            [string] To use the 'netmhciipan' tool, specify the path to the original software tarball for NetMHCIIpan 3.1 
+here.  
+
+Generic options
+  --multiqc_methods_description [string]          Custom MultiQC yaml file containing HTML including a methods description. 
+  --help                        [boolean, string] Display the help message. 
+  --help_full                   [boolean]         Display the full detailed help message. 
+  --show_hidden                 [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 22 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/epitopeprediction/blob/master/CITATIONS.md
+

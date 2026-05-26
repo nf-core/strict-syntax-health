@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "e49c41bed2a652f2859a3309e6609160408c321e",
+  "_repo_commit": "e62a1ec1dcefe39a0f543528c2817ddaf6d3c099",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -9560,6 +9560,12 @@
   },
   "souporcell": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/souporcell",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "soupx": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/soupx",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
