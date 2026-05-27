@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.04.2
 
-Launching `./main.nf` [peaceful_kimura] revision: 46ce8725e3
+Launching `./main.nf` [special_lagrange] revision: 46ce8725e3
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -38,6 +38,7 @@ Indexing options
 RY16, RY32, RY64, RY128) [default: YASS]  
   --softmask                    [string] Customise the way to mask the _target_ genome.  (accepted: tantan, original) [default: tantan] 
  
+  --strand                      [string] Index both strand, or just one.  (accepted: both, forward) [default: both] 
 
 Alignment options
   --export_aln_to               [string]  Convert the final _one-to-one_ alignment to a different format than MAF. [default: no_export] 
@@ -60,6 +61,8 @@ Dotplot parameters
   --skip_dotplot_m2o            [boolean] Do not generate the many-to-one alignment dot-plot. 
   --skip_dotplot_m2m            [boolean] Do not generate the many-to-many alignment dot-plot. 
   --dotplot_filter              [boolean] Remove isolated alignments with the `maf-filter` tool. 
+  --multiqc_thumbs              [integer] Size of the alignments thumbnails in MultiQC (default 0 turns it off; 100 is a good value to start 
+with). [default: 0]  
 
 Reference genome options
   --genome                      [string] Name of iGenomes reference. 

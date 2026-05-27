@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-05-26T00:40:00.831618214Z
+- Generated: 2026-05-27T00:43:01.842430238Z
 - Nextflow version: 26.04.2
 - Summary: 651 warnings
 
@@ -2183,77 +2183,77 @@
                                              ^^^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_sentieon_dnascope/main.nf:74:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/bam_variant_calling_sentieon_dnascope/main.nf:76:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               intervals:    it[0].num_intervals > 1
                             ^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_sentieon_dnascope/main.nf:75:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/bam_variant_calling_sentieon_dnascope/main.nf:77:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               no_intervals: it[0].num_intervals <= 1
                             ^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_sentieon_dnascope/main.nf:82:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/bam_variant_calling_sentieon_dnascope/main.nf:84:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               intervals:    it[0].num_intervals > 1
                             ^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_sentieon_dnascope/main.nf:83:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/bam_variant_calling_sentieon_dnascope/main.nf:85:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               no_intervals: it[0].num_intervals <= 1
                             ^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_sentieon_dnascope/main.nf:90:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/bam_variant_calling_sentieon_dnascope/main.nf:92:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               intervals:    it[0].num_intervals > 1
                             ^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_sentieon_dnascope/main.nf:91:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/bam_variant_calling_sentieon_dnascope/main.nf:93:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               no_intervals: it[0].num_intervals <= 1
                             ^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_sentieon_dnascope/main.nf:98:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/bam_variant_calling_sentieon_dnascope/main.nf:100:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               intervals:    it[0].num_intervals > 1
                             ^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_sentieon_dnascope/main.nf:99:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/bam_variant_calling_sentieon_dnascope/main.nf:101:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               no_intervals: it[0].num_intervals <= 1
                             ^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_sentieon_dnascope/main.nf:114:20`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/bam_variant_calling_sentieon_dnascope/main.nf:117:20`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       dnascope_vcf = Channel.empty().mix(
                      ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_sentieon_dnascope/main.nf:118:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/bam_variant_calling_sentieon_dnascope/main.nf:121:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       haplotyper_tbi = Channel.empty().mix(
                        ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_sentieon_dnascope/main.nf:124:5`: Variable was declared but not used
+- Warning: `subworkflows/local/bam_variant_calling_sentieon_dnascope/main.nf:127:5`: Variable was declared but not used
 
   ```nextflow
       vcf_tbi = haplotyper_tbi.map{ meta, tbi -> [ meta - meta.subMap('num_intervals'), tbi ] }
@@ -2337,98 +2337,98 @@
                                              ^^^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:70:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:72:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               intervals:    it[0].num_intervals > 1
                             ^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:71:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:73:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               no_intervals: it[0].num_intervals <= 1
                             ^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:78:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:80:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               intervals:    it[0].num_intervals > 1
                             ^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:79:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:81:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               no_intervals: it[0].num_intervals <= 1
                             ^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:86:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:88:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               intervals:    it[0].num_intervals > 1
                             ^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:87:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:89:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               no_intervals: it[0].num_intervals <= 1
                             ^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:94:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:96:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               intervals:    it[0].num_intervals > 1
                             ^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:95:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:97:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               no_intervals: it[0].num_intervals <= 1
                             ^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:110:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:114:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       haplotyper_vcf = Channel.empty().mix(
                        ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:114:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:118:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       haplotyper_tbi = Channel.empty().mix(
                        ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:120:5`: Variable was declared but not used
+- Warning: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:124:5`: Variable was declared but not used
 
   ```nextflow
       vcf_tbi = haplotyper_tbi.map{ meta, tbi -> [ meta - meta.subMap('num_intervals'), tbi ] }
       ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:133:12`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:134:12`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       gvcf = Channel.empty().mix(
              ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:137:5`: Variable was declared but not used
+- Warning: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:138:5`: Variable was declared but not used
 
   ```nextflow
       gvcf_tbi = Channel.empty().mix(
       ^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:137:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/bam_variant_calling_sentieon_haplotyper/main.nf:138:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       gvcf_tbi = Channel.empty().mix(

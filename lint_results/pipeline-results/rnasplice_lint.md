@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-05-26T00:39:25.265556868Z
+- Generated: 2026-05-27T00:42:25.006397898Z
 - Nextflow version: 26.04.2
-- Summary: 35 warnings
+- Summary: 34 warnings
 
 ## :warning: Warnings
 
@@ -230,21 +230,14 @@
       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/rnasplice.nf:137:16`: Variable was declared but not used
-
-  ```nextflow
-          .set { ch_contrasts }
-                 ^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/rnasplice.nf:228:9`: Variable was declared but not used
+- Warning: `workflows/rnasplice.nf:229:9`: Variable was declared but not used
 
   ```nextflow
           ch_transcriptome_bam_index = BAM_SORT_STATS_SAMTOOLS.out.index
           ^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/rnasplice.nf:582:5`: Emit name should be omitted when there is only one emit
+- Warning: `workflows/rnasplice.nf:583:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
       multiqc_report = MULTIQC.out.report.map { _meta, report -> [report] }.toList()

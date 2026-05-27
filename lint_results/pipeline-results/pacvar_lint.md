@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-05-06T00:34:43.520863789Z
-- Nextflow version: 26.04.0
-- Summary: 6 errors, 32 warnings
+- Generated: 2026-05-27T00:41:12.797683043Z
+- Nextflow version: 26.04.2
+- Summary: 6 errors, 40 warnings
 
 ## :x: Errors
 
@@ -49,6 +49,13 @@
   ```
 
 ## :warning: Warnings
+
+- Warning: `main.nf:111:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      multiqc_report = PACVAR.out.multiqc_report // channel: /path/to/multiqc_report.html
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/deepvariant/main.nf:1:5`: Variable was declared but not used
 
@@ -148,6 +155,20 @@
                                               ^^^^^^^^^^^^
   ```
 
+- Warning: `subworkflows/local/repeat_characterization/main.nf:32:40`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .map { meta_fasta, fasta_file, meta_fai, fai_file -> [meta_fasta, fasta_file, fai_file] }
+                                         ^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/repeat_characterization/main.nf:64:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      versions       = ch_versions
+      ^^^^^^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/set_value_channel/main.nf:13:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -160,6 +181,13 @@
   ```nextflow
           .set { data }
                  ^^^^
+  ```
+
+- Warning: `subworkflows/local/set_value_channel/main.nf:18:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      data // channel: [ file(infile) ]
+      ^^^^
   ```
 
 - Warning: `subworkflows/local/utils_nfcore_pacvar_pipeline/main.nf:34:5`: Parameter was not used -- prefix with `_` to suppress warning
@@ -190,6 +218,13 @@
           ^^^^^^^^^^^^^^^
   ```
 
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
 
   ```nextflow
@@ -197,77 +232,98 @@
       ^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/pacvar.nf:73:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_config
+      ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `workflows/pacvar.nf:74:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_barcode = Channel.value(file(params.barcodes))
                        ^^^^^^^
   ```
 
-- Warning: `workflows/pacvar.nf:97:59`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/pacvar.nf:98:59`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       pbmm2_input_filter_ch = pbmm2_input_ch.filter { meta, bam ->
                                                             ^^^
   ```
 
-- Warning: `workflows/pacvar.nf:124:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/pacvar.nf:125:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .filter { meta, bams -> bams.size() > 1 }
                         ^^^^
   ```
 
-- Warning: `workflows/pacvar.nf:129:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/pacvar.nf:130:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .filter { meta, bams -> bams.size() == 1 }
                         ^^^^
   ```
 
-- Warning: `workflows/pacvar.nf:149:50`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/pacvar.nf:144:40`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .map { meta_fasta, fasta_file, meta_fai, fai_file -> [meta_fasta, fasta_file, fai_file] }
+                                         ^^^^^^^^
+  ```
+
+- Warning: `workflows/pacvar.nf:152:50`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ordered_bam_ch = bam_bai_ch.map { meta, bam, bai -> [meta, bam] }
                                                    ^^^
   ```
 
-- Warning: `workflows/pacvar.nf:150:45`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/pacvar.nf:153:45`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ordered_bai_ch = bam_bai_ch.map { meta, bam, bai -> [meta, bai] }
                                               ^^^
   ```
 
-- Warning: `workflows/pacvar.nf:198:75`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/pacvar.nf:201:75`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                       ? orderd_bam_bai_vcf_tbi_snp.vcf_tbi.map { meta, vcf, tbi -> [ meta, vcf ] }
                                                                             ^^^
   ```
 
-- Warning: `workflows/pacvar.nf:223:90`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/pacvar.nf:226:90`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   cnv_input_bam_bai_maf_ch = bam_bai_vcf_snp_ch.map { meta, bam, bai, vcf, tbi ->
                                                                                            ^^^
   ```
 
-- Warning: `workflows/pacvar.nf:241:83`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/pacvar.nf:244:83`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               ch_cnv_vcf = BAM_CNV_VARIANT_CALLING.out.vcf_indexed.map { meta, vcf, tbi -> [ meta, vcf ] }
                                                                                     ^^^
   ```
 
-- Warning: `workflows/pacvar.nf:261:122`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/pacvar.nf:264:122`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   (sv_input_bam_ch, sv_input_bai_ch, sv_input_maf_ch) = bam_bai_vcf_snp_ch.multiMap { meta, bam, bai, vcf, tbi ->
                                                                                                                            ^^^
   ```
 
-- Warning: `workflows/pacvar.nf:314:74`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/pacvar.nf:317:74`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                       ? orderd_bam_bai_vcf_tbi_sv.vcf_tbi.map { meta, vcf, tbi -> [ meta, vcf ] }

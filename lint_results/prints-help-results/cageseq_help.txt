@@ -1,0 +1,138 @@
+$ NXF_SYNTAX_PARSER=v2 nextflow run . --help
+
+
+ N E X T F L O W   ~  version 26.04.2
+
+Launching `./main.nf` [boring_mercator] revision: 37a45165c7
+
+WARN: Unrecognized config option 'validation.defaultIgnoreParams'
+WARN: Unrecognized config option 'validation.monochromeLogs'
+
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/cageseq 2.0.0dev
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/cageseq -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input                       [string]  Path to comma-separated file containing information about the samples in the experiment. Mutually 
+exclusive with `infolder`.  
+  --infolder                    [string]  Path to the folder with fastq files. Mutually exclusive with input 
+  --sample_name_fields          [integer] Number of underscore separated fields  denoting sample name when infolder is used 
+  --outdir                      [string]  The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --email                       [string]  Email address for completion summary. 
+  --multiqc_title               [string]  MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+
+Reference genome options
+  --genome                      [string] Name of iGenomes reference. 
+  --fasta                       [string] Path to FASTA genome file. 
+
+Generic options
+  --multiqc_methods_description [string]          Custom MultiQC yaml file containing HTML including a methods description. 
+  --help                        [boolean, string] Display the help message. 
+  --help_full                   [boolean]         Display the full detailed help message. 
+  --show_hidden                 [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+
+Preprocessing options
+  --save_merged_fastq           [boolean] Whether to save merged fasta files [default: true] 
+  --remove_non_g                [boolean] Whether to keep only those reads that start with G base 
+  --params_trimgalore           [string]  Additional parameters that can be passed to TrimGalore! 
+  --nogtrim                     [boolean] Makes the pipeline skip the G-trimming step in preprocessing 
+
+Mapping options
+  --seq_platform                [string]  Sequencing platform used. Required for mapping with STAR 
+  --seq_center                  [boolean] Name of the sequencing center. Required for mapping with STAR 
+  --unique_only                 [boolean] Whether only uniquely mapped reads should be considered for downstream analysis. [default: true] 
+ 
+  --bowtie2                     [boolean] Switches the aligner from STAR to bowtie2 
+  --dedup                       [boolean] Switches on PCR duplicate removal 
+  --dist                        [integer] Sets an optical duplicate distance, used together with dedup 
+
+Reference preparation options
+  --gtf                         [string] Genome annotation file in GTF format 
+  --index                       [string] Specifies a directory with a genome index 
+  --genome_name                 [string] Name of the reference genome. It is used as meta information 
+  --forgeseed                   [string] Seed file for BSgenome forging 
+  --sourcedir                   [string] Directory containing either a set of FASTA files, one per reference chromosome, or a 2bit file for 
+the whole reference genome. Used for BSgenome forging  
+  --bsgenome                    [string] BSgenome R package to use (if not forged) 
+
+CAGEr options
+  --cager_sample_file           [string]  The input CSV samplesheet including the name of the samples, their pairedness status, and the 
+location of bigwig or bam files. Required when cageronly is true.  
+  --datatype                    [string]  Format of the mapping data file passed to the TSS analysis part when STAR is used (either 'bam' or 
+'bigwig'). [default: bigwig]  
+  --corrplot_tagCountThreshold  [integer] Threshold above which raw and normalized CTSS are considered for the correlation plot [default: 
+1]  
+  --norm_method                 [string]  Method used for normalizing the samples: powerLaw, simpleTpm, and none are supported [default: 
+powerLaw]  
+  --norm_range_min              [integer] Defines the lower threshold for fitting the power-law distribution [default: 5] 
+  --norm_range_max              [integer] Defines the upper threshold for fitting the power-law distribution [default: 10000] 
+  --alpha                       [string]  User specified alpha, the `-1 *` fitted slope in the log-log representation of the power-law 
+distribution. If none, the average across samples is calculated and used.  
+  --t_norm                      [integer] Total number of CAGE tags in the reference power-law distribution. Setting it to 1,000,000 results 
+in normalized tags per million (TPM) values. [default: 1000000]  
+  --sample_num_thr              [integer] Parameters for filtering low expressed CTSS before clustering. `ctss_thr` specifies the lower 
+threshold above which CTSS are considered, and `sample_num_thr` specifies the number of samples 
+where this threshold should be passed. [default: 1]  
+  --ctss_thr                    [integer] Parameters for filtering low expressed CTSS before clustering. `ctss_thr` specifies the lower 
+threshold above which CTSS are considered, and `sample_num_thr` specifies the number of samples 
+where this threshold should be passed. [default: 1]  
+  --distclu_maxDist             [integer] Maximum distance for distance-based clustering (distclu) [default: 20] 
+  --keepSingletonsAbove         [integer] The tpm threshold above which even a single CTSS is kept during clustering [default: 5] 
+  --iq_low                      [number]  Define the lower quantile boundaries of the interquartile range [default: 0.1] 
+  --iq_high                     [number]  Define the upper quantile boundaries of the interquartile range [default: 0.9] 
+  --iqw_tpm_threshold           [integer] Threshold above which tag clusters are considered for the interquartile width distribution plot 
+[default: 3]  
+  --tssregion_up                [integer] Upstream distance to consider into TSS region for ChIPseeker annotation. Should be negative. 
+[default: -3000]  
+  --tssregion_down              [integer] Downstream distance to consider into TSS region for ChIPseeker annotation. Should be positive. 
+[default: 3000]  
+  --tsslogo_upstream            [integer] The number of bases to include upstream of the TSS for TSS logos [default: 35] 
+  --consensus_thr               [integer] Used for defining the consensus clusters. `consensus_thr` specifies the TPM threshold above which 
+tag clusters are considered for consensus clusters, and `consensus_dist` define the maximum distance 
+between the interquartile ranges of tag clusters to be joined together into consensus clusters. 
+[default: 2]  
+  --markdown_path               [string]  Path to cageR markdown report template [default: ${projectDir}/assets/cager_report.Rmd] 
+  --consensus_dist              [integer] Used for defining the consensus clusters. `consensus_thr` specifies the TPM threshold above which 
+tag clusters are considered for consensus clusters, and `consensus_dist` define the maximum distance 
+between the interquartile ranges of tag clusters to be joined together into consensus clusters. 
+[default: 100]  
+
+CAGEfightR options
+  --cfBalanceThreshold          [number]  Defines the balance threshold above which bidirectionality is considered balanced and enhancers are 
+called [default: 0.95]  
+  --unexpressed                 [integer] Used for selecting only supported enhancers. `unexpressed` is a non inclusive lower TPM boundary for 
+expression when calculating support of enhancers. `minSamples` is a non-inclusive lower boundary for 
+the number of samples where the clusters should show bidirectionality. [default: 0]  
+  --minSamples                  [integer] Used for selecting only supported enhancers. `unexpressed` is a non inclusive lower TPM boundary for 
+expression when calculating support of enhancers. `minSamples` is a non-inclusive lower boundary for 
+the number of samples where the clusters should show bidirectionality. [default: 0]  
+
+Pipeline parameters
+  --fullpipeline                [boolean] Run the whole pipeline [default: true] 
+  --maponly                     [boolean] Run only the mapping part until bigiwgs or bams 
+  --cageronly                   [boolean] Run only the CAGEr and CAGEfightR processing parts from bigiwgs or bams 
+ !! Hiding 19 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The pipeline
+    https://doi.org/10.5281/zenodo.4438036
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/cageseq/blob/main/CITATIONS.md
+

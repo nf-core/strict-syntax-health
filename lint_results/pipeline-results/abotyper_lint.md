@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-30T00:34:39.651893724Z
-- Nextflow version: 26.04.0
-- Summary: 71 warnings
+- Generated: 2026-05-27T00:38:44.587228026Z
+- Nextflow version: 26.04.2
+- Summary: 65 warnings
 
 ## :warning: Warnings
 
@@ -74,6 +74,13 @@
   ```nextflow
       logo = params.logo ? Channel.fromPath(params.logo).collect() : Channel.empty()
                                                                      ^^^^^^^
+  ```
+
+- Warning: `main.nf:62:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      multiqc_report = ABOTYPER.out.multiqc_report
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `modules/local/abo/getabosnps/main.nf:21:9`: Variable was declared but not used
@@ -286,217 +293,168 @@
                                                                       ^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/predictabophenotype/main.nf:44:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/predictabophenotype/main.nf:50:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   def exon_dir = sample_dir.resolve(it.exon)
                                                     ^^
   ```
 
-- Warning: `subworkflows/local/predictabophenotype/main.nf:46:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/predictabophenotype/main.nf:52:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   it.file.copyTo(exon_dir.resolve(it.file.name))
                   ^^
   ```
 
-- Warning: `subworkflows/local/predictabophenotype/main.nf:46:49`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/predictabophenotype/main.nf:52:49`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   it.file.copyTo(exon_dir.resolve(it.file.name))
                                                   ^^
   ```
 
-- Warning: `subworkflows/local/variant_calling_mpileup/main.nf:33:29`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/predictabophenotype/main.nf:70:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
-          .filter { bam_meta, bam, bai, bed_meta, bed ->
-                              ^^^
+      abo_results = ABO_SNPS2PHENO.out.txt
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/variant_calling_mpileup/main.nf:33:34`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/variant_calling_haploscan/main.nf:21:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .filter { bam_meta, bam, bai, bed_meta, bed ->
-                                   ^^^
+      ch_bed   // channel: [ val(meta1), path(bed)   ]  — accepted but not used
+      ^^^^^^
   ```
 
-- Warning: `subworkflows/local/variant_calling_mpileup/main.nf:33:49`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .filter { bam_meta, bam, bai, bed_meta, bed ->
-                                                  ^^^
-  ```
-
-- Warning: `subworkflows/local/variant_calling_mpileup/main.nf:36:36`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .map { bam_meta, bam, bai, bed_meta, bed ->
-                                     ^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/variant_calling_mpileup/main.nf:43:31`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/variant_calling_haploscan/main.nf:31:31`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .filter { fasta_meta, fasta, fai_meta, fai ->
                                 ^^^^^
   ```
 
-- Warning: `subworkflows/local/variant_calling_mpileup/main.nf:43:48`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/variant_calling_haploscan/main.nf:31:48`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .filter { fasta_meta, fasta, fai_meta, fai ->
                                                  ^^^
   ```
 
-- Warning: `subworkflows/local/variant_calling_mpileup/main.nf:48:35`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/variant_calling_haploscan/main.nf:35:35`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { fasta_meta, fasta, fai_meta, fai ->
                                     ^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/variant_calling_mpileup/main.nf:55:29`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/variant_calling_haploscan/main.nf:42:29`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .filter { bam_meta, bam, bai, bed, fasta_meta, fasta, fai ->
+          .filter { bam_meta, bam, bai, fasta_meta, fasta, fai ->
                               ^^^
   ```
 
-- Warning: `subworkflows/local/variant_calling_mpileup/main.nf:55:34`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/variant_calling_haploscan/main.nf:42:34`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .filter { bam_meta, bam, bai, bed, fasta_meta, fasta, fai ->
+          .filter { bam_meta, bam, bai, fasta_meta, fasta, fai ->
                                    ^^^
   ```
 
-- Warning: `subworkflows/local/variant_calling_mpileup/main.nf:55:39`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/variant_calling_haploscan/main.nf:42:51`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .filter { bam_meta, bam, bai, bed, fasta_meta, fasta, fai ->
-                                        ^^^
+          .filter { bam_meta, bam, bai, fasta_meta, fasta, fai ->
+                                                    ^^^^^
   ```
 
-- Warning: `subworkflows/local/variant_calling_mpileup/main.nf:55:56`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/variant_calling_haploscan/main.nf:42:58`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .filter { bam_meta, bam, bai, bed, fasta_meta, fasta, fai ->
-                                                         ^^^^^
+          .filter { bam_meta, bam, bai, fasta_meta, fasta, fai ->
+                                                           ^^^
   ```
 
-- Warning: `subworkflows/local/variant_calling_mpileup/main.nf:55:63`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/variant_calling_haploscan/main.nf:48:54`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .filter { bam_meta, bam, bai, bed, fasta_meta, fasta, fai ->
-                                                                ^^^
+          ch_haploscan_input.map { bam_meta, bam, bai, fasta_meta, fasta, fai ->
+                                                       ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/variant_calling_mpileup/main.nf:66:57`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/variant_calling_haploscan/main.nf:48:66`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          ch_fasta_matched.map { bam_meta, bam, bai, bed, fasta_meta, fasta, fai ->
-                                                          ^^^^^^^^^^
+          ch_haploscan_input.map { bam_meta, bam, bai, fasta_meta, fasta, fai ->
+                                                                   ^^^^^
   ```
 
-- Warning: `subworkflows/local/variant_calling_mpileup/main.nf:66:69`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/variant_calling_haploscan/main.nf:48:73`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          ch_fasta_matched.map { bam_meta, bam, bai, bed, fasta_meta, fasta, fai ->
-                                                                      ^^^^^
+          ch_haploscan_input.map { bam_meta, bam, bai, fasta_meta, fasta, fai ->
+                                                                          ^^^
   ```
 
-- Warning: `subworkflows/local/variant_calling_mpileup/main.nf:66:76`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/variant_calling_haploscan/main.nf:51:34`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          ch_fasta_matched.map { bam_meta, bam, bai, bed, fasta_meta, fasta, fai ->
-                                                                             ^^^
+          ch_haploscan_input.map { bam_meta, bam, bai, fasta_meta, fasta, fai ->
+                                   ^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/variant_calling_mpileup/main.nf:69:32`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/variant_calling_haploscan/main.nf:51:44`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          ch_fasta_matched.map { bam_meta, bam, bai, bed, fasta_meta, fasta, fai ->
-                                 ^^^^^^^^
+          ch_haploscan_input.map { bam_meta, bam, bai, fasta_meta, fasta, fai ->
+                                             ^^^
   ```
 
-- Warning: `subworkflows/local/variant_calling_mpileup/main.nf:69:42`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/variant_calling_haploscan/main.nf:51:49`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          ch_fasta_matched.map { bam_meta, bam, bai, bed, fasta_meta, fasta, fai ->
-                                           ^^^
+          ch_haploscan_input.map { bam_meta, bam, bai, fasta_meta, fasta, fai ->
+                                                  ^^^
   ```
 
-- Warning: `subworkflows/local/variant_calling_mpileup/main.nf:69:47`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
-          ch_fasta_matched.map { bam_meta, bam, bai, bed, fasta_meta, fasta, fai ->
-                                                ^^^
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/variant_calling_mpileup/main.nf:69:52`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
-          ch_fasta_matched.map { bam_meta, bam, bai, bed, fasta_meta, fasta, fai ->
-                                                     ^^^
+      valid_config = valid_config
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/variant_calling_mpileup/main.nf:77:33`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:76:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
-          .filter { mpileup_meta, mpileup, fasta_meta, fasta ->
-                                  ^^^^^^^
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/variant_calling_mpileup/main.nf:77:54`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .filter { mpileup_meta, mpileup, fasta_meta, fasta ->
-                                                       ^^^^^
-  ```
-
-- Warning: `subworkflows/local/variant_calling_mpileup/main.nf:85:57`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          ch_nucl_freq_input.map { mpileup_meta, mpileup, fasta_meta, fasta ->
-                                                          ^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/variant_calling_mpileup/main.nf:85:69`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          ch_nucl_freq_input.map { mpileup_meta, mpileup, fasta_meta, fasta ->
-                                                                      ^^^^^
-  ```
-
-- Warning: `subworkflows/local/variant_calling_mpileup/main.nf:88:34`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          ch_nucl_freq_input.map { mpileup_meta, mpileup, fasta_meta, fasta ->
-                                   ^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/variant_calling_mpileup/main.nf:88:48`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          ch_nucl_freq_input.map { mpileup_meta, mpileup, fasta_meta, fasta ->
-                                                 ^^^^^^^
-  ```
-
-- Warning: `workflows/abotyper.nf:36:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/abotyper.nf:37:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       logo // channel: png from params.logo (custom pathwest logo)
       ^^^^
   ```
 
-- Warning: `workflows/abotyper.nf:72:68`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/abotyper.nf:73:68`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(FASTQC.out.zip.collect{it[1]})
                                                                      ^^
   ```
 
-- Warning: `workflows/abotyper.nf:113:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/abotyper.nf:115:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       def topic_versions = Channel.topic("versions")

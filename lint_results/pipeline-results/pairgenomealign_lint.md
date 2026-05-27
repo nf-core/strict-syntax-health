@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-05-26T00:38:18.347307562Z
+- Generated: 2026-05-27T00:41:18.743927066Z
 - Nextflow version: 26.04.2
-- Summary: 22 warnings
+- Summary: 23 warnings
 
 ## :warning: Warnings
 
@@ -139,23 +139,30 @@
       ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/pairgenomealign.nf:46:31`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/pairgenomealign.nf:48:31`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_targetgenome.map { meta, file -> [ [id:'targetGenome'] , file ] }
                                 ^^^^
   ```
 
-- Warning: `workflows/pairgenomealign.nf:58:55`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/pairgenomealign.nf:60:55`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
             .map { sorted_list -> sorted_list.collect { it[1] } }
                                                         ^^
   ```
 
-- Warning: `workflows/pairgenomealign.nf:111:39`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/pairgenomealign.nf:113:39`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               pairalign_out.o2o.combine(Channel.fromList(export_formats)),
                                         ^^^^^^^
+  ```
+
+- Warning: `workflows/pairgenomealign.nf:130:24`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+                  .map { meta, file -> file }
+                         ^^^^
   ```

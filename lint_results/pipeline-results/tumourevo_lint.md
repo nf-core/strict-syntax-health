@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-05-26T00:40:35.045133410Z
+- Generated: 2026-05-27T00:43:39.127955746Z
 - Nextflow version: 26.04.2
-- Summary: 59 warnings
+- Summary: 56 warnings
 
 ## :warning: Warnings
 
@@ -133,27 +133,6 @@
   ```
 
 - Warning: `modules/local/join_positions/main.nf:19:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/cnaqc/main.nf:25:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/cnaqc/main.nf:26:9`: Variable was declared but not used
-
-  ```nextflow
-      def prefix = task.ext.prefix ?: "${meta.id}"
-          ^^^^^^
-  ```
-
-- Warning: `modules/nf-core/cnaqc/main.nf:31:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''

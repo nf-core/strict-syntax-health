@@ -2,20 +2,20 @@
   "abotyper": {
     "full_name": "nf-core/abotyper",
     "html_url": "https://github.com/nf-core/abotyper",
-    "commit": "2271ad2d77960cbf1c478fb902fc62a2f23c8381",
+    "commit": "76f2cd4fa720375ea6becf05dc40113825b9d349",
     "errors": 0,
-    "warnings": 71,
+    "warnings": 65,
     "parse_error": false,
     "prints_help": true
   },
   "airrflow": {
     "full_name": "nf-core/airrflow",
     "html_url": "https://github.com/nf-core/airrflow",
-    "commit": "978a9c1e03d6e264ba4c7e85bda3c366c0713eec",
-    "errors": 190,
-    "warnings": 136,
+    "commit": "e394ed6c4a65630bc6cfc8e35d39deb990a55317",
+    "errors": 0,
+    "warnings": 40,
     "parse_error": false,
-    "prints_help": null
+    "prints_help": true
   },
   "alleleexpression": {
     "full_name": "nf-core/alleleexpression",
@@ -74,11 +74,11 @@
   "cageseq": {
     "full_name": "nf-core/cageseq",
     "html_url": "https://github.com/nf-core/cageseq",
-    "commit": "f3ce0656b62b7a2b1622f1ff31b679114c5bf415",
-    "errors": 46,
-    "warnings": 53,
+    "commit": "b40cc0408eba183363b2e59fa86176912b358018",
+    "errors": 0,
+    "warnings": 6,
     "parse_error": false,
-    "prints_help": null
+    "prints_help": true
   },
   "callingcards": {
     "full_name": "nf-core/callingcards",
@@ -542,16 +542,16 @@
   "lsmquant": {
     "full_name": "nf-core/lsmquant",
     "html_url": "https://github.com/nf-core/lsmquant",
-    "commit": "4c85347ab70b510882cd0164215d0c626f5650cd",
+    "commit": "135e2e2c6444f7ee6140c9ea54dc0a3373703888",
     "errors": 0,
-    "warnings": 42,
+    "warnings": 46,
     "parse_error": false,
     "prints_help": false
   },
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "c5bc88fd8f4f0a47362a2e843df0991a430b0c84",
+    "commit": "84e2ff46de905337b154a7ddb97fdaec4191b9ca",
     "errors": 0,
     "warnings": 25,
     "parse_error": false,
@@ -560,9 +560,9 @@
   "magmap": {
     "full_name": "nf-core/magmap",
     "html_url": "https://github.com/nf-core/magmap",
-    "commit": "eb710a0721d6e532edb81ec96c86544dc438f424",
+    "commit": "3f69f25fab15796890c8553d9a570153a2e14bbd",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 5,
     "parse_error": false,
     "prints_help": true
   },
@@ -767,18 +767,18 @@
   "pacvar": {
     "full_name": "nf-core/pacvar",
     "html_url": "https://github.com/nf-core/pacvar",
-    "commit": "c025c42297718ded01a6626a93cb826b5b18aa02",
+    "commit": "e1370084f46b1f42af523146d32c11d79b75f841",
     "errors": 6,
-    "warnings": 32,
+    "warnings": 40,
     "parse_error": false,
     "prints_help": null
   },
   "pairgenomealign": {
     "full_name": "nf-core/pairgenomealign",
     "html_url": "https://github.com/nf-core/pairgenomealign",
-    "commit": "3f23bf386bac965e4e04405917ea07188b8ce54a",
+    "commit": "afd978c1420d971282b66468e7fcfc0c09c3181b",
     "errors": 0,
-    "warnings": 22,
+    "warnings": 23,
     "parse_error": false,
     "prints_help": true
   },
@@ -902,9 +902,9 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "3d2ad4f251582b57910a7bf2d1de19d4431fbe8e",
+    "commit": "b540088ca2f06e00ac1c4d4e4d83369462510fc1",
     "errors": 0,
-    "warnings": 4,
+    "warnings": 13,
     "parse_error": false,
     "prints_help": true
   },
@@ -992,9 +992,9 @@
   "rnasplice": {
     "full_name": "nf-core/rnasplice",
     "html_url": "https://github.com/nf-core/rnasplice",
-    "commit": "68b6d5e28217e9a53f6f367ba4c703806da2808d",
+    "commit": "6d51dfed416cc0e9f06b6ccdd4fab017d74e2b2a",
     "errors": 0,
-    "warnings": 35,
+    "warnings": 34,
     "parse_error": false,
     "prints_help": true
   },
@@ -1019,7 +1019,7 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "c18335086e3b2a02872d8e0c0927bc3a200de47a",
+    "commit": "98e56d2c5ba975afef8a7b3298eec378c28bf51b",
     "errors": 0,
     "warnings": 651,
     "parse_error": false,
@@ -1172,9 +1172,9 @@
   "tumourevo": {
     "full_name": "nf-core/tumourevo",
     "html_url": "https://github.com/nf-core/tumourevo",
-    "commit": "f143dd2a3d1b8815dec80fa511ab6d5e9073e263",
+    "commit": "a897c00da181b5d3c38bd18e76c66e23454f60ac",
     "errors": 0,
-    "warnings": 59,
+    "warnings": 56,
     "parse_error": false,
     "prints_help": false
   },
