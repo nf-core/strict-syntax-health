@@ -4,9 +4,8 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.04.2
 
 Downloading plugin nf-fgbio@1.0.0
-Downloading plugin nf-core-utils@0.4.0
 Downloading plugin nf-prov@1.7.0
-Launching `./main.nf` [backstabbing_kimura] revision: 98b3f5f01d
+Launching `./main.nf` [big_mirzakhani] revision: f2330ae7a6
 
 
 ------------------------------------------------------
@@ -183,46 +182,47 @@ General reference genome options
   --download_cache                    [boolean] Download annotation cache. 
 
 Reference genome options
-  --genome                            [string] Name of iGenomes reference. [default: GATK.GRCh38] 
-  --ascat_genome                      [string] ASCAT genome.  (accepted: hg19, hg38) 
-  --ascat_alleles                     [string] Path to ASCAT allele zip file. 
-  --ascat_loci                        [string] Path to ASCAT loci zip file. 
-  --ascat_loci_gc                     [string] Path to ASCAT GC content correction file. 
-  --ascat_loci_rt                     [string] Path to ASCAT RT (replictiming) correction file. 
-  --bwa                               [string] Path to BWA mem indices. 
-  --bwamem2                           [string] Path to bwa-mem2 mem indices. 
-  --chr_dir                           [string] Path to chromosomes folder used with ControLFREEC. 
-  --dbsnp                             [string] Path to dbsnp file. 
-  --dbsnp_tbi                         [string] Path to dbsnp index. 
-  --dbsnp_vqsr                        [string] Label string for VariantRecalibration (haplotypecaller joint variant calling).
+  --genome                            [string]  Name of iGenomes reference. [default: GATK.GRCh38] 
+  --ascat_genome                      [string]  ASCAT genome.  (accepted: hg19, hg38) 
+  --ascat_alleles                     [string]  Path to ASCAT allele zip file. 
+  --ascat_loci                        [string]  Path to ASCAT loci zip file. 
+  --ascat_loci_gc                     [string]  Path to ASCAT GC content correction file. 
+  --ascat_loci_rt                     [string]  Path to ASCAT RT (replictiming) correction file. 
+  --bwa                               [string]  Path to BWA mem indices. 
+  --bwamem2                           [string]  Path to bwa-mem2 mem indices. 
+  --chr_dir                           [string]  Path to chromosomes folder used with ControLFREEC. 
+  --dbsnp                             [string]  Path to dbsnp file. 
+  --dbsnp_tbi                         [string]  Path to dbsnp index. 
+  --dbsnp_vqsr                        [string]  Label string for VariantRecalibration (haplotypecaller joint variant calling).
 
 If you use AWS 
 iGenomes, this has already been set for you appropriately.  
-  --dict                              [string] Path to FASTA dictionary file. 
-  --dragmap                           [string] Path to dragmap indices. 
-  --fasta                             [string] Path to FASTA genome file. 
-  --fasta_fai                         [string] Path to FASTA reference index. 
-  --germline_resource                 [string] Path to GATK Mutect2 Germline Resource File. 
-  --germline_resource_tbi             [string] Path to GATK Mutect2 Germline Resource Index. 
-  --known_indels                      [string] Path to known indels file. 
-  --known_indels_tbi                  [string] Path to known indels file index. 
-  --known_indels_vqsr                 [string] Label string for VariantRecalibration (haplotypecaller joint variant calling). If you use AWS 
+  --dict                              [string]  Path to FASTA dictionary file. 
+  --dragmap                           [string]  Path to dragmap indices. 
+  --fasta                             [string]  Path to FASTA genome file. 
+  --fasta_fai                         [string]  Path to FASTA reference index. 
+  --germline_resource                 [string]  Path to GATK Mutect2 Germline Resource File. 
+  --germline_resource_tbi             [string]  Path to GATK Mutect2 Germline Resource Index. 
+  --known_indels                      [string]  Path to known indels file. 
+  --known_indels_tbi                  [string]  Path to known indels file index. 
+  --known_indels_vqsr                 [string]  Label string for VariantRecalibration (haplotypecaller joint variant calling). If you use AWS 
 iGenomes, this has already been set for you appropriately.  
-  --known_snps                        [string] Path to known snps file. 
-  --known_snps_tbi                    [string] Path to known snps file snps. 
-  --known_snps_vqsr                   [string] Label string for VariantRecalibration (haplotypecaller joint variant calling).If you use AWS 
+  --known_snps                        [string]  Path to known snps file. 
+  --known_snps_tbi                    [string]  Path to known snps file snps. 
+  --known_snps_vqsr                   [string]  Label string for VariantRecalibration (haplotypecaller joint variant calling).If you use AWS 
 iGenomes, this has already been set for you appropriately.  
-  --mappability                       [string] Path to Control-FREEC mappability file. 
-  --msisensor2_models                 [string] Path to models folder used with MSIsensor2. 
-  --msisensorpro_scan                 [string] Path to scan file used with MSIsensorPro. 
-  --ngscheckmate_bed                  [string] Path to SNP bed file for sample checking with NGSCheckMate 
-  --sentieon_dnascope_model           [string] Machine learning model for Sentieon Dnascope. 
-  --snpeff_cache                      [string] Path to snpEff cache. [default: s3://annotation-cache/snpeff_cache/] 
-  --snpeff_db                         [string] snpEff DB version. 
-  --vep_cache                         [string] Path to VEP cache. [default: s3://annotation-cache/vep_cache/] 
-  --vep_cache_version                 [string] VEP cache version. 
-  --vep_genome                        [string] VEP genome. 
-  --vep_species                       [string] VEP species. 
+  --mappability                       [string]  Path to Control-FREEC mappability file. 
+  --msisensor2_models                 [string]  Path to models folder used with MSIsensor2. 
+  --msisensorpro_scan                 [string]  Path to scan file used with MSIsensorPro. 
+  --ngscheckmate_bed                  [string]  Path to SNP bed file for sample checking with NGSCheckMate 
+  --sentieon_dnascope_model           [string]  Machine learning model for Sentieon Dnascope. 
+  --snpeff_cache                      [string]  Path to snpEff cache. [default: s3://annotation-cache/snpeff_cache/] 
+  --snpeff_db                         [string]  snpEff DB version. 
+  --vep_cache                         [string]  Path to VEP cache. [default: s3://annotation-cache/vep_cache/] 
+  --vep_cache_preflight_check         [boolean] Force preflight check for local VEP cache download 
+  --vep_cache_version                 [string]  VEP cache version. 
+  --vep_genome                        [string]  VEP genome. 
+  --vep_species                       [string]  VEP species. 
 
 Generic options
   --email                             [string]          Email address for completion summary. 

@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-05-21T00:39:57.991668904Z
-- Nextflow version: 26.04.1
-- Summary: 70 warnings
+- Generated: 2026-05-28T00:36:15.578777018Z
+- Nextflow version: 26.04.2
+- Summary: 76 warnings
 
 ## :warning: Warnings
 
@@ -11,6 +11,13 @@
   ```nextflow
               saveAs: { (meta.single_end || params.save_align_intermeds) ? "${it}" : null }
                                                                               ^^
+  ```
+
+- Warning: `main.nf:96:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      multiqc_report = CHIPSEQ.out.multiqc_report // channel: /path/to/multiqc_report.html
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `modules/local/macs3_consensus/main.nf:39:46`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -104,6 +111,13 @@
                  ^^^^^
   ```
 
+- Warning: `subworkflows/local/input_check/main.nf:20:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      reads                                     // channel: [ val(meta), [ reads ] ]
+      ^^^^^
+  ```
+
 - Warning: `subworkflows/local/prepare_genome/main.nf:46:5`: Variable was declared but not used
 
   ```nextflow
@@ -193,6 +207,34 @@
   ```nextflow
           ch_macs_gsize = KHMER_UNIQUEKMERS.out.kmers.map { meta, file ->
                                                             ^^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_chipseq_pipeline/main.nf:112:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      samplesheet = ch_samplesheet
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_config = valid_config
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/chipseq.nf:168:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead

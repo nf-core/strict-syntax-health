@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "0d51a4601da86148964f3c6b28709f0f5d047719",
+  "_repo_commit": "5795e46cae24fa6e00e348fc9757c9058db811d3",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -3912,6 +3912,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "gcta_addgrms": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gcta/addgrms",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "gcta_makegrm": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gcta/makegrm",
     "errors": 0,
@@ -3920,6 +3926,18 @@
   },
   "gcta_makegrmpart": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gcta/makegrmpart",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "gcta_reml": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gcta/reml",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "gcta_remlldms": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gcta/remlldms",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

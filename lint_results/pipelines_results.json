@@ -11,7 +11,7 @@
   "airrflow": {
     "full_name": "nf-core/airrflow",
     "html_url": "https://github.com/nf-core/airrflow",
-    "commit": "e394ed6c4a65630bc6cfc8e35d39deb990a55317",
+    "commit": "b8f9c1bbe30abc59e50b92b9bacbfd2cd80331b2",
     "errors": 0,
     "warnings": 40,
     "parse_error": false,
@@ -74,7 +74,7 @@
   "cageseq": {
     "full_name": "nf-core/cageseq",
     "html_url": "https://github.com/nf-core/cageseq",
-    "commit": "b40cc0408eba183363b2e59fa86176912b358018",
+    "commit": "b4ab44cf1e93c81f5899b12e95dda7c4428f5ca2",
     "errors": 0,
     "warnings": 6,
     "parse_error": false,
@@ -101,9 +101,9 @@
   "chipseq": {
     "full_name": "nf-core/chipseq",
     "html_url": "https://github.com/nf-core/chipseq",
-    "commit": "cbfbdef2da846e7ddebf1d15e5b93626270e6353",
+    "commit": "4969914099b0dd3c438a2d5acb1a7ea30dabb494",
     "errors": 0,
-    "warnings": 70,
+    "warnings": 76,
     "parse_error": false,
     "prints_help": true
   },
@@ -560,7 +560,7 @@
   "magmap": {
     "full_name": "nf-core/magmap",
     "html_url": "https://github.com/nf-core/magmap",
-    "commit": "3f69f25fab15796890c8553d9a570153a2e14bbd",
+    "commit": "983e1765ab07ac84af44e41b1dda44028fba6e29",
     "errors": 0,
     "warnings": 5,
     "parse_error": false,
@@ -866,7 +866,7 @@
   "proteinfold": {
     "full_name": "nf-core/proteinfold",
     "html_url": "https://github.com/nf-core/proteinfold",
-    "commit": "d4e1cb858b5313b911b219a87349b65124368a82",
+    "commit": "98284979d13cbee3544a8310a22bf5b48b310f6e",
     "errors": 0,
     "warnings": 7,
     "parse_error": false,
@@ -902,7 +902,7 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "b540088ca2f06e00ac1c4d4e4d83369462510fc1",
+    "commit": "4b3e42bc8ffe810764e27834c4a567234c4aa96b",
     "errors": 0,
     "warnings": 13,
     "parse_error": false,
@@ -1001,9 +1001,9 @@
   "rnavar": {
     "full_name": "nf-core/rnavar",
     "html_url": "https://github.com/nf-core/rnavar",
-    "commit": "99700e73fc95e7a8f7bd6d8bdba67ff987774690",
+    "commit": "3cc083d337d2c72fe803018c63aa41b807854122",
     "errors": 0,
-    "warnings": 0,
+    "warnings": 3,
     "parse_error": false,
     "prints_help": true
   },
@@ -1019,9 +1019,9 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "98e56d2c5ba975afef8a7b3298eec378c28bf51b",
+    "commit": "5a2728a6dd9d2db4f6990ea28c069c6785b56d6d",
     "errors": 0,
-    "warnings": 651,
+    "warnings": 617,
     "parse_error": false,
     "prints_help": true
   },
@@ -1097,6 +1097,15 @@
     "parse_error": false,
     "prints_help": null
   },
+  "spatialaxe": {
+    "full_name": "nf-core/spatialaxe",
+    "html_url": "https://github.com/nf-core/spatialaxe",
+    "commit": "2af78b179cc4aed3524e2feae90c12a81feb1b9e",
+    "errors": 0,
+    "warnings": 10,
+    "parse_error": false,
+    "prints_help": false
+  },
   "spatialvi": {
     "full_name": "nf-core/spatialvi",
     "html_url": "https://github.com/nf-core/spatialvi",
@@ -1105,15 +1114,6 @@
     "warnings": 2,
     "parse_error": false,
     "prints_help": true
-  },
-  "spatialxe": {
-    "full_name": "nf-core/spatialxe",
-    "html_url": "https://github.com/nf-core/spatialxe",
-    "commit": "2af78b179cc4aed3524e2feae90c12a81feb1b9e",
-    "errors": 0,
-    "warnings": 4,
-    "parse_error": false,
-    "prints_help": false
   },
   "spinningjenny": {
     "full_name": "nf-core/spinningjenny",
@@ -1172,7 +1172,7 @@
   "tumourevo": {
     "full_name": "nf-core/tumourevo",
     "html_url": "https://github.com/nf-core/tumourevo",
-    "commit": "a897c00da181b5d3c38bd18e76c66e23454f60ac",
+    "commit": "f85d8dc62860c5fc6f63a75ca0c804b3f29a92ae",
     "errors": 0,
     "warnings": 56,
     "parse_error": false,
@@ -1217,9 +1217,9 @@
   "viralmetagenome": {
     "full_name": "nf-core/viralmetagenome",
     "html_url": "https://github.com/nf-core/viralmetagenome",
-    "commit": "87d54b5a93f6029bebe5409f846ce00d371591bd",
+    "commit": "c9cdc0c37e350d5c12c4a656438d55dd5ca9f997",
     "errors": 0,
-    "warnings": 3,
+    "warnings": 11,
     "parse_error": false,
     "prints_help": true
   },

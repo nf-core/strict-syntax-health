@@ -1,9 +1,11 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.04.0
+ N E X T F L O W   ~  version 26.04.2
 
-Launching `./main.nf` [insane_minsky] revision: efea1192cc
+Downloading plugin nf-core-utils@0.4.0
+Downloading plugin nf-schema@2.6.1
+Launching `./main.nf` [special_bhabha] revision: 2159631da4
 
 
 ------------------------------------------------------
@@ -89,6 +91,7 @@ Variant Annotation
 rs_dbSNP,HGVSc_VEP,HGVSp_VEP,1000Gp3_EAS_AF,1000Gp3_AMR_AF,LRT_score,GERP++_RS,gnomAD_exomes_AF] 
  
   --vep_loftee                  [boolean] Enable the use of the VEP LOFTEE plugin. 
+  --vep_version                 [string]  Should reflect the VEP version used in the container. [default: 115.2-1] 
   --vep_spliceai                [boolean] Enable the use of the VEP SpliceAI plugin. 
   --spliceai_snv                [string]  Path to spliceai raw scores snv file. 
   --spliceai_snv_tbi            [string]  Path to spliceai raw scores snv tabix indexed file. 
