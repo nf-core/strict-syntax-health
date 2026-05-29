@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-05-21T00:42:50.274301808Z
-- Nextflow version: 26.04.1
-- Summary: 60 warnings
+- Generated: 2026-05-29T00:44:32.628869280Z
+- Nextflow version: 26.04.3
+- Summary: 65 warnings
 
 ## :warning: Warnings
 
@@ -18,6 +18,13 @@
   ```nextflow
               saveAs: { (!it.endsWith('.bam') || params.save_align_intermeds) ? it : null }
                                                                                 ^^
+  ```
+
+- Warning: `main.nf:96:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      multiqc_report = SCRNASEQ.out.multiqc_report // channel: /path/to/multiqc_report.html
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/align_cellranger.nf:45:22`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -361,6 +368,34 @@
   ```nextflow
       def sample_type_ok = metas.collect { meta -> meta.sample_type }.unique().every { it in valid_sample_types }
                                                                                        ^^
+  ```
+
+- Warning: `subworkflows/nf-core/h5ad_removebackground_barcodes_cellbender_anndata/main.nf:18:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      h5ad = ANNDATA_BARCODES.out.h5ad  // channel: [ val(meta), path(h5ad) ]
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_config = valid_config
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/scrnaseq.nf:112:89`: Implicit closure parameter is deprecated, declare an explicit parameter instead

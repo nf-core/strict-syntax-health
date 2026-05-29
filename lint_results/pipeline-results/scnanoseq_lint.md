@@ -1,17 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-05-24T00:37:56.519055637Z
-- Nextflow version: 26.04.2
-- Summary: 1 error, 5 warnings
-
-## :x: Errors
-
-- Error: `workflows/scnanoseq.nf:555:65`: `ch_versions_yaml` is not defined
-
-  ```nextflow
-              ch_multiqc_rawqc_files = ch_multiqc_rawqc_files.mix(ch_versions_yaml.collect())
-                                                                  ^^^^^^^^^^^^^^^^
-  ```
+- Generated: 2026-05-29T00:44:12.794639439Z
+- Nextflow version: 26.04.3
+- Summary: 5 warnings
 
 ## :warning: Warnings
 

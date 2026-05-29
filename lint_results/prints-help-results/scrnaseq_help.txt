@@ -1,13 +1,12 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.04.1
+ N E X T F L O W   ~  version 26.04.3
 
-Launching `./main.nf` [determined_mercator] revision: 5ba3bf1f45
+Launching `./main.nf` [angry_wescoff] revision: 2b446ef73b
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
-WARN: `params.star_index` is defined multiple times -- Assignments following the first are ignored
 
 ------------------------------------------------------
                                         ,--./,-.
@@ -15,7 +14,7 @@ WARN: `params.star_index` is defined multiple times -- Assignments following the
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/scrnaseq 4.1.0
+  nf-core/scrnaseq 4.2.0
 ------------------------------------------------------
 Typical pipeline command:
 
@@ -59,7 +58,7 @@ Reference genome options
   --save_align_intermeds          [boolean] Specify this parameter to save the intermediate alignment files (STAR, CellRanger) to the results. 
  
   --txp2gene                      [string]  Path to transcript to gene mapping file. This allows the specification of a transcript to gene 
-mapping file for Kallisto/BUS and Alevin-fry with AlevinQC.  
+mapping file for Kallisto/BUS and Alevin-fry.  
 
 Simpleaf Options
   --simpleaf_index                [string]  Path to pre-built Simpleaf index. 

@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-05-26T00:39:00.668987170Z
-- Nextflow version: 26.04.2
+- Generated: 2026-05-29T00:42:08.025713024Z
+- Nextflow version: 26.04.3
 - Summary: 21 warnings
 
 ## :warning: Warnings
@@ -104,21 +104,21 @@
                  ^^
   ```
 
-- Warning: `subworkflows/local/pna/v2/main.nf:250:20`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/pna/v2/main.nf:249:20`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .flatMap { it }
                      ^^
   ```
 
-- Warning: `subworkflows/local/pna/v2/main.nf:254:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/pna/v2/main.nf:253:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def stages = stageFilePairs.collect { it[0] }
                                                     ^^
   ```
 
-- Warning: `subworkflows/local/pna/v2/main.nf:255:50`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/pna/v2/main.nf:254:50`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def files = stageFilePairs.collect { it[1] }

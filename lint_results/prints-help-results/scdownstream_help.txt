@@ -1,10 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.04.1
+ N E X T F L O W   ~  version 26.04.3
 
 Downloading plugin nf-anndata@0.3.2
-Launching `./main.nf` [nauseous_angela] revision: 1885d76243
+Launching `./main.nf` [loving_goldstine] revision: 97eaf4acc3
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -106,11 +106,15 @@ Clustering options
   --cluster_per_label             [boolean] Create a UMAP and a clustering for each unique value in the label column (and for each integration 
 method)  
   --cluster_global                [boolean] Create a global UMAP and clustering (for each integration method) [default: true] 
+  --analysis_plan                 [string]  Path to a CSV file controlling which integration × resolution combinations feed into downstream 
+analyses (PAGA, LIANA, DE, CyteType).  
 
 Tool options
   --celltypist_model              [string] Specify the models to use for the celltypist cell type annotation 
   --celldex_reference             [string] Path to comma-separated file containing information about the celldex references to use for the 
 singleR cell type annotation.  
+  --cytetype_study_context        [string] Study description passed to CyteType for LLM-based cell type annotation (after integration, 
+clustering, and global DE).  
 
 Resource options
   --memory_scale                  [integer] Scale the memory requirements for each process by this factor. Should be increased if you have a 

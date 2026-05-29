@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.04.2
+ N E X T F L O W   ~  version 26.04.3
 
-Launching `./main.nf` [special_lagrange] revision: 46ce8725e3
+Launching `./main.nf` [kickass_heyrovsky] revision: 0281f7d1a6
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -24,9 +24,11 @@ help message of that parameter will be printed.
 or `--helpFull`.  
 
 Input/output options
-  --input                       [string]  Path to comma-separated file containing information about the samples in the experiment. 
   --target                      [string]  Path or URL to a FASTA genome file for the _target_ genome. 
+  --query                       [string]  Path or URL to a FASTA genome file for the _query_ genome. 
+  --input                       [string]  Path to comma-separated file containing information about the samples in the experiment. 
   --targetName                  [string]  Target genome name. [default: target] 
+  --queryName                   [string]  Query genome name. [default: query] 
   --skip_assembly_qc            [boolean] Skip assembly QC. [default: false] 
   --outdir                      [string]  The output directory where the results will be saved. You have to use absolute paths to storage on 
 Cloud infrastructure.  

@@ -11,7 +11,7 @@
   "airrflow": {
     "full_name": "nf-core/airrflow",
     "html_url": "https://github.com/nf-core/airrflow",
-    "commit": "b8f9c1bbe30abc59e50b92b9bacbfd2cd80331b2",
+    "commit": "49557c28188a369ed47eaf68c76d7940cfec80a3",
     "errors": 0,
     "warnings": 40,
     "parse_error": false,
@@ -560,7 +560,7 @@
   "magmap": {
     "full_name": "nf-core/magmap",
     "html_url": "https://github.com/nf-core/magmap",
-    "commit": "983e1765ab07ac84af44e41b1dda44028fba6e29",
+    "commit": "9e91506750e39a15271fc1d1791718dae860453a",
     "errors": 0,
     "warnings": 5,
     "parse_error": false,
@@ -776,7 +776,7 @@
   "pairgenomealign": {
     "full_name": "nf-core/pairgenomealign",
     "html_url": "https://github.com/nf-core/pairgenomealign",
-    "commit": "afd978c1420d971282b66468e7fcfc0c09c3181b",
+    "commit": "63e7b7555e7468297f50303eb9bcf4ad23494523",
     "errors": 0,
     "warnings": 23,
     "parse_error": false,
@@ -839,7 +839,7 @@
   "pixelator": {
     "full_name": "nf-core/pixelator",
     "html_url": "https://github.com/nf-core/pixelator",
-    "commit": "b98f6bcbf0f2c535938b7e21d72ec19df2d8ae37",
+    "commit": "ad8bbcd362347de567f17b8b68ab061e8c6ae958",
     "errors": 0,
     "warnings": 21,
     "parse_error": false,
@@ -866,7 +866,7 @@
   "proteinfold": {
     "full_name": "nf-core/proteinfold",
     "html_url": "https://github.com/nf-core/proteinfold",
-    "commit": "98284979d13cbee3544a8310a22bf5b48b310f6e",
+    "commit": "0c879666753cfd8574cdb54201205450d0c05ee5",
     "errors": 0,
     "warnings": 7,
     "parse_error": false,
@@ -974,9 +974,9 @@
   "rnafusion": {
     "full_name": "nf-core/rnafusion",
     "html_url": "https://github.com/nf-core/rnafusion",
-    "commit": "28246ef171df35b063cdce2904a007133953fba0",
+    "commit": "3934e6b4ef39c0127ef06223db804918996b004d",
     "errors": 0,
-    "warnings": 24,
+    "warnings": 27,
     "parse_error": false,
     "prints_help": true
   },
@@ -1019,36 +1019,36 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "5a2728a6dd9d2db4f6990ea28c069c6785b56d6d",
+    "commit": "565f1b92d1469d7a90f6ee2ddf5296ce274e22ca",
     "errors": 0,
-    "warnings": 617,
+    "warnings": 613,
     "parse_error": false,
     "prints_help": true
   },
   "scdownstream": {
     "full_name": "nf-core/scdownstream",
     "html_url": "https://github.com/nf-core/scdownstream",
-    "commit": "ccf015590114d56f29fb39ff48d2d1bedfc78b4d",
+    "commit": "4c795be21737915935d2decf257c08df6de84af8",
     "errors": 0,
-    "warnings": 19,
+    "warnings": 30,
     "parse_error": false,
     "prints_help": true
   },
   "scnanoseq": {
     "full_name": "nf-core/scnanoseq",
     "html_url": "https://github.com/nf-core/scnanoseq",
-    "commit": "d385704a43db49159c8ed2adc0869cc7dec59918",
-    "errors": 1,
+    "commit": "a81c53ffe6150a05bb6f74db81b2d5bbb6ee8e74",
+    "errors": 0,
     "warnings": 5,
     "parse_error": false,
-    "prints_help": null
+    "prints_help": true
   },
   "scrnaseq": {
     "full_name": "nf-core/scrnaseq",
     "html_url": "https://github.com/nf-core/scrnaseq",
-    "commit": "aaf72401afa70a86e1ac75c112ca7ec09f8f76f6",
+    "commit": "86f1bdf539e8823b9aaa168587821a8eacf819d0",
     "errors": 0,
-    "warnings": 60,
+    "warnings": 65,
     "parse_error": false,
     "prints_help": true
   },
@@ -1100,7 +1100,7 @@
   "spatialaxe": {
     "full_name": "nf-core/spatialaxe",
     "html_url": "https://github.com/nf-core/spatialaxe",
-    "commit": "2af78b179cc4aed3524e2feae90c12a81feb1b9e",
+    "commit": "4468c520955c63f90400e9ae59270afa56ed58fe",
     "errors": 0,
     "warnings": 10,
     "parse_error": false,

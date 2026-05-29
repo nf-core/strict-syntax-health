@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-05-28T00:35:30.945894364Z
-- Nextflow version: 26.04.2
+- Generated: 2026-05-29T00:41:09.032928676Z
+- Nextflow version: 26.04.3
 - Summary: 40 warnings
 
 ## :warning: Warnings
@@ -279,7 +279,7 @@
                   ^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/airrflow.nf:513:88`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/airrflow.nf:514:88`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files = ch_multiqc_files.mix(ch_fastqc_postassembly_mqc.collect{it[1]}.ifEmpty([]))

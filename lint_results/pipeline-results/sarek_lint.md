@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-05-28T00:39:08.008410933Z
-- Nextflow version: 26.04.2
-- Summary: 617 warnings
+- Generated: 2026-05-29T00:43:22.540274990Z
+- Nextflow version: 26.04.3
+- Summary: 613 warnings
 
 ## :warning: Warnings
 
@@ -2309,14 +2309,14 @@
                                                            ^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_somatic_all/main.nf:289:5`: Variable was declared but not used
+- Warning: `subworkflows/local/bam_variant_calling_somatic_all/main.nf:288:5`: Variable was declared but not used
 
   ```nextflow
       vcf_all = channel.empty()
       ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_somatic_all/main.nf:300:5`: Variable was declared but not used
+- Warning: `subworkflows/local/bam_variant_calling_somatic_all/main.nf:299:5`: Variable was declared but not used
 
   ```nextflow
       tbi_all = channel.empty()
@@ -2337,32 +2337,18 @@
       ^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_somatic_controlfreec/main.nf:26:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/bam_variant_calling_somatic_controlfreec/main.nf:34:59`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/bam_variant_calling_somatic_controlfreec/main.nf:32:59`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           def tumor_file = cnv instanceof List ? cnv.find { it.toString().endsWith("gz_CNVs") } : cnv //only find if its a list, else it returns only the filename without the path
                                                             ^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_somatic_controlfreec/main.nf:43:63`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/bam_variant_calling_somatic_controlfreec/main.nf:41:63`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           def tumor_file = ratio instanceof List ? ratio.find { it.toString().endsWith("gz_ratio.txt") } : ratio //same here as cnv
                                                                 ^^
-  ```
-
-- Warning: `subworkflows/local/bam_variant_calling_somatic_controlfreec/main.nf:65:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      versions = ch_versions
-      ^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/bam_variant_calling_somatic_manta/main.nf:17:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -2904,46 +2890,32 @@
                        ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_tumor_only_all/main.nf:221:5`: Variable was declared but not used
+- Warning: `subworkflows/local/bam_variant_calling_tumor_only_all/main.nf:220:5`: Variable was declared but not used
 
   ```nextflow
       vcf_all = Channel.empty()
       ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_tumor_only_all/main.nf:221:15`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/bam_variant_calling_tumor_only_all/main.nf:220:15`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       vcf_all = Channel.empty()
                 ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_tumor_only_all/main.nf:232:5`: Variable was declared but not used
+- Warning: `subworkflows/local/bam_variant_calling_tumor_only_all/main.nf:231:5`: Variable was declared but not used
 
   ```nextflow
       tbi_all = Channel.empty()
       ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_tumor_only_all/main.nf:232:15`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/bam_variant_calling_tumor_only_all/main.nf:231:15`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       tbi_all = Channel.empty()
                 ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/bam_variant_calling_tumor_only_controlfreec/main.nf:26:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/bam_variant_calling_tumor_only_controlfreec/main.nf:42:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      versions = ch_versions
-      ^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/bam_variant_calling_tumor_only_lofreq/main.nf:13:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead

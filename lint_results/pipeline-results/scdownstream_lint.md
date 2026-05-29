@@ -1,10 +1,17 @@
 # Nextflow lint results
 
-- Generated: 2026-05-22T00:43:42.772442031Z
-- Nextflow version: 26.04.1
-- Summary: 19 warnings
+- Generated: 2026-05-29T00:43:52.853168915Z
+- Nextflow version: 26.04.3
+- Summary: 30 warnings
 
 ## :warning: Warnings
+
+- Warning: `main.nf:141:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      multiqc_report = SCDOWNSTREAM.out.multiqc_report // channel: /path/to/multiqc_report.html
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
 
 - Warning: `modules/local/adata/merge/main.nf:26:5`: Variable was declared but not used
 
@@ -137,4 +144,74 @@
   ```nextflow
       max_epochs = task.ext.max_epochs ?: null
       ^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/ambient_correction/main.nf:111:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      h5ad     = ch_h5ad     // channel: [ meta, h5ad ]
+      ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/celltype_assignment/main.nf:39:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      obs      = ch_obs      // channel: [ meta, pkl ]
+      ^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/load_h5ad/main.nf:75:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      h5ad     = ch_output   // channel: [ meta, h5ad, h5ad ]
+      ^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/pseudobulking/main.nf:22:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      h5ad_pseudobulk = ch_h5ad_pseudobulk // channel: [ integration, h5ad ]
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/singler/main.nf:43:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      obs      = ch_obs
+      ^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/unify_genes/main.nf:36:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      h5ad = ch_h5ad // channel: [ meta, h5ad ]
+      ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/h5ad_removebackground_barcodes_cellbender_anndata/main.nf:18:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      h5ad = ANNDATA_BARCODES.out.h5ad  // channel: [ val(meta), path(h5ad) ]
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_config = valid_config
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```

@@ -1,13 +1,11 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.04.2
+ N E X T F L O W   ~  version 26.04.3
 
 Downloading plugin nf-slack@0.5.1
-Launching `./main.nf` [disturbed_curran] revision: c6b45c301b
+Launching `./main.nf` [small_thompson] revision: c6b45c301b
 
-WARN: Unrecognized config option 'validation.defaultIgnoreParams'
-WARN: Unrecognized config option 'validation.monochromeLogs'
 WARN: Unrecognized config option 'slack.enabled'
 WARN: Unrecognized config option 'slack.webhook.url'
 
@@ -17,7 +15,7 @@ WARN: Unrecognized config option 'slack.webhook.url'
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/pixelator 4.1.0dev
+  nf-core/pixelator 4.2.0dev
 ------------------------------------------------------
 Typical pipeline command:
 
@@ -104,11 +102,17 @@ Sample calling options
 Denoise options
   --skip_denoise                                            [boolean] Skip denoise step 
   --save_pna_denoise_pixelfile                              [boolean] Save the PXL dataset after the denoise stage. 
-  --pna_denoise_run_one_core_graph_denoising                [boolean] Activate the one-core graph denoising algorithm [default: true] 
+  --pna_denoise_run_one_core_graph_denoising                [boolean] Activate the one-core graph denoising algorithm 
   --pna_denoise_pval_threshold                              [number]  The p-value threshold for the a marker to be considered significantly over-expressed in the one-core 
 layer of a component [default: 0.05]  
   --pna_denoise_inflate_factor                              [number]  The inflate factor for the number of nodes from over-expressed markers to be removed from the 
 one-core layer of a component [default: 1.5]  
+  --pna_denoise_run_ace_denoising                           [boolean] Remove nodes in the peripheral-like partition using adaptive core expansion (ACE). [default: 
+true]  
+  --pna_denoise_ace_k                                       [integer] Neighborhood radius in graph steps for ACE denoising. [default: 3] 
+  --pna_denoise_run_pls_denoising                           [boolean] Run PLS-on-coreness denoising and retain the largest connected component after filtering. 
+[default: true]  
+  --pna_denoise_pls_score_threshold                         [number]  All retained PLS score columns must exceed this value. [default: -3.0] 
 
 Analysis options
   --skip_analysis                                           [boolean] Skip analysis step 
