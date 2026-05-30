@@ -4,7 +4,8 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.04.3
 
 Downloading plugin nf-slack@0.5.1
-Launching `./main.nf` [small_thompson] revision: c6b45c301b
+Downloading plugin nf-schema@2.7.2
+Launching `./main.nf` [infallible_crick] revision: c6b45c301b
 
 WARN: Unrecognized config option 'slack.enabled'
 WARN: Unrecognized config option 'slack.webhook.url'

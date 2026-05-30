@@ -1,227 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T10:24:29.834982671Z
-- Nextflow version: 25.12.0-edge
-- Summary: 31 errors, 158 warnings
-
-## :x: Errors
-
-- Error: `conf/modules.config:179:21`: Unexpected input: '{'
-
-  ```nextflow
-              saveAs: { filename -> filename.equals('versions.yml') ? null : filename }
-                      ^
-  ```
-
-- Error: `main.nf:20:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/multiplesequencealign/subworkflows/local/utils_nfcore_multiplesequencealign_pipeline/main.nf'
-
-  ```nextflow
-  include { PIPELINE_INITIALISATION } from './subworkflows/local/utils_nfcore_multiplesequencealign_pipeline'
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `main.nf:21:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/multiplesequencealign/subworkflows/local/utils_nfcore_multiplesequencealign_pipeline/main.nf'
-
-  ```nextflow
-  include { PIPELINE_COMPLETION     } from './subworkflows/local/utils_nfcore_multiplesequencealign_pipeline'
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `main.nf:64:5`: `PIPELINE_INITIALISATION` is not defined
-
-  ```nextflow
-      PIPELINE_INITIALISATION (
-      ^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `main.nf:78:9`: `PIPELINE_INITIALISATION` is not defined
-
-  ```nextflow
-          PIPELINE_INITIALISATION.out.samplesheet,
-          ^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `main.nf:79:9`: `PIPELINE_INITIALISATION` is not defined
-
-  ```nextflow
-          PIPELINE_INITIALISATION.out.tools
-          ^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `main.nf:85:5`: `PIPELINE_COMPLETION` is not defined
-
-  ```nextflow
-      PIPELINE_COMPLETION (
-      ^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `modules/nf-core/mafft/align/main.nf:29:9`: `add` is already declared
-
-  ```nextflow
-      def add          = add             ? "--add <(unpigz -cdf ${add})"                   : ''
-          ^^^
-  ```
-
-- Error: `modules/nf-core/mafft/align/main.nf:30:9`: `addfragments` is already declared
-
-  ```nextflow
-      def addfragments = addfragments    ? "--addfragments <(unpigz -cdf ${addfragments})" : ''
-          ^^^^^^^^^^^^
-  ```
-
-- Error: `modules/nf-core/mafft/align/main.nf:31:9`: `addfull` is already declared
-
-  ```nextflow
-      def addfull      = addfull         ? "--addfull <(unpigz -cdf ${addfull})"           : ''
-          ^^^^^^^
-  ```
-
-- Error: `modules/nf-core/mafft/align/main.nf:32:9`: `addprofile` is already declared
-
-  ```nextflow
-      def addprofile   = addprofile      ? "--addprofile <(unpigz -cdf ${addprofile})"     : ''
-          ^^^^^^^^^^
-  ```
-
-- Error: `modules/nf-core/mafft/align/main.nf:33:9`: `addlong` is already declared
-
-  ```nextflow
-      def addlong      = addlong         ? "--addlong <(unpigz -cdf ${addlong})"           : ''
-          ^^^^^^^
-  ```
-
-- Error: `modules/nf-core/mafft/align/main.nf:59:9`: `add` is already declared
-
-  ```nextflow
-      def add          = add             ? "--add ${add}"                   : ''
-          ^^^
-  ```
-
-- Error: `modules/nf-core/mafft/align/main.nf:60:9`: `addfragments` is already declared
-
-  ```nextflow
-      def addfragments = addfragments    ? "--addfragments ${addfragments}" : ''
-          ^^^^^^^^^^^^
-  ```
-
-- Error: `modules/nf-core/mafft/align/main.nf:61:9`: `addfull` is already declared
-
-  ```nextflow
-      def addfull      = addfull         ? "--addfull ${addfull}"           : ''
-          ^^^^^^^
-  ```
-
-- Error: `modules/nf-core/mafft/align/main.nf:62:9`: `addprofile` is already declared
-
-  ```nextflow
-      def addprofile   = addprofile      ? "--addprofile ${addprofile}"     : ''
-          ^^^^^^^^^^
-  ```
-
-- Error: `modules/nf-core/mafft/align/main.nf:63:9`: `addlong` is already declared
-
-  ```nextflow
-      def addlong      = addlong         ? "--addlong ${addlong}"           : ''
-          ^^^^^^^
-  ```
-
-- Error: `nextflow.config:341:1`: Variable declarations cannot be mixed with config statements
-
-  ```nextflow
-  def co2_timestamp = new java.util.Date().format( 'yyyy-MM-dd_HH-mm-ss')
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `nextflow.config:344:72`: `co2_timestamp` is not defined
-
-  ```nextflow
-      traceFile   = "${params.outdir}/pipeline_info/co2footprint_trace_${co2_timestamp}.txt"
-                                                                         ^^^^^^^^^^^^^
-  ```
-
-- Error: `nextflow.config:345:73`: `co2_timestamp` is not defined
-
-  ```nextflow
-      reportFile  = "${params.outdir}/pipeline_info/co2footprint_report_${co2_timestamp}.html"
-                                                                          ^^^^^^^^^^^^^
-  ```
-
-- Error: `nextflow.config:346:74`: `co2_timestamp` is not defined
-
-  ```nextflow
-      summaryFile = "${params.outdir}/pipeline_info/co2footprint_summary_${co2_timestamp}.txt"
-                                                                           ^^^^^^^^^^^^^
-  ```
-
-- Error: `nextflow.config:364:45`: `manifest` is not defined
-
-  ```nextflow
-  \033[0;35m  nf-core/multiplesequencealign ${manifest.version}\033[0m
-                                              ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:367:26`: `manifest` is not defined
-
-  ```nextflow
-          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
-                           ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:367:69`: `manifest` is not defined
-
-  ```nextflow
-          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
-                                                                      ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:367:186`: `manifest` is not defined
-
-  ```nextflow
-          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
-                                                                                                                                                                                           ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:376:22`: `validation` is not defined
-
-  ```nextflow
-          beforeText = validation.help.beforeText
-                       ^^^^^^^^^^
-  ```
-
-- Error: `nextflow.config:377:21`: `validation` is not defined
-
-  ```nextflow
-          afterText = validation.help.afterText
-                      ^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/utils_nfcore_multiplesequencealign_pipeline/main.nf:570:66`: Unexpected input: '='
-
-  ```nextflow
-      def traceTrees = prepTrace(cleanTraceData, suffix_to_replace = "_GUIDETREE", subworkflow = "COMPUTE_TREES", keys)
-                                                                   ^
-  ```
-
-- Error: `workflows/multiplesequencealign.nf:10:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/multiplesequencealign/subworkflows/local/utils_nfcore_multiplesequencealign_pipeline/main.nf'
-
-  ```nextflow
-  include { methodsDescriptionText } from '../subworkflows/local/utils_nfcore_multiplesequencealign_pipeline'
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/multiplesequencealign.nf:311:13`: Variables in a closure should be declared with `def`
-
-  ```nextflow
-              content =  meta.keySet().collect{it}.join(",")
-              ^^^^^^^
-  ```
-
-- Error: `workflows/multiplesequencealign.nf:390:13`: `methodsDescriptionText` is not defined
-
-  ```nextflow
-              methodsDescriptionText(ch_multiqc_custom_methods_description))
-              ^^^^^^^^^^^^^^^^^^^^^^
-  ```
+- Generated: 2026-05-30T00:38:41.313091867Z
+- Nextflow version: 26.04.3
+- Summary: 178 warnings
 
 ## :warning: Warnings
 
@@ -337,55 +118,6 @@
           ^^^^
   ```
 
-- Warning: `modules/nf-core/learnmsa/align/main.nf:35:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/mafft/align/main.nf:57:9`: Variable was declared but not used
-
-  ```nextflow
-      def args         = task.ext.args   ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/mafft/align/main.nf:59:9`: Variable was declared but not used
-
-  ```nextflow
-      def add          = add             ? "--add ${add}"                   : ''
-          ^^^
-  ```
-
-- Warning: `modules/nf-core/mafft/align/main.nf:60:9`: Variable was declared but not used
-
-  ```nextflow
-      def addfragments = addfragments    ? "--addfragments ${addfragments}" : ''
-          ^^^^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/mafft/align/main.nf:61:9`: Variable was declared but not used
-
-  ```nextflow
-      def addfull      = addfull         ? "--addfull ${addfull}"           : ''
-          ^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/mafft/align/main.nf:62:9`: Variable was declared but not used
-
-  ```nextflow
-      def addprofile   = addprofile      ? "--addprofile ${addprofile}"     : ''
-          ^^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/mafft/align/main.nf:63:9`: Variable was declared but not used
-
-  ```nextflow
-      def addlong      = addlong         ? "--addlong ${addlong}"           : ''
-          ^^^^^^^
-  ```
-
 - Warning: `modules/nf-core/mafft/guidetree/main.nf:42:9`: Variable was declared but not used
 
   ```nextflow
@@ -475,13 +207,6 @@
   ```nextflow
       def tree_args = tree ? "-t $tree" : ""
           ^^^^^^^^^
-  ```
-
-- Warning: `nextflow.config:367:129`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
-                                                                                                                                  ^^
   ```
 
 - Warning: `subworkflows/local/ALIGN/main.nf:40:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -631,35 +356,35 @@
                                ^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/ALIGN/main.nf:258:30`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/ALIGN/main.nf:257:30`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               meta, fastafile, treefile ->
                                ^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/ALIGN/main.nf:331:17`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/ALIGN/main.nf:330:17`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   merging_id, meta, fastafile, treefile, templatefile, datafiles ->
                   ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/ALIGN/main.nf:352:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/ALIGN/main.nf:351:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   meta, template, dependency ->
                         ^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/ALIGN/main.nf:369:29`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/ALIGN/main.nf:368:29`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   meta, tree, template, dependency ->
                               ^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/ALIGN/main.nf:388:23`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/ALIGN/main.nf:387:23`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .filter { it[1].size() > 1 }
@@ -988,345 +713,541 @@
               ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/utils_nfcore_multiplesequencealign_pipeline/main.nf:34:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      return ch_versions.unique().map { version -> processVersionsFromYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
-                                                                                                   ^^^^^^^
+      input             //  string: Path to input samplesheet
+      ^^^^^
   ```
 
-- Warning: `workflows/multiplesequencealign.nf:63:36`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/utils_nfcore_multiplesequencealign_pipeline/main.nf:35:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      ch_multiqc_files             = Channel.empty()
-                                     ^^^^^^^
+      tools             //  string: Path to input tools samplesheet
+      ^^^^^
   ```
 
-- Warning: `workflows/multiplesequencealign.nf:64:36`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/utils_nfcore_multiplesequencealign_pipeline/main.nf:110:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+              ch_input = Channel.fromList([
+                         ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_multiplesequencealign_pipeline/main.nf:114:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+              ch_input = Channel.fromList([
+                         ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_multiplesequencealign_pipeline/main.nf:118:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+              ch_input = Channel.fromList([
+                         ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_multiplesequencealign_pipeline/main.nf:124:20`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+          ch_input = Channel.fromList(samplesheetToList(params.input, "${projectDir}/assets/schema_input.json"))
+                     ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_multiplesequencealign_pipeline/main.nf:129:20`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+          ch_tools = Channel.fromList([
+                     ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_multiplesequencealign_pipeline/main.nf:134:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+          Channel.fromList(samplesheetToList(params.tools, "${projectDir}/assets/schema_tools.json")).set{ ch_tools }
+          ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_multiplesequencealign_pipeline/main.nf:404:45`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          def mutableRow = map.findAll { key, value ->
+                                              ^^^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_multiplesequencealign_pipeline/main.nf:486:66`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      def traceFile = new File(traceDirPath).listFiles().findAll { it.name.startsWith(filePattern) }.sort { -it.lastModified() }.take(1)[0]
+                                                                   ^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_multiplesequencealign_pipeline/main.nf:486:108`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      def traceFile = new File(traceDirPath).listFiles().findAll { it.name.startsWith(filePattern) }.sort { -it.lastModified() }.take(1)[0]
+                                                                                                             ^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_multiplesequencealign_pipeline/main.nf:490:58`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      def traceFileAlign = traceFile.readLines().findAll { it.contains("COMPLETED") && it.contains("MULTIPLESEQUENCEALIGN:ALIGN") }.collect { it.replaceAll("\t", ",") }.join("\n")
+                                                           ^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_multiplesequencealign_pipeline/main.nf:490:86`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      def traceFileAlign = traceFile.readLines().findAll { it.contains("COMPLETED") && it.contains("MULTIPLESEQUENCEALIGN:ALIGN") }.collect { it.replaceAll("\t", ",") }.join("\n")
+                                                                                       ^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_multiplesequencealign_pipeline/main.nf:490:141`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      def traceFileAlign = traceFile.readLines().findAll { it.contains("COMPLETED") && it.contains("MULTIPLESEQUENCEALIGN:ALIGN") }.collect { it.replaceAll("\t", ",") }.join("\n")
+                                                                                                                                              ^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_multiplesequencealign_pipeline/main.nf:509:41`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      def map1 = list1.collectEntries { [(it[idKey]): it] }
+                                          ^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_multiplesequencealign_pipeline/main.nf:509:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      def map1 = list1.collectEntries { [(it[idKey]): it] }
+                                                      ^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_multiplesequencealign_pipeline/main.nf:551:66`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          mutableRow.args = mutableRow.tag?.split("args:")?.with { it.size() > 1 ? it[1].trim() : "default" }
+                                                                   ^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_multiplesequencealign_pipeline/main.nf:551:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          mutableRow.args = mutableRow.tag?.split("args:")?.with { it.size() > 1 ? it[1].trim() : "default" }
+                                                                                   ^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_multiplesequencealign_pipeline/main.nf:563:35`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      return cleanedTrace.findAll { it != null }
+                                    ^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_multiplesequencealign_pipeline/main.nf:589:59`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      def trace_co2_csv = mergeListsById(traceCsv.collect { it as Map }, co2Csv, "name")
+                                                            ^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_multiplesequencealign_pipeline/main.nf:627:45`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      def trace_subworkflow = trace.findAll { it.subworkflow == subworkflow }
+                                              ^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_multiplesequencealign_pipeline/main.nf:734:70`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      def data = parseCsv(new File(summary_file).readLines().collect { it.replaceAll("\t", ",") }.join("\n"))
+                                                                       ^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_multiplesequencealign_pipeline/main.nf:777:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              treeMatch = trace_file.traceTrees.find {it.tree == row.tree && it.args_tree_clean == row.args_tree_clean}
+                                                      ^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_multiplesequencealign_pipeline/main.nf:777:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              treeMatch = trace_file.traceTrees.find {it.tree == row.tree && it.args_tree_clean == row.args_tree_clean}
+                                                                             ^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_multiplesequencealign_pipeline/main.nf:779:54`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              treeMatch = trace_file.traceTrees.find { it.id == row.id && it.tree == row.tree && it.args_tree_clean == row.args_tree_clean}
+                                                       ^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_multiplesequencealign_pipeline/main.nf:779:73`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              treeMatch = trace_file.traceTrees.find { it.id == row.id && it.tree == row.tree && it.args_tree_clean == row.args_tree_clean}
+                                                                          ^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_multiplesequencealign_pipeline/main.nf:779:96`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              treeMatch = trace_file.traceTrees.find { it.id == row.id && it.tree == row.tree && it.args_tree_clean == row.args_tree_clean}
+                                                                                                 ^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_multiplesequencealign_pipeline/main.nf:782:55`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          def alignMatch = trace_file.traceAlign.find { it.id == row.id && it.tree == row.tree && row.args_tree_clean == it.args_tree_clean && it.aligner == row.aligner && it.args_aligner_clean == row.args_aligner_clean}
+                                                        ^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_multiplesequencealign_pipeline/main.nf:782:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          def alignMatch = trace_file.traceAlign.find { it.id == row.id && it.tree == row.tree && row.args_tree_clean == it.args_tree_clean && it.aligner == row.aligner && it.args_aligner_clean == row.args_aligner_clean}
+                                                                           ^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_multiplesequencealign_pipeline/main.nf:782:120`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          def alignMatch = trace_file.traceAlign.find { it.id == row.id && it.tree == row.tree && row.args_tree_clean == it.args_tree_clean && it.aligner == row.aligner && it.args_aligner_clean == row.args_aligner_clean}
+                                                                                                                         ^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_multiplesequencealign_pipeline/main.nf:782:142`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          def alignMatch = trace_file.traceAlign.find { it.id == row.id && it.tree == row.tree && row.args_tree_clean == it.args_tree_clean && it.aligner == row.aligner && it.args_aligner_clean == row.args_aligner_clean}
+                                                                                                                                               ^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_multiplesequencealign_pipeline/main.nf:782:171`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          def alignMatch = trace_file.traceAlign.find { it.id == row.id && it.tree == row.tree && row.args_tree_clean == it.args_tree_clean && it.aligner == row.aligner && it.args_aligner_clean == row.args_aligner_clean}
+                                                                                                                                                                            ^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_config = valid_config
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `workflows/multiplesequencealign.nf:61:5`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      multiqc_config   // string: path to MultiQC config file or list of paths if multiple config files
+      ^^^^^^^^^^^^^^
+  ```
+
+- Warning: `workflows/multiplesequencealign.nf:62:5`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      multiqc_logo     // string: path to MultiQC logo file
+      ^^^^^^^^^^^^
+  ```
+
+- Warning: `workflows/multiplesequencealign.nf:63:5`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      multiqc_methods_description // string: path to MultiQC methods description file
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `workflows/multiplesequencealign.nf:69:36`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_multiqc_report            = Channel.empty()
                                      ^^^^^^^
   ```
 
-- Warning: `workflows/multiplesequencealign.nf:65:36`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/multiplesequencealign.nf:70:36`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       evaluation_summary           = Channel.empty()
                                      ^^^^^^^
   ```
 
-- Warning: `workflows/multiplesequencealign.nf:66:36`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/multiplesequencealign.nf:71:36`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       stats_summary                = Channel.empty()
                                      ^^^^^^^
   ```
 
-- Warning: `workflows/multiplesequencealign.nf:67:36`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/multiplesequencealign.nf:72:36`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       stats_and_evaluation_summary = Channel.empty()
                                      ^^^^^^^
   ```
 
-- Warning: `workflows/multiplesequencealign.nf:68:36`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/multiplesequencealign.nf:73:36`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_refs                      = Channel.empty()
                                      ^^^^^^^
   ```
 
-- Warning: `workflows/multiplesequencealign.nf:69:36`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/multiplesequencealign.nf:74:36`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_templates                 = Channel.empty()
                                      ^^^^^^^
   ```
 
-- Warning: `workflows/multiplesequencealign.nf:70:36`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/multiplesequencealign.nf:75:36`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_optional_data             = Channel.empty()
                                      ^^^^^^^
   ```
 
-- Warning: `workflows/multiplesequencealign.nf:71:36`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions                  = Channel.empty()
-                                     ^^^^^^^
-  ```
-
-- Warning: `workflows/multiplesequencealign.nf:74:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/multiplesequencealign.nf:78:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .filter { it[1].size() > 0}
                     ^^
   ```
 
-- Warning: `workflows/multiplesequencealign.nf:76:26`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/multiplesequencealign.nf:80:26`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               meta, fasta, ref, str, template ->
                            ^^^
   ```
 
-- Warning: `workflows/multiplesequencealign.nf:76:31`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/multiplesequencealign.nf:80:31`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               meta, fasta, ref, str, template ->
                                 ^^^
   ```
 
-- Warning: `workflows/multiplesequencealign.nf:76:36`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/multiplesequencealign.nf:80:36`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               meta, fasta, ref, str, template ->
                                      ^^^^^^^^
   ```
 
-- Warning: `workflows/multiplesequencealign.nf:82:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/multiplesequencealign.nf:86:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .filter { it[2].size() > 0}
                     ^^
   ```
 
-- Warning: `workflows/multiplesequencealign.nf:84:19`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/multiplesequencealign.nf:88:19`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               meta, fasta, ref, str, template ->
                     ^^^^^
   ```
 
-- Warning: `workflows/multiplesequencealign.nf:84:31`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/multiplesequencealign.nf:88:31`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               meta, fasta, ref, str, template ->
                                 ^^^
   ```
 
-- Warning: `workflows/multiplesequencealign.nf:84:36`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/multiplesequencealign.nf:88:36`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               meta, fasta, ref, str, template ->
                                      ^^^^^^^^
   ```
 
-- Warning: `workflows/multiplesequencealign.nf:90:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/multiplesequencealign.nf:94:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .filter { it[4].size() > 0}
                     ^^
   ```
 
-- Warning: `workflows/multiplesequencealign.nf:92:19`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/multiplesequencealign.nf:96:19`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               meta, fasta, ref, str, template ->
                     ^^^^^
   ```
 
-- Warning: `workflows/multiplesequencealign.nf:92:26`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/multiplesequencealign.nf:96:26`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               meta, fasta, ref, str, template ->
                            ^^^
   ```
 
-- Warning: `workflows/multiplesequencealign.nf:92:31`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/multiplesequencealign.nf:96:31`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               meta, fasta, ref, str, template ->
                                 ^^^
   ```
 
-- Warning: `workflows/multiplesequencealign.nf:119:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/multiplesequencealign.nf:123:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               pdbs_dir = Channel.fromPath(params.pdbs_dir)
                          ^^^^^^^
   ```
 
-- Warning: `workflows/multiplesequencealign.nf:124:24`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/multiplesequencealign.nf:128:24`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   .map { meta, dir -> [ file(dir).listFiles() ] }
                          ^^^^
   ```
 
-- Warning: `workflows/multiplesequencealign.nf:132:42`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/multiplesequencealign.nf:136:42`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               optional_data_to_be_mapped = Channel.fromPath(params.pdbs_dir+"/**")
                                            ^^^^^^^
   ```
 
-- Warning: `workflows/multiplesequencealign.nf:158:24`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/multiplesequencealign.nf:162:24`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   .map { dep_id, dep, fasta_id -> [ fasta_id, dep ] }
                          ^^^^^^
   ```
 
-- Warning: `workflows/multiplesequencealign.nf:168:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/multiplesequencealign.nf:172:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   meta, fasta, ref, str, template ->
                         ^^^^^
   ```
 
-- Warning: `workflows/multiplesequencealign.nf:168:30`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/multiplesequencealign.nf:172:30`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   meta, fasta, ref, str, template ->
                                ^^^
   ```
 
-- Warning: `workflows/multiplesequencealign.nf:168:40`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/multiplesequencealign.nf:172:40`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   meta, fasta, ref, str, template ->
                                          ^^^^^^^^
   ```
 
-- Warning: `workflows/multiplesequencealign.nf:171:23`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/multiplesequencealign.nf:175:23`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .filter { it[1].size() > 0 }
                         ^^
   ```
 
-- Warning: `workflows/multiplesequencealign.nf:178:31`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/multiplesequencealign.nf:182:31`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   compressed:   it[1].endsWith('.tar.gz')
                                 ^^
   ```
 
-- Warning: `workflows/multiplesequencealign.nf:202:13`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/multiplesequencealign.nf:205:13`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               it[-1] == null
               ^^
   ```
 
-- Warning: `workflows/multiplesequencealign.nf:242:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/multiplesequencealign.nf:245:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .filter { it[3]["aligner"] == "3DCOFFEE" }
                     ^^
   ```
 
-- Warning: `workflows/multiplesequencealign.nf:249:33`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/multiplesequencealign.nf:252:33`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_optional_data_template = Channel.empty()
                                   ^^^^^^^
   ```
 
-- Warning: `workflows/multiplesequencealign.nf:263:13`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/multiplesequencealign.nf:266:13`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               it[-1] == null
               ^^
   ```
 
-- Warning: `workflows/multiplesequencealign.nf:310:80`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/multiplesequencealign.nf:313:80`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ALIGN.out.msa.collectFile(keepHeader: true, skip: 1,sort: true){ meta, msa ->
                                                                                  ^^^
   ```
 
-- Warning: `workflows/multiplesequencealign.nf:311:46`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/multiplesequencealign.nf:314:50`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-              content =  meta.keySet().collect{it}.join(",")
-                                               ^^
+              def content =  meta.keySet().collect{it}.join(",")
+                                                   ^^
   ```
 
-- Warning: `workflows/multiplesequencealign.nf:313:46`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/multiplesequencealign.nf:316:46`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               content += meta.values().collect{it}.join(",")
                                                ^^
   ```
 
-- Warning: `workflows/multiplesequencealign.nf:328:48`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/multiplesequencealign.nf:331:48`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           stats_summary_csv = stats_summary.map{ meta, csv -> csv }
                                                  ^^^^
   ```
 
-- Warning: `workflows/multiplesequencealign.nf:329:53`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/multiplesequencealign.nf:332:53`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           eval_summary_csv  = evaluation_summary.map{ meta, csv -> csv }
                                                       ^^^^
   ```
 
-- Warning: `workflows/multiplesequencealign.nf:346:21`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/multiplesequencealign.nf:349:21`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           shiny_app = Channel.fromPath(params.shiny_app)
                       ^^^^^^^
   ```
 
-- Warning: `workflows/multiplesequencealign.nf:372:36`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/multiplesequencealign.nf:408:92`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-          ch_multiqc_config        = Channel.fromPath(
-                                     ^^^^^^^
-  ```
-
-- Warning: `workflows/multiplesequencealign.nf:375:13`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-              Channel.fromPath(params.multiqc_config, checkIfExists: true) :
-              ^^^^^^^
-  ```
-
-- Warning: `workflows/multiplesequencealign.nf:376:13`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-              Channel.empty()
-              ^^^^^^^
-  ```
-
-- Warning: `workflows/multiplesequencealign.nf:378:13`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-              Channel.fromPath(params.multiqc_logo, checkIfExists: true) :
-              ^^^^^^^
-  ```
-
-- Warning: `workflows/multiplesequencealign.nf:379:13`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-              Channel.empty()
-              ^^^^^^^
-  ```
-
-- Warning: `workflows/multiplesequencealign.nf:383:49`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          ch_workflow_summary                   = Channel.value(paramsSummaryMultiqc(summary_params))
-                                                  ^^^^^^^
-  ```
-
-- Warning: `workflows/multiplesequencealign.nf:389:49`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          ch_methods_description                = Channel.value(
-                                                  ^^^^^^^
-  ```
-
-- Warning: `workflows/multiplesequencealign.nf:401:112`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          ch_multiqc_files                      = ch_multiqc_files.mix(PREPARE_MULTIQC.out.multiqc_table.collect{it[1]}.ifEmpty([]))
-                                                                                                                 ^^
+          ch_multiqc_files = ch_multiqc_files.mix(PREPARE_MULTIQC.out.multiqc_table.collect{ it[1] }.ifEmpty([]))
+                                                                                             ^^
   ```

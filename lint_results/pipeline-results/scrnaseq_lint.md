@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-05-29T00:44:32.628869280Z
+- Generated: 2026-05-30T00:40:46.147467760Z
 - Nextflow version: 26.04.3
 - Summary: 65 warnings
 
@@ -27,252 +27,252 @@
       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/align_cellranger.nf:45:22`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/align_cellranger/main.nf:45:22`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   if ( it.toString().contains("raw_feature_bc_matrix") ) { desired_files.add( it ) }
                        ^^
   ```
 
-- Warning: `subworkflows/local/align_cellranger.nf:45:93`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/align_cellranger/main.nf:45:93`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   if ( it.toString().contains("raw_feature_bc_matrix") ) { desired_files.add( it ) }
                                                                                               ^^
   ```
 
-- Warning: `subworkflows/local/align_cellranger.nf:54:22`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/align_cellranger/main.nf:54:22`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   if ( it.toString().contains("filtered_feature_bc_matrix") ) { desired_files.add( it ) }
                        ^^
   ```
 
-- Warning: `subworkflows/local/align_cellranger.nf:54:98`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/align_cellranger/main.nf:54:98`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   if ( it.toString().contains("filtered_feature_bc_matrix") ) { desired_files.add( it ) }
                                                                                                    ^^
   ```
 
-- Warning: `subworkflows/local/align_cellrangerarc.nf:70:30`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/align_cellrangerarc/main.nf:70:30`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           mtx_files.each{ if ( it.toString().contains("${pattern}") ) { desired_files.add( it ) } }
                                ^^
   ```
 
-- Warning: `subworkflows/local/align_cellrangerarc.nf:70:90`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/align_cellrangerarc/main.nf:70:90`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           mtx_files.each{ if ( it.toString().contains("${pattern}") ) { desired_files.add( it ) } }
                                                                                            ^^
   ```
 
-- Warning: `subworkflows/local/align_cellrangermulti.nf:32:47`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/align_cellrangermulti/main.nf:32:47`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def data_dict  = meta_clone.find{ it.key == "${meta_clone.feature_type}" }
                                                 ^^
   ```
 
-- Warning: `subworkflows/local/align_cellrangermulti.nf:62:9`: Variable was declared but not used
+- Warning: `subworkflows/local/align_cellrangermulti/main.nf:62:9`: Variable was declared but not used
 
   ```nextflow
           ch_gex_barcodes           = params.gex_barcode_sample_assignment ? file(params.gex_barcode_sample_assignment) : []
           ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/align_cellrangermulti.nf:93:20`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/align_cellrangermulti/main.nf:93:20`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .map{ [it[0].id] }
                      ^^
   ```
 
-- Warning: `subworkflows/local/align_cellrangermulti.nf:94:85`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/align_cellrangermulti/main.nf:94:85`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .concat( PARSE_CELLRANGERMULTI_SAMPLESHEET.out.cmo.flatten().map { [ "${it.baseName}" - "_cmo", it ] } )
                                                                                       ^^
   ```
 
-- Warning: `subworkflows/local/align_cellrangermulti.nf:94:109`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/align_cellrangermulti/main.nf:94:109`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .concat( PARSE_CELLRANGERMULTI_SAMPLESHEET.out.cmo.flatten().map { [ "${it.baseName}" - "_cmo", it ] } )
                                                                                                               ^^
   ```
 
-- Warning: `subworkflows/local/align_cellrangermulti.nf:96:25`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/align_cellrangermulti/main.nf:96:25`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .map { if ( it.size() == 2 ) { it[1] } else { [] } } // a correct tuple from snippet will have: [ sample, cmo.csv ]
                           ^^
   ```
 
-- Warning: `subworkflows/local/align_cellrangermulti.nf:96:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/align_cellrangermulti/main.nf:96:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .map { if ( it.size() == 2 ) { it[1] } else { [] } } // a correct tuple from snippet will have: [ sample, cmo.csv ]
                                              ^^
   ```
 
-- Warning: `subworkflows/local/align_cellrangermulti.nf:101:20`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/align_cellrangermulti/main.nf:101:20`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .map{ [it[0].id] }
                      ^^
   ```
 
-- Warning: `subworkflows/local/align_cellrangermulti.nf:102:85`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/align_cellrangermulti/main.nf:102:85`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .concat( PARSE_CELLRANGERMULTI_SAMPLESHEET.out.ocm.flatten().map { [ "${it.baseName}" - "_ocm", it ] } )
                                                                                       ^^
   ```
 
-- Warning: `subworkflows/local/align_cellrangermulti.nf:102:109`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/align_cellrangermulti/main.nf:102:109`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .concat( PARSE_CELLRANGERMULTI_SAMPLESHEET.out.ocm.flatten().map { [ "${it.baseName}" - "_ocm", it ] } )
                                                                                                               ^^
   ```
 
-- Warning: `subworkflows/local/align_cellrangermulti.nf:104:25`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/align_cellrangermulti/main.nf:104:25`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .map { if ( it.size() == 2 ) { it[1] } else { [] } } // a correct tuple from snippet will have: [ sample, ocm.csv ]
                           ^^
   ```
 
-- Warning: `subworkflows/local/align_cellrangermulti.nf:104:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/align_cellrangermulti/main.nf:104:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .map { if ( it.size() == 2 ) { it[1] } else { [] } } // a correct tuple from snippet will have: [ sample, ocm.csv ]
                                              ^^
   ```
 
-- Warning: `subworkflows/local/align_cellrangermulti.nf:109:20`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/align_cellrangermulti/main.nf:109:20`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .map{ [it[0].id] }
                      ^^
   ```
 
-- Warning: `subworkflows/local/align_cellrangermulti.nf:110:86`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/align_cellrangermulti/main.nf:110:86`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .concat( PARSE_CELLRANGERMULTI_SAMPLESHEET.out.frna.flatten().map { [ "${it.baseName}" - "_frna", it ] } )
                                                                                        ^^
   ```
 
-- Warning: `subworkflows/local/align_cellrangermulti.nf:110:111`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/align_cellrangermulti/main.nf:110:111`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .concat( PARSE_CELLRANGERMULTI_SAMPLESHEET.out.frna.flatten().map { [ "${it.baseName}" - "_frna", it ] } )
                                                                                                                 ^^
   ```
 
-- Warning: `subworkflows/local/align_cellrangermulti.nf:112:25`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/align_cellrangermulti/main.nf:112:25`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .map { if ( it.size() == 2 ) { it[1] } else { [] } } // a correct tuple from snippet will have: [ sample, frna.csv ]
                           ^^
   ```
 
-- Warning: `subworkflows/local/align_cellrangermulti.nf:112:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/align_cellrangermulti/main.nf:112:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .map { if ( it.size() == 2 ) { it[1] } else { [] } } // a correct tuple from snippet will have: [ sample, frna.csv ]
                                              ^^
   ```
 
-- Warning: `subworkflows/local/align_cellrangermulti.nf:200:39`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/align_cellrangermulti/main.nf:200:39`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_grouped_fastq.gex.map{ it[0] },
                                         ^^
   ```
 
-- Warning: `subworkflows/local/align_cellrangermulti.nf:247:34`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/align_cellrangermulti/main.nf:247:34`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               mtx_files.each{ if ( it.toString().contains("${pattern}") ) { desired_files.add( it ) } }
                                    ^^
   ```
 
-- Warning: `subworkflows/local/align_cellrangermulti.nf:247:94`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/align_cellrangermulti/main.nf:247:94`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               mtx_files.each{ if ( it.toString().contains("${pattern}") ) { desired_files.add( it ) } }
                                                                                                ^^
   ```
 
-- Warning: `subworkflows/local/align_cellrangermulti.nf:263:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/align_cellrangermulti/main.nf:263:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .filter{ it != null } // remove nulls from previous step
                    ^^
   ```
 
-- Warning: `subworkflows/local/fastqc.nf:29:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/fastqc/main.nf:29:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       fastqc_multiqc = Channel.empty()
                        ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/kallisto_bustools.nf:20:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/kallisto_bustools/main.nf:20:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_versions = Channel.empty()
                     ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/simpleaf.nf:23:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/simpleaf/main.nf:23:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_versions = Channel.empty()
                     ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/simpleaf.nf:63:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/simpleaf/main.nf:63:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
                   txp2gene = Channel.of( txp2gene )
                              ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/simpleaf.nf:67:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/simpleaf/main.nf:67:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               simpleaf_index = Channel.of( [ [:], [] ] )
                                ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/simpleaf.nf:72:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/simpleaf/main.nf:72:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           simpleaf_index = Channel.of( [ [ id: simpleaf_index.getName() ], simpleaf_index ] )
                            ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/simpleaf.nf:76:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/simpleaf/main.nf:76:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               txp2gene = Channel.of( txp2gene )
                          ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/simpleaf.nf:122:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/simpleaf/main.nf:122:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_qcatch_report = Channel.empty()
                          ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/starsolo.nf:72:53`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/starsolo/main.nf:72:53`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       for_multiqc     = STAR_ALIGN.out.log_final.map{ meta, it -> it }

@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.04.2
+ N E X T F L O W   ~  version 26.04.3
 
-Launching `./main.nf` [small_gutenberg] revision: b1d42e8756
+Launching `./main.nf` [determined_edison] revision: b1d42e8756
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -93,7 +93,8 @@ Leafcutter options
 rMATS options
   --rmats                       [boolean] Run rMATS workflow. [default: true] 
   --rmats_splice_diff_cutoff    [number]  The cutoff used in the null hypothesis test for differential splicing. [default: 0.0001] 
-  --rmats_paired_stats          [boolean] Use paired statistical model. [default: true] 
+  --rmats_paired_stats          [boolean] Use paired statistical model. It requires that the same individuals are measured in both conditions. 
+[default: true]  
   --rmats_read_len              [integer] The length of each read. [default: 40] 
   --rmats_novel_splice_site     [boolean] Detect splicing events that involve an unannotated splice site. 
   --rmats_min_intron_len        [integer] Minimum Intron Length. [default: 50] 

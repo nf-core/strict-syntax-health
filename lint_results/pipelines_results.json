@@ -362,9 +362,9 @@
   "fetchngs": {
     "full_name": "nf-core/fetchngs",
     "html_url": "https://github.com/nf-core/fetchngs",
-    "commit": "918395bc8c8c018e8f531b89f88c058d052c0395",
+    "commit": "0ae5518f251fd8ea78c5785f8c9e55fdf0e1db2c",
     "errors": 0,
-    "warnings": 9,
+    "warnings": 15,
     "parse_error": false,
     "prints_help": true
   },
@@ -560,7 +560,7 @@
   "magmap": {
     "full_name": "nf-core/magmap",
     "html_url": "https://github.com/nf-core/magmap",
-    "commit": "9e91506750e39a15271fc1d1791718dae860453a",
+    "commit": "076b3162ccba87aeb65a7b6b2dea03a2a4def22f",
     "errors": 0,
     "warnings": 5,
     "parse_error": false,
@@ -578,9 +578,9 @@
   "mcmicro": {
     "full_name": "nf-core/mcmicro",
     "html_url": "https://github.com/nf-core/mcmicro",
-    "commit": "811df80beffe0731d9b32d65a116c875d1f6e82f",
-    "errors": 21,
-    "warnings": 48,
+    "commit": "b4949c7b737a0320037c9781c383bfc8240ddcb4",
+    "errors": 13,
+    "warnings": 55,
     "parse_error": false,
     "prints_help": null
   },
@@ -614,9 +614,9 @@
   "metatdenovo": {
     "full_name": "nf-core/metatdenovo",
     "html_url": "https://github.com/nf-core/metatdenovo",
-    "commit": "53618bf411392c9ef6c0d07ad063f984bf4cc227",
+    "commit": "834f9be0a14c7a35103a07ad37cbcc8f001fffd7",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 4,
     "parse_error": false,
     "prints_help": true
   },
@@ -695,11 +695,11 @@
   "multiplesequencealign": {
     "full_name": "nf-core/multiplesequencealign",
     "html_url": "https://github.com/nf-core/multiplesequencealign",
-    "commit": "67d7057a5b161cb647f257b20edc4d385be1cc12",
-    "errors": 31,
-    "warnings": 158,
+    "commit": "1fd8bda62787418bff4c2df9dbff4561e888dadc",
+    "errors": 0,
+    "warnings": 178,
     "parse_error": false,
-    "prints_help": null
+    "prints_help": true
   },
   "nanoseq": {
     "full_name": "nf-core/nanoseq",
@@ -767,9 +767,9 @@
   "pacvar": {
     "full_name": "nf-core/pacvar",
     "html_url": "https://github.com/nf-core/pacvar",
-    "commit": "e1370084f46b1f42af523146d32c11d79b75f841",
+    "commit": "d744b8eeaebc526d9e0720f49eaa19d9bdd05c43",
     "errors": 6,
-    "warnings": 40,
+    "warnings": 34,
     "parse_error": false,
     "prints_help": null
   },
@@ -839,7 +839,7 @@
   "pixelator": {
     "full_name": "nf-core/pixelator",
     "html_url": "https://github.com/nf-core/pixelator",
-    "commit": "ad8bbcd362347de567f17b8b68ab061e8c6ae958",
+    "commit": "ccf598fb5afb06b3317d5827c57db1acc060b990",
     "errors": 0,
     "warnings": 21,
     "parse_error": false,
@@ -902,9 +902,9 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "4b3e42bc8ffe810764e27834c4a567234c4aa96b",
+    "commit": "efbdf4617de741c5dc29b16a9721f35727db14bf",
     "errors": 0,
-    "warnings": 13,
+    "warnings": 12,
     "parse_error": false,
     "prints_help": true
   },
@@ -992,9 +992,9 @@
   "rnasplice": {
     "full_name": "nf-core/rnasplice",
     "html_url": "https://github.com/nf-core/rnasplice",
-    "commit": "6d51dfed416cc0e9f06b6ccdd4fab017d74e2b2a",
+    "commit": "ce58c346049e459e9ed363394bef57d14cc26d7d",
     "errors": 0,
-    "warnings": 34,
+    "warnings": 37,
     "parse_error": false,
     "prints_help": true
   },
@@ -1046,7 +1046,7 @@
   "scrnaseq": {
     "full_name": "nf-core/scrnaseq",
     "html_url": "https://github.com/nf-core/scrnaseq",
-    "commit": "86f1bdf539e8823b9aaa168587821a8eacf819d0",
+    "commit": "d3e9a95eec86db88bf6472ced3004fda028aaae0",
     "errors": 0,
     "warnings": 65,
     "parse_error": false,

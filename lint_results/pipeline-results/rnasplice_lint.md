@@ -1,10 +1,31 @@
 # Nextflow lint results
 
-- Generated: 2026-05-27T00:42:25.006397898Z
-- Nextflow version: 26.04.2
-- Summary: 34 warnings
+- Generated: 2026-05-30T00:40:23.777332489Z
+- Nextflow version: 26.04.3
+- Summary: 37 warnings
 
 ## :warning: Warnings
+
+- Warning: `conf/modules.config:305:23`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              saveAs: { filename -> null }
+                        ^^^^^^^^
+  ```
+
+- Warning: `conf/modules.config:314:23`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              saveAs: { filename -> null }
+                        ^^^^^^^^
+  ```
+
+- Warning: `conf/modules.config:336:23`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              saveAs: { filename -> null }
+                        ^^^^^^^^
+  ```
 
 - Warning: `main.nf:92:5`: Emit name should be omitted when there is only one emit
 

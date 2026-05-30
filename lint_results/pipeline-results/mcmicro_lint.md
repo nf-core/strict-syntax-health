@@ -1,17 +1,10 @@
 # Nextflow lint results
 
-- Generated: 2026-02-28T00:19:43.147774163Z
-- Nextflow version: 26.01.1-edge
-- Summary: 21 errors, 48 warnings
+- Generated: 2026-05-30T00:38:13.254056550Z
+- Nextflow version: 26.04.3
+- Summary: 13 errors, 55 warnings
 
 ## :x: Errors
-
-- Error: `conf/modules.config:92:39`: Unexpected input: '/'
-
-  ```nextflow
-                  else if (filename ==~ /${meta.id}(_backsub)?_${meta2.id}(_mask)?\.csv/) { "${meta.id}.csv" }
-                                        ^
-  ```
 
 - Error: `main.nf:18:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/mcmicro/workflows/mcmicro.nf'
 
@@ -39,55 +32,6 @@
   ```nextflow
               node -> node.name() == 'Pixels' && node.@SizeX != '' && node.@SizeY != ''
                                                       ^
-  ```
-
-- Error: `modules/local/prelude/main.nf:222:22`: Unexpected input: '\n'
-
-  ```nextflow
-              counter++
-                       ^
-  ```
-
-- Error: `subworkflows/local/prelude/main.nf:1:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/mcmicro/modules/local/prelude/main.nf'
-
-  ```nextflow
-  include { SUMMARY_XML                   } from '../../../modules/local/prelude/main'
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/prelude/main.nf:2:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/mcmicro/modules/local/prelude/main.nf'
-
-  ```nextflow
-  include { SUMMARY_MARKERSHEET_LITERAL   } from '../../../modules/local/prelude/main'
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/prelude/main.nf:3:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/mcmicro/modules/local/prelude/main.nf'
-
-  ```nextflow
-  include { SUMMARY_SAMPLESHEET           } from '../../../modules/local/prelude/main'
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/prelude/main.nf:22:41`: `SUMMARY_XML` is not defined
-
-  ```nextflow
-                                      } | SUMMARY_XML ).output
-                                          ^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/prelude/main.nf:26:41`: `SUMMARY_MARKERSHEET_LITERAL` is not defined
-
-  ```nextflow
-                                      } | SUMMARY_MARKERSHEET_LITERAL ).output
-                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/prelude/main.nf:31:41`: `SUMMARY_SAMPLESHEET` is not defined
-
-  ```nextflow
-                                      } | SUMMARY_SAMPLESHEET).output
-                                          ^^^^^^^^^^^^^^^^^^^
   ```
 
 - Error: `subworkflows/local/update_from_ome/main.nf:1:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/mcmicro/modules/local/omevalidation/main.nf'
@@ -146,14 +90,28 @@
       ^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/mcmicro.nf:80:42`: Unexpected input: '\*'
+- Error: `workflows/mcmicro.nf:89:38`: Unexpected input: '\*'
 
   ```nextflow
-              .map{ meta, cycles -> [meta, *cycles.collect{ it[1..-1] }.transpose()]}
-                                           ^
+          .map{ meta, cycles -> [meta, *cycles.collect{ it[1..-1] }.transpose()]}
+                                       ^
   ```
 
 ## :warning: Warnings
+
+- Warning: `main.nf:47:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      multiqc_report = MCMICRO.out.multiqc_report // channel: /path/to/multiqc_report.html
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `modules/local/summary_markersheet/main.nf:20:9`: Variable was declared but not used
+
+  ```nextflow
+      def args        = task.ext.args ?: ''
+          ^^^^
+  ```
 
 - Warning: `modules/nf-core/bftools/showinf/main.nf:37:9`: Variable was declared but not used
 
@@ -211,53 +169,67 @@
           ^^^^^^
   ```
 
-- Warning: `subworkflows/local/prelude/main.nf:14:9`: Variable was declared but not used
+- Warning: `subworkflows/local/prelude/main.nf:26:43`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          output_file_xml         = Channel.of([])
-          ^^^^^^^^^^^^^^^
+                                      meta, image_tiles, dfp, ffp ->
+                                            ^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prelude/main.nf:14:35`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prelude/main.nf:26:56`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          output_file_xml         = Channel.of([])
-                                    ^^^^^^^
+                                      meta, image_tiles, dfp, ffp ->
+                                                         ^^^
   ```
 
-- Warning: `subworkflows/local/prelude/main.nf:15:9`: Variable was declared but not used
+- Warning: `subworkflows/local/prelude/main.nf:26:61`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          output_file_samplesheet = Channel.of([])
-          ^^^^^^^^^^^^^^^^^^^^^^^
+                                      meta, image_tiles, dfp, ffp ->
+                                                              ^^^
   ```
 
-- Warning: `subworkflows/local/prelude/main.nf:15:35`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prelude/main.nf:33:57`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          output_file_samplesheet = Channel.of([])
-                                    ^^^^^^^
+                                                          meta, file -> file
+                                                          ^^^^
   ```
 
-- Warning: `subworkflows/local/prelude/main.nf:16:9`: Variable was declared but not used
+- Warning: `subworkflows/local/prelude/main.nf:40:37`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          output_file_markersheet = Channel.of([])
-          ^^^^^^^^^^^^^^^^^^^^^^^
+                                      meta, files -> files
+                                      ^^^^
   ```
 
-- Warning: `subworkflows/local/prelude/main.nf:16:35`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prelude/main.nf:43:37`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          output_file_markersheet = Channel.of([])
-                                    ^^^^^^^
+                                      meta, files -> files
+                                      ^^^^
   ```
 
-- Warning: `subworkflows/local/prelude/main.nf:25:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/prelude/main.nf:50:66`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-                                      [["id": "markers"], it]
-                                                          ^^
+      output_file_xml                  = ch_output_xml.output.map{ meta, files -> files}
+                                                                   ^^^^
+  ```
+
+- Warning: `subworkflows/local/prelude/main.nf:51:67`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      output_file_samplesheet          = ch_output_samplesheet.map{ meta, files -> files}
+                                                                    ^^^^
+  ```
+
+- Warning: `subworkflows/local/prelude/main.nf:52:67`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      output_file_markersheet          = ch_output_markersheet.map{ meta, files -> files}
+                                                                    ^^^^
   ```
 
 - Warning: `subworkflows/local/update_from_ome/main.nf:18:65`: Parameter was not used -- prefix with `_` to suppress warning
@@ -344,18 +316,11 @@
                 ^^
   ```
 
-- Warning: `subworkflows/local/update_from_ome/main.nf:82:24`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/update_from_ome/main.nf:81:30`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-              if (e.any{ it == null }) {
-                         ^^
-  ```
-
-- Warning: `subworkflows/local/update_from_ome/main.nf:101:13`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-              key, values ->
-              ^^^
+          .filter{ e -> !e.any{it == null}} // ignore errors, will be caught in PRELUDE
+                               ^^
   ```
 
 - Warning: `subworkflows/local/utils_nfcore_mcmicro_pipeline/main.nf:33:5`: Parameter was not used -- prefix with `_` to suppress warning
@@ -482,6 +447,34 @@
   ```nextflow
               files << file(it)
                             ^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
+
+  ```nextflow
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_config
+      ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `tests/lib/utils.nf:18:36`: Implicit closure parameter is deprecated, declare an explicit parameter instead

@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "feef37435aea56816adf4b3bde1fc76aac327a8d",
+  "_repo_commit": "258c852e70261dca1ff2600f4c58fef6ab939128",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -3484,6 +3484,36 @@
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gappa/examineheattree",
     "errors": 0,
     "warnings": 0,
+    "parse_error": false
+  },
+  "gapseq_doall": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gapseq/doall",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
+  "gapseq_draft": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gapseq/draft",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "gapseq_fill": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gapseq/fill",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "gapseq_find": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gapseq/find",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "gapseq_findtransport": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gapseq/findtransport",
+    "errors": 0,
+    "warnings": 1,
     "parse_error": false
   },
   "gatk_indelrealigner": {

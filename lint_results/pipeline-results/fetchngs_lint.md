@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-30T00:38:01.626021725Z
-- Nextflow version: 26.04.0
-- Summary: 9 warnings
+- Generated: 2026-05-30T00:37:38.964344135Z
+- Nextflow version: 26.04.3
+- Summary: 15 warnings
 
 ## :warning: Warnings
 
@@ -48,11 +48,32 @@
       ^^^^^^^^^^^^^^^
   ```
 
+- Warning: `subworkflows/local/utils_nfcore_fetchngs_pipeline/main.nf:113:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      ids = ch_ids
+      ^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/utils_nfcore_fetchngs_pipeline/main.nf:202:101`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       def actual_ena_metadata_fields = ena_metadata_fields ? ena_metadata_fields.split(',').collect { it.trim().toLowerCase() } : valid_ena_metadata_fields
                                                                                                       ^^
+  ```
+
+- Warning: `subworkflows/nf-core/fastq_download_prefetch_fasterqdump_sratools/main.nf:32:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      reads    = SRATOOLS_FASTERQDUMP.out.reads // channel: [ val(meta), [ reads ] ]
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
@@ -62,7 +83,28 @@
       ^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/fetchngs.nf:217:17`: Variable was declared but not used
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_config
+      ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `workflows/fetchngs.nf:63:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          .filter { it.size() > 0 }
+                    ^^
+  ```
+
+- Warning: `workflows/fetchngs.nf:218:17`: Variable was declared but not used
 
   ```nextflow
           ).set { ch_collated_versions }
