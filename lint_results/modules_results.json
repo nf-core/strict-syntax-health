@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "258c852e70261dca1ff2600f4c58fef6ab939128",
+  "_repo_commit": "1d26feac934b15ae5c4609bb059e19ea7ca86896",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -8570,6 +8570,12 @@
   },
   "samclip": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/samclip",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "samplesheetparser_diff": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/samplesheetparser/diff",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

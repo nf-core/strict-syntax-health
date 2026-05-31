@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-05-30T00:41:33.826063+00:00
+- Generated: 2026-05-31T00:41:14.979884+00:00
 - Nextflow version: 26.04.3
 - Summary: 1 warning
 
@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/gapseq/doall/main.nf:25:9`: Variable was declared but not used
 
-    ```nextflow
-        def prefix = task.ext.prefix ?: "${meta.id}"
-            ^^^^^^^^^^
-    ```
+  ```nextflow
+      def prefix = task.ext.prefix ?: "${meta.id}"
+          ^^^^^^^^^^
+  ```
