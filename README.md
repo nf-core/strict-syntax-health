@@ -11,7 +11,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 > See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline.
 > **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**
 
-- **Last updated:** 2026-05-31 00:41:41 UTC
+- **Last updated:** 2026-06-01 00:43:03 UTC
 - **Nextflow version:** 26.04.3
 
 ## Pipelines
