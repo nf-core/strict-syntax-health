@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.04.2
+ N E X T F L O W   ~  version 26.04.3
 
-Launching `./main.nf` [awesome_ride] revision: d8e047c3e9
+Launching `./main.nf` [ridiculous_visvesvaraya] revision: d8e047c3e9
 
 
 ------------------------------------------------------
@@ -29,7 +29,7 @@ Cloud infrastructure.
   --email                           [string]  Email address for completion summary. 
   --multiqc_title                   [string]  MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
   --transpose_overview_tables       [boolean] Transpose the samples overview table so samples become columns and result fields become rows. 
- 
+[default: false]  
 
 Preprocessing options
   --skip_preprocessing              [boolean] Skip read preprocessing and use input reads for downstream analysis 

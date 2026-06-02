@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "1d26feac934b15ae5c4609bb059e19ea7ca86896",
+  "_repo_commit": "0cc597567439e825388fd02e86647552d6804778",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -2774,6 +2774,12 @@
   },
   "eagle2": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/eagle2",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "eautils_fastqstats": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/eautils/fastqstats",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -7513,13 +7519,13 @@
     "parse_error": false
   },
   "plastid_make_wiggle": {
-    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/make/wiggle",
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/make_wiggle",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
   "plastid_metagene_generate": {
-    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/metagene/generate",
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/metagene_generate",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -7854,8 +7860,8 @@
     "warnings": 0,
     "parse_error": false
   },
-  "proseg_proseg_to_baysor": {
-    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/proseg/proseg/to/baysor",
+  "proseg_proseg2baysor": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/proseg/proseg2baysor",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -8810,6 +8816,12 @@
   },
   "savana_classify": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/savana/classify",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "savana_run": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/savana/run",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

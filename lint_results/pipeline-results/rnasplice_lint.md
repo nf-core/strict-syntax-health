@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-05-30T00:40:23.777332489Z
+- Generated: 2026-06-02T00:45:23.905022776Z
 - Nextflow version: 26.04.3
-- Summary: 37 warnings
+- Summary: 40 warnings
 
 ## :warning: Warnings
 
@@ -32,6 +32,20 @@
   ```nextflow
       multiqc_report = RNASPLICE.out.multiqc_report // channel: /path/to/multiqc_report.html
       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `modules/local/rmats_post_single/main.nf:32:9`: Variable was declared but not used
+
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^
+  ```
+
+- Warning: `modules/local/rmats_prep_single/main.nf:31:9`: Variable was declared but not used
+
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^
   ```
 
 - Warning: `subworkflows/local/contrast_check/main.nf:26:5`: Emit name should be omitted when there is only one emit
@@ -251,14 +265,21 @@
       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/rnasplice.nf:229:9`: Variable was declared but not used
+- Warning: `workflows/rnasplice.nf:138:20`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          .flatMap { it }
+                     ^^
+  ```
+
+- Warning: `workflows/rnasplice.nf:230:9`: Variable was declared but not used
 
   ```nextflow
           ch_transcriptome_bam_index = BAM_SORT_STATS_SAMTOOLS.out.index
           ^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/rnasplice.nf:583:5`: Emit name should be omitted when there is only one emit
+- Warning: `workflows/rnasplice.nf:582:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
       multiqc_report = MULTIQC.out.report.map { _meta, report -> [report] }.toList()
