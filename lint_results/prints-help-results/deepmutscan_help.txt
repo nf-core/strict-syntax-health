@@ -1,9 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.04.1
+ N E X T F L O W   ~  version 26.04.3
 
-Launching `./main.nf` [sick_shirley] revision: ae3065a2fd
+Downloading plugin nf-schema@2.5.1
+Launching `./main.nf` [lethal_bose] revision: ae3065a2fd
 
 
 ------------------------------------------------------
@@ -19,10 +20,10 @@ Reference genome options
   igenomes_ignore    : true
 
 Generic options
-  trace_report_suffix: 2026-05-20_00-41-56
+  trace_report_suffix: 2026-06-03_00-49-52
 
 Core Nextflow options
-  runName            : sick_shirley
+  runName            : lethal_bose
   launchDir          : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/deepmutscan
   workDir            : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/deepmutscan/work
   projectDir         : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/deepmutscan

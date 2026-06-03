@@ -1,0 +1,85 @@
+$ NXF_SYNTAX_PARSER=v2 nextflow run . --help
+
+
+ N E X T F L O W   ~  version 26.04.3
+
+Launching `./main.nf` [cheeky_nightingale] revision: ea188be49f
+
+WARN: Unrecognized config option 'validation.defaultIgnoreParams'
+WARN: Unrecognized config option 'validation.monochromeLogs'
+
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/drugresponseeval 1.2.1dev
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/drugresponseeval -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Model options
+  --models                   [string] Model to be tested. [default: NaiveDrugMeanPredictor] 
+  --baselines                [string] Baselines to be tested. [default: NaiveMeanEffectsPredictor] 
+
+Input/output options
+  --run_id                   [string] Run name for the pipeline. The subdirectory in results will be named like this. [default: 
+my_run]  
+  --dataset_name             [string] Name of the dataset. Pre-supplied datasets are CTRPv2, CTRPv1, CCLE, GDSC1, GDSC2, TOYv1, TOYv2, 
+BeatAML2, and PDX_Bruna. [default: CTRPv2]  
+  --outdir                   [string] The output directory where the results will be saved. Default is results/ [default: results] 
+ 
+  --email                    [string] Email address for completion summary. 
+
+Mode options (LPO/LCO/LTO/LDO)
+  --test_mode                [string] Run the pipeline in test mode LPO (Leave-random-Pairs-Out), LCO (Leave-Cell-line-Out), or LDO 
+(Leave-Drug-Out). [default: LCO]  
+
+Randomization options
+  --randomization_mode       [string] Randomization mode for the pipeline. [default: None] 
+  --randomization_type       [string] Randomization type for the pipeline.  (accepted: permutation, invariant) [default: permutation] 
+ 
+
+Robustness options
+  --n_trials_robustness      [integer] Number of trials to run for the robustness test [default: 0] 
+
+Data options
+  --path_data                [string] Path to the data directory. [default: data] 
+  --measure                  [string] The name of the drug response measure to use.  (accepted: LN_IC50, pEC50, AUC, response, EC50, 
+IC50) [default: LN_IC50]  
+  --cross_study_datasets     [string] Datasets for cross-study prediction. 
+  --zenodo_link              [string] Link to the latest Zenodo version of the dataset. [default: 
+https://zenodo.org/records/17611663/files/]  
+
+Additional options
+  --no_refitting             [boolean] False by default (=refitting). By default, we use measures calculated with CurveCurator instead of 
+original measures reported by the authors for the available datasets, or invoke automatic fitting of 
+custom raw viability data with CurveCurator. Set this flag to disable this option. [default: 
+false]  
+  --optim_metric             [string]  Optimization metric for the pipeline.  (accepted: RMSE, MSE, MAE, R^2, Pearson, Spearman, 
+Kendall) [default: RMSE]  
+  --n_cv_splits              [integer] Number of cross-validation splits. [default: 10] 
+  --response_transformation  [string]  Response transformation  (accepted: None, standard, minmax, robust) [default: None] 
+  --model_checkpoint_dir     [string]  Model checkpoint directory [default: TEMPORARY] 
+  --no_hyperparameter_tuning [boolean] Disable hyperparameter tuning. [default: false] 
+  --final_model_on_full_data [boolean] Train final model on full data. [default: false] 
+
+Generic options
+  --help                     [boolean, string] Display the help message. 
+  --help_full                [boolean]         Display the full detailed help message. 
+  --show_hidden              [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 14 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/drugresponseeval/blob/main/CITATIONS.md
+

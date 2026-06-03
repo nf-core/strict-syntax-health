@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.04.2
+ N E X T F L O W   ~  version 26.04.3
 
-Launching `./main.nf` [stupefied_lamarr] revision: 71af2049ef
+Launching `./main.nf` [tender_jennings] revision: 71af2049ef
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -113,7 +113,7 @@ or a directory containing the extracted output of such.
   --gtdb_db                              [string]  Specify the location of a GTDBTK database. Can be either an uncompressed directory or a `.tar.gz` 
 archive. If not specified will be downloaded for you when GTDBTK or binning QC is not skipped. 
 [default: 
-https://data.gtdb.aau.ecogenomic.org/releases/release226/226.0/auxillary_files/gtdbtk_package/full_package/gtdbtk_r226_data.tar.gz] 
+https://data.gtdb.aau.ecogenomic.org/releases/release232/232.0/auxillary_files/gtdbtk_package/full_package/gtdbtk_r232_data.tar.gz] 
  
   --gtdbtk_min_completeness              [number]  Min. bin completeness (in %) required to apply GTDB-tk classification. [default: 50] 
   --gtdbtk_max_contamination             [number]  Max. bin contamination (in %) allowed to apply GTDB-tk classification. [default: 10] 
@@ -123,7 +123,9 @@ https://data.gtdb.aau.ecogenomic.org/releases/release226/226.0/auxillary_files/g
   --gtdbtk_pplacer_useram                [boolean] Speed up pplacer step of GTDB-Tk by loading to memory. 
   --gtdbtk_use_full_tree                 [boolean] Specify to have GTDBTk to use the full bacterial tree rather than the split tree (requires more 
 memory!)  
-  --gtdbtk_skip_aniscreen                [boolean] Specify to disable fast classification of genomes by ANI using skani in GTDB-Tk. 
+  --gtdbtk_place_species                 [boolean] Specify to disable fast classification of genomes by ANI using skani in GTDB-Tk. 
+  --gtdbtk_single_job                    [boolean] Run GTDB-Tk classification for all bins in a single job, rather than one job per 
+sample/assembler/binner group.  
 
 Assembly options
   --coassemble_group                     [boolean] Co-assemble samples within one group, instead of assembling each sample separately. 
@@ -244,7 +246,7 @@ Ancient DNA assembly
   --bcftools_view_high_variant_quality   [integer] minimum genotype quality for considering a variant high quality [default: 30] 
   --bcftools_view_medium_variant_quality [integer] minimum genotype quality for considering a variant medium quality [default: 20] 
   --bcftools_view_minimal_allelesupport  [integer] minimum number of bases supporting the alternative allele [default: 3] 
- !! Hiding 21 param(s), use the `--showHidden` parameter to show them !!
+ !! Hiding 22 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
 
 * The pipeline

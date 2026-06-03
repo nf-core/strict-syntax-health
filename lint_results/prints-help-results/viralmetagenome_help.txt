@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.04.3
 
-Launching `./main.nf` [ridiculous_visvesvaraya] revision: d8e047c3e9
+Launching `./main.nf` [serene_solvay] revision: d8e047c3e9
 
 
 ------------------------------------------------------
@@ -168,6 +168,7 @@ Generic options
 ------------------------------------------------------
 
 * The pipeline
+    https://doi.org/10.5281/zenodo.17524074
     https://doi.org/10.1093/bioinformatics/btag187
 
 * The nf-core framework

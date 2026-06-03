@@ -11,7 +11,7 @@
   "airrflow": {
     "full_name": "nf-core/airrflow",
     "html_url": "https://github.com/nf-core/airrflow",
-    "commit": "49557c28188a369ed47eaf68c76d7940cfec80a3",
+    "commit": "ba11edaa9d5c4478e90b0c8955cdc9aba8ae82ff",
     "errors": 0,
     "warnings": 40,
     "parse_error": false,
@@ -209,9 +209,9 @@
   "deepmutscan": {
     "full_name": "nf-core/deepmutscan",
     "html_url": "https://github.com/nf-core/deepmutscan",
-    "commit": "ff38f7db7af65b768bc764bcdce30118769786bd",
+    "commit": "220fc76981d9a37af697f381ea384fdf20abbc42",
     "errors": 0,
-    "warnings": 76,
+    "warnings": 80,
     "parse_error": false,
     "prints_help": false
   },
@@ -290,11 +290,11 @@
   "drugresponseeval": {
     "full_name": "nf-core/drugresponseeval",
     "html_url": "https://github.com/nf-core/drugresponseeval",
-    "commit": "cb4ee861ad61be17950b59608a96357d725eb78f",
-    "errors": 7,
+    "commit": "646dd47b2dcb119fae3be8729d3a3897e4c2846d",
+    "errors": 0,
     "warnings": 29,
     "parse_error": false,
-    "prints_help": null
+    "prints_help": true
   },
   "dualrnaseq": {
     "full_name": "nf-core/dualrnaseq",
@@ -317,9 +317,9 @@
   "epigenomesegmentation": {
     "full_name": "nf-core/epigenomesegmentation",
     "html_url": "https://github.com/nf-core/epigenomesegmentation",
-    "commit": "2c0db85a93441942d0d54e870fbe3448a21e109d",
+    "commit": "c78bf467b3b49434dc3f5b3793cddff1768bc628",
     "errors": 0,
-    "warnings": 66,
+    "warnings": 67,
     "parse_error": false,
     "prints_help": false
   },
@@ -542,7 +542,7 @@
   "lsmquant": {
     "full_name": "nf-core/lsmquant",
     "html_url": "https://github.com/nf-core/lsmquant",
-    "commit": "135e2e2c6444f7ee6140c9ea54dc0a3373703888",
+    "commit": "7d6e2fdacb93b4970e4a6055792e9e28d447a1f1",
     "errors": 0,
     "warnings": 46,
     "parse_error": false,
@@ -551,7 +551,7 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "84e2ff46de905337b154a7ddb97fdaec4191b9ca",
+    "commit": "82bf098715a20efe53017b01727fb049ed522d4b",
     "errors": 0,
     "warnings": 25,
     "parse_error": false,
@@ -776,9 +776,9 @@
   "pairgenomealign": {
     "full_name": "nf-core/pairgenomealign",
     "html_url": "https://github.com/nf-core/pairgenomealign",
-    "commit": "63e7b7555e7468297f50303eb9bcf4ad23494523",
+    "commit": "8fac8f7edb33bcd809a19c87aab1eb8a61d3a089",
     "errors": 0,
-    "warnings": 23,
+    "warnings": 26,
     "parse_error": false,
     "prints_help": true
   },
@@ -830,11 +830,11 @@
   "phyloplace": {
     "full_name": "nf-core/phyloplace",
     "html_url": "https://github.com/nf-core/phyloplace",
-    "commit": "374dcf211e508f749a56bf70639283b2fc2b0de2",
-    "errors": 17,
-    "warnings": 106,
+    "commit": "8163abb0bdb3a332ce571fea177b0837827a8c27",
+    "errors": 0,
+    "warnings": 50,
     "parse_error": false,
-    "prints_help": null
+    "prints_help": true
   },
   "pixelator": {
     "full_name": "nf-core/pixelator",
@@ -974,7 +974,7 @@
   "rnafusion": {
     "full_name": "nf-core/rnafusion",
     "html_url": "https://github.com/nf-core/rnafusion",
-    "commit": "c1242792bd237ba9dd5bdadd9d02cd002f118927",
+    "commit": "d91904e05490eef579ca4c28d17a6172ddbb864b",
     "errors": 0,
     "warnings": 27,
     "parse_error": false,
@@ -992,16 +992,16 @@
   "rnasplice": {
     "full_name": "nf-core/rnasplice",
     "html_url": "https://github.com/nf-core/rnasplice",
-    "commit": "e2a872dcb902fc05f7fa880d2f3ad0c9f0af4eff",
+    "commit": "8db0621c89540a8e4b34681693f57f3f114295dc",
     "errors": 0,
-    "warnings": 40,
+    "warnings": 33,
     "parse_error": false,
     "prints_help": true
   },
   "rnavar": {
     "full_name": "nf-core/rnavar",
     "html_url": "https://github.com/nf-core/rnavar",
-    "commit": "5e72bcb5520e00422750c978d4153b38f1fd7312",
+    "commit": "cd843fcbfd9007ffaf4da817481d35552051519b",
     "errors": 0,
     "warnings": 3,
     "parse_error": false,
@@ -1217,7 +1217,7 @@
   "viralmetagenome": {
     "full_name": "nf-core/viralmetagenome",
     "html_url": "https://github.com/nf-core/viralmetagenome",
-    "commit": "686a6b5dec450da49866fefab0fac6aee92dfc49",
+    "commit": "caea3984890d4ce3d2a2e2c3bd6f9e5fe3eff9af",
     "errors": 0,
     "warnings": 11,
     "parse_error": false,

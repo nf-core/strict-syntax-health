@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-02T00:45:23.905022776Z
+- Generated: 2026-06-03T00:52:48.277529920Z
 - Nextflow version: 26.04.3
-- Summary: 40 warnings
+- Summary: 33 warnings
 
 ## :warning: Warnings
 
@@ -81,62 +81,6 @@
   ```nextflow
       reads    = ch_final_reads   // channel: [ val(meta), [ files ] ]
       ^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/suppa/main.nf:147:25`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  .map { [it.baseName, it ] }
-                          ^^
-  ```
-
-- Warning: `subworkflows/local/suppa/main.nf:147:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  .map { [it.baseName, it ] }
-                                       ^^
-  ```
-
-- Warning: `subworkflows/local/suppa/main.nf:163:26`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  .map { [ it.baseName.toString().replaceAll("local_", ""), it ] }
-                           ^^
-  ```
-
-- Warning: `subworkflows/local/suppa/main.nf:163:75`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  .map { [ it.baseName.toString().replaceAll("local_", ""), it ] }
-                                                                            ^^
-  ```
-
-- Warning: `subworkflows/local/suppa/main.nf:300:25`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  .map { [it.baseName, it ] }
-                          ^^
-  ```
-
-- Warning: `subworkflows/local/suppa/main.nf:300:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  .map { [it.baseName, it ] }
-                                       ^^
-  ```
-
-- Warning: `subworkflows/local/suppa/main.nf:316:26`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  .map { [ it.baseName.toString().replaceAll("transcript_", ""), it ] }
-                           ^^
-  ```
-
-- Warning: `subworkflows/local/suppa/main.nf:316:80`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  .map { [ it.baseName.toString().replaceAll("transcript_", ""), it ] }
-                                                                                 ^^
   ```
 
 - Warning: `subworkflows/local/tx2gene_tximport/main.nf:29:14`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -272,6 +216,13 @@
                      ^^
   ```
 
+- Warning: `workflows/rnasplice.nf:139:16`: Variable was declared but not used
+
+  ```nextflow
+          .set { ch_contrasts }
+                 ^^^^^^^^^^^^
+  ```
+
 - Warning: `workflows/rnasplice.nf:230:9`: Variable was declared but not used
 
   ```nextflow
@@ -279,7 +230,7 @@
           ^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/rnasplice.nf:582:5`: Emit name should be omitted when there is only one emit
+- Warning: `workflows/rnasplice.nf:587:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
       multiqc_report = MULTIQC.out.report.map { _meta, report -> [report] }.toList()

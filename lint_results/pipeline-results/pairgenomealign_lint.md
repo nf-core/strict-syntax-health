@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-05-29T00:41:53.687033486Z
+- Generated: 2026-06-03T00:51:44.633746110Z
 - Nextflow version: 26.04.3
-- Summary: 23 warnings
+- Summary: 26 warnings
 
 ## :warning: Warnings
 
@@ -118,6 +118,13 @@
       ^^^^^
   ```
 
+- Warning: `subworkflows/nf-core/fasta_bgzip_index_dict_samtools/main.nf:35:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      fasta_fai_gzi_dict = ch_joined             // channel: [ val(meta),  fasta.gz, fai, gzi, sizes, dict ]
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
@@ -139,14 +146,14 @@
       ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/pairgenomealign.nf:48:31`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/pairgenomealign.nf:50:31`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_targetgenome.map { meta, file -> [ [id:'targetGenome'] , file ] }
                                 ^^^^
   ```
 
-- Warning: `workflows/pairgenomealign.nf:60:55`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/pairgenomealign.nf:62:55`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
             .map { sorted_list -> sorted_list.collect { it[1] } }
@@ -160,7 +167,21 @@
                                         ^^^^^^^
   ```
 
-- Warning: `workflows/pairgenomealign.nf:130:24`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/pairgenomealign.nf:129:33`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              o2o_alignments.map {it + "cram"},
+                                  ^^
+  ```
+
+- Warning: `workflows/pairgenomealign.nf:138:20`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              .map { meta, cram -> tuple(params.targetName, cram) }
+                     ^^^^
+  ```
+
+- Warning: `workflows/pairgenomealign.nf:159:24`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   .map { meta, file -> file }

@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.04.3
 
-Launching `./main.nf` [kickass_heyrovsky] revision: 0281f7d1a6
+Launching `./main.nf` [modest_einstein] revision: 0281f7d1a6
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -43,14 +43,17 @@ RY16, RY32, RY64, RY128) [default: YASS]
   --strand                      [string] Index both strand, or just one.  (accepted: both, forward) [default: both] 
 
 Alignment options
-  --export_aln_to               [string]  Convert the final _one-to-one_ alignment to a different format than MAF. [default: no_export] 
- 
   --m2m                         [boolean] Make a many to many alignment 
   --lastal_params               [string]  Path to a file containing alignment parameters or a scoring matrix. If this option is used, 
 `last-train` will be skipped and alignment parameters will be the same for each query.  
   --lastal_args                 [string]  Arguments passed to both `last-train` and `lastal`. [default: -C2 -D1e9] 
   --lastal_extr_args            [string]  Arguments passed only to `lastal` (useful when they are not recognised by `last-train`). 
   --last_split_mismap           [string]  Mismap probability cutoff for `last-split`. [default: 0.00001] 
+
+Export options
+  --export_aln_to               [string]  Convert the final _one-to-one_ alignment to a different format than MAF. [default: no_export] 
+ 
+  --multi_cram                  [boolean] kjhkjh 
 
 Dotplot parameters
   --dotplot_width               [integer] Maximum width of the dot plots, in pixels. [default: 1000] 

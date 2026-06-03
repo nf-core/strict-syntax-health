@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-05-27T00:40:02.949984153Z
-- Nextflow version: 26.04.2
+- Generated: 2026-06-03T00:50:50.308022799Z
+- Nextflow version: 26.04.3
 - Summary: 46 warnings
 
 ## :warning: Warnings
@@ -69,7 +69,7 @@
           ^^^^
   ```
 
-- Warning: `modules/local/numorphstitch/main.nf:50:9`: Variable was declared but not used
+- Warning: `modules/local/numorphstitch/main.nf:52:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''

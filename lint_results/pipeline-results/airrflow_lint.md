@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-05-29T00:41:09.032928676Z
+- Generated: 2026-06-03T00:49:20.558199915Z
 - Nextflow version: 26.04.3
 - Summary: 40 warnings
 
@@ -62,35 +62,35 @@
                           ^^
   ```
 
-- Warning: `subworkflows/local/clonal_analysis.nf:50:37`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/clonal_analysis.nf:48:37`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .splitText( limit:1 ) { it.trim().toString() }
                                       ^^
   ```
 
-- Warning: `subworkflows/local/clonal_analysis.nf:62:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/clonal_analysis.nf:60:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   def valid = list.findAll { it != '' && it != 'NA' && it != 'NaN' }
                                              ^^
   ```
 
-- Warning: `subworkflows/local/clonal_analysis.nf:62:56`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/clonal_analysis.nf:60:56`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   def valid = list.findAll { it != '' && it != 'NA' && it != 'NaN' }
                                                          ^^
   ```
 
-- Warning: `subworkflows/local/clonal_analysis.nf:62:70`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/clonal_analysis.nf:60:70`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   def valid = list.findAll { it != '' && it != 'NA' && it != 'NaN' }
                                                                        ^^
   ```
 
-- Warning: `subworkflows/local/clonal_analysis.nf:107:37`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/clonal_analysis.nf:104:37`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   .map{ get_meta_tabs(it, genotypeby, cloneby) }
@@ -125,60 +125,53 @@
       ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/novel_alleles_and_genotyping.nf:42:41`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/novel_alleles_and_genotyping.nf:41:41`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       .map{ get_meta_tabs(it) }
                                           ^^
   ```
 
-- Warning: `subworkflows/local/presto_sans_umi.nf:229:48`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/presto_sans_umi.nf:216:48`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       fastp_reads_json = FASTP.out.json.collect{ meta,json -> json }
                                                  ^^^^
   ```
 
-- Warning: `subworkflows/local/presto_sans_umi.nf:230:48`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/presto_sans_umi.nf:217:48`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       fastp_reads_html = FASTP.out.html.collect{ meta,html -> html }
                                                  ^^^^
   ```
 
-- Warning: `subworkflows/local/presto_umi.nf:113:51`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/presto_umi.nf:111:51`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                                               .map{ id, meta1, R1, R2, meta2, index -> [ meta1, R1, R2, index ] }
                                                     ^^
   ```
 
-- Warning: `subworkflows/local/presto_umi.nf:113:70`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/presto_umi.nf:111:70`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                                               .map{ id, meta1, R1, R2, meta2, index -> [ meta1, R1, R2, index ] }
                                                                        ^^^^^
   ```
 
-- Warning: `subworkflows/local/presto_umi.nf:641:48`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/presto_umi.nf:603:48`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       fastp_reads_json = FASTP.out.json.collect{ meta,json -> json }
                                                  ^^^^
   ```
 
-- Warning: `subworkflows/local/presto_umi.nf:642:48`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/presto_umi.nf:604:48`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       fastp_reads_html = FASTP.out.html.collect{ meta,html -> html }
                                                  ^^^^
-  ```
-
-- Warning: `subworkflows/local/repertoire_analysis_reporting.nf:88:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      versions = ch_versions
-      ^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/rnaseq_input.nf:33:5`: Variable was declared but not used
@@ -188,60 +181,60 @@
       ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/rnaseq_input.nf:113:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/rnaseq_input.nf:110:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       return [ meta, out_files.find { it.endsWith("${meta.id}_airr.tsv") } ]
                                                       ^^
   ```
 
-- Warning: `subworkflows/local/rnaseq_input.nf:115:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/rnaseq_input.nf:112:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       return [ meta, out_files.find { it.endsWith("${meta.id}_barcode_airr.tsv") } ]
                                                       ^^
   ```
 
-- Warning: `subworkflows/local/rnaseq_input.nf:138:48`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/rnaseq_input.nf:134:48`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       fastp_reads_json = FASTP.out.json.collect{ meta,json -> json }
                                                  ^^^^
   ```
 
-- Warning: `subworkflows/local/rnaseq_input.nf:139:48`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/rnaseq_input.nf:135:48`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       fastp_reads_html = FASTP.out.html.collect{ meta,html -> html }
                                                  ^^^^
   ```
 
-- Warning: `subworkflows/local/sc_raw_input.nf:25:5`: Variable was declared but not used
+- Warning: `subworkflows/local/sc_raw_input.nf:24:5`: Variable was declared but not used
 
   ```nextflow
       ch_logs = channel.empty()
       ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/sc_raw_input.nf:79:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/sc_raw_input.nf:76:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   [ meta, out_files.find { it.endsWith("airr_rearrangement.tsv") } ]
                                            ^^
   ```
 
-- Warning: `subworkflows/local/sc_raw_input.nf:90:16`: Variable was declared but not used
+- Warning: `subworkflows/local/sc_raw_input.nf:87:16`: Variable was declared but not used
 
   ```nextflow
           .set { ch_renamed_tsv }
                  ^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/translate_embed.nf:56:5`: Emit name should be omitted when there is only one emit
+- Warning: `subworkflows/local/utils_nfcore_airrflow_pipeline/main.nf:112:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
-      versions = ch_versions
-      ^^^^^^^^^^^^^^^^^^^^
+      samplesheet = ch_samplesheet
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
@@ -279,9 +272,16 @@
                   ^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/airrflow.nf:514:88`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/airrflow.nf:503:88`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files = ch_multiqc_files.mix(ch_fastqc_postassembly_mqc.collect{it[1]}.ifEmpty([]))
                                                                                          ^^
+  ```
+
+- Warning: `workflows/airrflow.nf:537:9`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+          multiqc_report = multiqc_report // channel: /path/to/multiqc_report.html
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```

@@ -1,59 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-23T00:19:41.883422820Z
-- Nextflow version: 25.12.0-edge
-- Summary: 7 errors, 29 warnings
-
-## :x: Errors
-
-- Error: `modules/nf-core/custom/dumpsoftwareversions/main.nf:1:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
-
-  ```nextflow
-  def deprecation_message = """
-  ^^^
-  ```
-
-- Error: `modules/nf-core/custom/dumpsoftwareversions/main.nf:30:18`: `deprecation_message` is not defined
-
-  ```nextflow
-      assert true: deprecation_message
-                   ^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/drugresponseeval.nf:24:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
-
-  ```nextflow
-  def test_modes = params.test_mode.split(",")
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/drugresponseeval.nf:25:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
-
-  ```nextflow
-  def randomizations = params.randomization_mode.split(",")
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/drugresponseeval.nf:48:9`: `test_modes` is not defined
-
-  ```nextflow
-          test_modes,
-          ^^^^^^^^^^
-  ```
-
-- Error: `workflows/drugresponseeval.nf:59:9`: `randomizations` is not defined
-
-  ```nextflow
-          randomizations,
-          ^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/drugresponseeval.nf:64:9`: `test_modes` is not defined
-
-  ```nextflow
-          test_modes,
-          ^^^^^^^^^^
-  ```
+- Generated: 2026-06-03T00:50:09.387460419Z
+- Nextflow version: 26.04.3
+- Summary: 29 warnings
 
 ## :warning: Warnings
 
@@ -141,25 +90,11 @@
                         ^^^^^^^^
   ```
 
-- Warning: `modules/nf-core/custom/dumpsoftwareversions/main.nf:1:5`: Variable was declared but not used
+- Warning: `main.nf:52:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
-  def deprecation_message = """
-      ^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/custom/dumpsoftwareversions/main.nf:31:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/unzip/main.nf:38:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
+      versions = ch_versions
+      ^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/model_testing/main.nf:63:31`: Parameter was not used -- prefix with `_` to suppress warning
@@ -188,6 +123,13 @@
   ```nextflow
                           .map{ test_mode, model, pred_file -> [test_mode, model.split("\\.")[0]] }
                                                   ^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/model_testing/main.nf:205:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      versions = ch_versions
+      ^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/run_cv/main.nf:54:43`: Parameter was not used -- prefix with `_` to suppress warning
@@ -225,37 +167,44 @@
                  ^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_drugresponseeval_pipeline/main.nf:32:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      monochrome_logs         // boolean: Do not use coloured log outputs
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_drugresponseeval_pipeline/main.nf:129:58`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_drugresponseeval_pipeline/main.nf:136:58`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_models = channel.from(models.split(',').collect { it.trim() })
                                                            ^^
   ```
 
-- Warning: `workflows/drugresponseeval.nf:24:5`: Variable was declared but not used
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
-  def test_modes = params.test_mode.split(",")
-      ^^^^^^^^^^
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/drugresponseeval.nf:25:5`: Variable was declared but not used
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
-  def randomizations = params.randomization_mode.split(",")
-      ^^^^^^^^^^^^^^
+      valid_config = valid_config
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/drugresponseeval.nf:96:17`: Variable was declared but not used
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:76:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
-          ).set { ch_collated_versions }
-                  ^^^^^^^^^^^^^^^^^^^^
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `workflows/drugresponseeval.nf:90:9`: Variable was declared but not used
+
+  ```nextflow
+      def ch_collated_versions = softwareVersionsToYAML(ch_versions.mix(topic_versions.versions_file))
+          ^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `workflows/drugresponseeval.nf:99:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      versions       = ch_versions                 // channel: [ path(versions.yml) ]
+      ^^^^^^^^^^^^^^^^^^^^
   ```

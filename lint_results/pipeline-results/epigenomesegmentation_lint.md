@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-02T00:44:18.653260810Z
+- Generated: 2026-06-03T00:50:25.677466258Z
 - Nextflow version: 26.04.3
-- Summary: 66 warnings
+- Summary: 67 warnings
 
 ## :warning: Warnings
 
@@ -321,11 +321,18 @@
       ^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:6:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome/main.nf:7:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_versions = Channel.empty()
                     ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/prepare_genome/main.nf:18:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+          ch_raw_chromsizes = Channel.fromPath(params.chromsizes)
+                              ^^^^^^^
   ```
 
 - Warning: `subworkflows/local/process_histones/main.nf:11:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
