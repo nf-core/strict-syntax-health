@@ -11,7 +11,7 @@
   "airrflow": {
     "full_name": "nf-core/airrflow",
     "html_url": "https://github.com/nf-core/airrflow",
-    "commit": "ba11edaa9d5c4478e90b0c8955cdc9aba8ae82ff",
+    "commit": "5aef057db77f5b99afed70e36a3d945ec51eee48",
     "errors": 0,
     "warnings": 40,
     "parse_error": false,
@@ -146,11 +146,11 @@
   "createpanelrefs": {
     "full_name": "nf-core/createpanelrefs",
     "html_url": "https://github.com/nf-core/createpanelrefs",
-    "commit": "8e82d2b5a0fa3cdf1c8ef0da536136d6584718dd",
+    "commit": "40304b33644d5bbe202684491c53e04edc8f53cb",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 5,
     "parse_error": false,
-    "prints_help": false
+    "prints_help": true
   },
   "createtaxdb": {
     "full_name": "nf-core/createtaxdb",
@@ -551,7 +551,7 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "82bf098715a20efe53017b01727fb049ed522d4b",
+    "commit": "61e1924f7623d4df784fca5eaeb73f4a8fce8ade",
     "errors": 0,
     "warnings": 25,
     "parse_error": false,
@@ -767,7 +767,7 @@
   "pacvar": {
     "full_name": "nf-core/pacvar",
     "html_url": "https://github.com/nf-core/pacvar",
-    "commit": "d744b8eeaebc526d9e0720f49eaa19d9bdd05c43",
+    "commit": "c7c4088cceb05419114f17a902310af8716731b1",
     "errors": 6,
     "warnings": 34,
     "parse_error": false,
@@ -776,7 +776,7 @@
   "pairgenomealign": {
     "full_name": "nf-core/pairgenomealign",
     "html_url": "https://github.com/nf-core/pairgenomealign",
-    "commit": "8fac8f7edb33bcd809a19c87aab1eb8a61d3a089",
+    "commit": "7b437568e1f9ff20b12f6acc73585e22112710bf",
     "errors": 0,
     "warnings": 26,
     "parse_error": false,
@@ -992,7 +992,7 @@
   "rnasplice": {
     "full_name": "nf-core/rnasplice",
     "html_url": "https://github.com/nf-core/rnasplice",
-    "commit": "8db0621c89540a8e4b34681693f57f3f114295dc",
+    "commit": "43ffff7a0dfc3ffcf56691a79e1d513b8f0b86f5",
     "errors": 0,
     "warnings": 33,
     "parse_error": false,
@@ -1001,7 +1001,7 @@
   "rnavar": {
     "full_name": "nf-core/rnavar",
     "html_url": "https://github.com/nf-core/rnavar",
-    "commit": "cd843fcbfd9007ffaf4da817481d35552051519b",
+    "commit": "cc14a0e752e4bdfd5740d0478cf519743b5b6000",
     "errors": 0,
     "warnings": 3,
     "parse_error": false,
@@ -1082,11 +1082,11 @@
   "smrnaseq": {
     "full_name": "nf-core/smrnaseq",
     "html_url": "https://github.com/nf-core/smrnaseq",
-    "commit": "8a9a96e469caa25f56b74c6abb742c327ff4fb7f",
-    "errors": 11,
-    "warnings": 65,
+    "commit": "a4a3530919f1563e9fe8d6ed4ca071a2fd77f521",
+    "errors": 0,
+    "warnings": 3,
     "parse_error": false,
-    "prints_help": null
+    "prints_help": true
   },
   "sopa": {
     "full_name": "nf-core/sopa",
@@ -1199,9 +1199,9 @@
   "variantprioritization": {
     "full_name": "nf-core/variantprioritization",
     "html_url": "https://github.com/nf-core/variantprioritization",
-    "commit": "3313b3abff8d6b0d3eb324e434ee4debee9f2bbf",
+    "commit": "b3e275d2ec72773be2245ed14d871264deae057d",
     "errors": 0,
-    "warnings": 6,
+    "warnings": 11,
     "parse_error": false,
     "prints_help": true
   },
@@ -1217,7 +1217,7 @@
   "viralmetagenome": {
     "full_name": "nf-core/viralmetagenome",
     "html_url": "https://github.com/nf-core/viralmetagenome",
-    "commit": "caea3984890d4ce3d2a2e2c3bd6f9e5fe3eff9af",
+    "commit": "e53186ea9957a9ad800c4d2d964325635344a4cc",
     "errors": 0,
     "warnings": 11,
     "parse_error": false,

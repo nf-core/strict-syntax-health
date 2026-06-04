@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.04.3
 
-Launching `./main.nf` [modest_einstein] revision: 0281f7d1a6
+Launching `./main.nf` [friendly_ritchie] revision: 0281f7d1a6
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -14,7 +14,7 @@ WARN: Unrecognized config option 'validation.monochromeLogs'
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/pairgenomealign 2.3.0dev
+  nf-core/pairgenomealign 2.3.0
 ------------------------------------------------------
 Typical pipeline command:
 

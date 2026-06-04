@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "57b2c18cde7b5b387b6d432f25a41c3177419b09",
+  "_repo_commit": "a70baaf0691ea27111f3706585d5704012be43aa",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -3038,6 +3038,12 @@
   },
   "fastcov": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fastcov",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "fastdup": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fastdup",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

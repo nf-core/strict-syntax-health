@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.04.1
+ N E X T F L O W   ~  version 26.04.3
 
-Launching `./main.nf` [loquacious_perlman] revision: ebe06bd3f1
+Launching `./main.nf` [prickly_mclean] revision: ebe06bd3f1
 
 
 ------------------------------------------------------
