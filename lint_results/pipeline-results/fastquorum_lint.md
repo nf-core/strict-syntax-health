@@ -1,10 +1,17 @@
 # Nextflow lint results
 
-- Generated: 2026-03-28T00:21:34.176025941Z
-- Nextflow version: 26.03.1-edge
-- Summary: 8 warnings
+- Generated: 2026-06-05T00:42:37.136761341Z
+- Nextflow version: 26.04.3
+- Summary: 10 warnings
 
 ## :warning: Warnings
+
+- Warning: `main.nf:153:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      multiqc_report = FASTQUORUM.out.multiqc_report // channel: /path/to/multiqc_report.html
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
 
 - Warning: `subworkflows/local/utils_nfcore_fastquorum_pipeline/main.nf:31:5`: Parameter was not used -- prefix with `_` to suppress warning
 
@@ -20,25 +27,32 @@
       ^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_fastquorum_pipeline/main.nf:111:41`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
-              validateInputSamplesheetRow(it)
-                                          ^^
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_fastquorum_pipeline/main.nf:116:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
 
   ```nextflow
-              validateInputSamplesheet(it)
-                                       ^^
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_fastquorum_pipeline/main.nf:122:31`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
-                  return [meta, it]
-                                ^^
+      valid_config
+      ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/fastquorum.nf:66:25`: Parameter was not used -- prefix with `_` to suppress warning

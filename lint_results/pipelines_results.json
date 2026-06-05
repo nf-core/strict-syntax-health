@@ -47,9 +47,9 @@
   "bacass": {
     "full_name": "nf-core/bacass",
     "html_url": "https://github.com/nf-core/bacass",
-    "commit": "92d5f6d208c5466b4a1963eacbbbffb0ebd3e6fb",
+    "commit": "1009e601c21aed7a4a1f90ab576f55be5d182c15",
     "errors": 0,
-    "warnings": 17,
+    "warnings": 21,
     "parse_error": false,
     "prints_help": true
   },
@@ -146,9 +146,9 @@
   "createpanelrefs": {
     "full_name": "nf-core/createpanelrefs",
     "html_url": "https://github.com/nf-core/createpanelrefs",
-    "commit": "40304b33644d5bbe202684491c53e04edc8f53cb",
+    "commit": "375aa3fdc2881f0390406238b4f6292f569d563f",
     "errors": 0,
-    "warnings": 5,
+    "warnings": 6,
     "parse_error": false,
     "prints_help": true
   },
@@ -353,9 +353,9 @@
   "fastquorum": {
     "full_name": "nf-core/fastquorum",
     "html_url": "https://github.com/nf-core/fastquorum",
-    "commit": "4d3d4ab08b313159d9792f3cc521696550b8069d",
+    "commit": "114adf854dc53fc7b3045360cb7467dc58629845",
     "errors": 0,
-    "warnings": 8,
+    "warnings": 10,
     "parse_error": false,
     "prints_help": false
   },
@@ -839,11 +839,11 @@
   "pixelator": {
     "full_name": "nf-core/pixelator",
     "html_url": "https://github.com/nf-core/pixelator",
-    "commit": "ccf598fb5afb06b3317d5827c57db1acc060b990",
+    "commit": "5050af76b11148e4fe5366e6ba831805bcf9965f",
     "errors": 0,
     "warnings": 21,
     "parse_error": false,
-    "prints_help": true
+    "prints_help": false
   },
   "proteinannotator": {
     "full_name": "nf-core/proteinannotator",
@@ -1064,9 +1064,9 @@
   "seqsubmit": {
     "full_name": "nf-core/seqsubmit",
     "html_url": "https://github.com/nf-core/seqsubmit",
-    "commit": "f3c1546fe9df586d93e667d6ea5ffaef7f7ec9c5",
+    "commit": "c744f44e22157d5b966971fe14a668d4f7523bc6",
     "errors": 0,
-    "warnings": 12,
+    "warnings": 18,
     "parse_error": false,
     "prints_help": true
   },

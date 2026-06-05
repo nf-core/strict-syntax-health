@@ -1,10 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.04.1
+ N E X T F L O W   ~  version 26.04.3
 
 WARN: Cannot read project manifest -- Cause:  Cannot get property 'ENA_WEBIN' on null object
-Launching `./main.nf` [loquacious_galileo] revision: 3ef3835571
+Launching `./main.nf` [distracted_swartz] revision: 5e77062e77
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -26,7 +26,7 @@ or `--helpFull`.
 
 Input/output options
   --input                       [string] Path to comma-separated file describing the data to be submitted. Format depends on the pipeline 
-mode (mags/bins/metagenomic_assemblies).  
+mode (mags/bins/metagenomic_assemblies/reads).  
   --outdir                      [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
 Cloud infrastructure.  
   --email                       [string] Email address for completion summary. 
@@ -55,7 +55,7 @@ Generic options
 Pipeline flow control parameters
   --centre_name                 [string]  The center name of the submitter (mandatory for broker accounts). 
   --upload_tpa                  [boolean] Flag to control the type of assembly study (third party assembly or not) [default: false] 
-  --mode                        [string]  Type of upload  (accepted: mags, bins, metagenomic_assemblies) 
+  --mode                        [string]  Type of upload  (accepted: mags, bins, metagenomic_assemblies, reads) 
   --test_upload                 [boolean] Upload to TEST server instead of LIVE [default: true] 
   --submission_study            [string]  ENA study accession (PRJ/ERP) to submit the data to 
   --study_metadata              [string]  Path to study metadata file (JSON, CSV, or TSV) for registering a new ENA study. Required when 

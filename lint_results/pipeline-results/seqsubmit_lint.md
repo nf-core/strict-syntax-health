@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-05-15T00:37:08.694803619Z
-- Nextflow version: 26.04.1
-- Summary: 12 warnings
+- Generated: 2026-06-05T00:45:29.289630825Z
+- Nextflow version: 26.04.3
+- Summary: 18 warnings
 
 ## :warning: Warnings
 
@@ -18,6 +18,20 @@
   ```nextflow
                   saveAs: { filename -> "tax" }
                             ^^^^^^^^
+  ```
+
+- Warning: `main.nf:96:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      multiqc_report = ch_multiqc_report // channel: /path/to/multiqc_report.html
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `modules/local/create_reads_manifest/main.nf:23:56`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      def fastq_args   = fastq_list.collect { "--fastq ${it.name}" }.join(' \\\n        ')
+                                                         ^^
   ```
 
 - Warning: `modules/local/generate_assembly_manifest/main.nf:22:9`: Variable was declared but not used
@@ -48,6 +62,13 @@
                                          ^^^^
   ```
 
+- Warning: `subworkflows/local/fasta_validation.nf:66:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_fastas    = valid_fastas
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/genome_evaluation.nf:30:5`: Variable was declared but not used
 
   ```nextflow
@@ -62,28 +83,49 @@
                     ^^^^
   ```
 
-- Warning: `workflows/assemblysubmit.nf:229:80`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_config = valid_config
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:76:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `workflows/assemblysubmit.nf:233:80`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(CONCAT_ACCESSIONS.out.file_out.map{meta, file -> file})
                                                                                  ^^^^
   ```
 
-- Warning: `workflows/assemblysubmit.nf:230:78`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/assemblysubmit.nf:234:78`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(CONCAT_METADATA.out.file_out.map{meta, file -> file})
                                                                                ^^^^
   ```
 
-- Warning: `workflows/genomesubmit.nf:361:78`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genomesubmit.nf:365:78`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(CONCAT_METADATA.out.file_out.map{meta, file -> file})
                                                                                ^^^^
   ```
 
-- Warning: `workflows/genomesubmit.nf:363:80`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genomesubmit.nf:367:80`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(CONCAT_ACCESSIONS.out.file_out.map{meta, file -> file})

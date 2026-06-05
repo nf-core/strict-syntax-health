@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "a70baaf0691ea27111f3706585d5704012be43aa",
+  "_repo_commit": "45857e6ed40bfb72da1fce605fa7af344aa03c44",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -8186,6 +8186,12 @@
   },
   "rbt_vcfsplit": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/rbt/vcfsplit",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "regenie_splitl0": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/regenie/splitl0",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
