@@ -5,7 +5,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 Downloading plugin nf-core-utils@0.4.0
 Downloading plugin nf-schema@2.7.1
-Launching `./main.nf` [cheesy_curry] revision: 0ce196005e
+Launching `./main.nf` [compassionate_dubinsky] revision: 747257e61f
 
 
 ------------------------------------------------------

@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-05-26T00:38:39.781686097Z
-- Nextflow version: 26.04.2
-- Summary: 22 warnings
+- Generated: 2026-06-06T00:40:33.141370782Z
+- Nextflow version: 26.04.3
+- Summary: 19 warnings
 
 ## :warning: Warnings
 
@@ -27,32 +27,11 @@
           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bam_impute_quilt2/main.nf:73:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      vcf_index = ch_vcf_index // channel:   [ [id, chr], vcf, tbi ]
-      ^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/prepare_genome/main.nf:42:5`: Variable was declared but not used
-
-  ```nextflow
-      ch_fasta_fai_gzi = ch_fasta
-      ^^^^^^^^^^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/prepare_genome/main.nf:49:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
-      ch_fasta_fai_gzi
-      ^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:423:5`: Variable was declared but not used
-
-  ```nextflow
-      ch_fasta_index = ch_ref_gen.map{ meta, fasta, fai, gzi -> [
-      ^^^^^^^^^^^^^^
+      ch_fasta_fai_gzi = ch_fasta_fai_gzi
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/vcf_chr_rename_bcftools/main.nf:54:5`: Emit name should be omitted when there is only one emit

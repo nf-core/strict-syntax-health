@@ -29,9 +29,9 @@
   "ampliseq": {
     "full_name": "nf-core/ampliseq",
     "html_url": "https://github.com/nf-core/ampliseq",
-    "commit": "907778bf4a4fce3a4baa5d3b4c7721aa10008600",
+    "commit": "0a98a59618a90e74ee0b2b8e65a12b4b5b38921f",
     "errors": 0,
-    "warnings": 0,
+    "warnings": 8,
     "parse_error": false,
     "prints_help": true
   },
@@ -146,9 +146,9 @@
   "createpanelrefs": {
     "full_name": "nf-core/createpanelrefs",
     "html_url": "https://github.com/nf-core/createpanelrefs",
-    "commit": "375aa3fdc2881f0390406238b4f6292f569d563f",
+    "commit": "e63dfc748304551af82b2b8e9738258225a0f799",
     "errors": 0,
-    "warnings": 6,
+    "warnings": 5,
     "parse_error": false,
     "prints_help": true
   },
@@ -821,9 +821,9 @@
   "phaseimpute": {
     "full_name": "nf-core/phaseimpute",
     "html_url": "https://github.com/nf-core/phaseimpute",
-    "commit": "0b54a875b93964872ce17d5c9ed7ff5e9d6f7915",
+    "commit": "fa9fac8cd231b08eec4a1b44ad12a0a00424ebed",
     "errors": 0,
-    "warnings": 22,
+    "warnings": 19,
     "parse_error": false,
     "prints_help": false
   },
@@ -992,11 +992,11 @@
   "rnasplice": {
     "full_name": "nf-core/rnasplice",
     "html_url": "https://github.com/nf-core/rnasplice",
-    "commit": "43ffff7a0dfc3ffcf56691a79e1d513b8f0b86f5",
+    "commit": "7d098e5da20ec1ee126a778f9961ce6f7f1b0b55",
     "errors": 0,
-    "warnings": 33,
+    "warnings": 35,
     "parse_error": false,
-    "prints_help": true
+    "prints_help": false
   },
   "rnavar": {
     "full_name": "nf-core/rnavar",
@@ -1028,7 +1028,7 @@
   "scdownstream": {
     "full_name": "nf-core/scdownstream",
     "html_url": "https://github.com/nf-core/scdownstream",
-    "commit": "4c795be21737915935d2decf257c08df6de84af8",
+    "commit": "17b38c1b7dbc4c664e7d1d3e3a0ceefaf374a03e",
     "errors": 0,
     "warnings": 30,
     "parse_error": false,
@@ -1046,7 +1046,7 @@
   "scrnaseq": {
     "full_name": "nf-core/scrnaseq",
     "html_url": "https://github.com/nf-core/scrnaseq",
-    "commit": "e8070df6809e76e98faf104861164fc797599475",
+    "commit": "ac8d1135b45ae9efe0654992049bf8154a5d93dc",
     "errors": 0,
     "warnings": 6,
     "parse_error": false,

@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "45857e6ed40bfb72da1fce605fa7af344aa03c44",
+  "_repo_commit": "a336d807cef3e71436ee5ec79a6287fa73d208fd",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -1926,6 +1926,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "cnvkit_fix": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cnvkit/fix",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "cnvkit_genemetrics": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cnvkit/genemetrics",
     "errors": 0,
@@ -3230,6 +3236,18 @@
   },
   "fgumi_extract": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fgumi/extract",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "fgumi_group": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fgumi/group",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "fgumi_sort": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fgumi/sort",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -6720,6 +6738,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "octopusv_stat": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/octopusv/stat",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "octopusv_svcf2vcf": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/octopusv/svcf2vcf",
     "errors": 0,
@@ -8324,6 +8348,12 @@
   },
   "ribowaltz": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ribowaltz",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "riker_multi": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/riker/multi",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

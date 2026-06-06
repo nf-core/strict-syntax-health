@@ -1,12 +1,12 @@
 # Nextflow lint results
 
-- Generated: 2026-05-29T00:43:52.853168915Z
+- Generated: 2026-06-06T00:41:51.246514444Z
 - Nextflow version: 26.04.3
 - Summary: 30 warnings
 
 ## :warning: Warnings
 
-- Warning: `main.nf:141:5`: Emit name should be omitted when there is only one emit
+- Warning: `main.nf:145:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
       multiqc_report = SCDOWNSTREAM.out.multiqc_report // channel: /path/to/multiqc_report.html
@@ -20,14 +20,14 @@
       ^^^^^^^^^^^^^^
   ```
 
-- Warning: `modules/local/adata/mygene/main.nf:22:5`: Variable was declared but not used
+- Warning: `modules/local/adata/mygene/main.nf:23:5`: Variable was declared but not used
 
   ```nextflow
       input_col = task.ext.input_col ?: "index"
       ^^^^^^^^^
   ```
 
-- Warning: `modules/local/adata/mygene/main.nf:23:5`: Variable was declared but not used
+- Warning: `modules/local/adata/mygene/main.nf:24:5`: Variable was declared but not used
 
   ```nextflow
       output_col = task.ext.output_col ?: "symbols"

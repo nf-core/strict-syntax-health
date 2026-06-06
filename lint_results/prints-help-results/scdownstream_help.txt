@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.04.3
 
 Downloading plugin nf-anndata@0.3.2
-Launching `./main.nf` [loving_goldstine] revision: 97eaf4acc3
+Launching `./main.nf` [determined_davinci] revision: 5e961ed890
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -44,9 +44,10 @@ before `duplicate_var_resolution` is applied. All numeric suffixes following a d
 
 Quality control options
   --species                       [string]  Species of the input data. Used to auto-select bundled cell cycle gene lists 
-(assets/cell_cycle_genes/<species>_s_genes.txt and _g2m_genes.txt). Bundled lists are provided for 
-'human' and 'mouse'. Ignored when --s_genes and --g2m_genes are set explicitly. [default: human] 
- 
+(assets/cell_cycle_genes/<species>_s_genes.txt and _g2m_genes.txt) and as the MyGene.info taxonomy 
+when converting gene identifiers (samplesheet symbol_col: none). Bundled cell cycle lists are 
+provided for 'human' and 'mouse'. Ignored when --s_genes and --g2m_genes are set explicitly. 
+[default: human]  
   --cell_cycle_scoring            [boolean] Whether to perform cell cycle scoring. If true, S and G2M phase scores and a predicted phase label 
 are added to each cell in adata.obs. Requires the gene index (or symbol_col) to use standard gene 
 symbols matching the selected species. [default: true]  
@@ -81,6 +82,9 @@ genes will be automatically determined. If set to a negative number, all genes w
 [default: 0]  
   --integration_excluded_genes    [string]  Optional file containing a list of gene symbols (one per line). If provided, these genes will be 
 excluded from highly variable genes selection for integration.  
+  --symphony_reference            [string]  Path to a Symphony reference AnnData, only relevant if Symphony is selected in 
+`integration_methods`. If provided, query cells will be mapped onto this reference instead of 
+running de novo Symphony integration.  
   --scvi_model                    [string]  Path to a pre-trained scVI model, only relevant if scVI is selected in `integration_methods`. If 
 provided, the model will be used for integration. Otherwise, a new model will be trained.  
   --scanvi_model                  [string]  Path to a pre-trained scANVI model, only relevant if scANVI is selected in `integration_methods`. If 

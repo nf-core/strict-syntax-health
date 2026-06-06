@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "45857e6ed40bfb72da1fce605fa7af344aa03c44",
+  "_repo_commit": "a336d807cef3e71436ee5ec79a6287fa73d208fd",
   "abundance_differential_filter": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/abundance_differential_filter",
     "errors": 0,
@@ -574,6 +574,12 @@
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/mmseqs_fasta_cluster",
     "errors": 0,
     "warnings": 0,
+    "parse_error": false
+  },
+  "opt_flip_track_stat": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/opt_flip_track_stat",
+    "errors": 0,
+    "warnings": 1,
     "parse_error": false
   },
   "quant_tximport_summarizedexperiment": {
