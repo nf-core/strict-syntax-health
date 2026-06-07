@@ -53,6 +53,15 @@
     "parse_error": false,
     "prints_help": true
   },
+  "bacmodel": {
+    "full_name": "nf-core/bacmodel",
+    "html_url": "https://github.com/nf-core/bacmodel",
+    "commit": "b486077453cb28d0bdefb08ece5ed05ce2979675",
+    "errors": 1,
+    "warnings": 38,
+    "parse_error": false,
+    "prints_help": null
+  },
   "bactmap": {
     "full_name": "nf-core/bactmap",
     "html_url": "https://github.com/nf-core/bactmap",
@@ -533,9 +542,9 @@
   "longraredisease": {
     "full_name": "nf-core/longraredisease",
     "html_url": "https://github.com/nf-core/longraredisease",
-    "commit": "d6e1a120a696d2de5b5b3bef5ca93210131d2002",
+    "commit": "cd4df8a3647476325595f929336dd11ac044195f",
     "errors": 0,
-    "warnings": 182,
+    "warnings": 167,
     "parse_error": false,
     "prints_help": false
   },
@@ -857,9 +866,9 @@
   "proteinfamilies": {
     "full_name": "nf-core/proteinfamilies",
     "html_url": "https://github.com/nf-core/proteinfamilies",
-    "commit": "86be6d21e8c30fcb70e4fe54af1b27c3da2888a3",
+    "commit": "9482f6deb7349e3f792abbdabbba2976042db94e",
     "errors": 0,
-    "warnings": 3,
+    "warnings": 7,
     "parse_error": false,
     "prints_help": true
   },
@@ -1028,7 +1037,7 @@
   "scdownstream": {
     "full_name": "nf-core/scdownstream",
     "html_url": "https://github.com/nf-core/scdownstream",
-    "commit": "17b38c1b7dbc4c664e7d1d3e3a0ceefaf374a03e",
+    "commit": "bcb4c67210cff40a150a558dd82a8b48ca7db3d7",
     "errors": 0,
     "warnings": 30,
     "parse_error": false,

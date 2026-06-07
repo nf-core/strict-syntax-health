@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-06-06T00:43:14.386526+00:00
+- Generated: 2026-06-07T00:44:19.507593+00:00
 - Nextflow version: 26.04.3
 - Summary: 1 warning
 
@@ -8,7 +8,7 @@
 
 - Warning: `subworkflows/nf-core/opt_flip_track_stat/main.nf:28:5`: Emit name should be omitted when there is only one emit
 
-    ```nextflow
-        summary  = ch_summary  // channel: [ val(meta), ["collapsed_summary.tsv"]]
-        ^^^^^^^^^^
-    ```
+  ```nextflow
+      summary  = ch_summary  // channel: [ val(meta), ["collapsed_summary.tsv"]]
+      ^^^^^^^^^^
+  ```
