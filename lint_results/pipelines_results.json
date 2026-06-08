@@ -1181,7 +1181,7 @@
   "tumourevo": {
     "full_name": "nf-core/tumourevo",
     "html_url": "https://github.com/nf-core/tumourevo",
-    "commit": "28504ba4a8807fea2a0cc48d2263a34a03646966",
+    "commit": "647a0f80e4443d8d2c2465930326bf3d620c3cd4",
     "errors": 0,
     "warnings": 56,
     "parse_error": false,

@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "87e0996ad70cb449019c505fd5f53f6594e26e4f",
+  "_repo_commit": "9edc097c4904d60808b5c4c9978934e091aded1a",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -3234,14 +3234,32 @@
     "warnings": 0,
     "parse_error": false
   },
+  "fgumi_duplex": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fgumi/duplex",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "fgumi_extract": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fgumi/extract",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
+  "fgumi_filter": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fgumi/filter",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "fgumi_group": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fgumi/group",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "fgumi_simplex": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fgumi/simplex",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -8228,6 +8246,12 @@
   },
   "regenie_step1": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/regenie/step1",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "regenie_step2": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/regenie/step2",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
