@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-06-07T00:42:47.749065414Z
+- Generated: 2026-06-09T00:38:05.007051785Z
 - Nextflow version: 26.04.3
 - Summary: 7 warnings
 
@@ -34,21 +34,21 @@
       ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/proteinfamilies.nf:232:88`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/proteinfamilies.nf:228:88`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(FAA_SEQFU_SEQKIT.out.multiqc_files.collect{it[1]}.ifEmpty([]))
                                                                                          ^^
   ```
 
-- Warning: `workflows/proteinfamilies.nf:233:92`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/proteinfamilies.nf:229:92`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(CALCULATE_CLUSTER_DISTRIBUTION.out.mqc.collect{it[1]}.ifEmpty([]))
                                                                                              ^^
   ```
 
-- Warning: `workflows/proteinfamilies.nf:234:70`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/proteinfamilies.nf:230:70`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(ch_family_reps.collect { it[1] }.ifEmpty([]))

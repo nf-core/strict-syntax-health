@@ -3,9 +3,9 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.04.3
 
-Downloading plugin nf-core-utils@0.4.0
-Downloading plugin nf-schema@2.7.1
-Launching `./main.nf` [compassionate_dubinsky] revision: 747257e61f
+Downloading plugin nf-core-utils@0.5.0
+Downloading plugin nf-schema@2.7.2
+Launching `./main.nf` [extravagant_payne] revision: d686ca7fad
 
 
 ------------------------------------------------------
@@ -14,7 +14,7 @@ Launching `./main.nf` [compassionate_dubinsky] revision: 747257e61f
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/createpanelrefs 1.0.0
+  nf-core/createpanelrefs 1.1.0dev
 ------------------------------------------------------
 Typical pipeline command:
 
@@ -51,6 +51,7 @@ merged.
   --mutect2_target_bed                  [string] Path to target bed file 
 
 CNVkit options
+  --cnvkit_pon_name                     [string] Name for panel of normals. [default: cnvkit] 
   --cnvkit_targets                      [string] Path to directory for target file. 
 
 GENS options
@@ -73,7 +74,7 @@ interval-counts. [default: 5000]
 
 Mutect2 options
   --mutect2_intervals_num               [number] Number of intervals. [default: 20] 
-  --mutect2_pon_name                    [string] Name for panel of normals. 
+  --mutect2_pon_name                    [string] Name for panel of normals. [default: mutect2] 
 
 Generic options
   --multiqc_methods_description         [string]          Custom MultiQC yaml file containing HTML including a methods description. 
@@ -83,6 +84,9 @@ Generic options
  
  !! Hiding 20 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
+
+* The pipeline
+    https://doi.org/10.5281/zenodo.20590606
 
 * The nf-core framework
     https://doi.org/10.1038/s41587-020-0439-x

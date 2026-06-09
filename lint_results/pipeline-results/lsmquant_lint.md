@@ -1,12 +1,12 @@
 # Nextflow lint results
 
-- Generated: 2026-06-03T00:50:50.308022799Z
+- Generated: 2026-06-09T00:37:39.909522457Z
 - Nextflow version: 26.04.3
-- Summary: 46 warnings
+- Summary: 23 warnings
 
 ## :warning: Warnings
 
-- Warning: `main.nf:39:5`: Emit name should be omitted when there is only one emit
+- Warning: `main.nf:47:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
       multiqc_report = LSMQUANT.out.multiqc_report
@@ -132,84 +132,14 @@
           ^^^^
   ```
 
-- Warning: `subworkflows/local/araregistration/main.nf:14:5`: Variable was declared but not used
-
-  ```nextflow
-      ch_versions = Channel.empty()
-      ^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/araregistration/main.nf:14:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/araregistration/main.nf:15:5`: Variable was declared but not used
-
-  ```nextflow
-      sample_meta = stitched_data.map { meta, img_dir, params -> meta }
-      ^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/araregistration/main.nf:15:45`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      sample_meta = stitched_data.map { meta, img_dir, params -> meta }
-                                              ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/araregistration/main.nf:15:54`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      sample_meta = stitched_data.map { meta, img_dir, params -> meta }
-                                                       ^^^^^^
-  ```
-
-- Warning: `subworkflows/local/araregistration/main.nf:21:22`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .map { meta, stitched_img_directory, parameter_file, resampled ->
-                       ^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/araregistration/main.nf:31:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  .findAll { it.name.endsWith('.mat') }
-                             ^^
-  ```
-
-- Warning: `subworkflows/local/numorph_preprocessing/main.nf:33:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  .findAll { it.name.endsWith('.mat') }
-                             ^^
-  ```
-
-- Warning: `subworkflows/local/numorph_stitch/main.nf:28:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  .findAll { it.name.endsWith('.mat') }
-                             ^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_lsmquant_pipeline/main.nf:32:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      monochrome_logs   // boolean: Do not use coloured log outputs
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_lsmquant_pipeline/main.nf:35:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_lsmquant_pipeline/main.nf:34:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       input             //  string: Path to input samplesheet
       ^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_lsmquant_pipeline/main.nf:103:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/utils_nfcore_lsmquant_pipeline/main.nf:104:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_samplesheet = Channel.fromList(samplesheetToList(params.input, "${projectDir}/assets/schema_input.json"))
@@ -223,18 +153,11 @@
       ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
-
-  ```nextflow
-      valid_config = checkConfigProvided()
-      ^^^^^^^^^^^^
-  ```
-
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
-      valid_config
-      ^^^^^^^^^^^^
+      valid_config = valid_config
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
@@ -242,88 +165,4 @@
   ```nextflow
       dummy_emit = true
       ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/lsmquant.nf:36:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_multiqc_files = Channel.empty()
-                         ^^^^^^^
-  ```
-
-- Warning: `workflows/lsmquant.nf:37:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `workflows/lsmquant.nf:41:49`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      ch_parameter_file = samplesheet.map { meta, img_dir, parameter_file -> [meta, parameter_file] }
-                                                  ^^^^^^^
-  ```
-
-- Warning: `workflows/lsmquant.nf:57:27`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .map { meta, zip, parameter_file ->
-                            ^^^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/lsmquant.nf:67:32`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .map { meta, unzipped, zip, parameter_file ->
-                                 ^^^
-  ```
-
-- Warning: `workflows/lsmquant.nf:74:37`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .map { meta, img_directory, parameter_file ->
-                                      ^^^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/lsmquant.nf:84:30`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .map { meta, staged, raw_img_directory, parameter_file ->
-                               ^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/lsmquant.nf:90:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_samplesheet = Channel.empty()
-                       ^^^^^^^
-  ```
-
-- Warning: `workflows/lsmquant.nf:111:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  .findAll { it.name.endsWith('.mat') }
-                             ^^
-  ```
-
-- Warning: `workflows/lsmquant.nf:137:26`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-              .map { meta, img_directory, parameter_file, stitched_data ->
-                           ^^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/lsmquant.nf:158:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      def topic_versions = Channel.topic("versions")
-                           ^^^^^^^
-  ```
-
-- Warning: `workflows/lsmquant.nf:221:5`: Variable was declared but not used
-
-  ```nextflow
-      multiqc_report = MULTIQC.out.report.toList()
-      ^^^^^^^^^^^^^^
   ```

@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "9edc097c4904d60808b5c4c9978934e091aded1a",
+  "_repo_commit": "e3aa77704b35843de77cd5f69c82b7ba5f559276",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -1406,6 +1406,12 @@
   },
   "bwa_samse": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bwa/samse",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "bwafastalign_index": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bwafastalign/index",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -3996,6 +4002,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "gcta_grmcutoff": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gcta/grmcutoff",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "gcta_makegrm": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gcta/makegrm",
     "errors": 0,
@@ -4796,6 +4808,12 @@
   },
   "hmmer_hmmsearch": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/hmmer/hmmsearch",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "hmmer_hmmstat": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/hmmer/hmmstat",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

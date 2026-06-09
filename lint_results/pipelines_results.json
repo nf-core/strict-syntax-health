@@ -155,9 +155,9 @@
   "createpanelrefs": {
     "full_name": "nf-core/createpanelrefs",
     "html_url": "https://github.com/nf-core/createpanelrefs",
-    "commit": "e63dfc748304551af82b2b8e9738258225a0f799",
+    "commit": "57e700eda43dd38c994417260d97ed98952e9d73",
     "errors": 0,
-    "warnings": 5,
+    "warnings": 2,
     "parse_error": false,
     "prints_help": true
   },
@@ -272,7 +272,7 @@
   "differentialabundance": {
     "full_name": "nf-core/differentialabundance",
     "html_url": "https://github.com/nf-core/differentialabundance",
-    "commit": "996a07d69d221fcf10f77f95656fa2b4e123cdb0",
+    "commit": "5627eac4cc69063bdf2bda9062dd5389308a11c1",
     "errors": 0,
     "warnings": 107,
     "parse_error": false,
@@ -551,11 +551,11 @@
   "lsmquant": {
     "full_name": "nf-core/lsmquant",
     "html_url": "https://github.com/nf-core/lsmquant",
-    "commit": "7d6e2fdacb93b4970e4a6055792e9e28d447a1f1",
+    "commit": "44374c995f674f9948cd9012f5efd5c28e90f20f",
     "errors": 0,
-    "warnings": 46,
+    "warnings": 23,
     "parse_error": false,
-    "prints_help": false
+    "prints_help": true
   },
   "mag": {
     "full_name": "nf-core/mag",
@@ -776,7 +776,7 @@
   "pacvar": {
     "full_name": "nf-core/pacvar",
     "html_url": "https://github.com/nf-core/pacvar",
-    "commit": "c7c4088cceb05419114f17a902310af8716731b1",
+    "commit": "beb0ed2d0ed639448df72aee1bc54c6d2027f4cb",
     "errors": 6,
     "warnings": 34,
     "parse_error": false,
@@ -866,7 +866,7 @@
   "proteinfamilies": {
     "full_name": "nf-core/proteinfamilies",
     "html_url": "https://github.com/nf-core/proteinfamilies",
-    "commit": "9482f6deb7349e3f792abbdabbba2976042db94e",
+    "commit": "5fe8ce441bd88167dbc9ba28b2ea7fbbbe5a6389",
     "errors": 0,
     "warnings": 7,
     "parse_error": false,
@@ -938,9 +938,9 @@
   "references": {
     "full_name": "nf-core/references",
     "html_url": "https://github.com/nf-core/references",
-    "commit": "8969df350de17a4f0e8382aa260e5d8683daeb83",
+    "commit": "d93b532cddd492ed5668d6e70fffa0e5a3b61a6d",
     "errors": 0,
-    "warnings": 46,
+    "warnings": 48,
     "parse_error": false,
     "prints_help": false
   },
@@ -1001,7 +1001,7 @@
   "rnasplice": {
     "full_name": "nf-core/rnasplice",
     "html_url": "https://github.com/nf-core/rnasplice",
-    "commit": "7d098e5da20ec1ee126a778f9961ce6f7f1b0b55",
+    "commit": "cb5ac0c3f1c12642ca3c368e5226d79b2133394f",
     "errors": 0,
     "warnings": 35,
     "parse_error": false,
@@ -1064,9 +1064,9 @@
   "seqinspector": {
     "full_name": "nf-core/seqinspector",
     "html_url": "https://github.com/nf-core/seqinspector",
-    "commit": "cf6432f7a35f651b32daa42b8c255cbcd5f37c8c",
+    "commit": "33320f85386a098a025681802bc89e92189659da",
     "errors": 0,
-    "warnings": 0,
+    "warnings": 3,
     "parse_error": false,
     "prints_help": true
   },
@@ -1181,7 +1181,7 @@
   "tumourevo": {
     "full_name": "nf-core/tumourevo",
     "html_url": "https://github.com/nf-core/tumourevo",
-    "commit": "647a0f80e4443d8d2c2465930326bf3d620c3cd4",
+    "commit": "43cc20b77aa9e74754cf4b15766081216a1d508e",
     "errors": 0,
     "warnings": 56,
     "parse_error": false,

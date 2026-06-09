@@ -1,11 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.04.0
+ N E X T F L O W   ~  version 26.04.3
 
 Downloading plugin nf-core-utils@0.4.0
-Downloading plugin nf-schema@2.7.2
-Launching `./main.nf` [curious_solvay] revision: 3a465d243c
+Launching `./main.nf` [tender_agnesi] revision: 3a465d243c
 
 
 ------------------------------------------------------
@@ -14,15 +13,15 @@ Launching `./main.nf` [curious_solvay] revision: 3a465d243c
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/references 0.2
+  nf-core/references 0.2dev
 ------------------------------------------------------
 
 Generic options
-  trace_report_suffix: 2026-05-05_00-33-39
+  trace_report_suffix: 2026-06-09_00-38-25
   help               : true
 
 Core Nextflow options
-  runName            : curious_solvay
+  runName            : tender_agnesi
   launchDir          : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/references
   workDir            : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/references/work
   projectDir         : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/references
