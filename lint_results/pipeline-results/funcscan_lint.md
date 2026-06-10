@@ -1,16 +1,23 @@
 # Nextflow lint results
 
-- Generated: 2026-05-22T00:40:48.274893356Z
-- Nextflow version: 26.04.1
-- Summary: 80 warnings
+- Generated: 2026-06-10T00:43:25.947924459Z
+- Nextflow version: 26.04.3
+- Summary: 87 warnings
 
 ## :warning: Warnings
 
-- Warning: `conf/modules.config:593:65`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:616:65`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               saveAs: { params.run_taxa_classification == false ? it : null },
                                                                   ^^
+  ```
+
+- Warning: `main.nf:49:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      multiqc_report = FUNCSCAN.out.multiqc_report // channel: /path/to/multiqc_report.html
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `modules/nf-core/ampcombi2/cluster/main.nf:37:9`: Variable was declared but not used
@@ -209,6 +216,13 @@
                                                ^^
   ```
 
+- Warning: `subworkflows/local/amp.nf:170:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      versions = ch_versions
+      ^^^^^^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/annotation.nf:79:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
@@ -293,39 +307,53 @@
                                                ^^
   ```
 
-- Warning: `subworkflows/local/bgc.nf:94:26`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/arg.nf:212:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      versions = ch_versions
+      ^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/bgc.nf:96:26`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   fastas: [it[0], it[1], []]
                            ^^
   ```
 
-- Warning: `subworkflows/local/bgc.nf:94:33`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/bgc.nf:96:33`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   fastas: [it[0], it[1], []]
                                   ^^
   ```
 
-- Warning: `subworkflows/local/bgc.nf:164:52`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/bgc.nf:198:52`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_combgc_summaries = COMBGC.out.tsv.map { it[1] }.collectFile(name: 'combgc_complete_summary.tsv', storeDir: "${params.outdir}/reports/combgc", keepHeader: true)
                                                      ^^
   ```
 
-- Warning: `subworkflows/local/bgc.nf:167:52`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/bgc.nf:201:52`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_combgc_summaries = COMBGC.out.tsv.map { it[1] }.collectFile(name: 'combgc_complete_summary.tsv', keepHeader: true)
                                                      ^^
   ```
 
-- Warning: `subworkflows/local/bgc.nf:173:46`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/bgc.nf:207:46`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_mmseqs_taxonomy_list = tsvs.map { it[1] }.collect()
                                                ^^
+  ```
+
+- Warning: `subworkflows/local/bgc.nf:219:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      versions = ch_versions
+      ^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/cazyme.nf:25:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -349,11 +377,32 @@
       ^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_funcscan_pipeline/main.nf:108:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/utils_nfcore_funcscan_pipeline/main.nf:114:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       Channel
       ^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_config = valid_config
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/funcscan.nf:73:25`: Implicit closure parameter is deprecated, declare an explicit parameter instead

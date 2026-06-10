@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.04.1
+ N E X T F L O W   ~  version 26.04.3
 
-Launching `./main.nf` [serene_hopper] revision: 2f3242266f
+Launching `./main.nf` [shrivelled_swartz] revision: 2f3242266f
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -298,6 +298,15 @@ BGC: GECCO
   --bgc_gecco_convertmode                           [string]  Specify conversion mode for GECCO convert.  (accepted: clusters, gbk) [default: clusters] 
   --bgc_gecco_convertformat                         [string]  Specify output format for GECCO convert.  (accepted: gff, bigslice, fna, faa) [default: gff] 
  
+
+BGC: BiG-SLiCE
+  --bgc_run_bigslice                                [boolean] Run BiG-SLiCE to cluster detected BGCs into gene cluster families (GCFs). 
+  --bgc_bigslice_db                                 [string]  Path to the pre-downloaded BiG-SLiCE HMM database directory. 
+  --bgc_bigslice_exporttsv                          [boolean] Export BiG-SLiCE results as TSV files in addition to the SQLite database. 
+  --bgc_bigslice_complete                           [boolean] Run BiG-SLiCE in complete mode, re-clustering all BGCs into GCFs from scratch. 
+  --bgc_bigslice_threshold                          [number]  Jaccard index threshold for considering a BGC as a member of a GCF. [default: 0.4] 
+  --bgc_bigslice_thresholdpct                       [number]  Percentage-based BGC-to-GCF membership threshold. [default: -1] 
+  --bgc_bigslice_nranks                             [integer] Number of best GCF hits to report for each BGC membership assignment. [default: 1] 
 
 BGC: hmmsearch
   --bgc_run_hmmsearch                               [boolean] Run hmmsearch during BGC screening. 

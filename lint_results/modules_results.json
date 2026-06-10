@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "e3aa77704b35843de77cd5f69c82b7ba5f559276",
+  "_repo_commit": "53c5d14fe7173a1fee9973dcba5cf79164760770",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -6578,6 +6578,12 @@
   },
   "nanolyse": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/nanolyse",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "nanomonsv_get": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/nanomonsv/get",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

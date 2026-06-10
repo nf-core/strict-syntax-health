@@ -326,7 +326,7 @@
   "epigenomesegmentation": {
     "full_name": "nf-core/epigenomesegmentation",
     "html_url": "https://github.com/nf-core/epigenomesegmentation",
-    "commit": "c78bf467b3b49434dc3f5b3793cddff1768bc628",
+    "commit": "3b57d5ad96536a6b2e6e331e246d94ba1b8395e9",
     "errors": 0,
     "warnings": 67,
     "parse_error": false,
@@ -389,9 +389,9 @@
   "funcscan": {
     "full_name": "nf-core/funcscan",
     "html_url": "https://github.com/nf-core/funcscan",
-    "commit": "753f349104c8f261c3fd78a6d489129cb69e8245",
+    "commit": "248c98eede6c9f825dec85ac46ed4f542ed4addc",
     "errors": 0,
-    "warnings": 80,
+    "warnings": 87,
     "parse_error": false,
     "prints_help": true
   },
@@ -587,7 +587,7 @@
   "mcmicro": {
     "full_name": "nf-core/mcmicro",
     "html_url": "https://github.com/nf-core/mcmicro",
-    "commit": "b4949c7b737a0320037c9781c383bfc8240ddcb4",
+    "commit": "1974c653761d9a8baac05a8d57ac3a019d79b943",
     "errors": 13,
     "warnings": 55,
     "parse_error": false,
@@ -695,9 +695,9 @@
   "mspepid": {
     "full_name": "nf-core/mspepid",
     "html_url": "https://github.com/nf-core/mspepid",
-    "commit": "3296f7535f4f2e6aa3863416db542460bc3d222f",
+    "commit": "6b5c623d878e520308eb0feb61d7ae36428f88d7",
     "errors": 0,
-    "warnings": 8,
+    "warnings": 12,
     "parse_error": false,
     "prints_help": true
   },
@@ -866,7 +866,7 @@
   "proteinfamilies": {
     "full_name": "nf-core/proteinfamilies",
     "html_url": "https://github.com/nf-core/proteinfamilies",
-    "commit": "5fe8ce441bd88167dbc9ba28b2ea7fbbbe5a6389",
+    "commit": "0ba6da73682d7008c6ea997e679318ea9e5f8aae",
     "errors": 0,
     "warnings": 7,
     "parse_error": false,
@@ -938,9 +938,9 @@
   "references": {
     "full_name": "nf-core/references",
     "html_url": "https://github.com/nf-core/references",
-    "commit": "d93b532cddd492ed5668d6e70fffa0e5a3b61a6d",
+    "commit": "60dcdc665e40ff0c3c3c91b9bebe6ffc85ef023c",
     "errors": 0,
-    "warnings": 48,
+    "warnings": 5,
     "parse_error": false,
     "prints_help": false
   },
@@ -1055,7 +1055,7 @@
   "scrnaseq": {
     "full_name": "nf-core/scrnaseq",
     "html_url": "https://github.com/nf-core/scrnaseq",
-    "commit": "ac8d1135b45ae9efe0654992049bf8154a5d93dc",
+    "commit": "2c72754140902d77f259d7685b89cca15e934a2e",
     "errors": 0,
     "warnings": 6,
     "parse_error": false,
@@ -1109,7 +1109,7 @@
   "spatialaxe": {
     "full_name": "nf-core/spatialaxe",
     "html_url": "https://github.com/nf-core/spatialaxe",
-    "commit": "4468c520955c63f90400e9ae59270afa56ed58fe",
+    "commit": "d1eaf0f06da8f36525bacdd8b4bbedb110585c9e",
     "errors": 0,
     "warnings": 10,
     "parse_error": false,
@@ -1145,9 +1145,9 @@
   "taxprofiler": {
     "full_name": "nf-core/taxprofiler",
     "html_url": "https://github.com/nf-core/taxprofiler",
-    "commit": "8fc4897b7cb2559ea7ecd7ac91820cf6e59c4b3c",
+    "commit": "4732e9257d4a9093d021530a98d603d039339540",
     "errors": 0,
-    "warnings": 94,
+    "warnings": 97,
     "parse_error": false,
     "prints_help": true
   },

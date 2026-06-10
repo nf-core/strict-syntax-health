@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.04.3
 
 Downloading plugin nf-core-utils@0.4.0
-Launching `./main.nf` [tender_agnesi] revision: 3a465d243c
+Launching `./main.nf` [reverent_blackwell] revision: 0ba09f7726
 
 
 ------------------------------------------------------
@@ -17,11 +17,11 @@ Launching `./main.nf` [tender_agnesi] revision: 3a465d243c
 ------------------------------------------------------
 
 Generic options
-  trace_report_suffix: 2026-06-09_00-38-25
+  trace_report_suffix: 2026-06-10_00-44-28
   help               : true
 
 Core Nextflow options
-  runName            : tender_agnesi
+  runName            : reverent_blackwell
   launchDir          : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/references
   workDir            : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/references/work
   projectDir         : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/references

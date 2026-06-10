@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-05-16T00:33:19.255157101Z
-- Nextflow version: 26.04.1
-- Summary: 8 warnings
+- Generated: 2026-06-10T00:43:52.407607212Z
+- Nextflow version: 26.04.3
+- Summary: 12 warnings
 
 ## :warning: Warnings
 
@@ -55,9 +55,37 @@
                                           ^^
   ```
 
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_config = valid_config
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `workflows/mspepid.nf:121:9`: Variable was declared but not used
 
   ```nextflow
       def ch_collated_versions = softwareVersionsToYAML(ch_versions.mix(topic_versions.versions_file))
           ^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `workflows/mspepid.nf:130:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      versions       = ch_versions                 // channel: [ path(versions.yml) ]
+      ^^^^^^^^^^^^^^^^^^^^
   ```
