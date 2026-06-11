@@ -164,9 +164,9 @@
   "createtaxdb": {
     "full_name": "nf-core/createtaxdb",
     "html_url": "https://github.com/nf-core/createtaxdb",
-    "commit": "4b2a7385eb29c56d56fe2947021216552c9eb4bb",
+    "commit": "1508062f7982fea87bb4aa5b16f6c52f14e317b7",
     "errors": 0,
-    "warnings": 6,
+    "warnings": 12,
     "parse_error": false,
     "prints_help": true
   },
@@ -299,7 +299,7 @@
   "drugresponseeval": {
     "full_name": "nf-core/drugresponseeval",
     "html_url": "https://github.com/nf-core/drugresponseeval",
-    "commit": "646dd47b2dcb119fae3be8729d3a3897e4c2846d",
+    "commit": "39e02053b6e3ed0c12b55e02f26bf911814d2bb1",
     "errors": 0,
     "warnings": 29,
     "parse_error": false,
@@ -560,7 +560,7 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "61e1924f7623d4df784fca5eaeb73f4a8fce8ade",
+    "commit": "e8eb3e154d16a0d39b72aa2d27f8653a87fdfafd",
     "errors": 0,
     "warnings": 25,
     "parse_error": false,
@@ -785,7 +785,7 @@
   "pairgenomealign": {
     "full_name": "nf-core/pairgenomealign",
     "html_url": "https://github.com/nf-core/pairgenomealign",
-    "commit": "7b437568e1f9ff20b12f6acc73585e22112710bf",
+    "commit": "33ef9d70369ba948949f06e6248e878b54e776a4",
     "errors": 0,
     "warnings": 26,
     "parse_error": false,
@@ -1001,9 +1001,9 @@
   "rnasplice": {
     "full_name": "nf-core/rnasplice",
     "html_url": "https://github.com/nf-core/rnasplice",
-    "commit": "cb5ac0c3f1c12642ca3c368e5226d79b2133394f",
+    "commit": "c4897807fd517532a0dc5af3ecee1760b3958ecf",
     "errors": 0,
-    "warnings": 35,
+    "warnings": 33,
     "parse_error": false,
     "prints_help": false
   },
@@ -1073,7 +1073,7 @@
   "seqsubmit": {
     "full_name": "nf-core/seqsubmit",
     "html_url": "https://github.com/nf-core/seqsubmit",
-    "commit": "c744f44e22157d5b966971fe14a668d4f7523bc6",
+    "commit": "b8cbf9b6fdf3f1a1be78ae47b9aef80870d65963",
     "errors": 0,
     "warnings": 18,
     "parse_error": false,

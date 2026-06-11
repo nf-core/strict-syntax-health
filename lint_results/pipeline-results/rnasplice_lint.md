@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-09T00:38:43.849842377Z
+- Generated: 2026-06-11T00:45:32.798304054Z
 - Nextflow version: 26.04.3
-- Summary: 35 warnings
+- Summary: 33 warnings
 
 ## :warning: Warnings
 
@@ -46,20 +46,6 @@
   ```nextflow
       multiqc_report = RNASPLICE.out.multiqc_report // channel: /path/to/multiqc_report.html
       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `modules/local/rmats_post_single/main.nf:32:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/local/rmats_prep_single/main.nf:31:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
   ```
 
 - Warning: `subworkflows/local/contrast_check/main.nf:26:5`: Emit name should be omitted when there is only one emit

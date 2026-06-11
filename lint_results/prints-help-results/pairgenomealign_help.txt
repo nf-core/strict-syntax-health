@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.04.3
 
-Launching `./main.nf` [friendly_ritchie] revision: 0281f7d1a6
+Launching `./main.nf` [crazy_watson] revision: 46ce8725e3
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -53,7 +53,7 @@ Alignment options
 Export options
   --export_aln_to               [string]  Convert the final _one-to-one_ alignment to a different format than MAF. [default: no_export] 
  
-  --multi_cram                  [boolean] kjhkjh 
+  --multi_cram                  [boolean] Produce a multi-query CRAM file combining all the alignments. 
 
 Dotplot parameters
   --dotplot_width               [integer] Maximum width of the dot plots, in pixels. [default: 1000] 

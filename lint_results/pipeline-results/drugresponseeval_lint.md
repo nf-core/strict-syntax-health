@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-06-03T00:50:09.387460419Z
+- Generated: 2026-06-11T00:43:59.522765248Z
 - Nextflow version: 26.04.3
 - Summary: 29 warnings
 
@@ -55,35 +55,35 @@
                         ^^^^^^^^
   ```
 
-- Warning: `conf/modules.config:133:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:134:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               saveAs: { filename -> null }
                         ^^^^^^^^
   ```
 
-- Warning: `conf/modules.config:159:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:161:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               saveAs: { filename -> null }
                         ^^^^^^^^
   ```
 
-- Warning: `conf/modules.config:205:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:209:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               saveAs: { filename -> null }
                         ^^^^^^^^
   ```
 
-- Warning: `conf/modules.config:213:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:217:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               saveAs: { filename -> null }
                         ^^^^^^^^
   ```
 
-- Warning: `conf/modules.config:239:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:244:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               saveAs: { filename -> null }
@@ -167,7 +167,7 @@
                  ^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_drugresponseeval_pipeline/main.nf:136:58`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_drugresponseeval_pipeline/main.nf:138:58`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_models = channel.from(models.split(',').collect { it.trim() })

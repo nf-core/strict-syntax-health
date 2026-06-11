@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "53c5d14fe7173a1fee9973dcba5cf79164760770",
+  "_repo_commit": "2f424c797d78c85b9a91886b41fcbe5b319ac100",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -3246,6 +3246,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "fgumi_duplexmetrics": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fgumi/duplexmetrics",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "fgumi_extract": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fgumi/extract",
     "errors": 0,
@@ -3260,6 +3266,12 @@
   },
   "fgumi_group": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fgumi/group",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "fgumi_merge": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fgumi/merge",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -3998,6 +4010,12 @@
   },
   "gcta_addgrms": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gcta/addgrms",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "gcta_bivariatereml": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gcta/bivariatereml",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
