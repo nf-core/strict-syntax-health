@@ -3,8 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.04.3
 
-Downloading plugin nf-core-utils@0.4.0
-Launching `./main.nf` [reverent_blackwell] revision: 0ba09f7726
+Launching `./main.nf` [irreverent_mandelbrot] revision: de79002a2e
 
 
 ------------------------------------------------------
@@ -17,11 +16,11 @@ Launching `./main.nf` [reverent_blackwell] revision: 0ba09f7726
 ------------------------------------------------------
 
 Generic options
-  trace_report_suffix: 2026-06-10_00-44-28
+  trace_report_suffix: 2026-06-12_00-47-44
   help               : true
 
 Core Nextflow options
-  runName            : reverent_blackwell
+  runName            : irreverent_mandelbrot
   launchDir          : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/references
   workDir            : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/references/work
   projectDir         : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/references
@@ -41,6 +40,12 @@ Core Nextflow options
 * Software dependencies
     https://github.com/nf-core/references/blob/main/CITATIONS.md
 
+
+Extra information
+  Tools selected to be run  :  
+------------------------------------------------------
+
+WARN: No tools specified
 ERROR ~ Validation of pipeline parameters failed!
 
  -- Check '.nextflow.log' file for details
@@ -48,4 +53,4 @@ The following invalid input values have been detected:
 
 * Missing required parameter(s): input, outdir
 
- -- Check script 'subworkflows/local/utils_nfcore_references_pipeline/main.nf' at line: 135 or see '.nextflow.log' file for more details
+ -- Check script 'subworkflows/local/utils_nfcore_references_pipeline/main.nf' at line: 152 or see '.nextflow.log' file for more details

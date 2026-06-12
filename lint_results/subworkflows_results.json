@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "2f424c797d78c85b9a91886b41fcbe5b319ac100",
+  "_repo_commit": "a6600d25601ecc308a63080d5a54cddddf097bd9",
   "abundance_differential_filter": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/abundance_differential_filter",
     "errors": 0,
@@ -531,7 +531,7 @@
   "fastq_taxonomic_profile_metaphlan": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_taxonomic_profile_metaphlan",
     "errors": 0,
-    "warnings": 0,
+    "warnings": 1,
     "parse_error": false
   },
   "fastq_trim_fastp_fastqc": {

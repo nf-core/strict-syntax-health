@@ -47,7 +47,7 @@
   "bacass": {
     "full_name": "nf-core/bacass",
     "html_url": "https://github.com/nf-core/bacass",
-    "commit": "1009e601c21aed7a4a1f90ab576f55be5d182c15",
+    "commit": "5444383ce0451be672571c10094766fed17edb06",
     "errors": 0,
     "warnings": 21,
     "parse_error": false,
@@ -56,11 +56,11 @@
   "bacmodel": {
     "full_name": "nf-core/bacmodel",
     "html_url": "https://github.com/nf-core/bacmodel",
-    "commit": "b486077453cb28d0bdefb08ece5ed05ce2979675",
-    "errors": 1,
-    "warnings": 38,
+    "commit": "054c4ff0298609a2e8a1f1ad996b9fb36ccb44b4",
+    "errors": 0,
+    "warnings": 47,
     "parse_error": false,
-    "prints_help": null
+    "prints_help": true
   },
   "bactmap": {
     "full_name": "nf-core/bactmap",
@@ -164,7 +164,7 @@
   "createtaxdb": {
     "full_name": "nf-core/createtaxdb",
     "html_url": "https://github.com/nf-core/createtaxdb",
-    "commit": "1508062f7982fea87bb4aa5b16f6c52f14e317b7",
+    "commit": "d6024a30aba12bf4120348b672c15e84181d1792",
     "errors": 0,
     "warnings": 12,
     "parse_error": false,
@@ -299,7 +299,7 @@
   "drugresponseeval": {
     "full_name": "nf-core/drugresponseeval",
     "html_url": "https://github.com/nf-core/drugresponseeval",
-    "commit": "39e02053b6e3ed0c12b55e02f26bf911814d2bb1",
+    "commit": "e9aaa956af62965d23333778a170c57849d32887",
     "errors": 0,
     "warnings": 29,
     "parse_error": false,
@@ -569,7 +569,7 @@
   "magmap": {
     "full_name": "nf-core/magmap",
     "html_url": "https://github.com/nf-core/magmap",
-    "commit": "076b3162ccba87aeb65a7b6b2dea03a2a4def22f",
+    "commit": "ee6503ef0f1daea9a4eee02ab12ec7b21295551b",
     "errors": 0,
     "warnings": 5,
     "parse_error": false,
@@ -830,7 +830,7 @@
   "phaseimpute": {
     "full_name": "nf-core/phaseimpute",
     "html_url": "https://github.com/nf-core/phaseimpute",
-    "commit": "fa9fac8cd231b08eec4a1b44ad12a0a00424ebed",
+    "commit": "52ee9d66325777d1f1cc684dd7347b63c2029144",
     "errors": 0,
     "warnings": 19,
     "parse_error": false,
@@ -890,6 +890,15 @@
     "parse_error": false,
     "prints_help": null
   },
+  "provenancereport": {
+    "full_name": "nf-core/provenancereport",
+    "html_url": "https://github.com/nf-core/provenancereport",
+    "commit": "e858f86c3595ba490c60b36b8fe086ef676a8944",
+    "errors": 0,
+    "warnings": 6,
+    "parse_error": false,
+    "prints_help": true
+  },
   "radseq": {
     "full_name": "nf-core/radseq",
     "html_url": "https://github.com/nf-core/radseq",
@@ -902,9 +911,9 @@
   "rangeland": {
     "full_name": "nf-core/rangeland",
     "html_url": "https://github.com/nf-core/rangeland",
-    "commit": "21003c9efe984e91f7e43eea8de2c1466005105e",
+    "commit": "941057f630e8c6555ebf79d164da7287eebcff46",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 5,
     "parse_error": false,
     "prints_help": true
   },
@@ -938,9 +947,9 @@
   "references": {
     "full_name": "nf-core/references",
     "html_url": "https://github.com/nf-core/references",
-    "commit": "60dcdc665e40ff0c3c3c91b9bebe6ffc85ef023c",
+    "commit": "b205e5bc23ad11c224dfea9d25ab9d07b26660d7",
     "errors": 0,
-    "warnings": 5,
+    "warnings": 4,
     "parse_error": false,
     "prints_help": false
   },
@@ -1028,9 +1037,9 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "1cf596e206c202943cfe570276a58a3f7be3dfac",
+    "commit": "375c449933215d19e26f645fd61c5bc38580e2da",
     "errors": 0,
-    "warnings": 613,
+    "warnings": 617,
     "parse_error": false,
     "prints_help": true
   },
@@ -1046,7 +1055,7 @@
   "scnanoseq": {
     "full_name": "nf-core/scnanoseq",
     "html_url": "https://github.com/nf-core/scnanoseq",
-    "commit": "a81c53ffe6150a05bb6f74db81b2d5bbb6ee8e74",
+    "commit": "c4ecbf5bd974fd2e70e5f909b484117ea37d814e",
     "errors": 0,
     "warnings": 5,
     "parse_error": false,
@@ -1055,7 +1064,7 @@
   "scrnaseq": {
     "full_name": "nf-core/scrnaseq",
     "html_url": "https://github.com/nf-core/scrnaseq",
-    "commit": "2c72754140902d77f259d7685b89cca15e934a2e",
+    "commit": "77bfdf84017df2ccef15f7b3532c7cc2433c5083",
     "errors": 0,
     "warnings": 6,
     "parse_error": false,
@@ -1145,7 +1154,7 @@
   "taxprofiler": {
     "full_name": "nf-core/taxprofiler",
     "html_url": "https://github.com/nf-core/taxprofiler",
-    "commit": "4732e9257d4a9093d021530a98d603d039339540",
+    "commit": "7daf9ab4a0c356db78a79e5bbffd81e3e86a213b",
     "errors": 0,
     "warnings": 97,
     "parse_error": false,

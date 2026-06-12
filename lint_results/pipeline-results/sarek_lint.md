@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-02T00:46:15.898513396Z
+- Generated: 2026-06-12T00:48:15.530316499Z
 - Nextflow version: 26.04.3
-- Summary: 613 warnings
+- Summary: 617 warnings
 
 ## :warning: Warnings
 
@@ -104,56 +104,70 @@
                                                                                  ^^
   ```
 
-- Warning: `conf/modules/markduplicates.config:32:52`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules/markduplicates.config:42:52`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               saveAs: { !params.save_output_as_bam ? it : null }
                                                      ^^
   ```
 
-- Warning: `conf/modules/markduplicates.config:59:52`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-              saveAs: { !params.save_output_as_bam ? it : null }
-                                                     ^^
-  ```
-
-- Warning: `conf/modules/markduplicates.config:88:56`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules/markduplicates.config:74:56`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   saveAs: { !params.save_output_as_bam ? it : null }
                                                          ^^
   ```
 
-- Warning: `conf/modules/markduplicates.config:94:145`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules/markduplicates.config:82:56`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  saveAs: { params.save_output_as_bam ? (it.endsWith('.md.bai') ? it.replace('.md.bai', '.md.bam.bai') : it) : null }
+                                                         ^^
+  ```
+
+- Warning: `conf/modules/markduplicates.config:82:81`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  saveAs: { params.save_output_as_bam ? (it.endsWith('.md.bai') ? it.replace('.md.bai', '.md.bam.bai') : it) : null }
+                                                                                  ^^
+  ```
+
+- Warning: `conf/modules/markduplicates.config:82:120`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  saveAs: { params.save_output_as_bam ? (it.endsWith('.md.bai') ? it.replace('.md.bai', '.md.bam.bai') : it) : null }
+                                                                                                                         ^^
+  ```
+
+- Warning: `conf/modules/markduplicates.config:88:145`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   saveAs: { !(params.skip_tools && params.skip_tools.split(',').contains('markduplicates_report')) ? "markduplicates/${meta.id}/${it}" : null}
                                                                                                                                                   ^^
   ```
 
-- Warning: `conf/modules/markduplicates.config:107:52`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules/markduplicates.config:102:56`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-              saveAs: { !params.save_output_as_bam ? it : null }
-                                                     ^^
+                  saveAs: { !params.save_output_as_bam ? it : null }
+                                                         ^^
   ```
 
-- Warning: `conf/modules/markduplicates.config:116:52`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-              saveAs: { !params.save_output_as_bam ? it : null }
-                                                     ^^
-  ```
-
-- Warning: `conf/modules/markduplicates.config:130:55`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules/markduplicates.config:108:55`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   saveAs: { params.save_output_as_bam ? it : null }
                                                         ^^
   ```
 
-- Warning: `conf/modules/markduplicates.config:136:55`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules/markduplicates.config:119:56`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  saveAs: { !params.save_output_as_bam ? it : null }
+                                                         ^^
+  ```
+
+- Warning: `conf/modules/markduplicates.config:125:55`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   saveAs: { params.save_output_as_bam ? it : null }
@@ -363,35 +377,49 @@
                                                                                                                ^^
   ```
 
-- Warning: `conf/modules/recalibrate.config:51:56`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules/recalibrate.config:50:52`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-                  saveAs: { !params.save_output_as_bam ? it : null }
-                                                         ^^
+              saveAs: { !params.save_output_as_bam ? it : null }
+                                                     ^^
   ```
 
-- Warning: `conf/modules/recalibrate.config:60:56`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules/recalibrate.config:59:52`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-                  saveAs: { !params.save_output_as_bam ? it : null }
-                                                         ^^
+              saveAs: { !params.save_output_as_bam ? it : null }
+                                                     ^^
   ```
 
-- Warning: `conf/modules/recalibrate.config:71:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules/recalibrate.config:69:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               saveAs: { params.save_output_as_bam ? it : null }
                                                     ^^
   ```
 
-- Warning: `conf/modules/sentieon_dedup.config:32:56`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules/recalibrate.config:79:79`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              saveAs: { (params.save_output_as_bam && meta.num_intervals > 1) ? it : null }
+                                                                                ^^
+  ```
+
+- Warning: `conf/modules/sentieon_dedup.config:35:56`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   saveAs: { !params.save_output_as_bam ? it : null }
                                                          ^^
   ```
 
-- Warning: `conf/modules/sentieon_dedup.config:38:145`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules/sentieon_dedup.config:41:55`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  saveAs: { params.save_output_as_bam ? it : null }
+                                                        ^^
+  ```
+
+- Warning: `conf/modules/sentieon_dedup.config:47:145`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   saveAs: { !(params.skip_tools && params.skip_tools.split(',').contains('sentieon_dedup_report')) ? "sentieon_dedup/${meta.id}/${it}" : null}
@@ -1168,14 +1196,14 @@
                  ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bam_markduplicates/main.nf:22:42`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/bam_markduplicates/main.nf:24:42`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       GATK4_MARKDUPLICATES(bam, fasta.map{ meta, fasta_ -> [ fasta_ ] }, fasta_fai.map{ meta, fasta_fai_ -> [ fasta_fai_ ] })
                                            ^^^^
   ```
 
-- Warning: `subworkflows/local/bam_markduplicates/main.nf:22:87`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/bam_markduplicates/main.nf:24:87`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       GATK4_MARKDUPLICATES(bam, fasta.map{ meta, fasta_ -> [ fasta_ ] }, fasta_fai.map{ meta, fasta_fai_ -> [ fasta_fai_ ] })
@@ -1217,21 +1245,21 @@
                                                                                                                                              ^^^^
   ```
 
-- Warning: `subworkflows/local/bam_markduplicates_spark/main.nf:37:53`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/bam_markduplicates_spark/main.nf:38:53`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       GATK4_ESTIMATELIBRARYCOMPLEXITY(bam, fasta.map{ meta, fasta_ -> [ fasta_ ] }, fasta_fai.map{ meta, fasta_fai_ -> [ fasta_fai_ ] }, dict.map{ meta, dict_ -> [ dict_ ] })
                                                       ^^^^
   ```
 
-- Warning: `subworkflows/local/bam_markduplicates_spark/main.nf:37:98`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/bam_markduplicates_spark/main.nf:38:98`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       GATK4_ESTIMATELIBRARYCOMPLEXITY(bam, fasta.map{ meta, fasta_ -> [ fasta_ ] }, fasta_fai.map{ meta, fasta_fai_ -> [ fasta_fai_ ] }, dict.map{ meta, dict_ -> [ dict_ ] })
                                                                                                    ^^^^
   ```
 
-- Warning: `subworkflows/local/bam_markduplicates_spark/main.nf:37:146`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/bam_markduplicates_spark/main.nf:38:146`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       GATK4_ESTIMATELIBRARYCOMPLEXITY(bam, fasta.map{ meta, fasta_ -> [ fasta_ ] }, fasta_fai.map{ meta, fasta_fai_ -> [ fasta_fai_ ] }, dict.map{ meta, dict_ -> [ dict_ ] })

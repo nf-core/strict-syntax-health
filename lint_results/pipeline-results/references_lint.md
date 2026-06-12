@@ -1,23 +1,16 @@
 # Nextflow lint results
 
-- Generated: 2026-06-10T00:44:25.687014054Z
+- Generated: 2026-06-12T00:47:41.906038836Z
 - Nextflow version: 26.04.3
-- Summary: 5 warnings
+- Summary: 4 warnings
 
 ## :warning: Warnings
 
-- Warning: `subworkflows/local/utils_nfcore_references_pipeline/main.nf:143:5`: Variable was declared but not used
+- Warning: `subworkflows/local/utils_nfcore_references_pipeline/main.nf:168:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
-      references = channel.fromList(
-      ^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_references_pipeline/main.nf:151:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      references
-      ^^^^^^^^^^
+      references = references
+      ^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/utils_references/main.nf:28:5`: Variable was declared but not used
@@ -34,7 +27,7 @@
       ^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/references.nf:117:5`: Emit name should be omitted when there is only one emit
+- Warning: `workflows/references.nf:101:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
       references = references // channel: [meta, *]

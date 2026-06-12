@@ -5,8 +5,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 Downloading plugin nf-fgbio@1.0.0
 Downloading plugin nf-prov@1.7.0
-Downloading plugin nf-schema@2.7.2
-Launching `./main.nf` [prickly_pike] revision: f2330ae7a6
+Launching `./main.nf` [cheesy_lovelace] revision: f2330ae7a6
 
 
 ------------------------------------------------------
@@ -163,7 +162,7 @@ rs_dbSNP,HGVSc_VEP,HGVSp_VEP,1000Gp3_EAS_AF,1000Gp3_AMR_AF,LRT_score,GERP++_RS,g
   --vep_spliceregion                  [boolean] Enable the use of the VEP SpliceRegion plugin. 
   --vep_custom_args                   [string]  Add an extra custom argument to VEP. [default: --everything --filter_common --per_gene 
 --total_length --offline --format vcf]  
-  --vep_version                       [string]  Should reflect the VEP version used in the container. [default: 115.0-0] 
+  --vep_version                       [string]  Should reflect the VEP version used in the container. [default: 115.2-1] 
   --outdir_cache                      [string]  The output directory where the cache will be saved. You have to use absolute paths to storage on 
 Cloud infrastructure.  
   --vep_out_format                    [string]  VEP output-file format.  (accepted: json, tab, vcf) [default: vcf] 
