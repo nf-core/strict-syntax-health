@@ -1,5 +1,42 @@
 # Nextflow lint results
 
-- Generated: 2026-05-12T00:36:34.569859538Z
-- Nextflow version: 26.04.1
-- Summary: No issues found
+- Generated: 2026-06-13T00:48:59.901943324Z
+- Nextflow version: 26.04.3
+- Summary: 5 warnings
+
+## :warning: Warnings
+
+- Warning: `subworkflows/local/multiqc_rnaseq/main.nf:247:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      report = MULTIQC.out.report.map { _meta, report -> report }
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/bam_stringtie_merge/main.nf:29:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      stringtie_gtf = STRINGTIE_MERGE.out.merged_gtf // channel: [ meta, gtf ]
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_config = valid_config
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```

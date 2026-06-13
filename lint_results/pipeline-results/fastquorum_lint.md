@@ -1,26 +1,26 @@
 # Nextflow lint results
 
-- Generated: 2026-06-05T00:42:37.136761341Z
+- Generated: 2026-06-13T00:46:36.211758642Z
 - Nextflow version: 26.04.3
 - Summary: 10 warnings
 
 ## :warning: Warnings
 
-- Warning: `main.nf:153:5`: Emit name should be omitted when there is only one emit
+- Warning: `main.nf:152:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
       multiqc_report = FASTQUORUM.out.multiqc_report // channel: /path/to/multiqc_report.html
       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_fastquorum_pipeline/main.nf:31:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_fastquorum_pipeline/main.nf:30:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       monochrome_logs // boolean: Do not use coloured log outputs
       ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_fastquorum_pipeline/main.nf:34:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_fastquorum_pipeline/main.nf:33:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       input //  string: Path to input samplesheet

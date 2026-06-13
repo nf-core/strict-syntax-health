@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.04.3
 
-Launching `./main.nf` [backstabbing_baekeland] revision: 92dac02512
+Launching `./main.nf` [soggy_curie] revision: 92dac02512
 
 
 ------------------------------------------------------
@@ -12,7 +12,7 @@ Launching `./main.nf` [backstabbing_baekeland] revision: 92dac02512
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/taxprofiler 2.1.0dev
+  nf-core/taxprofiler 2.0.1
 ------------------------------------------------------
 Typical pipeline command:
 

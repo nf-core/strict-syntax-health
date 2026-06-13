@@ -3,11 +3,11 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.04.3
 
-Downloading plugin nf-schema@2.5.1
-Launching `./main.nf` [exotic_hugle] revision: dab8d7ab31
+Launching `./main.nf` [grave_dijkstra] revision: dab8d7ab31
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
+WARN: Access to undefined parameter `rustqc_mock` -- Initialise it to a default value eg. `params.rustqc_mock = some_value`
 ERROR ~ Unable to create help message: Specified param 'true' does not exist in JSON schema.
 
  -- Check script 'subworkflows/nf-core/utils_nfschema_plugin/main.nf' at line: 41 or see '.nextflow.log' file for more details

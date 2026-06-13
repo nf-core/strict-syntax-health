@@ -3,7 +3,8 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.04.3
 
-Launching `./main.nf` [evil_northcutt] revision: 1e2807f293
+Downloading plugin nf-schema@2.5.1
+Launching `./main.nf` [determined_wiles] revision: 1e2807f293
 
 WARN: Unrecognized config option 'manifest.keywords'
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
@@ -55,6 +56,8 @@ Analysis options
   --carveme_mediadb       [string]  Path to CarveMe media database TSV file. If not provided, uses CarveMe's default media database 
  
   --run_gapseq            [boolean] Run Gapseq for pathway analysis and metabolic modeling [default: false] 
+  --run_memote            [boolean] Run MEMOTE to evaluate metabolic model quality (requires run_gapseq or run_carveme) [default: 
+false]  
  !! Hiding 15 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
 

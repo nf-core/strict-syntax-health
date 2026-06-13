@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-12T00:46:13.529164170Z
+- Generated: 2026-06-13T00:46:19.651975282Z
 - Nextflow version: 26.04.3
-- Summary: 29 warnings
+- Summary: 32 warnings
 
 ## :warning: Warnings
 
@@ -104,28 +104,49 @@
                                 ^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/model_testing/main.nf:125:36`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/model_testing/main.nf:74:51`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+                              .filter { model_name, test_mode, split_id, split_dataset, best_hpams, randomization_views, path_data ->
+                                                    ^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/model_testing/main.nf:74:72`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+                              .filter { model_name, test_mode, split_id, split_dataset, best_hpams, randomization_views, path_data ->
+                                                                         ^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/model_testing/main.nf:74:120`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+                              .filter { model_name, test_mode, split_id, split_dataset, best_hpams, randomization_views, path_data ->
+                                                                                                                         ^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/model_testing/main.nf:142:36`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                               .map { model_class, model_name, train_ds, val_ds, es_ds ->
                                      ^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/model_testing/main.nf:145:47`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/model_testing/main.nf:162:47`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                               .map{ model_name, final_constant, test_mode, best_hpam_combi ->
                                                 ^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/model_testing/main.nf:158:49`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/model_testing/main.nf:175:49`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                           .map{ test_mode, model, pred_file -> [test_mode, model.split("\\.")[0]] }
                                                   ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/model_testing/main.nf:205:5`: Emit name should be omitted when there is only one emit
+- Warning: `subworkflows/local/model_testing/main.nf:222:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
       versions = ch_versions

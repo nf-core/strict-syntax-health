@@ -1,10 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.04.0
+ N E X T F L O W   ~  version 26.04.3
 
-Downloading plugin nf-schema@2.5.1
-Launching `./main.nf` [distracted_cray] revision: 9b061e3e24
+Launching `./main.nf` [reverent_cantor] revision: 9b061e3e24
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -61,6 +60,7 @@ ortholog-containing sequences.
   --skip_plots_genome_anno      [string]          Skip these stat plots in the genome and annotation tree plot. [default: nseqs_plot] 
   --skip_plots_genome_only      [string]          Skip these stat plots in the genome only tree plot. [default: nseqs_plot] 
   --val_tool                    [string]          Tool for gxf validation.  (accepted: agat, gffread) [default: agat] 
+  --ortho_version               [string]          OrthoFinder major version to run.  (accepted: v2, v3) [default: v3] 
   --tree_scale                  [integer]         Modifies scale of the tree plot in the tree summary, default value is '0.0005'. Useful if tree tips 
 overlap with the concatenated plots. Very sensitive, increase/decrease by two-fold.  
   --repeat                      [string]          DNA string for tidk motif search 

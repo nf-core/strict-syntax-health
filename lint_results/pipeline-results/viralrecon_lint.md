@@ -1,10 +1,17 @@
 # Nextflow lint results
 
-- Generated: 2026-05-14T00:39:42.933732305Z
-- Nextflow version: 26.04.1
-- Summary: 152 warnings
+- Generated: 2026-06-13T00:51:45.653991219Z
+- Nextflow version: 26.04.3
+- Summary: 160 warnings
 
 ## :warning: Warnings
+
+- Warning: `main.nf:98:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      multiqc_report = VIRALRECON.out.multiqc_report // channel: /path/to/multiqc_report.html
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
 
 - Warning: `subworkflows/local/additional_annotation/main.nf:62:43`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
@@ -25,6 +32,13 @@
   ```nextflow
           pangolin.collect{it[1]}.ifEmpty([])
                            ^^
+  ```
+
+- Warning: `subworkflows/local/additional_annotation/main.nf:68:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      long_table  = MAKE_VARIANTS_LONG_TABLE_ADDITIONAL.out.csv // channel: [ val(meta), [ csv ] ]
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/assembly_minia/main.nf:44:19`: Parameter was not used -- prefix with `_` to suppress warning
@@ -342,6 +356,13 @@
                                      ^^^^^^^
   ```
 
+- Warning: `subworkflows/local/utils_nfcore_viralrecon_pipeline/main.nf:136:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      samplesheet = ch_samplesheet
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/utils_nfcore_viralrecon_pipeline/main.nf:348:27`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
@@ -510,560 +531,595 @@
       ^^^
   ```
 
-- Warning: `workflows/viralrecon.nf:106:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_config = valid_config
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `workflows/viralrecon.nf:104:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       multiqc_config
       ^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/viralrecon.nf:107:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/viralrecon.nf:105:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       multiqc_logo
       ^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/viralrecon.nf:108:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/viralrecon.nf:106:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       multiqc_methods_description
       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/viralrecon.nf:117:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/viralrecon.nf:115:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_artic_scheme
       ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/viralrecon.nf:130:9`: Variable was declared but not used
+- Warning: `workflows/viralrecon.nf:128:9`: Variable was declared but not used
 
   ```nextflow
       def valid_params = [
           ^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/viralrecon.nf:162:41`: Variable was declared but not used
+- Warning: `workflows/viralrecon.nf:160:41`: Variable was declared but not used
 
   ```nextflow
       if (params.input)                 { ch_input          = file(params.input)                 } else { exit 1, 'Input samplesheet file not specified!' }
                                           ^^^^^^^^
   ```
 
-- Warning: `workflows/viralrecon.nf:182:80`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:180:80`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       def assemblers = params.assemblers ? params.assemblers.split(',').collect{ it.trim().toLowerCase() } : []
                                                                                  ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:251:33`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:249:33`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .map { isMultiFasta(it, log) }
                                   ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:257:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:255:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   .map { checkPrimerSuffixes(it, params.primer_left_suffix, params.primer_right_suffix, log) }
                                              ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:262:41`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:260:41`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   .map { [ getColFromFile(it, 0, true) ] }
                                           ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:267:41`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:265:41`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   .map { [ getColFromFile(it, 0, true) ] }
                                           ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:276:49`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:274:49`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       .map { checkIfSwiftProtocol(it, 'covid19genome', log) }
                                                   ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:300:100`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:298:100`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(FASTQ_TRIM_FASTP_FASTQC.out.fastqc_raw_zip.collect{it[1]}.ifEmpty([]))
                                                                                                      ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:301:95`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:299:95`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(FASTQ_TRIM_FASTP_FASTQC.out.trim_json.collect{it[1]}.ifEmpty([]))
                                                                                                 ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:317:37`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/viralrecon.nf:315:37`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   .map { meta, reads, json, pass -> if (pass) [ meta, reads ] }
                                       ^^^^
   ```
 
-- Warning: `workflows/viralrecon.nf:322:27`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/viralrecon.nf:320:27`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                       meta, reads, json, pass ->
                             ^^^^^
   ```
 
-- Warning: `workflows/viralrecon.nf:352:89`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:350:89`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files =  ch_multiqc_files.mix(KRAKEN2_KRAKEN2.out.report.collect{it[1]}.ifEmpty([]))
                                                                                           ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:378:89`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:376:89`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(FASTQ_ALIGN_BOWTIE2.out.log_out.collect{it[1]}.ifEmpty([]))
                                                                                           ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:379:90`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:377:90`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(FASTQ_ALIGN_BOWTIE2.out.flagstat.collect{it[1]}.ifEmpty([]))
                                                                                            ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:393:37`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/viralrecon.nf:391:37`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   .map { meta, ofile, mapped, pass -> if (pass) [ meta, ofile ] }
                                       ^^^^^^
   ```
 
-- Warning: `workflows/viralrecon.nf:398:37`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/viralrecon.nf:396:37`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   .map { meta, ofile, mapped, pass -> if (pass) [ meta, ofile ] }
                                       ^^^^^^
   ```
 
-- Warning: `workflows/viralrecon.nf:437:96`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:435:96`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files = ch_multiqc_files.mix(BAM_TRIM_PRIMERS_IVAR.out.flagstat.collect{it[1]}.ifEmpty([]))
                                                                                                  ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:451:100`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:449:100`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files = ch_multiqc_files.mix(BAM_MARKDUPLICATES_PICARD.out.flagstat.collect{it[1]}.ifEmpty([]))
                                                                                                      ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:460:43`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:458:43`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   genome.fasta.map { [ [:], it ] },
                                             ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:461:41`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:459:41`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   genome.fai.map { [ [:], it ] }
                                           ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:476:92`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:474:92`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files = ch_multiqc_files.mix(MOSDEPTH_GENOME.out.global_txt.collect{it[1]}.ifEmpty([]))
                                                                                              ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:478:59`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:476:59`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   MOSDEPTH_GENOME.out.regions_bed.collect { it[1] }
                                                             ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:491:65`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:489:65`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       MOSDEPTH_AMPLICON.out.regions_bed.collect { it[1] }
                                                                   ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:518:91`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:516:91`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files = ch_multiqc_files.mix(VARIANTS_IVAR.out.multiqc_tsv.collect{it[1]}.ifEmpty([]))
                                                                                             ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:519:85`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:517:85`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files = ch_multiqc_files.mix(VARIANTS_IVAR.out.stats.collect{it[1]}.ifEmpty([]))
                                                                                       ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:520:90`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:518:90`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files = ch_multiqc_files.mix(VARIANTS_IVAR.out.snpeff_csv.collect{it[1]}.ifEmpty([]))
                                                                                            ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:539:89`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:537:89`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files = ch_multiqc_files.mix(VARIANTS_BCFTOOLS.out.stats.collect{it[1]}.ifEmpty([]))
                                                                                           ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:540:94`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:538:94`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files = ch_multiqc_files.mix(VARIANTS_BCFTOOLS.out.snpeff_csv.collect{it[1]}.ifEmpty([]))
                                                                                                ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:572:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:570:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   ch_genome_gff ? genome.gff.map { [ [:], it ] } : [ [:], [] ],
                                                           ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:578:83`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:576:83`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files    = ch_multiqc_files.mix(ch_pangolin_report.collect{it[1]}.ifEmpty([]))
                                                                                     ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:579:97`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:577:97`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files    = ch_multiqc_files.mix(CONSENSUS_IVAR.out.quast_results.collect{it[1]}.ifEmpty([]))
                                                                                                   ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:592:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:590:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   ch_genome_gff ? genome.gff.map { [ [:], it ] } : [ [:], [] ],
                                                           ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:599:101`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:597:101`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files    = ch_multiqc_files.mix(CONSENSUS_BCFTOOLS.out.quast_results.collect{it[1]}.ifEmpty([]))
                                                                                                       ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:600:83`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:598:83`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files    = ch_multiqc_files.mix(ch_pangolin_report.collect{it[1]}.ifEmpty([]))
                                                                                     ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:650:62`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:648:62`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   ch_annot       = GUNZIP_GFF.out.gunzip.map { it[1] }
                                                                ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:699:81`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:697:81`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files    = ch_multiqc_files.mix(CUTADAPT.out.log.collect{it[1]}.ifEmpty([]))
                                                                                   ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:717:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:715:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   ch_genome_gff ? genome.gff.map { [ [:], it ] } : [ [:], [] ],
                                                           ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:723:95`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:721:95`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files = ch_multiqc_files.mix(ASSEMBLY_SPADES.out.quast_results.collect{it[1]}.ifEmpty([]))
                                                                                                 ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:734:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:732:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   ch_genome_gff ? genome.gff.map { [ [:], it ] } : [ [:], [] ],
                                                           ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:740:98`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:738:98`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files = ch_multiqc_files.mix(ASSEMBLY_UNICYCLER.out.quast_results.collect{it[1]}.ifEmpty([]))
                                                                                                    ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:751:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:749:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   ch_genome_gff ? genome.gff.map { [ [:], it ] } : [ [:], [] ],
                                                           ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:757:94`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:755:94`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files = ch_multiqc_files.mix(ASSEMBLY_MINIA.out.quast_results.collect{it[1]}.ifEmpty([]))
                                                                                                ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:784:64`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:782:64`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   channel.of(ch_sequencing_summary).map { [ [:], it ] }
                                                                  ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:786:77`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:784:77`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files = ch_multiqc_files.mix(PYCOQC.out.json.collect{it[1]}.ifEmpty([]))
                                                                               ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:792:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:790:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .map { checkPrimerSuffixes(it, params.primer_left_suffix, params.primer_right_suffix, log) }
                                          ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:797:37`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:795:37`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .map { [ getColFromFile(it, 0, true) ] }
                                       ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:802:37`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:800:37`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .map { [ getColFromFile(it, 0, true) ] }
                                       ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:836:31`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:834:31`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       .filter { it[1] == null }
                                 ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:837:31`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:835:31`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       .filter { it[-1] >= min_barcode_reads }
                                 ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:854:31`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:852:31`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       .filter { it[-1] == null }
                                 ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:869:32`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:867:32`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       .filter { (it[1] != null)  }
                                  ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:870:32`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:868:32`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       .filter { (it[-1] != null) }
                                  ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:891:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/viralrecon.nf:889:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .branch { barcode, sample, dir, count  ->
                         ^^^^^^^
   ```
 
-- Warning: `workflows/viralrecon.nf:891:40`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/viralrecon.nf:889:40`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .branch { barcode, sample, dir, count  ->
                                          ^^^
   ```
 
-- Warning: `workflows/viralrecon.nf:917:23`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:915:23`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .filter { it[-1] > min_barcode_reads }
                         ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:918:42`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/viralrecon.nf:916:42`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map { barcode, sample, dir, count -> [ [ id: sample, barcode:barcode ], dir ] }
                                            ^^^^^
   ```
 
-- Warning: `workflows/viralrecon.nf:943:89`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:941:89`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files =  ch_multiqc_files.mix(KRAKEN2_KRAKEN2.out.report.collect{it[1]}.ifEmpty([]))
                                                                                           ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:998:48`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:1003:52`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-              ARTIC_GUPPYPLEX.out.fastq.filter { it[-1].countFastq() > min_guppyplex_reads },
-                                                 ^^
+                  ARTIC_GUPPYPLEX.out.fastq.filter { it[-1].countFastq() > min_guppyplex_reads },
+                                                     ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:1003:79`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:1016:107`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-          ch_multiqc_files = ch_multiqc_files.mix(ARTIC_MINION.out.json.collect{it[1]}.ifEmpty([]))
-                                                                                ^^
+              ch_multiqc_files = ch_multiqc_files.mix(ARTIC_MINION_PROTOCOL.out.artic_minion_report.collect{it[1]}.ifEmpty([]))
+                                                                                                            ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:1030:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:1022:52`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  ARTIC_GUPPYPLEX.out.fastq.filter { it[-1].countFastq() > min_guppyplex_reads },
+                                                     ^^
+  ```
+
+- Warning: `workflows/viralrecon.nf:1036:96`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              ch_multiqc_files = ch_multiqc_files.mix(MINIMAP2_MAPPING.out.multiqc_files.collect{it[1]}.ifEmpty([]))
+                                                                                                 ^^
+  ```
+
+- Warning: `workflows/viralrecon.nf:1056:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(BCFTOOLS_STATS.out.stats.collect{it[1]}.ifEmpty([]))
                                                                                    ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:1039:90`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:1065:90`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(FILTER_BAM_SAMTOOLS.out.flagstat.collect{it[1]}.ifEmpty([]))
                                                                                            ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:1055:31`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/viralrecon.nf:1081:31`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map { meta, bam, mapped, pass ->
                                 ^^^^^^
   ```
 
-- Warning: `workflows/viralrecon.nf:1063:31`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/viralrecon.nf:1089:31`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map { meta, bai, mapped, pass ->
                                 ^^^^^^
   ```
 
-- Warning: `workflows/viralrecon.nf:1071:33`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/viralrecon.nf:1097:33`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map { meta, fasta, mapped_reads, pass ->
                                   ^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/viralrecon.nf:1114:93`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:1140:93`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files  = ch_multiqc_files.mix(MOSDEPTH_GENOME.out.global_txt.collect{it[1]}.ifEmpty([]))
                                                                                               ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:1117:59`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:1143:59`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   MOSDEPTH_GENOME.out.regions_bed.collect { it[1] }
                                                             ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:1130:61`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:1156:61`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   MOSDEPTH_AMPLICON.out.regions_bed.collect { it[1] }
                                                               ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:1132:108`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:1158:108`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files = ch_multiqc_files.mix(PLOT_MOSDEPTH_REGIONS_AMPLICON.out.heatmap_tsv.collect{it[1]}.ifEmpty([]))
                                                                                                              ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:1152:71`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:1177:71`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       ch_pango_database = UNTAR_PANGODB.out.untar.map { it[1] }
                                                                         ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:1164:84`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:1189:84`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files    = ch_multiqc_files.mix(ch_pangolin_multiqc.collect{it[1]}.ifEmpty([]))
                                                                                      ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:1216:102`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:1241:102`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files  = ch_multiqc_files.mix(BAM_VARIANT_DEMIX_BOOT_FREYJA.out.demix.collect{it[1]}.ifEmpty([]))
                                                                                                        ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:1224:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:1249:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   .collect{ it[1] }
                             ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:1232:79`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:1257:79`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files = ch_multiqc_files.mix(QUAST.out.results.collect{it[1]}.ifEmpty([]))
                                                                                 ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:1246:85`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:1271:85`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files  = ch_multiqc_files.mix(SNPEFF_SNPSIFT.out.csv.collect{it[1]}.ifEmpty([]))
                                                                                       ^^
   ```
 
-- Warning: `workflows/viralrecon.nf:1274:62`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/viralrecon.nf:1299:62`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   ch_annot       = GUNZIP_GFF.out.gunzip.map { it[1] }

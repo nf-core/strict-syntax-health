@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "a6600d25601ecc308a63080d5a54cddddf097bd9",
+  "_repo_commit": "cc4d441624bd2a0db697502bdde9005a5a5f0b36",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -1776,6 +1776,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "chelae_trim": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/chelae/trim",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "chewbbaca_allelecall": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/chewbbaca/allelecall",
     "errors": 0,
@@ -2394,6 +2400,18 @@
     "warnings": 0,
     "parse_error": false
   },
+  "custom_orfmerge": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/custom/orfmerge",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
+  "custom_orfnormalise": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/custom/orfnormalise",
+    "errors": 0,
+    "warnings": 2,
+    "parse_error": false
+  },
   "custom_pcaclustering": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/custom/pcaclustering",
     "errors": 0,
@@ -2690,6 +2708,12 @@
   },
   "disambiguate": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/disambiguate",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "dotseq_dotseq": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/dotseq/dotseq",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -3326,6 +3350,12 @@
   },
   "finaletoolkit_adjustwps": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/finaletoolkit/adjustwps",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "finaletoolkit_aggbw": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/finaletoolkit/aggbw",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -4038,8 +4068,20 @@
     "warnings": 0,
     "parse_error": false
   },
+  "gcta_bivariateremlldms": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gcta/bivariateremlldms",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "gcta_grmcutoff": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gcta/grmcutoff",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "gcta_keep": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gcta/keep",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -8496,10 +8538,52 @@
     "warnings": 0,
     "parse_error": false
   },
+  "rpbp_estimatemetagenebayesfactors": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/rpbp/estimatemetagenebayesfactors",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "rpbp_estimateorfbayesfactors": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/rpbp/estimateorfbayesfactors",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "rpbp_extractmetageneprofiles": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/rpbp/extractmetageneprofiles",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "rpbp_extractorfprofiles": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/rpbp/extractorfprofiles",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "rpbp_getperiodiclengthsoffsets": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/rpbp/getperiodiclengthsoffsets",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
   "rpbp_preparegenome": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/rpbp/preparegenome",
     "errors": 0,
     "warnings": 1,
+    "parse_error": false
+  },
+  "rpbp_selectfinalpredictionset": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/rpbp/selectfinalpredictionset",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "rpbp_selectperiodicoffsets": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/rpbp/selectperiodicoffsets",
+    "errors": 0,
+    "warnings": 0,
     "parse_error": false
   },
   "rrnatranscripts": {
@@ -10582,6 +10666,12 @@
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/trnascanse",
     "errors": 0,
     "warnings": 0,
+    "parse_error": false
+  },
+  "trtools_dumpstr": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/trtools/dumpstr",
+    "errors": 0,
+    "warnings": 1,
     "parse_error": false
   },
   "trust4": {

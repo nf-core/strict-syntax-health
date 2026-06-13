@@ -3,8 +3,9 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.04.3
 
-Launching `./main.nf` [angry_brown] revision: df8a16552b
+Launching `./main.nf` [shrivelled_shirley] revision: fcbc19ad2d
 
+WARN: Access to undefined parameter `fasta` -- Initialise it to a default value eg. `params.fasta = some_value`
 
 ------------------------------------------------------
                                         ,--./,-.
@@ -12,7 +13,7 @@ Launching `./main.nf` [angry_brown] revision: df8a16552b
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/phyloplace 2.1.0dev
+  nf-core/phyloplace 2.0.1
 ------------------------------------------------------
 Typical pipeline command:
 
