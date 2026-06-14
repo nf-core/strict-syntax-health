@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-06-13T00:52:48.878984+00:00
+- Generated: 2026-06-14T00:45:37.860527+00:00
 - Nextflow version: 26.04.3
 - Summary: 2 warnings
 
@@ -8,14 +8,14 @@
 
 - Warning: `subworkflows/nf-core/orftable_fasta_gtf_buildorfcatalogue/main.nf:44:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-            .filter { it.size() > 0 }
-                      ^^^^^^^^^^
-    ```
+  ```nextflow
+          .filter { it.size() > 0 }
+                    ^^^^^^^^^^
+  ```
 
 - Warning: `subworkflows/nf-core/orftable_fasta_gtf_buildorfcatalogue/main.nf:50:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-            .filter { it.size() > 0 }
-                      ^^^^^^^^^^
-    ```
+  ```nextflow
+          .filter { it.size() > 0 }
+                    ^^^^^^^^^^
+  ```

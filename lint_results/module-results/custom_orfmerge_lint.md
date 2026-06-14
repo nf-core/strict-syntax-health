@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-06-13T00:52:33.516756+00:00
+- Generated: 2026-06-14T00:45:22.128394+00:00
 - Nextflow version: 26.04.3
 - Summary: 1 warning
 
@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/custom/orfmerge/main.nf:25:5`: Variable was declared but not used
 
-    ```nextflow
-        args   = task.ext.args ?: ''
-        ^^^^^^^^^^
-    ```
+  ```nextflow
+      args   = task.ext.args ?: ''
+      ^^^^^^^^^^
+  ```
