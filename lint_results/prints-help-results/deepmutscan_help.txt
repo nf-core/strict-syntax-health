@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.04.3
 
 Downloading plugin nf-schema@2.5.1
-Launching `./main.nf` [lethal_bose] revision: ae3065a2fd
+Launching `./main.nf` [agitated_waddington] revision: ae3065a2fd
 
 
 ------------------------------------------------------
@@ -13,23 +13,18 @@ Launching `./main.nf` [lethal_bose] revision: ae3065a2fd
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/deepmutscan 1.0.0dev
+  nf-core/deepmutscan 1.0.0
 ------------------------------------------------------
 
-Reference genome options
-  igenomes_ignore    : true
-
-Generic options
-  trace_report_suffix: 2026-06-03_00-49-52
-
+Could not read parameters settings from JSON. java.nio.file.NoSuchFileException: /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/deepmutscan/true
 Core Nextflow options
-  runName            : lethal_bose
-  launchDir          : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/deepmutscan
-  workDir            : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/deepmutscan/work
-  projectDir         : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/deepmutscan
-  userName           : runner
-  profile            : standard
-  configFiles        : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/deepmutscan/nextflow.config
+  runName    : agitated_waddington
+  launchDir  : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/deepmutscan
+  workDir    : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/deepmutscan/work
+  projectDir : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/deepmutscan
+  userName   : runner
+  profile    : standard
+  configFiles: /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/deepmutscan/nextflow.config
 
 !! Only displaying parameters that differ from the pipeline defaults !!
 ------------------------------------------------------
@@ -40,11 +35,6 @@ Core Nextflow options
 * Software dependencies
     https://github.com/nf-core/deepmutscan/blob/master/CITATIONS.md
 
-ERROR ~ Validation of pipeline parameters failed!
-
- -- Check '.nextflow.log' file for details
-The following invalid input values have been detected:
-
-* Missing required parameter(s): reading_frame, input, fasta, outdir
+ERROR ~ No such file or directory: /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/deepmutscan/true
 
  -- Check script 'subworkflows/nf-core/utils_nfschema_plugin/main.nf' at line: 72 or see '.nextflow.log' file for more details

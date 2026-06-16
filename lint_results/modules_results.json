@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "cf8f7932b6379bb349c3343b8e88b1720f1c1cce",
+  "_repo_commit": "28572d49a768f669198e950955519a3353e96b4b",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -644,6 +644,24 @@
   },
   "basicpy": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/basicpy",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "baysor_preview": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/baysor/preview",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "baysor_run": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/baysor/run",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "baysor_segfree": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/baysor/segfree",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -2338,6 +2356,12 @@
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/custom/addmostseverepli",
     "errors": 0,
     "warnings": 0,
+    "parse_error": false
+  },
+  "custom_bed12codonpositions": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/custom/bed12codonpositions",
+    "errors": 0,
+    "warnings": 1,
     "parse_error": false
   },
   "custom_catadditionalfasta": {
@@ -4058,6 +4082,12 @@
   },
   "gcta_addgrms": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gcta/addgrms",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "gcta_adjustgrm": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gcta/adjustgrm",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -6764,6 +6794,12 @@
   },
   "ngsbits_bedcoverage": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ngsbits/bedcoverage",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "ngsbits_rohhunter": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ngsbits/rohhunter",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

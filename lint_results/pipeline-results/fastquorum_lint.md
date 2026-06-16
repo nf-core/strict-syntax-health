@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-06-13T00:46:36.211758642Z
+- Generated: 2026-06-16T00:51:14.525191022Z
 - Nextflow version: 26.04.3
 - Summary: 10 warnings
 
@@ -11,6 +11,13 @@
   ```nextflow
       multiqc_report = FASTQUORUM.out.multiqc_report // channel: /path/to/multiqc_report.html
       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/prepare_genome/main.nf:20:5`: Variable was declared but not used
+
+  ```nextflow
+      versions = channel.empty()
+      ^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/utils_nfcore_fastquorum_pipeline/main.nf:30:5`: Parameter was not used -- prefix with `_` to suppress warning
@@ -34,42 +41,35 @@
       ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
-
-  ```nextflow
-      valid_config = checkConfigProvided()
-      ^^^^^^^^^^^^
-  ```
-
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
-      valid_config
-      ^^^^^^^^^^^^
+      valid_config = valid_config
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:76:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
       dummy_emit = true
       ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/fastquorum.nf:66:25`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/fastquorum.nf:65:25`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .branch { meta, bam ->
                           ^^^
   ```
 
-- Warning: `workflows/fastquorum.nf:73:41`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/fastquorum.nf:72:41`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_fastqtobam.correct.first().map { meta, bam ->
                                           ^^^^
   ```
 
-- Warning: `workflows/fastquorum.nf:73:47`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/fastquorum.nf:72:47`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_fastqtobam.correct.first().map { meta, bam ->

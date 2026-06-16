@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-02T00:44:41.326643206Z
+- Generated: 2026-06-16T00:52:01.649201401Z
 - Nextflow version: 26.04.3
-- Summary: 52 warnings
+- Summary: 51 warnings
 
 ## :warning: Warnings
 
@@ -174,13 +174,6 @@
                          ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/quant/main.nf:87:9`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-          consensusxml = PROCESS_FEATURE.out.consensusxml
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/rescore/main.nf:56:100`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
@@ -349,21 +342,21 @@
                          ^^^^^^^^
   ```
 
-- Warning: `workflows/mhcquant.nf:228:88`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/mhcquant.nf:239:88`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           params.epicore ? EPICORE.out.stats : SUMMARIZE_RESULTS.out.epicore_input.map { meta, tsv, stats -> stats }
                                                                                          ^^^^
   ```
 
-- Warning: `workflows/mhcquant.nf:228:94`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/mhcquant.nf:239:94`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           params.epicore ? EPICORE.out.stats : SUMMARIZE_RESULTS.out.epicore_input.map { meta, tsv, stats -> stats }
                                                                                                ^^^
   ```
 
-- Warning: `workflows/mhcquant.nf:286:10`: Emit name should be omitted when there is only one emit
+- Warning: `workflows/mhcquant.nf:297:10`: Emit name should be omitted when there is only one emit
 
   ```nextflow
       emit:multiqc_report = MULTIQC.out.report.map { _meta, report -> [report] }.toList() // channel: /path/to/multiqc_report.html

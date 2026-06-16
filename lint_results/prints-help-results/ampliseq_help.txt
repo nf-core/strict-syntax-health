@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.04.3
 
 Downloading plugin nf-schema@2.7.2
-Launching `./main.nf` [agitated_wescoff] revision: be54f69b2e
+Launching `./main.nf` [trusting_lavoisier] revision: be54f69b2e
 
 
 ------------------------------------------------------
@@ -13,7 +13,7 @@ Launching `./main.nf` [agitated_wescoff] revision: be54f69b2e
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/ampliseq 2.18.0dev
+  nf-core/ampliseq 2.18.0
 ------------------------------------------------------
 Typical pipeline command:
 
@@ -40,6 +40,7 @@ storage on Cloud infrastructure.
 
 Sequencing input
   --binned_quality                         [string]  Comma separated quality bins. If data has binned quality scores. 
+  --ignore_binned_quality                  [boolean] Ignore warnings about binned quality scores. 
   --pacbio                                 [boolean] If data is single-ended PacBio reads instead of Illumina 
   --iontorrent                             [boolean] If data is single-ended IonTorrent reads instead of Illumina 
   --single_end                             [boolean] If data is single-ended Illumina reads instead of paired-end 
@@ -121,8 +122,8 @@ arc,euk, mito,euk, bac, ...)
 
 Taxonomic assignment
   --dada_ref_taxonomy                      [string]  Name of supported database, and optionally also version number  (accepted: coidb, coidb=221216, 
-greengenes2, greengenes2=2024.09, gtdb, gtdb=R05-RS95, gtdb=R06-RS202, ...) [default: silva=138.2] 
- 
+greengenes2, greengenes2=2024.09, gtdb, gtdb=R05-RS95, gtdb=R06-RS202, ...) [default: 
+sbdi-gtdb=R11-RS232-1]  
   --dada_ref_tax_custom                    [string]  Path to a custom DADA2 reference taxonomy database 
   --dada_ref_tax_custom_sp                 [string]  Path to a custom DADA2 reference taxonomy database for species assignment 
   --dada_min_boot                          [integer] The minimum bootstrap confidence (out of 100 trials) for assigning a taxonomic level with DADA2. 
@@ -216,6 +217,9 @@ removed. [default: 1]
 [default: 1.0]  
   --ancombc_significance                   [number]  Significance threshold for differential abundance barplot for `--ancombc` and `--ancombc_formula` 
 [default: 0.05]  
+  --ancombc2                               [boolean] Perform differential abundance analysis with ANCOMBC2 
+  --ancombc2_formula                       [string]  Formula to perform differential abundance analysis with ANCOMBC2 
+  --ancombc2_formula_reflvl                [string]  Reference level for `--ancombc2_formula` 
 
 Pipeline summary report
   --report_template                        [string] Path to Markdown file (Rmd) [default: ${projectDir}/assets/report_template.Rmd] 

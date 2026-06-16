@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-13T00:44:43.584141881Z
+- Generated: 2026-06-16T00:50:17.078524726Z
 - Nextflow version: 26.04.3
-- Summary: 8 warnings
+- Summary: 10 warnings
 
 ## :warning: Warnings
 
@@ -11,6 +11,20 @@
   ```nextflow
       multiqc_report = AMPLISEQ.out.multiqc_report // channel: /path/to/multiqc_report.html
       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/dada2_preprocessing.nf:54:32`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                      .findAll { it.trim() }  // Remove empty lines
+                                 ^^
+  ```
+
+- Warning: `subworkflows/local/dada2_preprocessing.nf:55:32`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                      .collect { it.trim().toInteger() }
+                                 ^^
   ```
 
 - Warning: `subworkflows/local/parse_input.nf:84:5`: Emit name should be omitted when there is only one emit

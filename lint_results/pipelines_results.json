@@ -29,9 +29,9 @@
   "ampliseq": {
     "full_name": "nf-core/ampliseq",
     "html_url": "https://github.com/nf-core/ampliseq",
-    "commit": "949884e25f4e74ff9129ef0a7299aec6a536b9a2",
+    "commit": "33c088254e241c57a179764129f20463a9be0890",
     "errors": 0,
-    "warnings": 8,
+    "warnings": 10,
     "parse_error": false,
     "prints_help": true
   },
@@ -218,7 +218,7 @@
   "deepmutscan": {
     "full_name": "nf-core/deepmutscan",
     "html_url": "https://github.com/nf-core/deepmutscan",
-    "commit": "220fc76981d9a37af697f381ea384fdf20abbc42",
+    "commit": "e4b9554bb6c6ad717c4944d4abe08561e9eb5c1e",
     "errors": 0,
     "warnings": 80,
     "parse_error": false,
@@ -335,7 +335,7 @@
   "epitopeprediction": {
     "full_name": "nf-core/epitopeprediction",
     "html_url": "https://github.com/nf-core/epitopeprediction",
-    "commit": "2d0cf16db9f9e791438e06dc3a9ad7f246a35cf8",
+    "commit": "4da770321a335c8aff6cb713a78dd1e755ad116c",
     "errors": 0,
     "warnings": 4,
     "parse_error": false,
@@ -362,11 +362,11 @@
   "fastquorum": {
     "full_name": "nf-core/fastquorum",
     "html_url": "https://github.com/nf-core/fastquorum",
-    "commit": "00731a088d8e7102a1812e1987e0af39736ac1f0",
+    "commit": "1cbfe1450244036706546e50daa6b6c35054ff1a",
     "errors": 0,
     "warnings": 10,
     "parse_error": false,
-    "prints_help": false
+    "prints_help": true
   },
   "fetchngs": {
     "full_name": "nf-core/fetchngs",
@@ -542,7 +542,7 @@
   "longraredisease": {
     "full_name": "nf-core/longraredisease",
     "html_url": "https://github.com/nf-core/longraredisease",
-    "commit": "195cf29feb5c4c48f78edbf96e34a0f73950d918",
+    "commit": "36831ff50fe23d18cbc24ea510d3d76bfcd90403",
     "errors": 0,
     "warnings": 167,
     "parse_error": false,
@@ -659,9 +659,9 @@
   "mhcquant": {
     "full_name": "nf-core/mhcquant",
     "html_url": "https://github.com/nf-core/mhcquant",
-    "commit": "c888a9c4afcd972e3f78956fdfaab16178823c12",
+    "commit": "fd72a07e3356c386bed506e920a2d8b8fe3a8d9a",
     "errors": 0,
-    "warnings": 52,
+    "warnings": 51,
     "parse_error": false,
     "prints_help": true
   },
@@ -839,7 +839,7 @@
   "phyloplace": {
     "full_name": "nf-core/phyloplace",
     "html_url": "https://github.com/nf-core/phyloplace",
-    "commit": "7a5201dc2fd3ec11a21e072daad7d8bde35fe967",
+    "commit": "2fad170ad9fe0336a09412abe960d00cfe41a3dd",
     "errors": 0,
     "warnings": 4,
     "parse_error": false,
@@ -920,7 +920,7 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "efbdf4617de741c5dc29b16a9721f35727db14bf",
+    "commit": "560949bf362ad27bdf214459bf832c8163fa9936",
     "errors": 0,
     "warnings": 12,
     "parse_error": false,
@@ -1073,7 +1073,7 @@
   "seqinspector": {
     "full_name": "nf-core/seqinspector",
     "html_url": "https://github.com/nf-core/seqinspector",
-    "commit": "bbe2e1795c27721ac139cce6d1c3efacaf724c55",
+    "commit": "d5b7b80e1cbe2cc3460d6ef75079bd5a825428be",
     "errors": 0,
     "warnings": 3,
     "parse_error": false,
@@ -1154,7 +1154,7 @@
   "taxprofiler": {
     "full_name": "nf-core/taxprofiler",
     "html_url": "https://github.com/nf-core/taxprofiler",
-    "commit": "3f0ca0b56136bc6882fcf0b1cd8c42606dea1647",
+    "commit": "cb5b02b9f588346ddbf9a9584735dbc269894e05",
     "errors": 0,
     "warnings": 97,
     "parse_error": false,
