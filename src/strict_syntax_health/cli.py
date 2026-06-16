@@ -355,13 +355,48 @@ PUBLISHDIR_RE = re.compile(r"\bpublishDir\b")
 _MAX_REPORT_MATCHES = 200
 
 
+def _strip_comments(line: str, in_block: bool) -> tuple[str, bool]:
+    """Remove `//` line comments and `/* ... */` block comments from a line of Groovy/Nextflow.
+
+    Args:
+        line: The source line.
+        in_block: Whether we are inside a block comment carried over from a previous line.
+
+    Returns:
+        Tuple of (code_with_comments_removed, in_block_at_end_of_line). Comment markers inside
+        string literals are not specially handled, which is acceptable for keyword detection
+        (the keyword we look for precedes any such marker on a real directive line).
+    """
+    result: list[str] = []
+    i, n = 0, len(line)
+    while i < n:
+        if in_block:
+            end = line.find("*/", i)
+            if end == -1:
+                break  # rest of line is inside the block comment
+            in_block = False
+            i = end + 2
+        elif line.startswith("//", i):
+            break  # rest of line is a line comment
+        elif line.startswith("/*", i):
+            in_block = True
+            i += 2
+        else:
+            result.append(line[i])
+            i += 1
+    return "".join(result), in_block
+
+
 def _scan_lines(repo_path: Path, patterns: tuple[str, ...], regex: re.Pattern) -> list[tuple[str, int, str]]:
     """Scan files matching the given glob patterns for lines matching a regex.
+
+    Comments are stripped before matching so that keywords mentioned in code comments
+    (e.g. ``// Backwards compatibility for publishDir syntax``) are not counted.
 
     Args:
         repo_path: Repository root to scan (recursively).
         patterns: Glob patterns relative to the root (e.g. "*.nf", "*.config").
-        regex: Compiled regex to test against each line.
+        regex: Compiled regex to test against each (comment-stripped) line.
 
     Returns:
         Sorted list of (relative_path, line_number, stripped_line_text) tuples.
@@ -378,8 +413,10 @@ def _scan_lines(repo_path: Path, patterns: tuple[str, ...], regex: re.Pattern) -
             except (OSError, UnicodeDecodeError):
                 continue
             rel = str(src_file.relative_to(repo_path))
+            in_block = False
             for line_num, line in enumerate(source_lines, start=1):
-                if regex.search(line):
+                code, in_block = _strip_comments(line, in_block)
+                if regex.search(code):
                     matches.append((rel, line_num, line.strip()))
     matches.sort(key=lambda m: (m[0], m[1]))
     return matches
