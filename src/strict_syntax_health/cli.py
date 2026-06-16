@@ -5,7 +5,7 @@ import os
 import re
 import subprocess
 import sys
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import httpx
@@ -404,22 +404,49 @@ def detect_publishdir(repo_path: Path) -> bool:
     return bool(_scan_lines(repo_path, ("*.nf", "*.config"), PUBLISHDIR_RE))
 
 
-def _format_match_list(matches: list[tuple[str, int, str]], source_url_base: str | None) -> list[str]:
-    """Format a list of (file, line, text) matches as markdown bullets with code snippets.
+def _format_locations(matches: list[tuple[str, int, str]], source_url_base: str | None) -> list[str]:
+    """Format matches as one markdown bullet per `file:line` location (no code snippet).
 
     If source_url_base is given, each location links to the exact line on GitHub.
     """
     lines: list[str] = []
-    for rel, line_num, text in matches[:_MAX_REPORT_MATCHES]:
+    for rel, line_num, _text in matches[:_MAX_REPORT_MATCHES]:
         if source_url_base:
-            location = f"[`{rel}:{line_num}`]({source_url_base}/{rel}#L{line_num})"
+            lines.append(f"- [`{rel}:{line_num}`]({source_url_base}/{rel}#L{line_num})")
         else:
-            location = f"`{rel}:{line_num}`"
-        lines.extend([f"- {location}", "", "  ```nextflow", f"  {text}", "  ```", ""])
+            lines.append(f"- `{rel}:{line_num}`")
     remaining = len(matches) - _MAX_REPORT_MATCHES
     if remaining > 0:
-        lines.append(f"_…and {remaining} more reference{'s' if remaining != 1 else ''} not shown._")
-        lines.append("")
+        lines.append(f"- _…and {remaining} more not shown._")
+    return lines
+
+
+def _format_file_counts(matches: list[tuple[str, int, str]], source_url_base: str | None) -> list[str]:
+    """Group matches by file and format one markdown bullet per file with an instance count.
+
+    Used for publishDir, where the matching line (`publishDir = [`) carries no useful detail,
+    so we list each file once with how many references it contains rather than every line.
+    """
+    counts: dict[str, int] = {}
+    first_line: dict[str, int] = {}
+    for rel, line_num, _text in matches:
+        counts[rel] = counts.get(rel, 0) + 1
+        first_line.setdefault(rel, line_num)
+    # Most-referenced files first, then alphabetical
+    ordered = sorted(counts, key=lambda rel: (-counts[rel], rel))
+
+    lines: list[str] = []
+    for rel in ordered[:_MAX_REPORT_MATCHES]:
+        count = counts[rel]
+        ref_word = "reference" if count == 1 else "references"
+        if source_url_base:
+            location = f"[`{rel}`]({source_url_base}/{rel}#L{first_line[rel]})"
+        else:
+            location = f"`{rel}`"
+        lines.append(f"- {location} — {count} {ref_word}")
+    remaining = len(ordered) - _MAX_REPORT_MATCHES
+    if remaining > 0:
+        lines.append(f"- _…and {remaining} more file(s) not shown._")
     return lines
 
 
@@ -458,7 +485,8 @@ def _generate_workflow_outputs_markdown(
         block_word = "block" if len(output_locs) == 1 else "blocks"
         lines.append(f"Found {len(output_locs)} top-level `output {{}}` {block_word}:")
         lines.append("")
-        lines.extend(_format_match_list(output_locs, source_url_base))
+        lines.extend(_format_locations(output_locs, source_url_base))
+        lines.append("")
     else:
         lines.append("No top-level `output {}` block found. See the docs for how to add one:")
         lines.append("https://docs.seqera.io/nextflow/tutorials/workflow-outputs")
@@ -467,13 +495,16 @@ def _generate_workflow_outputs_markdown(
     lines.extend(["## Legacy `publishDir` references", ""])
 
     if publishdir_locs:
+        n_files = len({rel for rel, _, _ in publishdir_locs})
         ref_word = "reference" if len(publishdir_locs) == 1 else "references"
+        file_word = "file" if n_files == 1 else "files"
         lines.append(
-            f"Found {len(publishdir_locs)} `publishDir` {ref_word} that should be migrated "
-            "to the workflow `output {}` block:"
+            f"Found {len(publishdir_locs)} `publishDir` {ref_word} across {n_files} {file_word} "
+            "that should be migrated to the workflow `output {}` block:"
         )
         lines.append("")
-        lines.extend(_format_match_list(publishdir_locs, source_url_base))
+        lines.extend(_format_file_counts(publishdir_locs, source_url_base))
+        lines.append("")
     else:
         lines.append("No `publishDir` references found. :tada:")
         lines.append("")
@@ -1494,22 +1525,30 @@ def _create_stacked_chart(
     title: str,
     output_path: Path,
     y_label: str = "Number of Items",
+    show_markers: bool = False,
 ) -> None:
-    """Create a stacked area chart and save it to a file."""
+    """Create a stacked area chart and save it to a file.
+
+    Args:
+        show_markers: Draw point markers as well as the area. Useful when there are only
+            one or two data points, where an area alone would be invisible.
+    """
     fig = go.Figure()
+    mode = "lines+markers" if show_markers else "lines"
     for i, (values, name, line_color, fill_color) in enumerate(series):
-        fig.add_trace(
-            go.Scatter(
-                x=dates,
-                y=values,
-                name=name,
-                fill="tozeroy" if i == 0 else "tonexty",
-                mode="lines",
-                line={"width": 0.5, "color": line_color},
-                fillcolor=fill_color,
-                stackgroup="stack",
-            )
+        trace = go.Scatter(
+            x=dates,
+            y=values,
+            name=name,
+            fill="tozeroy" if i == 0 else "tonexty",
+            mode=mode,
+            line={"width": 0.5, "color": line_color},
+            fillcolor=fill_color,
+            stackgroup="stack",
         )
+        if show_markers:
+            trace.update(marker={"size": 7, "color": line_color})
+        fig.add_trace(trace)
     fig.update_layout(
         title={"text": title, "x": 0.5, "xanchor": "center", "font": {"size": 20}},
         xaxis_title="Date",
@@ -1520,6 +1559,17 @@ def _create_stacked_chart(
         width=1000,
         height=500,
     )
+    # Treat the x-axis as dates. With a single data point, plotly otherwise zooms to a
+    # sub-second window with nonsensical ticks, so widen the range to a few days around it.
+    fig.update_xaxes(type="date")
+    if len(dates) == 1:
+        day = datetime.strptime(dates[0], "%Y-%m-%d")
+        fig.update_xaxes(
+            range=[
+                (day - timedelta(days=3)).strftime("%Y-%m-%d"),
+                (day + timedelta(days=3)).strftime("%Y-%m-%d"),
+            ]
+        )
     fig.write_image(str(output_path), scale=2)
     console.print(f"Generated {output_path}")
 
@@ -1587,25 +1637,28 @@ def generate_charts_for_type(history: list[dict], output_dir: Path, type_name: s
     )
 
     # Pipelines additionally track migration from publishDir to the workflow outputs syntax.
-    # Only chart it once there is at least one data point with the new fields.
-    if type_name == "pipelines" and any("workflow_output_pass" in h for h in history):
+    # This data only exists from when the feature was added, so trim the chart to those
+    # dates rather than spanning the full pipeline history (which would show an empty region).
+    wf_history = [h for h in history if "workflow_output_pass" in h]
+    if type_name == "pipelines" and wf_history:
+        wf_dates = [h["date"] for h in wf_history]
         _create_stacked_chart(
-            dates,
+            wf_dates,
             [
                 (
-                    [h.get("workflow_output_pass", 0) for h in history],
+                    [h["workflow_output_pass"] for h in wf_history],
                     "Only output (migrated)",
                     "#2ecc71",
                     "rgba(46, 204, 113, 0.7)",
                 ),
                 (
-                    [h.get("workflow_output_warn", 0) for h in history],
+                    [h["workflow_output_warn"] for h in wf_history],
                     "Output + publishDir",
                     "#f39c12",
                     "rgba(243, 156, 18, 0.7)",
                 ),
                 (
-                    [h.get("workflow_output_error", 0) for h in history],
+                    [h["workflow_output_error"] for h in wf_history],
                     "Only publishDir",
                     "#e74c3c",
                     "rgba(231, 76, 60, 0.7)",
@@ -1614,6 +1667,7 @@ def generate_charts_for_type(history: list[dict], output_dir: Path, type_name: s
             "Pipeline Workflow Outputs Migration Over Time",
             LINT_RESULTS_DIR / "pipelines_workflow_outputs.png",
             y_label,
+            show_markers=len(wf_dates) <= 2,
         )
 
 
@@ -1635,7 +1689,6 @@ def _generate_results_section(
     include_charts: bool,
     show_only_errors: bool = False,
     show_prints_help: bool = False,
-    show_workflow_output: bool = False,
 ) -> list[str]:
     """Generate a results section for a specific type (pipelines, modules, subworkflows).
 
@@ -1647,7 +1700,6 @@ def _generate_results_section(
         include_charts: Whether to include chart images
         show_only_errors: If True, only show items with errors in the table (for modules/subworkflows)
         show_prints_help: If True, show the "Prints Help" column (for pipelines only)
-        show_workflow_output: If True, show workflow outputs adoption stats/chart/column (pipelines only)
     """
     if not results:
         return []
@@ -1666,22 +1718,8 @@ def _generate_results_section(
         f"- **Total:** {parse_error_count} parse errors, {total_errors} errors, "
         f"{total_warnings} warnings across {len(results)} {type_name}",
         f"- **Zero errors:** {zero_error_count} {type_name} ({zero_error_percentage:.1f}%)",
+        "",
     ]
-
-    if show_workflow_output:
-        states = [workflow_output_state(r) for r in results]
-        n_pass = sum(1 for s in states if s == "pass")
-        n_warn = sum(1 for s in states if s == "warn")
-        n_error = sum(1 for s in states if s == "error")
-        lines.append(
-            "- **Workflow outputs migration "
-            "([docs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs)):** "
-            f":white_check_mark: {n_pass} migrated (only `output`) · "
-            f":warning: {n_warn} in progress (`output` + `publishDir`) · "
-            f":x: {n_error} not started (only `publishDir`)"
-        )
-
-    lines.append("")
 
     # Add charts in a side-by-side table (charts are in LINT_RESULTS_DIR with type-prefixed names)
     errors_chart = LINT_RESULTS_DIR / f"{type_name}_errors.png"
@@ -1692,16 +1730,6 @@ def _generate_results_section(
                 "| Errors | Warnings |",
                 "|:------:|:--------:|",
                 f"| ![Errors]({errors_chart}) | ![Warnings]({warnings_chart}) |",
-                "",
-            ]
-        )
-
-    # Pipelines: show the workflow outputs migration chart below the error/warning charts
-    workflow_output_chart = LINT_RESULTS_DIR / "pipelines_workflow_outputs.png"
-    if show_workflow_output and include_charts and workflow_output_chart.exists():
-        lines.extend(
-            [
-                f"![Workflow outputs migration]({workflow_output_chart})",
                 "",
             ]
         )
@@ -1719,13 +1747,9 @@ def _generate_results_section(
     # Results table in a collapsible details section
     if show_prints_help:
         table_header = (
-            f"| {type_singular.title()} | Parse Error | Errors | Warnings | Workflow Outputs "
-            "| Prints Help | Lint Output | Help Output |"
+            f"| {type_singular.title()} | Parse Error | Errors | Warnings | Prints Help | Lint Output | Help Output |"
         )
-        table_separator = (
-            "|----------|:-----------:|-------:|---------:|:----------------:"
-            "|:-----------:|:-----------:|:-----------:|"
-        )
+        table_separator = "|----------|:-----------:|-------:|---------:|:-----------:|:-----------:|:-----------:|"
     else:
         table_header = f"| {type_singular.title()} | Parse Error | Errors | Warnings | Lint Output |"
         table_separator = "|----------|:-----------:|-------:|---------:|:-----------:|:-----------:|"
@@ -1775,18 +1799,9 @@ def _generate_results_section(
             else:
                 prints_help_str = "No"
                 help_file_link = f"[View]({PRINTS_HELP_RESULTS_DIR}/{result['name']}_help.txt)"
-
-            wf_state = workflow_output_state(result)
-            if wf_state is None:
-                workflow_output_str = "-"
-            else:
-                wf_emoji = {"pass": ":white_check_mark:", "warn": ":warning:", "error": ":x:"}[wf_state]
-                wf_report = WORKFLOW_OUTPUTS_RESULTS_DIR / f"{result['name']}_outputs.md"
-                workflow_output_str = f"{wf_emoji} [{wf_state}]({wf_report})"
-
             row = (
                 f"| {name_link} | {parse_error_str} | {error_str} | {warning_str} "
-                f"| {workflow_output_str} | {prints_help_str} | {lint_file_link} | {help_file_link} |"
+                f"| {prints_help_str} | {lint_file_link} | {help_file_link} |"
             )
             lines.append(row)
         else:
@@ -1810,6 +1825,79 @@ def _generate_results_section(
             "",
         ]
     )
+
+    return lines
+
+
+def _generate_workflow_outputs_section(results: list[dict], include_charts: bool) -> list[str]:
+    """Generate the standalone workflow outputs migration section for pipelines.
+
+    This is a separate dataset from the lint errors/warnings: it tracks which pipelines use
+    the new workflow `output {}` syntax and which still reference the legacy `publishDir`
+    directive. The table has one column per construct (emoji only) plus a link to the
+    per-pipeline report detailing where each was found.
+    """
+    if not results:
+        return []
+
+    total = len(results)
+    uses_output = sum(1 for r in results if r.get("workflow_output") is True)
+    uses_publishdir = sum(1 for r in results if r.get("publishdir") is True)
+    fully_migrated = sum(1 for r in results if r.get("workflow_output") is True and r.get("publishdir") is False)
+
+    def pct(n: int) -> str:
+        return f"{(n / total * 100):.1f}%" if total else "0.0%"
+
+    lines = [
+        "## Workflow Outputs Migration",
+        "",
+        "Adoption of the new "
+        "[workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax "
+        "(a top-level `output {}` block) and migration away from the legacy `publishDir` directive. "
+        "This is a separate dataset from the lint errors and warnings above.",
+        "",
+        f"- **Uses `output {{}}`:** {uses_output} pipelines ({pct(uses_output)})",
+        f"- **Still uses `publishDir`:** {uses_publishdir} pipelines ({pct(uses_publishdir)})",
+        f"- **Fully migrated** (`output {{}}`, no `publishDir`): {fully_migrated} pipelines ({pct(fully_migrated)})",
+        "",
+    ]
+
+    chart = LINT_RESULTS_DIR / "pipelines_workflow_outputs.png"
+    if include_charts and chart.exists():
+        lines.extend([f"![Workflow outputs migration]({chart})", ""])
+
+    # Sort so the pipelines making progress surface first: output adopters at the top,
+    # fully-migrated (no publishDir) before those still using it, then alphabetical.
+    def sort_key(r: dict) -> tuple:
+        return (r.get("workflow_output") is not True, r.get("publishdir") is True, r["name"])
+
+    lines.extend(
+        [
+            "<details>",
+            f"<summary>Workflow Outputs Migration ({total} pipelines)</summary>",
+            "",
+            "Each cell shows whether the construct is present (:white_check_mark: = present, "
+            "– = absent). A pipeline is fully migrated when it uses `output {}` with no `publishDir`.",
+            "",
+            "| Pipeline | `output {}` | `publishDir` | Report |",
+            "|----------|:-----------:|:------------:|:------:|",
+        ]
+    )
+
+    def cell(present: bool | None) -> str:
+        if present is None:
+            return "-"
+        return ":white_check_mark:" if present else "–"
+
+    for result in sorted(results, key=sort_key):
+        name_link = f"[{result['name']}]({result['html_url']})"
+        report_link = f"[View]({WORKFLOW_OUTPUTS_RESULTS_DIR}/{result['name']}_outputs.md)"
+        lines.append(
+            f"| {name_link} | {cell(result.get('workflow_output'))} "
+            f"| {cell(result.get('publishdir'))} | {report_link} |"
+        )
+
+    lines.extend(["", "</details>", ""])
 
     return lines
 
@@ -1858,9 +1946,10 @@ def generate_readme(
                 PIPELINES_LINT_RESULTS_DIR,
                 include_charts,
                 show_prints_help=True,
-                show_workflow_output=True,
             )
         )
+        # Workflow outputs migration is a separate dataset, shown in its own section/table
+        lines.extend(_generate_workflow_outputs_section(pipeline_results, include_charts))
 
     if module_results:
         lines.extend(
@@ -1897,16 +1986,12 @@ def generate_readme(
             "- **Prints Help** (pipelines only) tests whether the pipeline can print its help message "
             "using the v2 syntax parser (`NXF_SYNTAX_PARSER=v2 nextflow run . --help`). "
             "This test only runs for pipelines with zero lint errors.",
-            "- **Workflow Outputs** (pipelines only) tracks migration from the legacy `publishDir` "
-            "directive to the new "
-            "[workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax "
-            "(a top-level `output {}` block). There are three states: "
-            ":white_check_mark: **pass** = only `output {}` (no `publishDir`), "
-            ":warning: **warn** = both `output {}` and `publishDir`, "
-            ":x: **error** = only `publishDir` (not yet migrated). "
-            "`publishDir` is detected in both `.nf` and `conf/*.config` files. "
-            "Click the status in the table to open a per-pipeline report listing exactly which "
-            "files and lines were found.",
+            "- **Workflow Outputs Migration** (pipelines only, shown in its own section) tracks adoption "
+            "of the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) "
+            "syntax (a top-level `output {}` block) and migration away from the legacy `publishDir` "
+            "directive (detected in both `.nf` and `conf/*.config` files). A pipeline is fully migrated "
+            "once it uses `output {}` with no `publishDir`. Each pipeline links to a report listing "
+            "exactly where both were found.",
             "",
             "## Running Locally",
             "",
