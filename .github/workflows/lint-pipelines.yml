@@ -30,6 +30,10 @@ on:
         description: "Skip linting subworkflows"
         type: boolean
         default: false
+      no_cache:
+        description: "Ignore the commit cache and re-lint everything"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -39,7 +43,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
 
       - name: Install Nextflow
         uses: nf-core/setup-nextflow@b4ec1bc7c16a94435159de94a05253542fddf6ef # v3
@@ -47,62 +51,51 @@ jobs:
           version: latest-everything
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
         with:
           python-version: "3.12"
 
       - name: Install dependencies
         run: pip install .
 
-      - name: Build linting command
-        id: build-cmd
-        run: |
-          CMD="strict-syntax-health --update-pipelines --update-readme"
-
-          # Add skip flags based on inputs
-          if [[ "${{ inputs.skip_pipelines }}" == "true" ]]; then
-            CMD="$CMD --skip-pipelines"
-          fi
-          if [[ "${{ inputs.skip_modules }}" == "true" ]]; then
-            CMD="$CMD --skip-modules"
-          fi
-          if [[ "${{ inputs.skip_subworkflows }}" == "true" ]]; then
-            CMD="$CMD --skip-subworkflows"
-          fi
-
-          # Add specific filters if provided
-          if [[ -n "${{ inputs.pipelines }}" ]]; then
-            IFS=',' read -ra ITEMS <<< "${{ inputs.pipelines }}"
-            for item in "${ITEMS[@]}"; do
-              item=$(echo "$item" | xargs)
-              [[ -n "$item" ]] && CMD="$CMD -p $item"
-            done
-          fi
-
-          if [[ -n "${{ inputs.modules }}" ]]; then
-            IFS=',' read -ra ITEMS <<< "${{ inputs.modules }}"
-            for item in "${ITEMS[@]}"; do
-              item=$(echo "$item" | xargs)
-              [[ -n "$item" ]] && CMD="$CMD -m $item"
-            done
-          fi
-
-          if [[ -n "${{ inputs.subworkflows }}" ]]; then
-            IFS=',' read -ra ITEMS <<< "${{ inputs.subworkflows }}"
-            for item in "${ITEMS[@]}"; do
-              item=$(echo "$item" | xargs)
-              [[ -n "$item" ]] && CMD="$CMD -s $item"
-            done
-          fi
-
-          echo "cmd=$CMD" >> $GITHUB_OUTPUT
-          echo "Running: $CMD"
-
       - name: Run linting
-        run: ${{ steps.build-cmd.outputs.cmd }}
+        env:
+          # Pass inputs via env (not direct ${{ }} interpolation) to avoid template injection
+          SKIP_PIPELINES: ${{ inputs.skip_pipelines }}
+          SKIP_MODULES: ${{ inputs.skip_modules }}
+          SKIP_SUBWORKFLOWS: ${{ inputs.skip_subworkflows }}
+          NO_CACHE: ${{ inputs.no_cache }}
+          PIPELINES: ${{ inputs.pipelines }}
+          MODULES: ${{ inputs.modules }}
+          SUBWORKFLOWS: ${{ inputs.subworkflows }}
+        run: |
+          # Build an argument array (never an eval'd command string) so input values
+          # are passed as data, not executable shell.
+          ARGS=(--update-pipelines --update-readme)
+
+          [[ "$SKIP_PIPELINES" == "true" ]] && ARGS+=(--skip-pipelines)
+          [[ "$SKIP_MODULES" == "true" ]] && ARGS+=(--skip-modules)
+          [[ "$SKIP_SUBWORKFLOWS" == "true" ]] && ARGS+=(--skip-subworkflows)
+          [[ "$NO_CACHE" == "true" ]] && ARGS+=(--no-cache)
+
+          add_filters() {
+            local flag="$1" values="$2" item
+            [[ -z "$values" ]] && return
+            IFS=',' read -ra ITEMS <<< "$values"
+            for item in "${ITEMS[@]}"; do
+              item=$(echo "$item" | xargs)
+              [[ -n "$item" ]] && ARGS+=("$flag" "$item")
+            done
+          }
+          add_filters -p "$PIPELINES"
+          add_filters -m "$MODULES"
+          add_filters -s "$SUBWORKFLOWS"
+
+          echo "Running: strict-syntax-health ${ARGS[*]}"
+          strict-syntax-health "${ARGS[@]}"
 
       - name: Run prek on all files to fix formatting
-        uses: j178/prek-action@v1
+        uses: j178/prek-action@bdca6f102f98e2b4c7029491a53dfd366469e33d # v2.0.4
         with:
           install-only: true
       - run: prek run --all-files || true
