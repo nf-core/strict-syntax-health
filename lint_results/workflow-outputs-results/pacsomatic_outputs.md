@@ -1,6 +1,6 @@
 # Workflow outputs migration: pacsomatic
 
-- Generated: 2026-06-16T19:34:34.493320+00:00
+- Generated: 2026-06-16T20:32:52.745774+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.

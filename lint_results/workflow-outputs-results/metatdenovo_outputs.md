@@ -1,6 +1,6 @@
 # Workflow outputs migration: metatdenovo
 
-- Generated: 2026-06-16T19:31:11.114506+00:00
+- Generated: 2026-06-16T20:29:34.573113+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.

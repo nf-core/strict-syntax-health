@@ -1,6 +1,6 @@
 # Workflow outputs migration: readsimulator
 
-- Generated: 2026-06-16T19:38:38.603257+00:00
+- Generated: 2026-06-16T20:36:46.726638+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.

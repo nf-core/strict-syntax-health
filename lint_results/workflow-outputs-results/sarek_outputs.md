@@ -1,6 +1,6 @@
 # Workflow outputs migration: sarek
 
-- Generated: 2026-06-16T19:41:59.925580+00:00
+- Generated: 2026-06-16T20:40:04.364765+00:00
 - Status: :warning: **warn** — uses the new `output {}` syntax but still has legacy `publishDir` references to migrate
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.

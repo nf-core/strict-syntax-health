@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.04.3
 
-Launching `./main.nf` [pedantic_descartes] revision: ebe06bd3f1
+Launching `./main.nf` [sleepy_gutenberg] revision: ebe06bd3f1
 
 
 ------------------------------------------------------

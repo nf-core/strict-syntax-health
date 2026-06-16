@@ -1,6 +1,6 @@
 # Workflow outputs migration: demultiplex
 
-- Generated: 2026-06-16T19:22:38.522924+00:00
+- Generated: 2026-06-16T20:21:33.804788+00:00
 - Status: :warning: **warn** — uses the new `output {}` syntax but still has legacy `publishDir` references to migrate
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.

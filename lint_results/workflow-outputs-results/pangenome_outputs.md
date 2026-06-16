@@ -1,6 +1,6 @@
 # Workflow outputs migration: pangenome
 
-- Generated: 2026-06-16T19:35:03.318723+00:00
+- Generated: 2026-06-16T20:33:19.376479+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.

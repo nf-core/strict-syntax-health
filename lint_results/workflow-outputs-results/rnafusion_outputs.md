@@ -1,6 +1,6 @@
 # Workflow outputs migration: rnafusion
 
-- Generated: 2026-06-16T19:40:02.554827+00:00
+- Generated: 2026-06-16T20:38:10.201583+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.

@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.04.3
 
-Launching `./main.nf` [sharp_mirzakhani] revision: d44713b7e7
+Launching `./main.nf` [cheesy_mestorf] revision: d44713b7e7
 
 
 ------------------------------------------------------

@@ -8,7 +8,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 14
   },
   "airrflow": {
     "full_name": "nf-core/airrflow",
@@ -19,7 +20,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 84
   },
   "alleleexpression": {
     "full_name": "nf-core/alleleexpression",
@@ -30,7 +32,8 @@
     "parse_error": false,
     "prints_help": false,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 15
   },
   "ampliseq": {
     "full_name": "nf-core/ampliseq",
@@ -41,7 +44,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 95
   },
   "atacseq": {
     "full_name": "nf-core/atacseq",
@@ -52,7 +56,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 79
   },
   "bacass": {
     "full_name": "nf-core/bacass",
@@ -63,7 +68,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 33
   },
   "bacmodel": {
     "full_name": "nf-core/bacmodel",
@@ -74,7 +80,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 13
   },
   "bactmap": {
     "full_name": "nf-core/bactmap",
@@ -85,7 +92,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 53
   },
   "bamtofastq": {
     "full_name": "nf-core/bamtofastq",
@@ -96,7 +104,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 17
   },
   "cageseq": {
     "full_name": "nf-core/cageseq",
@@ -107,7 +116,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 30
   },
   "callingcards": {
     "full_name": "nf-core/callingcards",
@@ -118,7 +128,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 38
   },
   "cellpainting": {
     "full_name": "nf-core/cellpainting",
@@ -129,7 +140,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 7
   },
   "chipseq": {
     "full_name": "nf-core/chipseq",
@@ -140,7 +152,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 56
   },
   "circdna": {
     "full_name": "nf-core/circdna",
@@ -151,7 +164,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 36
   },
   "circrna": {
     "full_name": "nf-core/circrna",
@@ -162,7 +176,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 127
   },
   "clipseq": {
     "full_name": "nf-core/clipseq",
@@ -173,7 +188,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 24
   },
   "coproid": {
     "full_name": "nf-core/coproid",
@@ -184,7 +200,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 11
   },
   "createpanelrefs": {
     "full_name": "nf-core/createpanelrefs",
@@ -195,7 +212,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": true,
-    "publishdir": false
+    "publishdir": false,
+    "publishdir_count": 0
   },
   "createtaxdb": {
     "full_name": "nf-core/createtaxdb",
@@ -206,7 +224,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 17
   },
   "crisprseq": {
     "full_name": "nf-core/crisprseq",
@@ -217,7 +236,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 45
   },
   "cutandrun": {
     "full_name": "nf-core/cutandrun",
@@ -228,7 +248,8 @@
     "parse_error": false,
     "prints_help": false,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 81
   },
   "dartseq": {
     "full_name": "nf-core/dartseq",
@@ -239,7 +260,8 @@
     "parse_error": false,
     "prints_help": false,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 14
   },
   "datasync": {
     "full_name": "nf-core/datasync",
@@ -250,7 +272,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 2
   },
   "deepmodeloptim": {
     "full_name": "nf-core/deepmodeloptim",
@@ -261,7 +284,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 12
   },
   "deepmutscan": {
     "full_name": "nf-core/deepmutscan",
@@ -272,7 +296,8 @@
     "parse_error": false,
     "prints_help": false,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 21
   },
   "demo": {
     "full_name": "nf-core/demo",
@@ -283,7 +308,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 4
   },
   "demultiplex": {
     "full_name": "nf-core/demultiplex",
@@ -294,7 +320,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": true,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 6
   },
   "denovotranscript": {
     "full_name": "nf-core/denovotranscript",
@@ -305,7 +332,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 7
   },
   "detaxizer": {
     "full_name": "nf-core/detaxizer",
@@ -316,7 +344,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 20
   },
   "diaproteomics": {
     "full_name": "nf-core/diaproteomics",
@@ -327,7 +356,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 13
   },
   "differentialabundance": {
     "full_name": "nf-core/differentialabundance",
@@ -338,7 +368,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": true,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 10
   },
   "diseasemodulediscovery": {
     "full_name": "nf-core/diseasemodulediscovery",
@@ -349,7 +380,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 20
   },
   "drop": {
     "full_name": "nf-core/drop",
@@ -360,7 +392,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 28
   },
   "drugresponseeval": {
     "full_name": "nf-core/drugresponseeval",
@@ -371,7 +404,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 26
   },
   "dualrnaseq": {
     "full_name": "nf-core/dualrnaseq",
@@ -382,7 +416,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 30
   },
   "eager": {
     "full_name": "nf-core/eager",
@@ -393,7 +428,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 127
   },
   "epigenomesegmentation": {
     "full_name": "nf-core/epigenomesegmentation",
@@ -404,7 +440,8 @@
     "parse_error": false,
     "prints_help": false,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 13
   },
   "epitopeprediction": {
     "full_name": "nf-core/epitopeprediction",
@@ -415,7 +452,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 18
   },
   "evexplorer": {
     "full_name": "nf-core/evexplorer",
@@ -426,7 +464,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 9
   },
   "fastqrepair": {
     "full_name": "nf-core/fastqrepair",
@@ -437,7 +476,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 6
   },
   "fastquorum": {
     "full_name": "nf-core/fastquorum",
@@ -448,7 +488,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 15
   },
   "fetchngs": {
     "full_name": "nf-core/fetchngs",
@@ -459,7 +500,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 10
   },
   "funcprofiler": {
     "full_name": "nf-core/funcprofiler",
@@ -470,7 +512,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 11
   },
   "funcscan": {
     "full_name": "nf-core/funcscan",
@@ -481,7 +524,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 22
   },
   "genephylomodeler": {
     "full_name": "nf-core/genephylomodeler",
@@ -492,7 +536,8 @@
     "parse_error": false,
     "prints_help": false,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 12
   },
   "genomeannotator": {
     "full_name": "nf-core/genomeannotator",
@@ -503,7 +548,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 14
   },
   "genomeassembler": {
     "full_name": "nf-core/genomeassembler",
@@ -514,7 +560,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 60
   },
   "genomeqc": {
     "full_name": "nf-core/genomeqc",
@@ -525,7 +572,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 37
   },
   "genomeskim": {
     "full_name": "nf-core/genomeskim",
@@ -536,7 +584,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 3
   },
   "genomicrelatedness": {
     "full_name": "nf-core/genomicrelatedness",
@@ -547,7 +596,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 61
   },
   "gwas": {
     "full_name": "nf-core/gwas",
@@ -558,7 +608,8 @@
     "parse_error": false,
     "prints_help": false,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 3
   },
   "hadge": {
     "full_name": "nf-core/hadge",
@@ -569,7 +620,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 33
   },
   "hgtseq": {
     "full_name": "nf-core/hgtseq",
@@ -580,7 +632,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 50
   },
   "hic": {
     "full_name": "nf-core/hic",
@@ -591,7 +644,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 39
   },
   "hicar": {
     "full_name": "nf-core/hicar",
@@ -602,7 +656,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 156
   },
   "hlatyping": {
     "full_name": "nf-core/hlatyping",
@@ -613,7 +668,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 19
   },
   "imcyto": {
     "full_name": "nf-core/imcyto",
@@ -624,7 +680,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 7
   },
   "isoseq": {
     "full_name": "nf-core/isoseq",
@@ -635,7 +692,8 @@
     "parse_error": false,
     "prints_help": false,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 16
   },
   "kmermaid": {
     "full_name": "nf-core/kmermaid",
@@ -646,7 +704,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 2
   },
   "lncpipe": {
     "full_name": "nf-core/lncpipe",
@@ -657,7 +716,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 39
   },
   "longraredisease": {
     "full_name": "nf-core/longraredisease",
@@ -668,7 +728,8 @@
     "parse_error": false,
     "prints_help": false,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 76
   },
   "lsmquant": {
     "full_name": "nf-core/lsmquant",
@@ -679,7 +740,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 5
   },
   "mag": {
     "full_name": "nf-core/mag",
@@ -690,7 +752,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 38
   },
   "magmap": {
     "full_name": "nf-core/magmap",
@@ -701,7 +764,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 27
   },
   "marsseq": {
     "full_name": "nf-core/marsseq",
@@ -712,7 +776,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 23
   },
   "mcmicro": {
     "full_name": "nf-core/mcmicro",
@@ -723,7 +788,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 10
   },
   "meerpipe": {
     "full_name": "nf-core/meerpipe",
@@ -734,7 +800,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 9
   },
   "metaboigniter": {
     "full_name": "nf-core/metaboigniter",
@@ -745,7 +812,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 31
   },
   "metapep": {
     "full_name": "nf-core/metapep",
@@ -756,7 +824,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 21
   },
   "metatdenovo": {
     "full_name": "nf-core/metatdenovo",
@@ -767,7 +836,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 14
   },
   "methylarray": {
     "full_name": "nf-core/methylarray",
@@ -778,7 +848,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 2
   },
   "methylong": {
     "full_name": "nf-core/methylong",
@@ -789,7 +860,8 @@
     "parse_error": false,
     "prints_help": false,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 41
   },
   "methylseq": {
     "full_name": "nf-core/methylseq",
@@ -800,7 +872,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 45
   },
   "mhcquant": {
     "full_name": "nf-core/mhcquant",
@@ -811,7 +884,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 46
   },
   "mitodetect": {
     "full_name": "nf-core/mitodetect",
@@ -822,7 +896,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 2
   },
   "mnaseseq": {
     "full_name": "nf-core/mnaseseq",
@@ -833,7 +908,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 26
   },
   "molkart": {
     "full_name": "nf-core/molkart",
@@ -844,7 +920,8 @@
     "parse_error": false,
     "prints_help": false,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 18
   },
   "mspepid": {
     "full_name": "nf-core/mspepid",
@@ -855,7 +932,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 9
   },
   "multiplesequencealign": {
     "full_name": "nf-core/multiplesequencealign",
@@ -866,7 +944,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 17
   },
   "nanoseq": {
     "full_name": "nf-core/nanoseq",
@@ -877,7 +956,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 3
   },
   "nanostring": {
     "full_name": "nf-core/nanostring",
@@ -888,7 +968,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 7
   },
   "nascent": {
     "full_name": "nf-core/nascent",
@@ -899,7 +980,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 41
   },
   "ncrnannotator": {
     "full_name": "nf-core/ncrnannotator",
@@ -910,7 +992,8 @@
     "parse_error": false,
     "prints_help": false,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 6
   },
   "omicsgenetraitassociation": {
     "full_name": "nf-core/omicsgenetraitassociation",
@@ -921,7 +1004,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 11
   },
   "oncoanalyser": {
     "full_name": "nf-core/oncoanalyser",
@@ -932,7 +1016,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 35
   },
   "pacsomatic": {
     "full_name": "nf-core/pacsomatic",
@@ -943,7 +1028,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 40
   },
   "pacvar": {
     "full_name": "nf-core/pacvar",
@@ -954,7 +1040,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 15
   },
   "pairgenomealign": {
     "full_name": "nf-core/pairgenomealign",
@@ -965,7 +1052,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 11
   },
   "pangenome": {
     "full_name": "nf-core/pangenome",
@@ -976,7 +1064,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 30
   },
   "panoramaseq": {
     "full_name": "nf-core/panoramaseq",
@@ -987,7 +1076,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 15
   },
   "pathogensurveillance": {
     "full_name": "nf-core/pathogensurveillance",
@@ -998,7 +1088,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 52
   },
   "phageannotator": {
     "full_name": "nf-core/phageannotator",
@@ -1009,7 +1100,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 39
   },
   "phaseimpute": {
     "full_name": "nf-core/phaseimpute",
@@ -1020,7 +1112,8 @@
     "parse_error": false,
     "prints_help": false,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 83
   },
   "phyloplace": {
     "full_name": "nf-core/phyloplace",
@@ -1031,7 +1124,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 2
   },
   "pixelator": {
     "full_name": "nf-core/pixelator",
@@ -1042,7 +1136,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 12
   },
   "proteinannotator": {
     "full_name": "nf-core/proteinannotator",
@@ -1053,7 +1148,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 19
   },
   "proteinfamilies": {
     "full_name": "nf-core/proteinfamilies",
@@ -1064,7 +1160,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": true,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 73
   },
   "proteinfold": {
     "full_name": "nf-core/proteinfold",
@@ -1075,7 +1172,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 51
   },
   "proteogenomicsdb": {
     "full_name": "nf-core/proteogenomicsdb",
@@ -1086,7 +1184,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 5
   },
   "provenancereport": {
     "full_name": "nf-core/provenancereport",
@@ -1097,7 +1196,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 1
   },
   "radseq": {
     "full_name": "nf-core/radseq",
@@ -1108,7 +1208,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 25
   },
   "rangeland": {
     "full_name": "nf-core/rangeland",
@@ -1119,7 +1220,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 5
   },
   "raredisease": {
     "full_name": "nf-core/raredisease",
@@ -1130,7 +1232,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": true,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 2
   },
   "rarevariantburden": {
     "full_name": "nf-core/rarevariantburden",
@@ -1141,7 +1244,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 17
   },
   "readsimulator": {
     "full_name": "nf-core/readsimulator",
@@ -1152,7 +1256,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 18
   },
   "references": {
     "full_name": "nf-core/references",
@@ -1163,7 +1268,8 @@
     "parse_error": false,
     "prints_help": false,
     "workflow_output": true,
-    "publishdir": false
+    "publishdir": false,
+    "publishdir_count": 0
   },
   "reportho": {
     "full_name": "nf-core/reportho",
@@ -1174,7 +1280,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 37
   },
   "ribomsqc": {
     "full_name": "nf-core/ribomsqc",
@@ -1185,7 +1292,8 @@
     "parse_error": false,
     "prints_help": false,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 1
   },
   "riboseq": {
     "full_name": "nf-core/riboseq",
@@ -1196,7 +1304,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 93
   },
   "rnadnavar": {
     "full_name": "nf-core/rnadnavar",
@@ -1207,7 +1316,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 97
   },
   "rnafusion": {
     "full_name": "nf-core/rnafusion",
@@ -1218,7 +1328,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 35
   },
   "rnaseq": {
     "full_name": "nf-core/rnaseq",
@@ -1229,7 +1340,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 115
   },
   "rnasplice": {
     "full_name": "nf-core/rnasplice",
@@ -1240,7 +1352,8 @@
     "parse_error": false,
     "prints_help": false,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 66
   },
   "rnavar": {
     "full_name": "nf-core/rnavar",
@@ -1251,7 +1364,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": true,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 33
   },
   "sammyseq": {
     "full_name": "nf-core/sammyseq",
@@ -1262,7 +1376,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 30
   },
   "sarek": {
     "full_name": "nf-core/sarek",
@@ -1273,7 +1388,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": true,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 186
   },
   "scdownstream": {
     "full_name": "nf-core/scdownstream",
@@ -1284,7 +1400,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 63
   },
   "scnanoseq": {
     "full_name": "nf-core/scnanoseq",
@@ -1295,7 +1412,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 92
   },
   "scrnaseq": {
     "full_name": "nf-core/scrnaseq",
@@ -1306,7 +1424,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 25
   },
   "seqinspector": {
     "full_name": "nf-core/seqinspector",
@@ -1317,7 +1436,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": true,
-    "publishdir": false
+    "publishdir": false,
+    "publishdir_count": 0
   },
   "seqsubmit": {
     "full_name": "nf-core/seqsubmit",
@@ -1328,7 +1448,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 19
   },
   "slamseq": {
     "full_name": "nf-core/slamseq",
@@ -1339,7 +1460,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 8
   },
   "smrnaseq": {
     "full_name": "nf-core/smrnaseq",
@@ -1350,7 +1472,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 53
   },
   "sopa": {
     "full_name": "nf-core/sopa",
@@ -1361,7 +1484,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 4
   },
   "spatialaxe": {
     "full_name": "nf-core/spatialaxe",
@@ -1372,7 +1496,8 @@
     "parse_error": false,
     "prints_help": false,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 39
   },
   "spatialvi": {
     "full_name": "nf-core/spatialvi",
@@ -1383,7 +1508,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 7
   },
   "spinningjenny": {
     "full_name": "nf-core/spinningjenny",
@@ -1394,7 +1520,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 6
   },
   "stableexpression": {
     "full_name": "nf-core/stableexpression",
@@ -1405,7 +1532,8 @@
     "parse_error": false,
     "prints_help": false,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 15
   },
   "taxprofiler": {
     "full_name": "nf-core/taxprofiler",
@@ -1416,7 +1544,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 82
   },
   "tbanalyzer": {
     "full_name": "nf-core/tbanalyzer",
@@ -1427,7 +1556,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 2
   },
   "tfactivity": {
     "full_name": "nf-core/tfactivity",
@@ -1438,7 +1568,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 75
   },
   "troughgraph": {
     "full_name": "nf-core/troughgraph",
@@ -1449,7 +1580,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 2
   },
   "tumourevo": {
     "full_name": "nf-core/tumourevo",
@@ -1460,7 +1592,8 @@
     "parse_error": false,
     "prints_help": false,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 18
   },
   "variantbenchmarking": {
     "full_name": "nf-core/variantbenchmarking",
@@ -1471,7 +1604,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 79
   },
   "variantcatalogue": {
     "full_name": "nf-core/variantcatalogue",
@@ -1482,7 +1616,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 33
   },
   "variantprioritization": {
     "full_name": "nf-core/variantprioritization",
@@ -1493,7 +1628,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 13
   },
   "viralintegration": {
     "full_name": "nf-core/viralintegration",
@@ -1504,7 +1640,8 @@
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 2
   },
   "viralmetagenome": {
     "full_name": "nf-core/viralmetagenome",
@@ -1515,7 +1652,8 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 116
   },
   "viralrecon": {
     "full_name": "nf-core/viralrecon",
@@ -1526,6 +1664,7 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
-    "publishdir": true
+    "publishdir": true,
+    "publishdir_count": 173
   }
 }

@@ -11,7 +11,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 > See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline.
 > **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**
 
-- **Last updated:** 2026-06-16 19:49:18 UTC
+- **Last updated:** 2026-06-16 20:47:16 UTC
 - **Nextflow version:** 26.04.3
 
 ## Pipelines
@@ -183,149 +183,149 @@ Adoption of the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials
 <details>
 <summary>Workflow Outputs Migration (139 pipelines)</summary>
 
-Each cell shows whether the construct is present (:white_check_mark: = present, – = absent). A pipeline is fully migrated when it uses `output {}` with no `publishDir`.
+The status emoji next to each pipeline shows its migration state: :white_check_mark: fully migrated (only `output {}`), :warning: in progress (`output {}` and `publishDir`), :x: not started (only `publishDir`).
 
-| Pipeline                                                                          |    `output {}`     |    `publishDir`    |                                       Report                                       |
-| --------------------------------------------------------------------------------- | :----------------: | :----------------: | :--------------------------------------------------------------------------------: |
-| [createpanelrefs](https://github.com/nf-core/createpanelrefs)                     | :white_check_mark: |         –          |      [View](lint_results/workflow-outputs-results/createpanelrefs_outputs.md)      |
-| [references](https://github.com/nf-core/references)                               | :white_check_mark: |         –          |        [View](lint_results/workflow-outputs-results/references_outputs.md)         |
-| [seqinspector](https://github.com/nf-core/seqinspector)                           | :white_check_mark: |         –          |       [View](lint_results/workflow-outputs-results/seqinspector_outputs.md)        |
-| [demultiplex](https://github.com/nf-core/demultiplex)                             | :white_check_mark: | :white_check_mark: |        [View](lint_results/workflow-outputs-results/demultiplex_outputs.md)        |
-| [differentialabundance](https://github.com/nf-core/differentialabundance)         | :white_check_mark: | :white_check_mark: |   [View](lint_results/workflow-outputs-results/differentialabundance_outputs.md)   |
-| [proteinfamilies](https://github.com/nf-core/proteinfamilies)                     | :white_check_mark: | :white_check_mark: |      [View](lint_results/workflow-outputs-results/proteinfamilies_outputs.md)      |
-| [raredisease](https://github.com/nf-core/raredisease)                             | :white_check_mark: | :white_check_mark: |        [View](lint_results/workflow-outputs-results/raredisease_outputs.md)        |
-| [rnavar](https://github.com/nf-core/rnavar)                                       | :white_check_mark: | :white_check_mark: |          [View](lint_results/workflow-outputs-results/rnavar_outputs.md)           |
-| [sarek](https://github.com/nf-core/sarek)                                         | :white_check_mark: | :white_check_mark: |           [View](lint_results/workflow-outputs-results/sarek_outputs.md)           |
-| [abotyper](https://github.com/nf-core/abotyper)                                   |         –          | :white_check_mark: |         [View](lint_results/workflow-outputs-results/abotyper_outputs.md)          |
-| [airrflow](https://github.com/nf-core/airrflow)                                   |         –          | :white_check_mark: |         [View](lint_results/workflow-outputs-results/airrflow_outputs.md)          |
-| [alleleexpression](https://github.com/nf-core/alleleexpression)                   |         –          | :white_check_mark: |     [View](lint_results/workflow-outputs-results/alleleexpression_outputs.md)      |
-| [ampliseq](https://github.com/nf-core/ampliseq)                                   |         –          | :white_check_mark: |         [View](lint_results/workflow-outputs-results/ampliseq_outputs.md)          |
-| [atacseq](https://github.com/nf-core/atacseq)                                     |         –          | :white_check_mark: |          [View](lint_results/workflow-outputs-results/atacseq_outputs.md)          |
-| [bacass](https://github.com/nf-core/bacass)                                       |         –          | :white_check_mark: |          [View](lint_results/workflow-outputs-results/bacass_outputs.md)           |
-| [bacmodel](https://github.com/nf-core/bacmodel)                                   |         –          | :white_check_mark: |         [View](lint_results/workflow-outputs-results/bacmodel_outputs.md)          |
-| [bactmap](https://github.com/nf-core/bactmap)                                     |         –          | :white_check_mark: |          [View](lint_results/workflow-outputs-results/bactmap_outputs.md)          |
-| [bamtofastq](https://github.com/nf-core/bamtofastq)                               |         –          | :white_check_mark: |        [View](lint_results/workflow-outputs-results/bamtofastq_outputs.md)         |
-| [cageseq](https://github.com/nf-core/cageseq)                                     |         –          | :white_check_mark: |          [View](lint_results/workflow-outputs-results/cageseq_outputs.md)          |
-| [callingcards](https://github.com/nf-core/callingcards)                           |         –          | :white_check_mark: |       [View](lint_results/workflow-outputs-results/callingcards_outputs.md)        |
-| [cellpainting](https://github.com/nf-core/cellpainting)                           |         –          | :white_check_mark: |       [View](lint_results/workflow-outputs-results/cellpainting_outputs.md)        |
-| [chipseq](https://github.com/nf-core/chipseq)                                     |         –          | :white_check_mark: |          [View](lint_results/workflow-outputs-results/chipseq_outputs.md)          |
-| [circdna](https://github.com/nf-core/circdna)                                     |         –          | :white_check_mark: |          [View](lint_results/workflow-outputs-results/circdna_outputs.md)          |
-| [circrna](https://github.com/nf-core/circrna)                                     |         –          | :white_check_mark: |          [View](lint_results/workflow-outputs-results/circrna_outputs.md)          |
-| [clipseq](https://github.com/nf-core/clipseq)                                     |         –          | :white_check_mark: |          [View](lint_results/workflow-outputs-results/clipseq_outputs.md)          |
-| [coproid](https://github.com/nf-core/coproid)                                     |         –          | :white_check_mark: |          [View](lint_results/workflow-outputs-results/coproid_outputs.md)          |
-| [createtaxdb](https://github.com/nf-core/createtaxdb)                             |         –          | :white_check_mark: |        [View](lint_results/workflow-outputs-results/createtaxdb_outputs.md)        |
-| [crisprseq](https://github.com/nf-core/crisprseq)                                 |         –          | :white_check_mark: |         [View](lint_results/workflow-outputs-results/crisprseq_outputs.md)         |
-| [cutandrun](https://github.com/nf-core/cutandrun)                                 |         –          | :white_check_mark: |         [View](lint_results/workflow-outputs-results/cutandrun_outputs.md)         |
-| [dartseq](https://github.com/nf-core/dartseq)                                     |         –          | :white_check_mark: |          [View](lint_results/workflow-outputs-results/dartseq_outputs.md)          |
-| [datasync](https://github.com/nf-core/datasync)                                   |         –          | :white_check_mark: |         [View](lint_results/workflow-outputs-results/datasync_outputs.md)          |
-| [deepmodeloptim](https://github.com/nf-core/deepmodeloptim)                       |         –          | :white_check_mark: |      [View](lint_results/workflow-outputs-results/deepmodeloptim_outputs.md)       |
-| [deepmutscan](https://github.com/nf-core/deepmutscan)                             |         –          | :white_check_mark: |        [View](lint_results/workflow-outputs-results/deepmutscan_outputs.md)        |
-| [demo](https://github.com/nf-core/demo)                                           |         –          | :white_check_mark: |           [View](lint_results/workflow-outputs-results/demo_outputs.md)            |
-| [denovotranscript](https://github.com/nf-core/denovotranscript)                   |         –          | :white_check_mark: |     [View](lint_results/workflow-outputs-results/denovotranscript_outputs.md)      |
-| [detaxizer](https://github.com/nf-core/detaxizer)                                 |         –          | :white_check_mark: |         [View](lint_results/workflow-outputs-results/detaxizer_outputs.md)         |
-| [diaproteomics](https://github.com/nf-core/diaproteomics)                         |         –          | :white_check_mark: |       [View](lint_results/workflow-outputs-results/diaproteomics_outputs.md)       |
-| [diseasemodulediscovery](https://github.com/nf-core/diseasemodulediscovery)       |         –          | :white_check_mark: |  [View](lint_results/workflow-outputs-results/diseasemodulediscovery_outputs.md)   |
-| [drop](https://github.com/nf-core/drop)                                           |         –          | :white_check_mark: |           [View](lint_results/workflow-outputs-results/drop_outputs.md)            |
-| [drugresponseeval](https://github.com/nf-core/drugresponseeval)                   |         –          | :white_check_mark: |     [View](lint_results/workflow-outputs-results/drugresponseeval_outputs.md)      |
-| [dualrnaseq](https://github.com/nf-core/dualrnaseq)                               |         –          | :white_check_mark: |        [View](lint_results/workflow-outputs-results/dualrnaseq_outputs.md)         |
-| [eager](https://github.com/nf-core/eager)                                         |         –          | :white_check_mark: |           [View](lint_results/workflow-outputs-results/eager_outputs.md)           |
-| [epigenomesegmentation](https://github.com/nf-core/epigenomesegmentation)         |         –          | :white_check_mark: |   [View](lint_results/workflow-outputs-results/epigenomesegmentation_outputs.md)   |
-| [epitopeprediction](https://github.com/nf-core/epitopeprediction)                 |         –          | :white_check_mark: |     [View](lint_results/workflow-outputs-results/epitopeprediction_outputs.md)     |
-| [evexplorer](https://github.com/nf-core/evexplorer)                               |         –          | :white_check_mark: |        [View](lint_results/workflow-outputs-results/evexplorer_outputs.md)         |
-| [fastqrepair](https://github.com/nf-core/fastqrepair)                             |         –          | :white_check_mark: |        [View](lint_results/workflow-outputs-results/fastqrepair_outputs.md)        |
-| [fastquorum](https://github.com/nf-core/fastquorum)                               |         –          | :white_check_mark: |        [View](lint_results/workflow-outputs-results/fastquorum_outputs.md)         |
-| [fetchngs](https://github.com/nf-core/fetchngs)                                   |         –          | :white_check_mark: |         [View](lint_results/workflow-outputs-results/fetchngs_outputs.md)          |
-| [funcprofiler](https://github.com/nf-core/funcprofiler)                           |         –          | :white_check_mark: |       [View](lint_results/workflow-outputs-results/funcprofiler_outputs.md)        |
-| [funcscan](https://github.com/nf-core/funcscan)                                   |         –          | :white_check_mark: |         [View](lint_results/workflow-outputs-results/funcscan_outputs.md)          |
-| [genephylomodeler](https://github.com/nf-core/genephylomodeler)                   |         –          | :white_check_mark: |     [View](lint_results/workflow-outputs-results/genephylomodeler_outputs.md)      |
-| [genomeannotator](https://github.com/nf-core/genomeannotator)                     |         –          | :white_check_mark: |      [View](lint_results/workflow-outputs-results/genomeannotator_outputs.md)      |
-| [genomeassembler](https://github.com/nf-core/genomeassembler)                     |         –          | :white_check_mark: |      [View](lint_results/workflow-outputs-results/genomeassembler_outputs.md)      |
-| [genomeqc](https://github.com/nf-core/genomeqc)                                   |         –          | :white_check_mark: |         [View](lint_results/workflow-outputs-results/genomeqc_outputs.md)          |
-| [genomeskim](https://github.com/nf-core/genomeskim)                               |         –          | :white_check_mark: |        [View](lint_results/workflow-outputs-results/genomeskim_outputs.md)         |
-| [genomicrelatedness](https://github.com/nf-core/genomicrelatedness)               |         –          | :white_check_mark: |    [View](lint_results/workflow-outputs-results/genomicrelatedness_outputs.md)     |
-| [gwas](https://github.com/nf-core/gwas)                                           |         –          | :white_check_mark: |           [View](lint_results/workflow-outputs-results/gwas_outputs.md)            |
-| [hadge](https://github.com/nf-core/hadge)                                         |         –          | :white_check_mark: |           [View](lint_results/workflow-outputs-results/hadge_outputs.md)           |
-| [hgtseq](https://github.com/nf-core/hgtseq)                                       |         –          | :white_check_mark: |          [View](lint_results/workflow-outputs-results/hgtseq_outputs.md)           |
-| [hic](https://github.com/nf-core/hic)                                             |         –          | :white_check_mark: |            [View](lint_results/workflow-outputs-results/hic_outputs.md)            |
-| [hicar](https://github.com/nf-core/hicar)                                         |         –          | :white_check_mark: |           [View](lint_results/workflow-outputs-results/hicar_outputs.md)           |
-| [hlatyping](https://github.com/nf-core/hlatyping)                                 |         –          | :white_check_mark: |         [View](lint_results/workflow-outputs-results/hlatyping_outputs.md)         |
-| [imcyto](https://github.com/nf-core/imcyto)                                       |         –          | :white_check_mark: |          [View](lint_results/workflow-outputs-results/imcyto_outputs.md)           |
-| [isoseq](https://github.com/nf-core/isoseq)                                       |         –          | :white_check_mark: |          [View](lint_results/workflow-outputs-results/isoseq_outputs.md)           |
-| [kmermaid](https://github.com/nf-core/kmermaid)                                   |         –          | :white_check_mark: |         [View](lint_results/workflow-outputs-results/kmermaid_outputs.md)          |
-| [lncpipe](https://github.com/nf-core/lncpipe)                                     |         –          | :white_check_mark: |          [View](lint_results/workflow-outputs-results/lncpipe_outputs.md)          |
-| [longraredisease](https://github.com/nf-core/longraredisease)                     |         –          | :white_check_mark: |      [View](lint_results/workflow-outputs-results/longraredisease_outputs.md)      |
-| [lsmquant](https://github.com/nf-core/lsmquant)                                   |         –          | :white_check_mark: |         [View](lint_results/workflow-outputs-results/lsmquant_outputs.md)          |
-| [mag](https://github.com/nf-core/mag)                                             |         –          | :white_check_mark: |            [View](lint_results/workflow-outputs-results/mag_outputs.md)            |
-| [magmap](https://github.com/nf-core/magmap)                                       |         –          | :white_check_mark: |          [View](lint_results/workflow-outputs-results/magmap_outputs.md)           |
-| [marsseq](https://github.com/nf-core/marsseq)                                     |         –          | :white_check_mark: |          [View](lint_results/workflow-outputs-results/marsseq_outputs.md)          |
-| [mcmicro](https://github.com/nf-core/mcmicro)                                     |         –          | :white_check_mark: |          [View](lint_results/workflow-outputs-results/mcmicro_outputs.md)          |
-| [meerpipe](https://github.com/nf-core/meerpipe)                                   |         –          | :white_check_mark: |         [View](lint_results/workflow-outputs-results/meerpipe_outputs.md)          |
-| [metaboigniter](https://github.com/nf-core/metaboigniter)                         |         –          | :white_check_mark: |       [View](lint_results/workflow-outputs-results/metaboigniter_outputs.md)       |
-| [metapep](https://github.com/nf-core/metapep)                                     |         –          | :white_check_mark: |          [View](lint_results/workflow-outputs-results/metapep_outputs.md)          |
-| [metatdenovo](https://github.com/nf-core/metatdenovo)                             |         –          | :white_check_mark: |        [View](lint_results/workflow-outputs-results/metatdenovo_outputs.md)        |
-| [methylarray](https://github.com/nf-core/methylarray)                             |         –          | :white_check_mark: |        [View](lint_results/workflow-outputs-results/methylarray_outputs.md)        |
-| [methylong](https://github.com/nf-core/methylong)                                 |         –          | :white_check_mark: |         [View](lint_results/workflow-outputs-results/methylong_outputs.md)         |
-| [methylseq](https://github.com/nf-core/methylseq)                                 |         –          | :white_check_mark: |         [View](lint_results/workflow-outputs-results/methylseq_outputs.md)         |
-| [mhcquant](https://github.com/nf-core/mhcquant)                                   |         –          | :white_check_mark: |         [View](lint_results/workflow-outputs-results/mhcquant_outputs.md)          |
-| [mitodetect](https://github.com/nf-core/mitodetect)                               |         –          | :white_check_mark: |        [View](lint_results/workflow-outputs-results/mitodetect_outputs.md)         |
-| [mnaseseq](https://github.com/nf-core/mnaseseq)                                   |         –          | :white_check_mark: |         [View](lint_results/workflow-outputs-results/mnaseseq_outputs.md)          |
-| [molkart](https://github.com/nf-core/molkart)                                     |         –          | :white_check_mark: |          [View](lint_results/workflow-outputs-results/molkart_outputs.md)          |
-| [mspepid](https://github.com/nf-core/mspepid)                                     |         –          | :white_check_mark: |          [View](lint_results/workflow-outputs-results/mspepid_outputs.md)          |
-| [multiplesequencealign](https://github.com/nf-core/multiplesequencealign)         |         –          | :white_check_mark: |   [View](lint_results/workflow-outputs-results/multiplesequencealign_outputs.md)   |
-| [nanoseq](https://github.com/nf-core/nanoseq)                                     |         –          | :white_check_mark: |          [View](lint_results/workflow-outputs-results/nanoseq_outputs.md)          |
-| [nanostring](https://github.com/nf-core/nanostring)                               |         –          | :white_check_mark: |        [View](lint_results/workflow-outputs-results/nanostring_outputs.md)         |
-| [nascent](https://github.com/nf-core/nascent)                                     |         –          | :white_check_mark: |          [View](lint_results/workflow-outputs-results/nascent_outputs.md)          |
-| [ncrnannotator](https://github.com/nf-core/ncrnannotator)                         |         –          | :white_check_mark: |       [View](lint_results/workflow-outputs-results/ncrnannotator_outputs.md)       |
-| [omicsgenetraitassociation](https://github.com/nf-core/omicsgenetraitassociation) |         –          | :white_check_mark: | [View](lint_results/workflow-outputs-results/omicsgenetraitassociation_outputs.md) |
-| [oncoanalyser](https://github.com/nf-core/oncoanalyser)                           |         –          | :white_check_mark: |       [View](lint_results/workflow-outputs-results/oncoanalyser_outputs.md)        |
-| [pacsomatic](https://github.com/nf-core/pacsomatic)                               |         –          | :white_check_mark: |        [View](lint_results/workflow-outputs-results/pacsomatic_outputs.md)         |
-| [pacvar](https://github.com/nf-core/pacvar)                                       |         –          | :white_check_mark: |          [View](lint_results/workflow-outputs-results/pacvar_outputs.md)           |
-| [pairgenomealign](https://github.com/nf-core/pairgenomealign)                     |         –          | :white_check_mark: |      [View](lint_results/workflow-outputs-results/pairgenomealign_outputs.md)      |
-| [pangenome](https://github.com/nf-core/pangenome)                                 |         –          | :white_check_mark: |         [View](lint_results/workflow-outputs-results/pangenome_outputs.md)         |
-| [panoramaseq](https://github.com/nf-core/panoramaseq)                             |         –          | :white_check_mark: |        [View](lint_results/workflow-outputs-results/panoramaseq_outputs.md)        |
-| [pathogensurveillance](https://github.com/nf-core/pathogensurveillance)           |         –          | :white_check_mark: |   [View](lint_results/workflow-outputs-results/pathogensurveillance_outputs.md)    |
-| [phageannotator](https://github.com/nf-core/phageannotator)                       |         –          | :white_check_mark: |      [View](lint_results/workflow-outputs-results/phageannotator_outputs.md)       |
-| [phaseimpute](https://github.com/nf-core/phaseimpute)                             |         –          | :white_check_mark: |        [View](lint_results/workflow-outputs-results/phaseimpute_outputs.md)        |
-| [phyloplace](https://github.com/nf-core/phyloplace)                               |         –          | :white_check_mark: |        [View](lint_results/workflow-outputs-results/phyloplace_outputs.md)         |
-| [pixelator](https://github.com/nf-core/pixelator)                                 |         –          | :white_check_mark: |         [View](lint_results/workflow-outputs-results/pixelator_outputs.md)         |
-| [proteinannotator](https://github.com/nf-core/proteinannotator)                   |         –          | :white_check_mark: |     [View](lint_results/workflow-outputs-results/proteinannotator_outputs.md)      |
-| [proteinfold](https://github.com/nf-core/proteinfold)                             |         –          | :white_check_mark: |        [View](lint_results/workflow-outputs-results/proteinfold_outputs.md)        |
-| [proteogenomicsdb](https://github.com/nf-core/proteogenomicsdb)                   |         –          | :white_check_mark: |     [View](lint_results/workflow-outputs-results/proteogenomicsdb_outputs.md)      |
-| [provenancereport](https://github.com/nf-core/provenancereport)                   |         –          | :white_check_mark: |     [View](lint_results/workflow-outputs-results/provenancereport_outputs.md)      |
-| [radseq](https://github.com/nf-core/radseq)                                       |         –          | :white_check_mark: |          [View](lint_results/workflow-outputs-results/radseq_outputs.md)           |
-| [rangeland](https://github.com/nf-core/rangeland)                                 |         –          | :white_check_mark: |         [View](lint_results/workflow-outputs-results/rangeland_outputs.md)         |
-| [rarevariantburden](https://github.com/nf-core/rarevariantburden)                 |         –          | :white_check_mark: |     [View](lint_results/workflow-outputs-results/rarevariantburden_outputs.md)     |
-| [readsimulator](https://github.com/nf-core/readsimulator)                         |         –          | :white_check_mark: |       [View](lint_results/workflow-outputs-results/readsimulator_outputs.md)       |
-| [reportho](https://github.com/nf-core/reportho)                                   |         –          | :white_check_mark: |         [View](lint_results/workflow-outputs-results/reportho_outputs.md)          |
-| [ribomsqc](https://github.com/nf-core/ribomsqc)                                   |         –          | :white_check_mark: |         [View](lint_results/workflow-outputs-results/ribomsqc_outputs.md)          |
-| [riboseq](https://github.com/nf-core/riboseq)                                     |         –          | :white_check_mark: |          [View](lint_results/workflow-outputs-results/riboseq_outputs.md)          |
-| [rnadnavar](https://github.com/nf-core/rnadnavar)                                 |         –          | :white_check_mark: |         [View](lint_results/workflow-outputs-results/rnadnavar_outputs.md)         |
-| [rnafusion](https://github.com/nf-core/rnafusion)                                 |         –          | :white_check_mark: |         [View](lint_results/workflow-outputs-results/rnafusion_outputs.md)         |
-| [rnaseq](https://github.com/nf-core/rnaseq)                                       |         –          | :white_check_mark: |          [View](lint_results/workflow-outputs-results/rnaseq_outputs.md)           |
-| [rnasplice](https://github.com/nf-core/rnasplice)                                 |         –          | :white_check_mark: |         [View](lint_results/workflow-outputs-results/rnasplice_outputs.md)         |
-| [sammyseq](https://github.com/nf-core/sammyseq)                                   |         –          | :white_check_mark: |         [View](lint_results/workflow-outputs-results/sammyseq_outputs.md)          |
-| [scdownstream](https://github.com/nf-core/scdownstream)                           |         –          | :white_check_mark: |       [View](lint_results/workflow-outputs-results/scdownstream_outputs.md)        |
-| [scnanoseq](https://github.com/nf-core/scnanoseq)                                 |         –          | :white_check_mark: |         [View](lint_results/workflow-outputs-results/scnanoseq_outputs.md)         |
-| [scrnaseq](https://github.com/nf-core/scrnaseq)                                   |         –          | :white_check_mark: |         [View](lint_results/workflow-outputs-results/scrnaseq_outputs.md)          |
-| [seqsubmit](https://github.com/nf-core/seqsubmit)                                 |         –          | :white_check_mark: |         [View](lint_results/workflow-outputs-results/seqsubmit_outputs.md)         |
-| [slamseq](https://github.com/nf-core/slamseq)                                     |         –          | :white_check_mark: |          [View](lint_results/workflow-outputs-results/slamseq_outputs.md)          |
-| [smrnaseq](https://github.com/nf-core/smrnaseq)                                   |         –          | :white_check_mark: |         [View](lint_results/workflow-outputs-results/smrnaseq_outputs.md)          |
-| [sopa](https://github.com/nf-core/sopa)                                           |         –          | :white_check_mark: |           [View](lint_results/workflow-outputs-results/sopa_outputs.md)            |
-| [spatialaxe](https://github.com/nf-core/spatialaxe)                               |         –          | :white_check_mark: |        [View](lint_results/workflow-outputs-results/spatialaxe_outputs.md)         |
-| [spatialvi](https://github.com/nf-core/spatialvi)                                 |         –          | :white_check_mark: |         [View](lint_results/workflow-outputs-results/spatialvi_outputs.md)         |
-| [spinningjenny](https://github.com/nf-core/spinningjenny)                         |         –          | :white_check_mark: |       [View](lint_results/workflow-outputs-results/spinningjenny_outputs.md)       |
-| [stableexpression](https://github.com/nf-core/stableexpression)                   |         –          | :white_check_mark: |     [View](lint_results/workflow-outputs-results/stableexpression_outputs.md)      |
-| [taxprofiler](https://github.com/nf-core/taxprofiler)                             |         –          | :white_check_mark: |        [View](lint_results/workflow-outputs-results/taxprofiler_outputs.md)        |
-| [tbanalyzer](https://github.com/nf-core/tbanalyzer)                               |         –          | :white_check_mark: |        [View](lint_results/workflow-outputs-results/tbanalyzer_outputs.md)         |
-| [tfactivity](https://github.com/nf-core/tfactivity)                               |         –          | :white_check_mark: |        [View](lint_results/workflow-outputs-results/tfactivity_outputs.md)         |
-| [troughgraph](https://github.com/nf-core/troughgraph)                             |         –          | :white_check_mark: |        [View](lint_results/workflow-outputs-results/troughgraph_outputs.md)        |
-| [tumourevo](https://github.com/nf-core/tumourevo)                                 |         –          | :white_check_mark: |         [View](lint_results/workflow-outputs-results/tumourevo_outputs.md)         |
-| [variantbenchmarking](https://github.com/nf-core/variantbenchmarking)             |         –          | :white_check_mark: |    [View](lint_results/workflow-outputs-results/variantbenchmarking_outputs.md)    |
-| [variantcatalogue](https://github.com/nf-core/variantcatalogue)                   |         –          | :white_check_mark: |     [View](lint_results/workflow-outputs-results/variantcatalogue_outputs.md)      |
-| [variantprioritization](https://github.com/nf-core/variantprioritization)         |         –          | :white_check_mark: |   [View](lint_results/workflow-outputs-results/variantprioritization_outputs.md)   |
-| [viralintegration](https://github.com/nf-core/viralintegration)                   |         –          | :white_check_mark: |     [View](lint_results/workflow-outputs-results/viralintegration_outputs.md)      |
-| [viralmetagenome](https://github.com/nf-core/viralmetagenome)                     |         –          | :white_check_mark: |      [View](lint_results/workflow-outputs-results/viralmetagenome_outputs.md)      |
-| [viralrecon](https://github.com/nf-core/viralrecon)                               |         –          | :white_check_mark: |        [View](lint_results/workflow-outputs-results/viralrecon_outputs.md)         |
+| Pipeline                                                                              | `output {}` | `publishDir` |                                       Report                                       |
+| ------------------------------------------------------------------------------------- | :---------: | :----------: | :--------------------------------------------------------------------------------: |
+| :white_check_mark: [createpanelrefs](https://github.com/nf-core/createpanelrefs)      |     Yes     |      No      |      [View](lint_results/workflow-outputs-results/createpanelrefs_outputs.md)      |
+| :white_check_mark: [references](https://github.com/nf-core/references)                |     Yes     |      No      |        [View](lint_results/workflow-outputs-results/references_outputs.md)         |
+| :white_check_mark: [seqinspector](https://github.com/nf-core/seqinspector)            |     Yes     |      No      |       [View](lint_results/workflow-outputs-results/seqinspector_outputs.md)        |
+| :warning: [demultiplex](https://github.com/nf-core/demultiplex)                       |     Yes     |   Yes (6)    |        [View](lint_results/workflow-outputs-results/demultiplex_outputs.md)        |
+| :warning: [differentialabundance](https://github.com/nf-core/differentialabundance)   |     Yes     |   Yes (10)   |   [View](lint_results/workflow-outputs-results/differentialabundance_outputs.md)   |
+| :warning: [proteinfamilies](https://github.com/nf-core/proteinfamilies)               |     Yes     |   Yes (73)   |      [View](lint_results/workflow-outputs-results/proteinfamilies_outputs.md)      |
+| :warning: [raredisease](https://github.com/nf-core/raredisease)                       |     Yes     |   Yes (2)    |        [View](lint_results/workflow-outputs-results/raredisease_outputs.md)        |
+| :warning: [rnavar](https://github.com/nf-core/rnavar)                                 |     Yes     |   Yes (33)   |          [View](lint_results/workflow-outputs-results/rnavar_outputs.md)           |
+| :warning: [sarek](https://github.com/nf-core/sarek)                                   |     Yes     |  Yes (186)   |           [View](lint_results/workflow-outputs-results/sarek_outputs.md)           |
+| :x: [abotyper](https://github.com/nf-core/abotyper)                                   |     No      |   Yes (14)   |         [View](lint_results/workflow-outputs-results/abotyper_outputs.md)          |
+| :x: [airrflow](https://github.com/nf-core/airrflow)                                   |     No      |   Yes (84)   |         [View](lint_results/workflow-outputs-results/airrflow_outputs.md)          |
+| :x: [alleleexpression](https://github.com/nf-core/alleleexpression)                   |     No      |   Yes (15)   |     [View](lint_results/workflow-outputs-results/alleleexpression_outputs.md)      |
+| :x: [ampliseq](https://github.com/nf-core/ampliseq)                                   |     No      |   Yes (95)   |         [View](lint_results/workflow-outputs-results/ampliseq_outputs.md)          |
+| :x: [atacseq](https://github.com/nf-core/atacseq)                                     |     No      |   Yes (79)   |          [View](lint_results/workflow-outputs-results/atacseq_outputs.md)          |
+| :x: [bacass](https://github.com/nf-core/bacass)                                       |     No      |   Yes (33)   |          [View](lint_results/workflow-outputs-results/bacass_outputs.md)           |
+| :x: [bacmodel](https://github.com/nf-core/bacmodel)                                   |     No      |   Yes (13)   |         [View](lint_results/workflow-outputs-results/bacmodel_outputs.md)          |
+| :x: [bactmap](https://github.com/nf-core/bactmap)                                     |     No      |   Yes (53)   |          [View](lint_results/workflow-outputs-results/bactmap_outputs.md)          |
+| :x: [bamtofastq](https://github.com/nf-core/bamtofastq)                               |     No      |   Yes (17)   |        [View](lint_results/workflow-outputs-results/bamtofastq_outputs.md)         |
+| :x: [cageseq](https://github.com/nf-core/cageseq)                                     |     No      |   Yes (30)   |          [View](lint_results/workflow-outputs-results/cageseq_outputs.md)          |
+| :x: [callingcards](https://github.com/nf-core/callingcards)                           |     No      |   Yes (38)   |       [View](lint_results/workflow-outputs-results/callingcards_outputs.md)        |
+| :x: [cellpainting](https://github.com/nf-core/cellpainting)                           |     No      |   Yes (7)    |       [View](lint_results/workflow-outputs-results/cellpainting_outputs.md)        |
+| :x: [chipseq](https://github.com/nf-core/chipseq)                                     |     No      |   Yes (56)   |          [View](lint_results/workflow-outputs-results/chipseq_outputs.md)          |
+| :x: [circdna](https://github.com/nf-core/circdna)                                     |     No      |   Yes (36)   |          [View](lint_results/workflow-outputs-results/circdna_outputs.md)          |
+| :x: [circrna](https://github.com/nf-core/circrna)                                     |     No      |  Yes (127)   |          [View](lint_results/workflow-outputs-results/circrna_outputs.md)          |
+| :x: [clipseq](https://github.com/nf-core/clipseq)                                     |     No      |   Yes (24)   |          [View](lint_results/workflow-outputs-results/clipseq_outputs.md)          |
+| :x: [coproid](https://github.com/nf-core/coproid)                                     |     No      |   Yes (11)   |          [View](lint_results/workflow-outputs-results/coproid_outputs.md)          |
+| :x: [createtaxdb](https://github.com/nf-core/createtaxdb)                             |     No      |   Yes (17)   |        [View](lint_results/workflow-outputs-results/createtaxdb_outputs.md)        |
+| :x: [crisprseq](https://github.com/nf-core/crisprseq)                                 |     No      |   Yes (45)   |         [View](lint_results/workflow-outputs-results/crisprseq_outputs.md)         |
+| :x: [cutandrun](https://github.com/nf-core/cutandrun)                                 |     No      |   Yes (81)   |         [View](lint_results/workflow-outputs-results/cutandrun_outputs.md)         |
+| :x: [dartseq](https://github.com/nf-core/dartseq)                                     |     No      |   Yes (14)   |          [View](lint_results/workflow-outputs-results/dartseq_outputs.md)          |
+| :x: [datasync](https://github.com/nf-core/datasync)                                   |     No      |   Yes (2)    |         [View](lint_results/workflow-outputs-results/datasync_outputs.md)          |
+| :x: [deepmodeloptim](https://github.com/nf-core/deepmodeloptim)                       |     No      |   Yes (12)   |      [View](lint_results/workflow-outputs-results/deepmodeloptim_outputs.md)       |
+| :x: [deepmutscan](https://github.com/nf-core/deepmutscan)                             |     No      |   Yes (21)   |        [View](lint_results/workflow-outputs-results/deepmutscan_outputs.md)        |
+| :x: [demo](https://github.com/nf-core/demo)                                           |     No      |   Yes (4)    |           [View](lint_results/workflow-outputs-results/demo_outputs.md)            |
+| :x: [denovotranscript](https://github.com/nf-core/denovotranscript)                   |     No      |   Yes (7)    |     [View](lint_results/workflow-outputs-results/denovotranscript_outputs.md)      |
+| :x: [detaxizer](https://github.com/nf-core/detaxizer)                                 |     No      |   Yes (20)   |         [View](lint_results/workflow-outputs-results/detaxizer_outputs.md)         |
+| :x: [diaproteomics](https://github.com/nf-core/diaproteomics)                         |     No      |   Yes (13)   |       [View](lint_results/workflow-outputs-results/diaproteomics_outputs.md)       |
+| :x: [diseasemodulediscovery](https://github.com/nf-core/diseasemodulediscovery)       |     No      |   Yes (20)   |  [View](lint_results/workflow-outputs-results/diseasemodulediscovery_outputs.md)   |
+| :x: [drop](https://github.com/nf-core/drop)                                           |     No      |   Yes (28)   |           [View](lint_results/workflow-outputs-results/drop_outputs.md)            |
+| :x: [drugresponseeval](https://github.com/nf-core/drugresponseeval)                   |     No      |   Yes (26)   |     [View](lint_results/workflow-outputs-results/drugresponseeval_outputs.md)      |
+| :x: [dualrnaseq](https://github.com/nf-core/dualrnaseq)                               |     No      |   Yes (30)   |        [View](lint_results/workflow-outputs-results/dualrnaseq_outputs.md)         |
+| :x: [eager](https://github.com/nf-core/eager)                                         |     No      |  Yes (127)   |           [View](lint_results/workflow-outputs-results/eager_outputs.md)           |
+| :x: [epigenomesegmentation](https://github.com/nf-core/epigenomesegmentation)         |     No      |   Yes (13)   |   [View](lint_results/workflow-outputs-results/epigenomesegmentation_outputs.md)   |
+| :x: [epitopeprediction](https://github.com/nf-core/epitopeprediction)                 |     No      |   Yes (18)   |     [View](lint_results/workflow-outputs-results/epitopeprediction_outputs.md)     |
+| :x: [evexplorer](https://github.com/nf-core/evexplorer)                               |     No      |   Yes (9)    |        [View](lint_results/workflow-outputs-results/evexplorer_outputs.md)         |
+| :x: [fastqrepair](https://github.com/nf-core/fastqrepair)                             |     No      |   Yes (6)    |        [View](lint_results/workflow-outputs-results/fastqrepair_outputs.md)        |
+| :x: [fastquorum](https://github.com/nf-core/fastquorum)                               |     No      |   Yes (15)   |        [View](lint_results/workflow-outputs-results/fastquorum_outputs.md)         |
+| :x: [fetchngs](https://github.com/nf-core/fetchngs)                                   |     No      |   Yes (10)   |         [View](lint_results/workflow-outputs-results/fetchngs_outputs.md)          |
+| :x: [funcprofiler](https://github.com/nf-core/funcprofiler)                           |     No      |   Yes (11)   |       [View](lint_results/workflow-outputs-results/funcprofiler_outputs.md)        |
+| :x: [funcscan](https://github.com/nf-core/funcscan)                                   |     No      |   Yes (22)   |         [View](lint_results/workflow-outputs-results/funcscan_outputs.md)          |
+| :x: [genephylomodeler](https://github.com/nf-core/genephylomodeler)                   |     No      |   Yes (12)   |     [View](lint_results/workflow-outputs-results/genephylomodeler_outputs.md)      |
+| :x: [genomeannotator](https://github.com/nf-core/genomeannotator)                     |     No      |   Yes (14)   |      [View](lint_results/workflow-outputs-results/genomeannotator_outputs.md)      |
+| :x: [genomeassembler](https://github.com/nf-core/genomeassembler)                     |     No      |   Yes (60)   |      [View](lint_results/workflow-outputs-results/genomeassembler_outputs.md)      |
+| :x: [genomeqc](https://github.com/nf-core/genomeqc)                                   |     No      |   Yes (37)   |         [View](lint_results/workflow-outputs-results/genomeqc_outputs.md)          |
+| :x: [genomeskim](https://github.com/nf-core/genomeskim)                               |     No      |   Yes (3)    |        [View](lint_results/workflow-outputs-results/genomeskim_outputs.md)         |
+| :x: [genomicrelatedness](https://github.com/nf-core/genomicrelatedness)               |     No      |   Yes (61)   |    [View](lint_results/workflow-outputs-results/genomicrelatedness_outputs.md)     |
+| :x: [gwas](https://github.com/nf-core/gwas)                                           |     No      |   Yes (3)    |           [View](lint_results/workflow-outputs-results/gwas_outputs.md)            |
+| :x: [hadge](https://github.com/nf-core/hadge)                                         |     No      |   Yes (33)   |           [View](lint_results/workflow-outputs-results/hadge_outputs.md)           |
+| :x: [hgtseq](https://github.com/nf-core/hgtseq)                                       |     No      |   Yes (50)   |          [View](lint_results/workflow-outputs-results/hgtseq_outputs.md)           |
+| :x: [hic](https://github.com/nf-core/hic)                                             |     No      |   Yes (39)   |            [View](lint_results/workflow-outputs-results/hic_outputs.md)            |
+| :x: [hicar](https://github.com/nf-core/hicar)                                         |     No      |  Yes (156)   |           [View](lint_results/workflow-outputs-results/hicar_outputs.md)           |
+| :x: [hlatyping](https://github.com/nf-core/hlatyping)                                 |     No      |   Yes (19)   |         [View](lint_results/workflow-outputs-results/hlatyping_outputs.md)         |
+| :x: [imcyto](https://github.com/nf-core/imcyto)                                       |     No      |   Yes (7)    |          [View](lint_results/workflow-outputs-results/imcyto_outputs.md)           |
+| :x: [isoseq](https://github.com/nf-core/isoseq)                                       |     No      |   Yes (16)   |          [View](lint_results/workflow-outputs-results/isoseq_outputs.md)           |
+| :x: [kmermaid](https://github.com/nf-core/kmermaid)                                   |     No      |   Yes (2)    |         [View](lint_results/workflow-outputs-results/kmermaid_outputs.md)          |
+| :x: [lncpipe](https://github.com/nf-core/lncpipe)                                     |     No      |   Yes (39)   |          [View](lint_results/workflow-outputs-results/lncpipe_outputs.md)          |
+| :x: [longraredisease](https://github.com/nf-core/longraredisease)                     |     No      |   Yes (76)   |      [View](lint_results/workflow-outputs-results/longraredisease_outputs.md)      |
+| :x: [lsmquant](https://github.com/nf-core/lsmquant)                                   |     No      |   Yes (5)    |         [View](lint_results/workflow-outputs-results/lsmquant_outputs.md)          |
+| :x: [mag](https://github.com/nf-core/mag)                                             |     No      |   Yes (38)   |            [View](lint_results/workflow-outputs-results/mag_outputs.md)            |
+| :x: [magmap](https://github.com/nf-core/magmap)                                       |     No      |   Yes (27)   |          [View](lint_results/workflow-outputs-results/magmap_outputs.md)           |
+| :x: [marsseq](https://github.com/nf-core/marsseq)                                     |     No      |   Yes (23)   |          [View](lint_results/workflow-outputs-results/marsseq_outputs.md)          |
+| :x: [mcmicro](https://github.com/nf-core/mcmicro)                                     |     No      |   Yes (10)   |          [View](lint_results/workflow-outputs-results/mcmicro_outputs.md)          |
+| :x: [meerpipe](https://github.com/nf-core/meerpipe)                                   |     No      |   Yes (9)    |         [View](lint_results/workflow-outputs-results/meerpipe_outputs.md)          |
+| :x: [metaboigniter](https://github.com/nf-core/metaboigniter)                         |     No      |   Yes (31)   |       [View](lint_results/workflow-outputs-results/metaboigniter_outputs.md)       |
+| :x: [metapep](https://github.com/nf-core/metapep)                                     |     No      |   Yes (21)   |          [View](lint_results/workflow-outputs-results/metapep_outputs.md)          |
+| :x: [metatdenovo](https://github.com/nf-core/metatdenovo)                             |     No      |   Yes (14)   |        [View](lint_results/workflow-outputs-results/metatdenovo_outputs.md)        |
+| :x: [methylarray](https://github.com/nf-core/methylarray)                             |     No      |   Yes (2)    |        [View](lint_results/workflow-outputs-results/methylarray_outputs.md)        |
+| :x: [methylong](https://github.com/nf-core/methylong)                                 |     No      |   Yes (41)   |         [View](lint_results/workflow-outputs-results/methylong_outputs.md)         |
+| :x: [methylseq](https://github.com/nf-core/methylseq)                                 |     No      |   Yes (45)   |         [View](lint_results/workflow-outputs-results/methylseq_outputs.md)         |
+| :x: [mhcquant](https://github.com/nf-core/mhcquant)                                   |     No      |   Yes (46)   |         [View](lint_results/workflow-outputs-results/mhcquant_outputs.md)          |
+| :x: [mitodetect](https://github.com/nf-core/mitodetect)                               |     No      |   Yes (2)    |        [View](lint_results/workflow-outputs-results/mitodetect_outputs.md)         |
+| :x: [mnaseseq](https://github.com/nf-core/mnaseseq)                                   |     No      |   Yes (26)   |         [View](lint_results/workflow-outputs-results/mnaseseq_outputs.md)          |
+| :x: [molkart](https://github.com/nf-core/molkart)                                     |     No      |   Yes (18)   |          [View](lint_results/workflow-outputs-results/molkart_outputs.md)          |
+| :x: [mspepid](https://github.com/nf-core/mspepid)                                     |     No      |   Yes (9)    |          [View](lint_results/workflow-outputs-results/mspepid_outputs.md)          |
+| :x: [multiplesequencealign](https://github.com/nf-core/multiplesequencealign)         |     No      |   Yes (17)   |   [View](lint_results/workflow-outputs-results/multiplesequencealign_outputs.md)   |
+| :x: [nanoseq](https://github.com/nf-core/nanoseq)                                     |     No      |   Yes (3)    |          [View](lint_results/workflow-outputs-results/nanoseq_outputs.md)          |
+| :x: [nanostring](https://github.com/nf-core/nanostring)                               |     No      |   Yes (7)    |        [View](lint_results/workflow-outputs-results/nanostring_outputs.md)         |
+| :x: [nascent](https://github.com/nf-core/nascent)                                     |     No      |   Yes (41)   |          [View](lint_results/workflow-outputs-results/nascent_outputs.md)          |
+| :x: [ncrnannotator](https://github.com/nf-core/ncrnannotator)                         |     No      |   Yes (6)    |       [View](lint_results/workflow-outputs-results/ncrnannotator_outputs.md)       |
+| :x: [omicsgenetraitassociation](https://github.com/nf-core/omicsgenetraitassociation) |     No      |   Yes (11)   | [View](lint_results/workflow-outputs-results/omicsgenetraitassociation_outputs.md) |
+| :x: [oncoanalyser](https://github.com/nf-core/oncoanalyser)                           |     No      |   Yes (35)   |       [View](lint_results/workflow-outputs-results/oncoanalyser_outputs.md)        |
+| :x: [pacsomatic](https://github.com/nf-core/pacsomatic)                               |     No      |   Yes (40)   |        [View](lint_results/workflow-outputs-results/pacsomatic_outputs.md)         |
+| :x: [pacvar](https://github.com/nf-core/pacvar)                                       |     No      |   Yes (15)   |          [View](lint_results/workflow-outputs-results/pacvar_outputs.md)           |
+| :x: [pairgenomealign](https://github.com/nf-core/pairgenomealign)                     |     No      |   Yes (11)   |      [View](lint_results/workflow-outputs-results/pairgenomealign_outputs.md)      |
+| :x: [pangenome](https://github.com/nf-core/pangenome)                                 |     No      |   Yes (30)   |         [View](lint_results/workflow-outputs-results/pangenome_outputs.md)         |
+| :x: [panoramaseq](https://github.com/nf-core/panoramaseq)                             |     No      |   Yes (15)   |        [View](lint_results/workflow-outputs-results/panoramaseq_outputs.md)        |
+| :x: [pathogensurveillance](https://github.com/nf-core/pathogensurveillance)           |     No      |   Yes (52)   |   [View](lint_results/workflow-outputs-results/pathogensurveillance_outputs.md)    |
+| :x: [phageannotator](https://github.com/nf-core/phageannotator)                       |     No      |   Yes (39)   |      [View](lint_results/workflow-outputs-results/phageannotator_outputs.md)       |
+| :x: [phaseimpute](https://github.com/nf-core/phaseimpute)                             |     No      |   Yes (83)   |        [View](lint_results/workflow-outputs-results/phaseimpute_outputs.md)        |
+| :x: [phyloplace](https://github.com/nf-core/phyloplace)                               |     No      |   Yes (2)    |        [View](lint_results/workflow-outputs-results/phyloplace_outputs.md)         |
+| :x: [pixelator](https://github.com/nf-core/pixelator)                                 |     No      |   Yes (12)   |         [View](lint_results/workflow-outputs-results/pixelator_outputs.md)         |
+| :x: [proteinannotator](https://github.com/nf-core/proteinannotator)                   |     No      |   Yes (19)   |     [View](lint_results/workflow-outputs-results/proteinannotator_outputs.md)      |
+| :x: [proteinfold](https://github.com/nf-core/proteinfold)                             |     No      |   Yes (51)   |        [View](lint_results/workflow-outputs-results/proteinfold_outputs.md)        |
+| :x: [proteogenomicsdb](https://github.com/nf-core/proteogenomicsdb)                   |     No      |   Yes (5)    |     [View](lint_results/workflow-outputs-results/proteogenomicsdb_outputs.md)      |
+| :x: [provenancereport](https://github.com/nf-core/provenancereport)                   |     No      |   Yes (1)    |     [View](lint_results/workflow-outputs-results/provenancereport_outputs.md)      |
+| :x: [radseq](https://github.com/nf-core/radseq)                                       |     No      |   Yes (25)   |          [View](lint_results/workflow-outputs-results/radseq_outputs.md)           |
+| :x: [rangeland](https://github.com/nf-core/rangeland)                                 |     No      |   Yes (5)    |         [View](lint_results/workflow-outputs-results/rangeland_outputs.md)         |
+| :x: [rarevariantburden](https://github.com/nf-core/rarevariantburden)                 |     No      |   Yes (17)   |     [View](lint_results/workflow-outputs-results/rarevariantburden_outputs.md)     |
+| :x: [readsimulator](https://github.com/nf-core/readsimulator)                         |     No      |   Yes (18)   |       [View](lint_results/workflow-outputs-results/readsimulator_outputs.md)       |
+| :x: [reportho](https://github.com/nf-core/reportho)                                   |     No      |   Yes (37)   |         [View](lint_results/workflow-outputs-results/reportho_outputs.md)          |
+| :x: [ribomsqc](https://github.com/nf-core/ribomsqc)                                   |     No      |   Yes (1)    |         [View](lint_results/workflow-outputs-results/ribomsqc_outputs.md)          |
+| :x: [riboseq](https://github.com/nf-core/riboseq)                                     |     No      |   Yes (93)   |          [View](lint_results/workflow-outputs-results/riboseq_outputs.md)          |
+| :x: [rnadnavar](https://github.com/nf-core/rnadnavar)                                 |     No      |   Yes (97)   |         [View](lint_results/workflow-outputs-results/rnadnavar_outputs.md)         |
+| :x: [rnafusion](https://github.com/nf-core/rnafusion)                                 |     No      |   Yes (35)   |         [View](lint_results/workflow-outputs-results/rnafusion_outputs.md)         |
+| :x: [rnaseq](https://github.com/nf-core/rnaseq)                                       |     No      |  Yes (115)   |          [View](lint_results/workflow-outputs-results/rnaseq_outputs.md)           |
+| :x: [rnasplice](https://github.com/nf-core/rnasplice)                                 |     No      |   Yes (66)   |         [View](lint_results/workflow-outputs-results/rnasplice_outputs.md)         |
+| :x: [sammyseq](https://github.com/nf-core/sammyseq)                                   |     No      |   Yes (30)   |         [View](lint_results/workflow-outputs-results/sammyseq_outputs.md)          |
+| :x: [scdownstream](https://github.com/nf-core/scdownstream)                           |     No      |   Yes (63)   |       [View](lint_results/workflow-outputs-results/scdownstream_outputs.md)        |
+| :x: [scnanoseq](https://github.com/nf-core/scnanoseq)                                 |     No      |   Yes (92)   |         [View](lint_results/workflow-outputs-results/scnanoseq_outputs.md)         |
+| :x: [scrnaseq](https://github.com/nf-core/scrnaseq)                                   |     No      |   Yes (25)   |         [View](lint_results/workflow-outputs-results/scrnaseq_outputs.md)          |
+| :x: [seqsubmit](https://github.com/nf-core/seqsubmit)                                 |     No      |   Yes (19)   |         [View](lint_results/workflow-outputs-results/seqsubmit_outputs.md)         |
+| :x: [slamseq](https://github.com/nf-core/slamseq)                                     |     No      |   Yes (8)    |          [View](lint_results/workflow-outputs-results/slamseq_outputs.md)          |
+| :x: [smrnaseq](https://github.com/nf-core/smrnaseq)                                   |     No      |   Yes (53)   |         [View](lint_results/workflow-outputs-results/smrnaseq_outputs.md)          |
+| :x: [sopa](https://github.com/nf-core/sopa)                                           |     No      |   Yes (4)    |           [View](lint_results/workflow-outputs-results/sopa_outputs.md)            |
+| :x: [spatialaxe](https://github.com/nf-core/spatialaxe)                               |     No      |   Yes (39)   |        [View](lint_results/workflow-outputs-results/spatialaxe_outputs.md)         |
+| :x: [spatialvi](https://github.com/nf-core/spatialvi)                                 |     No      |   Yes (7)    |         [View](lint_results/workflow-outputs-results/spatialvi_outputs.md)         |
+| :x: [spinningjenny](https://github.com/nf-core/spinningjenny)                         |     No      |   Yes (6)    |       [View](lint_results/workflow-outputs-results/spinningjenny_outputs.md)       |
+| :x: [stableexpression](https://github.com/nf-core/stableexpression)                   |     No      |   Yes (15)   |     [View](lint_results/workflow-outputs-results/stableexpression_outputs.md)      |
+| :x: [taxprofiler](https://github.com/nf-core/taxprofiler)                             |     No      |   Yes (82)   |        [View](lint_results/workflow-outputs-results/taxprofiler_outputs.md)        |
+| :x: [tbanalyzer](https://github.com/nf-core/tbanalyzer)                               |     No      |   Yes (2)    |        [View](lint_results/workflow-outputs-results/tbanalyzer_outputs.md)         |
+| :x: [tfactivity](https://github.com/nf-core/tfactivity)                               |     No      |   Yes (75)   |        [View](lint_results/workflow-outputs-results/tfactivity_outputs.md)         |
+| :x: [troughgraph](https://github.com/nf-core/troughgraph)                             |     No      |   Yes (2)    |        [View](lint_results/workflow-outputs-results/troughgraph_outputs.md)        |
+| :x: [tumourevo](https://github.com/nf-core/tumourevo)                                 |     No      |   Yes (18)   |         [View](lint_results/workflow-outputs-results/tumourevo_outputs.md)         |
+| :x: [variantbenchmarking](https://github.com/nf-core/variantbenchmarking)             |     No      |   Yes (79)   |    [View](lint_results/workflow-outputs-results/variantbenchmarking_outputs.md)    |
+| :x: [variantcatalogue](https://github.com/nf-core/variantcatalogue)                   |     No      |   Yes (33)   |     [View](lint_results/workflow-outputs-results/variantcatalogue_outputs.md)      |
+| :x: [variantprioritization](https://github.com/nf-core/variantprioritization)         |     No      |   Yes (13)   |   [View](lint_results/workflow-outputs-results/variantprioritization_outputs.md)   |
+| :x: [viralintegration](https://github.com/nf-core/viralintegration)                   |     No      |   Yes (2)    |     [View](lint_results/workflow-outputs-results/viralintegration_outputs.md)      |
+| :x: [viralmetagenome](https://github.com/nf-core/viralmetagenome)                     |     No      |  Yes (116)   |      [View](lint_results/workflow-outputs-results/viralmetagenome_outputs.md)      |
+| :x: [viralrecon](https://github.com/nf-core/viralrecon)                               |     No      |  Yes (173)   |        [View](lint_results/workflow-outputs-results/viralrecon_outputs.md)         |
 
 </details>
 
