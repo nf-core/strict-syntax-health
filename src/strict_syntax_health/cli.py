@@ -554,7 +554,7 @@ def write_workflow_outputs_report(
     name: str,
     output_dir: Path,
     source_url_base: str | None = None,
-) -> tuple[bool, bool]:
+) -> tuple[bool, bool, int]:
     """Scan a pipeline for workflow outputs / publishDir usage and write a markdown report.
 
     The report lists where the top-level `output {}` block(s) and any legacy `publishDir`
@@ -567,7 +567,7 @@ def write_workflow_outputs_report(
         source_url_base: Optional URL prefix (e.g. ".../blob/<commit>") for linking to lines.
 
     Returns:
-        Tuple of (has_workflow_output, has_publishdir).
+        Tuple of (has_workflow_output, has_publishdir, publishdir_count).
     """
     output_locs = _scan_lines(repo_path, ("*.nf",), WORKFLOW_OUTPUT_RE)
     publishdir_locs = _scan_lines(repo_path, ("*.nf", "*.config"), PUBLISHDIR_RE)
@@ -580,7 +580,7 @@ def write_workflow_outputs_report(
     content = _generate_workflow_outputs_markdown(name, state, output_locs, publishdir_locs, source_url_base)
     (output_dir / f"{name}_outputs.md").write_text(content)
 
-    return has_output, has_publishdir
+    return has_output, has_publishdir, len(publishdir_locs)
 
 
 def workflow_output_state(result: dict) -> str | None:
@@ -959,8 +959,13 @@ def run_pipeline_lint(pipelines: list[dict], no_cache: bool = False) -> list[dic
                 and cached.get("prints_help") is None
             )
 
-            # Re-process pipelines cached before workflow outputs / publishDir detection was added
-            needs_output_detection = cached.get("workflow_output") is None or cached.get("publishdir") is None
+            # Re-process pipelines cached before workflow outputs / publishDir detection was added,
+            # or that have publishDir but no cached reference count yet.
+            needs_output_detection = (
+                cached.get("workflow_output") is None
+                or cached.get("publishdir") is None
+                or (cached.get("publishdir") and cached.get("publishdir_count") is None)
+            )
 
             if (
                 remote_commit
@@ -981,6 +986,7 @@ def run_pipeline_lint(pipelines: list[dict], no_cache: bool = False) -> list[dic
                         "prints_help": cached.get("prints_help"),
                         "workflow_output": cached.get("workflow_output"),
                         "publishdir": cached.get("publishdir"),
+                        "publishdir_count": cached.get("publishdir_count"),
                         "lint_details": {},  # Don't store full details in cache
                     }
                 )
@@ -1002,7 +1008,7 @@ def run_pipeline_lint(pipelines: list[dict], no_cache: bool = False) -> list[dic
 
             # Detect workflow outputs migration status (independent of lint state) and write a
             # per-pipeline report showing where the `output {}` block and `publishDir` refs are.
-            workflow_output, publishdir = write_workflow_outputs_report(
+            workflow_output, publishdir, publishdir_count = write_workflow_outputs_report(
                 repo_path,
                 name,
                 WORKFLOW_OUTPUTS_RESULTS_DIR,
@@ -1031,6 +1037,7 @@ def run_pipeline_lint(pipelines: list[dict], no_cache: bool = False) -> list[dic
                     "prints_help": prints_help,
                     "workflow_output": workflow_output,
                     "publishdir": publishdir,
+                    "publishdir_count": publishdir_count,
                     "lint_details": lint_result,
                 }
             )
@@ -1049,6 +1056,7 @@ def run_pipeline_lint(pipelines: list[dict], no_cache: bool = False) -> list[dic
                     "prints_help": None,
                     "workflow_output": None,
                     "publishdir": None,
+                    "publishdir_count": None,
                     "lint_details": {},
                 }
             )
@@ -1913,26 +1921,32 @@ def _generate_workflow_outputs_section(results: list[dict], include_charts: bool
             "<details>",
             f"<summary>Workflow Outputs Migration ({total} pipelines)</summary>",
             "",
-            "Each cell shows whether the construct is present (:white_check_mark: = present, "
-            "– = absent). A pipeline is fully migrated when it uses `output {}` with no `publishDir`.",
+            "The status emoji next to each pipeline shows its migration state: "
+            ":white_check_mark: fully migrated (only `output {}`), "
+            ":warning: in progress (`output {}` and `publishDir`), "
+            ":x: not started (only `publishDir`).",
             "",
             "| Pipeline | `output {}` | `publishDir` | Report |",
             "|----------|:-----------:|:------------:|:------:|",
         ]
     )
 
-    def cell(present: bool | None) -> str:
-        if present is None:
-            return "-"
-        return ":white_check_mark:" if present else "–"
+    status_emoji = {"pass": ":white_check_mark:", "warn": ":warning:", "error": ":x:"}
 
     for result in sorted(results, key=sort_key):
-        name_link = f"[{result['name']}]({result['html_url']})"
+        emoji = status_emoji.get(workflow_output_state(result), "")
+        name_link = f"{emoji} [{result['name']}]({result['html_url']})".strip()
         report_link = f"[View]({WORKFLOW_OUTPUTS_RESULTS_DIR}/{result['name']}_outputs.md)"
-        lines.append(
-            f"| {name_link} | {cell(result.get('workflow_output'))} "
-            f"| {cell(result.get('publishdir'))} | {report_link} |"
-        )
+
+        output_str = "Yes" if result.get("workflow_output") else "No"
+
+        if result.get("publishdir"):
+            count = result.get("publishdir_count")
+            publishdir_str = f"Yes ({count})" if isinstance(count, int) else "Yes"
+        else:
+            publishdir_str = "No"
+
+        lines.append(f"| {name_link} | {output_str} | {publishdir_str} | {report_link} |")
 
     lines.extend(["", "</details>", ""])
 
