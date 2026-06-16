@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.04.3
 
-Launching `./main.nf` [zen_goldstine] revision: fcbc19ad2d
+Launching `./main.nf` [reverent_kay] revision: fcbc19ad2d
 
 WARN: Access to undefined parameter `fasta` -- Initialise it to a default value eg. `params.fasta = some_value`
 
@@ -13,7 +13,7 @@ WARN: Access to undefined parameter `fasta` -- Initialise it to a default value 
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/phyloplace 2.0.1
+  nf-core/phyloplace 2.1.0dev
 ------------------------------------------------------
 Typical pipeline command:
 

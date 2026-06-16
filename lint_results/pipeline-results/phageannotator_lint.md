@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T10:25:40.310100666Z
-- Nextflow version: 25.12.0-edge
-- Summary: 59 errors, 98 warnings
+- Generated: 2026-06-16T14:26:43.448709772Z
+- Nextflow version: 26.04.3
+- Summary: 58 errors, 104 warnings
 
 ## :x: Errors
 
@@ -181,11 +181,11 @@
                                 ^
   ```
 
-- Error: `nextflow.config:151:5`: Unexpected input: 'includeConfig'
+- Error: `nextflow.config:326:14`: Unexpected input: '('
 
   ```nextflow
-      includeConfig "${params.custom_config_base}/nfcore_custom.config"
-      ^
+  def check_max(obj, type) {
+               ^
   ```
 
 - Error: `subworkflows/local/fasta_all_v_all_blast/main.nf:25:31`: Unexpected input: '='
@@ -405,13 +405,6 @@
                                    ^^^^^^^
   ```
 
-- Error: `tests/nextflow.config:55:1`: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/phageannotator/tests/https:/github.com/nf-core/modules/raw/master/tests/config/test_data.config'
-
-  ```nextflow
-  includeConfig 'https://github.com/nf-core/modules/raw/master/tests/config/test_data.config'
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
 - Error: `workflows/phageannotator/main.nf:411:32`: Unexpected input: '='
 
   ```nextflow
@@ -433,6 +426,13 @@
   ```nextflow
       ch_fasta_gz = samplesheet.map { meta, fastq, fasta -> return [ meta, fasta ] }
                                             ^^^^^
+  ```
+
+- Warning: `main.nf:73:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      versions = PHAGEANNOTATOR.out.versions
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `main.nf:85:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -1072,11 +1072,39 @@
                     ^^^^^^^
   ```
 
+- Warning: `subworkflows/nf-core/initialise/main.nf:78:9`: Variable was declared but not used
+
+  ```nextflow
+          summary_params = paramsSummaryMap(workflow)
+          ^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/initialise/main.nf:81:9`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+          summary_params
+          ^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/nf-core/initialise/main.nf:164:10`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
   def logo(workflow, monochrome_logs) {
            ^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Variable was declared but not used
+
+  ```nextflow
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:24:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_config
+      ^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:121:48`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -1105,4 +1133,11 @@
   ```nextflow
           } catch (all) {
                    ^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfvalidation_plugin/main.nf:61:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```

@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-02-16T00:19:47.188987641Z
-- Nextflow version: 26.01.1-edge
-- Summary: 12 errors, 46 warnings
+- Generated: 2026-06-16T14:11:20.206834366Z
+- Nextflow version: 26.04.3
+- Summary: 12 errors, 52 warnings
 
 ## :x: Errors
 
@@ -91,6 +91,13 @@
   ```
 
 ## :warning: Warnings
+
+- Warning: `main.nf:58:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      multiqc_report = COPROID.out.multiqc_report // channel: /path/to/multiqc_report.html
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
 
 - Warning: `modules/local/create_acc2tax/main.nf:18:9`: Variable was declared but not used
 
@@ -267,6 +274,13 @@
       ^^^^^^^
   ```
 
+- Warning: `subworkflows/local/quarto_reporting/main.nf:46:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      versions = ch_versions
+      ^^^^^^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/sam2lca_db/main.nf:15:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -293,6 +307,34 @@
   ```nextflow
       genome_sheet //  string: Path to reference genomesheet
       ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
+
+  ```nextflow
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_config
+      ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/coproid.nf:71:70`: Implicit closure parameter is deprecated, declare an explicit parameter instead

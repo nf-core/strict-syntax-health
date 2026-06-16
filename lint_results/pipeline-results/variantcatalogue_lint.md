@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T10:31:16.701405798Z
-- Nextflow version: 25.12.0-edge
-- Summary: 55 errors, 48 warnings
+- Generated: 2026-06-16T14:38:27.765321467Z
+- Nextflow version: 26.04.3
+- Summary: 46 errors, 49 warnings
 
 ## :x: Errors
 
@@ -125,25 +125,11 @@
                      ^^^^^^^^^
   ```
 
-- Error: `main.nf:21:16`: `WorkflowMain` is not defined
-
-  ```nextflow
-  params.fasta = WorkflowMain.getGenomeAttribute(params, 'fasta')
-                 ^^^^^^^^^^^^
-  ```
-
 - Error: `main.nf:29:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   WorkflowMain.initialise(workflow, params, log)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `main.nf:29:1`: `WorkflowMain` is not defined
-
-  ```nextflow
-  WorkflowMain.initialise(workflow, params, log)
-  ^^^^^^^^^^^^
   ```
 
 - Error: `modules/local/MT_Step2_participant_data.nf:6:12`: `meta` is already declared
@@ -188,11 +174,11 @@
                 ^^^^^
   ```
 
-- Error: `nextflow.config:65:5`: Unexpected input: 'includeConfig'
+- Error: `nextflow.config:209:14`: Unexpected input: '('
 
   ```nextflow
-      includeConfig "${params.custom_config_base}/nfcore_custom.config"
-      ^
+  def check_max(obj, type) {
+               ^
   ```
 
 - Error: `workflows/variantcatalogue.nf:7:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
@@ -202,25 +188,11 @@
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/variantcatalogue.nf:7:22`: `NfcoreSchema` is not defined
-
-  ```nextflow
-  def summary_params = NfcoreSchema.paramsSummaryMap(workflow, params)
-                       ^^^^^^^^^^^^
-  ```
-
 - Error: `workflows/variantcatalogue.nf:10:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   WorkflowVariantcatalogue.initialise(params, log)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/variantcatalogue.nf:10:1`: `WorkflowVariantcatalogue` is not defined
-
-  ```nextflow
-  WorkflowVariantcatalogue.initialise(params, log)
-  ^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Error: `workflows/variantcatalogue.nf:13:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
@@ -314,25 +286,11 @@
           ^^^^^^^^
   ```
 
-- Error: `workflows/variantcatalogue.nf:359:27`: `WorkflowVariantcatalogue` is not defined
-
-  ```nextflow
-      workflow_summary    = WorkflowVariantcatalogue.paramsSummaryMultiqc(workflow, summary_params)
-                            ^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
 - Error: `workflows/variantcatalogue.nf:359:83`: `summary_params` is not defined
 
   ```nextflow
       workflow_summary    = WorkflowVariantcatalogue.paramsSummaryMultiqc(workflow, summary_params)
                                                                                     ^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/variantcatalogue.nf:362:30`: `WorkflowVariantcatalogue` is not defined
-
-  ```nextflow
-      methods_description    = WorkflowVariantcatalogue.methodsDescriptionText(workflow, ch_multiqc_custom_methods_description)
-                               ^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Error: `workflows/variantcatalogue.nf:362:88`: `ch_multiqc_custom_methods_description` is not defined
@@ -368,27 +326,6 @@
   ```nextflow
   workflow.onComplete {
   ^
-  ```
-
-- Error: `workflows/variantcatalogue.nf:393:9`: `NfcoreTemplate` is not defined
-
-  ```nextflow
-          NfcoreTemplate.email(workflow, params, summary_params, projectDir, log, multiqc_report)
-          ^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/variantcatalogue.nf:395:5`: `NfcoreTemplate` is not defined
-
-  ```nextflow
-      NfcoreTemplate.summary(workflow, params, log)
-      ^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/variantcatalogue.nf:397:9`: `NfcoreTemplate` is not defined
-
-  ```nextflow
-          NfcoreTemplate.IM_notification(workflow, params, summary_params, projectDir, log)
-          ^^^^^^^^^^^^^^
   ```
 
 ## :warning: Warnings
@@ -566,6 +503,13 @@
   ```nextflow
           .map { create_fastq_channel(it) }
                                       ^^
+  ```
+
+- Warning: `subworkflows/local/input_check.nf:16:16`: Variable was declared but not used
+
+  ```nextflow
+          .set { reads }
+                 ^^^^^
   ```
 
 - Warning: `workflows/variantcatalogue.nf:17:21`: Variable was declared but not used

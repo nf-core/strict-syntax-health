@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T10:24:53.971076257Z
-- Nextflow version: 25.12.0-edge
-- Summary: 44 errors, 30 warnings
+- Generated: 2026-06-16T14:25:13.761365301Z
+- Nextflow version: 26.04.3
+- Summary: 33 errors, 31 warnings
 
 ## :x: Errors
 
@@ -132,39 +132,11 @@
   ^
   ```
 
-- Error: `main.nf:31:16`: `NfcoreTemplate` is not defined
-
-  ```nextflow
-      def logo = NfcoreTemplate.logo(workflow, params.monochrome_logs)
-                 ^^^^^^^^^^^^^^
-  ```
-
-- Error: `main.nf:32:27`: `WorkflowMain` is not defined
-
-  ```nextflow
-      def citation = '\n' + WorkflowMain.citation(workflow) + '\n'
-                            ^^^^^^^^^^^^
-  ```
-
-- Error: `main.nf:34:54`: `NfcoreTemplate` is not defined
-
-  ```nextflow
-      log.info logo + paramsHelp(command) + citation + NfcoreTemplate.dashedLine(params.monochrome_logs)
-                                                       ^^^^^^^^^^^^^^
-  ```
-
 - Error: `main.nf:43:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   WorkflowMain.initialise(workflow, params, log, args)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `main.nf:43:1`: `WorkflowMain` is not defined
-
-  ```nextflow
-  WorkflowMain.initialise(workflow, params, log, args)
-  ^^^^^^^^^^^^
   ```
 
 - Error: `modules/nf-core/multiqc/main.nf:28:31`: Unexpected input: '/'
@@ -174,11 +146,11 @@
                                 ^
   ```
 
-- Error: `nextflow.config:71:5`: Unexpected input: 'includeConfig'
+- Error: `nextflow.config:237:14`: Unexpected input: '('
 
   ```nextflow
-      includeConfig "${params.custom_config_base}/nfcore_custom.config"
-      ^
+  def check_max(obj, type) {
+               ^
   ```
 
 - Error: `subworkflows/local/mmap.nf:21:21`: Unexpected input: '->'
@@ -195,25 +167,11 @@
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/omicsgenetraitassociation.nf:9:12`: `NfcoreTemplate` is not defined
-
-  ```nextflow
-  def logo = NfcoreTemplate.logo(workflow, params.monochrome_logs)
-             ^^^^^^^^^^^^^^
-  ```
-
 - Error: `workflows/omicsgenetraitassociation.nf:10:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   def citation = '\n' + WorkflowMain.citation(workflow) + '\n'
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/omicsgenetraitassociation.nf:10:23`: `WorkflowMain` is not defined
-
-  ```nextflow
-  def citation = '\n' + WorkflowMain.citation(workflow) + '\n'
-                        ^^^^^^^^^^^^
   ```
 
 - Error: `workflows/omicsgenetraitassociation.nf:11:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
@@ -235,13 +193,6 @@
   ```nextflow
   WorkflowOmicsgenetraitassociation.initialise(params, log)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/omicsgenetraitassociation.nf:16:1`: `WorkflowOmicsgenetraitassociation` is not defined
-
-  ```nextflow
-  WorkflowOmicsgenetraitassociation.initialise(params, log)
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Error: `workflows/omicsgenetraitassociation.nf:52:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/omicsgenetraitassociation/subworkflows/local/mmap.nf'
@@ -284,34 +235,6 @@
   ```nextflow
   workflow.onComplete {
   ^
-  ```
-
-- Error: `workflows/omicsgenetraitassociation.nf:250:9`: `NfcoreTemplate` is not defined
-
-  ```nextflow
-          NfcoreTemplate.email(workflow, params, summary_params, projectDir, log)
-          ^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/omicsgenetraitassociation.nf:252:5`: `NfcoreTemplate` is not defined
-
-  ```nextflow
-      NfcoreTemplate.dump_parameters(workflow, params)
-      ^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/omicsgenetraitassociation.nf:253:5`: `NfcoreTemplate` is not defined
-
-  ```nextflow
-      NfcoreTemplate.summary(workflow, params, log)
-      ^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/omicsgenetraitassociation.nf:255:9`: `NfcoreTemplate` is not defined
-
-  ```nextflow
-          NfcoreTemplate.IM_notification(workflow, params, summary_params, projectDir, log)
-          ^^^^^^^^^^^^^^
   ```
 
 ## :warning: Warnings
@@ -433,6 +356,13 @@
   ```nextflow
           .map { create_fastq_channel(it) }
                                       ^^
+  ```
+
+- Warning: `subworkflows/local/input_check.nf:16:16`: Variable was declared but not used
+
+  ```nextflow
+          .set { reads }
+                 ^^^^^
   ```
 
 - Warning: `subworkflows/local/pascal.nf:14:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead

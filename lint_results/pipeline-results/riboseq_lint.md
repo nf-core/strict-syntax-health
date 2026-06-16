@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-05-06T00:36:15.525078065Z
-- Nextflow version: 26.04.0
-- Summary: 125 warnings
+- Generated: 2026-06-16T14:30:50.637409971Z
+- Nextflow version: 26.04.3
+- Summary: 128 warnings
 
 ## :warning: Warnings
 
@@ -524,11 +524,32 @@
       ^^^^^^^^
   ```
 
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
 
   ```nextflow
       valid_config = checkConfigProvided()
       ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_config
+      ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/riboseq/main.nf:88:5`: Parameter was not used -- prefix with `_` to suppress warning

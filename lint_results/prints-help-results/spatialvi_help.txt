@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.04.0
+ N E X T F L O W   ~  version 26.04.3
 
-Launching `./main.nf` [insane_bhabha] revision: dbc24d81d4
+Launching `./main.nf` [amazing_mirzakhani] revision: dbc24d81d4
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'

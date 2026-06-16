@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T10:17:53.673643718Z
-- Nextflow version: 25.12.0-edge
-- Summary: 41 errors, 168 warnings
+- Generated: 2026-06-16T14:10:11.886668452Z
+- Nextflow version: 26.04.3
+- Summary: 41 errors, 177 warnings
 
 ## :x: Errors
 
@@ -421,6 +421,13 @@
                                                    ^^
   ```
 
+- Warning: `main.nf:142:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      multiqc_report = CALLINGCARDS.out.multiqc_report // channel: /path/to/multiqc_report.html
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `modules/local/callingcardstools/mammals/concatQC/main.nf:11:15`: Variable was declared but not used
 
   ```nextflow
@@ -792,6 +799,20 @@
                      ^^^^^^^
   ```
 
+- Warning: `subworkflows/local/yeast/prepare_reads.nf:35:29`: Variable was declared but not used
+
+  ```nextflow
+      FASTQCRAW.out.html.set{ raw_fastqc_html }
+                              ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/yeast/prepare_reads.nf:36:28`: Variable was declared but not used
+
+  ```nextflow
+      FASTQCRAW.out.zip.set{ raw_fastqc_zip }
+                             ^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/yeast/prepare_reads.nf:51:14`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
@@ -811,6 +832,20 @@
   ```nextflow
               reads.every {it.size() > 0} }
                            ^^
+  ```
+
+- Warning: `subworkflows/local/yeast/prepare_reads.nf:131:31`: Variable was declared but not used
+
+  ```nextflow
+      FASTQCDEMUX.out.html.set{ demux_fastqc_html }
+                                ^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/yeast/prepare_reads.nf:132:31`: Variable was declared but not used
+
+  ```nextflow
+      FASTQCDEMUX.out.zip.set { demux_fastqc_zip  }
+                                ^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/yeast/prepare_reads.nf:231:9`: Variable was declared but not used
@@ -1128,11 +1163,39 @@
                                            ^^^
   ```
 
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
+
+  ```nextflow
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_config
+      ^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       return ch_versions.unique().map { version -> processVersionsFromYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
                                                                                                    ^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:44:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/callingcards.nf:39:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead

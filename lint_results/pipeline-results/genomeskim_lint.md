@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T10:21:32.133019559Z
-- Nextflow version: 25.12.0-edge
-- Summary: 40 errors, 13 warnings
+- Generated: 2026-06-16T14:18:34.284637882Z
+- Nextflow version: 26.04.3
+- Summary: 33 errors, 14 warnings
 
 ## :x: Errors
 
@@ -104,13 +104,6 @@
                      ^^^^^^^^^
   ```
 
-- Error: `main.nf:20:16`: `WorkflowMain` is not defined
-
-  ```nextflow
-  params.fasta = WorkflowMain.getGenomeAttribute(params, 'fasta')
-                 ^^^^^^^^^^^^
-  ```
-
 - Error: `main.nf:28:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
@@ -118,18 +111,11 @@
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `main.nf:28:1`: `WorkflowMain` is not defined
+- Error: `nextflow.config:180:14`: Unexpected input: '('
 
   ```nextflow
-  WorkflowMain.initialise(workflow, params, log)
-  ^^^^^^^^^^^^
-  ```
-
-- Error: `nextflow.config:61:5`: Unexpected input: 'includeConfig'
-
-  ```nextflow
-      includeConfig "${params.custom_config_base}/nfcore_custom.config"
-      ^
+  def check_max(obj, type) {
+               ^
   ```
 
 - Error: `workflows/genomeskim.nf:7:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
@@ -139,25 +125,11 @@
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/genomeskim.nf:7:22`: `NfcoreSchema` is not defined
-
-  ```nextflow
-  def summary_params = NfcoreSchema.paramsSummaryMap(workflow, params)
-                       ^^^^^^^^^^^^
-  ```
-
 - Error: `workflows/genomeskim.nf:10:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   WorkflowGenomeskim.initialise(params, log)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/genomeskim.nf:10:1`: `WorkflowGenomeskim` is not defined
-
-  ```nextflow
-  WorkflowGenomeskim.initialise(params, log)
-  ^^^^^^^^^^^^^^^^^^
   ```
 
 - Error: `workflows/genomeskim.nf:14:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
@@ -237,13 +209,6 @@
           ^^^^^^^^
   ```
 
-- Error: `workflows/genomeskim.nf:89:27`: `WorkflowGenomeskim` is not defined
-
-  ```nextflow
-      workflow_summary    = WorkflowGenomeskim.paramsSummaryMultiqc(workflow, summary_params)
-                            ^^^^^^^^^^^^^^^^^^
-  ```
-
 - Error: `workflows/genomeskim.nf:89:77`: `summary_params` is not defined
 
   ```nextflow
@@ -272,20 +237,6 @@
   ^
   ```
 
-- Error: `workflows/genomeskim.nf:114:9`: `NfcoreTemplate` is not defined
-
-  ```nextflow
-          NfcoreTemplate.email(workflow, params, summary_params, projectDir, log, multiqc_report)
-          ^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/genomeskim.nf:116:5`: `NfcoreTemplate` is not defined
-
-  ```nextflow
-      NfcoreTemplate.summary(workflow, params, log)
-      ^^^^^^^^^^^^^^
-  ```
-
 ## :warning: Warnings
 
 - Warning: `modules/nf-core/modules/custom/dumpsoftwareversions/main.nf:22:9`: Variable was declared but not used
@@ -300,6 +251,13 @@
   ```nextflow
           .map { create_fastq_channel(it) }
                                       ^^
+  ```
+
+- Warning: `subworkflows/local/input_check.nf:16:16`: Variable was declared but not used
+
+  ```nextflow
+          .set { reads }
+                 ^^^^^
   ```
 
 - Warning: `workflows/genomeskim.nf:18:21`: Variable was declared but not used

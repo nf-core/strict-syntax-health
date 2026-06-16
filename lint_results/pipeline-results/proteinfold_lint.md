@@ -1,12 +1,12 @@
 # Nextflow lint results
 
-- Generated: 2026-05-29T00:42:27.254502966Z
+- Generated: 2026-06-16T14:28:23.681671505Z
 - Nextflow version: 26.04.3
 - Summary: 7 warnings
 
 ## :warning: Warnings
 
-- Warning: `main.nf:616:5`: Emit name should be omitted when there is only one emit
+- Warning: `main.nf:620:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
       multiqc_report = ch_multiqc

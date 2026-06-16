@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T10:20:46.897160443Z
-- Nextflow version: 25.12.0-edge
-- Summary: 9 errors, 32 warnings
+- Generated: 2026-06-16T14:16:25.636125182Z
+- Nextflow version: 26.04.3
+- Summary: 9 errors, 37 warnings
 
 ## :x: Errors
 
@@ -70,6 +70,13 @@
   ```
 
 ## :warning: Warnings
+
+- Warning: `main.nf:44:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      multiqc_report = FASTQREPAIR.out.multiqc_report // channel: /path/to/multiqc_report.html
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/wipertools/fastqgather/main.nf:25:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
@@ -162,11 +169,39 @@
       ^^^^^^^
   ```
 
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
+
+  ```nextflow
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_config
+      ^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       return ch_versions.unique().map { version -> processVersionsFromYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
                                                                                                    ^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:44:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/fastqrepair.nf:29:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead

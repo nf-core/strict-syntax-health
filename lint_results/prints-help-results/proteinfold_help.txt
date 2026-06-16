@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.04.3
 
-Launching `./main.nf` [pensive_stonebraker] revision: 39efeac858
+Launching `./main.nf` [friendly_mcclintock] revision: 2f93b16035
 
 
 ------------------------------------------------------
@@ -59,7 +59,7 @@ alphafold_params_2022-12-06]
 ColabFold options
   --colabfold_num_recycles                  [integer] Number of recycles for ColabFold [default: 3] 
   --colabfold_use_amber                     [boolean] Use Amber minimization to refine the predicted structures [default: true] 
-  --colabfold_use_gpu_relax                 [boolean] Use GPU for Amber relaxation in ColabFold [default: false] 
+  --colabfold_use_gpu_relax                 [boolean] Use GPU for Amber relaxation in ColabFold 
   --colabfold_db_load_mode                  [integer] Specify the way that MMSeqs2 will load the required databases in memory  (accepted: 0, 1, 2, 3) 
  
   --colabfold_use_templates                 [boolean] Use PDB templates [default: false] 

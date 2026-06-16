@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T10:23:25.754836376Z
-- Nextflow version: 25.12.0-edge
-- Summary: 52 errors, 123 warnings
+- Generated: 2026-06-16T14:22:09.707241681Z
+- Nextflow version: 26.04.3
+- Summary: 52 errors, 125 warnings
 
 ## :x: Errors
 
@@ -244,11 +244,11 @@
                                 ^
   ```
 
-- Error: `nextflow.config:304:5`: Unexpected input: 'includeConfig'
+- Error: `nextflow.config:483:14`: Unexpected input: '('
 
   ```nextflow
-      includeConfig "${params.custom_config_base}/nfcore_custom.config"
-      ^
+  def check_max(obj, type) {
+               ^
   ```
 
 - Error: `subworkflows/local/identification.nf:106:20`: Incomplete expression
@@ -371,6 +371,13 @@
   ```
 
 ## :warning: Warnings
+
+- Warning: `main.nf:55:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      multiqc_report = METABOIGNITER.out.multiqc_report // channel: /path/to/multiqc_report.html
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
 
 - Warning: `modules/local/general_mergefile.nf:22:48`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
@@ -1147,6 +1154,13 @@
   ```nextflow
   ms_channel = PYOPENMS_SPLITMS.out.ms.flatMap{id, values -> values.collect { [id, it]}}
                                                                                    ^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfvalidation_plugin/main.nf:61:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/metaboigniter.nf:49:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead

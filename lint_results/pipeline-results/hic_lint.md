@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-05-06T10:08:37.749887031Z
-- Nextflow version: 26.04.0
-- Summary: 12 errors, 26 warnings
+- Generated: 2026-06-16T14:19:27.986340986Z
+- Nextflow version: 26.04.3
+- Summary: 12 errors, 31 warnings
 
 ## :x: Errors
 
@@ -91,6 +91,13 @@
   ```
 
 ## :warning: Warnings
+
+- Warning: `main.nf:73:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      multiqc_report = HIC.out.multiqc_report // channel: /path/to/multiqc_report.html
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
 
 - Warning: `modules/local/hicexplorer/hicPlotDistVsCounts.nf:22:9`: Variable was declared but not used
 
@@ -204,11 +211,32 @@
       ^^^^^^^^^^^
   ```
 
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
 
   ```nextflow
       valid_config = checkConfigProvided()
       ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_config
+      ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/hic.nf:38:5`: Parameter was not used -- prefix with `_` to suppress warning
@@ -272,4 +300,11 @@
   ```nextflow
               .filter{ it[0].resolution == it[2] }
                                            ^^
+  ```
+
+- Warning: `workflows/hic.nf:254:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      multiqc_report = MULTIQC.out.report.map { _meta, report -> [report] }.toList() // channel: /path/to/multiqc_report.html
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```

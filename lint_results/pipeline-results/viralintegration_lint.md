@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T10:31:26.605753296Z
-- Nextflow version: 25.12.0-edge
-- Summary: 66 errors, 13 warnings
+- Generated: 2026-06-16T14:38:47.702670597Z
+- Nextflow version: 26.04.3
+- Summary: 64 errors, 15 warnings
 
 ## :x: Errors
 
@@ -146,20 +146,6 @@
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `main.nf:34:16`: `getGenomeAttribute` is not defined
-
-  ```nextflow
-  params.fasta = getGenomeAttribute('fasta')
-                 ^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `main.nf:35:14`: `getGenomeAttribute` is not defined
-
-  ```nextflow
-  params.gtf = getGenomeAttribute('gtf')
-               ^^^^^^^^^^^^^^^^^^
-  ```
-
 - Error: `main.nf:77:5`: `PIPELINE_INITIALISATION` is not defined
 
   ```nextflow
@@ -265,11 +251,11 @@
           ^^^^^^^^^^
   ```
 
-- Error: `nextflow.config:79:5`: Unexpected input: 'includeConfig'
+- Error: `nextflow.config:263:14`: Unexpected input: '('
 
   ```nextflow
-      includeConfig "${params.custom_config_base}/nfcore_custom.config"
-      ^
+  def check_max(obj, type) {
+               ^
   ```
 
 - Error: `subworkflows/local/utils_nfcore_viralintegration_pipeline/main.nf:243:21`: Unexpected input: 'doi_ref'
@@ -470,11 +456,25 @@
 
 ## :warning: Warnings
 
+- Warning: `main.nf:61:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      multiqc_report = VIRALINTEGRATION.out.multiqc_report // channel: /path/to/multiqc_report.html
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `modules/nf-core/fastqc/main.nf:27:48`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       def renamed_files = old_new_pairs.collect{ old_name, new_name -> new_name }.join(' ')
                                                  ^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfvalidation_plugin/main.nf:61:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/viralintegration.nf:24:1`: Variable was declared but not used

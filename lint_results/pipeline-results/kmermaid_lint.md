@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T10:22:14.294913155Z
-- Nextflow version: 25.12.0-edge
-- Summary: 6 errors, 16 warnings
+- Generated: 2026-06-16T14:20:15.369963727Z
+- Nextflow version: 26.04.3
+- Summary: 6 errors, 21 warnings
 
 ## :x: Errors
 
@@ -50,6 +50,13 @@
 
 ## :warning: Warnings
 
+- Warning: `main.nf:44:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      multiqc_report = KMERMAID.out.multiqc_report // channel: /path/to/multiqc_report.html
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `nextflow.config:275:129`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
@@ -85,11 +92,39 @@
       ^^^^^^^
   ```
 
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
+
+  ```nextflow
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_config
+      ^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       return ch_versions.unique().map { version -> processVersionsFromYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
                                                                                                    ^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:44:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/kmermaid.nf:25:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead

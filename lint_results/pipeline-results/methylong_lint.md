@@ -1,10 +1,17 @@
 # Nextflow lint results
 
-- Generated: 2026-04-08T00:27:09.188621554Z
-- Nextflow version: 26.03.2-edge
-- Summary: 66 warnings
+- Generated: 2026-06-16T14:22:49.656899572Z
+- Nextflow version: 26.04.3
+- Summary: 79 warnings
 
 ## :warning: Warnings
+
+- Warning: `main.nf:46:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      multiqc_report = METHYLONG.out.multiqc_report // channel: /path/to/multiqc_report.html
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
 
 - Warning: `modules/local/bed2bedgraphs/modkit_bedgraphs/main.nf:53:9`: Variable was declared but not used
 
@@ -125,6 +132,13 @@
                                            ^^^^^^^^^^^^
   ```
 
+- Warning: `subworkflows/local/ont_fiberseq/main.nf:40:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      versions
+      ^^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/ont_trim_repair/main.nf:69:37`: Variable was declared but not used
 
   ```nextflow
@@ -167,11 +181,25 @@
                                            ^^^^^^^^^^^^
   ```
 
+- Warning: `subworkflows/local/pacbio_fiberseq/main.nf:37:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      versions
+      ^^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/pacbio_split_strand_pbcpg_pileup/main.nf:60:16`: Variable was declared but not used
 
   ```nextflow
           .set { pile_out }
                  ^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/pacbio_split_strand_pbcpg_pileup/main.nf:63:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      pile_out
+      ^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/shared_bed2bedgraph/main.nf:25:36`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -237,11 +265,25 @@
                                          ^^^^^^^
   ```
 
+- Warning: `subworkflows/local/shared_dss_population_scale/main.nf:64:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dmr_out
+      ^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/shared_dss_population_scale/preprocess/main.nf:45:35`: Variable was declared but not used
 
   ```nextflow
       GAWK_FOR_DSS.out.output.set { bed_preprocessed }
                                     ^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/shared_dss_population_scale/preprocess/main.nf:48:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      bed_preprocessed
+      ^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/shared_fastqc_unzip/main.nf:29:58`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -284,6 +326,13 @@
   ```nextflow
           .set { ch_awk_out }
                  ^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/shared_gunzip_awk/main.nf:39:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      ch_awk_out
+      ^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/shared_modkit_dmr_haplotype_level/main.nf:76:41`: Variable was declared but not used
@@ -342,6 +391,13 @@
                                            ^^^^^^^
   ```
 
+- Warning: `subworkflows/local/shared_modkit_dmr_population_scale/main.nf:68:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dmr_out
+      ^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/shared_modkit_dmr_population_scale/preprocess/main.nf:42:28`: Variable was declared but not used
 
   ```nextflow
@@ -370,11 +426,25 @@
                  ^^^^^^^^^^^^^
   ```
 
+- Warning: `subworkflows/local/shared_snvcall_clair3/main.nf:61:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      ch_clair3_out
+      ^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/shared_whatshap/main.nf:60:16`: Variable was declared but not used
 
   ```nextflow
           .set { ch_whatshap_out }
                  ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/shared_whatshap/main.nf:63:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      ch_whatshap_out
+      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/utils_nfcore_methylong_pipeline/main.nf:30:5`: Parameter was not used -- prefix with `_` to suppress warning
@@ -412,11 +482,32 @@
           ^^^^^^^^^^^^^^^
   ```
 
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
 
   ```nextflow
       valid_config = checkConfigProvided()
       ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_config
+      ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/methylong.nf:58:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead

@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-02-23T00:22:00.522865043Z
-- Nextflow version: 26.01.1-edge
-- Summary: 8 errors, 45 warnings
+- Generated: 2026-06-16T14:19:13.320424391Z
+- Nextflow version: 26.04.3
+- Summary: 8 errors, 50 warnings
 
 ## :x: Errors
 
@@ -63,6 +63,13 @@
   ```
 
 ## :warning: Warnings
+
+- Warning: `main.nf:59:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      multiqc_report = HADGE.out.multiqc_report // channel: /path/to/multiqc_report.html
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
 
 - Warning: `modules/local/create_anndata_mudata/main.nf:29:5`: Variable was declared but not used
 
@@ -356,6 +363,34 @@
   ```nextflow
           def bad = meta.hto_names.split(",").findAll { it.contains('_') }.join(', ')
                                                         ^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
+
+  ```nextflow
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_config
+      ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/hadge.nf:84:46`: Parameter was not used -- prefix with `_` to suppress warning

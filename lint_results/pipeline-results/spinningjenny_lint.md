@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T10:30:21.853829365Z
-- Nextflow version: 25.12.0-edge
-- Summary: 50 errors, 9 warnings
+- Generated: 2026-06-16T14:36:32.041483360Z
+- Nextflow version: 26.04.3
+- Summary: 50 errors, 12 warnings
 
 ## :x: Errors
 
@@ -146,11 +146,11 @@
       ^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `nextflow.config:77:5`: Unexpected input: 'includeConfig'
+- Error: `nextflow.config:243:14`: Unexpected input: '('
 
   ```nextflow
-      includeConfig "${params.custom_config_base}/nfcore_custom.config"
-      ^
+  def check_max(obj, type) {
+               ^
   ```
 
 - Error: `subworkflows/local/utils_nfcore_spinningjenny_pipeline/main.nf:14:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/spinningjenny/subworkflows/nf-core/utils_nextflow_pipeline/main.nf'
@@ -393,6 +393,20 @@
                                         ^^
   ```
 
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Variable was declared but not used
+
+  ```nextflow
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:24:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_config
+      ^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:121:48`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
@@ -419,4 +433,11 @@
   ```nextflow
           } catch (all) {
                    ^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfvalidation_plugin/main.nf:61:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```

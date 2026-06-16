@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T10:19:14.049777445Z
-- Nextflow version: 25.12.0-edge
-- Summary: 10 errors, 49 warnings
+- Generated: 2026-06-16T14:13:00.190425047Z
+- Nextflow version: 26.04.3
+- Summary: 16 errors, 56 warnings
 
 ## :x: Errors
 
@@ -69,11 +69,53 @@
              ^^^^
   ```
 
-- Error: `nextflow.config:214:5`: Unexpected input: 'includeConfig'
+- Error: `nextflow.config:211:1`: If statements cannot be mixed with config statements
 
   ```nextflow
-      includeConfig 'conf/igenomes.config'
-      ^
+  if (params.genome == null) {
+  ^
+  ```
+
+- Error: `nextflow.config:316:38`: `manifest` is not defined
+
+  ```nextflow
+  \033[0;35m  nf-core/deepmodeloptim ${manifest.version}\033[0m
+                                       ^^^^^^^^
+  ```
+
+- Error: `nextflow.config:319:26`: `manifest` is not defined
+
+  ```nextflow
+          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+                           ^^^^^^^^
+  ```
+
+- Error: `nextflow.config:319:69`: `manifest` is not defined
+
+  ```nextflow
+          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+                                                                      ^^^^^^^^
+  ```
+
+- Error: `nextflow.config:319:186`: `manifest` is not defined
+
+  ```nextflow
+          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+                                                                                                                                                                                           ^^^^^^^^
+  ```
+
+- Error: `nextflow.config:328:22`: `validation` is not defined
+
+  ```nextflow
+          beforeText = validation.help.beforeText
+                       ^^^^^^^^^^
+  ```
+
+- Error: `nextflow.config:329:21`: `validation` is not defined
+
+  ```nextflow
+          afterText = validation.help.afterText
+                      ^^^^^^^^^^
   ```
 
 ## :warning: Warnings
@@ -113,6 +155,13 @@
                  ^^
   ```
 
+- Warning: `nextflow.config:319:129`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+                                                                                                                                  ^^
+  ```
+
 - Warning: `subworkflows/local/check_model/main.nf:26:5`: Variable was declared but not used
 
   ```nextflow
@@ -146,6 +195,13 @@
   ```nextflow
           meta, csv -> csv
           ^^^^
+  ```
+
+- Warning: `subworkflows/local/evaluation/main.nf:96:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      versions = ch_versions // channel: [ versions.yml ]
+      ^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/preprocess_ibis_bedfile_to_stimulus/main.nf:51:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -386,11 +442,39 @@
               ^^^^^^^
   ```
 
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
+
+  ```nextflow
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_config
+      ^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       return ch_versions.unique().map { version -> processVersionsFromYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
                                                                                                    ^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:44:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/deepmodeloptim.nf:48:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -419,4 +503,11 @@
   ```nextflow
           ).set { ch_collated_versions }
                   ^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `workflows/deepmodeloptim.nf:163:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      versions = ch_versions  // channel: [ path(versions.yml) ]
+      ^^^^^^^^^^^^^^^^^^^^
   ```

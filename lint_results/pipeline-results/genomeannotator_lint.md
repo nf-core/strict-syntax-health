@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T10:21:12.551179534Z
-- Nextflow version: 25.12.0-edge
-- Summary: 85 errors, 148 warnings
+- Generated: 2026-06-16T14:17:58.602745242Z
+- Nextflow version: 26.04.3
+- Summary: 79 errors, 151 warnings
 
 ## :x: Errors
 
@@ -146,13 +146,6 @@
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `main.nf:28:1`: `WorkflowMain` is not defined
-
-  ```nextflow
-  WorkflowMain.initialise(workflow, params, log)
-  ^^^^^^^^^^^^
-  ```
-
 - Error: `modules/local/augustus/augustusbatch.nf:11:9`: `AUGUSTUS_CONFIG_PATH` is not defined
 
   ```nextflow
@@ -223,11 +216,11 @@
       ^
   ```
 
-- Error: `nextflow.config:120:5`: Unexpected input: 'includeConfig'
+- Error: `nextflow.config:232:14`: Unexpected input: '('
 
   ```nextflow
-      includeConfig "${params.custom_config_base}/nfcore_custom.config"
-      ^
+  def check_max(obj, type) {
+               ^
   ```
 
 - Error: `subworkflows/local/genome_align.nf:98:5`: `array` was assigned but not declared
@@ -251,25 +244,11 @@
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/genomeannotator.nf:7:22`: `NfcoreSchema` is not defined
-
-  ```nextflow
-  def summary_params = NfcoreSchema.paramsSummaryMap(workflow, params)
-                       ^^^^^^^^^^^^
-  ```
-
 - Error: `workflows/genomeannotator.nf:10:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   WorkflowGenomeannotator.initialise(params, log)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/genomeannotator.nf:10:1`: `WorkflowGenomeannotator` is not defined
-
-  ```nextflow
-  WorkflowGenomeannotator.initialise(params, log)
-  ^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Error: `workflows/genomeannotator.nf:12:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
@@ -552,13 +531,6 @@
             ^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/genomeannotator.nf:357:27`: `WorkflowGenomeannotator` is not defined
-
-  ```nextflow
-      workflow_summary    = WorkflowGenomeannotator.paramsSummaryMultiqc(workflow, summary_params)
-                            ^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
 - Error: `workflows/genomeannotator.nf:357:82`: `summary_params` is not defined
 
   ```nextflow
@@ -585,20 +557,6 @@
   ```nextflow
   workflow.onComplete {
   ^
-  ```
-
-- Error: `workflows/genomeannotator.nf:382:9`: `NfcoreTemplate` is not defined
-
-  ```nextflow
-          NfcoreTemplate.email(workflow, params, summary_params, projectDir, log, multiqc_report)
-          ^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/genomeannotator.nf:384:5`: `NfcoreTemplate` is not defined
-
-  ```nextflow
-      NfcoreTemplate.summary(workflow, params, log)
-      ^^^^^^^^^^^^^^
   ```
 
 ## :warning: Warnings
@@ -1233,6 +1191,13 @@
                          ^^^^^^^
   ```
 
+- Warning: `subworkflows/local/busco_qc.nf:34:4`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+     busco_summary = BUSCO.out.summary
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/evm.nf:18:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
@@ -1275,6 +1240,13 @@
                                       ^^
   ```
 
+- Warning: `subworkflows/local/input_check.nf:16:16`: Variable was declared but not used
+
+  ```nextflow
+          .set { reads }
+                 ^^^^^
+  ```
+
 - Warning: `subworkflows/local/ncrna.nf:29:38`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
@@ -1294,6 +1266,13 @@
   ```nextflow
         GUNZIP_RFAM_FAMILY.out.gunzip.map{m,f -> f}
                                           ^
+  ```
+
+- Warning: `subworkflows/local/ncrna.nf:59:4`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+     gff = HELPER_RFAMTOGFF.out.gff
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/repeatmasker.nf:26:31`: Parameter was not used -- prefix with `_` to suppress warning

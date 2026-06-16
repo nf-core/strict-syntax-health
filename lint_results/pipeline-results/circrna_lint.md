@@ -1,10 +1,17 @@
 # Nextflow lint results
 
-- Generated: 2026-05-12T00:33:25.512804826Z
-- Nextflow version: 26.04.1
-- Summary: 20 warnings
+- Generated: 2026-06-16T14:10:56.915006444Z
+- Nextflow version: 26.04.3
+- Summary: 29 warnings
 
 ## :warning: Warnings
+
+- Warning: `main.nf:81:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      multiqc_report = CIRCRNA.out.multiqc_report // channel: /path/to/multiqc_report.html
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
 
 - Warning: `modules/local/circtest/prepare/main.nf:19:5`: Variable was declared but not used
 
@@ -90,6 +97,41 @@
           ^^^^^^^^^
   ```
 
+- Warning: `subworkflows/local/fli_tools/jccirc.nf:40:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      versions = ch_versions
+      ^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/longread.nf:15:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      versions = ch_versions
+      ^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/longread_tools/circtools.nf:19:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      versions = ch_versions
+      ^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/mirna_prediction.nf:82:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      versions = ch_versions
+      ^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/statistical_tests.nf:76:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      versions = ch_versions
+      ^^^^^^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/nf-core/fastqc_trimgalore.nf:15:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -144,4 +186,25 @@
   ```nextflow
       trimgalore_versions = Channel.empty()
                             ^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_config = valid_config
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```

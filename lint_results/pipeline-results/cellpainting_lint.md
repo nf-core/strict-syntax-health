@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-05-01T00:34:55.111381993Z
-- Nextflow version: 26.04.0
-- Summary: 2 errors, 10 warnings
+- Generated: 2026-06-16T14:10:18.197255027Z
+- Nextflow version: 26.04.3
+- Summary: 2 errors, 14 warnings
 
 ## :x: Errors
 
@@ -21,6 +21,13 @@
   ```
 
 ## :warning: Warnings
+
+- Warning: `main.nf:50:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      multiqc_report = CELLPAINTING.out.multiqc_report // channel: /path/to/multiqc_report.html
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
 
 - Warning: `subworkflows/local/utils_nfcore_cellpainting_pipeline/main.nf:32:5`: Parameter was not used -- prefix with `_` to suppress warning
 
@@ -43,11 +50,32 @@
       ^^^^^^^
   ```
 
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
 
   ```nextflow
       valid_config = checkConfigProvided()
       ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_config
+      ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/cellpainting.nf:43:33`: Implicit closure parameter is deprecated, declare an explicit parameter instead

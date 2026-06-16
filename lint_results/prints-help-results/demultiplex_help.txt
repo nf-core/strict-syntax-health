@@ -1,10 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.03.2-edge
+ N E X T F L O W   ~  version 26.04.3
 
 Downloading plugin nf-schema@2.7.0
-Launching `./main.nf` [kickass_cantor] revision: 1921f8e539
+Launching `./main.nf` [friendly_baekeland] revision: 1921f8e539
 
 
 ------------------------------------------------------

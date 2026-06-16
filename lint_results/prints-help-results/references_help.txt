@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.04.3
 
-Launching `./main.nf` [irreverent_mandelbrot] revision: de79002a2e
+Launching `./main.nf` [sad_cori] revision: de79002a2e
 
 
 ------------------------------------------------------
@@ -16,11 +16,11 @@ Launching `./main.nf` [irreverent_mandelbrot] revision: de79002a2e
 ------------------------------------------------------
 
 Generic options
-  trace_report_suffix: 2026-06-12_00-47-44
+  trace_report_suffix: 2026-06-16_14-30-10
   help               : true
 
 Core Nextflow options
-  runName            : irreverent_mandelbrot
+  runName            : sad_cori
   launchDir          : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/references
   workDir            : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/references/work
   projectDir         : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/references

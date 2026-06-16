@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-05-12T00:35:54.776448087Z
-- Nextflow version: 26.04.1
-- Summary: 14 errors, 23 warnings
+- Generated: 2026-06-16T14:29:55.228262066Z
+- Nextflow version: 26.04.3
+- Summary: 14 errors, 26 warnings
 
 ## :x: Errors
 
@@ -148,10 +148,24 @@
       ^^^^^^^^^^^^^^^
   ```
 
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
 
   ```nextflow
       valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_config
       ^^^^^^^^^^^^
   ```
 
@@ -160,6 +174,13 @@
   ```nextflow
       return ch_versions.unique().map { version -> processVersionsFromYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
                                                                                                    ^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:44:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/rarevariantburden.nf:39:5`: Parameter was not used -- prefix with `_` to suppress warning

@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-03T00:26:52.322774020Z
-- Nextflow version: 26.03.1-edge
-- Summary: 64 errors, 102 warnings
+- Generated: 2026-06-16T14:25:39.791555541Z
+- Nextflow version: 26.04.3
+- Summary: 64 errors, 112 warnings
 
 ## :x: Errors
 
@@ -624,6 +624,13 @@
                         ^^^^^^^
   ```
 
+- Warning: `subworkflows/local/cider_calling/main.nf:91:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      versions = ch_versions // channel: [ versions.yml ]
+      ^^^^^^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/cobalt_normalisation/main.nf:24:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -631,11 +638,25 @@
                     ^^^^^^^
   ```
 
+- Warning: `subworkflows/local/cobalt_normalisation/main.nf:53:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      versions = ch_versions // channel: [ versions.yml ]
+      ^^^^^^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/isofox_normalisation/main.nf:23:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_versions = Channel.empty()
                     ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/isofox_normalisation/main.nf:44:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      versions = ch_versions // channel: [ versions.yml ]
+      ^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/isofox_quantification/main.nf:34:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -813,6 +834,13 @@
                     ^^^^^^^
   ```
 
+- Warning: `subworkflows/local/pave_pon_creation/main.nf:45:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      versions = ch_versions // channel: [ versions.yml ]
+      ^^^^^^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/peach_calling/main.nf:24:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -832,6 +860,13 @@
   ```nextflow
       ch_inputs = Channel.fromList(
                   ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/prepare_inputs/main.nf:23:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      inputs = ch_inputs // channel: [ meta ]
+      ^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/redux_processing/main.nf:33:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -1154,6 +1189,41 @@
   ```nextflow
       input             //  string: Path to input samplesheet
       ^^^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_oncoanalyser_pipeline/main.nf:101:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      versions    = ch_versions
+      ^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
+
+  ```nextflow
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_config
+      ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/prepare_reference.nf:24:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead

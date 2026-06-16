@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-04-11T00:26:47.727120789Z
-- Nextflow version: 26.03.2-edge
-- Summary: 3 errors, 66 warnings
+- Generated: 2026-06-16T14:23:08.523184536Z
+- Nextflow version: 26.04.3
+- Summary: 3 errors, 69 warnings
 
 ## :x: Errors
 
@@ -435,10 +435,24 @@
                     ^^^^^^^
   ```
 
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
 
   ```nextflow
       valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_config
       ^^^^^^^^^^^^
   ```
 
@@ -447,6 +461,13 @@
   ```nextflow
       return ch_versions.unique().map { version -> processVersionsFromYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
                                                                                                    ^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/methylseq/main.nf:197:86`: Implicit closure parameter is deprecated, declare an explicit parameter instead

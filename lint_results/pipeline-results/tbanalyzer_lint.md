@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T10:30:44.418608284Z
-- Nextflow version: 25.12.0-edge
-- Summary: 14 errors, 47 warnings
+- Generated: 2026-06-16T14:37:20.098594555Z
+- Nextflow version: 26.04.3
+- Summary: 28 errors, 53 warnings
 
 ## :x: Errors
 
@@ -97,14 +97,119 @@
             ^^^^^^^^^^^^^^
   ```
 
-- Error: `nextflow.config:62:5`: Unexpected input: 'includeConfig'
+- Error: `nextflow.config:61:1`: If statements cannot be mixed with config statements
 
   ```nextflow
-      includeConfig 'conf/mtbseq_base.config'
-      ^
+  if (params.mode == 'mtbseq') {
+  ^
+  ```
+
+- Error: `nextflow.config:217:1`: Variable declarations cannot be mixed with config statements
+
+  ```nextflow
+  def trace_timestamp = new java.util.Date().format( 'yyyy-MM-dd_HH-mm-ss')
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `nextflow.config:220:68`: `trace_timestamp` is not defined
+
+  ```nextflow
+      file    = "${params.outdir}/pipeline_info/execution_timeline_${trace_timestamp}.html"
+                                                                     ^^^^^^^^^^^^^^^
+  ```
+
+- Error: `nextflow.config:224:66`: `trace_timestamp` is not defined
+
+  ```nextflow
+      file    = "${params.outdir}/pipeline_info/execution_report_${trace_timestamp}.html"
+                                                                   ^^^^^^^^^^^^^^^
+  ```
+
+- Error: `nextflow.config:228:65`: `trace_timestamp` is not defined
+
+  ```nextflow
+      file    = "${params.outdir}/pipeline_info/execution_trace_${trace_timestamp}.txt"
+                                                                  ^^^^^^^^^^^^^^^
+  ```
+
+- Error: `nextflow.config:232:62`: `trace_timestamp` is not defined
+
+  ```nextflow
+      file    = "${params.outdir}/pipeline_info/pipeline_dag_${trace_timestamp}.html"
+                                                               ^^^^^^^^^^^^^^^
+  ```
+
+- Error: `nextflow.config:255:34`: `manifest` is not defined
+
+  ```nextflow
+          command = "nextflow run $manifest.name -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>"
+                                   ^^^^^^^^
+  ```
+
+- Error: `nextflow.config:265:15`: `manifest` is not defined
+
+  ```nextflow
+  \033[0;35m  ${manifest.name} ${manifest.version}\033[0m
+                ^^^^^^^^
+  ```
+
+- Error: `nextflow.config:265:32`: `manifest` is not defined
+
+  ```nextflow
+  \033[0;35m  ${manifest.name} ${manifest.version}\033[0m
+                                 ^^^^^^^^
+  ```
+
+- Error: `nextflow.config:268:26`: `manifest` is not defined
+
+  ```nextflow
+          afterText = """${manifest.doi ? "* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "  https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+                           ^^^^^^^^
+  ```
+
+- Error: `nextflow.config:268:67`: `manifest` is not defined
+
+  ```nextflow
+          afterText = """${manifest.doi ? "* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "  https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+                                                                    ^^^^^^^^
+  ```
+
+- Error: `nextflow.config:268:182`: `manifest` is not defined
+
+  ```nextflow
+          afterText = """${manifest.doi ? "* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "  https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+                                                                                                                                                                                       ^^^^^^^^
+  ```
+
+- Error: `nextflow.config:273:26`: `manifest` is not defined
+
+  ```nextflow
+      https://github.com/${manifest.name}/blob/master/CITATIONS.md
+                           ^^^^^^^^
+  ```
+
+- Error: `nextflow.config:277:22`: `validation` is not defined
+
+  ```nextflow
+          beforeText = validation.help.beforeText
+                       ^^^^^^^^^^
+  ```
+
+- Error: `nextflow.config:278:21`: `validation` is not defined
+
+  ```nextflow
+          afterText = validation.help.afterText
+                      ^^^^^^^^^^
   ```
 
 ## :warning: Warnings
+
+- Warning: `main.nf:70:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      multiqc_report = multiqc_report // channel: /path/to/multiqc_report.html
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
 
 - Warning: `modules/magma/modules/local/gatk4.nf:77:9`: Variable was declared but not used
 
@@ -197,6 +302,13 @@
           ^^^^
   ```
 
+- Warning: `nextflow.config:268:125`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          afterText = """${manifest.doi ? "* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "  https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+                                                                                                                              ^^
+  ```
+
 - Warning: `subworkflows/local/mtbseq/parallel_mode.nf:22:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -260,6 +372,13 @@
       ^^^^^^^
   ```
 
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:94:33`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
@@ -272,6 +391,20 @@
   ```nextflow
       catch (IOException e) {
                          ^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
+
+  ```nextflow
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_config
+      ^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:116:98`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -293,6 +426,13 @@
   ```nextflow
           catch (Exception all) {
                            ^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:44:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/mtbseqnf.nf:37:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead

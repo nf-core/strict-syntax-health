@@ -3,9 +3,8 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.04.3
 
-Downloading plugin nf-co2footprint@1.0.0
 Downloading plugin nf-prov@1.2.2
-Launching `./main.nf` [sick_payne] revision: 71277c8dd1
+Launching `./main.nf` [high_wegener] revision: 71277c8dd1
 
 WARN: Unrecognized config option 'prov.enabled'
 WARN: Unrecognized config option 'prov.formats.bco.file'

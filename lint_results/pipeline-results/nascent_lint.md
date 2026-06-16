@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T10:24:50.067675652Z
-- Nextflow version: 25.12.0-edge
-- Summary: 34 errors, 162 warnings
+- Generated: 2026-06-16T14:24:55.528740830Z
+- Nextflow version: 26.04.3
+- Summary: 38 errors, 167 warnings
 
 ## :x: Errors
 
@@ -230,11 +230,39 @@
                             ^^^^^^^^^^
   ```
 
-- Error: `tests/config/test_data.config:6:5`: Unexpected input: 'includeConfig'
+- Error: `tests/config/test_data.config:1:1`: Variable declarations cannot be mixed with config statements
 
   ```nextflow
-      includeConfig "https://raw.githubusercontent.com/nf-core/modules/master/tests/config/test_data.config"
-      ^
+  def test_data_dir = "${launchDir}/tests/data/"
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `tests/config/test_data.config:2:1`: Variable declarations cannot be mixed with config statements
+
+  ```nextflow
+  def nf_core_modules_data = "https://raw.githubusercontent.com/nf-core/test-datasets/modules/data/"
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `tests/config/test_data.config:3:1`: Variable declarations cannot be mixed with config statements
+
+  ```nextflow
+  def nf_core_nascent_data = "https://raw.githubusercontent.com/nf-core/test-datasets/nascent"
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `tests/config/test_data.config:5:1`: Try-catch blocks cannot be mixed with config statements
+
+  ```nextflow
+  try {
+  ^
+  ```
+
+- Error: `tests/config/test_data.config:16:45`: `nf_core_nascent_data` is not defined
+
+  ```nextflow
+              tune_csv                   = "${nf_core_nascent_data}/misc/tune.csv"
+                                              ^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Error: `workflows/nascent.nf:278:13`: Variables in a closure should be declared with `def`
@@ -245,6 +273,13 @@
   ```
 
 ## :warning: Warnings
+
+- Warning: `main.nf:75:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      multiqc_report = NASCENT.out.multiqc_report // channel: /path/to/multiqc_report.html
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/bowtie2/align/main.nf:93:9`: Variable was declared but not used
 
@@ -1023,11 +1058,39 @@
                                                                     ^^
   ```
 
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
+
+  ```nextflow
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_config
+      ^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       return ch_versions.unique().map { version -> processVersionsFromYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
                                                                                                    ^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:44:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/nascent.nf:63:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead

@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-02-14T00:20:48.077453092Z
-- Nextflow version: 26.01.1-edge
-- Summary: 16 errors, 437 warnings
+- Generated: 2026-06-16T14:26:35.703799736Z
+- Nextflow version: 26.04.3
+- Summary: 16 errors, 442 warnings
 
 ## :x: Errors
 
@@ -2787,6 +2787,34 @@
                                            ^^
   ```
 
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
+
+  ```nextflow
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_config
+      ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `workflows/pathogensurveillance.nf:150:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
@@ -3177,4 +3205,11 @@
   ```nextflow
               ref_meta.keySet().collect{'"' + it + '"'}.join('\t') + "\n" + ref_meta.values().collect{'"' + (it ?: '') + '"'}.join('\t') + "\n"
                                                                                                              ^^
+  ```
+
+- Warning: `workflows/pathogensurveillance.nf:369:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      multiqc_report = MULTIQC.out.report
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```

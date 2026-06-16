@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-10T00:43:25.947924459Z
+- Generated: 2026-06-16T14:17:24.014608116Z
 - Nextflow version: 26.04.3
-- Summary: 87 warnings
+- Summary: 71 warnings
 
 ## :warning: Warnings
 
@@ -18,55 +18,6 @@
   ```nextflow
       multiqc_report = FUNCSCAN.out.multiqc_report // channel: /path/to/multiqc_report.html
       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/ampcombi2/cluster/main.nf:37:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/ampcombi2/complete/main.nf:25:49`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          --summaries_files '${summaries.collect{"$it"}.join("' '")}' \\
-                                                  ^^
-  ```
-
-- Warning: `modules/nf-core/ampcombi2/complete/main.nf:35:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/ampcombi2/parsetables/main.nf:43:47`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          --path_list '${amp_input.collect { "${it}" }.join("' '")}' \\
-                                                ^^
-  ```
-
-- Warning: `modules/nf-core/ampcombi2/parsetables/main.nf:60:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/ampcombi2/parsetables/main.nf:62:9`: Variable was declared but not used
-
-  ```nextflow
-      def db_dir = opt_amp_db_dir ? "--amp_database_dir ${opt_amp_db_dir}" : ""
-          ^^^^^^
-  ```
-
-- Warning: `modules/nf-core/ampcombi2/parsetables/main.nf:63:9`: Variable was declared but not used
-
-  ```nextflow
-      def interpro = opt_interproscan ? "--interproscan_output ${opt_interproscan}" : ""
-          ^^^^^^^^
   ```
 
 - Warning: `modules/nf-core/ampir/main.nf:25:9`: Variable was declared but not used
@@ -158,69 +109,6 @@
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
-  ```
-
-- Warning: `subworkflows/local/amp.nf:111:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-              input: [it[0], it[1]]
-                      ^^
-  ```
-
-- Warning: `subworkflows/local/amp.nf:111:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-              input: [it[0], it[1]]
-                             ^^
-  ```
-
-- Warning: `subworkflows/local/amp.nf:112:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-              faa: it[2]
-                   ^^
-  ```
-
-- Warning: `subworkflows/local/amp.nf:113:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-              gbk: it[3]
-                   ^^
-  ```
-
-- Warning: `subworkflows/local/amp.nf:114:23`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-              interpro: it[4]
-                        ^^
-  ```
-
-- Warning: `subworkflows/local/amp.nf:129:65`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      ch_ampcombi_summaries = AMPCOMBI2_PARSETABLES.out.tsv.map { it[1] }.collect()
-                                                                  ^^
-  ```
-
-- Warning: `subworkflows/local/amp.nf:132:52`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      ch_summary_count = ch_ampcombi_summaries.map { it.size() }.sum()
-                                                     ^^
-  ```
-
-- Warning: `subworkflows/local/amp.nf:157:46`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          ch_mmseqs_taxonomy_list = tsvs.map { it[1] }.collect()
-                                               ^^
-  ```
-
-- Warning: `subworkflows/local/amp.nf:170:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      versions = ch_versions
-      ^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/annotation.nf:79:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead

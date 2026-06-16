@@ -1,10 +1,17 @@
 # Nextflow lint results
 
-- Generated: 2026-04-18T00:29:05.856940928Z
-- Nextflow version: 26.03.2-edge
-- Summary: 32 warnings
+- Generated: 2026-06-16T14:36:39.876511474Z
+- Nextflow version: 26.04.3
+- Summary: 43 warnings
 
 ## :warning: Warnings
+
+- Warning: `main.nf:44:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      multiqc_report = STABLEEXPRESSION.out.multiqc_report // channel: /path/to/multiqc_report.html
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
 
 - Warning: `modules/local/compute_dataset_statistics/main.nf:21:9`: Variable was declared but not used
 
@@ -34,6 +41,13 @@
       ^^^^^^^^^^^^^^^^^^^^^
   ```
 
+- Warning: `subworkflows/local/download_public_datasets/main.nf:64:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      datasets = ch_datasets
+      ^^^^^^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/expression_normalisation/main.nf:31:15`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
@@ -46,6 +60,20 @@
   ```nextflow
       ch_raw_rnaseq_datasets_to_normalise = ch_datasets.raw.filter { meta, file -> meta.platform == 'rnaseq' }
                                                                            ^^^^
+  ```
+
+- Warning: `subworkflows/local/expression_normalisation/main.nf:81:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      counts                   = QUANTILE_NORMALISATION.out.counts
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/genorm/main.nf:71:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      m_measures = COMPUTE_M_MEASURE.out.m_measures
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/genorm/main.nf:96:17`: Parameter was not used -- prefix with `_` to suppress warning
@@ -88,6 +116,20 @@
   ```nextflow
                                       .map { accession, excluded_accessions -> accession }
                                                         ^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/get_public_accessions/main.nf:135:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      accessions          = ch_all_accessions
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/get_transcript_lengths/main.nf:31:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      csv = COMPUTE_GENE_TRANSCRIPT_LENGTHS.out.csv
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/idmapping/main.nf:63:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -167,6 +209,13 @@
                              ^^^^
   ```
 
+- Warning: `subworkflows/local/stability_scoring/main.nf:71:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      summary_statistics      = COMPUTE_STABILITY_SCORES.out.stats_with_stability_scores
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/utils_nfcore_stableexpression_pipeline/main.nf:31:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
@@ -179,6 +228,13 @@
   ```nextflow
       input             //  string: Path to input samplesheet
       ^^^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_stableexpression_pipeline/main.nf:108:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      input_datasets = ch_input_datasets
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/utils_nfcore_stableexpression_pipeline/main.nf:235:19`: Parameter was not used -- prefix with `_` to suppress warning
@@ -209,10 +265,24 @@
               ^^^^
   ```
 
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
 
   ```nextflow
       valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_config
       ^^^^^^^^^^^^
   ```
 
@@ -221,6 +291,13 @@
   ```nextflow
       return ch_versions.unique().map { version -> processVersionsFromYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
                                                                                                    ^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/stableexpression.nf:183:40`: Parameter was not used -- prefix with `_` to suppress warning

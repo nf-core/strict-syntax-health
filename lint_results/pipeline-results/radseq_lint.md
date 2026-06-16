@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T10:26:39.790798200Z
-- Nextflow version: 25.12.0-edge
-- Summary: 45 errors, 42 warnings
+- Generated: 2026-06-16T14:28:57.623222787Z
+- Nextflow version: 26.04.3
+- Summary: 41 errors, 44 warnings
 
 ## :x: Errors
 
@@ -181,13 +181,6 @@
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `main.nf:28:1`: `WorkflowMain` is not defined
-
-  ```nextflow
-  WorkflowMain.initialise(workflow, params, log)
-  ^^^^^^^^^^^^
-  ```
-
 - Error: `main.nf:36:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/radseq/workflows/radseq.nf'
 
   ```nextflow
@@ -251,32 +244,11 @@
           ^^^^^^^^^^^^
   ```
 
-- Error: `nextflow.config:190:5`: Unexpected input: 'includeConfig'
+- Error: `nextflow.config:307:14`: Unexpected input: '('
 
   ```nextflow
-      includeConfig "${params.custom_config_base}/nfcore_custom.config"
-      ^
-  ```
-
-- Error: `subworkflows/local/bam_intervals_bedtools.nf:30:36`: `WorkflowRadseq` is not defined
-
-  ```nextflow
-      ch_bed_to_merge = ch_bed.map { WorkflowRadseq.groupMetaID(it) }.groupTuple() // [meta, bed]
-                                     ^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/bam_intervals_bedtools.nf:44:37`: `WorkflowRadseq` is not defined
-
-  ```nextflow
-          ch_cov_to_merge = cov.map { WorkflowRadseq.groupMetaID(it) }.groupTuple()
-                                      ^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/bam_intervals_bedtools.nf:69:41`: `WorkflowRadseq` is not defined
-
-  ```nextflow
-          ch_intervals = ch_fai_bed.map { WorkflowRadseq.splitBedFile(params, log, it) }.transpose()
-                                          ^^^^^^^^^^^^^^
+  def check_max(obj, type) {
+               ^
   ```
 
 - Error: `subworkflows/nf-core/bam_dedup_stats_samtools_umitools/main.nf:43:5`: Incorrect number of call arguments, expected 1 but received 2
@@ -463,11 +435,25 @@
                                                            ^^
   ```
 
+- Warning: `subworkflows/local/fastq_unzip.nf:19:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      fasta = ch_fasta
+      ^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/input_check.nf:15:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { create_fastq_channels(it) }
                                        ^^
+  ```
+
+- Warning: `subworkflows/local/input_check.nf:16:16`: Variable was declared but not used
+
+  ```nextflow
+          .set { reads }
+                 ^^^^^
   ```
 
 - Warning: `subworkflows/local/vcf_bcftools_radseq_filters.nf:15:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead

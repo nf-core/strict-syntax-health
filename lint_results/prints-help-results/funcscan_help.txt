@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.04.3
 
-Launching `./main.nf` [shrivelled_swartz] revision: 2f3242266f
+Launching `./main.nf` [goofy_linnaeus] revision: 2f3242266f
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -14,7 +14,7 @@ WARN: Unrecognized config option 'validation.monochromeLogs'
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/funcscan 3.1.0dev
+  nf-core/funcscan 4.0.0
 ------------------------------------------------------
 Typical pipeline command:
 
@@ -183,7 +183,7 @@ AMP: ampcombi2 cluster
   --amp_ampcombi_cluster_mode                       [number]  MMseqs2 clustering mode. [default: 1] 
   --amp_ampcombi_cluster_coverage                   [number]  MMseqs2 alignment coverage. [default: 0.8] 
   --amp_ampcombi_cluster_seqid                      [number]  MMseqs2 sequence identity. [default: 0.4] 
-  --amp_ampcombi_cluster_removesingletons           [boolean] Remove any hits that form a single member cluster. 
+  --amp_ampcombi_cluster_keepsingletons             [boolean] Keep any hits that form a single member cluster. 
 
 ARG: AMRFinderPlus
   --arg_skip_amrfinderplus                          [boolean] Skip AMRFinderPlus during the ARG screening. 

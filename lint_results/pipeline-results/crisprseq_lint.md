@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-03-07T00:18:41.564775322Z
-- Nextflow version: 26.02.0-edge
-- Summary: 13 errors, 45 warnings
+- Generated: 2026-06-16T14:12:03.739183242Z
+- Nextflow version: 26.04.3
+- Summary: 13 errors, 50 warnings
 
 ## :x: Errors
 
@@ -98,6 +98,13 @@
   ```
 
 ## :warning: Warnings
+
+- Warning: `main.nf:69:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      multiqc_report = multiqc_report_ch // channel: /path/to/multiqc_report.html
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
 
 - Warning: `modules/local/bagel2/bf.nf:26:9`: Variable was declared but not used
 
@@ -349,6 +356,34 @@
   ```nextflow
       def template_ok = metas.collect{ it.template }.unique().size == 1
                                        ^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
+
+  ```nextflow
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_config
+      ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/crisprseq_screening.nf:91:72`: Implicit closure parameter is deprecated, declare an explicit parameter instead

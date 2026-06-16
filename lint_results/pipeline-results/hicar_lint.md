@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T10:21:55.069666458Z
-- Nextflow version: 25.12.0-edge
-- Summary: 89 errors, 122 warnings
+- Generated: 2026-06-16T14:19:35.780354721Z
+- Nextflow version: 26.04.3
+- Summary: 78 errors, 123 warnings
 
 ## :x: Errors
 
@@ -146,60 +146,11 @@
                           ^^^^^^^^^
   ```
 
-- Error: `main.nf:20:21`: `WorkflowMain` is not defined
-
-  ```nextflow
-  params.fasta      = WorkflowMain.getGenomeAttribute(params, 'fasta')
-                      ^^^^^^^^^^^^
-  ```
-
-- Error: `main.nf:21:21`: `WorkflowMain` is not defined
-
-  ```nextflow
-  params.bwa_index  = WorkflowMain.getGenomeAttribute(params, 'bwa')
-                      ^^^^^^^^^^^^
-  ```
-
-- Error: `main.nf:22:21`: `WorkflowMain` is not defined
-
-  ```nextflow
-  params.gtf        = WorkflowMain.getGenomeAttribute(params, 'gtf')
-                      ^^^^^^^^^^^^
-  ```
-
-- Error: `main.nf:23:21`: `WorkflowMain` is not defined
-
-  ```nextflow
-  params.gff        = WorkflowMain.getGenomeAttribute(params, 'gff')
-                      ^^^^^^^^^^^^
-  ```
-
-- Error: `main.nf:24:21`: `WorkflowMain` is not defined
-
-  ```nextflow
-  params.gene_bed   = WorkflowMain.getGenomeAttribute(params, 'bed12')
-                      ^^^^^^^^^^^^
-  ```
-
-- Error: `main.nf:25:21`: `WorkflowMain` is not defined
-
-  ```nextflow
-  params.macs_gsize = WorkflowMain.getGenomeAttribute(params, 'macs_gsize')
-                      ^^^^^^^^^^^^
-  ```
-
 - Error: `main.nf:26:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   anno_readme       = WorkflowMain.getGenomeAttribute(params, 'readme')
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `main.nf:26:21`: `WorkflowMain` is not defined
-
-  ```nextflow
-  anno_readme       = WorkflowMain.getGenomeAttribute(params, 'readme')
-                      ^^^^^^^^^^^^
   ```
 
 - Error: `main.nf:28:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
@@ -216,27 +167,6 @@
   ^
   ```
 
-- Error: `main.nf:43:16`: `NfcoreTemplate` is not defined
-
-  ```nextflow
-      def logo = NfcoreTemplate.logo(workflow, params.monochrome_logs)
-                 ^^^^^^^^^^^^^^
-  ```
-
-- Error: `main.nf:44:27`: `WorkflowMain` is not defined
-
-  ```nextflow
-      def citation = '\n' + WorkflowMain.citation(workflow) + '\n'
-                            ^^^^^^^^^^^^
-  ```
-
-- Error: `main.nf:46:54`: `NfcoreTemplate` is not defined
-
-  ```nextflow
-      log.info logo + paramsHelp(command) + citation + NfcoreTemplate.dashedLine(params.monochrome_logs)
-                                                       ^^^^^^^^^^^^^^
-  ```
-
 - Error: `main.nf:51:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
@@ -249,13 +179,6 @@
   ```nextflow
   WorkflowMain.initialise(workflow, params, log)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `main.nf:55:1`: `WorkflowMain` is not defined
-
-  ```nextflow
-  WorkflowMain.initialise(workflow, params, log)
-  ^^^^^^^^^^^^
   ```
 
 - Error: `main.nf:63:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/hicar/workflows/hicar.nf'
@@ -307,11 +230,11 @@
                             ^^^
   ```
 
-- Error: `nextflow.config:174:5`: Unexpected input: 'includeConfig'
+- Error: `nextflow.config:349:14`: Unexpected input: '('
 
   ```nextflow
-      includeConfig "${params.custom_config_base}/nfcore_custom.config"
-      ^
+  def check_max(obj, type) {
+               ^
   ```
 
 - Error: `subworkflows/local/apa.nf:25:28`: Unexpected input: '\n'
@@ -1448,6 +1371,13 @@
   ```nextflow
                               .map{[it[1], it[2], it[4]]}
                                                   ^^
+  ```
+
+- Warning: `subworkflows/local/tfea/homer.nf:35:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      versions     = ch_versions                  // channel: [ path(version) ]
+      ^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/v4c/cooltools.nf:14:20`: Implicit closure parameter is deprecated, declare an explicit parameter instead

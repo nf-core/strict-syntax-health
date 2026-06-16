@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T10:20:19.506365889Z
-- Nextflow version: 25.12.0-edge
-- Summary: 2 errors, 48 warnings
+- Generated: 2026-06-16T14:15:25.089464921Z
+- Nextflow version: 26.04.3
+- Summary: 2 errors, 57 warnings
 
 ## :x: Errors
 
@@ -64,11 +64,25 @@
           ^^^^
   ```
 
+- Warning: `subworkflows/local/prepare_host_transcriptome/main.nf:21:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      transcriptome = ch_transcriptome
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/prepare_pathogen_transcriptome/main.nf:12:18`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       parameters = Channel.value(
                    ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/prepare_pathogen_transcriptome/main.nf:27:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      transcriptome = ch_transcriptome
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/prepare_reference_files/main.nf:58:43`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -232,6 +246,13 @@
                                      ^^
   ```
 
+- Warning: `subworkflows/local/salmon_alignment_based/main.nf:143:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      versions = ch_versions // channel: [ versions.yml ]
+      ^^^^^^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/salmon_selective_alignment/main.nf:21:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -260,11 +281,25 @@
                                      ^^
   ```
 
+- Warning: `subworkflows/local/salmon_selective_alignment/main.nf:128:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      versions = ch_versions // channel: [ versions.yml ]
+      ^^^^^^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/star_htseq/main.nf:13:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_versions = Channel.empty()
                     ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/star_htseq/main.nf:77:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      versions = ch_versions // channel: [ versions.yml ]
+      ^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/utils_nfcore_dualrnaseq_pipeline/main.nf:30:5`: Parameter was not used -- prefix with `_` to suppress warning
@@ -295,11 +330,39 @@
       ^^^^^^^
   ```
 
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
+
+  ```nextflow
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_config
+      ^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       return ch_versions.unique().map { version -> processVersionsFromYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
                                                                                                    ^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:44:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/dualrnaseq.nf:44:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead

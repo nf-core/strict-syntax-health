@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T10:22:04.565960902Z
-- Nextflow version: 25.12.0-edge
-- Summary: 52 errors, 14 warnings
+- Generated: 2026-06-16T14:19:56.307006145Z
+- Nextflow version: 26.04.3
+- Summary: 45 errors, 14 warnings
 
 ## :x: Errors
 
@@ -118,18 +118,11 @@
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `main.nf:20:1`: `WorkflowMain` is not defined
+- Error: `nextflow.config:172:14`: Unexpected input: '('
 
   ```nextflow
-  WorkflowMain.initialise(workflow, params, log)
-  ^^^^^^^^^^^^
-  ```
-
-- Error: `nextflow.config:58:5`: Unexpected input: 'includeConfig'
-
-  ```nextflow
-      includeConfig "${params.custom_config_base}/nfcore_custom.config"
-      ^
+  def check_max(obj, type) {
+               ^
   ```
 
 - Error: `workflows/imcyto.nf:7:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
@@ -139,25 +132,11 @@
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/imcyto.nf:7:22`: `NfcoreSchema` is not defined
-
-  ```nextflow
-  def summary_params = NfcoreSchema.paramsSummaryMap(workflow, params)
-                       ^^^^^^^^^^^^
-  ```
-
 - Error: `workflows/imcyto.nf:10:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   WorkflowImcyto.initialise(params, log)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/imcyto.nf:10:1`: `WorkflowImcyto` is not defined
-
-  ```nextflow
-  WorkflowImcyto.initialise(params, log)
-  ^^^^^^^^^^^^^^
   ```
 
 - Error: `workflows/imcyto.nf:13:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
@@ -272,20 +251,6 @@
           ^^^^^^^^^^^
   ```
 
-- Error: `workflows/imcyto.nf:103:16`: `WorkflowImcyto` is not defined
-
-  ```nextflow
-          .map { WorkflowImcyto.flattenTiff(it) }
-                 ^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/imcyto.nf:116:16`: `WorkflowImcyto` is not defined
-
-  ```nextflow
-          .map { WorkflowImcyto.flattenTiff(it) }
-                 ^^^^^^^^^^^^^^
-  ```
-
 - Error: `workflows/imcyto.nf:128:9`: `ch_full_stack_cppipe` is not defined
 
   ```nextflow
@@ -354,20 +319,6 @@
   ```nextflow
   workflow.onComplete {
   ^
-  ```
-
-- Error: `workflows/imcyto.nf:195:9`: `NfcoreTemplate` is not defined
-
-  ```nextflow
-          NfcoreTemplate.email(workflow, params, summary_params, projectDir, log, [])
-          ^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/imcyto.nf:197:5`: `NfcoreTemplate` is not defined
-
-  ```nextflow
-      NfcoreTemplate.summary(workflow, params, log)
-      ^^^^^^^^^^^^^^
   ```
 
 ## :warning: Warnings

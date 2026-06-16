@@ -1,10 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 25.12.0-edge
+ N E X T F L O W   ~  version 26.04.3
 
 Downloading plugin nf-validation@1.1.3
-Launching `./main.nf` [festering_elion] DSL2 - revision: 3f717d2232
+Launching `./main.nf` [tiny_archimedes] revision: 3f717d2232
 
 alleleexpression pipeline parameters:
   --help=true

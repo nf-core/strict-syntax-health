@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T10:24:36.533844921Z
-- Nextflow version: 25.12.0-edge
-- Summary: 36 errors, 43 warnings
+- Generated: 2026-06-16T14:24:33.939072176Z
+- Nextflow version: 26.04.3
+- Summary: 36 errors, 80 warnings
 
 ## :x: Errors
 
@@ -260,6 +260,13 @@
 
 ## :warning: Warnings
 
+- Warning: `main.nf:58:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      multiqc_report = NANOSEQ.out.multiqc_report // channel: /path/to/multiqc_report.html
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `modules/nf-core/custom/dumpsoftwareversions/main.nf:1:5`: Variable was declared but not used
 
   ```nextflow
@@ -337,11 +344,172 @@
                                                                                                                                   ^^
   ```
 
+- Warning: `subworkflows/local/align_graphmap2.nf:26:5`: Variable was declared but not used
+
+  ```nextflow
+      graphmap2_version = GRAPHMAP2_INDEX.out.versions
+      ^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/align_graphmap2.nf:65:5`: Variable was declared but not used
+
+  ```nextflow
+      samtools_version=SAMTOOLS_INDEX.out.versions
+      ^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/align_graphmap2.nf:71:5`: Variable was declared but not used
+
+  ```nextflow
+      ch_stats = BAM_STATS_SAMTOOLS.out.stats
+      ^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/align_graphmap2.nf:72:5`: Variable was declared but not used
+
+  ```nextflow
+      ch_flagstat = BAM_STATS_SAMTOOLS.out.flagstat
+      ^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/align_graphmap2.nf:73:5`: Variable was declared but not used
+
+  ```nextflow
+      ch_idxstats = BAM_STATS_SAMTOOLS.out.idxstats
+      ^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/align_minimap2.nf:22:5`: Variable was declared but not used
+
+  ```nextflow
+      minimap2_version = MINIMAP2_INDEX.out.versions
+      ^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/align_minimap2.nf:48:5`: Variable was declared but not used
+
+  ```nextflow
+      samtools_version = SAMTOOLS_INDEX.out.versions
+      ^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/align_minimap2.nf:54:5`: Variable was declared but not used
+
+  ```nextflow
+      ch_stats = BAM_STATS_SAMTOOLS.out.stats
+      ^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/align_minimap2.nf:55:5`: Variable was declared but not used
+
+  ```nextflow
+      ch_flagstat = BAM_STATS_SAMTOOLS.out.flagstat
+      ^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/align_minimap2.nf:56:5`: Variable was declared but not used
+
+  ```nextflow
+      ch_idxstats = BAM_STATS_SAMTOOLS.out.idxstats
+      ^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/bedtools_ucsc_bigbed.nf:19:5`: Variable was declared but not used
+
+  ```nextflow
+      bedtools_version = BEDTOOLS_BAMTOBED.out.versions
+      ^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/bedtools_ucsc_bigbed.nf:29:5`: Variable was declared but not used
+
+  ```nextflow
+      ch_bigbed = UCSC_BEDTOBIGBED.out.bigbed
+      ^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/bedtools_ucsc_bigbed.nf:30:5`: Variable was declared but not used
+
+  ```nextflow
+      bed12tobigbed_version = UCSC_BEDTOBIGBED.out.versions
+      ^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/bedtools_ucsc_bigwig.nf:28:5`: Variable was declared but not used
+
+  ```nextflow
+      bedtools_version = BEDTOOLS_GENOMECOV.out.versions
+      ^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/bedtools_ucsc_bigwig.nf:34:5`: Variable was declared but not used
+
+  ```nextflow
+      ch_bigwig = UCSC_BEDGRAPHTOBIGWIG.out.bigwig
+      ^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/bedtools_ucsc_bigwig.nf:35:5`: Variable was declared but not used
+
+  ```nextflow
+      bedgraphtobigwig_version = UCSC_BEDGRAPHTOBIGWIG.out.versions
+      ^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/differential_deseq2_dexseq.nf:18:5`: Variable was declared but not used
+
+  ```nextflow
+      ch_deseq2_txt  = DESEQ2.out.deseq2_txt
+      ^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/differential_deseq2_dexseq.nf:19:5`: Variable was declared but not used
+
+  ```nextflow
+      deseq2_version = DESEQ2.out.versions
+      ^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/differential_deseq2_dexseq.nf:25:5`: Variable was declared but not used
+
+  ```nextflow
+      ch_dexseq_txt  = DEXSEQ.out.dexseq_txt
+      ^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/differential_deseq2_dexseq.nf:26:5`: Variable was declared but not used
+
+  ```nextflow
+      dexseq_version = DEXSEQ.out.versions
+      ^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/input_check.nf:19:32`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { get_sample_info(it) }
                                  ^^
+  ```
+
+- Warning: `subworkflows/local/input_check.nf:20:16`: Variable was declared but not used
+
+  ```nextflow
+          .set { ch_sample }
+                 ^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/input_check.nf:23:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      ch_sample // [[id:, barcode:, nanopolish_fast5:], [input_file]]
+      ^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/qcfastq_nanoplot_fastqc.nf:24:5`: Variable was declared but not used
+
+  ```nextflow
+      nanoplot_png     = Channel.empty()
+      ^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/qcfastq_nanoplot_fastqc.nf:24:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -435,6 +603,13 @@
                        ^^^^^^^
   ```
 
+- Warning: `subworkflows/local/qcfastq_nanoplot_fastqc.nf:59:5`: Variable was declared but not used
+
+  ```nextflow
+      fastqc_version = Channel.empty()
+      ^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/qcfastq_nanoplot_fastqc.nf:59:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -447,6 +622,13 @@
   ```nextflow
       ch_annotation_gtf = Channel.from(file(params.gtf))
                           ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/quantify_stringtie_featurecounts.nf:27:5`: Variable was declared but not used
+
+  ```nextflow
+      stringtie2_version = STRINGTIE_STRINGTIE.out.versions
+      ^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/quantify_stringtie_featurecounts.nf:32:48`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -470,6 +652,48 @@
                                            ^^
   ```
 
+- Warning: `subworkflows/local/quantify_stringtie_featurecounts.nf:51:5`: Variable was declared but not used
+
+  ```nextflow
+      ch_gene_counts                   = SUBREAD_FEATURECOUNTS_GENE.out.counts.map{it -> it[1]}
+      ^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/quantify_stringtie_featurecounts.nf:52:5`: Variable was declared but not used
+
+  ```nextflow
+      ch_transcript_counts             = SUBREAD_FEATURECOUNTS_TRANSCRIPT.out.counts.map{it -> it[1]}
+      ^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/quantify_stringtie_featurecounts.nf:53:5`: Variable was declared but not used
+
+  ```nextflow
+      featurecounts_gene_multiqc       = SUBREAD_FEATURECOUNTS_GENE.out.summary
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/quantify_stringtie_featurecounts.nf:54:5`: Variable was declared but not used
+
+  ```nextflow
+      featurecounts_transcript_multiqc = SUBREAD_FEATURECOUNTS_TRANSCRIPT.out.summary
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/quantify_stringtie_featurecounts.nf:55:5`: Variable was declared but not used
+
+  ```nextflow
+      featurecounts_version            = SUBREAD_FEATURECOUNTS_GENE.out.versions
+      ^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/rna_modifications_xpore_m6anet.nf:24:5`: Variable was declared but not used
+
+  ```nextflow
+      nanopolish_version    = NANOPOLISH_INDEX_EVENTALIGN.out.versions
+      ^^^^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/utils_nfcore_nanoseq_pipeline/main.nf:31:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
@@ -491,6 +715,13 @@
                     ^^^^^^^
   ```
 
+- Warning: `subworkflows/local/utils_nfcore_nanoseq_pipeline/main.nf:98:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      versions    = ch_versions
+      ^^^^^^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/nf-core/bam_stats_samtools/main.nf:15:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -498,11 +729,39 @@
                     ^^^^^^^
   ```
 
+- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
+
+  ```nextflow
+      valid_config = checkConfigProvided()
+      ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      valid_config
+      ^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       return ch_versions.unique().map { version -> processVersionsFromYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
                                                                                                    ^^^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:44:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/nanoseq.nf:19:5`: Variable was declared but not used

@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T10:26:30.202184700Z
-- Nextflow version: 25.12.0-edge
+- Generated: 2026-06-16T14:28:40.028739372Z
+- Nextflow version: 26.04.3
 - Summary: 15 errors
 
 ## :x: Errors
@@ -104,9 +104,9 @@
                                         ^
   ```
 
-- Error: `nextflow.config:118:3`: Unexpected input: 'includeConfig'
+- Error: `nextflow.config:219:14`: Unexpected input: '('
 
   ```nextflow
-    includeConfig "${params.custom_config_base}/nfcore_custom.config"
-    ^
+  def check_max(obj, type) {
+               ^
   ```

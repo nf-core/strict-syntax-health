@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-16T10:20:41.560150878Z
-- Nextflow version: 25.12.0-edge
-- Summary: 75 errors, 53 warnings
+- Generated: 2026-06-16T14:16:19.303089842Z
+- Nextflow version: 26.04.3
+- Summary: 74 errors, 55 warnings
 
 ## :x: Errors
 
@@ -146,13 +146,6 @@
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `main.nf:35:16`: `getGenomeAttribute` is not defined
-
-  ```nextflow
-  params.fasta = getGenomeAttribute('fasta')
-                 ^^^^^^^^^^^^^^^^^^
-  ```
-
 - Error: `main.nf:41:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
@@ -272,11 +265,11 @@
                                 ^
   ```
 
-- Error: `nextflow.config:67:5`: Unexpected input: 'includeConfig'
+- Error: `nextflow.config:251:14`: Unexpected input: '('
 
   ```nextflow
-      includeConfig "${params.custom_config_base}/nfcore_custom.config"
-      ^
+  def check_max(obj, type) {
+               ^
   ```
 
 - Error: `subworkflows/local/utils_nfcore_evexplorer_pipeline/main.nf:248:21`: Unexpected input: 'doi_ref'
@@ -589,6 +582,13 @@
                  ^^^^^^^
   ```
 
+- Warning: `main.nf:88:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      multiqc_report = multiqc_report_ch
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `modules/local/derfinder/main.nf:11:15`: Variable was declared but not used
 
   ```nextflow
@@ -629,6 +629,13 @@
   ```nextflow
       meta.single_end ? [reads].flatten().each{reads1 << it} : reads.eachWithIndex{ v, ix -> ( ix & 1 ? reads2 : reads1) << v }
                                                          ^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfvalidation_plugin/main.nf:61:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/evexplorer.nf:40:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead

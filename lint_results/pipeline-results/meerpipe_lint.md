@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-01-29T00:20:45.876401071Z
-- Nextflow version: 25.12.0-edge
-- Summary: 44 errors, 84 warnings
+- Generated: 2026-06-16T14:22:02.267285914Z
+- Nextflow version: 26.04.3
+- Summary: 44 errors, 85 warnings
 
 ## :x: Errors
 
@@ -167,11 +167,11 @@
                                                                                                                                                                                   ^^^^
   ```
 
-- Error: `nextflow.config:111:5`: Unexpected input: 'includeConfig'
+- Error: `nextflow.config:124:22`: Unexpected input: '('
 
   ```nextflow
-      includeConfig "${params.custom_config_base}/nfcore_custom.config"
-      ^
+  def archive_size_calc(nchan, nbin, dur) {
+                       ^
   ```
 
 - Error: `subworkflows/local/utils_nfcore_meerpipe_pipeline/main.nf:14:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/meerpipe/subworkflows/nf-core/utils_nextflow_pipeline/main.nf'
@@ -622,6 +622,13 @@
   ```nextflow
       def endedness_ok = metas.collect{ it.single_end }.unique().size == 1
                                         ^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfvalidation_plugin/main.nf:61:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      dummy_emit = true
+      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/meerpipe.nf:40:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
