@@ -244,9 +244,9 @@
   "datasync": {
     "full_name": "nf-core/datasync",
     "html_url": "https://github.com/nf-core/datasync",
-    "commit": "3addfb1c2fad86c6bccbbb654fe42f9f1412302b",
+    "commit": "b02e7f6161ca62b7e27f3f3cc183414ea0959f36",
     "errors": 0,
-    "warnings": 5,
+    "warnings": 4,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -1014,7 +1014,7 @@
   "phaseimpute": {
     "full_name": "nf-core/phaseimpute",
     "html_url": "https://github.com/nf-core/phaseimpute",
-    "commit": "52ee9d66325777d1f1cc684dd7347b63c2029144",
+    "commit": "71cb181f1254459c4fad2e185d173ab23ecd4d67",
     "errors": 0,
     "warnings": 19,
     "parse_error": false,
@@ -1311,11 +1311,11 @@
   "seqinspector": {
     "full_name": "nf-core/seqinspector",
     "html_url": "https://github.com/nf-core/seqinspector",
-    "commit": "f3d7f505aa71c17a6943ff13429501e1a029c1ad",
+    "commit": "3f446363fc41b4a503885154373da0982a6d11dd",
     "errors": 0,
     "warnings": 3,
     "parse_error": false,
-    "prints_help": true,
+    "prints_help": false,
     "workflow_output": true,
     "publishdir": true
   },

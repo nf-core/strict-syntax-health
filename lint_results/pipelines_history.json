@@ -1985,8 +1985,8 @@
     "warnings_zero": 5,
     "warnings_low": 50,
     "warnings_high": 84,
-    "prints_help_pass": 62,
-    "prints_help_fail": 19,
+    "prints_help_pass": 61,
+    "prints_help_fail": 20,
     "workflow_output_pass": 0,
     "workflow_output_warn": 9,
     "workflow_output_error": 130

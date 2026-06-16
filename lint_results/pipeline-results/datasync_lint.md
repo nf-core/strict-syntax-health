@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-16T14:12:47.353861422Z
+- Generated: 2026-06-16T18:06:51.324762167Z
 - Nextflow version: 26.04.3
-- Summary: 5 warnings
+- Summary: 4 warnings
 
 ## :warning: Warnings
 
@@ -32,11 +32,4 @@
   ```nextflow
       dummy_emit = true
       ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/datasync.nf:21:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      ch_samplesheet // channel: samplesheet read in from --input
-      ^^^^^^^^^^^^^^
   ```

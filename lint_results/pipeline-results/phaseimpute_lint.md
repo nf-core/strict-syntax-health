@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-06-16T14:26:57.038674779Z
+- Generated: 2026-06-16T18:07:26.939167518Z
 - Nextflow version: 26.04.3
 - Summary: 19 warnings
 
@@ -41,7 +41,7 @@
       ^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/vcf_normalize_bcftools/main.nf:45:5`: Emit name should be omitted when there is only one emit
+- Warning: `subworkflows/local/vcf_normalize_bcftools/main.nf:49:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
       vcf_tbi        = ch_vcf_tbi                     // channel: [ [id, chr], vcf, tbi ]
