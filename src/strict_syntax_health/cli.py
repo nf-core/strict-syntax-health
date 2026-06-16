@@ -2,6 +2,7 @@
 
 import json
 import os
+import re
 import subprocess
 import sys
 from datetime import datetime, timezone
@@ -33,6 +34,7 @@ PIPELINES_LINT_RESULTS_DIR = LINT_RESULTS_DIR / "pipeline-results"
 MODULES_LINT_RESULTS_DIR = LINT_RESULTS_DIR / "module-results"
 SUBWORKFLOWS_LINT_RESULTS_DIR = LINT_RESULTS_DIR / "subworkflow-results"
 PRINTS_HELP_RESULTS_DIR = LINT_RESULTS_DIR / "prints-help-results"
+WORKFLOW_OUTPUTS_RESULTS_DIR = LINT_RESULTS_DIR / "workflow-outputs-results"
 
 console = Console()
 
@@ -335,6 +337,209 @@ def get_nextflow_version() -> str:
                 if part.lower() == "version" and i + 1 < len(parts):
                     return parts[i + 1]
     return "unknown"
+
+
+# Top-level `output {` block that signals adoption of the new workflow outputs syntax.
+# This is a top-level definition (column 0), so it can't be confused with an indented
+# process `output:` section. See https://docs.seqera.io/nextflow/tutorials/workflow-outputs
+WORKFLOW_OUTPUT_RE = re.compile(r"^output\s*\{", re.MULTILINE)
+
+
+# The legacy `publishDir` directive. nf-core pipelines set it inline in processes and,
+# more commonly, in `conf/*.config` selectors, so both file types must be scanned. Its
+# presence indicates output publishing that has not yet moved to the workflow outputs syntax.
+PUBLISHDIR_RE = re.compile(r"\bpublishDir\b")
+
+# Cap on how many matches to list per category in a per-pipeline report, to keep the
+# markdown readable for pipelines with a very large number of publishDir references.
+_MAX_REPORT_MATCHES = 200
+
+
+def _scan_lines(repo_path: Path, patterns: tuple[str, ...], regex: re.Pattern) -> list[tuple[str, int, str]]:
+    """Scan files matching the given glob patterns for lines matching a regex.
+
+    Args:
+        repo_path: Repository root to scan (recursively).
+        patterns: Glob patterns relative to the root (e.g. "*.nf", "*.config").
+        regex: Compiled regex to test against each line.
+
+    Returns:
+        Sorted list of (relative_path, line_number, stripped_line_text) tuples.
+    """
+    matches: list[tuple[str, int, str]] = []
+    seen: set[Path] = set()
+    for pattern in patterns:
+        for src_file in repo_path.rglob(pattern):
+            if src_file in seen:
+                continue
+            seen.add(src_file)
+            try:
+                source_lines = src_file.read_text().splitlines()
+            except (OSError, UnicodeDecodeError):
+                continue
+            rel = str(src_file.relative_to(repo_path))
+            for line_num, line in enumerate(source_lines, start=1):
+                if regex.search(line):
+                    matches.append((rel, line_num, line.strip()))
+    matches.sort(key=lambda m: (m[0], m[1]))
+    return matches
+
+
+def detect_workflow_output(repo_path: Path) -> bool:
+    """Return True if a top-level `output {}` block is found in any .nf file.
+
+    The workflow outputs feature publishes results via a `publish:` section in the entry
+    workflow paired with a top-level `output {}` block, the unambiguous signature of the
+    feature. See https://docs.seqera.io/nextflow/tutorials/workflow-outputs
+    """
+    return bool(_scan_lines(repo_path, ("*.nf",), WORKFLOW_OUTPUT_RE))
+
+
+def detect_publishdir(repo_path: Path) -> bool:
+    """Return True if any legacy `publishDir` reference is found.
+
+    Scans both Nextflow (`.nf`) and config (`.config`) files, since nf-core pipelines
+    typically configure publishing via `withName` selectors in `conf/*.config`.
+    """
+    return bool(_scan_lines(repo_path, ("*.nf", "*.config"), PUBLISHDIR_RE))
+
+
+def _format_match_list(matches: list[tuple[str, int, str]], source_url_base: str | None) -> list[str]:
+    """Format a list of (file, line, text) matches as markdown bullets with code snippets.
+
+    If source_url_base is given, each location links to the exact line on GitHub.
+    """
+    lines: list[str] = []
+    for rel, line_num, text in matches[:_MAX_REPORT_MATCHES]:
+        if source_url_base:
+            location = f"[`{rel}:{line_num}`]({source_url_base}/{rel}#L{line_num})"
+        else:
+            location = f"`{rel}:{line_num}`"
+        lines.extend([f"- {location}", "", "  ```nextflow", f"  {text}", "  ```", ""])
+    remaining = len(matches) - _MAX_REPORT_MATCHES
+    if remaining > 0:
+        lines.append(f"_…and {remaining} more reference{'s' if remaining != 1 else ''} not shown._")
+        lines.append("")
+    return lines
+
+
+def _generate_workflow_outputs_markdown(
+    name: str,
+    state: str,
+    output_locs: list[tuple[str, int, str]],
+    publishdir_locs: list[tuple[str, int, str]],
+    source_url_base: str | None = None,
+) -> str:
+    """Generate the per-pipeline workflow outputs migration report markdown."""
+    status_labels = {
+        "pass": ":white_check_mark: **pass** — uses only the new `output {}` syntax",
+        "warn": (
+            ":warning: **warn** — uses the new `output {}` syntax but still has "
+            "legacy `publishDir` references to migrate"
+        ),
+        "error": ":x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive",
+    }
+    now = datetime.now(timezone.utc).isoformat()
+
+    lines = [
+        f"# Workflow outputs migration: {name}",
+        "",
+        f"- Generated: {now}",
+        f"- Status: {status_labels[state]}",
+        "",
+        "This report tracks migration from the legacy `publishDir` directive to the new "
+        "[workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.",
+        "",
+        f"## Workflow `output {{}}` block{'s' if len(output_locs) != 1 else ''}",
+        "",
+    ]
+
+    if output_locs:
+        block_word = "block" if len(output_locs) == 1 else "blocks"
+        lines.append(f"Found {len(output_locs)} top-level `output {{}}` {block_word}:")
+        lines.append("")
+        lines.extend(_format_match_list(output_locs, source_url_base))
+    else:
+        lines.append("No top-level `output {}` block found. See the docs for how to add one:")
+        lines.append("https://docs.seqera.io/nextflow/tutorials/workflow-outputs")
+        lines.append("")
+
+    lines.extend(["## Legacy `publishDir` references", ""])
+
+    if publishdir_locs:
+        ref_word = "reference" if len(publishdir_locs) == 1 else "references"
+        lines.append(
+            f"Found {len(publishdir_locs)} `publishDir` {ref_word} that should be migrated "
+            "to the workflow `output {}` block:"
+        )
+        lines.append("")
+        lines.extend(_format_match_list(publishdir_locs, source_url_base))
+    else:
+        lines.append("No `publishDir` references found. :tada:")
+        lines.append("")
+
+    return "\n".join(lines).rstrip() + "\n"
+
+
+def write_workflow_outputs_report(
+    repo_path: Path,
+    name: str,
+    output_dir: Path,
+    source_url_base: str | None = None,
+) -> tuple[bool, bool]:
+    """Scan a pipeline for workflow outputs / publishDir usage and write a markdown report.
+
+    The report lists where the top-level `output {}` block(s) and any legacy `publishDir`
+    references were found, so developers can click through to see what to migrate and where.
+
+    Args:
+        repo_path: Path to the cloned pipeline repository.
+        name: Pipeline name (used for the output filename).
+        output_dir: Directory to write `{name}_outputs.md` into.
+        source_url_base: Optional URL prefix (e.g. ".../blob/<commit>") for linking to lines.
+
+    Returns:
+        Tuple of (has_workflow_output, has_publishdir).
+    """
+    output_locs = _scan_lines(repo_path, ("*.nf",), WORKFLOW_OUTPUT_RE)
+    publishdir_locs = _scan_lines(repo_path, ("*.nf", "*.config"), PUBLISHDIR_RE)
+
+    has_output = bool(output_locs)
+    has_publishdir = bool(publishdir_locs)
+    state = workflow_output_state({"workflow_output": has_output, "publishdir": has_publishdir})
+
+    output_dir.mkdir(parents=True, exist_ok=True)
+    content = _generate_workflow_outputs_markdown(name, state, output_locs, publishdir_locs, source_url_base)
+    (output_dir / f"{name}_outputs.md").write_text(content)
+
+    return has_output, has_publishdir
+
+
+def workflow_output_state(result: dict) -> str | None:
+    """Classify a pipeline's workflow outputs migration status from its detected flags.
+
+    Combines `workflow_output` (has a top-level `output {}` block) and `publishdir`
+    (has any legacy `publishDir` reference) into three states:
+
+    - ``"pass"``: only the new ``output {}`` syntax (no ``publishDir``)
+    - ``"warn"``: both ``output {}`` and ``publishDir`` (migration in progress)
+    - ``"error"``: no ``output {}`` block (still relies on ``publishDir``)
+
+    A "pass" requires the new ``output {}`` block, so any pipeline without one is an
+    "error" regardless of whether ``publishDir`` was found.
+
+    Returns:
+        One of "pass", "warn", "error", or None if detection has not run yet.
+    """
+    has_output = result.get("workflow_output")
+    has_publishdir = result.get("publishdir")
+    if has_output is None or has_publishdir is None:
+        return None
+    if has_output and has_publishdir:
+        return "warn"
+    if has_output:
+        return "pass"
+    return "error"
 
 
 def lint_component(repo_path: Path, target_path: Path | None = None) -> dict:
@@ -686,7 +891,15 @@ def run_pipeline_lint(pipelines: list[dict], no_cache: bool = False) -> list[dic
                 and cached.get("prints_help") is None
             )
 
-            if remote_commit and remote_commit == cached.get("commit") and not needs_prints_help:
+            # Re-process pipelines cached before workflow outputs / publishDir detection was added
+            needs_output_detection = cached.get("workflow_output") is None or cached.get("publishdir") is None
+
+            if (
+                remote_commit
+                and remote_commit == cached.get("commit")
+                and not needs_prints_help
+                and not needs_output_detection
+            ):
                 console.print(f"[dim]Skipping {name} (unchanged at {remote_commit[:8]})[/dim]")
                 results.append(
                     {
@@ -698,6 +911,8 @@ def run_pipeline_lint(pipelines: list[dict], no_cache: bool = False) -> list[dic
                         "warnings": cached["warnings"],
                         "parse_error": cached.get("parse_error", False),
                         "prints_help": cached.get("prints_help"),
+                        "workflow_output": cached.get("workflow_output"),
+                        "publishdir": cached.get("publishdir"),
                         "lint_details": {},  # Don't store full details in cache
                     }
                 )
@@ -716,6 +931,15 @@ def run_pipeline_lint(pipelines: list[dict], no_cache: bool = False) -> list[dic
             error_count = lint_result.get("summary", {}).get("errors", 0)
             warning_count = len(lint_result.get("warnings", []))
             parse_error = lint_result.get("parse_error", False)
+
+            # Detect workflow outputs migration status (independent of lint state) and write a
+            # per-pipeline report showing where the `output {}` block and `publishDir` refs are.
+            workflow_output, publishdir = write_workflow_outputs_report(
+                repo_path,
+                name,
+                WORKFLOW_OUTPUTS_RESULTS_DIR,
+                source_url_base=f"{pipeline['html_url']}/blob/{commit_hash}",
+            )
 
             # Run prints_help test only if there are no errors
             prints_help = None
@@ -737,6 +961,8 @@ def run_pipeline_lint(pipelines: list[dict], no_cache: bool = False) -> list[dic
                     "warnings": warning_count,
                     "parse_error": parse_error,
                     "prints_help": prints_help,
+                    "workflow_output": workflow_output,
+                    "publishdir": publishdir,
                     "lint_details": lint_result,
                 }
             )
@@ -753,6 +979,8 @@ def run_pipeline_lint(pipelines: list[dict], no_cache: bool = False) -> list[dic
                     "warnings": 0,
                     "parse_error": True,
                     "prints_help": None,
+                    "workflow_output": None,
+                    "publishdir": None,
                     "lint_details": {},
                 }
             )
@@ -1204,6 +1432,13 @@ def _create_history_entry(results: list[dict], include_prints_help: bool = False
         entry["prints_help_pass"] = sum(1 for r in valid_results if r.get("prints_help") is True)
         entry["prints_help_fail"] = sum(1 for r in valid_results if r.get("prints_help") is False)
 
+        # Count workflow outputs migration states across all results:
+        # pass (only output), warn (output + publishDir), error (only publishDir / not migrated)
+        states = [workflow_output_state(r) for r in results]
+        entry["workflow_output_pass"] = sum(1 for s in states if s == "pass")
+        entry["workflow_output_warn"] = sum(1 for s in states if s == "warn")
+        entry["workflow_output_error"] = sum(1 for s in states if s == "error")
+
     return entry
 
 
@@ -1351,6 +1586,36 @@ def generate_charts_for_type(history: list[dict], output_dir: Path, type_name: s
         y_label,
     )
 
+    # Pipelines additionally track migration from publishDir to the workflow outputs syntax.
+    # Only chart it once there is at least one data point with the new fields.
+    if type_name == "pipelines" and any("workflow_output_pass" in h for h in history):
+        _create_stacked_chart(
+            dates,
+            [
+                (
+                    [h.get("workflow_output_pass", 0) for h in history],
+                    "Only output (migrated)",
+                    "#2ecc71",
+                    "rgba(46, 204, 113, 0.7)",
+                ),
+                (
+                    [h.get("workflow_output_warn", 0) for h in history],
+                    "Output + publishDir",
+                    "#f39c12",
+                    "rgba(243, 156, 18, 0.7)",
+                ),
+                (
+                    [h.get("workflow_output_error", 0) for h in history],
+                    "Only publishDir",
+                    "#e74c3c",
+                    "rgba(231, 76, 60, 0.7)",
+                ),
+            ],
+            "Pipeline Workflow Outputs Migration Over Time",
+            LINT_RESULTS_DIR / "pipelines_workflow_outputs.png",
+            y_label,
+        )
+
 
 def generate_all_charts(history: dict) -> None:
     """Generate charts for all types (pipelines, modules, subworkflows)."""
@@ -1370,6 +1635,7 @@ def _generate_results_section(
     include_charts: bool,
     show_only_errors: bool = False,
     show_prints_help: bool = False,
+    show_workflow_output: bool = False,
 ) -> list[str]:
     """Generate a results section for a specific type (pipelines, modules, subworkflows).
 
@@ -1381,6 +1647,7 @@ def _generate_results_section(
         include_charts: Whether to include chart images
         show_only_errors: If True, only show items with errors in the table (for modules/subworkflows)
         show_prints_help: If True, show the "Prints Help" column (for pipelines only)
+        show_workflow_output: If True, show workflow outputs adoption stats/chart/column (pipelines only)
     """
     if not results:
         return []
@@ -1399,8 +1666,22 @@ def _generate_results_section(
         f"- **Total:** {parse_error_count} parse errors, {total_errors} errors, "
         f"{total_warnings} warnings across {len(results)} {type_name}",
         f"- **Zero errors:** {zero_error_count} {type_name} ({zero_error_percentage:.1f}%)",
-        "",
     ]
+
+    if show_workflow_output:
+        states = [workflow_output_state(r) for r in results]
+        n_pass = sum(1 for s in states if s == "pass")
+        n_warn = sum(1 for s in states if s == "warn")
+        n_error = sum(1 for s in states if s == "error")
+        lines.append(
+            "- **Workflow outputs migration "
+            "([docs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs)):** "
+            f":white_check_mark: {n_pass} migrated (only `output`) · "
+            f":warning: {n_warn} in progress (`output` + `publishDir`) · "
+            f":x: {n_error} not started (only `publishDir`)"
+        )
+
+    lines.append("")
 
     # Add charts in a side-by-side table (charts are in LINT_RESULTS_DIR with type-prefixed names)
     errors_chart = LINT_RESULTS_DIR / f"{type_name}_errors.png"
@@ -1411,6 +1692,16 @@ def _generate_results_section(
                 "| Errors | Warnings |",
                 "|:------:|:--------:|",
                 f"| ![Errors]({errors_chart}) | ![Warnings]({warnings_chart}) |",
+                "",
+            ]
+        )
+
+    # Pipelines: show the workflow outputs migration chart below the error/warning charts
+    workflow_output_chart = LINT_RESULTS_DIR / "pipelines_workflow_outputs.png"
+    if show_workflow_output and include_charts and workflow_output_chart.exists():
+        lines.extend(
+            [
+                f"![Workflow outputs migration]({workflow_output_chart})",
                 "",
             ]
         )
@@ -1428,9 +1719,13 @@ def _generate_results_section(
     # Results table in a collapsible details section
     if show_prints_help:
         table_header = (
-            f"| {type_singular.title()} | Parse Error | Errors | Warnings | Prints Help | Lint Output | Help Output |"
+            f"| {type_singular.title()} | Parse Error | Errors | Warnings | Workflow Outputs "
+            "| Prints Help | Lint Output | Help Output |"
         )
-        table_separator = "|----------|:-----------:|-------:|---------:|:-----------:|:-----------:|:-----------:|"
+        table_separator = (
+            "|----------|:-----------:|-------:|---------:|:----------------:"
+            "|:-----------:|:-----------:|:-----------:|"
+        )
     else:
         table_header = f"| {type_singular.title()} | Parse Error | Errors | Warnings | Lint Output |"
         table_separator = "|----------|:-----------:|-------:|---------:|:-----------:|:-----------:|"
@@ -1480,9 +1775,18 @@ def _generate_results_section(
             else:
                 prints_help_str = "No"
                 help_file_link = f"[View]({PRINTS_HELP_RESULTS_DIR}/{result['name']}_help.txt)"
+
+            wf_state = workflow_output_state(result)
+            if wf_state is None:
+                workflow_output_str = "-"
+            else:
+                wf_emoji = {"pass": ":white_check_mark:", "warn": ":warning:", "error": ":x:"}[wf_state]
+                wf_report = WORKFLOW_OUTPUTS_RESULTS_DIR / f"{result['name']}_outputs.md"
+                workflow_output_str = f"{wf_emoji} [{wf_state}]({wf_report})"
+
             row = (
                 f"| {name_link} | {parse_error_str} | {error_str} | {warning_str} "
-                f"| {prints_help_str} | {lint_file_link} | {help_file_link} |"
+                f"| {workflow_output_str} | {prints_help_str} | {lint_file_link} | {help_file_link} |"
             )
             lines.append(row)
         else:
@@ -1554,6 +1858,7 @@ def generate_readme(
                 PIPELINES_LINT_RESULTS_DIR,
                 include_charts,
                 show_prints_help=True,
+                show_workflow_output=True,
             )
         )
 
@@ -1592,6 +1897,16 @@ def generate_readme(
             "- **Prints Help** (pipelines only) tests whether the pipeline can print its help message "
             "using the v2 syntax parser (`NXF_SYNTAX_PARSER=v2 nextflow run . --help`). "
             "This test only runs for pipelines with zero lint errors.",
+            "- **Workflow Outputs** (pipelines only) tracks migration from the legacy `publishDir` "
+            "directive to the new "
+            "[workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax "
+            "(a top-level `output {}` block). There are three states: "
+            ":white_check_mark: **pass** = only `output {}` (no `publishDir`), "
+            ":warning: **warn** = both `output {}` and `publishDir`, "
+            ":x: **error** = only `publishDir` (not yet migrated). "
+            "`publishDir` is detected in both `.nf` and `conf/*.config` files. "
+            "Click the status in the table to open a per-pipeline report listing exactly which "
+            "files and lines were found.",
             "",
             "## Running Locally",
             "",
