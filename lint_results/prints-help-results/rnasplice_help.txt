@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.04.3
 
-Launching `./main.nf` [admiring_mestorf] revision: 576b61d256
+Launching `./main.nf` [focused_pauling] revision: 576b61d256
 
 Parameter `fasta` is required but was not specified on the command line, params file, or config
 

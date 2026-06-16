@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.04.3
 
 Downloading plugin nf-prov@1.7.0
-Launching `./main.nf` [big_bohr] revision: f2330ae7a6
+Launching `./main.nf` [sad_lagrange] revision: f2330ae7a6
 
 
 ------------------------------------------------------

@@ -11,7 +11,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 > See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline.
 > **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**
 
-- **Last updated:** 2026-06-16 18:11:13 UTC
+- **Last updated:** 2026-06-16 19:49:18 UTC
 - **Nextflow version:** 26.04.3
 
 ## Pipelines
@@ -164,7 +164,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :white_check_mark: [phyloplace](https://github.com/nf-core/phyloplace)                         |     No      |      0 |        4 |     Yes     |        [View](lint_results/pipeline-results/phyloplace_lint.md)         |       [View](lint_results/prints-help-results/phyloplace_help.txt)       |
 | :x: [references](https://github.com/nf-core/references)                                        |     No      |      0 |        4 |     No      |        [View](lint_results/pipeline-results/references_lint.md)         |       [View](lint_results/prints-help-results/references_help.txt)       |
 | :white_check_mark: [rnavar](https://github.com/nf-core/rnavar)                                 |     No      |      0 |        3 |     Yes     |          [View](lint_results/pipeline-results/rnavar_lint.md)           |         [View](lint_results/prints-help-results/rnavar_help.txt)         |
-| :x: [seqinspector](https://github.com/nf-core/seqinspector)                                    |     No      |      0 |        3 |     No      |       [View](lint_results/pipeline-results/seqinspector_lint.md)        |      [View](lint_results/prints-help-results/seqinspector_help.txt)      |
+| :white_check_mark: [seqinspector](https://github.com/nf-core/seqinspector)                     |     No      |      0 |        3 |     Yes     |       [View](lint_results/pipeline-results/seqinspector_lint.md)        |      [View](lint_results/prints-help-results/seqinspector_help.txt)      |
 | :white_check_mark: [smrnaseq](https://github.com/nf-core/smrnaseq)                             |     No      |      0 |        3 |     Yes     |         [View](lint_results/pipeline-results/smrnaseq_lint.md)          |        [View](lint_results/prints-help-results/smrnaseq_help.txt)        |
 | :white_check_mark: [createpanelrefs](https://github.com/nf-core/createpanelrefs)               |     No      |      0 |        2 |     Yes     |      [View](lint_results/pipeline-results/createpanelrefs_lint.md)      |    [View](lint_results/prints-help-results/createpanelrefs_help.txt)     |
 
@@ -175,8 +175,8 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 Adoption of the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax (a top-level `output {}` block) and migration away from the legacy `publishDir` directive. This is a separate dataset from the lint errors and warnings above.
 
 - **Uses `output {}`:** 9 pipelines (6.5%)
-- **Still uses `publishDir`:** 139 pipelines (100.0%)
-- **Fully migrated** (`output {}`, no `publishDir`): 0 pipelines (0.0%)
+- **Still uses `publishDir`:** 136 pipelines (97.8%)
+- **Fully migrated** (`output {}`, no `publishDir`): 3 pipelines (2.2%)
 
 ![Workflow outputs migration](lint_results/pipelines_workflow_outputs.png)
 
@@ -187,15 +187,15 @@ Each cell shows whether the construct is present (:white_check_mark: = present, 
 
 | Pipeline                                                                          |    `output {}`     |    `publishDir`    |                                       Report                                       |
 | --------------------------------------------------------------------------------- | :----------------: | :----------------: | :--------------------------------------------------------------------------------: |
-| [createpanelrefs](https://github.com/nf-core/createpanelrefs)                     | :white_check_mark: | :white_check_mark: |      [View](lint_results/workflow-outputs-results/createpanelrefs_outputs.md)      |
+| [createpanelrefs](https://github.com/nf-core/createpanelrefs)                     | :white_check_mark: |         –          |      [View](lint_results/workflow-outputs-results/createpanelrefs_outputs.md)      |
+| [references](https://github.com/nf-core/references)                               | :white_check_mark: |         –          |        [View](lint_results/workflow-outputs-results/references_outputs.md)         |
+| [seqinspector](https://github.com/nf-core/seqinspector)                           | :white_check_mark: |         –          |       [View](lint_results/workflow-outputs-results/seqinspector_outputs.md)        |
 | [demultiplex](https://github.com/nf-core/demultiplex)                             | :white_check_mark: | :white_check_mark: |        [View](lint_results/workflow-outputs-results/demultiplex_outputs.md)        |
 | [differentialabundance](https://github.com/nf-core/differentialabundance)         | :white_check_mark: | :white_check_mark: |   [View](lint_results/workflow-outputs-results/differentialabundance_outputs.md)   |
 | [proteinfamilies](https://github.com/nf-core/proteinfamilies)                     | :white_check_mark: | :white_check_mark: |      [View](lint_results/workflow-outputs-results/proteinfamilies_outputs.md)      |
 | [raredisease](https://github.com/nf-core/raredisease)                             | :white_check_mark: | :white_check_mark: |        [View](lint_results/workflow-outputs-results/raredisease_outputs.md)        |
-| [references](https://github.com/nf-core/references)                               | :white_check_mark: | :white_check_mark: |        [View](lint_results/workflow-outputs-results/references_outputs.md)         |
 | [rnavar](https://github.com/nf-core/rnavar)                                       | :white_check_mark: | :white_check_mark: |          [View](lint_results/workflow-outputs-results/rnavar_outputs.md)           |
 | [sarek](https://github.com/nf-core/sarek)                                         | :white_check_mark: | :white_check_mark: |           [View](lint_results/workflow-outputs-results/sarek_outputs.md)           |
-| [seqinspector](https://github.com/nf-core/seqinspector)                           | :white_check_mark: | :white_check_mark: |       [View](lint_results/workflow-outputs-results/seqinspector_outputs.md)        |
 | [abotyper](https://github.com/nf-core/abotyper)                                   |         –          | :white_check_mark: |         [View](lint_results/workflow-outputs-results/abotyper_outputs.md)          |
 | [airrflow](https://github.com/nf-core/airrflow)                                   |         –          | :white_check_mark: |         [View](lint_results/workflow-outputs-results/airrflow_outputs.md)          |
 | [alleleexpression](https://github.com/nf-core/alleleexpression)                   |         –          | :white_check_mark: |     [View](lint_results/workflow-outputs-results/alleleexpression_outputs.md)      |

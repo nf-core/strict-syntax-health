@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.04.3
 
-Launching `./main.nf` [friendly_mcclintock] revision: 2f93b16035
+Launching `./main.nf` [pedantic_bassi] revision: 2f93b16035
 
 
 ------------------------------------------------------

@@ -1,6 +1,6 @@
 # Workflow outputs migration: phaseimpute
 
-- Generated: 2026-06-16T18:07:27.020895+00:00
+- Generated: 2026-06-16T19:35:41.444777+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -12,7 +12,7 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 ## Legacy `publishDir` references
 
-Found 84 `publishDir` references across 22 files that should be migrated to the workflow `output {}` block:
+Found 83 `publishDir` references across 21 files that should be migrated to the workflow `output {}` block:
 
 - [`conf/steps/panelprep.config`](https://github.com/nf-core/phaseimpute/blob/71cb181f1254459c4fad2e185d173ab23ecd4d67/conf/steps/panelprep.config#L16) — 13 references
 - [`conf/steps/validation.config`](https://github.com/nf-core/phaseimpute/blob/71cb181f1254459c4fad2e185d173ab23ecd4d67/conf/steps/validation.config#L18) — 10 references
@@ -33,6 +33,5 @@ Found 84 `publishDir` references across 22 files that should be migrated to the 
 - [`conf/test_dog.config`](https://github.com/nf-core/phaseimpute/blob/71cb181f1254459c4fad2e185d173ab23ecd4d67/conf/test_dog.config#L51) — 2 references
 - [`conf/test_panelprep.config`](https://github.com/nf-core/phaseimpute/blob/71cb181f1254459c4fad2e185d173ab23ecd4d67/conf/test_panelprep.config#L48) — 2 references
 - [`conf/test_full.config`](https://github.com/nf-core/phaseimpute/blob/71cb181f1254459c4fad2e185d173ab23ecd4d67/conf/test_full.config#L46) — 1 reference
-- [`nextflow.config`](https://github.com/nf-core/phaseimpute/blob/71cb181f1254459c4fad2e185d173ab23ecd4d67/nextflow.config#L105) — 1 reference
 - [`subworkflows/nf-core/bam_impute_quilt/tests/nextflow.config`](https://github.com/nf-core/phaseimpute/blob/71cb181f1254459c4fad2e185d173ab23ecd4d67/subworkflows/nf-core/bam_impute_quilt/tests/nextflow.config#L14) — 1 reference
 - [`tests/nextflow.config`](https://github.com/nf-core/phaseimpute/blob/71cb181f1254459c4fad2e185d173ab23ecd4d67/tests/nextflow.config#L19) — 1 reference

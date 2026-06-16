@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.04.3
 
-Launching `./main.nf` [disturbed_northcutt] revision: ae3065a2fd
+Launching `./main.nf` [admiring_waddington] revision: ae3065a2fd
 
 
 ------------------------------------------------------
@@ -17,7 +17,7 @@ Launching `./main.nf` [disturbed_northcutt] revision: ae3065a2fd
 
 Could not read parameters settings from JSON. java.nio.file.NoSuchFileException: /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/deepmutscan/true
 Core Nextflow options
-  runName    : disturbed_northcutt
+  runName    : admiring_waddington
   launchDir  : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/deepmutscan
   workDir    : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/deepmutscan/work
   projectDir : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/deepmutscan

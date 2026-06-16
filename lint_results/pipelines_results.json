@@ -195,7 +195,7 @@
     "parse_error": false,
     "prints_help": true,
     "workflow_output": true,
-    "publishdir": true
+    "publishdir": false
   },
   "createtaxdb": {
     "full_name": "nf-core/createtaxdb",
@@ -1163,7 +1163,7 @@
     "parse_error": false,
     "prints_help": false,
     "workflow_output": true,
-    "publishdir": true
+    "publishdir": false
   },
   "reportho": {
     "full_name": "nf-core/reportho",
@@ -1315,9 +1315,9 @@
     "errors": 0,
     "warnings": 3,
     "parse_error": false,
-    "prints_help": false,
+    "prints_help": true,
     "workflow_output": true,
-    "publishdir": true
+    "publishdir": false
   },
   "seqsubmit": {
     "full_name": "nf-core/seqsubmit",

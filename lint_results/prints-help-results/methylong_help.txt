@@ -3,6 +3,6 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.04.3
 
-Launching `./main.nf` [nice_majorana] revision: d5821145d3
+Launching `./main.nf` [angry_engelbart] revision: d5821145d3
 
 Unable to create help message: Specified param 'true' does not exist in JSON schema. -- Check script 'subworkflows/nf-core/utils_nfschema_plugin/main.nf' at line: 41 or see '.nextflow.log' file for more details
