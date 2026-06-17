@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-16T20:24:08.886678908Z
+- Generated: 2026-06-17T00:45:08.203506844Z
 - Nextflow version: 26.04.3
-- Summary: 10 warnings
+- Summary: 11 warnings
 
 ## :warning: Warnings
 
@@ -55,23 +55,30 @@
       ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/fastquorum.nf:65:25`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/fastquorum.nf:63:25`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .branch { meta, bam ->
                           ^^^
   ```
 
-- Warning: `workflows/fastquorum.nf:72:41`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/fastquorum.nf:70:41`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_fastqtobam.correct.first().map { meta, bam ->
                                           ^^^^
   ```
 
-- Warning: `workflows/fastquorum.nf:72:47`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/fastquorum.nf:70:47`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_fastqtobam.correct.first().map { meta, bam ->
                                                 ^^^
+  ```
+
+- Warning: `workflows/fastquorum.nf:263:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      multiqc_report = MULTIQC.out.report.map { _meta, report -> [report] }.toList() // channel: /path/to/multiqc_report.html
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```

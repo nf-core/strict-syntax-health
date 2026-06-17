@@ -482,9 +482,9 @@
   "fastquorum": {
     "full_name": "nf-core/fastquorum",
     "html_url": "https://github.com/nf-core/fastquorum",
-    "commit": "1cbfe1450244036706546e50daa6b6c35054ff1a",
+    "commit": "76c4452a31761cca47e3c7af93701f3820cc0c15",
     "errors": 0,
-    "warnings": 10,
+    "warnings": 11,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
