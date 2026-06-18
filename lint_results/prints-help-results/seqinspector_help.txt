@@ -1,9 +1,12 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
+Nextflow 26.04.4 is available - Please consider updating your version to it
 
  N E X T F L O W   ~  version 26.04.3
 
-Launching `./main.nf` [berserk_minsky] revision: cd59d48ec5
+Downloading plugin nf-core-utils@0.4.0
+Downloading plugin nf-schema@2.6.1
+Launching `./main.nf` [happy_joliot] revision: 3b6783fcf8
 
 
 ------------------------------------------------------
@@ -37,6 +40,10 @@ Validation options
   --fq_lint_args                     [string]  Arguments to pass to FQ lint 
   --continue_with_lint_fail          [boolean] Whether to continue with the pipeline if linting fails for a single sample. [default: true] 
   --checkqc_config                   [string]  Path to custom CheckQC config 
+
+BBMap options
+  --save_bbmap_clumpify_reads        [boolean] Turn on saving of BBMap Clumpify deduplicated reads 
+  --bbmap_clumpify_args              [string]  Arguments to pass to BBMap Clumpify [default: markduplicates=true] 
 
 Kraken2 options
   --kraken2_db                       [string]  Path to Kraken2 database file, either a gzipped file or the path to the uncompressed database. 

@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "0a86013cac04c435a395838bb59c41650af5c036",
+  "_repo_commit": "3dce2078849798d8aca4b407e6212bcd21ecb3ab",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -2424,6 +2424,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "custom_orfcollapse": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/custom/orfcollapse",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
   "custom_orfmerge": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/custom/orfmerge",
     "errors": 0,
@@ -2576,6 +2582,18 @@
   },
   "deepcell_mesmer": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/deepcell/mesmer",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "deepmased_features": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/deepmased/features",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "deepmased_predict": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/deepmased/predict",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -3728,6 +3746,12 @@
   },
   "gatk4_calibratedragstrmodel": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gatk4/calibratedragstrmodel",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "gatk4_cleansam": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gatk4/cleansam",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -5594,6 +5618,12 @@
   },
   "last_train": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/last/train",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "leafcutter_clusterregtools": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/leafcutter/clusterregtools",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

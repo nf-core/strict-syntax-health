@@ -1,9 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
+Nextflow 26.04.4 is available - Please consider updating your version to it
 
  N E X T F L O W   ~  version 26.04.3
 
-Launching `./main.nf` [tiny_rosalind] revision: 2b446ef73b
+Launching `./main.nf` [small_roentgen] revision: 2b446ef73b
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -65,6 +66,7 @@ Simpleaf Options
   --simpleaf_umi_resolution       [string]  UMI resolution strategy to deduplicate UMIs.  (accepted: cr-like, cr-like-em, parsimony, 
 parsimony-em, parsimony-gene, parsimony-gene-em) [default: cr-like]  
   --remove_doublets               [boolean] Enable doublet detection and removal using Scrublet via QCatch. 
+  --qcatch_n_partitions           [integer] Number of partitions (max barcodes) for QCatch's empty_drops step. 
 
 STARSolo Options
   --star_index                    [string] Specify a path to the precomputed STAR index. 

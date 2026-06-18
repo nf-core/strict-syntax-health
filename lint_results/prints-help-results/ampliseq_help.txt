@@ -1,9 +1,11 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
+Nextflow 26.04.4 is available - Please consider updating your version to it
 
  N E X T F L O W   ~  version 26.04.3
 
-Launching `./main.nf` [friendly_carson] revision: be54f69b2e
+Downloading plugin nf-schema@2.7.2
+Launching `./main.nf` [confident_davinci] revision: be54f69b2e
 
 
 ------------------------------------------------------
@@ -12,7 +14,7 @@ Launching `./main.nf` [friendly_carson] revision: be54f69b2e
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/ampliseq 2.18.0
+  nf-core/ampliseq 2.19.0dev
 ------------------------------------------------------
 Typical pipeline command:
 

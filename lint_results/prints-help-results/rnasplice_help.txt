@@ -1,9 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
+Nextflow 26.04.4 is available - Please consider updating your version to it
 
  N E X T F L O W   ~  version 26.04.3
 
-Launching `./main.nf` [evil_davinci] revision: 576b61d256
+Launching `./main.nf` [tender_edison] revision: 576b61d256
 
 Parameter `fasta` is required but was not specified on the command line, params file, or config
 

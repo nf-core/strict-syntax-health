@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-16T20:26:58.185372909Z
+- Generated: 2026-06-18T00:46:33.138627333Z
 - Nextflow version: 26.04.3
-- Summary: 6 warnings
+- Summary: 8 warnings
 
 ## :warning: Warnings
 
@@ -46,4 +46,18 @@
   ```nextflow
       dummy_emit = true
       ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `workflows/hlatyping.nf:206:87`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  [meta.id, 'spechla', (files instanceof List ? files : [files]).find { it.name == 'hla.result.txt' }]
+                                                                                        ^^
+  ```
+
+- Warning: `workflows/hlatyping.nf:290:85`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  [meta.id, 'hlala', (files instanceof List ? files : [files]).find { it.name == 'R1_bestguess_G.txt' }]
+                                                                                      ^^
   ```
