@@ -74,7 +74,7 @@
   "bacmodel": {
     "full_name": "nf-core/bacmodel",
     "html_url": "https://github.com/nf-core/bacmodel",
-    "commit": "f6ccba6f8bf0aeba9db3a549c43c877a2735119e",
+    "commit": "73e86328d37a560b0f81f4b65ab9911ae3c1e95e",
     "errors": 0,
     "warnings": 54,
     "parse_error": false,
@@ -554,11 +554,11 @@
   "genomeassembler": {
     "full_name": "nf-core/genomeassembler",
     "html_url": "https://github.com/nf-core/genomeassembler",
-    "commit": "b017207723b90730c53a0c2b17a4a62170a2cfff",
-    "errors": 16,
-    "warnings": 139,
+    "commit": "df11fab16c4ef0ef836e40406f56f0f099e6e353",
+    "errors": 0,
+    "warnings": 136,
     "parse_error": false,
-    "prints_help": null,
+    "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
     "publishdir_count": 60
@@ -722,7 +722,7 @@
   "longraredisease": {
     "full_name": "nf-core/longraredisease",
     "html_url": "https://github.com/nf-core/longraredisease",
-    "commit": "36831ff50fe23d18cbc24ea510d3d76bfcd90403",
+    "commit": "396a851bba8c6920f3d33604d01157f43c6a4af2",
     "errors": 0,
     "warnings": 167,
     "parse_error": false,
@@ -734,7 +734,7 @@
   "lsmquant": {
     "full_name": "nf-core/lsmquant",
     "html_url": "https://github.com/nf-core/lsmquant",
-    "commit": "6c8efa56e94166da6cb33a5f64f6221944998be9",
+    "commit": "b9cc44fbed87dac43f85fafd16abc10604697d64",
     "errors": 0,
     "warnings": 23,
     "parse_error": false,
@@ -1106,7 +1106,7 @@
   "phaseimpute": {
     "full_name": "nf-core/phaseimpute",
     "html_url": "https://github.com/nf-core/phaseimpute",
-    "commit": "71cb181f1254459c4fad2e185d173ab23ecd4d67",
+    "commit": "6d08d2c865ce34b78afa182d2eeadcb955350331",
     "errors": 0,
     "warnings": 19,
     "parse_error": false,
@@ -1130,7 +1130,7 @@
   "pixelator": {
     "full_name": "nf-core/pixelator",
     "html_url": "https://github.com/nf-core/pixelator",
-    "commit": "5050af76b11148e4fe5366e6ba831805bcf9965f",
+    "commit": "dcfa53ad57f9988d9b7f44346c5b868db9e76527",
     "errors": 0,
     "warnings": 21,
     "parse_error": false,
@@ -1166,7 +1166,7 @@
   "proteinfold": {
     "full_name": "nf-core/proteinfold",
     "html_url": "https://github.com/nf-core/proteinfold",
-    "commit": "adda74069284af8d1f3d14abe8d63b6ee5708819",
+    "commit": "4a3bfe0a716084e31838ee0f6a54f616b4e0495f",
     "errors": 0,
     "warnings": 7,
     "parse_error": false,
@@ -1226,7 +1226,7 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "560949bf362ad27bdf214459bf832c8163fa9936",
+    "commit": "0afa63384c72130ac7ccbccbf6f76f284a4fd961",
     "errors": 0,
     "warnings": 12,
     "parse_error": false,
@@ -1298,7 +1298,7 @@
   "riboseq": {
     "full_name": "nf-core/riboseq",
     "html_url": "https://github.com/nf-core/riboseq",
-    "commit": "bbcd3aef5937b936fdf811611774e339036e1dc3",
+    "commit": "ce5d7f98ced97e4a4e86aa9be4f664a0d4b27062",
     "errors": 0,
     "warnings": 128,
     "parse_error": false,
@@ -1334,7 +1334,7 @@
   "rnaseq": {
     "full_name": "nf-core/rnaseq",
     "html_url": "https://github.com/nf-core/rnaseq",
-    "commit": "61651dc4b5842ca0bd6394a22d42b326d50daa2f",
+    "commit": "6f6c86071fd3040122063479376e62c30d86a544",
     "errors": 0,
     "warnings": 5,
     "parse_error": false,

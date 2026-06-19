@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.04.3
+ N E X T F L O W   ~  version 26.04.4
 
-Launching `./main.nf` [naughty_feynman] revision: e1f6be061f
+Launching `./main.nf` [silly_murdock] revision: e1f6be061f
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -166,9 +166,9 @@ biases when comparing the two modalities due to different read lengths. [default
   --equalise_read_lengths_target         [integer] Target read length for RNA-seq trimming. If not specified, the average Ribo-seq read length will be 
 derived from paired samples using seqkit stats. This parameter is required if RNA-seq samples have 
 no paired Ribo-seq sample.  
-  --te_quantification_method             [string]  Quantification method for translational efficiency analysis: 'alignment' (STAR → Salmon), 'pseudo' 
-(Salmon pseudo-alignment) or 'plastid_psite' (in-frame p-site counts from plastid).  (accepted: 
-alignment, pseudo, plastid_psite) [default: alignment]  
+  --te_quantification_method             [string]  Quantification method for translational efficiency analysis: 'plastid_psite' (in-frame P-site counts 
+from plastid, default), 'alignment' (STAR -> Salmon) or 'pseudo' (Salmon pseudo-alignment).  
+(accepted: alignment, pseudo, plastid_psite) [default: plastid_psite]  
 
 Optional outputs
   --save_merged_fastq                    [boolean] Save FastQ files after merging re-sequenced libraries in the results directory. 

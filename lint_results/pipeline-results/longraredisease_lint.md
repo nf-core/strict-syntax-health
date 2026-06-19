@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-06-16T20:27:49.756711396Z
-- Nextflow version: 26.04.3
+- Generated: 2026-06-19T00:50:40.891207749Z
+- Nextflow version: 26.04.4
 - Summary: 167 warnings
 
 ## :warning: Warnings
@@ -1028,147 +1028,147 @@
       ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/longraredisease/main.nf:111:54`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/longraredisease.nf:111:54`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               pedigree_input.map { family_meta, metas, file_paths ->
                                                        ^^^^^^^^^^
   ```
 
-- Warning: `workflows/longraredisease/main.nf:131:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/longraredisease.nf:131:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_fasta = Channel
                  ^^^^^^^
   ```
 
-- Warning: `workflows/longraredisease/main.nf:156:26`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/longraredisease.nf:156:26`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map { meta, file_path -> meta.family_id }
                            ^^^^^^^^^
   ```
 
-- Warning: `workflows/longraredisease/main.nf:161:20`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/longraredisease.nf:161:20`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map { meta, sdf -> sdf }
                      ^^^^
   ```
 
-- Warning: `workflows/longraredisease/main.nf:168:18`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/longraredisease.nf:168:18`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_trf = Channel
                    ^^^^^^^
   ```
 
-- Warning: `workflows/longraredisease/main.nf:198:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/longraredisease.nf:198:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       it.name.endsWith('.fastq.gz') || it.name.endsWith('.fq.gz')
                       ^^
   ```
 
-- Warning: `workflows/longraredisease/main.nf:198:54`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/longraredisease.nf:198:54`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       it.name.endsWith('.fastq.gz') || it.name.endsWith('.fq.gz')
                                                        ^^
   ```
 
-- Warning: `workflows/longraredisease/main.nf:267:69`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/longraredisease.nf:267:69`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       def bam_files = file_path.listFiles().findAll { it.name.endsWith('.bam') }
                                                                       ^^
   ```
 
-- Warning: `workflows/longraredisease/main.nf:334:65`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/longraredisease.nf:334:65`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_final_sorted_bam = ch_aligned_input.map { meta, bam, bai -> [meta, bam] }
                                                                   ^^^
   ```
 
-- Warning: `workflows/longraredisease/main.nf:335:60`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/longraredisease.nf:335:60`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_final_sorted_bai = ch_aligned_input.map { meta, bam, bai -> [meta, bai] }
                                                              ^^^
   ```
 
-- Warning: `workflows/longraredisease/main.nf:545:82`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/longraredisease.nf:545:82`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               ch_sv_vcf_final = FILTER_SV_SNIFFLES.out.ch_vcf_tbi.map { meta, vcf, tbi -> [meta, vcf] }
                                                                                    ^^^
   ```
 
-- Warning: `workflows/longraredisease/main.nf:564:74`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/longraredisease.nf:564:74`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               ch_svim_vcf = FILTER_SV_SVIM.out.ch_vcf_tbi.map { meta, vcf, tbi -> [meta, vcf] }
                                                                            ^^^
   ```
 
-- Warning: `workflows/longraredisease/main.nf:619:43`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/longraredisease.nf:619:43`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               ch_sv_svanna.map { meta, vcf, hpo_terms -> [meta, vcf] },
                                             ^^^^^^^^^
   ```
 
-- Warning: `workflows/longraredisease/main.nf:621:32`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/longraredisease.nf:621:32`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               ch_sv_svanna.map { meta, vcf, hpo_terms -> hpo_terms }
                                  ^^^^
   ```
 
-- Warning: `workflows/longraredisease/main.nf:621:38`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/longraredisease.nf:621:38`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               ch_sv_svanna.map { meta, vcf, hpo_terms -> hpo_terms }
                                        ^^^
   ```
 
-- Warning: `workflows/longraredisease/main.nf:733:78`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/longraredisease.nf:733:78`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               ch_cutesv_vcf = FILTER_SV_CUTESV.out.ch_vcf_tbi.map { meta, vcf, tbi -> [meta, vcf] }
                                                                                ^^^
   ```
 
-- Warning: `workflows/longraredisease/main.nf:812:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/longraredisease.nf:812:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_multiqc_files = Channel.empty()
                          ^^^^^^^
   ```
 
-- Warning: `workflows/longraredisease/main.nf:814:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/longraredisease.nf:814:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           Channel.of(paramsSummaryMultiqc(paramsSummaryMap(workflow, parameters_schema: "nextflow_schema.json")))
           ^^^^^^^
   ```
 
-- Warning: `workflows/longraredisease/main.nf:820:43`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/longraredisease.nf:820:43`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               NANOPLOT_QC.out.txt.collect { meta, txt -> txt }
                                             ^^^^
   ```
 
-- Warning: `workflows/longraredisease/main.nf:865:17`: Variable was declared but not used
+- Warning: `workflows/longraredisease.nf:865:17`: Variable was declared but not used
 
   ```nextflow
           ).set { ch_collated_versions }
                   ^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/longraredisease/main.nf:868:5`: Emit name should be omitted when there is only one emit
+- Warning: `workflows/longraredisease.nf:868:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
       multiqc_report = MULTIQC.out.report.map { _meta, report -> report }

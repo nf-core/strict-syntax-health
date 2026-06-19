@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-06-16T20:33:54.658984621Z
-- Nextflow version: 26.04.3
+- Generated: 2026-06-19T00:51:31.800309613Z
+- Nextflow version: 26.04.4
 - Summary: 19 warnings
 
 ## :warning: Warnings
@@ -83,7 +83,7 @@
       ^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/nf-core/bam_subsampledepth_samtools/main.nf:51:5`: Emit name should be omitted when there is only one emit
+- Warning: `subworkflows/nf-core/bam_subsampledepth_samtools/main.nf:93:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
       bam_subsampled    = ch_bam_subsampled             // channel: [ val(meta), path(bam), path(csi) ]
@@ -132,7 +132,7 @@
           ^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/phaseimpute/main.nf:820:5`: Emit name should be omitted when there is only one emit
+- Warning: `workflows/phaseimpute/main.nf:822:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
       multiqc_report = MULTIQC.out.report.map { _meta, report -> [report] }.toList() // channel: /path/to/multiqc_report.html

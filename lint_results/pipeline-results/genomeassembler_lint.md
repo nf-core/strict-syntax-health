@@ -1,122 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-16T20:25:33.977325927Z
-- Nextflow version: 26.04.3
-- Summary: 16 errors, 139 warnings
-
-## :x: Errors
-
-- Error: `modules/local/genomescope/main.nf:16:30`: `est_hap_len` is not defined
-
-  ```nextflow
-          tuple val(meta), env(est_hap_len)           , emit: estimated_hap_len
-                               ^^^^^^^^^^^
-  ```
-
-- Error: `modules/local/nanoq/main.nf:16:26`: `median` is not defined
-
-  ```nextflow
-      tuple val(meta), env(median), emit: median_length
-                           ^^^^^^
-  ```
-
-- Error: `nextflow.config:289:1`: Variable declarations cannot be mixed with config statements
-
-  ```nextflow
-  def trace_timestamp = new java.util.Date().format( 'yyyy-MM-dd_HH-mm-ss')
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `nextflow.config:292:68`: `trace_timestamp` is not defined
-
-  ```nextflow
-      file    = "${params.outdir}/pipeline_info/execution_timeline_${trace_timestamp}.html"
-                                                                     ^^^^^^^^^^^^^^^
-  ```
-
-- Error: `nextflow.config:296:66`: `trace_timestamp` is not defined
-
-  ```nextflow
-      file    = "${params.outdir}/pipeline_info/execution_report_${trace_timestamp}.html"
-                                                                   ^^^^^^^^^^^^^^^
-  ```
-
-- Error: `nextflow.config:300:65`: `trace_timestamp` is not defined
-
-  ```nextflow
-      file    = "${params.outdir}/pipeline_info/execution_trace_${trace_timestamp}.txt"
-                                                                  ^^^^^^^^^^^^^^^
-  ```
-
-- Error: `nextflow.config:304:62`: `trace_timestamp` is not defined
-
-  ```nextflow
-      file    = "${params.outdir}/pipeline_info/pipeline_dag_${trace_timestamp}.html"
-                                                               ^^^^^^^^^^^^^^^
-  ```
-
-- Error: `nextflow.config:338:34`: `manifest` is not defined
-
-  ```nextflow
-          command = "nextflow run $manifest.name -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>"
-                                   ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:348:15`: `manifest` is not defined
-
-  ```nextflow
-  \033[0;35m  ${manifest.name} ${manifest.version}\033[0m
-                ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:348:32`: `manifest` is not defined
-
-  ```nextflow
-  \033[0;35m  ${manifest.name} ${manifest.version}\033[0m
-                                 ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:351:26`: `manifest` is not defined
-
-  ```nextflow
-          afterText = """${manifest.doi ? "* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "  https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
-                           ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:351:67`: `manifest` is not defined
-
-  ```nextflow
-          afterText = """${manifest.doi ? "* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "  https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
-                                                                    ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:351:182`: `manifest` is not defined
-
-  ```nextflow
-          afterText = """${manifest.doi ? "* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "  https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
-                                                                                                                                                                                       ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:356:26`: `manifest` is not defined
-
-  ```nextflow
-      https://github.com/${manifest.name}/blob/master/CITATIONS.md
-                           ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:360:22`: `validation` is not defined
-
-  ```nextflow
-          beforeText = validation.help.beforeText
-                       ^^^^^^^^^^
-  ```
-
-- Error: `nextflow.config:361:21`: `validation` is not defined
-
-  ```nextflow
-          afterText = validation.help.afterText
-                      ^^^^^^^^^^
-  ```
+- Generated: 2026-06-19T00:50:12.658315346Z
+- Nextflow version: 26.04.4
+- Summary: 136 warnings
 
 ## :warning: Warnings
 
@@ -153,13 +39,6 @@
   ```nextflow
           args_list.removeAll { it.toLowerCase().contains('_r2 ') }
                                 ^^
-  ```
-
-- Warning: `nextflow.config:351:125`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          afterText = """${manifest.doi ? "* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "  https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
-                                                                                                                              ^^
   ```
 
 - Warning: `subworkflows/local/assemble/main.nf:22:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -925,28 +804,21 @@
       ^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_genomeassembler_pipeline/main.nf:31:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      monochrome_logs // boolean: Do not use coloured log outputs
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_genomeassembler_pipeline/main.nf:34:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_genomeassembler_pipeline/main.nf:33:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       input             //  string: Path to input samplesheet
       ^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_genomeassembler_pipeline/main.nf:98:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/utils_nfcore_genomeassembler_pipeline/main.nf:104:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       Channel.empty().set { ch_refs }
       ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_genomeassembler_pipeline/main.nf:99:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/utils_nfcore_genomeassembler_pipeline/main.nf:105:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       Channel.fromPath(params.input)
@@ -974,18 +846,11 @@
       ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
-
-  ```nextflow
-      valid_config = checkConfigProvided()
-      ^^^^^^^^^^^^
-  ```
-
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
-      valid_config
-      ^^^^^^^^^^^^
+      valid_config = valid_config
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
@@ -1086,9 +951,9 @@
                                                                                                                       ^^^^^^^
   ```
 
-- Warning: `workflows/genomeassembler.nf:217:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/genomeassembler.nf:234:9`: Variable was declared but not used
 
   ```nextflow
-      def topic_versions = Channel.topic("versions")
-                           ^^^^^^^
+      def ch_collated_versions = softwareVersionsToYAML(ch_versions.mix(topic_versions.versions_file))
+          ^^^^^^^^^^^^^^^^^^^^
   ```

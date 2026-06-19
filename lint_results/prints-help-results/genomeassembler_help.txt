@@ -1,0 +1,105 @@
+$ NXF_SYNTAX_PARSER=v2 nextflow run . --help
+
+
+ N E X T F L O W   ~  version 26.04.4
+
+Launching `./main.nf` [modest_hirsch] revision: 924644ce8d
+
+WARN: Unrecognized config option 'validation.defaultIgnoreParams'
+
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/genomeassembler 1.1.0
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/genomeassembler -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input               [string] Path to comma-separated file containing information about the samples in the experiment. 
+  --outdir              [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --email               [string] Email address for completion summary. 
+
+Generic options
+  --help_full           [boolean] Display the full detailed help message. 
+  --show_hidden         [boolean] Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+
+General parameters
+  --use_ref             [boolean] use reference genome [default: true] 
+  --skip_assembly       [boolean] skip assembly steps 
+  --skip_alignments     [boolean] skip alignments during qc 
+
+ONT options
+  --ont                 [boolean] ONT reads available? 
+  --collect             [boolean] collect ONT reads into a single file 
+  --porechop            [boolean] run porechop on ONT reads 
+  --read_length         [integer] read length for genomescope (ONT only) 
+  --jellyfish           [boolean] run jellyfish on ONT reads to compute k-mer distribution and estimate genome size [default: 
+true]  
+  --dump                [boolean] dump jellyfish output 
+  --kmer_length         [integer] kmer length to be used for jellyfish [default: 21] 
+
+HiFi options
+  --hifi                [boolean] HiFi reads available? 
+  --lima                [boolean] run lima on HiFi reads? 
+  --pacbio_primers      [string]  file containing pacbio primers for trimming with lima 
+
+Assembly options
+  --assembler           [string]  Assembler to use. Valid choices are: `'hifiasm'`, `'flye'`,  `'flye_on_hifiasm'` or 
+`hifiasm_on_hifiasm`. `flye_on_hifiasm` will scaffold flye assembly (ont) on hifiasm (hifi) assembly 
+using ragtag. `hifiasm_on_hifiasm` will scaffold hifiasm (ont) onto hifiasm (HiFi) using ragtag  
+(accepted: flye, hifiasm, flye_on_hifiasm, hifiasm_on_hifiasm) [default: flye]  
+  --genome_size         [integer] expected genome size, optional 
+  --flye_mode           [string]  flye mode  (accepted: --pacbio-raw, --pacbio-corr, --pacbio-hifi, --nano-raw, --nano-corr, 
+--nano-hq) [default: --nano-hq]  
+  --flye_args           [string]  additional args for flye 
+  --hifiasm_ont         [boolean] Use hifi and ONT reads with `hifiasm --ul` 
+  --hifiasm_args        [string]  Extra arguments passed to `hifiasm` 
+
+Short read options
+  --short_reads         [boolean] Short reads available? 
+  --trim_short_reads    [boolean] trim short reads with trimgalore [default: true] 
+  --meryl_k             [integer] kmer length for meryl / merqury [default: 21] 
+
+Polishing options
+  --polish_pilon        [boolean] Polish assembly with pilon? Requires short reads 
+  --polish_medaka       [boolean] Polish assembly with medaka (ONT only) 
+  --medaka_model        [string]  model to use with medaka 
+
+Scaffolding options
+  --scaffold_longstitch [boolean] Scaffold with longstitch? 
+  --scaffold_links      [boolean] Scaffolding with links? 
+  --scaffold_ragtag     [boolean] Scaffold with ragtag (requires reference)? 
+
+QC options
+  --merqury             [boolean] Run merqury [default: true] 
+  --qc_reads            [string]  Long reads that should be used for QC when both ONT and HiFi reads are provided. Options are `'ONT'` 
+or `'HIFI'`  (accepted: ONT, HIFI) [default: ONT]  
+  --busco               [boolean] Run BUSCO? [default: true] 
+  --busco_db            [string]  Path to busco db (optional) 
+  --busco_lineage       [string]  Busco lineage to use [default: brassicales_odb10] 
+  --quast               [boolean] Run quast [default: true] 
+
+Annotations options
+  --lift_annotations    [boolean] Lift-over annotations (requires reference)? [default: true] 
+ !! Hiding 13 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The pipeline
+    https://doi.org/10.5281/zenodo.14986998
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/genomeassembler/blob/master/CITATIONS.md
+
