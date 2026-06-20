@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.04.4
+ N E X T F L O W   ~  version 26.05.0-edge
 
-Launching `./main.nf` [silly_murdock] revision: e1f6be061f
+Launching `./main.nf` [backstabbing_goldberg] revision: 8f4b7ccf52
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -46,6 +46,9 @@ Reference genome options
 input GTF file when running Salmon. [default: gene_name]  
   --gtf_group_features                   [string]  Define the attribute type used to group features in the GTF file when running Salmon. [default: 
 gene_id]  
+  --canonical_gtf                        [string]  Optional one-transcript-per-gene canonical GTF used as the annotation backbone for the 
+genome-coordinate ORF callers (Ribo-TISH, Ribotricer), plastid P-site quantification and DTE. 
+ 
 
 Read trimming options
   --trimmer                              [string]  Specifies the trimming tool to use - available options are 'trimgalore' and 'fastp'.  (accepted: 
@@ -200,7 +203,7 @@ the pipeline run.
   --skip_qc                              [boolean] Skip all QC steps except for MultiQC. 
   --skip_coverage_tracks                 [boolean] Skip bigWig coverage track generation. 
   --skip_ribotish                        [boolean] Skip Ribo-TISH. 
-  --skip_ribotricer                      [boolean] Skip Riboricer. 
+  --run_ribotricer                       [boolean] Opt in to running Ribotricer as an additional ORF caller. 
   --skip_ribocode                        [boolean] Skip RiboCode. 
   --skip_ribowaltz                       [boolean] Skip riboWaltz. 
   --skip_plastid                         [boolean] Skip plastid. 

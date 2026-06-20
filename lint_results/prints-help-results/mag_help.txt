@@ -1,9 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.04.3
+ N E X T F L O W   ~  version 26.05.0-edge
 
-Launching `./main.nf` [festering_kilby] revision: 71af2049ef
+Downloading plugin nf-schema@2.5.1
+Launching `./main.nf` [goofy_kowalevski] revision: 71af2049ef
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -115,9 +116,9 @@ archive. If not specified will be downloaded for you when GTDBTK or binning QC i
 [default: 
 https://data.gtdb.aau.ecogenomic.org/releases/release232/232.0/auxillary_files/gtdbtk_package/full_package/gtdbtk_r232_data.tar.gz] 
  
-  --gtdbtk_min_completeness              [number]  Min. bin completeness (in %) required to apply GTDB-tk classification. [default: 50] 
-  --gtdbtk_max_contamination             [number]  Max. bin contamination (in %) allowed to apply GTDB-tk classification. [default: 10] 
-  --gtdbtk_min_perc_aa                   [number]  Min. fraction of AA (in %) in the MSA for bins to be kept. [default: 10] 
+  --gtdbtk_min_completeness              [number]  Min. bin completeness (in %) required to apply GTDB-tk classification. [default: 50.0] 
+  --gtdbtk_max_contamination             [number]  Max. bin contamination (in %) allowed to apply GTDB-tk classification. [default: 10.0] 
+  --gtdbtk_min_perc_aa                   [number]  Min. fraction of AA (in %) in the MSA for bins to be kept. [default: 10.0] 
   --gtdbtk_min_af                        [number]  Min. alignment fraction to consider closest genome. [default: 0.65] 
   --gtdbtk_pplacer_cpus                  [integer] Number of CPUs used for the by GTDB-Tk run tool pplacer. [default: 1] 
   --gtdbtk_pplacer_useram                [boolean] Speed up pplacer step of GTDB-Tk by loading to memory. 
@@ -141,6 +142,7 @@ for you!
   --skip_quast                           [boolean] Skip metaQUAST. 
   --skip_metamdbg                        [boolean] Skip MetaDBG assembly. 
   --skip_flye                            [boolean] Skip Flye assembly. 
+  --run_pypolca                          [boolean] Run PyPOLCA polishing on long-read assemblies before binning. 
 
 Gene prediction and annotation options
   --skip_prodigal                        [boolean] Skip Prodigal gene prediction 
@@ -206,7 +208,7 @@ steps).
 
 Bin quality check options
   --skip_binqc                           [boolean] Disable bin QC with BUSCO, CheckM or CheckM2. 
-  --run_busco                            [boolean] Enable running BUSCO during bin QC. 
+  --run_busco                            [boolean] Enable running BUSCO during bin QC. [default: true] 
   --run_checkm                           [boolean] Enable running CheckM during bin QC. 
   --run_checkm2                          [boolean] Enable running CheckM2 during bin QC. 
   --busco_db                             [string]  Download URL, local tar.gz archive, or local uncompressed directory for an *_odb10 or *_odb12 BUSCO 

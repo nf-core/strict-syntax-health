@@ -1,0 +1,82 @@
+$ NXF_SYNTAX_PARSER=v2 nextflow run . --help
+
+
+ N E X T F L O W   ~  version 26.05.0-edge
+
+Launching `./main.nf` [grave_nightingale] revision: c02a7a015c
+
+WARN: Unrecognized config option 'validation.defaultIgnoreParams'
+WARN: Unrecognized config option 'validation.monochromeLogs'
+
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/reportho 1.2.0dev
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/reportho -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input                       [string]  Path to comma-separated file containing information about the samples in the experiment. 
+  --outdir                      [string]  The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --output_intermediates        [boolean] Output intermediate files, including specific prediction lists. 
+  --email                       [string]  Email address for completion summary. 
+  --multiqc_title               [string]  MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+
+Ortholog search options
+  --use_all                     [boolean] Use all ortholog search methods. Will mix online and local methods if needed. Overrides all 
+individual database flags.  
+  --local_databases             [boolean] Use local databases for the analysis. 
+  --offline_run                 [boolean] Run the pipeline in offline mode. Overrides all online database flags. 
+  --skip_oma                    [boolean] Skip using OMA for the ortholog search. 
+  --oma_path                    [string]  Path to the OMA database. 
+  --oma_uniprot_path            [string]  Path to the Uniprot-OMA ID map. 
+  --oma_ensembl_path            [string]  Path to the Ensembl-OMA ID map. 
+  --oma_refseq_path             [string]  Path to the RefSeq-OMA ID map. 
+  --skip_panther                [boolean] Skip using PANTHER for the ortholog search. 
+  --panther_path                [string]  Path to the PANTHER database. 
+  --skip_orthoinspector         [boolean] Skip using OrthoInspector for the ortholog search. 
+  --orthoinspector_version      [string]  The version of the OrthoInspector database to use. [default: Eukaryota2023] 
+  --orthoinspector_path         [string]  Path to the OrthoInspector database. 
+  --skip_eggnog                 [boolean] Use EggNOG for the ortholog search. 
+  --eggnog_path                 [string]  Path to the EggNOG database. 
+  --eggnog_idmap_path           [string]  Path to the EggNOG ID map. 
+  --skip_merge                  [boolean] Skip merging IDs based on sequence. 
+  --use_centroid                [boolean] Use centroid strategy for the ortholog search. Overrides min_score. 
+  --min_score                   [number]  Minimum score for the ortholog search. [default: 2] 
+  --min_identity                [number]  Minimum sequence identity in Diamond [default: 90] 
+  --min_coverage                [number]  Minimum sequence coverage in Diamond [default: 80] 
+
+Downstream analysis options
+  --skip_report                 [boolean] Skip report generation. 
+
+Process skipping options
+  --skip_orthoplots             [boolean] Skip the ortholog plots. 
+  --skip_multiqc                [boolean] Skip MultiQC. 
+
+Generic options
+  --multiqc_methods_description [string]          Custom MultiQC yaml file containing HTML including a methods description. 
+  --help                        [boolean, string] Display the help message. 
+  --help_full                   [boolean]         Display the full detailed help message. 
+  --show_hidden                 [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 17 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The pipeline
+    https://doi.org/10.5281/zenodo.11574565
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/reportho/blob/master/CITATIONS.md
+

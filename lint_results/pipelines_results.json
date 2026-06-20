@@ -746,14 +746,14 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "e8eb3e154d16a0d39b72aa2d27f8653a87fdfafd",
+    "commit": "e7d60f5187f4126a54da9e9a3a348cc20f01d932",
     "errors": 0,
     "warnings": 25,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 38
+    "publishdir_count": 39
   },
   "magmap": {
     "full_name": "nf-core/magmap",
@@ -1274,11 +1274,11 @@
   "reportho": {
     "full_name": "nf-core/reportho",
     "html_url": "https://github.com/nf-core/reportho",
-    "commit": "de4ba462df58d43eb438ea529074519edbb9058f",
-    "errors": 2,
-    "warnings": 96,
+    "commit": "e72a55c5dafe5628baf0cf2777038764437c397d",
+    "errors": 0,
+    "warnings": 18,
     "parse_error": false,
-    "prints_help": null,
+    "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
     "publishdir_count": 37
@@ -1298,14 +1298,14 @@
   "riboseq": {
     "full_name": "nf-core/riboseq",
     "html_url": "https://github.com/nf-core/riboseq",
-    "commit": "ce5d7f98ced97e4a4e86aa9be4f664a0d4b27062",
+    "commit": "46fd9536eb4a90d294c3995dacf97ab1f67b8eb4",
     "errors": 0,
-    "warnings": 128,
+    "warnings": 138,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 93
+    "publishdir_count": 94
   },
   "rnadnavar": {
     "full_name": "nf-core/rnadnavar",
@@ -1322,11 +1322,11 @@
   "rnafusion": {
     "full_name": "nf-core/rnafusion",
     "html_url": "https://github.com/nf-core/rnafusion",
-    "commit": "d91904e05490eef579ca4c28d17a6172ddbb864b",
+    "commit": "36e05815b3c7ccf9e73cc2616655ee3bce9e298e",
     "errors": 0,
-    "warnings": 27,
+    "warnings": 6,
     "parse_error": false,
-    "prints_help": true,
+    "prints_help": false,
     "workflow_output": false,
     "publishdir": true,
     "publishdir_count": 35

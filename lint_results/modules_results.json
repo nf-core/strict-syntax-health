@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "08bcf4ed074207d16a6d971b5b3f0f7c0014b433",
+  "_repo_commit": "315b3434ffc4bead2ddac59c75e0e2d7fcf79f0c",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -1982,6 +1982,12 @@
   },
   "cnvkit_reference": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cnvkit/reference",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "cnvkit_segment": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cnvkit/segment",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -4932,8 +4938,20 @@
     "warnings": 0,
     "parse_error": false
   },
+  "hmmer_hmmemit": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/hmmer/hmmemit",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "hmmer_hmmfetch": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/hmmer/hmmfetch",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "hmmer_hmmlogo": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/hmmer/hmmlogo",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
