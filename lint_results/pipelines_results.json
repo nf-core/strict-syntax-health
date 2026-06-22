@@ -746,7 +746,7 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "e7d60f5187f4126a54da9e9a3a348cc20f01d932",
+    "commit": "92c0b2f6fea4dfb62bbc9cc1b80c6bd4dd52432e",
     "errors": 0,
     "warnings": 25,
     "parse_error": false,
@@ -1106,14 +1106,14 @@
   "phaseimpute": {
     "full_name": "nf-core/phaseimpute",
     "html_url": "https://github.com/nf-core/phaseimpute",
-    "commit": "6d08d2c865ce34b78afa182d2eeadcb955350331",
+    "commit": "db3455862f5019249cda5da75eb07d065e6548d3",
     "errors": 0,
     "warnings": 19,
     "parse_error": false,
     "prints_help": false,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 83
+    "publishdir_count": 91
   },
   "phyloplace": {
     "full_name": "nf-core/phyloplace",

@@ -11,7 +11,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 > See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline.
 > **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**
 
-- **Last updated:** 2026-06-21 00:45:08 UTC
+- **Last updated:** 2026-06-22 00:46:37 UTC
 - **Nextflow version:** 26.05.0-edge
 
 ## Pipelines
@@ -285,7 +285,7 @@ The status emoji next to each pipeline shows its migration state: :white_check_m
 | :x: [panoramaseq](https://github.com/nf-core/panoramaseq)                             |     No      |   Yes (15)   |        [View](lint_results/workflow-outputs-results/panoramaseq_outputs.md)        |
 | :x: [pathogensurveillance](https://github.com/nf-core/pathogensurveillance)           |     No      |   Yes (52)   |   [View](lint_results/workflow-outputs-results/pathogensurveillance_outputs.md)    |
 | :x: [phageannotator](https://github.com/nf-core/phageannotator)                       |     No      |   Yes (39)   |      [View](lint_results/workflow-outputs-results/phageannotator_outputs.md)       |
-| :x: [phaseimpute](https://github.com/nf-core/phaseimpute)                             |     No      |   Yes (83)   |        [View](lint_results/workflow-outputs-results/phaseimpute_outputs.md)        |
+| :x: [phaseimpute](https://github.com/nf-core/phaseimpute)                             |     No      |   Yes (91)   |        [View](lint_results/workflow-outputs-results/phaseimpute_outputs.md)        |
 | :x: [phyloplace](https://github.com/nf-core/phyloplace)                               |     No      |   Yes (2)    |        [View](lint_results/workflow-outputs-results/phyloplace_outputs.md)         |
 | :x: [pixelator](https://github.com/nf-core/pixelator)                                 |     No      |   Yes (12)   |         [View](lint_results/workflow-outputs-results/pixelator_outputs.md)         |
 | :x: [proteinannotator](https://github.com/nf-core/proteinannotator)                   |     No      |   Yes (19)   |     [View](lint_results/workflow-outputs-results/proteinannotator_outputs.md)      |

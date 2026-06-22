@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-06-19T00:51:31.800309613Z
-- Nextflow version: 26.04.4
+- Generated: 2026-06-22T00:45:02.613207786Z
+- Nextflow version: 26.05.0-edge
 - Summary: 19 warnings
 
 ## :warning: Warnings
@@ -20,7 +20,7 @@
       ^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bam_extract_region_samtools/main.nf:50:9`: Emit name should be omitted when there is only one emit
+- Warning: `subworkflows/local/bam_extract_region_samtools/main.nf:46:9`: Emit name should be omitted when there is only one emit
 
   ```nextflow
           bam_region = ch_bam_region_all // channel: [ [id, chr], bam, index ]
@@ -34,49 +34,49 @@
       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/vcf_chr_rename_bcftools/main.nf:54:5`: Emit name should be omitted when there is only one emit
+- Warning: `subworkflows/local/vcf_chr_rename_bcftools/main.nf:52:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
-      vcf_renamed    = ch_vcf_renamed        // [ [id], vcf, csi ]
+      vcf_renamed = ch_vcf_renamed // [ [id], vcf, csi ]
       ^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/vcf_normalize_bcftools/main.nf:49:5`: Emit name should be omitted when there is only one emit
+- Warning: `subworkflows/local/vcf_normalize_bcftools/main.nf:41:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
-      vcf_tbi        = ch_vcf_tbi                     // channel: [ [id, chr], vcf, tbi ]
-      ^^^^^^^^^^^^^^^^^^
+      vcf_index = ch_vcf_index // channel: [ [id, chr], vcf, [tbi, csi] ]
+      ^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/vcf_sites_extract_bcftools/main.nf:35:5`: Emit name should be omitted when there is only one emit
+- Warning: `subworkflows/local/vcf_sites_extract_bcftools/main.nf:40:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
-      posfile       = ch_posfile          // channel: [ [id, chr], vcf, csi, hap, legend, posfile ]
+      posfile = ch_posfile          // channel: [ [id, chr], vcf, csi, hap, legend, posfile ]
       ^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/vcf_split_bcftools/main.nf:23:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
-      vcf_tbi        = ch_vcf_tbi_samples   // channel: [ [id, chr, tools], vcf, index ]
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      vcf_index = ch_vcf_index_samples   // channel: [ [id, chr, tools], vcf, index ]
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/nf-core/bam_impute_quilt/main.nf:76:5`: Emit name should be omitted when there is only one emit
+- Warning: `subworkflows/nf-core/bam_impute_quilt/main.nf:88:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
       vcf_index = ch_vcf_index // channel:   [ [id, chr], vcf, tbi ]
       ^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/nf-core/bam_impute_quilt2/main.nf:75:5`: Emit name should be omitted when there is only one emit
+- Warning: `subworkflows/nf-core/bam_impute_quilt2/main.nf:86:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
       vcf_index = ch_vcf_index // channel: [ meta, vcf, tbi/csi ]
       ^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/nf-core/bam_impute_stitch/main.nf:86:5`: Emit name should be omitted when there is only one emit
+- Warning: `subworkflows/nf-core/bam_impute_stitch/main.nf:101:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
       vcf_index = ch_vcf_index // channel:   [ [id, chr], vcf, tbi ]
@@ -104,21 +104,21 @@
       ^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:76:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
       dummy_emit = true
       ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/nf-core/vcf_impute_beagle5/main.nf:119:5`: Emit name should be omitted when there is only one emit
+- Warning: `subworkflows/nf-core/vcf_impute_beagle5/main.nf:132:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
       vcf_index = ch_vcf_index // channel: [ [id, chr, tools], vcf, index ]
       ^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/nf-core/vcf_impute_minimac4/main.nf:90:5`: Emit name should be omitted when there is only one emit
+- Warning: `subworkflows/nf-core/vcf_impute_minimac4/main.nf:119:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
       vcf_index = ch_vcf_index // channel: [ [id, panel, chr], vcf, index ]
@@ -128,11 +128,11 @@
 - Warning: `workflows/chrcheck/main.nf:73:9`: Emit name should be omitted when there is only one emit
 
   ```nextflow
-          output   = ch_output             // [ [id], file, index ]
+          output = ch_output // [ [id], file, index ]
           ^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/phaseimpute/main.nf:822:5`: Emit name should be omitted when there is only one emit
+- Warning: `workflows/phaseimpute/main.nf:820:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
       multiqc_report = MULTIQC.out.report.map { _meta, report -> [report] }.toList() // channel: /path/to/multiqc_report.html
