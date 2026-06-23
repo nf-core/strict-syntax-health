@@ -1,31 +1,10 @@
 # Nextflow lint results
 
-- Generated: 2026-06-16T20:29:08.612818922Z
-- Nextflow version: 26.04.3
-- Summary: 13 errors, 55 warnings
+- Generated: 2026-06-23T00:42:30.422786267Z
+- Nextflow version: 26.05.0-edge
+- Summary: 9 errors, 80 warnings
 
 ## :x: Errors
-
-- Error: `main.nf:18:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/mcmicro/workflows/mcmicro.nf'
-
-  ```nextflow
-  include { MCMICRO  } from './workflows/mcmicro'
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `main.nf:42:5`: `MCMICRO` is not defined
-
-  ```nextflow
-      MCMICRO (
-      ^^^^^^^
-  ```
-
-- Error: `main.nf:47:22`: `MCMICRO` is not defined
-
-  ```nextflow
-      multiqc_report = MCMICRO.out.multiqc_report // channel: /path/to/multiqc_report.html
-                       ^^^^^^^
-  ```
 
 - Error: `modules/local/omevalidation/main.nf:28:53`: Unexpected character: '@'
 
@@ -88,13 +67,6 @@
   ```nextflow
       publishDir enabled: false
       ^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/mcmicro.nf:89:38`: Unexpected input: '\*'
-
-  ```nextflow
-          .map{ meta, cycles -> [meta, *cycles.collect{ it[1..-1] }.transpose()]}
-                                       ^
   ```
 
 ## :warning: Warnings
@@ -482,4 +454,179 @@
   ```nextflow
       def relPaths = f.collect{ "'../$it'" }.join(' ')
                                      ^^
+  ```
+
+- Warning: `workflows/mcmicro.nf:40:5`: Variable was declared but not used
+
+  ```nextflow
+      has_errors = false
+      ^^^^^^^^^^
+  ```
+
+- Warning: `workflows/mcmicro.nf:41:5`: Variable was declared but not used
+
+  ```nextflow
+      n_errors = 0
+      ^^^^^^^^
+  ```
+
+- Warning: `workflows/mcmicro.nf:43:43`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      ch_samplesheet.map{meta, image_tiles, dfp, ffp -> [meta, image_tiles]} | BFTOOLS_SHOWINF
+                                            ^^^
+  ```
+
+- Warning: `workflows/mcmicro.nf:43:48`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      ch_samplesheet.map{meta, image_tiles, dfp, ffp -> [meta, image_tiles]} | BFTOOLS_SHOWINF
+                                                 ^^^
+  ```
+
+- Warning: `workflows/mcmicro.nf:63:35`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      .combine(ch_has_no_errors.map{meta, has_no_error -> has_no_error})
+                                    ^^^^
+  ```
+
+- Warning: `workflows/mcmicro.nf:64:14`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      .filter{ meta, image_tiles, dfp, ffp, has_no_error -> has_no_error && !params.prelude}
+               ^^^^
+  ```
+
+- Warning: `workflows/mcmicro.nf:64:20`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      .filter{ meta, image_tiles, dfp, ffp, has_no_error -> has_no_error && !params.prelude}
+                     ^^^^^^^^^^^
+  ```
+
+- Warning: `workflows/mcmicro.nf:64:33`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      .filter{ meta, image_tiles, dfp, ffp, has_no_error -> has_no_error && !params.prelude}
+                                  ^^^
+  ```
+
+- Warning: `workflows/mcmicro.nf:64:38`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      .filter{ meta, image_tiles, dfp, ffp, has_no_error -> has_no_error && !params.prelude}
+                                       ^^^
+  ```
+
+- Warning: `workflows/mcmicro.nf:65:39`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      .map{meta, image_tiles, dfp, ffp, error -> [meta, image_tiles, dfp, ffp]}.dump(tag:"SampleAfterFiltering")
+                                        ^^^^^
+  ```
+
+- Warning: `workflows/mcmicro.nf:73:38`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              .map{ meta, image_tiles, dfp, ffp -> [meta, image_tiles] }
+                                       ^^^
+  ```
+
+- Warning: `workflows/mcmicro.nf:73:43`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              .map{ meta, image_tiles, dfp, ffp -> [meta, image_tiles] }
+                                            ^^^
+  ```
+
+- Warning: `workflows/mcmicro.nf:78:38`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              .map{ meta, image_tiles, dfp, ffp -> [meta, image_tiles] }
+                                       ^^^
+  ```
+
+- Warning: `workflows/mcmicro.nf:78:43`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              .map{ meta, image_tiles, dfp, ffp -> [meta, image_tiles] }
+                                            ^^^
+  ```
+
+- Warning: `workflows/mcmicro.nf:89:56`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          .map{ meta, cycles -> [meta] + cycles.collect{ it[1..-1] }.transpose() }
+                                                         ^^
+  ```
+
+- Warning: `workflows/mcmicro.nf:104:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  it.collect{ it.channel_number + "," + it.cycle_number + "," + it.marker_name + "," + it.exposure + "," + it.background + "," + it.remove}] }
+                  ^^
+  ```
+
+- Warning: `workflows/mcmicro.nf:104:29`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  it.collect{ it.channel_number + "," + it.cycle_number + "," + it.marker_name + "," + it.exposure + "," + it.background + "," + it.remove}] }
+                              ^^
+  ```
+
+- Warning: `workflows/mcmicro.nf:104:55`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  it.collect{ it.channel_number + "," + it.cycle_number + "," + it.marker_name + "," + it.exposure + "," + it.background + "," + it.remove}] }
+                                                        ^^
+  ```
+
+- Warning: `workflows/mcmicro.nf:104:79`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  it.collect{ it.channel_number + "," + it.cycle_number + "," + it.marker_name + "," + it.exposure + "," + it.background + "," + it.remove}] }
+                                                                                ^^
+  ```
+
+- Warning: `workflows/mcmicro.nf:104:102`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  it.collect{ it.channel_number + "," + it.cycle_number + "," + it.marker_name + "," + it.exposure + "," + it.background + "," + it.remove}] }
+                                                                                                       ^^
+  ```
+
+- Warning: `workflows/mcmicro.nf:104:122`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  it.collect{ it.channel_number + "," + it.cycle_number + "," + it.marker_name + "," + it.exposure + "," + it.background + "," + it.remove}] }
+                                                                                                                           ^^
+  ```
+
+- Warning: `workflows/mcmicro.nf:104:144`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  it.collect{ it.channel_number + "," + it.cycle_number + "," + it.marker_name + "," + it.exposure + "," + it.background + "," + it.remove}] }
+                                                                                                                                                 ^^
+  ```
+
+- Warning: `workflows/mcmicro.nf:106:20`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              .map { it.replaceAll('(?<=,|^)null(?=,|$)', '') }
+                     ^^
+  ```
+
+- Warning: `workflows/mcmicro.nf:180:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          .cross(ch_masks) { it[0]['id'] }
+                             ^^
+  ```
+
+- Warning: `workflows/mcmicro.nf:265:32`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      ch_has_no_errors.map{ if (!it[1]) error "QC Error found" }
+                                 ^^
   ```

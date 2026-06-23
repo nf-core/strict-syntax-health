@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-16T20:24:54.280717277Z
-- Nextflow version: 26.04.3
-- Summary: 71 warnings
+- Generated: 2026-06-23T00:42:10.048567997Z
+- Nextflow version: 26.05.0-edge
+- Summary: 70 warnings
 
 ## :warning: Warnings
 
@@ -62,13 +62,6 @@
           ^^^^
   ```
 
-- Warning: `modules/nf-core/gecco/convert/main.nf:27:9`: Variable was declared but not used
-
-  ```nextflow
-      def prefix = task.ext.prefix ?: "${meta.id}" // IMPORTANT: -o ${prefix} does not work in 0.10.0
-          ^^^^^^
-  ```
-
 - Warning: `modules/nf-core/gunzip/main.nf:43:9`: Variable was declared but not used
 
   ```nextflow
@@ -111,21 +104,21 @@
           ^^^^
   ```
 
-- Warning: `subworkflows/local/annotation.nf:79:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/annotation.nf:78:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = PROKKA.out.txt.collect { it[1] }.ifEmpty([])
                                                       ^^
   ```
 
-- Warning: `subworkflows/local/annotation.nf:100:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/annotation.nf:98:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               ch_bakta_hmm = Channel.fromPath(params.annotation_bakta_hmms, checkIfExists: true).first()
                              ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/annotation.nf:115:58`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/annotation.nf:112:58`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = BAKTA_BAKTA.out.txt.collect { it[1] }.ifEmpty([])
@@ -216,28 +209,28 @@
                                   ^^
   ```
 
-- Warning: `subworkflows/local/bgc.nf:198:52`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/bgc.nf:196:52`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_combgc_summaries = COMBGC.out.tsv.map { it[1] }.collectFile(name: 'combgc_complete_summary.tsv', storeDir: "${params.outdir}/reports/combgc", keepHeader: true)
                                                      ^^
   ```
 
-- Warning: `subworkflows/local/bgc.nf:201:52`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/bgc.nf:199:52`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_combgc_summaries = COMBGC.out.tsv.map { it[1] }.collectFile(name: 'combgc_complete_summary.tsv', keepHeader: true)
                                                      ^^
   ```
 
-- Warning: `subworkflows/local/bgc.nf:207:46`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/bgc.nf:205:46`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_mmseqs_taxonomy_list = tsvs.map { it[1] }.collect()
                                                ^^
   ```
 
-- Warning: `subworkflows/local/bgc.nf:219:5`: Emit name should be omitted when there is only one emit
+- Warning: `subworkflows/local/bgc.nf:217:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
       versions = ch_versions

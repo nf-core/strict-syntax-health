@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "163b4f0ec7d3b75c14c0141ff7cf2150cf4d1f19",
+  "_repo_commit": "f2e8516349cafb464dba32b2ac016e782818bd7a",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -2880,6 +2880,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "echtvar_encode": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/echtvar/encode",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "ectyper": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ectyper",
     "errors": 0,
@@ -4916,6 +4922,12 @@
   },
   "hmmer_eslalimask": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/hmmer/eslalimask",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "hmmer_eslalipid": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/hmmer/eslalipid",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

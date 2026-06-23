@@ -3,8 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.05.0-edge
 
-Downloading plugin nf-schema@2.7.2
-Launching `./main.nf` [pedantic_stallman] revision: c5cdbe0640
+Launching `./main.nf` [goofy_cantor] revision: c5cdbe0640
 
 Parameter `input` is required but was not specified on the command line, params file, or config
 

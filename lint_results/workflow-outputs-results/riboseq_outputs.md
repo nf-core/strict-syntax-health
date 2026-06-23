@@ -1,6 +1,6 @@
 # Workflow outputs migration: riboseq
 
-- Generated: 2026-06-20T00:41:30.090917+00:00
+- Generated: 2026-06-23T00:44:34.380800+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,9 +14,9 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 94 `publishDir` references across 6 files that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/riboseq/blob/46fd9536eb4a90d294c3995dacf97ab1f67b8eb4/conf/modules.config#L18) — 88 references
-- [`subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/tests/nextflow.config`](https://github.com/nf-core/riboseq/blob/46fd9536eb4a90d294c3995dacf97ab1f67b8eb4/subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/tests/nextflow.config#L22) — 2 references
-- [`modules/nf-core/umitools/extract/tests/nextflow.config`](https://github.com/nf-core/riboseq/blob/46fd9536eb4a90d294c3995dacf97ab1f67b8eb4/modules/nf-core/umitools/extract/tests/nextflow.config#L3) — 1 reference
-- [`subworkflows/nf-core/fastq_align_star/tests/nextflow.config`](https://github.com/nf-core/riboseq/blob/46fd9536eb4a90d294c3995dacf97ab1f67b8eb4/subworkflows/nf-core/fastq_align_star/tests/nextflow.config#L3) — 1 reference
-- [`subworkflows/nf-core/fastq_align_star/tests/with_transcripts.config`](https://github.com/nf-core/riboseq/blob/46fd9536eb4a90d294c3995dacf97ab1f67b8eb4/subworkflows/nf-core/fastq_align_star/tests/with_transcripts.config#L3) — 1 reference
-- [`subworkflows/nf-core/fastq_subsample_fq_salmon/tests/nextflow.config`](https://github.com/nf-core/riboseq/blob/46fd9536eb4a90d294c3995dacf97ab1f67b8eb4/subworkflows/nf-core/fastq_subsample_fq_salmon/tests/nextflow.config#L3) — 1 reference
+- [`conf/modules.config`](https://github.com/nf-core/riboseq/blob/2816021a9b34eb797f63cb536a55740bb13fc675/conf/modules.config#L18) — 88 references
+- [`subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/tests/nextflow.config`](https://github.com/nf-core/riboseq/blob/2816021a9b34eb797f63cb536a55740bb13fc675/subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/tests/nextflow.config#L22) — 2 references
+- [`modules/nf-core/umitools/extract/tests/nextflow.config`](https://github.com/nf-core/riboseq/blob/2816021a9b34eb797f63cb536a55740bb13fc675/modules/nf-core/umitools/extract/tests/nextflow.config#L3) — 1 reference
+- [`subworkflows/nf-core/fastq_align_star/tests/nextflow.config`](https://github.com/nf-core/riboseq/blob/2816021a9b34eb797f63cb536a55740bb13fc675/subworkflows/nf-core/fastq_align_star/tests/nextflow.config#L3) — 1 reference
+- [`subworkflows/nf-core/fastq_align_star/tests/with_transcripts.config`](https://github.com/nf-core/riboseq/blob/2816021a9b34eb797f63cb536a55740bb13fc675/subworkflows/nf-core/fastq_align_star/tests/with_transcripts.config#L3) — 1 reference
+- [`subworkflows/nf-core/fastq_subsample_fq_salmon/tests/nextflow.config`](https://github.com/nf-core/riboseq/blob/2816021a9b34eb797f63cb536a55740bb13fc675/subworkflows/nf-core/fastq_subsample_fq_salmon/tests/nextflow.config#L3) — 1 reference
