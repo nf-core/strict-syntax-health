@@ -1,6 +1,6 @@
 # Workflow outputs migration: rnadnavar
 
-- Generated: 2026-06-16T20:38:00.995907+00:00
+- Generated: 2026-06-24T00:38:23.149985+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -12,32 +12,33 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 ## Legacy `publishDir` references
 
-Found 97 `publishDir` references across 27 files that should be migrated to the workflow `output {}` block:
+Found 97 `publishDir` references across 28 files that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules/quality_control/quality_control.config`](https://github.com/nf-core/rnadnavar/blob/26df4e3c87388298a607231049cf8f59433c97c9/conf/modules/quality_control/quality_control.config#L20) — 12 references
-- [`conf/modules/prepare_resources/prepare_genome.config`](https://github.com/nf-core/rnadnavar/blob/26df4e3c87388298a607231049cf8f59433c97c9/conf/modules/prepare_resources/prepare_genome.config#L20) — 11 references
-- [`conf/modules/alignment/bam_align.config`](https://github.com/nf-core/rnadnavar/blob/26df4e3c87388298a607231049cf8f59433c97c9/conf/modules/alignment/bam_align.config#L35) — 10 references
-- [`conf/modules/variant_calling/mutect2.config`](https://github.com/nf-core/rnadnavar/blob/26df4e3c87388298a607231049cf8f59433c97c9/conf/modules/variant_calling/mutect2.config#L25) — 9 references
-- [`conf/modules/alignment/alignment_to_fastq.config`](https://github.com/nf-core/rnadnavar/blob/26df4e3c87388298a607231049cf8f59433c97c9/conf/modules/alignment/alignment_to_fastq.config#L21) — 8 references
-- [`conf/modules/prepare_resources/prepare_intervals.config`](https://github.com/nf-core/rnadnavar/blob/26df4e3c87388298a607231049cf8f59433c97c9/conf/modules/prepare_resources/prepare_intervals.config#L19) — 6 references
-- [`conf/modules/gatk4_preprocessing/markduplicates.config`](https://github.com/nf-core/rnadnavar/blob/26df4e3c87388298a607231049cf8f59433c97c9/conf/modules/gatk4_preprocessing/markduplicates.config#L28) — 5 references
-- [`conf/modules/gatk4_preprocessing/splitncigarreads.config`](https://github.com/nf-core/rnadnavar/blob/26df4e3c87388298a607231049cf8f59433c97c9/conf/modules/gatk4_preprocessing/splitncigarreads.config#L21) — 5 references
-- [`conf/modules/gatk4_preprocessing/recalibrate.config`](https://github.com/nf-core/rnadnavar/blob/26df4e3c87388298a607231049cf8f59433c97c9/conf/modules/gatk4_preprocessing/recalibrate.config#L20) — 4 references
-- [`conf/modules/variant_calling/sage.config`](https://github.com/nf-core/rnadnavar/blob/26df4e3c87388298a607231049cf8f59433c97c9/conf/modules/variant_calling/sage.config#L27) — 3 references
-- [`conf/modules/annotate/annotate.config`](https://github.com/nf-core/rnadnavar/blob/26df4e3c87388298a607231049cf8f59433c97c9/conf/modules/annotate/annotate.config#L31) — 2 references
-- [`conf/modules/consensus/vcf_consensus.config`](https://github.com/nf-core/rnadnavar/blob/26df4e3c87388298a607231049cf8f59433c97c9/conf/modules/consensus/vcf_consensus.config#L30) — 2 references
-- [`conf/modules/filtering/maf_filtering.config`](https://github.com/nf-core/rnadnavar/blob/26df4e3c87388298a607231049cf8f59433c97c9/conf/modules/filtering/maf_filtering.config#L25) — 2 references
-- [`conf/modules/gatk4_preprocessing/prepare_recalibration.config`](https://github.com/nf-core/rnadnavar/blob/26df4e3c87388298a607231049cf8f59433c97c9/conf/modules/gatk4_preprocessing/prepare_recalibration.config#L21) — 2 references
-- [`conf/modules/normalize/vt.config`](https://github.com/nf-core/rnadnavar/blob/26df4e3c87388298a607231049cf8f59433c97c9/conf/modules/normalize/vt.config#L21) — 2 references
-- [`conf/modules/prepare_realignment/extract_reads_id.config`](https://github.com/nf-core/rnadnavar/blob/26df4e3c87388298a607231049cf8f59433c97c9/conf/modules/prepare_realignment/extract_reads_id.config#L21) — 2 references
-- [`conf/modules/variant_calling/strelka.config`](https://github.com/nf-core/rnadnavar/blob/26df4e3c87388298a607231049cf8f59433c97c9/conf/modules/variant_calling/strelka.config#L23) — 2 references
-- [`conf/modules.config`](https://github.com/nf-core/rnadnavar/blob/26df4e3c87388298a607231049cf8f59433c97c9/conf/modules.config#L15) — 1 reference
-- [`conf/modules/modules.config`](https://github.com/nf-core/rnadnavar/blob/26df4e3c87388298a607231049cf8f59433c97c9/conf/modules/modules.config#L15) — 1 reference
-- [`conf/modules/prepare_realignment/filtersamreads.config`](https://github.com/nf-core/rnadnavar/blob/26df4e3c87388298a607231049cf8f59433c97c9/conf/modules/prepare_realignment/filtersamreads.config#L21) — 1 reference
-- [`conf/modules/prepare_resources/prepare_cache.config`](https://github.com/nf-core/rnadnavar/blob/26df4e3c87388298a607231049cf8f59433c97c9/conf/modules/prepare_resources/prepare_cache.config#L22) — 1 reference
-- [`conf/modules/quality_control/trimming.config`](https://github.com/nf-core/rnadnavar/blob/26df4e3c87388298a607231049cf8f59433c97c9/conf/modules/quality_control/trimming.config#L28) — 1 reference
-- [`conf/modules/variant_calling/variant_calling.config`](https://github.com/nf-core/rnadnavar/blob/26df4e3c87388298a607231049cf8f59433c97c9/conf/modules/variant_calling/variant_calling.config#L21) — 1 reference
-- [`modules/nf-core/gatk4/variantrecalibrator/tests/AS.config`](https://github.com/nf-core/rnadnavar/blob/26df4e3c87388298a607231049cf8f59433c97c9/modules/nf-core/gatk4/variantrecalibrator/tests/AS.config#L3) — 1 reference
-- [`modules/nf-core/gatk4/variantrecalibrator/tests/noAS.config`](https://github.com/nf-core/rnadnavar/blob/26df4e3c87388298a607231049cf8f59433c97c9/modules/nf-core/gatk4/variantrecalibrator/tests/noAS.config#L3) — 1 reference
-- [`subworkflows/nf-core/fastq_align_star/tests/nextflow.config`](https://github.com/nf-core/rnadnavar/blob/26df4e3c87388298a607231049cf8f59433c97c9/subworkflows/nf-core/fastq_align_star/tests/nextflow.config#L3) — 1 reference
-- [`subworkflows/nf-core/fastq_align_star/tests/with_transcripts.config`](https://github.com/nf-core/rnadnavar/blob/26df4e3c87388298a607231049cf8f59433c97c9/subworkflows/nf-core/fastq_align_star/tests/with_transcripts.config#L3) — 1 reference
+- [`conf/modules/quality_control/quality_control.config`](https://github.com/nf-core/rnadnavar/blob/c7c16f0a45b2bbe7c3f3a30489749ce27bd45311/conf/modules/quality_control/quality_control.config#L20) — 12 references
+- [`conf/modules/prepare_resources/prepare_genome.config`](https://github.com/nf-core/rnadnavar/blob/c7c16f0a45b2bbe7c3f3a30489749ce27bd45311/conf/modules/prepare_resources/prepare_genome.config#L20) — 11 references
+- [`conf/modules/alignment/bam_align.config`](https://github.com/nf-core/rnadnavar/blob/c7c16f0a45b2bbe7c3f3a30489749ce27bd45311/conf/modules/alignment/bam_align.config#L35) — 10 references
+- [`conf/modules/alignment/alignment_to_fastq.config`](https://github.com/nf-core/rnadnavar/blob/c7c16f0a45b2bbe7c3f3a30489749ce27bd45311/conf/modules/alignment/alignment_to_fastq.config#L21) — 8 references
+- [`conf/modules/variant_calling/mutect2.config`](https://github.com/nf-core/rnadnavar/blob/c7c16f0a45b2bbe7c3f3a30489749ce27bd45311/conf/modules/variant_calling/mutect2.config#L25) — 8 references
+- [`conf/modules/prepare_resources/prepare_intervals.config`](https://github.com/nf-core/rnadnavar/blob/c7c16f0a45b2bbe7c3f3a30489749ce27bd45311/conf/modules/prepare_resources/prepare_intervals.config#L19) — 6 references
+- [`conf/modules/gatk4_preprocessing/markduplicates.config`](https://github.com/nf-core/rnadnavar/blob/c7c16f0a45b2bbe7c3f3a30489749ce27bd45311/conf/modules/gatk4_preprocessing/markduplicates.config#L28) — 5 references
+- [`conf/modules/gatk4_preprocessing/splitncigarreads.config`](https://github.com/nf-core/rnadnavar/blob/c7c16f0a45b2bbe7c3f3a30489749ce27bd45311/conf/modules/gatk4_preprocessing/splitncigarreads.config#L21) — 5 references
+- [`conf/modules/gatk4_preprocessing/recalibrate.config`](https://github.com/nf-core/rnadnavar/blob/c7c16f0a45b2bbe7c3f3a30489749ce27bd45311/conf/modules/gatk4_preprocessing/recalibrate.config#L20) — 4 references
+- [`conf/modules/variant_calling/sage.config`](https://github.com/nf-core/rnadnavar/blob/c7c16f0a45b2bbe7c3f3a30489749ce27bd45311/conf/modules/variant_calling/sage.config#L27) — 3 references
+- [`conf/modules/annotate/annotate.config`](https://github.com/nf-core/rnadnavar/blob/c7c16f0a45b2bbe7c3f3a30489749ce27bd45311/conf/modules/annotate/annotate.config#L31) — 2 references
+- [`conf/modules/consensus/vcf_consensus.config`](https://github.com/nf-core/rnadnavar/blob/c7c16f0a45b2bbe7c3f3a30489749ce27bd45311/conf/modules/consensus/vcf_consensus.config#L30) — 2 references
+- [`conf/modules/filtering/maf_filtering.config`](https://github.com/nf-core/rnadnavar/blob/c7c16f0a45b2bbe7c3f3a30489749ce27bd45311/conf/modules/filtering/maf_filtering.config#L25) — 2 references
+- [`conf/modules/gatk4_preprocessing/prepare_recalibration.config`](https://github.com/nf-core/rnadnavar/blob/c7c16f0a45b2bbe7c3f3a30489749ce27bd45311/conf/modules/gatk4_preprocessing/prepare_recalibration.config#L21) — 2 references
+- [`conf/modules/normalize/vt.config`](https://github.com/nf-core/rnadnavar/blob/c7c16f0a45b2bbe7c3f3a30489749ce27bd45311/conf/modules/normalize/vt.config#L21) — 2 references
+- [`conf/modules/prepare_realignment/extract_reads_id.config`](https://github.com/nf-core/rnadnavar/blob/c7c16f0a45b2bbe7c3f3a30489749ce27bd45311/conf/modules/prepare_realignment/extract_reads_id.config#L21) — 2 references
+- [`conf/modules/variant_calling/strelka.config`](https://github.com/nf-core/rnadnavar/blob/c7c16f0a45b2bbe7c3f3a30489749ce27bd45311/conf/modules/variant_calling/strelka.config#L23) — 2 references
+- [`conf/modules.config`](https://github.com/nf-core/rnadnavar/blob/c7c16f0a45b2bbe7c3f3a30489749ce27bd45311/conf/modules.config#L15) — 1 reference
+- [`conf/modules/modules.config`](https://github.com/nf-core/rnadnavar/blob/c7c16f0a45b2bbe7c3f3a30489749ce27bd45311/conf/modules/modules.config#L15) — 1 reference
+- [`conf/modules/prepare_realignment/filtersamreads.config`](https://github.com/nf-core/rnadnavar/blob/c7c16f0a45b2bbe7c3f3a30489749ce27bd45311/conf/modules/prepare_realignment/filtersamreads.config#L21) — 1 reference
+- [`conf/modules/prepare_resources/prepare_cache.config`](https://github.com/nf-core/rnadnavar/blob/c7c16f0a45b2bbe7c3f3a30489749ce27bd45311/conf/modules/prepare_resources/prepare_cache.config#L22) — 1 reference
+- [`conf/modules/quality_control/trimming.config`](https://github.com/nf-core/rnadnavar/blob/c7c16f0a45b2bbe7c3f3a30489749ce27bd45311/conf/modules/quality_control/trimming.config#L28) — 1 reference
+- [`conf/modules/variant_calling/mutect2_joint.config`](https://github.com/nf-core/rnadnavar/blob/c7c16f0a45b2bbe7c3f3a30489749ce27bd45311/conf/modules/variant_calling/mutect2_joint.config#L19) — 1 reference
+- [`conf/modules/variant_calling/variant_calling.config`](https://github.com/nf-core/rnadnavar/blob/c7c16f0a45b2bbe7c3f3a30489749ce27bd45311/conf/modules/variant_calling/variant_calling.config#L20) — 1 reference
+- [`modules/nf-core/gatk4/variantrecalibrator/tests/AS.config`](https://github.com/nf-core/rnadnavar/blob/c7c16f0a45b2bbe7c3f3a30489749ce27bd45311/modules/nf-core/gatk4/variantrecalibrator/tests/AS.config#L3) — 1 reference
+- [`modules/nf-core/gatk4/variantrecalibrator/tests/noAS.config`](https://github.com/nf-core/rnadnavar/blob/c7c16f0a45b2bbe7c3f3a30489749ce27bd45311/modules/nf-core/gatk4/variantrecalibrator/tests/noAS.config#L3) — 1 reference
+- [`subworkflows/nf-core/fastq_align_star/tests/nextflow.config`](https://github.com/nf-core/rnadnavar/blob/c7c16f0a45b2bbe7c3f3a30489749ce27bd45311/subworkflows/nf-core/fastq_align_star/tests/nextflow.config#L3) — 1 reference
+- [`subworkflows/nf-core/fastq_align_star/tests/with_transcripts.config`](https://github.com/nf-core/rnadnavar/blob/c7c16f0a45b2bbe7c3f3a30489749ce27bd45311/subworkflows/nf-core/fastq_align_star/tests/with_transcripts.config#L3) — 1 reference

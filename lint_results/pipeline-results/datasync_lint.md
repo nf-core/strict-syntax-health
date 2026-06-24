@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-16T20:20:48.916888527Z
-- Nextflow version: 26.04.3
-- Summary: 4 warnings
+- Generated: 2026-06-24T00:35:25.037450490Z
+- Nextflow version: 26.05.0-edge
+- Summary: 5 warnings
 
 ## :warning: Warnings
 
@@ -32,4 +32,11 @@
   ```nextflow
       dummy_emit = true
       ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `workflows/datasync.nf:40:5`: Variable was declared but not used
+
+  ```nextflow
+      ch_checksum = ch_samplesheet.checksum.branch {
+      ^^^^^^^^^^^
   ```

@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.05.0-edge
 
-Launching `./main.nf` [thirsty_leibniz] revision: 8f4b7ccf52
+Launching `./main.nf` [tender_brown] revision: 8f4b7ccf52
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -172,6 +172,10 @@ no paired Ribo-seq sample.
   --te_quantification_method             [string]  Quantification method for translational efficiency analysis: 'plastid_psite' (in-frame P-site counts 
 from plastid, default), 'alignment' (STAR -> Salmon) or 'pseudo' (Salmon pseudo-alignment).  
 (accepted: alignment, pseudo, plastid_psite) [default: plastid_psite]  
+  --extra_stringtie_args                 [string]  Extra arguments to pass to per-sample StringTie in addition to defaults defined by the pipeline. 
+ 
+  --extra_stringtie_merge_args           [string]  Extra arguments to pass to StringTie --merge (e.g. `-T 1 -f 0.1` to tighten the merged annotation). 
+ 
 
 Optional outputs
   --save_merged_fastq                    [boolean] Save FastQ files after merging re-sequenced libraries in the results directory. 
@@ -207,6 +211,13 @@ the pipeline run.
   --skip_ribocode                        [boolean] Skip RiboCode. 
   --skip_ribowaltz                       [boolean] Skip riboWaltz. 
   --skip_plastid                         [boolean] Skip plastid. 
+  --skip_stringtie                       [boolean] Skip StringTie reference-guided transcript assembly and merge. [default: true] 
+  --novel_gtf                            [string]  Optional user-supplied novel-transcript GTF. When provided, StringTie assembly is skipped and this 
+GTF is used directly as the source of novel transcripts.  
+  --gffcompare_class_codes               [string]  Comma-separated gffcompare class codes to retain when filtering novel transcripts. [default: u] 
+ 
+  --rrna_blacklist                       [string]  Optional BED file of rRNA/repeat regions to exclude from the novel-transcript GTF (strand-aware 
+intersect).  
 
 Generic options
   --multiqc_methods_description          [string]          Custom MultiQC yaml file containing HTML including a methods description. 

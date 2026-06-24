@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-18T00:47:16.801323638Z
-- Nextflow version: 26.04.3
-- Summary: 33 warnings
+- Generated: 2026-06-24T00:38:33.757448368Z
+- Nextflow version: 26.05.0-edge
+- Summary: 35 warnings
 
 ## :warning: Warnings
 
@@ -46,6 +46,20 @@
   ```nextflow
       multiqc_report = RNASPLICE.out.multiqc_report // channel: /path/to/multiqc_report.html
       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `modules/local/misopy/index/main.nf:23:9`: Variable was declared but not used
+
+  ```nextflow
+      def prefix = task.ext.prefix ?: "${meta.id}"
+          ^^^^^^
+  ```
+
+- Warning: `modules/local/misopy/index/main.nf:35:9`: Variable was declared but not used
+
+  ```nextflow
+      def prefix = task.ext.prefix ?: "${meta.id}"
+          ^^^^^^
   ```
 
 - Warning: `subworkflows/local/contrast_check/main.nf:26:5`: Emit name should be omitted when there is only one emit

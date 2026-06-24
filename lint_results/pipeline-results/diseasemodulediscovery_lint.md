@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-06-16T20:22:25.310409205Z
-- Nextflow version: 26.04.3
+- Generated: 2026-06-24T00:36:06.016300339Z
+- Nextflow version: 26.05.0-edge
 - Summary: 133 warnings
 
 ## :warning: Warnings
@@ -615,63 +615,63 @@
       ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:125:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/diseasemodulediscovery.nf:126:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       id_space = Channel.value(params.id_space)
                  ^^^^^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:126:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/diseasemodulediscovery.nf:127:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       validate_online = Channel.value(params.validate_online)
                         ^^^^^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:133:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/diseasemodulediscovery.nf:134:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_versions = Channel.empty()
                     ^^^^^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:134:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/diseasemodulediscovery.nf:135:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_multiqc_files = Channel.empty()
                          ^^^^^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:135:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/diseasemodulediscovery.nf:136:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_seeds_empty_status = Channel.empty()
                               ^^^^^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:136:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/diseasemodulediscovery.nf:137:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_module_empty_status = Channel.empty()
                                ^^^^^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:137:39`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/diseasemodulediscovery.nf:138:39`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_visualization_skipped_status = Channel.empty()
                                         ^^^^^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:138:35`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/diseasemodulediscovery.nf:139:35`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_drugstone_skipped_status = Channel.empty()
                                     ^^^^^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:144:15`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/diseasemodulediscovery.nf:145:15`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map{ meta, path -> path }

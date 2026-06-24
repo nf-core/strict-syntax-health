@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "f2e8516349cafb464dba32b2ac016e782818bd7a",
+  "_repo_commit": "1c2df6eda26829e3025cb5a98a344a18ac55a706",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -2880,6 +2880,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "echtvar_anno": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/echtvar/anno",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "echtvar_encode": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/echtvar/encode",
     "errors": 0,
@@ -3416,6 +3422,12 @@
   },
   "finaletoolkit_delfi": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/finaletoolkit/delfi",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "finaletoolkit_endmotifs": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/finaletoolkit/endmotifs",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

@@ -1,6 +1,6 @@
 # Workflow outputs migration: tbanalyzer
 
-- Generated: 2026-06-16T20:43:46.897637+00:00
+- Generated: 2026-06-24T00:39:41.147108+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,4 +14,4 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 2 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/tbanalyzer/blob/47670645b33e632772efefb02423537212b4e016/conf/modules.config#L15) — 2 references
+- [`conf/modules.config`](https://github.com/nf-core/tbanalyzer/blob/676d808b7e422e56069f9549abe4e82aa1dbd398/conf/modules.config#L15) — 2 references
