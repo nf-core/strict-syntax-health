@@ -1,12 +1,12 @@
 # Nextflow lint results
 
-- Generated: 2026-06-16T20:40:34.773871293Z
-- Nextflow version: 26.04.3
-- Summary: 30 warnings
+- Generated: 2026-06-25T00:43:51.174082932Z
+- Nextflow version: 26.05.0-edge
+- Summary: 32 warnings
 
 ## :warning: Warnings
 
-- Warning: `main.nf:145:5`: Emit name should be omitted when there is only one emit
+- Warning: `main.nf:149:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
       multiqc_report = SCDOWNSTREAM.out.multiqc_report // channel: /path/to/multiqc_report.html
@@ -62,42 +62,42 @@
       ^^^^
   ```
 
-- Warning: `modules/local/scvitools/scanvi/main.nf:33:5`: Variable was declared but not used
+- Warning: `modules/local/scvitools/scanvi/main.nf:34:5`: Variable was declared but not used
 
   ```nextflow
       n_hidden = task.ext.n_hidden ?: 128
       ^^^^^^^^
   ```
 
-- Warning: `modules/local/scvitools/scanvi/main.nf:34:5`: Variable was declared but not used
+- Warning: `modules/local/scvitools/scanvi/main.nf:35:5`: Variable was declared but not used
 
   ```nextflow
       n_layers = task.ext.n_layers ?: 2
       ^^^^^^^^
   ```
 
-- Warning: `modules/local/scvitools/scanvi/main.nf:35:5`: Variable was declared but not used
+- Warning: `modules/local/scvitools/scanvi/main.nf:36:5`: Variable was declared but not used
 
   ```nextflow
       n_latent = task.ext.n_latent ?: 30
       ^^^^^^^^
   ```
 
-- Warning: `modules/local/scvitools/scanvi/main.nf:36:5`: Variable was declared but not used
+- Warning: `modules/local/scvitools/scanvi/main.nf:37:5`: Variable was declared but not used
 
   ```nextflow
       dispersion = task.ext.dispersion ?: 'gene'
       ^^^^^^^^^^
   ```
 
-- Warning: `modules/local/scvitools/scanvi/main.nf:37:5`: Variable was declared but not used
+- Warning: `modules/local/scvitools/scanvi/main.nf:38:5`: Variable was declared but not used
 
   ```nextflow
       gene_likelihood = task.ext.gene_likelihood ?: 'zinb'
       ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `modules/local/scvitools/scanvi/main.nf:38:5`: Variable was declared but not used
+- Warning: `modules/local/scvitools/scanvi/main.nf:39:5`: Variable was declared but not used
 
   ```nextflow
       max_epochs = task.ext.max_epochs ?: null
@@ -160,6 +160,13 @@
       ^^^^^^^^^^
   ```
 
+- Warning: `subworkflows/local/cluster_targets/main.nf:48:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      targets = ch_targets // channel: [ meta, h5ad ]
+      ^^^^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/load_h5ad/main.nf:75:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
@@ -186,6 +193,13 @@
   ```nextflow
       h5ad = ch_h5ad // channel: [ meta, h5ad ]
       ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_scdownstream_pipeline/main.nf:183:30`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      if (!rows || rows.any { !it.analyses }) {
+                               ^^
   ```
 
 - Warning: `subworkflows/nf-core/h5ad_removebackground_barcodes_cellbender_anndata/main.nf:18:5`: Emit name should be omitted when there is only one emit

@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.05.0-edge
 
 Downloading plugin nf-schema@2.5.1
-Launching `./main.nf` [suspicious_goldberg] revision: 71af2049ef
+Launching `./main.nf` [stoic_allen] revision: 71af2049ef
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -76,6 +76,7 @@ host genome.
   --phix_reference                       [string]  Genome reference used to remove Illumina PhiX contaminant reads. 
   --skip_clipping                        [boolean] Skip read preprocessing using fastp or adapterremoval. 
   --skip_shortread_qc                    [boolean] Skip all default QC steps for short reads (adapter trimming, phiX removal). 
+  --skip_fastqc                          [boolean] Skip running FastQC on short reads both before and after QC. 
   --save_phixremoved_reads               [boolean] Specify to save input FASTQ files with phiX reads removed to --outdir. 
   --bbnorm                               [boolean] Run BBnorm to normalize sequence depth. 
   --bbnorm_target                        [integer] Set BBnorm target maximum depth to this number. [default: 100] 

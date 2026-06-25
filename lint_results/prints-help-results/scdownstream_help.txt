@@ -1,10 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.04.3
+ N E X T F L O W   ~  version 26.05.0-edge
 
 Downloading plugin nf-anndata@0.3.2
-Launching `./main.nf` [hopeful_bardeen] revision: 5e961ed890
+Launching `./main.nf` [thirsty_sax] revision: 0d37db3e92
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -96,14 +96,21 @@ will be trained. [default: https://zenodo.org/records/10685499/files/model_v1.1.
 `integration_methods`. If not provided, the default Reactome pathways will be used.  
 
 Extension options
-  --base_adata                    [string] If you want to project new data onto an already integrated object, specify the path to the base 
+  --base_adata                    [string]  If you want to project new data onto an already integrated object, specify the path to the base 
 AnnData object here  
-  --base_label_col                [string] The column in the base AnnData object that contains the label (e.g. cell type) information. 
-[default: label]  
-  --base_condition_col            [string] The column in the base AnnData object that contains the condition (e.g. disease state, treatment) 
+  --base_label_col                [string]  The column in the base AnnData object used to group cells for downstream per-label analysis and, 
+when integrate_per_label is true, to split the object before integration. [default: label]  
+  --base_condition_col            [string]  The column in the base AnnData object that contains the condition (e.g. disease state, treatment) 
 information. [default: condition]  
-  --base_embeddings               [string] The keys in the obsm of the base AnnData object that contain the embeddings (without leading `X_`). 
-Required if `input` is not provided - otherwise it is ignored.  
+  --integrate_per_label           [boolean] In base_adata-only runs, split the base AnnData by base_label_col and run the selected 
+integration_methods independently for each group before clustering. [default: false]  
+  --integrate_per_label_whitelist [string]  Optional comma-separated list of group values from base_label_col for which per-label integration 
+should be run. When not provided, integration is run for all groups. Only used when 
+integrate_per_label is true. Values must match the filesystem-safe subset names produced when 
+splitting (spaces are replaced with underscores).  
+  --base_embeddings               [string]  The keys in the obsm of the base AnnData object that contain the embeddings (without leading `X_`). 
+Required if input is not provided and integrate_per_label is false; otherwise it is ignored. 
+ 
 
 Clustering options
   --clustering_resolutions        [string]  Specify the resolutions for clustering [default: 0.5,1.0] 

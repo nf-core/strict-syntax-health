@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-06-16T20:26:31.874492859Z
-- Nextflow version: 26.04.3
+- Generated: 2026-06-25T00:40:52.956940618Z
+- Nextflow version: 26.05.0-edge
 - Summary: 8 errors, 50 warnings
 
 ## :x: Errors
@@ -64,7 +64,7 @@
 
 ## :warning: Warnings
 
-- Warning: `main.nf:59:5`: Emit name should be omitted when there is only one emit
+- Warning: `main.nf:56:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
       multiqc_report = HADGE.out.multiqc_report // channel: /path/to/multiqc_report.html

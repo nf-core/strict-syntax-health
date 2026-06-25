@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-24T00:38:22.826719089Z
+- Generated: 2026-06-25T00:42:54.391905826Z
 - Nextflow version: 26.05.0-edge
-- Summary: 3 errors, 376 warnings
+- Summary: 3 errors, 380 warnings
 
 ## :x: Errors
 
@@ -1208,21 +1208,21 @@
 - Warning: `subworkflows/local/bam_variant_calling_somatic_sage/main.nf:47:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-          Channel.fromPath(params.sage_highconfidence).collect().map{ it -> [ [ id:it[0].baseName ], it ] },
+          Channel.fromPath(params.sage_high_confidence).collect().map{ it -> [ [ id:it[0].baseName ], it ] },
           ^^^^^^^
   ```
 
 - Warning: `subworkflows/local/bam_variant_calling_somatic_sage/main.nf:48:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-          Channel.fromPath(params.sage_actionablepanel).collect().map{ it -> [ [ id:it[0].baseName ], it ] },
+          Channel.fromPath(params.sage_actionable_panel).collect().map{ it -> [ [ id:it[0].baseName ], it ] },
           ^^^^^^^
   ```
 
 - Warning: `subworkflows/local/bam_variant_calling_somatic_sage/main.nf:49:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-          Channel.fromPath(params.sage_knownhotspots).collect().map{ it -> [ [ id:it[0].baseName ], it ] },
+          Channel.fromPath(params.sage_known_hotspots).collect().map{ it -> [ [ id:it[0].baseName ], it ] },
           ^^^^^^^
   ```
 
@@ -2283,179 +2283,207 @@
                                                                 ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/vcf_consensus/main.nf:23:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/vcf_consensus/main.nf:24:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       versions                = Channel.empty()
                                 ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/vcf_consensus/main.nf:25:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/vcf_consensus/main.nf:26:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       maf_from_consensus_dna  = Channel.empty()
                                 ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/vcf_consensus/main.nf:26:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/vcf_consensus/main.nf:27:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       mafs_from_varcal_dna    = Channel.empty()
                                 ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/vcf_consensus/main.nf:27:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/vcf_consensus/main.nf:28:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       consensus_maf           = Channel.empty()
                                 ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/vcf_consensus/main.nf:38:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/vcf_consensus/main.nf:41:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                                   vcf: it[0].data_type == "vcf"
                                        ^^
   ```
 
-- Warning: `subworkflows/local/vcf_consensus/main.nf:39:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/vcf_consensus/main.nf:42:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                                   maf: it[0].data_type == "maf"
                                        ^^
   ```
 
-- Warning: `subworkflows/local/vcf_consensus/main.nf:45:69`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/vcf_consensus/main.nf:48:69`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               tools_list = params.tools.split(',').toList().findAll { it in ['sage', 'strelka', 'mutect2'] }.unique()
                                                                       ^^
   ```
 
-- Warning: `subworkflows/local/vcf_consensus/main.nf:63:45`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/vcf_consensus/main.nf:54:23`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              .branch { meta, vcf_file ->
+                        ^^^^
+  ```
+
+- Warning: `subworkflows/local/vcf_consensus/main.nf:69:13`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+              Channel.value([]) // empty vep - we already call it independently
+              ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/vcf_consensus/main.nf:84:45`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       [meta, paired.collect { it[1] }, paired.collect { it[0] }]
                                               ^^
   ```
 
-- Warning: `subworkflows/local/vcf_consensus/main.nf:63:71`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/vcf_consensus/main.nf:84:71`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       [meta, paired.collect { it[1] }, paired.collect { it[0] }]
                                                                         ^^
   ```
 
-- Warning: `subworkflows/local/vcf_consensus/main.nf:76:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/vcf_consensus/main.nf:97:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                                   dna: it[0].status <= 1
                                        ^^
   ```
 
-- Warning: `subworkflows/local/vcf_consensus/main.nf:77:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/vcf_consensus/main.nf:98:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                                   rna: it[0].status == 2
                                        ^^
   ```
 
-- Warning: `subworkflows/local/vcf_consensus/main.nf:81:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/vcf_consensus/main.nf:102:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                                   dna: it[0].status <= 1
                                        ^^
   ```
 
-- Warning: `subworkflows/local/vcf_consensus/main.nf:82:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/vcf_consensus/main.nf:103:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                                   rna: it[0].status == 2
                                        ^^
   ```
 
-- Warning: `subworkflows/local/vcf_consensus/main.nf:143:77`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/vcf_consensus/main.nf:164:77`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                                                       [meta, paired.collect { it[1] }, paired.collect { it[0] }]
                                                                               ^^
   ```
 
-- Warning: `subworkflows/local/vcf_consensus/main.nf:143:103`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/vcf_consensus/main.nf:164:103`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                                                       [meta, paired.collect { it[1] }, paired.collect { it[0] }]
                                                                                                         ^^
   ```
 
-- Warning: `subworkflows/local/vcf_consensus/main.nf:156:73`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/vcf_consensus/main.nf:177:73`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                                                   [meta, paired.collect { it[1] }, paired.collect { it[0] }]
                                                                           ^^
   ```
 
-- Warning: `subworkflows/local/vcf_consensus/main.nf:156:99`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/vcf_consensus/main.nf:177:99`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                                                   [meta, paired.collect { it[1] }, paired.collect { it[0] }]
                                                                                                     ^^
   ```
 
-- Warning: `subworkflows/local/vcf_consensus/main.nf:159:13`: Variable was declared but not used
+- Warning: `subworkflows/local/vcf_consensus/main.nf:180:13`: Variable was declared but not used
 
   ```nextflow
               mafs_to_rescue = mafs_dna_crossed_with_rna_rescue.mix(mafs_rna_crossed_with_dna_rescue)
               ^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/vcf_consensus/main.nf:163:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/vcf_consensus/main.nf:184:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                                   dna: it[0].status <= 1
                                        ^^
   ```
 
-- Warning: `subworkflows/local/vcf_consensus/main.nf:164:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/vcf_consensus/main.nf:185:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                                   rna: it[0].status == 2
                                        ^^
   ```
 
-- Warning: `subworkflows/local/vcf_consensus/main.nf:168:13`: Variable was declared but not used
+- Warning: `subworkflows/local/vcf_consensus/main.nf:189:13`: Variable was declared but not used
 
   ```nextflow
               run_rescue_out = RUN_CONSENSUS_RESCUE.out.maf.branch{
               ^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/vcf_consensus/main.nf:169:31`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/vcf_consensus/main.nf:190:31`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   intervals:    it[0].num_intervals > 1
                                 ^^
   ```
 
-- Warning: `subworkflows/local/vcf_consensus/main.nf:170:31`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/vcf_consensus/main.nf:191:31`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   no_intervals: it[0].num_intervals <= 1
                                 ^^
   ```
 
-- Warning: `subworkflows/local/vcf_consensus/main.nf:195:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/vcf_consensus/main.nf:216:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                                   vcf: it[0].data_type == "vcf"
                                        ^^
   ```
 
-- Warning: `subworkflows/local/vcf_consensus/main.nf:196:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/vcf_consensus/main.nf:217:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                                   maf: it[0].data_type == "maf"
                                        ^^
+  ```
+
+- Warning: `subworkflows/local/vcf_consensus/main.nf:221:27`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+                  .branch { meta, vcf_file ->
+                            ^^^^
+  ```
+
+- Warning: `subworkflows/local/vcf_consensus/main.nf:236:17`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+                  Channel.value([]) // empty vep - we already call it independently
+                  ^^^^^^^
   ```
 
 - Warning: `subworkflows/local/vcf_normalize/main.nf:22:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead

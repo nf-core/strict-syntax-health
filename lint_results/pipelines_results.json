@@ -302,14 +302,14 @@
   "demo": {
     "full_name": "nf-core/demo",
     "html_url": "https://github.com/nf-core/demo",
-    "commit": "86f84cc1a20fc5b611aa703174005d0e0badaa0a",
+    "commit": "3c55d394d872f0fab8d8c21422b59235e7981cbd",
     "errors": 0,
     "warnings": 4,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 4
+    "publishdir_count": 5
   },
   "demultiplex": {
     "full_name": "nf-core/demultiplex",
@@ -614,7 +614,7 @@
   "hadge": {
     "full_name": "nf-core/hadge",
     "html_url": "https://github.com/nf-core/hadge",
-    "commit": "067f0a18b0bc6422c7665ac6b1e83b36a3bfb5de",
+    "commit": "c70dc6a7421dd5c18bec52d5e2db3abed08d5526",
     "errors": 8,
     "warnings": 50,
     "parse_error": false,
@@ -746,7 +746,7 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "92c0b2f6fea4dfb62bbc9cc1b80c6bd4dd52432e",
+    "commit": "46419491d41e9a16d985253db9d6281d37750359",
     "errors": 0,
     "warnings": 25,
     "parse_error": false,
@@ -1034,7 +1034,7 @@
   "pacvar": {
     "full_name": "nf-core/pacvar",
     "html_url": "https://github.com/nf-core/pacvar",
-    "commit": "7a7ab8f18feb8b3d59c177a17d7d684bb900c1b7",
+    "commit": "23f5f47d4221e971d1fb9c1bdb033aa2983a13e7",
     "errors": 6,
     "warnings": 34,
     "parse_error": false,
@@ -1046,9 +1046,9 @@
   "pairgenomealign": {
     "full_name": "nf-core/pairgenomealign",
     "html_url": "https://github.com/nf-core/pairgenomealign",
-    "commit": "f6756c6e3e1079c9f5f5bcce14ccbf33f0a21396",
+    "commit": "f031f1b23fe16f5e8d1fe6defb207ab65b0af961",
     "errors": 0,
-    "warnings": 26,
+    "warnings": 16,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -1166,7 +1166,7 @@
   "proteinfold": {
     "full_name": "nf-core/proteinfold",
     "html_url": "https://github.com/nf-core/proteinfold",
-    "commit": "4a3bfe0a716084e31838ee0f6a54f616b4e0495f",
+    "commit": "ca583fab074f842b4247351bc8b51ef7b6781561",
     "errors": 0,
     "warnings": 7,
     "parse_error": false,
@@ -1298,26 +1298,26 @@
   "riboseq": {
     "full_name": "nf-core/riboseq",
     "html_url": "https://github.com/nf-core/riboseq",
-    "commit": "ed6496e0ce7b4087f9e4e31cadbd1ec184552312",
+    "commit": "343331f699b89f828e06e7a36216e072512fade4",
     "errors": 0,
-    "warnings": 145,
+    "warnings": 144,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 100
+    "publishdir_count": 107
   },
   "rnadnavar": {
     "full_name": "nf-core/rnadnavar",
     "html_url": "https://github.com/nf-core/rnadnavar",
-    "commit": "c7c16f0a45b2bbe7c3f3a30489749ce27bd45311",
+    "commit": "6ffe8c49254dc3070be0f8911e4fe799182ff8e4",
     "errors": 3,
-    "warnings": 376,
+    "warnings": 380,
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 97
+    "publishdir_count": 98
   },
   "rnafusion": {
     "full_name": "nf-core/rnafusion",
@@ -1382,7 +1382,7 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "ffc664c98e19e642f42b6aa7c1d0d6a4ac0e3399",
+    "commit": "e68ca6b72a695cdb13d60fde65e1f58362b78493",
     "errors": 0,
     "warnings": 617,
     "parse_error": false,
@@ -1394,9 +1394,9 @@
   "scdownstream": {
     "full_name": "nf-core/scdownstream",
     "html_url": "https://github.com/nf-core/scdownstream",
-    "commit": "bcb4c67210cff40a150a558dd82a8b48ca7db3d7",
+    "commit": "e63ea286a745000e5381745ba31eed92cf716d70",
     "errors": 0,
-    "warnings": 30,
+    "warnings": 32,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,

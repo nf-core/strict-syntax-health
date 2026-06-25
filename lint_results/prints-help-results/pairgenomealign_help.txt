@@ -1,12 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.04.3
+ N E X T F L O W   ~  version 26.05.0-edge
 
-Launching `./main.nf` [special_wozniak] revision: 46ce8725e3
+Launching `./main.nf` [nasty_noether] revision: 8348843946
 
-WARN: Unrecognized config option 'validation.defaultIgnoreParams'
-WARN: Unrecognized config option 'validation.monochromeLogs'
 
 ------------------------------------------------------
                                         ,--./,-.
@@ -14,7 +12,7 @@ WARN: Unrecognized config option 'validation.monochromeLogs'
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/pairgenomealign 2.3.0
+  nf-core/pairgenomealign 3.0.0dev
 ------------------------------------------------------
 Typical pipeline command:
 
@@ -37,7 +35,7 @@ Cloud infrastructure.
 
 Indexing options
   --seed                        [string] Select the LAST seed to index the _target_ genome.  (accepted: YASS, NEAR, MAM4, MAM8, RY4, RY8, 
-RY16, RY32, RY64, RY128) [default: YASS]  
+RY16, RY32, RY64, RY128) [default: RY4]  
   --softmask                    [string] Customise the way to mask the _target_ genome.  (accepted: tantan, original) [default: tantan] 
  
   --strand                      [string] Index both strand, or just one.  (accepted: both, forward) [default: both] 
@@ -56,7 +54,7 @@ Export options
   --multi_cram                  [boolean] Produce a multi-query CRAM file combining all the alignments. 
 
 Dotplot parameters
-  --dotplot_width               [integer] Maximum width of the dot plots, in pixels. [default: 1000] 
+  --dotplot_width               [integer] Maximum width of the dot plots, in pixels. [default: 1200] 
   --dotplot_height              [integer] Maximum height of the dot plots, in pixels. [default: 10000] 
   --dotplot_font_size           [integer] Font size of the sequence names on the dot plots. [default: 14] 
   --dotplot_options             [string]  Extra arguments passed to `last-dotplot` to customise the output. See 

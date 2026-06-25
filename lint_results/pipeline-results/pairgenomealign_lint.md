@@ -1,72 +1,16 @@
 # Nextflow lint results
 
-- Generated: 2026-06-16T20:33:05.046209151Z
-- Nextflow version: 26.04.3
-- Summary: 26 warnings
+- Generated: 2026-06-25T00:41:39.193752372Z
+- Nextflow version: 26.05.0-edge
+- Summary: 16 warnings
 
 ## :warning: Warnings
 
-- Warning: `main.nf:62:5`: Emit name should be omitted when there is only one emit
+- Warning: `main.nf:60:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
       multiqc_report = PAIRGENOMEALIGN.out.multiqc_report // channel: /path/to/multiqc_report.html
       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/assemblyscan/main.nf:31:9`: Variable was declared but not used
-
-  ```nextflow
-      def args        = task.ext.args   ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/last/dotplot/main.nf:45:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/last/lastal/main.nf:94:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/last/lastal/main.nf:96:9`: Variable was declared but not used
-
-  ```nextflow
-      def trained_params = param_file ? "-p ${param_file}"  : ''
-          ^^^^^^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/last/lastdb/main.nf:34:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/last/mafconvert/main.nf:89:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/last/split/main.nf:89:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/last/train/main.nf:50:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
   ```
 
 - Warning: `subworkflows/local/pairalign_m2m/main.nf:55:77`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -74,13 +18,6 @@
   ```nextflow
           training_results_for_multiqc = ALIGNMENT_TRAIN.out.multiqc.collect{ it[1] }
                                                                               ^^
-  ```
-
-- Warning: `subworkflows/local/pairalign_m2m/main.nf:152:15`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      multiqc = Channel.empty()
-                ^^^^^^^
   ```
 
 - Warning: `subworkflows/local/pairalign_m2m/main.nf:154:55`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -95,13 +32,6 @@
   ```nextflow
           training_results_for_multiqc = ALIGNMENT_TRAIN.out.multiqc.collect{ it[1] }
                                                                               ^^
-  ```
-
-- Warning: `subworkflows/local/pairalign_m2o/main.nf:105:15`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      multiqc = Channel.empty()
-                ^^^^^^^
   ```
 
 - Warning: `subworkflows/local/pairalign_m2o/main.nf:107:55`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -146,42 +76,42 @@
       ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/pairgenomealign.nf:50:31`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/pairgenomealign.nf:45:50`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          ch_targetgenome.map { meta, file -> [ [id:'targetGenome'] , file ] }
-                                ^^^^
+      ch_targetgenome = ch_samplesheet.map { meta, query, target -> [ [id:meta.targetName], target ] }.first()
+                                                   ^^^^^
   ```
 
-- Warning: `workflows/pairgenomealign.nf:62:55`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/pairgenomealign.nf:46:57`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      ch_querygenome  = ch_samplesheet.map { meta, query, target -> [ meta, query ] }
+                                                          ^^^^^^
+  ```
+
+- Warning: `workflows/pairgenomealign.nf:70:55`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
             .map { sorted_list -> sorted_list.collect { it[1] } }
                                                         ^^
   ```
 
-- Warning: `workflows/pairgenomealign.nf:113:39`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-              pairalign_out.o2o.combine(Channel.fromList(export_formats)),
-                                        ^^^^^^^
-  ```
-
-- Warning: `workflows/pairgenomealign.nf:129:33`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/pairgenomealign.nf:119:33`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               o2o_alignments.map {it + "cram"},
                                   ^^
   ```
 
-- Warning: `workflows/pairgenomealign.nf:138:20`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/pairgenomealign.nf:125:20`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map { meta, cram -> tuple(params.targetName, cram) }
                      ^^^^
   ```
 
-- Warning: `workflows/pairgenomealign.nf:159:24`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/pairgenomealign.nf:146:24`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   .map { meta, file -> file }

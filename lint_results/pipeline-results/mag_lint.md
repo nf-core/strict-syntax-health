@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-06-22T00:44:27.367041406Z
+- Generated: 2026-06-25T00:41:08.471923907Z
 - Nextflow version: 26.05.0-edge
 - Summary: 25 warnings
 
@@ -174,7 +174,7 @@
       ^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:76:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
       dummy_emit = true

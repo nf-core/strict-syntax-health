@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.04.4
+ N E X T F L O W   ~  version 26.05.0-edge
 
-Launching `./main.nf` [agitated_gautier] revision: d341e39594
+Launching `./main.nf` [admiring_dalembert] revision: d341e39594
 
 
 ------------------------------------------------------
