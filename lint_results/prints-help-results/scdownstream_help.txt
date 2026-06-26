@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.05.0-edge
 
 Downloading plugin nf-anndata@0.3.2
-Launching `./main.nf` [thirsty_sax] revision: 0d37db3e92
+Launching `./main.nf` [gigantic_brazil] revision: b3fb972695
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -139,6 +139,16 @@ step. Use this option to skip it.
 usage in this step. Use this option to skip it.  
   --scib                          [boolean] Run scib-metrics integration benchmarking on each integration output (samplesheet / --input runs 
 only; not run for base_adata-only extension without --input). [default: false]  
+  --scib_max_cells                [integer] Optional maximum number of cells for scib-metrics benchmarking after integration. When set, cells 
+are subsampled stratified by label and batch before metric computation.  
+  --scib_subsample_strategy       [string]  Stratified subsampling strategy used when scib_max_cells is set. Uniform sampling is not used; if 
+strategy is 'none' while scib_max_cells is set, stratified_label_batch is applied with a warning. 
+ (accepted: none, stratified_label, stratified_label_batch) [default: stratified_label_batch] 
+ 
+  --scib_subsample_seed           [integer] Random seed for reproducible scib-metrics cell subsampling. [default: 42] 
+  --scib_metric_profile           [string]  scib-metrics metric set. 'fast' disables expensive metrics (isolated labels, k-means NMI/ARI, PCR 
+comparison) for routine runs; 'full' runs the default scib-metrics benchmark suite for 
+publication-style scoring.  (accepted: fast, full) [default: fast]  
   --rankgenesgroups_method        [string]  Statistical method for ranking genes in differential expression analysis.  (accepted: t-test, 
 t-test_overestim_var, wilcoxon, logreg) [default: wilcoxon]  
   --pseudobulk                    [boolean] Perform pseudobulking 

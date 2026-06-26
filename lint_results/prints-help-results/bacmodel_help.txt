@@ -1,10 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.04.4
+ N E X T F L O W   ~  version 26.05.0-edge
 
 Downloading plugin nf-schema@2.5.1
-Launching `./main.nf` [reverent_brown] revision: 1e2807f293
+Launching `./main.nf` [elated_kalman] revision: 1e2807f293
 
 WARN: Unrecognized config option 'manifest.keywords'
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
@@ -43,6 +43,7 @@ Annotation options
   --baktadb               [string]  Path to Bakta database (required if annotation_tool='bakta') 
   --baktadb_download      [boolean] Download Bakta database automatically 
   --baktadb_download_args [string]  Arguments for Bakta database download [default: --type light] 
+  --min_contig_length     [integer] Minimum contig length for annotation and analysis [default: 200] 
 
 Database options
   --pfamdb                [string]  Path to Pfam database (required if run_traitar=true) 

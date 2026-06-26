@@ -1,6 +1,6 @@
 # Workflow outputs migration: scnanoseq
 
-- Generated: 2026-06-16T20:40:55.857209+00:00
+- Generated: 2026-06-26T00:46:11.180240+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,4 +14,4 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 92 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/scnanoseq/blob/c4ecbf5bd974fd2e70e5f909b484117ea37d814e/conf/modules.config#L15) — 92 references
+- [`conf/modules.config`](https://github.com/nf-core/scnanoseq/blob/d71e425a2220eb9df366fd88dfd7bd74708a7d7b/conf/modules.config#L15) — 92 references

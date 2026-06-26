@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-06-23T00:42:10.048567997Z
+- Generated: 2026-06-26T00:42:25.621517709Z
 - Nextflow version: 26.05.0-edge
 - Summary: 70 warnings
 
@@ -317,7 +317,7 @@
 - Warning: `workflows/funcscan.nf:88:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-              def gff_found = files.find { it.toString().endsWith('.gff') }
+              def gff_found = files.find { it.toString().tokenize('.').last().matches('gff|gff3') }
                                            ^^
   ```
 

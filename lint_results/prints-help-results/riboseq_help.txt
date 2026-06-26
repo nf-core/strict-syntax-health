@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.05.0-edge
 
-Launching `./main.nf` [clever_salas] revision: 8f4b7ccf52
+Launching `./main.nf` [nostalgic_edison] revision: 8f4b7ccf52
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -176,6 +176,8 @@ from plastid, default), 'alignment' (STAR -> Salmon) or 'pseudo' (Salmon pseudo-
  
   --extra_stringtie_merge_args           [string]  Extra arguments to pass to StringTie --merge (e.g. `-T 1 -f 0.1` to tighten the merged annotation). 
  
+  --extra_price_indexgenome_args         [string]  Extra CLI arguments passed to `gedi -e IndexGenome`. 
+  --extra_price_price_args               [string]  Extra CLI arguments passed to `gedi -e Price`. 
 
 Optional outputs
   --save_merged_fastq                    [boolean] Save FastQ files after merging re-sequenced libraries in the results directory. 
@@ -221,6 +223,10 @@ intersect).
   --extended_orf_analysis                [boolean] Discover novel ORFs in novel intergenic transcripts (from StringTie or user-supplied --novel_gtf) by 
 feeding the hybrid GTF to genome-BAM ORF callers (Ribo-TISH predict, Ribotricer). Requires 
 --skip_stringtie false or --novel_gtf <path>. Default false for backward compatibility.  
+  --run_price                            [boolean] Opt in to running PRICE as an additional ORF caller (Bayesian, slow). 
+  --run_rpbp                             [boolean] Opt in to running Rp-Bp as an additional ORF caller (Bayesian, slow). 
+  --extra_rpbp_preparegenome_args        [string]  Extra CLI arguments passed to `prepare-rpbp-genome`. 
+  --extra_rpbp_predictorfs_args          [string]  Extra CLI arguments passed to `select-final-prediction-set`. 
 
 Generic options
   --multiqc_methods_description          [string]          Custom MultiQC yaml file containing HTML including a methods description. 

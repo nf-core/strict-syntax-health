@@ -1,95 +1,16 @@
 # Nextflow lint results
 
-- Generated: 2026-06-25T00:40:52.956940618Z
+- Generated: 2026-06-26T00:42:42.259177343Z
 - Nextflow version: 26.05.0-edge
-- Summary: 8 errors, 50 warnings
-
-## :x: Errors
-
-- Error: `modules/local/create_anndata_mudata/main.nf:34:9`: `prefix` is already declared
-
-  ```nextflow
-      def prefix = task.ext.prefix ?: "${meta.id}"
-          ^^^^^^
-  ```
-
-- Error: `modules/local/extract_hashes/main.nf:33:9`: `prefix` is already declared
-
-  ```nextflow
-      def prefix = task.ext.prefix ?: "${meta.id}"
-          ^^^^^^
-  ```
-
-- Error: `modules/local/gene_summary/main.nf:34:9`: `prefix` is already declared
-
-  ```nextflow
-      def prefix = task.ext.prefix ?: "${meta.id}"
-          ^^^^^^
-  ```
-
-- Error: `modules/local/hash_summary/main.nf:39:9`: `prefix` is already declared
-
-  ```nextflow
-      def prefix = task.ext.prefix ?: "${meta.id}"
-          ^^^^^^
-  ```
-
-- Error: `modules/local/htodemux_visualization/main.nf:59:9`: `prefix` is already declared
-
-  ```nextflow
-      def prefix = task.ext.prefix ?: "${meta.id}"
-          ^^^^^^
-  ```
-
-- Error: `modules/local/preprocessing_for_htodemux_multiseq/main.nf:38:9`: `prefix` is already declared
-
-  ```nextflow
-      def prefix = task.ext.prefix ?: "${meta.id}"
-          ^^^^^^
-  ```
-
-- Error: `modules/nf-core/demuxem/main.nf:51:9`: `prefix` is already declared
-
-  ```nextflow
-      def prefix = task.ext.prefix ?: "${meta.id}"
-          ^^^^^^
-  ```
-
-- Error: `subworkflows/local/hash_demultiplexing/main.nf:115:57`: `gmmdemux_estimated_n_cells` is not defined
-
-  ```nextflow
-                      params.gmmdemux_estimated_n_cells ? gmmdemux_estimated_n_cells : [],
-                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
+- Summary: 30 warnings
 
 ## :warning: Warnings
 
-- Warning: `main.nf:56:5`: Emit name should be omitted when there is only one emit
+- Warning: `main.nf:60:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
       multiqc_report = HADGE.out.multiqc_report // channel: /path/to/multiqc_report.html
       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `modules/local/create_anndata_mudata/main.nf:29:5`: Variable was declared but not used
-
-  ```nextflow
-      prefix = task.ext.prefix ?: "${meta.id}"
-      ^^^^^^
-  ```
-
-- Warning: `modules/local/gene_summary/main.nf:29:5`: Variable was declared but not used
-
-  ```nextflow
-      prefix = task.ext.prefix ?: "${meta.id}"
-      ^^^^^^
-  ```
-
-- Warning: `modules/local/hash_summary/main.nf:33:5`: Variable was declared but not used
-
-  ```nextflow
-      prefix         = task.ext.prefix         ?: "${meta.id}"
-      ^^^^^^
   ```
 
 - Warning: `modules/local/hash_summary/main.nf:34:5`: Variable was declared but not used
@@ -218,13 +139,6 @@
       ^^^^^^^^^^^^^
   ```
 
-- Warning: `modules/local/htodemux_visualization/main.nf:54:5`: Variable was declared but not used
-
-  ```nextflow
-      prefix         = task.ext.prefix         ?: "${meta.id}"
-      ^^^^^^
-  ```
-
 - Warning: `modules/local/preprocessing_for_htodemux_multiseq/main.nf:24:5`: Variable was declared but not used
 
   ```nextflow
@@ -274,95 +188,11 @@
       ^^^^^^^^
   ```
 
-- Warning: `modules/local/preprocessing_for_htodemux_multiseq/main.nf:33:5`: Variable was declared but not used
-
-  ```nextflow
-      prefix      = task.ext.prefix      ?: "${meta.id}"
-      ^^^^^^
-  ```
-
 - Warning: `modules/nf-core/gmmdemux/main.nf:62:9`: Variable was declared but not used
 
   ```nextflow
       def prefix = task.ext.prefix ?: "${meta.id}"
           ^^^^^^
-  ```
-
-- Warning: `subworkflows/local/genetic_demultiplexing/main.nf:134:41`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          .map { tuple -> tuple.collect { it == null ? [] : it } }
-                                          ^^
-  ```
-
-- Warning: `subworkflows/local/genetic_demultiplexing/main.nf:134:59`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          .map { tuple -> tuple.collect { it == null ? [] : it } }
-                                                            ^^
-  ```
-
-- Warning: `subworkflows/local/hash_demultiplexing/main.nf:51:13`: Variable was declared but not used
-
-  ```nextflow
-              ch_assignments = HTODEMUX.out.assignment
-              ^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/hash_demultiplexing/main.nf:56:13`: Variable was declared but not used
-
-  ```nextflow
-              ch_classifications = HTODEMUX.out.classification
-              ^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/hash_demultiplexing/main.nf:162:45`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      ch_summary = ch_samplesheet.map { meta, rna, hto -> [meta,hto] }
-                                              ^^^
-  ```
-
-- Warning: `subworkflows/local/hash_demultiplexing/main.nf:173:41`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          .map { tuple -> tuple.collect { it == null ? [] : it } }
-                                          ^^
-  ```
-
-- Warning: `subworkflows/local/hash_demultiplexing/main.nf:173:59`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          .map { tuple -> tuple.collect { it == null ? [] : it } }
-                                                            ^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_hadge_pipeline/main.nf:31:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      monochrome_logs   // boolean: Do not use coloured log outputs
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_hadge_pipeline/main.nf:34:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      input             //  string: Path to input samplesheet
-      ^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_hadge_pipeline/main.nf:217:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      if(meta.hto_names.split(",").any { it.contains('_') }){
-                                         ^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_hadge_pipeline/main.nf:218:55`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          def bad = meta.hto_names.split(",").findAll { it.contains('_') }.join(', ')
-                                                        ^^
   ```
 
 - Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
@@ -372,18 +202,11 @@
       ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
-
-  ```nextflow
-      valid_config = checkConfigProvided()
-      ^^^^^^^^^^^^
-  ```
-
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
-      valid_config
-      ^^^^^^^^^^^^
+      valid_config = valid_config
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
@@ -391,25 +214,4 @@
   ```nextflow
       dummy_emit = true
       ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/hadge.nf:84:46`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      ch_genetic = ch_preprocessed.map { meta, rna, _hto, bam, barcodes, vcf -> [meta, bam, barcodes, vcf] }
-                                               ^^^
-  ```
-
-- Warning: `workflows/hadge.nf:194:64`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  if (params.mode == 'genetic'){ tuple.collect { it == null ? [] : it } }
-                                                                 ^^
-  ```
-
-- Warning: `workflows/hadge.nf:194:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  if (params.mode == 'genetic'){ tuple.collect { it == null ? [] : it } }
-                                                                                   ^^
   ```

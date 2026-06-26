@@ -1,0 +1,291 @@
+$ NXF_SYNTAX_PARSER=v2 nextflow run . --help
+
+
+ N E X T F L O W   ~  version 26.05.0-edge
+
+Launching `./main.nf` [disturbed_hodgkin] revision: 6c6662f65c
+
+WARN: Unrecognized config option 'validation.defaultIgnoreParams'
+WARN: Unrecognized config option 'validation.monochromeLogs'
+
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/hadge 1.0.0dev
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/hadge -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input                                   [string]  Path to comma-separated file containing information about the samples in the experiment. 
+  --mode                                    [string]  Mode of the pipeline.  (accepted: genetic, hashing, rescue, donor_match) [default: rescue] 
+  --hash_tools                              [string]  Tools used for hash demultiplexing. [default: gmm-demux] 
+  --genetic_tools                           [string]  Tools used for genetic demultiplexing. [default: vireo] 
+  --bam_qc                                  [boolean] Perform BAM QC. [default: true] 
+  --common_variants                         [string]  File with common variants. If provided, the BAM files will be filtered to only include reads that 
+overlap with the common variants.  
+  --outdir                                  [string]  The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --save_intermediates                      [boolean] Save intermediate files. 
+  --email                                   [string]  Email address for completion summary. 
+  --multiqc_title                           [string]  MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+
+Reference genome options
+  --genome                                  [string] Name of iGenomes reference. 
+  --fasta                                   [string] Path to FASTA genome file. 
+
+Donor match options
+  --match_donor                             [boolean]      Match donor between different demultiplexing methods. [default: true] 
+  --demultiplexing_result                   [string, null] Path to demultiplexing result CSV file (necessary only for donor_match mode). 
+  --vireo_filtered_variants                 [string, null] Path to Vireo filtered variants file (necessary only for donor_match mode). 
+  --cell_genotype                           [string, null] Path to cell genotype file (necessary only for donor_match mode). 
+  --match_donor_method1                     [string, null] First method to use for donor matching. 
+  --match_donor_method2                     [string, null] Second method to use for donor matching. 
+  --find_variants                           [boolean]      Find variants for donor matching. [default: true] 
+  --subset_gt_donors                        [boolean]      Option to subset the donor genotype based on detected variants. [default: true] 
+  --variant_count                           [integer]      Minimum variant count threshold. [default: 10] 
+  --variant_pct                             [number]       The Minimal percentage of a variant for filtering. Has to be in a range between `[0,5;1[`. For 
+example, 0.9 means that we only keep variants with a frequency higher than 90% or lower than 10%. 
+[default: 0.9]  
+  --gt_donors                               [string, null] Path to cell genotype file (necessary only for donor_match mode). 
+
+demuxEM options
+  --demuxem_generate_diagnostic_plots       [boolean] Generate diagnostic plots. [default: true] 
+  --demuxem_alpha_on_samples                [number]  The Dirichlet prior concentration parameter (alpha) on samples. An alpha value < 1.0 will make the 
+prior sparse. [default: 0]  
+  --demuxem_min_num_genes                   [integer] Only demultiplex cells/nuclei with at least this number of expressed genes. [default: 100] 
+  --demuxem_min_num_umis                    [integer] Only demultiplex cells/nuclei with at least this number of UMIs. [default: 100] 
+  --demuxem_min_signal_hashtag              [number]  Any cell/nucleus with less than this count of hashtags from the signal will be marked as unknown. 
+[default: 10]  
+  --demuxem_random_state                    [integer] The random seed used in the KMeans algorithm to separate empty ADT droplets from others. 
+[default: 0]  
+  --demuxem_gender_genes                    [string]  Comma-separated list of gender-specific genes (e.g. Xist) for generating violin plots. 
+
+BFF options
+  --bff_methods                             [string]       Method(s) to use within BFF.  (accepted: COMBINED, RAW, CLUSTER) [default: COMBINED] 
+  --bff_preprocessing                       [boolean]      Whether to run preprocessing steps for BFF. [default: true] 
+  --bff_barcodeWhitelist                    [string, null] Path to barcode whitelist for preprocessing. 
+  --bff_cellbarcodeWhitelist                [string, null] Path to cell barcode whitelist for GenerateCellHashingCalls(). 
+  --bff_methodsForConsensus                 [string, null] Methods to use for consensus calling. 
+  --bff_metricsFile                         [string, null] Optional metrics file path. 
+  --bff_doTSNE                              [boolean]      Whether to compute tSNE visualization in BFF. 
+  --bff_doHeatmap                           [boolean]      Whether to generate heatmaps in BFF. [default: true] 
+  --bff_perCellSaturation                   [number, null] Per-cell saturation value. 
+  --bff_majorityConsensusThreshold          [number, null] Majority consensus threshold. 
+  --bff_chemistry                           [string]       Library chemistry (e.g., 10xV3). [default: 10xV3] 
+  --bff_callerDisagreementThreshold         [number, null] Threshold for caller disagreement. 
+
+GMM-Demux options
+  --gmmdemux_hto_names                      [string, null]  Comma separated list of HTO names, without whitespace. If null, hto_names are extracted from the 
+input hto matrix from features.tsv.gz.  
+  --gmmdemux_estimated_n_cells              [integer, null] If specified, it will generate the statistic summary of the dataset, including MSM and SSM rates. 
+This requires an estimated total number of cells in the assay as input.  
+  --gmmdemux_type_report                    [boolean]       If true, full classification report is generated, otherwise the simplified classification report. 
+[default: true]  
+  --gmmdemux_summary_report                 [boolean]       If true, summary report is generated. [default: true] 
+  --gmmdemux_skip                           [string, null]  Load a full classification report and skip the mtx folder as input. Requires a file path argument. 
+ 
+  --gmmdemux_examine                        [string, null]  Provide the cell list. Requires a file path argument. Only executes if -u is set. 
+  --gmmdemux_extract                        [string]        Names of the HTO tag(s) to extract, separated by ','. Joint HTO samples are combined with '+', such 
+as 'HTO_1+HTO_2'.  
+  --gmmdemux_threshold                      [number]        The confidence threshold value for classification. A higher value leads to more stringent 
+classification. [default: 0.8]  
+  --gmmdemux_random_state                   [integer]       The random seed used in the GaussianMixture algorithm. [default: 0] 
+
+Hashsolo options
+  --hashsolo_cell_hashing_columns           [array, null]   Groovy list (['hash_1', 'hash_2']) of .obs columns that contain cell hashing counts. Can be null if 
+the data is in 10x Genomics format, as the columns are derived from the input.  
+  --hashsolo_priors                         [string]        List of comma-separated priors for each hypothesis: NEGATIVE, SINGLET, DOUBLET. [default: 
+0.01,0.8,0.19]  
+  --hashsolo_pre_existing_clusters          [string, null]  Column in cell_hashing_adata.obs for how to break up demultiplexing. 
+  --hashsolo_clustering_data                [string, null]  Input directory containing transcriptomic data in 10x mtx format. 
+  --hashsolo_number_of_noise_barcodes       [integer, null] Number of barcodes to use to create noise distribution. 
+  --hashsolo_round_digits                   [integer]       Number of decimal places to round numeric values in cell_hashing_data.obs before saving. If omitted, 
+no rounding is applied. [default: 10]  
+
+HTODemux options
+  --htodemux_quantile                       [number]  The quantile to use for thresholding. [default: 0.99] 
+  --htodemux_init                           [string]  Initialization method for clustering. [default: NULL] 
+  --htodemux_nstarts                        [integer] Number of starts for clustering. [default: 100] 
+  --htodemux_kfunc                          [string]  Clustering function to use. [default: clara] 
+  --htodemux_nsamples                       [integer] Number of samples for clustering. [default: 100] 
+  --htodemux_seed                           [integer] Random seed for reproducibility. [default: 42] 
+  --htodemux_verbose                        [boolean] Whether to print verbose output. [default: true] 
+
+HTODemux visualization options
+  --htodemux_visualization_ridgePlot        [boolean] Generate ridge plot. [default: true] 
+  --htodemux_visualization_ridgeNCol        [integer] The number of plots that are dispalyed next to each other in one row. The number of plots 
+corresponds to the number of Hash Tag Oligo (HTO) identifiers. [default: 2]  
+  --htodemux_visualization_featureScatter   [boolean] Generate feature scatter plot. If no features are provided (one of them is null), the first two 
+features from the assay will be used. [default: true]  
+  --htodemux_visualization_scatterFeat1     [string]  Name of a Hash Tag Oligo (HTO) identifiers, usually defined in the `feature.tsv` of the hto matrix 
+folder.  
+  --htodemux_visualization_scatterFeat2     [string]  Name of a Hash Tag Oligo (HTO) identifiers, usually defined in the `feature.tsv` of the hto matrix 
+folder.  
+  --htodemux_visualization_vlnPlot          [boolean] Generate violin plot. [default: true] 
+  --htodemux_visualization_vlnFeatures      [string]  Features to plot (gene expression, metrics, PC scores, anything that can be retrieved by FetchData). 
+[default: nCount_RNA]  
+  --htodemux_visualization_vlnLog           [boolean] Plot the feature axis on log scale. [default: true] 
+  --htodemux_visualization_tSNE             [boolean] Generate a two dimensional tSNE embedding for HTOs. [default: true] 
+  --htodemux_visualization_tSNEIdents       [string]  What should we remove from the object (we have Singlet, Doublet and Negative).  (accepted: 
+Singlet, Doublet, Negative) [default: Negative]  
+  --htodemux_visualization_tSNEInvert       [boolean] Invert tSNE selection. [default: true] 
+  --htodemux_visualization_tSNEVerbose      [boolean] Verbose tSNE. 
+  --htodemux_visualization_tSNEApprox       [boolean] Approximate tSNE. 
+  --htodemux_visualization_tSNEDimMax       [integer] Max number of donors. [default: 2] 
+  --htodemux_visualization_tSNEPerplexity   [integer] Value for perplexity. [default: 100] 
+  --htodemux_visualization_heatMap          [boolean] Generate heatmap. [default: true] 
+  --htodemux_visualization_heatMapNcells    [integer] Number of cells for heatmap. [default: 500] 
+
+MultiSeqDemux options
+  --multiseqdemux_quantile                  [number]  The quantile to use for thresholding. [default: 0.7] 
+  --multiseqdemux_autoThresh                [boolean] Whether to automatically determine thresholds. [default: true] 
+  --multiseqdemux_maxiter                   [integer] Maximum number of iterations. [default: 5] 
+  --multiseqdemux_qrangeFrom                [number]  Start of quantile range. [default: 0.1] 
+  --multiseqdemux_qrangeTo                  [number]  End of quantile range. [default: 0.9] 
+  --multiseqdemux_qrangeBy                  [number]  Step size for quantile range. [default: 0.05] 
+  --multiseqdemux_verbose                   [boolean] Whether to print verbose output. [default: true] 
+
+HashedDrops options
+  --hasheddrops_lower                       [integer]       Lower bound on total UMI count for empty droplets. [default: 100] 
+  --hasheddrops_niters                      [integer]       Number of iterations for Monte Carlo p-value calculations. [default: 10000] 
+  --hasheddrops_testAmbient                 [boolean]       Whether to test ambient RNA. [default: true] 
+  --hasheddrops_round                       [boolean]       Whether to round non-integer values. [default: true] 
+  --hasheddrops_byRank                      [integer, null] Alternative method for identifying empty droplets. 
+  --hasheddrops_isCellFDR                   [number]        FDR threshold for cell filtering. [default: 0.01] 
+  --hasheddrops_gene_col                    [integer]       Column to use for gene names. [default: 2] 
+  --hasheddrops_ignore                      [number, null]  Lower bound for ignoring barcodes. 
+  --hasheddrops_alpha                       [number, null]  Scaling parameter for Dirichlet-multinomial sampling. 
+  --hasheddrops_ambient                     [boolean]       Whether to use ambient solution abundance. [default: true] 
+  --hasheddrops_minProp                     [number]        Minimum proportion for ambient profile inference. [default: 0.05] 
+  --hasheddrops_pseudoCount                 [integer]       Minimum pseudo-count for log-fold change computation. [default: 5] 
+  --hasheddrops_constantAmbient             [boolean]       Whether to use constant ambient contamination level. 
+  --hasheddrops_doubletNmads                [integer]       Number of MADs to identify doublets. [default: 3] 
+  --hasheddrops_doubletMin                  [integer]       Minimum threshold for doublet identification. [default: 2] 
+  --hasheddrops_doubletMixture              [boolean]       Whether to use 2-component mixture model for doublets. 
+  --hasheddrops_confidentNmads              [integer]       Number of MADs to identify confident singlets. [default: 3] 
+  --hasheddrops_confidentMin                [integer]       Minimum threshold for confident singlet identification. [default: 2] 
+  --hasheddrops_combinations                [array]         An integer matrix specifying valid combinations of HTOs. Number of items in each row has to be the 
+same.  
+  --hasheddrops_runEmptyDrops               [boolean]       Whether to run EmptyDrops analysis as part of HashedDrops. 
+
+Preprocessing options
+  --preprocessing_sel_method                [string]  Method for feature selection. [default: mean.var.plot] 
+  --preprocessing_ndelim                    [string]  Delimiter for parsing feature names. [default: _] 
+  --preprocessing_n_features                [integer] Number of features to select. [default: 2000] 
+  --preprocessing_assay                     [string]  Assay type for preprocessing. [default: HTO] 
+  --preprocessing_margin                    [integer] Margin parameter for preprocessing. [default: 2] 
+  --preprocessing_norm_method               [string]  Normalization method to use. [default: CLR] 
+  --preprocessing_gene_col                  [integer] Column containing gene information. [default: 2] 
+
+CellSNP-lite options
+  --cellsnp_celltag                         [string]  Tag for cell barcodes, e.g., CB for 10x Genomics. Set to 'None' for bulk RNA-seq or SMART-seq2. 
+[default: CB]  
+  --cellsnp_umitag                          [string]  Tag for UMI barcodes, e.g., UB for 10x Genomics. Set to 'None' for bulk RNA-seq or SMART-seq2 
+without UMIs. [default: Auto]  
+  --cellsnp_mincount                        [integer] Minimum aggregated count (across cells) for SNPs to be included in the output. [default: 20] 
+ 
+  --cellsnp_minmaf                          [number]  Minimum minor allele frequency (MAF) for SNPs to be included in the output. [default: 0] 
+  --cellsnp_inclflag                        [string]  Required flags in SAM/BAM: skip reads that don't have ALL of these flags. See SAM format 
+specification for details.  
+  --cellsnp_exclflag                        [string]  Excluding flags in SAM/BAM: skip reads that have ANY of these flags. See SAM format specification 
+for details.  
+  --cellsnp_minlen                          [integer] Minimum read length (after clipping) for a read to be included. [default: 30] 
+  --cellsnp_minmapq                         [integer] Minimum mapping quality for a read to be included. [default: 20] 
+  --cellsnp_maxdepth                        [integer] Maximum read depth at a position per input file. Set to 0 for highest possible value. [default: 
+0]  
+  --cellsnp_countorphan                     [boolean] If true, do not skip anomalous read pairs (i.e., count orphan reads). 
+
+Vireo options
+  --vireo_genotag                           [string]  The tag for donor genotype in VCF file. Options: GT, GP, PL.  (accepted: GT, GP, PL) [default: 
+GT]  
+  --vireo_no_doublet                        [boolean] If true, do not check for doublets during demultiplexing. 
+  --vireo_n_init                            [integer] Number of random initializations when GT needs to be learned. [default: 50] 
+  --vireo_extra_donor                       [integer] Number of extra donors in pre-cluster, when GT needs to be learned. [default: 0] 
+  --vireo_extra_donor_mode                  [string]  Method for searching from extra donors. 'size': n_cell per donor; 'distance': GT distance between 
+donors.  (accepted: size, distance) [default: distance]  
+  --vireo_force_learn_gt                    [boolean] If true, treat donor GT as prior only and learn genotypes from data. [default: true] 
+  --vireo_ase_mode                          [boolean] If true, turn on SNP specific allelic ratio (ASE mode). 
+  --vireo_no_plot                           [boolean] If true, turn off plotting GT distance. 
+  --vireo_rand_seed                         [integer] Random seed for initialization. [default: 0] 
+  --vireo_cell_range                        [string]  Range of cells to process, e.g., '0-10000'. Default is 'all'. [default: all] 
+  --vireo_cell_ambient_rnas                 [boolean] If true, detect ambient RNAs in each cell (experimental feature). 
+
+DSC-Pileup options
+  --dsc_pileup_tag_group                    [string]  Tag representing readgroup or cell barcodes to partition the BAM file into multiple groups. For 10x 
+Genomics, use CB. [default: CB]  
+  --dsc_pileup_tag_umi                      [string]  Tag representing UMIs. For 10x Genomics, use UB. [default: UB] 
+  --dsc_pileup_cap_bq                       [integer] Maximum base quality (higher BQ will be capped). [default: 40] 
+  --dsc_pileup_min_bq                       [integer] Minimum base quality to consider (lower BQ will be skipped). [default: 13] 
+  --dsc_pileup_min_mq                       [integer] Minimum mapping quality to consider (lower MQ will be ignored). [default: 20] 
+  --dsc_pileup_min_td                       [integer] Minimum distance to the tail (lower will be ignored). [default: 0] 
+  --dsc_pileup_excl_flag                    [integer] SAM/BAM FLAGs to be excluded. [default: 3844] 
+  --dsc_pileup_min_total                    [integer] Minimum number of total reads for a droplet/cell to be considered. [default: 0] 
+  --dsc_pileup_min_uniq                     [integer] Minimum number of unique reads (determined by UMI/SNP pair) for a droplet/cell to be considered. 
+[default: 0]  
+  --dsc_pileup_min_snp                      [integer] Minimum number of SNPs with coverage for a droplet/cell to be considered. [default: 0] 
+
+Demuxlet options
+  --demuxlet_field                          [string]  FORMAT field to extract the genotype, likelihood, or posterior from. [default: GT] 
+  --demuxlet_geno_error_offset              [number]  Offset of genotype error rate. [error] = [offset] + [1-offset]*[coeff]*[1-r2] [default: 0.1] 
+ 
+  --demuxlet_geno_error_coeff               [number]  Slope of genotype error rate. [error] = [offset] + [1-offset]*[coeff]*[1-r2] [default: 0] 
+  --demuxlet_r2_info                        [string]  INFO field name representing R2 value. Used for representing imputation quality. [default: R2] 
+ 
+  --demuxlet_min_mac                        [integer] Minimum minor allele frequency. [default: 1] 
+  --demuxlet_min_callrate                   [number]  Minimum call rate. [default: 0.5] 
+  --demuxlet_alpha                          [string]  Grid of alpha to search for. [default: 0.1,0.2,0.3,0.4,0.5] 
+  --demuxlet_doublet_prior                  [number]  Prior probability of doublet. [default: 0.5] 
+
+Freemuxlet options
+  --freemuxlet_doublet_prior                [number]  Prior probability of doublet. [default: 0.5] 
+  --freemuxlet_geno_error                   [number]  Genotype error parameter per cluster. [default: 0.1] 
+  --freemuxlet_bf_thres                     [number]  Bayes Factor Threshold used in the initial clustering. [default: 5.41] 
+  --freemuxlet_frac_init_clust              [number]  Fraction of droplets to be clustered in the very first round of initial clustering procedure. 
+[default: 1]  
+  --freemuxlet_iter_init                    [integer] Iteration for initial cluster assignment (set to zero to skip the iterations). [default: 10] 
+ 
+  --freemuxlet_keep_init_missing            [boolean] Keep missing cluster assignment as missing in the initial iteration. 
+  --freemuxlet_randomize_singlet_score      [boolean] Randomize the singlet scores to test its effect. 
+  --freemuxlet_seed                         [integer] Seed for random number (use clocks if not set). [default: 0] 
+
+Souporcell options
+  --souporcell_ploidy                       [integer] Ploidy, must be 1 or 2.  (accepted: 1, 2) [default: 2] 
+  --souporcell_min_alt                      [integer] Min alt to use locus. [default: 10] 
+  --souporcell_min_ref                      [integer] Min ref to use locus. [default: 10] 
+  --souporcell_max_loci                     [integer] Max loci per cell, affects speed. [default: 2048] 
+  --souporcell_restarts                     [integer] Number of restarts in clustering, when there are > 12 clusters we recommend increasing this to avoid 
+local minima. [default: 100]  
+  --souporcell_common_variants              [string]  Common variant loci or known variant loci vcf, must be vs same reference fasta. 
+  --souporcell_known_genotypes              [string]  Known variants per clone in population vcf mode, must be .vcf right now we dont accept gzip or bcf 
+sorry.  
+  --souporcell_known_genotypes_sample_names [string]  Which samples in population vcf from known genotypes option represent the donors in your sample. 
+Provide space-separated sample names for multiple donors.  
+  --souporcell_skip_remap                   [boolean] Don't remap with minimap2 (not recommended unless in conjunction with --common_variants). 
+  --souporcell_ignore                       [boolean] Set to True to ignore data error assertions. 
+
+Generic options
+  --multiqc_methods_description             [string]          Custom MultiQC yaml file containing HTML including a methods description. 
+  --help                                    [boolean, string] Display the help message. 
+  --help_full                               [boolean]         Display the full detailed help message. 
+  --show_hidden                             [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 19 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The pipeline
+    https://doi.org/10.1101/2023.07.23.550061
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/hadge/blob/main/CITATIONS.md
+

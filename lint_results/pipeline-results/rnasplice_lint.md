@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-24T00:38:33.757448368Z
+- Generated: 2026-06-26T00:45:35.543916239Z
 - Nextflow version: 26.05.0-edge
-- Summary: 35 warnings
+- Summary: 30 warnings
 
 ## :warning: Warnings
 
@@ -144,41 +144,6 @@
   ```nextflow
               if (it.size() > 1) {
                   ^^
-  ```
-
-- Warning: `subworkflows/local/visualize_miso/main.nf:63:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      ch_bams = ch_genome_bam.collect({it[1]})
-                                       ^^
-  ```
-
-- Warning: `subworkflows/local/visualize_miso/main.nf:64:41`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      ch_miso_run = MISO_RUN.out.miso.map{it[1]}.collect()
-                                          ^^
-  ```
-
-- Warning: `subworkflows/local/visualize_miso/main.nf:77:71`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def miso_genes_list = miso_genes ? miso_genes.split(',').collect{ it.trim() } : [""]
-                                                                        ^^
-  ```
-
-- Warning: `subworkflows/local/visualize_miso/main.nf:95:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          .map { [it[1], it[2] ] }
-                  ^^
-  ```
-
-- Warning: `subworkflows/local/visualize_miso/main.nf:95:24`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          .map { [it[1], it[2] ] }
-                         ^^
   ```
 
 - Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit

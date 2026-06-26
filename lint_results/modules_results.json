@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "3ae65622c8c8e6ab8390a73dd75a698308a4971b",
+  "_repo_commit": "2724f164f1c751b368918fb78e7f4049df6f736d",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -2546,6 +2546,24 @@
   },
   "deacon_index": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/deacon/index",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "deacon_indexdiff": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/deacon/indexdiff",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "deacon_indexintersect": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/deacon/indexintersect",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "deacon_indexunion": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/deacon/indexunion",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

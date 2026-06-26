@@ -1,10 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.04.3
+ N E X T F L O W   ~  version 26.05.0-edge
 
 WARN: Cannot read project manifest -- Cause:  Cannot get property 'ENA_WEBIN' on null object
-Launching `./main.nf` [determined_mendel] revision: 5e77062e77
+Launching `./main.nf` [mad_morse] revision: d58f83c8cb
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -57,6 +57,8 @@ Pipeline flow control parameters
   --upload_tpa                  [boolean] Flag to control the type of assembly study (third party assembly or not) [default: false] 
   --mode                        [string]  Type of upload  (accepted: mags, bins, metagenomic_assemblies, reads) 
   --test_upload                 [boolean] Upload to TEST server instead of LIVE [default: true] 
+  --is_private                  [boolean] Use that flag if you are referring to private data in ENA [default: false] 
+  --release_date                [string]  Use that flag if you want to keep your data private after submission 
   --submission_study            [string]  ENA study accession (PRJ/ERP) to submit the data to 
   --study_metadata              [string]  Path to study metadata file (JSON, CSV, or TSV) for registering a new ENA study. Required when 
 submission_study is not provided.  

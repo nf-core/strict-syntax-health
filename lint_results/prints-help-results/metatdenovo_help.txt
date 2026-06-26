@@ -1,9 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.04.3
+ N E X T F L O W   ~  version 26.05.0-edge
 
-Launching `./main.nf` [admiring_waddington] revision: 04bb5cefca
+Downloading plugin nf-schema@2.7.2
+Launching `./main.nf` [mad_goodall] revision: 04bb5cefca
 
 
 ------------------------------------------------------
@@ -12,7 +13,7 @@ Launching `./main.nf` [admiring_waddington] revision: 04bb5cefca
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/metatdenovo 1.3.1dev
+  nf-core/metatdenovo 1.4.0
 ------------------------------------------------------
 Typical pipeline command:
 
