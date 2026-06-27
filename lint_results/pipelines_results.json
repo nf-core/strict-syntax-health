@@ -38,14 +38,14 @@
   "ampliseq": {
     "full_name": "nf-core/ampliseq",
     "html_url": "https://github.com/nf-core/ampliseq",
-    "commit": "cc622267cca6911f094212bdc63faa2e2f9e894d",
+    "commit": "e651b990cc8a8c47ff5b4432be30b4bb81753740",
     "errors": 0,
-    "warnings": 10,
+    "warnings": 27,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 95
+    "publishdir_count": 97
   },
   "atacseq": {
     "full_name": "nf-core/atacseq",
@@ -74,7 +74,7 @@
   "bacmodel": {
     "full_name": "nf-core/bacmodel",
     "html_url": "https://github.com/nf-core/bacmodel",
-    "commit": "2985ecdd1cf3280bdd5e8fc7c1edde02111c0c79",
+    "commit": "2efd7d38ae2511c56912bfa2b591ec980ee84520",
     "errors": 0,
     "warnings": 54,
     "parse_error": false,
@@ -374,7 +374,7 @@
   "diseasemodulediscovery": {
     "full_name": "nf-core/diseasemodulediscovery",
     "html_url": "https://github.com/nf-core/diseasemodulediscovery",
-    "commit": "fa1596365bc73866887c97f0502fa75ddae2070a",
+    "commit": "9ee26debbf79189bf44c9891a2886d6421168fbb",
     "errors": 0,
     "warnings": 133,
     "parse_error": false,
@@ -518,7 +518,7 @@
   "funcscan": {
     "full_name": "nf-core/funcscan",
     "html_url": "https://github.com/nf-core/funcscan",
-    "commit": "f32f0f74a3679e9b54657e04862fa920b116c910",
+    "commit": "d4e471841fdbcdb2cee127b24ac96cc1507666ff",
     "errors": 0,
     "warnings": 70,
     "parse_error": false,
@@ -554,14 +554,14 @@
   "genomeassembler": {
     "full_name": "nf-core/genomeassembler",
     "html_url": "https://github.com/nf-core/genomeassembler",
-    "commit": "df11fab16c4ef0ef836e40406f56f0f099e6e353",
+    "commit": "6ce7e86c09f54c091d0ad944375c4f3989064e5c",
     "errors": 0,
-    "warnings": 136,
+    "warnings": 23,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 60
+    "publishdir_count": 91
   },
   "genomeqc": {
     "full_name": "nf-core/genomeqc",
@@ -722,7 +722,7 @@
   "longraredisease": {
     "full_name": "nf-core/longraredisease",
     "html_url": "https://github.com/nf-core/longraredisease",
-    "commit": "a89c6b453e561ae6d2406c3542bd37b029d72c06",
+    "commit": "43349d7d9537c5465f204f24212bff1db0dd12b0",
     "errors": 0,
     "warnings": 167,
     "parse_error": false,
@@ -746,7 +746,7 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "7d59e1b96dbc60313d8e0ab984cfa7b962e6ddb8",
+    "commit": "49e54010efc790aa76af9581fc777c38edf77594",
     "errors": 0,
     "warnings": 25,
     "parse_error": false,
@@ -830,7 +830,7 @@
   "metatdenovo": {
     "full_name": "nf-core/metatdenovo",
     "html_url": "https://github.com/nf-core/metatdenovo",
-    "commit": "c558ec272572ed1a8c302a57650da2312cd50cc4",
+    "commit": "afc7f125e115ae598add3b5494b1f40fd269bbe8",
     "errors": 0,
     "warnings": 4,
     "parse_error": false,
@@ -1046,7 +1046,7 @@
   "pairgenomealign": {
     "full_name": "nf-core/pairgenomealign",
     "html_url": "https://github.com/nf-core/pairgenomealign",
-    "commit": "f031f1b23fe16f5e8d1fe6defb207ab65b0af961",
+    "commit": "3166c2a0679880fb38d7705880a9edaf6e26b8e4",
     "errors": 0,
     "warnings": 16,
     "parse_error": false,
@@ -1226,7 +1226,7 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "cbb21fff48b6362a7d1fb5de4aa5eae98ca0c221",
+    "commit": "b0159722d76a6df60e13bb15b0160003e5510821",
     "errors": 0,
     "warnings": 13,
     "parse_error": false,
@@ -1274,7 +1274,7 @@
   "reportho": {
     "full_name": "nf-core/reportho",
     "html_url": "https://github.com/nf-core/reportho",
-    "commit": "c272b2d5d64b677c8850f611c2e12c02c94bb0f6",
+    "commit": "b43cc4537138cefaf0e5126d49d425d24ca57ebc",
     "errors": 0,
     "warnings": 18,
     "parse_error": false,
@@ -1298,14 +1298,14 @@
   "riboseq": {
     "full_name": "nf-core/riboseq",
     "html_url": "https://github.com/nf-core/riboseq",
-    "commit": "b7428c9aa41b5303cbca8010cd17f354adba70b3",
+    "commit": "6ee988594d7c7dc6c7321dbbc4aaef0201155233",
     "errors": 0,
-    "warnings": 153,
+    "warnings": 160,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 110
+    "publishdir_count": 116
   },
   "rnadnavar": {
     "full_name": "nf-core/rnadnavar",
@@ -1346,7 +1346,7 @@
   "rnasplice": {
     "full_name": "nf-core/rnasplice",
     "html_url": "https://github.com/nf-core/rnasplice",
-    "commit": "f8e42b0d4426c10c7091d353200377700719e752",
+    "commit": "064e5afcb34b8cbdb0c12d33602d7ea7778b2ee5",
     "errors": 0,
     "warnings": 30,
     "parse_error": false,
@@ -1382,9 +1382,9 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "e68ca6b72a695cdb13d60fde65e1f58362b78493",
+    "commit": "50b98fae8d4df5773388b5f5d12c6020baef52e1",
     "errors": 0,
-    "warnings": 617,
+    "warnings": 585,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": true,
@@ -1406,7 +1406,7 @@
   "scnanoseq": {
     "full_name": "nf-core/scnanoseq",
     "html_url": "https://github.com/nf-core/scnanoseq",
-    "commit": "d71e425a2220eb9df366fd88dfd7bd74708a7d7b",
+    "commit": "c816bba584026d95df6078fa79f176795df9271a",
     "errors": 0,
     "warnings": 5,
     "parse_error": false,
@@ -1490,14 +1490,14 @@
   "spatialaxe": {
     "full_name": "nf-core/spatialaxe",
     "html_url": "https://github.com/nf-core/spatialaxe",
-    "commit": "a48fac2c8bafb80911b9ba57b8086c74bfd42fe5",
+    "commit": "81b78577191144f2dafe195efcb3f2a1b11f6dfc",
     "errors": 0,
-    "warnings": 4,
+    "warnings": 8,
     "parse_error": false,
-    "prints_help": true,
+    "prints_help": false,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 2
+    "publishdir_count": 39
   },
   "spatialvi": {
     "full_name": "nf-core/spatialvi",

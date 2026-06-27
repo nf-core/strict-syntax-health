@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "2724f164f1c751b368918fb78e7f4049df6f736d",
+  "_repo_commit": "3c81fd40c2955cc88e9c3baabea82ba05dd8f221",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -3594,6 +3594,18 @@
     "warnings": 0,
     "parse_error": false
   },
+  "fungtion_downloadmodels": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fungtion/downloadmodels",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "fungtion_fungtion": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fungtion/fungtion",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "fusioncatcher_build": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fusioncatcher/build",
     "errors": 0,
@@ -6964,6 +6976,12 @@
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/nucmer",
     "errors": 0,
     "warnings": 0,
+    "parse_error": false
+  },
+  "numorph_3dunet": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/numorph/3dunet",
+    "errors": 0,
+    "warnings": 1,
     "parse_error": false
   },
   "numorph_intensity": {

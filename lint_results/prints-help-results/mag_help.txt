@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.05.0-edge
 
-Launching `./main.nf` [awesome_meitner] revision: 71af2049ef
+Launching `./main.nf` [amazing_waddington] revision: 71af2049ef
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -89,8 +89,9 @@ Quality control for long reads options
  
   --longreads_min_length                 [integer] Discard any read which is shorter than this value. [default: 1000] 
   --longreads_min_quality                [integer] Discard any read which has a mean quality score lower than this value. 
-  --longreads_keep_percent               [integer] Keep this percent of bases. [default: 90] 
-  --longreads_length_weight              [integer] The higher the more important is read length when choosing the best reads. [default: 10] 
+  --longreads_keep_percent               [integer] Keep this percent of bases. Only used by filtlong. [default: 90] 
+  --longreads_length_weight              [integer] The higher the more important is read length when choosing the best reads. Only used by filtlong. 
+[default: 10]  
   --keep_lambda                          [boolean] Keep reads similar to the ONT internal standard Escherichia virus Lambda genome. 
   --lambda_reference                     [string]  Genome reference used to remove ONT Lambda contaminant reads. 
   --save_lambdaremoved_reads             [boolean] Specify to save input FASTQ files with lamba reads removed  to --outdir. 
@@ -98,8 +99,9 @@ Quality control for long reads options
   --save_filtered_longreads              [boolean] Specify to save the resulting length filtered long read FASTQ files to --outdir. 
   --longread_adaptertrimming_tool        [string]  Specify which long read adapter trimming tool to use.  (accepted: porechop, porechop_abi) 
 [default: porechop_abi]  
-  --longread_filtering_tool              [string]  Specify which long read filtering tool to use.  (accepted: filtlong, nanoq, chopper) [default: 
-filtlong]  
+  --longread_filtering_tool              [string]  Specify which long read filtering tool to use.  (accepted: chopper, filtlong, nanoq) [default: 
+chopper]  
+  --filtlong_filtering_by_shortreads     [boolean] Filter long reads against short reads when using filtlong. 
 
 Taxonomic profiling options
   --cat_db                               [string]  Database for taxonomic classification of metagenome assembled genomes. Can be either a zipped file 

@@ -6,7 +6,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 Downloading plugin nf-core-utils@0.4.0
 Downloading plugin nf-fgbio@1.0.0
 Downloading plugin nf-prov@1.7.0
-Launching `./main.nf` [modest_dalembert] revision: f2330ae7a6
+Launching `./main.nf` [jovial_fourier] revision: f2330ae7a6
 
 
 ------------------------------------------------------

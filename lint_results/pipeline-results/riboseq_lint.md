@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-26T00:45:02.485251977Z
+- Generated: 2026-06-27T00:43:15.813396604Z
 - Nextflow version: 26.05.0-edge
-- Summary: 153 warnings
+- Summary: 160 warnings
 
 ## :warning: Warnings
 
@@ -146,21 +146,21 @@
                                                                                    ^^
   ```
 
-- Warning: `conf/modules.config:1187:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:1236:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   saveAs: { params.save_align_intermeds ? it : null }
                                                           ^^
   ```
 
-- Warning: `conf/modules.config:1198:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:1247:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   saveAs: { params.save_unaligned ? it : null }
                                                     ^^
   ```
 
-- Warning: `conf/modules.config:1226:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:1275:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               saveAs: { params.save_align_intermeds ? it : null }
@@ -200,6 +200,34 @@
   ```nextflow
       ch_bowtie2_index = Channel.empty()
                          ^^^^^^^
+  ```
+
+- Warning: `modules/nf-core/custom/orfcollapse/main.nf:29:5`: Variable was declared but not used
+
+  ```nextflow
+      args   = task.ext.args ?: ''
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/custom/orfmerge/main.nf:28:5`: Variable was declared but not used
+
+  ```nextflow
+      args   = task.ext.args ?: ''
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/custom/orfnormalise/main.nf:24:5`: Variable was declared but not used
+
+  ```nextflow
+      sample_id = meta.id ?: 'unknown'
+      ^^^^^^^^^
+  ```
+
+- Warning: `modules/nf-core/custom/orfnormalise/main.nf:25:5`: Variable was declared but not used
+
+  ```nextflow
+      args      = task.ext.args ?: ''
+      ^^^^
   ```
 
 - Warning: `modules/nf-core/rpbp/getperiodiclengthsoffsets/main.nf:21:5`: Variable was declared but not used
@@ -783,6 +811,20 @@
       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
+- Warning: `subworkflows/nf-core/orftable_fasta_gtf_buildorfcatalogue/main.nf:51:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          .filter { it.size() > 0 }
+                    ^^
+  ```
+
+- Warning: `subworkflows/nf-core/orftable_fasta_gtf_buildorfcatalogue/main.nf:57:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          .filter { it.size() > 0 }
+                    ^^
+  ```
+
 - Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
@@ -811,266 +853,273 @@
       ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:72:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/riboseq/main.nf:73:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_chrom_sizes      // channel: path(genome.sizes)
       ^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:147:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:148:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               validateInputSamplesheet(it)
                                        ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:223:103`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:224:103`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(FASTQ_EQUALISE_READ_LENGTHS.out.riboseq_stats.collect{it[1]})
                                                                                                         ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:233:36`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:234:36`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_star_index.map { [ [:], it ] },
                                      ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:234:29`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:235:29`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_gtf.map { [ [:], it ] },
                               ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:236:31`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:237:31`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_fasta.map { [ [:], it ] },
                                 ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:237:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:238:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_transcript_fasta.map { [ [:], it ] }
                                            ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:243:5`: Variable was declared but not used
+- Warning: `workflows/riboseq/main.nf:244:5`: Variable was declared but not used
 
   ```nextflow
       ch_transcriptome_bai       = FASTQ_ALIGN_STAR.out.bai_transcript
       ^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:246:49`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:247:49`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .mix(FASTQ_ALIGN_STAR.out.stats.collect{it[1]})
                                                   ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:247:52`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:248:52`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .mix(FASTQ_ALIGN_STAR.out.flagstat.collect{it[1]})
                                                      ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:248:52`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:249:52`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .mix(FASTQ_ALIGN_STAR.out.idxstats.collect{it[1]})
                                                      ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:249:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:250:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .mix(FASTQ_ALIGN_STAR.out.log_final.collect{it[1]})
                                                       ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:259:35`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:260:35`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_fasta.map { [ [:], it ] },
                                     ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:264:46`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:265:46`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_transcript_fasta.map { [ [:], it ] },
                                                ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:375:39`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:376:39`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   ch_fasta.map { [ [:], it ] },
                                         ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:380:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:381:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   EXTENDED_ORF_SECOND_PASS_ALIGN.out.transcript_fasta.map { [ [:], it ] },
                                                                                    ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:439:9`: Variable was declared but not used
+- Warning: `workflows/riboseq/main.nf:440:9`: Variable was declared but not used
 
   ```nextflow
       def orf_agreement_min_callers = enabled_orf_callers
           ^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:442:5`: Variable was declared but not used
+- Warning: `workflows/riboseq/main.nf:443:5`: Variable was declared but not used
 
   ```nextflow
       ch_enabled_orf_callers      = channel.value(enabled_orf_callers)
       ^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:443:5`: Variable was declared but not used
+- Warning: `workflows/riboseq/main.nf:444:5`: Variable was declared but not used
 
   ```nextflow
       ch_rank_aggregation_callers = channel.value(rank_aggregation_callers)
       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:464:33`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:467:106`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          ch_multiqc_files = ch_multiqc_files.mix(ORFTABLE_FASTA_GTF_BUILDORFCATALOGUE.out.multiqc.collect{it[1]}.ifEmpty([]))
+                                                                                                           ^^
+  ```
+
+- Warning: `workflows/riboseq/main.nf:489:33`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_gtf.map { [ [:], it ] },
                                   ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:465:35`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:490:35`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_fasta.map { [ [:], it ] })
                                     ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:468:89`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:493:89`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(RIBOWALTZ.out.ribowaltz_qc_data.collect{it[1]}.ifEmpty([]))
                                                                                           ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:473:65`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:498:65`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           PLASTID_METAGENE_GENERATE(ch_canonical_gtf.map { [ [:], it ] })
                                                                   ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:497:37`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:522:37`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_samplesheet.map { [ [:], it ] },
                                       ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:511:86`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:536:86`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(QUANTIFY_STAR_SALMON.out.multiqc.collect{it[1]}.ifEmpty([]))
                                                                                        ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:523:29`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/riboseq/main.nf:548:29`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .filter { meta, reads -> meta.sample_type in ['riboseq', 'rnaseq'] }
                               ^^^^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:526:41`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:551:41`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_samplesheet.map { [ [:], it ] },
                                           ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:540:88`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:565:88`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(QUANTIFY_PSEUDO_TE.out.multiqc.collect{it[1]}.ifEmpty([]))
                                                                                          ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:565:67`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/riboseq/main.nf:590:67`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .collectFile(name: 'gene_inframe_psite_counts.tsv') { meta, file -> file }
                                                                     ^^^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:570:82`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/riboseq/main.nf:595:82`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   .combine(QUANTIFY_STAR_SALMON.out.counts_gene_length_scaled.map{ meta, counts -> counts })
                                                                                    ^^^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:587:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:612:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .map{[it, it.variable, it.reference, it.target]}
                     ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:587:23`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:612:23`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .map{[it, it.variable, it.reference, it.target]}
                         ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:587:36`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:612:36`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .map{[it, it.variable, it.reference, it.target]}
                                      ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:587:50`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:612:50`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .map{[it, it.variable, it.reference, it.target]}
                                                    ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:591:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:616:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .map{[it[0], it[2], it[1]]}
                     ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:591:26`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:616:26`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .map{[it[0], it[2], it[1]]}
                            ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:591:33`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:616:33`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .map{[it[0], it[2], it[1]]}
                                   ^^
   ```
 
-- Warning: `workflows/riboseq/main.nf:615:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/riboseq/main.nf:640:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_versions = ch_versions.filter{it != null}

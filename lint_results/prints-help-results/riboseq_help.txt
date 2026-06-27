@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.05.0-edge
 
-Launching `./main.nf` [nostalgic_edison] revision: 8f4b7ccf52
+Launching `./main.nf` [festering_bell] revision: 8f4b7ccf52
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -227,6 +227,11 @@ feeding the hybrid GTF to genome-BAM ORF callers (Ribo-TISH predict, Ribotricer)
   --run_rpbp                             [boolean] Opt in to running Rp-Bp as an additional ORF caller (Bayesian, slow). 
   --extra_rpbp_preparegenome_args        [string]  Extra CLI arguments passed to `prepare-rpbp-genome`. 
   --extra_rpbp_predictorfs_args          [string]  Extra CLI arguments passed to `select-final-prediction-set`. 
+  --skip_orf_collapse                    [boolean] Skip the peptide-level smORF deduplication of the cross-sample ORF catalogue. 
+  --orf_min_callers                      [integer] Minimum number of ORF callers that must agree for an ORF to enter the consensus catalogue view. 
+[default: 1]  
+  --orf_min_samples                      [integer] Minimum number of samples an ORF must recur in to enter the consensus catalogue view. [default: 
+1]  
 
 Generic options
   --multiqc_methods_description          [string]          Custom MultiQC yaml file containing HTML including a methods description. 
