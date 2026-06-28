@@ -518,7 +518,7 @@
   "funcscan": {
     "full_name": "nf-core/funcscan",
     "html_url": "https://github.com/nf-core/funcscan",
-    "commit": "d4e471841fdbcdb2cee127b24ac96cc1507666ff",
+    "commit": "670aab3a65e6c5e4629b6906cd915e3174ee4b93",
     "errors": 0,
     "warnings": 70,
     "parse_error": false,
@@ -746,7 +746,7 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "49e54010efc790aa76af9581fc777c38edf77594",
+    "commit": "d605bdcb417bf64876cacd3a99e43ef70821cda2",
     "errors": 0,
     "warnings": 25,
     "parse_error": false,
@@ -1226,7 +1226,7 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "b0159722d76a6df60e13bb15b0160003e5510821",
+    "commit": "a6ab19597753c2dae83b3a167d7b428721e85e79",
     "errors": 0,
     "warnings": 13,
     "parse_error": false,
@@ -1346,7 +1346,7 @@
   "rnasplice": {
     "full_name": "nf-core/rnasplice",
     "html_url": "https://github.com/nf-core/rnasplice",
-    "commit": "064e5afcb34b8cbdb0c12d33602d7ea7778b2ee5",
+    "commit": "b90c6773732396072411198f547008070cc884a5",
     "errors": 0,
     "warnings": 30,
     "parse_error": false,
@@ -1394,7 +1394,7 @@
   "scdownstream": {
     "full_name": "nf-core/scdownstream",
     "html_url": "https://github.com/nf-core/scdownstream",
-    "commit": "dfc1482d9ece55c5249b63517cc867ee37654599",
+    "commit": "61b838cd2deca56f1a42f93023b3912acfa24945",
     "errors": 0,
     "warnings": 32,
     "parse_error": false,

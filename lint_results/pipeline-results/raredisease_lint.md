@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-06-27T00:42:35.607655468Z
+- Generated: 2026-06-28T00:41:10.037211238Z
 - Nextflow version: 26.05.0-edge
 - Summary: 13 warnings
 
@@ -13,7 +13,7 @@
           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/call_sv_MT/main.nf:152:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/call_sv_MT/main.nf:145:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   .filter { !it.isEmpty() }
@@ -76,21 +76,21 @@
       ^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/raredisease.nf:990:5`: Variable was declared but not used
+- Warning: `workflows/raredisease.nf:991:5`: Variable was declared but not used
 
   ```nextflow
       ch_multiqc_config        = channel.fromPath(
       ^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/raredisease.nf:992:5`: Variable was declared but not used
+- Warning: `workflows/raredisease.nf:993:5`: Variable was declared but not used
 
   ```nextflow
       ch_multiqc_custom_config = val_multiqc_config ?
       ^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/raredisease.nf:995:5`: Variable was declared but not used
+- Warning: `workflows/raredisease.nf:996:5`: Variable was declared but not used
 
   ```nextflow
       ch_multiqc_logo          = val_multiqc_logo ?

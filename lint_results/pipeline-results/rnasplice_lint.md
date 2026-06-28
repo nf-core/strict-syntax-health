@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-06-27T00:43:37.148756069Z
+- Generated: 2026-06-28T00:41:38.251302694Z
 - Nextflow version: 26.05.0-edge
 - Summary: 30 warnings
 
@@ -209,7 +209,7 @@
           ^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/rnasplice.nf:588:5`: Emit name should be omitted when there is only one emit
+- Warning: `workflows/rnasplice.nf:587:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
       multiqc_report = MULTIQC.out.report.map { _meta, report -> [report] }.toList()

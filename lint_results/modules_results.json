@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "3c81fd40c2955cc88e9c3baabea82ba05dd8f221",
+  "_repo_commit": "94be3d403c32cedad9406c6fc2bddc15ffc82507",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -6472,6 +6472,12 @@
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mirtrace/qc",
     "errors": 0,
     "warnings": 0,
+    "parse_error": false
+  },
+  "misopy_index": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/misopy/index",
+    "errors": 0,
+    "warnings": 1,
     "parse_error": false
   },
   "mitohifi_findmitoreference": {
