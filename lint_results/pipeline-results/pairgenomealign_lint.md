@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-27T00:42:07.130528117Z
+- Generated: 2026-06-29T00:41:45.492938243Z
 - Nextflow version: 26.05.0-edge
-- Summary: 16 warnings
+- Summary: 17 warnings
 
 ## :warning: Warnings
 
@@ -90,28 +90,35 @@
                                                           ^^^^^^
   ```
 
-- Warning: `workflows/pairgenomealign.nf:70:55`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/pairgenomealign.nf:50:81`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      def needs_genome = ['cram','bam','bcf','gff'].any { export_formats.contains(it) }
+                                                                                  ^^
+  ```
+
+- Warning: `workflows/pairgenomealign.nf:71:55`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
             .map { sorted_list -> sorted_list.collect { it[1] } }
                                                         ^^
   ```
 
-- Warning: `workflows/pairgenomealign.nf:119:33`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/pairgenomealign.nf:120:33`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               o2o_alignments.map {it + "cram"},
                                   ^^
   ```
 
-- Warning: `workflows/pairgenomealign.nf:125:20`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/pairgenomealign.nf:126:20`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map { meta, cram -> tuple(params.targetName, cram) }
                      ^^^^
   ```
 
-- Warning: `workflows/pairgenomealign.nf:146:24`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/pairgenomealign.nf:147:24`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   .map { meta, file -> file }

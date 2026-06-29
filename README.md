@@ -11,12 +11,12 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 > See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline.
 > **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**
 
-- **Last updated:** 2026-06-28 00:43:25 UTC
+- **Last updated:** 2026-06-29 00:42:41 UTC
 - **Nextflow version:** 26.05.0-edge
 
 ## Pipelines
 
-- **Total:** 0 parse errors, 1514 errors, 7488 warnings across 139 pipelines
+- **Total:** 0 parse errors, 1514 errors, 7489 warnings across 139 pipelines
 - **Zero errors:** 84 pipelines (60.4%)
 
 |                    Errors                    |                     Warnings                     |
@@ -126,7 +126,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :white_check_mark: [seqsubmit](https://github.com/nf-core/seqsubmit)                           |     No      |      0 |       18 |     Yes     |         [View](lint_results/pipeline-results/seqsubmit_lint.md)         |       [View](lint_results/prints-help-results/seqsubmit_help.txt)        |
 | :x: [genephylomodeler](https://github.com/nf-core/genephylomodeler)                            |     No      |      0 |       17 |     No      |     [View](lint_results/pipeline-results/genephylomodeler_lint.md)      |    [View](lint_results/prints-help-results/genephylomodeler_help.txt)    |
 | :white_check_mark: [genomicrelatedness](https://github.com/nf-core/genomicrelatedness)         |     No      |      0 |       17 |     Yes     |    [View](lint_results/pipeline-results/genomicrelatedness_lint.md)     |   [View](lint_results/prints-help-results/genomicrelatedness_help.txt)   |
-| :white_check_mark: [pairgenomealign](https://github.com/nf-core/pairgenomealign)               |     No      |      0 |       16 |     Yes     |      [View](lint_results/pipeline-results/pairgenomealign_lint.md)      |    [View](lint_results/prints-help-results/pairgenomealign_help.txt)     |
+| :white_check_mark: [pairgenomealign](https://github.com/nf-core/pairgenomealign)               |     No      |      0 |       17 |     Yes     |      [View](lint_results/pipeline-results/pairgenomealign_lint.md)      |    [View](lint_results/prints-help-results/pairgenomealign_help.txt)     |
 | :white_check_mark: [fetchngs](https://github.com/nf-core/fetchngs)                             |     No      |      0 |       15 |     Yes     |         [View](lint_results/pipeline-results/fetchngs_lint.md)          |        [View](lint_results/prints-help-results/fetchngs_help.txt)        |
 | :white_check_mark: [genomeqc](https://github.com/nf-core/genomeqc)                             |     No      |      0 |       14 |     Yes     |         [View](lint_results/pipeline-results/genomeqc_lint.md)          |        [View](lint_results/prints-help-results/genomeqc_help.txt)        |
 | :white_check_mark: [tfactivity](https://github.com/nf-core/tfactivity)                         |     No      |      0 |       14 |     Yes     |        [View](lint_results/pipeline-results/tfactivity_lint.md)         |       [View](lint_results/prints-help-results/tfactivity_help.txt)       |

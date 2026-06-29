@@ -1046,9 +1046,9 @@
   "pairgenomealign": {
     "full_name": "nf-core/pairgenomealign",
     "html_url": "https://github.com/nf-core/pairgenomealign",
-    "commit": "3166c2a0679880fb38d7705880a9edaf6e26b8e4",
+    "commit": "87e08f5a8127c8ac866dc75329e8c7615b08cdd6",
     "errors": 0,
-    "warnings": 16,
+    "warnings": 17,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,

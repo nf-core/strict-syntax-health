@@ -3,7 +3,8 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.05.0-edge
 
-Launching `./main.nf` [focused_cajal] revision: 8348843946
+Downloading plugin nf-schema@2.7.2
+Launching `./main.nf` [distraught_engelbart] revision: 8348843946
 
 
 ------------------------------------------------------
@@ -12,7 +13,7 @@ Launching `./main.nf` [focused_cajal] revision: 8348843946
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/pairgenomealign 3.0.0
+  nf-core/pairgenomealign 3.0.1
 ------------------------------------------------------
 Typical pipeline command:
 
