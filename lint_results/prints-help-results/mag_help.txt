@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.05.0-edge
 
 Downloading plugin nf-schema@2.5.1
-Launching `./main.nf` [cheeky_leavitt] revision: 71af2049ef
+Launching `./main.nf` [backstabbing_leavitt] revision: 71af2049ef
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -142,6 +142,7 @@ for you!
   --skip_spadeshybrid                    [boolean] Skip SPAdes hybrid assembly. 
   --skip_megahit                         [boolean] Skip MEGAHIT assembly. 
   --skip_ale                             [boolean] Skip ALE 
+  --ale_per_base_output                  [boolean] Enable ALE per-base output. This output can be very large (tens of GB). 
   --skip_quast                           [boolean] Skip metaQUAST. 
   --skip_metamdbg                        [boolean] Skip MetaDBG assembly. 
   --skip_flye                            [boolean] Skip Flye assembly. 

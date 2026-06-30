@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-06-27T00:40:42.298280196Z
+- Generated: 2026-06-30T00:39:48.234046895Z
 - Nextflow version: 26.05.0-edge
 - Summary: 23 warnings
 
@@ -69,21 +69,21 @@
       ^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare/main.nf:230:5`: Variable was declared but not used
+- Warning: `subworkflows/local/prepare/main.nf:233:5`: Variable was declared but not used
 
   ```nextflow
       genomescope_summary = JELLYFISH.out.genomescope_summary
       ^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare/main.nf:232:5`: Variable was declared but not used
+- Warning: `subworkflows/local/prepare/main.nf:235:5`: Variable was declared but not used
 
   ```nextflow
       genomescope_plot = JELLYFISH.out.genomescope_plot
       ^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare/main.nf:234:5`: Variable was declared but not used
+- Warning: `subworkflows/local/prepare/main.nf:237:5`: Variable was declared but not used
 
   ```nextflow
       fastplong_json_reports = HIFI.out.fastplong_hifi_reports.mix(ONT.out.fastplong_ont_reports)

@@ -158,14 +158,14 @@
   "circdna": {
     "full_name": "nf-core/circdna",
     "html_url": "https://github.com/nf-core/circdna",
-    "commit": "b5e2fbe05c2892f963e7e02784efd657d429634d",
-    "errors": 21,
-    "warnings": 30,
+    "commit": "b0f57cde33898641d71d30c7ed949f546ba690a1",
+    "errors": 4,
+    "warnings": 62,
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 36
+    "publishdir_count": 35
   },
   "circrna": {
     "full_name": "nf-core/circrna",
@@ -554,14 +554,14 @@
   "genomeassembler": {
     "full_name": "nf-core/genomeassembler",
     "html_url": "https://github.com/nf-core/genomeassembler",
-    "commit": "6ce7e86c09f54c091d0ad944375c4f3989064e5c",
+    "commit": "5a1991d1390f37932ff22a123aa21a5a12ebfa92",
     "errors": 0,
     "warnings": 23,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 91
+    "publishdir_count": 93
   },
   "genomeqc": {
     "full_name": "nf-core/genomeqc",
@@ -746,7 +746,7 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "d605bdcb417bf64876cacd3a99e43ef70821cda2",
+    "commit": "95ec1edd2f5c813ae3cc19940689135010485782",
     "errors": 0,
     "warnings": 25,
     "parse_error": false,
@@ -1226,7 +1226,7 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "a6ab19597753c2dae83b3a167d7b428721e85e79",
+    "commit": "98d93c38f82bf85271793aff4d7839076ec0ad79",
     "errors": 0,
     "warnings": 13,
     "parse_error": false,
@@ -1274,7 +1274,7 @@
   "reportho": {
     "full_name": "nf-core/reportho",
     "html_url": "https://github.com/nf-core/reportho",
-    "commit": "b43cc4537138cefaf0e5126d49d425d24ca57ebc",
+    "commit": "a3c79eb24698ea7172760f3baaf668e2f5827181",
     "errors": 0,
     "warnings": 18,
     "parse_error": false,
@@ -1310,7 +1310,7 @@
   "rnadnavar": {
     "full_name": "nf-core/rnadnavar",
     "html_url": "https://github.com/nf-core/rnadnavar",
-    "commit": "447a2db612999106ec52080057437c68d66b253b",
+    "commit": "a48bbeb8989ff321ea0ad55c33bc4754b31f07db",
     "errors": 3,
     "warnings": 382,
     "parse_error": false,
@@ -1430,7 +1430,7 @@
   "seqinspector": {
     "full_name": "nf-core/seqinspector",
     "html_url": "https://github.com/nf-core/seqinspector",
-    "commit": "9ced68de6c8e6866c4d5bda688e584365f8618a8",
+    "commit": "b4cb5223ead0b7f6a2c732e5786ccfa1f151cda4",
     "errors": 0,
     "warnings": 3,
     "parse_error": false,
@@ -1442,7 +1442,7 @@
   "seqsubmit": {
     "full_name": "nf-core/seqsubmit",
     "html_url": "https://github.com/nf-core/seqsubmit",
-    "commit": "66900216383002e4f50aa996d61b1f3a16716251",
+    "commit": "3b2ffb78066be53e7c61956925ec353d3c3bc373",
     "errors": 0,
     "warnings": 18,
     "parse_error": false,
@@ -1526,14 +1526,14 @@
   "stableexpression": {
     "full_name": "nf-core/stableexpression",
     "html_url": "https://github.com/nf-core/stableexpression",
-    "commit": "3c5669a174e0490923b094c1a72cd0523f71acf2",
+    "commit": "f1854a49a3f5ba6fbe297ba7496de6c5835bdb7b",
     "errors": 0,
     "warnings": 43,
     "parse_error": false,
     "prints_help": false,
-    "workflow_output": false,
+    "workflow_output": true,
     "publishdir": true,
-    "publishdir_count": 15
+    "publishdir_count": 1
   },
   "taxprofiler": {
     "full_name": "nf-core/taxprofiler",
@@ -1646,7 +1646,7 @@
   "viralmetagenome": {
     "full_name": "nf-core/viralmetagenome",
     "html_url": "https://github.com/nf-core/viralmetagenome",
-    "commit": "e53186ea9957a9ad800c4d2d964325635344a4cc",
+    "commit": "d9d796e397d65f99f2d671a532ddb191795a493f",
     "errors": 0,
     "warnings": 11,
     "parse_error": false,

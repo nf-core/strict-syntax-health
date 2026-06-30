@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.04.3
+ N E X T F L O W   ~  version 26.05.0-edge
 
-Launching `./main.nf` [agitated_aryabhata] revision: d8e047c3e9
+Launching `./main.nf` [peaceful_hopper] revision: d8e047c3e9
 
 
 ------------------------------------------------------
@@ -12,7 +12,7 @@ Launching `./main.nf` [agitated_aryabhata] revision: d8e047c3e9
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/viralmetagenome 1.2.1dev
+  nf-core/viralmetagenome 1.1.3
 ------------------------------------------------------
 Typical pipeline command:
 
@@ -95,7 +95,7 @@ Polishing
  
   --save_intermediate_polishing     [boolean] Save intermediate polishing files 
   --reference_pool                  [string]  Set of fasta sequences used as potential references for the contigs [default: 
-https://rvdb.dbi.udel.edu/download/C-RVDBvCurrent.fasta.gz]  
+https://rvdb.dbi.udel.edu/download/C-RVDBv31.0.fasta.gz]  
   --cluster_with_reference_pool     [boolean] Include BLAST-hit reference sequences in the contig clustering input [default: true] 
   --blacklist                       [string]  File containing identifiers to exclude from the scaffolding reference pool 
   --skip_precluster                 [boolean] Skip the preclustering of assemblies to facilitate downstream processing of assemblies 

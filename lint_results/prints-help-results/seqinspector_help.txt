@@ -1,12 +1,11 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
-Nextflow 26.04.4 is available - Please consider updating your version to it
 
- N E X T F L O W   ~  version 26.04.3
+ N E X T F L O W   ~  version 26.05.0-edge
 
 Downloading plugin nf-core-utils@0.4.0
 Downloading plugin nf-schema@2.6.1
-Launching `./main.nf` [happy_joliot] revision: 3b6783fcf8
+Launching `./main.nf` [fervent_kimura] revision: efd697d0c1
 
 
 ------------------------------------------------------
@@ -35,6 +34,8 @@ Cloud infrastructure.
   --tools_bundle                     [string] Select some default setup for the tools to be run, tools can still be used to add tools 
 [default: default]  
   --skip_tools                       [string] Comma-separated string of tools to skip - overrides any other means of tools selection 
+  --subsample_tools                  [string] Comma-separated string of tools to run on subsampled data. Tools not in this list run on original 
+data. [default: fastqscreen,kraken2,picard_collecthsmetrics,picard_collectmultiplemetrics]  
 
 Validation options
   --fq_lint_args                     [string]  Arguments to pass to FQ lint 

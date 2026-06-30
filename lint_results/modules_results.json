@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "94be3d403c32cedad9406c6fc2bddc15ffc82507",
+  "_repo_commit": "89e570609a9c76e86861b8acd0bc7e0aafaccab0",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -3452,6 +3452,12 @@
   },
   "finaletoolkit_fraglengthbins": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/finaletoolkit/fraglengthbins",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "finaletoolkit_mds": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/finaletoolkit/mds",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -7843,13 +7849,13 @@
     "parse_error": false
   },
   "plastid_make_wiggle": {
-    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/make/wiggle",
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/make_wiggle",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
   "plastid_metagene_generate": {
-    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/metagene/generate",
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/metagene_generate",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

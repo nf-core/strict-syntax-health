@@ -1,16 +1,23 @@
 # Nextflow lint results
 
-- Generated: 2026-06-16T20:43:07.573306063Z
-- Nextflow version: 26.04.3
+- Generated: 2026-06-30T00:42:29.180946039Z
+- Nextflow version: 26.05.0-edge
 - Summary: 43 warnings
 
 ## :warning: Warnings
 
-- Warning: `main.nf:44:5`: Emit name should be omitted when there is only one emit
+- Warning: `main.nf:178:16`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      multiqc_report = STABLEEXPRESSION.out.multiqc_report // channel: /path/to/multiqc_report.html
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          path { meta, file ->
+                 ^^^^
+  ```
+
+- Warning: `main.nf:184:16`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          path { meta, file ->
+                 ^^^^
   ```
 
 - Warning: `modules/local/compute_dataset_statistics/main.nf:21:9`: Variable was declared but not used
@@ -48,88 +55,67 @@
       ^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/expression_normalisation/main.nf:31:15`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/expression_normalisation/main.nf:35:15`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           meta, file ->
                 ^^^^
   ```
 
-- Warning: `subworkflows/local/expression_normalisation/main.nf:36:74`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/expression_normalisation/main.nf:40:74`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_raw_rnaseq_datasets_to_normalise = ch_datasets.raw.filter { meta, file -> meta.platform == 'rnaseq' }
                                                                            ^^^^
   ```
 
-- Warning: `subworkflows/local/expression_normalisation/main.nf:81:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      counts                   = QUANTILE_NORMALISATION.out.counts
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/genorm/main.nf:71:5`: Emit name should be omitted when there is only one emit
+- Warning: `subworkflows/local/genorm/main.nf:69:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
       m_measures = COMPUTE_M_MEASURE.out.m_measures
       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/genorm/main.nf:96:17`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/genorm/main.nf:94:17`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   meta, i, file_i, j, file_j -> i <= j } // keeps only pairs where i <= j
                   ^^^^
   ```
 
-- Warning: `subworkflows/local/genorm/main.nf:96:26`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/genorm/main.nf:94:26`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   meta, i, file_i, j, file_j -> i <= j } // keeps only pairs where i <= j
                            ^^^^^^
   ```
 
-- Warning: `subworkflows/local/genorm/main.nf:96:37`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/genorm/main.nf:94:37`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   meta, i, file_i, j, file_j -> i <= j } // keeps only pairs where i <= j
                                       ^^^^^^
   ```
 
-- Warning: `subworkflows/local/get_public_accessions/main.nf:77:35`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/get_public_accessions/main.nf:79:35`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                           .filter { species_name, quota -> quota == "ok" }
                                     ^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/get_public_accessions/main.nf:78:46`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/get_public_accessions/main.nf:80:46`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                           .map { species_name, quota -> species_name }
                                                ^^^^^
   ```
 
-- Warning: `subworkflows/local/get_public_accessions/main.nf:114:55`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/get_public_accessions/main.nf:117:55`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                                       .map { accession, excluded_accessions -> accession }
                                                         ^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/get_public_accessions/main.nf:135:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      accessions          = ch_all_accessions
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/get_transcript_lengths/main.nf:31:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      csv = COMPUTE_GENE_TRANSCRIPT_LENGTHS.out.csv
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/idmapping/main.nf:63:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -198,7 +184,7 @@
 - Warning: `subworkflows/local/reporting/main.nf:57:28`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          ch_all_counts.map{ meta, file -> file }.collect(),
+          ch_all_counts.map{ meta, file -> file }.collect(), // 1 file
                              ^^^^
   ```
 
@@ -207,6 +193,13 @@
   ```nextflow
           ch_all_counts.map{ meta, file -> file }.collect(),
                              ^^^^
+  ```
+
+- Warning: `subworkflows/local/reporting/main.nf:397:50`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      ch_multiqc_report = MULTIQC.out.report.map { meta, file -> file }
+                                                   ^^^^
   ```
 
 - Warning: `subworkflows/local/stability_scoring/main.nf:71:5`: Emit name should be omitted when there is only one emit
@@ -237,28 +230,28 @@
       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_stableexpression_pipeline/main.nf:235:19`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_stableexpression_pipeline/main.nf:238:19`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               meta, file ->
                     ^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_stableexpression_pipeline/main.nf:252:16`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_stableexpression_pipeline/main.nf:255:16`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { meta, file ->
                  ^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_stableexpression_pipeline/main.nf:354:13`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_stableexpression_pipeline/main.nf:361:13`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               it.get(1).size() == 2 // only groups with two files
               ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_stableexpression_pipeline/main.nf:357:13`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_stableexpression_pipeline/main.nf:364:13`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               meta, files ->
@@ -300,7 +293,14 @@
       ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/stableexpression.nf:183:40`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `tests/prepare_pr/.config:9:22`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              } catch (e) {
+                       ^
+  ```
+
+- Warning: `workflows/stableexpression.nf:197:40`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               ch_all_imputed_counts.map{ meta, file -> file },
