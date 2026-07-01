@@ -1,9 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
+Nextflow 26.06.0-edge is available - Please consider updating your version to it
 
  N E X T F L O W   ~  version 26.05.0-edge
 
-Launching `./main.nf` [disturbed_hodgkin] revision: 6c6662f65c
+Launching `./main.nf` [ecstatic_church] revision: 6c6662f65c
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'

@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-06-30T00:42:12.891118048Z
+- Generated: 2026-07-01T00:51:32.428235270Z
 - Nextflow version: 26.05.0-edge
 - Summary: 18 warnings
 
@@ -55,21 +55,21 @@
           ^^^^^^
   ```
 
-- Warning: `subworkflows/local/fasta_validation.nf:27:40`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/fasta_validation/main.nf:27:40`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       fasta_split = input_fasta.branch { meta, fasta ->
                                          ^^^^
   ```
 
-- Warning: `subworkflows/local/fasta_validation.nf:66:5`: Emit name should be omitted when there is only one emit
+- Warning: `subworkflows/local/fasta_validation/main.nf:66:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
       valid_fastas    = valid_fastas
       ^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/genome_evaluation.nf:30:5`: Variable was declared but not used
+- Warning: `subworkflows/local/genome_evaluation/main.nf:30:5`: Variable was declared but not used
 
   ```nextflow
       ch_versions = channel.empty()

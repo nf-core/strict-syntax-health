@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-06-27T00:40:04.005825720Z
+- Generated: 2026-07-01T00:44:27.724166446Z
 - Nextflow version: 26.05.0-edge
 - Summary: 133 warnings
 
@@ -678,259 +678,259 @@
                 ^^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:160:14`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/diseasemodulediscovery.nf:161:14`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map{key, meta, seeds, network -> [meta, seeds, network]}
                ^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:165:15`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/diseasemodulediscovery.nf:166:15`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map{ meta, path -> path }
                 ^^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:176:20`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/diseasemodulediscovery.nf:178:20`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map{meta, seeds, network -> meta.id}
                      ^^^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:176:27`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/diseasemodulediscovery.nf:178:27`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map{meta, seeds, network -> meta.id}
                             ^^^^^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:208:15`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/diseasemodulediscovery.nf:210:15`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map{ meta, path -> path }
                 ^^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:234:14`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/diseasemodulediscovery.nf:236:14`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map{newtork_id, meta, module, network -> [meta, module, network]}
                ^^^^^^^^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:244:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/diseasemodulediscovery.nf:246:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .filter{meta, module -> meta.nodes > 0} // Filter out empty modules
                         ^^^^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:250:24`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/diseasemodulediscovery.nf:252:24`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .branch{ meta, module ->
                          ^^^^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:258:58`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/diseasemodulediscovery.nf:260:58`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .mix(ch_modules_empty_not_empty.empty.map {meta, module -> [meta.id, true] })
                                                            ^^^^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:259:62`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/diseasemodulediscovery.nf:261:62`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .mix(ch_modules_empty_not_empty.not_empty.map {meta, module -> [meta.id, false] })
                                                                ^^^^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:264:21`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/diseasemodulediscovery.nf:266:21`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map {meta, module -> "$meta.id\t$meta.nodes" }
                       ^^^^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:282:28`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/diseasemodulediscovery.nf:284:28`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .branch {meta, module ->
                              ^^^^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:289:57`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/diseasemodulediscovery.nf:291:57`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .mix(ch_visualization_input.fail.map {meta, module -> [meta.id, true] })
                                                           ^^^^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:290:57`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/diseasemodulediscovery.nf:292:57`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .mix(ch_visualization_input.pass.map {meta, module -> [meta.id, false] })
                                                           ^^^^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:295:25`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/diseasemodulediscovery.nf:297:25`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map {meta, module -> "$meta.id\t$meta.nodes" }
                           ^^^^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:315:28`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/diseasemodulediscovery.nf:317:28`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .branch {meta, module ->
                              ^^^^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:322:56`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/diseasemodulediscovery.nf:324:56`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .mix(ch_drugstone_export_input.fail.map {meta, module -> [meta.id, true] })
                                                          ^^^^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:323:56`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/diseasemodulediscovery.nf:325:56`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .mix(ch_drugstone_export_input.pass.map {meta, module -> [meta.id, false] })
                                                          ^^^^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:328:25`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/diseasemodulediscovery.nf:330:25`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map {meta, module -> "$meta.id\t$meta.nodes" }
                           ^^^^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:344:19`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/diseasemodulediscovery.nf:346:19`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map{ meta, path -> path }
                     ^^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:398:27`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/diseasemodulediscovery.nf:400:27`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   .multiMap{key, meta, nodes, network ->
                             ^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:420:27`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/diseasemodulediscovery.nf:422:27`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   .multiMap{key, meta, nodes, network ->
                             ^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:429:27`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/diseasemodulediscovery.nf:431:27`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                       .map{ meta, path -> path }
                             ^^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:442:36`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/diseasemodulediscovery.nf:444:36`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                       .filter{ meta, nodes -> meta.amim != "no_tool" } // Filter out no_tool modules
                                      ^^^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:445:31`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/diseasemodulediscovery.nf:447:31`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                       .multiMap{key, meta, nodes, network ->
                                 ^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:454:27`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/diseasemodulediscovery.nf:456:27`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                       .map{ meta, path -> path }
                             ^^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:480:42`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/diseasemodulediscovery.nf:482:42`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   ch_modules.filter{ meta, path -> meta.amim != "no_tool" }, // Filter out no_tool modules
                                            ^^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:493:42`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/diseasemodulediscovery.nf:495:42`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   ch_modules.filter{ meta, path -> meta.amim != "no_tool" }, // Filter out no_tool modules
                                            ^^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:517:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/diseasemodulediscovery.nf:519:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_algorithms_drugs = Channel
                                 ^^^^^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:527:28`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/diseasemodulediscovery.nf:529:28`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .branch {meta, module ->
                              ^^^^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:541:32`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/diseasemodulediscovery.nf:543:32`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           includeIndirectDrugs = Channel.value(params.includeIndirectDrugs).map{it ? 1 : 0}
                                  ^^^^^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:541:79`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/diseasemodulediscovery.nf:543:79`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           includeIndirectDrugs = Channel.value(params.includeIndirectDrugs).map{it ? 1 : 0}
                                                                                 ^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:542:35`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/diseasemodulediscovery.nf:544:35`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           includeNonApprovedDrugs = Channel.value(params.includeNonApprovedDrugs).map{it ? 1 : 0}
                                     ^^^^^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:542:85`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/diseasemodulediscovery.nf:544:85`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           includeNonApprovedDrugs = Channel.value(params.includeNonApprovedDrugs).map{it ? 1 : 0}
                                                                                       ^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:549:29`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/diseasemodulediscovery.nf:551:29`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   .map{ meta, algorithm, drug_predictions -> [meta, drug_predictions] }
                               ^^^^^^^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:550:32`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/diseasemodulediscovery.nf:552:32`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   .filter{ meta, drug_predictions -> meta.nodes <= params.visualization_max_nodes }       // Filter out modules with too many nodes
                                  ^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/diseasemodulediscovery.nf:553:22`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/diseasemodulediscovery.nf:555:22`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   .map{module_id, meta, drug_predictions, module -> [meta, module, drug_predictions] }    // Format for visualization

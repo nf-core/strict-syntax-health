@@ -1,6 +1,6 @@
 # Workflow outputs migration: pairgenomealign
 
-- Generated: 2026-06-29T00:41:45.587905+00:00
+- Generated: 2026-07-01T00:46:28.598346+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,4 +14,4 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 11 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/pairgenomealign/blob/87e08f5a8127c8ac866dc75329e8c7615b08cdd6/conf/modules.config#L15) — 11 references
+- [`conf/modules.config`](https://github.com/nf-core/pairgenomealign/blob/593625405c0c67ace47950eea440aef61ef3758b/conf/modules.config#L15) — 11 references

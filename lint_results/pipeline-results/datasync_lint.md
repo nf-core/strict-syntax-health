@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-24T00:35:25.037450490Z
+- Generated: 2026-07-01T00:44:08.328467246Z
 - Nextflow version: 26.05.0-edge
-- Summary: 5 warnings
+- Summary: 6 warnings
 
 ## :warning: Warnings
 
@@ -11,6 +11,20 @@
   ```nextflow
       multiqc_report = DATASYNC.out.multiqc_report // channel: /path/to/multiqc_report.html
       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `modules/local/comparechecksum/main.nf:22:9`: Variable was declared but not used
+
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^
+  ```
+
+- Warning: `modules/local/comparechecksum/main.nf:27:9`: Variable was declared but not used
+
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^
   ```
 
 - Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
@@ -32,11 +46,4 @@
   ```nextflow
       dummy_emit = true
       ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/datasync.nf:40:5`: Variable was declared but not used
-
-  ```nextflow
-      ch_checksum = ch_samplesheet.checksum.branch {
-      ^^^^^^^^^^^
   ```

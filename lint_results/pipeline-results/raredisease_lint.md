@@ -1,10 +1,17 @@
 # Nextflow lint results
 
-- Generated: 2026-06-30T00:40:58.776411966Z
+- Generated: 2026-07-01T00:47:02.090233968Z
 - Nextflow version: 26.05.0-edge
 - Summary: 13 warnings
 
 ## :warning: Warnings
+
+- Warning: `main.nf:123:5`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      val_save_reference
+      ^^^^^^^^^^^^^^^^^^
+  ```
 
 - Warning: `subworkflows/local/annotate_mobile_elements/main.nf:74:9`: Emit name should be omitted when there is only one emit
 
@@ -34,18 +41,11 @@
           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/generate_cytosure_files/main.nf:94:9`: Emit name should be omitted when there is only one emit
+- Warning: `subworkflows/local/generate_cytosure_files/main.nf:91:9`: Emit name should be omitted when there is only one emit
 
   ```nextflow
-          publish = ch_publish // channel: [ val(destination), val(value) ]
-          ^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/variant_evaluation/main.nf:59:9`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-          publish = ch_publish // channel: [ val(destination), val(value) ]
-          ^^^^^^^^^^^^^^^^^^
+          cgh = VCF2CYTOSURE.out.cgh // channel: [ val(meta), path(cgh) ]
+          ^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
@@ -76,21 +76,21 @@
       ^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/raredisease.nf:997:5`: Variable was declared but not used
+- Warning: `workflows/raredisease.nf:1033:5`: Variable was declared but not used
 
   ```nextflow
       ch_multiqc_config        = channel.fromPath(
       ^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/raredisease.nf:999:5`: Variable was declared but not used
+- Warning: `workflows/raredisease.nf:1035:5`: Variable was declared but not used
 
   ```nextflow
       ch_multiqc_custom_config = val_multiqc_config ?
       ^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/raredisease.nf:1002:5`: Variable was declared but not used
+- Warning: `workflows/raredisease.nf:1038:5`: Variable was declared but not used
 
   ```nextflow
       ch_multiqc_logo          = val_multiqc_logo ?

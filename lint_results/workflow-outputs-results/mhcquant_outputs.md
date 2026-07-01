@@ -1,6 +1,6 @@
 # Workflow outputs migration: mhcquant
 
-- Generated: 2026-06-23T00:42:38.814183+00:00
+- Generated: 2026-07-01T00:46:08.265682+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,4 +14,4 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 46 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/mhcquant/blob/0ac624d2e617a7a15e847beeb521243e01f1a882/conf/modules.config#L15) — 46 references
+- [`conf/modules.config`](https://github.com/nf-core/mhcquant/blob/01d5ae8a45b6936ac901e714cf5a76280782efac/conf/modules.config#L15) — 46 references

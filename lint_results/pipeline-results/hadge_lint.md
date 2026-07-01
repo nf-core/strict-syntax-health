@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-26T00:42:42.259177343Z
+- Generated: 2026-07-01T00:45:13.168284431Z
 - Nextflow version: 26.05.0-edge
-- Summary: 30 warnings
+- Summary: 32 warnings
 
 ## :warning: Warnings
 
@@ -193,6 +193,20 @@
   ```nextflow
       def prefix = task.ext.prefix ?: "${meta.id}"
           ^^^^^^
+  ```
+
+- Warning: `subworkflows/local/bam_qc/main.nf:27:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      bam = SAMTOOLS_SORT.out.bam
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_hadge_pipeline/main.nf:113:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      samplesheet = ch_samplesheet
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit

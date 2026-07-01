@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-06-27T00:44:07.235054960Z
+- Generated: 2026-07-01T00:48:31.137472262Z
 - Nextflow version: 26.05.0-edge
 - Summary: 585 warnings
 
@@ -41,7 +41,7 @@
                                              ^^
   ```
 
-- Warning: `conf/modules/aligner_parabricks.config:60:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules/aligner_parabricks.config:59:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               saveAs: { params.save_output_as_bam ? it : null }

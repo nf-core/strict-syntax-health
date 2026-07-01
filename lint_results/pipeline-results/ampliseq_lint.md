@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-27T00:39:23.282054892Z
+- Generated: 2026-07-01T00:41:30.374711422Z
 - Nextflow version: 26.05.0-edge
-- Summary: 27 warnings
+- Summary: 29 warnings
 
 ## :warning: Warnings
 
@@ -13,18 +13,32 @@
       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/comparison_wf.nf:19:37`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/comparison_wf.nf:20:37`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_observed_sequences.map { it = [ [id: val_md5sum_version], file(it) ] },
                                       ^^
   ```
 
-- Warning: `subworkflows/local/comparison_wf.nf:19:75`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/comparison_wf.nf:20:75`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_observed_sequences.map { it = [ [id: val_md5sum_version], file(it) ] },
                                                                             ^^
+  ```
+
+- Warning: `subworkflows/local/comparison_wf.nf:33:63`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      COMPARE_PERFORMANCE ( COMPARE_SEQUENCES.out.matches.map { it = [ [id: val_md5sum_version], file(it) ] }, ch_observed_abundances, ch_expected_abundances )
+                                                                ^^
+  ```
+
+- Warning: `subworkflows/local/comparison_wf.nf:33:101`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      COMPARE_PERFORMANCE ( COMPARE_SEQUENCES.out.matches.map { it = [ [id: val_md5sum_version], file(it) ] }, ch_observed_abundances, ch_expected_abundances )
+                                                                                                      ^^
   ```
 
 - Warning: `subworkflows/local/dada2_preprocessing.nf:54:32`: Implicit closure parameter is deprecated, declare an explicit parameter instead
