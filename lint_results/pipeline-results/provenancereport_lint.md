@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-16T20:35:35.375786794Z
-- Nextflow version: 26.04.3
-- Summary: 6 warnings
+- Generated: 2026-07-02T00:40:04.016669840Z
+- Nextflow version: 26.06.0-edge
+- Summary: 3 warnings
 
 ## :warning: Warnings
 
@@ -25,25 +25,4 @@
   ```nextflow
       dummy_emit = true
       ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/provenancereport.nf:19:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      ch_samplesheet // channel: samplesheet read in from --input
-      ^^^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/provenancereport.nf:46:9`: Variable was declared but not used
-
-  ```nextflow
-      def ch_collated_versions = softwareVersionsToYAML(ch_versions.mix(topic_versions.versions_file))
-          ^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/provenancereport.nf:55:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      versions       = ch_versions                 // channel: [ path(versions.yml) ]
-      ^^^^^^^^^^^^^^^^^^^^
   ```

@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-07-01T00:47:02.090233968Z
-- Nextflow version: 26.05.0-edge
-- Summary: 13 warnings
+- Generated: 2026-07-02T00:40:30.215228942Z
+- Nextflow version: 26.06.0-edge
+- Summary: 18 warnings
 
 ## :warning: Warnings
 
@@ -41,6 +41,20 @@
           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
+- Warning: `subworkflows/local/contamination_check/main.nf:32:21`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .map { vcf, tbi -> vcf }
+                      ^^^
+  ```
+
+- Warning: `subworkflows/local/contamination_check/main.nf:36:16`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .map { vcf, tbi -> tbi }
+                 ^^^
+  ```
+
 - Warning: `subworkflows/local/generate_cytosure_files/main.nf:91:9`: Emit name should be omitted when there is only one emit
 
   ```nextflow
@@ -69,28 +83,49 @@
       ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/raredisease.nf:245:5`: Variable was declared but not used
+- Warning: `workflows/raredisease.nf:250:5`: Variable was declared but not used
 
   ```nextflow
       ch_call_snv_publish                 = channel.empty()
       ^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/raredisease.nf:1033:5`: Variable was declared but not used
+- Warning: `workflows/raredisease.nf:437:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+      ch_contamination_mqc    = Channel.empty()
+                                ^^^^^^^
+  ```
+
+- Warning: `workflows/raredisease.nf:438:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+      ch_contamination_table  = Channel.empty()
+                                ^^^^^^^
+  ```
+
+- Warning: `workflows/raredisease.nf:439:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+      ch_contamination_pileup = Channel.empty()
+                                ^^^^^^^
+  ```
+
+- Warning: `workflows/raredisease.nf:1074:5`: Variable was declared but not used
 
   ```nextflow
       ch_multiqc_config        = channel.fromPath(
       ^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/raredisease.nf:1035:5`: Variable was declared but not used
+- Warning: `workflows/raredisease.nf:1076:5`: Variable was declared but not used
 
   ```nextflow
       ch_multiqc_custom_config = val_multiqc_config ?
       ^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/raredisease.nf:1038:5`: Variable was declared but not used
+- Warning: `workflows/raredisease.nf:1079:5`: Variable was declared but not used
 
   ```nextflow
       ch_multiqc_logo          = val_multiqc_logo ?

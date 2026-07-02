@@ -1,10 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
-Nextflow 26.06.0-edge is available - Please consider updating your version to it
 
- N E X T F L O W   ~  version 26.05.0-edge
+ N E X T F L O W   ~  version 26.06.0-edge
 
-Launching `./main.nf` [sick_koch] revision: b4e66f7e8d
+Launching `./main.nf` [elegant_hirsch] revision: cc434a1806
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -79,6 +78,8 @@ chromosomes). Only applied for WGS; for WES, Manta always uses target_bed instea
   --verifybamid_svd_bed               [string]  Path to a BED file containing markers used by verifybamid2. 
   --verifybamid_svd_mu                [string]  Path to mean matrix file of genotype matrix. Used by verifybamid2. 
   --verifybamid_svd_ud                [string]  Path to UD matrix file from SVD result of genotype matrix. Used by verifybamid2. 
+  --contamination_sites               [string]  Path to VCF file with common variants for GATK contamination detection. 
+  --contamination_sites_tbi           [string]  Index file for contamination sites VCF. 
   --vcf2cytosure_blacklist            [string]  Path to vcf2cytosure blacklist file 
   --vcfanno_extra_resources           [string]  Path to a VCF file containing annotations. 
   --vcfanno_resources                 [string]  Path to a file containing the absolute paths to resources defined within the vcfanno toml file. One 

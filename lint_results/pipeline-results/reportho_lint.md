@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-30T00:41:22.612662955Z
-- Nextflow version: 26.05.0-edge
-- Summary: 18 warnings
+- Generated: 2026-07-02T00:40:54.056028943Z
+- Nextflow version: 26.06.0-edge
+- Summary: 15 warnings
 
 ## :warning: Warnings
 
@@ -27,27 +27,6 @@
                                            ^^
   ```
 
-- Warning: `modules/nf-core/diamond/cluster/main.nf:41:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/gawk/main.nf:25:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      suffix = task.ext.suffix ?: "${input.collect{ it.getExtension()}.get(0)}" // use the first extension of the input files
-                                                    ^^
-  ```
-
-- Warning: `modules/nf-core/gawk/main.nf:28:32`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      lst_gz    = input.collect{ it.getExtension().endsWith("gz") }
-                                 ^^
-  ```
-
 - Warning: `subworkflows/local/merge_ids/main.nf:40:32`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
@@ -55,7 +34,7 @@
                                  ^^^^^
   ```
 
-- Warning: `subworkflows/local/merge_ids/main.nf:50:32`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/merge_ids/main.nf:49:32`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map { meta, file, count -> [ meta, file ] }

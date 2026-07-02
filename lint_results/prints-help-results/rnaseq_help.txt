@@ -1,9 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.04.4
+ N E X T F L O W   ~  version 26.06.0-edge
 
-Launching `./main.nf` [confident_kare] revision: 90e80d6805
+Downloading plugin nf-schema@2.7.2
+Launching `./main.nf` [jovial_ride] revision: 90e80d6805
 
 
 ------------------------------------------------------
@@ -160,8 +161,9 @@ bam_stat,inner_distance,infer_experiment,junction_annotation,junction_saturation
  
   --contaminant_screening       [string]  Tool to use for detecting contaminants in the selected screening reads - available options are 
 'sylph', 'kraken2', or 'kraken2_bracken'  (accepted: kraken2, kraken2_bracken, sylph)  
-  --contaminant_screening_input [string]  Read set to screen for contaminants: aligner-unmapped reads (default) or trimmed/filter-passed reads 
-before alignment.  (accepted: trimmed, unmapped) [default: unmapped]  
+  --contaminant_screening_input [string]  Read set to screen for contaminants: aligner-unmapped reads (default), trimmed reads 
+(post-BBSplit/rRNA), post-trim pre-BBSplit reads, or raw reads.  (accepted: trimmed, unmapped, 
+trim_only, raw) [default: unmapped]  
   --kraken_db                   [string]  Database when using Kraken2/Bracken for contaminant screening. 
   --bracken_precision           [string]  Taxonomic level for Bracken abundance estimations.  (accepted: D, P, C, O, F, G, S) [default: S] 
  

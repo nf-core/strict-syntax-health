@@ -74,7 +74,7 @@
   "bacmodel": {
     "full_name": "nf-core/bacmodel",
     "html_url": "https://github.com/nf-core/bacmodel",
-    "commit": "2efd7d38ae2511c56912bfa2b591ec980ee84520",
+    "commit": "6325119058fc519c69bb241c604c5971862ddf5f",
     "errors": 0,
     "warnings": 54,
     "parse_error": false,
@@ -782,7 +782,7 @@
   "mcmicro": {
     "full_name": "nf-core/mcmicro",
     "html_url": "https://github.com/nf-core/mcmicro",
-    "commit": "4fa1c1f1866b9c427e40a04326b56969c117bae4",
+    "commit": "c0619249ad9b2fe4a3d2d3dfd1e3bf04b3c26e83",
     "errors": 9,
     "warnings": 80,
     "parse_error": false,
@@ -1190,9 +1190,9 @@
   "provenancereport": {
     "full_name": "nf-core/provenancereport",
     "html_url": "https://github.com/nf-core/provenancereport",
-    "commit": "e858f86c3595ba490c60b36b8fe086ef676a8944",
+    "commit": "339adce96b55d735b77fbcb197e1ecdd55673f12",
     "errors": 0,
-    "warnings": 6,
+    "warnings": 3,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -1226,9 +1226,9 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "6fea9aea09786b85d38874766dc7b2243f31ea5c",
+    "commit": "adfc25bcd8532d5c2123dca9c20d3ab5f135f842",
     "errors": 0,
-    "warnings": 13,
+    "warnings": 18,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": true,
@@ -1274,9 +1274,9 @@
   "reportho": {
     "full_name": "nf-core/reportho",
     "html_url": "https://github.com/nf-core/reportho",
-    "commit": "a3c79eb24698ea7172760f3baaf668e2f5827181",
+    "commit": "a57c7b4777a9e070db15ccfbc2c64fef3998db8a",
     "errors": 0,
-    "warnings": 18,
+    "warnings": 15,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -1298,7 +1298,7 @@
   "riboseq": {
     "full_name": "nf-core/riboseq",
     "html_url": "https://github.com/nf-core/riboseq",
-    "commit": "6ee988594d7c7dc6c7321dbbc4aaef0201155233",
+    "commit": "a84fe9dd5c8d85d91cafa11476a3eab253c56737",
     "errors": 0,
     "warnings": 160,
     "parse_error": false,
@@ -1334,7 +1334,7 @@
   "rnaseq": {
     "full_name": "nf-core/rnaseq",
     "html_url": "https://github.com/nf-core/rnaseq",
-    "commit": "6f6c86071fd3040122063479376e62c30d86a544",
+    "commit": "02dfe8bbea3ac9b6c182d174fba815f1be81bf7c",
     "errors": 0,
     "warnings": 5,
     "parse_error": false,
@@ -1346,7 +1346,7 @@
   "rnasplice": {
     "full_name": "nf-core/rnasplice",
     "html_url": "https://github.com/nf-core/rnasplice",
-    "commit": "85c499e19d177921e7668f1e9e87dad9d718bee5",
+    "commit": "01ceff9644b0fa29b9e514f973c475218a5de553",
     "errors": 0,
     "warnings": 29,
     "parse_error": false,
@@ -1442,7 +1442,7 @@
   "seqsubmit": {
     "full_name": "nf-core/seqsubmit",
     "html_url": "https://github.com/nf-core/seqsubmit",
-    "commit": "983909e7ea15c23985d429c59f98aba26a0a7af9",
+    "commit": "327cee7d3bee45876775318d6522adc49f78058c",
     "errors": 0,
     "warnings": 18,
     "parse_error": false,

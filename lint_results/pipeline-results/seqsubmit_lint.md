@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-07-01T00:51:32.428235270Z
-- Nextflow version: 26.05.0-edge
+- Generated: 2026-07-02T00:42:29.164770793Z
+- Nextflow version: 26.06.0-edge
 - Summary: 18 warnings
 
 ## :warning: Warnings
@@ -118,14 +118,14 @@
                                                                                ^^^^
   ```
 
-- Warning: `workflows/genomesubmit.nf:368:78`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genomesubmit.nf:373:78`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(CONCAT_METADATA.out.file_out.map{meta, file -> file})
                                                                                ^^^^
   ```
 
-- Warning: `workflows/genomesubmit.nf:370:80`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genomesubmit.nf:375:80`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(CONCAT_ACCESSIONS.out.file_out.map{meta, file -> file})
