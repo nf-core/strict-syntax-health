@@ -1,10 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.05.0-edge
+ N E X T F L O W   ~  version 26.06.0-edge
 
 Downloading plugin nf-schema@2.7.2
-Launching `./main.nf` [sharp_kalam] revision: 2f3242266f
+Launching `./main.nf` [sharp_ardinghelli] revision: 2f3242266f
 
 
 ------------------------------------------------------
@@ -13,7 +13,7 @@ Launching `./main.nf` [sharp_kalam] revision: 2f3242266f
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/funcscan 4.0.0
+  nf-core/funcscan 4.0.1dev
 ------------------------------------------------------
 Typical pipeline command:
 

@@ -1,12 +1,76 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.04.3
+ N E X T F L O W   ~  version 26.06.0-edge
 
-Launching `./main.nf` [awesome_banach] revision: 251d917a53
+Launching `./main.nf` [berserk_escher] revision: 2e78a1a992
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
-ERROR ~ Unable to create help message: Specified param 'true' does not exist in JSON schema.
 
- -- Check script 'subworkflows/nf-core/utils_nfschema_plugin/main.nf' at line: 41 or see '.nextflow.log' file for more details
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/isoseq 2.1.0dev
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/isoseq -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input                       [string]  Path to comma-separated file containing information about the samples in the experiment. 
+  --outdir                      [string]  The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --primers                     [string]  Fasta file of primers sequences 
+  --gtf                         [string]  Genome annotation file 
+  --chunk_ccs                   [integer] Defines the number of batches to run in parallel for. [default: 40] 
+  --chunk_mapping               [integer] Splits fasta in files of 'chunk' sequences. [default: 100] 
+  --email                       [string]  Email address for completion summary. 
+  --multiqc_title               [string]  MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+
+CCS options
+  --rq                          [number]  ccs --rq option, define the minimum read quality for CCS selection [default: 0.9] 
+  --min_passes                  [integer] ccs --min-passes option, define the minimum number of passes to select a CCS [default: 3] 
+  --min_snr                     [number]  ccs --min-snr option, minimum SNR of subreads to use for generating CCS [default: 2.5] 
+  --min_length                  [integer] ccs --min-length option, minimum CCS length for CCS selection [default: 10] 
+  --max_length                  [integer] ccs --max-length option, maximum CCS length for CCS selection [default: 50000] 
+  --top_passes                  [integer] ccs --top-passes option, maximum number of passes to use for CCS generation [default: 60] 
+
+Aligner option
+  --aligner                     [string] Aligner to use for mapping: minimap2 or ultra  (accepted: minimap2, ultra) 
+
+TAMA options
+  --capped                      [boolean] TAMA collapse: Capped RNA? 
+  --five_prime                  [integer] TAMA collapse: 5 prime wobble threshold [default: 100] 
+  --splice_junction             [integer] TAMA collapse: Splice junction / exon wobble threshold [default: 10] 
+  --three_prime                 [integer] TAMA collapse: 3 prime wobble threshold [default: 100] 
+  --tama_merge_all              [boolean] TAMA merge: merge the sample-wise annotations into a single annotation? [default: false] 
+
+Reference genome options
+  --genome                      [string] Name of iGenomes reference. 
+  --fasta                       [string] Path to FASTA genome file. 
+
+Generic options
+  --multiqc_methods_description [string]          Custom MultiQC yaml file containing HTML including a methods description. 
+  --help                        [boolean, string] Display the help message. 
+  --help_full                   [boolean]         Display the full detailed help message. 
+  --show_hidden                 [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 19 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The pipeline
+    https://doi.org/10.1093/bioinformatics/btad150
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/isoseq/blob/master/CITATIONS.md
+

@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "061691811242655df000a12c987069a557b6f22c",
+  "_repo_commit": "838d07c09dfac095defc7b39c6b56ca9741ee517",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -3354,6 +3354,36 @@
     "warnings": 0,
     "parse_error": false
   },
+  "fgumi_clip": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fgumi/clip",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "fgumi_codec": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fgumi/codec",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "fgumi_correct": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fgumi/correct",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "fgumi_dedup": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fgumi/dedup",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "fgumi_downsample": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fgumi/downsample",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "fgumi_duplex": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fgumi/duplex",
     "errors": 0,
@@ -3370,6 +3400,12 @@
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fgumi/extract",
     "errors": 0,
     "warnings": 0,
+    "parse_error": false
+  },
+  "fgumi_fastq": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fgumi/fastq",
+    "errors": 0,
+    "warnings": 1,
     "parse_error": false
   },
   "fgumi_filter": {
@@ -3396,10 +3432,22 @@
     "warnings": 0,
     "parse_error": false
   },
+  "fgumi_simplexmetrics": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fgumi/simplexmetrics",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
   "fgumi_sort": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fgumi/sort",
     "errors": 0,
     "warnings": 0,
+    "parse_error": false
+  },
+  "fgumi_zipper": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fgumi/zipper",
+    "errors": 0,
+    "warnings": 1,
     "parse_error": false
   },
   "fibertoolsrs_addnucleosomes": {
@@ -6396,6 +6444,18 @@
     "warnings": 0,
     "parse_error": false
   },
+  "minibwa_index": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/minibwa/index",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "minibwa_map": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/minibwa/map",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "minimac4_compressref": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/minimac4/compressref",
     "errors": 0,
@@ -9222,6 +9282,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "savana_cna": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/savana/cna",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "savana_run": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/savana/run",
     "errors": 0,
@@ -10834,6 +10900,12 @@
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/trtools/dumpstr",
     "errors": 0,
     "warnings": 1,
+    "parse_error": false
+  },
+  "trtools_mergestr": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/trtools/mergestr",
+    "errors": 0,
+    "warnings": 2,
     "parse_error": false
   },
   "trust4": {

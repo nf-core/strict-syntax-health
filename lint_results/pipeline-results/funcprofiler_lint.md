@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-26T00:42:11.940247703Z
-- Nextflow version: 26.05.0-edge
-- Summary: 25 warnings
+- Generated: 2026-07-03T00:33:13.702314290Z
+- Nextflow version: 26.06.0-edge
+- Summary: 28 warnings
 
 ## :warning: Warnings
 
@@ -13,7 +13,14 @@
       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `modules/local/humann4/regroup/main.nf:42:9`: Variable was declared but not used
+- Warning: `main.nf:76:9`: Variable was declared but not used
+
+  ```nextflow
+      def profileUsesContainers = (workflow.containerEngine != null && workflow.containerEngine != '')
+          ^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `modules/local/humann4/regroup/main.nf:44:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
@@ -165,6 +172,20 @@
   ```nextflow
       dummy_emit = true
       ^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `workflows/funcprofiler.nf:50:5`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      multiqc_config
+      ^^^^^^^^^^^^^^
+  ```
+
+- Warning: `workflows/funcprofiler.nf:51:5`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      multiqc_logo
+      ^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/funcprofiler.nf:57:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead

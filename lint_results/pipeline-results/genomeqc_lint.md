@@ -1,12 +1,12 @@
 # Nextflow lint results
 
-- Generated: 2026-06-16T20:25:41.106985295Z
-- Nextflow version: 26.04.3
+- Generated: 2026-07-03T00:33:49.224591429Z
+- Nextflow version: 26.06.0-edge
 - Summary: 14 warnings
 
 ## :warning: Warnings
 
-- Warning: `main.nf:61:5`: Emit name should be omitted when there is only one emit
+- Warning: `main.nf:49:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
       multiqc_report = GENOMEQC.out.multiqc_report // channel: /path/to/multiqc_report.html
@@ -41,7 +41,7 @@
           ^^^^^^
   ```
 
-- Warning: `subworkflows/local/decontamination.nf:40:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/decontamination.nf:39:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_gxdb_manifest ?: Channel.empty() // If there no manifest, use empty channel (won't run)

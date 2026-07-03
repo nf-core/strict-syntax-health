@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.04.3
+ N E X T F L O W   ~  version 26.06.0-edge
 
-Launching `./main.nf` [adoring_magritte] revision: 92dac02512
+Launching `./main.nf` [awesome_rosalind] revision: 92dac02512
 
 
 ------------------------------------------------------
@@ -90,10 +90,16 @@ shallow short-read sequencing datasets.
 
 Preprocessing host removal options
   --perform_shortread_hostremoval                        [boolean] Turn on short-read host removal 
+  --shortread_hostremoval_tool                           [string]  Specify which tool to use for short read host removal  (accepted: bowtie2, hostile) [default: 
+bowtie2]  
   --perform_longread_hostremoval                         [boolean] Turn on long-read host removal 
-  --hostremoval_reference                                [string]  Specify path to single reference FASTA of host(s) genome(s) 
-  --shortread_hostremoval_index                          [string]  Specify path to the directory containing pre-made BowTie2 indexes of the host removal reference 
+  --longread_hostremoval_tool                            [string]  Specify which tool to use for long read host removal  (accepted: minimap2, hostile) [default: 
+minimap2]  
+  --hostremoval_reference                                [string]  Specify path to the reference genome FASTA for Bowtie2 of host reads to remove (Bowtie2 only) 
  
+  --hostremoval_hostile_referencename                    [string]  Specify the name of the hostile index supplied, or for Hostile to download 
+  --shortread_hostremoval_index                          [string]  Specify path to the directory containing pre-made Bowtie2 or Hostile indexes of the host removal 
+reference  
   --longread_hostremoval_index                           [string]  Specify path to a pre-made Minimap2 index file (.mmi) of the host removal reference 
   --save_hostremoval_index                               [boolean] Save mapping index of input reference when not already supplied by user 
   --save_hostremoval_bam                                 [boolean] Saved mapped and unmapped reads in BAM format from host removal 

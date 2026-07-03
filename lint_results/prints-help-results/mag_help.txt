@@ -1,10 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
-Nextflow 26.06.0-edge is available - Please consider updating your version to it
 
- N E X T F L O W   ~  version 26.05.0-edge
+ N E X T F L O W   ~  version 26.06.0-edge
 
-Launching `./main.nf` [modest_wright] revision: 71af2049ef
+Launching `./main.nf` [infallible_ptolemy] revision: 71af2049ef
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -194,6 +193,7 @@ ocean, soil, cat_gut, human_oral, mouse_gut, pig_gut, built_environment, ...) [d
 [default: 0]  
   --bin_max_size                         [integer] Specify the longest length a bin should be to retain for downstream processing (in base pairs). By 
 default no limit.  
+  --bin_seqkit_stats_max_forks           [integer] Limit the number of concurrent SEQKIT_STATS jobs used for bin size calculation. 
   --bin_concoct_chunksize                [integer] Specify length of sub-contigs cut up prior CONCOCT binning [default: 10000] 
   --bin_concoct_overlap                  [integer] Specify the overlap between each sub-contig prior CONCOCT binning [default: 0] 
   --bin_concoct_donotconcatlast          [boolean] Specify to not append the last contig less than sub-contig length to the last correct length contig 

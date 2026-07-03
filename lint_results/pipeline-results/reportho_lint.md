@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-07-02T00:40:54.056028943Z
+- Generated: 2026-07-03T00:35:31.953736757Z
 - Nextflow version: 26.06.0-edge
 - Summary: 15 warnings
 
@@ -62,7 +62,7 @@
       ^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/report/main.nf:56:5`: Emit name should be omitted when there is only one emit
+- Warning: `subworkflows/local/report/main.nf:54:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
       versions = ch_versions

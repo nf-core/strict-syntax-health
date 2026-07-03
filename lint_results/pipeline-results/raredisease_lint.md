@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-07-02T00:40:30.215228942Z
+- Generated: 2026-07-03T00:35:07.935515152Z
 - Nextflow version: 26.06.0-edge
-- Summary: 18 warnings
+- Summary: 17 warnings
 
 ## :warning: Warnings
 
@@ -83,49 +83,42 @@
       ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/raredisease.nf:250:5`: Variable was declared but not used
-
-  ```nextflow
-      ch_call_snv_publish                 = channel.empty()
-      ^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/raredisease.nf:437:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/raredisease.nf:434:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_contamination_mqc    = Channel.empty()
                                 ^^^^^^^
   ```
 
-- Warning: `workflows/raredisease.nf:438:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/raredisease.nf:435:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_contamination_table  = Channel.empty()
                                 ^^^^^^^
   ```
 
-- Warning: `workflows/raredisease.nf:439:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/raredisease.nf:436:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_contamination_pileup = Channel.empty()
                                 ^^^^^^^
   ```
 
-- Warning: `workflows/raredisease.nf:1074:5`: Variable was declared but not used
+- Warning: `workflows/raredisease.nf:1069:5`: Variable was declared but not used
 
   ```nextflow
       ch_multiqc_config        = channel.fromPath(
       ^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/raredisease.nf:1076:5`: Variable was declared but not used
+- Warning: `workflows/raredisease.nf:1071:5`: Variable was declared but not used
 
   ```nextflow
       ch_multiqc_custom_config = val_multiqc_config ?
       ^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/raredisease.nf:1079:5`: Variable was declared but not used
+- Warning: `workflows/raredisease.nf:1074:5`: Variable was declared but not used
 
   ```nextflow
       ch_multiqc_logo          = val_multiqc_logo ?

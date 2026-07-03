@@ -1,12 +1,12 @@
 # Nextflow lint results
 
-- Generated: 2026-06-16T20:27:16.417909918Z
-- Nextflow version: 26.04.3
-- Summary: 28 warnings
+- Generated: 2026-07-03T00:34:05.694302588Z
+- Nextflow version: 26.06.0-edge
+- Summary: 19 warnings
 
 ## :warning: Warnings
 
-- Warning: `main.nf:57:5`: Emit name should be omitted when there is only one emit
+- Warning: `main.nf:61:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
       multiqc_report = ISOSEQ.out.multiqc_report // channel: /path/to/multiqc_report.html
@@ -18,48 +18,6 @@
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
-  ```
-
-- Warning: `modules/nf-core/gunzip/main.nf:43:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/isoseq/refine/main.nf:44:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/isoseq/refine/main.nf:45:9`: Variable was declared but not used
-
-  ```nextflow
-      def prefix = task.ext.prefix ?: "${meta.id}"
-          ^^^^^^
-  ```
-
-- Warning: `modules/nf-core/minimap2/align/main.nf:67:9`: Variable was declared but not used
-
-  ```nextflow
-      def target = reference ?: (bam_input ? error("BAM input requires reference") : reads)
-          ^^^^^^
-  ```
-
-- Warning: `modules/nf-core/pbccs/main.nf:47:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/pbccs/main.nf:48:9`: Variable was declared but not used
-
-  ```nextflow
-      def prefix = task.ext.prefix ?: "${meta.id}"
-          ^^^^^^
   ```
 
 - Warning: `subworkflows/local/chunker/main.nf:39:16`: Variable was declared but not used
@@ -104,25 +62,11 @@
       ^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_isoseq_pipeline/main.nf:32:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      monochrome_logs   // boolean: Do not use coloured log outputs
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_isoseq_pipeline/main.nf:35:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_isoseq_pipeline/main.nf:34:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       input             //  string: Path to input samplesheet
       ^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_isoseq_pipeline/main.nf:67:144`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      after_text = """${workflow.manifest.doi ? "\n* The pipeline\n" : ""}${workflow.manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${workflow.manifest.doi ? "\n" : ""}
-                                                                                                                                                 ^^
   ```
 
 - Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
@@ -132,25 +76,11 @@
       ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
-
-  ```nextflow
-      valid_config = checkConfigProvided()
-      ^^^^^^^^^^^^
-  ```
-
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
-      valid_config
-      ^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      return ch_versions.unique().map { version -> processVersionsFromYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
-                                                                                                   ^^^^^^^
+      valid_config = valid_config
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
@@ -160,42 +90,49 @@
       ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/isoseq.nf:206:39`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/isoseq.nf:151:65`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          .map { meta, files -> [ meta, [files].flatten().find { !it.name.endsWith('_tails.fa.gz') } ] }
+                                                                  ^^
+  ```
+
+- Warning: `workflows/isoseq.nf:215:39`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       GSTAMA_MERGE(ch_tmerge_in.map { [ it[0], it[1] ] }, ch_tmerge_in.map { it[2] }) // Merge all bed files from one sample into a uniq bed file
                                         ^^
   ```
 
-- Warning: `workflows/isoseq.nf:206:46`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/isoseq.nf:215:46`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       GSTAMA_MERGE(ch_tmerge_in.map { [ it[0], it[1] ] }, ch_tmerge_in.map { it[2] }) // Merge all bed files from one sample into a uniq bed file
                                                ^^
   ```
 
-- Warning: `workflows/isoseq.nf:206:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/isoseq.nf:215:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       GSTAMA_MERGE(ch_tmerge_in.map { [ it[0], it[1] ] }, ch_tmerge_in.map { it[2] }) // Merge all bed files from one sample into a uniq bed file
                                                                              ^^
   ```
 
-- Warning: `workflows/isoseq.nf:283:75`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/isoseq.nf:285:75`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(PBCCS.out.report_json.collect{it[1]}.ifEmpty([]))
                                                                             ^^
   ```
 
-- Warning: `workflows/isoseq.nf:284:70`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/isoseq.nf:286:70`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(LIMA.out.summary.collect{it[1]}.ifEmpty([]))
                                                                        ^^
   ```
 
-- Warning: `workflows/isoseq.nf:285:69`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/isoseq.nf:287:69`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(LIMA.out.counts.collect{it[1]}.ifEmpty([]))
