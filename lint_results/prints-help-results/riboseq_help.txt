@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.06.0-edge
 
-Launching `./main.nf` [elegant_becquerel] revision: 8f4b7ccf52
+Launching `./main.nf` [festering_jang] revision: 8f4b7ccf52
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -143,10 +143,18 @@ options include: --gene_id_col (column name for gene IDs in count table, default
 --exclude_samples_col and --exclude_samples_values (exclude samples by column value, 
 semicolon-separated). Note: --samples_pairing_col and --samples_batch_col are automatically set from 
 the 'pair' and 'batch' columns in the contrast file if present.  
-  --translational_efficiency_method      [string]  Method to use for translational efficiency analysis.  (accepted: anota2seq, deltate) [default: 
-anota2seq]  
+  --translational_efficiency_method      [string]  Comma-separated list of translational efficiency methods to run; any of `anota2seq`, `deltate`, 
+`dotseq`. Each runs independently. `dotseq` is ORF-level only (no gene-level fit) and requires 
+`--extended_orf_analysis true`. [default: anota2seq]  
   --extra_deltate_args                   [string]  Extra arguments to pass to deltaTE (DESeq2) in addition to defaults defined by the pipeline. 
  
+  --extra_orf_deltate_args               [string]  Extra arguments forwarded to the deltaTE DESeq2 module for the ORF-level call. Accepts the same 
+options as the gene-level deltaTE module.  
+  --extra_orf_anota2seq_run_args         [string]  Extra arguments forwarded to anota2seq for the ORF-level call. Accepts the same options as the 
+gene-level `--extra_anota2seq_run_args`.  
+  --extra_dotseq_args                    [string]  Extra arguments forwarded to the DOTSeq R template (ORF-level DTE + DOU). Accepts any of the 
+template's `--key value` options, e.g. `--min_count`, `--stringent`, `--dispersion_modeling`, 
+`--nullweight`, `--top_hits`.  
   --te_lfc_threshold                     [number]  Minimum absolute log2 fold change for translational efficiency (TE) to be considered significant. 
 Genes must meet both p-value and effect size thresholds. Default is log2(1.2) matching anota2seq. 
 Maps to anota2seq selDeltaPT / deltaTE lfc_threshold_te. [default: 0.2630344]  

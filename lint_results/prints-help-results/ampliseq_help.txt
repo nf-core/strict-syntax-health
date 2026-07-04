@@ -1,11 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
-Nextflow 26.06.0-edge is available - Please consider updating your version to it
 
- N E X T F L O W   ~  version 26.05.0-edge
+ N E X T F L O W   ~  version 26.06.0-edge
 
 Downloading plugin nf-schema@2.7.2
-Launching `./main.nf` [deadly_leakey] revision: be54f69b2e
+Launching `./main.nf` [nostalgic_wegener] revision: be54f69b2e
 
 
 ------------------------------------------------------
@@ -223,10 +222,11 @@ removed. [default: 1]
   --ancombc2_formula_reflvl                [string]  Reference level for `--ancombc2_formula` 
 
 Comparison of observed to expected results
-  --expected_sequences                     [string] Path to file of expected sequences in fasta format 
-  --expected_sequences_region              [string] What region of the sequence comparison is evaluated  (accepted: alignment, query, target) 
+  --expected_sequences                     [string]  Path to file of expected sequences in fasta format 
+  --expected_sequences_region              [string]  What region of the sequence comparison is evaluated  (accepted: alignment, query, target) 
 [default: query]  
-  --expected_abundances                    [string] Path to file of abundances of expected sequences in tsv format 
+  --expected_sequences_mismatches          [integer] Threshold of accepted mismatches and gaps to the expected sequences [default: 0] 
+  --expected_abundances                    [string]  Path to file of abundances of expected sequences in tsv format 
 
 Pipeline summary report
   --report_template                        [string] Path to Markdown file (Rmd) [default: ${projectDir}/assets/report_template.Rmd] 

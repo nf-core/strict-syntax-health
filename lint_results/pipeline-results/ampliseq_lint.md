@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-07-01T00:41:30.374711422Z
-- Nextflow version: 26.05.0-edge
+- Generated: 2026-07-04T00:32:11.413240944Z
+- Nextflow version: 26.06.0-edge
 - Summary: 29 warnings
 
 ## :warning: Warnings
@@ -13,28 +13,28 @@
       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/comparison_wf.nf:20:37`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/comparison_wf.nf:21:37`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_observed_sequences.map { it = [ [id: val_md5sum_version], file(it) ] },
                                       ^^
   ```
 
-- Warning: `subworkflows/local/comparison_wf.nf:20:75`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/comparison_wf.nf:21:75`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_observed_sequences.map { it = [ [id: val_md5sum_version], file(it) ] },
                                                                             ^^
   ```
 
-- Warning: `subworkflows/local/comparison_wf.nf:33:63`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/comparison_wf.nf:35:63`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       COMPARE_PERFORMANCE ( COMPARE_SEQUENCES.out.matches.map { it = [ [id: val_md5sum_version], file(it) ] }, ch_observed_abundances, ch_expected_abundances )
                                                                 ^^
   ```
 
-- Warning: `subworkflows/local/comparison_wf.nf:33:101`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/comparison_wf.nf:35:101`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       COMPARE_PERFORMANCE ( COMPARE_SEQUENCES.out.matches.map { it = [ [id: val_md5sum_version], file(it) ] }, ch_observed_abundances, ch_expected_abundances )
@@ -202,9 +202,9 @@
                                                                                                                                ^^
   ```
 
-- Warning: `workflows/ampliseq.nf:1122:31`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/ampliseq.nf:1121:49`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-              ( params.findAll{ it.key != 'trace_report_suffix' }.toString().md5() + "_${workflow.manifest.version}" ),  // md5sum of params (without variable time stamp in "trace_report_suffix") appended by pipeline version
-                                ^^
+          def val_params_string = params.findAll{ it.key != 'trace_report_suffix' }.toString()
+                                                  ^^
   ```

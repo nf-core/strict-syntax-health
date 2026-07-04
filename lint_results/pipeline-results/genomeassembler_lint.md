@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-07-01T00:44:52.789692984Z
-- Nextflow version: 26.05.0-edge
-- Summary: 23 warnings
+- Generated: 2026-07-04T00:34:10.349617239Z
+- Nextflow version: 26.06.0-edge
+- Summary: 21 warnings
 
 ## :warning: Warnings
 
@@ -48,20 +48,6 @@
       ^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare/jellyfish/main.nf:93:5`: Variable was declared but not used
-
-  ```nextflow
-      genomescope_summary = GENOMESCOPE.out.summary
-      ^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/prepare/jellyfish/main.nf:95:5`: Variable was declared but not used
-
-  ```nextflow
-      genomescope_plot = GENOMESCOPE.out.plot_log
-      ^^^^^^^^^^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/prepare/main.nf:83:5`: Variable was declared but not used
 
   ```nextflow
@@ -97,7 +83,7 @@
       ^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare/prepare_shortreads/main.nf:173:5`: Variable was declared but not used
+- Warning: `subworkflows/local/prepare/prepare_shortreads/main.nf:171:5`: Variable was declared but not used
 
   ```nextflow
       meryl_kmers = MERYL_UNIONSUM.out.meryl_db
@@ -160,7 +146,7 @@
       ^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/genomeassembler.nf:222:5`: Emit name should be omitted when there is only one emit
+- Warning: `workflows/genomeassembler.nf:233:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
       _report

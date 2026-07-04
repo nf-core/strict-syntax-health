@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "838d07c09dfac095defc7b39c6b56ca9741ee517",
+  "_repo_commit": "24f94e605b24cffdb0f545333ba9c031b003c97e",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -2862,6 +2862,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "dupblaster": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/dupblaster",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "duphold": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/duphold",
     "errors": 0,
@@ -3778,6 +3784,12 @@
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gapseq/findtransport",
     "errors": 0,
     "warnings": 1,
+    "parse_error": false
+  },
+  "gapseq_medium": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gapseq/medium",
+    "errors": 0,
+    "warnings": 0,
     "parse_error": false
   },
   "gatk_indelrealigner": {
@@ -5556,6 +5568,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "kled": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/kled",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "kma_index": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/kma/index",
     "errors": 0,
@@ -6398,6 +6416,12 @@
   },
   "methyldackel_mbias": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/methyldackel/mbias",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "methylsieve": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/methylsieve",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

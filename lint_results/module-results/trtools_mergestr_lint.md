@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-07-03T00:37:55.351230+00:00
+- Generated: 2026-07-04T00:37:31.310111+00:00
 - Nextflow version: 26.06.0-edge
 - Summary: 2 warnings
 
@@ -8,14 +8,14 @@
 
 - Warning: `modules/nf-core/trtools/mergestr/main.nf:24:23`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        if ( vcfs.any{ "${it}" == "${prefix}.vcf" || "${it}" == "${prefix}.vcf.gz" } ) {
-                          ^^^^^^^^^^
-    ```
+  ```nextflow
+      if ( vcfs.any{ "${it}" == "${prefix}.vcf" || "${it}" == "${prefix}.vcf.gz" } ) {
+                        ^^^^^^^^^^
+  ```
 
 - Warning: `modules/nf-core/trtools/mergestr/main.nf:24:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-        if ( vcfs.any{ "${it}" == "${prefix}.vcf" || "${it}" == "${prefix}.vcf.gz" } ) {
-                                                        ^^^^^^^^^^
-    ```
+  ```nextflow
+      if ( vcfs.any{ "${it}" == "${prefix}.vcf" || "${it}" == "${prefix}.vcf.gz" } ) {
+                                                      ^^^^^^^^^^
+  ```

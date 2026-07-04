@@ -1,6 +1,6 @@
 # Workflow outputs migration: hlatyping
 
-- Generated: 2026-06-18T00:46:33.243663+00:00
+- Generated: 2026-07-04T00:34:31.647920+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,5 +14,5 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 20 `publishDir` references across 2 files that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/hlatyping/blob/d4648a1a54f4ab962da0dd10a933e66cb33b96c8/conf/modules.config#L15) — 19 references
-- [`modules/nf-core/hlala/preparegraph/tests/nextflow.config`](https://github.com/nf-core/hlatyping/blob/d4648a1a54f4ab962da0dd10a933e66cb33b96c8/modules/nf-core/hlala/preparegraph/tests/nextflow.config#L7) — 1 reference
+- [`conf/modules.config`](https://github.com/nf-core/hlatyping/blob/2c0fb9b96091f68b1de6f677a2040eedd33fe500/conf/modules.config#L15) — 19 references
+- [`modules/nf-core/hlala/preparegraph/tests/nextflow.config`](https://github.com/nf-core/hlatyping/blob/2c0fb9b96091f68b1de6f677a2040eedd33fe500/modules/nf-core/hlala/preparegraph/tests/nextflow.config#L7) — 1 reference
