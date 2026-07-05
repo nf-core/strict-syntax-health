@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "24f94e605b24cffdb0f545333ba9c031b003c97e",
+  "_repo_commit": "e5932df11168a85f13e74eee4159387a4fc8663b",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -3300,6 +3300,18 @@
     "warnings": 0,
     "parse_error": false
   },
+  "ferrohgvs_normalize": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ferrohgvs/normalize",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "ferrohgvs_parse": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ferrohgvs/parse",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "ffq": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ffq",
     "errors": 0,
@@ -5108,6 +5120,30 @@
   },
   "hmtnote_annotate": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/hmtnote/annotate",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "holodeck_eval": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/holodeck/eval",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "holodeck_methylate": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/holodeck/methylate",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "holodeck_mutate": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/holodeck/mutate",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "holodeck_simulate": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/holodeck/simulate",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -8594,6 +8630,24 @@
   },
   "rbt_vcfsplit": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/rbt/vcfsplit",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "refsolver_compare": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/refsolver/compare",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "refsolver_identify": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/refsolver/identify",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "refsolver_score": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/refsolver/score",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
