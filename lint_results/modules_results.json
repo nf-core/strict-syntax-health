@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "e5932df11168a85f13e74eee4159387a4fc8663b",
+  "_repo_commit": "cab334f632708de2679161f713dd969bfa491a25",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -1448,6 +1448,18 @@
   },
   "bwamem2_mem": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bwamem2/mem",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "bwamem3_index": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bwamem3/index",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "bwamem3_mem": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bwamem3/mem",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
