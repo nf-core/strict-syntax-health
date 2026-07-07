@@ -1,6 +1,6 @@
 # Workflow outputs migration: fastquorum
 
-- Generated: 2026-06-23T00:41:51.023727+00:00
+- Generated: 2026-07-07T00:35:36.829211+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,4 +14,4 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 15 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/fastquorum/blob/0cba208a2e8c70d525ddb5d99df05ff3bb760cfc/conf/modules.config#L15) — 15 references
+- [`conf/modules.config`](https://github.com/nf-core/fastquorum/blob/ce2d37ac866e8f23acad6198816c9560200222d1/conf/modules.config#L15) — 15 references

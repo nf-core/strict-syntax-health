@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.04.3
+ N E X T F L O W   ~  version 26.06.0-edge
 
-Launching `./main.nf` [determined_nightingale] revision: de79002a2e
+Launching `./main.nf` [evil_hirsch] revision: de79002a2e
 
 
 ------------------------------------------------------
@@ -16,11 +16,11 @@ Launching `./main.nf` [determined_nightingale] revision: de79002a2e
 ------------------------------------------------------
 
 Generic options
-  trace_report_suffix: 2026-06-16_20-36-55
+  trace_report_suffix: 2026-07-07_00-37-23
   help               : true
 
 Core Nextflow options
-  runName            : determined_nightingale
+  runName            : evil_hirsch
   launchDir          : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/references
   workDir            : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/references/work
   projectDir         : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/references

@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "cab334f632708de2679161f713dd969bfa491a25",
+  "_repo_commit": "1b02a0e691ffa32dcd115408606eb3e5361ad73c",
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -6068,6 +6068,12 @@
   },
   "magus_guidetree": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/magus/guidetree",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "mako": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mako",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

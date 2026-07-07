@@ -1,23 +1,37 @@
 # Nextflow lint results
 
-- Generated: 2026-07-04T00:35:35.226020964Z
+- Generated: 2026-07-07T00:36:54.981645705Z
 - Nextflow version: 26.06.0-edge
-- Summary: 17 warnings
+- Summary: 19 warnings
 
 ## :warning: Warnings
-
-- Warning: `main.nf:123:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      val_save_reference
-      ^^^^^^^^^^^^^^^^^^
-  ```
 
 - Warning: `subworkflows/local/annotate_mobile_elements/main.nf:74:9`: Emit name should be omitted when there is only one emit
 
   ```nextflow
           vcf_ann  = BCFTOOLS_VIEW_FILTER.out.vcf     // channel: [ val(meta), path(vcf) ]
           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/call_snv_sentieon/main.nf:67:62`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  def sorted = [vcfs, idxs].transpose().sort { it[0].name }
+                                                               ^^
+  ```
+
+- Warning: `subworkflows/local/call_snv_sentieon/main.nf:68:48`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  return [meta, sorted.collect { it[0] }, sorted.collect { it[1] }]
+                                                 ^^
+  ```
+
+- Warning: `subworkflows/local/call_snv_sentieon/main.nf:68:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  return [meta, sorted.collect { it[0] }, sorted.collect { it[1] }]
+                                                                           ^^
   ```
 
 - Warning: `subworkflows/local/call_sv_MT/main.nf:145:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -83,21 +97,21 @@
       ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/raredisease.nf:434:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/raredisease.nf:433:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_contamination_mqc    = Channel.empty()
                                 ^^^^^^^
   ```
 
-- Warning: `workflows/raredisease.nf:435:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/raredisease.nf:434:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_contamination_table  = Channel.empty()
                                 ^^^^^^^
   ```
 
-- Warning: `workflows/raredisease.nf:436:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/raredisease.nf:435:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_contamination_pileup = Channel.empty()

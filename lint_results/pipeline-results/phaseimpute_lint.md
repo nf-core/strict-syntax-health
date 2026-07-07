@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-23T00:43:03.059074275Z
-- Nextflow version: 26.05.0-edge
-- Summary: 19 warnings
+- Generated: 2026-07-07T00:36:17.195941954Z
+- Nextflow version: 26.06.0-edge
+- Summary: 20 warnings
 
 ## :warning: Warnings
 
@@ -32,6 +32,13 @@
   ```nextflow
       ch_fasta_fai_gzi = ch_fasta_fai_gzi
       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_phaseimpute_pipeline/main.nf:923:40`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+  def toolBibliographyText(steps, tools, compute_freq, phase) {
+                                         ^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/vcf_chr_rename_bcftools/main.nf:52:5`: Emit name should be omitted when there is only one emit

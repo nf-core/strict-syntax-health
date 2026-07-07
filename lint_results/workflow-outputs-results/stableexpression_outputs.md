@@ -1,6 +1,6 @@
 # Workflow outputs migration: stableexpression
 
-- Generated: 2026-06-30T00:42:29.310846+00:00
+- Generated: 2026-07-07T00:39:49.973667+00:00
 - Status: :warning: **warn** — uses the new `output {}` syntax but still has legacy `publishDir` references to migrate
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -9,10 +9,10 @@ This report tracks migration from the legacy `publishDir` directive to the new [
 
 Found 1 top-level `output {}` block:
 
-- [`main.nf:126`](https://github.com/nf-core/stableexpression/blob/f1854a49a3f5ba6fbe297ba7496de6c5835bdb7b/main.nf#L126)
+- [`main.nf:123`](https://github.com/nf-core/stableexpression/blob/b68f80cb1a1a432c189253ecec6952a26bff0081/main.nf#L123)
 
 ## Legacy `publishDir` references
 
 Found 1 `publishDir` reference across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`tests/prepare_pr/.config`](https://github.com/nf-core/stableexpression/blob/f1854a49a3f5ba6fbe297ba7496de6c5835bdb7b/tests/prepare_pr/.config#L3) — 1 reference
+- [`tests/prepare_pr/.config`](https://github.com/nf-core/stableexpression/blob/b68f80cb1a1a432c189253ecec6952a26bff0081/tests/prepare_pr/.config#L3) — 1 reference

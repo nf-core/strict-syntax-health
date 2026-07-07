@@ -1,13 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
-Nextflow 26.06.0-edge is available - Please consider updating your version to it
 
- N E X T F L O W   ~  version 26.05.0-edge
+ N E X T F L O W   ~  version 26.06.0-edge
 
-Downloading plugin nf-core-utils@0.4.0
-Downloading plugin nf-fgbio@1.0.0
 Downloading plugin nf-prov@1.7.0
-Launching `./main.nf` [astonishing_kimura] revision: f2330ae7a6
+Launching `./main.nf` [boring_boyd] revision: 4d72b303ae
 
 
 ------------------------------------------------------
@@ -128,6 +125,13 @@ https://samtools.github.io/bcftools/bcftools.html#view  [default: -f PASS,.]
   --snv_consensus_calling             [boolean] Enable consensus calling of multiple VCF files from one sample 
   --consensus_min_count               [integer] Minimum number of variant callers calling a variant for consensus results [default: 2] 
   --concatenate_vcfs                  [boolean] Option for concatenating germline vcf-files. 
+  --varlociraptor_events_tumor_only   [string]  Events to consider for FDR filtering for tumor only samples, must match events described in scenario 
+file. [default: somatic_tumor_high somatic_tumor_low]  
+  --varlociraptor_events_somatic      [string]  Events to consider for FDR filtering for somatic samples, must match events described in scenario 
+file. [default: somatic_tumor_high somatic_tumor_low]  
+  --varlociraptor_events_germline     [string]  Events to consider for FDR filtering for germline samples, must match events described in scenario 
+file. [default: germline]  
+  --varlociraptor_fdr                 [number]  The probability to be a false discovery may not exceed the given threshold. [default: 0.05] 
   --varlociraptor_scenario_tumor_only [string]  Yte compatible scenario file for tumor only samples. Defaults to 
 assets/varlociraptor_tumor_only.yte.yaml  
   --varlociraptor_scenario_somatic    [string]  Yte compatible scenario file for somatic samples. Defaults to assets/varlociraptor_somatic.yte.yaml 

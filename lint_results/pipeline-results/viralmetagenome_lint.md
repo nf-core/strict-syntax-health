@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-07-03T00:37:07.245217688Z
+- Generated: 2026-07-07T00:40:15.410703248Z
 - Nextflow version: 26.06.0-edge
-- Summary: 11 warnings
+- Summary: 12 warnings
 
 ## :warning: Warnings
 
@@ -18,6 +18,13 @@
   ```nextflow
       consensus = BCFTOOLS_CONSENSUS.out.fasta // channel: [ val(meta), [ fasta ] ]
       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/fasta_contig_preclust/main.nf:16:5`: Variable was declared but not used
+
+  ```nextflow
+      ch_versions = channel.empty()
+      ^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/mmseqs_annotate/main.nf:18:5`: Emit name should be omitted when there is only one emit

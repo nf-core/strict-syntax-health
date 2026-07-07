@@ -1,10 +1,97 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.05.0-edge
+ N E X T F L O W   ~  version 26.06.0-edge
 
-Launching `./main.nf` [intergalactic_kare] revision: 781380408e
+Launching `./main.nf` [berserk_feynman] revision: d5dcb6c5aa
 
-ERROR ~ Unable to create help message: Specified param 'true' does not exist in JSON schema.
 
- -- Check script 'subworkflows/nf-core/utils_nfschema_plugin/main.nf' at line: 41 or see '.nextflow.log' file for more details
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/stableexpression 1.0.0
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/stableexpression -profile <docker/apptainer/singularity/.../institute> --species <species> --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --species                      [string]  Scientifc species name (genus and species) 
+  --outdir                       [string]  Output directory 
+  --datasets                     [string]  Custom datasets (counts + designs) 
+  --keywords                     [string]  Keywords used for selecting specific Expression Atlas / GEO accessions 
+  --target_genes                 [string]  Target genes 
+  --target_gene_file             [string]  File containing target genes 
+  --platform                     [string]  Only download from this platform  (accepted: rnaseq, microarray) 
+  --accessions_only              [boolean] Only get accessions from Expression Atlas / GEO and exit. 
+  --download_only                [boolean] Only get accessions from Expression Atlas / GEO and download the selected datasets. 
+  --email                        [string]  Email address for completion summary. 
+  --multiqc_title                [string]  MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+
+Public data options
+  --skip_fetch_eatlas_accessions [boolean] Skip fetching Expression Atlas accessions 
+  --fetch_geo_accessions         [boolean] Fetch GEO accessions from NCBI [Experimental] 
+  --accessions                   [string]  Expression Atlas / GEO accession(s) to include 
+  --accessions_file              [string]  File containing Expression Atlas / GEO accession(s) to download 
+  --excluded_accessions          [string]  Expression Atlas accession(s) to exclude 
+  --excluded_accessions_file     [string]  File containing Expression Atlas accession(s) to exclude 
+
+ID mapping options
+  --skip_id_mapping              [boolean] Skip g:Profiler ID mapping step 
+  --skip_cleaning_gene_ids       [boolean] Skip cleaning gene IDs step 
+  --gprofiler_target_db          [string]  Experimental: target database for g:Profiler  (accepted: ENSG, ENTREZGENE, UNIPROTSPTREMBL, 
+UNIPROTSWISSPROT) [default: ENSG]  
+  --gene_id_mapping              [string]  Custom gene id mapping file 
+  --gene_metadata                [string]  Custom gene metadata file 
+  --min_occurrence_quantile      [number]  Minimum quantile for the frequency of occurrence [default: 0.2] 
+  --min_occurrence_freq          [number]  Minimum frequency of occurrence among all datasets [default: 0.1] 
+
+Sample filtering options
+  --max_zero_ratio               [number] Maximum ratio of zero counts to total counts [default: 0.9] 
+  --max_null_ratio               [number] Maximum ratio of null values [default: 0.9] 
+  --max_null_ratio_valid_sample  [number] Maximum ratio of null values in a sample for it to be considered in the computation of the null 
+value malus [default: 0.75]  
+
+Statistics options
+  --normalisation_method         [string] Count normalisation method  (accepted: tpm, cpm) [default: tpm] 
+  --gff                          [string] Genome annotation file (GFF format) 
+  --gff_url                      [string] URL to genome annotation file (GFF format) 
+  --gene_length                  [string] Gene length file 
+  --quantile_norm_target_distrib [string] Target distribution for quantile normalisation  (accepted: uniform, normal) [default: uniform] 
+ 
+
+Missing value imputation options
+  --missing_value_imputer        [string] Type of imputation method to use for missing values  (accepted: knn, iterative, simple) 
+[default: knn]  
+
+Stability scoring options
+  --nb_sections                  [integer] Number of sections to divide genes into for stability scoring. [default: 10] 
+  --nb_candidates_per_section    [integer] Number of candidate genes to keep for stability scoring in each section [default: 250] 
+  --skip_genorm                  [boolean] Run Genorm 
+  --stability_score_weights      [string]  Weights for stability score calculation [default: 0.25,0.25,0.25,0.25] 
+
+Scalability options
+  --random_sampling_size         [integer] Number of public dataset samples to choose randomly before downloading. [default: 5000] 
+  --random_sampling_seed         [integer] Seed for dataset random sampling. [default: 42] 
+
+Generic options
+  --multiqc_methods_description  [string]          Custom MultiQC yaml file containing HTML including a methods description. 
+  --help                         [boolean, string] Display the help message. 
+  --help_full                    [boolean]         Display the full detailed help message. 
+  --show_hidden                  [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 17 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/stableexpression/blob/main/CITATIONS.md
+
