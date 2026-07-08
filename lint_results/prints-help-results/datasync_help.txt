@@ -1,11 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
-Nextflow 26.06.0-edge is available - Please consider updating your version to it
 
- N E X T F L O W   ~  version 26.05.0-edge
+ N E X T F L O W   ~  version 26.06.0-edge
 
 Downloading plugin nf-schema@2.5.1
-Launching `./main.nf` [elated_jones] revision: 2248a30d8d
+Launching `./main.nf` [zen_banach] revision: 4f0edf8d08
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -26,11 +25,13 @@ help message of that parameter will be printed.
 or `--helpFull`.  
 
 Input/output options
-  --input                       [string] Path to comma-separated file containing information about the samples in the experiment. 
-  --outdir                      [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
+  --input                       [string]  Path to comma-separated file containing information about the samples in the experiment. 
+  --outdir                      [string]  The output directory where the results will be saved. You have to use absolute paths to storage on 
 Cloud infrastructure.  
-  --email                       [string] Email address for completion summary. 
-  --multiqc_title               [string] MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+  --email                       [string]  Email address for completion summary. 
+  --multiqc_title               [string]  MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+  --rclone_config               [string]  Path to the rclone config file used for cloud storage authentication. 
+  --rclone_dry_run              [boolean] Perform a dry run of the rclone copy command. 
 
 Reference genome options
   --genome                      [string] Name of iGenomes reference. 

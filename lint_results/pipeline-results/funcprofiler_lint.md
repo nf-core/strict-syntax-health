@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-07-03T00:33:13.702314290Z
+- Generated: 2026-07-08T00:28:45.603879935Z
 - Nextflow version: 26.06.0-edge
 - Summary: 28 warnings
 
@@ -83,28 +83,28 @@
       ^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/profile/main.nf:63:21`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/profile/main.nf:64:21`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
   	.filter { meta_db, file ->
                       ^^^^
   ```
 
-- Warning: `subworkflows/local/profile/main.nf:157:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/profile/main.nf:158:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_versions             = Channel.empty()
                                 ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/profile/main.nf:158:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/profile/main.nf:159:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_multiqc_files        = Channel.empty()
                                 ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/profile/main.nf:159:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/profile/main.nf:160:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_raw_profiles         = Channel.empty() // These are count tables

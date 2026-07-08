@@ -266,7 +266,7 @@
   "datasync": {
     "full_name": "nf-core/datasync",
     "html_url": "https://github.com/nf-core/datasync",
-    "commit": "04eae404dcbc433b9bc599d92fafff6bff056c7e",
+    "commit": "dad2dc238d1dd90718eae5fe8f4babf85583db3b",
     "errors": 0,
     "warnings": 6,
     "parse_error": false,
@@ -506,7 +506,7 @@
   "funcprofiler": {
     "full_name": "nf-core/funcprofiler",
     "html_url": "https://github.com/nf-core/funcprofiler",
-    "commit": "df8c6f992a28c028181c19e0721c9b87330beedb",
+    "commit": "66de1db072f9f4aacb494dc3bc0252ff1edc3bef",
     "errors": 0,
     "warnings": 28,
     "parse_error": false,
@@ -974,7 +974,7 @@
   "nascent": {
     "full_name": "nf-core/nascent",
     "html_url": "https://github.com/nf-core/nascent",
-    "commit": "8d094841b348aca2e857c9d40b4e0c8f5f8320ec",
+    "commit": "3d5462861e331eba7c090b1e81dd107182228a74",
     "errors": 38,
     "warnings": 167,
     "parse_error": false,
@@ -1190,7 +1190,7 @@
   "provenancereport": {
     "full_name": "nf-core/provenancereport",
     "html_url": "https://github.com/nf-core/provenancereport",
-    "commit": "339adce96b55d735b77fbcb197e1ecdd55673f12",
+    "commit": "89082532f5f9fd0bb0d7e1f4d91b65c7a36c42e4",
     "errors": 0,
     "warnings": 3,
     "parse_error": false,
@@ -1274,7 +1274,7 @@
   "reportho": {
     "full_name": "nf-core/reportho",
     "html_url": "https://github.com/nf-core/reportho",
-    "commit": "6b4071c310147c777bb67f0316848e8701e479d3",
+    "commit": "2d57a40aeeae7766e79102dfb5c4961775c40c96",
     "errors": 0,
     "warnings": 13,
     "parse_error": false,
@@ -1358,7 +1358,7 @@
   "rnavar": {
     "full_name": "nf-core/rnavar",
     "html_url": "https://github.com/nf-core/rnavar",
-    "commit": "5917196951c752d457a91b9ba67b9a21dbace372",
+    "commit": "8a103c880430a0a223eefe36ee75c05abd92ba6a",
     "errors": 0,
     "warnings": 3,
     "parse_error": false,
@@ -1394,7 +1394,7 @@
   "scdownstream": {
     "full_name": "nf-core/scdownstream",
     "html_url": "https://github.com/nf-core/scdownstream",
-    "commit": "61b838cd2deca56f1a42f93023b3912acfa24945",
+    "commit": "ab0639483be2fe7bf77f8a3286be5c9988e53617",
     "errors": 0,
     "warnings": 32,
     "parse_error": false,
@@ -1442,7 +1442,7 @@
   "seqsubmit": {
     "full_name": "nf-core/seqsubmit",
     "html_url": "https://github.com/nf-core/seqsubmit",
-    "commit": "327cee7d3bee45876775318d6522adc49f78058c",
+    "commit": "cf2cf3d24a820562b326d0f5aa15f8fc9e920861",
     "errors": 0,
     "warnings": 18,
     "parse_error": false,
