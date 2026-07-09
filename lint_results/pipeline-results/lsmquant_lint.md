@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-06-19T00:50:59.793245915Z
-- Nextflow version: 26.04.4
+- Generated: 2026-07-09T00:33:13.168101394Z
+- Nextflow version: 26.06.0-edge
 - Summary: 23 warnings
 
 ## :warning: Warnings
@@ -21,13 +21,6 @@
   ```
 
 - Warning: `modules/local/mat2json/main.nf:42:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/local/numorph3dunet/main.nf:45:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
@@ -105,6 +98,13 @@
   ```
 
 - Warning: `modules/nf-core/mat2json/main.nf:37:9`: Variable was declared but not used
+
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^
+  ```
+
+- Warning: `modules/nf-core/numorph/3dunet/main.nf:41:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''

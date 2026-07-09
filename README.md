@@ -11,12 +11,12 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 > See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline.
 > **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**
 
-- **Last updated:** 2026-07-08 00:31:49 UTC
+- **Last updated:** 2026-07-09 00:37:38 UTC
 - **Nextflow version:** 26.06.0-edge
 
 ## Pipelines
 
-- **Total:** 0 parse errors, 1497 errors, 7502 warnings across 139 pipelines
+- **Total:** 0 parse errors, 1497 errors, 7505 warnings across 139 pipelines
 - **Zero errors:** 84 pipelines (60.4%)
 
 |                    Errors                    |                     Warnings                     |
@@ -138,6 +138,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :white_check_mark: [fastquorum](https://github.com/nf-core/fastquorum)                         |     No      |      0 |       11 |     Yes     |        [View](lint_results/pipeline-results/fastquorum_lint.md)         |       [View](lint_results/prints-help-results/fastquorum_help.txt)       |
 | :white_check_mark: [variantprioritization](https://github.com/nf-core/variantprioritization)   |     No      |      0 |       11 |     Yes     |   [View](lint_results/pipeline-results/variantprioritization_lint.md)   | [View](lint_results/prints-help-results/variantprioritization_help.txt)  |
 | :x: [ncrnannotator](https://github.com/nf-core/ncrnannotator)                                  |     No      |      0 |       10 |     No      |       [View](lint_results/pipeline-results/ncrnannotator_lint.md)       |     [View](lint_results/prints-help-results/ncrnannotator_help.txt)      |
+| :white_check_mark: [datasync](https://github.com/nf-core/datasync)                             |     No      |      0 |        9 |     Yes     |         [View](lint_results/pipeline-results/datasync_lint.md)          |        [View](lint_results/prints-help-results/datasync_help.txt)        |
 | :white_check_mark: [hlatyping](https://github.com/nf-core/hlatyping)                           |     No      |      0 |        8 |     Yes     |         [View](lint_results/pipeline-results/hlatyping_lint.md)         |       [View](lint_results/prints-help-results/hlatyping_help.txt)        |
 | :x: [spatialaxe](https://github.com/nf-core/spatialaxe)                                        |     No      |      0 |        8 |     No      |        [View](lint_results/pipeline-results/spatialaxe_lint.md)         |       [View](lint_results/prints-help-results/spatialaxe_help.txt)       |
 | :white_check_mark: [spatialvi](https://github.com/nf-core/spatialvi)                           |     No      |      0 |        8 |     Yes     |         [View](lint_results/pipeline-results/spatialvi_lint.md)         |       [View](lint_results/prints-help-results/spatialvi_help.txt)        |
@@ -145,7 +146,6 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :white_check_mark: [proteinfold](https://github.com/nf-core/proteinfold)                       |     No      |      0 |        7 |     Yes     |        [View](lint_results/pipeline-results/proteinfold_lint.md)        |      [View](lint_results/prints-help-results/proteinfold_help.txt)       |
 | :white_check_mark: [bamtofastq](https://github.com/nf-core/bamtofastq)                         |     No      |      0 |        6 |     Yes     |        [View](lint_results/pipeline-results/bamtofastq_lint.md)         |       [View](lint_results/prints-help-results/bamtofastq_help.txt)       |
 | :white_check_mark: [cageseq](https://github.com/nf-core/cageseq)                               |     No      |      0 |        6 |     Yes     |          [View](lint_results/pipeline-results/cageseq_lint.md)          |        [View](lint_results/prints-help-results/cageseq_help.txt)         |
-| :white_check_mark: [datasync](https://github.com/nf-core/datasync)                             |     No      |      0 |        6 |     Yes     |         [View](lint_results/pipeline-results/datasync_lint.md)          |        [View](lint_results/prints-help-results/datasync_help.txt)        |
 | :x: [ribomsqc](https://github.com/nf-core/ribomsqc)                                            |     No      |      0 |        6 |     No      |         [View](lint_results/pipeline-results/ribomsqc_lint.md)          |        [View](lint_results/prints-help-results/ribomsqc_help.txt)        |
 | :x: [rnafusion](https://github.com/nf-core/rnafusion)                                          |     No      |      0 |        6 |     No      |         [View](lint_results/pipeline-results/rnafusion_lint.md)         |       [View](lint_results/prints-help-results/rnafusion_help.txt)        |
 | :white_check_mark: [scrnaseq](https://github.com/nf-core/scrnaseq)                             |     No      |      0 |        6 |     Yes     |         [View](lint_results/pipeline-results/scrnaseq_lint.md)          |        [View](lint_results/prints-help-results/scrnaseq_help.txt)        |
@@ -331,8 +331,8 @@ The status emoji next to each pipeline shows its migration state: :white_check_m
 
 ## Modules
 
-- **Total:** 0 parse errors, 0 errors, 20 warnings across 1958 modules
-- **Zero errors:** 1958 modules (100.0%)
+- **Total:** 0 parse errors, 0 errors, 20 warnings across 1962 modules
+- **Zero errors:** 1962 modules (100.0%)
 
 |                   Errors                   |                    Warnings                    |
 | :----------------------------------------: | :--------------------------------------------: |
@@ -344,7 +344,7 @@ The status emoji next to each pipeline shows its migration state: :white_check_m
 | Module | Parse Error | Errors | Warnings | Lint Output |
 | ------ | :---------: | -----: | -------: | :---------: |
 
-_Modules with zero errors are not shown above (1958 modules). They may still have warnings. See the [modules results directory](lint_results/module-results/) for all lint outputs._
+_Modules with zero errors are not shown above (1962 modules). They may still have warnings. See the [modules results directory](lint_results/module-results/) for all lint outputs._
 
 </details>
 

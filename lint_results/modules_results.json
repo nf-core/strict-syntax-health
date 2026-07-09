@@ -1,5 +1,11 @@
 {
-  "_repo_commit": "f0faeaa8b8b5bc6e50af49763b95a94c9019530f",
+  "_repo_commit": "587ef528a2f42a2415ad1b5f760ea93ab1983603",
+  "aardvark_compare": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "abacas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/abacas",
     "errors": 0,
@@ -4290,6 +4296,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "gcta_makebksparse": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gcta/makebksparse",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "gcta_makegrm": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gcta/makegrm",
     "errors": 0,
@@ -8076,6 +8088,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "plink_missing": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plink/missing",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "plink_recode": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plink/recode",
     "errors": 0,
@@ -8114,6 +8132,12 @@
   },
   "plink2_pca": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plink2/pca",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "plink2_pmerge": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plink2/pmerge",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

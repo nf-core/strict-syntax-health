@@ -74,7 +74,7 @@
   "bacmodel": {
     "full_name": "nf-core/bacmodel",
     "html_url": "https://github.com/nf-core/bacmodel",
-    "commit": "0144ad503d3726dabfc17e461c60ea197e21440d",
+    "commit": "9b50fe6841fe2fd28bf085c2103f9399b1f15077",
     "errors": 0,
     "warnings": 54,
     "parse_error": false,
@@ -266,9 +266,9 @@
   "datasync": {
     "full_name": "nf-core/datasync",
     "html_url": "https://github.com/nf-core/datasync",
-    "commit": "dad2dc238d1dd90718eae5fe8f4babf85583db3b",
+    "commit": "9fee02bcf96cddc8a6c30a9abed0c66ce4a0984d",
     "errors": 0,
-    "warnings": 6,
+    "warnings": 9,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -506,7 +506,7 @@
   "funcprofiler": {
     "full_name": "nf-core/funcprofiler",
     "html_url": "https://github.com/nf-core/funcprofiler",
-    "commit": "66de1db072f9f4aacb494dc3bc0252ff1edc3bef",
+    "commit": "d3ec186660b74e44e91960ea5bc3651683db52db",
     "errors": 0,
     "warnings": 28,
     "parse_error": false,
@@ -734,7 +734,7 @@
   "lsmquant": {
     "full_name": "nf-core/lsmquant",
     "html_url": "https://github.com/nf-core/lsmquant",
-    "commit": "b9cc44fbed87dac43f85fafd16abc10604697d64",
+    "commit": "599df9c144fe45c31c2015dc8535a4c82fb850bd",
     "errors": 0,
     "warnings": 23,
     "parse_error": false,
@@ -746,7 +746,7 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "a96086479c09055e4065f5975e9467f6f16b47d4",
+    "commit": "56a0eb388262251ffa1fd9c8df0dfb9b34886ba6",
     "errors": 0,
     "warnings": 25,
     "parse_error": false,
@@ -1226,7 +1226,7 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "d06ea2a253bb88f435d0c9d05e5b8eb42f96bc67",
+    "commit": "a942e2311f05534ddea21eaaba4ef979ab5f7882",
     "errors": 0,
     "warnings": 19,
     "parse_error": false,
@@ -1274,7 +1274,7 @@
   "reportho": {
     "full_name": "nf-core/reportho",
     "html_url": "https://github.com/nf-core/reportho",
-    "commit": "2d57a40aeeae7766e79102dfb5c4961775c40c96",
+    "commit": "c321b03cbe42d6b6f1bdf1e5bcfbd20b19d21ec8",
     "errors": 0,
     "warnings": 13,
     "parse_error": false,
@@ -1358,7 +1358,7 @@
   "rnavar": {
     "full_name": "nf-core/rnavar",
     "html_url": "https://github.com/nf-core/rnavar",
-    "commit": "8a103c880430a0a223eefe36ee75c05abd92ba6a",
+    "commit": "a4176981bed0abc75be93ba2930ab2fbb67262e4",
     "errors": 0,
     "warnings": 3,
     "parse_error": false,
@@ -1382,7 +1382,7 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "e219d7bcd6357ea811997b33222fe00b7ddea0b5",
+    "commit": "bd02bf289d768167a399807fcfc15e5e2582f4b9",
     "errors": 0,
     "warnings": 577,
     "parse_error": false,
