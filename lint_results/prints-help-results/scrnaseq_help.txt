@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.06.0-edge
 
-Launching `./main.nf` [loving_poincare] revision: 2b446ef73b
+Launching `./main.nf` [friendly_dijkstra] revision: b292f28dc3
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -53,6 +53,8 @@ Reference genome options
   --fasta                         [string]  Path to FASTA genome file. 
   --transcript_fasta              [string]  A cDNA FASTA file 
   --gtf                           [string]  Reference GTF annotation file 
+  --gff                           [string]  Reference GFF annotation file. Can be used as an alternative to the GTF file. If both are provided, 
+the GTF file will be used.  
   --save_reference                [boolean] Specify this parameter to save the indices created (STAR, Kallisto, Simpleaf) to the results. 
  
   --save_align_intermeds          [boolean] Specify this parameter to save the intermediate alignment files (STAR, CellRanger) to the results. 

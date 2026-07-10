@@ -218,7 +218,7 @@
   "createtaxdb": {
     "full_name": "nf-core/createtaxdb",
     "html_url": "https://github.com/nf-core/createtaxdb",
-    "commit": "6775a358555e292bc2d9755c31c3c568d20f1bfd",
+    "commit": "336763b0e0567be070b17a92ff71286d5574e2db",
     "errors": 0,
     "warnings": 12,
     "parse_error": false,
@@ -506,7 +506,7 @@
   "funcprofiler": {
     "full_name": "nf-core/funcprofiler",
     "html_url": "https://github.com/nf-core/funcprofiler",
-    "commit": "d3ec186660b74e44e91960ea5bc3651683db52db",
+    "commit": "a72f04ec4edfcfa8886de5a8dff4bd0d873191f3",
     "errors": 0,
     "warnings": 28,
     "parse_error": false,
@@ -566,14 +566,14 @@
   "genomeqc": {
     "full_name": "nf-core/genomeqc",
     "html_url": "https://github.com/nf-core/genomeqc",
-    "commit": "de41568519ec43acfd3cb3dfe03444607b6b5b82",
+    "commit": "94221e2c9f8daf62bcad684e6ec113b72784b4bd",
     "errors": 0,
-    "warnings": 14,
+    "warnings": 24,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 37
+    "publishdir_count": 47
   },
   "genomeskim": {
     "full_name": "nf-core/genomeskim",
@@ -602,11 +602,11 @@
   "gwas": {
     "full_name": "nf-core/gwas",
     "html_url": "https://github.com/nf-core/gwas",
-    "commit": "2e6660aa8db59c674df4a70a25449cf2aedc630c",
+    "commit": "2d8342d044f5570ad93241d342490bba8f4a4c7e",
     "errors": 0,
-    "warnings": 12,
+    "warnings": 4,
     "parse_error": false,
-    "prints_help": false,
+    "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
     "publishdir_count": 3
@@ -746,7 +746,7 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "56a0eb388262251ffa1fd9c8df0dfb9b34886ba6",
+    "commit": "57b6a549559435818a6ac1eabc4a7c996db3c381",
     "errors": 0,
     "warnings": 25,
     "parse_error": false,
@@ -782,11 +782,11 @@
   "mcmicro": {
     "full_name": "nf-core/mcmicro",
     "html_url": "https://github.com/nf-core/mcmicro",
-    "commit": "c0619249ad9b2fe4a3d2d3dfd1e3bf04b3c26e83",
-    "errors": 9,
-    "warnings": 80,
+    "commit": "67793e133a9ffc12887325d2f3583350fa81f9d2",
+    "errors": 0,
+    "warnings": 74,
     "parse_error": false,
-    "prints_help": null,
+    "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
     "publishdir_count": 10
@@ -974,9 +974,9 @@
   "nascent": {
     "full_name": "nf-core/nascent",
     "html_url": "https://github.com/nf-core/nascent",
-    "commit": "3d5462861e331eba7c090b1e81dd107182228a74",
-    "errors": 38,
-    "warnings": 167,
+    "commit": "c3ca52ddec4489f53404df2a460658c51be2c769",
+    "errors": 5,
+    "warnings": 158,
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
@@ -1130,9 +1130,9 @@
   "pixelator": {
     "full_name": "nf-core/pixelator",
     "html_url": "https://github.com/nf-core/pixelator",
-    "commit": "a2470e2c5fd51970ca5735fe0ce8d03a1c80c4e3",
+    "commit": "d1f9a45b9ae4b5480f1eed18020df566930eb0c4",
     "errors": 0,
-    "warnings": 21,
+    "warnings": 23,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -1226,7 +1226,7 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "a942e2311f05534ddea21eaaba4ef979ab5f7882",
+    "commit": "645e3318b30574874e67df311d7cf22b16cb6856",
     "errors": 0,
     "warnings": 19,
     "parse_error": false,
@@ -1418,19 +1418,19 @@
   "scrnaseq": {
     "full_name": "nf-core/scrnaseq",
     "html_url": "https://github.com/nf-core/scrnaseq",
-    "commit": "e57766bb985b61173614f98eef25d452c8451568",
+    "commit": "40f076f916e71e9b94b1335ced72bda1aca2aab3",
     "errors": 0,
     "warnings": 6,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 25
+    "publishdir_count": 26
   },
   "seqinspector": {
     "full_name": "nf-core/seqinspector",
     "html_url": "https://github.com/nf-core/seqinspector",
-    "commit": "14b8b5ce857b63ea337a929d0c09d273e2b7a046",
+    "commit": "abf4dc516602eacf6b1d599712a50d6f82235d92",
     "errors": 0,
     "warnings": 3,
     "parse_error": false,

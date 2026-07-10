@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "587ef528a2f42a2415ad1b5f760ea93ab1983603",
+  "_repo_commit": "da4b4aa519d032c6689cb7d27c6dda496f657989",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -1400,6 +1400,12 @@
   },
   "busco_phylogenomics": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/busco/phylogenomics",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "busco_plot": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/busco/plot",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -3576,6 +3582,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "fmhfunprofiler": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fmhfunprofiler",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "foldcomp_compress": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/foldcomp/compress",
     "errors": 0,
@@ -4280,6 +4292,12 @@
   },
   "gcta_calculateldscores": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gcta/calculateldscores",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "gcta_fastgwa": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gcta/fastgwa",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -4994,6 +5012,12 @@
   },
   "hiphase": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/hiphase",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "hipstr": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/hipstr",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -8028,6 +8052,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "plink_bmerge": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plink/bmerge",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "plink_epistasis": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plink/epistasis",
     "errors": 0,
@@ -8696,6 +8726,12 @@
   },
   "regenie_runl0": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/regenie/runl0",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "regenie_runl1": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/regenie/runl1",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -9410,6 +9446,12 @@
   },
   "savana_run": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/savana/run",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "savana_to": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/savana/to",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -10520,6 +10562,12 @@
   },
   "summarizedexperiment_summarizedexperiment": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/summarizedexperiment/summarizedexperiment",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "suppa_generateevents": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/suppa/generateevents",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

@@ -1,23 +1,37 @@
 # Nextflow lint results
 
-- Generated: 2026-06-23T00:43:22.586339454Z
-- Nextflow version: 26.05.0-edge
-- Summary: 21 warnings
+- Generated: 2026-07-10T00:36:29.117872056Z
+- Nextflow version: 26.06.0-edge
+- Summary: 23 warnings
 
 ## :warning: Warnings
 
-- Warning: `conf/modules.pna.config:171:89`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.pna.config:180:93`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-                  saveAs: { params.save_pna_sample_calling_pixelfile || params.save_all ? it : null },
-                                                                                          ^^
+                  saveAs: { (params.save_pna_sample_calling_pixelfile || params.save_all) && !it.contains('undetermined') ? it : null },
+                                                                                              ^^
   ```
 
-- Warning: `conf/modules.pna.config:182:65`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.pna.config:180:123`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  saveAs: { (params.save_pna_sample_calling_pixelfile || params.save_all) && !it.contains('undetermined') ? it : null },
+                                                                                                                            ^^
+  ```
+
+- Warning: `conf/modules.pna.config:191:65`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   saveAs: { params.save_json || params.save_all ? it : null },
                                                                   ^^
+  ```
+
+- Warning: `modules/local/experiment_summary/main.nf:25:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      def stageArray = result_stages.collect { "\"${it}\"" }.join(' ')
+                                                    ^^
   ```
 
 - Warning: `subworkflows/local/pna/v1/main.nf:93:5`: Variable was declared but not used

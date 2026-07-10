@@ -1,10 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.05.0-edge
+ N E X T F L O W   ~  version 26.06.0-edge
 
 Downloading plugin nf-slack@0.5.1
-Launching `./main.nf` [suspicious_varahamihira] revision: c6b45c301b
+Launching `./main.nf` [agitated_cori] revision: c6b45c301b
 
 WARN: Unrecognized config option 'slack.enabled'
 WARN: Unrecognized config option 'slack.webhook.url'
@@ -94,7 +94,7 @@ automatic size filtering based on the data. [default: 8000]
 Sample calling options
   --save_pna_sample_calling_pixelfile                       [boolean] Save the PXL dataset after the sample calling stage. 
   --pna_sample_calling_save_undetermined                    [boolean] Save components that could not be confidently assigned to any sample to a separate pxl file. 
- 
+[default: true]  
   --pna_sample_calling_remove_incompatible                  [boolean] Remove antibodies that are incompatible with their component's called sample. [default: true] 
  
   --pna_sample_calling_enrichment_threshold                 [number]  Enrichment threshold for sample calling. [default: 10.0] 

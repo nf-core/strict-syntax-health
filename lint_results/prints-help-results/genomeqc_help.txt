@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.06.0-edge
 
-Launching `./main.nf` [jolly_almeida] revision: f90c9eb6a8
+Launching `./main.nf` [grave_roentgen] revision: f90c9eb6a8
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -59,6 +59,7 @@ ortholog-containing sequences.
   --save_filtered_seqs          [boolean]         Publish filtered fasta genome files from seqkit. 
   --skip_plots_genome_anno      [string]          Skip these stat plots in the genome and annotation tree plot. [default: nseqs_plot] 
   --skip_plots_genome_only      [string]          Skip these stat plots in the genome only tree plot. [default: nseqs_plot] 
+  --skip_busco                  [boolean]         Skip BUSCO. If run on genome only, it will also skip orthofinder. 
   --val_tool                    [string]          Tool for gxf validation.  (accepted: agat, gffread) [default: agat] 
   --ortho_version               [string]          OrthoFinder major version to run.  (accepted: v2, v3) [default: v3] 
   --tree_scale                  [integer]         Modifies scale of the tree plot in the tree summary, default value is '0.0005'. Useful if tree tips 
@@ -66,6 +67,30 @@ overlap with the concatenated plots. Very sensitive, increase/decrease by two-fo
   --repeat                      [string]          DNA string for tidk motif search 
   --ramdisk                     [string]          Path to RAM-backed tmpfs or ramfs location to store FCS-GX database 
   --container_engine            [string]          Container engine to run shint app [default: docker] 
+
+TE annotation options
+  --te                          [string]  TE annotation method to run. Use 'hite' for HiTE or 'repeatmasker' for the full RepeatMasker 
+pipeline. Omit to skip TE annotation.  (accepted: hite, repeatmasker)  
+  --is_plant                    [boolean] Set to true for plant genomes (passed to HiTE). 
+  --curated_lib                 [string]  Path to a curated repeat library for HiTE. 
+  --famdb_library               [string]  Path to pre-staged famdb h5 partition file(s). Accepts a single file path or a glob pattern (e.g. 
+'/path/FamDB*'). Alternative to downloading via RM_db.  
+  --famdb_lineage               [string]  Taxonomic lineage to filter repeat families from famdb (e.g. 'hymenoptera'). Omit to export all 
+families.  
+  --run_repeatmodeler           [boolean] Run de novo repeat discovery with RepeatModeler before masking. Disabled by default — RepeatModeler 
+typically requires 24 CPUs and 24–48 h per genome. When false, only the curated famdb library is 
+used.  
+  --repeatmasker_speed          [string]  RepeatMasker sensitivity/speed mode. 'default' is most sensitive; 'q' (quick) is ~5x faster; 'qq' 
+(rush) is fastest with lowest sensitivity.  (accepted: default, q, qq) [default: qq]  
+  --RM_download_db              [boolean] Download h5 partition files from the URLs specified in RM_db. [default: true] 
+  --RM_db                       [array]   List of URLs to DFAM h5 partition files to download. 
+  --te_clusterer                [string]  Clustering tool used to dereplicate the repeat library before RepeatMasker. 'mmseqs' (default) uses 
+MMseqs2 easy-cluster; 'linclust' uses MMseqs2 easy-linclust (linear time, less sensitive); 'cdhit' 
+uses CD-HIT-EST.  (accepted: mmseqs, linclust, cdhit) [default: linclust]  
+  --te_cluster_identity         [number]  Minimum sequence identity threshold (0.0–1.0) for repeat library clustering. Passed as -c to 
+CD-HIT-EST and --min-seq-id to MMseqs2. [default: 0.8]  
+  --te_cluster_coverage         [number]  Minimum alignment coverage threshold (0.0–1.0) for repeat library clustering. Passed as -aS to 
+CD-HIT-EST and -c (with --cov-mode 1) to MMseqs2. [default: 0.8]  
  !! Hiding 19 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
 
