@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-07-10T00:36:00.990555158Z
+- Generated: 2026-07-11T00:28:38.010063806Z
 - Nextflow version: 26.06.0-edge
-- Summary: 74 warnings
+- Summary: 76 warnings
 
 ## :warning: Warnings
 
@@ -510,14 +510,28 @@
                      ^^
   ```
 
-- Warning: `workflows/mcmicro.nf:184:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/mcmicro.nf:158:15`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+              ? Channel.fromPath(params.cellpose_model, checkIfExists: true)
+                ^^^^^^^
+  ```
+
+- Warning: `workflows/mcmicro.nf:159:15`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+              : Channel.value([])
+                ^^^^^^^
+  ```
+
+- Warning: `workflows/mcmicro.nf:190:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .cross(ch_masks) { it[0]['id'] }
                              ^^
   ```
 
-- Warning: `workflows/mcmicro.nf:256:32`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/mcmicro.nf:257:32`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_has_no_errors.map{ if (!it[1]) error "QC Error found" }

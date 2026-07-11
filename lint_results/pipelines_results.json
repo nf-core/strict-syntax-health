@@ -566,7 +566,7 @@
   "genomeqc": {
     "full_name": "nf-core/genomeqc",
     "html_url": "https://github.com/nf-core/genomeqc",
-    "commit": "94221e2c9f8daf62bcad684e6ec113b72784b4bd",
+    "commit": "a62d2e3de7ce945c70896cfac1df14e01285b625",
     "errors": 0,
     "warnings": 24,
     "parse_error": false,
@@ -602,9 +602,9 @@
   "gwas": {
     "full_name": "nf-core/gwas",
     "html_url": "https://github.com/nf-core/gwas",
-    "commit": "2d8342d044f5570ad93241d342490bba8f4a4c7e",
+    "commit": "fd38163f53cc9e11a566f85de2a147d13090eddb",
     "errors": 0,
-    "warnings": 4,
+    "warnings": 5,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -746,7 +746,7 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "57b6a549559435818a6ac1eabc4a7c996db3c381",
+    "commit": "bed815ef56586c08695bf94943d9ad6f1dedd387",
     "errors": 0,
     "warnings": 25,
     "parse_error": false,
@@ -782,9 +782,9 @@
   "mcmicro": {
     "full_name": "nf-core/mcmicro",
     "html_url": "https://github.com/nf-core/mcmicro",
-    "commit": "67793e133a9ffc12887325d2f3583350fa81f9d2",
+    "commit": "54a9c8920c839199829c20b3b556cd7fc6102c9c",
     "errors": 0,
-    "warnings": 74,
+    "warnings": 76,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -1274,9 +1274,9 @@
   "reportho": {
     "full_name": "nf-core/reportho",
     "html_url": "https://github.com/nf-core/reportho",
-    "commit": "c321b03cbe42d6b6f1bdf1e5bcfbd20b19d21ec8",
+    "commit": "1108a92b8c71cab741087daf17cc6752b27790b1",
     "errors": 0,
-    "warnings": 13,
+    "warnings": 3,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -1346,7 +1346,7 @@
   "rnasplice": {
     "full_name": "nf-core/rnasplice",
     "html_url": "https://github.com/nf-core/rnasplice",
-    "commit": "01ceff9644b0fa29b9e514f973c475218a5de553",
+    "commit": "724de2672d168036b70868b5fa63ecca617278ba",
     "errors": 0,
     "warnings": 29,
     "parse_error": false,
@@ -1430,7 +1430,7 @@
   "seqinspector": {
     "full_name": "nf-core/seqinspector",
     "html_url": "https://github.com/nf-core/seqinspector",
-    "commit": "abf4dc516602eacf6b1d599712a50d6f82235d92",
+    "commit": "e7ae4eb37b24a7a91c4ff79db7aeb05a2d645a64",
     "errors": 0,
     "warnings": 3,
     "parse_error": false,

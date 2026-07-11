@@ -1,7 +1,13 @@
 {
-  "_repo_commit": "da4b4aa519d032c6689cb7d27c6dda496f657989",
+  "_repo_commit": "56d93f9fe4e0fe043a40991efa38cf5429506123",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "aardvark_merge": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/merge",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -4470,6 +4476,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "genometester4_glistmaker": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/genometester4/glistmaker",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "genotyphi_parse": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/genotyphi/parse",
     "errors": 0,
@@ -5852,6 +5864,18 @@
   },
   "last_train": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/last/train",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "ldak_kvikstep1": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ldak/kvikstep1",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "ldak_thinpredictors": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ldak/thinpredictors",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
