@@ -1418,7 +1418,7 @@
   "scrnaseq": {
     "full_name": "nf-core/scrnaseq",
     "html_url": "https://github.com/nf-core/scrnaseq",
-    "commit": "40f076f916e71e9b94b1335ced72bda1aca2aab3",
+    "commit": "96dadeb2088a496970d68f0633e490f677c3dc7f",
     "errors": 0,
     "warnings": 6,
     "parse_error": false,
