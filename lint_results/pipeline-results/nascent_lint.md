@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-07-10T00:36:20.868864430Z
+- Generated: 2026-07-13T00:29:01.978814820Z
 - Nextflow version: 26.06.0-edge
-- Summary: 5 errors, 158 warnings
+- Summary: 5 errors, 161 warnings
 
 ## :x: Errors
 
@@ -43,21 +43,21 @@
 
 ## :warning: Warnings
 
-- Warning: `conf/modules.config:136:29`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:146:29`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   def parts = it.trim().split(/\s+/, 2)
                               ^^
   ```
 
-- Warning: `conf/modules.config:140:29`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:150:29`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   def parts = it.trim().split(/\s+/, 2)
                               ^^
   ```
 
-- Warning: `main.nf:75:5`: Emit name should be omitted when there is only one emit
+- Warning: `main.nf:77:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
       multiqc_report = NASCENT.out.multiqc_report // channel: /path/to/multiqc_report.html
@@ -267,6 +267,13 @@
                     ^^^^^^^
   ```
 
+- Warning: `subworkflows/local/align_minibwa/main.nf:16:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+      ch_versions = Channel.empty()
+                    ^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/coverage_graphs/main.nf:13:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
@@ -323,126 +330,140 @@
                     ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome.nf:36:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/prepare_genome.nf:38:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       hisat2_index
       ^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome.nf:40:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome.nf:42:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_versions = Channel.empty()
                     ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome.nf:46:60`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/prepare_genome.nf:48:60`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_fasta = GUNZIP_FASTA([[:], fasta]).gunzip.map { it[1] }
                                                              ^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome.nf:50:20`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome.nf:52:20`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_fasta = Channel.value(file(fasta))
                      ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome.nf:59:62`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/prepare_genome.nf:61:62`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   ch_gtf = GUNZIP_GTF([[:], gtf]).gunzip.map { it[1] }
                                                                ^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome.nf:63:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome.nf:65:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
                   ch_gtf = Channel.value(file(gtf))
                            ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome.nf:74:58`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/prepare_genome.nf:76:58`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_gtf = GFFREAD(ch_gff, ch_fasta).gtf.map { it[1] }
                                                            ^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome.nf:84:73`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/prepare_genome.nf:86:73`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_gene_bed = GUNZIP_GENE_BED([[:], gene_bed]).gunzip.map { it[1] }
                                                                           ^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome.nf:99:47`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/prepare_genome.nf:101:47`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       CUSTOM_GETCHROMSIZES(ch_fasta.map { [[:], it] })
                                                 ^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome.nf:100:49`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/prepare_genome.nf:102:49`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_fai = CUSTOM_GETCHROMSIZES.out.fai.map { it[1] }
                                                   ^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome.nf:101:59`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/prepare_genome.nf:103:59`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_chrom_sizes = CUSTOM_GETCHROMSIZES.out.sizes.map { it[1] }
                                                             ^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome.nf:107:20`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome.nf:109:20`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_bwa_index = Channel.empty()
                      ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome.nf:108:18`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome.nf:110:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+      ch_minibwa_index = Channel.empty()
+                         ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/prepare_genome.nf:111:18`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_dragmap = Channel.empty()
                    ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome.nf:109:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_genome.nf:112:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_bowtie2_index = Channel.empty()
                          ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome.nf:123:59`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/prepare_genome.nf:126:59`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_bwa_index = BWA_INDEX(ch_fasta.map { [[:], it] }).index
                                                             ^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome.nf:139:63`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/prepare_genome.nf:142:63`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_bwa_index = BWAMEM2_INDEX(ch_fasta.map { [[:], it] }).index
                                                                 ^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome.nf:155:65`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/prepare_genome.nf:157:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              ch_minibwa_index = MINIBWA_INDEX(ch_fasta.map { [[:], it] }).index
+                                                                    ^^
+  ```
+
+- Warning: `subworkflows/local/prepare_genome.nf:173:65`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_dragmap = DRAGMAP_HASHTABLE(ch_fasta.map { [[:], it] }).hashmap
                                                                   ^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome.nf:171:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/prepare_genome.nf:189:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_bowtie2_index = BOWTIE2_BUILD(ch_fasta.map { [[:], it] }).index
@@ -834,315 +855,315 @@
       ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/nascent.nf:63:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/nascent.nf:65:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_versions = Channel.empty()
                     ^^^^^^^
   ```
 
-- Warning: `workflows/nascent.nf:64:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/nascent.nf:66:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_multiqc_files = Channel.empty()
                          ^^^^^^^
   ```
 
-- Warning: `workflows/nascent.nf:95:70`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/nascent.nf:98:70`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(FASTQC.out.zip.collect { it[1] })
                                                                        ^^
   ```
 
-- Warning: `workflows/nascent.nf:100:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/nascent.nf:103:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_reads = Channel.empty()
                  ^^^^^^^
   ```
 
-- Warning: `workflows/nascent.nf:113:21`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/nascent.nf:116:21`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_genome_bam = Channel.empty()
                       ^^^^^^^
   ```
 
-- Warning: `workflows/nascent.nf:114:21`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/nascent.nf:117:21`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_genome_bai = Channel.empty()
                       ^^^^^^^
   ```
 
-- Warning: `workflows/nascent.nf:115:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/nascent.nf:118:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_samtools_stats = Channel.empty()
                           ^^^^^^^
   ```
 
-- Warning: `workflows/nascent.nf:116:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/nascent.nf:119:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_samtools_flagstat = Channel.empty()
                              ^^^^^^^
   ```
 
-- Warning: `workflows/nascent.nf:117:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/nascent.nf:120:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_samtools_idxstats = Channel.empty()
                              ^^^^^^^
   ```
 
-- Warning: `workflows/nascent.nf:118:5`: Variable was declared but not used
+- Warning: `workflows/nascent.nf:121:5`: Variable was declared but not used
 
   ```nextflow
       ch_star_multiqc = Channel.empty()
       ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/nascent.nf:118:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/nascent.nf:121:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_star_multiqc = Channel.empty()
                         ^^^^^^^
   ```
 
-- Warning: `workflows/nascent.nf:119:5`: Variable was declared but not used
+- Warning: `workflows/nascent.nf:122:5`: Variable was declared but not used
 
   ```nextflow
       ch_aligner_pca_multiqc = Channel.empty()
       ^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/nascent.nf:119:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/nascent.nf:122:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_aligner_pca_multiqc = Channel.empty()
                                ^^^^^^^
   ```
 
-- Warning: `workflows/nascent.nf:120:5`: Variable was declared but not used
+- Warning: `workflows/nascent.nf:123:5`: Variable was declared but not used
 
   ```nextflow
       ch_aligner_clustering_multiqc = Channel.empty()
       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/nascent.nf:120:37`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/nascent.nf:123:37`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_aligner_clustering_multiqc = Channel.empty()
                                       ^^^^^^^
   ```
 
-- Warning: `workflows/nascent.nf:121:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/nascent.nf:124:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_bowtie2_multiqc = Channel.empty()
                            ^^^^^^^
   ```
 
-- Warning: `workflows/nascent.nf:206:9`: Variable was declared but not used
+- Warning: `workflows/nascent.nf:224:9`: Variable was declared but not used
 
   ```nextflow
           ch_HISAT2_multiqc = FASTQ_ALIGN_HISAT2.out.summary
           ^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/nascent.nf:213:52`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/nascent.nf:231:52`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   PREPARE_GENOME.out.gtf.map { [[:], it] }
                                                      ^^
   ```
 
-- Warning: `workflows/nascent.nf:228:48`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/nascent.nf:246:48`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               PREPARE_GENOME.out.gtf.map { [[:], it] },
                                                  ^^
   ```
 
-- Warning: `workflows/nascent.nf:233:13`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/nascent.nf:251:13`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               Channel.of([[:], []])
               ^^^^^^^
   ```
 
-- Warning: `workflows/nascent.nf:237:9`: Variable was declared but not used
+- Warning: `workflows/nascent.nf:255:9`: Variable was declared but not used
 
   ```nextflow
           ch_transcriptome_bam = FASTQ_ALIGN_STAR.out.bam_transcript
           ^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/nascent.nf:239:86`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/nascent.nf:257:86`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(FASTQ_ALIGN_STAR.out.stats.collect { it[1] })
                                                                                        ^^
   ```
 
-- Warning: `workflows/nascent.nf:240:89`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/nascent.nf:258:89`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(FASTQ_ALIGN_STAR.out.flagstat.collect { it[1] })
                                                                                           ^^
   ```
 
-- Warning: `workflows/nascent.nf:241:89`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/nascent.nf:259:89`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(FASTQ_ALIGN_STAR.out.idxstats.collect { it[1] })
                                                                                           ^^
   ```
 
-- Warning: `workflows/nascent.nf:242:71`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/nascent.nf:260:71`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(ch_star_log.collect { it[1] })
                                                                         ^^
   ```
 
-- Warning: `workflows/nascent.nf:280:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/nascent.nf:298:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def fmeta = meta.findAll { it.key != 'read_group' }
                                          ^^
   ```
 
-- Warning: `workflows/nascent.nf:291:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/nascent.nf:309:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def fmeta = meta.findAll { it.key != 'read_group' }
                                          ^^
   ```
 
-- Warning: `workflows/nascent.nf:320:25`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/nascent.nf:338:25`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ).saf.map { it[1] }
                           ^^
   ```
 
-- Warning: `workflows/nascent.nf:352:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/nascent.nf:370:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_params))
                             ^^^^^^^
   ```
 
-- Warning: `workflows/nascent.nf:359:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/nascent.nf:377:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_methods_description = Channel.value(
                                ^^^^^^^
   ```
 
-- Warning: `workflows/nascent.nf:371:70`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/nascent.nf:389:70`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(FASTQC.out.zip.collect { it[1] }.ifEmpty([]))
                                                                        ^^
   ```
 
-- Warning: `workflows/nascent.nf:372:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/nascent.nf:390:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(ch_bowtie2_multiqc.collect { it[1] }.ifEmpty([]))
                                                                            ^^
   ```
 
-- Warning: `workflows/nascent.nf:373:73`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/nascent.nf:391:73`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(ch_samtools_stats.collect { it[1] }.ifEmpty([]))
                                                                           ^^
   ```
 
-- Warning: `workflows/nascent.nf:374:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/nascent.nf:392:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(ch_samtools_flagstat.collect { it[1] }.ifEmpty([]))
                                                                              ^^
   ```
 
-- Warning: `workflows/nascent.nf:375:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/nascent.nf:393:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(ch_samtools_idxstats.collect { it[1] }.ifEmpty([]))
                                                                              ^^
   ```
 
-- Warning: `workflows/nascent.nf:376:89`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/nascent.nf:394:89`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(QUALITY_CONTROL.out.preseq_ccurve.collect { it[1] }.ifEmpty([]))
                                                                                           ^^
   ```
 
-- Warning: `workflows/nascent.nf:377:91`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/nascent.nf:395:91`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(QUALITY_CONTROL.out.preseq_lcextrap.collect { it[1] }.ifEmpty([]))
                                                                                             ^^
   ```
 
-- Warning: `workflows/nascent.nf:378:96`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/nascent.nf:396:96`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(QUALITY_CONTROL.out.readdistribution_txt.collect { it[1] }.ifEmpty([]))
                                                                                                  ^^
   ```
 
-- Warning: `workflows/nascent.nf:379:99`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/nascent.nf:397:99`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(QUALITY_CONTROL.out.readduplication_seq_xls.collect { it[1] }.ifEmpty([]))
                                                                                                     ^^
   ```
 
-- Warning: `workflows/nascent.nf:380:99`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/nascent.nf:398:99`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(QUALITY_CONTROL.out.readduplication_pos_xls.collect { it[1] }.ifEmpty([]))
                                                                                                     ^^
   ```
 
-- Warning: `workflows/nascent.nf:381:95`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/nascent.nf:399:95`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(QUALITY_CONTROL.out.inferexperiment_txt.collect { it[1] }.ifEmpty([]))
                                                                                                 ^^
   ```
 
-- Warning: `workflows/nascent.nf:382:73`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/nascent.nf:400:73`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(ch_grohmm_multiqc.collect { it[1] }.ifEmpty([]))
                                                                           ^^
   ```
 
-- Warning: `workflows/nascent.nf:383:72`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/nascent.nf:401:72`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(ch_homer_multiqc.collect { it[1] }.ifEmpty([]))
                                                                          ^^
   ```
 
-- Warning: `workflows/nascent.nf:384:99`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/nascent.nf:402:99`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(SUBREAD_FEATURECOUNTS_PREDICTED.out.summary.collect { it[1] }.ifEmpty([]))
                                                                                                     ^^
   ```
 
-- Warning: `workflows/nascent.nf:385:94`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/nascent.nf:403:94`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(SUBREAD_FEATURECOUNTS_GENE.out.summary.collect { it[1] }.ifEmpty([]))

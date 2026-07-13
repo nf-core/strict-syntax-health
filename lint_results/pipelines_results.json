@@ -974,14 +974,14 @@
   "nascent": {
     "full_name": "nf-core/nascent",
     "html_url": "https://github.com/nf-core/nascent",
-    "commit": "c3ca52ddec4489f53404df2a460658c51be2c769",
+    "commit": "f993c385b5a24533c1b9da2bc27ad03eeb081a1d",
     "errors": 5,
-    "warnings": 158,
+    "warnings": 161,
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 41
+    "publishdir_count": 42
   },
   "ncrnannotator": {
     "full_name": "nf-core/ncrnannotator",
@@ -1418,7 +1418,7 @@
   "scrnaseq": {
     "full_name": "nf-core/scrnaseq",
     "html_url": "https://github.com/nf-core/scrnaseq",
-    "commit": "96dadeb2088a496970d68f0633e490f677c3dc7f",
+    "commit": "500a69b7264c9238ef2fe2814eaf2afbb0f295e2",
     "errors": 0,
     "warnings": 6,
     "parse_error": false,

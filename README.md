@@ -11,12 +11,12 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 > See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline.
 > **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**
 
-- **Last updated:** 2026-07-12 00:29:46 UTC
+- **Last updated:** 2026-07-13 00:30:41 UTC
 - **Nextflow version:** 26.06.0-edge
 
 ## Pipelines
 
-- **Total:** 0 parse errors, 1455 errors, 7487 warnings across 139 pipelines
+- **Total:** 0 parse errors, 1455 errors, 7490 warnings across 139 pipelines
 - **Zero errors:** 85 pipelines (61.2%)
 
 |                    Errors                    |                     Warnings                     |
@@ -74,7 +74,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :x: [kmermaid](https://github.com/nf-core/kmermaid)                                            |     No      |      6 |       21 |      -      |         [View](lint_results/pipeline-results/kmermaid_lint.md)          |                                    -                                     |
 | :x: [mitodetect](https://github.com/nf-core/mitodetect)                                        |     No      |      6 |       21 |      -      |        [View](lint_results/pipeline-results/mitodetect_lint.md)         |                                    -                                     |
 | :x: [troughgraph](https://github.com/nf-core/troughgraph)                                      |     No      |      6 |       21 |      -      |        [View](lint_results/pipeline-results/troughgraph_lint.md)        |                                    -                                     |
-| :x: [nascent](https://github.com/nf-core/nascent)                                              |     No      |      5 |      158 |      -      |          [View](lint_results/pipeline-results/nascent_lint.md)          |                                    -                                     |
+| :x: [nascent](https://github.com/nf-core/nascent)                                              |     No      |      5 |      161 |      -      |          [View](lint_results/pipeline-results/nascent_lint.md)          |                                    -                                     |
 | :x: [circdna](https://github.com/nf-core/circdna)                                              |     No      |      4 |       62 |      -      |          [View](lint_results/pipeline-results/circdna_lint.md)          |                                    -                                     |
 | :x: [methylarray](https://github.com/nf-core/methylarray)                                      |     No      |      4 |       24 |      -      |        [View](lint_results/pipeline-results/methylarray_lint.md)        |                                    -                                     |
 | :x: [rnadnavar](https://github.com/nf-core/rnadnavar)                                          |     No      |      3 |      382 |      -      |         [View](lint_results/pipeline-results/rnadnavar_lint.md)         |                                    -                                     |
@@ -275,7 +275,7 @@ The status emoji next to each pipeline shows its migration state: :white_check_m
 | :x: [multiplesequencealign](https://github.com/nf-core/multiplesequencealign)         |     No      |   Yes (17)   |   [View](lint_results/workflow-outputs-results/multiplesequencealign_outputs.md)   |
 | :x: [nanoseq](https://github.com/nf-core/nanoseq)                                     |     No      |   Yes (3)    |          [View](lint_results/workflow-outputs-results/nanoseq_outputs.md)          |
 | :x: [nanostring](https://github.com/nf-core/nanostring)                               |     No      |   Yes (7)    |        [View](lint_results/workflow-outputs-results/nanostring_outputs.md)         |
-| :x: [nascent](https://github.com/nf-core/nascent)                                     |     No      |   Yes (41)   |          [View](lint_results/workflow-outputs-results/nascent_outputs.md)          |
+| :x: [nascent](https://github.com/nf-core/nascent)                                     |     No      |   Yes (42)   |          [View](lint_results/workflow-outputs-results/nascent_outputs.md)          |
 | :x: [ncrnannotator](https://github.com/nf-core/ncrnannotator)                         |     No      |   Yes (6)    |       [View](lint_results/workflow-outputs-results/ncrnannotator_outputs.md)       |
 | :x: [omicsgenetraitassociation](https://github.com/nf-core/omicsgenetraitassociation) |     No      |   Yes (11)   | [View](lint_results/workflow-outputs-results/omicsgenetraitassociation_outputs.md) |
 | :x: [oncoanalyser](https://github.com/nf-core/oncoanalyser)                           |     No      |   Yes (35)   |       [View](lint_results/workflow-outputs-results/oncoanalyser_outputs.md)        |
@@ -331,8 +331,8 @@ The status emoji next to each pipeline shows its migration state: :white_check_m
 
 ## Modules
 
-- **Total:** 0 parse errors, 0 errors, 20 warnings across 1974 modules
-- **Zero errors:** 1974 modules (100.0%)
+- **Total:** 0 parse errors, 0 errors, 20 warnings across 1975 modules
+- **Zero errors:** 1975 modules (100.0%)
 
 |                   Errors                   |                    Warnings                    |
 | :----------------------------------------: | :--------------------------------------------: |
@@ -344,7 +344,7 @@ The status emoji next to each pipeline shows its migration state: :white_check_m
 | Module | Parse Error | Errors | Warnings | Lint Output |
 | ------ | :---------: | -----: | -------: | :---------: |
 
-_Modules with zero errors are not shown above (1974 modules). They may still have warnings. See the [modules results directory](lint_results/module-results/) for all lint outputs._
+_Modules with zero errors are not shown above (1975 modules). They may still have warnings. See the [modules results directory](lint_results/module-results/) for all lint outputs._
 
 </details>
 
