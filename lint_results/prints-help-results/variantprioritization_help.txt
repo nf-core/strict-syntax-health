@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.04.3
+ N E X T F L O W   ~  version 26.06.0-edge
 
-Launching `./main.nf` [sleepy_gutenberg] revision: ebe06bd3f1
+Launching `./main.nf` [spontaneous_albattani] revision: ebe06bd3f1
 
 
 ------------------------------------------------------
@@ -57,8 +57,6 @@ asj, nfe, fin, global) [default: nfe]
 PCGR options
   --vcf2maf                         [boolean] Generate a MAF file for the input VCF using vcf2maf. 
   --assay                           [string]  Type of DNA sequencing assay performed for input data.  (accepted: WGS, WES, TARGETED) 
-  --tumor_site                      [integer] Primary tumor type/site code used for site-specific interpretation. [default: 0] 
-  --tumor_ploidy                    [string]  Estimated tumor ploidy. 
   --cna_analysis                    [boolean] Enable copy-number alteration (CNA) analysis and reporting. 
   --cna_overlap_pct                 [integer] Mean percent overlap between CNA segment and gene transcripts for reporting gains/losses. 
 [default: 50]  
@@ -67,7 +65,6 @@ PCGR options
   --control_dp_tag                  [string]  VCF INFO tag for control/normal sequencing depth. 
   --control_af_tag                  [string]  VCF INFO tag for control/normal variant allelic fraction. 
   --call_conf_tag                   [string]  VCF INFO tag for somatic call confidence. 
-  --tumor_purity                              Estimated tumor purity. 
   --effective_target_size_mb        [integer] Effective target size in Mb for TMB calculation. [default: 34] 
   --input_cpsr                      [string]  Path to CPSR-classified germline calls file. 
   --input_cpsr_yaml                 [string]  Path to CPSR YAML configuration file. 

@@ -1,6 +1,6 @@
 # Workflow outputs migration: seqinspector
 
-- Generated: 2026-07-11T00:29:38.817678+00:00
+- Generated: 2026-07-14T00:28:04.483884+00:00
 - Status: :white_check_mark: **pass** — uses only the new `output {}` syntax
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -9,7 +9,7 @@ This report tracks migration from the legacy `publishDir` directive to the new [
 
 Found 1 top-level `output {}` block:
 
-- [`main.nf:135`](https://github.com/nf-core/seqinspector/blob/e7ae4eb37b24a7a91c4ff79db7aeb05a2d645a64/main.nf#L135)
+- [`main.nf:135`](https://github.com/nf-core/seqinspector/blob/8c1e4a40e88325f1342ff067f00efb5949d62f00/main.nf#L135)
 
 ## Legacy `publishDir` references
 

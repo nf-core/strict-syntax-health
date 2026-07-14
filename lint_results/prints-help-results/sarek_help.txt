@@ -3,10 +3,10 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.06.0-edge
 
+Downloading plugin nf-core-utils@0.4.0
 Downloading plugin nf-fgbio@1.0.0
 Downloading plugin nf-prov@1.7.0
-Downloading plugin nf-schema@2.7.2
-Launching `./main.nf` [boring_mayer] revision: 4d72b303ae
+Launching `./main.nf` [friendly_solvay] revision: 4d72b303ae
 
 
 ------------------------------------------------------

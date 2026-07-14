@@ -506,9 +506,9 @@
   "funcprofiler": {
     "full_name": "nf-core/funcprofiler",
     "html_url": "https://github.com/nf-core/funcprofiler",
-    "commit": "a72f04ec4edfcfa8886de5a8dff4bd0d873191f3",
+    "commit": "d3347814554836c39917586e1b234652720bbab2",
     "errors": 0,
-    "warnings": 28,
+    "warnings": 24,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -746,7 +746,7 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "bed815ef56586c08695bf94943d9ad6f1dedd387",
+    "commit": "3f19c98bd67807d08074650770bba0179322416f",
     "errors": 0,
     "warnings": 25,
     "parse_error": false,
@@ -1046,7 +1046,7 @@
   "pairgenomealign": {
     "full_name": "nf-core/pairgenomealign",
     "html_url": "https://github.com/nf-core/pairgenomealign",
-    "commit": "593625405c0c67ace47950eea440aef61ef3758b",
+    "commit": "0bb3e3c7af792096fab53b797b5bb47d9aeef0da",
     "errors": 0,
     "warnings": 17,
     "parse_error": false,
@@ -1130,7 +1130,7 @@
   "pixelator": {
     "full_name": "nf-core/pixelator",
     "html_url": "https://github.com/nf-core/pixelator",
-    "commit": "d1f9a45b9ae4b5480f1eed18020df566930eb0c4",
+    "commit": "80b7c1ee8301dec2fdaae12f1caad2b23b425d65",
     "errors": 0,
     "warnings": 23,
     "parse_error": false,
@@ -1382,7 +1382,7 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "bd02bf289d768167a399807fcfc15e5e2582f4b9",
+    "commit": "2d44030d286f2308eae5d5af85eef738e3bb5e1e",
     "errors": 0,
     "warnings": 577,
     "parse_error": false,
@@ -1430,7 +1430,7 @@
   "seqinspector": {
     "full_name": "nf-core/seqinspector",
     "html_url": "https://github.com/nf-core/seqinspector",
-    "commit": "e7ae4eb37b24a7a91c4ff79db7aeb05a2d645a64",
+    "commit": "8c1e4a40e88325f1342ff067f00efb5949d62f00",
     "errors": 0,
     "warnings": 3,
     "parse_error": false,
@@ -1622,7 +1622,7 @@
   "variantprioritization": {
     "full_name": "nf-core/variantprioritization",
     "html_url": "https://github.com/nf-core/variantprioritization",
-    "commit": "b3e275d2ec72773be2245ed14d871264deae057d",
+    "commit": "9514bf52787b5f5e1267a2a5e2e4b7f9bd7e836a",
     "errors": 0,
     "warnings": 11,
     "parse_error": false,
