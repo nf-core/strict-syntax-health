@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "9339809fcb90af8a8b7051e6cd914894d5c52002",
+  "_repo_commit": "7d264419ee98edd5a0886d3782fb87553628272b",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -1526,6 +1526,12 @@
   },
   "caddsv_get": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/caddsv/get",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "caddsv_run": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/caddsv/run",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -6714,6 +6720,18 @@
     "warnings": 0,
     "parse_error": false
   },
+  "mm2plus_align": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mm2plus/align",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "mm2plus_index": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mm2plus/index",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "mmseqs_cluster": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mmseqs/cluster",
     "errors": 0,
@@ -8732,6 +8750,12 @@
   },
   "rbt_vcfsplit": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/rbt/vcfsplit",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "rclone_copy": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/rclone/copy",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

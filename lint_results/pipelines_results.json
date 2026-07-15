@@ -38,14 +38,14 @@
   "ampliseq": {
     "full_name": "nf-core/ampliseq",
     "html_url": "https://github.com/nf-core/ampliseq",
-    "commit": "53d81c56b6f5507051b46df19e1617bf8d70ee6c",
+    "commit": "9d513bc2b80241dfe5a73ac5e274d8ee4c6e1a45",
     "errors": 0,
-    "warnings": 29,
+    "warnings": 30,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 98
+    "publishdir_count": 101
   },
   "atacseq": {
     "full_name": "nf-core/atacseq",
@@ -506,7 +506,7 @@
   "funcprofiler": {
     "full_name": "nf-core/funcprofiler",
     "html_url": "https://github.com/nf-core/funcprofiler",
-    "commit": "d3347814554836c39917586e1b234652720bbab2",
+    "commit": "a0d2bf94826ad7de416a42071e3315c37cb8dee1",
     "errors": 0,
     "warnings": 24,
     "parse_error": false,
@@ -746,7 +746,7 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "3f19c98bd67807d08074650770bba0179322416f",
+    "commit": "197b8ba62ecc3142d7b0a49e92ba7e28667c0abb",
     "errors": 0,
     "warnings": 25,
     "parse_error": false,
@@ -866,9 +866,9 @@
   "methylseq": {
     "full_name": "nf-core/methylseq",
     "html_url": "https://github.com/nf-core/methylseq",
-    "commit": "d39c3deb67e65f0f93f83b0096a54278339731be",
-    "errors": 3,
-    "warnings": 69,
+    "commit": "9308ad4c1ed39c77705c909e06b5c8025e376a1d",
+    "errors": 2,
+    "warnings": 31,
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
@@ -1382,7 +1382,7 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "2d44030d286f2308eae5d5af85eef738e3bb5e1e",
+    "commit": "de19184f59f8e74b2037d3e6bcf243f0a56f1390",
     "errors": 0,
     "warnings": 577,
     "parse_error": false,
@@ -1394,14 +1394,14 @@
   "scdownstream": {
     "full_name": "nf-core/scdownstream",
     "html_url": "https://github.com/nf-core/scdownstream",
-    "commit": "ab0639483be2fe7bf77f8a3286be5c9988e53617",
+    "commit": "c540ab6c8869c3cc14bb52bdb94dd18bed0a1354",
     "errors": 0,
     "warnings": 32,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 63
+    "publishdir_count": 74
   },
   "scnanoseq": {
     "full_name": "nf-core/scnanoseq",
@@ -1430,7 +1430,7 @@
   "seqinspector": {
     "full_name": "nf-core/seqinspector",
     "html_url": "https://github.com/nf-core/seqinspector",
-    "commit": "8c1e4a40e88325f1342ff067f00efb5949d62f00",
+    "commit": "3f3f27e354038b3a73e5b3699ecf5782872c3e3c",
     "errors": 0,
     "warnings": 3,
     "parse_error": false,
@@ -1466,7 +1466,7 @@
   "smrnaseq": {
     "full_name": "nf-core/smrnaseq",
     "html_url": "https://github.com/nf-core/smrnaseq",
-    "commit": "a4a3530919f1563e9fe8d6ed4ca071a2fd77f521",
+    "commit": "5b53f705b9cd4077da6f6c2167501f8c1b0e6e60",
     "errors": 0,
     "warnings": 3,
     "parse_error": false,

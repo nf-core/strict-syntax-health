@@ -1,19 +1,19 @@
 # Nextflow lint results
 
-- Generated: 2026-07-08T00:30:06.320952967Z
+- Generated: 2026-07-15T00:26:08.445969961Z
 - Nextflow version: 26.06.0-edge
 - Summary: 32 warnings
 
 ## :warning: Warnings
 
-- Warning: `main.nf:159:5`: Emit name should be omitted when there is only one emit
+- Warning: `main.nf:172:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
       multiqc_report = SCDOWNSTREAM.out.multiqc_report // channel: /path/to/multiqc_report.html
       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `modules/local/adata/merge/main.nf:26:5`: Variable was declared but not used
+- Warning: `modules/local/adata/merge/main.nf:24:5`: Variable was declared but not used
 
   ```nextflow
       force_obs_cols = task.ext.force_obs_cols ?: params.force_obs_cols ?: ""
@@ -41,7 +41,7 @@
       ^^^^^^^
   ```
 
-- Warning: `modules/local/scanpy/hvgs/main.nf:25:5`: Variable was declared but not used
+- Warning: `modules/local/scanpy/hvgs/main.nf:27:5`: Variable was declared but not used
 
   ```nextflow
       batch_key = task.ext.batch_key ?: ""
@@ -153,10 +153,10 @@
       ^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/celltype_assignment/main.nf:39:5`: Emit name should be omitted when there is only one emit
+- Warning: `subworkflows/local/cluster_annotation/main.nf:65:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
-      obs      = ch_obs      // channel: [ meta, pkl ]
+      obs = ch_obs
       ^^^^^^^^^^
   ```
 
@@ -167,6 +167,13 @@
       ^^^^^^^^^^^^^^^^^^
   ```
 
+- Warning: `subworkflows/local/edgepython_sc_de/main.nf:47:5`: Emit name should be omitted when there is only one emit
+
+  ```nextflow
+      results = EDGEPYTHON_SCDIFFERENTIAL.out.results
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/load_h5ad/main.nf:75:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
@@ -174,18 +181,18 @@
       ^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/pseudobulking/main.nf:22:5`: Emit name should be omitted when there is only one emit
+- Warning: `subworkflows/local/normalization/main.nf:23:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
-      h5ad_pseudobulk = ch_h5ad_pseudobulk // channel: [ integration, h5ad ]
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      h5ad = ch_h5ad
+      ^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/singler/main.nf:43:5`: Emit name should be omitted when there is only one emit
+- Warning: `subworkflows/local/pseudobulk_de/main.nf:32:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
-      obs      = ch_obs
-      ^^^^^^^^^^
+      results = ch_results
+      ^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/unify_genes/main.nf:36:5`: Emit name should be omitted when there is only one emit
@@ -193,13 +200,6 @@
   ```nextflow
       h5ad = ch_h5ad // channel: [ meta, h5ad ]
       ^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_scdownstream_pipeline/main.nf:183:30`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      if (!rows || rows.any { !it.analyses }) {
-                               ^^
   ```
 
 - Warning: `subworkflows/nf-core/h5ad_removebackground_barcodes_cellbender_anndata/main.nf:18:5`: Emit name should be omitted when there is only one emit

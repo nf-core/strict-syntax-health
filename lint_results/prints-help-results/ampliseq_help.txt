@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.06.0-edge
 
 Downloading plugin nf-schema@2.7.2
-Launching `./main.nf` [nostalgic_wegener] revision: be54f69b2e
+Launching `./main.nf` [infallible_meninsky] revision: be54f69b2e
 
 
 ------------------------------------------------------
@@ -41,6 +41,7 @@ storage on Cloud infrastructure.
 Sequencing input
   --binned_quality                         [string]  Comma separated quality bins. If data has binned quality scores. 
   --ignore_binned_quality                  [boolean] Ignore warnings about binned quality scores. 
+  --nanopore                               [boolean] If data is single-ended Nanopore reads instead of Illumina 
   --pacbio                                 [boolean] If data is single-ended PacBio reads instead of Illumina 
   --iontorrent                             [boolean] If data is single-ended IonTorrent reads instead of Illumina 
   --single_end                             [boolean] If data is single-ended Illumina reads instead of paired-end 
@@ -80,6 +81,7 @@ median quality score [default: 25]
 Amplicon Sequence Variants (ASV) calculation
   --sample_inference                       [string]  Mode of sample inference: "independent", "pooled" or "pseudo"  (accepted: independent, pooled, 
 pseudo) [default: independent]  
+  --savont_options                         [string]  Options for Savont ONT analysis [default: --fl-16s] 
   --mergepairs_strategy                    [string]  Strategy to merge paired end reads. When paired end reads are not sufficiently overlapping for 
 merging, you can use "concatenate" (not recommended). When you have a mix of overlapping and non 
 overlapping reads use "consensus"  (accepted: merge, concatenate, consensus) [default: merge] 
@@ -242,6 +244,8 @@ Running specific steps
 
 Skipping specific steps
   --skip_fastqc                            [boolean] Skip FastQC 
+  --skip_porechop_abi                      [boolean] Skip adapter trimming with porechop_ABI (ONT reads). 
+  --skip_chopper                           [boolean] Skip quality filtering with Chopper (ONT reads). 
   --skip_cutadapt                          [boolean] Skip primer trimming with cutadapt. This is not recommended! Use only in case primer sequences were 
 removed before and the data does not contain any primer sequences.  
   --skip_dada_quality                      [boolean] Skip quality check with DADA2. Can only be skipped when `--trunclenf` and `--trunclenr` are set. 

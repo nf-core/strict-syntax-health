@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.06.0-edge
 
 Downloading plugin nf-anndata@0.3.2
-Launching `./main.nf` [disturbed_feynman] revision: 232d8d5f9e
+Launching `./main.nf` [stoic_woese] revision: 23928575f1
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -59,29 +59,29 @@ Overrides the species-derived default from assets/cell_cycle_genes/. Only used w
 cell_cycle_scoring is true.  
   --mito_genes                    [string]  Optional file containing a list of mitochondrial gene symbols (one per line). If provided, it 
 overrides the default 'mt-' prefix heuristic.  
-  --ambient_correction            [string]  Specify the tool to use for ambient RNA correction. If 'none' is selected, no ambient RNA correction 
-will be performed. If you want to use ambient RNA correction only for a subset of datasets, you can 
-use the 'ambient_correction' column in the sample sheet. By default, the ambient-corrected counts 
-will NOT be used for integration, but only stored as an additional layer in the final AnnData object 
-because of the findings in [this 
-publication](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-023-02978-x). If you 
-want to use the ambient-corrected counts for integration, set `ambient_corrected_integration` to 
-true in the sample sheet.  (accepted: none, decontx, cellbender, soupx, scar) [default: decontx] 
- 
+  --ambient_correction            [string]  Specify the tool to use for ambient RNA correction. SoupX is the default and requires an unfiltered 
+matrix for each corrected sample. If 'none' is selected, no ambient RNA correction will be 
+performed. Per-sample overrides are available via the samplesheet `ambient_correction` column.  
+(accepted: none, decontx, cellbender, soupx, scar) [default: soupx]  
   --ambient_corrected_integration [boolean] Whether to use the ambient-corrected counts for integration. Can be overridden by the 
 `ambient_corrected_integration` in the sample sheet. [default: false]  
-  --doublet_detection             [string]  Specify the tools to use for doublet detection. Setting to 'none' will skip this step [default: 
-scrublet]  
-  --doublet_detection_threshold   [integer] Number of tools that need to agree on a doublet for it to be called as such [default: 1] 
+  --doublet_detection             [string]  Specify the tools to use for doublet detection. Setting to 'none' will skip this step. Default 
+scDblFinder follows sc-best-practices recommendations. [default: scdblfinder]  
+  --doublet_detection_threshold   [integer] Number of tools that need to agree on a doublet for it to be removed when `doublet_removal` is true 
+[default: 1]  
+  --doublet_removal               [boolean] Whether to remove cells flagged as doublets. When false (default), doublet scores are stored in 
+`adata.obs` for inspection, following sc-best-practices guidance to review doublets before 
+filtering. [default: false]  
   --cellbender_epochs             [integer] Number of epochs to train the CellBender model [default: 150] 
 
 Integration options
   --integration_methods           [string]  Specify the tool to use for integration [default: scvi] 
-  --integration_hvgs              [integer] Number of highly variable genes to use for integration. If set to 0, the number of highly variable 
-genes will be automatically determined. If set to a negative number, all genes will be used. 
-[default: 0]  
+  --feature_selection             [string]  Gene selection method applied before integration on merged counts.  (accepted: hvgs, deviance, 
+pearson_residuals_hvgs, none) [default: deviance]  
+  --integration_n_features        [integer] Number of genes to retain for integration feature selection. [default: 0] 
   --integration_excluded_genes    [string]  Optional file containing a list of gene symbols (one per line). If provided, these genes will be 
-excluded from highly variable genes selection for integration.  
+excluded from feature selection for integration.  
+  --normalization_method          [string]  Normalisation method to compute before feature selection and integration. [default: scran] 
   --symphony_reference            [string]  Path to a Symphony reference AnnData, only relevant if Symphony is selected in 
 `integration_methods`. If provided, query cells will be mapped onto this reference instead of 
 running de novo Symphony integration.  
@@ -113,12 +113,15 @@ Required if input is not provided and integrate_per_label is false; otherwise it
  
 
 Clustering options
-  --clustering_resolutions        [string]  Specify the resolutions for clustering [default: 0.5,1.0] 
+  --clustering_resolutions        [string]  Specify the resolutions for clustering [default: 0.25,0.5,1.0] 
+  --neighbors_n_pcs               [integer] Number of principal components used to build the neighbour graph before UMAP and Leiden clustering. 
+ 
+  --tsne                          [boolean] Compute a t-SNE embedding alongside UMAP for each integration method. [default: false] 
   --cluster_per_label             [boolean] Create a UMAP and a clustering for each unique value in the label column (and for each integration 
 method)  
   --cluster_global                [boolean] Create a global UMAP and clustering (for each integration method) [default: true] 
   --analysis_plan                 [string]  Path to a CSV file controlling which integration × resolution combinations feed into downstream 
-analyses (PAGA, LIANA, DE, CyteType).  
+analyses (PAGA, LIANA, DE, cluster-level annotation).  
 
 Tool options
   --celltypist_model              [string] Specify the models to use for the celltypist cell type annotation 
@@ -135,8 +138,6 @@ Pipeline options
   --qc_only                       [boolean] Only run the preprocessing steps, skip the integration and clustering steps 
   --skip_liana                    [boolean] Skip the LIANA step. For large datasets, the pipeline might fail due to high memory usage in this 
 step. Use this option to skip it.  
-  --skip_rankgenesgroups          [boolean] Skip the rank_genes_groups step. For large datasets, the pipeline might fail due to high memory 
-usage in this step. Use this option to skip it.  
   --skip_qc_report                [boolean] Skip rendering the Quarto QC HTML report in reports/. 
   --scib                          [boolean] Run scib-metrics integration benchmarking on each integration output (samplesheet / --input runs 
 only; not run for base_adata-only extension without --input). [default: false]  
@@ -150,9 +151,9 @@ strategy is 'none' while scib_max_cells is set, stratified_label_batch is applie
   --scib_metric_profile           [string]  scib-metrics metric set. 'fast' disables expensive metrics (isolated labels, k-means NMI/ARI, PCR 
 comparison) for routine runs; 'full' runs the default scib-metrics benchmark suite for 
 publication-style scoring.  (accepted: fast, full) [default: fast]  
-  --rankgenesgroups_method        [string]  Statistical method for ranking genes in differential expression analysis.  (accepted: t-test, 
-t-test_overestim_var, wilcoxon, logreg) [default: wilcoxon]  
-  --pseudobulk                    [boolean] Perform pseudobulking 
+  --de_methods                    [string]  Comma-separated differential expression engines to run when enabled by the analysis plan. 
+[default: wilcoxon]  
+  --reference_condition           [string]  Reference condition level for condition-based differential expression contrasts. 
   --prep_cellxgene                [boolean] Prepare the output for visualisation in cellxgene 
 
 Sampling options
@@ -172,10 +173,11 @@ will be used.
   --scvi_categorical_covariates   [string]  Categorical covariates for scVI/scANVI 
   --scvi_continuous_covariates    [string]  Continuous covariates for scVI/scANVI 
 
-Pseudobulking options
-  --pseudobulk_groupby_labels     [string]  Group by labels for pseudobulking. If you want to use multiple labels, separate them with a comma. 
-[default: batch]  
-  --pseudobulk_min_num_cells      [integer] Minimum number of cells for pseudobulking [default: 5] 
+Pseudobulk differential expression options
+  --pseudobulk                    [boolean] Run pseudobulk aggregation even when no pseudobulk DE method is selected in de_methods. 
+[default: false]  
+  --pseudobulk_min_num_cells      [integer] Minimum number of cells per pseudobulk sample [default: 10] 
+  --pseudobulk_min_total_counts   [integer] Minimum total UMI counts per pseudobulk sample [default: 1000] 
 
 Generic options
   --multiqc_methods_description   [string]          Custom MultiQC yaml file containing HTML including a methods description. 

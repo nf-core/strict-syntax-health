@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-16T20:30:17.853976168Z
-- Nextflow version: 26.04.3
-- Summary: 3 errors, 69 warnings
+- Generated: 2026-07-15T00:25:05.504929273Z
+- Nextflow version: 26.06.0-edge
+- Summary: 2 errors, 31 warnings
 
 ## :x: Errors
 
@@ -18,13 +18,6 @@
   ```nextflow
       tuple val(meta), env(trim_OT), env(trim_OB),                    emit: mbias_processed_str
                                          ^^^^^^^
-  ```
-
-- Error: `nextflow.config:251:23`: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/methylseq/conf/aws/batch/nextflow.config'
-
-  ```nextflow
-      aws_batch       { includeConfig 'conf/aws/batch/nextflow.config' }
-                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 ## :warning: Warnings
@@ -57,90 +50,6 @@
                                                            ^^
   ```
 
-- Warning: `modules/nf-core/bismark/align/main.nf:51:18`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          } catch (all) {
-                   ^^^
-  ```
-
-- Warning: `modules/nf-core/bismark/align/main.nf:67:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/bismark/coverage2cytosine/main.nf:42:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/bismark/deduplicate/main.nf:23:9`: Variable was declared but not used
-
-  ```nextflow
-      def prefix  = task.ext.prefix ?: "${meta.id}"
-          ^^^^^^
-  ```
-
-- Warning: `modules/nf-core/bismark/deduplicate/main.nf:38:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/bismark/genomepreparation/main.nf:34:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/bismark/methylationextractor/main.nf:54:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/bismark/report/main.nf:32:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/bismark/summary/main.nf:24:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/bismark/summary/main.nf:35:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/bwameth/index/main.nf:22:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/bwameth/index/main.nf:37:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
 - Warning: `modules/nf-core/cat/fastq/main.nf:22:60`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
@@ -153,20 +62,6 @@
   ```nextflow
       def readList = reads instanceof List ? reads.collect { it.toString() } : [reads.toString()]
                                                              ^^
-  ```
-
-- Warning: `modules/nf-core/gunzip/main.nf:43:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/parabricks/fq2bammeth/main.nf:35:83`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def known_sites_command = known_sites ? known_sites.collect { "--knownSites ${it}" }.join(' ') : ""
-                                                                                    ^^
   ```
 
 - Warning: `modules/nf-core/rastair/call/main.nf:25:9`: Variable was declared but not used
@@ -239,76 +134,6 @@
           ^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/nf-core/bam_methyldackel/main.nf:13:40`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_methydackel_extract_bedgraph  = Channel.empty()
-                                         ^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/bam_methyldackel/main.nf:14:40`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_methydackel_extract_methylkit = Channel.empty()
-                                         ^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/bam_methyldackel/main.nf:15:40`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_methydackel_mbias             = Channel.empty()
-                                         ^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/bam_methyldackel/main.nf:16:40`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_multiqc_files                 = Channel.empty()
-                                         ^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/bam_methyldackel/main.nf:17:40`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions                      = Channel.empty()
-                                         ^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/bam_methyldackel/main.nf:45:65`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      ch_multiqc_files = ch_methydackel_extract_bedgraph.collect{ meta, bedgraph -> bedgraph  }
-                                                                  ^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/bam_methyldackel/main.nf:46:72`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-                          .mix(ch_methydackel_extract_methylkit.collect{ meta, methylkit -> methylkit })
-                                                                         ^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/bam_methyldackel/main.nf:47:60`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-                          .mix(ch_methydackel_mbias.collect{ meta, txt -> txt  })
-                                                             ^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/bam_sort_stats_samtools/main.nf:16:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/bam_stats_samtools/main.nf:15:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
 - Warning: `subworkflows/nf-core/bam_taps_conversion/main.nf:21:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -342,97 +167,6 @@
   ```nextflow
           ch_rastair_mbiasparser.map{ meta, nOT_clip, nOB_clip -> [ meta, nOB_clip ] },
                                             ^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/fasta_index_bismark_bwameth/main.nf:20:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_fasta         = Channel.empty()
-                         ^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/fasta_index_bismark_bwameth/main.nf:21:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_fasta_index   = Channel.empty()
-                         ^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/fasta_index_bismark_bwameth/main.nf:22:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_bismark_index = Channel.empty()
-                         ^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/fasta_index_bismark_bwameth/main.nf:23:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_bwameth_index = Channel.empty()
-                         ^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/fasta_index_bismark_bwameth/main.nf:24:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions      = Channel.empty()
-                         ^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/fasta_index_bismark_bwameth/main.nf:29:22`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-              gzipped: it[1].toString().endsWith('.gz')
-                       ^^
-  ```
-
-- Warning: `subworkflows/nf-core/fasta_index_bismark_bwameth/main.nf:50:30`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                      gzipped: it[1].toString().endsWith('.gz')
-                               ^^
-  ```
-
-- Warning: `subworkflows/nf-core/fasta_index_bismark_bwameth/main.nf:79:30`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                      gzipped: it[1].toString().endsWith('.gz')
-                               ^^
-  ```
-
-- Warning: `subworkflows/nf-core/fasta_index_methylseq/main.nf:34:22`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-              gzipped: it[1].toString().endsWith('.gz')
-                       ^^
-  ```
-
-- Warning: `subworkflows/nf-core/fasta_index_methylseq/main.nf:55:30`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                      gzipped: it[1].toString().endsWith('.gz')
-                               ^^
-  ```
-
-- Warning: `subworkflows/nf-core/fasta_index_methylseq/main.nf:93:30`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                      gzipped: it[1].toString().endsWith('.gz')
-                               ^^
-  ```
-
-- Warning: `subworkflows/nf-core/fasta_index_methylseq/main.nf:123:30`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                      gzipped: it[1].toString().endsWith('.gz')
-                               ^^
-  ```
-
-- Warning: `subworkflows/nf-core/fastq_align_bwa/main.nf:16:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
   ```
 
 - Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
@@ -470,42 +204,35 @@
       ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/methylseq/main.nf:197:86`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          ch_versions = ch_versions.mix(FASTQ_ALIGN_DEDUP_BWAMEM.out.versions.unique { it.baseName })
-                                                                                       ^^
-  ```
-
-- Warning: `workflows/methylseq/main.nf:369:90`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/methylseq/main.nf:361:90`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files = ch_multiqc_files.mix(QUALIMAP_BAMQC.out.results.collect { it[1] }.ifEmpty([]))
                                                                                            ^^
   ```
 
-- Warning: `workflows/methylseq/main.nf:372:87`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/methylseq/main.nf:364:87`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files = ch_multiqc_files.mix(PRESEQ_LCEXTRAP.out.log.collect { it[1] }.ifEmpty([]))
                                                                                         ^^
   ```
 
-- Warning: `workflows/methylseq/main.nf:376:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/methylseq/main.nf:368:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files = ch_multiqc_files.mix(TRIMGALORE.out.log.collect { it[1] })
                                                                                    ^^
   ```
 
-- Warning: `workflows/methylseq/main.nf:380:106`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/methylseq/main.nf:372:106`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   ch_multiqc_files = ch_multiqc_files.mix(TARGETED_SEQUENCING.out.picard_metrics.collect { it[1] }.ifEmpty([]))
                                                                                                            ^^
   ```
 
-- Warning: `workflows/methylseq/main.nf:384:78`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/methylseq/main.nf:376:78`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files = ch_multiqc_files.mix(FASTQC.out.zip.collect { it[1] }.ifEmpty([]))
