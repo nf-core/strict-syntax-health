@@ -1,10 +1,11 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
+Nextflow 26.07.0-edge is available - Please consider updating your version to it
 
  N E X T F L O W   ~  version 26.06.0-edge
 
 Downloading plugin nf-anndata@0.3.2
-Launching `./main.nf` [stoic_woese] revision: 23928575f1
+Launching `./main.nf` [loquacious_meucci] revision: 23928575f1
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -172,6 +173,7 @@ scVI/scANVI options
 will be used.  
   --scvi_categorical_covariates   [string]  Categorical covariates for scVI/scANVI 
   --scvi_continuous_covariates    [string]  Continuous covariates for scVI/scANVI 
+  --scvi_use_observed_lib_size    [boolean] Use the observed library size for RNA as the scaling factor in scVI/scANVI [default: true] 
 
 Pseudobulk differential expression options
   --pseudobulk                    [boolean] Run pseudobulk aggregation even when no pseudobulk DE method is selected in de_methods. 

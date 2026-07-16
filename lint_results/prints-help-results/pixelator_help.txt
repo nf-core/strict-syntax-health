@@ -1,10 +1,12 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
+Nextflow 26.07.0-edge is available - Please consider updating your version to it
 
  N E X T F L O W   ~  version 26.06.0-edge
 
+Downloading plugin nf-schema@2.7.2
 Downloading plugin nf-slack@0.5.1
-Launching `./main.nf` [shrivelled_pare] revision: c6b45c301b
+Launching `./main.nf` [crazy_kirch] revision: c6b45c301b
 
 WARN: Unrecognized config option 'slack.enabled'
 WARN: Unrecognized config option 'slack.webhook.url'
@@ -90,11 +92,13 @@ smaller of the two when during the initial stage (iteration == 0) of multiplet r
 smaller of the two when during the refinement stage (iteration > 0) of multiplet recovery.  
   --pna_graph_component_size_min_threshold                  [integer] Components with fewer nodes than this will be filtered from the output data. Set to null to enable 
 automatic size filtering based on the data. [default: 8000]  
+  --pna_graph_component_size_max_threshold                  [integer] Components with more nodes than this will be filtered from the output data. Set to null to enable 
+automatic size filtering based on the data. [default: 500000]  
 
 Sample calling options
   --save_pna_sample_calling_pixelfile                       [boolean] Save the PXL dataset after the sample calling stage. 
   --pna_sample_calling_save_undetermined                    [boolean] Save components that could not be confidently assigned to any sample to a separate pxl file. 
-[default: true]  
+ 
   --pna_sample_calling_remove_incompatible                  [boolean] Remove antibodies that are incompatible with their component's called sample. [default: true] 
  
   --pna_sample_calling_enrichment_threshold                 [number]  Enrichment threshold for sample calling. [default: 10.0] 

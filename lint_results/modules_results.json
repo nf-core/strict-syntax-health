@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "7d264419ee98edd5a0886d3782fb87553628272b",
+  "_repo_commit": "f478a9020729f849b44cfb3a68b49dba212d1218",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -4740,6 +4740,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "gridss_preprocess": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gridss/preprocess",
+    "errors": 0,
+    "warnings": 2,
+    "parse_error": false
+  },
   "gridss_somaticfilter": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gridss/somaticfilter",
     "errors": 0,
@@ -8754,6 +8760,18 @@
     "warnings": 0,
     "parse_error": false
   },
+  "rclone_check": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/rclone/check",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "rclone_checksum": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/rclone/checksum",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "rclone_copy": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/rclone/copy",
     "errors": 0,
@@ -11066,6 +11084,12 @@
   },
   "transdecoder_predict": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/transdecoder/predict",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "treerecs": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/treerecs",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

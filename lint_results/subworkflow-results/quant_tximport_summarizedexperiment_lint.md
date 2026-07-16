@@ -1,5 +1,14 @@
 # Nextflow lint results
 
-- Generated: 2026-07-15T00:27:50.435831+00:00
+- Generated: 2026-07-16T00:33:22.652330+00:00
 - Nextflow version: 26.06.0-edge
-- Summary: No issues found
+- Summary: 1 warning
+
+## :warning: Warnings
+
+- Warning: `subworkflows/nf-core/quant_tximport_summarizedexperiment/main.nf:62:72`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              .map { sorted -> [ ['id': 'all_samples'], sorted.collect { it[1] } ] }
+                                                                         ^^^^^^^^^^
+  ```

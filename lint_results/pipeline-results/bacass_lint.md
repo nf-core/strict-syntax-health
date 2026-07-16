@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-06-16T20:17:09.868304101Z
-- Nextflow version: 26.04.3
+- Generated: 2026-07-16T00:27:11.296206469Z
+- Nextflow version: 26.06.0-edge
 - Summary: 21 warnings
 
 ## :warning: Warnings
@@ -139,14 +139,14 @@
       ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/bacass.nf:261:33`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/bacass.nf:262:33`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   .branch { meta, reads ->
                                   ^^^^^
   ```
 
-- Warning: `workflows/bacass.nf:276:13`: Variable was declared but not used
+- Warning: `workflows/bacass.nf:277:13`: Variable was declared but not used
 
   ```nextflow
               ch_rasusa_log = RASUSA.out.log

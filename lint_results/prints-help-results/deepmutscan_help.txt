@@ -1,9 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
+Nextflow 26.07.0-edge is available - Please consider updating your version to it
 
- N E X T F L O W   ~  version 26.05.0-edge
+ N E X T F L O W   ~  version 26.06.0-edge
 
-Launching `./main.nf` [stupefied_hodgkin] revision: ae3065a2fd
+Launching `./main.nf` [boring_wright] revision: ae3065a2fd
 
 
 ------------------------------------------------------
@@ -17,7 +18,7 @@ Launching `./main.nf` [stupefied_hodgkin] revision: ae3065a2fd
 
 Could not read parameters settings from JSON. java.nio.file.NoSuchFileException: /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/deepmutscan/true
 Core Nextflow options
-  runName    : stupefied_hodgkin
+  runName    : boring_wright
   launchDir  : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/deepmutscan
   workDir    : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/deepmutscan/work
   projectDir : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/deepmutscan

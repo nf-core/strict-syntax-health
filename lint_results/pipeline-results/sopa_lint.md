@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-06-16T20:42:24.199144397Z
-- Nextflow version: 26.04.3
+- Generated: 2026-07-16T00:32:12.558876430Z
+- Nextflow version: 26.06.0-edge
 - Summary: 7 errors, 24 warnings
 
 ## :x: Errors
@@ -64,7 +64,7 @@
                                                             ^^
   ```
 
-- Warning: `modules/local/utils.nf:185:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `modules/local/utils.nf:178:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           return channels.split(/[ ,|]+/).findAll { it }
@@ -204,21 +204,21 @@
       ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/sopa.nf:148:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/sopa.nf:141:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       def topic_versions = Channel.topic("versions")
                            ^^^^^^^
   ```
 
-- Warning: `workflows/sopa.nf:172:17`: Variable was declared but not used
+- Warning: `workflows/sopa.nf:165:17`: Variable was declared but not used
 
   ```nextflow
           ).set { ch_collated_versions }
                   ^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/sopa.nf:176:5`: Emit name should be omitted when there is only one emit
+- Warning: `workflows/sopa.nf:169:5`: Emit name should be omitted when there is only one emit
 
   ```nextflow
       versions = ch_versions // channel: [ path(versions.yml) ]

@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-07-15T00:26:08.445969961Z
+- Generated: 2026-07-16T00:31:35.802350110Z
 - Nextflow version: 26.06.0-edge
-- Summary: 32 warnings
+- Summary: 34 warnings
 
 ## :warning: Warnings
 
@@ -104,6 +104,13 @@
       ^^^^^^^^^^
   ```
 
+- Warning: `modules/local/scvitools/scanvi/main.nf:40:5`: Variable was declared but not used
+
+  ```nextflow
+      use_observed_lib_size = task.ext.use_observed_lib_size != null ? task.ext.use_observed_lib_size : true
+      ^^^^^^^^^^^^^^^^^^^^^
+  ```
+
 - Warning: `modules/local/scvitools/scvi/main.nf:31:5`: Variable was declared but not used
 
   ```nextflow
@@ -144,6 +151,13 @@
   ```nextflow
       max_epochs = task.ext.max_epochs ?: null
       ^^^^^^^^^^
+  ```
+
+- Warning: `modules/local/scvitools/scvi/main.nf:37:5`: Variable was declared but not used
+
+  ```nextflow
+      use_observed_lib_size = task.ext.use_observed_lib_size != null ? task.ext.use_observed_lib_size : true
+      ^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/ambient_correction/main.nf:111:5`: Emit name should be omitted when there is only one emit

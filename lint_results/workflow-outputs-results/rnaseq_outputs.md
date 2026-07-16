@@ -1,6 +1,6 @@
 # Workflow outputs migration: rnaseq
 
-- Generated: 2026-07-02T00:41:45.581434+00:00
+- Generated: 2026-07-16T00:30:23.934414+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,47 +14,47 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 115 `publishDir` references across 44 files that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules/prepare_genome.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/conf/modules/prepare_genome.config#L3) — 18 references
-- [`conf/modules/qc_trim_filter.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/conf/modules/qc_trim_filter.config#L5) — 12 references
-- [`conf/modules/quantify_bam_salmon.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/conf/modules/quantify_bam_salmon.config#L8) — 11 references
-- [`conf/modules/rseqc.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/conf/modules/rseqc.config#L3) — 8 references
-- [`conf/modules/umi_dedup.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/conf/modules/umi_dedup.config#L26) — 6 references
-- [`conf/modules/quantify_pseudo_alignment.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/conf/modules/quantify_pseudo_alignment.config#L8) — 5 references
-- [`conf/modules/fastp.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/conf/modules/fastp.config#L5) — 4 references
-- [`conf/modules/quantify_rsem.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/conf/modules/quantify_rsem.config#L7) — 4 references
-- [`conf/modules/markduplicates.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/conf/modules/markduplicates.config#L5) — 3 references
-- [`conf/modules/stringtie.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/conf/modules/stringtie.config#L4) — 3 references
-- [`conf/modules/trimgalore.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/conf/modules/trimgalore.config#L5) — 3 references
-- [`conf/modules/alignment.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/conf/modules/alignment.config#L8) — 2 references
-- [`conf/modules/bigwig.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/conf/modules/bigwig.config#L22) — 2 references
-- [`conf/modules/qualimap.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/conf/modules/qualimap.config#L5) — 2 references
-- [`conf/modules/strandedness.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/conf/modules/strandedness.config#L5) — 2 references
-- [`subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/tests/nextflow.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/tests/nextflow.config#L22) — 2 references
-- [`conf/modules/align_bowtie2.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/conf/modules/align_bowtie2.config#L39) — 1 reference
-- [`conf/modules/align_hisat2.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/conf/modules/align_hisat2.config#L17) — 1 reference
-- [`conf/modules/align_star.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/conf/modules/align_star.config#L138) — 1 reference
-- [`conf/modules/bbsplit.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/conf/modules/bbsplit.config#L4) — 1 reference
-- [`conf/modules/bracken.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/conf/modules/bracken.config#L4) — 1 reference
-- [`conf/modules/cat_fastq.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/conf/modules/cat_fastq.config#L3) — 1 reference
-- [`conf/modules/deseq2_qc.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/conf/modules/deseq2_qc.config#L14) — 1 reference
-- [`conf/modules/dupradar.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/conf/modules/dupradar.config#L3) — 1 reference
-- [`conf/modules/featurecounts.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/conf/modules/featurecounts.config#L8) — 1 reference
-- [`conf/modules/kraken2.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/conf/modules/kraken2.config#L6) — 1 reference
-- [`conf/modules/multiqc.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/conf/modules/multiqc.config#L7) — 1 reference
-- [`conf/modules/multiqc_custom_biotype.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/conf/modules/multiqc_custom_biotype.config#L3) — 1 reference
-- [`conf/modules/preseq.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/conf/modules/preseq.config#L4) — 1 reference
-- [`conf/modules/rustqc.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/conf/modules/rustqc.config#L13) — 1 reference
-- [`conf/modules/sortmerna.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/conf/modules/sortmerna.config#L4) — 1 reference
-- [`conf/modules/sylph.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/conf/modules/sylph.config#L7) — 1 reference
-- [`conf/modules/sylphtax.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/conf/modules/sylphtax.config#L3) — 1 reference
-- [`modules/nf-core/rsem/calculateexpression/tests/alignment.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/modules/nf-core/rsem/calculateexpression/tests/alignment.config#L3) — 1 reference
-- [`modules/nf-core/rsem/calculateexpression/tests/nextflow.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/modules/nf-core/rsem/calculateexpression/tests/nextflow.config#L3) — 1 reference
-- [`modules/nf-core/rseqc/bamstat/tests/nextflow.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/modules/nf-core/rseqc/bamstat/tests/nextflow.config#L3) — 1 reference
-- [`modules/nf-core/rseqc/inferexperiment/tests/nextflow.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/modules/nf-core/rseqc/inferexperiment/tests/nextflow.config#L3) — 1 reference
-- [`modules/nf-core/subread/featurecounts/tests/nextflow.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/modules/nf-core/subread/featurecounts/tests/nextflow.config#L3) — 1 reference
-- [`modules/nf-core/umitools/extract/tests/nextflow.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/modules/nf-core/umitools/extract/tests/nextflow.config#L3) — 1 reference
-- [`nextflow.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/nextflow.config#L174) — 1 reference
-- [`subworkflows/local/align_star/tests/nextflow.extra_args.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/subworkflows/local/align_star/tests/nextflow.extra_args.config#L26) — 1 reference
-- [`subworkflows/local/align_star/tests/nextflow.rg.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/subworkflows/local/align_star/tests/nextflow.rg.config#L26) — 1 reference
-- [`subworkflows/nf-core/bedgraph_bedclip_bedgraphtobigwig/tests/nextflow.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/subworkflows/nf-core/bedgraph_bedclip_bedgraphtobigwig/tests/nextflow.config#L3) — 1 reference
-- [`subworkflows/nf-core/fastq_subsample_fq_salmon/tests/nextflow.config`](https://github.com/nf-core/rnaseq/blob/02dfe8bbea3ac9b6c182d174fba815f1be81bf7c/subworkflows/nf-core/fastq_subsample_fq_salmon/tests/nextflow.config#L3) — 1 reference
+- [`conf/modules/prepare_genome.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/conf/modules/prepare_genome.config#L3) — 18 references
+- [`conf/modules/qc_trim_filter.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/conf/modules/qc_trim_filter.config#L5) — 12 references
+- [`conf/modules/quantify_bam_salmon.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/conf/modules/quantify_bam_salmon.config#L8) — 11 references
+- [`conf/modules/rseqc.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/conf/modules/rseqc.config#L3) — 8 references
+- [`conf/modules/umi_dedup.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/conf/modules/umi_dedup.config#L26) — 6 references
+- [`conf/modules/quantify_pseudo_alignment.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/conf/modules/quantify_pseudo_alignment.config#L8) — 5 references
+- [`conf/modules/fastp.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/conf/modules/fastp.config#L5) — 4 references
+- [`conf/modules/quantify_rsem.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/conf/modules/quantify_rsem.config#L7) — 4 references
+- [`conf/modules/markduplicates.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/conf/modules/markduplicates.config#L5) — 3 references
+- [`conf/modules/stringtie.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/conf/modules/stringtie.config#L4) — 3 references
+- [`conf/modules/trimgalore.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/conf/modules/trimgalore.config#L5) — 3 references
+- [`conf/modules/alignment.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/conf/modules/alignment.config#L8) — 2 references
+- [`conf/modules/bigwig.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/conf/modules/bigwig.config#L22) — 2 references
+- [`conf/modules/qualimap.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/conf/modules/qualimap.config#L5) — 2 references
+- [`conf/modules/strandedness.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/conf/modules/strandedness.config#L5) — 2 references
+- [`subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/tests/nextflow.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/tests/nextflow.config#L22) — 2 references
+- [`conf/modules/align_bowtie2.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/conf/modules/align_bowtie2.config#L39) — 1 reference
+- [`conf/modules/align_hisat2.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/conf/modules/align_hisat2.config#L17) — 1 reference
+- [`conf/modules/align_star.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/conf/modules/align_star.config#L138) — 1 reference
+- [`conf/modules/bbsplit.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/conf/modules/bbsplit.config#L4) — 1 reference
+- [`conf/modules/bracken.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/conf/modules/bracken.config#L4) — 1 reference
+- [`conf/modules/cat_fastq.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/conf/modules/cat_fastq.config#L3) — 1 reference
+- [`conf/modules/deseq2_qc.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/conf/modules/deseq2_qc.config#L14) — 1 reference
+- [`conf/modules/dupradar.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/conf/modules/dupradar.config#L3) — 1 reference
+- [`conf/modules/featurecounts.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/conf/modules/featurecounts.config#L8) — 1 reference
+- [`conf/modules/kraken2.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/conf/modules/kraken2.config#L6) — 1 reference
+- [`conf/modules/multiqc.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/conf/modules/multiqc.config#L7) — 1 reference
+- [`conf/modules/multiqc_custom_biotype.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/conf/modules/multiqc_custom_biotype.config#L3) — 1 reference
+- [`conf/modules/preseq.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/conf/modules/preseq.config#L4) — 1 reference
+- [`conf/modules/rustqc.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/conf/modules/rustqc.config#L13) — 1 reference
+- [`conf/modules/sortmerna.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/conf/modules/sortmerna.config#L4) — 1 reference
+- [`conf/modules/sylph.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/conf/modules/sylph.config#L7) — 1 reference
+- [`conf/modules/sylphtax.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/conf/modules/sylphtax.config#L3) — 1 reference
+- [`modules/nf-core/rsem/calculateexpression/tests/alignment.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/modules/nf-core/rsem/calculateexpression/tests/alignment.config#L3) — 1 reference
+- [`modules/nf-core/rsem/calculateexpression/tests/nextflow.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/modules/nf-core/rsem/calculateexpression/tests/nextflow.config#L3) — 1 reference
+- [`modules/nf-core/rseqc/bamstat/tests/nextflow.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/modules/nf-core/rseqc/bamstat/tests/nextflow.config#L3) — 1 reference
+- [`modules/nf-core/rseqc/inferexperiment/tests/nextflow.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/modules/nf-core/rseqc/inferexperiment/tests/nextflow.config#L3) — 1 reference
+- [`modules/nf-core/subread/featurecounts/tests/nextflow.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/modules/nf-core/subread/featurecounts/tests/nextflow.config#L3) — 1 reference
+- [`modules/nf-core/umitools/extract/tests/nextflow.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/modules/nf-core/umitools/extract/tests/nextflow.config#L3) — 1 reference
+- [`nextflow.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/nextflow.config#L174) — 1 reference
+- [`subworkflows/local/align_star/tests/nextflow.extra_args.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/subworkflows/local/align_star/tests/nextflow.extra_args.config#L26) — 1 reference
+- [`subworkflows/local/align_star/tests/nextflow.rg.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/subworkflows/local/align_star/tests/nextflow.rg.config#L26) — 1 reference
+- [`subworkflows/nf-core/bedgraph_bedclip_bedgraphtobigwig/tests/nextflow.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/subworkflows/nf-core/bedgraph_bedclip_bedgraphtobigwig/tests/nextflow.config#L3) — 1 reference
+- [`subworkflows/nf-core/fastq_subsample_fq_salmon/tests/nextflow.config`](https://github.com/nf-core/rnaseq/blob/9b04429e2b6d3748faa3c14a3cae21d84c3a376b/subworkflows/nf-core/fastq_subsample_fq_salmon/tests/nextflow.config#L3) — 1 reference
