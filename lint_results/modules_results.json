@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "f478a9020729f849b44cfb3a68b49dba212d1218",
+  "_repo_commit": "88d84bb0b17ed17f3673f4c5a77e21f5a8b27a3d",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -6902,6 +6902,12 @@
   },
   "msisensor2_msi": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/msisensor2/msi",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "msisensorpro_baseline": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/msisensorpro/baseline",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

@@ -1,14 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-07-16T00:33:22.643986+00:00
-- Nextflow version: 26.06.0-edge
-- Summary: 1 warning
-
-## :warning: Warnings
-
-- Warning: `subworkflows/nf-core/bam_subsampledepth_samtools/main.nf:93:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      bam_subsampled    = ch_bam_subsampled             // channel: [ val(meta), path(bam), path(csi) ]
-      ^^^^^^^^^^
-  ```
+- Generated: 2026-07-17T00:33:56.944333+00:00
+- Nextflow version: 26.07.0-edge
+- Summary: No issues found

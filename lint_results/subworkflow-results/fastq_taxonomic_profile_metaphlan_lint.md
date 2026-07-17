@@ -1,14 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-07-16T00:33:22.651206+00:00
-- Nextflow version: 26.06.0-edge
-- Summary: 1 warning
-
-## :warning: Warnings
-
-- Warning: `subworkflows/nf-core/fastq_taxonomic_profile_metaphlan/main.nf:22:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      merged_taxa = metaphlan_merged_profiles_txt
-      ^^^^^^^^^^
-  ```
+- Generated: 2026-07-17T00:33:56.948939+00:00
+- Nextflow version: 26.07.0-edge
+- Summary: No issues found

@@ -1,6 +1,6 @@
 # Workflow outputs migration: datasync
 
-- Generated: 2026-07-09T00:32:33.779792+00:00
+- Generated: 2026-07-17T00:29:08.577558+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,4 +14,4 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 2 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/datasync/blob/9fee02bcf96cddc8a6c30a9abed0c66ce4a0984d/conf/modules.config#L15) — 2 references
+- [`conf/modules.config`](https://github.com/nf-core/datasync/blob/5d1da840a34cb18bdf4db037f90f5cc04e9c39c5/conf/modules.config#L15) — 2 references

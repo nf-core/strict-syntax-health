@@ -1,14 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-07-16T00:33:22.642046+00:00
-- Nextflow version: 26.06.0-edge
-- Summary: 1 warning
-
-## :warning: Warnings
-
-- Warning: `subworkflows/nf-core/bam_impute_quilt/main.nf:88:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      vcf_index = ch_vcf_index // channel:   [ [id, chr], vcf, tbi ]
-      ^^^^^^^^^^
-  ```
+- Generated: 2026-07-17T00:33:56.943247+00:00
+- Nextflow version: 26.07.0-edge
+- Summary: No issues found

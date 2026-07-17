@@ -1,17 +1,10 @@
 # Nextflow lint results
 
-- Generated: 2026-07-15T00:23:46.375856795Z
-- Nextflow version: 26.06.0-edge
-- Summary: 30 warnings
+- Generated: 2026-07-17T00:28:43.820180186Z
+- Nextflow version: 26.07.0-edge
+- Summary: 22 warnings
 
 ## :warning: Warnings
-
-- Warning: `main.nf:46:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      multiqc_report = AMPLISEQ.out.multiqc_report // channel: /path/to/multiqc_report.html
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
 
 - Warning: `modules/local/savont_export.nf:20:9`: Variable was declared but not used
 
@@ -60,55 +53,6 @@
   ```nextflow
                       .collect { it.trim().toInteger() }
                                  ^^
-  ```
-
-- Warning: `subworkflows/local/parse_input.nf:84:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      reads   = ch_reads
-      ^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/qiime2_preptax.nf:96:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      classifier = QIIME2_TRAIN.out.qza
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/sintax_taxonomy_wf.nf:47:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      tax      = ch_sintax_tax
-      ^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_ampliseq_pipeline/main.nf:126:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      versions    = ch_versions
-      ^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      valid_config = valid_config
-      ^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/ampliseq.nf:849:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead

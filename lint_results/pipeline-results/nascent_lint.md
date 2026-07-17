@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-07-13T00:29:01.978814820Z
-- Nextflow version: 26.06.0-edge
-- Summary: 5 errors, 161 warnings
+- Generated: 2026-07-17T00:30:21.650950171Z
+- Nextflow version: 26.07.0-edge
+- Summary: 5 errors, 157 warnings
 
 ## :x: Errors
 
@@ -55,13 +55,6 @@
   ```nextflow
                   def parts = it.trim().split(/\s+/, 2)
                               ^^
-  ```
-
-- Warning: `main.nf:77:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      multiqc_report = NASCENT.out.multiqc_report // channel: /path/to/multiqc_report.html
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `modules/nf-core/bowtie2/align/main.nf:93:9`: Variable was declared but not used
@@ -832,27 +825,6 @@
   ```nextflow
           ch_uniqmap = UNZIP([[:], uniqmap]).unzipped_archive.map { it[1] }
                                                                     ^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      valid_config = valid_config
-      ^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/nascent.nf:65:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead

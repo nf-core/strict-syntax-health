@@ -1,42 +1,28 @@
 # Nextflow lint results
 
-- Generated: 2026-07-16T00:30:23.628300058Z
-- Nextflow version: 26.06.0-edge
-- Summary: 5 warnings
+- Generated: 2026-07-17T00:31:59.281861777Z
+- Nextflow version: 26.07.0-edge
+- Summary: 3 warnings
 
 ## :warning: Warnings
 
-- Warning: `subworkflows/local/multiqc_rnaseq/main.nf:247:5`: Emit name should be omitted when there is only one emit
+- Warning: `subworkflows/nf-core/quant_tximport_summarizedexperiment/main.nf:65:72`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-      report = MULTIQC.out.report.map { _meta, report -> report }
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              .map { sorted -> [ ['id': 'all_samples'], sorted.collect { it[1] } ] }
+                                                                         ^^
   ```
 
-- Warning: `subworkflows/nf-core/bam_stringtie_merge/main.nf:29:5`: Emit name should be omitted when there is only one emit
+- Warning: `subworkflows/nf-core/quantify_rsem/main.nf:62:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-      stringtie_gtf = STRINGTIE_MERGE.out.merged_gtf // channel: [ meta, gtf ]
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                  .map { sorted -> [ ['id': 'all_samples'], sorted.collect { it[1] } ] },
+                                                                             ^^
   ```
 
-- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
+- Warning: `subworkflows/nf-core/quantify_rsem/main.nf:66:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      valid_config = valid_config
-      ^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
+                  .map { sorted -> sorted.collect { it[1] } }
+                                                    ^^
   ```
