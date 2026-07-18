@@ -1,40 +1,26 @@
 # Nextflow lint results
 
-- Generated: 2026-07-17T00:29:08.458470280Z
+- Generated: 2026-07-18T00:26:08.760047571Z
 - Nextflow version: 26.07.0-edge
-- Summary: 5 warnings
+- Summary: 3 warnings
 
 ## :warning: Warnings
 
-- Warning: `modules/local/comparechecksum/main.nf:22:9`: Variable was declared but not used
+- Warning: `subworkflows/local/utils_nfcore_datasync_pipeline/main.nf:195:20`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
+          .findAll { it.trim() }
+                     ^^
   ```
 
-- Warning: `modules/local/comparechecksum/main.nf:27:9`: Variable was declared but not used
+- Warning: `workflows/datasync.nf:98:37`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
+          .map { meta, input, output, log -> [ meta, input, output ]}
+                                      ^^^
   ```
 
-- Warning: `workflows/datasync.nf:81:78`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      ch_multiqc_files = ch_multiqc_files.mix(COMPARECHECKSUM.out.report.map { meta, report -> report })
-                                                                               ^^^^
-  ```
-
-- Warning: `workflows/datasync.nf:82:86`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      ch_multiqc_files = ch_multiqc_files.mix(COMPARECHECKSUM.out.summary_report.map { meta, summary -> summary })
-                                                                                       ^^^^
-  ```
-
-- Warning: `workflows/datasync.nf:124:45`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/datasync.nf:148:45`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(Channel.fromPath(params.input).collectFile(name: 'samplesheet.csv'))

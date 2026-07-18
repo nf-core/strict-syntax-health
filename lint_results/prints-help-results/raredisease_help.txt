@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.07.0-edge
 
-Launching `./main.nf` [disturbed_cantor] revision: 94e4270fc3
+Launching `./main.nf` [grave_brown] revision: 372b5bffbf
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -129,6 +129,8 @@ Alignment options
 'sentieon'.  (accepted: bwa, bwafastalign, bwamem2, bwameme, sentieon) [default: bwamem2]  
   --mt_aligner                        [string]  Specifies the alignment algorithm to use - available options are 'bwamem2', 'bwa' and 'sentieon'. 
  (accepted: bwa, bwamem2, sentieon) [default: bwamem2]  
+  --qc_metrics_tool                   [string]  Specifies the tool to collect BAM QC metrics - available options are 'picard' and 'riker'.  
+(accepted: picard, riker) [default: picard]  
   --samtools_sort_threads             [integer] Number of threads allocated for sorting alignment files (used by bwameme and bwafastalign) 
 [default: 4]  
   --mbuffer_mem                       [integer] Memory allocated for mbuffer in megabytes (MB) (used by bwameme and bwafastalign) [default: 

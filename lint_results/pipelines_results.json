@@ -266,14 +266,14 @@
   "datasync": {
     "full_name": "nf-core/datasync",
     "html_url": "https://github.com/nf-core/datasync",
-    "commit": "5d1da840a34cb18bdf4db037f90f5cc04e9c39c5",
+    "commit": "ce6bd4a73116db71667b1254feb8977fcc441d80",
     "errors": 0,
-    "warnings": 5,
+    "warnings": 3,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 2
+    "publishdir_count": 5
   },
   "deepmodeloptim": {
     "full_name": "nf-core/deepmodeloptim",
@@ -1046,7 +1046,7 @@
   "pairgenomealign": {
     "full_name": "nf-core/pairgenomealign",
     "html_url": "https://github.com/nf-core/pairgenomealign",
-    "commit": "d2f7a33e926e4e553bfa5e00e79d25a35140428f",
+    "commit": "14442773e8a48c145b23821f7072461a77a50511",
     "errors": 0,
     "warnings": 12,
     "parse_error": false,
@@ -1226,7 +1226,7 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "d185758f85619fcb15eb6b55223171dec6a60a2c",
+    "commit": "6570b1ff23a3887aa34729f89529e64e5479a190",
     "errors": 0,
     "warnings": 9,
     "parse_error": false,
@@ -1346,14 +1346,26 @@
   "rnasplice": {
     "full_name": "nf-core/rnasplice",
     "html_url": "https://github.com/nf-core/rnasplice",
-    "commit": "724de2672d168036b70868b5fa63ecca617278ba",
+    "commit": "1f8f3167e75010477b543cf69307f5b6107cd111",
     "errors": 0,
-    "warnings": 29,
+    "warnings": 21,
     "parse_error": false,
     "prints_help": false,
     "workflow_output": false,
     "publishdir": true,
     "publishdir_count": 66
+  },
+  "rnastructurome": {
+    "full_name": "nf-core/rnastructurome",
+    "html_url": "https://github.com/nf-core/rnastructurome",
+    "commit": "f098c4a30658947c89fad7da29803a2b0cf0ec43",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false,
+    "prints_help": false,
+    "workflow_output": false,
+    "publishdir": true,
+    "publishdir_count": 53
   },
   "rnavar": {
     "full_name": "nf-core/rnavar",
@@ -1382,7 +1394,7 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "e17a658185de12849e7ec6448b07c363f731c6dd",
+    "commit": "e3d53c53b88bca2927b017597bfd072b03bdb8d0",
     "errors": 0,
     "warnings": 303,
     "parse_error": false,

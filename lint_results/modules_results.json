@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "88d84bb0b17ed17f3673f4c5a77e21f5a8b27a3d",
+  "_repo_commit": "5488955899b1c02180ca6049d954f7be861b9e74",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -1910,6 +1910,24 @@
   },
   "clame": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/clame",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "cleanifier_download": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cleanifier/download",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "cleanifier_filter": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cleanifier/filter",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "cleanifier_index": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cleanifier/index",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-07-11T00:29:17.965183307Z
-- Nextflow version: 26.06.0-edge
-- Summary: 29 warnings
+- Generated: 2026-07-18T00:27:51.072295182Z
+- Nextflow version: 26.07.0-edge
+- Summary: 21 warnings
 
 ## :warning: Warnings
 
@@ -41,25 +41,11 @@
                         ^^^^^^^^
   ```
 
-- Warning: `main.nf:239:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      multiqc_report = RNASPLICE.out.multiqc_report // channel: /path/to/multiqc_report.html
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
 - Warning: `modules/nf-core/misopy/index/main.nf:23:9`: Variable was declared but not used
 
   ```nextflow
       def prefix = task.ext.prefix ?: "${meta.id}"
           ^^^^^^
-  ```
-
-- Warning: `subworkflows/local/contrast_check/main.nf:26:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      contrasts = ch_contrasts                        // channel: [ val(contrast_map) ]
-      ^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/dexseq_deu/main.nf:55:48`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -74,20 +60,6 @@
   ```nextflow
       dexseq_clean_txt        = DEXSEQ_COUNT.out.dexseq_clean_txt.map{ it[1] }.collect()
                                                                        ^^
-  ```
-
-- Warning: `subworkflows/local/edger_deu/main.nf:42:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      featureCounts_summary = SUBREAD_FEATURECOUNTS.out.summary // path featureCounts.txt.summary
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/input_check/main.nf:92:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      reads    = ch_final_reads   // channel: [ val(meta), [ files ] ]
-      ^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/tx2gene_tximport/main.nf:29:14`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -139,27 +111,6 @@
                   ^^
   ```
 
-- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      valid_config = valid_config
-      ^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:76:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
-  ```
-
 - Warning: `workflows/rnasplice.nf:71:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
@@ -200,11 +151,4 @@
   ```nextflow
           ch_transcriptome_bam_index = BAM_SORT_STATS_SAMTOOLS.out.index
           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/rnasplice.nf:587:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      multiqc_report = MULTIQC.out.report.map { _meta, report -> [report] }.toList()
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```

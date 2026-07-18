@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-07-17T00:31:28.133548553Z
+- Generated: 2026-07-18T00:27:17.986241215Z
 - Nextflow version: 26.07.0-edge
 - Summary: 9 warnings
 
@@ -48,21 +48,21 @@
                                                              ^^^
   ```
 
-- Warning: `workflows/raredisease.nf:1051:5`: Variable was declared but not used
+- Warning: `workflows/raredisease.nf:1132:5`: Variable was declared but not used
 
   ```nextflow
       ch_multiqc_config        = channel.fromPath(
       ^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/raredisease.nf:1053:5`: Variable was declared but not used
+- Warning: `workflows/raredisease.nf:1134:5`: Variable was declared but not used
 
   ```nextflow
       ch_multiqc_custom_config = val_multiqc_config ?
       ^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/raredisease.nf:1056:5`: Variable was declared but not used
+- Warning: `workflows/raredisease.nf:1137:5`: Variable was declared but not used
 
   ```nextflow
       ch_multiqc_logo          = val_multiqc_logo ?

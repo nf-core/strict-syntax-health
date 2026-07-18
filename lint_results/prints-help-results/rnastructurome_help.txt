@@ -1,0 +1,8 @@
+$ NXF_SYNTAX_PARSER=v2 nextflow run . --help
+
+
+ N E X T F L O W   ~  version 26.07.0-edge
+
+Launching `./main.nf` [festering_hopper] revision: 3a86725e67
+
+Missing required parameter: --input. Provide a samplesheet CSV path.
