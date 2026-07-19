@@ -1358,7 +1358,7 @@
   "rnastructurome": {
     "full_name": "nf-core/rnastructurome",
     "html_url": "https://github.com/nf-core/rnastructurome",
-    "commit": "f098c4a30658947c89fad7da29803a2b0cf0ec43",
+    "commit": "b3443f4d1dceddf904943adc6093cf2d2f3433cd",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
