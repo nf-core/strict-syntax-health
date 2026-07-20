@@ -866,9 +866,9 @@
   "methylseq": {
     "full_name": "nf-core/methylseq",
     "html_url": "https://github.com/nf-core/methylseq",
-    "commit": "ba449675bbaa47c4f198c60fc1bcc2c1fba0cedf",
+    "commit": "aa3f4da99ac6b42f82086e139135c73430c19440",
     "errors": 2,
-    "warnings": 31,
+    "warnings": 27,
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,

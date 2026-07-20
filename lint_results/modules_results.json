@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "5488955899b1c02180ca6049d954f7be861b9e74",
+  "_repo_commit": "0a23b7b979f01da12ec5b8db7ba88c109d8ff967",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -8101,13 +8101,13 @@
     "parse_error": false
   },
   "plastid_make_wiggle": {
-    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/make/wiggle",
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/make_wiggle",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
   "plastid_metagene_generate": {
-    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/metagene/generate",
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/metagene_generate",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -10664,6 +10664,12 @@
   },
   "suppa_generateevents": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/suppa/generateevents",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "suppa_psiperevent": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/suppa/psiperevent",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
