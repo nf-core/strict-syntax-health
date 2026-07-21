@@ -1,6 +1,6 @@
 # Workflow outputs migration: rarevariantburden
 
-- Generated: 2026-06-16T20:36:41.736321+00:00
+- Generated: 2026-07-21T00:31:15.184378+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,4 +14,4 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 17 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`modules/local/cocorv/main.nf`](https://github.com/nf-core/rarevariantburden/blob/e9392c4294ecdd4f6f984b9c235eb220306455be/modules/local/cocorv/main.nf#L28) — 17 references
+- [`modules/local/cocorv/main.nf`](https://github.com/nf-core/rarevariantburden/blob/84db4289cd01ecd757901e3cd837f05d6d82d9d8/modules/local/cocorv/main.nf#L28) — 17 references

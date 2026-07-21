@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "0a23b7b979f01da12ec5b8db7ba88c109d8ff967",
+  "_repo_commit": "bbf3773533b23cb2b2fac8e8a64df310d1523c82",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -7290,8 +7290,20 @@
     "warnings": 0,
     "parse_error": false
   },
+  "octopusv_plotcircos": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/octopusv/plotcircos",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "octopusv_stat": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/octopusv/stat",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "octopusv_svcf2bed": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/octopusv/svcf2bed",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -10670,6 +10682,12 @@
   },
   "suppa_psiperevent": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/suppa/psiperevent",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "suppa_psiperisoform": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/suppa/psiperisoform",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

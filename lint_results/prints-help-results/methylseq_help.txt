@@ -1,0 +1,140 @@
+$ NXF_SYNTAX_PARSER=v2 nextflow run . --help
+
+
+ N E X T F L O W   ~  version 26.07.0-edge
+
+Downloading plugin nf-amazon@2.15.0
+Launching `./main.nf` [voluminous_heyrovsky] revision: a6d23dc594
+
+WARN: Unrecognized config option 'validation.defaultIgnoreParams'
+WARN: Unrecognized config option 'validation.monochromeLogs'
+
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/methylseq 4.3.0dev
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/methylseq -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input                       [string] Path to comma-separated file containing information about the samples in the experiment. 
+  --outdir                      [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --email                       [string] Email address for completion summary. 
+  --multiqc_title               [string] MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+
+Save intermediate files
+  --save_reference              [boolean] Save reference(s) to results directory 
+  --save_align_intermeds        [boolean] Save aligned intermediates to results directory 
+  --unmapped                    [boolean] Bismark only - Save unmapped reads to FastQ files 
+  --save_trimmed                [boolean] Save trimmed reads to results directory. 
+
+Reference genome options
+  --genome                      [string] Name of iGenomes reference. 
+  --fasta                       [string] Path to FASTA genome file 
+  --fasta_index                 [string] Path to Fasta index file. 
+  --bismark_index               [string] Path to a directory containing a Bismark reference index. 
+  --bwameth_index               [string] bwameth index filename base 
+  --bwamem_index                [string] Path to the BWA-MEM index filename base 
+
+Alignment options
+  --aligner                     [string]  Alignment tool to use.  (accepted: bismark, bismark_hisat, bwameth, bwamem) [default: bismark] 
+ 
+  --use_mem2                    [boolean] Use BWA-MEM2 algorithm for BWA-Meth indexing and alignment. 
+
+Special library types
+  --taps                        [boolean] Preset for working with TET-assisted pyridine borane sequencing (TAPS) libraries. 
+  --pbat                        [boolean] Preset for working with PBAT libraries. 
+  --rrbs                        [boolean] Turn on if dealing with MspI digested material. 
+  --slamseq                     [boolean] Run bismark in SLAM-seq mode. 
+  --em_seq                      [boolean] Preset for EM-seq libraries. 
+  --single_cell                 [boolean] Trimming preset for single-cell bisulfite libraries. 
+  --accel                       [boolean] Trimming preset for the Accel kit. 
+  --zymo                        [boolean] Trimming preset for the Zymo kit. 
+
+Adapter Trimming
+  --clip_r1                     [integer] Trim bases from the 5' end of read 1 (or single-end reads). [default: 0] 
+  --clip_r2                     [integer] Trim bases from the 5' end of read 2 (paired-end only). [default: 0] 
+  --three_prime_clip_r1         [integer] Trim bases from the 3' end of read 1 AFTER adapter/quality trimming. [default: 0] 
+  --three_prime_clip_r2         [integer] Trim bases from the 3' end of read 2 AFTER adapter/quality trimming [default: 0] 
+  --nextseq_trim                [integer] Trim bases below this quality value from the 3' end of the read, ignoring high-quality G bases 
+[default: 0]  
+  --length_trim                 [integer] Discard reads that become shorter than INT because of either quality or adapter trimming. 
+  --skip_trimming_presets       [boolean] Skip presetting trimming parameters entirely 
+
+Bismark options
+  --non_directional             [boolean] Run alignment against all four possible strands. 
+  --cytosine_report             [boolean] Output stranded cytosine report, following Bismark's bismark_methylation_extractor step. 
+  --relax_mismatches            [boolean] Turn on to relax stringency for alignment (set allowed penalty with --num_mismatches). 
+  --num_mismatches              [number]  0.6 will allow a penalty of bp * -0.6 - for 100bp reads (bismark default is 0.2) [default: 0.6] 
+ 
+  --meth_cutoff                 [integer] Specify a minimum read coverage to report a methylation call 
+  --no_overlap                  [boolean] Ignore read 2 methylation when it overlaps read 1 [default: true] 
+  --ignore_r1                   [integer] Ignore methylation in first n bases of 5' end of R1 [default: 0] 
+  --ignore_r2                   [integer] Ignore methylation in first n bases of 5' end of R2 [default: 2] 
+  --ignore_3prime_r1            [integer] Ignore methylation in last n bases of 3' end of R1 [default: 0] 
+  --ignore_3prime_r2            [integer] Ignore methylation in last n bases of 3' end of R2 [default: 2] 
+  --known_splices               [string]  Supply a .gtf file containing known splice sites (bismark_hisat only). 
+  --local_alignment             [boolean] Allow soft-clipping of reads (potentially useful for single-cell experiments). 
+  --minins                      [integer] The minimum insert size for valid paired-end alignments. 
+  --maxins                      [integer] The maximum insert size for valid paired-end alignments. 
+  --nomeseq                     [boolean] Sample is NOMe-seq or NMT-seq. Runs coverage2cytosine. 
+  --comprehensive               [boolean] Merges methylation calls for every strand into a single, context dependent file. 
+
+MethylDackel options
+  --all_contexts                [boolean] Call methylation in all three CpG, CHG and CHH contexts. 
+  --merge_context               [boolean] Merges methylation metrics of the Cytosines in a given context. 
+  --min_depth                   [integer] Specify a minimum read coverage for MethylDackel to report a methylation call. [default: 0] 
+  --ignore_flags                [boolean] MethylDackel - ignore SAM flags 
+  --methyl_kit                  [boolean] Save files for use with methylKit 
+
+rastair options
+  --trim_OT                     [string] Nucleotides to exclude from methylation calling on Original Top (strand) reads, following this 
+pattern: R1 start, R1 end, R2 start, R2 end [default: 0,0,10,0]  
+  --trim_OB                     [string] Nucleotides to exclude from methylation calling on Original Bottom (strand) reads, following this 
+pattern: R1 start, R1 end, R2 start, R2 end [default: 0,0,10,0]  
+
+Qualimap Options
+  --bamqc_regions_file          [string] A GFF or BED file containing the target regions which will be passed to Qualimap/Bamqc. 
+
+Targeted Sequencing Analysis Options
+  --target_regions_file         [string]  A BED file containing the target regions 
+  --collecthsmetrics            [boolean] Run Picard CollectHsMetrics in the targeted analysis 
+
+Skip pipeline steps
+  --skip_trimming               [boolean] Skip read trimming. 
+  --skip_deduplication          [boolean] Skip deduplication step after alignment. 
+  --skip_fastqc                 [boolean] Skip FastQC 
+  --skip_multiqc                [boolean] Skip MultiQC 
+
+Run pipeline steps
+  --run_preseq                  [boolean] Run preseq/lcextrap tool 
+  --run_qualimap                [boolean] Run qualimap/bamqc tool 
+  --run_targeted_sequencing     [boolean] Run advanced analysis for targeted methylation kits with enrichment of specific regions 
+
+Generic options
+  --multiqc_methods_description [string]          Custom MultiQC yaml file containing HTML including a methods description. 
+  --help                        [boolean, string] Display the help message. 
+  --help_full                   [boolean]         Display the full detailed help message. 
+  --show_hidden                 [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 19 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The pipeline
+    https://doi.org/10.5281/zenodo.1343417
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/methylseq/blob/master/CITATIONS.md
+

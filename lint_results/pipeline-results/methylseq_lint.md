@@ -1,24 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-07-20T00:30:10.694207358Z
+- Generated: 2026-07-21T00:30:03.727954822Z
 - Nextflow version: 26.07.0-edge
-- Summary: 2 errors, 27 warnings
-
-## :x: Errors
-
-- Error: `modules/nf-core/rastair/mbiasparser/main.nf:15:26`: `trim_OT` is not defined
-
-  ```nextflow
-      tuple val(meta), env(trim_OT), env(trim_OB),                    emit: mbias_processed_str
-                           ^^^^^^^
-  ```
-
-- Error: `modules/nf-core/rastair/mbiasparser/main.nf:15:40`: `trim_OB` is not defined
-
-  ```nextflow
-      tuple val(meta), env(trim_OT), env(trim_OB),                    emit: mbias_processed_str
-                                         ^^^^^^^
-  ```
+- Summary: 23 warnings
 
 ## :warning: Warnings
 
@@ -78,13 +62,6 @@
           ^^^^
   ```
 
-- Warning: `modules/nf-core/trimgalore/main.nf:47:31`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          args_list.removeAll { it.toLowerCase().contains('_r2 ') }
-                                ^^
-  ```
-
 - Warning: `subworkflows/local/targeted_sequencing/main.nf:29:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -106,31 +83,17 @@
                                                                          ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_methylseq_pipeline/main.nf:32:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_methylseq_pipeline/main.nf:112:40`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      monochrome_logs   // boolean: Do not use coloured log outputs
-      ^^^^^^^^^^^^^^^
+          .map { meta, fastq_1, fastq_2, genome ->
+                                         ^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_methylseq_pipeline/main.nf:35:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_methylseq_pipeline/main.nf:235:9`: Variable was declared but not used
 
   ```nextflow
-      input             //  string: Path to input samplesheet
-      ^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_methylseq_pipeline/main.nf:109:37`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-              meta, fastq_1, fastq_2, genome ->
-                                      ^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_methylseq_pipeline/main.nf:241:9`: Variable was declared but not used
-
-  ```nextflow
-      def citation_text = [
+      def citation_text = ["Tools used in the workflow included:", "FastQC (Andrews 2010),", "Trim Galore! (Krueger)", "Bismark (Krueger 2011)", "bwa-meth (Pedersen 2014)", "Picard (Broad Institute 2019)", "Qualimap (Okonechnikov 2015)", "Preseq (Daley 2013)", "MultiQC (Ewels et al. 2016)", "."].join(' ').trim()
           ^^^^^^^^^^^^^
   ```
 
@@ -169,42 +132,35 @@
                                             ^^^^^^^^
   ```
 
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      return ch_versions.unique().map { version -> processVersionsFromYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
-                                                                                                   ^^^^^^^
-  ```
-
-- Warning: `workflows/methylseq/main.nf:361:90`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/methylseq/main.nf:341:90`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files = ch_multiqc_files.mix(QUALIMAP_BAMQC.out.results.collect { it[1] }.ifEmpty([]))
                                                                                            ^^
   ```
 
-- Warning: `workflows/methylseq/main.nf:364:87`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/methylseq/main.nf:344:87`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files = ch_multiqc_files.mix(PRESEQ_LCEXTRAP.out.log.collect { it[1] }.ifEmpty([]))
                                                                                         ^^
   ```
 
-- Warning: `workflows/methylseq/main.nf:368:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/methylseq/main.nf:348:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files = ch_multiqc_files.mix(TRIMGALORE.out.log.collect { it[1] })
                                                                                    ^^
   ```
 
-- Warning: `workflows/methylseq/main.nf:372:106`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/methylseq/main.nf:352:106`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   ch_multiqc_files = ch_multiqc_files.mix(TARGETED_SEQUENCING.out.picard_metrics.collect { it[1] }.ifEmpty([]))
                                                                                                            ^^
   ```
 
-- Warning: `workflows/methylseq/main.nf:376:78`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/methylseq/main.nf:356:78`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files = ch_multiqc_files.mix(FASTQC.out.zip.collect { it[1] }.ifEmpty([]))

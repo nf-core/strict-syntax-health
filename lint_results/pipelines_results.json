@@ -251,6 +251,18 @@
     "publishdir": true,
     "publishdir_count": 81
   },
+  "daamicrobiome": {
+    "full_name": "nf-core/daamicrobiome",
+    "html_url": "https://github.com/nf-core/daamicrobiome",
+    "commit": "bd35f7ec1899b790fc80f99de2be6e2d3bcd21fe",
+    "errors": 0,
+    "warnings": 2,
+    "parse_error": false,
+    "prints_help": true,
+    "workflow_output": false,
+    "publishdir": true,
+    "publishdir_count": 1
+  },
   "dartseq": {
     "full_name": "nf-core/dartseq",
     "html_url": "https://github.com/nf-core/dartseq",
@@ -266,7 +278,7 @@
   "datasync": {
     "full_name": "nf-core/datasync",
     "html_url": "https://github.com/nf-core/datasync",
-    "commit": "ce6bd4a73116db71667b1254feb8977fcc441d80",
+    "commit": "b1120ce32fca57ff443a6ade51a923b9b32e73db",
     "errors": 0,
     "warnings": 3,
     "parse_error": false,
@@ -290,14 +302,14 @@
   "deepmutscan": {
     "full_name": "nf-core/deepmutscan",
     "html_url": "https://github.com/nf-core/deepmutscan",
-    "commit": "35eafca2d2f78ed43ff026806c3c7a76b96bdd16",
+    "commit": "f3947ce4a5d57d31eeb865f802bc56ebcb675f6a",
     "errors": 0,
-    "warnings": 104,
+    "warnings": 117,
     "parse_error": false,
     "prints_help": false,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 26
+    "publishdir_count": 29
   },
   "demo": {
     "full_name": "nf-core/demo",
@@ -362,9 +374,9 @@
   "differentialabundance": {
     "full_name": "nf-core/differentialabundance",
     "html_url": "https://github.com/nf-core/differentialabundance",
-    "commit": "b95f7543a3716568678afdac2909f9504a3eb506",
+    "commit": "0dca5f186f7b325f23b72c5dc458d48883875a20",
     "errors": 0,
-    "warnings": 107,
+    "warnings": 108,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": true,
@@ -866,11 +878,11 @@
   "methylseq": {
     "full_name": "nf-core/methylseq",
     "html_url": "https://github.com/nf-core/methylseq",
-    "commit": "aa3f4da99ac6b42f82086e139135c73430c19440",
-    "errors": 2,
-    "warnings": 27,
+    "commit": "e8df423a325e6975cf0d9df9f55a5a1ee78c36bf",
+    "errors": 0,
+    "warnings": 23,
     "parse_error": false,
-    "prints_help": null,
+    "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
     "publishdir_count": 45
@@ -878,9 +890,9 @@
   "mhcquant": {
     "full_name": "nf-core/mhcquant",
     "html_url": "https://github.com/nf-core/mhcquant",
-    "commit": "85b0afc622425ad18546aa5ddaed51f966706ede",
+    "commit": "d602127b443870e96d23062bfc261fc26564856f",
     "errors": 0,
-    "warnings": 51,
+    "warnings": 45,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -1166,7 +1178,7 @@
   "proteinfold": {
     "full_name": "nf-core/proteinfold",
     "html_url": "https://github.com/nf-core/proteinfold",
-    "commit": "c30680bf335cadda04ebf4d65bd401dec77439ea",
+    "commit": "2e1e748d255f25baf6b24fd520f138ca6765420a",
     "errors": 0,
     "warnings": 3,
     "parse_error": false,
@@ -1238,9 +1250,9 @@
   "rarevariantburden": {
     "full_name": "nf-core/rarevariantburden",
     "html_url": "https://github.com/nf-core/rarevariantburden",
-    "commit": "e9392c4294ecdd4f6f984b9c235eb220306455be",
+    "commit": "84db4289cd01ecd757901e3cd837f05d6d82d9d8",
     "errors": 14,
-    "warnings": 26,
+    "warnings": 22,
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
@@ -1610,14 +1622,14 @@
   "variantbenchmarking": {
     "full_name": "nf-core/variantbenchmarking",
     "html_url": "https://github.com/nf-core/variantbenchmarking",
-    "commit": "4d07dcda08ddcce51933018df2c9daec8479bbc1",
+    "commit": "1d3fb18b37ae3387db90441c586d4ce988831b20",
     "errors": 0,
-    "warnings": 36,
+    "warnings": 11,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 79
+    "publishdir_count": 80
   },
   "variantcatalogue": {
     "full_name": "nf-core/variantcatalogue",

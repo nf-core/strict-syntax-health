@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-07-04T00:34:54.690075308Z
-- Nextflow version: 26.06.0-edge
-- Summary: 51 warnings
+- Generated: 2026-07-21T00:30:24.982477576Z
+- Nextflow version: 26.07.0-edge
+- Summary: 45 warnings
 
 ## :warning: Warnings
 
@@ -18,13 +18,6 @@
   ```nextflow
               meta.variable_mods.trim() ? "-variable_modifications ${meta.variable_mods.tokenize(',').collect { "'${it.trim()}'" }.join(' ')}" : "",
                                                                                                                     ^^
-  ```
-
-- Warning: `main.nf:50:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      multiqc_report = MHCQUANT.out.multiqc_report // channel: /path/to/multiqc_report.html
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `modules/local/epicore/main.nf:38:9`: Variable was declared but not used
@@ -125,18 +118,11 @@
                      ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_spectra/main.nf:67:9`: Emit name should be omitted when there is only one emit
+- Warning: `subworkflows/local/process_feature/main.nf:20:61`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-          mzml = ch_mzml_file
-          ^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/process_feature/main.nf:40:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      consensusxml = OPENMS_IDCONFLICTRESOLVER.out.consensusxml
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          .map { key, featurexmls -> [key, featurexmls.sort { it.name.tokenize('_')[0] as int }] }
+                                                              ^^
   ```
 
 - Warning: `subworkflows/local/quant/main.nf:30:24`: Parameter was not used -- prefix with `_` to suppress warning
@@ -160,14 +146,14 @@
                      ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/quant/main.nf:50:20`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/quant/main.nf:51:20`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map { group_meta, meta, idxml, q_value -> [meta, idxml, q_value] }
                      ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/quant/main.nf:78:24`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/quant/main.nf:79:24`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   .map { group_meta, meta, aligned_mzml, idxml, merged_idxml -> [meta, aligned_mzml, idxml, merged_idxml] }
@@ -258,27 +244,6 @@
                      ^^^^
   ```
 
-- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      valid_config = valid_config
-      ^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
-  ```
-
 - Warning: `workflows/mhcquant.nf:89:89`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
@@ -354,11 +319,4 @@
   ```nextflow
           params.epicore ? EPICORE.out.stats : SUMMARIZE_RESULTS.out.epicore_input.map { meta, tsv, stats -> stats }
                                                                                                ^^^
-  ```
-
-- Warning: `workflows/mhcquant.nf:297:10`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      emit:multiqc_report = MULTIQC.out.report.map { _meta, report -> [report] }.toList() // channel: /path/to/multiqc_report.html
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```

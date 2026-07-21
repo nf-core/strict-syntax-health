@@ -1,6 +1,6 @@
 # Workflow outputs migration: deepmutscan
 
-- Generated: 2026-07-17T00:29:22.066998+00:00
+- Generated: 2026-07-21T00:29:05.791263+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -12,7 +12,7 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 ## Legacy `publishDir` references
 
-Found 26 `publishDir` references across 2 files that should be migrated to the workflow `output {}` block:
+Found 29 `publishDir` references across 2 files that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/deepmutscan/blob/35eafca2d2f78ed43ff026806c3c7a76b96bdd16/conf/modules.config#L18) — 25 references
-- [`modules/local/dmsanalysis/process_variant_counts/main.nf`](https://github.com/nf-core/deepmutscan/blob/35eafca2d2f78ed43ff026806c3c7a76b96bdd16/modules/local/dmsanalysis/process_variant_counts/main.nf#L11) — 1 reference
+- [`conf/modules.config`](https://github.com/nf-core/deepmutscan/blob/f3947ce4a5d57d31eeb865f802bc56ebcb675f6a/conf/modules.config#L18) — 28 references
+- [`modules/local/dmsanalysis/process_variant_counts/main.nf`](https://github.com/nf-core/deepmutscan/blob/f3947ce4a5d57d31eeb865f802bc56ebcb675f6a/modules/local/dmsanalysis/process_variant_counts/main.nf#L11) — 1 reference
