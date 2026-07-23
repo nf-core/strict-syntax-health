@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.07.0-edge
 
 Downloading plugin nf-schema@2.7.2
-Launching `./main.nf` [grave_newton] revision: be54f69b2e
+Launching `./main.nf` [berserk_goldwasser] revision: 345edf4f8d
 
 
 ------------------------------------------------------
@@ -26,8 +26,8 @@ Main arguments
   --input                                  [string]  Path to tab-separated sample sheet 
   --input_fasta                            [string]  Path to ASV/OTU fasta file 
   --input_folder                           [string]  Path to folder containing zipped FastQ files 
-  --FW_primer                              [string]  Forward primer sequence 
-  --RV_primer                              [string]  Reverse primer sequence 
+  --primer_fwd                             [string]  Forward primer sequence 
+  --primer_rev                             [string]  Reverse primer sequence 
   --metadata                               [string]  Path to metadata sheet, when missing most downstream analysis are skipped (barplots, PCoA plots, 
 ...).  
   --multiregion                            [string]  Path to multi-region definition sheet, for multi-region analysis with Sidle 
@@ -39,18 +39,16 @@ storage on Cloud infrastructure.
   --email                                  [string]  Email address for completion summary. 
 
 Sequencing input
-  --binned_quality                         [string]  Comma separated quality bins. If data has binned quality scores. 
+  --sequencing_type                        [string]  Sequencing technology of the data, determines analyze settings and tools.  (accepted: 
+illumina_pe, illumina_se, iontorrent, pacbio, nanopore) [default: illumina_pe]  
+  --binned_quality                         [string]  Comma separated quality bins for DADA2. If data has binned quality scores. 
   --ignore_binned_quality                  [boolean] Ignore warnings about binned quality scores. 
-  --nanopore                               [boolean] If data is single-ended Nanopore reads instead of Illumina 
-  --pacbio                                 [boolean] If data is single-ended PacBio reads instead of Illumina 
-  --iontorrent                             [boolean] If data is single-ended IonTorrent reads instead of Illumina 
-  --single_end                             [boolean] If data is single-ended Illumina reads instead of paired-end 
-  --illumina_pe_its                        [boolean] If analysing ITS amplicons or any other region with large length variability with Illumina paired 
-end reads  
-  --quality_type                           [string]  Type of quality scores in raw read data  (accepted: Auto, FastqQuality, SFastqQuality) [default: 
-Auto]  
+  --illumina_pe_readthrough                [boolean] If analyzing Illumina paired end reads of an amplicon with large length variability such as ITS 
+ 
+  --quality_type                           [string]  Type of quality scores in raw read data for DADA2  (accepted: Auto, FastqQuality, SFastqQuality) 
+[default: Auto]  
   --multiple_sequencing_runs               [boolean] If using `--input_folder`: samples were sequenced in multiple sequencing runs 
-  --extension                              [string]  If using `--input_folder`: naming of sequencing files [default: /*_R{1,2}_001.fastq.gz] 
+  --input_folder_extensions                [string]  If using `--input_folder`: naming of sequencing files [default: /*_R{1,2}_001.fastq.gz] 
   --min_read_counts                        [integer] Set read count threshold for failed samples. [default: 1] 
   --ignore_empty_input_files               [boolean] Ignore input files with too few reads. 
 
@@ -64,7 +62,7 @@ sequences.
   --double_primer                          [boolean] Cutadapt will be run twice to ensure removal of potential double primers 
   --ignore_failed_trimming                 [boolean] Ignore files with too few reads after trimming. 
 
-Read trimming and quality filtering
+DADA2 read trimming and quality filtering
   --truncq                                 [integer] Truncate each read at the first instance of a quality score less than or equal to `--truncq`. 
 [default: 2]  
   --trunclenf                              [integer] DADA2 read truncation value for forward strand, set this to 0 for no truncation 
@@ -79,23 +77,26 @@ median quality score [default: 25]
   --ignore_failed_filtering                [boolean] Ignore files with too few reads after quality filtering. 
 
 Amplicon Sequence Variants (ASV) calculation
+  --asv_calling                            [string]  Tool for ASV calculation.  (accepted: dada2, savont, auto) [default: auto] 
   --sample_inference                       [string]  Mode of sample inference: "independent", "pooled" or "pseudo"  (accepted: independent, pooled, 
-pseudo) [default: independent]  
+pseudo) [default: pooled]  
   --savont_options                         [string]  Options for Savont ONT analysis [default: --fl-16s] 
-  --mergepairs_strategy                    [string]  Strategy to merge paired end reads. When paired end reads are not sufficiently overlapping for 
-merging, you can use "concatenate" (not recommended). When you have a mix of overlapping and non 
+  --mergepairs_strategy                    [string]  DADA2: Strategy to merge paired end reads. When paired end reads are not sufficiently overlapping 
+for merging, you can use "concatenate" (not recommended). When you have a mix of overlapping and non 
 overlapping reads use "consensus"  (accepted: merge, concatenate, consensus) [default: merge] 
  
-  --mergepairs_consensus_match             [integer] The score assigned for each matching base pair during sequence alignment. [default: 1] 
-  --mergepairs_consensus_mismatch          [integer] The penalty score assigned for each mismatched base pair during sequence alignment. [default: 
--2]  
-  --mergepairs_consensus_gap               [integer] The penalty score assigned for each gap introduced during sequence alignment. [default: -4] 
-  --mergepairs_consensus_minoverlap        [integer] The minimum number of overlapping base pairs required to merge forward and reverse reads. 
+  --mergepairs_consensus_match             [integer] DADA2: The score assigned for each matching base pair during sequence alignment. [default: 1] 
+ 
+  --mergepairs_consensus_mismatch          [integer] DADA2: The penalty score assigned for each mismatched base pair during sequence alignment. 
+[default: -2]  
+  --mergepairs_consensus_gap               [integer] DADA2: The penalty score assigned for each gap introduced during sequence alignment. [default: 
+-4]  
+  --mergepairs_consensus_minoverlap        [integer] DADA2: The minimum number of overlapping base pairs required to merge forward and reverse reads. 
 [default: 12]  
-  --mergepairs_consensus_maxmismatch       [integer] The maximum number of mismatches allowed within the overlapping region for merging reads. 
+  --mergepairs_consensus_maxmismatch       [integer] DADA2: The maximum number of mismatches allowed within the overlapping region for merging reads. 
 [default: 0]  
-  --mergepairs_consensus_percentile_cutoff [number]  The percentile used to determine a stringent cutoff which will correspond to the minimum observed 
-overlap in the dataset. This ensures that only read pairs with high overlap are merged into 
+  --mergepairs_consensus_percentile_cutoff [number]  DADA2: The percentile used to determine a stringent cutoff which will correspond to the minimum 
+observed overlap in the dataset. This ensures that only read pairs with high overlap are merged into 
 consensus sequences. Those with insufficient overlap are concatenated. [default: 0.001]  
 
 ASV post processing
@@ -150,7 +151,7 @@ extract_hmm, align_hmm, align_extract_hmm, refseqfile, refphylogeny, model, taxo
 greengenes85, greengenes2, greengenes2=2024.09, greengenes2=2022.10)  
   --qiime_ref_tax_custom                   [string]  Path to files of a custom QIIME2 reference taxonomy database (tarball, or two comma-separated files) 
  
-  --classifier                             [string]  Path to QIIME2 trained classifier file (typically *-classifier.qza) 
+  --qiime_classifier                       [string]  Path to QIIME2 trained classifier file (typically *-classifier.qza) 
   --kraken2_ref_taxonomy                   [string]  Name of supported database, and optionally also version number  (accepted: silva, silva=138, 
 silva=132, rdp, rdp=18, greengenes, greengenes=13.5, standard, standard=20240904, ...)  
   --kraken2_ref_tax_custom                 [string]  Path to a custom Kraken2 reference taxonomy database (*.tar.gz|*.tgz archive or folder) 

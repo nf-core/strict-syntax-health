@@ -8,14 +8,14 @@
 
 - Warning: `workflows/daamicrobiome.nf:19:5`: Parameter was not used -- prefix with `_` to suppress warning
 
-    ```nextflow
-        ch_samplesheet // channel: samplesheet read in from --input
-        ^^^^^^^^^^^^^^
-    ```
+  ```nextflow
+      ch_samplesheet // channel: samplesheet read in from --input
+      ^^^^^^^^^^^^^^
+  ```
 
 - Warning: `workflows/daamicrobiome.nf:46:9`: Variable was declared but not used
 
-    ```nextflow
-        def ch_collated_versions = softwareVersionsToYAML(ch_versions.mix(topic_versions.versions_file))
-            ^^^^^^^^^^^^^^^^^^^^
-    ```
+  ```nextflow
+      def ch_collated_versions = softwareVersionsToYAML(ch_versions.mix(topic_versions.versions_file))
+          ^^^^^^^^^^^^^^^^^^^^
+  ```

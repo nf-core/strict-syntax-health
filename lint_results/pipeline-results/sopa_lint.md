@@ -1,59 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-07-16T00:32:12.558876430Z
-- Nextflow version: 26.06.0-edge
-- Summary: 7 errors, 24 warnings
-
-## :x: Errors
-
-- Error: `modules/nf-core/spaceranger/count/main.nf:27:9`: `probeset` is already declared
-
-  ```nextflow
-      def probeset = probeset ? "--probe-set=\"${probeset}\"" : ""
-          ^^^^^^^^
-  ```
-
-- Error: `modules/nf-core/spaceranger/count/main.nf:28:9`: `alignment` is already declared
-
-  ```nextflow
-      def alignment = alignment ? "--loupe-alignment=\"${alignment}\"" : ""
-          ^^^^^^^^^
-  ```
-
-- Error: `modules/nf-core/spaceranger/count/main.nf:29:9`: `slidefile` is already declared
-
-  ```nextflow
-      def slidefile = slidefile ? "--slidefile=\"${slidefile}\"" : ""
-          ^^^^^^^^^
-  ```
-
-- Error: `modules/nf-core/spaceranger/count/main.nf:30:9`: `image` is already declared
-
-  ```nextflow
-      def image = image ? "--image=\"${image}\"" : ""
-          ^^^^^
-  ```
-
-- Error: `modules/nf-core/spaceranger/count/main.nf:31:9`: `cytaimage` is already declared
-
-  ```nextflow
-      def cytaimage = cytaimage ? "--cytaimage=\"${cytaimage}\"" : ""
-          ^^^^^^^^^
-  ```
-
-- Error: `modules/nf-core/spaceranger/count/main.nf:32:9`: `darkimage` is already declared
-
-  ```nextflow
-      def darkimage = darkimage ? "--darkimage=\"${darkimage}\"" : ""
-          ^^^^^^^^^
-  ```
-
-- Error: `modules/nf-core/spaceranger/count/main.nf:33:9`: `colorizedimage` is already declared
-
-  ```nextflow
-      def colorizedimage = colorizedimage ? "--colorizedimage=\"${colorizedimage}\"" : ""
-          ^^^^^^^^^^^^^^
-  ```
+- Generated: 2026-07-23T00:33:26.621471653Z
+- Nextflow version: 26.07.0-edge
+- Summary: 13 warnings
 
 ## :warning: Warnings
 
@@ -69,27 +18,6 @@
   ```nextflow
           return channels.split(/[ ,|]+/).findAll { it }
                                                     ^^
-  ```
-
-- Warning: `subworkflows/local/baysor/main.nf:23:6`: Variable was declared but not used
-
-  ```nextflow
-      (ch_resolved, versions) = RESOLVE_BAYSOR(ch_segmented, argsCLI("resolve"))
-       ^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/cellpose/main.nf:23:6`: Variable was declared but not used
-
-  ```nextflow
-      (ch_resolved, versions) = RESOLVE_CELLPOSE(ch_segmented)
-       ^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/comseg/main.nf:23:6`: Variable was declared but not used
-
-  ```nextflow
-      (ch_resolved, versions) = RESOLVE_COMSEG(ch_segmented, argsCLI("resolve"))
-       ^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/input_check/main.nf:15:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -111,27 +39,6 @@
   ```nextflow
               dir: !it[1].name.contains(".gz")
                     ^^
-  ```
-
-- Warning: `subworkflows/local/input_check/main.nf:35:5`: Variable was declared but not used
-
-  ```nextflow
-      ch_spaceranger_input = ch_spaceranger_combined.map { meta, dir -> create_channel_spaceranger(meta, dir) }
-      ^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/proseg/main.nf:11:6`: Variable was declared but not used
-
-  ```nextflow
-      (ch_segmented, versions) = PATCH_SEGMENTATION_PROSEG(ch_patches, argsCLI("proseg"))
-       ^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/stardist/main.nf:23:6`: Variable was declared but not used
-
-  ```nextflow
-      (ch_resolved, versions) = RESOLVE_STARDIST(ch_segmented)
-       ^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/utils_nfcore_sopa_pipeline/main.nf:31:5`: Parameter was not used -- prefix with `_` to suppress warning
@@ -176,34 +83,6 @@
                                                            ^^
   ```
 
-- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
-
-  ```nextflow
-      valid_config = checkConfigProvided()
-      ^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      valid_config
-      ^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
-  ```
-
 - Warning: `workflows/sopa.nf:141:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -216,11 +95,4 @@
   ```nextflow
           ).set { ch_collated_versions }
                   ^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/sopa.nf:169:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      versions = ch_versions // channel: [ path(versions.yml) ]
-      ^^^^^^^^^^^^^^^^^^^^
   ```

@@ -1,6 +1,6 @@
 # Workflow outputs migration: genomicrelatedness
 
-- Generated: 2026-06-16T20:26:03.662206+00:00
+- Generated: 2026-07-23T00:31:11.181029+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,43 +14,43 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 61 `publishDir` references across 40 files that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules/samtools_index.config`](https://github.com/nf-core/genomicrelatedness/blob/14c1035344db22683551b3455e42fddaed9ea60c/conf/modules/samtools_index.config#L16) — 3 references
-- [`conf/modules/samtools_merge.config`](https://github.com/nf-core/genomicrelatedness/blob/14c1035344db22683551b3455e42fddaed9ea60c/conf/modules/samtools_merge.config#L16) — 3 references
-- [`conf/subworkflows/prepare_genome.config`](https://github.com/nf-core/genomicrelatedness/blob/14c1035344db22683551b3455e42fddaed9ea60c/conf/subworkflows/prepare_genome.config#L17) — 3 references
-- [`conf/modules.config`](https://github.com/nf-core/genomicrelatedness/blob/14c1035344db22683551b3455e42fddaed9ea60c/conf/modules.config#L15) — 2 references
-- [`conf/modules/bcftools_sort.config`](https://github.com/nf-core/genomicrelatedness/blob/14c1035344db22683551b3455e42fddaed9ea60c/conf/modules/bcftools_sort.config#L16) — 2 references
-- [`conf/modules/bcftools_stats.config`](https://github.com/nf-core/genomicrelatedness/blob/14c1035344db22683551b3455e42fddaed9ea60c/conf/modules/bcftools_stats.config#L16) — 2 references
-- [`conf/modules/gatk4_analyzecovariates.config`](https://github.com/nf-core/genomicrelatedness/blob/14c1035344db22683551b3455e42fddaed9ea60c/conf/modules/gatk4_analyzecovariates.config#L16) — 2 references
-- [`conf/modules/gatk4_applybqsr.config`](https://github.com/nf-core/genomicrelatedness/blob/14c1035344db22683551b3455e42fddaed9ea60c/conf/modules/gatk4_applybqsr.config#L16) — 2 references
-- [`conf/modules/gatk4_baserecalibrator.config`](https://github.com/nf-core/genomicrelatedness/blob/14c1035344db22683551b3455e42fddaed9ea60c/conf/modules/gatk4_baserecalibrator.config#L16) — 2 references
-- [`conf/modules/gatk4_gatherbqsrreports.config`](https://github.com/nf-core/genomicrelatedness/blob/14c1035344db22683551b3455e42fddaed9ea60c/conf/modules/gatk4_gatherbqsrreports.config#L16) — 2 references
-- [`conf/modules/gatk4_genomicsdbimport.config`](https://github.com/nf-core/genomicrelatedness/blob/14c1035344db22683551b3455e42fddaed9ea60c/conf/modules/gatk4_genomicsdbimport.config#L16) — 2 references
-- [`conf/modules/gatk4_genotypegvcfs.config`](https://github.com/nf-core/genomicrelatedness/blob/14c1035344db22683551b3455e42fddaed9ea60c/conf/modules/gatk4_genotypegvcfs.config#L16) — 2 references
-- [`conf/modules/gatk4_haplotypecaller.config`](https://github.com/nf-core/genomicrelatedness/blob/14c1035344db22683551b3455e42fddaed9ea60c/conf/modules/gatk4_haplotypecaller.config#L19) — 2 references
-- [`conf/modules/gatk4_mergevcfs.config`](https://github.com/nf-core/genomicrelatedness/blob/14c1035344db22683551b3455e42fddaed9ea60c/conf/modules/gatk4_mergevcfs.config#L16) — 2 references
-- [`conf/modules/make_scaffold_bed.config`](https://github.com/nf-core/genomicrelatedness/blob/14c1035344db22683551b3455e42fddaed9ea60c/conf/modules/make_scaffold_bed.config#L16) — 2 references
-- [`conf/modules/vcftools.config`](https://github.com/nf-core/genomicrelatedness/blob/14c1035344db22683551b3455e42fddaed9ea60c/conf/modules/vcftools.config#L18) — 2 references
-- [`conf/subworkflows/cram_baserecalibrator.config`](https://github.com/nf-core/genomicrelatedness/blob/14c1035344db22683551b3455e42fddaed9ea60c/conf/subworkflows/cram_baserecalibrator.config#L16) — 2 references
-- [`conf/subworkflows/filter_variants.config`](https://github.com/nf-core/genomicrelatedness/blob/14c1035344db22683551b3455e42fddaed9ea60c/conf/subworkflows/filter_variants.config#L16) — 2 references
-- [`conf/modules/angsd_ngsrelate.config`](https://github.com/nf-core/genomicrelatedness/blob/14c1035344db22683551b3455e42fddaed9ea60c/conf/modules/angsd_ngsrelate.config#L18) — 1 reference
-- [`conf/modules/bcftools_call.config`](https://github.com/nf-core/genomicrelatedness/blob/14c1035344db22683551b3455e42fddaed9ea60c/conf/modules/bcftools_call.config#L17) — 1 reference
-- [`conf/modules/bcftools_concat.config`](https://github.com/nf-core/genomicrelatedness/blob/14c1035344db22683551b3455e42fddaed9ea60c/conf/modules/bcftools_concat.config#L17) — 1 reference
-- [`conf/modules/bcftools_index.config`](https://github.com/nf-core/genomicrelatedness/blob/14c1035344db22683551b3455e42fddaed9ea60c/conf/modules/bcftools_index.config#L17) — 1 reference
-- [`conf/modules/bcftools_isec.config`](https://github.com/nf-core/genomicrelatedness/blob/14c1035344db22683551b3455e42fddaed9ea60c/conf/modules/bcftools_isec.config#L17) — 1 reference
-- [`conf/modules/bcftools_mpileup.config`](https://github.com/nf-core/genomicrelatedness/blob/14c1035344db22683551b3455e42fddaed9ea60c/conf/modules/bcftools_mpileup.config#L17) — 1 reference
-- [`conf/modules/bcftools_query.config`](https://github.com/nf-core/genomicrelatedness/blob/14c1035344db22683551b3455e42fddaed9ea60c/conf/modules/bcftools_query.config#L18) — 1 reference
-- [`conf/modules/bwamem2_mem.config`](https://github.com/nf-core/genomicrelatedness/blob/14c1035344db22683551b3455e42fddaed9ea60c/conf/modules/bwamem2_mem.config#L16) — 1 reference
-- [`conf/modules/fastp.config`](https://github.com/nf-core/genomicrelatedness/blob/14c1035344db22683551b3455e42fddaed9ea60c/conf/modules/fastp.config#L16) — 1 reference
-- [`conf/modules/gatk4_addorreplacereadgroups.config`](https://github.com/nf-core/genomicrelatedness/blob/14c1035344db22683551b3455e42fddaed9ea60c/conf/modules/gatk4_addorreplacereadgroups.config#L21) — 1 reference
-- [`conf/modules/gatk4_markduplicates.config`](https://github.com/nf-core/genomicrelatedness/blob/14c1035344db22683551b3455e42fddaed9ea60c/conf/modules/gatk4_markduplicates.config#L17) — 1 reference
-- [`conf/modules/gunzip.config`](https://github.com/nf-core/genomicrelatedness/blob/14c1035344db22683551b3455e42fddaed9ea60c/conf/modules/gunzip.config#L16) — 1 reference
-- [`conf/modules/mosdepth.config`](https://github.com/nf-core/genomicrelatedness/blob/14c1035344db22683551b3455e42fddaed9ea60c/conf/modules/mosdepth.config#L16) — 1 reference
-- [`conf/modules/normalize_bam_names.config`](https://github.com/nf-core/genomicrelatedness/blob/14c1035344db22683551b3455e42fddaed9ea60c/conf/modules/normalize_bam_names.config#L16) — 1 reference
-- [`conf/modules/preseq_ccurve.config`](https://github.com/nf-core/genomicrelatedness/blob/14c1035344db22683551b3455e42fddaed9ea60c/conf/modules/preseq_ccurve.config#L16) — 1 reference
-- [`conf/modules/preseq_lcextrap.config`](https://github.com/nf-core/genomicrelatedness/blob/14c1035344db22683551b3455e42fddaed9ea60c/conf/modules/preseq_lcextrap.config#L18) — 1 reference
-- [`conf/modules/samtools_convert.config`](https://github.com/nf-core/genomicrelatedness/blob/14c1035344db22683551b3455e42fddaed9ea60c/conf/modules/samtools_convert.config#L16) — 1 reference
-- [`conf/modules/samtools_stats.config`](https://github.com/nf-core/genomicrelatedness/blob/14c1035344db22683551b3455e42fddaed9ea60c/conf/modules/samtools_stats.config#L16) — 1 reference
-- [`conf/modules/splitintervals.config`](https://github.com/nf-core/genomicrelatedness/blob/14c1035344db22683551b3455e42fddaed9ea60c/conf/modules/splitintervals.config#L17) — 1 reference
-- [`conf/modules/spring.config`](https://github.com/nf-core/genomicrelatedness/blob/14c1035344db22683551b3455e42fddaed9ea60c/conf/modules/spring.config#L16) — 1 reference
-- [`conf/subworkflows/prepare_intervals.config`](https://github.com/nf-core/genomicrelatedness/blob/14c1035344db22683551b3455e42fddaed9ea60c/conf/subworkflows/prepare_intervals.config#L16) — 1 reference
-- [`modules/nf-core/spring/decompress/tests/nextflow.config`](https://github.com/nf-core/genomicrelatedness/blob/14c1035344db22683551b3455e42fddaed9ea60c/modules/nf-core/spring/decompress/tests/nextflow.config#L3) — 1 reference
+- [`conf/modules/samtools_index.config`](https://github.com/nf-core/genomicrelatedness/blob/31a67f78209150ed3aa748bc38762ef2c4ffd4eb/conf/modules/samtools_index.config#L16) — 3 references
+- [`conf/modules/samtools_merge.config`](https://github.com/nf-core/genomicrelatedness/blob/31a67f78209150ed3aa748bc38762ef2c4ffd4eb/conf/modules/samtools_merge.config#L16) — 3 references
+- [`conf/subworkflows/prepare_genome.config`](https://github.com/nf-core/genomicrelatedness/blob/31a67f78209150ed3aa748bc38762ef2c4ffd4eb/conf/subworkflows/prepare_genome.config#L17) — 3 references
+- [`conf/modules.config`](https://github.com/nf-core/genomicrelatedness/blob/31a67f78209150ed3aa748bc38762ef2c4ffd4eb/conf/modules.config#L15) — 2 references
+- [`conf/modules/bcftools_sort.config`](https://github.com/nf-core/genomicrelatedness/blob/31a67f78209150ed3aa748bc38762ef2c4ffd4eb/conf/modules/bcftools_sort.config#L16) — 2 references
+- [`conf/modules/bcftools_stats.config`](https://github.com/nf-core/genomicrelatedness/blob/31a67f78209150ed3aa748bc38762ef2c4ffd4eb/conf/modules/bcftools_stats.config#L16) — 2 references
+- [`conf/modules/gatk4_analyzecovariates.config`](https://github.com/nf-core/genomicrelatedness/blob/31a67f78209150ed3aa748bc38762ef2c4ffd4eb/conf/modules/gatk4_analyzecovariates.config#L16) — 2 references
+- [`conf/modules/gatk4_applybqsr.config`](https://github.com/nf-core/genomicrelatedness/blob/31a67f78209150ed3aa748bc38762ef2c4ffd4eb/conf/modules/gatk4_applybqsr.config#L16) — 2 references
+- [`conf/modules/gatk4_baserecalibrator.config`](https://github.com/nf-core/genomicrelatedness/blob/31a67f78209150ed3aa748bc38762ef2c4ffd4eb/conf/modules/gatk4_baserecalibrator.config#L16) — 2 references
+- [`conf/modules/gatk4_gatherbqsrreports.config`](https://github.com/nf-core/genomicrelatedness/blob/31a67f78209150ed3aa748bc38762ef2c4ffd4eb/conf/modules/gatk4_gatherbqsrreports.config#L16) — 2 references
+- [`conf/modules/gatk4_genomicsdbimport.config`](https://github.com/nf-core/genomicrelatedness/blob/31a67f78209150ed3aa748bc38762ef2c4ffd4eb/conf/modules/gatk4_genomicsdbimport.config#L16) — 2 references
+- [`conf/modules/gatk4_genotypegvcfs.config`](https://github.com/nf-core/genomicrelatedness/blob/31a67f78209150ed3aa748bc38762ef2c4ffd4eb/conf/modules/gatk4_genotypegvcfs.config#L16) — 2 references
+- [`conf/modules/gatk4_haplotypecaller.config`](https://github.com/nf-core/genomicrelatedness/blob/31a67f78209150ed3aa748bc38762ef2c4ffd4eb/conf/modules/gatk4_haplotypecaller.config#L19) — 2 references
+- [`conf/modules/gatk4_mergevcfs.config`](https://github.com/nf-core/genomicrelatedness/blob/31a67f78209150ed3aa748bc38762ef2c4ffd4eb/conf/modules/gatk4_mergevcfs.config#L16) — 2 references
+- [`conf/modules/make_scaffold_bed.config`](https://github.com/nf-core/genomicrelatedness/blob/31a67f78209150ed3aa748bc38762ef2c4ffd4eb/conf/modules/make_scaffold_bed.config#L16) — 2 references
+- [`conf/modules/vcftools.config`](https://github.com/nf-core/genomicrelatedness/blob/31a67f78209150ed3aa748bc38762ef2c4ffd4eb/conf/modules/vcftools.config#L18) — 2 references
+- [`conf/subworkflows/cram_baserecalibrator.config`](https://github.com/nf-core/genomicrelatedness/blob/31a67f78209150ed3aa748bc38762ef2c4ffd4eb/conf/subworkflows/cram_baserecalibrator.config#L16) — 2 references
+- [`conf/subworkflows/filter_variants.config`](https://github.com/nf-core/genomicrelatedness/blob/31a67f78209150ed3aa748bc38762ef2c4ffd4eb/conf/subworkflows/filter_variants.config#L16) — 2 references
+- [`conf/modules/angsd_ngsrelate.config`](https://github.com/nf-core/genomicrelatedness/blob/31a67f78209150ed3aa748bc38762ef2c4ffd4eb/conf/modules/angsd_ngsrelate.config#L18) — 1 reference
+- [`conf/modules/bcftools_call.config`](https://github.com/nf-core/genomicrelatedness/blob/31a67f78209150ed3aa748bc38762ef2c4ffd4eb/conf/modules/bcftools_call.config#L17) — 1 reference
+- [`conf/modules/bcftools_concat.config`](https://github.com/nf-core/genomicrelatedness/blob/31a67f78209150ed3aa748bc38762ef2c4ffd4eb/conf/modules/bcftools_concat.config#L17) — 1 reference
+- [`conf/modules/bcftools_index.config`](https://github.com/nf-core/genomicrelatedness/blob/31a67f78209150ed3aa748bc38762ef2c4ffd4eb/conf/modules/bcftools_index.config#L17) — 1 reference
+- [`conf/modules/bcftools_isec.config`](https://github.com/nf-core/genomicrelatedness/blob/31a67f78209150ed3aa748bc38762ef2c4ffd4eb/conf/modules/bcftools_isec.config#L17) — 1 reference
+- [`conf/modules/bcftools_mpileup.config`](https://github.com/nf-core/genomicrelatedness/blob/31a67f78209150ed3aa748bc38762ef2c4ffd4eb/conf/modules/bcftools_mpileup.config#L17) — 1 reference
+- [`conf/modules/bcftools_query.config`](https://github.com/nf-core/genomicrelatedness/blob/31a67f78209150ed3aa748bc38762ef2c4ffd4eb/conf/modules/bcftools_query.config#L18) — 1 reference
+- [`conf/modules/bwamem2_mem.config`](https://github.com/nf-core/genomicrelatedness/blob/31a67f78209150ed3aa748bc38762ef2c4ffd4eb/conf/modules/bwamem2_mem.config#L16) — 1 reference
+- [`conf/modules/fastp.config`](https://github.com/nf-core/genomicrelatedness/blob/31a67f78209150ed3aa748bc38762ef2c4ffd4eb/conf/modules/fastp.config#L16) — 1 reference
+- [`conf/modules/gatk4_addorreplacereadgroups.config`](https://github.com/nf-core/genomicrelatedness/blob/31a67f78209150ed3aa748bc38762ef2c4ffd4eb/conf/modules/gatk4_addorreplacereadgroups.config#L21) — 1 reference
+- [`conf/modules/gatk4_markduplicates.config`](https://github.com/nf-core/genomicrelatedness/blob/31a67f78209150ed3aa748bc38762ef2c4ffd4eb/conf/modules/gatk4_markduplicates.config#L17) — 1 reference
+- [`conf/modules/gunzip.config`](https://github.com/nf-core/genomicrelatedness/blob/31a67f78209150ed3aa748bc38762ef2c4ffd4eb/conf/modules/gunzip.config#L16) — 1 reference
+- [`conf/modules/mosdepth.config`](https://github.com/nf-core/genomicrelatedness/blob/31a67f78209150ed3aa748bc38762ef2c4ffd4eb/conf/modules/mosdepth.config#L16) — 1 reference
+- [`conf/modules/normalize_bam_names.config`](https://github.com/nf-core/genomicrelatedness/blob/31a67f78209150ed3aa748bc38762ef2c4ffd4eb/conf/modules/normalize_bam_names.config#L16) — 1 reference
+- [`conf/modules/preseq_ccurve.config`](https://github.com/nf-core/genomicrelatedness/blob/31a67f78209150ed3aa748bc38762ef2c4ffd4eb/conf/modules/preseq_ccurve.config#L16) — 1 reference
+- [`conf/modules/preseq_lcextrap.config`](https://github.com/nf-core/genomicrelatedness/blob/31a67f78209150ed3aa748bc38762ef2c4ffd4eb/conf/modules/preseq_lcextrap.config#L18) — 1 reference
+- [`conf/modules/samtools_convert.config`](https://github.com/nf-core/genomicrelatedness/blob/31a67f78209150ed3aa748bc38762ef2c4ffd4eb/conf/modules/samtools_convert.config#L16) — 1 reference
+- [`conf/modules/samtools_stats.config`](https://github.com/nf-core/genomicrelatedness/blob/31a67f78209150ed3aa748bc38762ef2c4ffd4eb/conf/modules/samtools_stats.config#L16) — 1 reference
+- [`conf/modules/splitintervals.config`](https://github.com/nf-core/genomicrelatedness/blob/31a67f78209150ed3aa748bc38762ef2c4ffd4eb/conf/modules/splitintervals.config#L17) — 1 reference
+- [`conf/modules/spring.config`](https://github.com/nf-core/genomicrelatedness/blob/31a67f78209150ed3aa748bc38762ef2c4ffd4eb/conf/modules/spring.config#L16) — 1 reference
+- [`conf/subworkflows/prepare_intervals.config`](https://github.com/nf-core/genomicrelatedness/blob/31a67f78209150ed3aa748bc38762ef2c4ffd4eb/conf/subworkflows/prepare_intervals.config#L16) — 1 reference
+- [`modules/nf-core/spring/decompress/tests/nextflow.config`](https://github.com/nf-core/genomicrelatedness/blob/31a67f78209150ed3aa748bc38762ef2c4ffd4eb/modules/nf-core/spring/decompress/tests/nextflow.config#L3) — 1 reference

@@ -1,10 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
-Nextflow 26.07.0-edge is available - Please consider updating your version to it
 
- N E X T F L O W   ~  version 26.06.0-edge
+ N E X T F L O W   ~  version 26.07.0-edge
 
-Launching `./main.nf` [determined_salas] revision: f76ea14d93
+Launching `./main.nf` [intergalactic_aryabhata] revision: f76ea14d93
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'

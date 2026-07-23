@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-07-16T00:27:33.111109633Z
-- Nextflow version: 26.06.0-edge
-- Summary: 69 warnings
+- Generated: 2026-07-23T00:30:09.893038452Z
+- Nextflow version: 26.07.0-edge
+- Summary: 57 warnings
 
 ## :warning: Warnings
 
@@ -11,13 +11,6 @@
   ```nextflow
               saveAs: { (meta.single_end || params.save_align_intermeds) ? "${it}" : null }
                                                                               ^^
-  ```
-
-- Warning: `main.nf:96:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      multiqc_report = CHIPSEQ.out.multiqc_report // channel: /path/to/multiqc_report.html
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `modules/local/macs3_consensus/main.nf:39:46`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -34,63 +27,56 @@
                           ^^
   ```
 
-- Warning: `subworkflows/local/bam_peaks_call_qc_annotate_macs3_homer/main.nf:46:13`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/bam_peaks_call_qc_annotate_macs3_homer/main.nf:44:13`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               meta, peaks ->
               ^^^^
   ```
 
-- Warning: `subworkflows/local/bam_peaks_call_qc_annotate_macs3_homer/main.nf:55:27`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/bam_peaks_call_qc_annotate_macs3_homer/main.nf:53:27`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               meta, ip_bam, control_bam, peaks ->
                             ^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bam_peaks_call_qc_annotate_macs3_homer/main.nf:71:19`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/bam_peaks_call_qc_annotate_macs3_homer/main.nf:69:19`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               meta, ip_bam, peaks, frip ->
                     ^^^^^^
   ```
 
-- Warning: `subworkflows/local/bam_peaks_call_qc_annotate_macs3_homer/main.nf:108:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/bam_peaks_call_qc_annotate_macs3_homer/main.nf:105:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   ch_macs3_peaks.collect{it[1]},
                                          ^^
   ```
 
-- Warning: `subworkflows/local/bam_peaks_call_qc_annotate_macs3_homer/main.nf:118:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/bam_peaks_call_qc_annotate_macs3_homer/main.nf:115:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   HOMER_ANNOTATEPEAKS.out.txt.collect{it[1]},
                                                       ^^
   ```
 
-- Warning: `subworkflows/local/bed_consensus_quantify_qc_bedtools_featurecounts_deseq2/main.nf:26:5`: Variable was declared but not used
-
-  ```nextflow
-      ch_versions = channel.empty()
-      ^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/bed_consensus_quantify_qc_bedtools_featurecounts_deseq2/main.nf:40:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/bed_consensus_quantify_qc_bedtools_featurecounts_deseq2/main.nf:38:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       groups.groupBy().collectEntries { [(it.key) : it.value.size()] },
                                                           ^^
   ```
 
-- Warning: `subworkflows/local/bed_consensus_quantify_qc_bedtools_featurecounts_deseq2/main.nf:40:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/bed_consensus_quantify_qc_bedtools_featurecounts_deseq2/main.nf:38:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       groups.groupBy().collectEntries { [(it.key) : it.value.size()] },
                                                                     ^^
   ```
 
-- Warning: `subworkflows/local/bed_consensus_quantify_qc_bedtools_featurecounts_deseq2/main.nf:49:58`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/bed_consensus_quantify_qc_bedtools_featurecounts_deseq2/main.nf:47:58`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   meta_new.replicates_exist = groups.max { it.value }.value > 1
@@ -102,20 +88,6 @@
   ```nextflow
           .map { create_fastq_channel(it, seq_center) }
                                       ^^
-  ```
-
-- Warning: `subworkflows/local/input_check/main.nf:17:16`: Variable was declared but not used
-
-  ```nextflow
-          .set { reads }
-                 ^^^^^
-  ```
-
-- Warning: `subworkflows/local/input_check/main.nf:20:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      reads                                     // channel: [ val(meta), [ reads ] ]
-      ^^^^^
   ```
 
 - Warning: `subworkflows/local/prepare_genome/main.nf:46:5`: Variable was declared but not used
@@ -174,67 +146,11 @@
                                                                           ^^
   ```
 
-- Warning: `subworkflows/local/prepare_genome/main.nf:149:59`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-              ch_bwa_index = BWA_INDEX(ch_fasta.map { [[:], it] }).index
-                                                            ^^
-  ```
-
-- Warning: `subworkflows/local/prepare_genome/main.nf:165:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-              ch_bowtie2_index = BOWTIE2_BUILD(ch_fasta.map { [[:], it] }).index
-                                                                    ^^
-  ```
-
-- Warning: `subworkflows/local/prepare_genome/main.nf:181:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-              ch_chromap_index = CHROMAP_INDEX(ch_fasta.map { [[:], it] }).index
-                                                                    ^^
-  ```
-
-- Warning: `subworkflows/local/prepare_genome/main.nf:192:81`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  ch_star_index = UNTAR_STAR_INDEX([[:], star_index]).untar.map { it[1] }
-                                                                                  ^^
-  ```
-
 - Warning: `subworkflows/local/prepare_genome/main.nf:212:59`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_macs_gsize = KHMER_UNIQUEKMERS.out.kmers.map { meta, file ->
                                                             ^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_chipseq_pipeline/main.nf:112:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      samplesheet = ch_samplesheet
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      valid_config = valid_config
-      ^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/chipseq.nf:243:9`: Variable was declared but not used

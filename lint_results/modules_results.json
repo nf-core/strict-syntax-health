@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "bbf3773533b23cb2b2fac8e8a64df310d1523c82",
+  "_repo_commit": "a554e54c63c3f03f91c88a18ece7b89eca5a5212",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -4886,6 +4886,12 @@
   },
   "gzrt": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gzrt",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "hackgap_count": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/hackgap/count",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -10670,6 +10676,12 @@
   },
   "summarizedexperiment_summarizedexperiment": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/summarizedexperiment/summarizedexperiment",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "suppa_diffsplice": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/suppa/diffsplice",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

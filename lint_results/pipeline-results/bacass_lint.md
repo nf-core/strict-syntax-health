@@ -1,17 +1,10 @@
 # Nextflow lint results
 
-- Generated: 2026-07-16T00:27:11.296206469Z
-- Nextflow version: 26.06.0-edge
-- Summary: 21 warnings
+- Generated: 2026-07-23T00:29:34.402378914Z
+- Nextflow version: 26.07.0-edge
+- Summary: 16 warnings
 
 ## :warning: Warnings
-
-- Warning: `main.nf:44:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      multiqc_report = BACASS.out.multiqc_report // channel: /path/to/multiqc_report.html
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
 
 - Warning: `modules/nf-core/quast/main.nf:48:9`: Variable was declared but not used
 
@@ -111,42 +104,14 @@
                              ^^^^^^^
   ```
 
-- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
-
-  ```nextflow
-      valid_config = checkConfigProvided()
-      ^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      valid_config
-      ^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/bacass.nf:262:33`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/bacass.nf:261:33`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   .branch { meta, reads ->
                                   ^^^^^
   ```
 
-- Warning: `workflows/bacass.nf:277:13`: Variable was declared but not used
+- Warning: `workflows/bacass.nf:276:13`: Variable was declared but not used
 
   ```nextflow
               ch_rasusa_log = RASUSA.out.log
