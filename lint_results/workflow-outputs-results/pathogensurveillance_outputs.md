@@ -1,6 +1,6 @@
 # Workflow outputs migration: pathogensurveillance
 
-- Generated: 2026-06-16T20:33:35.077088+00:00
+- Generated: 2026-07-24T00:27:34.510188+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,4 +14,4 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 52 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/pathogensurveillance/blob/f9a0d73b990e050f13545c071f9eb7d16ca683e1/conf/modules.config#L16) — 52 references
+- [`conf/modules.config`](https://github.com/nf-core/pathogensurveillance/blob/34729ea5417983b4edf826e230b3fe2ef8e867ec/conf/modules.config#L16) — 52 references

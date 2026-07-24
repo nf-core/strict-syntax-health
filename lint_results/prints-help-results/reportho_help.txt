@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.07.0-edge
 
-Launching `./main.nf` [crazy_visvesvaraya] revision: 35f60fe6cf
+Launching `./main.nf` [crazy_laplace] revision: 35f60fe6cf
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -59,6 +59,7 @@ Process skipping options
   --skip_orthoplots             [boolean] Skip the ortholog plots. 
   --skip_report                 [boolean] Skip report generation. 
   --skip_multiqc                [boolean] Skip MultiQC. 
+  --skip_samplesheets           [boolean] Skip generation of downstream samplesheets. 
 
 Infrastructure options
   --array_size                  [integer] Job array size in grid executors. Only used in grid executors. [default: 10] 

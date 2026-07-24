@@ -1,6 +1,6 @@
 # Workflow outputs migration: variantbenchmarking
 
-- Generated: 2026-07-21T00:31:37.422087+00:00
+- Generated: 2026-07-24T00:29:53.461534+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -12,6 +12,6 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 ## Legacy `publishDir` references
 
-Found 80 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
+Found 79 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/variantbenchmarking/blob/1d3fb18b37ae3387db90441c586d4ce988831b20/conf/modules.config#L15) — 80 references
+- [`conf/modules.config`](https://github.com/nf-core/variantbenchmarking/blob/c20ccf44c2a1aa47eff33fab346b8173557bdb7a/conf/modules.config#L15) — 79 references

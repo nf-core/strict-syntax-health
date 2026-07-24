@@ -3,10 +3,168 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.07.0-edge
 
-Launching `./main.nf` [compassionate_hilbert] revision: 794d8c5589
+Launching `./main.nf` [trusting_faggin] revision: 8e72056edd
 
-WARN: Unrecognized config option 'validation.defaultIgnoreParams'
-WARN: Unrecognized config option 'validation.monochromeLogs'
-ERROR ~ Unable to create help message: Specified param 'true' does not exist in JSON schema.
 
- -- Check script 'subworkflows/nf-core/utils_nfschema_plugin/main.nf' at line: 41 or see '.nextflow.log' file for more details
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/sopa 1.0.1
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/sopa -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input                         [string] Path to comma-separated file containing information about the samples in the experiment. 
+  --outdir                        [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --email                         [string] Email address for completion summary. 
+
+Space Ranger options
+  --spaceranger_probeset          [string] Location of Space Ranger probeset file. 
+  --spaceranger_reference         [string] Location of Space Ranger reference directory. May be packed as `tar.gz` file. [default: 
+https://cf.10xgenomics.com/supp/spatial-exp/refdata-gex-GRCh38-2020-A.tar.gz]  
+
+Generic options
+  --help                          [boolean, string] Display the help message. 
+  --help_full                     [boolean]         Display the full detailed help message. 
+  --show_hidden                   [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+
+Reader
+  --technology                    [string] Technology used for the spatial data, e.g., 'xenium', 'merscope', ...  (accepted: xenium, 
+merscope, cosmx, visium_hd, molecular_cartography, macsima, phenocycler, hyperion, ome_tif, ...) 
+[default: xenium]  
+  --visium_hd_imread_page         [number] Optional page for the imageio reader 
+
+Patches
+  --patch_width_pixel             [number] Width (and height) of each patch in pixels 
+  --patch_overlap_pixel           [number] Number of overlapping pixels between the patches. We advise to choose approximately twice the 
+diameter of a cell  
+  --image_scale                   [string] The scale to be used for the image patches (e.g., `"scale1"`). By default, uses the highest 
+resolution scale.  
+  --patch_width_microns           [number] Width (and height) of each patch in microns 
+  --patch_overlap_microns         [number] Number of overlapping microns between the patches. We advise to choose approximately twice the 
+diameter of a cell  
+  --prior_shapes_key              [string] Optional name of the boundaries element to use as a segmentation prior. Either a column name for the 
+transcript dataframe, or a key of `sdata` containing the shapes names. If combining cellpose with 
+proseg/baysor/comseg, it will be set automatically to `'cellpose_boundaries'`.  
+  --unassigned_value              [string] If `prior_shapes_key` is provided, this is the value given to transcripts that are not inside any 
+cell (if it's already 0, don't provide this argument)  
+
+Tissue segmentation
+  --use_tissue_segmentation       [boolean] Whether to run tissue segmentation 
+  --level                         [number]  Level of the image pyramid to use for tissue segmentation 
+  --mode                          [string]  Mode for the tissue segmentation: 'staining' or 'saturation' (for H&E images).  (accepted: 
+staining, saturation)  
+  --tissue_segmentation_kwargs    [string]  Additional tissue segmentation parameters as a python dict string 
+
+Cell filtering
+  --min_area_pixels2              [number] Cells with an area less than this value will be filtered. The unit is in pixels^2, and used by 
+Stardist/Cellpose. [default: 0.0]  
+  --min_area_microns2             [number] Cells with an area less than this value will be filtered. The unit is in microns^2, and used by 
+Baysor/Comseg. Not used by Proseg. [default: 0.0]  
+  --min_transcripts               [number] Cells with less transcripts than this value will be filtered. 
+  --min_intensity_ratio           [number] Cells whose mean channel intensity is less than `min_intensity_ratio * quantile_90` will be 
+filtered.  
+
+Aggregation
+  --aggregate_genes               [boolean] Whether to aggregate the genes (counts) inside each cell 
+  --aggregate_channels            [boolean] Whether to aggregate the channels (intensity) inside each cell 
+  --expand_radius_ratio           [string]  Cells polygons will be expanded by `expand_radius_ratio * mean_radius` for channels averaging 
+**only**. This help better aggregate boundary stainings  
+
+Scanpy preprocessing
+  --use_scanpy_preprocessing      [boolean] Whether to run scanpy preprocessing 
+  --resolution                    [number]  Resolution parameter for the leiden clustering 
+  --check_counts                  [boolean] Whether to check that adata.X contains counts 
+  --hvg                           [boolean] Whether to compute highly variable genes before computing the UMAP and clustering 
+
+Explorer
+  --pixel_size                    [number]  Number of microns in a pixel. Invalid value can lead to inconsistent scales in the Explorer. 
+[default: 0.2125]  
+  --lazy                          [boolean] If `True`, will not load the full images in memory (except if the image memory is below 
+`ram_threshold_gb`) [default: true]  
+  --ram_threshold_gb              [number]  Threshold (in gygabytes) from which image can be loaded in memory. [default: 4.0] 
+
+Image preprocessing
+  --gaussian_sigma                [number] Parameter for scipy gaussian_filter (applied before running the segmentation method) 
+  --clip_limit                    [number] Parameter for skimage.exposure.equalize_adapthist (applied before running the segmentation method) 
+ 
+  --clahe_kernel_size             [number] Parameter for skimage.exposure.equalize_adapthist (applied before running the segmentation method) 
+ 
+
+Proseg
+  --use_proseg                    [boolean] Whether to run proseg segmentation 
+  --command_line_suffix           [string]  String suffix to add to the proseg command line. This can be used to add extra parameters to the 
+proseg command line.  
+  --infer_presets                 [boolean] Whether to infer the proseg presets based on the columns of the transcripts dataframe. 
+  --visium_hd_prior_shapes_key    [string]  **Only for Visium HD data.** Key of `sdata` containing the prior cell boundaries. If `'auto'`, use 
+the latest performed segmentation (e.g., stardist or the 10X Genomics segmentation). If combining 
+stardist with proseg, it will be set automatically to `'stardist_boundaries'`.  
+
+Comseg
+  --use_comseg                    [boolean] Whether to run comseg segmentation 
+  --mean_cell_diameter            [number]  Comseg `mean_cell_diameter` parameter [default: 10.0] 
+  --max_cell_radius               [number]  Comseg `max_cell_radius` parameter [default: 15.0] 
+  --alpha                         [number]  Comseg `alpha` parameter [default: 0.5] 
+  --min_rna_per_cell              [number]  Comseg `min_rna_per_cell` parameter [default: 1.0] 
+  --allow_disconnected_polygon    [boolean] Comseg `allow_disconnected_polygon` parameter 
+  --norm_vector                   [boolean] Comseg `norm_vector` parameter 
+
+Baysor
+  --use_baysor                    [boolean] Whether to run baysor segmentation 
+  --baysor_scale                  [number]  Baysor `scale` parameter [default: -1.0] 
+  --baysor_scale_std              [string]  Baysor `scale_std` parameter [default: 25%] 
+  --prior_segmentation_confidence [number]  Baysor `prior_segmentation_confidence` parameter [default: 0.2] 
+  --min_molecules_per_cell        [number]  Baysor `min_molecules_per_cell` parameter [default: 20.0] 
+  --min_molecules_per_gene        [number]  Baysor `min_molecules_per_gene` parameter [default: 10.0] 
+  --min_molecules_per_segment     [number]  Baysor `min_molecules_per_segment` parameter 
+  --confidence_nn_id              [number]  Baysor `confidence_nn_id` parameter 
+  --force_2d                      [boolean] Baysor `force_2d` parameter [default: true] 
+
+Cellpose
+  --use_cellpose                  [boolean] Whether to run cellpose segmentation 
+  --cellpose_diameter             [number]  Cellpose `diameter` parameter 
+  --cellpose_channels             [string]  Channel name(s) to use for cellpose segmentation. If multiple, separate by space, comma or pipe 
+characters.  
+  --flow_threshold                [number]  Cellpose `flow_threshold` parameter 
+  --cellprob_threshold            [number]  Cellpose `cellprob_threshold` parameter 
+  --cellpose_model_type           [string]  Cellpose model type to use 
+  --pretrained_model              [string]  Cellpose `pretrained_model` parameter 
+  --cellpose_use_gpu              [boolean] Whether to use GPU for Cellpose segmentation 
+  --cellpose_kwargs               [string]  Additional cellpose parameters as a python dict string 
+
+Stardist
+  --use_stardist                  [boolean] Whether to run stardist segmentation 
+  --stardist_model_type           [string]  Name of stardist model to use 
+  --prob_thresh                   [number]  Stardist `prob_thresh` parameter 
+  --nms_thresh                    [number]  Stardist `nms_thresh` parameter 
+  --stardist_channels             [string]  Optional channel name(s) to use for stardist segmentation. If multiple, separate by space, comma or 
+pipe characters.  
+  --stardist_kwargs               [string]  Additional stardist parameters as a python dict string 
+
+Fluorescence annotation
+  --use_fluorescence_annotation   [boolean] Whether to run cell-type annotation based on a marker-to-cell dictionary 
+  --fluorescence_cell_type_key    [string]  Key of `sdata.obs` containing the cell-types 
+  --marker_cell_dict              [string]  Dictionary mapping whose keys are marker channel names and values are the cell types associated to 
+each marker. Should be provided as a string representation of a python dictionary.  
+ !! Hiding 14 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The pipeline
+    https://doi.org/10.5281/zenodo.21382875
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/sopa/blob/master/CITATIONS.md
+

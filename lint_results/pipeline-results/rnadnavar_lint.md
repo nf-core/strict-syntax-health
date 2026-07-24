@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-07-01T00:47:40.806587988Z
-- Nextflow version: 26.05.0-edge
-- Summary: 3 errors, 382 warnings
+- Generated: 2026-07-24T00:28:19.593686316Z
+- Nextflow version: 26.07.0-edge
+- Summary: 3 errors, 351 warnings
 
 ## :x: Errors
 
@@ -120,13 +120,6 @@
                  ^^^^^^^
   ```
 
-- Warning: `main.nf:69:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      multiqc_report = RNADNAVAR.out.multiqc_report // channel: /path/to/multiqc_report.html
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
 - Warning: `modules/local/maf2bed/main.nf:21:9`: Variable was declared but not used
 
   ```nextflow
@@ -146,13 +139,6 @@
   ```nextflow
           ensemblvep_cache = Channel.value([[id: vep_cache_path_full.baseName], vep_cache_path_full])
                              ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/annotation_cache_initialisation/main.nf:41:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      ensemblvep_cache // channel: [ meta, cache ]
-      ^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/bam_align/main.nf:36:17`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -246,25 +232,11 @@
                     ^^
   ```
 
-- Warning: `subworkflows/local/bam_baserecalibrator/main.nf:51:5`: Variable was declared but not used
-
-  ```nextflow
-      table_bqsr = GATK4_GATHERBQSRREPORTS.out.table.mix(table_to_merge.single.map{ meta, table -> [ meta, table[0] ] })
-      ^^^^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/bam_convert_samtools/main.nf:22:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       versions = Channel.empty()
                  ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/bam_convert_samtools/main.nf:64:5`: Variable was declared but not used
-
-  ```nextflow
-      reads = CAT_FASTQ.out.reads
-      ^^^^^
   ```
 
 - Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:39:17`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -617,13 +589,6 @@
                  ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bam_merge_index_samtools/main.nf:36:5`: Variable was declared but not used
-
-  ```nextflow
-      bam_bai = bam_all.join(INDEX_MERGE_BAM.out.index, failOnDuplicate: true, failOnMismatch: true)
-      ^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/bam_splitncigarreads/main.nf:19:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -911,13 +876,6 @@
                                         ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_somatic/main.nf:126:5`: Variable was declared but not used
-
-  ```nextflow
-      vcf_all = Channel.empty().mix(
-      ^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/bam_variant_calling_somatic/main.nf:126:15`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -932,32 +890,11 @@
                  ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_somatic_manta/main.nf:30:5`: Variable was declared but not used
-
-  ```nextflow
-      candidate_small_indels_vcf = MANTA_SOMATIC.out.candidate_small_indels_vcf
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/bam_variant_calling_somatic_manta/main.nf:31:5`: Variable was declared but not used
-
-  ```nextflow
-      candidate_small_indels_vcf_tbi = MANTA_SOMATIC.out.candidate_small_indels_vcf_tbi
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/bam_variant_calling_somatic_manta/main.nf:32:5`: Variable was declared but not used
 
   ```nextflow
       candidate_sv_vcf = MANTA_SOMATIC.out.candidate_sv_vcf
       ^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/bam_variant_calling_somatic_manta/main.nf:38:5`: Variable was declared but not used
-
-  ```nextflow
-      vcf = Channel.empty().mix(diploid_sv_vcf, somatic_sv_vcf).map{ meta, vcf -> [ meta + [ variantcaller:'manta' ], vcf ] }
-      ^^^
   ```
 
 - Warning: `subworkflows/local/bam_variant_calling_somatic_manta/main.nf:38:11`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -1163,13 +1100,6 @@
                                          ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bam_variant_calling_somatic_mutect2/main.nf:249:5`: Variable was declared but not used
-
-  ```nextflow
-      vcf_filtered = FILTERMUTECTCALLS.out.vcf
-      ^^^^^^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/bam_variant_calling_somatic_sage/main.nf:22:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -1238,13 +1168,6 @@
   ```nextflow
           no_intervals: it[0].num_intervals <= 1
                         ^^
-  ```
-
-- Warning: `subworkflows/local/bam_variant_calling_somatic_sage/main.nf:74:5`: Variable was declared but not used
-
-  ```nextflow
-      vcf = BGZIPTABIX_VC_SAGE.out.output
-      ^^^
   ```
 
 - Warning: `subworkflows/local/bam_variant_calling_somatic_sage/main.nf:78:26`: Parameter was not used -- prefix with `_` to suppress warning
@@ -1331,13 +1254,6 @@
                  ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/cram_merge_index_samtools/main.nf:38:5`: Variable was declared but not used
-
-  ```nextflow
-      cram_crai = cram_all.join(INDEX_CRAM.out.index, failOnDuplicate: true, failOnMismatch: true)
-      ^^^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/cram_qc_mosdepth_samtools/main.nf:18:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -1420,13 +1336,6 @@
   ```nextflow
                   maf_to_filter_realigned = Channel.empty()
                                             ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/maf_rna_filtering/main.nf:84:9`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-          versions            = versions // channel: [ versions.yml ]
-          ^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/prepare_genome/main.nf:43:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -1716,25 +1625,11 @@
                                  ^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_intervals/main.nf:126:5`: Variable was declared but not used
-
-  ```nextflow
-      intervals_for_preprocessing = wes ?
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/prepare_intervals/main.nf:128:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           Channel.value([ [ id:'null' ], [] ])
           ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/prepare_intervals/main.nf:130:5`: Variable was declared but not used
-
-  ```nextflow
-      intervals_and_num_intervals   = intervals_bed.map{ interval, num_intervals ->
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/prepare_realignment/main.nf:24:9`: Parameter was not used -- prefix with `_` to suppress warning
@@ -1954,25 +1849,11 @@
                                                                                                                    ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_reference_and_intervals/main.nf:57:5`: Variable was declared but not used
-
-  ```nextflow
-      bwa                    = fasta_input                   ? bwa_input                        ? Channel.fromPath(bwa_input).collect()                           : PREPARE_GENOME.out.bwa                   : []
-      ^^^
-  ```
-
 - Warning: `subworkflows/local/prepare_reference_and_intervals/main.nf:57:97`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       bwa                    = fasta_input                   ? bwa_input                        ? Channel.fromPath(bwa_input).collect()                           : PREPARE_GENOME.out.bwa                   : []
                                                                                                   ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/prepare_reference_and_intervals/main.nf:58:5`: Variable was declared but not used
-
-  ```nextflow
-      bwamem2                = fasta_input                   ? bwamem2_input                    ? Channel.fromPath(bwamem2_input).collect()                       : PREPARE_GENOME.out.bwamem2               : []
-      ^^^^^^^
   ```
 
 - Warning: `subworkflows/local/prepare_reference_and_intervals/main.nf:58:97`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -1982,25 +1863,11 @@
                                                                                                   ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_reference_and_intervals/main.nf:59:5`: Variable was declared but not used
-
-  ```nextflow
-      dragmap                = fasta_input                   ? dragmap_input                    ? Channel.fromPath(dragmap_input).collect()                       : PREPARE_GENOME.out.hashtable             : []
-      ^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/prepare_reference_and_intervals/main.nf:59:97`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       dragmap                = fasta_input                   ? dragmap_input                    ? Channel.fromPath(dragmap_input).collect()                       : PREPARE_GENOME.out.hashtable             : []
                                                                                                   ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/prepare_reference_and_intervals/main.nf:60:5`: Variable was declared but not used
-
-  ```nextflow
-      hisat2_index           = fasta_input                   ? hisat2_index_input               ? Channel.fromPath(hisat2_index_input).map{ it -> [ [id:'ht_idx'], it ] }.collect()                          : PREPARE_GENOME.out.hisat2_index : []
-      ^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/prepare_reference_and_intervals/main.nf:60:97`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -2010,25 +1877,11 @@
                                                                                                   ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_reference_and_intervals/main.nf:61:5`: Variable was declared but not used
-
-  ```nextflow
-      splicesites            = fasta_input                   ? splicesites_input                ? Channel.fromPath(splicesites_input).collect()                   : PREPARE_GENOME.out.splicesites           : []
-      ^^^^^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/prepare_reference_and_intervals/main.nf:61:97`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       splicesites            = fasta_input                   ? splicesites_input                ? Channel.fromPath(splicesites_input).collect()                   : PREPARE_GENOME.out.splicesites           : []
                                                                                                   ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/prepare_reference_and_intervals/main.nf:62:5`: Variable was declared but not used
-
-  ```nextflow
-      dict                   = dict_input                    ? Channel.fromPath(dict_input).map{ it -> [ [id:'dict'], it ] }.first()                               : PREPARE_GENOME.out.dict
-      ^^^^
   ```
 
 - Warning: `subworkflows/local/prepare_reference_and_intervals/main.nf:62:62`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -2115,13 +1968,6 @@
                                                                                                                                                                                                                ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_reference_and_intervals/main.nf:72:5`: Variable was declared but not used
-
-  ```nextflow
-      germline_resource_tbi  = germline_resource_input       ? germline_resource_tbi_input      ? Channel.fromPath(germline_resource_tbi_input).collect()         : PREPARE_GENOME.out.germline_resource_tbi : []
-      ^^^^^^^^^^^^^^^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/prepare_reference_and_intervals/main.nf:72:97`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -2157,13 +2003,6 @@
                                                                                                                                                                                                                ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_reference_and_intervals/main.nf:75:5`: Variable was declared but not used
-
-  ```nextflow
-      pon_tbi                = pon_input                     ? pon_tbi_input                    ? Channel.fromPath(pon_tbi_input).collect()                       : PREPARE_GENOME.out.pon_tbi               : []
-      ^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/prepare_reference_and_intervals/main.nf:75:97`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -2171,46 +2010,11 @@
                                                                                                   ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_reference_and_intervals/main.nf:78:5`: Variable was declared but not used
-
-  ```nextflow
-      known_sites_indels     = dbsnp.concat(known_indels).collect()
-      ^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/prepare_reference_and_intervals/main.nf:79:5`: Variable was declared but not used
-
-  ```nextflow
-      known_sites_indels_tbi = dbsnp_tbi.concat(known_indels_tbi).collect()
-      ^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/prepare_reference_and_intervals/main.nf:81:5`: Variable was declared but not used
-
-  ```nextflow
-      known_sites_snps       = dbsnp.concat(known_snps).collect()
-      ^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/prepare_reference_and_intervals/main.nf:82:5`: Variable was declared but not used
-
-  ```nextflow
-      known_sites_snps_tbi   = dbsnp_tbi.concat(known_snps_tbi).collect()
-      ^^^^^^^^^^^^^^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/samplesheet_to_channel/main.nf:25:16`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { patient_sample, num_lanes, ch_items ->
                  ^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/samplesheet_to_channel/main.nf:216:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      input_sample
-      ^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/samplesheet_to_channel/main.nf:232:68`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -2519,27 +2323,6 @@
   ```nextflow
       versions = Channel.empty()
                  ^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      valid_config = valid_config
-      ^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:76:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/rnadnavar/main.nf:57:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead

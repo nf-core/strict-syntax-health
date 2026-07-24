@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-07-23T00:33:26.621471653Z
+- Generated: 2026-07-24T00:29:15.754996587Z
 - Nextflow version: 26.07.0-edge
-- Summary: 13 warnings
+- Summary: 11 warnings
 
 ## :warning: Warnings
 
@@ -13,7 +13,7 @@
                                                             ^^
   ```
 
-- Warning: `modules/local/utils.nf:178:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `modules/local/utils.nf:179:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           return channels.split(/[ ,|]+/).findAll { it }
@@ -41,58 +41,44 @@
                     ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_sopa_pipeline/main.nf:31:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      monochrome_logs // boolean: Do not use coloured log outputs
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_sopa_pipeline/main.nf:34:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_sopa_pipeline/main.nf:33:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       input //  string: Path to input samplesheet
       ^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_sopa_pipeline/main.nf:98:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/utils_nfcore_sopa_pipeline/main.nf:104:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       Channel
       ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_sopa_pipeline/main.nf:274:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_sopa_pipeline/main.nf:277:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       assert TRANSCRIPT_BASED_METHODS.count { params[it] } <= 1 : "Only one of ${TRANSCRIPT_BASED_METHODS} may be used"
                                                     ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_sopa_pipeline/main.nf:275:49`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_sopa_pipeline/main.nf:278:49`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       assert STAINING_BASED_METHODS.count { params[it] } <= 1 : "Only one of ${STAINING_BASED_METHODS} may be used"
                                                   ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_sopa_pipeline/main.nf:277:58`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_sopa_pipeline/main.nf:280:58`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           assert NON_VALID_STARDIST_METHODS.every { !params[it] } : "'stardist' cannot be combined with transcript-based methods, except proseg."
                                                            ^^
   ```
 
-- Warning: `workflows/sopa.nf:141:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/sopa.nf:159:9`: Variable was declared but not used
 
   ```nextflow
-      def topic_versions = Channel.topic("versions")
-                           ^^^^^^^
-  ```
-
-- Warning: `workflows/sopa.nf:165:17`: Variable was declared but not used
-
-  ```nextflow
-          ).set { ch_collated_versions }
-                  ^^^^^^^^^^^^^^^^^^^^
+      def ch_collated_versions = softwareVersionsToYAML(ch_versions.mix(topic_versions.versions_file))
+          ^^^^^^^^^^^^^^^^^^^^
   ```

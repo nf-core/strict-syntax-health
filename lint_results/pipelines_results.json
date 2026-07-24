@@ -74,9 +74,9 @@
   "bacmodel": {
     "full_name": "nf-core/bacmodel",
     "html_url": "https://github.com/nf-core/bacmodel",
-    "commit": "6663fe55ce94dfbfaa6c86054167a5ac4c361ed5",
+    "commit": "f5f4195f422376e1fb7212614814c663efc085f3",
     "errors": 0,
-    "warnings": 57,
+    "warnings": 55,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -146,7 +146,7 @@
   "chipseq": {
     "full_name": "nf-core/chipseq",
     "html_url": "https://github.com/nf-core/chipseq",
-    "commit": "5ae4b0218e957819526c04e6c061fef59eb559e6",
+    "commit": "fdc766363e1d6465f54f4ea57426ffb44aeba1d0",
     "errors": 0,
     "warnings": 57,
     "parse_error": false,
@@ -278,7 +278,7 @@
   "datasync": {
     "full_name": "nf-core/datasync",
     "html_url": "https://github.com/nf-core/datasync",
-    "commit": "b1120ce32fca57ff443a6ade51a923b9b32e73db",
+    "commit": "fbf1c8586fcae7df61a2d2f7d7f8dadab9f80290",
     "errors": 0,
     "warnings": 3,
     "parse_error": false,
@@ -518,9 +518,9 @@
   "funcprofiler": {
     "full_name": "nf-core/funcprofiler",
     "html_url": "https://github.com/nf-core/funcprofiler",
-    "commit": "a0d2bf94826ad7de416a42071e3315c37cb8dee1",
+    "commit": "e351b6ad88058881d67001d989f9e780a76904ef",
     "errors": 0,
-    "warnings": 24,
+    "warnings": 19,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -1094,11 +1094,11 @@
   "pathogensurveillance": {
     "full_name": "nf-core/pathogensurveillance",
     "html_url": "https://github.com/nf-core/pathogensurveillance",
-    "commit": "f9a0d73b990e050f13545c071f9eb7d16ca683e1",
-    "errors": 16,
-    "warnings": 442,
+    "commit": "34729ea5417983b4edf826e230b3fe2ef8e867ec",
+    "errors": 0,
+    "warnings": 436,
     "parse_error": false,
-    "prints_help": null,
+    "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
     "publishdir_count": 52
@@ -1286,14 +1286,14 @@
   "reportho": {
     "full_name": "nf-core/reportho",
     "html_url": "https://github.com/nf-core/reportho",
-    "commit": "db01f187206e675029bd06f724fc7dd0b98d3a1e",
+    "commit": "d30a441ce2043bcef161c3a3e232200966c981a9",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 37
+    "publishdir_count": 38
   },
   "ribomsqc": {
     "full_name": "nf-core/ribomsqc",
@@ -1322,9 +1322,9 @@
   "rnadnavar": {
     "full_name": "nf-core/rnadnavar",
     "html_url": "https://github.com/nf-core/rnadnavar",
-    "commit": "b18f9b5a154bd7b55a0e60cfa67ad48a464f8ce4",
+    "commit": "3279bf473055f67ed359b8ba95463d86456bea1d",
     "errors": 3,
-    "warnings": 382,
+    "warnings": 351,
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
@@ -1406,9 +1406,9 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "e952f4ef56d2a9085989571f8a70b16b73527262",
+    "commit": "c8c2348f8adae8049f7a7156a7eb00174ff1b52c",
     "errors": 0,
-    "warnings": 21,
+    "warnings": 6,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": true,
@@ -1502,11 +1502,11 @@
   "sopa": {
     "full_name": "nf-core/sopa",
     "html_url": "https://github.com/nf-core/sopa",
-    "commit": "f7a86b9bb332d590b893b4827ee165c3ca00ae65",
+    "commit": "61ba07c2c4e83682c98272cfc6297b0756bdfd02",
     "errors": 0,
-    "warnings": 13,
+    "warnings": 11,
     "parse_error": false,
-    "prints_help": false,
+    "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
     "publishdir_count": 4
@@ -1514,7 +1514,7 @@
   "spatialaxe": {
     "full_name": "nf-core/spatialaxe",
     "html_url": "https://github.com/nf-core/spatialaxe",
-    "commit": "36f25035fdf1ecc1e5ab7e498d28d1d00d1200b9",
+    "commit": "0a72750cc87cf659c327fbcd91212f68380d489e",
     "errors": 0,
     "warnings": 1,
     "parse_error": false,
@@ -1622,14 +1622,14 @@
   "variantbenchmarking": {
     "full_name": "nf-core/variantbenchmarking",
     "html_url": "https://github.com/nf-core/variantbenchmarking",
-    "commit": "1d3fb18b37ae3387db90441c586d4ce988831b20",
+    "commit": "c20ccf44c2a1aa47eff33fab346b8173557bdb7a",
     "errors": 0,
     "warnings": 11,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 80
+    "publishdir_count": 79
   },
   "variantcatalogue": {
     "full_name": "nf-core/variantcatalogue",
