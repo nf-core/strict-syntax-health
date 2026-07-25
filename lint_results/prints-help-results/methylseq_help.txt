@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.07.0-edge
 
 Downloading plugin nf-amazon@2.15.0
-Launching `./main.nf` [voluminous_heyrovsky] revision: a6d23dc594
+Launching `./main.nf` [golden_lamarck] revision: ce988dd915
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -84,6 +84,8 @@ Bismark options
   --ignore_3prime_r2            [integer] Ignore methylation in last n bases of 3' end of R2 [default: 2] 
   --known_splices               [string]  Supply a .gtf file containing known splice sites (bismark_hisat only). 
   --local_alignment             [boolean] Allow soft-clipping of reads (potentially useful for single-cell experiments). 
+  --combined_index              [boolean] Align against a single combined (CT+GA) Bismark index instead of the classic per-strand model. 
+ 
   --minins                      [integer] The minimum insert size for valid paired-end alignments. 
   --maxins                      [integer] The maximum insert size for valid paired-end alignments. 
   --nomeseq                     [boolean] Sample is NOMe-seq or NMT-seq. Runs coverage2cytosine. 
@@ -102,6 +104,12 @@ pattern: R1 start, R1 end, R2 start, R2 end [default: 0,0,10,0]
   --trim_OB                     [string] Nucleotides to exclude from methylation calling on Original Bottom (strand) reads, following this 
 pattern: R1 start, R1 end, R2 start, R2 end [default: 0,0,10,0]  
 
+methurator options
+  --methurator_minimum_coverage [string]  Minimum CpGs coverage to consider for the saturation analysis. Can be a single integer or a list 
+(e.g. 1,3,5). [default: 1,10,15]  
+  --methurator_compute_ci       [boolean] Compute confidence intervals using bootstrap replicates. [default: false] 
+  --methurator_t_max            [integer] Maximum extrapolation factor. [default: 10] 
+
 Qualimap Options
   --bamqc_regions_file          [string] A GFF or BED file containing the target regions which will be passed to Qualimap/Bamqc. 
 
@@ -117,6 +125,7 @@ Skip pipeline steps
 
 Run pipeline steps
   --run_preseq                  [boolean] Run preseq/lcextrap tool 
+  --run_methurator              [boolean] Run methurator/gtestimator tool 
   --run_qualimap                [boolean] Run qualimap/bamqc tool 
   --run_targeted_sequencing     [boolean] Run advanced analysis for targeted methylation kits with enrichment of specific regions 
 

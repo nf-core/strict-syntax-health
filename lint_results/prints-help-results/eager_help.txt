@@ -1,0 +1,361 @@
+$ NXF_SYNTAX_PARSER=v2 nextflow run . --help
+
+
+ N E X T F L O W   ~  version 26.07.0-edge
+
+Launching `./main.nf` [clever_borg] revision: 0c52c26246
+
+WARN: Unrecognized config option 'validation.defaultIgnoreParams'
+WARN: Unrecognized config option 'validation.monochromeLogs'
+
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/eager 3.0.0dev
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/eager -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input                                                            [string]  Path to tab- or comma-separated file containing information about the samples in the experiment. 
+ 
+  --convert_inputbam                                                 [boolean] Specify to convert input BAM files back to FASTQ for remapping 
+  --outdir                                                           [string]  The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --email                                                            [string]  Email address for completion summary. 
+  --multiqc_title                                                    [string]  MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+
+Reference genome options
+  --fasta                                                            [string]  Path to FASTA file of the reference genome. 
+  --fasta_fai                                                        [string]  Specify path to samtools FASTA index. 
+  --fasta_dict                                                       [string]  Specify path to Picard sequence dictionary file. 
+  --fasta_mapperindexdir                                             [string]  Specify path to directory containing index files of the FASTA for a given mapper. 
+  --fasta_largeref                                                   [boolean] Specify to generate '.csi' BAM indices instead of '.bai' for larger reference genomes. 
+  --save_reference                                                   [boolean] Specify to save any pipeline-generated reference genome indices in the results directory. 
+  --fasta_sheet                                                      [string]  Path to a tab-/comma-separated file containing reference-specific files. 
+  --fasta_circular_target                                            [string]  Specify the FASTA header of the extended chromosome when using `circularmapper`. 
+  --fasta_circularmapper_elongationfactor                            [integer] Specify the number of bases to extend reference by (circularmapper only). [default: 500] 
+  --fasta_circularmapper_elongatedfasta                              [string]  Specify an elongated reference FASTA to be used for circularmapper. 
+  --fasta_circularmapper_elongatedindex                              [string]  Specify a samtools index for the elongated FASTA file. 
+
+Generic options
+  --multiqc_methods_description                                      [string]          Custom MultiQC yaml file containing HTML including a methods description. 
+  --help                                                             [boolean, string] Display the help message. 
+  --help_full                                                        [boolean]         Display the full detailed help message. 
+  --show_hidden                                                      [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+
+Preprocessing
+  --sequencing_qc_tool                                               [string]  Specify which tool to use for sequencing quality control.  (accepted: fastqc, falco) [default: 
+fastqc]  
+  --skip_preprocessing                                               [boolean] Specify to skip all preprocessing steps (adapter removal, paired-end merging, poly-G trimming, etc). 
+ 
+  --preprocessing_tool                                               [string]  Specify which preprocessing tool to use.  (accepted: fastp, adapterremoval) [default: fastp] 
+ 
+  --preprocessing_skippairmerging                                    [boolean] Specify to skip read-pair merging. 
+  --preprocessing_excludeunmerged                                    [boolean] Specify to exclude read-pairs that did not overlap sufficiently for merging (i.e., keep merged reads 
+only).  
+  --preprocessing_skipadaptertrim                                    [boolean] Specify to skip removal of adapters. 
+  --preprocessing_adapter1                                           [string]  Specify the nucleotide sequence for the forward read/R1. 
+  --preprocessing_adapter2                                           [string]  Specify the nucleotide sequence for the reverse read/R2. 
+  --preprocessing_adapterlist                                        [string]  Specify a list of all possible adapters to trim. 
+  --preprocessing_minlength                                          [integer] Specify the minimum length reads must have to be retained. [default: 25] 
+  --preprocessing_trim5p                                             [integer] Specify number of bases to hard-trim from 5 prime or front of reads. [default: 0] 
+  --preprocessing_trim3p                                             [integer] Specify number of bases to hard-trim from 3 prime or tail of reads. [default: 0] 
+  --preprocessing_savepreprocessedreads                              [boolean] Specify to save the preprocessed reads in the results directory. 
+  --preprocessing_fastp_complexityfilter                             [boolean] Specify to turn on sequence complexity filtering of reads. 
+  --preprocessing_fastp_complexityfilter_threshold                   [integer] Specify the complexity threshold that must be reached or exceeded to retain reads. [default: 10] 
+ 
+  --preprocessing_adapterremoval_preserve5p                          [boolean] Skip AdapterRemoval quality and N base trimming at 5 prime end. 
+  --preprocessing_adapterremoval_skipqualitytrimming                 [boolean] Specify to skip AdapterRemoval quality and N trimming at the ends of reads. 
+  --preprocessing_adapterremoval_trimbasequalitymin                  [integer] Specify AdapterRemoval minimum base quality for trimming off bases. [default: 20] 
+  --preprocessing_adapterremoval_skipntrimming                       [boolean] Specify to skip AdapterRemoval N trimming (quality trimming only). 
+  --preprocessing_adapterremoval_adapteroverlap                      [integer] Specify the AdapterRemoval minimum adapter overlap required for trimming. [default: 1] 
+  --preprocessing_adapterremoval_qualitymax                          [integer] Specify the AdapterRemoval maximum Phred score used in input FASTQ files. [default: 41] 
+
+Mapping
+  --run_fastq_sharding                                               [boolean] Specify to turn on FASTQ sharding. 
+  --fastq_shard_size                                                 [integer] Specify the number of reads in each shard when splitting. [default: 1000000] 
+  --mapping_tool                                                     [string]  Specify which mapper to use.  (accepted: bwaaln, bwamem, bowtie2, circularmapper, mapad) 
+[default: bwaaln]  
+  --mapping_bwaaln_n                                                 [number]  Specify the amount of allowed mismatches in the alignment for mapping with BWA aln. [default: 
+0.01]  
+  --mapping_bwaaln_k                                                 [integer] Specify the maximum edit distance allowed in a seed for mapping with BWA aln. [default: 2] 
+  --mapping_bwaaln_l                                                 [integer] Specify the length of seeds to be used for BWA aln. [default: 1024] 
+  --mapping_bwaaln_o                                                 [integer] Specify the number of gaps allowed for alignment with BWA aln. [default: 2] 
+  --mapping_bwamem_k                                                 [integer] Specify the  minimum seed length for alignment with BWA mem. [default: 19] 
+  --mapping_bwamem_r                                                 [number]  Specify the re-seeding threshold for alignment with BWA mem. [default: 1.5] 
+  --mapping_bowtie2_alignmode                                        [string]  Specify the Bowtie 2 alignment mode.  (accepted: local, end-to-end) [default: local] 
+  --mapping_bowtie2_sensitivity                                      [string]  Specify the level of sensitivity for the Bowtie 2 alignment mode.  (accepted: fast, very-fast, 
+sensitive, very-sensitive) [default: sensitive]  
+  --mapping_bowtie2_n                                                [integer] Specify the number of mismatches in seed for alignment with Bowtie 2. [default: 0] 
+  --mapping_bowtie2_l                                                [integer] Specify the length of seed substrings for Bowtie 2. [default: 20] 
+  --mapping_bowtie2_trim5                                            [integer] Specify the number of bases to trim off from 5 prime end of read before alignment with Bowtie 2. 
+[default: 0]  
+  --mapping_bowtie2_trim3                                            [integer] Specify the number of bases to trim off from 3 prime end of read before alignment with Bowtie 2. 
+[default: 0]  
+  --mapping_bowtie2_maxins                                           [integer] Specify the maximum fragment length for Bowtie2 paired-end mapping mode only. [default: 500] 
+ 
+  --mapping_circularmapper_circularfilter                            [boolean] Turn on to remove reads that did not map to the circularised genome. 
+  --mapping_mapad_p                                                  [number]  Specify the -p parameter for mapAD, i.e. mismatch budget for the alignment. [default: 0.03] 
+  --mapping_mapad_f                                                  [number]  Specify the -f parameter for mapAD, which sets the 5'-overhang length parameter of mapAD's aDNA 
+scoring model. [default: 0.5]  
+  --mapping_mapad_t                                                  [number]  Specify the -t parameter for mapAD, which sets the 3'-overhang length parameter of mapAD's aDNA 
+scoring model. [default: 0.5]  
+  --mapping_mapad_d                                                  [number]  Specify the -d parameter for mapAD, which sets the double-stranded deamination rate parameter of 
+mapAD's aDNA scoring model. [default: 0.02]  
+  --mapping_mapad_s                                                  [number]  Specify the -s parameter for mapAD, which sets the single-stranded deamination rate parameter of 
+mapAD's aDNA scoring model. [default: 1.0]  
+  --mapping_mapad_i                                                  [number]  Specify the -i parameter for mapAD, which adjusts the expected indel rate between reads and 
+reference. [default: 0.001]  
+  --mapping_mapad_x                                                  [number]  Specify the -x parameter for mapAD, which adjusts the gap extension penalty. [default: 0.5] 
+  --mapping_mapad_gapreadenddistance                                 [number]  Specify the --gap_dist_ends parameter for mapAD, which defines the distance from the read ends in 
+which no gaps are permitted. [default: 5]  
+  --mapping_mapad_maxnumopengaps                                     [number]  Specify the number of gaps allowed for alignment with mapAD. [default: 2] 
+  --mapping_mapad_baseerrorrate                                      [number]  Specify the base error rate parameter for mapAD. [default: 0.02] 
+  --mapping_mapad_ignorebasequal                                     [boolean] Set the --ignore_base_quality flag, which instructs mapAD to ignore base quality values in its 
+scoring model.  
+  --mapping_mapad_nosearchlimitrecovery                              [boolean] Set the --no_search_limit_recovery flag, which instructs mapAD to abort instead of trying to recover 
+from full internal data structures.  
+
+BAM Filtering
+  --run_bamfiltering                                                 [boolean] Specify to turn on filtering of reads in BAM files after mapping. By default, only mapped reads 
+retained.  
+  --bamfiltering_minreadlength                                       [integer] Specify the minimum read length mapped reads should have for downstream genomic analysis. 
+[default: 0]  
+  --bamfiltering_mappingquality                                      [integer] Specify the minimum mapping quality reads should have for downstream genomic analysis. [default: 
+0]  
+  --bamfiltering_genomicbamfilterflag                                [integer] Specify the SAM format flag of reads to remove during BAM filtering for downstream genomic steps. 
+[default: 4]  
+  --bamfiltering_retainunmappedgenomicbam                            [boolean] Specify to retain unmapped reads in the BAM file used for downstream genomic analyses. 
+  --bamfiltering_generatefastq                                       [boolean] Specify to generate FASTQ files from the filtered BAM files. 
+  --bamfiltering_savefilteredbams                                    [boolean] Specify to save the intermediate filtered genomic BAM files in the results directory. 
+
+Metagenomics
+  --run_metagenomics                                                 [boolean] Specify to turn on metagenomic screening of mapped, unmapped or all reads. 
+  --metagenomics_input                                               [string]  Specify which type of reads to use for metagenomic screening.  (accepted: unmapped, mapped, all) 
+[default: unmapped]  
+  --metagenomics_input_savefastq                                     [boolean] Specify to turn on saving of input for metagenomics. 
+  --run_metagenomics_complexityfiltering                             [boolean] Specify to run a complexity filter on the metagenomics input files before classification. 
+  --metagenomics_complexity_savefastq                                [boolean] Specify to save FASTQ files containing the complexity-filtered reads before metagenomic 
+classification.  
+  --metagenomics_complexity_tool                                     [string]  Specify which tool to use for trimming, filtering or reformatting of FASTQ reads that go into 
+metagenomics screening.  (accepted: bbduk, prinseq) [default: bbduk]  
+  --metagenomics_complexity_entropy                                  [number]  Specify the entropy threshold under which a sequencing read will be complexity-filtered out. 
+[default: 0.3]  
+  --metagenomics_prinseq_mode                                        [string]  Specify the complexity filter mode for PRINSEQ++.  (accepted: entropy, dust) [default: entropy] 
+ 
+  --metagenomics_prinseq_dustscore                                   [number]  Specify the minimum dust score for PRINTSEQ++ complexity filtering [default: 0.5] 
+  --metagenomics_profiling_tool                                      [string]  Specify which tool to use for metagenomic profiling and screening. Required if `--run_metagenomics` 
+flagged.  (accepted: malt, metaphlan, kraken2, krakenuniq)  
+  --metagenomics_profiling_database                                  [string]  Specify a databse directory or .tar.gz file of a database directory to run metagenomics profiling 
+on. Required if `--run_metagenomics` flagged.  
+  --metagenomics_kraken2_savereads                                   [boolean] Turn on saving reads assigned by KrakenUniq or Kraken2 
+  --metagenomics_kraken2_savereadclassifications                     [boolean] Turn on saving of KrakenUniq or Kraken2 per-read taxonomic assignment file 
+  --metagenomics_krakenuniq_ramchunksize                             [string]  Specify how large to chunk database when loading into memory for KrakenUniq [default: 16G] 
+  --metagenomics_kraken2_saveminimizers                              [boolean] Turn on saving minimizer information in the kraken2 report thus increasing to an eight column 
+layout.  
+  --metagenomics_malt_mode                                           [string]  Specify which alignment mode to use for MALT.  (accepted: BlastN, BlastP, BlastX) [default: 
+BlastN]  
+  --metagenomics_malt_alignmentmode                                  [string]  Specify alignment method for MALT.  (accepted: Local, SemiGlobal) [default: SemiGlobal] 
+  --metagenomics_malt_minpercentidentity                             [integer] Percent identity value threshold for MALT. [default: 85] 
+  --metagenomics_malt_toppercent                                     [integer] Specify the percent for LCA algorithm for MALT (see MEGAN6 CE manual). [default: 1] 
+  --metagenomics_malt_minsupportmode                                 [string]  Specify whether to use percent or raw number of reads for minimum support required for taxon to be 
+retained for MALT.  (accepted: percent, reads) [default: percent]  
+  --metagenomics_malt_minsupportpercent                              [number]  Specify the minimum percentage of reads a taxon of sample total is required to have to be retained 
+for MALT. [default: 0.01]  
+  --metagenomics_malt_minsupportreads                                [integer] Specify a minimum number of reads a taxon of sample total is required to have to be retained in malt 
+or kraken. Not compatible with --malt_min_support_mode 'percent'. [default: 1]  
+  --metagenomics_malt_maxqueries                                     [integer] Specify the maximum number of queries a read can have for MALT. [default: 100] 
+  --metagenomics_malt_memorymode                                     [string]  Specify the memory load method. Do not use 'map' with GPFS file systems for MALT as can be very 
+slow.  (accepted: load, page, map) [default: load]  
+  --metagenomics_malt_savereads                                      [boolean] Specify to also produce SAM alignment files. Note this includes both aligned and unaligned reads, 
+and are gzipped. Note this will result in very large file sizes.  
+  --metagenomics_malt_group_size                                     [integer] Define how many fastq files should be submitted in the same malt run. Default value of 0 runs all 
+files at once. [default: 0]  
+  --metagenomics_run_postprocessing                                  [boolean] Activate post-processing of metagenomics profiling tool selected. 
+  --metagenomics_maltextract_taxonlist                               [string]  Path to a text file with taxa of interest (one taxon per row, NCBI taxonomy name format) 
+  --metagenomics_maltextract_ncbidir                                 [string]  Path to directory containing containing NCBI resource files (ncbi.tre and ncbi.map; available: 
+https://github.com/rhuebler/HOPS/)  
+  --metagenomics_maltextract_filter                                  [string]  Specify which MaltExtract filter to use.  (accepted: def_anc, default, ancient, scan, crawl, 
+srna) [default: def_anc]  
+  --metagenomics_maltextract_toppercent                              [number]  Specify percent of top alignments to use. [default: 0.01] 
+  --metagenomics_maltextract_destackingoff                           [boolean] Turn off destacking. 
+  --metagenomics_maltextract_downsamplingoff                         [boolean] Turn off downsampling. 
+  --metagenomics_maltextract_duplicateremovaloff                     [boolean] Turn off duplicate removal. 
+  --metagenomics_maltextract_matches                                 [boolean] Turn on exporting alignments of hits in BLAST format. 
+  --metagenomics_maltextract_megansummary                            [boolean] Turn on export of MEGAN summary files. 
+  --metagenomics_maltextract_minpercentidentity                      [number]  Minimum percent identity alignments are required to have to be reported as candidate reads. 
+Recommended to set same as MALT parameter. [default: 85]  
+  --metagenomics_maltextract_usetopalignment                         [boolean] Turn on using top alignments per read after filtering. 
+
+Deduplication
+  --skip_deduplication                                               [boolean] Specify to skip the removal of PCR duplicates. 
+  --deduplication_skipregionsplit                                    [boolean] Specify to run deduplicaiton without splitting bams by contig (default behavior). 
+  --deduplication_tool                                               [string]  Specify which tool to use for deduplication.  (accepted: markduplicates, dedup) [default: 
+markduplicates]  
+
+Damage Manipulation
+  --run_mapdamage_rescaling                                          [boolean] Specify to turn on damage rescaling of BAM files using mapDamage2 to probabilistically remove 
+damage.  
+  --damage_manipulation_rescale_seqlength                            [integer] Specify the length of read sequence to use from each side for rescaling. [default: 12] 
+  --damage_manipulation_rescale_length_5p                            [integer] Specify the length of read for mapDamage2 to rescale from 5 prime end. [default: 0] 
+  --damage_manipulation_rescale_length_3p                            [integer] Specify the length of read for mapDamage2 to rescale from 3 prime end. [default: 0] 
+  --run_pmd_filtering                                                [boolean] Specify to turn on PMDtools filtering. 
+  --damage_manipulation_pmdtools_threshold                           [integer] Specify PMD score threshold for PMDtools. [default: 3] 
+  --damage_manipulation_pmdtools_masked_reference                    [string]  Specify a masked FASTA file with positions to be used with PMDtools. 
+  --damage_manipulation_pmdtools_reference_mask                      [string]  Specify a BED file to be used to mask the reference FASTA prior to running PMDtools. 
+  --run_trim_bam                                                     [boolean] Specify to turn on BAM trimming for non-UDG or half-UDG libraries. 
+  --damage_manipulation_bamutils_trim_double_stranded_none_udg_left  [integer] Specify the number of bases to clip off reads from 'left' (5 prime) end of reads for double-stranded 
+non-UDG libraries. [default: 0]  
+  --damage_manipulation_bamutils_trim_double_stranded_none_udg_right [integer] Specify the number of bases to clip off reads from 'right' (3 prime) end of reads for 
+double-stranded non-UDG libraries. [default: 0]  
+  --damage_manipulation_bamutils_trim_double_stranded_half_udg_left  [integer] Specify the number of bases to clip off reads from 'left' (5 prime) end of read for double-stranded 
+half-UDG libraries. [default: 0]  
+  --damage_manipulation_bamutils_trim_double_stranded_half_udg_right [integer] Specify the number of bases to clip off reads from 'right' (3 prime) end of read for double-stranded 
+half-UDG libraries. [default: 0]  
+  --damage_manipulation_bamutils_trim_single_stranded_none_udg_left  [integer] Specify the number of bases to clip off reads from 'left' (5 prime) end of read for single-stranded 
+non-UDG libraries. [default: 0]  
+  --damage_manipulation_bamutils_trim_single_stranded_none_udg_right [integer] Specify the number of bases to clip off reads from 'right' (3 prime) end of read for single-stranded 
+non-UDG libraries. [default: 0]  
+  --damage_manipulation_bamutils_trim_single_stranded_half_udg_left  [integer] Specify the number of bases to clip off reads from 'left' (5 prime) end of read for single-stranded 
+half-UDG libraries. [default: 0]  
+  --damage_manipulation_bamutils_trim_single_stranded_half_udg_right [integer] Specify the number of bases to clip off reads from 'right' (3 prime) end of read for single-stranded 
+half-UDG libraries. [default: 0]  
+  --damage_manipulation_bamutils_softclip                            [boolean] Specify to turn on soft-trimming instead of hard masking. 
+
+Genotyping
+  --run_genotyping                                                   [boolean] Specify to turn on genotyping of BAM files. 
+  --genotyping_source                                                [string]  Specify which input BAM to use for genotyping.  (accepted: raw, pmd, trimmed, rescaled) 
+  --genotyping_tool                                                  [string]  Specify which genotyper to use.  (accepted: ug, hc, freebayes, pileupcaller, angsd) 
+  --skip_bcftools_stats                                              [boolean] Specify to skip generation of VCF-based variant calling statistics with bcftools. 
+  --genotyping_reference_ploidy                                      [integer] Specify the ploidy of the reference organism. [default: 2] 
+  --genotyping_pileupcaller_min_base_quality                         [integer] Specify the base mapping quality to be used for genotyping with pileupCaller. [default: 30] 
+  --genotyping_pileupcaller_min_map_quality                          [integer] Specify the minimum mapping quality to be used for genotyping with pileupCaller. [default: 30] 
+ 
+  --genotyping_pileupcaller_bedfile                                  [string]  Specify the path to SNP panel in BED format for pileupCaller. 
+  --genotyping_pileupcaller_snpfile                                  [string]  Specify the path to SNP panel in EIGENSTRAT format for pileupCaller. 
+  --genotyping_pileupcaller_method                                   [string]  Specify the SNP calling method to use for genotyping with pileupCaller.  (accepted: 
+randomHaploid, randomDiploid, majorityCall) [default: randomHaploid]  
+  --genotyping_pileupcaller_transitions_mode                         [string]  Specify the calling mode for transitions with pileupCaller.  (accepted: AllSites, 
+TransitionsMissing, SkipTransitions) [default: AllSites]  
+  --genotyping_gatk_call_conf                                        [integer] Specify GATK phred-scaled confidence threshold. [default: 30] 
+  --genotyping_gatk_dbsnp                                            [string]  Specify VCF file for SNP annotation of output VCF files for GATK. 
+  --genotyping_gatk_ug_downsample                                    [integer] Specify the maximum depth coverage allowed for genotyping with GATK before down-sampling is turned 
+on. [default: 250]  
+  --genotyping_gatk_ug_out_mode                                      [string]  Specify GATK UnifiedGenotyper output mode.  (accepted: EMIT_VARIANTS_ONLY, 
+EMIT_ALL_CONFIDENT_SITES, EMIT_ALL_SITES) [default: EMIT_VARIANTS_ONLY]  
+  --genotyping_gatk_ug_genotype_mode                                 [string]  Specify UnifiedGenotyper likelihood model.  (accepted: SNP, INDEL, BOTH, GENERALPLOIDYSNP, 
+GENERALPLOIDYINDEL) [default: SNP]  
+  --genotyping_gatk_ug_keeprealignbam                                [boolean] Specify to keep the BAM output of re-alignment around variants from GATK UnifiedGenotyper. 
+  --genotyping_gatk_ug_defaultbasequalities                          [integer] Specify to supply a default base quality if a read is missing a base quality score. [default: 
+-1]  
+  --genotyping_gatk_hc_out_mode                                      [string]  Specify GATK HaplotypeCaller output mode.  (accepted: EMIT_VARIANTS_ONLY, 
+EMIT_ALL_CONFIDENT_SITES, EMIT_ALL_ACTIVE_SITES) [default: EMIT_VARIANTS_ONLY]  
+  --genotyping_gatk_hc_emitrefconf                                   [string]  Specify HaplotypeCaller mode for emitting reference confidence calls.  (accepted: NONE, 
+BP_RESOLUTION, GVCF) [default: GVCF]  
+  --genotyping_freebayes_min_alternate_count                         [integer] Specify minimum required supporting observations of an alternate allele to consider a variant in 
+FreeBayes. [default: 1]  
+  --genotyping_freebayes_skip_coverage                               [integer] Specify to skip over regions of high depth by discarding alignments overlapping positions where 
+total read depth is greater than specified in FreeBayes. [default: 0]  
+  --genotyping_angsd_glmodel                                         [string]  Specify which ANGSD genotyping likelihood model to use.  (accepted: samtools, gatk, soapsnp, 
+syk) [default: samtools]  
+  --genotyping_angsd_glformat                                        [string]  Specify the formatting of the output VCF for ANGSD genotype likelihood results.  (accepted: 
+binary, beagle_binary, binary_three, text) [default: binary]  
+
+Mitochondrial to Nuclear Ratio
+  --run_mtnucratio                                                   [boolean] Specify to turn on mitochondrial to nuclear ratio calculation. 
+  --mitochondrion_header                                             [string]  Specify the name of the reference FASTA entry corresponding to the mitochondrial genome. 
+[default: MT]  
+
+Mapping statistics
+  --mapstats_skip_preseq                                             [boolean] Specify to turn off the computation of library complexity estimation with preseq. 
+  --mapstats_preseq_mode                                             [string]  Specify which mode of preseq to run.  (accepted: c_curve, lc_extrap) [default: c_curve] 
+  --mapstats_preseq_stepsize                                         [integer] Specify the step size (i.e., sampling regularity) of preseq. [default: 1000] 
+  --mapstats_preseq_terms                                            [integer] Specify the maximum number of terms that preseq's lc_extrap mode will use. [default: 100] 
+  --mapstats_preseq_maxextrap                                        [integer] Specify the maximum extrapolation to use for preseq's lc_extrap mode. [default: 10000000000] 
+ 
+  --mapstats_preseq_bootstrap                                        [integer] Specify number of bootstraps to perform in preseq's lc_extrap mode. [default: 100] 
+  --mapstats_preseq_cval                                             [number]  Specify confidence interval level for preseq's lc_extrap mode. [default: 0.95] 
+  --mapstats_preseq_defects_mode                                     [boolean] Specify to turn on preseq defects mode to extrapolate without testing for defects in lc_extrap mode. 
+ 
+  --skip_qualimap                                                    [boolean] Specify to turn off coverage calculation with Qualimap. 
+  --snpcapture_bed                                                   [string]  Specify path to SNP capture positions in BED format for coverage calculations with Qualimap. 
+ 
+
+(aDNA) Damage Analysis
+  --skip_damagecalculation                                           [boolean] Specify to turn off ancient DNA damage calculation. 
+  --damagecalculation_tool                                           [string]  Specify the tool to use for damage calculation.  (accepted: damageprofiler, mapdamage) [default: 
+damageprofiler]  
+  --damagecalculation_yaxis                                          [number]  Specify the maximum misincorporation frequency that should be displayed on damage plot. 
+[default: 0.3]  
+  --damagecalculation_xaxis                                          [integer] Specify number of bases of each read to be considered for plotting damage estimation. [default: 
+25]  
+  --damagecalculation_damageprofiler_length                          [integer] Specify the length filter for DamageProfiler. [default: 100] 
+  --damagecalculation_mapdamage_downsample                           [integer] Specify the maximum number of reads to consider for damage calculation with mapDamage. [default: 
+0]  
+
+Feature Annotation Statistics
+  --run_bedtools_coverage                                            [boolean] Specify to turn on calculation of number of reads, depth and breadth coverage of features in 
+reference with bedtools.  
+  --mapstats_bedtools_featurefile                                    [string]  Specify path to GFF or BED file containing positions of features in reference file for bedtools. 
+ 
+
+Host Removal
+  --run_host_removal                                                 [boolean] Specify to turn on creation of pre-adapter-removal and/or read-pair-merging FASTQ files without 
+reads that mapped to reference (e.g. for public upload of privacy sensitive non-host data).  
+  --host_removal_mode                                                [string]  Specify the host-mapped read removal mode.  (accepted: remove, replace) [default: remove] 
+
+Contamination estimation
+  --run_contamination_estimation_angsd                               [boolean] Specify to turn on nuclear contamination estimation for genomes with ANGSD. 
+  --contamination_estimation_angsd_chrom_name                        [string]  Specify the name of the chromosome to be used for contamination estimation with ANGSD. [default: 
+X]  
+  --contamination_estimation_angsd_range_from                        [integer] Specify the first position on the chromosome to be used for contamination estimation with ANGSD. 
+[default: 5000000]  
+  --contamination_estimation_angsd_range_to                          [integer] Specify the last position on the chromosome to be used for contamination estimation with ANGSD. 
+[default: 154900000]  
+  --contamination_estimation_angsd_mapq                              [integer] Specify the minimum mapping quality reads should have for contamination estimation with ANGSD. 
+[default: 30]  
+  --contamination_estimation_angsd_minq                              [integer] Specify the minimum base quality reads should have for contamination estimation with ANGSD. 
+[default: 30]  
+  --contamination_estimation_angsd_hapmap                            [string]  Specify path to HapMap file of chromosome for contamination estimation with ANGSD. [default: 
+${projectDir}/assets/angsd_resources/HapMapChrX.gz]  
+
+Human Sex Determination
+  --run_sexdeterrmine                                                [boolean] Specify to turn on sex determination for genomes mapped to human reference genomes with 
+Sex.DetERRmine.  
+  --sexdeterrmine_bedfile                                            [string]  Specify path to SNP panel in BED format for error bar calculation. 
+
+Consensus sequence
+  --run_consensus_sequence                                           [boolean] Specify to create consensus sequence from VCF files 
+  --consensus_tool                                                   [string]  Specify which tool to use to create consensus sequences: multivcfanalyzer  (accepted: 
+multivcfanalyzer)  
+  --consensus_multivcfanalyzer_write_allele_frequencies              [boolean] Speficy to write the allele frequencies in the SNP table 
+  --consensus_multivcfanalyzer_min_genotype_quality                  [integer] Specify the mininum genotyping quality for base calling. [default: 30] 
+  --consensus_multivcfanalyzer_min_base_coverage                     [integer] Specify the minum number of reads required for base calling [default: 5] 
+  --consensus_multivcfanalyzer_allele_freq_hom                       [number]  Specify the minimum allele frequency required for a base to be called as 'homozygous' [default: 
+0.9]  
+  --consensus_multivcfanalyzer_allele_freq_het                       [number]  Specify the minimum allele frequency required for a base to be called as 'heterozygous' 
+[default: 0.9]  
+  --consensus_multivcfanalyzer_reference_gff_annotations             [string]  Specify path to GFF reference file 
+  --consensus_multivcfanalyzer_reference_gff_exclude                 [string]  Specify path to GFF with positions to be excluded 
+  --consensus_multivcfanalyzer_snpeff_results                        [string]  Specify path to SNP effect output 
+ !! Hiding 20 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The pipeline
+    https://doi.org/10.7717/peerj.10947
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/eager/blob/master/CITATIONS.md
+

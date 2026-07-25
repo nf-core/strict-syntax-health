@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.06.0-edge
+ N E X T F L O W   ~  version 26.07.0-edge
 
-Launching `./main.nf` [awesome_rosalind] revision: 92dac02512
+Launching `./main.nf` [intergalactic_tesla] revision: 92dac02512
 
 
 ------------------------------------------------------
@@ -113,6 +113,9 @@ Profiling options
   --run_centrifuge                                       [boolean] Turn on profiling with Centrifuge. Requires database to be present CSV file passed to --databases 
  
   --centrifuge_save_reads                                [boolean] Turn on saving of Centrifuge-aligned reads 
+  --run_centrifuger                                      [boolean] Turn on profiling with Centrifuger. Requires database to be present CSV file passed to --databases 
+ 
+  --centrifuger_save_reads                               [boolean] Turn on saving of Centrifuger-aligned reads 
   --run_diamond                                          [boolean] Turn on profiling with DIAMOND. For unmerged paired-read libraries, only read1 will be used Requires 
 database to be present CSV file passed to --databases  
   --diamond_output_format                                [string]  Specify output format from DIAMOND profiling.  (accepted: blast, xml, txt, daa, sam, tsv, paf) 

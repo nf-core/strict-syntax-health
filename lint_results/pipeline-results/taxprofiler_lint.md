@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-07-03T00:36:41.544936871Z
-- Nextflow version: 26.06.0-edge
+- Generated: 2026-07-25T00:37:48.781127912Z
+- Nextflow version: 26.07.0-edge
 - Summary: 97 warnings
 
 ## :warning: Warnings
@@ -102,13 +102,6 @@
   ```nextflow
               saveAs: { !params.bracken_save_intermediatekraken2 && meta.tool == "bracken" ? null : it },
                                                                                                     ^^
-  ```
-
-- Warning: `main.nf:51:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      multiqc_report = TAXPROFILER.out.multiqc_report // channel: /path/to/multiqc_report.html
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `modules/nf-core/bbmap/bbduk/main.nf:45:9`: Variable was declared but not used
@@ -468,91 +461,112 @@
           ^^^^
   ```
 
-- Warning: `subworkflows/local/profiling/main.nf:247:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/profiling/main.nf:250:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   if (it[0].is_fasta) {
                       ^^
   ```
 
-- Warning: `subworkflows/local/profiling/main.nf:248:145`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/profiling/main.nf:251:145`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       log.warn("[nf-core/taxprofiler] Centrifuge currently does not accept FASTA files as input. Skipping Centrifuge for sample ${it[0].id}.")
                                                                                                                                                   ^^
   ```
 
-- Warning: `subworkflows/local/profiling/main.nf:250:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/profiling/main.nf:253:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   !it[0].is_fasta
                    ^^
   ```
 
-- Warning: `subworkflows/local/profiling/main.nf:334:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/profiling/main.nf:296:25`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                      if (it[0].is_fasta) {
+                          ^^
+  ```
+
+- Warning: `subworkflows/local/profiling/main.nf:297:151`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                          log.warn("[nf-core/taxprofiler] Centrifuger currently does not accept FASTA files as input. Skipping Centrifuger for sample ${it[0].id}.")
+                                                                                                                                                        ^^
+  ```
+
+- Warning: `subworkflows/local/profiling/main.nf:299:22`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                      !it[0].is_fasta
+                       ^^
+  ```
+
+- Warning: `subworkflows/local/profiling/main.nf:387:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   if (it[0].is_fasta) {
                       ^^
   ```
 
-- Warning: `subworkflows/local/profiling/main.nf:335:135`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/profiling/main.nf:388:135`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       log.warn("[nf-core/taxprofiler] mOTUs currently does not accept FASTA files as input. Skipping mOTUs for sample ${it[0].id}.")
                                                                                                                                         ^^
   ```
 
-- Warning: `subworkflows/local/profiling/main.nf:337:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/profiling/main.nf:390:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   !it[0].is_fasta
                    ^^
   ```
 
-- Warning: `subworkflows/local/profiling/main.nf:340:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/profiling/main.nf:393:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   longread: it[0].instrument_platform == 'OXFORD_NANOPORE' || it[0].instrument_platform == 'PACBIO_SMRT'
                             ^^
   ```
 
-- Warning: `subworkflows/local/profiling/main.nf:340:77`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/profiling/main.nf:393:77`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   longread: it[0].instrument_platform == 'OXFORD_NANOPORE' || it[0].instrument_platform == 'PACBIO_SMRT'
                                                                               ^^
   ```
 
-- Warning: `subworkflows/local/profiling/main.nf:341:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/profiling/main.nf:394:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   shortread: it[0].instrument_platform != 'OXFORD_NANOPORE' && it[0].instrument_platform != 'PACBIO_SMRT'
                              ^^
   ```
 
-- Warning: `subworkflows/local/profiling/main.nf:341:78`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/profiling/main.nf:394:78`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   shortread: it[0].instrument_platform != 'OXFORD_NANOPORE' && it[0].instrument_platform != 'PACBIO_SMRT'
                                                                                ^^
   ```
 
-- Warning: `subworkflows/local/profiling/main.nf:531:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/profiling/main.nf:584:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   if (it[0].is_fasta) {
                       ^^
   ```
 
-- Warning: `subworkflows/local/profiling/main.nf:532:135`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/profiling/main.nf:585:135`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       log.warn("[nf-core/taxprofiler] sylph currently does not accept FASTA files as input. Skipping sylph for sample ${it[0].id}.")
                                                                                                                                         ^^
   ```
 
-- Warning: `subworkflows/local/profiling/main.nf:534:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/profiling/main.nf:587:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   !it[0].is_fasta
@@ -594,93 +608,79 @@
                       ^^
   ```
 
-- Warning: `subworkflows/local/visualization_krona/main.nf:28:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/visualization_krona/main.nf:28:22`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          centrifuger: it[0]['tool'] == 'centrifuger'
+                       ^^
+  ```
+
+- Warning: `subworkflows/local/visualization_krona/main.nf:29:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           kraken2: it[0]['tool'] == 'kraken2' || it[0]['tool'] == 'kraken2-bracken'
                    ^^
   ```
 
-- Warning: `subworkflows/local/visualization_krona/main.nf:28:48`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/visualization_krona/main.nf:29:48`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           kraken2: it[0]['tool'] == 'kraken2' || it[0]['tool'] == 'kraken2-bracken'
                                                  ^^
   ```
 
-- Warning: `subworkflows/local/visualization_krona/main.nf:32:16`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/visualization_krona/main.nf:33:16`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           kaiju: it[0]['tool'] == 'kaiju'
                  ^^
   ```
 
-- Warning: `subworkflows/local/visualization_krona/main.nf:33:15`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/visualization_krona/main.nf:34:15`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           malt: it[0]['tool'] == 'malt'
                 ^^
   ```
 
-- Warning: `subworkflows/local/visualization_krona/main.nf:72:22`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/visualization_krona/main.nf:74:22`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { [[id: it[0]['db_name'], tool: it[0]['tool']], it[1]] }
                        ^^
   ```
 
-- Warning: `subworkflows/local/visualization_krona/main.nf:72:46`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/visualization_krona/main.nf:74:46`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { [[id: it[0]['db_name'], tool: it[0]['tool']], it[1]] }
                                                ^^
   ```
 
-- Warning: `subworkflows/local/visualization_krona/main.nf:72:62`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/visualization_krona/main.nf:74:62`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { [[id: it[0]['db_name'], tool: it[0]['tool']], it[1]] }
                                                                ^^
   ```
 
-- Warning: `subworkflows/local/visualization_krona/main.nf:86:26`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/visualization_krona/main.nf:88:26`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .map { [[id: it[0]['db_name'], tool: it[0]['tool']], it[1]] }
                            ^^
   ```
 
-- Warning: `subworkflows/local/visualization_krona/main.nf:86:50`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/visualization_krona/main.nf:88:50`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .map { [[id: it[0]['db_name'], tool: it[0]['tool']], it[1]] }
                                                    ^^
   ```
 
-- Warning: `subworkflows/local/visualization_krona/main.nf:86:66`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/visualization_krona/main.nf:88:66`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .map { [[id: it[0]['db_name'], tool: it[0]['tool']], it[1]] }
                                                                    ^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      valid_config = valid_config
-      ^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
   ```

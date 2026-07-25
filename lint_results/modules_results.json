@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "620983b7f0c876448d4599052fb90e40848b1d7d",
+  "_repo_commit": "18756aea6cac39a78a7ca8cd51bb9ee53d4e7ba4",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -3003,7 +3003,7 @@
   "eigenstratdatabasetools_eigenstratsnpcoverage": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/eigenstratdatabasetools/eigenstratsnpcoverage",
     "errors": 0,
-    "warnings": 0,
+    "warnings": 1,
     "parse_error": false
   },
   "eklipse": {
@@ -3632,6 +3632,18 @@
   },
   "foldcomp_decompress": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/foldcomp/decompress",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "folddisco_index": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/folddisco/index",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "folddisco_query": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/folddisco/query",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

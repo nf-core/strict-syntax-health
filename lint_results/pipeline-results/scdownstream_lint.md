@@ -1,17 +1,10 @@
 # Nextflow lint results
 
-- Generated: 2026-07-16T00:31:35.802350110Z
-- Nextflow version: 26.06.0-edge
-- Summary: 34 warnings
+- Generated: 2026-07-25T00:36:21.600922204Z
+- Nextflow version: 26.07.0-edge
+- Summary: 21 warnings
 
 ## :warning: Warnings
-
-- Warning: `main.nf:172:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      multiqc_report = SCDOWNSTREAM.out.multiqc_report // channel: /path/to/multiqc_report.html
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
 
 - Warning: `modules/local/adata/merge/main.nf:24:5`: Variable was declared but not used
 
@@ -158,88 +151,4 @@
   ```nextflow
       use_observed_lib_size = task.ext.use_observed_lib_size != null ? task.ext.use_observed_lib_size : true
       ^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/ambient_correction/main.nf:111:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      h5ad     = ch_h5ad     // channel: [ meta, h5ad ]
-      ^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/cluster_annotation/main.nf:65:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      obs = ch_obs
-      ^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/cluster_targets/main.nf:48:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      targets = ch_targets // channel: [ meta, h5ad ]
-      ^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/edgepython_sc_de/main.nf:47:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      results = EDGEPYTHON_SCDIFFERENTIAL.out.results
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/load_h5ad/main.nf:75:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      h5ad     = ch_output   // channel: [ meta, h5ad, h5ad ]
-      ^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/normalization/main.nf:23:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      h5ad = ch_h5ad
-      ^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/pseudobulk_de/main.nf:32:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      results = ch_results
-      ^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/unify_genes/main.nf:36:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      h5ad = ch_h5ad // channel: [ meta, h5ad ]
-      ^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/h5ad_removebackground_barcodes_cellbender_anndata/main.nf:18:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      h5ad = ANNDATA_BARCODES.out.h5ad  // channel: [ val(meta), path(h5ad) ]
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      valid_config = valid_config
-      ^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
   ```

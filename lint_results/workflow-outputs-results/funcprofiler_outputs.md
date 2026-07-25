@@ -1,6 +1,6 @@
 # Workflow outputs migration: funcprofiler
 
-- Generated: 2026-07-24T00:27:09.477405+00:00
+- Generated: 2026-07-25T00:32:37.134304+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,5 +14,5 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 10 `publishDir` references across 2 files that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/funcprofiler/blob/e351b6ad88058881d67001d989f9e780a76904ef/conf/modules.config#L15) — 8 references
-- [`tests/nextflow.config`](https://github.com/nf-core/funcprofiler/blob/e351b6ad88058881d67001d989f9e780a76904ef/tests/nextflow.config#L26) — 2 references
+- [`conf/modules.config`](https://github.com/nf-core/funcprofiler/blob/fe0ac389d5f0340746686e54f7cbfb9da0a7cbe6/conf/modules.config#L15) — 8 references
+- [`tests/nextflow.config`](https://github.com/nf-core/funcprofiler/blob/fe0ac389d5f0340746686e54f7cbfb9da0a7cbe6/tests/nextflow.config#L26) — 2 references

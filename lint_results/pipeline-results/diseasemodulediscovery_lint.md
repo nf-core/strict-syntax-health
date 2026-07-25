@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-07-04T00:33:04.404723290Z
-- Nextflow version: 26.06.0-edge
-- Summary: 133 warnings
+- Generated: 2026-07-25T00:31:52.072763516Z
+- Nextflow version: 26.07.0-edge
+- Summary: 129 warnings
 
 ## :warning: Warnings
 
@@ -158,13 +158,6 @@
   ```nextflow
           .multiMap{network_id, meta, module, network, sp ->
                     ^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/gt_proximity/main.nf:55:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      versions = ch_versions
-      ^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/gt_robust/main.nf:16:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -592,27 +585,6 @@
   ```nextflow
       def drugstone_skipped_count = drugstone_skipped.count  { key, value -> value == true }
                                                                ^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      valid_config = valid_config
-      ^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/diseasemodulediscovery.nf:126:16`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead

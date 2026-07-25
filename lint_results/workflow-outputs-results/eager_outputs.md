@@ -1,6 +1,6 @@
 # Workflow outputs migration: eager
 
-- Generated: 2026-06-16T20:23:22.429018+00:00
+- Generated: 2026-07-25T00:32:15.170222+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -12,7 +12,7 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 ## Legacy `publishDir` references
 
-Found 127 `publishDir` references across 2 files that should be migrated to the workflow `output {}` block:
+Found 126 `publishDir` references across 2 files that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/eager/blob/f77d2464a7c6fe06b67ce1832f2fe72ba21c8fde/conf/modules.config#L15) — 126 references
-- [`subworkflows/nf-core/fastq_align_bwaaln/nextflow.config`](https://github.com/nf-core/eager/blob/f77d2464a7c6fe06b67ce1832f2fe72ba21c8fde/subworkflows/nf-core/fastq_align_bwaaln/nextflow.config#L7) — 1 reference
+- [`conf/modules.config`](https://github.com/nf-core/eager/blob/2e46e89d137b20bfc23c3bc1909a30a16e3704c7/conf/modules.config#L15) — 125 references
+- [`subworkflows/nf-core/fastq_align_bwaaln/nextflow.config`](https://github.com/nf-core/eager/blob/2e46e89d137b20bfc23c3bc1909a30a16e3704c7/subworkflows/nf-core/fastq_align_bwaaln/nextflow.config#L7) — 1 reference

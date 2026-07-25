@@ -1,12 +1,97 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.04.3
+ N E X T F L O W   ~  version 26.07.0-edge
 
-Launching `./main.nf` [serene_knuth] revision: e4152308ec
+Launching `./main.nf` [shrivelled_avogadro] revision: 81336ac1c7
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
-ERROR ~ Unable to create help message: Specified param 'true' does not exist in JSON schema.
 
- -- Check script 'subworkflows/nf-core/utils_nfschema_plugin/main.nf' at line: 41 or see '.nextflow.log' file for more details
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/molkart 1.3.0dev
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/molkart -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Segmentation methods and options
+  --segmentation_method         [string]  List of segmentation tools to apply to the image. Allowed values: mesmer, cellpose, stardist, 
+ilastik. Use a comma-separated string without whitespaces for multiple methods. [default: 
+mesmer]  
+  --segmentation_min_area       [integer] Minimum area size (in pixels) for segmentation masks. 
+  --segmentation_max_area       [integer] Maximum area size (in pixels) for segmentation masks. 
+  --cellpose_diameter           [integer] Cell diameter, if 0 will use the diameter of the training labels used in the model, or with built-in 
+model will estimate diameter for each image. [default: 30]  
+  --cellpose_chan               [integer] Specifies the channel to be segmented by Cellpose. [default: 0] 
+  --cellpose_chan2              [integer] Specifies nuclear channel index for Cellpose if using pretrained models such as cyto. 
+  --cellpose_pretrained_model   [string]  Pretrained Cellpose model to be used for segmentation. [default: cyto] 
+  --cellpose_custom_model       [string]  Custom Cellpose model can be provided by the user. 
+  --cellpose_flow_threshold     [number]  Flow error threshold for Cellpose. [default: 0.4] 
+  --cellpose_edge_exclude       [boolean] Should cells detected near image edges be excluded. [default: true] 
+  --cellpose_save_flows         [boolean] Should flow fields from Cellpose be saved? 
+  --cellpose_cellprob_threshold [integer] Cell probability threshold for Cellpose [default: 0] 
+  --mesmer_image_mpp            [number]  Pixel size in microns for segmentation with Mesmer. [default: 0.138] 
+  --mesmer_compartment          [string]  Compartment to be segmented with Mesmer (nuclear, whole-cell) [default: whole-cell] 
+  --ilastik_pixel_project       [string]  Provide ilastik with a pixel classification project to produce probability maps. 
+  --ilastik_multicut_project    [string]  Provide ilastik with a multicut project to create segmentation masks. 
+  --stardist_model              [string]  Model to use for segmentation with stardist.  (accepted: 2D_versatile_fluo, 2D_paper_dsb2018, 
+2D_versatile_he) [default: 2D_versatile_fluo]  
+  --stardist_n_tiles_x          [integer] Number of tiles on the X axis for Stardist. [default: 3] 
+  --stardist_n_tiles_y          [integer] Number of tiles on the Y axis for Stardist. [default: 3] 
+
+Image preprocessing
+  --skip_mindagap               [boolean] Skip mindagap if your data does not contain gaps between tiles. 
+  --mindagap_boxsize            [integer] Box size used by Mindagap to overcome gaps, a larger number allows to overcome large gaps, but 
+results in less fine details in the filled grid. [default: 3]  
+  --mindagap_loopnum            [integer] Loop number performed by Mindagap. Lower values are faster, but the result is less good. 
+[default: 40]  
+  --clahe_cliplimit             [number]  Contrast limit for localized changes in contrast by CLAHE. [default: 0.01] 
+  --clahe_nbins                 [integer] Number of histogram bins to be used by CLAHE. [default: 256] 
+  --clahe_pixel_size            [number]  Pixel size to be used by CLAHE. [default: 0.138] 
+  --clahe_kernel                [number]  Kernel size to be used by CLAHE. [default: 25.0] 
+  --skip_clahe                  [boolean] Specifies whether contrast-limited adaptive histogram equalization should be skipped. 
+
+Training subset options
+  --create_training_subset      [boolean] Create subset for training a segmentation model. 
+  --crop_size_x                 [integer] Indicates crop size on x axis. [default: 400] 
+  --crop_size_y                 [integer] Indicates crop size on y axis. [default: 400] 
+  --crop_amount                 [integer] Number of crops you would like to extract. [default: 4] 
+  --crop_nonzero_fraction       [number]  Indicates fraction of pixels per crop above global threshold to ensure tissue and not only 
+background is selected. [default: 0.4]  
+
+Input/output options
+  --input                       [string] Path to comma-separated file containing information about the samples in the experiment. 
+  --outdir                      [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --email                       [string] Email address for completion summary. 
+  --multiqc_title               [string] MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+
+Generic options
+  --multiqc_methods_description [string]          Custom MultiQC yaml file containing HTML including a methods description. 
+  --modules_testdata_base_path  [string]          URL or local path to location of module test dataset files [default: 
+https://raw.githubusercontent.com/nf-core/test-datasets/modules/data/]  
+  --help                        [boolean, string] Display the help message. 
+  --help_full                   [boolean]         Display the full detailed help message. 
+  --show_hidden                 [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 20 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The pipeline
+    https://doi.org/10.5281/zenodo.10650748
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/molkart/blob/master/CITATIONS.md
+

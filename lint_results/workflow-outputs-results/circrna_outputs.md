@@ -1,6 +1,6 @@
 # Workflow outputs migration: circrna
 
-- Generated: 2026-06-16T20:19:02.917401+00:00
+- Generated: 2026-07-25T00:31:27.071629+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,4 +14,4 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 127 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/circrna/blob/bdba2f02bc819da073fc80b18ba9cc9d76292620/conf/modules.config#L15) — 127 references
+- [`conf/modules.config`](https://github.com/nf-core/circrna/blob/5b6008aacefa93ba037b9477f500337be4897db4/conf/modules.config#L15) — 127 references

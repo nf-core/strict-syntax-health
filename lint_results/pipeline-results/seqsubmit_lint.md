@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-07-08T00:30:24.973179311Z
-- Nextflow version: 26.06.0-edge
-- Summary: 18 warnings
+- Generated: 2026-07-25T00:36:42.473683119Z
+- Nextflow version: 26.07.0-edge
+- Summary: 13 warnings
 
 ## :warning: Warnings
 
@@ -18,13 +18,6 @@
   ```nextflow
                   saveAs: { filename -> "tax" }
                             ^^^^^^^^
-  ```
-
-- Warning: `main.nf:101:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      multiqc_report = ch_multiqc_report // channel: /path/to/multiqc_report.html
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `modules/local/create_reads_manifest/main.nf:25:56`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -62,13 +55,6 @@
                                          ^^^^
   ```
 
-- Warning: `subworkflows/local/fasta_validation/main.nf:66:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      valid_fastas    = valid_fastas
-      ^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/genome_evaluation/main.nf:30:5`: Variable was declared but not used
 
   ```nextflow
@@ -81,27 +67,6 @@
   ```nextflow
           .branch { meta, db ->
                     ^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      valid_config = valid_config
-      ^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:76:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/assemblysubmit.nf:235:80`: Parameter was not used -- prefix with `_` to suppress warning

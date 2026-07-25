@@ -1,17 +1,10 @@
 # Nextflow lint results
 
-- Generated: 2026-07-11T00:27:37.006125030Z
-- Nextflow version: 26.06.0-edge
-- Summary: 24 warnings
+- Generated: 2026-07-25T00:32:54.556223518Z
+- Nextflow version: 26.07.0-edge
+- Summary: 20 warnings
 
 ## :warning: Warnings
-
-- Warning: `main.nf:49:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      multiqc_report = GENOMEQC.out.multiqc_report // channel: /path/to/multiqc_report.html
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
 
 - Warning: `modules/local/buscos_seqs/main.nf:19:9`: Variable was declared but not used
 
@@ -151,25 +144,4 @@
   ```nextflow
       buscos_per_seqs         = !params.skip_busco ? GENOMEBUSCOIDEOGRAM.out.busco_mappings.collect { meta, table -> table}.map { tables -> tables.toSorted { a, b -> a.name <=> b.name } } : channel.empty() // channel: [ csv ]
                                                                                                       ^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      valid_config = valid_config
-      ^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
   ```

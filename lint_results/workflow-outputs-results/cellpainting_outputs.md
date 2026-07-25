@@ -1,6 +1,6 @@
 # Workflow outputs migration: cellpainting
 
-- Generated: 2026-06-16T20:18:26.239285+00:00
+- Generated: 2026-07-25T00:30:45.938507+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,4 +14,4 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 7 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/cellpainting/blob/eebfc70c4fc381335540854fefbc47c219cfa854/conf/modules.config#L15) — 7 references
+- [`conf/modules.config`](https://github.com/nf-core/cellpainting/blob/6849844d1f7c841578a89caa5101d9537e7fa023/conf/modules.config#L15) — 7 references
