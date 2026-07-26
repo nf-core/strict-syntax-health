@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-07-21T00:29:05.640963533Z
+- Generated: 2026-07-26T00:32:32.645915908Z
 - Nextflow version: 26.07.0-edge
 - Summary: 117 warnings
 
@@ -699,126 +699,126 @@
                                              ^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:294:101`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/deepmutscan.nf:295:101`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       def min_counts_for_cov_ch          = min_counts_ch.combine(variantCounts_for_heatmaps_ch).map { it[0] }
                                                                                                       ^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:295:101`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/deepmutscan.nf:296:101`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       def min_counts_for_heatmap_ch      = min_counts_ch.combine(variantCounts_for_heatmaps_ch).map { it[0] }
                                                                                                       ^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:298:77`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/deepmutscan.nf:299:77`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       def aa_seq_for_bias_ch             = DMSANALYSIS_AASEQ.out.aa_seq.map { it[1] }.combine(variantCounts_filtered_by_library_ch).map { it[0] }
                                                                               ^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:298:137`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/deepmutscan.nf:299:137`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       def aa_seq_for_bias_ch             = DMSANALYSIS_AASEQ.out.aa_seq.map { it[1] }.combine(variantCounts_filtered_by_library_ch).map { it[0] }
                                                                                                                                           ^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:299:117`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/deepmutscan.nf:300:117`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       def sliding_window_size_N          = sliding_window_size_ch.combine(variantCounts_filtered_by_library_ch).map { it[0] }
                                                                                                                       ^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:300:107`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/deepmutscan.nf:301:107`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       def aimed_cov_N                    = aimed_cov_ch.combine(variantCounts_filtered_by_library_ch).map { it[0] }
                                                                                                             ^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:303:102`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/deepmutscan.nf:304:102`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       def possible_mutations_N           = DMSANALYSIS_POSSIBLE_MUTATIONS.out.possible_mutations.map { it[1] }.combine(variantCounts_filtered_by_library_ch).map { it[0] }
                                                                                                        ^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:303:162`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/deepmutscan.nf:304:162`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       def possible_mutations_N           = DMSANALYSIS_POSSIBLE_MUTATIONS.out.possible_mutations.map { it[1] }.combine(variantCounts_filtered_by_library_ch).map { it[0] }
                                                                                                                                                                    ^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:304:108`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/deepmutscan.nf:305:108`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       def min_counts_for_seqdepth_ch     = min_counts_ch.combine(variantCounts_filtered_by_library_ch).map { it[0] }
                                                                                                              ^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:366:96`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/deepmutscan.nf:367:96`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       def ch_fasta_for_fitness    = ch_fasta.combine(variantCounts_filtered_by_library_ch).map { it[1] }      // path(fasta) -- N
                                                                                                  ^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:367:104`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/deepmutscan.nf:368:104`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       def ch_rf_for_fitness       = reading_frame_ch.combine(variantCounts_filtered_by_library_ch).map { it[0] }  // val(range) -- N
                                                                                                          ^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:395:68`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/deepmutscan.nf:396:68`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
             .mix(CALCULATE_FITNESS.out.dimsum_dir.flatten().filter { it.name == 'report.html' }.map { f -> [['report', 'dimsum', 'DiMSum'], f] })
                                                                      ^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:403:32`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/deepmutscan.nf:404:32`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               def ch_structure = Channel
                                  ^^^^^^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:501:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/deepmutscan.nf:502:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           Channel.fromPath("${outdir}/pipeline_info/execution_trace_${params.trace_report_suffix}.txt", checkIfExists: false)
           ^^^^^^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:509:50`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/deepmutscan.nf:510:50`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def manifest = rows.collect { [kind: it[0][0], group: it[0][1], name: it[0][2]] }
                                                    ^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:509:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/deepmutscan.nf:510:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def manifest = rows.collect { [kind: it[0][0], group: it[0][1], name: it[0][2]] }
                                                                     ^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:509:83`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/deepmutscan.nf:510:83`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def manifest = rows.collect { [kind: it[0][0], group: it[0][1], name: it[0][2]] }
                                                                                     ^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:512:32`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/deepmutscan.nf:513:32`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   rows.collect { it[1] },

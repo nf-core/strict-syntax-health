@@ -3,7 +3,8 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.07.0-edge
 
-Launching `./main.nf` [magical_lattes] revision: ae3065a2fd
+Downloading plugin nf-schema@2.5.1
+Launching `./main.nf` [sad_hypatia] revision: ae3065a2fd
 
 
 ------------------------------------------------------
@@ -17,7 +18,7 @@ Launching `./main.nf` [magical_lattes] revision: ae3065a2fd
 
 Could not read parameters settings from JSON. java.nio.file.NoSuchFileException: /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/deepmutscan/true
 Core Nextflow options
-  runName    : magical_lattes
+  runName    : sad_hypatia
   launchDir  : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/deepmutscan
   workDir    : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/deepmutscan/work
   projectDir : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/deepmutscan

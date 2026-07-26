@@ -218,9 +218,9 @@
   "createtaxdb": {
     "full_name": "nf-core/createtaxdb",
     "html_url": "https://github.com/nf-core/createtaxdb",
-    "commit": "336763b0e0567be070b17a92ff71286d5574e2db",
+    "commit": "cac77b3f37ed6aaeed3e8acdd04a9510e00d3c7c",
     "errors": 0,
-    "warnings": 12,
+    "warnings": 6,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -302,7 +302,7 @@
   "deepmutscan": {
     "full_name": "nf-core/deepmutscan",
     "html_url": "https://github.com/nf-core/deepmutscan",
-    "commit": "f3947ce4a5d57d31eeb865f802bc56ebcb675f6a",
+    "commit": "e53c89c3f3bcb0d6b1315d0daf8bc8a6ae5b88be",
     "errors": 0,
     "warnings": 117,
     "parse_error": false,
@@ -530,9 +530,9 @@
   "funcscan": {
     "full_name": "nf-core/funcscan",
     "html_url": "https://github.com/nf-core/funcscan",
-    "commit": "e571215bb7e72b45b9003d08bf48c8bcf4500c5b",
+    "commit": "195ec2a389fe202ff670e75cfdfae96cce9a64f8",
     "errors": 0,
-    "warnings": 70,
+    "warnings": 64,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -758,7 +758,7 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "25527e26d61f3f611920f6a57738ece78cb38fc1",
+    "commit": "660eedc60d1c8e32e23058647979a0d445b697e5",
     "errors": 0,
     "warnings": 21,
     "parse_error": false,

@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-07-04T00:33:46.855535915Z
-- Nextflow version: 26.06.0-edge
-- Summary: 70 warnings
+- Generated: 2026-07-26T00:33:00.310141564Z
+- Nextflow version: 26.07.0-edge
+- Summary: 64 warnings
 
 ## :warning: Warnings
 
@@ -11,13 +11,6 @@
   ```nextflow
               saveAs: { params.run_taxa_classification == false ? it : null },
                                                                   ^^
-  ```
-
-- Warning: `main.nf:49:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      multiqc_report = FUNCSCAN.out.multiqc_report // channel: /path/to/multiqc_report.html
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `modules/nf-core/ampir/main.nf:25:9`: Variable was declared but not used
@@ -188,13 +181,6 @@
                                                ^^
   ```
 
-- Warning: `subworkflows/local/arg.nf:212:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      versions = ch_versions
-      ^^^^^^^^^^^^^^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/bgc.nf:96:26`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
@@ -230,13 +216,6 @@
                                                ^^
   ```
 
-- Warning: `subworkflows/local/bgc.nf:217:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      versions = ch_versions
-      ^^^^^^^^^^^^^^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/cazyme.nf:25:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -263,27 +242,6 @@
   ```nextflow
       Channel
       ^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      valid_config = valid_config
-      ^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/funcscan.nf:73:25`: Implicit closure parameter is deprecated, declare an explicit parameter instead
