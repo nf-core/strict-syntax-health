@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-07-25T00:36:21.600922204Z
+- Generated: 2026-07-27T00:34:23.551410961Z
 - Nextflow version: 26.07.0-edge
 - Summary: 21 warnings
 
@@ -27,7 +27,7 @@
       ^^^^^^^^^^
   ```
 
-- Warning: `modules/local/liana/rankaggregate/main.nf:22:5`: Variable was declared but not used
+- Warning: `modules/local/liana/rankaggregate/main.nf:26:5`: Variable was declared but not used
 
   ```nextflow
       obs_key = meta.obs_key ?: "leiden"

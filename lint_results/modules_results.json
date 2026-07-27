@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "18756aea6cac39a78a7ca8cd51bb9ee53d4e7ba4",
+  "_repo_commit": "dba388cb6d87d390543f2c108bb8684c4c36c644",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -4764,6 +4764,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "gridss_assemble": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gridss/assemble",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "gridss_generateponbedpe": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gridss/generateponbedpe",
     "errors": 0,
@@ -8143,13 +8149,13 @@
     "parse_error": false
   },
   "plastid_make_wiggle": {
-    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/make/wiggle",
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/make_wiggle",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
   "plastid_metagene_generate": {
-    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/metagene/generate",
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/metagene_generate",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

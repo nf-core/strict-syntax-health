@@ -758,7 +758,7 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "660eedc60d1c8e32e23058647979a0d445b697e5",
+    "commit": "5977159bcec0ead665a538daf4d205efa684f437",
     "errors": 0,
     "warnings": 21,
     "parse_error": false,
@@ -1130,9 +1130,9 @@
   "phyloplace": {
     "full_name": "nf-core/phyloplace",
     "html_url": "https://github.com/nf-core/phyloplace",
-    "commit": "1bb88024c934e0bbcf25c58dcf96c6eeb6ff045e",
+    "commit": "5e3ed1d8d74afe60998a664be3a3431e87a7214b",
     "errors": 0,
-    "warnings": 4,
+    "warnings": 0,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -1418,14 +1418,14 @@
   "scdownstream": {
     "full_name": "nf-core/scdownstream",
     "html_url": "https://github.com/nf-core/scdownstream",
-    "commit": "a2cd186a63e18c4bbdf75202ed5ac36b11ce125c",
+    "commit": "560853da96c87390a2738a919455fcd42eb45b38",
     "errors": 0,
     "warnings": 21,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 74
+    "publishdir_count": 73
   },
   "scnanoseq": {
     "full_name": "nf-core/scnanoseq",
@@ -1562,7 +1562,7 @@
   "taxprofiler": {
     "full_name": "nf-core/taxprofiler",
     "html_url": "https://github.com/nf-core/taxprofiler",
-    "commit": "8def8073afb9d4f2155187f1899fd8d5ebd01ba7",
+    "commit": "eccce25aaa861d144fbb54e8f96585baa2f33c2c",
     "errors": 0,
     "warnings": 97,
     "parse_error": false,

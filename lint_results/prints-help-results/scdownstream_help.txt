@@ -3,8 +3,9 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.07.0-edge
 
+Downloading plugin nf-schema@2.5.1
 Downloading plugin nf-anndata@0.3.2
-Launching `./main.nf` [gigantic_poincare] revision: 23928575f1
+Launching `./main.nf` [evil_shirley] revision: f7cd170089
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -102,6 +103,9 @@ AnnData object here
 when integrate_per_label is true, to split the object before integration. [default: label]  
   --base_condition_col            [string]  The column in the base AnnData object that contains the condition (e.g. disease state, treatment) 
 information. [default: condition]  
+  --base_donor_col                [string]  The column in the base AnnData object that contains biological replicate / donor identifiers. Used 
+for pseudobulking and sample-level differential expression on base_adata-only runs. [default: 
+donor]  
   --integrate_per_label           [boolean] In base_adata-only runs, split the base AnnData by base_label_col and run the selected 
 integration_methods independently for each group before clustering. [default: false]  
   --integrate_per_label_whitelist [string]  Optional comma-separated list of group values from base_label_col for which per-label integration 
@@ -138,7 +142,15 @@ Pipeline options
   --qc_only                       [boolean] Only run the preprocessing steps, skip the integration and clustering steps 
   --skip_liana                    [boolean] Skip the LIANA step. For large datasets, the pipeline might fail due to high memory usage in this 
 step. Use this option to skip it.  
-  --skip_qc_report                [boolean] Skip rendering the Quarto QC HTML report in reports/. 
+  --liana_n_perms                 [integer] Number of permutations for LIANA rank_aggregate specificity testing. Set to 0 to disable permutation 
+testing and speed up large runs. [default: 1000]  
+  --liana_max_cells               [integer] Optional maximum number of cells for LIANA rank_aggregate. When set, cells are subsampled stratified 
+by the LIANA grouping column (and batch when using stratified_obs_batch) before analysis.  
+  --liana_subsample_strategy      [string]  Stratified subsampling strategy used when liana_max_cells is set. Uniform sampling is not used; if 
+strategy is 'none' while liana_max_cells is set, stratified_obs is applied with a warning.  
+(accepted: none, stratified_obs, stratified_obs_batch) [default: stratified_obs]  
+  --liana_subsample_seed          [integer] Random seed for reproducible LIANA cell subsampling. [default: 42] 
+  --skip_qc_report                [boolean] Skip rendering the Quarto QC HTML report in 10_reports/. 
   --scib                          [boolean] Run scib-metrics integration benchmarking on each integration output (samplesheet / --input runs 
 only; not run for base_adata-only extension without --input). [default: false]  
   --scib_max_cells                [integer] Optional maximum number of cells for scib-metrics benchmarking after integration. When set, cells 
@@ -154,6 +166,8 @@ publication-style scoring.  (accepted: fast, full) [default: fast]
   --de_methods                    [string]  Comma-separated differential expression engines to run when enabled by the analysis plan. 
 [default: wilcoxon]  
   --reference_condition           [string]  Reference condition level for condition-based differential expression contrasts. 
+  --interesting_genes             [string]  Optional CSV of gene symbols to mark with a distinct shape on differential expression volcano plots. 
+First column is used; optional header gene/symbol/names. Blank and # lines are ignored.  
   --prep_cellxgene                [boolean] Prepare the output for visualisation in cellxgene 
 
 Sampling options

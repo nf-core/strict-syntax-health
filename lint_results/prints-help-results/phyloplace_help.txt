@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.04.3
+ N E X T F L O W   ~  version 26.07.0-edge
 
-Launching `./main.nf` [sleepy_darwin] revision: fcbc19ad2d
+Launching `./main.nf` [big_shockley] revision: fcbc19ad2d
 
 WARN: Access to undefined parameter `fasta` -- Initialise it to a default value eg. `params.fasta = some_value`
 
