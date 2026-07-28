@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-07-27T00:33:21.445348765Z
+- Generated: 2026-07-28T00:29:53.066222777Z
 - Nextflow version: 26.07.0-edge
-- Summary: 21 warnings
+- Summary: 20 warnings
 
 ## :warning: Warnings
 
@@ -116,13 +116,6 @@
   ```nextflow
       def adapters_list = custom_adapters ? "--custom_adapters ${custom_adapters}" : ""
           ^^^^^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/prodigal/main.nf:49:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args   ?: ''
-          ^^^^
   ```
 
 - Warning: `modules/nf-core/spades/main.nf:80:9`: Variable was declared but not used

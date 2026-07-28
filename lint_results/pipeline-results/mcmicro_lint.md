@@ -1,17 +1,10 @@
 # Nextflow lint results
 
-- Generated: 2026-07-11T00:28:38.010063806Z
-- Nextflow version: 26.06.0-edge
-- Summary: 76 warnings
+- Generated: 2026-07-28T00:30:16.573682570Z
+- Nextflow version: 26.07.0-edge
+- Summary: 72 warnings
 
 ## :warning: Warnings
-
-- Warning: `main.nf:51:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      multiqc_report = MCMICRO.out.multiqc_report // channel: /path/to/multiqc_report.html
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
 
 - Warning: `modules/local/summary_markersheet/main.nf:20:9`: Variable was declared but not used
 
@@ -326,27 +319,6 @@
   ```nextflow
               files << file(it)
                             ^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      valid_config = valid_config
-      ^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `tests/lib/utils.nf:18:36`: Implicit closure parameter is deprecated, declare an explicit parameter instead

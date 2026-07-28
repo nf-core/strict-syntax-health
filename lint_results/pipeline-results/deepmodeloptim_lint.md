@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-16T20:21:00.830996948Z
-- Nextflow version: 26.04.3
-- Summary: 16 errors, 56 warnings
+- Generated: 2026-07-28T00:28:46.159451478Z
+- Nextflow version: 26.07.0-edge
+- Summary: 16 errors, 50 warnings
 
 ## :x: Errors
 
@@ -195,13 +195,6 @@
   ```nextflow
           meta, csv -> csv
           ^^^^
-  ```
-
-- Warning: `subworkflows/local/evaluation/main.nf:96:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      versions = ch_versions // channel: [ versions.yml ]
-      ^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/preprocess_ibis_bedfile_to_stimulus/main.nf:51:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -442,39 +435,11 @@
               ^^^^^^^
   ```
 
-- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
-
-  ```nextflow
-      valid_config = checkConfigProvided()
-      ^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      valid_config
-      ^^^^^^^^^^^^
-  ```
-
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       return ch_versions.unique().map { version -> processVersionsFromYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
                                                                                                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:44:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/deepmodeloptim.nf:48:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -503,11 +468,4 @@
   ```nextflow
           ).set { ch_collated_versions }
                   ^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/deepmodeloptim.nf:163:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      versions = ch_versions  // channel: [ path(versions.yml) ]
-      ^^^^^^^^^^^^^^^^^^^^
   ```

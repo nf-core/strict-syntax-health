@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-16T20:39:39.669263493Z
-- Nextflow version: 26.04.3
-- Summary: 21 errors, 153 warnings
+- Generated: 2026-07-28T00:35:07.204099879Z
+- Nextflow version: 26.07.0-edge
+- Summary: 21 errors, 159 warnings
 
 ## :x: Errors
 
@@ -55,98 +55,98 @@
                                 ^^^
   ```
 
-- Error: `workflows/sammyseq.nf:50:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
+- Error: `workflows/sammyseq.nf:51:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   if (params.fasta) { ch_fasta =  Channel.fromPath(params.fasta) } else { exit 1, 'Fasta reference genome not specified!' }
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/sammyseq.nf:53:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
+- Error: `workflows/sammyseq.nf:54:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_fasta_meta = ch_fasta.map{ it -> [[id:it[0].baseName], it] }.collect()
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/sammyseq.nf:61:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
+- Error: `workflows/sammyseq.nf:62:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_multiqc_config          = Channel.fromPath("$projectDir/assets/multiqc_config.yml", checkIfExists: true)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/sammyseq.nf:62:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
+- Error: `workflows/sammyseq.nf:63:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_multiqc_custom_config   = params.multiqc_config ? Channel.fromPath( params.multiqc_config, checkIfExists: true ) : Channel.empty()
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/sammyseq.nf:63:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
+- Error: `workflows/sammyseq.nf:64:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_multiqc_logo            = params.multiqc_logo   ? Channel.fromPath( params.multiqc_logo, checkIfExists: true ) : Channel.empty()
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/sammyseq.nf:64:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
+- Error: `workflows/sammyseq.nf:65:1`: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
 
   ```nextflow
   ch_multiqc_custom_methods_description = params.multiqc_methods_description ? file(params.multiqc_methods_description, checkIfExists: true) : file("$projectDir/assets/methods_description_template.yml", checkIfExists: true)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/sammyseq.nf:160:21`: Variables in a closure should be declared with `def`
+- Error: `workflows/sammyseq.nf:161:21`: Variables in a closure should be declared with `def`
 
   ```nextflow
                       newid=id.id + "_trim"
                       ^^^^^
   ```
 
-- Error: `workflows/sammyseq.nf:161:21`: Variables in a closure should be declared with `def`
+- Error: `workflows/sammyseq.nf:162:21`: Variables in a closure should be declared with `def`
 
   ```nextflow
                       sng=meta.subMap('single_end').single_end
                       ^^^
   ```
 
-- Error: `workflows/sammyseq.nf:162:21`: Variables in a closure should be declared with `def`
+- Error: `workflows/sammyseq.nf:163:21`: Variables in a closure should be declared with `def`
 
   ```nextflow
                       newmeta=[id: newid, single_end: sng]
                       ^^^^^^^
   ```
 
-- Error: `workflows/sammyseq.nf:195:13`: `ch_fasta_meta` is not defined
+- Error: `workflows/sammyseq.nf:196:13`: `ch_fasta_meta` is not defined
 
   ```nextflow
               ch_fasta_meta,
               ^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/sammyseq.nf:205:13`: `ch_fasta_meta` is not defined
+- Error: `workflows/sammyseq.nf:206:13`: `ch_fasta_meta` is not defined
 
   ```nextflow
               ch_fasta_meta,
               ^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/sammyseq.nf:224:9`: `ch_fasta_meta` is not defined
+- Error: `workflows/sammyseq.nf:225:9`: `ch_fasta_meta` is not defined
 
   ```nextflow
           ch_fasta_meta,
           ^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/sammyseq.nf:245:9`: `ch_fasta_meta` is not defined
+- Error: `workflows/sammyseq.nf:246:9`: `ch_fasta_meta` is not defined
 
   ```nextflow
           ch_fasta_meta
           ^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/sammyseq.nf:260:21`: `ch_fasta_meta` is not defined
+- Error: `workflows/sammyseq.nf:261:21`: `ch_fasta_meta` is not defined
 
   ```nextflow
       ch_fasta_path = ch_fasta_meta.map { it[1] }
@@ -155,11 +155,11 @@
 
 ## :warning: Warnings
 
-- Warning: `main.nf:63:5`: Emit name should be omitted when there is only one emit
+- Warning: `modules/local/chr_compartments_calling/main.nf:19:9`: Variable was declared but not used
 
   ```nextflow
-      multiqc_report = SAMMYSEQ.out.multiqc_report // channel: /path/to/multiqc_report.html
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      def args = task.ext.args ?: ''
+          ^^^^
   ```
 
 - Warning: `modules/local/differential_enrichment/main.nf:29:5`: Variable was declared but not used
@@ -265,6 +265,76 @@
   ```nextflow
           ).reads.set { cat_fastq_output }
                         ^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/compartmentalization_analysis/main.nf:22:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+      ch_versions = Channel.empty()
+                    ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/compartmentalization_analysis/main.nf:50:32`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .map { experimentalID, fraction, sample_group, bigwig -> experimentalID }
+                                 ^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/compartmentalization_analysis/main.nf:50:42`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .map { experimentalID, fraction, sample_group, bigwig -> experimentalID }
+                                           ^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/compartmentalization_analysis/main.nf:50:56`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .map { experimentalID, fraction, sample_group, bigwig -> experimentalID }
+                                                         ^^^^^^
+  ```
+
+- Warning: `subworkflows/local/compartmentalization_analysis/main.nf:131:32`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .map { experimentalID, fraction, sample_group, bigwig ->
+                                 ^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/compartmentalization_analysis/main.nf:131:56`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .map { experimentalID, fraction, sample_group, bigwig ->
+                                                         ^^^^^^
+  ```
+
+- Warning: `subworkflows/local/compartmentalization_analysis/main.nf:141:32`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .filter { patient_bed, bed, patient_group, group ->
+                                 ^^^
+  ```
+
+- Warning: `subworkflows/local/compartmentalization_analysis/main.nf:141:52`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .filter { patient_bed, bed, patient_group, group ->
+                                                     ^^^^^
+  ```
+
+- Warning: `subworkflows/local/compartmentalization_analysis/main.nf:144:34`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .map { patient_bed, bed, patient_group, group ->
+                                   ^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/compartmentalization_analysis/main.nf:152:23`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .map { group, patient, bed -> [group, bed] }
+                        ^^^^^^^
   ```
 
 - Warning: `subworkflows/local/deeptools_qc/main.nf:20:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -834,27 +904,6 @@
                             ^^^^^^^
   ```
 
-- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
-
-  ```nextflow
-      valid_config = checkConfigProvided()
-      ^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      valid_config
-      ^^^^^^^^^^^^
-  ```
-
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -862,364 +911,357 @@
                                                                                                    ^^^^^^^
   ```
 
-- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/sammyseq.nf:50:33`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/sammyseq.nf:51:33`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
   if (params.fasta) { ch_fasta =  Channel.fromPath(params.fasta) } else { exit 1, 'Fasta reference genome not specified!' }
                                   ^^^^^^^
   ```
 
-- Warning: `workflows/sammyseq.nf:53:1`: Variable was declared but not used
+- Warning: `workflows/sammyseq.nf:54:1`: Variable was declared but not used
 
   ```nextflow
   ch_fasta_meta = ch_fasta.map{ it -> [[id:it[0].baseName], it] }.collect()
   ^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/sammyseq.nf:61:1`: Variable was declared but not used
+- Warning: `workflows/sammyseq.nf:62:1`: Variable was declared but not used
 
   ```nextflow
   ch_multiqc_config          = Channel.fromPath("$projectDir/assets/multiqc_config.yml", checkIfExists: true)
   ^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/sammyseq.nf:61:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/sammyseq.nf:62:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
   ch_multiqc_config          = Channel.fromPath("$projectDir/assets/multiqc_config.yml", checkIfExists: true)
                                ^^^^^^^
   ```
 
-- Warning: `workflows/sammyseq.nf:62:1`: Variable was declared but not used
+- Warning: `workflows/sammyseq.nf:63:1`: Variable was declared but not used
 
   ```nextflow
   ch_multiqc_custom_config   = params.multiqc_config ? Channel.fromPath( params.multiqc_config, checkIfExists: true ) : Channel.empty()
   ^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/sammyseq.nf:62:54`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/sammyseq.nf:63:54`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
   ch_multiqc_custom_config   = params.multiqc_config ? Channel.fromPath( params.multiqc_config, checkIfExists: true ) : Channel.empty()
                                                        ^^^^^^^
   ```
 
-- Warning: `workflows/sammyseq.nf:62:119`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/sammyseq.nf:63:119`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
   ch_multiqc_custom_config   = params.multiqc_config ? Channel.fromPath( params.multiqc_config, checkIfExists: true ) : Channel.empty()
                                                                                                                         ^^^^^^^
   ```
 
-- Warning: `workflows/sammyseq.nf:63:1`: Variable was declared but not used
+- Warning: `workflows/sammyseq.nf:64:1`: Variable was declared but not used
 
   ```nextflow
   ch_multiqc_logo            = params.multiqc_logo   ? Channel.fromPath( params.multiqc_logo, checkIfExists: true ) : Channel.empty()
   ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/sammyseq.nf:63:54`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/sammyseq.nf:64:54`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
   ch_multiqc_logo            = params.multiqc_logo   ? Channel.fromPath( params.multiqc_logo, checkIfExists: true ) : Channel.empty()
                                                        ^^^^^^^
   ```
 
-- Warning: `workflows/sammyseq.nf:63:117`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/sammyseq.nf:64:117`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
   ch_multiqc_logo            = params.multiqc_logo   ? Channel.fromPath( params.multiqc_logo, checkIfExists: true ) : Channel.empty()
                                                                                                                       ^^^^^^^
   ```
 
-- Warning: `workflows/sammyseq.nf:64:1`: Variable was declared but not used
+- Warning: `workflows/sammyseq.nf:65:1`: Variable was declared but not used
 
   ```nextflow
   ch_multiqc_custom_methods_description = params.multiqc_methods_description ? file(params.multiqc_methods_description, checkIfExists: true) : file("$projectDir/assets/methods_description_template.yml", checkIfExists: true)
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/sammyseq.nf:79:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/sammyseq.nf:80:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_versions = Channel.empty()
                     ^^^^^^^
   ```
 
-- Warning: `workflows/sammyseq.nf:80:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/sammyseq.nf:81:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_multiqc_files = Channel.empty()
                          ^^^^^^^
   ```
 
-- Warning: `workflows/sammyseq.nf:146:17`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/sammyseq.nf:147:17`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_trimmed= Channel.empty()
                   ^^^^^^^
   ```
 
-- Warning: `workflows/sammyseq.nf:176:68`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/sammyseq.nf:177:68`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(FASTQC.out.zip.collect{it[1]})
                                                                      ^^
   ```
 
-- Warning: `workflows/sammyseq.nf:183:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/sammyseq.nf:184:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_aligned_bam = Channel.empty()
                        ^^^^^^^
   ```
 
-- Warning: `workflows/sammyseq.nf:225:59`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/sammyseq.nf:226:59`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           PREPARE_GENOME.out.fai.collect { [ [id: 'fasta'], it ] }
                                                             ^^
   ```
 
-- Warning: `workflows/sammyseq.nf:229:5`: Variable was declared but not used
+- Warning: `workflows/sammyseq.nf:230:5`: Variable was declared but not used
 
   ```nextflow
       ch_mle_in = BAM_MARKDUPLICATES_PICARD.out.bam
       ^^^^^^^^^
   ```
 
-- Warning: `workflows/sammyseq.nf:258:48`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/sammyseq.nf:259:48`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_fai_path = PREPARE_GENOME.out.fai.map { it[1] }
                                                  ^^
   ```
 
-- Warning: `workflows/sammyseq.nf:260:41`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/sammyseq.nf:261:41`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_fasta_path = ch_fasta_meta.map { it[1] }
                                           ^^
   ```
 
-- Warning: `workflows/sammyseq.nf:267:59`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/sammyseq.nf:268:59`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           params.blacklist ? PREPARE_GENOME.out.blacklist : Channel.value(tuple([ id:'no_blacklist' ], []))
                                                             ^^^^^^^
   ```
 
-- Warning: `workflows/sammyseq.nf:280:55`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/sammyseq.nf:278:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-      params.blacklist ? PREPARE_GENOME.out.blacklist : Channel.value(tuple([ id:'no_blacklist' ], []))
-                                                        ^^^^^^^
+  ch_dt_corrmatrix       = Channel.empty()
+                           ^^^^^^^
   ```
 
-- Warning: `workflows/sammyseq.nf:282:5`: Variable was declared but not used
+- Warning: `workflows/sammyseq.nf:279:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-      ch_dt_corrmatrix     = DEEPTOOLS_QC.out.correlation_matrix
-      ^^^^^^^^^^^^^^^^
+  ch_dt_pcadata          = Channel.empty()
+                           ^^^^^^^
   ```
 
-- Warning: `workflows/sammyseq.nf:283:5`: Variable was declared but not used
+- Warning: `workflows/sammyseq.nf:280:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-      ch_dt_pcadata        = DEEPTOOLS_QC.out.pca_data
-      ^^^^^^^^^^^^^
+  ch_dt_fpmatrix_global  = Channel.empty()
+                           ^^^^^^^
   ```
 
-- Warning: `workflows/sammyseq.nf:285:9`: Variable was declared but not used
+- Warning: `workflows/sammyseq.nf:281:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-          ch_dt_fpmatrix_global = DEEPTOOLS_QC.out.fingerprint_matrix_global
-          ^^^^^^^^^^^^^^^^^^^^^
+  ch_dt_fpmetrics_global = Channel.empty()
+                           ^^^^^^^
   ```
 
-- Warning: `workflows/sammyseq.nf:286:9`: Variable was declared but not used
+- Warning: `workflows/sammyseq.nf:282:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-          ch_dt_fpmetrics_global = DEEPTOOLS_QC.out.fingerprint_metrics_global
-          ^^^^^^^^^^^^^^^^^^^^^^
+  ch_dt_fpmatrix_region  = Channel.empty()
+                           ^^^^^^^
   ```
 
-- Warning: `workflows/sammyseq.nf:288:13`: Variable was declared but not used
+- Warning: `workflows/sammyseq.nf:283:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-              ch_dt_fpmatrix_region = DEEPTOOLS_QC.out.fingerprint_matrix_region
-              ^^^^^^^^^^^^^^^^^^^^^
+  ch_dt_fpmetrics_region = Channel.empty()
+                           ^^^^^^^
   ```
 
-- Warning: `workflows/sammyseq.nf:289:13`: Variable was declared but not used
+- Warning: `workflows/sammyseq.nf:291:59`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-              ch_dt_fpmetrics_region = DEEPTOOLS_QC.out.fingerprint_metrics_region
-              ^^^^^^^^^^^^^^^^^^^^^^
+          params.blacklist ? PREPARE_GENOME.out.blacklist : Channel.value(tuple([ id:'no_blacklist' ], []))
+                                                            ^^^^^^^
   ```
 
-- Warning: `workflows/sammyseq.nf:299:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/sammyseq.nf:313:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   def sorted = values.sort { it[1].getBaseName() }
                                              ^^
   ```
 
-- Warning: `workflows/sammyseq.nf:300:50`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/sammyseq.nf:314:50`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   def sorted_bw = sorted.collect { it[1] }
                                                    ^^
   ```
 
-- Warning: `workflows/sammyseq.nf:301:54`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/sammyseq.nf:315:54`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   def sorted_labels = sorted.collect { it[0].id }
                                                        ^^
   ```
 
-- Warning: `workflows/sammyseq.nf:328:24`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/sammyseq.nf:342:24`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   .map { meta, bed -> bed }
                          ^^^^
   ```
 
-- Warning: `workflows/sammyseq.nf:340:33`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/sammyseq.nf:354:33`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_comparison_results = Channel.empty()
                                   ^^^^^^^
   ```
 
-- Warning: `workflows/sammyseq.nf:395:32`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/sammyseq.nf:430:32`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_multiqc_config        = Channel.fromPath(
                                  ^^^^^^^
   ```
 
-- Warning: `workflows/sammyseq.nf:398:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/sammyseq.nf:433:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           Channel.fromPath(params.multiqc_config, checkIfExists: true) :
           ^^^^^^^
   ```
 
-- Warning: `workflows/sammyseq.nf:399:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/sammyseq.nf:434:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           Channel.empty()
           ^^^^^^^
   ```
 
-- Warning: `workflows/sammyseq.nf:401:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/sammyseq.nf:436:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           Channel.fromPath(params.multiqc_logo, checkIfExists: true) :
           ^^^^^^^
   ```
 
-- Warning: `workflows/sammyseq.nf:402:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/sammyseq.nf:437:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           Channel.empty()
           ^^^^^^^
   ```
 
-- Warning: `workflows/sammyseq.nf:406:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/sammyseq.nf:441:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_params))
                             ^^^^^^^
   ```
 
-- Warning: `workflows/sammyseq.nf:412:45`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/sammyseq.nf:447:45`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_methods_description                = Channel.value(
                                               ^^^^^^^
   ```
 
-- Warning: `workflows/sammyseq.nf:424:91`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/sammyseq.nf:459:91`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(BAM_MARKDUPLICATES_PICARD.out.metrics.collect{it[1]}.ifEmpty([]))
                                                                                             ^^
   ```
 
-- Warning: `workflows/sammyseq.nf:428:83`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/sammyseq.nf:463:83`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(FILTER_BAM_SAMTOOLS.out.stats.collect{it[1]}.ifEmpty([]))
                                                                                     ^^
   ```
 
-- Warning: `workflows/sammyseq.nf:429:86`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/sammyseq.nf:464:86`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(FILTER_BAM_SAMTOOLS.out.flagstat.collect{it[1]}.ifEmpty([]))
                                                                                        ^^
   ```
 
-- Warning: `workflows/sammyseq.nf:430:86`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/sammyseq.nf:465:86`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(FILTER_BAM_SAMTOOLS.out.idxstats.collect{it[1]}.ifEmpty([]))
                                                                                        ^^
   ```
 
-- Warning: `workflows/sammyseq.nf:432:89`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/sammyseq.nf:467:70`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-      ch_multiqc_files = ch_multiqc_files.mix(DEEPTOOLS_QC.out.correlation_matrix.collect{it[1]}.ifEmpty([]))
-                                                                                          ^^
+      ch_multiqc_files = ch_multiqc_files.mix(ch_dt_corrmatrix.collect{it[1]}.ifEmpty([]))
+                                                                       ^^
   ```
 
-- Warning: `workflows/sammyseq.nf:433:79`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/sammyseq.nf:468:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-      ch_multiqc_files = ch_multiqc_files.mix(DEEPTOOLS_QC.out.pca_data.collect{it[1]}.ifEmpty([]))
+      ch_multiqc_files = ch_multiqc_files.mix(ch_dt_pcadata.collect{it[1]}.ifEmpty([]))
+                                                                    ^^
+  ```
+
+- Warning: `workflows/sammyseq.nf:471:79`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          ch_multiqc_files = ch_multiqc_files.mix(ch_dt_fpmatrix_global.collect{it[1]}.ifEmpty([]))
                                                                                 ^^
   ```
 
-- Warning: `workflows/sammyseq.nf:436:100`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/sammyseq.nf:472:80`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-          ch_multiqc_files = ch_multiqc_files.mix(DEEPTOOLS_QC.out.fingerprint_matrix_global.collect{it[1]}.ifEmpty([]))
-                                                                                                     ^^
+          ch_multiqc_files = ch_multiqc_files.mix(ch_dt_fpmetrics_global.collect{it[1]}.ifEmpty([]))
+                                                                                 ^^
   ```
 
-- Warning: `workflows/sammyseq.nf:437:101`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          ch_multiqc_files = ch_multiqc_files.mix(DEEPTOOLS_QC.out.fingerprint_metrics_global.collect{it[1]}.ifEmpty([]))
-                                                                                                      ^^
-  ```
-
-- Warning: `workflows/sammyseq.nf:441:100`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/sammyseq.nf:476:100`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files  = ch_multiqc_files.mix(BIGWIG_PLOT_DEEPTOOLS.out.plotprofile_pdf.collect{it[1]}.ifEmpty([]))
                                                                                                      ^^
   ```
 
-- Warning: `workflows/sammyseq.nf:442:102`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/sammyseq.nf:477:102`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files  = ch_multiqc_files.mix(BIGWIG_PLOT_DEEPTOOLS.out.plotprofile_table.collect{it[1]}.ifEmpty([]))
                                                                                                        ^^
   ```
 
-- Warning: `workflows/sammyseq.nf:455:75`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/sammyseq.nf:490:75`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       multiqc_report = !params.skip_multiqc ? MULTIQC.out.report.toList() : Channel.empty() // channel: /path/to/multiqc_report.html

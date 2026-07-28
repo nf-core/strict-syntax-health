@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-07-18T00:26:43.663667200Z
+- Generated: 2026-07-28T00:31:04.066368665Z
 - Nextflow version: 26.07.0-edge
 - Summary: 12 warnings
 
@@ -69,21 +69,21 @@
                                                         ^^
   ```
 
-- Warning: `workflows/pairgenomealign.nf:120:33`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/pairgenomealign.nf:121:33`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               o2o_alignments.map {it + "cram"},
                                   ^^
   ```
 
-- Warning: `workflows/pairgenomealign.nf:126:20`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/pairgenomealign.nf:127:20`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map { meta, cram -> tuple(params.targetName, cram) }
                      ^^^^
   ```
 
-- Warning: `workflows/pairgenomealign.nf:147:24`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/pairgenomealign.nf:148:24`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   .map { meta, file -> file }

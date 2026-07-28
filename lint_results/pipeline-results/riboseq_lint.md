@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-07-07T00:38:00.743025268Z
-- Nextflow version: 26.06.0-edge
-- Summary: 156 warnings
+- Generated: 2026-07-28T00:34:16.754847472Z
+- Nextflow version: 26.07.0-edge
+- Summary: 150 warnings
 
 ## :warning: Warnings
 
@@ -258,13 +258,6 @@
       ^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/coverage_tracks/main.nf:71:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      bigwig = UCSC_BEDGRAPHTOBIGWIG.out.bigwig // channel: [ val(meta), path(bigwig) ]
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/extended_orf_second_pass_align/main.nf:54:43`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
@@ -396,13 +389,6 @@
   ```nextflow
           Channel.value(gffcompare_class_codes),
           ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/novel_transcript_discovery/main.nf:77:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      hybrid_gtf = ch_hybrid_gtf // channel: path(hybrid.gtf) - canonical + filtered novel
-      ^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/orf_caller_dispatch/main.nf:45:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -804,13 +790,6 @@
                     ^^^^^^^
   ```
 
-- Warning: `subworkflows/nf-core/bam_stringtie_merge/main.nf:29:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      stringtie_gtf = STRINGTIE_MERGE.out.merged_gtf // channel: [ meta, gtf ]
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
 - Warning: `subworkflows/nf-core/orftable_fasta_gtf_buildorfcatalogue/main.nf:51:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
@@ -823,27 +802,6 @@
   ```nextflow
           .filter { it.size() > 0 }
                     ^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      valid_config = valid_config
-      ^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:76:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/riboseq/main.nf:79:5`: Parameter was not used -- prefix with `_` to suppress warning

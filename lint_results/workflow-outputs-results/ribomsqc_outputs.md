@@ -1,6 +1,6 @@
 # Workflow outputs migration: ribomsqc
 
-- Generated: 2026-06-16T20:37:13.142861+00:00
+- Generated: 2026-07-28T00:33:54.624308+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,4 +14,4 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 1 `publishDir` reference across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/ribomsqc/blob/8a0e1ed486cbeade43845c428c9ef939bd0379a9/conf/modules.config#L15) — 1 reference
+- [`conf/modules.config`](https://github.com/nf-core/ribomsqc/blob/021c8778dac4596075fcac52d24f328ec9ab3e5a/conf/modules.config#L15) — 1 reference

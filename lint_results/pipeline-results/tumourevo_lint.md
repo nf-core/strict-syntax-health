@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-16T20:44:14.772786184Z
-- Nextflow version: 26.04.3
-- Summary: 56 warnings
+- Generated: 2026-07-28T00:36:09.409887094Z
+- Nextflow version: 26.07.0-edge
+- Summary: 48 warnings
 
 ## :warning: Warnings
 
@@ -83,13 +83,6 @@
                                               ^^^^
   ```
 
-- Warning: `main.nf:83:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      versions = ch_versions
-      ^^^^^^^^^^^^^^^^^^^^
-  ```
-
 - Warning: `main.nf:96:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
@@ -153,25 +146,11 @@
                                                           ^^
   ```
 
-- Warning: `subworkflows/local/annotation_cache_initialisation/main.nf:22:5`: Variable was declared but not used
-
-  ```nextflow
-      ensemblvep_cache = Channel.fromPath(file("${vep_cache}/${vep_annotation_cache_key}"), checkIfExists: true).collect()
-      ^^^^^^^^^^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/annotation_cache_initialisation/main.nf:22:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ensemblvep_cache = Channel.fromPath(file("${vep_cache}/${vep_annotation_cache_key}"), checkIfExists: true).collect()
                          ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/annotation_cache_initialisation/main.nf:25:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      ensemblvep_cache
-      ^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/formatter/main.nf:16:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -235,34 +214,6 @@
   ```nextflow
       input             //  string: Path to input samplesheet
       ^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
-
-  ```nextflow
-      valid_config = checkConfigProvided()
-      ^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      valid_config
-      ^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/tumourevo.nf:42:20`: Parameter was not used -- prefix with `_` to suppress warning
@@ -389,11 +340,4 @@
   ```nextflow
       rds_input = join_input.multisample.map{ meta, rds, bam, bai ->
                                                               ^^^
-  ```
-
-- Warning: `workflows/tumourevo.nf:131:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      versions = ch_collated_versions
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
