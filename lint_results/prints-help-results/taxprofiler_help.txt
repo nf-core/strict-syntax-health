@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.07.0-edge
 
-Launching `./main.nf` [lethal_cajal] revision: 92dac02512
+Launching `./main.nf` [sleepy_faggin] revision: 92dac02512
 
 
 ------------------------------------------------------
@@ -90,16 +90,15 @@ shallow short-read sequencing datasets.
 
 Preprocessing host removal options
   --perform_shortread_hostremoval                        [boolean] Turn on short-read host removal 
-  --shortread_hostremoval_tool                           [string]  Specify which tool to use for short read host removal  (accepted: bowtie2, hostile) [default: 
-bowtie2]  
+  --shortread_hostremoval_tool                           [string]  Specify which tool to use for short read host removal  (accepted: bowtie2, hostile, deacon) 
+[default: deacon]  
   --perform_longread_hostremoval                         [boolean] Turn on long-read host removal 
-  --longread_hostremoval_tool                            [string]  Specify which tool to use for long read host removal  (accepted: minimap2, hostile) [default: 
-minimap2]  
-  --hostremoval_reference                                [string]  Specify path to the reference genome FASTA for Bowtie2 of host reads to remove (Bowtie2 only) 
- 
+  --longread_hostremoval_tool                            [string]  Specify which tool to use for long read host removal  (accepted: minimap2, hostile, deacon) 
+[default: deacon]  
+  --hostremoval_reference                                [string]  Specify path to the reference genome FASTA for Deacon or Bowtie2 of host reads to remove. 
   --hostremoval_hostile_referencename                    [string]  Specify the name of the hostile index supplied, or for Hostile to download 
-  --shortread_hostremoval_index                          [string]  Specify path to the directory containing pre-made Bowtie2 or Hostile indexes of the host removal 
-reference  
+  --shortread_hostremoval_index                          [string]  Specify path to the directory containing pre-made Deacon, Bowtie2 or Hostile indexes of the host 
+removal reference  
   --longread_hostremoval_index                           [string]  Specify path to a pre-made Minimap2 index file (.mmi) of the host removal reference 
   --save_hostremoval_index                               [boolean] Save mapping index of input reference when not already supplied by user 
   --save_hostremoval_bam                                 [boolean] Saved mapped and unmapped reads in BAM format from host removal 

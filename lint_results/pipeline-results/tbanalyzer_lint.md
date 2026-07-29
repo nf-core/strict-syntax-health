@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-24T00:39:41.039706306Z
-- Nextflow version: 26.05.0-edge
-- Summary: 2 errors, 27 warnings
+- Generated: 2026-07-29T00:33:19.081129754Z
+- Nextflow version: 26.07.0-edge
+- Summary: 2 errors, 23 warnings
 
 ## :x: Errors
 
@@ -27,13 +27,6 @@
   ```nextflow
       multiqc_report = Channel.empty()
                        ^^^^^^^
-  ```
-
-- Warning: `main.nf:76:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      multiqc_report = multiqc_report // channel: /path/to/multiqc_report.html
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `modules/magma/modules/local/gatk4.nf:77:9`: Variable was declared but not used
@@ -174,27 +167,6 @@
   ```nextflow
       multiqc_files          = FASTQC.out.zip.collect{it[1]}
                                                       ^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      valid_config = valid_config
-      ^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/mtbseqnf.nf:54:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead

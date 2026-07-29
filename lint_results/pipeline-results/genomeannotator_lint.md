@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-16T20:25:24.596430552Z
-- Nextflow version: 26.04.3
-- Summary: 79 errors, 151 warnings
+- Generated: 2026-07-29T00:27:51.437366426Z
+- Nextflow version: 26.07.0-edge
+- Summary: 79 errors, 148 warnings
 
 ## :x: Errors
 
@@ -1191,13 +1191,6 @@
                          ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/busco_qc.nf:34:4`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-     busco_summary = BUSCO.out.summary
-     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/evm.nf:18:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
@@ -1240,13 +1233,6 @@
                                       ^^
   ```
 
-- Warning: `subworkflows/local/input_check.nf:16:16`: Variable was declared but not used
-
-  ```nextflow
-          .set { reads }
-                 ^^^^^
-  ```
-
 - Warning: `subworkflows/local/ncrna.nf:29:38`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
@@ -1266,13 +1252,6 @@
   ```nextflow
         GUNZIP_RFAM_FAMILY.out.gunzip.map{m,f -> f}
                                           ^
-  ```
-
-- Warning: `subworkflows/local/ncrna.nf:59:4`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-     gff = HELPER_RFAMTOGFF.out.gff
-     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/repeatmasker.nf:26:31`: Parameter was not used -- prefix with `_` to suppress warning

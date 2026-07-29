@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-16T20:26:51.509968039Z
-- Nextflow version: 26.04.3
-- Summary: 78 errors, 123 warnings
+- Generated: 2026-07-29T00:28:00.998985329Z
+- Nextflow version: 26.07.0-edge
+- Summary: 78 errors, 122 warnings
 
 ## :x: Errors
 
@@ -1371,13 +1371,6 @@
   ```nextflow
                               .map{[it[1], it[2], it[4]]}
                                                   ^^
-  ```
-
-- Warning: `subworkflows/local/tfea/homer.nf:35:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      versions     = ch_versions                  // channel: [ path(version) ]
-      ^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/v4c/cooltools.nf:14:20`: Implicit closure parameter is deprecated, declare an explicit parameter instead

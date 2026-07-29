@@ -1,6 +1,6 @@
 # Workflow outputs migration: genomeannotator
 
-- Generated: 2026-06-16T20:25:24.737999+00:00
+- Generated: 2026-07-29T00:27:51.563920+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,4 +14,4 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 14 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/genomeannotator/blob/cbd878f7997d367ccbe952648e114ad25962963f/conf/modules.config#L15) — 14 references
+- [`conf/modules.config`](https://github.com/nf-core/genomeannotator/blob/d80105de179fec01765ad3c84ea26c9330e29fb0/conf/modules.config#L15) — 14 references

@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-16T20:35:47.032320183Z
-- Nextflow version: 26.04.3
-- Summary: 41 errors, 44 warnings
+- Generated: 2026-07-29T00:30:34.549146882Z
+- Nextflow version: 26.07.0-edge
+- Summary: 41 errors, 42 warnings
 
 ## :x: Errors
 
@@ -435,25 +435,11 @@
                                                            ^^
   ```
 
-- Warning: `subworkflows/local/fastq_unzip.nf:19:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      fasta = ch_fasta
-      ^^^^^^^^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/input_check.nf:15:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { create_fastq_channels(it) }
                                        ^^
-  ```
-
-- Warning: `subworkflows/local/input_check.nf:16:16`: Variable was declared but not used
-
-  ```nextflow
-          .set { reads }
-                 ^^^^^
   ```
 
 - Warning: `subworkflows/local/vcf_bcftools_radseq_filters.nf:15:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead

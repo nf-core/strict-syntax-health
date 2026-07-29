@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.04.3
+ N E X T F L O W   ~  version 26.07.0-edge
 
-Launching `./main.nf` [amazing_lamarck] revision: 7977fbd64f
+Launching `./main.nf` [exotic_sanger] revision: b10f46d70f
 
 
 ------------------------------------------------------
@@ -12,7 +12,7 @@ Launching `./main.nf` [amazing_lamarck] revision: 7977fbd64f
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/magmap 1.1.0
+  nf-core/magmap 1.2.0dev
 ------------------------------------------------------
 Typical pipeline command:
 
@@ -77,6 +77,9 @@ FeatureCounts option
 Sourmash
   --genomeset_mode              [string]  Perform mapping on all genomes for all samples ('joint') or sample-specific selections of genomes 
 ('sample').  (accepted: joint, sample) [default: joint]  
+  --species_preference          [string]  Select genomes from the same species: 'all', 'local' (prefer local genomes), 'completeness' (prefer 
+the most complete) or 'gtdb' (use GTDB's criterion of completeness and contamination)  
+(accepted: all, local, completeness, gtdb) [default: all]  
   --skip_sourmash               [boolean] Skip Sourmash filtering for user-provided genomes [default: true] 
   --sourmash_ksize              [integer] K-mer size used by Sourmash [default: 21] 
   --sourmash_save_sourmash      [boolean] Save Sourmash output 

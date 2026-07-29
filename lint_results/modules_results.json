@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "a8e13eeab3b80443afaa64e82b255d429b0fb9d5",
+  "_repo_commit": "2080397432fcb0d079121dbacf22ce42ef175cec",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -6882,6 +6882,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "mobsuite_typer": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mobsuite/typer",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "modkit_bedmethyltobigwig": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/modkit/bedmethyltobigwig",
     "errors": 0,
@@ -11934,8 +11940,8 @@
     "warnings": 0,
     "parse_error": false
   },
-  "xeniumranger_import-segmentation": {
-    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/xeniumranger/import-segmentation",
+  "xeniumranger_importsegmentation": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/xeniumranger/importsegmentation",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

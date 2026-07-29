@@ -1,5 +1,14 @@
 # Nextflow lint results
 
-- Generated: 2026-07-27T00:33:55.914589449Z
+- Generated: 2026-07-29T00:29:52.183494300Z
 - Nextflow version: 26.07.0-edge
-- Summary: No issues found
+- Summary: 1 warning
+
+## :warning: Warnings
+
+- Warning: `workflows/phyloplace.nf:29:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      text.readLines().collect { pad + it }.join('\n')
+                                       ^^
+  ```

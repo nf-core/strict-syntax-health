@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-16T20:43:00.738298607Z
-- Nextflow version: 26.04.3
-- Summary: 50 errors, 12 warnings
+- Generated: 2026-07-29T00:32:49.631270570Z
+- Nextflow version: 26.07.0-edge
+- Summary: 50 errors, 9 warnings
 
 ## :x: Errors
 
@@ -393,20 +393,6 @@
                                         ^^
   ```
 
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Variable was declared but not used
-
-  ```nextflow
-      valid_config = checkConfigProvided()
-      ^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:24:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      valid_config
-      ^^^^^^^^^^^^
-  ```
-
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:121:48`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
@@ -433,11 +419,4 @@
   ```nextflow
           } catch (all) {
                    ^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfvalidation_plugin/main.nf:61:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
   ```

@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-07-18T00:27:51.072295182Z
+- Generated: 2026-07-29T00:31:50.691749708Z
 - Nextflow version: 26.07.0-edge
-- Summary: 21 warnings
+- Summary: 22 warnings
 
 ## :warning: Warnings
 
@@ -39,6 +39,13 @@
   ```nextflow
               saveAs: { filename -> null }
                         ^^^^^^^^
+  ```
+
+- Warning: `modules/local/mergeevents/main.nf:21:9`: Variable was declared but not used
+
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^
   ```
 
 - Warning: `modules/nf-core/misopy/index/main.nf:23:9`: Variable was declared but not used

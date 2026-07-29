@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-07-27T00:34:53.755955921Z
+- Generated: 2026-07-29T00:33:01.333697857Z
 - Nextflow version: 26.07.0-edge
-- Summary: 97 warnings
+- Summary: 100 warnings
 
 ## :warning: Warnings
 
@@ -97,7 +97,7 @@
                                                                                                                                                                                                    ^^
   ```
 
-- Warning: `conf/modules.config:629:99`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:653:99`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               saveAs: { !params.bracken_save_intermediatekraken2 && meta.tool == "bracken" ? null : it },
@@ -461,6 +461,13 @@
           ^^^^
   ```
 
+- Warning: `subworkflows/local/longread_hostremoval/main.nf:26:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+          DEACON_INDEX( Channel.value([[id: ch_reference.baseName], ch_reference]) )
+                        ^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/profiling/main.nf:250:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
@@ -599,6 +606,20 @@
   ```nextflow
           paired: it[0]['single_end'] == false
                   ^^
+  ```
+
+- Warning: `subworkflows/local/shortread_hostremoval/main.nf:26:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+          DEACON_INDEX( Channel.value([[id: ch_reference.baseName], ch_reference]) )
+                        ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/shortread_hostremoval/main.nf:30:46`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+          ch_hostremoval_index = BOWTIE2_BUILD(Channel.value([[id: ch_reference.baseName], ch_reference])).index
+                                               ^^^^^^^
   ```
 
 - Warning: `subworkflows/local/visualization_krona/main.nf:27:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead

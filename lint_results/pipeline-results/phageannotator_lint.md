@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-16T20:33:41.798999789Z
-- Nextflow version: 26.04.3
-- Summary: 58 errors, 104 warnings
+- Generated: 2026-07-29T00:29:46.190583755Z
+- Nextflow version: 26.07.0-edge
+- Summary: 58 errors, 98 warnings
 
 ## :x: Errors
 
@@ -426,13 +426,6 @@
   ```nextflow
       ch_fasta_gz = samplesheet.map { meta, fastq, fasta -> return [ meta, fasta ] }
                                             ^^^^^
-  ```
-
-- Warning: `main.nf:73:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      versions = PHAGEANNOTATOR.out.versions
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `main.nf:85:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -1072,39 +1065,11 @@
                     ^^^^^^^
   ```
 
-- Warning: `subworkflows/nf-core/initialise/main.nf:78:9`: Variable was declared but not used
-
-  ```nextflow
-          summary_params = paramsSummaryMap(workflow)
-          ^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/initialise/main.nf:81:9`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-          summary_params
-          ^^^^^^^^^^^^^^
-  ```
-
 - Warning: `subworkflows/nf-core/initialise/main.nf:164:10`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
   def logo(workflow, monochrome_logs) {
            ^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Variable was declared but not used
-
-  ```nextflow
-      valid_config = checkConfigProvided()
-      ^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:24:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      valid_config
-      ^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:121:48`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -1133,11 +1098,4 @@
   ```nextflow
           } catch (all) {
                    ^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfvalidation_plugin/main.nf:61:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
   ```

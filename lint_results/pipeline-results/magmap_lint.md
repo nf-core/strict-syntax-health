@@ -1,16 +1,37 @@
 # Nextflow lint results
 
-- Generated: 2026-06-16T20:28:48.511428720Z
-- Nextflow version: 26.04.3
-- Summary: 5 warnings
+- Generated: 2026-07-29T00:28:46.251225836Z
+- Nextflow version: 26.07.0-edge
+- Summary: 7 warnings
 
 ## :warning: Warnings
 
-- Warning: `main.nf:80:5`: Emit name should be omitted when there is only one emit
+- Warning: `subworkflows/local/sourmash/main.nf:140:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-      multiqc_report = MAGMAP.out.multiqc_report // channel: /path/to/multiqc_report.html
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                              .splitText() { it.trim() }
+                                             ^^
+  ```
+
+- Warning: `subworkflows/local/sourmash/main.nf:141:39`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                              .filter { it }
+                                        ^^
+  ```
+
+- Warning: `subworkflows/local/sourmash/main.nf:150:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                              .splitText() { it.trim() }
+                                             ^^
+  ```
+
+- Warning: `subworkflows/local/sourmash/main.nf:151:39`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                              .filter { it }
+                                        ^^
   ```
 
 - Warning: `subworkflows/local/utils_nfcore_magmap_pipeline/main.nf:51:5`: Variable was declared but not used
@@ -20,23 +41,16 @@
       ^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
+- Warning: `workflows/magmap.nf:264:66`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
+                  .map { pairs -> [ [ id: 'all' ], pairs.collect { it[0] }, pairs.collect { it[1] } ] }
+                                                                   ^^
   ```
 
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
+- Warning: `workflows/magmap.nf:264:91`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-      valid_config = valid_config
-      ^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:76:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
+                  .map { pairs -> [ [ id: 'all' ], pairs.collect { it[0] }, pairs.collect { it[1] } ] }
+                                                                                            ^^
   ```

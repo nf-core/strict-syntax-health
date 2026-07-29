@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-16T20:44:51.299237694Z
-- Nextflow version: 26.04.3
-- Summary: 46 errors, 49 warnings
+- Generated: 2026-07-29T00:33:48.304783909Z
+- Nextflow version: 26.07.0-edge
+- Summary: 46 errors, 48 warnings
 
 ## :x: Errors
 
@@ -503,13 +503,6 @@
   ```nextflow
           .map { create_fastq_channel(it) }
                                       ^^
-  ```
-
-- Warning: `subworkflows/local/input_check.nf:16:16`: Variable was declared but not used
-
-  ```nextflow
-          .set { reads }
-                 ^^^^^
   ```
 
 - Warning: `workflows/variantcatalogue.nf:17:21`: Variable was declared but not used

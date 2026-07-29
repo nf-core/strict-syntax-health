@@ -1,6 +1,6 @@
 # Workflow outputs migration: hicar
 
-- Generated: 2026-06-16T20:26:51.802065+00:00
+- Generated: 2026-07-29T00:28:01.252296+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,4 +14,4 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 156 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/hicar/blob/d2d17a924e42d6f88640b79d48d8b332f33a953f/conf/modules.config#L14) — 156 references
+- [`conf/modules.config`](https://github.com/nf-core/hicar/blob/98cabf0ebbd6be55536273914c221b167b35712e/conf/modules.config#L14) — 156 references

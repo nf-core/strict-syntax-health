@@ -1,6 +1,6 @@
 # Workflow outputs migration: taxprofiler
 
-- Generated: 2026-07-27T00:34:54.008177+00:00
+- Generated: 2026-07-29T00:33:01.554501+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -12,15 +12,15 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 ## Legacy `publishDir` references
 
-Found 89 `publishDir` references across 10 files that should be migrated to the workflow `output {}` block:
+Found 91 `publishDir` references across 10 files that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/taxprofiler/blob/eccce25aaa861d144fbb54e8f96585baa2f33c2c/conf/modules.config#L15) — 70 references
-- [`conf/test.config`](https://github.com/nf-core/taxprofiler/blob/eccce25aaa861d144fbb54e8f96585baa2f33c2c/conf/test.config#L69) — 3 references
-- [`conf/test_fastpnonpareilkrakenuniq.config`](https://github.com/nf-core/taxprofiler/blob/eccce25aaa861d144fbb54e8f96585baa2f33c2c/conf/test_fastpnonpareilkrakenuniq.config#L74) — 3 references
-- [`conf/test_alternativepreprocessing.config`](https://github.com/nf-core/taxprofiler/blob/eccce25aaa861d144fbb54e8f96585baa2f33c2c/conf/test_alternativepreprocessing.config#L65) — 2 references
-- [`conf/test_falcobbduk.config`](https://github.com/nf-core/taxprofiler/blob/eccce25aaa861d144fbb54e8f96585baa2f33c2c/conf/test_falcobbduk.config#L62) — 2 references
-- [`conf/test_malt.config`](https://github.com/nf-core/taxprofiler/blob/eccce25aaa861d144fbb54e8f96585baa2f33c2c/conf/test_malt.config#L64) — 2 references
-- [`conf/test_minimal.config`](https://github.com/nf-core/taxprofiler/blob/eccce25aaa861d144fbb54e8f96585baa2f33c2c/conf/test_minimal.config#L60) — 2 references
-- [`conf/test_motus.config`](https://github.com/nf-core/taxprofiler/blob/eccce25aaa861d144fbb54e8f96585baa2f33c2c/conf/test_motus.config#L69) — 2 references
-- [`conf/test_nopreprocessing.config`](https://github.com/nf-core/taxprofiler/blob/eccce25aaa861d144fbb54e8f96585baa2f33c2c/conf/test_nopreprocessing.config#L63) — 2 references
-- [`modules/nf-core/nonpareil/nonpareil/tests/nextflow.config`](https://github.com/nf-core/taxprofiler/blob/eccce25aaa861d144fbb54e8f96585baa2f33c2c/modules/nf-core/nonpareil/nonpareil/tests/nextflow.config#L3) — 1 reference
+- [`conf/modules.config`](https://github.com/nf-core/taxprofiler/blob/b9189df46e2901677cbc8f1dd3c37baf52324190/conf/modules.config#L15) — 72 references
+- [`conf/test.config`](https://github.com/nf-core/taxprofiler/blob/b9189df46e2901677cbc8f1dd3c37baf52324190/conf/test.config#L69) — 3 references
+- [`conf/test_fastpnonpareilkrakenuniq.config`](https://github.com/nf-core/taxprofiler/blob/b9189df46e2901677cbc8f1dd3c37baf52324190/conf/test_fastpnonpareilkrakenuniq.config#L76) — 3 references
+- [`conf/test_alternativepreprocessing.config`](https://github.com/nf-core/taxprofiler/blob/b9189df46e2901677cbc8f1dd3c37baf52324190/conf/test_alternativepreprocessing.config#L65) — 2 references
+- [`conf/test_falcobbduk.config`](https://github.com/nf-core/taxprofiler/blob/b9189df46e2901677cbc8f1dd3c37baf52324190/conf/test_falcobbduk.config#L64) — 2 references
+- [`conf/test_malt.config`](https://github.com/nf-core/taxprofiler/blob/b9189df46e2901677cbc8f1dd3c37baf52324190/conf/test_malt.config#L64) — 2 references
+- [`conf/test_minimal.config`](https://github.com/nf-core/taxprofiler/blob/b9189df46e2901677cbc8f1dd3c37baf52324190/conf/test_minimal.config#L60) — 2 references
+- [`conf/test_motus.config`](https://github.com/nf-core/taxprofiler/blob/b9189df46e2901677cbc8f1dd3c37baf52324190/conf/test_motus.config#L69) — 2 references
+- [`conf/test_nopreprocessing.config`](https://github.com/nf-core/taxprofiler/blob/b9189df46e2901677cbc8f1dd3c37baf52324190/conf/test_nopreprocessing.config#L63) — 2 references
+- [`modules/nf-core/nonpareil/nonpareil/tests/nextflow.config`](https://github.com/nf-core/taxprofiler/blob/b9189df46e2901677cbc8f1dd3c37baf52324190/modules/nf-core/nonpareil/nonpareil/tests/nextflow.config#L3) — 1 reference

@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.07.0-edge
 
 Downloading plugin nf-schema@2.5.1
-Launching `./main.nf` [big_brahmagupta] revision: 1e2807f293
+Launching `./main.nf` [evil_boltzmann] revision: 1e2807f293
 
 WARN: Unrecognized config option 'manifest.keywords'
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
@@ -52,11 +52,20 @@ Database options
 Analysis options
   --skip_macsyfinder          [boolean] Skip MacSyFinder macromolecular systems detection [default: false] 
   --macsyfinder_models        [string]  MacSyFinder models to use (TXSS for Type III/IV/VI secretion systems) [default: TXSS] 
+  --macsyfinder_db_type       [string]  MacSyFinder --db-type: 'unordered' for MAGs/draft assemblies with unreliable gene order (default, 
+most permissive), 'ordered_replicon' for a single complete/nearly-complete genome (enables 
+synteny-aware detection), or 'gembase' for multiple complete replicons in one gembase-formatted 
+database  (accepted: unordered, ordered_replicon, gembase) [default: unordered]  
   --skip_traitar              [boolean] Skip TRAITAR phenotype prediction [default: false] 
   --skip_carveme              [boolean] Skip CarveMe genome-scale metabolic reconstruction [default: false] 
-  --carveme_mediadb           [string]  Path to CarveMe media database TSV file. If not provided, uses CarveMe's default media database 
- 
+  --carveme_mediadb           [string]  Path to CarveMe media database TSV file (columns: medium, description, compound, name). If not 
+provided, uses CarveMe's default media database. See assets/medium_carveme_mediadb_example.tsv for 
+an example.  
   --skip_gapseq               [boolean] Skip Gapseq pathway analysis and metabolic modeling [default: true] 
+  --gapseq_doall_args         [string]  Custom arguments for the simplified 'gapseq doall' search step (default: '-b 200 -A diamond'). Only 
+used in the default doall workflow - ignored if any of the 
+gapseq_find_args/gapseq_findtransport_args/gapseq_draft_args/gapseq_medium_args/gapseq_fill_args 
+below are set, since that switches to the custom/stepwise workflow instead.  
   --gapseq_find_args          [string]  Custom arguments for 'gapseq find' (e.g., '-b 200 -A diamond') 
   --gapseq_findtransport_args [string]  Custom arguments for 'gapseq find-transport' (e.g., '-b 200') 
   --gapseq_draft_args         [string]  Custom arguments for 'gapseq draft' (e.g., '-u 200') 
