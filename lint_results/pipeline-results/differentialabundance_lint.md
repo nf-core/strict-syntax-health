@@ -1,10 +1,17 @@
 # Nextflow lint results
 
-- Generated: 2026-07-21T00:29:27.687644543Z
+- Generated: 2026-07-30T00:27:54.171232004Z
 - Nextflow version: 26.07.0-edge
-- Summary: 108 warnings
+- Summary: 109 warnings
 
 ## :warning: Warnings
+
+- Warning: `conf/modules.config:475:115`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  (gsea_enrichment ? "--enrichment_gene_sets \"" + meta.params.gene_sets_files.split(',').collect { it.split('/')[-1] }.join(',') + "\"" : ''),
+                                                                                                                    ^^
+  ```
 
 - Warning: `main.nf:277:28`: Parameter was not used -- prefix with `_` to suppress warning
 
@@ -685,77 +692,77 @@
                  ^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:795:27`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/differentialabundance.nf:806:27`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .multiMap { meta, meta_with_contrast, differential_results, contrast_file, samplesheet, features, matrices ->
+          .multiMap { meta, meta_with_contrast, differential_results, contrast_file, samplesheet, features, matrices, gene_sets, enrichment_results ->
                             ^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:798:96`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/differentialabundance.nf:809:96`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               contrast_stats_assay: meta.params.exploratory_assay_names.split(',').findIndexOf { it == meta.params.exploratory_final_assay } + 1
                                                                                                  ^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:867:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/differentialabundance.nf:882:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { [it[0], it.tail().tail().flatten().grep()] }  // [ meta, [differential results and models] ]
                   ^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:867:24`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/differentialabundance.nf:882:24`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { [it[0], it.tail().tail().flatten().grep()] }  // [ meta, [differential results and models] ]
                          ^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:871:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/differentialabundance.nf:886:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { [it[0], it.tail().tail().flatten()] }  // [ meta, [functional results] ]
                   ^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:871:24`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/differentialabundance.nf:886:24`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { [it[0], it.tail().tail().flatten()] }  // [ meta, [functional results] ]
                          ^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:884:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/differentialabundance.nf:899:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { [it[0], it.tail().flatten().grep()] }  // [meta, [files]]   // note that grep() would remove null files from join with remainder true
                   ^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:884:24`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/differentialabundance.nf:899:24`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { [it[0], it.tail().flatten().grep()] }  // [meta, [files]]   // note that grep() would remove null files from join with remainder true
                          ^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:886:26`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/differentialabundance.nf:901:26`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .flatMap { meta, report_file, files ->
                            ^^^^^^^^^^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:903:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/differentialabundance.nf:918:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   paramset.exploratory_assay_names.split(',').collect { "${it}_matrix".toString() } +
                                                                            ^^
   ```
 
-- Warning: `workflows/differentialabundance.nf:918:42`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/differentialabundance.nf:933:42`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_report_input.input_files.map{ meta, files -> files },

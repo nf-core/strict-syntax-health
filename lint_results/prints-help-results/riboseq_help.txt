@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.07.0-edge
 
-Launching `./main.nf` [wise_swirles] revision: 3d0b30fc75
+Launching `./main.nf` [backstabbing_yalow] revision: 71fc02080c
 
 
 ------------------------------------------------------
@@ -38,6 +38,7 @@ Reference genome options
   --additional_fasta                     [string]  FASTA file to concatenate to genome FASTA file e.g. containing spike-in sequences. 
   --star_index                           [string]  Path to directory or tar.gz archive for pre-built STAR index. 
   --salmon_index                         [string]  Path to directory or tar.gz archive for pre-built Salmon index. 
+  --kallisto_index                       [string]  Path to a pre-built kallisto index file. 
   --gencode                              [boolean] Specify if your GTF annotation is in GENCODE format. 
   --gtf_extra_attributes                 [string]  By default, the pipeline uses the `gene_name` field to obtain additional gene identifiers from the 
 input GTF file when running Salmon. [default: gene_name]  
@@ -93,23 +94,25 @@ directional]
 Alignment options
   --aligner                              [string]  Specifies the alignment algorithm to use - available options are currently 'star'.  (accepted: 
 star) [default: star]  
-  --pseudo_aligner                       [string]  Specifies the pseudo aligner to use - available options are 'salmon' or 'kallisto'. Runs in addition 
-to the main aligner.  (accepted: salmon, kallisto)  
-  --skip_pseudo_alignment                [boolean] Skip pseudo alignment and quantification. [default: true] 
+  --pseudo_aligner                       [string]  Pseudo-aligner used for translational efficiency quantification under `--te_quantification_method 
+pseudo`.  (accepted: salmon, kallisto) [default: salmon]  
   --pseudo_aligner_kmer_size             [integer] Kmer length passed to Salmon indexing for pseudo-alignment quantification. [default: 23] 
+  --kallisto_quant_fraglen               [integer] Estimated average fragment length required by kallisto for single-end libraries. 
+  --kallisto_quant_fraglen_sd            [integer] Estimated standard deviation of the fragment length required by kallisto for single-end libraries. 
+ 
   --bam_csi_index                        [boolean] Create a CSI index for BAM files instead of the traditional BAI index. This will be required for 
 genomes with larger chromosome sizes.  
   --star_ignore_sjdbgtf                  [boolean] When using pre-built STAR indices do not re-extract and use splice junctions from the GTF file. 
  
   --salmon_quant_libtype                 [string]   Override Salmon library type inferred based on strandedness defined in meta object.  (accepted: 
 A, IS, ISF, ISR, IU, MS, MSF, MSR, MU, OS, OSF, OSR, OU, SF, SR, U)  
-  --min_mapped_reads                     [number]  Minimum percentage of uniquely mapped reads below which samples are removed from further processing. 
-[default: 5.0]  
   --seq_center                           [string]  Sequencing center information to be added to read group of BAM files. 
   --extra_star_align_args                [string]  Extra arguments to pass to STAR alignment command in addition to defaults defined by the pipeline. 
 Only available for the STAR-Salmon route.  
   --extra_salmon_quant_args              [string]  Extra arguments to pass to Salmon quant command in addition to defaults defined by the pipeline. 
  
+  --extra_kallisto_quant_args            [string]  Extra arguments to pass to the kallisto quant command in addition to defaults defined by the 
+pipeline.  
   --stranded_threshold                   [number]  The fraction of stranded reads that must be assigned to a strandedness for confident assignment. 
 Must be at least 0.5. [default: 0.8]  
   --unstranded_threshold                 [number]  The difference in fraction of stranded reads assigned to 'forward' and 'reverse' below which a 
@@ -207,7 +210,6 @@ Process skipping options
 the pipeline run.  
   --skip_linting                         [boolean] Skip linting checks during FASTQ preprocessing and filtering. 
   --skip_trimming                        [boolean] Skip the adapter trimming step. 
-  --skip_alignment                       [boolean] Skip all of the alignment-based processes within the pipeline. 
   --skip_markduplicates                  [boolean] Skip picard MarkDuplicates step. 
   --skip_fastqc                          [boolean] Skip FastQC. 
   --skip_multiqc                         [boolean] Skip MultiQC. 

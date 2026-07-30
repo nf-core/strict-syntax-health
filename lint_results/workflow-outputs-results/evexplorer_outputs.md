@@ -1,6 +1,6 @@
 # Workflow outputs migration: evexplorer
 
-- Generated: 2026-06-16T20:23:57.973649+00:00
+- Generated: 2026-07-30T00:28:11.259225+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,4 +14,4 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 9 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/evexplorer/blob/f446969e762a9f7398842d38952207e71991aaad/conf/modules.config#L15) — 9 references
+- [`conf/modules.config`](https://github.com/nf-core/evexplorer/blob/b06c9114853b9370cec6c4f6c0c9c44550ed5125/conf/modules.config#L15) — 9 references

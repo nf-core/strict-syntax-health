@@ -1,6 +1,6 @@
 # Workflow outputs migration: bacass
 
-- Generated: 2026-07-28T00:27:56.078370+00:00
+- Generated: 2026-07-30T00:27:17.333460+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -12,6 +12,6 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 ## Legacy `publishDir` references
 
-Found 33 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
+Found 35 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/bacass/blob/aaaa0d6a5895e7357d1976e92ab2d77efda6dedb/conf/modules.config#L18) — 33 references
+- [`conf/modules.config`](https://github.com/nf-core/bacass/blob/d7e0460ecf4fe7a34297d89ec31f4eaee98bf30e/conf/modules.config#L18) — 35 references

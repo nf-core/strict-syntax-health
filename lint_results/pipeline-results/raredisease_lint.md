@@ -1,10 +1,17 @@
 # Nextflow lint results
 
-- Generated: 2026-07-29T00:30:53.043842348Z
+- Generated: 2026-07-30T00:31:06.197429429Z
 - Nextflow version: 26.07.0-edge
-- Summary: 9 warnings
+- Summary: 10 warnings
 
 ## :warning: Warnings
+
+- Warning: `subworkflows/local/align_genome/main.nf:20:9`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          ch_genome_dictionary          // channel: [mandatory] [ val(meta), path(dict) ]
+          ^^^^^^^^^^^^^^^^^^^^
+  ```
 
 - Warning: `subworkflows/local/call_snv_sentieon/main.nf:66:62`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
@@ -48,21 +55,21 @@
                                                              ^^^
   ```
 
-- Warning: `workflows/raredisease.nf:1115:5`: Variable was declared but not used
+- Warning: `workflows/raredisease.nf:1131:5`: Variable was declared but not used
 
   ```nextflow
       ch_multiqc_config        = channel.fromPath(
       ^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/raredisease.nf:1117:5`: Variable was declared but not used
+- Warning: `workflows/raredisease.nf:1133:5`: Variable was declared but not used
 
   ```nextflow
       ch_multiqc_custom_config = val_multiqc_config ?
       ^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/raredisease.nf:1120:5`: Variable was declared but not used
+- Warning: `workflows/raredisease.nf:1136:5`: Variable was declared but not used
 
   ```nextflow
       ch_multiqc_logo          = val_multiqc_logo ?

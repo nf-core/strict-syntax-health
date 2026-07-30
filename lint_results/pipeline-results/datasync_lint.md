@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-07-29T00:26:42.461318211Z
+- Generated: 2026-07-30T00:27:36.292696063Z
 - Nextflow version: 26.07.0-edge
-- Summary: 3 warnings
+- Summary: 7 warnings
 
 ## :warning: Warnings
 
@@ -13,14 +13,42 @@
                      ^^
   ```
 
-- Warning: `workflows/datasync.nf:102:37`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/datasync.nf:94:26`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .map { meta, input, output, log -> [ meta, input, output ]}
+              .map { meta, checksum, hash, source -> [ meta.subMap(meta.keySet() - 'check_format'), 1 ] }
+                           ^^^^^^^^
+  ```
+
+- Warning: `workflows/datasync.nf:94:36`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              .map { meta, checksum, hash, source -> [ meta.subMap(meta.keySet() - 'check_format'), 1 ] }
+                                     ^^^^
+  ```
+
+- Warning: `workflows/datasync.nf:94:42`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              .map { meta, checksum, hash, source -> [ meta.subMap(meta.keySet() - 'check_format'), 1 ] }
+                                           ^^^^^^
+  ```
+
+- Warning: `workflows/datasync.nf:106:32`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                      .collect { it.readLines() }
+                                 ^^
+  ```
+
+- Warning: `workflows/datasync.nf:129:37`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .map { meta, input, output, log -> [ meta, input, output ] }
                                       ^^^
   ```
 
-- Warning: `workflows/datasync.nf:153:45`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/datasync.nf:183:45`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(Channel.fromPath(params.input).collectFile(name: 'samplesheet.csv'))

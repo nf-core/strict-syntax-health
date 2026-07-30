@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "2080397432fcb0d079121dbacf22ce42ef175cec",
+  "_repo_commit": "a3b787358fa965b5f242b2408d52e8d0a28aaca2",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -2918,6 +2918,12 @@
   },
   "dssp_mkdssp": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/dssp/mkdssp",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "duckdb_table2parquet": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/duckdb/table2parquet",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

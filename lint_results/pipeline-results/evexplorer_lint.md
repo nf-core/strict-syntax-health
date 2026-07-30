@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-16T20:23:57.869749257Z
-- Nextflow version: 26.04.3
-- Summary: 74 errors, 55 warnings
+- Generated: 2026-07-30T00:28:11.150728369Z
+- Nextflow version: 26.07.0-edge
+- Summary: 74 errors, 53 warnings
 
 ## :x: Errors
 
@@ -582,13 +582,6 @@
                  ^^^^^^^
   ```
 
-- Warning: `main.nf:88:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      multiqc_report = multiqc_report_ch
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
 - Warning: `modules/local/derfinder/main.nf:11:15`: Variable was declared but not used
 
   ```nextflow
@@ -629,13 +622,6 @@
   ```nextflow
       meta.single_end ? [reads].flatten().each{reads1 << it} : reads.eachWithIndex{ v, ix -> ( ix & 1 ? reads2 : reads1) << v }
                                                          ^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfvalidation_plugin/main.nf:61:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/evexplorer.nf:40:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead

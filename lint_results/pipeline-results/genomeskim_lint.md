@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-16T20:25:55.146240812Z
-- Nextflow version: 26.04.3
-- Summary: 33 errors, 14 warnings
+- Generated: 2026-07-30T00:28:17.603358463Z
+- Nextflow version: 26.07.0-edge
+- Summary: 33 errors, 13 warnings
 
 ## :x: Errors
 
@@ -251,13 +251,6 @@
   ```nextflow
           .map { create_fastq_channel(it) }
                                       ^^
-  ```
-
-- Warning: `subworkflows/local/input_check.nf:16:16`: Variable was declared but not used
-
-  ```nextflow
-          .set { reads }
-                 ^^^^^
   ```
 
 - Warning: `workflows/genomeskim.nf:18:21`: Variable was declared but not used

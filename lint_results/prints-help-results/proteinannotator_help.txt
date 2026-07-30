@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.07.0-edge
 
 Downloading plugin nf-schema@2.6.1
-Launching `./main.nf` [dreamy_curie] revision: d44713b7e7
+Launching `./main.nf` [evil_turing] revision: 1996496361
 
 
 ------------------------------------------------------
@@ -31,7 +31,6 @@ Cloud infrastructure.
 
 Generic options
   --multiqc_methods_description   [string]          Custom MultiQC yaml file containing HTML including a methods description. 
-  --modules_testdata_base_path    [string]          Base URL or local path to location of modules test dataset files 
   --help                          [boolean, string] Display the help message. 
   --help_full                     [boolean]         Display the full detailed help message. 
   --show_hidden                   [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
@@ -74,13 +73,20 @@ https://ftp.ebi.ac.uk/pub/software/unix/iprscan/5/5.72-103.0/interproscan-5.72-1
   --interproscan_applications     [string]  Assigns the database(s) to be used to annotate the coding regions. [default: 
 Hamap,PANTHER,PIRSF,TIGRFAM,sfld]  
   --interproscan_enableprecalc    [boolean] Pre-calculates residue mutual matches. 
+  --skip_kofamscan                [boolean] Skip KEGG Orthology annotation with KOfamScan. 
+  --kofamscan_profiles_url        [string]  URL for the KOfam profiles archive. [default: 
+https://www.genome.jp/ftp/db/kofam/profiles.tar.gz]  
+  --kofamscan_profiles            [string]  Path to a pre-downloaded and extracted KOfam profiles directory. 
+  --kofamscan_ko_list_url         [string]  URL for the compressed KOfam KO list. [default: https://www.genome.jp/ftp/db/kofam/ko_list.gz] 
+ 
+  --kofamscan_ko_list             [string]  Path to a pre-downloaded and decompressed KOfam KO list. 
 
 Prediction parameters
   --skip_s4pred                   [boolean] Skip the secondary structure prediction. 
   --s4pred_outfmt                 [string]  Choose the output format (i.e., 'ss2', 'fas', 'horiz') for the s4pred per amino acid probability 
 predictions (i.e., α-helix, β-strand, coil). Modifies the --outfmt parameter of s4pred run_model. 
  (accepted: ss2, fas, horiz) [default: ss2]  
- !! Hiding 17 param(s), use the `--showHidden` parameter to show them !!
+ !! Hiding 18 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
 
 * The pipeline

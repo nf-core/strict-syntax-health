@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-16T20:32:19.038603085Z
-- Nextflow version: 26.04.3
-- Summary: 33 errors, 31 warnings
+- Generated: 2026-07-30T00:29:43.949864900Z
+- Nextflow version: 26.07.0-edge
+- Summary: 33 errors, 30 warnings
 
 ## :x: Errors
 
@@ -356,13 +356,6 @@
   ```nextflow
           .map { create_fastq_channel(it) }
                                       ^^
-  ```
-
-- Warning: `subworkflows/local/input_check.nf:16:16`: Variable was declared but not used
-
-  ```nextflow
-          .set { reads }
-                 ^^^^^
   ```
 
 - Warning: `subworkflows/local/pascal.nf:14:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead

@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-07-27T00:34:23.551410961Z
+- Generated: 2026-07-30T00:33:06.246852537Z
 - Nextflow version: 26.07.0-edge
-- Summary: 21 warnings
+- Summary: 22 warnings
 
 ## :warning: Warnings
 
@@ -25,6 +25,13 @@
   ```nextflow
       output_col = task.ext.output_col ?: "symbols"
       ^^^^^^^^^^
+  ```
+
+- Warning: `modules/local/cell2cell/tensor/main.nf:30:5`: Variable was declared but not used
+
+  ```nextflow
+      integration = meta.integration ?: 'integration'
+      ^^^^^^^^^^^
   ```
 
 - Warning: `modules/local/liana/rankaggregate/main.nf:26:5`: Variable was declared but not used

@@ -3,9 +3,8 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.07.0-edge
 
-Downloading plugin nf-schema@2.5.1
 Downloading plugin nf-anndata@0.3.2
-Launching `./main.nf` [evil_shirley] revision: f7cd170089
+Launching `./main.nf` [silly_sax] revision: 109787bca5
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -45,10 +44,10 @@ before `duplicate_var_resolution` is applied. All numeric suffixes following a d
 
 Quality control options
   --species                       [string]  Species of the input data. Used to auto-select bundled cell cycle gene lists 
-(assets/cell_cycle_genes/<species>_s_genes.txt and _g2m_genes.txt) and as the MyGene.info taxonomy 
-when converting gene identifiers (samplesheet symbol_col: none). Bundled cell cycle lists are 
-provided for 'human' and 'mouse'. Ignored when --s_genes and --g2m_genes are set explicitly. 
-[default: human]  
+(assets/cell_cycle_genes/<species>_s_genes.txt and _g2m_genes.txt), as the MyGene.info taxonomy when 
+converting gene identifiers (samplesheet symbol_col: none), and for PROGENy pathway enrichment in 
+Tensor-cell2cell. Bundled cell cycle lists are provided for 'human' and 'mouse'. Ignored when 
+--s_genes and --g2m_genes are set explicitly. [default: human]  
   --cell_cycle_scoring            [boolean] Whether to perform cell cycle scoring. If true, S and G2M phase scores and a predicted phase label 
 are added to each cell in adata.obs. Requires the gene index (or symbol_col) to use standard gene 
 symbols matching the selected species. [default: true]  
@@ -150,6 +149,11 @@ by the LIANA grouping column (and batch when using stratified_obs_batch) before 
 strategy is 'none' while liana_max_cells is set, stratified_obs is applied with a warning.  
 (accepted: none, stratified_obs, stratified_obs_batch) [default: stratified_obs]  
   --liana_subsample_seed          [integer] Random seed for reproducible LIANA cell subsampling. [default: 42] 
+  --cell2cell                     [boolean] Run Tensor-cell2cell (by-sample LIANA followed by tensor factorisation). Uses the unified donor 
+column as context and requires at least two donors. [default: false]  
+  --cell2cell_rank                [integer] Optional Tensor-cell2cell factorisation rank. When unset, Cell2cell estimates the rank 
+automatically.  
+  --cell2cell_seed                [integer] Random seed for Tensor-cell2cell factorisation. [default: 42] 
   --skip_qc_report                [boolean] Skip rendering the Quarto QC HTML report in 10_reports/. 
   --scib                          [boolean] Run scib-metrics integration benchmarking on each integration output (samplesheet / --input runs 
 only; not run for base_adata-only extension without --input). [default: false]  

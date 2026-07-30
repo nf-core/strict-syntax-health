@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-27T00:41:05.343342715Z
-- Nextflow version: 26.05.0-edge
-- Summary: 167 warnings
+- Generated: 2026-07-30T00:28:30.121597362Z
+- Nextflow version: 26.07.0-edge
+- Summary: 161 warnings
 
 ## :warning: Warnings
 
@@ -11,13 +11,6 @@
   ```nextflow
               ].findAll { it }.join(' ').trim()
                           ^^
-  ```
-
-- Warning: `main.nf:46:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      multiqc_report = LONGRAREDISEASE.out.multiqc_report // channel: /path/to/multiqc_report.html
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `modules/local/fix_header_sv/cutesv/main.nf:18:9`: Variable was declared but not used
@@ -1000,34 +993,6 @@
                     ^^^^^^^
   ```
 
-- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
-
-  ```nextflow
-      valid_config = checkConfigProvided()
-      ^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      valid_config
-      ^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
-  ```
-
 - Warning: `workflows/longraredisease.nf:111:54`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
@@ -1166,11 +1131,4 @@
   ```nextflow
           ).set { ch_collated_versions }
                   ^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/longraredisease.nf:868:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      multiqc_report = MULTIQC.out.report.map { _meta, report -> report }
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```

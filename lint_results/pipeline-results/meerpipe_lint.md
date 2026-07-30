@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-16T20:29:13.100552928Z
-- Nextflow version: 26.04.3
-- Summary: 44 errors, 85 warnings
+- Generated: 2026-07-30T00:29:16.660864590Z
+- Nextflow version: 26.07.0-edge
+- Summary: 44 errors, 84 warnings
 
 ## :x: Errors
 
@@ -622,13 +622,6 @@
   ```nextflow
       def endedness_ok = metas.collect{ it.single_end }.unique().size == 1
                                         ^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfvalidation_plugin/main.nf:61:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/meerpipe.nf:40:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
