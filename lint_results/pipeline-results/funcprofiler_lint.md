@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-07-25T00:32:37.029422998Z
+- Generated: 2026-07-31T00:31:21.145345423Z
 - Nextflow version: 26.07.0-edge
-- Summary: 19 warnings
+- Summary: 16 warnings
 
 ## :warning: Warnings
 
@@ -55,32 +55,11 @@
                              ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/profile/main.nf:64:21`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/profile/main.nf:68:28`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-  	.filter { meta_db, file ->
-                      ^^^^
-  ```
-
-- Warning: `subworkflows/local/profile/main.nf:158:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions             = Channel.empty()
-                                ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/profile/main.nf:159:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_multiqc_files        = Channel.empty()
-                                ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/profile/main.nf:160:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_raw_profiles         = Channel.empty() // These are count tables
-                                ^^^^^^^
+          .filter { meta_db, file ->
+                             ^^^^
   ```
 
 - Warning: `subworkflows/local/utils_nfcore_funcprofiler_pipeline/main.nf:31:5`: Parameter was not used -- prefix with `_` to suppress warning
@@ -107,32 +86,32 @@
 - Warning: `subworkflows/local/utils_nfcore_funcprofiler_pipeline/main.nf:102:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-      Channel.fromList(samplesheetToList(params.input, "assets/schema_input.json"))
+      Channel
       ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_funcprofiler_pipeline/main.nf:108:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/utils_nfcore_funcprofiler_pipeline/main.nf:109:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-      Channel.fromList(samplesheetToList(params.databases, "assets/schema_database.json"))
+      Channel
       ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_funcprofiler_pipeline/main.nf:130:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_funcprofiler_pipeline/main.nf:132:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       hook_url //  string: hook URL for notifications
       ^^^^^^^^
   ```
 
-- Warning: `workflows/funcprofiler.nf:58:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/funcprofiler.nf:57:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_versions = Channel.empty()
                     ^^^^^^^
   ```
 
-- Warning: `workflows/funcprofiler.nf:59:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/funcprofiler.nf:58:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_multiqc_files = Channel.empty()

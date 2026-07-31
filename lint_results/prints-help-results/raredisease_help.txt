@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.07.0-edge
 
-Launching `./main.nf` [drunk_pasteur] revision: 127755fc6d
+Launching `./main.nf` [sharp_kalam] revision: 2cf9e458bf
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -76,7 +76,6 @@ model file.
   --svdb_query_dbs                    [string]  Databases used for structural variant annotation in vcf format. 
   --target_bed                        [string]  Path to directory for target bed file. 
   --variant_catalog                   [string]  Path to variant catalog file 
-  --sample_id_map                     [string]  Path to a file containing internal ids and customer ids in csv format. 
   --verifybamid_svd_bed               [string]  Path to a BED file containing markers used by verifybamid2. 
   --verifybamid_svd_mu                [string]  Path to mean matrix file of genotype matrix. Used by verifybamid2. 
   --verifybamid_svd_ud                [string]  Path to UD matrix file from SVD result of genotype matrix. Used by verifybamid2. 

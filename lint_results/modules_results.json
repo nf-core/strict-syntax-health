@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "a3b787358fa965b5f242b2408d52e8d0a28aaca2",
+  "_repo_commit": "1a6d192f85a35f260ca5b70195f87536d78b4717",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -284,6 +284,12 @@
   },
   "angsd_docounts": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/angsd/docounts",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "angsd_dosaf": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/angsd/dosaf",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -3489,7 +3495,7 @@
   "fgumi_fastq": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fgumi/fastq",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "fgumi_filter": {
@@ -3519,7 +3525,7 @@
   "fgumi_simplexmetrics": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fgumi/simplexmetrics",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "fgumi_sort": {
@@ -3531,7 +3537,7 @@
   "fgumi_zipper": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fgumi/zipper",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false
   },
   "fibertoolsrs_addnucleosomes": {
@@ -5186,6 +5192,18 @@
   },
   "hmmer_eslreformat": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/hmmer/eslreformat",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "hmmer_eslsfetch": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/hmmer/eslsfetch",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "hmmer_eslsfetchindex": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/hmmer/eslsfetchindex",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -10444,6 +10462,12 @@
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/sourmash/index",
     "errors": 0,
     "warnings": 0,
+    "parse_error": false
+  },
+  "sourmash_pairwise": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/sourmash/pairwise",
+    "errors": 0,
+    "warnings": 1,
     "parse_error": false
   },
   "sourmash_sketch": {

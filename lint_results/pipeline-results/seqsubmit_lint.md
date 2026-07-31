@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-07-25T00:36:42.473683119Z
+- Generated: 2026-07-31T00:34:44.727507854Z
 - Nextflow version: 26.07.0-edge
-- Summary: 13 warnings
+- Summary: 10 warnings
 
 ## :warning: Warnings
 
@@ -34,14 +34,14 @@
           ^^^^^^
   ```
 
-- Warning: `modules/local/generate_assembly_manifest/main.nf:48:9`: Variable was declared but not used
+- Warning: `modules/local/generate_assembly_manifest/main.nf:43:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
   ```
 
-- Warning: `modules/local/generate_assembly_manifest/main.nf:49:9`: Variable was declared but not used
+- Warning: `modules/local/generate_assembly_manifest/main.nf:44:9`: Variable was declared but not used
 
   ```nextflow
       def prefix = task.ext.prefix ?: "${meta.id}"
@@ -55,13 +55,6 @@
                                          ^^^^
   ```
 
-- Warning: `subworkflows/local/genome_evaluation/main.nf:30:5`: Variable was declared but not used
-
-  ```nextflow
-      ch_versions = channel.empty()
-      ^^^^^^^^^^^
-  ```
-
 - Warning: `subworkflows/nf-core/fasta_classify_catpack/main.nf:39:19`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
@@ -69,30 +62,16 @@
                     ^^^^
   ```
 
-- Warning: `workflows/assemblysubmit.nf:235:80`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/assemblysubmit.nf:53:29`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      ch_multiqc_files = ch_multiqc_files.mix(CONCAT_ACCESSIONS.out.file_out.map{meta, file -> file})
-                                                                                 ^^^^
+          .map { meta, fasta, reads_1, reads_2 ->
+                              ^^^^^^^
   ```
 
-- Warning: `workflows/assemblysubmit.nf:236:78`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/assemblysubmit.nf:61:22`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      ch_multiqc_files = ch_multiqc_files.mix(CONCAT_METADATA.out.file_out.map{meta, file -> file})
-                                                                               ^^^^
-  ```
-
-- Warning: `workflows/genomesubmit.nf:372:78`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      ch_multiqc_files = ch_multiqc_files.mix(CONCAT_METADATA.out.file_out.map{meta, file -> file})
-                                                                               ^^^^
-  ```
-
-- Warning: `workflows/genomesubmit.nf:374:80`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      ch_multiqc_files = ch_multiqc_files.mix(CONCAT_ACCESSIONS.out.file_out.map{meta, file -> file})
-                                                                                 ^^^^
+          .map { meta, fasta, reads_1, reads_2 ->
+                       ^^^^^
   ```

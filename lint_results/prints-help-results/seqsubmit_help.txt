@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.07.0-edge
 
 WARN: Cannot read project manifest -- Cause:  Cannot get property 'ENA_WEBIN' on null object
-Launching `./main.nf` [naughty_austin] revision: d58f83c8cb
+Launching `./main.nf` [nostalgic_davinci] revision: 44cc7f221c
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -25,25 +25,26 @@ help message of that parameter will be printed.
 or `--helpFull`.  
 
 Input/output options
-  --input                       [string] Path to comma-separated file describing the data to be submitted. Format depends on the pipeline 
-mode (mags/bins/metagenomic_assemblies/reads).  
+  --input                       [string] Path to samplesheet describing the data to be submitted (supported formats: csv, tsv, yaml, yml, 
+json). Columns/fields depend on the pipeline mode  
   --outdir                      [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
 Cloud infrastructure.  
   --email                       [string] Email address for completion summary. 
   --multiqc_title               [string] MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
 
-RNA detection options
+rRNA and tRNA detection options
   --rrna_limit                  [number] Minimum percentage of 16S, 23S, and 5S rRNA gene length recovered to count the gene as present. 
 [default: 80]  
-  --trna_limit                  [number] Minimum number of tRNA. [default: 18] 
+  --trna_limit                  [number] Minimum number of tRNA genes detected to count tRNA as present. This value is defined by the 
+MISAG/MIMAG standard and must not be modified. [default: 18]  
 
 Assigning NCBI taxonomy with CAT_pack
-  --cat_db                      [string] Path to local CAT_pack DB 
-  --cat_db_download_id          [string] CAT_pack database ID for download [default: nr] 
+  --cat_db                       Path to local CAT_pack DB 
 
 Evaluation options
-  --checkm2_db                  [string]  Path to pre-downloaded checkm2 database 
-  --checkm2_db_download_id      [integer] Zenodo ID for checkm2 database download [default: 14897628] 
+  --checkm2_db                            Path to pre-downloaded CheckM2 database. If omitted, downloads the version set by 
+`--checkm2_db_download_id`  
+  --checkm2_db_download_id      [integer] Zenodo ID for CheckM2 database download [default: 14897628] 
 
 Generic options
   --multiqc_methods_description [string]          Custom MultiQC yaml file containing HTML including a methods description. 
@@ -53,16 +54,18 @@ Generic options
  
 
 Pipeline flow control parameters
-  --centre_name                 [string]  The center name of the submitter (mandatory for broker accounts). 
-  --upload_tpa                  [boolean] Flag to control the type of assembly study (third party assembly or not) [default: false] 
-  --mode                        [string]  Type of upload  (accepted: mags, bins, metagenomic_assemblies, reads) 
-  --test_upload                 [boolean] Upload to TEST server instead of LIVE [default: true] 
-  --is_private                  [boolean] Use that flag if you are referring to private data in ENA [default: false] 
-  --release_date                [string]  Use that flag if you want to keep your data private after submission 
+  --centre_name                 [string]  Name of the submitter's organisation (mandatory for broker accounts). 
+  --upload_tpa                  [boolean] Mark the assemblies as a Third PArty (TPA) [default: false] 
+  --mode                        [string]  Type of the data to be submitted  (accepted: mags, bins, metagenomic_assemblies, reads) 
+  --test_upload                 [boolean] Upload to ENA TEST server instead of LIVE server [default: true] 
+  --is_private                  [boolean] Use that flag if you are referencing private data accessions in the samplesheet [default: false] 
+ 
+  --release_date                [string]  Date (YYYY-MM-DD) until which the newly created study stays private in ENA. 
   --submission_study            [string]  ENA study accession (PRJ/ERP) to submit the data to 
-  --study_metadata              [string]  Path to study metadata file (JSON, CSV, or TSV) for registering a new ENA study. Required when 
-submission_study is not provided.  
-  --webincli_mode               [string]  Webin-CLI mode of operation  (accepted: submit, validate) [default: submit] 
+  --study_metadata              [string]  Path to a file (JSON, CSV, or TSV) with metadata for registering a new ENA study. Required if 
+--submission_study is not set.  
+  --webincli_mode               [string]  Webin-CLI mode for ENA interaction: `submit` uploads data, `validate` performs validation only.  
+(accepted: submit, validate) [default: submit]  
  !! Hiding 17 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
 
@@ -70,5 +73,5 @@ submission_study is not provided.
     https://doi.org/10.1038/s41587-020-0439-x
 
 * Software dependencies
-    https://github.com/nf-core/seqsubmit/blob/master/CITATIONS.md
+    https://github.com/nf-core/seqsubmit/blob/main/CITATIONS.md
 

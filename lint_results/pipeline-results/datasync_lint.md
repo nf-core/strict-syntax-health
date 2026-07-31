@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-07-30T00:27:36.292696063Z
+- Generated: 2026-07-31T00:31:03.719493277Z
 - Nextflow version: 26.07.0-edge
 - Summary: 7 warnings
 
@@ -41,14 +41,14 @@
                                  ^^
   ```
 
-- Warning: `workflows/datasync.nf:129:37`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/datasync.nf:132:37`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { meta, input, output, log -> [ meta, input, output ] }
                                       ^^^
   ```
 
-- Warning: `workflows/datasync.nf:183:45`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/datasync.nf:186:45`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(Channel.fromPath(params.input).collectFile(name: 'samplesheet.csv'))

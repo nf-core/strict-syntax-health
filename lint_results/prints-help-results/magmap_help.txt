@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.07.0-edge
 
-Launching `./main.nf` [exotic_sanger] revision: b10f46d70f
+Launching `./main.nf` [sharp_bernard] revision: 072fd78704
 
 
 ------------------------------------------------------
@@ -39,6 +39,13 @@ https://ftp.ncbi.nlm.nih.gov/genomes/ASSEMBLY_REPORTS/assembly_summary_refseq.tx
  
   --genome_store_dir            [string] Path to a directory where downloaded genome files is stored. [default: magmap_genomes] 
   --prokka_store_dir            [string] Path to a directory where prokka output is stored. [default: magmap_prokka] 
+  --annotator                   [string] Which tool to annotate genomes lacking a GFF with: 'prokka', 'bakta_supported_only' (Bacteria to 
+Bakta, everything else -- Archaea and unclassified genomes -- to Prokka) or 'bakta_all' (everything 
+to Bakta, including domains Bakta wasn't designed for).  (accepted: prokka, 
+bakta_supported_only, bakta_all) [default: prokka]  
+  --bakta_db                    [string] Path to a directory holding the Bakta database, used only when --annotator is bakta_supported_only 
+or bakta_all. [default: magmap_bakta_db]  
+  --bakta_store_dir             [string] Path to a directory where Bakta annotation output is stored. [default: magmap_bakta] 
   --email                       [string] Email address for completion summary. 
   --multiqc_title               [string] MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
   --outdir                      [string] The output directory where the results will be saved. You have to use absolute paths to storage on 

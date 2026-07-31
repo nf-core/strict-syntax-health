@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.07.0-edge
 
 Downloading plugin nf-anndata@0.3.2
-Launching `./main.nf` [silly_sax] revision: 109787bca5
+Launching `./main.nf` [intergalactic_watson] revision: 109787bca5
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -143,11 +143,13 @@ Pipeline options
 step. Use this option to skip it.  
   --liana_n_perms                 [integer] Number of permutations for LIANA rank_aggregate specificity testing. Set to 0 to disable permutation 
 testing and speed up large runs. [default: 1000]  
-  --liana_max_cells               [integer] Optional maximum number of cells for LIANA rank_aggregate. When set, cells are subsampled stratified 
-by the LIANA grouping column (and batch when using stratified_obs_batch) before analysis.  
+  --liana_max_cells               [integer] Optional maximum number of cells for LIANA rank_aggregate and by-sample LIANA. When set, cells are 
+subsampled stratified by the LIANA grouping column (and batch when using stratified_obs_batch) 
+before analysis. By-sample LIANA also stratifies by the context/donor column.  
   --liana_subsample_strategy      [string]  Stratified subsampling strategy used when liana_max_cells is set. Uniform sampling is not used; if 
-strategy is 'none' while liana_max_cells is set, stratified_obs is applied with a warning.  
-(accepted: none, stratified_obs, stratified_obs_batch) [default: stratified_obs]  
+strategy is 'none' while liana_max_cells is set, stratified_obs is applied with a warning. By-sample 
+LIANA always includes the context/donor column in the strata.  (accepted: none, stratified_obs, 
+stratified_obs_batch) [default: stratified_obs]  
   --liana_subsample_seed          [integer] Random seed for reproducible LIANA cell subsampling. [default: 42] 
   --cell2cell                     [boolean] Run Tensor-cell2cell (by-sample LIANA followed by tensor factorisation). Uses the unified donor 
 column as context and requires at least two donors. [default: false]  
