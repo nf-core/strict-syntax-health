@@ -1,6 +1,6 @@
 # Workflow outputs migration: daamicrobiome
 
-- Generated: 2026-07-29T00:26:16.858883+00:00
+- Generated: 2026-08-01T00:29:23.785415+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -12,6 +12,6 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 ## Legacy `publishDir` references
 
-Found 1 `publishDir` reference across 1 file that should be migrated to the workflow `output {}` block:
+Found 18 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/daamicrobiome/blob/b2bfeeab04c54af4ab2181f7636c4457691c7635/conf/modules.config#L15) — 1 reference
+- [`conf/modules.config`](https://github.com/nf-core/daamicrobiome/blob/a7bb1ee3cdba34b6725bfd539493468df1007139/conf/modules.config#L15) — 18 references

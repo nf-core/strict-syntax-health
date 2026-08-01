@@ -74,9 +74,9 @@
   "bacmodel": {
     "full_name": "nf-core/bacmodel",
     "html_url": "https://github.com/nf-core/bacmodel",
-    "commit": "46bc29505e03448d3fb374fa34f9006b23342625",
+    "commit": "e87942fab67168fc8c16183b573a3011db90d2fb",
     "errors": 0,
-    "warnings": 59,
+    "warnings": 58,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -254,14 +254,14 @@
   "daamicrobiome": {
     "full_name": "nf-core/daamicrobiome",
     "html_url": "https://github.com/nf-core/daamicrobiome",
-    "commit": "b2bfeeab04c54af4ab2181f7636c4457691c7635",
-    "errors": 0,
-    "warnings": 2,
+    "commit": "a7bb1ee3cdba34b6725bfd539493468df1007139",
+    "errors": 1,
+    "warnings": 12,
     "parse_error": false,
-    "prints_help": true,
+    "prints_help": null,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 1
+    "publishdir_count": 18
   },
   "dartseq": {
     "full_name": "nf-core/dartseq",
@@ -278,7 +278,7 @@
   "datasync": {
     "full_name": "nf-core/datasync",
     "html_url": "https://github.com/nf-core/datasync",
-    "commit": "54b293e8cd90c6733d2f7652e63416b2df49870e",
+    "commit": "d29ad7e5fa125b145d791f08d2ba4bf2d0ad513c",
     "errors": 0,
     "warnings": 7,
     "parse_error": false,
@@ -458,7 +458,7 @@
   "epitopeprediction": {
     "full_name": "nf-core/epitopeprediction",
     "html_url": "https://github.com/nf-core/epitopeprediction",
-    "commit": "3c4b607c8b573fdd5b01b0442689d29e17fc9e0b",
+    "commit": "05d4ecd2b102dba2b98b322dbe16729a4bccc03c",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -518,14 +518,14 @@
   "funcprofiler": {
     "full_name": "nf-core/funcprofiler",
     "html_url": "https://github.com/nf-core/funcprofiler",
-    "commit": "9acfccad2aaf9e9d7272a1518730c4c623b2c4fa",
+    "commit": "4d53c0cde8960ab3b73734d6423c210c9e20411c",
     "errors": 0,
     "warnings": 16,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 10
+    "publishdir_count": 11
   },
   "funcscan": {
     "full_name": "nf-core/funcscan",
@@ -674,9 +674,9 @@
   "hlatyping": {
     "full_name": "nf-core/hlatyping",
     "html_url": "https://github.com/nf-core/hlatyping",
-    "commit": "2c0fb9b96091f68b1de6f677a2040eedd33fe500",
+    "commit": "4bd547ff758474c443d7bb373ece6d4c073249bd",
     "errors": 0,
-    "warnings": 8,
+    "warnings": 4,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -890,7 +890,7 @@
   "mhcquant": {
     "full_name": "nf-core/mhcquant",
     "html_url": "https://github.com/nf-core/mhcquant",
-    "commit": "d602127b443870e96d23062bfc261fc26564856f",
+    "commit": "950030d411c6f0b3240b497f7f4797ba962639be",
     "errors": 0,
     "warnings": 45,
     "parse_error": false,
@@ -1322,7 +1322,7 @@
   "riboseq": {
     "full_name": "nf-core/riboseq",
     "html_url": "https://github.com/nf-core/riboseq",
-    "commit": "f4a3753c7656b1353cd60e8a75e33ad62f14e263",
+    "commit": "d26621dd6948543e81bccb06d73d28f65d9d6d57",
     "errors": 0,
     "warnings": 155,
     "parse_error": false,
@@ -1382,7 +1382,7 @@
   "rnastructurome": {
     "full_name": "nf-core/rnastructurome",
     "html_url": "https://github.com/nf-core/rnastructurome",
-    "commit": "2678cdd9f6a82c25d62b0ba1d4f862167064c464",
+    "commit": "20f11432b4134cf8bcceb6df09ceb570e4f02ed2",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1418,7 +1418,7 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "96cbec65b1035596676b26dfcfa75a8a1b4c0767",
+    "commit": "bd3e9bc999e97eadcc1f0ebdd1252272aace289f",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1526,7 +1526,7 @@
   "spatialaxe": {
     "full_name": "nf-core/spatialaxe",
     "html_url": "https://github.com/nf-core/spatialaxe",
-    "commit": "0e7c83382d36ddb5be922c1ed2bb493498fd22b6",
+    "commit": "4985a57612d32f2c7777c49c7a73d475d2c2bd22",
     "errors": 0,
     "warnings": 1,
     "parse_error": false,
@@ -1694,7 +1694,7 @@
   "viralrecon": {
     "full_name": "nf-core/viralrecon",
     "html_url": "https://github.com/nf-core/viralrecon",
-    "commit": "139591756ac4dec5eb43e27244148c66d0187864",
+    "commit": "04d1b32c7a230c9f34a54491a04fa8ecbe9f2907",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,

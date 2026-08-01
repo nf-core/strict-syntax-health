@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "1a6d192f85a35f260ca5b70195f87536d78b4717",
+  "_repo_commit": "826a9b28d6da61097d60e1923bb8a2e51de3c5b4",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -4782,6 +4782,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "gridss_call": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gridss/call",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
   "gridss_generateponbedpe": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gridss/generateponbedpe",
     "errors": 0,
@@ -5096,6 +5102,12 @@
   },
   "hifitrimmer_processblast": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/hifitrimmer/processblast",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "hifitrimmer_trim": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/hifitrimmer/trim",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -11222,6 +11234,12 @@
   },
   "transdecoder_predict": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/transdecoder/predict",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "transrate": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/transrate",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

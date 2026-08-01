@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-07-31T00:36:23.314698+00:00
+- Generated: 2026-08-01T00:34:05.629057+00:00
 - Nextflow version: 26.07.0-edge
 - Summary: 1 warning
 
@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/sourmash/pairwise/main.nf:36:61`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
-    ```nextflow
-            combine_cmd = "sourmash sig cat ${signatures.sort { it.toString() }.join(' ')} -o ${prefix}_collection.zip"
-                                                                ^^^^^^^^^^
-    ```
+  ```nextflow
+          combine_cmd = "sourmash sig cat ${signatures.sort { it.toString() }.join(' ')} -o ${prefix}_collection.zip"
+                                                              ^^^^^^^^^^
+  ```

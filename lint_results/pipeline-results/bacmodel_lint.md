@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-07-31T00:30:48.105278937Z
+- Generated: 2026-08-01T00:29:05.603153739Z
 - Nextflow version: 26.07.0-edge
-- Summary: 59 warnings
+- Summary: 58 warnings
 
 ## :warning: Warnings
 
@@ -174,175 +174,168 @@
                       ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bacmodel_annotation/main.nf:52:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/bacmodel_annotation/main.nf:57:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-          ch_baktadb = Channel.empty()
-                       ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/bacmodel_annotation/main.nf:60:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-              ch_baktadb = Channel.fromPath(options.baktadb, checkIfExists: true)
+              ch_baktadb = Channel.fromPath(baktadb_cached, checkIfExists: true)
                            ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bacmodel_annotation/main.nf:86:34`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/bacmodel_annotation/main.nf:81:37`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+              ch_macsyfinder_models = Channel.fromPath(macsyfinder_models_cached, checkIfExists: true)
+                                      ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/bacmodel_annotation/main.nf:94:34`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_macsyfinder_results = Channel.empty()
                                    ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bacmodel_annotation/main.nf:92:21`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/bacmodel_annotation/main.nf:105:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-          ch_pfamdb = Channel.empty()
-                      ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/bacmodel_annotation/main.nf:100:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-              ch_pfamdb = Channel.fromPath(options.pfamdb, checkIfExists: true)
+              ch_pfamdb = Channel.fromPath(pfamdb_cached, checkIfExists: true)
                           ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bacmodel_annotation/main.nf:113:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/bacmodel_annotation/main.nf:119:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_traitar_results = Channel.empty()
                                ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bacmodel_annotation/main.nf:114:35`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/bacmodel_annotation/main.nf:120:35`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_traitar_single_votes = Channel.empty()
                                     ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bacmodel_annotation/main.nf:132:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/bacmodel_annotation/main.nf:138:28`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_carveme_model = Channel.empty()
                              ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bacmodel_annotation/main.nf:154:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/bacmodel_annotation/main.nf:160:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_gapseq_model = Channel.empty()
                             ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bacmodel_annotation/main.nf:155:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/bacmodel_annotation/main.nf:161:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_gapseq_xml = Channel.empty()
                           ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bacmodel_annotation/main.nf:156:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/bacmodel_annotation/main.nf:162:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_gapseq_tbl = Channel.empty()
                           ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bacmodel_annotation/main.nf:162:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/bacmodel_annotation/main.nf:168:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_memote_report = Channel.empty()
                          ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bacmodel_annotation/main.nf:163:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/bacmodel_annotation/main.nf:169:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_memote_json = Channel.empty()
                        ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bacmodel_annotation/main.nf:169:70`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/bacmodel_annotation/main.nf:175:70`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   def final_xml = xml instanceof List ? xml.findAll { !it.name.contains('-draft') } : xml
                                                                        ^^
   ```
 
-- Warning: `subworkflows/local/bacmodel_annotation/main.nf:173:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/bacmodel_annotation/main.nf:179:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .filter { meta, xml ->
                         ^^^^
   ```
 
-- Warning: `subworkflows/local/bacmodel_annotation/main.nf:202:44`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/bacmodel_annotation/main.nf:208:44`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_sample_ids = ch_genomes.map { meta, fasta -> meta.id }.collectFile(name: 'sample_ids.txt', newLine: true)
                                              ^^^^^
   ```
 
-- Warning: `subworkflows/local/bacmodel_annotation/main.nf:205:63`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/bacmodel_annotation/main.nf:211:63`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_macsyfinder_for_summary = ch_macsyfinder_results.map { meta, file -> file }.collect().ifEmpty([])
                                                                 ^^^^
   ```
 
-- Warning: `subworkflows/local/bacmodel_annotation/main.nf:206:64`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/bacmodel_annotation/main.nf:212:64`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_traitar_majority_for_summary = ch_traitar_results.map { meta, file -> file }.collect().ifEmpty([])
                                                                  ^^^^
   ```
 
-- Warning: `subworkflows/local/bacmodel_annotation/main.nf:207:67`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/bacmodel_annotation/main.nf:213:67`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_traitar_single_for_summary = ch_traitar_single_votes.map { meta, file -> file }.collect().ifEmpty([])
                                                                     ^^^^
   ```
 
-- Warning: `subworkflows/local/bacmodel_annotation/main.nf:208:53`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/bacmodel_annotation/main.nf:214:53`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_carveme_for_summary = ch_carveme_model.map { meta, file -> file }.collect().ifEmpty([])
                                                       ^^^^
   ```
 
-- Warning: `subworkflows/local/bacmodel_annotation/main.nf:214:66`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/bacmodel_annotation/main.nf:220:66`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def final_xml = xml instanceof List ? xml.findAll { !it.name.contains('-draft') } : xml
                                                                    ^^
   ```
 
-- Warning: `subworkflows/local/bacmodel_annotation/main.nf:218:65`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/bacmodel_annotation/main.nf:224:65`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_gapseq_for_summary = RENAME_GAPSEQ_XML.out.xml.map { meta, xml -> xml }.flatten().collect().ifEmpty([])
                                                                   ^^^^
   ```
 
-- Warning: `subworkflows/local/bacmodel_annotation/main.nf:220:33`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/bacmodel_annotation/main.nf:226:33`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_gapseq_for_summary = Channel.empty().collect().ifEmpty([])
                                   ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bacmodel_annotation/main.nf:223:53`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/bacmodel_annotation/main.nf:229:53`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_gapseq_tbl_for_summary = ch_gapseq_tbl.map { meta, files -> files }.flatten().collect().ifEmpty([])
                                                       ^^^^
   ```
 
-- Warning: `subworkflows/local/bacmodel_annotation/main.nf:224:50`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/bacmodel_annotation/main.nf:230:50`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_memote_for_summary = ch_memote_json.map { meta, json -> json }.collect().ifEmpty([])
@@ -412,7 +405,7 @@
       ^^^^^^^^
   ```
 
-- Warning: `workflows/bacmodel.nf:63:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/bacmodel.nf:57:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       def topic_versions = Channel.topic("versions")

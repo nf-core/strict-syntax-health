@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-07-31T00:33:59.471169109Z
+- Generated: 2026-08-01T00:31:08.273325786Z
 - Nextflow version: 26.07.0-edge
 - Summary: 155 warnings
 
@@ -146,21 +146,21 @@
                                                                                    ^^
   ```
 
-- Warning: `conf/modules.config:1406:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:1404:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   saveAs: { params.save_align_intermeds ? it : null }
                                                           ^^
   ```
 
-- Warning: `conf/modules.config:1417:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:1415:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   saveAs: { params.save_unaligned ? it : null }
                                                     ^^
   ```
 
-- Warning: `conf/modules.config:1445:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:1443:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               saveAs: { params.save_align_intermeds ? it : null }

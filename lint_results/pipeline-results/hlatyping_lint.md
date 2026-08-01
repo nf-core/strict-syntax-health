@@ -1,17 +1,10 @@
 # Nextflow lint results
 
-- Generated: 2026-07-04T00:34:31.550081809Z
-- Nextflow version: 26.06.0-edge
-- Summary: 8 warnings
+- Generated: 2026-08-01T00:30:19.815683432Z
+- Nextflow version: 26.07.0-edge
+- Summary: 4 warnings
 
 ## :warning: Warnings
-
-- Warning: `main.nf:56:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      multiqc_report = HLATYPING.out.multiqc_report // channel: /path/to/multiqc_report.html
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
 
 - Warning: `subworkflows/local/utils_nfcore_hlatyping_pipeline/main.nf:32:5`: Parameter was not used -- prefix with `_` to suppress warning
 
@@ -25,27 +18,6 @@
   ```nextflow
       def actual = file.withInputStream { org.apache.commons.codec.digest.DigestUtils.md5Hex(it) }
                                                                                              ^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      valid_config = valid_config
-      ^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/hlatyping.nf:206:87`: Implicit closure parameter is deprecated, declare an explicit parameter instead

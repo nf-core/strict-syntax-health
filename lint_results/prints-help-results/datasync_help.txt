@@ -3,7 +3,8 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.07.0-edge
 
-Launching `./main.nf` [sharp_descartes] revision: 8eac2f157f
+Downloading plugin nf-schema@2.7.2
+Launching `./main.nf` [backstabbing_bassi] revision: 8eac2f157f
 
 
 ------------------------------------------------------
@@ -30,6 +31,7 @@ Cloud infrastructure.
   --rclone_config               [string]  Path to the rclone config file used for cloud storage authentication. 
   --rclone_dry_run              [boolean] Perform a dry run of the rclone copy command. 
   --copy_matching_only          [boolean] Only copy files that matched their provided input checksums. 
+  --download                    [boolean] Download remote files for sha256 checksum verification in `RCLONE_CHECKSUM`. 
 
 Generic options
   --multiqc_methods_description [string]          Custom MultiQC yaml file containing HTML including a methods description. 
