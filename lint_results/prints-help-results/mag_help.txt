@@ -3,7 +3,8 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.07.0-edge
 
-Launching `./main.nf` [cheeky_williams] revision: 71af2049ef
+Downloading plugin nf-schema@2.7.2
+Launching `./main.nf` [special_solvay] revision: 71af2049ef
 
 
 ------------------------------------------------------
@@ -12,7 +13,7 @@ Launching `./main.nf` [cheeky_williams] revision: 71af2049ef
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/mag 5.5.0
+  nf-core/mag 5.6.0dev
 ------------------------------------------------------
 Typical pipeline command:
 

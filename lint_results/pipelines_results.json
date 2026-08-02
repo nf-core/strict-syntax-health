@@ -758,7 +758,7 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "cef5962578b80f9ee0320d7cee8f74076612d840",
+    "commit": "e59a5e894adfd428c73bb8be80dbe9862b7bdb74",
     "errors": 0,
     "warnings": 20,
     "parse_error": false,
