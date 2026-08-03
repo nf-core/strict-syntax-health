@@ -11,12 +11,12 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 > See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline.
 > **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**
 
-- **Last updated:** 2026-08-02 00:31:30 UTC
+- **Last updated:** 2026-08-03 00:33:09 UTC
 - **Nextflow version:** 26.07.0-edge
 
 ## Pipelines
 
-- **Total:** 0 parse errors, 1297 errors, 6305 warnings across 142 pipelines
+- **Total:** 0 parse errors, 1263 errors, 6308 warnings across 142 pipelines
 - **Zero errors:** 93 pipelines (65.5%)
 
 |                    Errors                    |                     Warnings                     |
@@ -31,7 +31,6 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :x: [genomeannotator](https://github.com/nf-core/genomeannotator)                              |     No      |     79 |      148 |      -      |      [View](lint_results/pipeline-results/genomeannotator_lint.md)      |                                    -                                     |
 | :x: [hicar](https://github.com/nf-core/hicar)                                                  |     No      |     78 |      122 |      -      |           [View](lint_results/pipeline-results/hicar_lint.md)           |                                    -                                     |
 | :x: [evexplorer](https://github.com/nf-core/evexplorer)                                        |     No      |     74 |       53 |      -      |        [View](lint_results/pipeline-results/evexplorer_lint.md)         |                                    -                                     |
-| :x: [oncoanalyser](https://github.com/nf-core/oncoanalyser)                                    |     No      |     64 |      102 |      -      |       [View](lint_results/pipeline-results/oncoanalyser_lint.md)        |                                    -                                     |
 | :x: [viralintegration](https://github.com/nf-core/viralintegration)                            |     No      |     64 |       15 |      -      |     [View](lint_results/pipeline-results/viralintegration_lint.md)      |                                    -                                     |
 | :x: [phageannotator](https://github.com/nf-core/phageannotator)                                |     No      |     58 |       98 |      -      |      [View](lint_results/pipeline-results/phageannotator_lint.md)       |                                    -                                     |
 | :x: [readsimulator](https://github.com/nf-core/readsimulator)                                  |     No      |     53 |       53 |      -      |       [View](lint_results/pipeline-results/readsimulator_lint.md)       |                                    -                                     |
@@ -48,6 +47,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :x: [omicsgenetraitassociation](https://github.com/nf-core/omicsgenetraitassociation)          |     No      |     33 |       30 |      -      | [View](lint_results/pipeline-results/omicsgenetraitassociation_lint.md) |                                    -                                     |
 | :x: [genomeskim](https://github.com/nf-core/genomeskim)                                        |     No      |     33 |       13 |      -      |        [View](lint_results/pipeline-results/genomeskim_lint.md)         |                                    -                                     |
 | :x: [denovotranscript](https://github.com/nf-core/denovotranscript)                            |     No      |     31 |       56 |      -      |     [View](lint_results/pipeline-results/denovotranscript_lint.md)      |                                    -                                     |
+| :x: [oncoanalyser](https://github.com/nf-core/oncoanalyser)                                    |     No      |     30 |      105 |      -      |       [View](lint_results/pipeline-results/oncoanalyser_lint.md)        |                                    -                                     |
 | :x: [sammyseq](https://github.com/nf-core/sammyseq)                                            |     No      |     21 |      159 |      -      |         [View](lint_results/pipeline-results/sammyseq_lint.md)          |                                    -                                     |
 | :x: [metapep](https://github.com/nf-core/metapep)                                              |     No      |     20 |       56 |      -      |          [View](lint_results/pipeline-results/metapep_lint.md)          |                                    -                                     |
 | :x: [bactmap](https://github.com/nf-core/bactmap)                                              |     No      |     17 |       31 |      -      |          [View](lint_results/pipeline-results/bactmap_lint.md)          |                                    -                                     |
@@ -177,9 +177,9 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 
 Adoption of the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax (a top-level `output {}` block) and migration away from the legacy `publishDir` directive. This is a separate dataset from the lint errors and warnings above.
 
-- **Uses `output {}`:** 10 pipelines (7.0%)
-- **Still uses `publishDir`:** 139 pipelines (97.9%)
-- **Fully migrated** (`output {}`, no `publishDir`): 3 pipelines (2.1%)
+- **Uses `output {}`:** 11 pipelines (7.7%)
+- **Still uses `publishDir`:** 138 pipelines (97.2%)
+- **Fully migrated** (`output {}`, no `publishDir`): 4 pipelines (2.8%)
 
 ![Workflow outputs migration](lint_results/pipelines_workflow_outputs.png)
 
@@ -191,6 +191,7 @@ The status emoji next to each pipeline shows its migration state: :white_check_m
 | Pipeline                                                                              | `output {}` | `publishDir` |                                       Report                                       |
 | ------------------------------------------------------------------------------------- | :---------: | :----------: | :--------------------------------------------------------------------------------: |
 | :white_check_mark: [createpanelrefs](https://github.com/nf-core/createpanelrefs)      |     Yes     |      No      |      [View](lint_results/workflow-outputs-results/createpanelrefs_outputs.md)      |
+| :white_check_mark: [oncoanalyser](https://github.com/nf-core/oncoanalyser)            |     Yes     |      No      |       [View](lint_results/workflow-outputs-results/oncoanalyser_outputs.md)        |
 | :white_check_mark: [references](https://github.com/nf-core/references)                |     Yes     |      No      |        [View](lint_results/workflow-outputs-results/references_outputs.md)         |
 | :white_check_mark: [seqinspector](https://github.com/nf-core/seqinspector)            |     Yes     |      No      |       [View](lint_results/workflow-outputs-results/seqinspector_outputs.md)        |
 | :warning: [demultiplex](https://github.com/nf-core/demultiplex)                       |     Yes     |   Yes (5)    |        [View](lint_results/workflow-outputs-results/demultiplex_outputs.md)        |
@@ -282,7 +283,6 @@ The status emoji next to each pipeline shows its migration state: :white_check_m
 | :x: [nascent](https://github.com/nf-core/nascent)                                     |     No      |   Yes (42)   |          [View](lint_results/workflow-outputs-results/nascent_outputs.md)          |
 | :x: [ncrnannotator](https://github.com/nf-core/ncrnannotator)                         |     No      |   Yes (6)    |       [View](lint_results/workflow-outputs-results/ncrnannotator_outputs.md)       |
 | :x: [omicsgenetraitassociation](https://github.com/nf-core/omicsgenetraitassociation) |     No      |   Yes (11)   | [View](lint_results/workflow-outputs-results/omicsgenetraitassociation_outputs.md) |
-| :x: [oncoanalyser](https://github.com/nf-core/oncoanalyser)                           |     No      |   Yes (35)   |       [View](lint_results/workflow-outputs-results/oncoanalyser_outputs.md)        |
 | :x: [pacsomatic](https://github.com/nf-core/pacsomatic)                               |     No      |   Yes (40)   |        [View](lint_results/workflow-outputs-results/pacsomatic_outputs.md)         |
 | :x: [pacvar](https://github.com/nf-core/pacvar)                                       |     No      |   Yes (15)   |          [View](lint_results/workflow-outputs-results/pacvar_outputs.md)           |
 | :x: [pairgenomealign](https://github.com/nf-core/pairgenomealign)                     |     No      |   Yes (11)   |      [View](lint_results/workflow-outputs-results/pairgenomealign_outputs.md)      |

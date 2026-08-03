@@ -1,1145 +1,886 @@
 # Nextflow lint results
 
-- Generated: 2026-07-25T00:34:53.913703851Z
+- Generated: 2026-08-03T00:31:14.530463732Z
 - Nextflow version: 26.07.0-edge
-- Summary: 64 errors, 102 warnings
+- Summary: 30 errors, 105 warnings
 
 ## :x: Errors
 
-- Error: `conf/modules.config:314:128`: Unexpected input: '='
+- Error: `subworkflows/local/read_alignment_dna/main.nf:186:17`: Unexpected input: '\*'
 
   ```nextflow
-              saveAs: { filename -> get_saveas_path(meta, task, filename, "panel_resources/${filename}", panel_resource_creation = true) },
-                                                                                                                                 ^
+                  *:meta_aln,
+                  ^
   ```
 
-- Error: `main.nf:84:20`: Unexpected input: '='
-
-  ```nextflow
-      if (run_mode === Constants.RunMode.PREPARE_REFERENCE)  {
-                     ^
-  ```
-
-- Error: `modules/local/lilac/main.nf:82:9`: `Sys` is not defined
-
-  ```nextflow
-          Sys.exit(1)
-          ^^^
-  ```
-
-- Error: `modules/local/orange/main.nf:60:39`: Unexpected input: '='
-
-  ```nextflow
-      def experiment_type = (run_mode === Constants.RunMode.WGTS) ? 'WGS' : 'PANEL'
-                                        ^
-  ```
-
-- Error: `modules/local/wisp/main.nf:60:21`: `primary_amber_dir` is not defined
-
-  ```nextflow
-          for fp in ${primary_amber_dir}/*.amber.*; do ln -sf ../\$fp amber_dir__prepared/; done
-                      ^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `modules/local/wisp/main.nf:61:21`: `sample_amber_dir` is not defined
-
-  ```nextflow
-          for fp in ${sample_amber_dir}/*.amber.*;  do ln -sf ../\$fp amber_dir__prepared/; done
-                      ^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `modules/nf-core/bwa/index/main.nf:15:10`: `bwa_index` is not defined
-
-  ```nextflow
-      path bwa_index     , emit: index
-           ^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/amber_profiling/main.nf:5:1`: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
-
-  ```nextflow
-  import Constants
-  ^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/amber_profiling/main.nf:6:1`: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
-
-  ```nextflow
-  import Utils
-  ^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/bamtools_metrics/main.nf:5:1`: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
-
-  ```nextflow
-  import Constants
-  ^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/bamtools_metrics/main.nf:6:1`: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
-
-  ```nextflow
-  import Utils
-  ^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/chord_prediction/main.nf:5:1`: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
-
-  ```nextflow
-  import Constants
-  ^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/chord_prediction/main.nf:6:1`: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
-
-  ```nextflow
-  import Utils
-  ^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/cider_calling/main.nf:5:1`: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
-
-  ```nextflow
-  import Constants
-  ^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/cider_calling/main.nf:6:1`: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
-
-  ```nextflow
-  import Utils
-  ^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/cobalt_normalisation/main.nf:5:1`: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
-
-  ```nextflow
-  import Constants
-  ^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/cobalt_normalisation/main.nf:6:1`: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
-
-  ```nextflow
-  import Utils
-  ^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/cobalt_profiling/main.nf:59:49`: Unexpected input: '\*'
-
-  ```nextflow
-              ch_inputs_sorted.runnable_tn.map { [*it, []] },
-                                                  ^
-  ```
-
-- Error: `subworkflows/local/cuppa_prediction/main.nf:46:27`: Unexpected input: '\*'
-
-  ```nextflow
-              return [meta, *inputs]
-                            ^
-  ```
-
-- Error: `subworkflows/local/esvee_calling/main.nf:62:49`: Unexpected input: '\*'
-
-  ```nextflow
-              ch_inputs_sorted.runnable_to.map { [*it, [], []] },
-                                                  ^
-  ```
-
-- Error: `subworkflows/local/isofox_normalisation/main.nf:5:1`: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
-
-  ```nextflow
-  import Constants
-  ^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/isofox_normalisation/main.nf:6:1`: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
-
-  ```nextflow
-  import Utils
-  ^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/isofox_quantification/main.nf:5:1`: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
-
-  ```nextflow
-  import Constants
-  ^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/isofox_quantification/main.nf:6:1`: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
-
-  ```nextflow
-  import Utils
-  ^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/lilac_calling/main.nf:5:1`: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
-
-  ```nextflow
-  import Constants
-  ^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/lilac_calling/main.nf:6:1`: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
-
-  ```nextflow
-  import Utils
-  ^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/linx_annotation/main.nf:5:1`: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
-
-  ```nextflow
-  import Constants
-  ^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/linx_annotation/main.nf:6:1`: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
-
-  ```nextflow
-  import Utils
-  ^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/linx_plotting/main.nf:5:1`: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
-
-  ```nextflow
-  import Constants
-  ^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/linx_plotting/main.nf:6:1`: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
-
-  ```nextflow
-  import Utils
-  ^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/neo_prediction/main.nf:55:27`: Unexpected input: '\*'
-
-  ```nextflow
-              return [meta, *inputs]
-                            ^
-  ```
-
-- Error: `subworkflows/local/orange_reporting/main.nf:125:27`: Unexpected input: '\*'
-
-  ```nextflow
-              return [meta, *inputs_selected]
-                            ^
-  ```
-
-- Error: `subworkflows/local/pave_annotation/main.nf:5:1`: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
-
-  ```nextflow
-  import Constants
-  ^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/pave_annotation/main.nf:6:1`: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
-
-  ```nextflow
-  import Utils
-  ^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/pave_pon_creation/main.nf:5:1`: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
-
-  ```nextflow
-  import Constants
-  ^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/pave_pon_creation/main.nf:6:1`: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
-
-  ```nextflow
-  import Utils
-  ^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/peach_calling/main.nf:5:1`: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
-
-  ```nextflow
-  import Constants
-  ^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/peach_calling/main.nf:6:1`: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
-
-  ```nextflow
-  import Utils
-  ^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/prepare_inputs/main.nf:11:1`: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
-
-  ```nextflow
-  import Utils
-  ^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/prepare_reference/main.nf:215:28`: Unexpected input: '='
-
-  ```nextflow
-              if (run_mode !== Constants.RunMode.PANEL_RESOURCE_CREATION) {
-                             ^
-  ```
-
-- Error: `subworkflows/local/purple_calling/main.nf:68:27`: Unexpected input: '\*'
-
-  ```nextflow
-              return [meta, *inputs]
-                            ^
-  ```
-
-- Error: `subworkflows/local/read_alignment_dna/main.nf:122:29`: Unexpected input: '\*'
-
-  ```nextflow
-                              *:meta_fastq,
-                              ^
-  ```
-
-- Error: `subworkflows/local/read_alignment_rna/main.nf:65:17`: Unexpected input: '\*'
+- Error: `subworkflows/local/read_alignment_rna/main.nf:58:17`: Unexpected input: '\*'
 
   ```nextflow
                   *:meta_fastq,
                   ^
   ```
 
-- Error: `subworkflows/local/redux_processing/main.nf:5:1`: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
+- Error: `workflows/panel_resource_creation.nf:15:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/oncoanalyser/subworkflows/local/read_alignment_dna/main.nf'
 
   ```nextflow
-  import Constants
-  ^^^^^^^^^^^^^^^^
+  include { READ_ALIGNMENT_DNA                      } from '../subworkflows/local/read_alignment_dna'
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/redux_processing/main.nf:6:1`: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
+- Error: `workflows/panel_resource_creation.nf:16:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/oncoanalyser/subworkflows/local/read_alignment_rna/main.nf'
 
   ```nextflow
-  import Utils
-  ^^^^^^^^^^^^
+  include { READ_ALIGNMENT_RNA                      } from '../subworkflows/local/read_alignment_rna'
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/sage_append/main.nf:36:43`: Unexpected input: '='
+- Error: `workflows/panel_resource_creation.nf:117:5`: `READ_ALIGNMENT_DNA` is not defined
 
   ```nextflow
-      def purity_estimate_mode = run_mode === Constants.RunMode.PURITY_ESTIMATE
-                                            ^
+      READ_ALIGNMENT_DNA(
+      ^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/sage_calling/main.nf:5:1`: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
+- Error: `workflows/panel_resource_creation.nf:125:5`: `READ_ALIGNMENT_RNA` is not defined
 
   ```nextflow
-  import Constants
-  ^^^^^^^^^^^^^^^^
+      READ_ALIGNMENT_RNA(
+      ^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/sage_calling/main.nf:6:1`: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
+- Error: `workflows/panel_resource_creation.nf:132:30`: `READ_ALIGNMENT_DNA` is not defined
 
   ```nextflow
-  import Utils
-  ^^^^^^^^^^^^
+      ch_align_dna_tumor_out = READ_ALIGNMENT_DNA.out.tumor
+                               ^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/sage_calling/main.nf:8:1`: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
+- Error: `workflows/panel_resource_creation.nf:133:31`: `READ_ALIGNMENT_DNA` is not defined
 
   ```nextflow
-  import java.nio.channels.Channel
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      ch_align_dna_normal_out = READ_ALIGNMENT_DNA.out.normal
+                                ^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/sigs_fitting/main.nf:5:1`: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
+- Error: `workflows/panel_resource_creation.nf:134:30`: `READ_ALIGNMENT_RNA` is not defined
 
   ```nextflow
-  import Constants
-  ^^^^^^^^^^^^^^^^
+      ch_align_rna_tumor_out = READ_ALIGNMENT_RNA.out.tumor
+                               ^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/sigs_fitting/main.nf:6:1`: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
+- Error: `workflows/purity_estimate.nf:11:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/oncoanalyser/subworkflows/local/read_alignment_dna/main.nf'
 
   ```nextflow
-  import Utils
-  ^^^^^^^^^^^^
+  include { READ_ALIGNMENT_DNA              } from '../subworkflows/local/read_alignment_dna'
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/teal_characterisation/main.nf:86:40`: Unexpected input: '\*'
+- Error: `workflows/purity_estimate.nf:96:9`: `READ_ALIGNMENT_DNA` is not defined
 
   ```nextflow
-          .map { meta, bam_bai -> [meta, *bam_bai] }
-                                         ^
+          READ_ALIGNMENT_DNA(
+          ^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/virusbreakend_calling/main.nf:103:27`: Unexpected input: '\*'
+- Error: `workflows/purity_estimate.nf:104:61`: `READ_ALIGNMENT_DNA` is not defined
 
   ```nextflow
-              return [meta, *inputs]
-                            ^
+          ch_align_dna_tumor_out = ch_align_dna_tumor_out.mix(READ_ALIGNMENT_DNA.out.tumor)
+                                                              ^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `subworkflows/local/wisp_analysis/main.nf:46:40`: Unexpected input: '='
+- Error: `workflows/purity_estimate.nf:105:63`: `READ_ALIGNMENT_DNA` is not defined
 
   ```nextflow
-              if (purity_estimate_mode === Constants.RunMode.WGTS) {
-                                         ^
+          ch_align_dna_normal_out = ch_align_dna_normal_out.mix(READ_ALIGNMENT_DNA.out.normal)
+                                                                ^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/panel_resource_creation.nf:136:54`: Unexpected input: '='
+- Error: `workflows/purity_estimate.nf:106:61`: `READ_ALIGNMENT_DNA` is not defined
 
   ```nextflow
-      isofox_read_length = params.isofox_read_length !== null ? params.isofox_read_length : Constants.DEFAULT_ISOFOX_READ_LENGTH_TARGETED
-                                                       ^
+          ch_align_dna_donor_out = ch_align_dna_donor_out.mix(READ_ALIGNMENT_DNA.out.donor)
+                                                              ^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/prepare_reference.nf:1:1`: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
+- Error: `workflows/targeted.nf:24:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/oncoanalyser/subworkflows/local/read_alignment_dna/main.nf'
 
   ```nextflow
-  import Constants
-  ^^^^^^^^^^^^^^^^
+  include { READ_ALIGNMENT_DNA       } from '../subworkflows/local/read_alignment_dna'
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/prepare_reference.nf:2:1`: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
+- Error: `workflows/targeted.nf:25:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/oncoanalyser/subworkflows/local/read_alignment_rna/main.nf'
 
   ```nextflow
-  import Processes
-  ^^^^^^^^^^^^^^^^
+  include { READ_ALIGNMENT_RNA       } from '../subworkflows/local/read_alignment_rna'
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/prepare_reference.nf:3:1`: Groovy `import` declarations are not supported -- use fully-qualified name inline instead
+- Error: `workflows/targeted.nf:137:9`: `READ_ALIGNMENT_DNA` is not defined
 
   ```nextflow
-  import Utils
-  ^^^^^^^^^^^^
+          READ_ALIGNMENT_DNA(
+          ^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/prepare_reference.nf:11:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/oncoanalyser/subworkflows/local/prepare_reference/main.nf'
+- Error: `workflows/targeted.nf:145:9`: `READ_ALIGNMENT_RNA` is not defined
 
   ```nextflow
-  include { PREPARE_REFERENCE as STAGE_REFERENCE } from '../subworkflows/local/prepare_reference'
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          READ_ALIGNMENT_RNA(
+          ^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/prepare_reference.nf:28:5`: `STAGE_REFERENCE` is not defined
+- Error: `workflows/targeted.nf:151:61`: `READ_ALIGNMENT_DNA` is not defined
 
   ```nextflow
-      STAGE_REFERENCE(
-      ^^^^^^^^^^^^^^^
+          ch_align_dna_tumor_out = ch_align_dna_tumor_out.mix(READ_ALIGNMENT_DNA.out.tumor)
+                                                              ^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/prepare_reference.nf:33:35`: `STAGE_REFERENCE` is not defined
+- Error: `workflows/targeted.nf:152:63`: `READ_ALIGNMENT_DNA` is not defined
 
   ```nextflow
-      ch_versions = ch_versions.mix(STAGE_REFERENCE.out.versions)
-                                    ^^^^^^^^^^^^^^^
+          ch_align_dna_normal_out = ch_align_dna_normal_out.mix(READ_ALIGNMENT_DNA.out.normal)
+                                                                ^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/purity_estimate.nf:147:63`: Unexpected input: '='
+- Error: `workflows/targeted.nf:153:61`: `READ_ALIGNMENT_DNA` is not defined
 
   ```nextflow
-      if (run_config.stages.amber && purity_estimate_run_mode === Constants.RunMode.WGTS) {
-                                                                ^
+          ch_align_dna_donor_out = ch_align_dna_donor_out.mix(READ_ALIGNMENT_DNA.out.donor)
+                                                              ^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/targeted.nf:182:54`: Unexpected input: '='
+- Error: `workflows/targeted.nf:155:61`: `READ_ALIGNMENT_RNA` is not defined
 
   ```nextflow
-      isofox_read_length = params.isofox_read_length !== null ? params.isofox_read_length : Constants.DEFAULT_ISOFOX_READ_LENGTH_TARGETED
-                                                       ^
+          ch_align_rna_tumor_out = ch_align_rna_tumor_out.mix(READ_ALIGNMENT_RNA.out.tumor)
+                                                              ^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/wgts.nf:79:44`: Unexpected input: '='
+- Error: `workflows/wgts.nf:27:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/oncoanalyser/subworkflows/local/read_alignment_dna/main.nf'
 
   ```nextflow
-      gridss_config = params.gridss_config !== null ? file(params.gridss_config) : hmf_data.gridss_config
-                                             ^
+  include { READ_ALIGNMENT_DNA    } from '../subworkflows/local/read_alignment_dna'
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `workflows/wgts.nf:28:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/oncoanalyser/subworkflows/local/read_alignment_rna/main.nf'
+
+  ```nextflow
+  include { READ_ALIGNMENT_RNA    } from '../subworkflows/local/read_alignment_rna'
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `workflows/wgts.nf:108:9`: `READ_ALIGNMENT_DNA` is not defined
+
+  ```nextflow
+          READ_ALIGNMENT_DNA(
+          ^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `workflows/wgts.nf:116:9`: `READ_ALIGNMENT_RNA` is not defined
+
+  ```nextflow
+          READ_ALIGNMENT_RNA(
+          ^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `workflows/wgts.nf:122:61`: `READ_ALIGNMENT_DNA` is not defined
+
+  ```nextflow
+          ch_align_dna_tumor_out = ch_align_dna_tumor_out.mix(READ_ALIGNMENT_DNA.out.tumor)
+                                                              ^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `workflows/wgts.nf:123:63`: `READ_ALIGNMENT_DNA` is not defined
+
+  ```nextflow
+          ch_align_dna_normal_out = ch_align_dna_normal_out.mix(READ_ALIGNMENT_DNA.out.normal)
+                                                                ^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `workflows/wgts.nf:124:61`: `READ_ALIGNMENT_DNA` is not defined
+
+  ```nextflow
+          ch_align_dna_donor_out = ch_align_dna_donor_out.mix(READ_ALIGNMENT_DNA.out.donor)
+                                                              ^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `workflows/wgts.nf:126:61`: `READ_ALIGNMENT_RNA` is not defined
+
+  ```nextflow
+          ch_align_rna_tumor_out = ch_align_rna_tumor_out.mix(READ_ALIGNMENT_RNA.out.tumor)
+                                                              ^^^^^^^^^^^^^^^^^^
   ```
 
 ## :warning: Warnings
 
-- Warning: `modules/local/wisp/main.nf:34:9`: Variable was declared but not used
+- Warning: `subworkflows/local/amber_profiling/main.nf:47:36`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      def purity_estimate_mode = Utils.getEnumFromString(params.purity_estimate_mode, Constants.RunMode)
-          ^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/gatk4/markduplicates/main.nf:30:43`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def input_list = bam.collect{"--INPUT $it"}.join(' ')
-                                            ^^
-  ```
-
-- Warning: `modules/nf-core/star/genomegenerate/main.nf:23:9`: Variable was declared but not used
-
-  ```nextflow
-      def args_list   = args.tokenize()
-          ^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/amber_profiling/main.nf:27:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/amber_profiling/main.nf:50:36`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .branch { meta, tumor_bam, tumor_bai, normal_bam, normal_bai, donor_bam, donor_bai ->
+          .branch { meta, tumor_aln, tumor_idx, normal_aln, normal_idx, donor_aln, donor_idx ->
                                      ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/amber_profiling/main.nf:50:47`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/amber_profiling/main.nf:47:59`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .branch { meta, tumor_bam, tumor_bai, normal_bam, normal_bai, donor_bam, donor_bai ->
-                                                ^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/amber_profiling/main.nf:50:59`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .branch { meta, tumor_bam, tumor_bai, normal_bam, normal_bai, donor_bam, donor_bai ->
+          .branch { meta, tumor_aln, tumor_idx, normal_aln, normal_idx, donor_aln, donor_idx ->
                                                             ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/amber_profiling/main.nf:50:71`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/amber_profiling/main.nf:47:71`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .branch { meta, tumor_bam, tumor_bai, normal_bam, normal_bai, donor_bam, donor_bai ->
+          .branch { meta, tumor_aln, tumor_idx, normal_aln, normal_idx, donor_aln, donor_idx ->
                                                                         ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/amber_profiling/main.nf:50:82`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/amber_profiling/main.nf:47:82`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .branch { meta, tumor_bam, tumor_bai, normal_bam, normal_bai, donor_bam, donor_bai ->
+          .branch { meta, tumor_aln, tumor_idx, normal_aln, normal_idx, donor_aln, donor_idx ->
                                                                                    ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/amber_profiling/main.nf:99:18`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/bamtools_metrics/main.nf:34:30`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      ch_outputs = Channel.empty()
-                   ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/bamtools_metrics/main.nf:27:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/bamtools_metrics/main.nf:40:30`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .branch { meta, bam, bai ->
+          .branch { meta, aln, idx ->
                                ^^^
   ```
 
-- Warning: `subworkflows/local/bamtools_metrics/main.nf:57:30`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/bamtools_metrics/main.nf:51:30`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .branch { meta, bam, bai ->
+          .branch { meta, aln, idx ->
                                ^^^
   ```
 
-- Warning: `subworkflows/local/bamtools_metrics/main.nf:66:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/bamtools_metrics/main.nf:89:34`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      ch_bamtools_inputs = Channel.empty()
-                           ^^^^^^^
+          .branch { meta_bamtools, bamtools_dir ->
+                                   ^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bamtools_metrics/main.nf:97:34`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/cider_calling/main.nf:10:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .branch { meta_bamtools, metrics_dir ->
-                                   ^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/bamtools_metrics/main.nf:106:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_somatic_metrics_dir = Channel.empty()
-                               ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/bamtools_metrics/main.nf:112:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_germline_metrics_dir = Channel.empty()
-                                ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/chord_prediction/main.nf:22:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/chord_prediction/main.nf:87:18`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_outputs = Channel.empty()
-                   ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/cider_calling/main.nf:13:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      ch_inputs        // channel: [mandatory] [ meta ]
+      ch_inputs          // channel: [mandatory] [ meta ]
       ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/cider_calling/main.nf:26:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/cider_calling/main.nf:33:30`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/cider_calling/main.nf:39:30`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .branch { meta, bam, bai ->
+          .branch { meta, aln, idx ->
                                ^^^
   ```
 
-- Warning: `subworkflows/local/cider_calling/main.nf:55:30`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/cider_calling/main.nf:49:30`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .branch { meta, bam, bai ->
+          .branch { meta, aln, idx ->
                                ^^^
   ```
 
-- Warning: `subworkflows/local/cider_calling/main.nf:63:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/cobalt_profiling/main.nf:42:36`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      ch_cider_inputs = Channel.empty()
-                        ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/cobalt_normalisation/main.nf:24:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/isofox_normalisation/main.nf:23:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/isofox_quantification/main.nf:34:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/isofox_quantification/main.nf:47:36`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .branch { meta, tumor_bam, tumor_bai ->
+          .branch { meta, tumor_aln, tumor_idx, normal_aln, normal_idx ->
                                      ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/isofox_quantification/main.nf:88:18`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/cobalt_profiling/main.nf:42:59`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      ch_outputs = Channel.empty()
-                   ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/lilac_calling/main.nf:29:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/lilac_calling/main.nf:47:36`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .branch { meta, tumor_bam, tumor_bai, normal_bam, normal_bai ->
-                                     ^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/lilac_calling/main.nf:47:59`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .branch { meta, tumor_bam, tumor_bai, normal_bam, normal_bai ->
+          .branch { meta, tumor_aln, tumor_idx, normal_aln, normal_idx ->
                                                             ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/lilac_calling/main.nf:107:18`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/cuppa_prediction/main.nf:40:70`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      ch_outputs = Channel.empty()
-                   ^^^^^^^
+          .branch { meta, isofox_dir, purple_dir, linx_annotation_dir, virusinterpreter_dir ->
+                                                                       ^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/linx_annotation/main.nf:26:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/esvee_calling/main.nf:50:59`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
+          .branch { meta, tumor_aln, tumor_idx, normal_aln, normal_idx ->
+                                                            ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/linx_annotation/main.nf:99:25`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/isofox_quantification/main.nf:43:36`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .branch { meta, tumor_aln, tumor_idx ->
+                                     ^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/lilac_calling/main.nf:56:41`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .branch { meta, normal_dna_aln, normal_dna_idx, tumor_dna_aln, tumor_dna_idx, tumor_rna_aln, tumor_rna_idx, purple_dir ->
+                                          ^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/lilac_calling/main.nf:56:72`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .branch { meta, normal_dna_aln, normal_dna_idx, tumor_dna_aln, tumor_dna_idx, tumor_rna_aln, tumor_rna_idx, purple_dir ->
+                                                                         ^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/lilac_calling/main.nf:56:87`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .branch { meta, normal_dna_aln, normal_dna_idx, tumor_dna_aln, tumor_dna_idx, tumor_rna_aln, tumor_rna_idx, purple_dir ->
+                                                                                        ^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/lilac_calling/main.nf:56:102`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .branch { meta, normal_dna_aln, normal_dna_idx, tumor_dna_aln, tumor_dna_idx, tumor_rna_aln, tumor_rna_idx, purple_dir ->
+                                                                                                       ^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/lilac_calling/main.nf:56:117`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .branch { meta, normal_dna_aln, normal_dna_idx, tumor_dna_aln, tumor_dna_idx, tumor_rna_aln, tumor_rna_idx, purple_dir ->
+                                                                                                                      ^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/linx_annotation/main.nf:93:25`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .branch { meta, purple_dir ->
                           ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/linx_annotation/main.nf:137:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/linx_plotting/main.nf:44:47`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      ch_somatic_out = Channel.empty()
-                       ^^^^^^^
+          .branch { meta, linx_annotations_dir, amber_dir, cobalt_dir, purple_dir ->
+                                                ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/linx_annotation/main.nf:144:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/linx_plotting/main.nf:44:58`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      ch_germline_out = Channel.empty()
-                        ^^^^^^^
+          .branch { meta, linx_annotations_dir, amber_dir, cobalt_dir, purple_dir ->
+                                                           ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/linx_plotting/main.nf:29:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/linx_plotting/main.nf:44:70`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
+          .branch { meta, linx_annotations_dir, amber_dir, cobalt_dir, purple_dir ->
+                                                                       ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/linx_plotting/main.nf:51:41`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/neo_prediction/main.nf:113:25`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .branch { meta, annotation_dir, amber_dir, cobalt_dir, purple_dir ->
-                                          ^^^^^^^^^
+          .branch { meta, neo_finder_dir, tumor_rna_aln, tumor_rna_idx ->
+                          ^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/linx_plotting/main.nf:51:52`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/neo_prediction/main.nf:113:41`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .branch { meta, annotation_dir, amber_dir, cobalt_dir, purple_dir ->
-                                                     ^^^^^^^^^^
+          .branch { meta, neo_finder_dir, tumor_rna_aln, tumor_rna_idx ->
+                                          ^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/linx_plotting/main.nf:51:64`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/neo_prediction/main.nf:113:56`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .branch { meta, annotation_dir, amber_dir, cobalt_dir, purple_dir ->
-                                                                 ^^^^^^^^^^
+          .branch { meta, neo_finder_dir, tumor_rna_aln, tumor_rna_idx ->
+                                                         ^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/linx_plotting/main.nf:95:38`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/neo_prediction/main.nf:191:25`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .map { meta, annotation_dir, amber_dir, cobalt_dir, purple_dir, visualiser_dir ->
-                                       ^^^^^^^^^
+          .branch { meta, isofox_dir, purple_dir, sage_append_dir_somatic, lilac_dir, neo_finder_dir, annotated_fusions ->
+                          ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/linx_plotting/main.nf:95:49`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/neo_prediction/main.nf:191:49`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .map { meta, annotation_dir, amber_dir, cobalt_dir, purple_dir, visualiser_dir ->
-                                                  ^^^^^^^^^^
+          .branch { meta, isofox_dir, purple_dir, sage_append_dir_somatic, lilac_dir, neo_finder_dir, annotated_fusions ->
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/linx_plotting/main.nf:95:61`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/neo_prediction/main.nf:191:101`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .map { meta, annotation_dir, amber_dir, cobalt_dir, purple_dir, visualiser_dir ->
-                                                              ^^^^^^^^^^
+          .branch { meta, isofox_dir, purple_dir, sage_append_dir_somatic, lilac_dir, neo_finder_dir, annotated_fusions ->
+                                                                                                      ^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/linx_plotting/main.nf:115:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_visualiser_dir_out = Channel.empty()
-                              ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/pave_annotation/main.nf:34:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/pave_annotation/main.nf:50:35`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/pave_annotation/main.nf:48:35`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .branch { meta, sage_vcf, sage_tbi ->
                                     ^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/pave_annotation/main.nf:103:35`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/pave_annotation/main.nf:101:35`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .branch { meta, sage_vcf, sage_tbi ->
                                     ^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/pave_annotation/main.nf:145:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_reference/main.nf:229:33`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      ch_somatic_out = Channel.empty()
-                       ^^^^^^^
+                  .filter { meta, dir -> meta.topic_key == params.ref_data_panel_data_path }
+                                  ^^^
   ```
 
-- Warning: `subworkflows/local/pave_annotation/main.nf:151:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/prepare_reference/main.nf:230:24`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      ch_germline_out = Channel.empty()
-                        ^^^^^^^
+                  .map { meta, dir -> dir }
+                         ^^^^
   ```
 
-- Warning: `subworkflows/local/pave_pon_creation/main.nf:22:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/purple_calling/main.nf:58:48`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
+          .branch { meta, amber_dir, cobalt_dir, esvee_dir, pave_somatic_dir, pave_germline_dir, redux_tsvs_tumor ->
+                                                 ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/peach_calling/main.nf:24:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/purple_calling/main.nf:58:59`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
+          .branch { meta, amber_dir, cobalt_dir, esvee_dir, pave_somatic_dir, pave_germline_dir, redux_tsvs_tumor ->
+                                                            ^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/peach_calling/main.nf:74:18`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/purple_calling/main.nf:58:77`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      ch_outputs = Channel.empty()
-                   ^^^^^^^
+          .branch { meta, amber_dir, cobalt_dir, esvee_dir, pave_somatic_dir, pave_germline_dir, redux_tsvs_tumor ->
+                                                                              ^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_inputs/main.nf:18:17`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/purple_calling/main.nf:58:96`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      ch_inputs = Channel.fromList(
-                  ^^^^^^^
+          .branch { meta, amber_dir, cobalt_dir, esvee_dir, pave_somatic_dir, pave_germline_dir, redux_tsvs_tumor ->
+                                                                                                 ^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/redux_processing/main.nf:33:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/qsee_metrics/main.nf:60:25`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
+          .branch { meta, redux_tsvs_tumor, redux_tsvs_normal, bamtools_dir_tumor, bamtools_dir_normal, cobalt_dir, esvee_dir, purple_dir ->
+                          ^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/redux_processing/main.nf:46:31`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/qsee_metrics/main.nf:60:43`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .branch { meta, bams, bais ->
+          .branch { meta, redux_tsvs_tumor, redux_tsvs_normal, bamtools_dir_tumor, bamtools_dir_normal, cobalt_dir, esvee_dir, purple_dir ->
+                                            ^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/qsee_metrics/main.nf:60:82`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .branch { meta, redux_tsvs_tumor, redux_tsvs_normal, bamtools_dir_tumor, bamtools_dir_normal, cobalt_dir, esvee_dir, purple_dir ->
+                                                                                   ^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/qsee_metrics/main.nf:60:103`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .branch { meta, redux_tsvs_tumor, redux_tsvs_normal, bamtools_dir_tumor, bamtools_dir_normal, cobalt_dir, esvee_dir, purple_dir ->
+                                                                                                        ^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/qsee_metrics/main.nf:60:115`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .branch { meta, redux_tsvs_tumor, redux_tsvs_normal, bamtools_dir_tumor, bamtools_dir_normal, cobalt_dir, esvee_dir, purple_dir ->
+                                                                                                                    ^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/read_umi_processing/main.nf:101:35`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              .branch { meta_fastq, fastq_fwd, fastq_rev ->
+                                    ^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/read_umi_processing/main.nf:101:46`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              .branch { meta_fastq, fastq_fwd, fastq_rev ->
+                                               ^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/read_umi_processing/main.nf:141:35`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              .branch { meta_fastq, fastq_fwd, fastq_rev ->
+                                    ^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/read_umi_processing/main.nf:141:46`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              .branch { meta_fastq, fastq_fwd, fastq_rev ->
+                                               ^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/read_umi_processing/main.nf:184:31`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .branch { meta_fastq, fastq_info, fastq_fwd, fastq_rev ->
+                                ^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/read_umi_processing/main.nf:184:43`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .branch { meta_fastq, fastq_info, fastq_fwd, fastq_rev ->
+                                            ^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/read_umi_processing/main.nf:184:54`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .branch { meta_fastq, fastq_info, fastq_fwd, fastq_rev ->
+                                                       ^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/redux_processing/main.nf:43:31`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .branch { meta, alns, idxs ->
                                 ^^^^
   ```
 
-- Warning: `subworkflows/local/redux_processing/main.nf:61:31`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/redux_processing/main.nf:58:31`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .branch { meta, bams, bais ->
+          .branch { meta, alns, idxs ->
                                 ^^^^
   ```
 
-- Warning: `subworkflows/local/redux_processing/main.nf:76:31`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/redux_processing/main.nf:73:31`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .branch { meta, bams, bais ->
+          .branch { meta, alns, idxs ->
                                 ^^^^
   ```
 
-- Warning: `subworkflows/local/redux_processing/main.nf:85:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/redux_processing/main.nf:124:31`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      ch_redux_inputs = Channel.empty()
-                        ^^^^^^^
+          .branch { meta_redux, redux_dir ->
+                                ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/redux_processing/main.nf:132:31`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/sage_append/main.nf:59:52`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .branch { meta_redux, bam, bai, dup_freq_tsv, jitter_tsv, ms_tsv ->
-                                ^^^
+          .branch { meta, purple_dir, tumor_dna_aln, tumor_dna_idx, redux_tsvs_tumor, tumor_rna_aln, tumor_rna_idx ->
+                                                     ^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/redux_processing/main.nf:132:36`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/sage_append/main.nf:59:67`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .branch { meta_redux, bam, bai, dup_freq_tsv, jitter_tsv, ms_tsv ->
-                                     ^^^
+          .branch { meta, purple_dir, tumor_dna_aln, tumor_dna_idx, redux_tsvs_tumor, tumor_rna_aln, tumor_rna_idx ->
+                                                                    ^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/redux_processing/main.nf:132:41`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/sage_append/main.nf:59:100`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .branch { meta_redux, bam, bai, dup_freq_tsv, jitter_tsv, ms_tsv ->
-                                          ^^^^^^^^^^^^
+          .branch { meta, purple_dir, tumor_dna_aln, tumor_dna_idx, redux_tsvs_tumor, tumor_rna_aln, tumor_rna_idx ->
+                                                                                                     ^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/redux_processing/main.nf:132:55`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/sage_append/main.nf:73:37`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .branch { meta_redux, bam, bai, dup_freq_tsv, jitter_tsv, ms_tsv ->
-                                                        ^^^^^^^^^^
+          .branch { meta, purple_dir, tumor_dna_aln, tumor_dna_idx, redux_tsvs_tumor, tumor_rna_aln, tumor_rna_idx ->
+                                      ^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/redux_processing/main.nf:132:67`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/sage_append/main.nf:73:52`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .branch { meta_redux, bam, bai, dup_freq_tsv, jitter_tsv, ms_tsv ->
-                                                                    ^^^^^^
+          .branch { meta, purple_dir, tumor_dna_aln, tumor_dna_idx, redux_tsvs_tumor, tumor_rna_aln, tumor_rna_idx ->
+                                                     ^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/redux_processing/main.nf:142:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/sage_append/main.nf:73:67`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      ch_redux_tumor_out = Channel.empty()
-                           ^^^^^^^
+          .branch { meta, purple_dir, tumor_dna_aln, tumor_dna_idx, redux_tsvs_tumor, tumor_rna_aln, tumor_rna_idx ->
+                                                                    ^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/redux_processing/main.nf:152:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/sage_append/main.nf:73:85`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      ch_redux_normal_out = Channel.empty()
-                            ^^^^^^^
+          .branch { meta, purple_dir, tumor_dna_aln, tumor_dna_idx, redux_tsvs_tumor, tumor_rna_aln, tumor_rna_idx ->
+                                                                                      ^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/redux_processing/main.nf:162:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/sage_append/main.nf:73:100`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      ch_redux_donor_out = Channel.empty()
-                           ^^^^^^^
+          .branch { meta, purple_dir, tumor_dna_aln, tumor_dna_idx, redux_tsvs_tumor, tumor_rna_aln, tumor_rna_idx ->
+                                                                                                     ^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/sage_calling/main.nf:33:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/sage_append/main.nf:135:37`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .branch { meta, purple_dir, tumor_dna_aln, tumor_dna_idx, redux_tsvs_tumor, tumor_rna_aln, tumor_rna_idx ->
+                                      ^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/sage_append/main.nf:135:52`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .branch { meta, purple_dir, tumor_dna_aln, tumor_dna_idx, redux_tsvs_tumor, tumor_rna_aln, tumor_rna_idx ->
+                                                     ^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/sage_append/main.nf:135:67`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .branch { meta, purple_dir, tumor_dna_aln, tumor_dna_idx, redux_tsvs_tumor, tumor_rna_aln, tumor_rna_idx ->
+                                                                    ^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/sage_append/main.nf:135:85`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .branch { meta, purple_dir, tumor_dna_aln, tumor_dna_idx, redux_tsvs_tumor, tumor_rna_aln, tumor_rna_idx ->
+                                                                                      ^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/sage_append/main.nf:135:100`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .branch { meta, purple_dir, tumor_dna_aln, tumor_dna_idx, redux_tsvs_tumor, tumor_rna_aln, tumor_rna_idx ->
+                                                                                                     ^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/sage_calling/main.nf:25:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       segment_mappability          // channel: [mandatory] /path/to/segment_mappability
       ^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/sage_calling/main.nf:43:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/sage_calling/main.nf:63:36`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/sage_calling/main.nf:61:13`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-              tumor_dup_freq_tsv,  tumor_jitter_tsv,  tumor_ms_tsv,
-              ^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/sage_calling/main.nf:62:13`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-              normal_dup_freq_tsv, normal_jitter_tsv, normal_ms_tsv,
-              ^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/sage_calling/main.nf:63:13`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-              donor_dup_freq_tsv,  donor_jitter_tsv,  donor_ms_tsv ->
-              ^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/sage_calling/main.nf:76:54`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-              redux_tsv_list = redux_tsv_list.findAll{ it != [] }
-                                                       ^^
-  ```
-
-- Warning: `subworkflows/local/sage_calling/main.nf:93:36`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .branch { meta, tumor_bam, tumor_bai, normal_bam, normal_bai, donor_bam, donor_bai, redux_tsvs ->
+          .branch { meta, tumor_aln, tumor_idx, normal_aln, normal_idx, donor_aln, donor_idx, redux_tsvs ->
                                      ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/sage_calling/main.nf:93:47`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/sage_calling/main.nf:63:47`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .branch { meta, tumor_bam, tumor_bai, normal_bam, normal_bai, donor_bam, donor_bai, redux_tsvs ->
+          .branch { meta, tumor_aln, tumor_idx, normal_aln, normal_idx, donor_aln, donor_idx, redux_tsvs ->
                                                 ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/sage_calling/main.nf:93:59`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/sage_calling/main.nf:63:59`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .branch { meta, tumor_bam, tumor_bai, normal_bam, normal_bai, donor_bam, donor_bai, redux_tsvs ->
+          .branch { meta, tumor_aln, tumor_idx, normal_aln, normal_idx, donor_aln, donor_idx, redux_tsvs ->
                                                             ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/sage_calling/main.nf:93:71`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/sage_calling/main.nf:63:71`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .branch { meta, tumor_bam, tumor_bai, normal_bam, normal_bai, donor_bam, donor_bai, redux_tsvs ->
+          .branch { meta, tumor_aln, tumor_idx, normal_aln, normal_idx, donor_aln, donor_idx, redux_tsvs ->
                                                                         ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/sage_calling/main.nf:93:82`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/sage_calling/main.nf:63:82`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .branch { meta, tumor_bam, tumor_bai, normal_bam, normal_bai, donor_bam, donor_bai, redux_tsvs ->
+          .branch { meta, tumor_aln, tumor_idx, normal_aln, normal_idx, donor_aln, donor_idx, redux_tsvs ->
                                                                                    ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/sage_calling/main.nf:93:93`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/sage_calling/main.nf:63:93`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .branch { meta, tumor_bam, tumor_bai, normal_bam, normal_bai, donor_bam, donor_bai, redux_tsvs ->
+          .branch { meta, tumor_aln, tumor_idx, normal_aln, normal_idx, donor_aln, donor_idx, redux_tsvs ->
                                                                                               ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/sage_calling/main.nf:106:36`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/sage_calling/main.nf:76:36`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .branch { meta, tumor_bam, tumor_bai, normal_bam, normal_bai, donor_bam, donor_bai, redux_tsvs ->
+          .branch { meta, tumor_aln, tumor_idx, normal_aln, normal_idx, donor_aln, donor_idx, redux_tsvs ->
                                      ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/sage_calling/main.nf:106:59`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/sage_calling/main.nf:76:59`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .branch { meta, tumor_bam, tumor_bai, normal_bam, normal_bai, donor_bam, donor_bai, redux_tsvs ->
+          .branch { meta, tumor_aln, tumor_idx, normal_aln, normal_idx, donor_aln, donor_idx, redux_tsvs ->
                                                             ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/sage_calling/main.nf:106:71`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/sage_calling/main.nf:76:71`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .branch { meta, tumor_bam, tumor_bai, normal_bam, normal_bai, donor_bam, donor_bai, redux_tsvs ->
+          .branch { meta, tumor_aln, tumor_idx, normal_aln, normal_idx, donor_aln, donor_idx, redux_tsvs ->
                                                                         ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/sage_calling/main.nf:106:82`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/sage_calling/main.nf:76:82`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .branch { meta, tumor_bam, tumor_bai, normal_bam, normal_bai, donor_bam, donor_bai, redux_tsvs ->
+          .branch { meta, tumor_aln, tumor_idx, normal_aln, normal_idx, donor_aln, donor_idx, redux_tsvs ->
                                                                                    ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/sage_calling/main.nf:106:93`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/sage_calling/main.nf:76:93`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .branch { meta, tumor_bam, tumor_bai, normal_bam, normal_bai, donor_bam, donor_bai, redux_tsvs ->
+          .branch { meta, tumor_aln, tumor_idx, normal_aln, normal_idx, donor_aln, donor_idx, redux_tsvs ->
                                                                                               ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/sage_calling/main.nf:118:68`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/sage_calling/main.nf:122:36`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .map { meta, tumor_bam, tumor_bai, normal_bam, normal_bai, donor_bam, donor_bai, redux_tsvs ->
-                                                                     ^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/sage_calling/main.nf:118:79`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .map { meta, tumor_bam, tumor_bai, normal_bam, normal_bai, donor_bam, donor_bai, redux_tsvs ->
-                                                                                ^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/sage_calling/main.nf:153:36`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .branch { meta, tumor_bam, tumor_bai, normal_bam, normal_bai, donor_bam, donor_bai, redux_tsvs ->
+          .branch { meta, tumor_aln, tumor_idx, normal_aln, normal_idx, donor_aln, donor_idx, redux_tsvs ->
                                      ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/sage_calling/main.nf:153:47`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/sage_calling/main.nf:122:47`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .branch { meta, tumor_bam, tumor_bai, normal_bam, normal_bai, donor_bam, donor_bai, redux_tsvs ->
+          .branch { meta, tumor_aln, tumor_idx, normal_aln, normal_idx, donor_aln, donor_idx, redux_tsvs ->
                                                 ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/sage_calling/main.nf:153:59`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/sage_calling/main.nf:122:59`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .branch { meta, tumor_bam, tumor_bai, normal_bam, normal_bai, donor_bam, donor_bai, redux_tsvs ->
+          .branch { meta, tumor_aln, tumor_idx, normal_aln, normal_idx, donor_aln, donor_idx, redux_tsvs ->
                                                             ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/sage_calling/main.nf:153:71`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/sage_calling/main.nf:122:71`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .branch { meta, tumor_bam, tumor_bai, normal_bam, normal_bai, donor_bam, donor_bai, redux_tsvs ->
+          .branch { meta, tumor_aln, tumor_idx, normal_aln, normal_idx, donor_aln, donor_idx, redux_tsvs ->
                                                                         ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/sage_calling/main.nf:153:82`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/sage_calling/main.nf:122:82`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .branch { meta, tumor_bam, tumor_bai, normal_bam, normal_bai, donor_bam, donor_bai, redux_tsvs ->
+          .branch { meta, tumor_aln, tumor_idx, normal_aln, normal_idx, donor_aln, donor_idx, redux_tsvs ->
                                                                                    ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/sage_calling/main.nf:153:93`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/sage_calling/main.nf:122:93`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .branch { meta, tumor_bam, tumor_bai, normal_bam, normal_bai, donor_bam, donor_bai, redux_tsvs ->
+          .branch { meta, tumor_aln, tumor_idx, normal_aln, normal_idx, donor_aln, donor_idx, redux_tsvs ->
                                                                                               ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/sage_calling/main.nf:206:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/sage_plotting/main.nf:67:36`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      ch_somatic_vcf_out = Channel.empty()
-                           ^^^^^^^
+          .branch { meta, tumor_aln, tumor_idx, normal_aln, normal_idx, donor_aln, donor_idx, redux_tsvs, purple_dir ->
+                                     ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/sage_calling/main.nf:214:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/sage_plotting/main.nf:67:47`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      ch_germline_vcf_out = Channel.empty()
-                            ^^^^^^^
+          .branch { meta, tumor_aln, tumor_idx, normal_aln, normal_idx, donor_aln, donor_idx, redux_tsvs, purple_dir ->
+                                                ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/sage_calling/main.nf:222:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/sage_plotting/main.nf:67:59`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      ch_somatic_dir = Channel.empty()
-                       ^^^^^^^
+          .branch { meta, tumor_aln, tumor_idx, normal_aln, normal_idx, donor_aln, donor_idx, redux_tsvs, purple_dir ->
+                                                            ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/sage_calling/main.nf:230:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/sage_plotting/main.nf:67:71`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      ch_germline_dir = Channel.empty()
-                        ^^^^^^^
+          .branch { meta, tumor_aln, tumor_idx, normal_aln, normal_idx, donor_aln, donor_idx, redux_tsvs, purple_dir ->
+                                                                        ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/sigs_fitting/main.nf:22:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/sage_plotting/main.nf:67:82`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
+          .branch { meta, tumor_aln, tumor_idx, normal_aln, normal_idx, donor_aln, donor_idx, redux_tsvs, purple_dir ->
+                                                                                   ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/sigs_fitting/main.nf:81:18`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/sage_plotting/main.nf:67:93`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      ch_outputs = Channel.empty()
-                   ^^^^^^^
+          .branch { meta, tumor_aln, tumor_idx, normal_aln, normal_idx, donor_aln, donor_idx, redux_tsvs, purple_dir ->
+                                                                                              ^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/teal_characterisation/main.nf:47:36`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .branch { meta, tumor_aln, tumor_idx, normal_aln, normal_idx ->
+                                     ^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/teal_characterisation/main.nf:47:59`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .branch { meta, tumor_aln, tumor_idx, normal_aln, normal_idx ->
+                                                            ^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/teal_characterisation/main.nf:127:41`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .branch { meta, teal_bam_tumor, teal_bai_tumor, teal_bam_normal, teal_bai_normal, bamtools_dir_tumor, bamtools_dir_normal, cobalt_dir, purple_dir ->
+                                          ^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/teal_characterisation/main.nf:127:74`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .branch { meta, teal_bam_tumor, teal_bai_tumor, teal_bam_normal, teal_bai_normal, bamtools_dir_tumor, bamtools_dir_normal, cobalt_dir, purple_dir ->
+                                                                           ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/utils_nfcore_oncoanalyser_pipeline/main.nf:32:5`: Parameter was not used -- prefix with `_` to suppress warning
@@ -1156,16 +897,58 @@
       ^^^^^
   ```
 
-- Warning: `workflows/prepare_reference.nf:24:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/virusbreakend_calling/main.nf:45:36`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
+          .branch { meta, tumor_aln, tumor_idx ->
+                                     ^^^^^^^^^
   ```
 
-- Warning: `workflows/prepare_reference.nf:38:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/wisp_analysis/main.nf:10:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      def topic_versions = Channel.topic("versions")
-                           ^^^^^^^
+      ch_inputs                  // channel: [mandatory] [ meta ]
+      ^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/wisp_analysis/main.nf:54:45`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .branch { meta, primary_purple_dir, primary_amber_dir, primary_normal_aln, longitudinal_redux_dir, longitudinal_amber_dir, longitudinal_cobalt_dir, longitudinal_sage_append_dir ->
+                                              ^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/wisp_analysis/main.nf:54:64`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .branch { meta, primary_purple_dir, primary_amber_dir, primary_normal_aln, longitudinal_redux_dir, longitudinal_amber_dir, longitudinal_cobalt_dir, longitudinal_sage_append_dir ->
+                                                                 ^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/wisp_analysis/main.nf:54:84`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .branch { meta, primary_purple_dir, primary_amber_dir, primary_normal_aln, longitudinal_redux_dir, longitudinal_amber_dir, longitudinal_cobalt_dir, longitudinal_sage_append_dir ->
+                                                                                     ^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/wisp_analysis/main.nf:54:108`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .branch { meta, primary_purple_dir, primary_amber_dir, primary_normal_aln, longitudinal_redux_dir, longitudinal_amber_dir, longitudinal_cobalt_dir, longitudinal_sage_append_dir ->
+                                                                                                             ^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `workflows/targeted.nf:96:5`: Variable was declared but not used
+
+  ```nextflow
+      ch_align_rna_qc_tumor_out = channel.empty()
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `workflows/wgts.nf:100:5`: Variable was declared but not used
+
+  ```nextflow
+      ch_align_rna_qc_tumor_out = channel.empty()
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
   ```

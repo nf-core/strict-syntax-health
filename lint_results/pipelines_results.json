@@ -1022,14 +1022,14 @@
   "oncoanalyser": {
     "full_name": "nf-core/oncoanalyser",
     "html_url": "https://github.com/nf-core/oncoanalyser",
-    "commit": "195525c00ba11e0a79f8125c3040db78051a46ae",
-    "errors": 64,
-    "warnings": 102,
+    "commit": "093147486f0f42e16070e3d3e261ef64689eed79",
+    "errors": 30,
+    "warnings": 105,
     "parse_error": false,
     "prints_help": null,
-    "workflow_output": false,
-    "publishdir": true,
-    "publishdir_count": 35
+    "workflow_output": true,
+    "publishdir": false,
+    "publishdir_count": 0
   },
   "pacsomatic": {
     "full_name": "nf-core/pacsomatic",
@@ -1430,7 +1430,7 @@
   "scdownstream": {
     "full_name": "nf-core/scdownstream",
     "html_url": "https://github.com/nf-core/scdownstream",
-    "commit": "2d9577530f442172869082a973a2142a2da9b247",
+    "commit": "98697a8efa6b4823ec7f08a9513a7538104842ac",
     "errors": 0,
     "warnings": 22,
     "parse_error": false,
