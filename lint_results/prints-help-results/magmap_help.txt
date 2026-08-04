@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.07.0-edge
 
-Launching `./main.nf` [sharp_bernard] revision: 072fd78704
+Launching `./main.nf` [confident_hugle] revision: fdfb337b4b
 
 
 ------------------------------------------------------
@@ -90,6 +90,9 @@ the most complete) or 'gtdb' (use GTDB's criterion of completeness and contamina
   --skip_sourmash               [boolean] Skip Sourmash filtering for user-provided genomes [default: true] 
   --sourmash_ksize              [integer] K-mer size used by Sourmash [default: 21] 
   --sourmash_save_sourmash      [boolean] Save Sourmash output 
+
+Output options
+  --save_parquet                [boolean] Also write the summary tables in Parquet format, alongside the default gzipped TSV. 
 
 Generic options
   --multiqc_methods_description [string]          Custom MultiQC yaml file containing HTML including a methods description. 

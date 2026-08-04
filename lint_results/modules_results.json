@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "e765e4c738991a22f7d0dc2a13f102bfa6d9568f",
+  "_repo_commit": "a3b737266567e58d0d2edf43f37f5cab95f47041",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -1124,6 +1124,12 @@
   },
   "bigslice_downloaddb": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bigslice/downloaddb",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "binette": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/binette",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -8190,14 +8196,14 @@
     "warnings": 0,
     "parse_error": false
   },
-  "plastid_make_wiggle": {
-    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/make_wiggle",
+  "plastid_makewiggle": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/makewiggle",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
   },
-  "plastid_metagene_generate": {
-    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/metagene_generate",
+  "plastid_metagenegenerate": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plastid/metagenegenerate",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

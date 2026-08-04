@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-08-03T00:31:14.530463732Z
+- Generated: 2026-08-04T00:32:41.669469543Z
 - Nextflow version: 26.07.0-edge
-- Summary: 30 errors, 105 warnings
+- Summary: 30 errors, 104 warnings
 
 ## :x: Errors
 
@@ -883,14 +883,7 @@
                                                                            ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_oncoanalyser_pipeline/main.nf:32:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      monochrome_logs   // boolean: Do not use coloured log outputs
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_oncoanalyser_pipeline/main.nf:35:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_oncoanalyser_pipeline/main.nf:34:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       input             //  string: Path to input samplesheet
