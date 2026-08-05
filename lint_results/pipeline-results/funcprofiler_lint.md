@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-08-04T00:30:49.897691318Z
+- Generated: 2026-08-05T00:29:21.308469031Z
 - Nextflow version: 26.07.0-edge
 - Summary: 16 warnings
 
@@ -55,49 +55,49 @@
                              ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/profile/main.nf:68:28`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/profile/main.nf:67:28`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .filter { meta_db, file ->
                              ^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_funcprofiler_pipeline/main.nf:31:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_funcprofiler_pipeline/main.nf:30:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       monochrome_logs // boolean: Do not use coloured log outputs
       ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_funcprofiler_pipeline/main.nf:34:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_funcprofiler_pipeline/main.nf:33:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       input //  string: Path to input samplesheet
       ^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_funcprofiler_pipeline/main.nf:35:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_funcprofiler_pipeline/main.nf:34:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       databases //  string: Path to databases
       ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_funcprofiler_pipeline/main.nf:102:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/utils_nfcore_funcprofiler_pipeline/main.nf:101:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       Channel
       ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_funcprofiler_pipeline/main.nf:109:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/utils_nfcore_funcprofiler_pipeline/main.nf:108:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       Channel
       ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_funcprofiler_pipeline/main.nf:132:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_funcprofiler_pipeline/main.nf:131:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       hook_url //  string: hook URL for notifications

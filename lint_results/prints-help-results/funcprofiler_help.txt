@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.07.0-edge
 
 Downloading plugin nf-schema@2.5.1
-Launching `./main.nf` [happy_mccarthy] revision: daaf189a53
+Launching `./main.nf` [determined_koch] revision: a5c244f2b6
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -38,7 +38,6 @@ Preprocessing QC options
   --skip_preprocessing_qc       [boolean] Skip quality control step when preprocessing 
 
 Preprocessing run merging options
-  --perform_runmerging          [boolean] Turn on run merging [default: true] 
   --save_runmerged_reads        [boolean] Save reads from samples that went through the run-merging step 
 
 Profiling options
@@ -50,7 +49,6 @@ to --databases
 to --databases  
   --run_diamond                 [boolean] Turn on translated alignment with DIAMOND blastx. Requires a .dmnd database to be present in the CSV 
 file passed to --databases  
-  --humann_renorm_to_cpm        [boolean] save copies-per-million outputs from HUMAaN 
   --run_rgi                     [boolean] Turn on profiling with RGI. Requires database to be present CSV file passed to --databases 
   --run_mifaser                 [boolean] Turn on profiling with mi-faser. Requires database to be present CSV file passed to --databases 
  

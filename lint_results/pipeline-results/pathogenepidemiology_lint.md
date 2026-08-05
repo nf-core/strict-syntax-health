@@ -1,10 +1,45 @@
 # Nextflow lint results
 
-- Generated: 2026-08-04T00:32:49.440760936Z
+- Generated: 2026-08-05T00:30:00.240369136Z
 - Nextflow version: 26.07.0-edge
 - Summary: 23 warnings
 
 ## :warning: Warnings
+
+- Warning: `subworkflows/local/prepare_references.nf:15:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+      ch_queryref = Channel.of(queryurl)
+                    ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/prepare_references.nf:16:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+      ch_hostref  = Channel.of(hosturl)
+                    ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/preprocess_reads.nf:16:18`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+      ch_samples = Channel.fromPath(samplesheet)
+                   ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/preprocess_reads.nf:29:50`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      ch_reads_raw = ch_samples.map { meta, reads, platform ->
+                                                   ^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/preprocess_reads.nf:39:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+      ch_adapters = Channel.fromPath(adapters)
+                    ^^^^^^^
+  ```
 
 - Warning: `workflows/download_references.nf:14:15`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
@@ -130,39 +165,4 @@
   ```nextflow
           ch_bm3stats.stats.collect { meta, files -> files }
                                       ^^^^
-  ```
-
-- Warning: `workflows/prepare_references.nf:15:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_queryref = Channel.of(queryurl)
-                    ^^^^^^^
-  ```
-
-- Warning: `workflows/prepare_references.nf:16:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_hostref  = Channel.of(hosturl)
-                    ^^^^^^^
-  ```
-
-- Warning: `workflows/preprocess_reads.nf:16:18`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_samples = Channel.fromPath(samplesheet)
-                   ^^^^^^^
-  ```
-
-- Warning: `workflows/preprocess_reads.nf:29:50`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      ch_reads_raw = ch_samples.map { meta, reads, platform ->
-                                                   ^^^^^^^^
-  ```
-
-- Warning: `workflows/preprocess_reads.nf:39:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_adapters = Channel.fromPath(adapters)
-                    ^^^^^^^
   ```

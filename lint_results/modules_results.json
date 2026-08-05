@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "a3b737266567e58d0d2edf43f37f5cab95f47041",
+  "_repo_commit": "08d31674d8ab1f85e54573e62dc112022790a305",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -4792,6 +4792,12 @@
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gridss/call",
     "errors": 0,
     "warnings": 1,
+    "parse_error": false
+  },
+  "gridss_extractoverlappingfragments": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/gridss/extractoverlappingfragments",
+    "errors": 0,
+    "warnings": 0,
     "parse_error": false
   },
   "gridss_generateponbedpe": {

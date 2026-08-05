@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.07.0-edge
 
-Launching `./main.nf` [clever_kowalevski] revision: 71fc02080c
+Launching `./main.nf` [backstabbing_escher] revision: 71fc02080c
 
 
 ------------------------------------------------------
@@ -228,8 +228,9 @@ GTF is used directly as the source of novel transcripts.
   --rrna_blacklist                       [string]  Optional BED file of rRNA/repeat regions to exclude from the novel-transcript GTF (strand-aware 
 intersect).  
   --extended_orf_analysis                [boolean] Discover novel ORFs in novel intergenic transcripts (from StringTie or user-supplied --novel_gtf) by 
-feeding the hybrid GTF to genome-BAM ORF callers (Ribo-TISH predict, Ribotricer). Requires 
---skip_stringtie false or --novel_gtf <path>. Default false for backward compatibility.  
+feeding the hybrid GTF to genome-BAM ORF callers (Ribo-TISH predict, Ribotricer). Also enables the 
+cross-caller ORF catalogue and ORF-level quantification, which do not need a novel-transcript 
+source. Default false for backward compatibility.  
   --run_price                            [boolean] Opt in to running PRICE as an additional ORF caller (Bayesian, slow). 
   --run_rpbp                             [boolean] Opt in to running Rp-Bp as an additional ORF caller (Bayesian, slow). 
   --extra_rpbp_preparegenome_args        [string]  Extra CLI arguments passed to `prepare-rpbp-genome`. 

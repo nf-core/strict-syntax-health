@@ -38,7 +38,7 @@
   "ampliseq": {
     "full_name": "nf-core/ampliseq",
     "html_url": "https://github.com/nf-core/ampliseq",
-    "commit": "45301559dde99cc460980bd4d35924750f6aa382",
+    "commit": "8925757ecb43d996b5960a197a74041cd7de4a53",
     "errors": 0,
     "warnings": 22,
     "parse_error": false,
@@ -518,7 +518,7 @@
   "funcprofiler": {
     "full_name": "nf-core/funcprofiler",
     "html_url": "https://github.com/nf-core/funcprofiler",
-    "commit": "a0d5bccb5bed4d78f2afaff31150c1df6515714e",
+    "commit": "c03cfbf24e23fbb55331e51063562c120625e7d2",
     "errors": 0,
     "warnings": 16,
     "parse_error": false,
@@ -770,7 +770,7 @@
   "magmap": {
     "full_name": "nf-core/magmap",
     "html_url": "https://github.com/nf-core/magmap",
-    "commit": "e50c954ef76f9ded7f3ff92a82ea3206ba027903",
+    "commit": "ae6f0c0afe548fbcbccbba6baa6bdcf29e55429b",
     "errors": 0,
     "warnings": 13,
     "parse_error": false,
@@ -1094,7 +1094,7 @@
   "pathogenepidemiology": {
     "full_name": "nf-core/pathogenepidemiology",
     "html_url": "https://github.com/nf-core/pathogenepidemiology",
-    "commit": "6dcf8ee6449619c86bb5ea93e021128a4b0a9124",
+    "commit": "13621e99c2baa915276f94820023ff697a304dae",
     "errors": 0,
     "warnings": 23,
     "parse_error": false,
@@ -1154,7 +1154,7 @@
   "pixelator": {
     "full_name": "nf-core/pixelator",
     "html_url": "https://github.com/nf-core/pixelator",
-    "commit": "2935206b951f386b1559b57d3259e9e5ab76b2d3",
+    "commit": "fb54d3d97bd89033e39304f23292f675815b7c14",
     "errors": 0,
     "warnings": 18,
     "parse_error": false,
@@ -1250,7 +1250,7 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "99006f3373c78d3aac5525266bd7551b45012d4c",
+    "commit": "1be665303a37802bf0bfc0051f2eb236e08784e0",
     "errors": 0,
     "warnings": 11,
     "parse_error": false,
@@ -1322,9 +1322,9 @@
   "riboseq": {
     "full_name": "nf-core/riboseq",
     "html_url": "https://github.com/nf-core/riboseq",
-    "commit": "d26621dd6948543e81bccb06d73d28f65d9d6d57",
+    "commit": "3c17dc5a0ee94cd8c45aa066ff05eabde7c47749",
     "errors": 0,
-    "warnings": 155,
+    "warnings": 152,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -1370,7 +1370,7 @@
   "rnasplice": {
     "full_name": "nf-core/rnasplice",
     "html_url": "https://github.com/nf-core/rnasplice",
-    "commit": "8c5eab317015ce3be1c7b2946c777a39ae9eb964",
+    "commit": "b860a1b02195e5252cb739758e71fff5b7c280d8",
     "errors": 0,
     "warnings": 19,
     "parse_error": false,
@@ -1418,7 +1418,7 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "bd3e9bc999e97eadcc1f0ebdd1252272aace289f",
+    "commit": "335a0a9f51ec09e45cf7a910abd87194b009594d",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1526,7 +1526,7 @@
   "spatialaxe": {
     "full_name": "nf-core/spatialaxe",
     "html_url": "https://github.com/nf-core/spatialaxe",
-    "commit": "4985a57612d32f2c7777c49c7a73d475d2c2bd22",
+    "commit": "104575f75824c9fc607f5245c9b7dd5261411a45",
     "errors": 0,
     "warnings": 1,
     "parse_error": false,
@@ -1682,7 +1682,7 @@
   "viralmetagenome": {
     "full_name": "nf-core/viralmetagenome",
     "html_url": "https://github.com/nf-core/viralmetagenome",
-    "commit": "14f0ea343a42a8f170f62a36b93055a67aca0204",
+    "commit": "c0c101f20f0f756395a54ae847ae95bced7c0370",
     "errors": 0,
     "warnings": 4,
     "parse_error": false,
