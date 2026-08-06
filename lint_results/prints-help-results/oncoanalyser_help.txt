@@ -1,0 +1,16 @@
+$ NXF_SYNTAX_PARSER=v2 nextflow run . --help
+
+
+ N E X T F L O W   ~  version 26.07.0-edge
+
+Launching `./main.nf` [desperate_lamarck] revision: b96559179d
+
+WARN: Access to undefined parameter `genome_version` -- Initialise it to a default value eg. `params.genome_version = some_value`
+ERROR ~ 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  Genome must be set using the --genome CLI argument or in a configuration file.
+  Currently, the available genomes are:
+  GRCh37_hmf, GRCh38_hmf
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ -- Check '.nextflow.log' file for details

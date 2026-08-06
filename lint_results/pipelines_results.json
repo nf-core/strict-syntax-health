@@ -38,7 +38,7 @@
   "ampliseq": {
     "full_name": "nf-core/ampliseq",
     "html_url": "https://github.com/nf-core/ampliseq",
-    "commit": "8925757ecb43d996b5960a197a74041cd7de4a53",
+    "commit": "d9d44ae8a4602a12fedbcc50b0b025d6f63c3ea6",
     "errors": 0,
     "warnings": 22,
     "parse_error": false,
@@ -278,7 +278,7 @@
   "datasync": {
     "full_name": "nf-core/datasync",
     "html_url": "https://github.com/nf-core/datasync",
-    "commit": "03e0139cae4c27be806fca547e83af349d913dc5",
+    "commit": "71440e4a4b517b516ab5b5775a4ce89d5cedb5fb",
     "errors": 0,
     "warnings": 7,
     "parse_error": false,
@@ -518,9 +518,9 @@
   "funcprofiler": {
     "full_name": "nf-core/funcprofiler",
     "html_url": "https://github.com/nf-core/funcprofiler",
-    "commit": "c03cfbf24e23fbb55331e51063562c120625e7d2",
+    "commit": "8726325bba2f4c07182fc9b74d62b70491fb1baa",
     "errors": 0,
-    "warnings": 16,
+    "warnings": 15,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -842,7 +842,7 @@
   "metatdenovo": {
     "full_name": "nf-core/metatdenovo",
     "html_url": "https://github.com/nf-core/metatdenovo",
-    "commit": "07c798fd48afc21ac41c71bf3b7d3b599b512120",
+    "commit": "ee69f7c76b4e4054d8a70cf6a041122e58ccd031",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1022,11 +1022,11 @@
   "oncoanalyser": {
     "full_name": "nf-core/oncoanalyser",
     "html_url": "https://github.com/nf-core/oncoanalyser",
-    "commit": "0b32bbf06d2afc8d0b995f71e5d9fe83dbd4732f",
-    "errors": 30,
-    "warnings": 104,
+    "commit": "5c3339be047206cd5f3b8245ca82d1eb98ed96f0",
+    "errors": 0,
+    "warnings": 105,
     "parse_error": false,
-    "prints_help": null,
+    "prints_help": false,
     "workflow_output": true,
     "publishdir": false,
     "publishdir_count": 0
@@ -1250,7 +1250,7 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "1be665303a37802bf0bfc0051f2eb236e08784e0",
+    "commit": "b2734100ecbbd1507f5f695f1ac22328c225b336",
     "errors": 0,
     "warnings": 11,
     "parse_error": false,
@@ -1262,7 +1262,7 @@
   "rarevariantburden": {
     "full_name": "nf-core/rarevariantburden",
     "html_url": "https://github.com/nf-core/rarevariantburden",
-    "commit": "d1e22b021c93e69c3f39e1be56288394edcf22bc",
+    "commit": "1b3f20e2c0952e8f825a1c8bfb4cbd6efcb962bc",
     "errors": 0,
     "warnings": 22,
     "parse_error": false,
@@ -1322,14 +1322,14 @@
   "riboseq": {
     "full_name": "nf-core/riboseq",
     "html_url": "https://github.com/nf-core/riboseq",
-    "commit": "3c17dc5a0ee94cd8c45aa066ff05eabde7c47749",
+    "commit": "35c13c061ab28bd2433e711e145695349b9c9555",
     "errors": 0,
-    "warnings": 152,
+    "warnings": 149,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 134
+    "publishdir_count": 139
   },
   "rnadnavar": {
     "full_name": "nf-core/rnadnavar",
@@ -1454,9 +1454,9 @@
   "scrnaseq": {
     "full_name": "nf-core/scrnaseq",
     "html_url": "https://github.com/nf-core/scrnaseq",
-    "commit": "500a69b7264c9238ef2fe2814eaf2afbb0f295e2",
+    "commit": "a34bdc6b38ad00183728c859cce844426057033a",
     "errors": 0,
-    "warnings": 6,
+    "warnings": 1,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,

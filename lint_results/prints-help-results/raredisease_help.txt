@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.07.0-edge
 
-Launching `./main.nf` [elated_bose] revision: 54c8498534
+Launching `./main.nf` [modest_davinci] revision: 05f98b73fd
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -106,6 +106,8 @@ restrict the analysis to those regions/contigs.
   --homoplasmy_af_threshold           [number]  Allele frequency threshold for mitochondrial variants. Variants with an AF above this threshold will 
 be treated as homoplasmic and assigned a 1/1 genotype. Range 0-1.0. [default: 1.0]  
   --platform                          [string]  Specifies the platform on which the reads were sequenced. [default: illumina] 
+  --pre_vep_snv_filter_expression     [string]  bcftools expression used to exclude SNVs before VEP annotation. [default: INFO/GNOMADAF > 0.70 | 
+INFO/GNOMADAF_popmax > 0.70]  
   --ngsbits_samplegender_method       [string]  Method selection for ngs-bits samplegender  (accepted: xy, hetx, sry) [default: xy] 
   --restrict_to_contigs               [string]  Can be specified as RNAME[:STARTPOS[-ENDPOS]]. Multiple regions should be seperated by space 
  

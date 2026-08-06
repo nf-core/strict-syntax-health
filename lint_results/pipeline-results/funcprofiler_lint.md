@@ -1,17 +1,10 @@
 # Nextflow lint results
 
-- Generated: 2026-08-05T00:29:21.308469031Z
+- Generated: 2026-08-06T00:26:15.219655738Z
 - Nextflow version: 26.07.0-edge
-- Summary: 16 warnings
+- Summary: 15 warnings
 
 ## :warning: Warnings
-
-- Warning: `main.nf:76:9`: Variable was declared but not used
-
-  ```nextflow
-      def profileUsesContainers = (workflow.containerEngine != null && workflow.containerEngine != '')
-          ^^^^^^^^^^^^^^^^^^^^^
-  ```
 
 - Warning: `modules/local/humann4/regroup/main.nf:44:9`: Variable was declared but not used
 
@@ -55,7 +48,7 @@
                              ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/profile/main.nf:67:28`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/profile/main.nf:221:28`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .filter { meta_db, file ->

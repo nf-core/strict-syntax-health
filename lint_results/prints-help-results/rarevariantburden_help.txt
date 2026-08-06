@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.07.0-edge
 
 Downloading plugin nf-schema@2.3.0
-Launching `./main.nf` [silly_gautier] revision: f05088cb0d
+Launching `./main.nf` [tiny_celsius] revision: f05088cb0d
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -26,10 +26,10 @@ WARN: Unrecognized config option 'validation.summary.afterText'
   nf-core/rarevariantburden 1.0.0dev
 ------------------------------------------------------
 Generic options
-  trace_report_suffix: 2026-07-30_00-31-31
+  trace_report_suffix: 2026-08-06_00-29-06
 
 Core Nextflow options
-  runName            : silly_gautier
+  runName            : tiny_celsius
   launchDir          : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/rarevariantburden
   workDir            : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/rarevariantburden/work
   projectDir         : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/rarevariantburden

@@ -1,220 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-08-04T00:32:41.669469543Z
+- Generated: 2026-08-06T00:27:59.322905896Z
 - Nextflow version: 26.07.0-edge
-- Summary: 30 errors, 104 warnings
-
-## :x: Errors
-
-- Error: `subworkflows/local/read_alignment_dna/main.nf:186:17`: Unexpected input: '\*'
-
-  ```nextflow
-                  *:meta_aln,
-                  ^
-  ```
-
-- Error: `subworkflows/local/read_alignment_rna/main.nf:58:17`: Unexpected input: '\*'
-
-  ```nextflow
-                  *:meta_fastq,
-                  ^
-  ```
-
-- Error: `workflows/panel_resource_creation.nf:15:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/oncoanalyser/subworkflows/local/read_alignment_dna/main.nf'
-
-  ```nextflow
-  include { READ_ALIGNMENT_DNA                      } from '../subworkflows/local/read_alignment_dna'
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/panel_resource_creation.nf:16:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/oncoanalyser/subworkflows/local/read_alignment_rna/main.nf'
-
-  ```nextflow
-  include { READ_ALIGNMENT_RNA                      } from '../subworkflows/local/read_alignment_rna'
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/panel_resource_creation.nf:117:5`: `READ_ALIGNMENT_DNA` is not defined
-
-  ```nextflow
-      READ_ALIGNMENT_DNA(
-      ^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/panel_resource_creation.nf:125:5`: `READ_ALIGNMENT_RNA` is not defined
-
-  ```nextflow
-      READ_ALIGNMENT_RNA(
-      ^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/panel_resource_creation.nf:132:30`: `READ_ALIGNMENT_DNA` is not defined
-
-  ```nextflow
-      ch_align_dna_tumor_out = READ_ALIGNMENT_DNA.out.tumor
-                               ^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/panel_resource_creation.nf:133:31`: `READ_ALIGNMENT_DNA` is not defined
-
-  ```nextflow
-      ch_align_dna_normal_out = READ_ALIGNMENT_DNA.out.normal
-                                ^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/panel_resource_creation.nf:134:30`: `READ_ALIGNMENT_RNA` is not defined
-
-  ```nextflow
-      ch_align_rna_tumor_out = READ_ALIGNMENT_RNA.out.tumor
-                               ^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/purity_estimate.nf:11:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/oncoanalyser/subworkflows/local/read_alignment_dna/main.nf'
-
-  ```nextflow
-  include { READ_ALIGNMENT_DNA              } from '../subworkflows/local/read_alignment_dna'
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/purity_estimate.nf:96:9`: `READ_ALIGNMENT_DNA` is not defined
-
-  ```nextflow
-          READ_ALIGNMENT_DNA(
-          ^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/purity_estimate.nf:104:61`: `READ_ALIGNMENT_DNA` is not defined
-
-  ```nextflow
-          ch_align_dna_tumor_out = ch_align_dna_tumor_out.mix(READ_ALIGNMENT_DNA.out.tumor)
-                                                              ^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/purity_estimate.nf:105:63`: `READ_ALIGNMENT_DNA` is not defined
-
-  ```nextflow
-          ch_align_dna_normal_out = ch_align_dna_normal_out.mix(READ_ALIGNMENT_DNA.out.normal)
-                                                                ^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/purity_estimate.nf:106:61`: `READ_ALIGNMENT_DNA` is not defined
-
-  ```nextflow
-          ch_align_dna_donor_out = ch_align_dna_donor_out.mix(READ_ALIGNMENT_DNA.out.donor)
-                                                              ^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/targeted.nf:24:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/oncoanalyser/subworkflows/local/read_alignment_dna/main.nf'
-
-  ```nextflow
-  include { READ_ALIGNMENT_DNA       } from '../subworkflows/local/read_alignment_dna'
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/targeted.nf:25:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/oncoanalyser/subworkflows/local/read_alignment_rna/main.nf'
-
-  ```nextflow
-  include { READ_ALIGNMENT_RNA       } from '../subworkflows/local/read_alignment_rna'
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/targeted.nf:137:9`: `READ_ALIGNMENT_DNA` is not defined
-
-  ```nextflow
-          READ_ALIGNMENT_DNA(
-          ^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/targeted.nf:145:9`: `READ_ALIGNMENT_RNA` is not defined
-
-  ```nextflow
-          READ_ALIGNMENT_RNA(
-          ^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/targeted.nf:151:61`: `READ_ALIGNMENT_DNA` is not defined
-
-  ```nextflow
-          ch_align_dna_tumor_out = ch_align_dna_tumor_out.mix(READ_ALIGNMENT_DNA.out.tumor)
-                                                              ^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/targeted.nf:152:63`: `READ_ALIGNMENT_DNA` is not defined
-
-  ```nextflow
-          ch_align_dna_normal_out = ch_align_dna_normal_out.mix(READ_ALIGNMENT_DNA.out.normal)
-                                                                ^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/targeted.nf:153:61`: `READ_ALIGNMENT_DNA` is not defined
-
-  ```nextflow
-          ch_align_dna_donor_out = ch_align_dna_donor_out.mix(READ_ALIGNMENT_DNA.out.donor)
-                                                              ^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/targeted.nf:155:61`: `READ_ALIGNMENT_RNA` is not defined
-
-  ```nextflow
-          ch_align_rna_tumor_out = ch_align_rna_tumor_out.mix(READ_ALIGNMENT_RNA.out.tumor)
-                                                              ^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/wgts.nf:27:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/oncoanalyser/subworkflows/local/read_alignment_dna/main.nf'
-
-  ```nextflow
-  include { READ_ALIGNMENT_DNA    } from '../subworkflows/local/read_alignment_dna'
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/wgts.nf:28:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/oncoanalyser/subworkflows/local/read_alignment_rna/main.nf'
-
-  ```nextflow
-  include { READ_ALIGNMENT_RNA    } from '../subworkflows/local/read_alignment_rna'
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/wgts.nf:108:9`: `READ_ALIGNMENT_DNA` is not defined
-
-  ```nextflow
-          READ_ALIGNMENT_DNA(
-          ^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/wgts.nf:116:9`: `READ_ALIGNMENT_RNA` is not defined
-
-  ```nextflow
-          READ_ALIGNMENT_RNA(
-          ^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/wgts.nf:122:61`: `READ_ALIGNMENT_DNA` is not defined
-
-  ```nextflow
-          ch_align_dna_tumor_out = ch_align_dna_tumor_out.mix(READ_ALIGNMENT_DNA.out.tumor)
-                                                              ^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/wgts.nf:123:63`: `READ_ALIGNMENT_DNA` is not defined
-
-  ```nextflow
-          ch_align_dna_normal_out = ch_align_dna_normal_out.mix(READ_ALIGNMENT_DNA.out.normal)
-                                                                ^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/wgts.nf:124:61`: `READ_ALIGNMENT_DNA` is not defined
-
-  ```nextflow
-          ch_align_dna_donor_out = ch_align_dna_donor_out.mix(READ_ALIGNMENT_DNA.out.donor)
-                                                              ^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/wgts.nf:126:61`: `READ_ALIGNMENT_RNA` is not defined
-
-  ```nextflow
-          ch_align_rna_tumor_out = ch_align_rna_tumor_out.mix(READ_ALIGNMENT_RNA.out.tumor)
-                                                              ^^^^^^^^^^^^^^^^^^
-  ```
+- Summary: 105 warnings
 
 ## :warning: Warnings
 
@@ -351,13 +139,6 @@
                                                                                                        ^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/lilac_calling/main.nf:56:117`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .branch { meta, normal_dna_aln, normal_dna_idx, tumor_dna_aln, tumor_dna_idx, tumor_rna_aln, tumor_rna_idx, purple_dir ->
-                                                                                                                      ^^^^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/linx_annotation/main.nf:93:25`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
@@ -386,42 +167,42 @@
                                                                        ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/neo_prediction/main.nf:113:25`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/neo_prediction/main.nf:116:25`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .branch { meta, neo_finder_dir, tumor_rna_aln, tumor_rna_idx ->
                           ^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/neo_prediction/main.nf:113:41`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/neo_prediction/main.nf:116:41`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .branch { meta, neo_finder_dir, tumor_rna_aln, tumor_rna_idx ->
                                           ^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/neo_prediction/main.nf:113:56`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/neo_prediction/main.nf:116:56`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .branch { meta, neo_finder_dir, tumor_rna_aln, tumor_rna_idx ->
                                                          ^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/neo_prediction/main.nf:191:25`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/neo_prediction/main.nf:194:25`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .branch { meta, isofox_dir, purple_dir, sage_append_dir_somatic, lilac_dir, neo_finder_dir, annotated_fusions ->
                           ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/neo_prediction/main.nf:191:49`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/neo_prediction/main.nf:194:49`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .branch { meta, isofox_dir, purple_dir, sage_append_dir_somatic, lilac_dir, neo_finder_dir, annotated_fusions ->
                                                   ^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/neo_prediction/main.nf:191:101`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/neo_prediction/main.nf:194:101`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .branch { meta, isofox_dir, purple_dir, sage_append_dir_somatic, lilac_dir, neo_finder_dir, annotated_fusions ->
@@ -519,49 +300,77 @@
                                                                                                                     ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/read_umi_processing/main.nf:101:35`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/read_alignment_dna/main.nf:196:31`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .branch { meta_group, alns, idxs ->
+                                ^^^^
+  ```
+
+- Warning: `subworkflows/local/read_alignment_dna/main.nf:196:37`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .branch { meta_group, alns, idxs ->
+                                      ^^^^
+  ```
+
+- Warning: `subworkflows/local/read_alignment_rna/main.nf:26:25`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .branch { meta, fastq_info, fastq_fwd, fastq_rev ->
+                          ^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/read_alignment_rna/main.nf:78:18`: Variable was declared but not used
+
+  ```nextflow
+              def (meta_group, meta_fastq, fastq_fwd, fastq_rev) = inputs_tuple
+                   ^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/read_umi_processing/main.nf:102:35`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .branch { meta_fastq, fastq_fwd, fastq_rev ->
                                     ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/read_umi_processing/main.nf:101:46`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/read_umi_processing/main.nf:102:46`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .branch { meta_fastq, fastq_fwd, fastq_rev ->
                                                ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/read_umi_processing/main.nf:141:35`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/read_umi_processing/main.nf:142:35`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .branch { meta_fastq, fastq_fwd, fastq_rev ->
                                     ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/read_umi_processing/main.nf:141:46`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/read_umi_processing/main.nf:142:46`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .branch { meta_fastq, fastq_fwd, fastq_rev ->
                                                ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/read_umi_processing/main.nf:184:31`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/read_umi_processing/main.nf:186:31`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .branch { meta_fastq, fastq_info, fastq_fwd, fastq_rev ->
                                 ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/read_umi_processing/main.nf:184:43`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/read_umi_processing/main.nf:186:43`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .branch { meta_fastq, fastq_info, fastq_fwd, fastq_rev ->
                                             ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/read_umi_processing/main.nf:184:54`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/read_umi_processing/main.nf:186:54`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .branch { meta_fastq, fastq_info, fastq_fwd, fastq_rev ->
@@ -930,18 +739,4 @@
   ```nextflow
           .branch { meta, primary_purple_dir, primary_amber_dir, primary_normal_aln, longitudinal_redux_dir, longitudinal_amber_dir, longitudinal_cobalt_dir, longitudinal_sage_append_dir ->
                                                                                                              ^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/targeted.nf:96:5`: Variable was declared but not used
-
-  ```nextflow
-      ch_align_rna_qc_tumor_out = channel.empty()
-      ^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/wgts.nf:100:5`: Variable was declared but not used
-
-  ```nextflow
-      ch_align_rna_qc_tumor_out = channel.empty()
-      ^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
