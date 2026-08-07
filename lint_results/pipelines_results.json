@@ -38,7 +38,7 @@
   "ampliseq": {
     "full_name": "nf-core/ampliseq",
     "html_url": "https://github.com/nf-core/ampliseq",
-    "commit": "d9d44ae8a4602a12fedbcc50b0b025d6f63c3ea6",
+    "commit": "ee5bec22c53d4cc5e98e6a597d73888929d1dcc5",
     "errors": 0,
     "warnings": 22,
     "parse_error": false,
@@ -278,9 +278,9 @@
   "datasync": {
     "full_name": "nf-core/datasync",
     "html_url": "https://github.com/nf-core/datasync",
-    "commit": "71440e4a4b517b516ab5b5775a4ce89d5cedb5fb",
+    "commit": "fd1034908a4f837b6515e556eb27315a72672b3a",
     "errors": 0,
-    "warnings": 7,
+    "warnings": 0,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -566,7 +566,7 @@
   "genomeassembler": {
     "full_name": "nf-core/genomeassembler",
     "html_url": "https://github.com/nf-core/genomeassembler",
-    "commit": "09d9490e9effd18bf3a6079b286bfe9389f44dc8",
+    "commit": "f5481172a9e062a155cd53fe8392eeea5448812b",
     "errors": 0,
     "warnings": 8,
     "parse_error": false,
@@ -578,7 +578,7 @@
   "genomeqc": {
     "full_name": "nf-core/genomeqc",
     "html_url": "https://github.com/nf-core/genomeqc",
-    "commit": "27cebff3a836e19656780aa7dc9dd9416a83ef74",
+    "commit": "36be2f901f10f0fba0644ff093ee7924f300c938",
     "errors": 0,
     "warnings": 20,
     "parse_error": false,
@@ -770,7 +770,7 @@
   "magmap": {
     "full_name": "nf-core/magmap",
     "html_url": "https://github.com/nf-core/magmap",
-    "commit": "ae6f0c0afe548fbcbccbba6baa6bdcf29e55429b",
+    "commit": "ceb333b44d889bb06a6f3f37ef12afc5d8491a8d",
     "errors": 0,
     "warnings": 13,
     "parse_error": false,
@@ -1022,7 +1022,7 @@
   "oncoanalyser": {
     "full_name": "nf-core/oncoanalyser",
     "html_url": "https://github.com/nf-core/oncoanalyser",
-    "commit": "5c3339be047206cd5f3b8245ca82d1eb98ed96f0",
+    "commit": "0e277cc3ae4574ae83a9c7016efac49a010ec54a",
     "errors": 0,
     "warnings": 105,
     "parse_error": false,
@@ -1178,14 +1178,14 @@
   "proteinfamilies": {
     "full_name": "nf-core/proteinfamilies",
     "html_url": "https://github.com/nf-core/proteinfamilies",
-    "commit": "443ff475edcb4af8708263f0f6a35786a7c697f7",
+    "commit": "9419af6af2067e303e9a64f9aa7f20b6a8c073b9",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": true,
     "publishdir": true,
-    "publishdir_count": 73
+    "publishdir_count": 79
   },
   "proteinfold": {
     "full_name": "nf-core/proteinfold",
@@ -1250,7 +1250,7 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "b2734100ecbbd1507f5f695f1ac22328c225b336",
+    "commit": "154b4331e2408a29e2abb9de3e0d227df5f1d61e",
     "errors": 0,
     "warnings": 11,
     "parse_error": false,
@@ -1418,7 +1418,7 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "335a0a9f51ec09e45cf7a910abd87194b009594d",
+    "commit": "d4f97d4dca54287a1215ba69b471c84b3d17d99f",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1526,7 +1526,7 @@
   "spatialaxe": {
     "full_name": "nf-core/spatialaxe",
     "html_url": "https://github.com/nf-core/spatialaxe",
-    "commit": "104575f75824c9fc607f5245c9b7dd5261411a45",
+    "commit": "af4d5a93dab5d583515f974b3016bd99520d7ff3",
     "errors": 0,
     "warnings": 1,
     "parse_error": false,

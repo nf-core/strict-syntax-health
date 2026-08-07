@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-08-05T00:29:41.153659069Z
+- Generated: 2026-08-07T01:13:47.843201709Z
 - Nextflow version: 26.07.0-edge
 - Summary: 13 warnings
 
@@ -34,7 +34,7 @@
                                         ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_magmap_pipeline/main.nf:53:5`: Variable was declared but not used
+- Warning: `subworkflows/local/utils_nfcore_magmap_pipeline/main.nf:54:5`: Variable was declared but not used
 
   ```nextflow
       ch_versions = channel.empty()

@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.07.0-edge
 
-Launching `./main.nf` [amazing_saha] revision: 8dedb1d42a
+Launching `./main.nf` [disturbed_monod] revision: 8dedb1d42a
 
 
 ------------------------------------------------------
@@ -12,7 +12,7 @@ Launching `./main.nf` [amazing_saha] revision: 8dedb1d42a
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/proteinfamilies 2.5.0dev
+  nf-core/proteinfamilies 2.5.0
 ------------------------------------------------------
 Typical pipeline command:
 
@@ -62,6 +62,15 @@ sensitive clustering of larger datasets.  (accepted: linclust, cluster) [default
   --cluster_size_threshold                       [integer] Minimum clustering chunk size threshold to create seed Multiple Sequence Alignments upon. 
 [default: 25]  
   --save_mmseqs_chunked_fasta                    [boolean] Save membership-filtered initial mmseqs clusters in fasta format 
+
+Family generation parameters
+  --family_generation_algorithm                  [string]  Choose the algorithm that turns clusters into family models. Either 'standard', aligning each 
+cluster and building one HMM per task, or 'iterative', letting mgnifam loop HMM building, 
+recruitment and realignment per cluster.  (accepted: standard, iterative) [default: standard] 
+ 
+  --clusters_per_chunk                           [integer] Number of clusters handed to each family generation task by the 'iterative' algorithm. [default: 
+1000]  
+  --save_iterative_family_metadata               [boolean] Save the family rosters and diagnostics reported by the 'iterative' algorithm 
 
 Alignment parameters
   --alignment_tool                               [string]  Choose alignment tool. FAMSA is recommended as best time-memory-accuracy combination option.  

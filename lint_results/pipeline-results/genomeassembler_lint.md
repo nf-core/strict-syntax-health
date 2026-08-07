@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-07-23T00:30:51.321231119Z
+- Generated: 2026-08-07T01:13:02.709595460Z
 - Nextflow version: 26.07.0-edge
 - Summary: 8 warnings
 
@@ -55,7 +55,7 @@
       ^^^^^
   ```
 
-- Warning: `workflows/genomeassembler.nf:110:5`: Variable was declared but not used
+- Warning: `workflows/genomeassembler.nf:109:5`: Variable was declared but not used
 
   ```nextflow
       ch_main_scaffolded = ch_main_polished_branched
