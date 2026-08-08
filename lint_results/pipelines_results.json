@@ -38,7 +38,7 @@
   "ampliseq": {
     "full_name": "nf-core/ampliseq",
     "html_url": "https://github.com/nf-core/ampliseq",
-    "commit": "ee5bec22c53d4cc5e98e6a597d73888929d1dcc5",
+    "commit": "9e5dc4925c5d2a4d99cbfc779c7019fd3902d042",
     "errors": 0,
     "warnings": 22,
     "parse_error": false,
@@ -278,9 +278,9 @@
   "datasync": {
     "full_name": "nf-core/datasync",
     "html_url": "https://github.com/nf-core/datasync",
-    "commit": "fd1034908a4f837b6515e556eb27315a72672b3a",
+    "commit": "5ce0a10dca3476e77378c15cf138ea408f7695bf",
     "errors": 0,
-    "warnings": 0,
+    "warnings": 1,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -578,7 +578,7 @@
   "genomeqc": {
     "full_name": "nf-core/genomeqc",
     "html_url": "https://github.com/nf-core/genomeqc",
-    "commit": "36be2f901f10f0fba0644ff093ee7924f300c938",
+    "commit": "f01174d6203b5e1788e0c8c7ef4e172113bf5597",
     "errors": 0,
     "warnings": 20,
     "parse_error": false,
@@ -698,9 +698,9 @@
   "isoseq": {
     "full_name": "nf-core/isoseq",
     "html_url": "https://github.com/nf-core/isoseq",
-    "commit": "b8a31d04f6039a20e292046dd208751734005eee",
+    "commit": "a4438703bd44d9f078c24456c6cbcc8742c0f7c7",
     "errors": 0,
-    "warnings": 10,
+    "warnings": 9,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -746,9 +746,9 @@
   "lsmquant": {
     "full_name": "nf-core/lsmquant",
     "html_url": "https://github.com/nf-core/lsmquant",
-    "commit": "599df9c144fe45c31c2015dc8535a4c82fb850bd",
+    "commit": "7a2c9aee18efb41ee6647f7d5a4e62e370c4ca0b",
     "errors": 0,
-    "warnings": 23,
+    "warnings": 19,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -1178,7 +1178,7 @@
   "proteinfamilies": {
     "full_name": "nf-core/proteinfamilies",
     "html_url": "https://github.com/nf-core/proteinfamilies",
-    "commit": "9419af6af2067e303e9a64f9aa7f20b6a8c073b9",
+    "commit": "a2b6a091814778459c0508a1918a11b98ce7c734",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1250,7 +1250,7 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "154b4331e2408a29e2abb9de3e0d227df5f1d61e",
+    "commit": "e15c4e459fb5898fd2435bf5f1e22fc0a5b9762a",
     "errors": 0,
     "warnings": 11,
     "parse_error": false,
@@ -1322,7 +1322,7 @@
   "riboseq": {
     "full_name": "nf-core/riboseq",
     "html_url": "https://github.com/nf-core/riboseq",
-    "commit": "35c13c061ab28bd2433e711e145695349b9c9555",
+    "commit": "40851ec52ff9b45a18559f3fa141a78dc7e7d657",
     "errors": 0,
     "warnings": 149,
     "parse_error": false,
@@ -1418,7 +1418,7 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "d4f97d4dca54287a1215ba69b471c84b3d17d99f",
+    "commit": "0804b9a768f83e05ecf5fb77c691eb1702f11fe2",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1526,7 +1526,7 @@
   "spatialaxe": {
     "full_name": "nf-core/spatialaxe",
     "html_url": "https://github.com/nf-core/spatialaxe",
-    "commit": "af4d5a93dab5d583515f974b3016bd99520d7ff3",
+    "commit": "e19e07618ae6c97ee8d5a797d576eafad73b115a",
     "errors": 0,
     "warnings": 1,
     "parse_error": false,
@@ -1574,7 +1574,7 @@
   "taxprofiler": {
     "full_name": "nf-core/taxprofiler",
     "html_url": "https://github.com/nf-core/taxprofiler",
-    "commit": "9a8cef2efb6930b43494e2d1bb2f786fde9182e9",
+    "commit": "33f440417361661b2e9a5b8af3c3db7445725691",
     "errors": 0,
     "warnings": 100,
     "parse_error": false,

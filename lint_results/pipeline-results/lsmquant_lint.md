@@ -1,17 +1,10 @@
 # Nextflow lint results
 
-- Generated: 2026-07-09T00:33:13.168101394Z
-- Nextflow version: 26.06.0-edge
-- Summary: 23 warnings
+- Generated: 2026-08-08T00:15:58.926012030Z
+- Nextflow version: 26.07.0-edge
+- Summary: 19 warnings
 
 ## :warning: Warnings
-
-- Warning: `main.nf:47:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      multiqc_report = LSMQUANT.out.multiqc_report
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
 
 - Warning: `modules/local/mat2json/main.nf:20:9`: Variable was declared but not used
 
@@ -144,25 +137,4 @@
   ```nextflow
       ch_samplesheet = Channel.fromList(samplesheetToList(params.input, "${projectDir}/assets/schema_input.json"))
                        ^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      valid_config = valid_config
-      ^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
   ```

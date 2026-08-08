@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.07.0-edge
 
-Launching `./main.nf` [reverent_kirch] revision: 2e78a1a992
+Launching `./main.nf` [astonishing_lamport] revision: 2e78a1a992
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -14,7 +14,7 @@ WARN: Unrecognized config option 'validation.monochromeLogs'
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/isoseq 2.1.0dev
+  nf-core/isoseq 3.0.0
 ------------------------------------------------------
 Typical pipeline command:
 

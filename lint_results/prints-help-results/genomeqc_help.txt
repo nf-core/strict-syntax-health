@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.07.0-edge
 
 Downloading plugin nf-schema@2.5.1
-Launching `./main.nf` [nostalgic_bardeen] revision: f90c9eb6a8
+Launching `./main.nf` [grave_heisenberg] revision: f90c9eb6a8
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -15,7 +15,7 @@ WARN: Unrecognized config option 'validation.monochromeLogs'
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/genomeqc 1.0.0
+  nf-core/genomeqc 1.0.0dev
 ------------------------------------------------------
 Typical pipeline command:
 
@@ -65,9 +65,16 @@ ortholog-containing sequences.
   --ortho_version               [string]          OrthoFinder major version to run.  (accepted: v2, v3) [default: v3] 
   --tree_scale                  [integer]         Modifies scale of the tree plot in the tree summary, default value is '0.0005'. Useful if tree tips 
 overlap with the concatenated plots. Very sensitive, increase/decrease by two-fold.  
+  --tree_style                  [string]          Tree layout style for the tree summary plot.  (accepted: roundrect, ellipse, rectangular, 
+circular) [default: roundrect]  
+  --circular_rings              [string]          Circular layout only: which summary stats to draw as rings. 
   --repeat                      [string]          DNA string for tidk motif search 
   --ramdisk                     [string]          Path to RAM-backed tmpfs or ramfs location to store FCS-GX database 
   --container_engine            [string]          Container engine to run shint app [default: docker] 
+  --quality_preset              [string]          Circular layout only: phylogenetic-group thresholds used to score the quality (traffic-light) rings. 
+ (accepted: generic, vertebrate, insect, plant, fungi, bacteria)  
+  --quality_thresholds          [string]          Circular layout only: override individual --quality_preset cut-offs. 
+  --show_ring_values            [boolean]         Circular layout only: print each value on its ring. [default: false] 
 
 TE annotation options
   --te                          [string]  TE annotation method to run. Use 'hite' for HiTE or 'repeatmasker' for the full RepeatMasker 
@@ -83,7 +90,7 @@ typically requires 24 CPUs and 24–48 h per genome. When false, only the curate
 used.  
   --repeatmasker_speed          [string]  RepeatMasker sensitivity/speed mode. 'default' is most sensitive; 'q' (quick) is ~5x faster; 'qq' 
 (rush) is fastest with lowest sensitivity.  (accepted: default, q, qq) [default: qq]  
-  --RM_download_db              [boolean] Download h5 partition files from the URLs specified in RM_db. [default: true] 
+  --RM_download_db              [boolean] Download h5 partition files from the URLs specified in RM_db. [default: false] 
   --RM_db                       [array]   List of URLs to DFAM h5 partition files to download. 
   --te_clusterer                [string]  Clustering tool used to dereplicate the repeat library before RepeatMasker. 'mmseqs' (default) uses 
 MMseqs2 easy-cluster; 'linclust' uses MMseqs2 easy-linclust (linear time, less sensitive); 'cdhit' 

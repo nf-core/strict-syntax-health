@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-08-07T01:13:22.507212501Z
+- Generated: 2026-08-08T00:15:26.408192160Z
 - Nextflow version: 26.07.0-edge
 - Summary: 20 warnings
 
@@ -34,7 +34,7 @@
           ^^^^^^
   ```
 
-- Warning: `modules/local/shiny_app/main.nf:26:9`: Variable was declared but not used
+- Warning: `modules/local/shiny_app/main.nf:29:9`: Variable was declared but not used
 
   ```nextflow
       def results_path     = file(params.outdir).toAbsolutePath()
@@ -76,35 +76,35 @@
                               ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/fasta_annotate_te/main.nf:48:29`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/fasta_annotate_te/main.nf:51:29`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                       | map { meta, h5 -> h5 }
                               ^^^^
   ```
 
-- Warning: `subworkflows/local/fasta_annotate_te/main.nf:110:66`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/fasta_annotate_te/main.nf:113:66`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   ch_shared_lib = CDHIT_CDHITEST.out.fasta | map { meta, fasta -> fasta }
                                                                    ^^^^
   ```
 
-- Warning: `subworkflows/local/fasta_annotate_te/main.nf:113:81`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/fasta_annotate_te/main.nf:116:81`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   ch_shared_lib = MMSEQS_EASYLINCLUST.out.representatives | map { meta, fasta -> fasta }
                                                                                   ^^^^
   ```
 
-- Warning: `subworkflows/local/fasta_annotate_te/main.nf:116:80`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/fasta_annotate_te/main.nf:119:80`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   ch_shared_lib = MMSEQS_EASYCLUSTER.out.representatives | map { meta, fasta -> fasta }
                                                                                  ^^^^
   ```
 
-- Warning: `subworkflows/local/fasta_annotate_te/main.nf:121:44`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/fasta_annotate_te/main.nf:124:44`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                                | map { meta, fasta -> meta }
