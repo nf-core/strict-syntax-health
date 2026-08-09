@@ -11,7 +11,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 > See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline.
 > **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**
 
-- **Last updated:** 2026-08-08 00:20:23 UTC
+- **Last updated:** 2026-08-09 00:15:25 UTC
 - **Nextflow version:** 26.07.0-edge
 
 ## Pipelines
@@ -246,7 +246,7 @@ The status emoji next to each pipeline shows its migration state: :white_check_m
 | :x: [genephylomodeler](https://github.com/nf-core/genephylomodeler)                   |     No      |   Yes (12)   |     [View](lint_results/workflow-outputs-results/genephylomodeler_outputs.md)      |
 | :x: [genomeannotator](https://github.com/nf-core/genomeannotator)                     |     No      |   Yes (14)   |      [View](lint_results/workflow-outputs-results/genomeannotator_outputs.md)      |
 | :x: [genomeassembler](https://github.com/nf-core/genomeassembler)                     |     No      |   Yes (93)   |      [View](lint_results/workflow-outputs-results/genomeassembler_outputs.md)      |
-| :x: [genomeqc](https://github.com/nf-core/genomeqc)                                   |     No      |   Yes (47)   |         [View](lint_results/workflow-outputs-results/genomeqc_outputs.md)          |
+| :x: [genomeqc](https://github.com/nf-core/genomeqc)                                   |     No      |   Yes (46)   |         [View](lint_results/workflow-outputs-results/genomeqc_outputs.md)          |
 | :x: [genomeskim](https://github.com/nf-core/genomeskim)                               |     No      |   Yes (3)    |        [View](lint_results/workflow-outputs-results/genomeskim_outputs.md)         |
 | :x: [genomicrelatedness](https://github.com/nf-core/genomicrelatedness)               |     No      |   Yes (61)   |    [View](lint_results/workflow-outputs-results/genomicrelatedness_outputs.md)     |
 | :x: [gwas](https://github.com/nf-core/gwas)                                           |     No      |   Yes (3)    |           [View](lint_results/workflow-outputs-results/gwas_outputs.md)            |
