@@ -578,7 +578,7 @@
   "genomeqc": {
     "full_name": "nf-core/genomeqc",
     "html_url": "https://github.com/nf-core/genomeqc",
-    "commit": "d3811fe3cbb43092fa45e909aec33112b634bf21",
+    "commit": "25b817fea2900614726d04605e37f09280692657",
     "errors": 0,
     "warnings": 20,
     "parse_error": false,
@@ -1322,7 +1322,7 @@
   "riboseq": {
     "full_name": "nf-core/riboseq",
     "html_url": "https://github.com/nf-core/riboseq",
-    "commit": "40851ec52ff9b45a18559f3fa141a78dc7e7d657",
+    "commit": "d343121849e992cae39456684ff0c5be5793c3fa",
     "errors": 0,
     "warnings": 149,
     "parse_error": false,
@@ -1562,7 +1562,7 @@
   "stableexpression": {
     "full_name": "nf-core/stableexpression",
     "html_url": "https://github.com/nf-core/stableexpression",
-    "commit": "e7b43f32fc5f48cb9c41f42cce58c51893b819e1",
+    "commit": "dfde809bd04f328e8421b044eec67a554cc9b220",
     "errors": 0,
     "warnings": 33,
     "parse_error": false,

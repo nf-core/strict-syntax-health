@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-08-08T00:17:25.266250337Z
+- Generated: 2026-08-10T00:16:16.230306576Z
 - Nextflow version: 26.07.0-edge
 - Summary: 149 warnings
 
@@ -90,77 +90,77 @@
                                                     ^^
   ```
 
-- Warning: `conf/modules.config:848:86`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:863:86`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   saveAs: { params.save_align_intermeds || params.save_umi_intermeds ? it : null }
                                                                                        ^^
   ```
 
-- Warning: `conf/modules.config:860:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:875:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               saveAs: { params.save_align_intermeds || params.save_umi_intermeds ? it : null }
                                                                                    ^^
   ```
 
-- Warning: `conf/modules.config:882:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:897:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               saveAs: { params.save_align_intermeds || params.save_umi_intermeds ? it : null }
                                                                                    ^^
   ```
 
-- Warning: `conf/modules.config:898:86`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:913:86`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   saveAs: { params.save_align_intermeds || params.save_umi_intermeds ? it : null }
                                                                                        ^^
   ```
 
-- Warning: `conf/modules.config:909:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:924:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               saveAs: { params.save_align_intermeds || params.save_umi_intermeds ? it : null }
                                                                                    ^^
   ```
 
-- Warning: `conf/modules.config:918:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:933:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               saveAs: { params.save_align_intermeds || params.save_umi_intermeds ? it : null }
                                                                                    ^^
   ```
 
-- Warning: `conf/modules.config:928:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:943:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               saveAs: { params.save_align_intermeds || params.save_umi_intermeds ? it : null }
                                                                                    ^^
   ```
 
-- Warning: `conf/modules.config:937:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:952:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               saveAs: { params.save_align_intermeds || params.save_umi_intermeds ? it : null }
                                                                                    ^^
   ```
 
-- Warning: `conf/modules.config:1417:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:1432:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   saveAs: { params.save_align_intermeds ? it : null }
                                                           ^^
   ```
 
-- Warning: `conf/modules.config:1428:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:1443:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   saveAs: { params.save_unaligned ? it : null }
                                                     ^^
   ```
 
-- Warning: `conf/modules.config:1456:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:1471:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               saveAs: { params.save_align_intermeds ? it : null }
