@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "aaedc8e6b81abbee1c0b1d4c924925864323de6a",
+  "_repo_commit": "473747a1ba2887a65a3e88873732d28038777800",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -7358,6 +7358,30 @@
   },
   "numorph_resample": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/numorph/resample",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "oarfish_alignmentmode": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/oarfish/alignmentmode",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "oarfish_alignmentprojectionmode": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/oarfish/alignmentprojectionmode",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "oarfish_readmode": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/oarfish/readmode",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "oarfish_readprojectionmode": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/oarfish/readprojectionmode",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

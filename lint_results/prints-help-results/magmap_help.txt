@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.07.0-edge
 
-Launching `./main.nf` [golden_galileo] revision: 7b9f13c859
+Launching `./main.nf` [loving_bernard] revision: ade3140203
 
 
 ------------------------------------------------------
@@ -22,33 +22,34 @@ help message of that parameter will be printed.
 or `--helpFull`.  
 
 Input/output options
-  --input                       [string] Path to a file containing information about the samples in the experiment. 
-  --genomeinfo                  [string] Path to a file containing information about the genomes to map to, see [usage 
+  --input                       [string]  Path to a file containing information about the samples in the experiment. 
+  --genomeinfo                  [string]  Path to a file containing information about the genomes to map to, see [usage 
 docs](https://nf-co.re/magmap/usage#genome-input).  
-  --gtdb_metadata               [string] Comma-separated list of paths to tab-separated files containing information from GTDB. For column 
+  --gtdb_metadata               [string]  Comma-separated list of paths to tab-separated files containing information from GTDB. For column 
 description, see [usage docs](https://nf-co.re/magmap/usage#gtdb-metadata).  
-  --checkm_metadata             [string] Comma-separated list of path to tab-separated files containing the output from CheckM. For column 
+  --checkm_metadata             [string]  Comma-separated list of path to tab-separated files containing the output from CheckM. For column 
 description, see [usage docs](https://nf-co.re/magmap/usage#checkmcheckm2-metadata).  
-  --gtdbtk_metadata             [string] Comma-separated list of paths to tab-separated files containing a .tsv file which has the same 
+  --gtdbtk_metadata             [string]  Comma-separated list of paths to tab-separated files containing a .tsv file which has the same 
 columns as the output from GTDB-Tk, see [usage 
 docs](https://nf-co.re/magmap/usage#gtdb-tk-metadata).  
-  --indexes                     [string] Comma-separated list of paths to Sourmash .sbt/.sbt.zip files. 
-  --remote_genome_sources       [string] Comma-separated list of paths to tsv files with information about genomes in NCBI 'assembly_summary' 
+  --indexes                     [string]  Comma-separated list of paths to Sourmash .sbt/.sbt.zip files. 
+  --remote_genome_sources       [string]  Comma-separated list of paths to tsv files with information about genomes in NCBI 'assembly_summary' 
 format. The default are GenBank and RefSeq summary files. [default: 
 https://ftp.ncbi.nlm.nih.gov/genomes/ASSEMBLY_REPORTS/assembly_summary_refseq.txt,https://ftp.ncbi.nlm.nih.gov/genomes/ASSEMBLY_REPORTS/assembly_summary_genbank.txt] 
  
-  --genome_store_dir            [string] Path to a directory where downloaded genome files is stored. [default: magmap_genomes] 
-  --prokka_store_dir            [string] Path to a directory where prokka output is stored. [default: magmap_prokka] 
-  --annotator                   [string] Which tool to annotate genomes lacking a GFF with: 'prokka', 'bakta_supported_only' (Bacteria to 
+  --genome_store_dir            [string]  Path to a directory where downloaded genome files is stored. [default: magmap_genomes] 
+  --prokka_store_dir            [string]  Path to a directory where prokka output is stored. [default: magmap_prokka] 
+  --annotator                   [string]  Which tool to annotate genomes lacking a GFF with: 'prokka', 'bakta_supported_only' (Bacteria to 
 Bakta, everything else -- Archaea and unclassified genomes -- to Prokka) or 'bakta_all' (everything 
 to Bakta, including domains Bakta wasn't designed for).  (accepted: prokka, 
 bakta_supported_only, bakta_all) [default: prokka]  
-  --bakta_db                    [string] Path to a directory holding the Bakta database, used only when --annotator is bakta_supported_only 
+  --bakta_db                    [string]  Path to a directory holding the Bakta database, used only when --annotator is bakta_supported_only 
 or bakta_all. [default: magmap_bakta_db]  
-  --bakta_store_dir             [string] Path to a directory where Bakta annotation output is stored. [default: magmap_bakta] 
-  --email                       [string] Email address for completion summary. 
-  --multiqc_title               [string] MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
-  --outdir                      [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
+  --bakta_store_dir             [string]  Path to a directory where Bakta annotation output is stored. [default: magmap_bakta] 
+  --save_parquet                [boolean] Also write the summary tables in Parquet format, alongside the default gzipped TSV. 
+  --email                       [string]  Email address for completion summary. 
+  --multiqc_title               [string]  MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+  --outdir                      [string]  The output directory where the results will be saved. You have to use absolute paths to storage on 
 Cloud infrastructure.  
 
 Quality control options
@@ -90,9 +91,6 @@ the most complete) or 'gtdb' (use GTDB's criterion of completeness and contamina
   --skip_sourmash               [boolean] Skip Sourmash filtering for user-provided genomes [default: true] 
   --sourmash_ksize              [integer] K-mer size used by Sourmash [default: 21] 
   --sourmash_save_sourmash      [boolean] Save Sourmash output 
-
-Output options
-  --save_parquet                [boolean] Also write the summary tables in Parquet format, alongside the default gzipped TSV. 
 
 Generic options
   --multiqc_methods_description [string]          Custom MultiQC yaml file containing HTML including a methods description. 

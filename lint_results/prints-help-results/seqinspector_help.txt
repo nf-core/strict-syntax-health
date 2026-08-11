@@ -1,11 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
-Nextflow 26.07.0-edge is available - Please consider updating your version to it
 
- N E X T F L O W   ~  version 26.06.0-edge
+ N E X T F L O W   ~  version 26.07.0-edge
 
 Downloading plugin nf-schema@2.6.1
-Launching `./main.nf` [distracted_snyder] revision: 0bdadec2b6
+Launching `./main.nf` [shrivelled_williams] revision: 0bdadec2b6
 
 
 ------------------------------------------------------

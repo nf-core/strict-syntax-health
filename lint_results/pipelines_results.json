@@ -38,7 +38,7 @@
   "ampliseq": {
     "full_name": "nf-core/ampliseq",
     "html_url": "https://github.com/nf-core/ampliseq",
-    "commit": "9e5dc4925c5d2a4d99cbfc779c7019fd3902d042",
+    "commit": "1f255002b3be7ca2143f01920affe6badcc30c09",
     "errors": 0,
     "warnings": 22,
     "parse_error": false,
@@ -506,9 +506,9 @@
   "fetchngs": {
     "full_name": "nf-core/fetchngs",
     "html_url": "https://github.com/nf-core/fetchngs",
-    "commit": "0ae5518f251fd8ea78c5785f8c9e55fdf0e1db2c",
+    "commit": "536465a126754078a8328fc67eacefd79a57b0f2",
     "errors": 0,
-    "warnings": 15,
+    "warnings": 0,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -578,14 +578,14 @@
   "genomeqc": {
     "full_name": "nf-core/genomeqc",
     "html_url": "https://github.com/nf-core/genomeqc",
-    "commit": "25b817fea2900614726d04605e37f09280692657",
+    "commit": "71605452f6b2b7d477d05db726fa587cbbd53ce3",
     "errors": 0,
-    "warnings": 20,
+    "warnings": 19,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 46
+    "publishdir_count": 47
   },
   "genomeskim": {
     "full_name": "nf-core/genomeskim",
@@ -770,7 +770,7 @@
   "magmap": {
     "full_name": "nf-core/magmap",
     "html_url": "https://github.com/nf-core/magmap",
-    "commit": "ceb333b44d889bb06a6f3f37ef12afc5d8491a8d",
+    "commit": "ba3b33fa9c61c00f462d132b1eaf8e708804bee2",
     "errors": 0,
     "warnings": 13,
     "parse_error": false,
@@ -842,7 +842,7 @@
   "metatdenovo": {
     "full_name": "nf-core/metatdenovo",
     "html_url": "https://github.com/nf-core/metatdenovo",
-    "commit": "ee69f7c76b4e4054d8a70cf6a041122e58ccd031",
+    "commit": "3f61d92ac59dfd02112afd2a64f9f5ef7ee9b598",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1382,11 +1382,11 @@
   "rnastructurome": {
     "full_name": "nf-core/rnastructurome",
     "html_url": "https://github.com/nf-core/rnastructurome",
-    "commit": "20f11432b4134cf8bcceb6df09ceb570e4f02ed2",
+    "commit": "de28c3593b2dd89bda7375fcb8a06e7b4383b006",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
-    "prints_help": false,
+    "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
     "publishdir_count": 53
@@ -1418,7 +1418,7 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "0804b9a768f83e05ecf5fb77c691eb1702f11fe2",
+    "commit": "8679fe6185dc86195f9b4dbf8dce7c28de931133",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1430,7 +1430,7 @@
   "scdownstream": {
     "full_name": "nf-core/scdownstream",
     "html_url": "https://github.com/nf-core/scdownstream",
-    "commit": "98697a8efa6b4823ec7f08a9513a7538104842ac",
+    "commit": "f4943e583992604765cde45a143388fab4b2853e",
     "errors": 0,
     "warnings": 22,
     "parse_error": false,
@@ -1466,9 +1466,9 @@
   "seqinspector": {
     "full_name": "nf-core/seqinspector",
     "html_url": "https://github.com/nf-core/seqinspector",
-    "commit": "00d5b6943d0e6b90d761f485f5b640d6c3bb8534",
+    "commit": "651c762f4b71934bcc11522b7b823f00058a3d00",
     "errors": 0,
-    "warnings": 3,
+    "warnings": 0,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": true,

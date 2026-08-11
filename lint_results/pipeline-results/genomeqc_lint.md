@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-08-10T00:15:29.520132203Z
+- Generated: 2026-08-11T00:15:36.655688129Z
 - Nextflow version: 26.07.0-edge
-- Summary: 20 warnings
+- Summary: 19 warnings
 
 ## :warning: Warnings
 
@@ -69,13 +69,6 @@
                                            ^^
   ```
 
-- Warning: `subworkflows/local/decontamination.nf:39:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          ch_gxdb_manifest ?: Channel.empty() // If there no manifest, use empty channel (won't run)
-                              ^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/fasta_annotate_te/main.nf:51:29`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
@@ -111,35 +104,35 @@
                                              ^^^^^
   ```
 
-- Warning: `subworkflows/local/genome_and_annotation.nf:26:32`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/genome_and_annotation/main.nf:26:32`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_fasta.view { "Running ${it[0]} on genome and annotation mode"}
                                  ^^
   ```
 
-- Warning: `subworkflows/local/genome_and_annotation.nf:259:114`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/genome_and_annotation/main.nf:259:114`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       buscos_per_seqs            = !params.skip_busco ? GENOMEANNOTATIONBUSCOIDEOGRAM.out.busco_mappings.collect { meta, table -> table}.map { tables -> tables.toSorted { a, b -> a.name <=> b.name } } : channel.empty() // channel: [ val(meta), [csv] ]
                                                                                                                    ^^^^
   ```
 
-- Warning: `subworkflows/local/genome_only.nf:17:32`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/genome_only/main.nf:17:32`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_fasta.view { "Running ${it[0]} on genome only mode"}
                                  ^^
   ```
 
-- Warning: `subworkflows/local/genome_only.nf:19:5`: Variable was declared but not used
+- Warning: `subworkflows/local/genome_only/main.nf:19:5`: Variable was declared but not used
 
   ```nextflow
       ch_versions   = channel.empty()
       ^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/genome_only.nf:129:101`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/genome_only/main.nf:129:101`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       buscos_per_seqs         = !params.skip_busco ? GENOMEBUSCOIDEOGRAM.out.busco_mappings.collect { meta, table -> table}.map { tables -> tables.toSorted { a, b -> a.name <=> b.name } } : channel.empty() // channel: [ csv ]
