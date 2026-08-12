@@ -3,8 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.07.0-edge
 
-Downloading plugin nf-schema@2.7.2
-Launching `./main.nf` [gloomy_jepsen] revision: 71fc02080c
+Launching `./main.nf` [thirsty_baekeland] revision: 71fc02080c
 
 
 ------------------------------------------------------
@@ -237,11 +236,13 @@ source. Default false for backward compatibility.
   --run_rpbp                             [boolean] Opt in to running Rp-Bp as an additional ORF caller (Bayesian, slow). 
   --extra_rpbp_preparegenome_args        [string]  Extra CLI arguments passed to `prepare-rpbp-genome`. 
   --extra_rpbp_predictorfs_args          [string]  Extra CLI arguments passed to `select-final-prediction-set`. 
-  --skip_orf_collapse                    [boolean] Skip the peptide-level smORF deduplication of the cross-sample ORF catalogue. 
+  --skip_orf_collapse                    [boolean] Skip the peptide-level small-ORF deduplication of the cross-sample ORF catalogue. 
   --orf_min_callers                      [integer] Minimum number of ORF callers that must agree for an ORF to enter the consensus catalogue view. 
 [default: 1]  
   --orf_min_samples                      [integer] Minimum number of samples an ORF must recur in to enter the consensus catalogue view. [default: 
 1]  
+  --smorf_max_aa                         [integer] Maximum amino-acid length flagged as a small ORF in the catalogue's `is_smorf` column. [default: 
+100]  
 
 Generic options
   --multiqc_methods_description          [string]          Custom MultiQC yaml file containing HTML including a methods description. 

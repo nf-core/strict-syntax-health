@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-08-08T00:15:45.798271406Z
+- Generated: 2026-08-12T00:20:34.173737195Z
 - Nextflow version: 26.07.0-edge
 - Summary: 9 warnings
 
@@ -27,42 +27,42 @@
       ^^^^^
   ```
 
-- Warning: `workflows/isoseq.nf:211:39`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/isoseq.nf:215:39`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       GSTAMA_MERGE(ch_tmerge_in.map { [ it[0], it[1] ] }, ch_tmerge_in.map { it[2] }) // Merge all bed files from one sample into a uniq bed file
                                         ^^
   ```
 
-- Warning: `workflows/isoseq.nf:211:46`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/isoseq.nf:215:46`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       GSTAMA_MERGE(ch_tmerge_in.map { [ it[0], it[1] ] }, ch_tmerge_in.map { it[2] }) // Merge all bed files from one sample into a uniq bed file
                                                ^^
   ```
 
-- Warning: `workflows/isoseq.nf:211:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/isoseq.nf:215:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       GSTAMA_MERGE(ch_tmerge_in.map { [ it[0], it[1] ] }, ch_tmerge_in.map { it[2] }) // Merge all bed files from one sample into a uniq bed file
                                                                              ^^
   ```
 
-- Warning: `workflows/isoseq.nf:281:75`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/isoseq.nf:285:75`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(PBCCS.out.report_json.collect{it[1]}.ifEmpty([]))
                                                                             ^^
   ```
 
-- Warning: `workflows/isoseq.nf:282:70`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/isoseq.nf:286:70`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(LIMA.out.summary.collect{it[1]}.ifEmpty([]))
                                                                        ^^
   ```
 
-- Warning: `workflows/isoseq.nf:283:69`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/isoseq.nf:287:69`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(LIMA.out.counts.collect{it[1]}.ifEmpty([]))

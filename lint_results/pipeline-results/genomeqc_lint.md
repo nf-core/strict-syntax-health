@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-08-11T00:15:36.655688129Z
+- Generated: 2026-08-12T00:20:16.359966800Z
 - Nextflow version: 26.07.0-edge
 - Summary: 19 warnings
 
@@ -16,7 +16,7 @@
 - Warning: `modules/local/genomeannotationbuscoideogram/main.nf:44:9`: Variable was declared but not used
 
   ```nextflow
-      def prefix = "${genusspeci}_${lineage}"
+      def prefix = "${meta.id}_${meta.lineage}"
           ^^^^^^
   ```
 
@@ -41,7 +41,7 @@
           ^^^^^^^^^^^^
   ```
 
-- Warning: `modules/local/te_tbl_2_table/main.nf:18:9`: Variable was declared but not used
+- Warning: `modules/local/te_tbl_2_table/main.nf:19:9`: Variable was declared but not used
 
   ```nextflow
       def args   = task.ext.args ?: ''

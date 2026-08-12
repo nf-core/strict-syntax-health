@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "473747a1ba2887a65a3e88873732d28038777800",
+  "_repo_commit": "ccaea62d10f8457f1166ada25671ef6f51929f29",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -1910,6 +1910,12 @@
   },
   "circularmapper_realignsamfile": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/circularmapper/realignsamfile",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "ciri2": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ciri2",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

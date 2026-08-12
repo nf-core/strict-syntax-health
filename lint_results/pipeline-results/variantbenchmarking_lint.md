@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-07-29T00:33:30.169543506Z
+- Generated: 2026-08-12T00:25:11.517098831Z
 - Nextflow version: 26.07.0-edge
 - Summary: 11 warnings
 
@@ -69,14 +69,14 @@
                                      ^^^^^
   ```
 
-- Warning: `workflows/variantbenchmarking.nf:231:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/variantbenchmarking.nf:229:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           def _meta = it[0]
                       ^^
   ```
 
-- Warning: `workflows/variantbenchmarking.nf:232:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/variantbenchmarking.nf:230:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           def regions_file = it[2]

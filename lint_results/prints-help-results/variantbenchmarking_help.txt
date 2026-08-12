@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.07.0-edge
 
 Downloading plugin nf-prov@1.2.2
-Launching `./main.nf` [mad_bassi] revision: 932e26d8da
+Launching `./main.nf` [extravagant_cajal] revision: 932e26d8da
 
 WARN: Unrecognized config option 'prov.enabled'
 WARN: Unrecognized config option 'prov.formats.bco.file'
@@ -38,10 +38,10 @@ rtgtools, for somatic small variants (SNV and INDEL) use sompy and/or rtgtools, 
 variants use wittyer, truvari and/or svanalyzer, for copy number variations use wittyer and/or 
 truvari. Use intersect to intersect BED files. Should be a comma-separate list of one or more of the 
 following options: truvari, svanalyzer, happy, sompy, rtgtools, wittyer, intersect  
-  --regions_bed                 [string]  Path to regions BED or VCF files. Works similar to Bcftools -R. 
-  --targets_bed                 [string]  Path to targets BED. Works similar to Bcftools -T. It will be only used with happy, sompy or 
-rtgtools.  
-  --falsepositive_bed           [string]  Path to false positive BED. Only applicable to happy and sompy tool. 
+  --regions_bed                 [string]  Path for regions of interest BED or VCF file. 
+  --targets_bed                 [string]  Path to targets BED. Works similar to Bcftools -T. 
+  --high_conf                   [boolean] If set to true, treat regions_bed as a high confidence region rather than a restriction region. 
+[default: true]  
   --ambiguous_beds              [string]  Path to ambiguous BED. Only applicable to sompy tool. 
   --truth_vcf                   [string]  Path to the golden set VCF files. 
   --ensemble_truth              [integer] Ensemble truth using input VCF files following the majority rule specified. This method should be 

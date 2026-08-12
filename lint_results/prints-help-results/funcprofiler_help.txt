@@ -3,8 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.07.0-edge
 
-Downloading plugin nf-schema@2.5.1
-Launching `./main.nf` [nasty_poincare] revision: 0e28111edc
+Launching `./main.nf` [stoic_saha] revision: 0e28111edc
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -33,9 +32,6 @@ each taxonomic profiler
 Cloud infrastructure.  
   --email                       [string]  Email address for completion summary. 
   --multiqc_title               [string]  MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
-
-Preprocessing QC options
-  --skip_preprocessing_qc       [boolean] Skip quality control step when preprocessing 
 
 Profiling options
   --run_fmhfunprofiler          [boolean] Turn on profiling with fmhfunprofiler; Requires database to be present CSV file passed to 

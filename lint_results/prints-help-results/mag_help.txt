@@ -3,8 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.07.0-edge
 
-Downloading plugin nf-schema@2.7.2
-Launching `./main.nf` [special_solvay] revision: 71af2049ef
+Launching `./main.nf` [chaotic_rosalind] revision: 71af2049ef
 
 
 ------------------------------------------------------
@@ -237,8 +236,8 @@ quality control etc.  (accepted: raw_bins_only, refined_bins_only, both) [defaul
 raw_bins_only]  
   --run_gunc                             [boolean] Turn on GUNC genome chimerism checks 
   --gunc_db                              [string]  Specify a path to a pre-downloaded GUNC dmnd database file 
-  --gunc_database_type                   [string]  Specify which database to auto-download if not supplying own  (accepted: progenomes, gtdb, 
-test_data) [default: progenomes]  
+  --gunc_database_type                   [string]  Specify which database to auto-download if not supplying own  (accepted: progenomes_2.1, 
+progenomes_3, gtdb_95, gtdb_214, test_data) [default: progenomes_2.1]  
   --gunc_save_db                         [boolean] Save the used GUNC reference files downloaded when not using --gunc_db parameter. 
   --generate_bigmag_file                 [boolean] Make a BIgMAG input file including GUNC results. 
 

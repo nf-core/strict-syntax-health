@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-08-05T00:31:37.568612955Z
+- Generated: 2026-08-12T00:23:58.891071703Z
 - Nextflow version: 26.07.0-edge
-- Summary: 19 warnings
+- Summary: 20 warnings
 
 ## :warning: Warnings
 
@@ -46,6 +46,13 @@
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
+  ```
+
+- Warning: `modules/local/misopysettings/main.nf:26:9`: Variable was declared but not used
+
+  ```nextflow
+      def prefix = task.ext.prefix ?: "${meta.id}"
+          ^^^^^^
   ```
 
 - Warning: `modules/nf-core/misopy/index/main.nf:23:9`: Variable was declared but not used
