@@ -1,6 +1,6 @@
 # Workflow outputs migration: rnastructurome
 
-- Generated: 2026-08-11T00:16:50.467075+00:00
+- Generated: 2026-08-13T00:23:04.721357+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,10 +14,10 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 53 `publishDir` references across 7 files that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/rnastructurome/blob/de28c3593b2dd89bda7375fcb8a06e7b4383b006/conf/modules.config#L14) — 47 references
-- [`modules/local/r2dt/tests/nextflow.config`](https://github.com/nf-core/rnastructurome/blob/de28c3593b2dd89bda7375fcb8a06e7b4383b006/modules/local/r2dt/tests/nextflow.config#L4) — 1 reference
-- [`modules/local/rnaframework/fold/tests/nextflow.config`](https://github.com/nf-core/rnastructurome/blob/de28c3593b2dd89bda7375fcb8a06e7b4383b006/modules/local/rnaframework/fold/tests/nextflow.config#L4) — 1 reference
-- [`modules/local/samtools/qnames/tests/nextflow.config`](https://github.com/nf-core/rnastructurome/blob/de28c3593b2dd89bda7375fcb8a06e7b4383b006/modules/local/samtools/qnames/tests/nextflow.config#L3) — 1 reference
-- [`modules/local/viennarna/tests/nextflow.config`](https://github.com/nf-core/rnastructurome/blob/de28c3593b2dd89bda7375fcb8a06e7b4383b006/modules/local/viennarna/tests/nextflow.config#L4) — 1 reference
-- [`modules/nf-core/rseqc/inferexperiment/tests/nextflow.config`](https://github.com/nf-core/rnastructurome/blob/de28c3593b2dd89bda7375fcb8a06e7b4383b006/modules/nf-core/rseqc/inferexperiment/tests/nextflow.config#L3) — 1 reference
-- [`modules/nf-core/umitools/extract/tests/nextflow.config`](https://github.com/nf-core/rnastructurome/blob/de28c3593b2dd89bda7375fcb8a06e7b4383b006/modules/nf-core/umitools/extract/tests/nextflow.config#L3) — 1 reference
+- [`conf/modules.config`](https://github.com/nf-core/rnastructurome/blob/67c0bcd0de72b18873a735a2403ff190c7ba3741/conf/modules.config#L14) — 47 references
+- [`modules/local/r2dt/tests/nextflow.config`](https://github.com/nf-core/rnastructurome/blob/67c0bcd0de72b18873a735a2403ff190c7ba3741/modules/local/r2dt/tests/nextflow.config#L4) — 1 reference
+- [`modules/local/rnaframework/fold/tests/nextflow.config`](https://github.com/nf-core/rnastructurome/blob/67c0bcd0de72b18873a735a2403ff190c7ba3741/modules/local/rnaframework/fold/tests/nextflow.config#L4) — 1 reference
+- [`modules/local/samtools/qnames/tests/nextflow.config`](https://github.com/nf-core/rnastructurome/blob/67c0bcd0de72b18873a735a2403ff190c7ba3741/modules/local/samtools/qnames/tests/nextflow.config#L3) — 1 reference
+- [`modules/local/viennarna/tests/nextflow.config`](https://github.com/nf-core/rnastructurome/blob/67c0bcd0de72b18873a735a2403ff190c7ba3741/modules/local/viennarna/tests/nextflow.config#L4) — 1 reference
+- [`modules/nf-core/rseqc/inferexperiment/tests/nextflow.config`](https://github.com/nf-core/rnastructurome/blob/67c0bcd0de72b18873a735a2403ff190c7ba3741/modules/nf-core/rseqc/inferexperiment/tests/nextflow.config#L3) — 1 reference
+- [`modules/nf-core/umitools/extract/tests/nextflow.config`](https://github.com/nf-core/rnastructurome/blob/67c0bcd0de72b18873a735a2403ff190c7ba3741/modules/nf-core/umitools/extract/tests/nextflow.config#L3) — 1 reference

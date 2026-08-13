@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-08-12T00:20:16.359966800Z
+- Generated: 2026-08-13T00:20:13.081759867Z
 - Nextflow version: 26.07.0-edge
-- Summary: 19 warnings
+- Summary: 17 warnings
 
 ## :warning: Warnings
 
@@ -53,20 +53,6 @@
   ```nextflow
       def prefix = task.ext.prefix ?: "${meta.id}"
           ^^^^^^
-  ```
-
-- Warning: `modules/nf-core/cat/cat/main.nf:23:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def file_list = files_in.collect { it.toString() }
-                                         ^^
-  ```
-
-- Warning: `modules/nf-core/cat/cat/main.nf:59:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def file_list   = files_in.collect { it.toString() }
-                                           ^^
   ```
 
 - Warning: `subworkflows/local/fasta_annotate_te/main.nf:51:29`: Parameter was not used -- prefix with `_` to suppress warning

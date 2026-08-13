@@ -38,14 +38,14 @@
   "ampliseq": {
     "full_name": "nf-core/ampliseq",
     "html_url": "https://github.com/nf-core/ampliseq",
-    "commit": "70ee1c5a4396a442cc07f2ca63a64bf2a6035d9d",
+    "commit": "a56b5c92d544b4c518be1e31f561aa4c68bbfd2b",
     "errors": 0,
-    "warnings": 22,
+    "warnings": 24,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 101
+    "publishdir_count": 102
   },
   "atacseq": {
     "full_name": "nf-core/atacseq",
@@ -578,14 +578,14 @@
   "genomeqc": {
     "full_name": "nf-core/genomeqc",
     "html_url": "https://github.com/nf-core/genomeqc",
-    "commit": "de90f6d6fdc714c5874eab7787cb045c5ef65337",
+    "commit": "111866b9922bf97d800a3d69881a4e0f5d6466d1",
     "errors": 0,
-    "warnings": 19,
+    "warnings": 17,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 47
+    "publishdir_count": 48
   },
   "genomeskim": {
     "full_name": "nf-core/genomeskim",
@@ -614,7 +614,7 @@
   "gwas": {
     "full_name": "nf-core/gwas",
     "html_url": "https://github.com/nf-core/gwas",
-    "commit": "31da218a0a99b06f3c31c3956bd32331b966c134",
+    "commit": "abc15c402e823391ac2fff51eed8d8e993376f08",
     "errors": 0,
     "warnings": 1,
     "parse_error": false,
@@ -758,14 +758,14 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "2204e11968e39c311e3fd15962c70bae7fa9f8b5",
+    "commit": "2f3655c78b0e5ec7373df35971e8d92bc6c46333",
     "errors": 0,
     "warnings": 20,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 39
+    "publishdir_count": 41
   },
   "magmap": {
     "full_name": "nf-core/magmap",
@@ -842,7 +842,7 @@
   "metatdenovo": {
     "full_name": "nf-core/metatdenovo",
     "html_url": "https://github.com/nf-core/metatdenovo",
-    "commit": "c7257e40e0a5fd814b23f81a8ff6013f96097e45",
+    "commit": "c806f8dc8da4783423973f10b4990e82838f6393",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -866,14 +866,14 @@
   "methylong": {
     "full_name": "nf-core/methylong",
     "html_url": "https://github.com/nf-core/methylong",
-    "commit": "76d88b46190abe812b0f59319298f9f6f02f62d1",
+    "commit": "b62cf2d5fe2a016e3ac343eb84d2c4ce0f966347",
     "errors": 0,
     "warnings": 45,
     "parse_error": false,
     "prints_help": false,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 41
+    "publishdir_count": 42
   },
   "methylseq": {
     "full_name": "nf-core/methylseq",
@@ -1154,7 +1154,7 @@
   "pixelator": {
     "full_name": "nf-core/pixelator",
     "html_url": "https://github.com/nf-core/pixelator",
-    "commit": "81e0d34664c128b62280111e428ac2b47fb4feb1",
+    "commit": "b6bcc6dd92cec588d5ed28afcde3370da0447bd4",
     "errors": 0,
     "warnings": 18,
     "parse_error": false,
@@ -1162,6 +1162,18 @@
     "workflow_output": false,
     "publishdir": true,
     "publishdir_count": 12
+  },
+  "plasmodiumdrugres": {
+    "full_name": "nf-core/plasmodiumdrugres",
+    "html_url": "https://github.com/nf-core/plasmodiumdrugres",
+    "commit": "31b1e287678e0e6b85d928d7124d890d08f0931e",
+    "errors": 0,
+    "warnings": 20,
+    "parse_error": false,
+    "prints_help": true,
+    "workflow_output": false,
+    "publishdir": true,
+    "publishdir_count": 3
   },
   "proteinannotator": {
     "full_name": "nf-core/proteinannotator",
@@ -1382,7 +1394,7 @@
   "rnastructurome": {
     "full_name": "nf-core/rnastructurome",
     "html_url": "https://github.com/nf-core/rnastructurome",
-    "commit": "de28c3593b2dd89bda7375fcb8a06e7b4383b006",
+    "commit": "67c0bcd0de72b18873a735a2403ff190c7ba3741",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1418,7 +1430,7 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "d49e78da9568da455bc20cb68c1b885bebe71a7d",
+    "commit": "7e455477b7b55f89a5adad02434d42dc51eaaaea",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1466,7 +1478,7 @@
   "seqinspector": {
     "full_name": "nf-core/seqinspector",
     "html_url": "https://github.com/nf-core/seqinspector",
-    "commit": "651c762f4b71934bcc11522b7b823f00058a3d00",
+    "commit": "01c1b58a6e5ec8a98c80666a76b5176e5efad7e0",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1538,7 +1550,7 @@
   "spatialvi": {
     "full_name": "nf-core/spatialvi",
     "html_url": "https://github.com/nf-core/spatialvi",
-    "commit": "682c3a8df39ab6202eacecc71714e554e0d0421e",
+    "commit": "ccdfb48659aa8298bb5ed8d7c986651a99e04e7c",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,

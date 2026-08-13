@@ -1,0 +1,72 @@
+$ NXF_SYNTAX_PARSER=v2 nextflow run . --help
+
+
+ N E X T F L O W   ~  version 26.07.0-edge
+
+Launching `./main.nf` [furious_leibniz] revision: e851f5a72f
+
+WARN: Unrecognized config option 'validation.defaultIgnoreParams'
+WARN: Unrecognized config option 'validation.monochromeLogs'
+
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/plasmodiumdrugres 1.0.0dev
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/plasmodiumdrugres -profile <docker/singularity/.../institute> --pmo input.pmo.json --loci_of_interest_bed loci_of_interest.bed --loci_groups loci_groups.tsv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --pmo                           [string]       Path to json file containing metadata and microhaplotypes according to pmo format. 
+  --allele_table                  [string]       Path to tab separated file containing microhaplotypes for specimens. 
+  --loci_of_interest_bed          [string]       Path to BED file containing individual loci of interest. 
+  --loci_groups                   [string, null] Path to tab separated file containing groups of loci of interest. Multi-locus allele frequency 
+estimation is skipped when this parameter is not provided.  
+  --panel_info_bed                [string]       Path to BED file containing panel location information. 
+  --population_assignment         [string]       Path to tab separated file containing population assignment for each specimen_name. 
+  --pmo_population_fields         [string, null] Comma-separated list of PMO specimen metadata field names to combine into the population label (e.g. 
+"collection_country, collection_date"). Whitespace is ignored.  
+  --pmo_population_separator      [string, null] String used to join the selected `pmo_population_fields` when building the population label. 
+[default: _]  
+  --outdir                        [string]       The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure. [default: output]  
+  --email                         [string]       Email address for completion summary. 
+
+Reference genome options
+  --genome_reference              [string] Path to FASTA file containing the full genome. 
+  --targeted_reference            [string] Path to FASTA file containing the reference for only the targets. 
+
+Method options for pipeline steps
+  --mlaf_method                   [string] Method for multi-locus allele frequency estimates.  (accepted: MLBM, FEM, naive) [default: 
+naive]  
+  --slaf_method                   [string] Method for single-locus allele frequency estimates.  (accepted: IDM, naive, mhaps_freq) 
+[default: naive]  
+  --translate_loci_extra_args     [string] Extra arguments supplied when translating loci of interest 
+  --naive_slaf_method             [string] Naive SLAF method when --slaf_method is naive.  (accepted: read_count_prop, presence_absence) 
+[default: read_count_prop]  
+  --population_label              [string] label for population/ this individual pipeline run. [default: pop1] 
+  --naive_mlaf_method             [string] Naive MLAF method when --mlaf_method is naive.  (accepted: wsaf_prop, presence_absence) 
+[default: wsaf_prop]  
+  --slaf_method_mhaps_freq_method [string] Tool used for --slaf_method mhaps_freq.  (accepted: dcifer) [default: dcifer] 
+
+Generic options
+  --help                          [boolean, string] Display the help message. 
+  --help_full                     [boolean]         Display the full detailed help message. 
+  --show_hidden                   [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 20 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/plasmodiumdrugres/blob/master/CITATIONS.md
+

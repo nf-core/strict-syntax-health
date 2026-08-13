@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.07.0-edge
 
-Launching `./main.nf` [exotic_miescher] revision: b4641016f5
+Launching `./main.nf` [peaceful_swanson] revision: b4641016f5
 
 
 ------------------------------------------------------
@@ -86,6 +86,8 @@ Functional annotation options
   --skip_kofamscan              [boolean] If enabled, skips the run of KofamScan. 
   --kofam_dir                   [string]  Path to a directory with KOfam files. Will be created if it doesn't exist. [default: ./kofam/] 
  
+  --skip_dbcan                  [boolean] If enabled, skips dbCAN CAZyme annotation. 
+  --dbcan_dbpath                [string]  Specify the dbCAN database path. [default: dbcan] 
   --hmmdir                      [string]  Directory with hmm files which will be searched for among ORFs 
   --hmmfiles                    [string]  Comma-separated list of hmm files which will be searched for among ORFs 
   --hmmpattern                  [string]  Specify which pattern hmm files end with [default: *.hmm] 

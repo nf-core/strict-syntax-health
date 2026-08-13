@@ -3,10 +3,8 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.07.0-edge
 
-Launching `./main.nf` [soggy_coulomb] revision: dbc24d81d4
+Launching `./main.nf` [berserk_kilby] revision: dbc24d81d4
 
-WARN: Unrecognized config option 'validation.defaultIgnoreParams'
-WARN: Unrecognized config option 'validation.monochromeLogs'
 
 ------------------------------------------------------
                                         ,--./,-.
