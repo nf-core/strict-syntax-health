@@ -3,7 +3,8 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.07.0-edge
 
-Launching `./main.nf` [lonely_curry] revision: 756dffde08
+Downloading plugin nf-schema@2.5.1
+Launching `./main.nf` [trusting_wilson] revision: 2e60bf32b3
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -25,7 +26,7 @@ or `--helpFull`.
 
 Input/output options
   --input                       [string] Path to a CSV sample sheet defining seed file-network combinations 
-  --seeds                       [string] Path(s) to one or multiple file(s) with seed genes, in txt, csv, or tsv format. 
+  --seeds                       [string] Path(s) to one or multiple file(s) with seed genes, in txt, csv, or tsv format.  
   --network                     [string] Path(s) to one or multiple PPI network(s) as file(s) in gt, csv, tsv, graphml, xml, dot, or gml 
 format, or keyword(s) referring to inbuilt networks.  
   --id_space                    [string] Type of gene/protein ids  (accepted: entrez, symbol, ensembl, uniprot) [default: entrez] 
@@ -74,7 +75,6 @@ Module evaluation
 evaluation  
 
 Drug prioritization
-  --run_proximity               [boolean] Flag for running proximity 
   --skip_drug_predictions       [boolean] Flag for skipping drug predictions 
   --includeIndirectDrugs        [boolean] Drugst.One parameter for including indirect drugs. 
   --includeNonApprovedDrugs     [boolean] Drugst.One parameter for including non approved drugs. 
@@ -88,7 +88,7 @@ Generic options
   --help_full                   [boolean]         Display the full detailed help message. 
   --show_hidden                 [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
  
- !! Hiding 20 param(s), use the `--showHidden` parameter to show them !!
+ !! Hiding 18 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
 
 * The pipeline

@@ -1,6 +1,6 @@
 # Workflow outputs migration: diseasemodulediscovery
 
-- Generated: 2026-07-25T00:31:52.220656+00:00
+- Generated: 2026-08-14T00:20:59.639321+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -12,6 +12,6 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 ## Legacy `publishDir` references
 
-Found 21 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
+Found 19 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/diseasemodulediscovery/blob/fe0448a0f307c7643d8fcedf2d420bdfd024a0b8/conf/modules.config#L17) — 21 references
+- [`conf/modules.config`](https://github.com/nf-core/diseasemodulediscovery/blob/65201ed1eaf92f7eba6c63aa70bd6df981dcd3f9/conf/modules.config#L17) — 19 references

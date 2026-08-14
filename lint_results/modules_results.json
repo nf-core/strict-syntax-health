@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "313ab80d1e02131b8ab3ed502dc1b684ae08c6dc",
+  "_repo_commit": "8e4cc14bb069daefdcb5e7c44736cefddecad4c0",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -7628,6 +7628,12 @@
   },
   "orfipy": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/orfipy",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "orfm": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/orfm",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

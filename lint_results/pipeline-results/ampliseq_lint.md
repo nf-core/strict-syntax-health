@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-08-13T00:19:36.982328664Z
+- Generated: 2026-08-14T00:20:25.507568932Z
 - Nextflow version: 26.07.0-edge
 - Summary: 24 warnings
 
@@ -167,7 +167,7 @@
                                                                                                                                ^^
   ```
 
-- Warning: `workflows/ampliseq.nf:1193:49`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/ampliseq.nf:1197:49`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           def val_params_string = params.findAll{ it.key != 'trace_report_suffix' }.toString()

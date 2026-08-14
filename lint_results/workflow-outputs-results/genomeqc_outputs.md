@@ -1,6 +1,6 @@
 # Workflow outputs migration: genomeqc
 
-- Generated: 2026-08-13T00:20:13.237176+00:00
+- Generated: 2026-08-14T00:21:35.920065+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,4 +14,4 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 48 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/genomeqc/blob/111866b9922bf97d800a3d69881a4e0f5d6466d1/conf/modules.config#L15) — 48 references
+- [`conf/modules.config`](https://github.com/nf-core/genomeqc/blob/6d2e70cb299ca7f8f31bc48d15b6ee257eff71ae/conf/modules.config#L15) — 48 references

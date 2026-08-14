@@ -1,28 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-07-09T00:35:10.217606491Z
-- Nextflow version: 26.06.0-edge
-- Summary: 3 warnings
-
-## :warning: Warnings
-
-- Warning: `subworkflows/local/prepare_alignment/main.nf:25:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      reads_index = input_reads.indexed.mix(input_reads.not_indexed.join(SAMTOOLS_INDEX.out.index, failOnMismatch: true, failOnDuplicate: true)) // [ val(meta), path(bam|cram), path(bai|crai) ]
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/recalibrate/main.nf:33:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      bam = bam_recalibrated_index
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/splitncigar/main.nf:52:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      bam_bai = SAMTOOLS_MERGE.out.bam.join(SAMTOOLS_INDEX.out.index, failOnDuplicate: true, failOnMismatch: true)
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
+- Generated: 2026-08-14T00:23:14.101800889Z
+- Nextflow version: 26.07.0-edge
+- Summary: No issues found
