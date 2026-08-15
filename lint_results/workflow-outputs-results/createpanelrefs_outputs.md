@@ -1,6 +1,6 @@
 # Workflow outputs migration: createpanelrefs
 
-- Generated: 2026-07-07T00:34:55.508258+00:00
+- Generated: 2026-08-15T00:10:13.949218+00:00
 - Status: :white_check_mark: **pass** — uses only the new `output {}` syntax
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -9,7 +9,7 @@ This report tracks migration from the legacy `publishDir` directive to the new [
 
 Found 1 top-level `output {}` block:
 
-- [`main.nf:199`](https://github.com/nf-core/createpanelrefs/blob/38551d55391ab6476b744992ca3420151e7fa1ff/main.nf#L199)
+- [`main.nf:199`](https://github.com/nf-core/createpanelrefs/blob/0a578c300fe9145f9a50177bab980e1e87b8ce9b/main.nf#L199)
 
 ## Legacy `publishDir` references
 

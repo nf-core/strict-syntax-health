@@ -14,7 +14,7 @@
   "airrflow": {
     "full_name": "nf-core/airrflow",
     "html_url": "https://github.com/nf-core/airrflow",
-    "commit": "4c63a2130ea2c87b08b097b296e7561496c00fb8",
+    "commit": "cb0531bfe01ef06f76f2953894dcf23a28bf2a29",
     "errors": 0,
     "warnings": 34,
     "parse_error": false,
@@ -206,9 +206,9 @@
   "createpanelrefs": {
     "full_name": "nf-core/createpanelrefs",
     "html_url": "https://github.com/nf-core/createpanelrefs",
-    "commit": "38551d55391ab6476b744992ca3420151e7fa1ff",
+    "commit": "0a578c300fe9145f9a50177bab980e1e87b8ce9b",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": true,
@@ -506,7 +506,7 @@
   "fetchngs": {
     "full_name": "nf-core/fetchngs",
     "html_url": "https://github.com/nf-core/fetchngs",
-    "commit": "345fa07560b8ccc30707dbf09c5d48138ec782f9",
+    "commit": "31e36a8fd6b482695a47257e59b1ca1c1fe791d4",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -578,9 +578,9 @@
   "genomeqc": {
     "full_name": "nf-core/genomeqc",
     "html_url": "https://github.com/nf-core/genomeqc",
-    "commit": "6d2e70cb299ca7f8f31bc48d15b6ee257eff71ae",
+    "commit": "2db5a89ee4171d6e1ad4299873a03641c436c47f",
     "errors": 0,
-    "warnings": 17,
+    "warnings": 18,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -698,7 +698,7 @@
   "isoseq": {
     "full_name": "nf-core/isoseq",
     "html_url": "https://github.com/nf-core/isoseq",
-    "commit": "829a4ef7d5f61549b32e6c16952c87e23a31c93e",
+    "commit": "66d8db34b6149052ffde63443cf34e27126dbba7",
     "errors": 0,
     "warnings": 9,
     "parse_error": false,
@@ -758,14 +758,14 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "2f3655c78b0e5ec7373df35971e8d92bc6c46333",
+    "commit": "034af2b60718f2272c5daefb333c450ff4037bdc",
     "errors": 0,
     "warnings": 20,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 41
+    "publishdir_count": 74
   },
   "magmap": {
     "full_name": "nf-core/magmap",
@@ -1166,7 +1166,7 @@
   "plasmodiumdrugres": {
     "full_name": "nf-core/plasmodiumdrugres",
     "html_url": "https://github.com/nf-core/plasmodiumdrugres",
-    "commit": "31b1e287678e0e6b85d928d7124d890d08f0931e",
+    "commit": "076642a93b9d564708af5e75137eb19899c31266",
     "errors": 0,
     "warnings": 20,
     "parse_error": false,
@@ -1298,9 +1298,9 @@
   "references": {
     "full_name": "nf-core/references",
     "html_url": "https://github.com/nf-core/references",
-    "commit": "6027e22535d1ebf768858b0045fd986f5589264f",
+    "commit": "a4476d1bf70d34ace3988ad5860c39c7fb603726",
     "errors": 0,
-    "warnings": 4,
+    "warnings": 0,
     "parse_error": false,
     "prints_help": false,
     "workflow_output": true,
@@ -1394,7 +1394,7 @@
   "rnastructurome": {
     "full_name": "nf-core/rnastructurome",
     "html_url": "https://github.com/nf-core/rnastructurome",
-    "commit": "605dd9f6f14dfb0d802bb2994cbef0393c8797e1",
+    "commit": "19c952892031ce026ccad54617dcca47bfea2c97",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1406,7 +1406,7 @@
   "rnavar": {
     "full_name": "nf-core/rnavar",
     "html_url": "https://github.com/nf-core/rnavar",
-    "commit": "dd1870b6839adc193461f5b088d7bd608e63b8e2",
+    "commit": "a556c5e5f52d775a07a5c605b1996378e57a3e12",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,

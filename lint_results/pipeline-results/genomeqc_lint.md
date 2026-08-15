@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-08-14T00:21:35.761291200Z
+- Generated: 2026-08-15T00:10:51.855521576Z
 - Nextflow version: 26.07.0-edge
-- Summary: 17 warnings
+- Summary: 18 warnings
 
 ## :warning: Warnings
 
@@ -11,6 +11,13 @@
   ```nextflow
       def prefix         = task.ext.prefix ?: "${meta.id}"
           ^^^^^^
+  ```
+
+- Warning: `modules/local/fcsgx_report_2_table/main.nf:19:9`: Variable was declared but not used
+
+  ```nextflow
+      def args   = task.ext.args ?: ''
+          ^^^^
   ```
 
 - Warning: `modules/local/genomeannotationbuscoideogram/main.nf:44:9`: Variable was declared but not used
@@ -48,7 +55,7 @@
           ^^^^
   ```
 
-- Warning: `modules/local/treesummary/main.nf:38:9`: Variable was declared but not used
+- Warning: `modules/local/treesummary/main.nf:39:9`: Variable was declared but not used
 
   ```nextflow
       def prefix = task.ext.prefix ?: "${meta.id}"

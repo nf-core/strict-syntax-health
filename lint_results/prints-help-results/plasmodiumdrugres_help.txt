@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.07.0-edge
 
-Launching `./main.nf` [furious_leibniz] revision: e851f5a72f
+Launching `./main.nf` [tiny_morse] revision: e851f5a72f
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -14,7 +14,7 @@ WARN: Unrecognized config option 'validation.monochromeLogs'
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/plasmodiumdrugres 1.0.0dev
+  nf-core/plasmodiumdrugres 1.0.0
 ------------------------------------------------------
 Typical pipeline command:
 

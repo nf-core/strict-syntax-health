@@ -1,21 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-07-07T00:34:55.404444174Z
-- Nextflow version: 26.06.0-edge
-- Summary: 2 warnings
-
-## :warning: Warnings
-
-- Warning: `subworkflows/local/prepare_alignment/main.nf:43:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      reads_index = ch_reads_index // [ val(meta), path(bam|cram), path(bai|crai) ]
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_createpanelrefs_pipeline/main.nf:171:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      samplesheet = ch_samplesheet
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
+- Generated: 2026-08-15T00:10:13.856257441Z
+- Nextflow version: 26.07.0-edge
+- Summary: No issues found
