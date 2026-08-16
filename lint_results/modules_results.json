@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "9ecb0724f4cf9c3bfabef1ace14ff336a65fc6b6",
+  "_repo_commit": "117c1c65e1ecd4ee9cfdcd6e3630200998932503",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -10191,7 +10191,7 @@
   "seroba_run": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/seroba/run",
     "errors": 0,
-    "warnings": 0,
+    "warnings": 1,
     "parse_error": false
   },
   "severus": {

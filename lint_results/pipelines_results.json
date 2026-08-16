@@ -206,7 +206,7 @@
   "createpanelrefs": {
     "full_name": "nf-core/createpanelrefs",
     "html_url": "https://github.com/nf-core/createpanelrefs",
-    "commit": "0a578c300fe9145f9a50177bab980e1e87b8ce9b",
+    "commit": "f231aa072bfb18d796637df3564b20f8347da0b8",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1298,7 +1298,7 @@
   "references": {
     "full_name": "nf-core/references",
     "html_url": "https://github.com/nf-core/references",
-    "commit": "a4476d1bf70d34ace3988ad5860c39c7fb603726",
+    "commit": "74ba29ce09e7011b31f69f039e298ba7a72c5138",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,

@@ -11,7 +11,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 > See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline.
 > **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**
 
-- **Last updated:** 2026-08-15 00:14:49 UTC
+- **Last updated:** 2026-08-16 00:12:25 UTC
 - **Nextflow version:** 26.07.0-edge
 
 ## Pipelines
@@ -339,7 +339,7 @@ The status emoji next to each pipeline shows its migration state: :white_check_m
 
 ## Modules
 
-- **Total:** 0 parse errors, 0 errors, 22 warnings across 2024 modules
+- **Total:** 0 parse errors, 0 errors, 23 warnings across 2024 modules
 - **Zero errors:** 2024 modules (100.0%)
 
 |                   Errors                   |                    Warnings                    |
