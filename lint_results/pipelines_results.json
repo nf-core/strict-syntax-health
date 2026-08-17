@@ -1334,7 +1334,7 @@
   "riboseq": {
     "full_name": "nf-core/riboseq",
     "html_url": "https://github.com/nf-core/riboseq",
-    "commit": "799d4afabac84fed107779984712acaa5e813d1b",
+    "commit": "b54f44db20105b5ddb148e118afda7fd359c7d0a",
     "errors": 0,
     "warnings": 149,
     "parse_error": false,

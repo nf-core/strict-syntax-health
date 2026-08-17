@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "117c1c65e1ecd4ee9cfdcd6e3630200998932503",
+  "_repo_commit": "1f7f3ee45071798ae6ea064c93e878cc94a4fdd6",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -1124,6 +1124,12 @@
   },
   "bftools_showinf": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bftools/showinf",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "bigscape_bigscape": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/bigscape/bigscape",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
