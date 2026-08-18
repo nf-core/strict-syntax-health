@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.07.0-edge
 
-Launching `./main.nf` [trusting_lattes] revision: 4bfeeaefa1
+Launching `./main.nf` [confident_leakey] revision: 375748d1f7
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -87,10 +87,14 @@ line per resource.
   --vcfanno_toml                      [string]  Path to the vcfanno toml file. 
   --vcfanno_lua                       [string]  Path to the vcfanno lua file. 
   --vep_cache                         [string]  Path to vep's cache directory. 
+  --vep_gtf                           [string]  Path to a bgzipped GTF file to annotate with VEP instead of a cache. 
+  --vep_gtf_tbi                       [string]  Tabix index for vep_gtf. 
   --vep_plugin_files                  [string]  Databases used by both named and custom plugins to annotate variants. 
   --vep_filters                       [string]  Path to the file containing HGNC_IDs of interest on separate lines. 
   --vep_filters_scout_fmt             [string]  Path to a bed-like file exported by scout, which contains HGNC_IDs to be used in filter_vep. 
  
+  --peddy_sites                       [string]  Path to a custom peddy sites file (chrom:pos:ref:alt per line) to use instead of peddy's bundled 
+hg19/hg38 site list.  
 
 Analysis options
   --analysis_type                     [string]  Specifies which analysis type for the pipeline- either 'wgs', 'wes' or 'mito'. This changes 
@@ -106,7 +110,7 @@ restrict the analysis to those regions/contigs.
 be treated as homoplasmic and assigned a 1/1 genotype. Range 0-1.0. [default: 1.0]  
   --platform                          [string]  Specifies the platform on which the reads were sequenced. [default: illumina] 
   --pre_vep_snv_filter_expression     [string]  bcftools expression used to exclude SNVs before VEP annotation. [default: INFO/GNOMADAF > 0.70 | 
-INFO/GNOMADAF_popmax > 0.70]  
+INFO/GNOMADAF_grpmax > 0.70]  
   --ngsbits_samplegender_method       [string]  Method selection for ngs-bits samplegender  (accepted: xy, hetx, sry) [default: xy] 
   --restrict_to_contigs               [string]  Can be specified as RNAME[:STARTPOS[-ENDPOS]]. Multiple regions should be seperated by space 
  

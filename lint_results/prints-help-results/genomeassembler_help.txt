@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.07.0-edge
 
-Launching `./main.nf` [trusting_colden] revision: 44e2f14764
+Launching `./main.nf` [berserk_faraday] revision: 44e2f14764
 
 
 ------------------------------------------------------
@@ -33,8 +33,8 @@ Generic options
  
 
 Reference Parameters
-  --ref_fasta                  [string] Path to reference genome seqeunce (fasta). 
-  --ref_gff                    [string] Path to reference genome annotations (gff). 
+  --ref_fasta                  [string] Path to reference genome seqeunce (fasta) 
+  --ref_gff                    [string] Path to reference genome annotations (gff) 
 
 Assembly options
   --strategy                   [string] Assembly strategy to use. Valid choices are `'single'`, `'hybrid'` and `'scaffold'`. [default: 
@@ -114,7 +114,7 @@ Short read options
   --meryl_k                    [integer] kmer length for `meryl` / `merqury`. [default: 21] 
   --shortread_F                [string]  Path to forward short reads. 
   --shortread_R                [string]  Path to reverse short reads. 
-  --paired                     [boolean] Are shortreads paired. 
+  --paired                     [boolean] Are shortreads paired. [default: false] 
 
 HiC short read options
   --hic_trim                   [boolean] Trim HiC short reads. [default: false] 

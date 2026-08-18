@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-24T00:36:20.636548225Z
-- Nextflow version: 26.05.0-edge
-- Summary: 32 warnings
+- Generated: 2026-08-18T00:12:52.154902929Z
+- Nextflow version: 26.07.0-edge
+- Summary: 26 warnings
 
 ## :warning: Warnings
 
@@ -90,13 +90,6 @@
                         ^^^^^^^^
   ```
 
-- Warning: `main.nf:52:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      versions = ch_versions
-      ^^^^^^^^^^^^^^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/model_testing/main.nf:63:31`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
@@ -146,13 +139,6 @@
                                                   ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/model_testing/main.nf:222:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      versions = ch_versions
-      ^^^^^^^^^^^^^^^^^^^^
-  ```
-
 - Warning: `subworkflows/local/run_cv/main.nf:54:43`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
@@ -195,37 +181,9 @@
                                                            ^^
   ```
 
-- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      valid_config = valid_config
-      ^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:76:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
-  ```
-
 - Warning: `workflows/drugresponseeval.nf:90:9`: Variable was declared but not used
 
   ```nextflow
       def ch_collated_versions = softwareVersionsToYAML(ch_versions.mix(topic_versions.versions_file))
           ^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/drugresponseeval.nf:99:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      versions       = ch_versions                 // channel: [ path(versions.yml) ]
-      ^^^^^^^^^^^^^^^^^^^^
   ```

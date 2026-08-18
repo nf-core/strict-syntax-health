@@ -38,9 +38,9 @@
   "ampliseq": {
     "full_name": "nf-core/ampliseq",
     "html_url": "https://github.com/nf-core/ampliseq",
-    "commit": "c94b744595e629089c8a5ad137dade0f6c5da862",
+    "commit": "7888e940e5d200db91f2c6e52e625e55d102d01f",
     "errors": 0,
-    "warnings": 24,
+    "warnings": 23,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -74,11 +74,11 @@
   "bacmodel": {
     "full_name": "nf-core/bacmodel",
     "html_url": "https://github.com/nf-core/bacmodel",
-    "commit": "e87942fab67168fc8c16183b573a3011db90d2fb",
+    "commit": "49fdba2dbc9e739703c8ef2f1b4cb0af561af483",
     "errors": 0,
     "warnings": 58,
     "parse_error": false,
-    "prints_help": true,
+    "prints_help": false,
     "workflow_output": false,
     "publishdir": true,
     "publishdir_count": 20
@@ -98,9 +98,9 @@
   "bamtofastq": {
     "full_name": "nf-core/bamtofastq",
     "html_url": "https://github.com/nf-core/bamtofastq",
-    "commit": "665440cdcccfec66ceb8212589a3c6ee92920d49",
+    "commit": "5d6e87a91ff9b8625b1a123d697f2f3ca38bd5a9",
     "errors": 0,
-    "warnings": 6,
+    "warnings": 0,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -386,7 +386,7 @@
   "diseasemodulediscovery": {
     "full_name": "nf-core/diseasemodulediscovery",
     "html_url": "https://github.com/nf-core/diseasemodulediscovery",
-    "commit": "65201ed1eaf92f7eba6c63aa70bd6df981dcd3f9",
+    "commit": "6b729f4fe6ea395a2845a45e0ce007a73e3fc001",
     "errors": 0,
     "warnings": 105,
     "parse_error": false,
@@ -410,9 +410,9 @@
   "drugresponseeval": {
     "full_name": "nf-core/drugresponseeval",
     "html_url": "https://github.com/nf-core/drugresponseeval",
-    "commit": "d25cd403fc643473e18246581e73dfbfa39a3e40",
+    "commit": "a622b314b4649600a6064ea6b49382a63f803b26",
     "errors": 0,
-    "warnings": 32,
+    "warnings": 26,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -566,7 +566,7 @@
   "genomeassembler": {
     "full_name": "nf-core/genomeassembler",
     "html_url": "https://github.com/nf-core/genomeassembler",
-    "commit": "f5481172a9e062a155cd53fe8392eeea5448812b",
+    "commit": "e364b570015b24bfb9880a1be7f62c953d90ed14",
     "errors": 0,
     "warnings": 8,
     "parse_error": false,
@@ -698,7 +698,7 @@
   "isoseq": {
     "full_name": "nf-core/isoseq",
     "html_url": "https://github.com/nf-core/isoseq",
-    "commit": "66d8db34b6149052ffde63443cf34e27126dbba7",
+    "commit": "f7d11f3993cd5a56d2faf2875dbf06a4c40d88f8",
     "errors": 0,
     "warnings": 9,
     "parse_error": false,
@@ -1154,7 +1154,7 @@
   "pixelator": {
     "full_name": "nf-core/pixelator",
     "html_url": "https://github.com/nf-core/pixelator",
-    "commit": "b6bcc6dd92cec588d5ed28afcde3370da0447bd4",
+    "commit": "6419699ab22766a37a73bb8f78bfc67b80939a04",
     "errors": 0,
     "warnings": 18,
     "parse_error": false,
@@ -1262,7 +1262,7 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "54b3f0eb4c1f3a5b0409e0e376b8e350003d404c",
+    "commit": "a8ca71bd7bbf9ed57566d2a9ccfb03c5b0ccb3ab",
     "errors": 0,
     "warnings": 11,
     "parse_error": false,
@@ -1670,9 +1670,9 @@
   "variantprioritization": {
     "full_name": "nf-core/variantprioritization",
     "html_url": "https://github.com/nf-core/variantprioritization",
-    "commit": "9514bf52787b5f5e1267a2a5e2e4b7f9bd7e836a",
+    "commit": "cb3a6d524f6b454ae5eed1d594b2b2d971b1bb51",
     "errors": 0,
-    "warnings": 11,
+    "warnings": 2,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
