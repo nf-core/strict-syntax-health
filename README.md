@@ -11,7 +11,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 > See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline.
 > **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**
 
-- **Last updated:** 2026-08-18 00:16:48 UTC
+- **Last updated:** 2026-08-19 00:13:36 UTC
 - **Nextflow version:** 26.07.0-edge
 
 ## Pipelines
@@ -151,7 +151,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :x: [phaseimpute](https://github.com/nf-core/phaseimpute)                                      |     No      |      0 |        1 |     No      |        [View](lint_results/pipeline-results/phaseimpute_lint.md)        |      [View](lint_results/prints-help-results/phaseimpute_help.txt)       |
 | :white_check_mark: [phyloplace](https://github.com/nf-core/phyloplace)                         |     No      |      0 |        1 |     Yes     |        [View](lint_results/pipeline-results/phyloplace_lint.md)         |       [View](lint_results/prints-help-results/phyloplace_help.txt)       |
 | :white_check_mark: [scrnaseq](https://github.com/nf-core/scrnaseq)                             |     No      |      0 |        1 |     Yes     |         [View](lint_results/pipeline-results/scrnaseq_lint.md)          |        [View](lint_results/prints-help-results/scrnaseq_help.txt)        |
-| :x: [spatialaxe](https://github.com/nf-core/spatialaxe)                                        |     No      |      0 |        1 |     No      |        [View](lint_results/pipeline-results/spatialaxe_lint.md)         |       [View](lint_results/prints-help-results/spatialaxe_help.txt)       |
+| :white_check_mark: [spatialaxe](https://github.com/nf-core/spatialaxe)                         |     No      |      0 |        1 |     Yes     |        [View](lint_results/pipeline-results/spatialaxe_lint.md)         |       [View](lint_results/prints-help-results/spatialaxe_help.txt)       |
 | :white_check_mark: [bamtofastq](https://github.com/nf-core/bamtofastq)                         |     No      |      0 |        0 |     Yes     |        [View](lint_results/pipeline-results/bamtofastq_lint.md)         |       [View](lint_results/prints-help-results/bamtofastq_help.txt)       |
 | :white_check_mark: [cellpainting](https://github.com/nf-core/cellpainting)                     |     No      |      0 |        0 |     Yes     |       [View](lint_results/pipeline-results/cellpainting_lint.md)        |      [View](lint_results/prints-help-results/cellpainting_help.txt)      |
 | :white_check_mark: [createpanelrefs](https://github.com/nf-core/createpanelrefs)               |     No      |      0 |        0 |     Yes     |      [View](lint_results/pipeline-results/createpanelrefs_lint.md)      |    [View](lint_results/prints-help-results/createpanelrefs_help.txt)     |
@@ -205,7 +205,7 @@ The status emoji next to each pipeline shows its migration state: :white_check_m
 | :x: [abotyper](https://github.com/nf-core/abotyper)                                   |     No      |   Yes (14)   |         [View](lint_results/workflow-outputs-results/abotyper_outputs.md)          |
 | :x: [airrflow](https://github.com/nf-core/airrflow)                                   |     No      |   Yes (84)   |         [View](lint_results/workflow-outputs-results/airrflow_outputs.md)          |
 | :x: [alleleexpression](https://github.com/nf-core/alleleexpression)                   |     No      |   Yes (15)   |     [View](lint_results/workflow-outputs-results/alleleexpression_outputs.md)      |
-| :x: [ampliseq](https://github.com/nf-core/ampliseq)                                   |     No      |  Yes (102)   |         [View](lint_results/workflow-outputs-results/ampliseq_outputs.md)          |
+| :x: [ampliseq](https://github.com/nf-core/ampliseq)                                   |     No      |  Yes (104)   |         [View](lint_results/workflow-outputs-results/ampliseq_outputs.md)          |
 | :x: [atacseq](https://github.com/nf-core/atacseq)                                     |     No      |   Yes (79)   |          [View](lint_results/workflow-outputs-results/atacseq_outputs.md)          |
 | :x: [bacass](https://github.com/nf-core/bacass)                                       |     No      |   Yes (35)   |          [View](lint_results/workflow-outputs-results/bacass_outputs.md)           |
 | :x: [bacmodel](https://github.com/nf-core/bacmodel)                                   |     No      |   Yes (20)   |         [View](lint_results/workflow-outputs-results/bacmodel_outputs.md)          |
@@ -269,7 +269,7 @@ The status emoji next to each pipeline shows its migration state: :white_check_m
 | :x: [meerpipe](https://github.com/nf-core/meerpipe)                                   |     No      |   Yes (9)    |         [View](lint_results/workflow-outputs-results/meerpipe_outputs.md)          |
 | :x: [metaboigniter](https://github.com/nf-core/metaboigniter)                         |     No      |   Yes (31)   |       [View](lint_results/workflow-outputs-results/metaboigniter_outputs.md)       |
 | :x: [metapep](https://github.com/nf-core/metapep)                                     |     No      |   Yes (21)   |          [View](lint_results/workflow-outputs-results/metapep_outputs.md)          |
-| :x: [metatdenovo](https://github.com/nf-core/metatdenovo)                             |     No      |   Yes (14)   |        [View](lint_results/workflow-outputs-results/metatdenovo_outputs.md)        |
+| :x: [metatdenovo](https://github.com/nf-core/metatdenovo)                             |     No      |   Yes (16)   |        [View](lint_results/workflow-outputs-results/metatdenovo_outputs.md)        |
 | :x: [methylarray](https://github.com/nf-core/methylarray)                             |     No      |   Yes (2)    |        [View](lint_results/workflow-outputs-results/methylarray_outputs.md)        |
 | :x: [methylong](https://github.com/nf-core/methylong)                                 |     No      |   Yes (42)   |         [View](lint_results/workflow-outputs-results/methylong_outputs.md)         |
 | :x: [methylseq](https://github.com/nf-core/methylseq)                                 |     No      |   Yes (47)   |         [View](lint_results/workflow-outputs-results/methylseq_outputs.md)         |
@@ -320,7 +320,7 @@ The status emoji next to each pipeline shows its migration state: :white_check_m
 | :x: [slamseq](https://github.com/nf-core/slamseq)                                     |     No      |   Yes (8)    |          [View](lint_results/workflow-outputs-results/slamseq_outputs.md)          |
 | :x: [smrnaseq](https://github.com/nf-core/smrnaseq)                                   |     No      |   Yes (53)   |         [View](lint_results/workflow-outputs-results/smrnaseq_outputs.md)          |
 | :x: [sopa](https://github.com/nf-core/sopa)                                           |     No      |   Yes (4)    |           [View](lint_results/workflow-outputs-results/sopa_outputs.md)            |
-| :x: [spatialaxe](https://github.com/nf-core/spatialaxe)                               |     No      |   Yes (39)   |        [View](lint_results/workflow-outputs-results/spatialaxe_outputs.md)         |
+| :x: [spatialaxe](https://github.com/nf-core/spatialaxe)                               |     No      |   Yes (40)   |        [View](lint_results/workflow-outputs-results/spatialaxe_outputs.md)         |
 | :x: [spatialvi](https://github.com/nf-core/spatialvi)                                 |     No      |   Yes (7)    |         [View](lint_results/workflow-outputs-results/spatialvi_outputs.md)         |
 | :x: [spinningjenny](https://github.com/nf-core/spinningjenny)                         |     No      |   Yes (6)    |       [View](lint_results/workflow-outputs-results/spinningjenny_outputs.md)       |
 | :x: [taxprofiler](https://github.com/nf-core/taxprofiler)                             |     No      |   Yes (91)   |        [View](lint_results/workflow-outputs-results/taxprofiler_outputs.md)        |
@@ -339,8 +339,8 @@ The status emoji next to each pipeline shows its migration state: :white_check_m
 
 ## Modules
 
-- **Total:** 0 parse errors, 0 errors, 23 warnings across 2025 modules
-- **Zero errors:** 2025 modules (100.0%)
+- **Total:** 0 parse errors, 0 errors, 23 warnings across 2026 modules
+- **Zero errors:** 2026 modules (100.0%)
 
 |                   Errors                   |                    Warnings                    |
 | :----------------------------------------: | :--------------------------------------------: |
@@ -352,7 +352,7 @@ The status emoji next to each pipeline shows its migration state: :white_check_m
 | Module | Parse Error | Errors | Warnings | Lint Output |
 | ------ | :---------: | -----: | -------: | :---------: |
 
-_Modules with zero errors are not shown above (2025 modules). They may still have warnings. See the [modules results directory](lint_results/module-results/) for all lint outputs._
+_Modules with zero errors are not shown above (2026 modules). They may still have warnings. See the [modules results directory](lint_results/module-results/) for all lint outputs._
 
 </details>
 

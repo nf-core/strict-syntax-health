@@ -38,14 +38,14 @@
   "ampliseq": {
     "full_name": "nf-core/ampliseq",
     "html_url": "https://github.com/nf-core/ampliseq",
-    "commit": "7888e940e5d200db91f2c6e52e625e55d102d01f",
+    "commit": "0a8a4515d3f7333a12f96ea44bb566d5b77a0726",
     "errors": 0,
     "warnings": 23,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 102
+    "publishdir_count": 104
   },
   "atacseq": {
     "full_name": "nf-core/atacseq",
@@ -254,7 +254,7 @@
   "daamicrobiome": {
     "full_name": "nf-core/daamicrobiome",
     "html_url": "https://github.com/nf-core/daamicrobiome",
-    "commit": "a7bb1ee3cdba34b6725bfd539493468df1007139",
+    "commit": "de1ab09c7c7ebb763e59a721533b70445eb7ad0a",
     "errors": 1,
     "warnings": 12,
     "parse_error": false,
@@ -578,7 +578,7 @@
   "genomeqc": {
     "full_name": "nf-core/genomeqc",
     "html_url": "https://github.com/nf-core/genomeqc",
-    "commit": "2db5a89ee4171d6e1ad4299873a03641c436c47f",
+    "commit": "0351f72ff2b0fe9c7c97d47df21bcf190442e0f1",
     "errors": 0,
     "warnings": 18,
     "parse_error": false,
@@ -698,7 +698,7 @@
   "isoseq": {
     "full_name": "nf-core/isoseq",
     "html_url": "https://github.com/nf-core/isoseq",
-    "commit": "f7d11f3993cd5a56d2faf2875dbf06a4c40d88f8",
+    "commit": "44e6022177ec71af6341fa1fc4fc0cd28cc40f36",
     "errors": 0,
     "warnings": 9,
     "parse_error": false,
@@ -758,7 +758,7 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "034af2b60718f2272c5daefb333c450ff4037bdc",
+    "commit": "439a426b7bb482fbf32215d038256a099a451afc",
     "errors": 0,
     "warnings": 20,
     "parse_error": false,
@@ -842,14 +842,14 @@
   "metatdenovo": {
     "full_name": "nf-core/metatdenovo",
     "html_url": "https://github.com/nf-core/metatdenovo",
-    "commit": "c806f8dc8da4783423973f10b4990e82838f6393",
+    "commit": "f20ecbbb81557fe7d72feaacdaa6e045729f898c",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 14
+    "publishdir_count": 16
   },
   "methylarray": {
     "full_name": "nf-core/methylarray",
@@ -878,7 +878,7 @@
   "methylseq": {
     "full_name": "nf-core/methylseq",
     "html_url": "https://github.com/nf-core/methylseq",
-    "commit": "9855ef9444cfb0111517b6f5f56bb4a0cd78ed7a",
+    "commit": "915959e27f2f98ab9665be75c50fd4be8ad43c78",
     "errors": 0,
     "warnings": 25,
     "parse_error": false,
@@ -1370,7 +1370,7 @@
   "rnaseq": {
     "full_name": "nf-core/rnaseq",
     "html_url": "https://github.com/nf-core/rnaseq",
-    "commit": "a4ed3abe93e06ed5bd12644e90449938d43a7f7f",
+    "commit": "47e24a87d1fcb45c299c3c22e46ea1c7515e34c1",
     "errors": 0,
     "warnings": 3,
     "parse_error": false,
@@ -1478,7 +1478,7 @@
   "seqinspector": {
     "full_name": "nf-core/seqinspector",
     "html_url": "https://github.com/nf-core/seqinspector",
-    "commit": "01c1b58a6e5ec8a98c80666a76b5176e5efad7e0",
+    "commit": "7506c59d97481acdc213fa7a2887bc195ac42d09",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1538,14 +1538,14 @@
   "spatialaxe": {
     "full_name": "nf-core/spatialaxe",
     "html_url": "https://github.com/nf-core/spatialaxe",
-    "commit": "e19e07618ae6c97ee8d5a797d576eafad73b115a",
+    "commit": "b05a853cae94a0a209d895f60126282c7a3c6c87",
     "errors": 0,
     "warnings": 1,
     "parse_error": false,
-    "prints_help": false,
+    "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 39
+    "publishdir_count": 40
   },
   "spatialvi": {
     "full_name": "nf-core/spatialvi",
@@ -1706,7 +1706,7 @@
   "viralrecon": {
     "full_name": "nf-core/viralrecon",
     "html_url": "https://github.com/nf-core/viralrecon",
-    "commit": "04d1b32c7a230c9f34a54491a04fa8ecbe9f2907",
+    "commit": "53182aa222f85ecbe05280972350034771e18e1c",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,

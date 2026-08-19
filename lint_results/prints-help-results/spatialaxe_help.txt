@@ -3,10 +3,154 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.07.0-edge
 
-Launching `./main.nf` [elated_pauling] revision: 5e182039c4
+Launching `./main.nf` [hopeful_plateau] revision: c5af9bbcb5
 
-WARN: Unrecognized config option 'validation.defaultIgnoreParams'
-WARN: Unrecognized config option 'validation.monochromeLogs'
-ERROR ~ Unable to create help message: Specified param 'true' does not exist in JSON schema.
 
- -- Check script 'subworkflows/nf-core/utils_nfschema_plugin/main.nf' at line: 41 or see '.nextflow.log' file for more details
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/spatialaxe 1.0.1dev
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/spatialaxe -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input                                  [string] Path to comma-separated file containing information about the Xenium experiment. (eg; 
+meta,path-to-xenium-bundle,path-to-morphology.ome.tif))  
+  --outdir                                 [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --mode                                   [string] Mode in which the pipeline is to be run. Either image-based segmentation, coordinate-based 
+segmentation, segmentation-free analysis or data preview.  (accepted: image, coordinate, 
+segfree, preview, qc)  
+  --method                                 [string] Segmentation method to run.  (accepted: cellpose, xeniumranger, baysor, proseg, segger, ficture, 
+stardist)  
+  --gene_panel                             [string] Path to gene panel JSON file to use for relabeling transcripts with the correct gene. 
+  --qupath_polygons                        [string] Path to qupath segmentation file in GeoJSON format. 
+  --alignment_csv                          [string] Image alignment file containing similarity transform matrix. (e.g., the _imagealignment.csv file 
+exported from Xenium Explorer)  
+  --cellpose_model                         [string] Model to use for running or starting training. 
+  --stardist_model                         [string] StarDist pretrained model for cell segmentation (e.g., '2D_versatile_fluo', '2D_versatile_he'). 
+[default: 2D_versatile_fluo]  
+  --stardist_nuclei_model                  [string] StarDist pretrained model for nuclei segmentation. [default: 2D_versatile_fluo] 
+  --stardist_prob_thresh                   [number] StarDist object probability threshold. Lower values detect more objects. 
+  --stardist_nms_thresh                    [number] StarDist non-maximum suppression threshold. Lower values reduce overlapping detections. 
+  --stardist_n_tiles                       [string] StarDist tiling for large images (e.g., '4 4'). Reduces memory usage. [default: 8 8] 
+  --segmentation_mask                      [string] Prior segmentation mask from other segmentation methods. 
+  --probes_fasta                           [string] Fasta file for the probe sequences used in the xenium experiment. 
+  --reference_annotations                  [string] Path to the directory containing genomic features (.gff) and fasta (.fa) files used as reference 
+annotations.  
+  --gene_synonyms                          [string] Gene synonyms that may have been counted as off-targets but simply differ in name. 
+  --email                                  [string] Email address for completion summary. 
+  --multiqc_title                          [string] MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+
+Segmentation options
+  --run_qc                                 [boolean] Whether to run the qc layer in the pipeline. [default: true] 
+  --offtarget_probe_tracking               [boolean] Whether to run the off-target probe tracking. 
+  --segmentation_refinement                [boolean] Whether to run refinement on the image-based segmentation methods. Runs coordinate-based methods 
+after the initial image-based segmentation run.  
+  --relabel_genes                          [boolean] Whether to relabel genes with gene_panel.json file. True when gene_panel is provided. 
+  --xeniumranger_only                      [boolean] Whether to run vanilla xeniumranger workflow. 
+  --cell_segmentation_only                 [boolean] Whether to only run nucleus segmentation. [default: true] 
+  --nucleus_segmentation_only              [boolean] Whether to only run nucleus segmentation. 
+  --expansion_distance                     [integer] Nuclei boundary expansion distance in µm. Default: 5 (Min: 0, Max: 15 if either boundary-stain or 
+interior-stain are enabled and 100 if nucleus-expansion only) [default: 5]  
+  --dapi_filter                            [integer] Minimum intensity in photoelectrons (pe) to filter nuclei. Default: 100. (appropriate range of 
+values is 0 to 99th percentile of image stack or 1000, whichever is larger) [default: 100]  
+  --interior_stain                         [boolean] Specify the name of the interior stain to use or disable. Supported for cell segmentation staining 
+workflow output bundles. Possible options are: \"18S\" (default) or \"disable\" [default: true] 
+ 
+  --boundary_stain                         [boolean] Specify the name of the boundary stain to use or disable. Supported for cell segmentation staining 
+workflow output bundles. Possible options are: \"ATP1A1/CD45/E-Cadherin\" (default) or \"disable\" 
+[default: true]  
+  --use_gpu                                [boolean] Enable GPU acceleration (set automatically by the gpu profile). 
+  --gpu_queue                              [string]  AWS Batch queue for GPU tasks (e.g., Segger, ProSeg). 
+  --cellpose_queue                         [string]  AWS Batch queue for Cellpose (single large GPU). 
+  --cellpose_downscale                     [boolean] Pre-downscale morphology image to avoid Cellpose OOM on large images. 
+  --sharpen_tiff                           [boolean] Whether to enhance the morphology.ome.tif file. 
+  --segger_accelerator                     [string]  Device used for training. (e.g., cuda for GPU or cpu)  (accepted: cpu, cuda) [default: cpu] 
+  --segger_knn_method                      [string]  Method for KNN computation. (e.g., cuda for GPU-based computation)  (accepted: kd_tree, cuda) 
+[default: kd_tree]  
+  --segger_num_workers                     [integer] Number of data-loader workers for Segger. [default: 4] 
+  --segger_model                           [string]  Path to a pre-trained Segger model checkpoint. 
+  --format                                 [string]  Input data platform. Used by proseg, segger, and spatialdata modules.  (accepted: xenium, cosmx, 
+merscope) [default: xenium]  
+  --image_seg_methods                      [array]   List of image-based segmentation methods. 
+  --transcript_seg_methods                 [array]   List of transcript-based segmentation methods. 
+  --segfree_methods                        [array]   List of segmentation-free methods. 
+  --negative_control_regex                 [string]  Regex used to identify or match negative control samples in a dataset. 
+  --features                               [string]  List of features to be passed to the ficture method. (eg: TP53,OCIAD1,BCAS3,SOX) 
+  --filter_transcripts                     [boolean] Whether to filter the transcripts.parquet file before running Baysor segmentation. 
+  --baysor_scale                           [integer] Baysor --scale parameter for non-tiled runs. [default: 30] 
+  --baysor_config                          [string]  Path to Baysor config TOML file (optional). 
+  --baysor_tiling                          [boolean] Enable tiled Baysor segmentation (divide transcripts into patches, run Baysor per patch, stitch 
+results). [default: true]  
+  --baysor_tiling_micron                   [integer] Tile width in microns for Baysor tiling. [default: 1200] 
+  --baysor_tiling_overlap                  [integer] Overlap between Baysor patches in microns. [default: 200] 
+  --baysor_tiling_balanced                 [boolean] Balance transcripts across tiles by merging sparse tiles. [default: true] 
+  --baysor_tiling_scale                    [integer] Baysor --scale for tiled runs (larger to compensate for EM on smaller tiles). [default: 39] 
+  --baysor_tiling_min_mols_per_cell        [integer] Minimum molecules per cell (--min-molecules-per-cell) for tiled Baysor. [default: 120] 
+  --baysor_tiling_min_transcripts_per_cell [integer] Post-stitch cell filtering threshold: minimum transcripts per cell. [default: 50] 
+  --baysor_prior                           [string]  Prior segmentation type for Baysor. 'cells' uses Xenium bundle cell_id column; 'cellpose' uses 
+Cellpose mask as image prior.  (accepted: cells, cellpose)  
+  --baysor_prior_confidence                [number]  Baysor prior-segmentation-confidence (0-1). [default: 0.2] 
+  --min_qv                                 [number]  Minimum Q-Score to pass filtering. [default: 20] 
+  --min_x                                  [number]  only keep transcripts whose x-coordinate is greater than specified limit, if no limit is specified, 
+the default minimum value will be 0.0  
+  --max_x                                  [number]  only keep transcripts whose x-coordinate is less than specified limit, if no limit is specified, the 
+default value will retain all transcripts since Xenium slide is <24000 microns in x and y (default: 
+24000.0) [default: 24000]  
+  --min_y                                  [number]  only keep transcripts whose y-coordinate is greater than specified limit, if no limit is specified, 
+the default minimum value will be 0.0  
+  --max_y                                  [number]  only keep transcripts whose y-coordinate is less than specified limit, if no limit is specified, the 
+default value will retain all transcripts since Xenium slide is <24000 microns in x and y (default: 
+24000.0) [default: 24000]  
+  --tiling                                 [boolean] Enable tiled segmentation for large datasets. Divides transcripts into overlapping patches, runs 
+segmentation in parallel per patch, then stitches results.  
+  --patch_grid                             [string]  Grid layout for tiling (rows x cols), e.g. '3x3', '4x4'. [default: 3x3] 
+  --patch_overlap                          [integer] Overlap between adjacent patches in microns. [default: 50] 
+  --patch_filter_method                    [string]  Post-stitch cell size filtering method. Options: 'empirical' (IQR-based), 'distribution' (z-score), 
+'both', or null to disable.  (accepted: empirical, distribution, both)  
+  --patch_filter_iqr_multiplier            [number]  IQR multiplier for empirical cell size filtering during stitching. [default: 3] 
+  --patch_filter_z_threshold               [number]  Z-score threshold for distribution-based cell size filtering during stitching. [default: 4] 
+  --csplit_x_bins                          [integer] Number of tiles along the x axis for cell-type separability. [default: 2] 
+  --csplit_y_bins                          [integer] Number of tiles along the y axis for cell-type separability. [default: 2] 
+  --tile_width                             [integer] Width of the tiles in pixels [default: 120] 
+  --tile_height                            [integer] Height of the tiles in pixels [default: 120] 
+  --batch_size_train                       [integer] Number of samples to process per training batch [default: 4] 
+  --devices                                [integer] Number of devices (GPUs) to use during training [default: 4] 
+  --max_epochs                             [integer] Number of training epochs [default: 200] 
+  --batch_size_predict                     [integer] Number of samples to process per batch during prediction [default: 1] 
+  --cc_analysis                            [boolean] Whether to use connected components for grouping transcripts without direct nucleus association 
+ 
+  --buffer_samples                         [boolean] Process only one sample at a time from a multi-sample samplesheet. 
+  --buffer_size                            [integer] Number of sample(s) to process at a time from a multi-sample samplesheet. Works if buffered_samples 
+is true. [default: 1]  
+
+QC options
+  --spoqc                                  [boolean] 
+
+Institutional config options
+  --test_data_base                         [string] Base path / URL for data used in the test profiles. [default: 
+https://raw.githubusercontent.com/nf-core/test-datasets/spatialaxe]  
+
+Generic options
+  --multiqc_methods_description            [string]  Custom MultiQC yaml file containing HTML including a methods description. 
+  --help_full                              [boolean] Display the full detailed help message. 
+  --show_hidden                            [boolean] Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 20 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/spatialaxe/blob/master/CITATIONS.md
+

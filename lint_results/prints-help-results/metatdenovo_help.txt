@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.07.0-edge
 
-Launching `./main.nf` [peaceful_swanson] revision: b4641016f5
+Launching `./main.nf` [sleepy_archimedes] revision: b4641016f5
 
 
 ------------------------------------------------------
@@ -71,14 +71,16 @@ Mapping options
   --bbmap_minid                 [number]  Minimum identity needed to assign read to a contig [default: 0.9] 
 
 Orf Caller options
-  --orf_caller                  [string] Specify which ORF caller to run. Possible alternatives: prodigal, prokka, transdecoder. This needs 
-to be set unless the `--user_orfs_*` params are set.  (accepted: prodigal, prokka, transdecoder) 
- 
+  --orf_caller                  [string] Specify which ORF caller to run. Possible alternatives: prodigal, prokka, transdecoder, metaeuk. 
+This needs to be set unless the `--user_orfs_*` params are set.  (accepted: prodigal, prokka, 
+transdecoder, metaeuk)  
   --user_orfs_faa               [string] Path to a protein fasta file for user-provided ORFs. 
   --user_orfs_gff               [string] Path to a gff file for user-provided ORFs. 
   --user_orfs_name              [string] Name to give to user-provided ORFs. [default: user_orfs] 
   --prodigal_trainingfile       [string] Specify a training file for prodigal. By default prodigal will learn from the input sequences 
  
+  --metaeuk_db                  [string] Path to a reference protein database for MetaEuk, either a protein fasta file or a directory 
+containing an mmseqs2-formatted database. Required when `--orf_caller metaeuk` is used.  
 
 Functional annotation options
   --skip_eggnog                 [boolean] Skip EGGNOG functional annotation 

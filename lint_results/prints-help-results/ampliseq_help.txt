@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.07.0-edge
 
 Downloading plugin nf-schema@2.7.2
-Launching `./main.nf` [clever_faraday] revision: 3a18f2f2f5
+Launching `./main.nf` [marvelous_leavitt] revision: 1a33346707
 
 
 ------------------------------------------------------
@@ -270,6 +270,7 @@ dramatically under certain conditions. Incompatible with `--sbdiexport`
   --skip_tse                               [boolean] Skip exporting TreeSummarizedExperiment rds object(s) 
   --skip_multiqc                           [boolean] Skip MultiQC reporting 
   --skip_report                            [boolean] Skip Markdown summary report 
+  --skip_parquet_summary                   [boolean] Skip writing summary tables as Parquet, alongside the default gzipped tsv 
 
 Generic options
   --seed                                   [integer]         Specifies the random seed. [default: 100] 
