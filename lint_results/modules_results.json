@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "fcad955c9c9529407951b09583707290c9220c94",
+  "_repo_commit": "f0c89298605aba2bcbaa9c843409cd8af013605e",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -8852,6 +8852,12 @@
   },
   "quantmsutils_mzmlstatistics": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/quantmsutils/mzmlstatistics",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "quarto_notebook": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/quarto/notebook",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

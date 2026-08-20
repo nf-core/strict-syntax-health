@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-08-12T00:21:16.909270273Z
+- Generated: 2026-08-20T00:11:29.674116951Z
 - Nextflow version: 26.07.0-edge
 - Summary: 13 warnings
 
@@ -41,56 +41,56 @@
       ^^^^^^^^^^^
   ```
 
-- Warning: `workflows/magmap.nf:250:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/magmap.nf:251:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .splitText() { it.trim() }
                              ^^
   ```
 
-- Warning: `workflows/magmap.nf:251:23`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/magmap.nf:252:23`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .filter { it }
                         ^^
   ```
 
-- Warning: `workflows/magmap.nf:264:36`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/magmap.nf:265:36`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       .splitText() { it.trim() }
                                      ^^
   ```
 
-- Warning: `workflows/magmap.nf:265:31`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/magmap.nf:266:31`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       .filter { it }
                                 ^^
   ```
 
-- Warning: `workflows/magmap.nf:273:36`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/magmap.nf:274:36`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       .splitText() { it.trim() }
                                      ^^
   ```
 
-- Warning: `workflows/magmap.nf:274:31`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/magmap.nf:275:31`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       .filter { it }
                                 ^^
   ```
 
-- Warning: `workflows/magmap.nf:332:66`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/magmap.nf:333:66`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   .map { pairs -> [ [ id: 'all' ], pairs.collect { it[0] }, pairs.collect { it[1] } ] }
                                                                    ^^
   ```
 
-- Warning: `workflows/magmap.nf:332:91`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/magmap.nf:333:91`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   .map { pairs -> [ [ id: 'all' ], pairs.collect { it[0] }, pairs.collect { it[1] } ] }

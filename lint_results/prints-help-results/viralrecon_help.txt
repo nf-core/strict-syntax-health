@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.07.0-edge
 
-Launching `./main.nf` [crazy_boltzmann] revision: c079035134
+Launching `./main.nf` [ridiculous_mandelbrot] revision: c079035134
 
 
 ------------------------------------------------------
@@ -38,8 +38,10 @@ Reference genome options
   --gff                                           Full path to GFF annotation file. 
   --additional_annotation        [string]         Full path to additional annotation file in GTF or GFF format. 
   --bowtie2_index                [string]         Path to directory or tar.gz archive for pre-built Bowtie2 index. 
-  --primer_bed                   [string]         If the '--protocol amplicon' parameter is provided then iVar is used to trim primer sequences after 
-read alignment and before variant calling.  
+  --primer_bed                   [string]         If the '--protocol amplicon' parameter is provided then iVar is used, when working with Illumina 
+data, to trim primer sequences after read alignment and before variant calling. This BED file will 
+also be used by ARTIC minion for the same purpose (if using --mapper_nanopore artic), in the case of 
+Nanopore data.  
   --primer_fasta                 [string]         If the '--protocol amplicon' parameter is provided then Cutadapt is used to trim primer sequences 
 from FastQ files before de novo assembly.  
   --primer_set                   [string]         The primer set to be used for the data analysis. 

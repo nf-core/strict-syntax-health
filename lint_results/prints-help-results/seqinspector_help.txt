@@ -4,8 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.07.0-edge
 
 Downloading plugin nf-core-utils@0.4.0
-Downloading plugin nf-schema@2.6.1
-Launching `./main.nf` [dreamy_easley] revision: 0bdadec2b6
+Launching `./main.nf` [boring_moriondo] revision: 0bdadec2b6
 
 
 ------------------------------------------------------
@@ -14,7 +13,7 @@ Launching `./main.nf` [dreamy_easley] revision: 0bdadec2b6
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/seqinspector 1.1.2
+  nf-core/seqinspector 1.2.0dev
 ------------------------------------------------------
 Typical pipeline command:
 

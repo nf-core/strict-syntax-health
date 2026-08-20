@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-07-25T00:33:32.005215924Z
+- Generated: 2026-08-20T00:11:12.356493667Z
 - Nextflow version: 26.07.0-edge
-- Summary: 26 warnings
+- Summary: 27 warnings
 
 ## :warning: Warnings
 
@@ -186,4 +186,11 @@
   ```nextflow
       def prefix = task.ext.prefix ?: "${meta.id}"
           ^^^^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_hadge_pipeline/main.nf:40:5`: Variable was declared but not used
+
+  ```nextflow
+      ch_versions = channel.empty()
+      ^^^^^^^^^^^
   ```

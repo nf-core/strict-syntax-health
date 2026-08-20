@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.07.0-edge
 
 Downloading plugin nf-schema@2.5.1
-Launching `./main.nf` [shrivelled_kalam] revision: f90c9eb6a8
+Launching `./main.nf` [distracted_curry] revision: f90c9eb6a8
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -33,7 +33,8 @@ Cloud infrastructure.
 
 Pipeline mode options
   --kvalue                      [integer] k-mer size for meryl (merqury). [default: 21] 
-  --container_engine            [string]  Container engine to run shiny app [default: docker] 
+  --container_engine            [string]  Container engine used to launch the interactive Shiny app. Only 'docker' and 'podman' are supported 
+- Singularity/Apptainer does not work.  (accepted: docker, podman) [default: docker]  
 
 BUSCO options
   --groups                      [string]  A string with NCBI taxonomic groups of the assemblies. Can be a comma-separated list. [default: 

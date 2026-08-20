@@ -1,8 +1,24 @@
 # Nextflow lint results
 
-- Generated: 2026-08-18T00:09:59.450318006Z
+- Generated: 2026-08-20T00:09:58.806508678Z
 - Nextflow version: 26.07.0-edge
-- Summary: 58 warnings
+- Summary: 2 errors, 54 warnings
+
+## :x: Errors
+
+- Error: `main.nf:40:5`: Incorrect number of call arguments, expected 1 but received 2
+
+  ```nextflow
+      BACMODEL (
+      ^
+  ```
+
+- Error: `workflows/bacmodel.nf:80:26`: `outdir` is not defined
+
+  ```nextflow
+              storeDir: "${outdir}/pipeline_info",
+                           ^^^^^^
+  ```
 
 ## :warning: Warnings
 
@@ -382,32 +398,4 @@
   ```nextflow
               def transport_tbl = files.find { it.name.contains('Transporter') }
                                                ^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_bacmodel_pipeline/main.nf:30:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      monochrome_logs   // boolean: Do not use coloured log outputs
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_bacmodel_pipeline/main.nf:33:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      input             //  string: Path to input samplesheet
-      ^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_bacmodel_pipeline/main.nf:125:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      hook_url        //  string: hook URL for notifications
-      ^^^^^^^^
-  ```
-
-- Warning: `workflows/bacmodel.nf:57:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      def topic_versions = Channel.topic("versions")
-                           ^^^^^^^
   ```
