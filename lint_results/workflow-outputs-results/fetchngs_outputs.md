@@ -1,6 +1,6 @@
 # Workflow outputs migration: fetchngs
 
-- Generated: 2026-08-15T00:10:34.019716+00:00
+- Generated: 2026-08-21T00:12:17.479075+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,12 +14,12 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 9 `publishDir` references across 9 files that should be migrated to the workflow `output {}` block:
 
-- [`conf/base.config`](https://github.com/nf-core/fetchngs/blob/31e36a8fd6b482695a47257e59b1ca1c1fe791d4/conf/base.config#L16) — 1 reference
-- [`modules/local/aspera_cli/nextflow.config`](https://github.com/nf-core/fetchngs/blob/31e36a8fd6b482695a47257e59b1ca1c1fe791d4/modules/local/aspera_cli/nextflow.config#L4) — 1 reference
-- [`modules/local/multiqc_mappings_config/nextflow.config`](https://github.com/nf-core/fetchngs/blob/31e36a8fd6b482695a47257e59b1ca1c1fe791d4/modules/local/multiqc_mappings_config/nextflow.config#L3) — 1 reference
-- [`modules/local/sra_fastq_ftp/nextflow.config`](https://github.com/nf-core/fetchngs/blob/31e36a8fd6b482695a47257e59b1ca1c1fe791d4/modules/local/sra_fastq_ftp/nextflow.config#L4) — 1 reference
-- [`modules/local/sra_ids_to_runinfo/nextflow.config`](https://github.com/nf-core/fetchngs/blob/31e36a8fd6b482695a47257e59b1ca1c1fe791d4/modules/local/sra_ids_to_runinfo/nextflow.config#L3) — 1 reference
-- [`modules/local/sra_runinfo_to_ftp/nextflow.config`](https://github.com/nf-core/fetchngs/blob/31e36a8fd6b482695a47257e59b1ca1c1fe791d4/modules/local/sra_runinfo_to_ftp/nextflow.config#L3) — 1 reference
-- [`modules/nf-core/fastqdl/nextflow.config`](https://github.com/nf-core/fetchngs/blob/31e36a8fd6b482695a47257e59b1ca1c1fe791d4/modules/nf-core/fastqdl/nextflow.config#L3) — 1 reference
-- [`modules/nf-core/sratools/fasterqdump/nextflow.config`](https://github.com/nf-core/fetchngs/blob/31e36a8fd6b482695a47257e59b1ca1c1fe791d4/modules/nf-core/sratools/fasterqdump/nextflow.config#L4) — 1 reference
-- [`modules/nf-core/sratools/prefetch/nextflow.config`](https://github.com/nf-core/fetchngs/blob/31e36a8fd6b482695a47257e59b1ca1c1fe791d4/modules/nf-core/sratools/prefetch/nextflow.config#L3) — 1 reference
+- [`conf/base.config`](https://github.com/nf-core/fetchngs/blob/a1238b35b0b30db97bc80427486b4f255a9b05db/conf/base.config#L16) — 1 reference
+- [`modules/local/aspera_cli/nextflow.config`](https://github.com/nf-core/fetchngs/blob/a1238b35b0b30db97bc80427486b4f255a9b05db/modules/local/aspera_cli/nextflow.config#L4) — 1 reference
+- [`modules/local/multiqc_mappings_config/nextflow.config`](https://github.com/nf-core/fetchngs/blob/a1238b35b0b30db97bc80427486b4f255a9b05db/modules/local/multiqc_mappings_config/nextflow.config#L3) — 1 reference
+- [`modules/local/sra_fastq_ftp/nextflow.config`](https://github.com/nf-core/fetchngs/blob/a1238b35b0b30db97bc80427486b4f255a9b05db/modules/local/sra_fastq_ftp/nextflow.config#L4) — 1 reference
+- [`modules/local/sra_ids_to_runinfo/nextflow.config`](https://github.com/nf-core/fetchngs/blob/a1238b35b0b30db97bc80427486b4f255a9b05db/modules/local/sra_ids_to_runinfo/nextflow.config#L3) — 1 reference
+- [`modules/local/sra_runinfo_to_ftp/nextflow.config`](https://github.com/nf-core/fetchngs/blob/a1238b35b0b30db97bc80427486b4f255a9b05db/modules/local/sra_runinfo_to_ftp/nextflow.config#L3) — 1 reference
+- [`modules/nf-core/fastqdl/nextflow.config`](https://github.com/nf-core/fetchngs/blob/a1238b35b0b30db97bc80427486b4f255a9b05db/modules/nf-core/fastqdl/nextflow.config#L3) — 1 reference
+- [`modules/nf-core/sratools/fasterqdump/nextflow.config`](https://github.com/nf-core/fetchngs/blob/a1238b35b0b30db97bc80427486b4f255a9b05db/modules/nf-core/sratools/fasterqdump/nextflow.config#L4) — 1 reference
+- [`modules/nf-core/sratools/prefetch/nextflow.config`](https://github.com/nf-core/fetchngs/blob/a1238b35b0b30db97bc80427486b4f255a9b05db/modules/nf-core/sratools/prefetch/nextflow.config#L3) — 1 reference

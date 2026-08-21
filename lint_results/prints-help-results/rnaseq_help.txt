@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.07.0-edge
+ N E X T F L O W   ~  version 26.08.0-edge
 
-Launching `./main.nf` [scruffy_hypatia] revision: 90e80d6805
+Launching `./main.nf` [jovial_jennings] revision: 7c5e07bead
 
 
 ------------------------------------------------------
@@ -74,6 +74,7 @@ BBSplit. You have to also explicitly set `--skip_bbsplit false` if you want to u
   --remove_ribo_rna             [boolean] Enable the removal of reads derived from ribosomal RNA. 
   --ribo_removal_tool           [string]  Tool to use for rRNA removal.  (accepted: sortmerna, ribodetector, bowtie2) [default: sortmerna] 
  
+  --bowtie2_rrna_index          [string]  Path to directory or tar.gz archive for pre-built Bowtie2 index for rRNA removal. 
   --use_gpu_ribodetector        [boolean] Enable GPU acceleration for ribodetector. 
   --ribo_database_manifest      [string]  Text file containing paths to fasta files (one per line) that will be used to create the database 
 for SortMeRNA. [default: ${projectDir}/assets/rrna-db-defaults.txt]  

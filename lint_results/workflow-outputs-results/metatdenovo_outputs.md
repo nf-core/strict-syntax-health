@@ -1,6 +1,6 @@
 # Workflow outputs migration: metatdenovo
 
-- Generated: 2026-08-19T00:10:40.684345+00:00
+- Generated: 2026-08-21T00:12:56.499967+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,5 +14,5 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 16 `publishDir` references across 2 files that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/metatdenovo/blob/f20ecbbb81557fe7d72feaacdaa6e045729f898c/conf/modules.config#L13) — 15 references
-- [`modules/nf-core/subread/featurecounts/tests/nextflow.config`](https://github.com/nf-core/metatdenovo/blob/f20ecbbb81557fe7d72feaacdaa6e045729f898c/modules/nf-core/subread/featurecounts/tests/nextflow.config#L3) — 1 reference
+- [`conf/modules.config`](https://github.com/nf-core/metatdenovo/blob/a8776f3294ac926b201282f10a37e9151f96d436/conf/modules.config#L13) — 15 references
+- [`modules/nf-core/subread/featurecounts/tests/nextflow.config`](https://github.com/nf-core/metatdenovo/blob/a8776f3294ac926b201282f10a37e9151f96d436/modules/nf-core/subread/featurecounts/tests/nextflow.config#L3) — 1 reference

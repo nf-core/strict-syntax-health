@@ -1,10 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.07.0-edge
+ N E X T F L O W   ~  version 26.08.0-edge
 
 Downloading plugin nf-schema@2.7.2
-Launching `./main.nf` [marvelous_leavitt] revision: 1a33346707
+Launching `./main.nf` [shrivelled_goldstine] revision: 3825e9f45c
 
 
 ------------------------------------------------------
@@ -124,9 +124,8 @@ arc,euk, mito,euk, bac, ...)
   --stop_codons                            [string]  Define stop codons [default: TAA,TAG] 
 
 Taxonomic assignment
-  --dada_ref_taxonomy                      [string]  Name of supported database, and optionally also version number  (accepted: coidb, coidb=221216, 
-glosed, glosed=1.0.0, greengenes2, greengenes2=2024.09, gtdb, gtdb=R05-RS95, ...) [default: 
-sbdi-gtdb=R11-RS232-1]  
+  --dada_ref_taxonomy                      [string]  Name of supported database(s), and optionally also version number(s) -- comma-separated for multiple 
+databases [default: sbdi-gtdb=R11-RS232-1]  
   --dada_ref_tax_custom                    [string]  Path to a custom DADA2 reference taxonomy database 
   --dada_ref_tax_custom_sp                 [string]  Path to a custom DADA2 reference taxonomy database for species assignment 
   --dada_min_boot                          [integer] The minimum bootstrap confidence (out of 100 trials) for assigning a taxonomic level with DADA2. 
@@ -226,9 +225,11 @@ removed. [default: 1]
 
 Comparison of observed to expected results
   --expected_sequences                     [string]  Path to file of expected sequences in fasta format 
-  --expected_sequences_region              [string]  What region of the sequence comparison is evaluated  (accepted: alignment, query, target) 
-[default: query]  
+  --expected_sequences_region              [string]  What region of the sequence comparison is evaluated  (accepted: alignment, observed, expected) 
+[default: observed]  
   --expected_sequences_mismatches          [integer] Threshold of accepted mismatches and gaps to the expected sequences [default: 0] 
+  --expected_sequences_merge               [string]  How to handle multiple sequence matches  (accepted: all, observed, expected, none) [default: 
+all]  
   --expected_abundances                    [string]  Path to file of abundances of expected sequences in tsv format 
   --expected_profile                       [string]  Path to file of abundances of expected taxnonomies in tsv format 
 

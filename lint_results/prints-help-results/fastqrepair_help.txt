@@ -1,0 +1,53 @@
+$ NXF_SYNTAX_PARSER=v2 nextflow run . --help
+
+
+ N E X T F L O W   ~  version 26.08.0-edge
+
+Launching `./main.nf` [gloomy_stone] revision: b67a1ebedb
+
+WARN: Unrecognized config option 'validation.defaultIgnoreParams'
+WARN: Unrecognized config option 'validation.monochromeLogs'
+
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/fastqrepair 1.1.1
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/fastqrepair -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input                 [string]  Path to comma-separated file containing information about the samples in the experiment. 
+  --outdir                [string]  The output directory where the results will be saved. 
+  --num_splits            [integer] FASTQ chunk numbers for parallel processing. [default: 2] 
+  --qin                   [integer] the ASCII offset for BBMap (33=Sanger, 64=old Solexa).  (accepted: 33, 64) [default: 33] 
+  --alphabet              [string]  Allowed character in the SEQ line for Wipertools. [default: ACGTN] 
+  --skip_bbmap_repair     [boolean] This option tells the pipeline to skip the BBMap re-pair step. [default: false] 
+  --publish_all_tools     [boolean] Publish intermediate results. [default: false] 
+
+Generic options
+  --email                 [string]          Email address for completion summary. 
+  --multiqc_title         [string]          MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+  --multiqc_replace_names [string]          Optional two-column sample renaming file. First column a set of patterns, second column a set of 
+corresponding replacements. Passed via MultiQC's `--replace-names` option.  
+  --multiqc_sample_names  [string]          Optional TSV file with headers, passed to the MultiQC --sample_names argument. 
+  --help                  [boolean, string] Display the help message. 
+  --help_full             [boolean]         Display the full detailed help message. 
+  --show_hidden           [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 18 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/fastqrepair/blob/main/CITATIONS.md
+

@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-23T00:40:50.124713371Z
-- Nextflow version: 26.05.0-edge
-- Summary: 19 warnings
+- Generated: 2026-08-21T00:11:20.918302759Z
+- Nextflow version: 26.08.0-edge
+- Summary: 16 warnings
 
 ## :warning: Warnings
 
@@ -116,25 +116,4 @@
   ```nextflow
       ch_versions = Channel.empty()
                     ^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      valid_config = valid_config
-      ^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
   ```
