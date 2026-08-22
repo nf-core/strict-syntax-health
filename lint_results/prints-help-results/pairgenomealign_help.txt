@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.07.0-edge
+ N E X T F L O W   ~  version 26.08.0-edge
 
-Launching `./main.nf` [distraught_dubinsky] revision: 8348843946
+Launching `./main.nf` [high_curry] revision: 8348843946
 
 
 ------------------------------------------------------
@@ -12,7 +12,7 @@ Launching `./main.nf` [distraught_dubinsky] revision: 8348843946
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/pairgenomealign 3.0.3
+  nf-core/pairgenomealign 3.0.4
 ------------------------------------------------------
 Typical pipeline command:
 

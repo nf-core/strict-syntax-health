@@ -146,7 +146,7 @@
   "chipseq": {
     "full_name": "nf-core/chipseq",
     "html_url": "https://github.com/nf-core/chipseq",
-    "commit": "43d21542377b830c154ebf60ef31b190c002d244",
+    "commit": "2923ac3ad00e10fe45906d65e599c4b136d95b80",
     "errors": 0,
     "warnings": 57,
     "parse_error": false,
@@ -326,9 +326,9 @@
   "demultiplex": {
     "full_name": "nf-core/demultiplex",
     "html_url": "https://github.com/nf-core/demultiplex",
-    "commit": "3d7200afd0894b0a35c9efc26d83261501bf9c12",
+    "commit": "a85e565d603c3c04261bd6432799af2ed26bec52",
     "errors": 0,
-    "warnings": 0,
+    "warnings": 1,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": true,
@@ -482,7 +482,7 @@
   "fastqrepair": {
     "full_name": "nf-core/fastqrepair",
     "html_url": "https://github.com/nf-core/fastqrepair",
-    "commit": "7f24b1532256d4042142467d01a3392f2a8a0723",
+    "commit": "d2a8976f753e64b2d927911839ca99d3b05021df",
     "errors": 0,
     "warnings": 17,
     "parse_error": false,
@@ -578,7 +578,7 @@
   "genomeqc": {
     "full_name": "nf-core/genomeqc",
     "html_url": "https://github.com/nf-core/genomeqc",
-    "commit": "b7a7c653b48b47aa70f81ee11410e1d27132b544",
+    "commit": "26682e00949e0aaa78ed5e5f4eb658add2c0f421",
     "errors": 0,
     "warnings": 2,
     "parse_error": false,
@@ -770,7 +770,7 @@
   "magmap": {
     "full_name": "nf-core/magmap",
     "html_url": "https://github.com/nf-core/magmap",
-    "commit": "d2820e1fa9b82de370c5f97d9b0aa25d5fbddcdf",
+    "commit": "53bd2ee8554852d031c580802cac07d33a429c16",
     "errors": 0,
     "warnings": 13,
     "parse_error": false,
@@ -842,7 +842,7 @@
   "metatdenovo": {
     "full_name": "nf-core/metatdenovo",
     "html_url": "https://github.com/nf-core/metatdenovo",
-    "commit": "a8776f3294ac926b201282f10a37e9151f96d436",
+    "commit": "664316994548a91b37a30df4484931396e649646",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1058,7 +1058,7 @@
   "pairgenomealign": {
     "full_name": "nf-core/pairgenomealign",
     "html_url": "https://github.com/nf-core/pairgenomealign",
-    "commit": "5b4f9920b6d9f794695b3b921157c0b8f326f998",
+    "commit": "beb46dc3d560e7e9c28c3bb43628a865d20dfb48",
     "errors": 0,
     "warnings": 12,
     "parse_error": false,
@@ -1226,14 +1226,14 @@
   "provenancereport": {
     "full_name": "nf-core/provenancereport",
     "html_url": "https://github.com/nf-core/provenancereport",
-    "commit": "0b08f5e9cf4895c3ab96852615ae94bb3a86966c",
+    "commit": "502e620e3f9102bf002b26bd8afbebf8503b2f52",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 2
+    "publishdir_count": 4
   },
   "radseq": {
     "full_name": "nf-core/radseq",
@@ -1526,7 +1526,7 @@
   "sopa": {
     "full_name": "nf-core/sopa",
     "html_url": "https://github.com/nf-core/sopa",
-    "commit": "c2b4e5fe1f5291a3f079e55859cd2f42e588e324",
+    "commit": "0ed26205d52e00bfeaa64a802fd7010fe25f64c7",
     "errors": 0,
     "warnings": 11,
     "parse_error": false,

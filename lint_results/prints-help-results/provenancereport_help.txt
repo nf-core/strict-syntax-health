@@ -1,10 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.07.0-edge
+ N E X T F L O W   ~  version 26.08.0-edge
 
 Downloading plugin nf-prov@1.7.0
-Launching `./main.nf` [jolly_feynman] revision: 24be60e8c5
+Launching `./main.nf` [ecstatic_davinci] revision: 24be60e8c5
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -35,6 +35,7 @@ notebook is used.
 information. [default: 
 community.wave.seqera.io/library/jupyter_matplotlib_papermill_quarto_r-rmarkdown:6d15193ce3dfc665] 
  
+  --document         [string] Path to a documentation file to track that the provenance report has been reviewed. 
   --email            [string] Email address for completion summary. 
 
 Generic options
