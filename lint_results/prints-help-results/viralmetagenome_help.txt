@@ -3,8 +3,9 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.08.0-edge
 
-Launching `./main.nf` [shrivelled_archimedes] revision: c2dfc94d7c
+Launching `./main.nf` [sad_knuth] revision: c2dfc94d7c
 
+WARN: Unrecognized config option 'manifest.diagram'
 
 ------------------------------------------------------
                                         ,--./,-.

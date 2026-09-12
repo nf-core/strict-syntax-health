@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-08-25T00:11:42.983268334Z
+- Generated: 2026-09-12T00:22:34.044335149Z
 - Nextflow version: 26.08.0-edge
-- Summary: 16 warnings
+- Summary: 13 warnings
 
 ## :warning: Warnings
 
@@ -32,27 +32,6 @@
   ```nextflow
       ch_cat_panel_files = ch_cat_fastq
       ^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/pna/v1/main.nf:205:24`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-              .flatMap { it }
-                         ^^
-  ```
-
-- Warning: `subworkflows/local/pna/v1/main.nf:209:55`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  def stages = stageFilePairs.collect { it[0] }
-                                                        ^^
-  ```
-
-- Warning: `subworkflows/local/pna/v1/main.nf:210:54`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                  def files = stageFilePairs.collect { it[1] }
-                                                       ^^
   ```
 
 - Warning: `subworkflows/local/pna/v2/main.nf:115:5`: Variable was declared but not used
@@ -97,23 +76,23 @@
                  ^^
   ```
 
-- Warning: `subworkflows/local/pna/v2/main.nf:248:24`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_pixelator_pipeline/main.nf:279:20`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-              .flatMap { it }
-                         ^^
+          .flatMap { it }
+                     ^^
   ```
 
-- Warning: `subworkflows/local/pna/v2/main.nf:252:55`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_pixelator_pipeline/main.nf:290:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-                  def stages = stageFilePairs.collect { it[0] }
-                                                        ^^
+              tuple([id: 'all'], filtered.collect { it[0] }, filtered.collect { it[1] })
+                                                    ^^
   ```
 
-- Warning: `subworkflows/local/pna/v2/main.nf:253:54`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_pixelator_pipeline/main.nf:290:79`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-                  def files = stageFilePairs.collect { it[1] }
-                                                       ^^
+              tuple([id: 'all'], filtered.collect { it[0] }, filtered.collect { it[1] })
+                                                                                ^^
   ```

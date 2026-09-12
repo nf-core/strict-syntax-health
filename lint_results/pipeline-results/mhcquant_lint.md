@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-09-10T00:20:13.213737193Z
+- Generated: 2026-09-12T00:21:56.248283590Z
 - Nextflow version: 26.08.0-edge
-- Summary: 45 warnings
+- Summary: 52 warnings
 
 ## :warning: Warnings
 
@@ -35,6 +35,13 @@
   ```
 
 - Warning: `modules/local/openms/mapaligneridentification/main.nf:22:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      def out_names = idxmls.collect { it.baseName.replace('_fdr_filtered','')+'.trafoXML' }.join(' ')
+                                       ^^
+  ```
+
+- Warning: `modules/local/openms/mapaligneridentification/main.nf:32:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       def out_names = idxmls.collect { it.baseName.replace('_fdr_filtered','')+'.trafoXML' }.join(' ')
@@ -79,43 +86,85 @@
 - Warning: `subworkflows/local/map_alignment/main.nf:22:24`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-              .flatMap { group_meta, metas -> metas }
+              .flatMap { group_meta, trafoxmls -> [trafoxmls].flatten().collect { trafoxml -> [[spectra: trafoxml.baseName], trafoxml] } }
                          ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/map_alignment/main.nf:25:32`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-                      .flatMap { group_meta, trafoxmls -> [trafoxmls].flatten().collect { trafoxml -> [[spectra: trafoxml.baseName], trafoxml] } })
-                                 ^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/map_alignment/main.nf:26:20`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-              .map { spectra, meta, trafoxml -> [meta, trafoxml] }
-                     ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/map_alignment/main.nf:35:24`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/map_alignment/main.nf:27:24`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .flatMap { group_meta, idxmls -> [idxmls].flatten().collect { idxml -> [[spectra: idxml.baseName.replace("_fdr_filtered","")], idxml] } }
                          ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/map_alignment/main.nf:37:32`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/map_alignment/main.nf:29:32`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                       .flatMap { group_meta, metas -> metas }
                                  ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/map_alignment/main.nf:39:20`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/map_alignment/main.nf:34:20`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-              .map { group_meta, idxml, meta -> [meta, idxml] }
-                     ^^^^^^^^^^
+              .map { spectra, idxml, meta, mzml, trafoxml -> [meta, idxml, mzml, trafoxml] }
+                     ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/map_alignment/main.nf:35:23`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              .branch { meta, idxml, mzml, trafoxml ->
+                        ^^^^
+  ```
+
+- Warning: `subworkflows/local/map_alignment/main.nf:35:29`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              .branch { meta, idxml, mzml, trafoxml ->
+                              ^^^^^
+  ```
+
+- Warning: `subworkflows/local/map_alignment/main.nf:35:36`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              .branch { meta, idxml, mzml, trafoxml ->
+                                     ^^^^
+  ```
+
+- Warning: `subworkflows/local/map_alignment/main.nf:43:26`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              .map { meta, idxml, mzml, trafoxml -> [id: "${meta.sample}_${meta.condition}"] }
+                           ^^^^^
+  ```
+
+- Warning: `subworkflows/local/map_alignment/main.nf:43:33`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              .map { meta, idxml, mzml, trafoxml -> [id: "${meta.sample}_${meta.condition}"] }
+                                  ^^^^
+  ```
+
+- Warning: `subworkflows/local/map_alignment/main.nf:43:39`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              .map { meta, idxml, mzml, trafoxml -> [id: "${meta.sample}_${meta.condition}"] }
+                                        ^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/map_alignment/main.nf:52:78`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          OPENMS_MAPRTTRANSFORMERMZML(ch_runs_by_alignment.aligned.map { meta, idxml, mzml, trafoxml -> [meta, mzml, trafoxml] })
+                                                                               ^^^^^
+  ```
+
+- Warning: `subworkflows/local/map_alignment/main.nf:53:86`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          OPENMS_MAPRTTRANSFORMERIDXML(ch_runs_by_alignment.aligned.map { meta, idxml, mzml, trafoxml -> [meta, idxml, trafoxml] })
+                                                                                       ^^^^
   ```
 
 - Warning: `subworkflows/local/process_feature/main.nf:20:61`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -307,14 +356,14 @@
                          ^^^^^^^^
   ```
 
-- Warning: `workflows/mhcquant.nf:239:88`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/mhcquant.nf:241:88`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           params.epicore ? EPICORE.out.stats : SUMMARIZE_RESULTS.out.epicore_input.map { meta, tsv, stats -> stats }
                                                                                          ^^^^
   ```
 
-- Warning: `workflows/mhcquant.nf:239:94`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/mhcquant.nf:241:94`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           params.epicore ? EPICORE.out.stats : SUMMARIZE_RESULTS.out.epicore_input.map { meta, tsv, stats -> stats }

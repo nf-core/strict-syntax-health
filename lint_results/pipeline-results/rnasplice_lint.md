@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-09-11T00:22:12.491768417Z
+- Generated: 2026-09-12T00:23:47.269640248Z
 - Nextflow version: 26.08.0-edge
 - Summary: 13 warnings
 
@@ -90,7 +90,7 @@
                   ^^
   ```
 
-- Warning: `workflows/rnasplice.nf:178:9`: Variable was declared but not used
+- Warning: `workflows/rnasplice.nf:179:9`: Variable was declared but not used
 
   ```nextflow
           ch_transcriptome_bam_index = BAM_SORT_STATS_SAMTOOLS.out.index

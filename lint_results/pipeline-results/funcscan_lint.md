@@ -1,12 +1,12 @@
 # Nextflow lint results
 
-- Generated: 2026-08-29T00:17:29.607478585Z
+- Generated: 2026-09-12T00:19:54.038324898Z
 - Nextflow version: 26.08.0-edge
 - Summary: 64 warnings
 
 ## :warning: Warnings
 
-- Warning: `conf/modules.config:616:65`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:615:65`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               saveAs: { params.run_taxa_classification == false ? it : null },
@@ -237,7 +237,7 @@
       ^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_funcscan_pipeline/main.nf:114:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/utils_nfcore_funcscan_pipeline/main.nf:115:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       Channel

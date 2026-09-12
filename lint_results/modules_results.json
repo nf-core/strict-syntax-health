@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "b80f9f534316d36fec85fa36cf6b4c60ab8c5b96",
+  "_repo_commit": "56155f73713bc32c5343b59f05d968794c1b596d",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -6075,7 +6075,7 @@
   "krakenuniq_preloadedkrakenuniq": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/krakenuniq/preloadedkrakenuniq",
     "errors": 0,
-    "warnings": 0,
+    "warnings": 1,
     "parse_error": false
   },
   "krona_kronadb": {
@@ -7124,6 +7124,18 @@
   },
   "modkit_callmods": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/modkit/callmods",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "modkit_extractcalls": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/modkit/extractcalls",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "modkit_extractfull": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/modkit/extractfull",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
