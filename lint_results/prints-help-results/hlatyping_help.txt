@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.08.0-edge
 
 Downloading plugin nf-schema@2.7.2
-Launching `./main.nf` [fabulous_liskov] revision: 7a24b6780a
+Launching `./main.nf` [naughty_ramachandran] revision: 7a24b6780a
 
 
 ------------------------------------------------------
@@ -31,11 +31,12 @@ Cloud infrastructure.
 HLA typing options
   --tools                       [string] Specifies the hlatyping tool(s) to use. [default: optitype] 
 
-OptiType Optimisation steps
-  --solver                      [string]  Specifies the integer programming solver. [default: glpk] 
-  --enumerations                [integer] Specifies the number of output solutions. [default: 1] 
-  --beta                        [number]  Specifies the weight of the regularisation term. [default: 0.009] 
-  --multiqc_title               [string]  MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+OptiType options
+  --optitype_solver             [string]  Specifies the integer programming solver.  (accepted: glpk, cbc) [default: glpk] 
+  --optitype_enumerations       [integer] Specifies the number of output solutions. [default: 1] 
+  --optitype_beta               [number]  Specifies the weight of the regularisation term. [default: 0.009] 
+  --optitype_unpaired_weight    [number]  Sets the weight of unpaired reads. [default: 0] 
+  --optitype_use_discordant     [boolean] Use discordant read pairs for typing. 
 
 HLA-HD options
   --hlahd_path                  [string]  Tarball file location of HLA-HD software distribution. 
@@ -53,6 +54,7 @@ Optional outputs
   --save_merged_fastq           [boolean] Save FastQ files after merging re-sequenced libraries in the results directory. 
 
 Generic options
+  --multiqc_title               [string]          MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
   --multiqc_methods_description [string]          Custom MultiQC yaml file containing HTML including a methods description. 
   --help                        [boolean, string] Display the help message. 
   --help_full                   [boolean]         Display the full detailed help message. 

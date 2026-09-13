@@ -626,7 +626,7 @@
   "hadge": {
     "full_name": "nf-core/hadge",
     "html_url": "https://github.com/nf-core/hadge",
-    "commit": "fa0c1e2788710d2df8204eec6dd38819540cc4c5",
+    "commit": "b81dcd2fd21f2a876538154c77e143cbb846c33a",
     "errors": 0,
     "warnings": 27,
     "parse_error": false,
@@ -674,7 +674,7 @@
   "hlatyping": {
     "full_name": "nf-core/hlatyping",
     "html_url": "https://github.com/nf-core/hlatyping",
-    "commit": "fff6d750aae2557d6bb647cf0ad3265c7e78db39",
+    "commit": "5ef5de01f9d0c63556986acfff18c3472fc2b8da",
     "errors": 0,
     "warnings": 4,
     "parse_error": false,
@@ -890,7 +890,7 @@
   "mhcquant": {
     "full_name": "nf-core/mhcquant",
     "html_url": "https://github.com/nf-core/mhcquant",
-    "commit": "9ec6a909583496233f3f6681924a73a6d483349a",
+    "commit": "c613d13f9a82723bfb15fe9618c5897e18e2dac5",
     "errors": 0,
     "warnings": 52,
     "parse_error": false,
@@ -1058,7 +1058,7 @@
   "pairgenomealign": {
     "full_name": "nf-core/pairgenomealign",
     "html_url": "https://github.com/nf-core/pairgenomealign",
-    "commit": "907c96f13781e14ac3d7f15a0564e6222ca0cb24",
+    "commit": "5f3a88650c5383897aaf39181cfdc186a0b0beb6",
     "errors": 0,
     "warnings": 12,
     "parse_error": false,
@@ -1298,7 +1298,7 @@
   "references": {
     "full_name": "nf-core/references",
     "html_url": "https://github.com/nf-core/references",
-    "commit": "d34b9900e8e4be16f68de2d3310b088f0aecdb5f",
+    "commit": "e1d4891b29feb7847223ae28262bdfc270adbac1",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
