@@ -458,7 +458,7 @@
   "epitopeprediction": {
     "full_name": "nf-core/epitopeprediction",
     "html_url": "https://github.com/nf-core/epitopeprediction",
-    "commit": "a8e091514ec77aaab8db17f80b2da676914526df",
+    "commit": "edef74b20cc3da1bb92d0fbb49454f509d9ea5db",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -626,7 +626,7 @@
   "hadge": {
     "full_name": "nf-core/hadge",
     "html_url": "https://github.com/nf-core/hadge",
-    "commit": "b81dcd2fd21f2a876538154c77e143cbb846c33a",
+    "commit": "48082eb8a37e5f8a232ab31789239c9724cbd688",
     "errors": 0,
     "warnings": 27,
     "parse_error": false,
@@ -842,7 +842,7 @@
   "metatdenovo": {
     "full_name": "nf-core/metatdenovo",
     "html_url": "https://github.com/nf-core/metatdenovo",
-    "commit": "c0d4f79421c4ac1cf9671bcb3340dc4de59d13db",
+    "commit": "e394ec89497915c76055857c3ebe25149a235852",
     "errors": 0,
     "warnings": 1,
     "parse_error": false,
@@ -1382,7 +1382,7 @@
   "rnasplice": {
     "full_name": "nf-core/rnasplice",
     "html_url": "https://github.com/nf-core/rnasplice",
-    "commit": "2461511dcd71c2f16a6cc8805c99d33bc1cddb3e",
+    "commit": "059d711592cfd961ee92c6e47b75187b7f119d1a",
     "errors": 0,
     "warnings": 13,
     "parse_error": false,

@@ -3,8 +3,9 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.08.0-edge
 
-Launching `./main.nf` [pedantic_baekeland] revision: e3f25d4155
+Launching `./main.nf` [extravagant_hodgkin] revision: e3f25d4155
 
+WARN: Unrecognized config option 'manifest.diagram'
 
 ------------------------------------------------------
                                         ,--./,-.

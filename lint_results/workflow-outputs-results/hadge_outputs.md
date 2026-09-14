@@ -1,6 +1,6 @@
 # Workflow outputs migration: hadge
 
-- Generated: 2026-09-13T00:21:19.844255+00:00
+- Generated: 2026-09-14T00:21:57.156515+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,4 +14,4 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 33 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/hadge/blob/b81dcd2fd21f2a876538154c77e143cbb846c33a/conf/modules.config#L15) — 33 references
+- [`conf/modules.config`](https://github.com/nf-core/hadge/blob/48082eb8a37e5f8a232ab31789239c9724cbd688/conf/modules.config#L15) — 33 references
