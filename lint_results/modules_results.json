@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "56155f73713bc32c5343b59f05d968794c1b596d",
+  "_repo_commit": "d6e2b556fcfb3e3f3c4e210e9d65de03abb7a65c",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -5330,6 +5330,12 @@
   },
   "hmmer_eslsfetchindex": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/hmmer/eslsfetchindex",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "hmmer_formattsv": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/hmmer/formattsv",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

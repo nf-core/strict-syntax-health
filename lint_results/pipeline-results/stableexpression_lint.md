@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-09-12T00:24:11.650478211Z
+- Generated: 2026-09-15T00:25:57.832460707Z
 - Nextflow version: 26.08.0-edge
 - Summary: 32 warnings
 

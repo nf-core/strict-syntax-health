@@ -1,17 +1,16 @@
 # Workflow outputs migration: provenancereport
 
-- Generated: 2026-09-12T00:22:50.196849+00:00
-- Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
+- Generated: 2026-09-15T00:23:55.914364+00:00
+- Status: :white_check_mark: **pass** — uses only the new `output {}` syntax
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
 
-## Workflow `output {}` blocks
+## Workflow `output {}` block
 
-No top-level `output {}` block found. See the docs for how to add one:
-https://docs.seqera.io/nextflow/tutorials/workflow-outputs
+Found 1 top-level `output {}` block:
+
+- [`main.nf:104`](https://github.com/nf-core/provenancereport/blob/be325dab69444f0fd2b8a666739fdcf120fd4eb3/main.nf#L104)
 
 ## Legacy `publishDir` references
 
-Found 4 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
-
-- [`conf/modules.config`](https://github.com/nf-core/provenancereport/blob/3c2dd14c704469fafe0564df836f6aebc830aa08/conf/modules.config#L15) — 4 references
+No `publishDir` references found. :tada:

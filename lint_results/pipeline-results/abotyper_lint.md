@@ -1,8 +1,24 @@
 # Nextflow lint results
 
-- Generated: 2026-09-10T00:17:47.947940585Z
+- Generated: 2026-09-15T00:19:37.422092093Z
 - Nextflow version: 26.08.0-edge
-- Summary: 13 warnings
+- Summary: 2 errors, 17 warnings
+
+## :x: Errors
+
+- Error: `modules/local/longshot/main.nf:23:15`: `meta` is already declared
+
+  ```nextflow
+      tuple val(meta), path(bai)
+                ^^^^
+  ```
+
+- Error: `modules/local/longshot/main.nf:25:15`: `meta1` is already declared
+
+  ```nextflow
+      tuple val(meta1), path(fasta_fai)
+                ^^^^^
+  ```
 
 ## :warning: Warnings
 
@@ -48,6 +64,27 @@
                                                                      ^^^^^^^
   ```
 
+- Warning: `modules/local/longshot/main.nf:22:15`: Variable was declared but not used
+
+  ```nextflow
+      tuple val(meta), path(bam)
+                ^^^^
+  ```
+
+- Warning: `modules/local/longshot/main.nf:24:15`: Variable was declared but not used
+
+  ```nextflow
+      tuple val(meta1), path(fasta)
+                ^^^^^
+  ```
+
+- Warning: `modules/local/longshot/main.nf:53:9`: Variable was declared but not used
+
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^
+  ```
+
 - Warning: `subworkflows/local/minimap_align_exons/main.nf:29:16`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
@@ -88,6 +125,13 @@
   ```nextflow
       logo // channel: png from params.logo (custom pathwest logo)
       ^^^^
+  ```
+
+- Warning: `workflows/abotyper.nf:47:68`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      ch_multiqc_files = ch_multiqc_files.mix(FASTQC.out.zip.collect{it[1]})
+                                                                     ^^
   ```
 
 - Warning: `workflows/abotyper.nf:88:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead

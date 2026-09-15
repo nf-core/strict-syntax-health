@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-09-07T00:21:51.970860177Z
+- Generated: 2026-09-15T00:24:20.884971195Z
 - Nextflow version: 26.08.0-edge
-- Summary: 149 warnings
+- Summary: 150 warnings
 
 ## :warning: Warnings
 
@@ -146,21 +146,21 @@
                                                                                    ^^
   ```
 
-- Warning: `conf/modules.config:1439:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:1440:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   saveAs: { params.save_align_intermeds ? it : null }
                                                           ^^
   ```
 
-- Warning: `conf/modules.config:1450:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:1451:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   saveAs: { params.save_unaligned ? it : null }
                                                     ^^
   ```
 
-- Warning: `conf/modules.config:1478:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:1479:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               saveAs: { params.save_align_intermeds ? it : null }
@@ -207,6 +207,13 @@
   ```nextflow
       args   = task.ext.args ?: ''
       ^^^^
+  ```
+
+- Warning: `modules/local/orf_count_matrix/main.nf:22:5`: Variable was declared but not used
+
+  ```nextflow
+      sample_ids_b64 = groovy.json.JsonOutput.toJson(sample_ids).bytes.encodeBase64().toString()
+      ^^^^^^^^^^^^^^
   ```
 
 - Warning: `modules/nf-core/custom/bed12codonpositions/main.nf:22:5`: Variable was declared but not used
@@ -797,14 +804,14 @@
                     ^^^^^^^
   ```
 
-- Warning: `subworkflows/nf-core/orftable_fasta_gtf_buildorfcatalogue/main.nf:51:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/nf-core/orftable_fasta_gtf_buildorfcatalogue/main.nf:49:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .filter { it.size() > 0 }
                     ^^
   ```
 
-- Warning: `subworkflows/nf-core/orftable_fasta_gtf_buildorfcatalogue/main.nf:57:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/nf-core/orftable_fasta_gtf_buildorfcatalogue/main.nf:55:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .filter { it.size() > 0 }
