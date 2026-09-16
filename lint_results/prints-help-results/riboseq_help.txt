@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.08.0-edge
 
-Launching `./main.nf` [loving_linnaeus] revision: 71fc02080c
+Launching `./main.nf` [nauseous_newton] revision: 2541bbac9e
 
 
 ------------------------------------------------------

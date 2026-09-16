@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.08.0-edge
 
-Launching `./main.nf` [lonely_lagrange] revision: c2dfc94d7c
+Launching `./main.nf` [compassionate_cantor] revision: c2dfc94d7c
 
 WARN: Unrecognized config option 'manifest.diagram'
 
@@ -13,7 +13,7 @@ WARN: Unrecognized config option 'manifest.diagram'
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/viralmetagenome 1.2.1dev
+  nf-core/viralmetagenome 1.2.0
 ------------------------------------------------------
 Typical pipeline command:
 

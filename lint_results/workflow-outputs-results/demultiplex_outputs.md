@@ -1,6 +1,6 @@
 # Workflow outputs migration: demultiplex
 
-- Generated: 2026-09-15T00:20:07.586621+00:00
+- Generated: 2026-09-16T00:18:45.866236+00:00
 - Status: :white_check_mark: **pass** — uses only the new `output {}` syntax
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -9,7 +9,7 @@ This report tracks migration from the legacy `publishDir` directive to the new [
 
 Found 1 top-level `output {}` block:
 
-- [`main.nf:129`](https://github.com/nf-core/demultiplex/blob/1d6a1935d90012b2d103bacee5d32caf9222f00f/main.nf#L129)
+- [`main.nf:130`](https://github.com/nf-core/demultiplex/blob/b40ea42be2b7b22686ffc6a249b9920f1db1d88e/main.nf#L130)
 
 ## Legacy `publishDir` references
 

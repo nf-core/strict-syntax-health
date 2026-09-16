@@ -3,8 +3,9 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.08.0-edge
 
-Launching `./main.nf` [nauseous_agnesi] revision: 92dac02512
+Launching `./main.nf` [zen_moriondo] revision: 92dac02512
 
+WARN: Unrecognized config option 'manifest.diagram'
 
 ------------------------------------------------------
                                         ,--./,-.

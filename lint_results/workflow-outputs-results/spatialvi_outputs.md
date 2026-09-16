@@ -1,6 +1,6 @@
 # Workflow outputs migration: spatialvi
 
-- Generated: 2026-09-05T00:20:52.250354+00:00
+- Generated: 2026-09-16T00:22:50.100340+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,4 +14,4 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 12 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/spatialvi/blob/630fb85d30a088363c60b4676e0fd60ae3283a82/conf/modules.config#L17) — 12 references
+- [`conf/modules.config`](https://github.com/nf-core/spatialvi/blob/441ded53109f57ecf70555fb0b060546b34b4a2c/conf/modules.config#L17) — 12 references

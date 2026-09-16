@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "d6e2b556fcfb3e3f3c4e210e9d65de03abb7a65c",
+  "_repo_commit": "0befdd9db2975ee04a97decc1672a4304387e9a7",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -7530,6 +7530,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "nucleoatac_run": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/nucleoatac/run",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "nucmer": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/nucmer",
     "errors": 0,
@@ -10638,6 +10644,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "smudgeplot_hetmers": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/smudgeplot/hetmers",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "snakemake": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/snakemake",
     "errors": 0,
@@ -11438,6 +11450,12 @@
   },
   "telomerehunter": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/telomerehunter",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "telomerehunter2": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/telomerehunter2",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

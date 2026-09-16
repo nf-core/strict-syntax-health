@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.08.0-edge
 
 Downloading plugin nf-schema@2.5.1
-Launching `./main.nf` [focused_mirzakhani] revision: b49526c122
+Launching `./main.nf` [loquacious_sanger] revision: 5eb57e1e60
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -41,8 +41,11 @@ ABO-specific reference files
   --logo                        [string]  Path to custom logo file. 
   --renaming_file               [string]  Path to file containing sample renaming information. 
   --skip_renaming               [boolean] Skip sample renaming process. [default: true] 
-  --abo_panel                   [string]  Path to the ABO diagnostic variant panel (.yaml/.yml/.json/.csv/.tsv). [default: 
-/data/ABO-analysis-31-Oct-2023/nf-core-abotyper/assets/refs/abo_variant_panel.yaml]  
+  --abo_panel                   [string]  Path to the ABO diagnostic variant panel (.yaml/.yml/.json/.csv/.tsv). 
+  --abo_bed                     [string]  Path to the ABO panel BED file (regenerated from abo_panel at runtime by ABO_PANEL2BED; the 
+committed copy is a fallback, not the source of truth).  
+  --clair3_model_url            [string]  URL to the Clair3 basecaller model archive (.tar.gz) used for small-variant calling and phasing. 
+ 
 
 Generic options
   --multiqc_methods_description [string]          Custom MultiQC yaml file containing HTML including a methods description. 

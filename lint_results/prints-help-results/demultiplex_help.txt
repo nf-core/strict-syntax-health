@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.08.0-edge
 
 Downloading plugin nf-schema@2.7.2
-Launching `./main.nf` [grave_einstein] revision: 46c4f11940
+Launching `./main.nf` [mad_roentgen] revision: 39d3b5c32b
 
 WARN: Unrecognized config option 'manifest.diagram'
 
@@ -14,7 +14,7 @@ WARN: Unrecognized config option 'manifest.diagram'
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/demultiplex 1.7.2dev
+  nf-core/demultiplex 1.8.0
 ------------------------------------------------------
 Typical pipeline command:
 
@@ -25,6 +25,8 @@ or `--helpFull`.
 
 Workflow options
   --trim_fastq                     [boolean] Whether or not to skip trimming [default: true] 
+  --publish_raw_fastq              [boolean] Whether or not to publish raw (untrimmed) FASTQ files alongside trimmed FASTQs. When false, only 
+trimmed FASTQs are published. [default: false]  
   --skip_tools                     [string]  Comma-separated list of tools to skip (fastp,fastqc,kraken,multiqc,checkqc,falco,md5sum,samshee) 
  
   --sample_size                    [integer] Number of reads to subsample for contamination detection. [default: 100000] 
