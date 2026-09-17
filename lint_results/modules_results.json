@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "0befdd9db2975ee04a97decc1672a4304387e9a7",
+  "_repo_commit": "16a32d753b71a738925f436b43a822e5f867ce7d",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -7704,6 +7704,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "openms_featurefinderidentification": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/openms/featurefinderidentification",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "openms_fileconverter": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/openms/fileconverter",
     "errors": 0,
@@ -7712,6 +7718,12 @@
   },
   "openms_filefilter": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/openms/filefilter",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "openms_idconflictresolver": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/openms/idconflictresolver",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -7742,6 +7754,24 @@
   },
   "openms_idscoreswitcher": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/openms/idscoreswitcher",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "openms_mapaligneridentification": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/openms/mapaligneridentification",
+    "errors": 0,
+    "warnings": 2,
+    "parse_error": false
+  },
+  "openms_maprttransformer": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/openms/maprttransformer",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "openms_mztabexporter": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/openms/mztabexporter",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -11528,6 +11558,12 @@
   },
   "tmb_pytmb": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/tmb/pytmb",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "tobias_atacorrect": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/tobias/atacorrect",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

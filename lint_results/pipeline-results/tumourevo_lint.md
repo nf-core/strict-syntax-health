@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-09-09T00:22:59.374731292Z
+- Generated: 2026-09-17T00:23:55.323528381Z
 - Nextflow version: 26.08.0-edge
-- Summary: 46 warnings
+- Summary: 44 warnings
 
 ## :warning: Warnings
 
@@ -186,20 +186,6 @@
   ```nextflow
       ch_versions = Channel.empty()
                     ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_tumourevo_pipeline/main.nf:32:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      monochrome_logs   // boolean: Do not use coloured log outputs
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_tumourevo_pipeline/main.nf:35:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      input             //  string: Path to input samplesheet
-      ^^^^^
   ```
 
 - Warning: `workflows/tumourevo.nf:42:20`: Parameter was not used -- prefix with `_` to suppress warning

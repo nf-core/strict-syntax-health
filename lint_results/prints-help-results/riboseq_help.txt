@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.08.0-edge
 
-Launching `./main.nf` [nauseous_newton] revision: 2541bbac9e
+Launching `./main.nf` [spontaneous_lovelace] revision: 2541bbac9e
 
 
 ------------------------------------------------------
@@ -12,7 +12,7 @@ Launching `./main.nf` [nauseous_newton] revision: 2541bbac9e
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/riboseq 2.0.0
+  nf-core/riboseq 2.1.0dev
 ------------------------------------------------------
 Typical pipeline command:
 

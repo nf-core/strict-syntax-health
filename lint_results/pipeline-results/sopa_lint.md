@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-09-09T00:22:36.776090987Z
+- Generated: 2026-09-17T00:23:40.045303154Z
 - Nextflow version: 26.08.0-edge
-- Summary: 11 warnings
+- Summary: 12 warnings
 
 ## :warning: Warnings
 
@@ -13,7 +13,7 @@
                                                             ^^
   ```
 
-- Warning: `modules/local/utils.nf:189:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `modules/local/utils.nf:194:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           return channels.split(/[ ,|]+/).findAll { it }
@@ -55,25 +55,32 @@
       ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_sopa_pipeline/main.nf:277:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_sopa_pipeline/main.nf:279:47`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-      assert TRANSCRIPT_BASED_METHODS.count { params[it] } <= 1 : "Only one of ${TRANSCRIPT_BASED_METHODS} may be used"
-                                                    ^^
+      def enabled = ALL_METHODS.findAll { params[it] }
+                                                ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_sopa_pipeline/main.nf:278:49`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_sopa_pipeline/main.nf:280:71`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-      assert STAINING_BASED_METHODS.count { params[it] } <= 1 : "Only one of ${STAINING_BASED_METHODS} may be used"
-                                                  ^^
+      def enabled_transcript = TRANSCRIPT_BASED_METHODS.findAll { params[it] }
+                                                                        ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_sopa_pipeline/main.nf:280:58`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_sopa_pipeline/main.nf:281:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-          assert NON_VALID_STARDIST_METHODS.every { !params[it] } : "'stardist' cannot be combined with transcript-based methods, except proseg."
-                                                           ^^
+      def enabled_staining = STAINING_BASED_METHODS.findAll { params[it] }
+                                                                    ^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_sopa_pipeline/main.nf:323:93`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          error("Invalid combination of nf-core/sopa parameters:\n" + errors.collect { "  - ${it}" }.join("\n") + "\nSee https://nf-co.re/sopa/docs/usage/ for the supported configurations.")
+                                                                                              ^^
   ```
 
 - Warning: `workflows/sopa.nf:159:9`: Variable was declared but not used

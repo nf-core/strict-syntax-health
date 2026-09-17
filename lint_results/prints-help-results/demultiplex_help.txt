@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.08.0-edge
 
 Downloading plugin nf-schema@2.7.2
-Launching `./main.nf` [mad_roentgen] revision: 39d3b5c32b
+Launching `./main.nf` [distracted_austin] revision: 39d3b5c32b
 
 WARN: Unrecognized config option 'manifest.diagram'
 
@@ -14,7 +14,7 @@ WARN: Unrecognized config option 'manifest.diagram'
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/demultiplex 1.8.0
+  nf-core/demultiplex 1.9.0dev
 ------------------------------------------------------
 Typical pipeline command:
 
