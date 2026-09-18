@@ -3,11 +3,56 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.08.0-edge
 
-Launching `./main.nf` [ridiculous_ramanujan] revision: 0ff97fd8f8
+Launching `./main.nf` [nasty_marconi] revision: 7b5e77fd20
 
 WARN: Unrecognized config option 'manifest.diagram'
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
-ERROR ~ Unable to create help message: Specified param 'true' does not exist in JSON schema.
 
- -- Check script 'subworkflows/nf-core/utils_nfschema_plugin/main.nf' at line: 41 or see '.nextflow.log' file for more details
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/ncrnannotator 1.0dev
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/ncrnannotator -profile <docker/singularity/.../institute> --fasta genome.fa --mode ensembl-invertebrates --rfam_cm Rfam.cm --rfam_seed Rfam.seed --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --outdir                      [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --email                       [string] Email address for completion summary. 
+  --multiqc_title               [string] MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+
+Pipeline options
+  --fasta                       [string]  Path to the genome FASTA file to annotate. 
+  --mode                        [string]  Annotation mode: 'ensembl-vertebrates' (1 Mbp chunks), 'ensembl-invertebrates' (100 kbp chunks), 
+'mgnify-assembly' (50 Mbp chunks, full Rfam, includes prokaryotic rRNA), or 'full' (1 Mbp chunks, 
+full Rfam, eukaryotic only).  (accepted: ensembl-vertebrates, ensembl-invertebrates, 
+mgnify-assembly, full)  
+  --rfam_cm                     [string]  Path to the Rfam covariance model file (Rfam.cm). 
+  --rfam_seed                   [string]  Path to the Rfam seed alignment file (Rfam.seed). 
+  --rfam_accessions             [string]  Optional override for the Rfam accession list file. 
+  --chunk_size                  [integer] Genome chunk size in base pairs for parallel cmsearch. 
+
+Generic options
+  --multiqc_methods_description [string]          Custom MultiQC yaml file containing HTML including a methods description. 
+  --help                        [boolean, string] Display the help message. 
+  --help_full                   [boolean]         Display the full detailed help message. 
+  --show_hidden                 [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 18 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/ncrnannotator/blob/master/CITATIONS.md
+

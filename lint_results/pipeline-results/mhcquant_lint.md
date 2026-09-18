@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-09-13T00:21:58.985559396Z
+- Generated: 2026-09-18T00:21:50.621793421Z
 - Nextflow version: 26.08.0-edge
-- Summary: 52 warnings
+- Summary: 53 warnings
 
 ## :warning: Warnings
 
@@ -34,41 +34,6 @@
           ^^^^
   ```
 
-- Warning: `modules/local/openms/mapaligneridentification/main.nf:22:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def out_names = idxmls.collect { it.baseName.replace('_fdr_filtered','')+'.trafoXML' }.join(' ')
-                                       ^^
-  ```
-
-- Warning: `modules/local/openms/mapaligneridentification/main.nf:32:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def out_names = idxmls.collect { it.baseName.replace('_fdr_filtered','')+'.trafoXML' }.join(' ')
-                                       ^^
-  ```
-
-- Warning: `modules/local/openms/maprttransformer/main.nf:23:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def fileExt = alignment_file.collect { it.name.tokenize("\\.")[1] }.join(' ')
-                                             ^^
-  ```
-
-- Warning: `modules/local/openms/maprttransformer/main.nf:36:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def fileExt = alignment_file.collect { it.name.tokenize("\\.")[1] }.join(' ')
-                                             ^^
-  ```
-
-- Warning: `modules/local/openms/psmfeatureextractor/main.nf:23:9`: Variable was declared but not used
-
-  ```nextflow
-      def extra_features = ""
-          ^^^^^^^^^^^^^^
-  ```
-
 - Warning: `modules/local/pyopenms/chromatogramextractor/main.nf:21:9`: Variable was declared but not used
 
   ```nextflow
@@ -83,10 +48,24 @@
           ^^^^^^
   ```
 
+- Warning: `modules/nf-core/openms/mapaligneridentification/main.nf:22:43`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      def trafo_out = id_files.collect { "${it.baseName}.trafoXML" }.join(' ')
+                                            ^^
+  ```
+
+- Warning: `modules/nf-core/openms/mapaligneridentification/main.nf:32:43`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      def trafo_out = id_files.collect { "${it.baseName}.trafoXML" }.join(' ')
+                                            ^^
+  ```
+
 - Warning: `subworkflows/local/map_alignment/main.nf:22:24`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-              .flatMap { group_meta, trafoxmls -> [trafoxmls].flatten().collect { trafoxml -> [[spectra: trafoxml.baseName], trafoxml] } }
+              .flatMap { group_meta, trafoxmls -> [trafoxmls].flatten().collect { trafoxml -> [[spectra: trafoxml.baseName.replace("_fdr_filtered", "")], trafoxml] } }
                          ^^^^^^^^^^
   ```
 
@@ -167,7 +146,7 @@
                                                                                        ^^^^
   ```
 
-- Warning: `subworkflows/local/process_feature/main.nf:20:61`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/process_feature/main.nf:27:61`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map { key, featurexmls -> [key, featurexmls.sort { it.name.tokenize('_')[0] as int }] }
@@ -209,21 +188,49 @@
                          ^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/rescore/main.nf:56:100`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/rescore/main.nf:56:73`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  def extra = feature_names.readLines().drop(1).findAll { it.contains('\t') }.collect { it.split('\t', -1) }.findAll { !it[0].contains('psm_file') }.collect { it[1] }
+                                                                          ^^
+  ```
+
+- Warning: `subworkflows/local/rescore/main.nf:56:103`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  def extra = feature_names.readLines().drop(1).findAll { it.contains('\t') }.collect { it.split('\t', -1) }.findAll { !it[0].contains('psm_file') }.collect { it[1] }
+                                                                                                        ^^
+  ```
+
+- Warning: `subworkflows/local/rescore/main.nf:56:135`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  def extra = feature_names.readLines().drop(1).findAll { it.contains('\t') }.collect { it.split('\t', -1) }.findAll { !it[0].contains('psm_file') }.collect { it[1] }
+                                                                                                                                        ^^
+  ```
+
+- Warning: `subworkflows/local/rescore/main.nf:56:174`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  def extra = feature_names.readLines().drop(1).findAll { it.contains('\t') }.collect { it.split('\t', -1) }.findAll { !it[0].contains('psm_file') }.collect { it[1] }
+                                                                                                                                                                               ^^
+  ```
+
+- Warning: `subworkflows/local/rescore/main.nf:65:100`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(OPENMS_PERCOLATORADAPTER.out.feature_weights.map { meta, feature_weights -> feature_weights })
                                                                                                      ^^^^
   ```
 
-- Warning: `subworkflows/local/rescore/main.nf:77:25`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/rescore/main.nf:86:25`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   ).map { preset, group_meta, local_idxml, global_filtered_idxml ->
                           ^^^^^^
   ```
 
-- Warning: `subworkflows/local/rescore/main.nf:97:24`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/rescore/main.nf:106:24`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               non_empty: it[1].countLines() > 130

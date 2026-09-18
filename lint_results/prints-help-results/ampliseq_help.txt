@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.08.0-edge
 
 Downloading plugin nf-schema@2.7.2
-Launching `./main.nf` [shrivelled_goldstine] revision: 3825e9f45c
+Launching `./main.nf` [prickly_hopper] revision: c03ccd0c73
 
 
 ------------------------------------------------------
@@ -72,6 +72,8 @@ median quality score [default: 25]
   --trunc_rmin                             [number]  Assures that values chosen with --trunc_qmin will retain a fraction of reads. [default: 0.75] 
  
   --max_ee                                 [integer] DADA2 read filtering option [default: 2] 
+  --max_ee_r                               [integer] DADA2 read filtering option for reverse reads, overriding --max_ee for reverse reads only 
+(paired-end Illumina data only)  
   --min_len                                [integer] DADA2 read filtering option [default: 50] 
   --max_len                                [integer] DADA2 read filtering option 
   --ignore_failed_filtering                [boolean] Ignore files with too few reads after quality filtering. 

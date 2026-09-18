@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.08.0-edge
 
-Launching `./main.nf` [ridiculous_lamarck] revision: 44e2f14764
+Launching `./main.nf` [distraught_meitner] revision: 44e2f14764
 
 WARN: Unrecognized config option 'manifest.diagram'
 

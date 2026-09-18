@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "16a32d753b71a738925f436b43a822e5f867ce7d",
+  "_repo_commit": "c3eeb662a004a4c75ca2712a095ad61251878c5d",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -6840,6 +6840,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "mgatk_call": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mgatk/call",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "mgikit_demultiplex": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mgikit/demultiplex",
     "errors": 0,
@@ -6848,6 +6854,12 @@
   },
   "mgnifam_generatefamilies": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mgnifam/generatefamilies",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "mgnifam_updatefamilies": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mgnifam/updatefamilies",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -11040,6 +11052,18 @@
     "warnings": 0,
     "parse_error": false
   },
+  "stitchr_stitchrdl": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/stitchr/stitchrdl",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "stitchr_thimble": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/stitchr/thimble",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "stranger": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/stranger",
     "errors": 0,
@@ -11564,6 +11588,12 @@
   },
   "tobias_atacorrect": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/tobias/atacorrect",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "tobias_scorebigwig": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/tobias/scorebigwig",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
