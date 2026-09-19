@@ -38,7 +38,7 @@
   "ampliseq": {
     "full_name": "nf-core/ampliseq",
     "html_url": "https://github.com/nf-core/ampliseq",
-    "commit": "a2698b16abf5455a473ab9f6b18df2349a028fba",
+    "commit": "3aa6f150db048f220fc4250187b5a2b61a60fe59",
     "errors": 0,
     "warnings": 23,
     "parse_error": false,
@@ -218,7 +218,7 @@
   "createtaxdb": {
     "full_name": "nf-core/createtaxdb",
     "html_url": "https://github.com/nf-core/createtaxdb",
-    "commit": "cac77b3f37ed6aaeed3e8acdd04a9510e00d3c7c",
+    "commit": "36d1a066a6f07ea7c40ae1ab187a3bcae43dc915",
     "errors": 0,
     "warnings": 6,
     "parse_error": false,
@@ -434,7 +434,7 @@
   "eager": {
     "full_name": "nf-core/eager",
     "html_url": "https://github.com/nf-core/eager",
-    "commit": "4c7ed5bba146bab7628db71d5eabda740b847c9b",
+    "commit": "8b8f93dcbcc7bfa91e9877968d6620c5207f91c4",
     "errors": 0,
     "warnings": 410,
     "parse_error": false,
@@ -566,7 +566,7 @@
   "genomeassembler": {
     "full_name": "nf-core/genomeassembler",
     "html_url": "https://github.com/nf-core/genomeassembler",
-    "commit": "26824561d835e9df626432d2408882c47f87e074",
+    "commit": "a234cbb70a001d5b6c127c3223beea4ccda84347",
     "errors": 0,
     "warnings": 5,
     "parse_error": false,
@@ -842,7 +842,7 @@
   "metatdenovo": {
     "full_name": "nf-core/metatdenovo",
     "html_url": "https://github.com/nf-core/metatdenovo",
-    "commit": "695bb7082eb0a5f0e46448bcdfa051f32a47e7c1",
+    "commit": "c6940d21d7f34008600e9310e1ce1905c3e53571",
     "errors": 0,
     "warnings": 1,
     "parse_error": false,
@@ -878,7 +878,7 @@
   "methylseq": {
     "full_name": "nf-core/methylseq",
     "html_url": "https://github.com/nf-core/methylseq",
-    "commit": "915959e27f2f98ab9665be75c50fd4be8ad43c78",
+    "commit": "998bc1fbc6436a98de362e1fe4c0cc2aa486c361",
     "errors": 0,
     "warnings": 25,
     "parse_error": false,
@@ -1094,7 +1094,7 @@
   "pathogenepidemiology": {
     "full_name": "nf-core/pathogenepidemiology",
     "html_url": "https://github.com/nf-core/pathogenepidemiology",
-    "commit": "9c3df9c7a9611e46a94afc44f193366b0d1a6d0a",
+    "commit": "86c86fc62b8905b933a6ed73ca8c11128fdb0592",
     "errors": 4,
     "warnings": 33,
     "parse_error": false,
@@ -1130,14 +1130,14 @@
   "phaseimpute": {
     "full_name": "nf-core/phaseimpute",
     "html_url": "https://github.com/nf-core/phaseimpute",
-    "commit": "99d1dabd9a23e261dfe0b778aad9b58931eaeb08",
+    "commit": "87fd19d699a0ee836554e2807ae118b6f0793630",
     "errors": 0,
     "warnings": 1,
     "parse_error": false,
     "prints_help": false,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 90
+    "publishdir_count": 87
   },
   "phyloplace": {
     "full_name": "nf-core/phyloplace",
@@ -1262,7 +1262,7 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "67699be7947e9e0ac43def989160a3977e0a7808",
+    "commit": "b2784edd6f78fff17aa2eb758513547a65f61636",
     "errors": 0,
     "warnings": 12,
     "parse_error": false,
@@ -1370,7 +1370,7 @@
   "rnaseq": {
     "full_name": "nf-core/rnaseq",
     "html_url": "https://github.com/nf-core/rnaseq",
-    "commit": "e6b37e46b2db3ebb147134b671f3085272e35a4a",
+    "commit": "e94465d7d8d87bb0079180135190ce4a25d736e1",
     "errors": 0,
     "warnings": 3,
     "parse_error": false,
@@ -1394,7 +1394,7 @@
   "rnastructurome": {
     "full_name": "nf-core/rnastructurome",
     "html_url": "https://github.com/nf-core/rnastructurome",
-    "commit": "1accdafce7e9c066994bb7bf21f953188676688b",
+    "commit": "e369fff1acf3a94a41929b5b15f3a35e6a17e785",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1406,7 +1406,7 @@
   "rnavar": {
     "full_name": "nf-core/rnavar",
     "html_url": "https://github.com/nf-core/rnavar",
-    "commit": "a556c5e5f52d775a07a5c605b1996378e57a3e12",
+    "commit": "9e6f4f575860ad1663885764db372f9ae847b013",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1646,7 +1646,7 @@
   "tumourevo": {
     "full_name": "nf-core/tumourevo",
     "html_url": "https://github.com/nf-core/tumourevo",
-    "commit": "c04cf814aa2363051308e8ecb2a4ddb84ccb2811",
+    "commit": "887168d95124ecb64b1139693c7b512f14b8e112",
     "errors": 0,
     "warnings": 44,
     "parse_error": false,

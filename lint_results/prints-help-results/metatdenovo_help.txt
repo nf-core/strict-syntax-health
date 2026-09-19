@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.08.0-edge
 
-Launching `./main.nf` [ridiculous_lovelace] revision: e3f25d4155
+Launching `./main.nf` [mad_goldwasser] revision: e3f25d4155
 
 WARN: Unrecognized config option 'manifest.diagram'
 
@@ -23,11 +23,12 @@ help message of that parameter will be printed.
 or `--helpFull`.  
 
 Input/output options
-  --input                       [string] Path to comma-separated file containing information about the samples in the experiment. 
-  --outdir                      [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
+  --input                       [string]  Path to comma-separated file containing information about the samples in the experiment. 
+  --outdir                      [string]  The output directory where the results will be saved. You have to use absolute paths to storage on 
 Cloud infrastructure.  
-  --email                       [string] Email address for completion summary. 
-  --multiqc_title               [string] MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+  --save_parquet                [boolean] Also write the summary tables in Parquet format, alongside the default gzipped TSV. 
+  --email                       [string]  Email address for completion summary. 
+  --multiqc_title               [string]  MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
 
 Quality control options
   --skip_qc                     [boolean] Skip all QC steps except for MultiQC. 

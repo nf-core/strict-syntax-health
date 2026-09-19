@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.08.0-edge
 
 Downloading plugin nf-schema@2.7.2
-Launching `./main.nf` [prickly_hopper] revision: c03ccd0c73
+Launching `./main.nf` [scruffy_hirsch] revision: 60b0095272
 
 
 ------------------------------------------------------
@@ -162,6 +162,7 @@ silva=132, rdp, rdp=18, greengenes, greengenes=13.5, standard, standard=20240904
 unite-fungi, unite-fungi=10.0, unite-fungi=9.0, unite-fungi=8.3, ...)  
   --sintax_ref_tax_custom                  [string]  Path to a custom SINTAX reference database (fasta) 
   --sintax_assign_taxlevels                [string]  Comma separated list of taxonomic levels used in SINTAX with a custom reference database 
+  --sintax_cutoff                          [number]  Confidence cutoff for SINTAX taxonomic classification. [default: 0.8] 
   --vsearch_lca_ref_tax_custom             [string]  Path to a custom VSEARCH LCA reference database (SINTAX-compatible FASTA) 
   --vsearch_lca_ref_taxonomy               [string]  Name of built-in VSEARCH LCA reference database, and optionally also version number  (accepted: 
 coidb, coidb=221216, midori2-co1, midori2-co1=gb270, unite-fungi, unite-fungi=10.0, unite-fungi=9.0, 

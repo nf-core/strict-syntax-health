@@ -1,5 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-09-18T00:24:19.032086+00:00
+- Generated: 2026-09-19T00:25:56.214305+00:00
 - Nextflow version: 26.08.0-edge
 - Summary: No issues found

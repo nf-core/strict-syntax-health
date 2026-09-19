@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.08.0-edge
 
-Launching `./main.nf` [distraught_meitner] revision: 44e2f14764
+Launching `./main.nf` [wise_cori] revision: 44e2f14764
 
 WARN: Unrecognized config option 'manifest.diagram'
 
@@ -13,7 +13,7 @@ WARN: Unrecognized config option 'manifest.diagram'
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/genomeassembler 2.0.0
+  nf-core/genomeassembler 2.0.1-dev
 ------------------------------------------------------
 Typical pipeline command:
 
