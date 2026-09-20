@@ -218,7 +218,7 @@
   "createtaxdb": {
     "full_name": "nf-core/createtaxdb",
     "html_url": "https://github.com/nf-core/createtaxdb",
-    "commit": "36d1a066a6f07ea7c40ae1ab187a3bcae43dc915",
+    "commit": "c4419b3d1479ebbd4da652b90973d83be8f4632e",
     "errors": 0,
     "warnings": 6,
     "parse_error": false,
@@ -842,7 +842,7 @@
   "metatdenovo": {
     "full_name": "nf-core/metatdenovo",
     "html_url": "https://github.com/nf-core/metatdenovo",
-    "commit": "c6940d21d7f34008600e9310e1ce1905c3e53571",
+    "commit": "a7260b42aa170a31d63a4877f0a6af9d32475cc4",
     "errors": 0,
     "warnings": 1,
     "parse_error": false,

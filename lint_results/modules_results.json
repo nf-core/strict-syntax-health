@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "66aec9b46a179bd72b055bdeeb8cf19664c2a4a0",
+  "_repo_commit": "a20acf23088e655a47484165818a5db1279555e3",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -314,6 +314,12 @@
   },
   "anndata_barcodes": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/anndata/barcodes",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "anndata_convert": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/anndata/convert",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -11612,6 +11618,12 @@
   },
   "tobias_atacorrect": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/tobias/atacorrect",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "tobias_bindetect": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/tobias/bindetect",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

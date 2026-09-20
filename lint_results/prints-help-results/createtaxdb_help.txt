@@ -3,7 +3,8 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.08.0-edge
 
-Launching `./main.nf` [cheeky_miescher] revision: 94881d840d
+Downloading plugin nf-schema@2.7.2
+Launching `./main.nf` [scruffy_fourier] revision: 94881d840d
 
 WARN: Unrecognized config option 'manifest.diagram'
 
@@ -84,10 +85,10 @@ Parameters must be supplied in quotes: `--malt_build_options "--sequenceType DNA
 [default: --sequenceType DNA]  
   --build_sourmash_dna               [boolean] Whether to build a sourmash reference from the provided nucleotide sequences. 
   --sourmash_build_dna_options       [string]  Specify parameters given to sourmash sketch dna. Must start with sourmash sketch dna's 
-'--param-string'. [default: --param-string \'scaled=1000,k=31,noabund\]  
+'--param-string'. [default: --param-string 'scaled=1000,k=31,noabund']  
   --build_sourmash_protein           [boolean] Whether to build a sourmash reference from the provided amino acid sequences. 
   --sourmash_build_protein_options   [string]  Specify parameters given to sourmash sketch protein. Must start with sourmash sketch protein's 
-'--param-string'. [default: --param-string \'scaled=200,k=10,noabund\]  
+'--param-string'. [default: --param-string 'scaled=200,k=10,noabund']  
   --sourmash_batch_size              [integer] Sourmash can perform the main build step in parallel batches. Set the size of the batches. 
 [default: 100]  
   --build_sylph                      [boolean] Turn on building of sylph database. Requires nucleotide FASTA file input. 
