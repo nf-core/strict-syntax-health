@@ -842,7 +842,7 @@
   "metatdenovo": {
     "full_name": "nf-core/metatdenovo",
     "html_url": "https://github.com/nf-core/metatdenovo",
-    "commit": "a7260b42aa170a31d63a4877f0a6af9d32475cc4",
+    "commit": "54604e96a8b1380016b45d16f19b27efe60656ef",
     "errors": 0,
     "warnings": 1,
     "parse_error": false,
