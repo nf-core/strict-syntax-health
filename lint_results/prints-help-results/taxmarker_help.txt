@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.08.0-edge
 
 Downloading plugin nf-schema@2.7.3
-Launching `./main.nf` [condescending_brazil] revision: cc028659c9
+Launching `./main.nf` [hopeful_goldwasser] revision: b5b05ee4d0
 
 
 ------------------------------------------------------
@@ -48,6 +48,9 @@ must cover to be kept. Sequences below this are too short/incomplete to place re
 reported separately instead of being placed. [default: 0.8]  
   --skip_sativa                 [boolean] Skip the phylogenetic placement subworkflow (reference tree, leave-one-out placement, scoring) 
 entirely.  
+  --taxcode                     [string]  Taxonomic code of the input data, passed to sativa-epang: bac(teriological), bot(anical), 
+zoo(logical) or vir(ological). Governs its nomenclature-revision suggestions.  (accepted: bac, 
+bot, zoo, vir) [default: bac]  
   --outdir                      [string]  The output directory where the results will be saved. You have to use absolute paths to storage on 
 Cloud infrastructure.  
   --email                       [string]  Email address for completion summary. 

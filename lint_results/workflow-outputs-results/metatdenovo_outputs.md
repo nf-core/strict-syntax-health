@@ -1,6 +1,6 @@
 # Workflow outputs migration: metatdenovo
 
-- Generated: 2026-09-21T00:21:07.333507+00:00
+- Generated: 2026-09-22T00:22:13.615370+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,7 +14,7 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 17 `publishDir` references across 4 files that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/metatdenovo/blob/54604e96a8b1380016b45d16f19b27efe60656ef/conf/modules.config#L13) — 14 references
-- [`modules/nf-core/mmseqs/cluster/tests/nextflow.config`](https://github.com/nf-core/metatdenovo/blob/54604e96a8b1380016b45d16f19b27efe60656ef/modules/nf-core/mmseqs/cluster/tests/nextflow.config#L3) — 1 reference
-- [`modules/nf-core/mmseqs/linclust/tests/nextflow.config`](https://github.com/nf-core/metatdenovo/blob/54604e96a8b1380016b45d16f19b27efe60656ef/modules/nf-core/mmseqs/linclust/tests/nextflow.config#L3) — 1 reference
-- [`modules/nf-core/subread/featurecounts/tests/nextflow.config`](https://github.com/nf-core/metatdenovo/blob/54604e96a8b1380016b45d16f19b27efe60656ef/modules/nf-core/subread/featurecounts/tests/nextflow.config#L3) — 1 reference
+- [`conf/modules.config`](https://github.com/nf-core/metatdenovo/blob/7ae81b0a17946a58a82cca0b02a56bcef9aa92d0/conf/modules.config#L13) — 14 references
+- [`modules/nf-core/mmseqs/cluster/tests/nextflow.config`](https://github.com/nf-core/metatdenovo/blob/7ae81b0a17946a58a82cca0b02a56bcef9aa92d0/modules/nf-core/mmseqs/cluster/tests/nextflow.config#L3) — 1 reference
+- [`modules/nf-core/mmseqs/linclust/tests/nextflow.config`](https://github.com/nf-core/metatdenovo/blob/7ae81b0a17946a58a82cca0b02a56bcef9aa92d0/modules/nf-core/mmseqs/linclust/tests/nextflow.config#L3) — 1 reference
+- [`modules/nf-core/subread/featurecounts/tests/nextflow.config`](https://github.com/nf-core/metatdenovo/blob/7ae81b0a17946a58a82cca0b02a56bcef9aa92d0/modules/nf-core/subread/featurecounts/tests/nextflow.config#L3) — 1 reference

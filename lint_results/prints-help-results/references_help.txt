@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.08.0-edge
 
 Downloading plugin nf-core-utils@0.4.0
-Launching `./main.nf` [goofy_wright] revision: 2b38956958
+Launching `./main.nf` [hopeful_lorenz] revision: 75cb5539f0
 
 WARN: Unrecognized config option 'manifest.diagram'
 WARN: Static typing is a preview feature -- syntax and behavior may change in future releases
@@ -19,11 +19,11 @@ WARN: Static typing is a preview feature -- syntax and behavior may change in fu
 ------------------------------------------------------
 
 Generic options
-  trace_report_suffix: 2026-09-13_00-22-38
+  trace_report_suffix: 2026-09-22_00-23-36
   help               : true
 
 Core Nextflow options
-  runName            : goofy_wright
+  runName            : hopeful_lorenz
   launchDir          : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/references
   workDir            : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/references/work
   projectDir         : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/references

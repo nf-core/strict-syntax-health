@@ -38,7 +38,7 @@
   "ampliseq": {
     "full_name": "nf-core/ampliseq",
     "html_url": "https://github.com/nf-core/ampliseq",
-    "commit": "3aa6f150db048f220fc4250187b5a2b61a60fe59",
+    "commit": "6afe944c446c12d29280207fd9a68961423b1884",
     "errors": 0,
     "warnings": 23,
     "parse_error": false,
@@ -626,11 +626,11 @@
   "hadge": {
     "full_name": "nf-core/hadge",
     "html_url": "https://github.com/nf-core/hadge",
-    "commit": "48082eb8a37e5f8a232ab31789239c9724cbd688",
+    "commit": "d1e8a61c425b6124d707c01e701a4e549ff9c822",
     "errors": 0,
     "warnings": 27,
     "parse_error": false,
-    "prints_help": true,
+    "prints_help": false,
     "workflow_output": false,
     "publishdir": true,
     "publishdir_count": 33
@@ -698,7 +698,7 @@
   "isoseq": {
     "full_name": "nf-core/isoseq",
     "html_url": "https://github.com/nf-core/isoseq",
-    "commit": "c6749e9049925c269b32105053086f1aa106eb7c",
+    "commit": "aacae9d598e4c9ae57729a6c0dec6a27be640d25",
     "errors": 0,
     "warnings": 9,
     "parse_error": false,
@@ -842,7 +842,7 @@
   "metatdenovo": {
     "full_name": "nf-core/metatdenovo",
     "html_url": "https://github.com/nf-core/metatdenovo",
-    "commit": "54604e96a8b1380016b45d16f19b27efe60656ef",
+    "commit": "7ae81b0a17946a58a82cca0b02a56bcef9aa92d0",
     "errors": 0,
     "warnings": 1,
     "parse_error": false,
@@ -1142,7 +1142,7 @@
   "phyloplace": {
     "full_name": "nf-core/phyloplace",
     "html_url": "https://github.com/nf-core/phyloplace",
-    "commit": "5bbe0a8fa855880b4825f83369fae271cf6a34d2",
+    "commit": "70c188775fa0fe57f95b13c53e80f9979801d6e7",
     "errors": 0,
     "warnings": 9,
     "parse_error": false,
@@ -1262,7 +1262,7 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "b2784edd6f78fff17aa2eb758513547a65f61636",
+    "commit": "6de800bb9fdd96a48210452ff59623b5a298b38c",
     "errors": 0,
     "warnings": 12,
     "parse_error": false,
@@ -1298,7 +1298,7 @@
   "references": {
     "full_name": "nf-core/references",
     "html_url": "https://github.com/nf-core/references",
-    "commit": "e1d4891b29feb7847223ae28262bdfc270adbac1",
+    "commit": "9c595d0ea1a2d63e72e64550d5bec5338531336e",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1370,14 +1370,14 @@
   "rnaseq": {
     "full_name": "nf-core/rnaseq",
     "html_url": "https://github.com/nf-core/rnaseq",
-    "commit": "e94465d7d8d87bb0079180135190ce4a25d736e1",
+    "commit": "c0aea8d400960e08a82a476064132e994d42d34a",
     "errors": 0,
     "warnings": 3,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 115
+    "publishdir_count": 113
   },
   "rnasplice": {
     "full_name": "nf-core/rnasplice",
@@ -1406,7 +1406,7 @@
   "rnavar": {
     "full_name": "nf-core/rnavar",
     "html_url": "https://github.com/nf-core/rnavar",
-    "commit": "9e6f4f575860ad1663885764db372f9ae847b013",
+    "commit": "f9b4137c948567509d7bc5220f81f5c1b9f9581f",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1466,7 +1466,7 @@
   "scrnaseq": {
     "full_name": "nf-core/scrnaseq",
     "html_url": "https://github.com/nf-core/scrnaseq",
-    "commit": "a34bdc6b38ad00183728c859cce844426057033a",
+    "commit": "35d2914f5319eb765f3d4248a4125e408d4fab2a",
     "errors": 0,
     "warnings": 1,
     "parse_error": false,
@@ -1586,14 +1586,14 @@
   "taxmarker": {
     "full_name": "nf-core/taxmarker",
     "html_url": "https://github.com/nf-core/taxmarker",
-    "commit": "e0f38d5e886fbfc9cb779dc72ed3d2aa9bdc2ef6",
+    "commit": "f3aaaf90b6e91dda88f4a33b4ce3a51e12d75366",
     "errors": 0,
-    "warnings": 9,
+    "warnings": 17,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 2
+    "publishdir_count": 4
   },
   "taxprofiler": {
     "full_name": "nf-core/taxprofiler",
@@ -1718,13 +1718,13 @@
   "viralrecon": {
     "full_name": "nf-core/viralrecon",
     "html_url": "https://github.com/nf-core/viralrecon",
-    "commit": "e13cb63793d28c823e54e1b22ee4cd49548a384e",
+    "commit": "e76992871bbe836dcd98dc6f8a2379444641f850",
     "errors": 0,
-    "warnings": 0,
+    "warnings": 2,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 173
+    "publishdir_count": 169
   }
 }

@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.08.0-edge
 
-Launching `./main.nf` [friendly_ampere] revision: a87bf185b0
+Launching `./main.nf` [friendly_jones] revision: b1f8412745
 
 WARN: Unrecognized config option 'manifest.diagram'
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
@@ -107,12 +107,17 @@ retaining only primary chromosomes (GRCh37: 1-22,X,Y,MT / GRCh38: chr1-chr22,chr
  
   --extract_alignments                [boolean] After aligning the reads to a reference, extract alignments from specific regions/contigs and 
 restrict the analysis to those regions/contigs.  
+  --genmod_skip_plugin_check          [boolean] Pass --skip_plugin_check to genmod score, so a rank model config missing an info_key/csq_key 
+referenced in its scoring categories degrades that category to a warning instead of aborting the 
+pipeline.  
   --homoplasmy_af_threshold           [number]  Allele frequency threshold for mitochondrial variants. Variants with an AF above this threshold will 
 be treated as homoplasmic and assigned a 1/1 genotype. Range 0-1.0. [default: 1.0]  
   --platform                          [string]  Specifies the platform on which the reads were sequenced. [default: illumina] 
   --pre_vep_snv_filter_expression     [string]  bcftools expression used to exclude SNVs before VEP annotation. [default: INFO/GNOMADAF > 0.70 | 
 INFO/GNOMADAF_grpmax > 0.70]  
   --ngsbits_samplegender_method       [string]  Method selection for ngs-bits samplegender  (accepted: xy, hetx, sry) [default: xy] 
+  --sex_source                        [string]  Source of sample sex for sex-dependent analysis steps (e.g. ExpansionHunter).  (accepted: 
+samplesheet, auto, estimated) [default: samplesheet]  
   --restrict_to_contigs               [string]  Can be specified as RNAME[:STARTPOS[-ENDPOS]]. Multiple regions should be seperated by space 
  
   --run_mt_for_wes                    [boolean] Specifies whether to run mitochondrial analysis for wes samples 
@@ -165,10 +170,6 @@ AGGRESSIVE, CONSERVATIVE) [default: CONSERVATIVE]
 [default: snp,indel]  
 
 Annotation options
-  --variant_consequences_snv          [string]  File containing list of SO terms listed in the order of severity from most severe to lease severe 
-for annotating genomic and mitochondrial SNVs.  
-  --variant_consequences_sv           [string]  File containing list of SO terms listed in the order of severity from most severe to lease severe 
-for annotating genomic SVs.  
   --vep_cache_version                 [integer] Specify the version of the VEP cache provided to the `--vep_cache` option. [default: 116] 
 
 Mitosalt and saltshaker options
