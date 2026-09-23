@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-09-22T00:25:05.802951875Z
+- Generated: 2026-09-23T00:26:56.196104105Z
 - Nextflow version: 26.08.0-edge
 - Summary: 17 warnings
 
@@ -20,56 +20,56 @@
                                       ^^
   ```
 
-- Warning: `subworkflows/local/raxtax_prefilter/main.nf:35:77`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/raxtax_prefilter/main.nf:40:78`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-      def ch_meta_taxonomy   = ch_taxonomy.map  { [ [ id: 'user-alignment' ], it ] }
-                                                                              ^^
+      def ch_meta_taxonomy    = ch_taxonomy.map  { [ [ id: 'user-alignment' ], it ] }
+                                                                               ^^
   ```
 
-- Warning: `subworkflows/local/raxtax_prefilter/main.nf:36:77`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/raxtax_prefilter/main.nf:41:78`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-      def ch_alignment_fasta = ch_alignment.map { [ [ id: 'user-alignment' ], it ] }
-                                                                              ^^
+      def ch_meta_sequences   = ch_sequences.map { [ [ id: 'user-alignment' ], it ] }
+                                                                               ^^
   ```
 
-- Warning: `subworkflows/local/sativa/main.nf:66:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/sativa/main.nf:69:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_ref_tree   // channel: [ val(meta), path(tree.nwk) ]
       ^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/sativa/main.nf:69:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/sativa/main.nf:72:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_ref_model  // channel: [ val(meta), path(model.txt) ]
       ^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/sativa/main.nf:75:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/sativa/main.nf:78:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       def ch_alignment_meta = ch_alignment.map { [ [ id: 'user-alignment' ], it ] }
                                                                              ^^
   ```
 
-- Warning: `subworkflows/local/sativa/main.nf:89:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/sativa/main.nf:92:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       def ch_taxonomy_meta = ch_taxonomy.map { [ [ id: 'user-alignment' ], it ] }
                                                                            ^^
   ```
 
-- Warning: `subworkflows/local/sativa/main.nf:115:34`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/sativa/main.nf:118:34`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_reference_input.map { meta, _alignment, _taxonomy, _taxcode, reftree, _refmodel -> reftree },
                                    ^^^^
   ```
 
-- Warning: `subworkflows/local/sativa/main.nf:116:34`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/sativa/main.nf:119:34`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_reference_input.map { meta, _alignment, _taxonomy, _taxcode, _reftree, refmodel -> refmodel }

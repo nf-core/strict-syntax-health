@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-09-15T00:25:57.832460707Z
+- Generated: 2026-09-23T00:26:41.005471641Z
 - Nextflow version: 26.08.0-edge
 - Summary: 32 warnings
 
@@ -48,14 +48,14 @@
       ^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/expression_normalisation/main.nf:34:15`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/expression_normalisation/main.nf:35:15`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           meta, file ->
                 ^^^^
   ```
 
-- Warning: `subworkflows/local/expression_normalisation/main.nf:39:74`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/expression_normalisation/main.nf:40:74`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_raw_rnaseq_datasets_to_normalise = ch_datasets.raw.filter { meta, file -> meta.platform == 'rnaseq' }
@@ -223,7 +223,7 @@
               ^^^^
   ```
 
-- Warning: `workflows/stableexpression.nf:195:40`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/stableexpression.nf:196:40`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               ch_all_imputed_counts.map{ meta, file -> file },

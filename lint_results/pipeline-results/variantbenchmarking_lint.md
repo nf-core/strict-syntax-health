@@ -1,17 +1,10 @@
 # Nextflow lint results
 
-- Generated: 2026-09-04T00:23:08.502966890Z
+- Generated: 2026-09-23T00:27:18.693355470Z
 - Nextflow version: 26.08.0-edge
-- Summary: 6 warnings
+- Summary: 5 warnings
 
 ## :warning: Warnings
-
-- Warning: `modules/local/plots/metrics/main.nf:22:9`: Variable was declared but not used
-
-  ```nextflow
-      def prefix = task.ext.prefix ?: "${meta.benchmark_tool}"
-          ^^^^^^
-  ```
 
 - Warning: `subworkflows/local/intersect_statistics/main.nf:18:13`: Variable was declared but not used
 

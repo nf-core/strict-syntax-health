@@ -1,6 +1,6 @@
 # Workflow outputs migration: taxmarker
 
-- Generated: 2026-09-22T00:25:05.896091+00:00
+- Generated: 2026-09-23T00:26:56.289024+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,4 +14,4 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 4 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/taxmarker/blob/f3aaaf90b6e91dda88f4a33b4ce3a51e12d75366/conf/modules.config#L15) — 4 references
+- [`conf/modules.config`](https://github.com/nf-core/taxmarker/blob/02e40d5de0992f3cf157f3b3dfe2918e01874c44/conf/modules.config#L15) — 4 references

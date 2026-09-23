@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.08.0-edge
 
-Launching `./main.nf` [dreamy_euler] revision: 984ab8af38
+Launching `./main.nf` [hungry_volta] revision: 984ab8af38
 
 WARN: Unrecognized config option 'manifest.diagram'
 
@@ -13,7 +13,7 @@ WARN: Unrecognized config option 'manifest.diagram'
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/rnaseq 3.27.0dev
+  nf-core/rnaseq 3.27.0
 ------------------------------------------------------
 Typical pipeline command:
 
@@ -126,6 +126,8 @@ Only available for the STAR-Salmon route.
 Only available when using --aligner hisat2.  
   --extra_bowtie2_align_args    [string]  Extra arguments to pass to Bowtie2 alignment command in addition to defaults defined by the 
 pipeline. Only available when using --aligner bowtie2_salmon.  
+  --extra_salmon_index_args     [string]  Extra arguments to pass to the Salmon index command in addition to defaults defined by the pipeline. 
+ 
   --extra_salmon_quant_args     [string]  Extra arguments to pass to Salmon quant command in addition to defaults defined by the pipeline. 
  
   --extra_kallisto_quant_args   [string]  Extra arguments to pass to Kallisto quant command in addition to defaults defined by the pipeline. 

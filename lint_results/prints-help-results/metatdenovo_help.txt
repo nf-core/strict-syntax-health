@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.08.0-edge
 
-Launching `./main.nf` [festering_magritte] revision: e3f25d4155
+Launching `./main.nf` [drunk_newton] revision: e3f25d4155
 
 WARN: Unrecognized config option 'manifest.diagram'
 
@@ -143,7 +143,7 @@ Generic options
   --help_full                   [boolean]         Display the full detailed help message. 
   --show_hidden                 [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
  
- !! Hiding 27 param(s), use the `--showHidden` parameter to show them !!
+ !! Hiding 30 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
 
 * The pipeline

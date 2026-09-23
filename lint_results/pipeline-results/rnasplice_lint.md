@@ -1,40 +1,40 @@
 # Nextflow lint results
 
-- Generated: 2026-09-17T00:22:42.209914555Z
+- Generated: 2026-09-23T00:25:04.822698475Z
 - Nextflow version: 26.08.0-edge
 - Summary: 13 warnings
 
 ## :warning: Warnings
 
-- Warning: `conf/modules.config:321:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:333:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               saveAs: { filename -> null }
                         ^^^^^^^^
   ```
 
-- Warning: `conf/modules.config:330:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:342:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               saveAs: { filename -> null }
                         ^^^^^^^^
   ```
 
-- Warning: `conf/modules.config:339:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:351:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               saveAs: { filename -> null }
                         ^^^^^^^^
   ```
 
-- Warning: `conf/modules.config:348:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:360:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               saveAs: { filename -> null }
                         ^^^^^^^^
   ```
 
-- Warning: `conf/modules.config:370:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:382:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               saveAs: { filename -> null }

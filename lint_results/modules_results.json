@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "25ed81c43e7b2d70bc667978a5485af653604c5c",
+  "_repo_commit": "5a3ad078bbf1192276d13168000a784b13ef0d89",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -5160,6 +5160,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "happy_report": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/happy/report",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "happy_sompy": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/happy/sompy",
     "errors": 0,
@@ -9212,6 +9218,12 @@
   },
   "rattle_cluster": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/rattle/cluster",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "rattle_polish": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/rattle/polish",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
