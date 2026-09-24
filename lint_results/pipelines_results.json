@@ -14,7 +14,7 @@
   "airrflow": {
     "full_name": "nf-core/airrflow",
     "html_url": "https://github.com/nf-core/airrflow",
-    "commit": "be405e67497ecb2beaa4b4ebdb29c98860ff749c",
+    "commit": "41ededb5fe56ff524afa208adc8016cbf7f5d8b8",
     "errors": 0,
     "warnings": 34,
     "parse_error": false,
@@ -38,14 +38,14 @@
   "ampliseq": {
     "full_name": "nf-core/ampliseq",
     "html_url": "https://github.com/nf-core/ampliseq",
-    "commit": "6b760b9d7c002cd3b1b429574521b9ba6910524e",
+    "commit": "460cac7a57d9ec4ed3c1d6fc5ca2e460448749cd",
     "errors": 0,
-    "warnings": 23,
+    "warnings": 26,
     "parse_error": false,
-    "prints_help": true,
+    "prints_help": false,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 104
+    "publishdir_count": 105
   },
   "atacseq": {
     "full_name": "nf-core/atacseq",
@@ -758,7 +758,7 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "b0cb2b53d83eac2878c196aeccff2f5c7b7dd579",
+    "commit": "7f17632024c0218cc2d17d069d7bfd7bbaf84b1d",
     "errors": 0,
     "warnings": 20,
     "parse_error": false,
@@ -842,7 +842,7 @@
   "metatdenovo": {
     "full_name": "nf-core/metatdenovo",
     "html_url": "https://github.com/nf-core/metatdenovo",
-    "commit": "9957f74e51f5a68c1301ef4c89ed9a6ecf7ac071",
+    "commit": "4c9110d71a75b053c9f0d4b3e501591cc9027faa",
     "errors": 0,
     "warnings": 1,
     "parse_error": false,
@@ -1142,11 +1142,11 @@
   "phyloplace": {
     "full_name": "nf-core/phyloplace",
     "html_url": "https://github.com/nf-core/phyloplace",
-    "commit": "66bdae5cdb93725e089f2cc29e05c9ecea7759bf",
+    "commit": "edfefe37af1a6a6fd0713af66c3f4589aa7b3c3e",
     "errors": 0,
     "warnings": 9,
     "parse_error": false,
-    "prints_help": false,
+    "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
     "publishdir_count": 4
@@ -1226,7 +1226,7 @@
   "provenancereport": {
     "full_name": "nf-core/provenancereport",
     "html_url": "https://github.com/nf-core/provenancereport",
-    "commit": "7d7f039da368d4012fabb974b9e77529cb6d1095",
+    "commit": "0550a6e567acc2374a7adf79241a3e80fb1fa362",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1298,7 +1298,7 @@
   "references": {
     "full_name": "nf-core/references",
     "html_url": "https://github.com/nf-core/references",
-    "commit": "9c595d0ea1a2d63e72e64550d5bec5338531336e",
+    "commit": "e7685cc03b33e468d8b1ce64670f4a448e3d7400",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1370,7 +1370,7 @@
   "rnaseq": {
     "full_name": "nf-core/rnaseq",
     "html_url": "https://github.com/nf-core/rnaseq",
-    "commit": "55092f830c81b9291d1f929ed1af1930c4838dc4",
+    "commit": "a2283f4bce7f779e16ee9e2dcd84d8d288f71fec",
     "errors": 0,
     "warnings": 3,
     "parse_error": false,
@@ -1382,7 +1382,7 @@
   "rnasplice": {
     "full_name": "nf-core/rnasplice",
     "html_url": "https://github.com/nf-core/rnasplice",
-    "commit": "a4c5845379a7aa2542074759d435a2f5359f186f",
+    "commit": "b7890362a9f6d86be2b26988c512ea0c56e1b5cb",
     "errors": 0,
     "warnings": 13,
     "parse_error": false,
@@ -1430,7 +1430,7 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "2cb7b7f603bb97d8159b23642a9b6e3c58d4793c",
+    "commit": "14ccbe01c76283ad18eedbd0a5f6381789281ca7",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1466,7 +1466,7 @@
   "scrnaseq": {
     "full_name": "nf-core/scrnaseq",
     "html_url": "https://github.com/nf-core/scrnaseq",
-    "commit": "35d2914f5319eb765f3d4248a4125e408d4fab2a",
+    "commit": "c972f5688eb21bf591f50e19cd5e245612bfd1ec",
     "errors": 0,
     "warnings": 1,
     "parse_error": false,
@@ -1514,7 +1514,7 @@
   "smrnaseq": {
     "full_name": "nf-core/smrnaseq",
     "html_url": "https://github.com/nf-core/smrnaseq",
-    "commit": "8dea8e1b8e5a4955230b55867a663a034b13e9c2",
+    "commit": "b8bf7d26d544b438549bd261510e112486126cad",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1574,7 +1574,7 @@
   "stableexpression": {
     "full_name": "nf-core/stableexpression",
     "html_url": "https://github.com/nf-core/stableexpression",
-    "commit": "b02188e7b848627395dafff2f23def601f4b8f5c",
+    "commit": "c5ceba06295196fd9cfd4f74ddabb6d6115929a6",
     "errors": 0,
     "warnings": 32,
     "parse_error": false,

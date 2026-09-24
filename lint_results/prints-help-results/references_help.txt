@@ -1,12 +1,11 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.08.0-edge
+ N E X T F L O W   ~  version 26.09.0-edge
 
 Downloading plugin nf-core-utils@0.4.0
-Launching `./main.nf` [hopeful_lorenz] revision: 75cb5539f0
+Launching `./main.nf` [jolly_almeida] revision: cb4b23041d
 
-WARN: Unrecognized config option 'manifest.diagram'
 WARN: Static typing is a preview feature -- syntax and behavior may change in future releases
 
 ------------------------------------------------------
@@ -19,11 +18,11 @@ WARN: Static typing is a preview feature -- syntax and behavior may change in fu
 ------------------------------------------------------
 
 Generic options
-  trace_report_suffix: 2026-09-22_00-23-36
+  trace_report_suffix: 2026-09-24_00-20-26
   help               : true
 
 Core Nextflow options
-  runName            : hopeful_lorenz
+  runName            : jolly_almeida
   launchDir          : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/references
   workDir            : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/references/work
   projectDir         : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/references

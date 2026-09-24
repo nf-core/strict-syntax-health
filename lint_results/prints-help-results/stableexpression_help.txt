@@ -1,11 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.08.0-edge
+ N E X T F L O W   ~  version 26.09.0-edge
 
-Launching `./main.nf` [boring_colden] revision: d5dcb6c5aa
+Launching `./main.nf` [hopeful_lamport] revision: d5dcb6c5aa
 
-WARN: Unrecognized config option 'manifest.diagram'
 
 ------------------------------------------------------
                                         ,--./,-.
@@ -13,7 +12,7 @@ WARN: Unrecognized config option 'manifest.diagram'
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/stableexpression 1.0.0
+  nf-core/stableexpression 1.1.0
 ------------------------------------------------------
 Typical pipeline command:
 
@@ -89,6 +88,9 @@ Generic options
  
  !! Hiding 17 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
+
+* The pipeline
+    https://doi.org/10.5281/zenodo.22895924
 
 * The nf-core framework
     https://doi.org/10.1038/s41587-020-0439-x

@@ -1,10 +1,31 @@
 # Nextflow lint results
 
-- Generated: 2026-09-23T00:18:33.020004200Z
-- Nextflow version: 26.08.0-edge
-- Summary: 23 warnings
+- Generated: 2026-09-24T00:18:38.775089970Z
+- Nextflow version: 26.09.0-edge
+- Summary: 26 warnings
 
 ## :warning: Warnings
+
+- Warning: `modules/local/summary_report.nf:91:71`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              dada_ref_taxonomy_list.collect { params.dada_ref_databases[it]["title"] }.join('; ') :
+                                                                        ^^
+  ```
+
+- Warning: `modules/local/summary_report.nf:94:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          dada_ref_taxonomy_list.collect { params.dada_ref_databases[it]["file"] }.flatten().join(', ') :
+                                                                    ^^
+  ```
+
+- Warning: `modules/local/summary_report.nf:97:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          dada_ref_taxonomy_list.collect { params.dada_ref_databases[it]["citation"] }.join(' | ') :
+                                                                    ^^
+  ```
 
 - Warning: `subworkflows/local/comparison_wf.nf:24:37`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
@@ -62,105 +83,105 @@
                                  ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_ampliseq_pipeline/main.nf:542:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_ampliseq_pipeline/main.nf:552:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           def collisions = filesToKeys.values().findAll { it.size() > 1 }
                                                           ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_ampliseq_pipeline/main.nf:545:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_ampliseq_pipeline/main.nf:555:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   collisions.collect { "'${it.join("', '")}'" }.join(", ") + ". List each database only once.")
                                            ^^
   ```
 
-- Warning: `workflows/ampliseq.nf:881:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/ampliseq.nf:895:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_tax_tsv = ch_tax_tsv.mix( KRAKEN2_TAXONOMY_WF.out.tax_tsv.map { it = [ [database:val_kraken2_ref_taxonomy, classifier:"KRAKEN2"], file(it) ] } )
                                                                              ^^
   ```
 
-- Warning: `workflows/ampliseq.nf:881:147`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/ampliseq.nf:895:147`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_tax_tsv = ch_tax_tsv.mix( KRAKEN2_TAXONOMY_WF.out.tax_tsv.map { it = [ [database:val_kraken2_ref_taxonomy, classifier:"KRAKEN2"], file(it) ] } )
                                                                                                                                                     ^^
   ```
 
-- Warning: `workflows/ampliseq.nf:897:58`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/ampliseq.nf:911:58`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_tax_tsv = ch_tax_tsv.mix( ch_sintax_tax.map { it = [ [database:val_sintax_ref_taxonomy, classifier:"SINTAX"], file(it) ] } )
                                                            ^^
   ```
 
-- Warning: `workflows/ampliseq.nf:897:127`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/ampliseq.nf:911:127`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_tax_tsv = ch_tax_tsv.mix( ch_sintax_tax.map { it = [ [database:val_sintax_ref_taxonomy, classifier:"SINTAX"], file(it) ] } )
                                                                                                                                 ^^
   ```
 
-- Warning: `workflows/ampliseq.nf:915:63`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/ampliseq.nf:929:63`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_tax_tsv = ch_tax_tsv.mix( ch_vsearch_lca_tax.map { it = [ [database:val_vsearch_lca_ref_taxonomy, classifier:"VSEARCH-LCA"], file(it) ] } )
                                                                 ^^
   ```
 
-- Warning: `workflows/ampliseq.nf:915:142`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/ampliseq.nf:929:142`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_tax_tsv = ch_tax_tsv.mix( ch_vsearch_lca_tax.map { it = [ [database:val_vsearch_lca_ref_taxonomy, classifier:"VSEARCH-LCA"], file(it) ] } )
                                                                                                                                                ^^
   ```
 
-- Warning: `workflows/ampliseq.nf:946:58`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/ampliseq.nf:960:58`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_tax_tsv = ch_tax_tsv.mix( ch_pplace_tax.map { it = [ [database: params.pplace_name ?: 'user_tree', classifier:"PPLACE"], file(it) ] } )
                                                            ^^
   ```
 
-- Warning: `workflows/ampliseq.nf:946:138`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/ampliseq.nf:960:138`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_tax_tsv = ch_tax_tsv.mix( ch_pplace_tax.map { it = [ [database: params.pplace_name ?: 'user_tree', classifier:"PPLACE"], file(it) ] } )
                                                                                                                                            ^^
   ```
 
-- Warning: `workflows/ampliseq.nf:1010:62`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/ampliseq.nf:1024:62`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_tax_tsv = ch_tax_tsv.mix( ch_pplace_tax.map { it = [ [database:"PPLACE", classifier:"PPLACE"], file(it) ] } )
                                                                ^^
   ```
 
-- Warning: `workflows/ampliseq.nf:1010:116`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/ampliseq.nf:1024:116`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_tax_tsv = ch_tax_tsv.mix( ch_pplace_tax.map { it = [ [database:"PPLACE", classifier:"PPLACE"], file(it) ] } )
                                                                                                                      ^^
   ```
 
-- Warning: `workflows/ampliseq.nf:1030:58`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/ampliseq.nf:1044:58`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_tax_tsv = ch_tax_tsv.mix( ch_qiime2_tax.map { it = [ [database:val_qiime_ref_taxonomy, classifier:"QIIME2"], file(it) ] } )
                                                            ^^
   ```
 
-- Warning: `workflows/ampliseq.nf:1030:126`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/ampliseq.nf:1044:126`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_tax_tsv = ch_tax_tsv.mix( ch_qiime2_tax.map { it = [ [database:val_qiime_ref_taxonomy, classifier:"QIIME2"], file(it) ] } )
                                                                                                                                ^^
   ```
 
-- Warning: `workflows/ampliseq.nf:1243:49`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/ampliseq.nf:1257:49`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           def val_params_string = params.findAll{ it.key != 'trace_report_suffix' }.toString()

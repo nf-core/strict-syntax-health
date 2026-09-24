@@ -1,10 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.08.0-edge
+ N E X T F L O W   ~  version 26.09.0-edge
 
-Launching `./main.nf` [dreamy_monod] revision: 441f8a9d95
+Launching `./main.nf` [admiring_bell] revision: 36e3597988
 
-Parameter `fasta` is required but was not specified on the command line, params file, or config
+Parameter `input` is required but no value was provided
 
 

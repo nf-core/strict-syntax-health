@@ -1,6 +1,6 @@
 # Workflow outputs migration: airrflow
 
-- Generated: 2026-08-28T02:46:05.563221+00:00
+- Generated: 2026-09-24T00:18:17.282604+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,4 +14,4 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 84 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/airrflow/blob/be405e67497ecb2beaa4b4ebdb29c98860ff749c/conf/modules.config#L15) — 84 references
+- [`conf/modules.config`](https://github.com/nf-core/airrflow/blob/41ededb5fe56ff524afa208adc8016cbf7f5d8b8/conf/modules.config#L15) — 84 references
