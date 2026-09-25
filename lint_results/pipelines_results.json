@@ -38,14 +38,14 @@
   "ampliseq": {
     "full_name": "nf-core/ampliseq",
     "html_url": "https://github.com/nf-core/ampliseq",
-    "commit": "460cac7a57d9ec4ed3c1d6fc5ca2e460448749cd",
+    "commit": "0acc158958ce7f575bc7e53622efc11e21ea5647",
     "errors": 0,
     "warnings": 26,
     "parse_error": false,
     "prints_help": false,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 105
+    "publishdir_count": 106
   },
   "atacseq": {
     "full_name": "nf-core/atacseq",
@@ -770,7 +770,7 @@
   "magmap": {
     "full_name": "nf-core/magmap",
     "html_url": "https://github.com/nf-core/magmap",
-    "commit": "b845bbebb210e171995baf836ba171c384d7cfa6",
+    "commit": "a08d22dfa68ad186a8b3de9140c2c69df611ae16",
     "errors": 0,
     "warnings": 13,
     "parse_error": false,
@@ -890,7 +890,7 @@
   "mhcquant": {
     "full_name": "nf-core/mhcquant",
     "html_url": "https://github.com/nf-core/mhcquant",
-    "commit": "62e8aac846b1d9dbe2f96f440f1e623e86ce2083",
+    "commit": "a7ec95c604a3906a821eec8ad9fc6942be3add97",
     "errors": 0,
     "warnings": 53,
     "parse_error": false,
@@ -1094,7 +1094,7 @@
   "pathogenepidemiology": {
     "full_name": "nf-core/pathogenepidemiology",
     "html_url": "https://github.com/nf-core/pathogenepidemiology",
-    "commit": "86c86fc62b8905b933a6ed73ca8c11128fdb0592",
+    "commit": "548a5b0666870f2d33a14f3466c57e5527947b46",
     "errors": 4,
     "warnings": 33,
     "parse_error": false,
@@ -1130,7 +1130,7 @@
   "phaseimpute": {
     "full_name": "nf-core/phaseimpute",
     "html_url": "https://github.com/nf-core/phaseimpute",
-    "commit": "5f34760dd42d16659974e6b109cee51d833efd1c",
+    "commit": "a581c34ad2c558080f8e37da72c417f6000de9d6",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1226,7 +1226,7 @@
   "provenancereport": {
     "full_name": "nf-core/provenancereport",
     "html_url": "https://github.com/nf-core/provenancereport",
-    "commit": "0550a6e567acc2374a7adf79241a3e80fb1fa362",
+    "commit": "238e33f5a4369d32bbecced19835870cb355eccb",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1262,7 +1262,7 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "0943510188a4a48d374d3d781e581c251caf72ba",
+    "commit": "58ce3fa32c31cc05845d759311ef0baff1b9b3fe",
     "errors": 0,
     "warnings": 12,
     "parse_error": false,
@@ -1298,7 +1298,7 @@
   "references": {
     "full_name": "nf-core/references",
     "html_url": "https://github.com/nf-core/references",
-    "commit": "e7685cc03b33e468d8b1ce64670f4a448e3d7400",
+    "commit": "e0f4e7e38af9b29a86030b1d6dc83d0808dcfc43",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1358,7 +1358,7 @@
   "rnafusion": {
     "full_name": "nf-core/rnafusion",
     "html_url": "https://github.com/nf-core/rnafusion",
-    "commit": "717421477c9349b5b938a8908adffb24bba023a0",
+    "commit": "8c11d2390e31b1e1b0e6db821a16877cd42e1de5",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1370,7 +1370,7 @@
   "rnaseq": {
     "full_name": "nf-core/rnaseq",
     "html_url": "https://github.com/nf-core/rnaseq",
-    "commit": "a2283f4bce7f779e16ee9e2dcd84d8d288f71fec",
+    "commit": "525e45c7d015c53208c3b9896768e8c1e288649d",
     "errors": 0,
     "warnings": 3,
     "parse_error": false,
@@ -1382,7 +1382,7 @@
   "rnasplice": {
     "full_name": "nf-core/rnasplice",
     "html_url": "https://github.com/nf-core/rnasplice",
-    "commit": "b7890362a9f6d86be2b26988c512ea0c56e1b5cb",
+    "commit": "1b447239488097651d8eac44bca2c1556865eb0f",
     "errors": 0,
     "warnings": 13,
     "parse_error": false,
@@ -1586,9 +1586,9 @@
   "taxmarker": {
     "full_name": "nf-core/taxmarker",
     "html_url": "https://github.com/nf-core/taxmarker",
-    "commit": "02e40d5de0992f3cf157f3b3dfe2918e01874c44",
+    "commit": "599b87436b3bbc1de4b6b19f3cd5688ecd66e9b9",
     "errors": 0,
-    "warnings": 17,
+    "warnings": 20,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -1598,9 +1598,9 @@
   "taxprofiler": {
     "full_name": "nf-core/taxprofiler",
     "html_url": "https://github.com/nf-core/taxprofiler",
-    "commit": "be96a8f348fc688b43b5d44997f3eddf085f526c",
+    "commit": "76097900a2287647985a35f397498967f5ab5eeb",
     "errors": 0,
-    "warnings": 54,
+    "warnings": 55,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,

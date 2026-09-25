@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-09-16T00:23:07.823160657Z
-- Nextflow version: 26.08.0-edge
-- Summary: 54 warnings
+- Generated: 2026-09-25T00:24:32.270949842Z
+- Nextflow version: 26.09.0-edge
+- Summary: 55 warnings
 
 ## :warning: Warnings
 
@@ -123,6 +123,13 @@
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
+  ```
+
+- Warning: `modules/nf-core/krakenuniq/preloadedkrakenuniq/main.nf:112:46`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      def prefix_list = prefixes.collect { "'${it}'" }.join(' ')
+                                               ^^
   ```
 
 - Warning: `modules/nf-core/porechop/abi/main.nf:42:9`: Variable was declared but not used

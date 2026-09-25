@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-09-23T00:26:56.196104105Z
-- Nextflow version: 26.08.0-edge
-- Summary: 17 warnings
+- Generated: 2026-09-25T00:24:10.970187294Z
+- Nextflow version: 26.09.0-edge
+- Summary: 20 warnings
 
 ## :warning: Warnings
 
@@ -34,42 +34,42 @@
                                                                                ^^
   ```
 
-- Warning: `subworkflows/local/sativa/main.nf:69:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/sativa/main.nf:72:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_ref_tree   // channel: [ val(meta), path(tree.nwk) ]
       ^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/sativa/main.nf:72:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/sativa/main.nf:75:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_ref_model  // channel: [ val(meta), path(model.txt) ]
       ^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/sativa/main.nf:78:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/sativa/main.nf:81:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       def ch_alignment_meta = ch_alignment.map { [ [ id: 'user-alignment' ], it ] }
                                                                              ^^
   ```
 
-- Warning: `subworkflows/local/sativa/main.nf:92:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/sativa/main.nf:95:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       def ch_taxonomy_meta = ch_taxonomy.map { [ [ id: 'user-alignment' ], it ] }
                                                                            ^^
   ```
 
-- Warning: `subworkflows/local/sativa/main.nf:118:34`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/sativa/main.nf:121:34`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_reference_input.map { meta, _alignment, _taxonomy, _taxcode, reftree, _refmodel -> reftree },
                                    ^^^^
   ```
 
-- Warning: `subworkflows/local/sativa/main.nf:119:34`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/sativa/main.nf:122:34`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_reference_input.map { meta, _alignment, _taxonomy, _taxcode, _reftree, refmodel -> refmodel }
@@ -118,7 +118,28 @@
                                                  ^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/taxmarker.nf:121:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/weighted_clustering/main.nf:40:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      def ch_meta_taxonomy  = ch_taxonomy.map  { [ [ id: 'user-alignment' ], it ] }
+                                                                             ^^
+  ```
+
+- Warning: `subworkflows/local/weighted_clustering/main.nf:41:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      def ch_meta_sequences = ch_sequences.map { [ [ id: 'user-alignment' ], it ] }
+                                                                             ^^
+  ```
+
+- Warning: `workflows/taxmarker.nf:91:68`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          SEQKIT_GREP(ch_sequences.map { [ [ id: 'user-alignment' ], it ] }, [], '')
+                                                                     ^^
+  ```
+
+- Warning: `workflows/taxmarker.nf:139:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       EMBOSS_SEQRET(ch_sequences_checked.map { [ [ id: 'user-alignment' ], it ] }, 'fasta')

@@ -1,6 +1,6 @@
 # Workflow outputs migration: rnafusion
 
-- Generated: 2026-09-12T00:23:25.713869+00:00
+- Generated: 2026-09-25T00:22:55.885622+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,7 +14,7 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 35 `publishDir` references across 4 files that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/rnafusion/blob/717421477c9349b5b938a8908adffb24bba023a0/conf/modules.config#L15) — 32 references
-- [`modules/nf-core/umitools/extract/tests/nextflow.config`](https://github.com/nf-core/rnafusion/blob/717421477c9349b5b938a8908adffb24bba023a0/modules/nf-core/umitools/extract/tests/nextflow.config#L3) — 1 reference
-- [`subworkflows/nf-core/fastq_align_star/tests/nextflow.config`](https://github.com/nf-core/rnafusion/blob/717421477c9349b5b938a8908adffb24bba023a0/subworkflows/nf-core/fastq_align_star/tests/nextflow.config#L3) — 1 reference
-- [`subworkflows/nf-core/fastq_align_star/tests/with_transcripts.config`](https://github.com/nf-core/rnafusion/blob/717421477c9349b5b938a8908adffb24bba023a0/subworkflows/nf-core/fastq_align_star/tests/with_transcripts.config#L3) — 1 reference
+- [`conf/modules.config`](https://github.com/nf-core/rnafusion/blob/8c11d2390e31b1e1b0e6db821a16877cd42e1de5/conf/modules.config#L15) — 32 references
+- [`modules/nf-core/umitools/extract/tests/nextflow.config`](https://github.com/nf-core/rnafusion/blob/8c11d2390e31b1e1b0e6db821a16877cd42e1de5/modules/nf-core/umitools/extract/tests/nextflow.config#L3) — 1 reference
+- [`subworkflows/nf-core/fastq_align_star/tests/nextflow.config`](https://github.com/nf-core/rnafusion/blob/8c11d2390e31b1e1b0e6db821a16877cd42e1de5/subworkflows/nf-core/fastq_align_star/tests/nextflow.config#L3) — 1 reference
+- [`subworkflows/nf-core/fastq_align_star/tests/with_transcripts.config`](https://github.com/nf-core/rnafusion/blob/8c11d2390e31b1e1b0e6db821a16877cd42e1de5/subworkflows/nf-core/fastq_align_star/tests/with_transcripts.config#L3) — 1 reference

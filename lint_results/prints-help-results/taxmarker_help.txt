@@ -1,10 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.08.0-edge
+ N E X T F L O W   ~  version 26.09.0-edge
 
 Downloading plugin nf-schema@2.7.3
-Launching `./main.nf` [suspicious_marconi] revision: b5b05ee4d0
+Launching `./main.nf` [stupefied_joliot] revision: 5a337134bf
 
 
 ------------------------------------------------------
@@ -31,6 +31,16 @@ Input/output options
 unaligned. Only required when the input is unaligned.  
   --hmm_name                    [string]  Name of the specific profile to use from --hmm, if that database holds more than one (e.g. Barrnap's 
 databases hold one profile per rRNA gene).  
+  --seqgrep                     [string]  Keep only --sequences records whose whole FASTA header matches this pattern, dropping the rest 
+before anything else runs.  
+  --skip_clustering             [boolean] Skip WEIGHTED_CLUSTERING entirely and run every sequence straight through, unclustered. 
+  --sequence_weights            [string]  Path to a two-column table (sequence_id<TAB>weight) used to pick a representative sequence per 
+(cluster, taxon) pair. Sequences absent from the table default to weight 1.  
+  --min_weight                  [number]  Absolute weight cutoff: sequences below this are excluded before clustering, regardless of 
+--sequence_weights. Unset by default -- has no effect unless both this and --sequence_weights are 
+given.  
+  --cluster_identity            [number]  VSEARCH clustering identity threshold (0-1) applied before representative selection. [default: 
+1.0]  
   --skip_raxtax                 [boolean] Skip the raxtax prefilter and run every sequence straight through the full EPA-ng-based placement 
 pipeline.  
   --raxtax_filter_rank          [integer] Taxonomic rank at which raxtax's self-classification must agree with the declared taxonomy, counted 

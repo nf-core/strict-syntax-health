@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "deb8254027c27a9e505befc68ab449db1f3dadef",
+  "_repo_commit": "4a208ad81dc6284b41f6a11aaa7d14336fe322a9",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -11432,6 +11432,12 @@
   },
   "tar": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/tar",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "taxonkit_lca": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/taxonkit/lca",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
