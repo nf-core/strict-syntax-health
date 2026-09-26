@@ -1,16 +1,23 @@
 # Nextflow lint results
 
-- Generated: 2026-09-24T00:18:17.173300830Z
-- Nextflow version: 26.09.0-edge
-- Summary: 34 warnings
+- Generated: 2026-09-26T00:18:57.157553322Z
+- Nextflow version: 26.09.1-edge
+- Summary: 35 warnings
 
 ## :warning: Warnings
 
-- Warning: `main.nf:237:5`: Variable was declared but not used
+- Warning: `main.nf:238:5`: Variable was declared but not used
 
   ```nextflow
       ch_multiqc_custom_methods_description = params.multiqc_methods_description ? file(params.multiqc_methods_description, checkIfExists: true) : file("$projectDir/assets/methods_description_template.yml", checkIfExists: true)
       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `modules/local/enchantr/novel_allele_inference/main.nf:33:32`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      def input = tabs.collect { it.toString() }.sort().join(',')
+                                 ^^
   ```
 
 - Warning: `modules/nf-core/cat/fastq/main.nf:21:9`: Variable was declared but not used
@@ -237,7 +244,7 @@
                   ^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/airrflow.nf:503:88`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/airrflow.nf:498:88`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files = ch_multiqc_files.mix(ch_fastqc_postassembly_mqc.collect{it[1]}.ifEmpty([]))

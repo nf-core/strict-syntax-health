@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-09-25T00:24:10.970187294Z
-- Nextflow version: 26.09.0-edge
-- Summary: 20 warnings
+- Generated: 2026-09-26T00:22:34.909638602Z
+- Nextflow version: 26.09.1-edge
+- Summary: 21 warnings
 
 ## :warning: Warnings
 
@@ -118,30 +118,37 @@
                                                  ^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/weighted_clustering/main.nf:40:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/weighted_clustering/main.nf:41:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       def ch_meta_taxonomy  = ch_taxonomy.map  { [ [ id: 'user-alignment' ], it ] }
                                                                              ^^
   ```
 
-- Warning: `subworkflows/local/weighted_clustering/main.nf:41:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/weighted_clustering/main.nf:42:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       def ch_meta_sequences = ch_sequences.map { [ [ id: 'user-alignment' ], it ] }
                                                                              ^^
   ```
 
-- Warning: `workflows/taxmarker.nf:91:68`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/taxmarker.nf:95:68`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           SEQKIT_GREP(ch_sequences.map { [ [ id: 'user-alignment' ], it ] }, [], '')
                                                                      ^^
   ```
 
-- Warning: `workflows/taxmarker.nf:139:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/taxmarker.nf:143:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       EMBOSS_SEQRET(ch_sequences_checked.map { [ [ id: 'user-alignment' ], it ] }, 'fasta')
                                                                            ^^
+  ```
+
+- Warning: `workflows/taxmarker.nf:169:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  ch_sequences_for_resolve.map { [ [ id: 'user-alignment' ], it ] },
+                                                                             ^^
   ```

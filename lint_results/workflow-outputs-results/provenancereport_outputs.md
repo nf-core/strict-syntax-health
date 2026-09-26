@@ -1,6 +1,6 @@
 # Workflow outputs migration: provenancereport
 
-- Generated: 2026-09-25T00:21:42.720277+00:00
+- Generated: 2026-09-26T00:21:47.364891+00:00
 - Status: :white_check_mark: **pass** — uses only the new `output {}` syntax
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -9,7 +9,7 @@ This report tracks migration from the legacy `publishDir` directive to the new [
 
 Found 1 top-level `output {}` block:
 
-- [`main.nf:115`](https://github.com/nf-core/provenancereport/blob/238e33f5a4369d32bbecced19835870cb355eccb/main.nf#L115)
+- [`main.nf:115`](https://github.com/nf-core/provenancereport/blob/0b38a4b45f042bfac1afd4ee90879442c7a443c0/main.nf#L115)
 
 ## Legacy `publishDir` references
 

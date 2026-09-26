@@ -1,10 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.09.0-edge
+ N E X T F L O W   ~  version 26.09.1-edge
 
 Downloading plugin nf-schema@2.7.3
-Launching `./main.nf` [stupefied_joliot] revision: 5a337134bf
+Launching `./main.nf` [soggy_snyder] revision: 199ad5eb1b
 
 
 ------------------------------------------------------
@@ -33,6 +33,14 @@ unaligned. Only required when the input is unaligned.
 databases hold one profile per rRNA gene).  
   --seqgrep                     [string]  Keep only --sequences records whose whole FASTA header matches this pattern, dropping the rest 
 before anything else runs.  
+  --upstream                    [string]  Name of an upstream data source this run's --sequences/--taxonomy came from, to enable 
+source-specific pipeline behaviour. Currently only 'GTDB' is recognised: translates 
+--gtdb_bac120_metadata/--gtdb_ar53_metadata into --sequence_weights automatically.  (accepted: 
+GTDB)  
+  --gtdb_bac120_metadata        [string]  GTDB bacterial (bac120) genome metadata table (gzip-ok). Required (with/without 
+--gtdb_ar53_metadata) when --upstream is 'GTDB'.  
+  --gtdb_ar53_metadata          [string]  GTDB archaeal (ar53) genome metadata table (gzip-ok). Required (with/without --gtdb_bac120_metadata) 
+when --upstream is 'GTDB'.  
   --skip_clustering             [boolean] Skip WEIGHTED_CLUSTERING entirely and run every sequence straight through, unclustered. 
   --sequence_weights            [string]  Path to a two-column table (sequence_id<TAB>weight) used to pick a representative sequence per 
 (cluster, taxon) pair. Sequences absent from the table default to weight 1.  

@@ -1,10 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.09.0-edge
+ N E X T F L O W   ~  version 26.09.1-edge
 
-Downloading plugin nf-schema@2.7.2
-Launching `./main.nf` [magical_blackwell] revision: 6958ad813f
+Launching `./main.nf` [maniac_solvay] revision: 59a5b9135d
 
 Parameter `outdir` is required but no value was provided
 

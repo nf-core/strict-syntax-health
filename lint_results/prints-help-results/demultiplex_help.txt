@@ -1,12 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.08.0-edge
+ N E X T F L O W   ~  version 26.09.1-edge
 
-Downloading plugin nf-schema@2.7.2
-Launching `./main.nf` [distracted_austin] revision: 39d3b5c32b
+Launching `./main.nf` [suspicious_tuckerman] revision: 39d3b5c32b
 
-WARN: Unrecognized config option 'manifest.diagram'
 
 ------------------------------------------------------
                                         ,--./,-.
@@ -24,17 +22,18 @@ help message of that parameter will be printed.
 or `--helpFull`.  
 
 Workflow options
-  --trim_fastq                     [boolean] Whether or not to skip trimming [default: true] 
-  --publish_raw_fastq              [boolean] Whether or not to publish raw (untrimmed) FASTQ files alongside trimmed FASTQs. When false, only 
-trimmed FASTQs are published. [default: false]  
+  --trim_fastq                     [boolean] Trim adapter sequences with fastp. When false, fastp still generates QC output, but does not modify 
+the reads. [default: true]  
+  --publish_raw_fastq              [boolean] Whether to publish raw, untrimmed FASTQ files alongside trimmed FASTQ files. When false, only 
+trimmed FASTQ files are published. [default: false]  
   --skip_tools                     [string]  Comma-separated list of tools to skip (fastp,fastqc,kraken,multiqc,checkqc,falco,md5sum,samshee) 
  
   --sample_size                    [integer] Number of reads to subsample for contamination detection. [default: 100000] 
-  --kraken_db                      [string]  Path to Kraken2 DB to use for screening 
-  --json_schema_validator          [string]  String in JSON format to be passed to samshee module for samplesheet validation 
-  --name_schema_validator          [string]  Schema name to be passed to samshee module for samplesheet validation 
-  --file_schema_validator          [string]  Local JSON file to be passed to samshee module for samplesheet validation 
-  --v1_schema                      [boolean] Whether or not illumina samplesheet is v1  
+  --kraken_db                      [string]  Path to the Kraken2 database used for contamination screening. 
+  --json_schema_validator          [string]  JSON-formatted schema string passed to the samshee module for samplesheet validation. 
+  --name_schema_validator          [string]  Schema name passed to the samshee module for samplesheet validation. 
+  --file_schema_validator          [string]  Local JSON schema file passed to the samshee module for samplesheet validation. 
+  --v1_schema                      [boolean] Whether the Illumina samplesheet is in v1 format. 
 
 Input/output options
   --input                          [string]  Path to comma-separated file containing information about the samples in the experiment. 
@@ -42,10 +41,10 @@ Input/output options
   --flowcell_samplesheet           [string]  Path to the flowcell SampleSheet.csv for single-flowcell runs. 
   --flowcell_lane                  [integer] Lane number for single-flowcell runs. 
   --flowcell_path                  [string]  Run directory (or tar.gz) for single-flowcell runs. 
-  --flowcell_per_flowcell_manifest [string]  Per-flowcell manifest file for fqtk single-flowcell runs. 
+  --flowcell_per_flowcell_manifest [string]  Per-flowcell manifest file for single-flowcell fqtk runs. 
   --outdir                         [string]  The output directory where the results will be saved. You have to use absolute paths to storage on 
 Cloud infrastructure.  
-  --optional_outputs               [boolean] Whether to publish optional outputs such as undertermined files. 
+  --optional_outputs               [boolean] Whether to publish optional outputs such as undetermined FASTQ files. 
   --email                          [string]  Email address for completion summary. 
   --multiqc_title                  [string]  MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
 
@@ -63,9 +62,8 @@ CheckQC options
 
 Generic options
   --multiqc_methods_description    [string]          Custom MultiQC yaml file containing HTML including a methods description. 
-  --remove_samplesheet_adapter     [boolean]         Boolean whether to remove adapter information from Illumina samplesheet. If adapter information is 
-present, the various bcl conversion tools will perform adapter trimming already at the 
-demultiplexing step. [default: true]  
+  --remove_samplesheet_adapter     [boolean]         Whether to remove adapter information from the Illumina samplesheet before demultiplexing. If it is 
+present, demultiplexers may trim adapters during the demultiplexing step. [default: true]  
   --help                           [boolean, string] Display the help message. 
   --help_full                      [boolean]         Display the full detailed help message. 
   --show_hidden                    [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 

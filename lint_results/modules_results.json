@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "4a208ad81dc6284b41f6a11aaa7d14336fe322a9",
+  "_repo_commit": "6ea7380463eee30a9792c0199aed8fd976abbdc0",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -10002,6 +10002,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "samtools_trimheader": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/samtools/trimheader",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
   "samtools_view": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/samtools/view",
     "errors": 0,
@@ -12430,6 +12436,12 @@
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/wittyer",
     "errors": 0,
     "warnings": 0,
+    "parse_error": false
+  },
+  "xengsort_classify": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/xengsort/classify",
+    "errors": 0,
+    "warnings": 1,
     "parse_error": false
   },
   "xengsort_index": {

@@ -14,9 +14,9 @@
   "airrflow": {
     "full_name": "nf-core/airrflow",
     "html_url": "https://github.com/nf-core/airrflow",
-    "commit": "41ededb5fe56ff524afa208adc8016cbf7f5d8b8",
+    "commit": "f8b2239c7ecc121e03d671c570ae9ec06d5053e3",
     "errors": 0,
-    "warnings": 34,
+    "warnings": 35,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -38,14 +38,14 @@
   "ampliseq": {
     "full_name": "nf-core/ampliseq",
     "html_url": "https://github.com/nf-core/ampliseq",
-    "commit": "0acc158958ce7f575bc7e53622efc11e21ea5647",
+    "commit": "1b60e549d96d0c2b92155ff8abd42c43e4922135",
     "errors": 0,
     "warnings": 26,
     "parse_error": false,
     "prints_help": false,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 106
+    "publishdir_count": 104
   },
   "atacseq": {
     "full_name": "nf-core/atacseq",
@@ -326,7 +326,7 @@
   "demultiplex": {
     "full_name": "nf-core/demultiplex",
     "html_url": "https://github.com/nf-core/demultiplex",
-    "commit": "db5324373684b6fd4d545b478d3640e142b9c38e",
+    "commit": "039a747c5781669961a0f07b2cb1ed08d33cf626",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -770,14 +770,14 @@
   "magmap": {
     "full_name": "nf-core/magmap",
     "html_url": "https://github.com/nf-core/magmap",
-    "commit": "a08d22dfa68ad186a8b3de9140c2c69df611ae16",
+    "commit": "0f26b961e52a80589eda344062b1a535907d8180",
     "errors": 0,
     "warnings": 13,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 26
+    "publishdir_count": 27
   },
   "marsseq": {
     "full_name": "nf-core/marsseq",
@@ -1130,7 +1130,7 @@
   "phaseimpute": {
     "full_name": "nf-core/phaseimpute",
     "html_url": "https://github.com/nf-core/phaseimpute",
-    "commit": "a581c34ad2c558080f8e37da72c417f6000de9d6",
+    "commit": "b92746afdf9e481d210d1dec98034626eb246074",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1226,7 +1226,7 @@
   "provenancereport": {
     "full_name": "nf-core/provenancereport",
     "html_url": "https://github.com/nf-core/provenancereport",
-    "commit": "238e33f5a4369d32bbecced19835870cb355eccb",
+    "commit": "0b38a4b45f042bfac1afd4ee90879442c7a443c0",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1466,7 +1466,7 @@
   "scrnaseq": {
     "full_name": "nf-core/scrnaseq",
     "html_url": "https://github.com/nf-core/scrnaseq",
-    "commit": "c972f5688eb21bf591f50e19cd5e245612bfd1ec",
+    "commit": "32743a9883a0c24d2552e94cb8d81d60df3499d2",
     "errors": 0,
     "warnings": 1,
     "parse_error": false,
@@ -1586,9 +1586,9 @@
   "taxmarker": {
     "full_name": "nf-core/taxmarker",
     "html_url": "https://github.com/nf-core/taxmarker",
-    "commit": "599b87436b3bbc1de4b6b19f3cd5688ecd66e9b9",
+    "commit": "37fe41d5cca3b58ec78ba8889c499be0e65c1ed9",
     "errors": 0,
-    "warnings": 20,
+    "warnings": 21,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -1646,7 +1646,7 @@
   "tumourevo": {
     "full_name": "nf-core/tumourevo",
     "html_url": "https://github.com/nf-core/tumourevo",
-    "commit": "887168d95124ecb64b1139693c7b512f14b8e112",
+    "commit": "30ae4698b8a4f5a7e594b39b49421ec6025ca7dd",
     "errors": 0,
     "warnings": 44,
     "parse_error": false,
