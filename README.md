@@ -11,12 +11,12 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 > See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline.
 > **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**
 
-- **Last updated:** 2026-09-26 00:24:23 UTC
+- **Last updated:** 2026-09-27 00:24:56 UTC
 - **Nextflow version:** 26.09.1-edge
 
 ## Pipelines
 
-- **Total:** 0 parse errors, 1228 errors, 5950 warnings across 144 pipelines
+- **Total:** 0 parse errors, 1228 errors, 5946 warnings across 144 pipelines
 - **Zero errors:** 96 pipelines (66.7%)
 
 |                    Errors                    |                     Warnings                     |
@@ -57,7 +57,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :x: [mnaseseq](https://github.com/nf-core/mnaseseq)                                            |     No      |     15 |        0 |      -      |         [View](lint_results/pipeline-results/mnaseseq_lint.md)          |                                    -                                     |
 | :x: [proteogenomicsdb](https://github.com/nf-core/proteogenomicsdb)                            |     No      |     15 |        0 |      -      |     [View](lint_results/pipeline-results/proteogenomicsdb_lint.md)      |                                    -                                     |
 | :x: [pangenome](https://github.com/nf-core/pangenome)                                          |     No      |     14 |       67 |      -      |         [View](lint_results/pipeline-results/pangenome_lint.md)         |                                    -                                     |
-| :x: [detaxizer](https://github.com/nf-core/detaxizer)                                          |     No      |     13 |       65 |      -      |         [View](lint_results/pipeline-results/detaxizer_lint.md)         |                                    -                                     |
+| :x: [detaxizer](https://github.com/nf-core/detaxizer)                                          |     No      |     13 |       61 |      -      |         [View](lint_results/pipeline-results/detaxizer_lint.md)         |                                    -                                     |
 | :x: [crisprseq](https://github.com/nf-core/crisprseq)                                          |     No      |     13 |       50 |      -      |         [View](lint_results/pipeline-results/crisprseq_lint.md)         |                                    -                                     |
 | :x: [coproid](https://github.com/nf-core/coproid)                                              |     No      |     12 |       52 |      -      |          [View](lint_results/pipeline-results/coproid_lint.md)          |                                    -                                     |
 | :x: [hic](https://github.com/nf-core/hic)                                                      |     No      |     12 |       31 |      -      |            [View](lint_results/pipeline-results/hic_lint.md)            |                                    -                                     |
@@ -271,7 +271,7 @@ The status emoji next to each pipeline shows its migration state: :white_check_m
 | :x: [meerpipe](https://github.com/nf-core/meerpipe)                                   |     No      |   Yes (9)    |         [View](lint_results/workflow-outputs-results/meerpipe_outputs.md)          |
 | :x: [metaboigniter](https://github.com/nf-core/metaboigniter)                         |     No      |   Yes (31)   |       [View](lint_results/workflow-outputs-results/metaboigniter_outputs.md)       |
 | :x: [metapep](https://github.com/nf-core/metapep)                                     |     No      |   Yes (21)   |          [View](lint_results/workflow-outputs-results/metapep_outputs.md)          |
-| :x: [metatdenovo](https://github.com/nf-core/metatdenovo)                             |     No      |   Yes (17)   |        [View](lint_results/workflow-outputs-results/metatdenovo_outputs.md)        |
+| :x: [metatdenovo](https://github.com/nf-core/metatdenovo)                             |     No      |   Yes (18)   |        [View](lint_results/workflow-outputs-results/metatdenovo_outputs.md)        |
 | :x: [methylarray](https://github.com/nf-core/methylarray)                             |     No      |   Yes (2)    |        [View](lint_results/workflow-outputs-results/methylarray_outputs.md)        |
 | :x: [methylong](https://github.com/nf-core/methylong)                                 |     No      |   Yes (42)   |         [View](lint_results/workflow-outputs-results/methylong_outputs.md)         |
 | :x: [methylseq](https://github.com/nf-core/methylseq)                                 |     No      |   Yes (47)   |         [View](lint_results/workflow-outputs-results/methylseq_outputs.md)         |

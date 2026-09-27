@@ -350,9 +350,9 @@
   "detaxizer": {
     "full_name": "nf-core/detaxizer",
     "html_url": "https://github.com/nf-core/detaxizer",
-    "commit": "e352a73bf1d8b3d0fb884aa2baf15dc29f43775e",
+    "commit": "cd615b393ddf419d51025cf9c5ed4b4499ab43db",
     "errors": 13,
-    "warnings": 65,
+    "warnings": 61,
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
@@ -842,14 +842,14 @@
   "metatdenovo": {
     "full_name": "nf-core/metatdenovo",
     "html_url": "https://github.com/nf-core/metatdenovo",
-    "commit": "4c9110d71a75b053c9f0d4b3e501591cc9027faa",
+    "commit": "a9ab6eb591986d3d3daa52e969f569f4da5d5910",
     "errors": 0,
     "warnings": 1,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 17
+    "publishdir_count": 18
   },
   "methylarray": {
     "full_name": "nf-core/methylarray",
@@ -1442,7 +1442,7 @@
   "scdownstream": {
     "full_name": "nf-core/scdownstream",
     "html_url": "https://github.com/nf-core/scdownstream",
-    "commit": "e2206504b2eb42cb09ce5b6ca8a93f5b7290ae9d",
+    "commit": "a9342200aa6aedd0f05a0d830e23753fdf353b6d",
     "errors": 0,
     "warnings": 22,
     "parse_error": false,
