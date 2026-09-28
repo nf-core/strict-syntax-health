@@ -626,11 +626,11 @@
   "hadge": {
     "full_name": "nf-core/hadge",
     "html_url": "https://github.com/nf-core/hadge",
-    "commit": "d1e8a61c425b6124d707c01e701a4e549ff9c822",
+    "commit": "fedeeb3ef358fb7cf576eae6f20b97f95ef920d3",
     "errors": 0,
     "warnings": 27,
     "parse_error": false,
-    "prints_help": false,
+    "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
     "publishdir_count": 33
@@ -842,9 +842,9 @@
   "metatdenovo": {
     "full_name": "nf-core/metatdenovo",
     "html_url": "https://github.com/nf-core/metatdenovo",
-    "commit": "a9ab6eb591986d3d3daa52e969f569f4da5d5910",
+    "commit": "8dea718428345acfbe296d8021aca9d47ba32262",
     "errors": 0,
-    "warnings": 1,
+    "warnings": 0,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -1178,7 +1178,7 @@
   "proteinannotator": {
     "full_name": "nf-core/proteinannotator",
     "html_url": "https://github.com/nf-core/proteinannotator",
-    "commit": "ffb0473c9e014388378616d2b442745cbc321a3a",
+    "commit": "79197a35ff15b158e3e7bee4df409323d4554a7d",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1442,7 +1442,7 @@
   "scdownstream": {
     "full_name": "nf-core/scdownstream",
     "html_url": "https://github.com/nf-core/scdownstream",
-    "commit": "a9342200aa6aedd0f05a0d830e23753fdf353b6d",
+    "commit": "466cdb06964bac270392fc0fb26f1d85bcbb369e",
     "errors": 0,
     "warnings": 22,
     "parse_error": false,
@@ -1574,7 +1574,7 @@
   "stableexpression": {
     "full_name": "nf-core/stableexpression",
     "html_url": "https://github.com/nf-core/stableexpression",
-    "commit": "c5ceba06295196fd9cfd4f74ddabb6d6115929a6",
+    "commit": "d6337d316f56cd23c85314fc2cdbcf4ebf17072d",
     "errors": 0,
     "warnings": 32,
     "parse_error": false,

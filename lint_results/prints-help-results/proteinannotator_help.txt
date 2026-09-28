@@ -1,12 +1,11 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.08.0-edge
+ N E X T F L O W   ~  version 26.09.1-edge
 
 Downloading plugin nf-schema@2.6.1
-Launching `./main.nf` [dreamy_ramanujan] revision: 1996496361
+Launching `./main.nf` [dreamy_majorana] revision: 1996496361
 
-WARN: Unrecognized config option 'manifest.diagram'
 
 ------------------------------------------------------
                                         ,--./,-.
@@ -68,11 +67,11 @@ https://envofams.org/envofams/databases/hmmer/metagroot.hmm.gz]
 Functional annotation parameters
   --skip_interproscan             [boolean] Skip the functional annotation with InterProScan. 
   --interproscan_db_url           [string]  Change the database version used for annotation. [default: 
-https://ftp.ebi.ac.uk/pub/software/unix/iprscan/5/5.72-103.0/interproscan-5.72-103.0-64-bit.tar.gz] 
+https://ftp.ebi.ac.uk/pub/software/unix/iprscan/5/5.59-91.0/interproscan-5.59-91.0-64-bit.tar.gz] 
  
   --interproscan_db               [string]  Path to pre-downloaded InterProScan database. 
   --interproscan_applications     [string]  Assigns the database(s) to be used to annotate the coding regions. [default: 
-Hamap,PANTHER,PIRSF,TIGRFAM,sfld]  
+Hamap,PANTHER,TIGRFAM,sfld]  
   --interproscan_enableprecalc    [boolean] Pre-calculates residue mutual matches. 
   --skip_kofamscan                [boolean] Skip KEGG Orthology annotation with KOfamScan. 
   --kofamscan_profiles_url        [string]  URL for the KOfam profiles archive. [default: 
