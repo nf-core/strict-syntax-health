@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.09.0-edge
+ N E X T F L O W   ~  version 26.09.1-edge
 
-Launching `./main.nf` [romantic_linnaeus] revision: 4c8b1c2912
+Launching `./main.nf` [jovial_fermi] revision: 4c8b1c2912
 
 
 ------------------------------------------------------
@@ -259,6 +259,7 @@ Ancient DNA assembly
 ------------------------------------------------------
 
 * The pipeline
+    https://doi.org/10.1093/bioinformatics/btag628
     https://doi.org/10.1093/nargab/lqac007
 
 * The nf-core framework

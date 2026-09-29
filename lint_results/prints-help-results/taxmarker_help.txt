@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.09.1-edge
 
 Downloading plugin nf-schema@2.7.3
-Launching `./main.nf` [soggy_snyder] revision: 199ad5eb1b
+Launching `./main.nf` [sharp_kimura] revision: 60a8b5e7cc
 
 
 ------------------------------------------------------
@@ -69,6 +69,7 @@ entirely.
   --taxcode                     [string]  Taxonomic code of the input data, passed to sativa-epang: bac(teriological), bot(anical), 
 zoo(logical) or vir(ological). Governs its nomenclature-revision suggestions.  (accepted: bac, 
 bot, zoo, vir) [default: bac]  
+  --folds_per_job               [integer] Number of leave-one-out folds each placement job places. Unset places them all in one job. 
   --outdir                      [string]  The output directory where the results will be saved. You have to use absolute paths to storage on 
 Cloud infrastructure.  
   --email                       [string]  Email address for completion summary. 

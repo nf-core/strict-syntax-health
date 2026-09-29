@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-09-25T00:20:44.922905486Z
-- Nextflow version: 26.09.0-edge
-- Summary: 53 warnings
+- Generated: 2026-09-29T00:22:48.474094164Z
+- Nextflow version: 26.09.1-edge
+- Summary: 52 warnings
 
 ## :warning: Warnings
 
@@ -335,42 +335,35 @@
                      ^^^^^^^^
   ```
 
-- Warning: `workflows/mhcquant.nf:114:85`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      ch_multiqc_files = ch_multiqc_files.mix(OPENMS_IDMASSACCURACY.out.frag_err.map{ meta, frag_err -> frag_err })
-                                                                                      ^^^^
-  ```
-
-- Warning: `workflows/mhcquant.nf:118:22`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/mhcquant.nf:117:22`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { meta, idxml -> [ groupKey([id: "${meta.sample}_${meta.condition}"], meta.group_count), meta] }
                        ^^^^^
   ```
 
-- Warning: `workflows/mhcquant.nf:135:20`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/mhcquant.nf:134:20`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .map { gkey, metas, mzmls, idxml ->
                      ^^^^
   ```
 
-- Warning: `workflows/mhcquant.nf:162:24`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/mhcquant.nf:161:24`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   .map { groupKey, meta, comet_idxml, fdr_filtered_idxml -> [meta, comet_idxml, fdr_filtered_idxml] }
                          ^^^^^^^^
   ```
 
-- Warning: `workflows/mhcquant.nf:241:88`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/mhcquant.nf:246:88`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           params.epicore ? EPICORE.out.stats : SUMMARIZE_RESULTS.out.epicore_input.map { meta, tsv, stats -> stats }
                                                                                          ^^^^
   ```
 
-- Warning: `workflows/mhcquant.nf:241:94`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/mhcquant.nf:246:94`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           params.epicore ? EPICORE.out.stats : SUMMARIZE_RESULTS.out.epicore_input.map { meta, tsv, stats -> stats }

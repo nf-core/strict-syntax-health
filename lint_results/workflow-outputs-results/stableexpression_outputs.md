@@ -1,6 +1,6 @@
 # Workflow outputs migration: stableexpression
 
-- Generated: 2026-09-28T00:24:36.654262+00:00
+- Generated: 2026-09-29T00:25:09.480953+00:00
 - Status: :white_check_mark: **pass** — uses only the new `output {}` syntax
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -9,7 +9,7 @@ This report tracks migration from the legacy `publishDir` directive to the new [
 
 Found 1 top-level `output {}` block:
 
-- [`main.nf:123`](https://github.com/nf-core/stableexpression/blob/d6337d316f56cd23c85314fc2cdbcf4ebf17072d/main.nf#L123)
+- [`main.nf:123`](https://github.com/nf-core/stableexpression/blob/c5f006a0cfbe73c7becf4097c569629ca2ed9349/main.nf#L123)
 
 ## Legacy `publishDir` references
 

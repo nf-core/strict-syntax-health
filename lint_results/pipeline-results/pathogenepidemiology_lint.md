@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-09-25T00:21:05.463045676Z
-- Nextflow version: 26.09.0-edge
-- Summary: 4 errors, 33 warnings
+- Generated: 2026-09-29T00:23:09.312269615Z
+- Nextflow version: 26.09.1-edge
+- Summary: 4 errors, 39 warnings
 
 ## :x: Errors
 
@@ -36,60 +36,74 @@
 
 ## :warning: Warnings
 
-- Warning: `subworkflows/local/gatk_MOI.nf:38:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/gatk_MOI.nf:40:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-      ch_vqsr_resource      // channel: path(training_vcf)    equivalent of the paper's Strains.vcf.gz
-      ^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/gatk_MOI.nf:39:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      ch_vqsr_resource_tbi  // channel: path(training_vcf_tbi)
-      ^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/gatk_MOI.nf:46:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty() // accumulates tool versions, which can be emitted as
+      ch_versions = Channel.empty()
                     ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/gatk_MOI.nf:55:40`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/gatk_MOI.nf:47:40`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_fasta_val = ch_queryfasta.map { meta, fasta -> fasta }.first()
                                          ^^^^
   ```
 
-- Warning: `subworkflows/local/gatk_MOI.nf:56:40`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/gatk_MOI.nf:48:40`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      ch_fai_val     = ch_queryfai.map { meta, fai -> fai }.first()
+      ch_fai_val   = ch_queryfai.map   { meta, fai   -> fai   }.first()
                                          ^^^^
   ```
 
-- Warning: `subworkflows/local/gatk_MOI.nf:57:5`: Variable was declared but not used
+- Warning: `subworkflows/local/gatk_MOI.nf:49:40`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      ch_dict_val   = ch_querydict.map { meta, dict -> dict }.first()
-      ^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/gatk_MOI.nf:57:40`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      ch_dict_val   = ch_querydict.map { meta, dict -> dict }.first()
+      ch_dict_val  = ch_querydict.map  { meta, dict  -> dict  }.first()
                                          ^^^^
   ```
 
-- Warning: `subworkflows/local/gatk_MOI.nf:94:37`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/gatk_MOI.nf:78:39`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-        ch_dedup_bam.map { meta, bam, bai -> tuple(meta, bam) }
-                                      ^^^
+          ch_dedup_bam.map { meta, bam, bai -> tuple(meta, bam) }
+                                        ^^^
+  ```
+
+- Warning: `subworkflows/local/gatk_MOI.nf:94:20`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+      ch_intervals = Channel.fromPath("${launchDir}/assets/intervals/core_chr*.list")
+                     ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/gatk_MOI.nf:156:19`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .filter { meta, vcf, tbi -> vcf.size() > 8000 }
+                    ^^^^
+  ```
+
+- Warning: `subworkflows/local/gatk_MOI.nf:156:30`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .filter { meta, vcf, tbi -> vcf.size() > 8000 }
+                               ^^^
+  ```
+
+- Warning: `subworkflows/local/gatk_MOI.nf:218:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              def vcfs = items.collect { it[1] }
+                                         ^^
+  ```
+
+- Warning: `subworkflows/local/gatk_MOI.nf:219:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              def tbis = items.collect { it[2] }
+                                         ^^
   ```
 
 - Warning: `subworkflows/local/prepare_references.nf:15:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -113,14 +127,14 @@
                    ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/preprocess_reads.nf:29:50`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/preprocess_reads.nf:31:50`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_reads_raw = ch_samples.map { meta, reads, platform ->
                                                    ^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/preprocess_reads.nf:39:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/preprocess_reads.nf:41:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_adapters = Channel.fromPath(adapters)
@@ -197,72 +211,100 @@
                           ^^^^^^^^
   ```
 
-- Warning: `workflows/original_local.nf:148:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/original_local.nf:144:55`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      Channel.empty(),
+    ch_wgs_bam_s     = aligned_s.aligned.filter { meta, bam -> meta.library_strategy == 'WGS' }
+                                                        ^^^
+  ```
+
+- Warning: `workflows/original_local.nf:146:3`: Variable was declared but not used
+
+  ```nextflow
+    ch_amplicon_bam_s = aligned_s.aligned.filter { meta, bam -> meta.library_strategy != 'WGS' }
+    ^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `workflows/original_local.nf:146:56`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+    ch_amplicon_bam_s = aligned_s.aligned.filter { meta, bam -> meta.library_strategy != 'WGS' }
+                                                         ^^^
+  ```
+
+- Warning: `workflows/original_local.nf:153:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+      Channel.fromPath("${launchDir}/assets/Strains.2kb.vcf.gz"),
       ^^^^^^^
   ```
 
-- Warning: `workflows/original_local.nf:149:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/original_local.nf:154:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-      Channel.empty()
+      Channel.fromPath("${launchDir}/assets/Strains.2kb.vcf.gz.tbi")
       ^^^^^^^
   ```
 
-- Warning: `workflows/original_local.nf:169:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/original_local.nf:174:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
     ch_multiqc_input = Channel.empty()
                        ^^^^^^^
   ```
 
-- Warning: `workflows/original_local.nf:171:33`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:176:33`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_fastqc_out.collect { meta, files -> files },
                                   ^^^^
   ```
 
-- Warning: `workflows/original_local.nf:172:34`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:177:34`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_bbduk_stats.collect { meta, files -> files },
                                    ^^^^
   ```
 
-- Warning: `workflows/original_local.nf:173:33`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:178:33`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_bbduk_logs.collect { meta, files -> files },
                                   ^^^^
   ```
 
-- Warning: `workflows/original_local.nf:174:36`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:179:36`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_bbduk_dropped.collect { meta, files -> files },
                                      ^^^^
   ```
 
-- Warning: `workflows/original_local.nf:175:37`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:180:37`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_mm2stats.stats.collect { meta, files -> files },
                                       ^^^^
   ```
 
-- Warning: `workflows/original_local.nf:176:37`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:181:37`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_bm3stats.stats.collect { meta, files -> files },
                                       ^^^^
   ```
 
-- Warning: `workflows/original_local.nf:177:30`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:182:30`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          varcalls_s.collect { meta, files -> files }//,
+          varcalls_s.collect { meta, files, idx -> files }//,
                                ^^^^
+  ```
+
+- Warning: `workflows/original_local.nf:182:43`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          varcalls_s.collect { meta, files, idx -> files }//,
+                                            ^^^
   ```

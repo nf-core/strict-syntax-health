@@ -3,10 +3,9 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.09.1-edge
 
-Downloading plugin nf-schema@2.5.1
 Downloading plugin nf-co2footprint@1.0.0-beta
 Downloading plugin nf-core-utils@0.4.0
-Launching `./main.nf` [disturbed_ochoa] revision: cb0959f11d
+Launching `./main.nf` [berserk_almeida] revision: cb0959f11d
 
 WARN: Unrecognized config option 'co2footprint.traceFile'
 WARN: Unrecognized config option 'co2footprint.reportFile'
