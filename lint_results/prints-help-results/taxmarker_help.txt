@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.09.1-edge
 
 Downloading plugin nf-schema@2.7.3
-Launching `./main.nf` [sharp_kimura] revision: 60a8b5e7cc
+Launching `./main.nf` [friendly_mandelbrot] revision: 60a8b5e7cc
 
 
 ------------------------------------------------------
@@ -53,7 +53,9 @@ given.
 pipeline.  
   --raxtax_filter_rank          [integer] Taxonomic rank at which raxtax's self-classification must agree with the declared taxonomy, counted 
 from the most specific rank (1) upward. A sequence disagreeing at this one rank is flagged as a 
-mislabel and skips EPA-ng placement. [default: 1]  
+mislabel and skips EPA-ng placement. [default: 2]  
+  --raxtax_min_confidence       [number]  Minimum raxtax confidence at `--raxtax_filter_rank` for a disagreement to be flagged as a mislabel. 
+[default: 0.9]  
   --skip_gapfilter              [boolean] For already-aligned input: skip filtering out sequences with too high a proportion of alignment 
 gaps, and run every sequence straight through the rest of the pipeline.  
   --min_nongap                  [number]  For already-aligned input: minimum proportion of non-gap columns a sequence must have in the 

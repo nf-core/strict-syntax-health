@@ -1,0 +1,119 @@
+$ NXF_SYNTAX_PARSER=v2 nextflow run . --help
+
+
+ N E X T F L O W   ~  version 26.09.1-edge
+
+Launching `./main.nf` [shrivelled_rosalind] revision: 4c500c0a83
+
+
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/detaxizer 1.4.0dev
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/detaxizer -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input                                 [string] Path to comma-separated file containing information about the samples in the experiment. 
+  --outdir                                [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --email                                 [string] Email address for completion summary. 
+  --multiqc_title                         [string] MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+
+General workflow parameters
+  --preprocessing                         [boolean] If preprocessing with fastp should be turned on. 
+  --classification_bbduk                  [boolean] Signifies that bbduk is used in the classification process. Can be combined with the 
+'classification_kraken2' parameter to run both.  
+  --classification_kraken2                [boolean] Signifies that kraken2 is used in the classification process. Can be combined with the 
+'classification_bbduk' parameter to run both. For kraken2 alone no parameter is needed.  
+  --validation_blastn                     [boolean] If a validation of the classified reads via blastn should be carried out. 
+  --classification_kraken2_post_filtering [boolean] If the filtered reads should be classified with kraken2. 
+  --filter_with_classification            [boolean] When a validation via blastn is wanted but the filtering should use the IDs from the classification 
+process.  
+  --skip_filter                           [boolean] If the filtering step should be skipped. 
+  --filtering_tool                        [string]  Select the read-filtering tool: seqkit or bbmap. seqkit normalizes FASTQ headers by temporarily 
+renaming them; bbmap uses filterbyname.sh for exact header matching -- Note: BBTools I/O forces any 
+base that is N to Q=0 (!).  (accepted: seqkit, bbmap) [default: seqkit]  
+  --output_removed_reads                  [boolean] If the removed reads should also be written to the output folder. 
+  --filter_trimmed                        [boolean] If the pre-processed reads should be used by the filter. 
+  --save_intermediates                    [boolean] Save intermediates to the results folder. 
+
+bbduk
+  --fasta_bbduk                           [string]  Location of the fasta which contains the contaminant sequences. 
+  --bbduk_kmers                           [integer] Length of k-mers for classification carried out by bbduk [default: 27] 
+
+kraken2
+  --kraken2db                             [string]  The database which is used in the classification step. Please be aware that this default database 
+will require ~60GB download and ~80GB RAM. [default: 
+https://genome-idx.s3.amazonaws.com/kraken/k2_standard_20240605.tar.gz]  
+  --save_output_fastqs_filtered           [boolean] Save unclassified reads and classified reads (those assigned to any taxon, not specifically assessed 
+or filtered) to separate files. For the filtered reads.  
+  --save_output_fastqs_removed            [boolean] Save unclassified reads and classified reads (those assigned to any taxon, not specifically assessed 
+or filtered) to separate files. For the removed reads.  
+  --kraken2confidence                     [number]  Confidence in the classification of a read as a certain taxon. [default: 0.0] 
+  --kraken2confidence_filtered            [number]  Confidence in the classification of a read as a certain taxon. For the filtered reads. [default: 
+0.0]  
+  --kraken2confidence_removed             [number]  Confidence in the classification of a read as a certain taxon. For the removed reads. [default: 
+0.0]  
+  --cutoff_tax2filter                     [integer] If a read has less k-mers assigned to the taxon/taxa to be assessed/to be filtered the read is 
+ignored by the pipeline. [default: 0]  
+  --cutoff_tax2keep                       [number]  Ratio per read of assigned to tax2filter k-mers to k-mers assigned to any other taxon (except 
+unclassified). [default: 0.0]  
+  --cutoff_unclassified                   [number]  Ratio per read of assigned to tax2filter k-mers to unclassified k-mers. [default: 0.0] 
+  --tax2filter                            [string]  The taxon or taxonomic group to be assessed or filtered by the pipeline. [default: Homo sapiens] 
+ 
+
+blastn
+  --fasta_blastn                          [string] Location of the fasta from which the blastn database will be constructed. 
+  --blast_coverage                        [number] Coverage is the percentage of the query sequence which can be found in the alignments of the 
+sequence match. It can be used to fine-tune the validation step. [default: 40.0]  
+  --blast_evalue                          [number] The expected(e)-value contains information on how many hits of the same score can be found in a 
+database of the size used in the query by chance. The parameter can be used to fine-tune the 
+validation step. [default: 0.01]  
+  --blast_identity                        [number] Identity is the percentage of the exact matches in the query and the sequence found in the database. 
+The parameter can be used to fine-tune the validation step. [default: 40.0]  
+
+fastp options
+  --reads_minlength                       [integer] fastp option defining the minimum readlength of a read [default: 0] 
+  --fastp_save_trimmed_fail               [boolean] fastp option defining if the reads which failed to be trimmed should be saved 
+  --fastp_qualified_quality               [integer] fastp option to define the threshold of quality of an individual base [default: 0] 
+  --fastp_cut_mean_quality                [integer] fastp option to define the mean quality for trimming [default: 1] 
+  --fastp_eval_duplication                [boolean] fastp option if duplicates should be filtered or not before classification 
+  --save_clipped_reads                    [boolean] fastp option to define if the clipped reads should be saved 
+
+Reference genome options
+  --genome                                [string]  Name of iGenomes reference. [default: GRCh38] 
+  --saveReference                         [boolean] Save the reference genome and its index files in the results directory. [default: true] 
+
+Downstream pipeline samplesheet generation options
+  --generate_downstream_samplesheets      [boolean] Turn on generation of samplesheets for downstream pipelines. 
+  --generate_pipeline_samplesheets        [string]  Specify a comma separated string in quotes to specify which pipeline to generate a samplesheet for. 
+[default: taxprofiler,mag]  
+
+Generic options
+  --multiqc_methods_description           [string]          Custom MultiQC yaml file containing HTML including a methods description. 
+  --help                                  [boolean, string] Display the help message. 
+  --help_full                             [boolean]         Display the full detailed help message. 
+  --show_hidden                           [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 20 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The pipeline
+    https://doi.org/10.5281/zenodo.10877147
+    https://doi.org/10.1093/nargab/lqaf125
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/detaxizer/blob/master/CITATIONS.md
+

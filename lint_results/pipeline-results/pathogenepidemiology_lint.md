@@ -1,10 +1,24 @@
 # Nextflow lint results
 
-- Generated: 2026-09-29T00:23:09.312269615Z
+- Generated: 2026-09-30T00:24:08.350725842Z
 - Nextflow version: 26.09.1-edge
-- Summary: 4 errors, 39 warnings
+- Summary: 9 errors, 38 warnings
 
 ## :x: Errors
+
+- Error: `conf/modules.config:280:18`: Unexpected character: '`'
+
+  ```nextflow
+      cpus       = `nproc --all`.trim().toInteger() // all
+                   ^
+  ```
+
+- Error: `modules/local/hmmibdrs/main.nf:32:9`: `bam` is not defined
+
+  ```nextflow
+          $bam
+          ^^^^
+  ```
 
 - Error: `subworkflows/nf-core/deepvariant/tests/deepvariant-workflow-and-process-equality-tester.nf:1:1`: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/pathogenepidemiology/modules/nf-core/deepvariant/rundeepvariant/main.nf'
 
@@ -32,6 +46,27 @@
   ```nextflow
       pc_gvcf = DEEPVARIANT_RUNDEEPVARIANT.out.gvcf
                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `workflows/original_local.nf:26:1`: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/pathogenepidemiology/modules/local/hmmibdrs/mainf.nf'
+
+  ```nextflow
+  include { HMMIBDRS             } from '../modules/local/hmmibdrs/mainf'
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `workflows/pathogenepidemiology.nf:12:1`: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/pathogenepidemiology/modules/local/clair3_custom/main.nf'
+
+  ```nextflow
+  include { CLAIR3_CUSTOM          } from '../modules/local/clair3_custom/main'
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `workflows/pathogenepidemiology.nf:15:1`: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/pathogenepidemiology/modules/nf-core/clair3/main.nf'
+
+  ```nextflow
+  include { CLAIR3                 } from '../modules/nf-core/clair3/main'
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 ## :warning: Warnings
@@ -148,161 +183,154 @@
                 ^^^^^^^
   ```
 
-- Warning: `workflows/original_local.nf:73:34`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:64:34`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       .join(ch_samples.map { meta, reads, platform -> tuple(meta, platform) }, by: 0)
                                    ^^^^^
   ```
 
-- Warning: `workflows/original_local.nf:74:15`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:65:15`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       .filter { meta, reads, platform ->
                 ^^^^
   ```
 
-- Warning: `workflows/original_local.nf:74:21`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:65:21`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       .filter { meta, reads, platform ->
                       ^^^^^
   ```
 
-- Warning: `workflows/original_local.nf:77:25`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:68:25`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       .map { meta, reads, platform ->
                           ^^^^^^^^
   ```
 
-- Warning: `workflows/original_local.nf:100:3`: Variable was declared but not used
-
-  ```nextflow
-    varcalls_l = CLAIR3_CUSTOM(
-    ^^^^^^^^^^
-  ```
-
-- Warning: `workflows/original_local.nf:121:34`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:101:34`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       .join(ch_samples.map { meta, reads, platform -> tuple(meta, platform) }, by: 0)
                                    ^^^^^
   ```
 
-- Warning: `workflows/original_local.nf:122:15`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:102:15`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       .filter { meta, reads, platform ->
                 ^^^^
   ```
 
-- Warning: `workflows/original_local.nf:122:21`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:102:21`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       .filter { meta, reads, platform ->
                       ^^^^^
   ```
 
-- Warning: `workflows/original_local.nf:125:25`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:105:25`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       .map { meta, reads, platform ->
                           ^^^^^^^^
   ```
 
-- Warning: `workflows/original_local.nf:144:55`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:124:55`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
     ch_wgs_bam_s     = aligned_s.aligned.filter { meta, bam -> meta.library_strategy == 'WGS' }
                                                         ^^^
   ```
 
-- Warning: `workflows/original_local.nf:146:3`: Variable was declared but not used
+- Warning: `workflows/original_local.nf:126:3`: Variable was declared but not used
 
   ```nextflow
     ch_amplicon_bam_s = aligned_s.aligned.filter { meta, bam -> meta.library_strategy != 'WGS' }
     ^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/original_local.nf:146:56`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:126:56`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
     ch_amplicon_bam_s = aligned_s.aligned.filter { meta, bam -> meta.library_strategy != 'WGS' }
                                                          ^^^
   ```
 
-- Warning: `workflows/original_local.nf:153:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/original_local.nf:133:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       Channel.fromPath("${launchDir}/assets/Strains.2kb.vcf.gz"),
       ^^^^^^^
   ```
 
-- Warning: `workflows/original_local.nf:154:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/original_local.nf:134:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       Channel.fromPath("${launchDir}/assets/Strains.2kb.vcf.gz.tbi")
       ^^^^^^^
   ```
 
-- Warning: `workflows/original_local.nf:174:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/original_local.nf:169:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
     ch_multiqc_input = Channel.empty()
                        ^^^^^^^
   ```
 
-- Warning: `workflows/original_local.nf:176:33`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:171:33`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_fastqc_out.collect { meta, files -> files },
                                   ^^^^
   ```
 
-- Warning: `workflows/original_local.nf:177:34`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:172:34`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_bbduk_stats.collect { meta, files -> files },
                                    ^^^^
   ```
 
-- Warning: `workflows/original_local.nf:178:33`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:173:33`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_bbduk_logs.collect { meta, files -> files },
                                   ^^^^
   ```
 
-- Warning: `workflows/original_local.nf:179:36`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:174:36`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_bbduk_dropped.collect { meta, files -> files },
                                      ^^^^
   ```
 
-- Warning: `workflows/original_local.nf:180:37`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:175:37`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_mm2stats.stats.collect { meta, files -> files },
                                       ^^^^
   ```
 
-- Warning: `workflows/original_local.nf:181:37`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:176:37`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_bm3stats.stats.collect { meta, files -> files },
                                       ^^^^
   ```
 
-- Warning: `workflows/original_local.nf:182:30`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:177:30`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           varcalls_s.collect { meta, files, idx -> files }//,
                                ^^^^
   ```
 
-- Warning: `workflows/original_local.nf:182:43`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:177:43`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           varcalls_s.collect { meta, files, idx -> files }//,

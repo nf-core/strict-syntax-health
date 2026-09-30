@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-06-26T00:44:02.283836193Z
-- Nextflow version: 26.05.0-edge
-- Summary: 6 errors, 34 warnings
+- Generated: 2026-09-30T00:23:58.184395918Z
+- Nextflow version: 26.09.1-edge
+- Summary: 6 errors, 27 warnings
 
 ## :x: Errors
 
@@ -49,13 +49,6 @@
   ```
 
 ## :warning: Warnings
-
-- Warning: `main.nf:115:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      multiqc_report = PACVAR.out.multiqc_report // channel: /path/to/multiqc_report.html
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
 
 - Warning: `modules/nf-core/deepvariant/main.nf:1:5`: Variable was declared but not used
 
@@ -155,27 +148,6 @@
                                          ^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/repeat_characterization/main.nf:64:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      versions       = ch_versions
-      ^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/set_value_channel/main.nf:15:16`: Variable was declared but not used
-
-  ```nextflow
-          .set { data }
-                 ^^^^
-  ```
-
-- Warning: `subworkflows/local/set_value_channel/main.nf:18:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      data // channel: [ file(infile) ]
-      ^^^^
-  ```
-
 - Warning: `subworkflows/local/utils_nfcore_pacvar_pipeline/main.nf:116:24`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
@@ -188,27 +160,6 @@
   ```nextflow
       def multiqc_reports = multiqc_report.toList()
           ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      valid_config = valid_config
-      ^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
   ```
 
 - Warning: `workflows/pacvar.nf:102:59`: Parameter was not used -- prefix with `_` to suppress warning

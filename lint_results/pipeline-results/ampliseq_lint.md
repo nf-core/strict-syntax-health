@@ -1,82 +1,82 @@
 # Nextflow lint results
 
-- Generated: 2026-09-29T00:20:39.350332131Z
+- Generated: 2026-09-30T00:21:26.693695200Z
 - Nextflow version: 26.09.1-edge
 - Summary: 26 warnings
 
 ## :warning: Warnings
 
-- Warning: `modules/local/summary_report.nf:90:71`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `modules/local/summary_report/main.nf:90:71`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               dada_ref_taxonomy_list.collect { params.dada_ref_databases[it]["title"] }.join('; ') :
                                                                         ^^
   ```
 
-- Warning: `modules/local/summary_report.nf:93:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `modules/local/summary_report/main.nf:93:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           dada_ref_taxonomy_list.collect { params.dada_ref_databases[it]["file"] }.flatten().join(', ') :
                                                                     ^^
   ```
 
-- Warning: `modules/local/summary_report.nf:96:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `modules/local/summary_report/main.nf:96:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           dada_ref_taxonomy_list.collect { params.dada_ref_databases[it]["citation"] }.join(' | ') :
                                                                     ^^
   ```
 
-- Warning: `subworkflows/local/comparison_wf.nf:24:37`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/comparison_wf/main.nf:24:37`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_observed_sequences.map { it = [ [id: val_md5sum_version], file(it) ] },
                                       ^^
   ```
 
-- Warning: `subworkflows/local/comparison_wf.nf:24:75`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/comparison_wf/main.nf:24:75`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_observed_sequences.map { it = [ [id: val_md5sum_version], file(it) ] },
                                                                             ^^
   ```
 
-- Warning: `subworkflows/local/comparison_wf.nf:47:45`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/comparison_wf/main.nf:47:45`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           COMPARE_SEQUENCES.out.matches.map { it = [ [id: val_md5sum_version], file(it) ] },
                                               ^^
   ```
 
-- Warning: `subworkflows/local/comparison_wf.nf:47:83`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/comparison_wf/main.nf:47:83`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           COMPARE_SEQUENCES.out.matches.map { it = [ [id: val_md5sum_version], file(it) ] },
                                                                                     ^^
   ```
 
-- Warning: `subworkflows/local/comparison_wf.nf:57:20`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/comparison_wf/main.nf:57:20`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .map { it = [ [id: val_md5sum_version], it ] },
                      ^^
   ```
 
-- Warning: `subworkflows/local/comparison_wf.nf:57:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/comparison_wf/main.nf:57:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .map { it = [ [id: val_md5sum_version], it ] },
                                                       ^^
   ```
 
-- Warning: `subworkflows/local/dada2_preprocessing.nf:54:32`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/dada2_preprocessing/main.nf:54:32`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       .findAll { it.trim() }  // Remove empty lines
                                  ^^
   ```
 
-- Warning: `subworkflows/local/dada2_preprocessing.nf:55:32`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/dada2_preprocessing/main.nf:55:32`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       .collect { it.trim().toInteger() }

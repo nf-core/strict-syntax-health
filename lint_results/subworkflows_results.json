@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "3ccf6cbb9868aa36cf77b9490af7b47595eaab17",
+  "_repo_commit": "c99190a98f82b7c09f50e9d15d3ec2a5411b8f76",
   "abundance_differential_filter": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/abundance_differential_filter",
     "errors": 0,
@@ -285,7 +285,7 @@
   "fasta_clean_faidx": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fasta_clean_faidx",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "parse_error": false
   },
   "fasta_clean_fcs": {
@@ -321,7 +321,7 @@
   "fasta_hmmsearch_rank_fastas": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fasta_hmmsearch_rank_fastas",
     "errors": 0,
-    "warnings": 9,
+    "warnings": 0,
     "parse_error": false
   },
   "fasta_index_bismark_bwameth": {
@@ -603,7 +603,7 @@
   "orftable_fasta_gtf_buildorfcatalogue": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/orftable_fasta_gtf_buildorfcatalogue",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "parse_error": false
   },
   "quant_tximport_summarizedexperiment": {

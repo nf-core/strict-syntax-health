@@ -1,21 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-09-29T00:26:05.586048+00:00
+- Generated: 2026-09-30T00:26:00.932021+00:00
 - Nextflow version: 26.09.1-edge
-- Summary: 2 warnings
-
-## :warning: Warnings
-
-- Warning: `modules/nf-core/openms/mapaligneridentification/main.nf:22:43`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def trafo_out = id_files.collect { "${it.baseName}.trafoXML" }.join(' ')
-                                            ^^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/openms/mapaligneridentification/main.nf:32:43`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def trafo_out = id_files.collect { "${it.baseName}.trafoXML" }.join(' ')
-                                            ^^^^^^^^^^
-  ```
+- Summary: No issues found

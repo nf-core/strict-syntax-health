@@ -1,21 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-09-29T00:26:05.440718+00:00
+- Generated: 2026-09-30T00:26:00.766929+00:00
 - Nextflow version: 26.09.1-edge
-- Summary: 2 warnings
-
-## :warning: Warnings
-
-- Warning: `modules/nf-core/custom/orfnormalise/main.nf:24:5`: Variable was declared but not used
-
-  ```nextflow
-      sample_id = meta.id ?: 'unknown'
-      ^^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/custom/orfnormalise/main.nf:25:5`: Variable was declared but not used
-
-  ```nextflow
-      args      = task.ext.args ?: ''
-      ^^^^^^^^^^
-  ```
+- Summary: No issues found

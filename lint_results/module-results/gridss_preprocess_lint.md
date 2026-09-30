@@ -1,21 +1,5 @@
 # Nextflow lint results
 
-- Generated: 2026-09-29T00:26:05.504268+00:00
+- Generated: 2026-09-30T00:26:00.842596+00:00
 - Nextflow version: 26.09.1-edge
-- Summary: 2 warnings
-
-## :warning: Warnings
-
-- Warning: `modules/nf-core/gridss/preprocess/main.nf:23:9`: Variable was declared but not used
-
-  ```nextflow
-      def prefix = task.ext.prefix ?: "${meta.id}"
-          ^^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/gridss/preprocess/main.nf:46:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^^^^^^^
-  ```
+- Summary: No issues found

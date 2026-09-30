@@ -1,6 +1,6 @@
 # Workflow outputs migration: ampliseq
 
-- Generated: 2026-09-29T00:20:39.566770+00:00
+- Generated: 2026-09-30T00:21:26.937009+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,4 +14,4 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 104 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/ampliseq/blob/2c89494702a9f454ae9153965e5bb6fc6ea5d1aa/conf/modules.config#L19) — 104 references
+- [`conf/modules.config`](https://github.com/nf-core/ampliseq/blob/9e79a8131b2ebaf1dd4410d91ead842d7cf82ec0/conf/modules.config#L19) — 104 references

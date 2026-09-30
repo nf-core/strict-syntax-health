@@ -1,11 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.08.0-edge
+ N E X T F L O W   ~  version 26.09.1-edge
 
-Launching `./main.nf` [romantic_brenner] revision: 8dedb1d42a
+Launching `./main.nf` [big_swartz] revision: 8dedb1d42a
 
-WARN: Unrecognized config option 'manifest.diagram'
 
 ------------------------------------------------------
                                         ,--./,-.
@@ -47,7 +46,7 @@ removal).
 Update mechanism parameters
   --save_update_families_pre_clipped_fasta       [boolean] Save intermediate FASTA files before clipping gappy ends (non-redundant --if 
 `skip_sequence_redundancy_removal` is false-- or all --if `skip_sequence_redundancy_removal` is 
-true--) in the update_families subworkflow [default: false]  
+true--) in the update_families subworkflow  
   --save_update_families_clipped_fasta           [boolean] Save FASTA files derived from updated family MSAs (after re-alignment and clipping) [default: 
 true]  
 
@@ -75,7 +74,7 @@ recruitment and realignment per cluster.  (accepted: standard, iterative) [defau
 
 Alignment parameters
   --alignment_tool                               [string]  Choose alignment tool. FAMSA is recommended as best time-memory-accuracy combination option.  
-(accepted: famsa, mafft)  
+(accepted: famsa, mafft) [default: famsa]  
   --clipkit_out_format                           [string]  Choose the output format of the clipped alignment. [default: clipkit] 
   --trim_ends_only                               [boolean] Choose if ClipKIT should only clip gaps at the ends of the MSAs. [default: true] 
   --gap_threshold                                [number]  Multiple Sequence Alignment (MSA) positions with gappiness greater than this threshold will be 
@@ -96,7 +95,7 @@ Redundancy removal parameters
   --cluster_coverage_for_redundancy              [number]  mmseqs parameter for minimum sequence coverage ratio [default: 0.9] 
   --cluster_cov_mode_for_redundancy              [integer] mmseqs parameter for coverage mode: 0 for both, 1 for target and 2 for query sequence [default: 
 0]  
-  --save_non_redundant_seqs_fasta                [boolean] Save the final family fasta files with sequence redundancy removed 
+  --save_non_redundant_seqs_fasta                [boolean] Save the final family fasta files with sequence redundancy removed [default: true] 
  !! Hiding 28 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
 
