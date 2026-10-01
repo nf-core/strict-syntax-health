@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.09.0-edge
+ N E X T F L O W   ~  version 26.09.1-edge
 
-Launching `./main.nf` [adoring_gutenberg] revision: b1f8412745
+Launching `./main.nf` [zen_morse] revision: 9f22a7303b
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -49,9 +49,6 @@ Reference file options
   --known_dbsnp                       [string]  Path to known dbSNP file. 
   --known_dbsnp_tbi                   [string]  Path to known dbSNP file index. 
   --local_genomes                     [string]  Local directory base for genome references that map to the config. 
-  --manta_call_regions                [string]  Path to a bgzipped BED file restricting Manta SV calling to specific regions (e.g. primary 
-chromosomes). Only applied for WGS; for WES, Manta always uses target_bed instead.  
-  --manta_call_regions_tbi            [string]  Tabix index for the file supplied via --manta_call_regions. 
   --mito_name                         [string]  Name of the mitochondrial contig in the reference fasta file [default: chrM] 
   --mobile_element_references         [string]  File with mobile element references 
   --mobile_element_svdb_annotations   [string]  File with mobile element allele frequency references 
@@ -70,6 +67,10 @@ model file.
   --score_config_snv                  [string]  SNV rank model config file for genmod. 
   --score_config_sv                   [string]  SV rank model config file for genmod. 
   --sequence_dictionary               [string]  Path to the genome dictionary file 
+  --sv_call_region                    [string]  Path to a bgzipped BED file restricting SV calling to specific regions (e.g. primary chromosomes). 
+Currently only used by Manta, and only for WGS; for WES, Manta always uses target_bed instead. 
+ 
+  --sv_call_region_tbi                [string]  Tabix index for the file supplied via --sv_call_region. 
   --svdb_query_bedpedbs               [string]  Databases used for structural variant annotation in chrA-posA-chrB-posB-type-count-frequency format. 
  
   --svdb_query_dbs                    [string]  Databases used for structural variant annotation in vcf format. 
@@ -159,7 +160,7 @@ mt_subsample_approach is set to fraction [default: 30]
   --rmdup                             [boolean] Specifies whether duplicates reads should be removed prior to variant calling. 
 
 Variant calling options
-  --call_interval                     [string]  Interval in the reference that will be used in the software. Used only by sentieon. 
+  --snv_call_region                   [string]  Restrict SNV calling (DeepVariant or Sentieon) to this region. 
   --cnvnator_binsize                  [integer] Bin size for CNVnator [default: 1000] 
   --sentieon_dnascope_pcr_indel_model [string]  Option for selecting the PCR indel model used by Sentieon Dnascope.  (accepted: NONE, HOSTILE, 
 AGGRESSIVE, CONSERVATIVE) [default: CONSERVATIVE]  

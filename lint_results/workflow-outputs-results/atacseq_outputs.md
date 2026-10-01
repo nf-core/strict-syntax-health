@@ -1,6 +1,6 @@
 # Workflow outputs migration: atacseq
 
-- Generated: 2026-09-30T00:21:50.572026+00:00
+- Generated: 2026-10-01T00:24:42.155198+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,6 +14,6 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 81 `publishDir` references across 3 files that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/atacseq/blob/a51bee0178045b29cd9f034e58f4de6b80bc91db/conf/modules.config#L18) — 79 references
-- [`modules/nf-core/subread/featurecounts/tests/nextflow.config`](https://github.com/nf-core/atacseq/blob/a51bee0178045b29cd9f034e58f4de6b80bc91db/modules/nf-core/subread/featurecounts/tests/nextflow.config#L3) — 1 reference
-- [`modules/nf-core/umitools/extract/tests/nextflow.config`](https://github.com/nf-core/atacseq/blob/a51bee0178045b29cd9f034e58f4de6b80bc91db/modules/nf-core/umitools/extract/tests/nextflow.config#L3) — 1 reference
+- [`conf/modules.config`](https://github.com/nf-core/atacseq/blob/6a9307709662bad3e7bcc10aa873f7e81fdd1646/conf/modules.config#L18) — 79 references
+- [`modules/nf-core/subread/featurecounts/tests/nextflow.config`](https://github.com/nf-core/atacseq/blob/6a9307709662bad3e7bcc10aa873f7e81fdd1646/modules/nf-core/subread/featurecounts/tests/nextflow.config#L3) — 1 reference
+- [`modules/nf-core/umitools/extract/tests/nextflow.config`](https://github.com/nf-core/atacseq/blob/6a9307709662bad3e7bcc10aa873f7e81fdd1646/modules/nf-core/umitools/extract/tests/nextflow.config#L3) — 1 reference

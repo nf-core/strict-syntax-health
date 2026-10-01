@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-09-30T00:24:54.868760556Z
+- Generated: 2026-10-01T00:27:18.348097034Z
 - Nextflow version: 26.09.1-edge
 - Summary: 21 warnings
 
@@ -132,21 +132,21 @@
                                                                              ^^
   ```
 
-- Warning: `workflows/taxmarker.nf:96:68`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/taxmarker.nf:98:68`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           SEQKIT_GREP(ch_sequences.map { [ [ id: 'user-alignment' ], it ] }, [], '')
                                                                      ^^
   ```
 
-- Warning: `workflows/taxmarker.nf:144:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/taxmarker.nf:146:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       EMBOSS_SEQRET(ch_sequences_checked.map { [ [ id: 'user-alignment' ], it ] }, 'fasta')
                                                                            ^^
   ```
 
-- Warning: `workflows/taxmarker.nf:170:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/taxmarker.nf:172:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   ch_sequences_for_resolve.map { [ [ id: 'user-alignment' ], it ] },

@@ -11,12 +11,12 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 > See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline.
 > **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**
 
-- **Last updated:** 2026-09-30 00:26:25 UTC
+- **Last updated:** 2026-10-01 00:28:43 UTC
 - **Nextflow version:** 26.09.1-edge
 
 ## Pipelines
 
-- **Total:** 0 parse errors, 1220 errors, 5879 warnings across 144 pipelines
+- **Total:** 0 parse errors, 1220 errors, 5889 warnings across 144 pipelines
 - **Zero errors:** 97 pipelines (67.4%)
 
 |                    Errors                    |                     Warnings                     |
@@ -95,10 +95,10 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :x: [tumourevo](https://github.com/nf-core/tumourevo)                                          |     No      |      0 |       44 |     No      |         [View](lint_results/pipeline-results/tumourevo_lint.md)         |       [View](lint_results/prints-help-results/tumourevo_help.txt)        |
 | :white_check_mark: [molkart](https://github.com/nf-core/molkart)                               |     No      |      0 |       43 |     Yes     |          [View](lint_results/pipeline-results/molkart_lint.md)          |        [View](lint_results/prints-help-results/molkart_help.txt)         |
 | :white_check_mark: [airrflow](https://github.com/nf-core/airrflow)                             |     No      |      0 |       35 |     Yes     |         [View](lint_results/pipeline-results/airrflow_lint.md)          |        [View](lint_results/prints-help-results/airrflow_help.txt)        |
+| :x: [ampliseq](https://github.com/nf-core/ampliseq)                                            |     No      |      0 |       35 |     No      |         [View](lint_results/pipeline-results/ampliseq_lint.md)          |        [View](lint_results/prints-help-results/ampliseq_help.txt)        |
 | :white_check_mark: [stableexpression](https://github.com/nf-core/stableexpression)             |     No      |      0 |       32 |     Yes     |     [View](lint_results/pipeline-results/stableexpression_lint.md)      |    [View](lint_results/prints-help-results/stableexpression_help.txt)    |
 | :white_check_mark: [detaxizer](https://github.com/nf-core/detaxizer)                           |     No      |      0 |       28 |     Yes     |         [View](lint_results/pipeline-results/detaxizer_lint.md)         |       [View](lint_results/prints-help-results/detaxizer_help.txt)        |
 | :white_check_mark: [hadge](https://github.com/nf-core/hadge)                                   |     No      |      0 |       27 |     Yes     |           [View](lint_results/pipeline-results/hadge_lint.md)           |         [View](lint_results/prints-help-results/hadge_help.txt)          |
-| :x: [ampliseq](https://github.com/nf-core/ampliseq)                                            |     No      |      0 |       26 |     No      |         [View](lint_results/pipeline-results/ampliseq_lint.md)          |        [View](lint_results/prints-help-results/ampliseq_help.txt)        |
 | :white_check_mark: [drugresponseeval](https://github.com/nf-core/drugresponseeval)             |     No      |      0 |       26 |     Yes     |     [View](lint_results/pipeline-results/drugresponseeval_lint.md)      |    [View](lint_results/prints-help-results/drugresponseeval_help.txt)    |
 | :white_check_mark: [methylseq](https://github.com/nf-core/methylseq)                           |     No      |      0 |       25 |     Yes     |         [View](lint_results/pipeline-results/methylseq_lint.md)         |       [View](lint_results/prints-help-results/methylseq_help.txt)        |
 | :x: [rarevariantburden](https://github.com/nf-core/rarevariantburden)                          |     No      |      0 |       22 |     No      |     [View](lint_results/pipeline-results/rarevariantburden_lint.md)     |   [View](lint_results/prints-help-results/rarevariantburden_help.txt)    |
@@ -112,11 +112,11 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :x: [dartseq](https://github.com/nf-core/dartseq)                                              |     No      |      0 |       18 |     No      |          [View](lint_results/pipeline-results/dartseq_lint.md)          |        [View](lint_results/prints-help-results/dartseq_help.txt)         |
 | :white_check_mark: [bacass](https://github.com/nf-core/bacass)                                 |     No      |      0 |       16 |     Yes     |          [View](lint_results/pipeline-results/bacass_lint.md)           |         [View](lint_results/prints-help-results/bacass_help.txt)         |
 | :white_check_mark: [magmap](https://github.com/nf-core/magmap)                                 |     No      |      0 |       13 |     Yes     |          [View](lint_results/pipeline-results/magmap_lint.md)           |         [View](lint_results/prints-help-results/magmap_help.txt)         |
+| :white_check_mark: [raredisease](https://github.com/nf-core/raredisease)                       |     No      |      0 |       13 |     Yes     |        [View](lint_results/pipeline-results/raredisease_lint.md)        |      [View](lint_results/prints-help-results/raredisease_help.txt)       |
 | :x: [rnasplice](https://github.com/nf-core/rnasplice)                                          |     No      |      0 |       13 |     No      |         [View](lint_results/pipeline-results/rnasplice_lint.md)         |       [View](lint_results/prints-help-results/rnasplice_help.txt)        |
 | :white_check_mark: [funcprofiler](https://github.com/nf-core/funcprofiler)                     |     No      |      0 |       12 |     Yes     |       [View](lint_results/pipeline-results/funcprofiler_lint.md)        |      [View](lint_results/prints-help-results/funcprofiler_help.txt)      |
 | :x: [genephylomodeler](https://github.com/nf-core/genephylomodeler)                            |     No      |      0 |       12 |     No      |     [View](lint_results/pipeline-results/genephylomodeler_lint.md)      |    [View](lint_results/prints-help-results/genephylomodeler_help.txt)    |
 | :white_check_mark: [pairgenomealign](https://github.com/nf-core/pairgenomealign)               |     No      |      0 |       12 |     Yes     |      [View](lint_results/pipeline-results/pairgenomealign_lint.md)      |    [View](lint_results/prints-help-results/pairgenomealign_help.txt)     |
-| :white_check_mark: [raredisease](https://github.com/nf-core/raredisease)                       |     No      |      0 |       12 |     Yes     |        [View](lint_results/pipeline-results/raredisease_lint.md)        |      [View](lint_results/prints-help-results/raredisease_help.txt)       |
 | :white_check_mark: [sopa](https://github.com/nf-core/sopa)                                     |     No      |      0 |       12 |     Yes     |           [View](lint_results/pipeline-results/sopa_lint.md)            |          [View](lint_results/prints-help-results/sopa_help.txt)          |
 | :white_check_mark: [riboseq](https://github.com/nf-core/riboseq)                               |     No      |      0 |       11 |     Yes     |          [View](lint_results/pipeline-results/riboseq_lint.md)          |        [View](lint_results/prints-help-results/riboseq_help.txt)         |
 | :white_check_mark: [pixelator](https://github.com/nf-core/pixelator)                           |     No      |      0 |       10 |     Yes     |         [View](lint_results/pipeline-results/pixelator_lint.md)         |       [View](lint_results/prints-help-results/pixelator_help.txt)        |
@@ -207,7 +207,7 @@ The status emoji next to each pipeline shows its migration state: :white_check_m
 | :x: [abotyper](https://github.com/nf-core/abotyper)                                   |     No      |   Yes (19)   |         [View](lint_results/workflow-outputs-results/abotyper_outputs.md)          |
 | :x: [airrflow](https://github.com/nf-core/airrflow)                                   |     No      |   Yes (84)   |         [View](lint_results/workflow-outputs-results/airrflow_outputs.md)          |
 | :x: [alleleexpression](https://github.com/nf-core/alleleexpression)                   |     No      |   Yes (15)   |     [View](lint_results/workflow-outputs-results/alleleexpression_outputs.md)      |
-| :x: [ampliseq](https://github.com/nf-core/ampliseq)                                   |     No      |  Yes (104)   |         [View](lint_results/workflow-outputs-results/ampliseq_outputs.md)          |
+| :x: [ampliseq](https://github.com/nf-core/ampliseq)                                   |     No      |  Yes (105)   |         [View](lint_results/workflow-outputs-results/ampliseq_outputs.md)          |
 | :x: [atacseq](https://github.com/nf-core/atacseq)                                     |     No      |   Yes (81)   |          [View](lint_results/workflow-outputs-results/atacseq_outputs.md)          |
 | :x: [bacass](https://github.com/nf-core/bacass)                                       |     No      |   Yes (35)   |          [View](lint_results/workflow-outputs-results/bacass_outputs.md)           |
 | :x: [bacmodel](https://github.com/nf-core/bacmodel)                                   |     No      |   Yes (20)   |         [View](lint_results/workflow-outputs-results/bacmodel_outputs.md)          |
@@ -324,7 +324,7 @@ The status emoji next to each pipeline shows its migration state: :white_check_m
 | :x: [spatialaxe](https://github.com/nf-core/spatialaxe)                               |     No      |   Yes (40)   |        [View](lint_results/workflow-outputs-results/spatialaxe_outputs.md)         |
 | :x: [spatialvi](https://github.com/nf-core/spatialvi)                                 |     No      |   Yes (12)   |         [View](lint_results/workflow-outputs-results/spatialvi_outputs.md)         |
 | :x: [spinningjenny](https://github.com/nf-core/spinningjenny)                         |     No      |   Yes (6)    |       [View](lint_results/workflow-outputs-results/spinningjenny_outputs.md)       |
-| :x: [taxmarker](https://github.com/nf-core/taxmarker)                                 |     No      |   Yes (5)    |         [View](lint_results/workflow-outputs-results/taxmarker_outputs.md)         |
+| :x: [taxmarker](https://github.com/nf-core/taxmarker)                                 |     No      |   Yes (6)    |         [View](lint_results/workflow-outputs-results/taxmarker_outputs.md)         |
 | :x: [taxprofiler](https://github.com/nf-core/taxprofiler)                             |     No      |   Yes (90)   |        [View](lint_results/workflow-outputs-results/taxprofiler_outputs.md)        |
 | :x: [tbanalyzer](https://github.com/nf-core/tbanalyzer)                               |     No      |   Yes (2)    |        [View](lint_results/workflow-outputs-results/tbanalyzer_outputs.md)         |
 | :x: [tfactivity](https://github.com/nf-core/tfactivity)                               |     No      |   Yes (75)   |        [View](lint_results/workflow-outputs-results/tfactivity_outputs.md)         |

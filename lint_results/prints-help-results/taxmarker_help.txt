@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.09.1-edge
 
 Downloading plugin nf-schema@2.7.3
-Launching `./main.nf` [friendly_mandelbrot] revision: 60a8b5e7cc
+Launching `./main.nf` [determined_wing] revision: 2a267001cb
 
 
 ------------------------------------------------------
@@ -23,59 +23,63 @@ help message of that parameter will be printed.
 or `--helpFull`.  
 
 Input/output options
-  --taxonomy                    [string]  Path to a taxonomy file. If omitted, taxonomy is derived from --sequences record headers instead. 
+  --taxonomy                    [string]          Path to a taxonomy file. If omitted, taxonomy is derived from --sequences record headers instead. 
  
-  --sequences                   [string]  Path to a sequences file, aligned or not, in phylip (.phy), Clustal (.aln) or fasta format (.fa, 
+  --sequences                   [string]          Path to a sequences file, aligned or not, in phylip (.phy), Clustal (.aln) or fasta format (.fa, 
 .fasta, .mfa, .alnfaa or .alnfna).  
-  --hmm                         [string]  Path to an HMM profile database, used to align --sequences via hmmalign if it turns out to be 
+  --hmm                         [string]          Path to an HMM profile database, used to align --sequences via hmmalign if it turns out to be 
 unaligned. Only required when the input is unaligned.  
-  --hmm_name                    [string]  Name of the specific profile to use from --hmm, if that database holds more than one (e.g. Barrnap's 
+  --hmm_name                    [string]          Name of the specific profile to use from --hmm, if that database holds more than one (e.g. Barrnap's 
 databases hold one profile per rRNA gene).  
-  --seqgrep                     [string]  Keep only --sequences records whose whole FASTA header matches this pattern, dropping the rest 
+  --seqgrep                     [string]          Keep only --sequences records whose whole FASTA header matches this pattern, dropping the rest 
 before anything else runs.  
-  --upstream                    [string]  Name of an upstream data source this run's --sequences/--taxonomy came from, to enable 
+  --upstream                    [string]          Name of an upstream data source this run's --sequences/--taxonomy came from, to enable 
 source-specific pipeline behaviour. Currently only 'GTDB' is recognised: translates 
 --gtdb_bac120_metadata/--gtdb_ar53_metadata into --sequence_weights automatically.  (accepted: 
 GTDB)  
-  --gtdb_bac120_metadata        [string]  GTDB bacterial (bac120) genome metadata table (gzip-ok). Required (with/without 
+  --gtdb_bac120_metadata        [string]          GTDB bacterial (bac120) genome metadata table (gzip-ok). Required (with/without 
 --gtdb_ar53_metadata) when --upstream is 'GTDB'.  
-  --gtdb_ar53_metadata          [string]  GTDB archaeal (ar53) genome metadata table (gzip-ok). Required (with/without --gtdb_bac120_metadata) 
+  --gtdb_ar53_metadata          [string]          GTDB archaeal (ar53) genome metadata table (gzip-ok). Required (with/without --gtdb_bac120_metadata) 
 when --upstream is 'GTDB'.  
-  --skip_clustering             [boolean] Skip WEIGHTED_CLUSTERING entirely and run every sequence straight through, unclustered. 
-  --sequence_weights            [string]  Path to a two-column table (sequence_id<TAB>weight) used to pick a representative sequence per 
+  --skip_clustering             [boolean]         Skip WEIGHTED_CLUSTERING entirely and run every sequence straight through, unclustered. 
+  --sequence_weights            [string]          Path to a two-column table (sequence_id<TAB>weight) used to pick a representative sequence per 
 (cluster, taxon) pair. Sequences absent from the table default to weight 1.  
-  --min_weight                  [number]  Absolute weight cutoff: sequences below this are excluded before clustering, regardless of 
+  --min_weight                  [number]          Absolute weight cutoff: sequences below this are excluded before clustering, regardless of 
 --sequence_weights. Unset by default -- has no effect unless both this and --sequence_weights are 
 given.  
-  --cluster_identity            [number]  VSEARCH clustering identity threshold (0-1) applied before representative selection. [default: 
+  --cluster_identity            [number]          VSEARCH clustering identity threshold (0-1) applied before representative selection. [default: 
 1.0]  
-  --skip_raxtax                 [boolean] Skip the raxtax prefilter and run every sequence straight through the full EPA-ng-based placement 
+  --skip_raxtax                 [boolean]         Skip the raxtax prefilter and run every sequence straight through the full EPA-ng-based placement 
 pipeline.  
-  --raxtax_filter_rank          [integer] Taxonomic rank at which raxtax's self-classification must agree with the declared taxonomy, counted 
+  --raxtax_filter_rank          [integer]         Taxonomic rank at which raxtax's self-classification must agree with the declared taxonomy, counted 
 from the most specific rank (1) upward. A sequence disagreeing at this one rank is flagged as a 
 mislabel and skips EPA-ng placement. [default: 2]  
-  --raxtax_min_confidence       [number]  Minimum raxtax confidence at `--raxtax_filter_rank` for a disagreement to be flagged as a mislabel. 
+  --raxtax_min_confidence       [number]          Minimum raxtax confidence at `--raxtax_filter_rank` for a disagreement to be flagged as a mislabel. 
 [default: 0.9]  
-  --skip_gapfilter              [boolean] For already-aligned input: skip filtering out sequences with too high a proportion of alignment 
+  --export_n_per_species        [string, integer] Export reference FASTA files with at most this many sequences per species, e.g. `1,5,20` for one set 
+of files per number.  
+  --skip_gapfilter              [boolean]         For already-aligned input: skip filtering out sequences with too high a proportion of alignment 
 gaps, and run every sequence straight through the rest of the pipeline.  
-  --min_nongap                  [number]  For already-aligned input: minimum proportion of non-gap columns a sequence must have in the 
+  --min_nongap                  [number]          For already-aligned input: minimum proportion of non-gap columns a sequence must have in the 
 alignment to be kept. Sequences below this are too short/incomplete to place reliably, and are 
 reported separately instead of being placed. [default: 0.3]  
-  --skip_profile_cover          [boolean] For hmmalign-derived input: skip filtering out sequences that cover too little of the HMM profile, 
+  --skip_profile_cover          [boolean]         For hmmalign-derived input: skip filtering out sequences that cover too little of the HMM profile, 
 and run every sequence straight through the rest of the pipeline.  
-  --min_profile_cover           [number]  For hmmalign-derived input: minimum proportion of the HMM profile's match-state columns a sequence 
+  --min_profile_cover           [number]          For hmmalign-derived input: minimum proportion of the HMM profile's match-state columns a sequence 
 must cover to be kept. Sequences below this are too short/incomplete to place reliably, and are 
 reported separately instead of being placed. [default: 0.8]  
-  --skip_sativa                 [boolean] Skip the phylogenetic placement subworkflow (reference tree, leave-one-out placement, scoring) 
+  --min_profile_cover_rescue    [number]          For hmmalign-derived input: keep the best-covered sequence of any taxon that has none at or above 
+--min_profile_cover, if it covers at least this proportion of the profile. [default: 0.5]  
+  --skip_sativa                 [boolean]         Skip the phylogenetic placement subworkflow (reference tree, leave-one-out placement, scoring) 
 entirely.  
-  --taxcode                     [string]  Taxonomic code of the input data, passed to sativa-epang: bac(teriological), bot(anical), 
+  --taxcode                     [string]          Taxonomic code of the input data, passed to sativa-epang: bac(teriological), bot(anical), 
 zoo(logical) or vir(ological). Governs its nomenclature-revision suggestions.  (accepted: bac, 
 bot, zoo, vir) [default: bac]  
-  --folds_per_job               [integer] Number of leave-one-out folds each placement job places. Unset places them all in one job. 
-  --outdir                      [string]  The output directory where the results will be saved. You have to use absolute paths to storage on 
+  --folds_per_job               [integer]         Number of leave-one-out folds each placement job places. Unset places them all in one job. 
+  --outdir                      [string]          The output directory where the results will be saved. You have to use absolute paths to storage on 
 Cloud infrastructure.  
-  --email                       [string]  Email address for completion summary. 
-  --multiqc_title               [string]  MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+  --email                       [string]          Email address for completion summary. 
+  --multiqc_title               [string]          MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
 
 Generic options
   --multiqc_methods_description [string]          Custom MultiQC yaml file containing HTML including a methods description. 
