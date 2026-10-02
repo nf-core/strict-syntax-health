@@ -1,59 +1,10 @@
 # Nextflow lint results
 
-- Generated: 2026-09-30T00:22:30.161387763Z
+- Generated: 2026-10-02T00:21:15.198002717Z
 - Nextflow version: 26.09.1-edge
-- Summary: 28 warnings
+- Summary: 21 warnings
 
 ## :warning: Warnings
-
-- Warning: `modules/nf-core/bbmap/bbduk/main.nf:48:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/blast/blastn/main.nf:65:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/blast/makeblastdb/main.nf:42:9`: Variable was declared but not used
-
-  ```nextflow
-      def args           = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/kraken2/kraken2/main.nf:60:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
-  ```
-
-- Warning: `modules/nf-core/kraken2/kraken2/main.nf:62:9`: Variable was declared but not used
-
-  ```nextflow
-      def paired       = meta.single_end ? "" : "--paired"
-          ^^^^^^
-  ```
-
-- Warning: `modules/nf-core/kraken2/kraken2/main.nf:65:9`: Variable was declared but not used
-
-  ```nextflow
-      def readclassification_option = save_reads_assignment ? "--output ${prefix}.kraken2.classifiedreads.txt" : "--output /dev/null"
-          ^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `modules/nf-core/kraken2/kraken2/main.nf:66:9`: Variable was declared but not used
-
-  ```nextflow
-      def compress_reads_command = save_output_fastqs ? "pigz -p $task.cpus *.fastq" : ""
-          ^^^^^^^^^^^^^^^^^^^^^^
-  ```
 
 - Warning: `subworkflows/local/generate_downstream_samplesheets/main.nf:73:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
@@ -139,63 +90,63 @@
                                      ^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/detaxizer.nf:189:75`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/detaxizer.nf:184:75`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_parsed_kraken2_report = PARSE_KRAKEN2REPORT.out.to_filter.map {meta, path -> path}
                                                                             ^^^^
   ```
 
-- Warning: `workflows/detaxizer.nf:282:13`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/detaxizer.nf:273:13`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               meta, path -> [path]
               ^^^^
   ```
 
-- Warning: `workflows/detaxizer.nf:403:17`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/detaxizer.nf:388:17`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   meta, path -> [path]
                   ^^^^
   ```
 
-- Warning: `workflows/detaxizer.nf:443:49`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/detaxizer.nf:427:49`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   ch_to_filter.map { meta, reads, ids -> tuple(meta, reads) },
                                                   ^^^
   ```
 
-- Warning: `workflows/detaxizer.nf:444:36`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/detaxizer.nf:428:36`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   ch_to_filter.map { meta, reads, ids -> ids.toString() },
                                      ^^^^
   ```
 
-- Warning: `workflows/detaxizer.nf:444:42`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/detaxizer.nf:428:42`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   ch_to_filter.map { meta, reads, ids -> ids.toString() },
                                            ^^^^^
   ```
 
-- Warning: `workflows/detaxizer.nf:452:53`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/detaxizer.nf:435:53`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                       ch_to_filter.map { meta, reads, ids -> tuple(meta, reads) },
                                                       ^^^
   ```
 
-- Warning: `workflows/detaxizer.nf:453:40`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/detaxizer.nf:436:40`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                       ch_to_filter.map { meta, reads, ids -> ids.toString() },
                                          ^^^^
   ```
 
-- Warning: `workflows/detaxizer.nf:453:46`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/detaxizer.nf:436:46`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                       ch_to_filter.map { meta, reads, ids -> ids.toString() },

@@ -1,33 +1,33 @@
 # Nextflow lint results
 
-- Generated: 2026-10-01T00:25:14.516253821Z
+- Generated: 2026-10-02T00:22:18.039217397Z
 - Nextflow version: 26.09.1-edge
 - Summary: 13 warnings
 
 ## :warning: Warnings
 
-- Warning: `subworkflows/local/sourmash/main.nf:144:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/sourmash/main.nf:131:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                               .splitText() { it.trim() }
                                              ^^
   ```
 
-- Warning: `subworkflows/local/sourmash/main.nf:145:39`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/sourmash/main.nf:132:39`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                               .filter { it }
                                         ^^
   ```
 
-- Warning: `subworkflows/local/sourmash/main.nf:154:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/sourmash/main.nf:141:44`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                               .splitText() { it.trim() }
                                              ^^
   ```
 
-- Warning: `subworkflows/local/sourmash/main.nf:155:39`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/sourmash/main.nf:142:39`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                               .filter { it }

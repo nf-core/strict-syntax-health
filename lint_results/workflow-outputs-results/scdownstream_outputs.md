@@ -1,6 +1,6 @@
 # Workflow outputs migration: scdownstream
 
-- Generated: 2026-09-28T00:24:11.703273+00:00
+- Generated: 2026-10-02T00:24:27.257484+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,4 +14,4 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 76 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/scdownstream/blob/466cdb06964bac270392fc0fb26f1d85bcbb369e/conf/modules.config#L18) — 76 references
+- [`conf/modules.config`](https://github.com/nf-core/scdownstream/blob/cdc9ddcb9578257e45a3a27731f6b7110f71e6ca/conf/modules.config#L18) — 76 references

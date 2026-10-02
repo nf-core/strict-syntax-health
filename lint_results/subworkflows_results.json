@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "b999e6262a72a758d1b038160d095386f5c59e7f",
+  "_repo_commit": "066da9c5f80fbc42ec51bb720956e5213a4aa657",
   "abundance_differential_filter": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/abundance_differential_filter",
     "errors": 0,
@@ -663,7 +663,7 @@
   "utils_nfschema_plugin": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/utils_nfschema_plugin",
     "errors": 0,
-    "warnings": 0,
+    "warnings": 1,
     "parse_error": false
   },
   "utils_nfvalidation_plugin": {

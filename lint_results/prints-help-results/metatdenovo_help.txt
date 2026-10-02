@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.09.1-edge
 
-Launching `./main.nf` [disturbed_pesquet] revision: e3f25d4155
+Launching `./main.nf` [dreamy_curran] revision: e3f25d4155
 
 
 ------------------------------------------------------

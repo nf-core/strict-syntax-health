@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.09.1-edge
 
 Downloading plugin nf-prov@1.2.2
-Launching `./main.nf` [loquacious_sax] revision: 932e26d8da
+Launching `./main.nf` [astonishing_jones] revision: 932e26d8da
 
 WARN: Unrecognized config option 'prov.enabled'
 WARN: Unrecognized config option 'prov.formats.bco.file'
@@ -38,6 +38,8 @@ rtgtools, for somatic small variants (SNV and INDEL) use sompy and/or rtgtools, 
 variants use wittyer, truvari and/or svanalyzer, for copy number variations use wittyer and/or 
 truvari. Use intersect to intersect BED files. Should be a comma-separate list of one or more of the 
 following options: truvari, svanalyzer, happy, sompy, rtgtools, wittyer, intersect  
+  --happy_comparison_engine     [string]  Comparison engine used by hap.py to match test variants against the truth set.  (accepted: 
+default, xcmp, vcfeval) [default: default]  
   --regions_bed                 [string]  Path for regions of interest BED or VCF file. 
   --targets_bed                 [string]  Path to targets BED. Works similar to Bcftools -T. 
   --high_conf                   [boolean] If set to true, treat regions_bed as a high confidence region rather than a restriction region. 

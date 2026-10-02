@@ -14,14 +14,14 @@
   "airrflow": {
     "full_name": "nf-core/airrflow",
     "html_url": "https://github.com/nf-core/airrflow",
-    "commit": "f8b2239c7ecc121e03d671c570ae9ec06d5053e3",
+    "commit": "182da2547acdca1902c05517133a06c77925c637",
     "errors": 0,
-    "warnings": 35,
+    "warnings": 36,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 84
+    "publishdir_count": 85
   },
   "alleleexpression": {
     "full_name": "nf-core/alleleexpression",
@@ -350,9 +350,9 @@
   "detaxizer": {
     "full_name": "nf-core/detaxizer",
     "html_url": "https://github.com/nf-core/detaxizer",
-    "commit": "16baa985e805fc8d1defe6d4c78bd18aba9f57b4",
+    "commit": "b578110a493b73be3b898f61242708c9559c5435",
     "errors": 0,
-    "warnings": 28,
+    "warnings": 21,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -458,7 +458,7 @@
   "epitopeprediction": {
     "full_name": "nf-core/epitopeprediction",
     "html_url": "https://github.com/nf-core/epitopeprediction",
-    "commit": "28c497a226d9e816bd1c2800c3f2f50eeb84257f",
+    "commit": "5ad2d9984af3de24b59a1c39e78de248c8032c0a",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -566,7 +566,7 @@
   "genomeassembler": {
     "full_name": "nf-core/genomeassembler",
     "html_url": "https://github.com/nf-core/genomeassembler",
-    "commit": "af5e0fc9fa11e3ffaaa5de1837340415b1e90739",
+    "commit": "2f5b06a99602c4a631164ab4b01ac06c764fb54c",
     "errors": 0,
     "warnings": 5,
     "parse_error": false,
@@ -770,7 +770,7 @@
   "magmap": {
     "full_name": "nf-core/magmap",
     "html_url": "https://github.com/nf-core/magmap",
-    "commit": "e359a45bee876dad6d6b69037fc845afdb4272a2",
+    "commit": "7c950d1cb042b433d592ad13cd90a0ed0542c86b",
     "errors": 0,
     "warnings": 13,
     "parse_error": false,
@@ -842,7 +842,7 @@
   "metatdenovo": {
     "full_name": "nf-core/metatdenovo",
     "html_url": "https://github.com/nf-core/metatdenovo",
-    "commit": "231f6726226786e2870c775bf71211991dea77d7",
+    "commit": "886eac4c87ccdda0ee07d7a6c066b1f532f9e983",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -890,7 +890,7 @@
   "mhcquant": {
     "full_name": "nf-core/mhcquant",
     "html_url": "https://github.com/nf-core/mhcquant",
-    "commit": "aa931de1d7d0bb6ffb8cfe128cc57eea5d023834",
+    "commit": "f508666e6799e1a8352f44df45f609bed824998c",
     "errors": 0,
     "warnings": 52,
     "parse_error": false,
@@ -1094,8 +1094,8 @@
   "pathogenepidemiology": {
     "full_name": "nf-core/pathogenepidemiology",
     "html_url": "https://github.com/nf-core/pathogenepidemiology",
-    "commit": "a5ed5c0360f5d7f084259b5a3609c88c97b691c2",
-    "errors": 9,
+    "commit": "b1fd349759a139f3697c7f263c17824aa76f2e1c",
+    "errors": 11,
     "warnings": 38,
     "parse_error": false,
     "prints_help": null,
@@ -1190,7 +1190,7 @@
   "proteinfamilies": {
     "full_name": "nf-core/proteinfamilies",
     "html_url": "https://github.com/nf-core/proteinfamilies",
-    "commit": "0bad731199b96aec78abbaef6f06212d7d215678",
+    "commit": "c6eed10c6a4c1be7cf9f89ce67985e8dfe5117e2",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1262,7 +1262,7 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "6bc345389b3f17149db7c8a47384212c93291e7d",
+    "commit": "15bc2f315ecd2d9018cbdb0d3f37e4793ecb074a",
     "errors": 0,
     "warnings": 13,
     "parse_error": false,
@@ -1442,7 +1442,7 @@
   "scdownstream": {
     "full_name": "nf-core/scdownstream",
     "html_url": "https://github.com/nf-core/scdownstream",
-    "commit": "466cdb06964bac270392fc0fb26f1d85bcbb369e",
+    "commit": "cdc9ddcb9578257e45a3a27731f6b7110f71e6ca",
     "errors": 0,
     "warnings": 22,
     "parse_error": false,
@@ -1514,7 +1514,7 @@
   "smrnaseq": {
     "full_name": "nf-core/smrnaseq",
     "html_url": "https://github.com/nf-core/smrnaseq",
-    "commit": "b8bf7d26d544b438549bd261510e112486126cad",
+    "commit": "67fd0abf5b46e6053ce76de714bf862c2e7103c0",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1658,7 +1658,7 @@
   "variantbenchmarking": {
     "full_name": "nf-core/variantbenchmarking",
     "html_url": "https://github.com/nf-core/variantbenchmarking",
-    "commit": "b0750f9d6f7a9e8d8679537154cf62525a56fd99",
+    "commit": "e44e239c8aec0f4ef2b56b96a7eed256959b31a2",
     "errors": 0,
     "warnings": 5,
     "parse_error": false,

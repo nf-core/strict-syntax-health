@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-10-01T00:25:54.130977392Z
+- Generated: 2026-10-02T00:23:18.954805440Z
 - Nextflow version: 26.09.1-edge
-- Summary: 9 errors, 38 warnings
+- Summary: 11 errors, 38 warnings
 
 ## :x: Errors
 
@@ -48,11 +48,25 @@
                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
+- Error: `workflows/original_local.nf:25:1`: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/pathogenepidemiology/subworkflows/local/gatk_MOI/main.nf'
+
+  ```nextflow
+  include { GATK_MOI             } from '../subworkflows/local/gatk_MOI'
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
 - Error: `workflows/original_local.nf:26:1`: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/pathogenepidemiology/modules/local/hmmibdrs/mainf.nf'
 
   ```nextflow
   include { HMMIBDRS             } from '../modules/local/hmmibdrs/mainf'
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `workflows/original_local.nf:128:16`: `GATK_MOI` is not defined
+
+  ```nextflow
+    varcalls_s = GATK_MOI(
+                 ^^^^^^^^
   ```
 
 - Error: `workflows/pathogenepidemiology.nf:12:1`: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/pathogenepidemiology/modules/local/clair3_custom/main.nf'

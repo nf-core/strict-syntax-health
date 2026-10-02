@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "b999e6262a72a758d1b038160d095386f5c59e7f",
+  "_repo_commit": "066da9c5f80fbc42ec51bb720956e5213a4aa657",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -2096,6 +2096,12 @@
   },
   "cnvkit_genemetrics": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cnvkit/genemetrics",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "cnvkit_purity": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cnvkit/purity",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -12176,6 +12182,12 @@
   },
   "vembrane_table": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/vembrane/table",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "vepyr_annotate": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/vepyr/annotate",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

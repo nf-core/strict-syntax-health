@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-09-26T00:18:57.157553322Z
+- Generated: 2026-10-02T00:20:46.361468539Z
 - Nextflow version: 26.09.1-edge
-- Summary: 35 warnings
+- Summary: 36 warnings
 
 ## :warning: Warnings
 
@@ -160,14 +160,14 @@
                                                                        ^^^^^
   ```
 
-- Warning: `subworkflows/local/presto_umi.nf:603:48`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/presto_umi.nf:610:48`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       fastp_reads_json = FASTP.out.json.collect{ meta,json -> json }
                                                  ^^^^
   ```
 
-- Warning: `subworkflows/local/presto_umi.nf:604:48`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/presto_umi.nf:611:48`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       fastp_reads_html = FASTP.out.html.collect{ meta,html -> html }
@@ -181,28 +181,35 @@
       ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/rnaseq_input.nf:110:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/rnaseq_input.nf:106:16`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .map { meta, fastas ->
+                 ^^^^
+  ```
+
+- Warning: `subworkflows/local/rnaseq_input.nf:115:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       return [ meta, out_files.find { it.endsWith("${meta.id}_airr.tsv") } ]
                                                       ^^
   ```
 
-- Warning: `subworkflows/local/rnaseq_input.nf:112:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/rnaseq_input.nf:117:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       return [ meta, out_files.find { it.endsWith("${meta.id}_barcode_airr.tsv") } ]
                                                       ^^
   ```
 
-- Warning: `subworkflows/local/rnaseq_input.nf:134:48`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/rnaseq_input.nf:139:48`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       fastp_reads_json = FASTP.out.json.collect{ meta,json -> json }
                                                  ^^^^
   ```
 
-- Warning: `subworkflows/local/rnaseq_input.nf:135:48`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/rnaseq_input.nf:140:48`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       fastp_reads_html = FASTP.out.html.collect{ meta,html -> html }
@@ -244,7 +251,7 @@
                   ^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/airrflow.nf:498:88`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/airrflow.nf:508:88`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files = ch_multiqc_files.mix(ch_fastqc_postassembly_mqc.collect{it[1]}.ifEmpty([]))
