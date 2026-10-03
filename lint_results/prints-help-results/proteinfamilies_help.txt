@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.09.1-edge
 
-Launching `./main.nf` [clever_feynman] revision: 8dedb1d42a
+Launching `./main.nf` [gigantic_shockley] revision: 8dedb1d42a
 
 
 ------------------------------------------------------
@@ -43,13 +43,6 @@ removal).
   --max_seq_length                               [integer] The maximum allowed sequence length [default: 5000] 
   --remove_duplicates_on_sequence                [boolean] Remove duplicate input amino acid sequences, based on the sequence. 
 
-Update mechanism parameters
-  --save_update_families_pre_clipped_fasta       [boolean] Save intermediate FASTA files before clipping gappy ends (non-redundant --if 
-`skip_sequence_redundancy_removal` is false-- or all --if `skip_sequence_redundancy_removal` is 
-true--) in the update_families subworkflow  
-  --save_update_families_clipped_fasta           [boolean] Save FASTA files derived from updated family MSAs (after re-alignment and clipping) [default: 
-true]  
-
 Clustering parameters
   --save_mmseqs_db                               [boolean] Save the db output folder of mmseqs createdb 
   --clustering_tool                              [string]  Choose clustering algorithm. Either simple 'cluster' for medium size inputs, or 'linclust' for less 
@@ -75,7 +68,6 @@ recruitment and realignment per cluster.  (accepted: standard, iterative) [defau
 Alignment parameters
   --alignment_tool                               [string]  Choose alignment tool. FAMSA is recommended as best time-memory-accuracy combination option.  
 (accepted: famsa, mafft) [default: famsa]  
-  --clipkit_out_format                           [string]  Choose the output format of the clipped alignment. [default: clipkit] 
   --trim_ends_only                               [boolean] Choose if ClipKIT should only clip gaps at the ends of the MSAs. [default: true] 
   --gap_threshold                                [number]  Multiple Sequence Alignment (MSA) positions with gappiness greater than this threshold will be 
 trimmed [default: 0.5]  

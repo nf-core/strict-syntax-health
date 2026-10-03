@@ -1,6 +1,6 @@
 # Workflow outputs migration: plasmodiumdrugres
 
-- Generated: 2026-10-01T00:26:00.940749+00:00
+- Generated: 2026-10-03T00:23:53.606796+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -12,6 +12,6 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 ## Legacy `publishDir` references
 
-Found 3 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
+Found 4 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/plasmodiumdrugres/blob/8371de5be4dc9f02bbd4560be32ebe59eae5b8d8/conf/modules.config#L16) — 3 references
+- [`conf/modules.config`](https://github.com/nf-core/plasmodiumdrugres/blob/90343d51c32a9a89b99e19acd232c636b295107a/conf/modules.config#L16) — 4 references

@@ -110,9 +110,9 @@
   "cageseq": {
     "full_name": "nf-core/cageseq",
     "html_url": "https://github.com/nf-core/cageseq",
-    "commit": "b4ab44cf1e93c81f5899b12e95dda7c4428f5ca2",
+    "commit": "4260295b64fb2a30972af4a6900a35995484c49c",
     "errors": 0,
-    "warnings": 6,
+    "warnings": 0,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -278,11 +278,11 @@
   "datasync": {
     "full_name": "nf-core/datasync",
     "html_url": "https://github.com/nf-core/datasync",
-    "commit": "c67b1f90cb32bafb1e18504e7174cf0af641c885",
+    "commit": "6d0dba7cb728f4a3ba042b1bbded330708e71ede",
     "errors": 0,
     "warnings": 3,
     "parse_error": false,
-    "prints_help": true,
+    "prints_help": false,
     "workflow_output": false,
     "publishdir": true,
     "publishdir_count": 5
@@ -350,7 +350,7 @@
   "detaxizer": {
     "full_name": "nf-core/detaxizer",
     "html_url": "https://github.com/nf-core/detaxizer",
-    "commit": "b578110a493b73be3b898f61242708c9559c5435",
+    "commit": "6872dba26662fb1182a4ec104d0a3d53f2c3e01c",
     "errors": 0,
     "warnings": 21,
     "parse_error": false,
@@ -386,7 +386,7 @@
   "diseasemodulediscovery": {
     "full_name": "nf-core/diseasemodulediscovery",
     "html_url": "https://github.com/nf-core/diseasemodulediscovery",
-    "commit": "ec9bfb017fa0d5919cf84bf944ebc0a115c87e2e",
+    "commit": "51f376ec8f4a7c25216fcc5eefa9bfbda4605d26",
     "errors": 0,
     "warnings": 105,
     "parse_error": false,
@@ -458,14 +458,14 @@
   "epitopeprediction": {
     "full_name": "nf-core/epitopeprediction",
     "html_url": "https://github.com/nf-core/epitopeprediction",
-    "commit": "5ad2d9984af3de24b59a1c39e78de248c8032c0a",
+    "commit": "56408386b74981f33d10ec534785cd605e25f928",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 26
+    "publishdir_count": 28
   },
   "evexplorer": {
     "full_name": "nf-core/evexplorer",
@@ -566,7 +566,7 @@
   "genomeassembler": {
     "full_name": "nf-core/genomeassembler",
     "html_url": "https://github.com/nf-core/genomeassembler",
-    "commit": "2f5b06a99602c4a631164ab4b01ac06c764fb54c",
+    "commit": "ba8f911a17246bd2299bd49f0cf33ade11406c4a",
     "errors": 0,
     "warnings": 5,
     "parse_error": false,
@@ -770,7 +770,7 @@
   "magmap": {
     "full_name": "nf-core/magmap",
     "html_url": "https://github.com/nf-core/magmap",
-    "commit": "7c950d1cb042b433d592ad13cd90a0ed0542c86b",
+    "commit": "b8e5a48d05a95f64d6af2703f07b87fd19d25235",
     "errors": 0,
     "warnings": 13,
     "parse_error": false,
@@ -890,7 +890,7 @@
   "mhcquant": {
     "full_name": "nf-core/mhcquant",
     "html_url": "https://github.com/nf-core/mhcquant",
-    "commit": "f508666e6799e1a8352f44df45f609bed824998c",
+    "commit": "032f21a2fa518d01dadb494ffb67d725c6bc1b04",
     "errors": 0,
     "warnings": 52,
     "parse_error": false,
@@ -1046,11 +1046,11 @@
   "pacvar": {
     "full_name": "nf-core/pacvar",
     "html_url": "https://github.com/nf-core/pacvar",
-    "commit": "1610f9f8dd3ec749edb1dd5f1865172c376b930e",
-    "errors": 6,
-    "warnings": 27,
+    "commit": "f4f8fd754a06df71617d60ecdf501acdb30d55b7",
+    "errors": 0,
+    "warnings": 25,
     "parse_error": false,
-    "prints_help": null,
+    "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
     "publishdir_count": 15
@@ -1166,14 +1166,14 @@
   "plasmodiumdrugres": {
     "full_name": "nf-core/plasmodiumdrugres",
     "html_url": "https://github.com/nf-core/plasmodiumdrugres",
-    "commit": "8371de5be4dc9f02bbd4560be32ebe59eae5b8d8",
+    "commit": "90343d51c32a9a89b99e19acd232c636b295107a",
     "errors": 0,
-    "warnings": 8,
+    "warnings": 9,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 3
+    "publishdir_count": 4
   },
   "proteinannotator": {
     "full_name": "nf-core/proteinannotator",
@@ -1190,14 +1190,14 @@
   "proteinfamilies": {
     "full_name": "nf-core/proteinfamilies",
     "html_url": "https://github.com/nf-core/proteinfamilies",
-    "commit": "c6eed10c6a4c1be7cf9f89ce67985e8dfe5117e2",
+    "commit": "03fc799bdcb341b05e611cac68fca1a9b4993144",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": true,
     "publishdir": true,
-    "publishdir_count": 79
+    "publishdir_count": 78
   },
   "proteinfold": {
     "full_name": "nf-core/proteinfold",
@@ -1262,7 +1262,7 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "15bc2f315ecd2d9018cbdb0d3f37e4793ecb074a",
+    "commit": "c191256e4ce2414d9e95513b5643d850b95003da",
     "errors": 0,
     "warnings": 13,
     "parse_error": false,
@@ -1430,7 +1430,7 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "3796931729f7350790cf0c225e94bf124f4ca3c6",
+    "commit": "6a84ec15d4e87252b61be91e51e785c1318acdfd",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1514,7 +1514,7 @@
   "smrnaseq": {
     "full_name": "nf-core/smrnaseq",
     "html_url": "https://github.com/nf-core/smrnaseq",
-    "commit": "67fd0abf5b46e6053ce76de714bf862c2e7103c0",
+    "commit": "8fb78eec78b685a614e8838e46ba1006ce2f4db8",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,

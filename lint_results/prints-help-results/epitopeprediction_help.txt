@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.09.1-edge
 
 Downloading plugin nf-co2footprint@1.0.0
-Launching `./main.nf` [high_marconi] revision: c9d3acc699
+Launching `./main.nf` [dreamy_caravaggio] revision: c9d3acc699
 
 WARN: Unrecognized config option 'co2footprint.traceFile'
 WARN: Unrecognized config option 'co2footprint.summaryFile'
@@ -160,12 +160,14 @@ Run optimisation
  
 
 External software
-  --netmhc_system               [string] Specifies the operating system in use (Linux or Darwin). This is only necessary if conda is used. 
+  --netmhc_system               [string]  Specifies the operating system in use (Linux or Darwin). This is only necessary if conda is used. 
  (accepted: linux, darwin) [default: linux]  
-  --netmhcpan_path              [string] To use the 'netmhcpan' tool, specify the path to the original software tarball for NetMHCpan 4.0 
+  --netmhcpan_path              [string]  To use the 'netmhcpan' tool, specify the path to the original software tarball for NetMHCpan 4.0 
 here.  
-  --netmhciipan_path            [string] To use the 'netmhciipan' tool, specify the path to the original software tarball for NetMHCIIpan 3.1 
+  --netmhciipan_path            [string]  To use the 'netmhciipan' tool, specify the path to the original software tarball for NetMHCIIpan 3.1 
 here.  
+  --accept_mixmhcpred_license   [boolean] Confirm that you have read the MixMHCpred and MixMHC2pred licenses and use them for academic 
+non-commercial research only. [default: false]  
 
 Generic options
   --multiqc_methods_description [string]          Custom MultiQC yaml file containing HTML including a methods description. 

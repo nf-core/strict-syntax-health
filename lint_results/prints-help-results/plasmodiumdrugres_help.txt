@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.09.1-edge
 
-Launching `./main.nf` [voluminous_franklin] revision: e851f5a72f
+Launching `./main.nf` [deadly_legentil] revision: f437a008ed
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -18,7 +18,7 @@ WARN: Unrecognized config option 'validation.monochromeLogs'
 ------------------------------------------------------
 Typical pipeline command:
 
-  nextflow run nf-core/plasmodiumdrugres -profile <docker/singularity/.../institute> --pmo input.pmo.json --loci_of_interest_bed loci_of_interest.bed --loci_groups loci_groups.tsv --outdir <OUTDIR>
+  nextflow run nf-core/plasmodiumdrugres -profile <docker/singularity/.../institute> --pmo input.json --loci_of_interest_bed loci_of_interest.bed --loci_groups loci_groups.tsv --outdir <OUTDIR>
 
 help message of that parameter will be printed.  
 or `--helpFull`.  
@@ -35,6 +35,8 @@ estimation is skipped when this parameter is not provided.
 "collection_country, collection_date"). Whitespace is ignored.  
   --pmo_population_separator      [string, null] String used to join the selected `pmo_population_fields` when building the population label. 
 [default: _]  
+  --pmo_replicate_libraries       [string]       How to handle specimens with more than one library sample in the PMO.  (accepted: combine, 
+max_reads) [default: combine]  
   --outdir                        [string]       The output directory where the results will be saved. You have to use absolute paths to storage on 
 Cloud infrastructure. [default: output]  
   --email                         [string]       Email address for completion summary. 
@@ -44,17 +46,21 @@ Reference genome options
   --targeted_reference            [string] Path to FASTA file containing the reference for only the targets. 
 
 Method options for pipeline steps
-  --mlaf_method                   [string] Method for multi-locus allele frequency estimates.  (accepted: MLBM, FEM, naive) [default: 
+  --mlaf_method                   [string]  Method for multi-locus allele frequency estimates.  (accepted: MLBM, FEM, naive) [default: 
 naive]  
-  --slaf_method                   [string] Method for single-locus allele frequency estimates.  (accepted: IDM, naive, mhaps_freq) 
+  --slaf_method                   [string]  Method for single-locus allele frequency estimates.  (accepted: IDM, naive, mhaps_freq) 
 [default: naive]  
-  --translate_loci_extra_args     [string] Extra arguments supplied when translating loci of interest 
-  --naive_slaf_method             [string] Naive SLAF method when --slaf_method is naive.  (accepted: read_count_prop, presence_absence) 
+  --collapse_calls_by_summing     [boolean] Sum amino acid calls across all targets covering a locus instead of using only the target with the 
+highest read count. [default: true]  
+  --translate_loci_extra_args     [string]  Extra arguments supplied when translating loci of interest 
+  --naive_slaf_method             [string]  Naive SLAF method when --slaf_method is naive.  (accepted: read_count_prop, presence_absence) 
 [default: read_count_prop]  
-  --population_label              [string] label for population/ this individual pipeline run. [default: pop1] 
-  --naive_mlaf_method             [string] Naive MLAF method when --mlaf_method is naive.  (accepted: wsaf_prop, presence_absence) 
+  --population_label              [string]  label for population/ this individual pipeline run. [default: pop1] 
+  --fem_coi                       [number]  Average complexity of infection (COI) assumed for every specimen when --mlaf_method is FEM. 
+[default: 3]  
+  --naive_mlaf_method             [string]  Naive MLAF method when --mlaf_method is naive.  (accepted: wsaf_prop, presence_absence) 
 [default: wsaf_prop]  
-  --slaf_method_mhaps_freq_method [string] Tool used for --slaf_method mhaps_freq.  (accepted: dcifer) [default: dcifer] 
+  --slaf_method_mhaps_freq_method [string]  Tool used for --slaf_method mhaps_freq.  (accepted: dcifer) [default: dcifer] 
 
 Generic options
   --help                          [boolean, string] Display the help message. 

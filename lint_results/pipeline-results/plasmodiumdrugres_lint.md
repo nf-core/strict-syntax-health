@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-10-01T00:26:00.850448332Z
+- Generated: 2026-10-03T00:23:53.517159894Z
 - Nextflow version: 26.09.1-edge
-- Summary: 8 warnings
+- Summary: 9 warnings
 
 ## :warning: Warnings
 
@@ -10,6 +10,13 @@
 
   ```nextflow
       Rscript ${projectDir}/bin/concat_tables.R \
+                ^^^^^^^^^^
+  ```
+
+- Warning: `modules/local/extract_allele_table/main.nf:32:15`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+
+  ```nextflow
+      python3 ${projectDir}/bin/pmo_allele_table_to_specimens.py \
                 ^^^^^^^^^^
   ```
 

@@ -1,6 +1,6 @@
 # Workflow outputs migration: cageseq
 
-- Generated: 2026-06-16T20:18:04.261036+00:00
+- Generated: 2026-10-03T00:19:12.274395+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,4 +14,4 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 30 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/cageseq/blob/b4ab44cf1e93c81f5899b12e95dda7c4428f5ca2/conf/modules.config#L15) — 30 references
+- [`conf/modules.config`](https://github.com/nf-core/cageseq/blob/4260295b64fb2a30972af4a6900a35995484c49c/conf/modules.config#L15) — 30 references
