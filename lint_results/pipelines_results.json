@@ -1598,7 +1598,7 @@
   "taxprofiler": {
     "full_name": "nf-core/taxprofiler",
     "html_url": "https://github.com/nf-core/taxprofiler",
-    "commit": "76097900a2287647985a35f397498967f5ab5eeb",
+    "commit": "3b8595987edec10bd4aff0d9dcecfb93c850871e",
     "errors": 0,
     "warnings": 55,
     "parse_error": false,
