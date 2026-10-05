@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-08-13T00:22:04.544652923Z
-- Nextflow version: 26.07.0-edge
+- Generated: 2026-10-05T00:22:19.971870999Z
+- Nextflow version: 26.09.1-edge
 - Summary: 45 warnings
 
 ## :warning: Warnings
@@ -258,14 +258,14 @@
       ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_methylong_pipeline/main.nf:128:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_methylong_pipeline/main.nf:129:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       hook_url        //  string: hook URL for notifications
       ^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_methylong_pipeline/main.nf:133:9`: Variable was declared but not used
+- Warning: `subworkflows/local/utils_nfcore_methylong_pipeline/main.nf:134:9`: Variable was declared but not used
 
   ```nextflow
       def multiqc_reports = multiqc_report.toList()

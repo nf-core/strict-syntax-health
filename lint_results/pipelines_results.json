@@ -866,7 +866,7 @@
   "methylong": {
     "full_name": "nf-core/methylong",
     "html_url": "https://github.com/nf-core/methylong",
-    "commit": "b62cf2d5fe2a016e3ac343eb84d2c4ce0f966347",
+    "commit": "3e6359d2aab73ebf9da92d859c8c21226e879ee9",
     "errors": 0,
     "warnings": 45,
     "parse_error": false,
@@ -890,7 +890,7 @@
   "mhcquant": {
     "full_name": "nf-core/mhcquant",
     "html_url": "https://github.com/nf-core/mhcquant",
-    "commit": "032f21a2fa518d01dadb494ffb67d725c6bc1b04",
+    "commit": "ebe99bbebc63ed43da405c41917a2698d166c123",
     "errors": 0,
     "warnings": 52,
     "parse_error": false,
