@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.09.1-edge
 
-Launching `./main.nf` [gigantic_shockley] revision: 8dedb1d42a
+Launching `./main.nf` [clever_fibonacci] revision: 9321a188c3
 
 
 ------------------------------------------------------
@@ -63,6 +63,7 @@ recruitment and realignment per cluster.  (accepted: standard, iterative) [defau
  
   --clusters_per_chunk                           [integer] Number of clusters handed to each family generation task by the 'iterative' algorithm. [default: 
 1000]  
+  --skip_update_refinement                       [boolean] Keep the existing HMMs of updated families, only rebuilding their full MSAs. 
   --save_iterative_family_metadata               [boolean] Save the family rosters and diagnostics reported by the 'iterative' algorithm 
 
 Alignment parameters

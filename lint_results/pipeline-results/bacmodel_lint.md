@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-08-21T00:11:35.652597397Z
-- Nextflow version: 26.08.0-edge
-- Summary: 58 warnings
+- Generated: 2026-10-06T00:21:08.639248273Z
+- Nextflow version: 26.09.1-edge
+- Summary: 59 warnings
 
 ## :warning: Warnings
 
@@ -398,11 +398,18 @@
       ^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_bacmodel_pipeline/main.nf:125:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_bacmodel_pipeline/main.nf:131:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       hook_url        //  string: hook URL for notifications
       ^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_bacmodel_pipeline/main.nf:179:69`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+      def used = renamed_params.keySet().findAll { params.containsKey(it) }
+                                                                      ^^
   ```
 
 - Warning: `workflows/bacmodel.nf:57:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead

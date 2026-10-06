@@ -38,7 +38,7 @@
   "ampliseq": {
     "full_name": "nf-core/ampliseq",
     "html_url": "https://github.com/nf-core/ampliseq",
-    "commit": "d24c196d9be624a51cba51db6c9a8fdea04f0753",
+    "commit": "f582aa112660e6182c1d77d32582d8c7d1b80471",
     "errors": 0,
     "warnings": 35,
     "parse_error": false,
@@ -74,9 +74,9 @@
   "bacmodel": {
     "full_name": "nf-core/bacmodel",
     "html_url": "https://github.com/nf-core/bacmodel",
-    "commit": "48ee4d824f47d923da9d7b5495b0680dc451a153",
+    "commit": "b27cf54638f26db62cb3c38fb51f7b5d8a75c593",
     "errors": 0,
-    "warnings": 58,
+    "warnings": 59,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -770,7 +770,7 @@
   "magmap": {
     "full_name": "nf-core/magmap",
     "html_url": "https://github.com/nf-core/magmap",
-    "commit": "b8e5a48d05a95f64d6af2703f07b87fd19d25235",
+    "commit": "2924c222018ecb95a81a05b81efeaa1e99b8c232",
     "errors": 0,
     "warnings": 13,
     "parse_error": false,
@@ -794,7 +794,7 @@
   "mcmicro": {
     "full_name": "nf-core/mcmicro",
     "html_url": "https://github.com/nf-core/mcmicro",
-    "commit": "c2285336c90c6f2e98dd540dea35e50c78721c36",
+    "commit": "c3d46693e94b7e2645bee564f08a73fdeaeefb32",
     "errors": 0,
     "warnings": 72,
     "parse_error": false,
@@ -1130,7 +1130,7 @@
   "phaseimpute": {
     "full_name": "nf-core/phaseimpute",
     "html_url": "https://github.com/nf-core/phaseimpute",
-    "commit": "36c5c92eccd8dcb818d9cd3acd4fde79843f6239",
+    "commit": "6d7f59205d244f511c536e360cce272bd0beae32",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1190,14 +1190,14 @@
   "proteinfamilies": {
     "full_name": "nf-core/proteinfamilies",
     "html_url": "https://github.com/nf-core/proteinfamilies",
-    "commit": "03fc799bdcb341b05e611cac68fca1a9b4993144",
+    "commit": "f44e15e43178a6cf72c9756134017715dc9d2c3b",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": true,
     "publishdir": true,
-    "publishdir_count": 78
+    "publishdir_count": 84
   },
   "proteinfold": {
     "full_name": "nf-core/proteinfold",
@@ -1262,7 +1262,7 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "c191256e4ce2414d9e95513b5643d850b95003da",
+    "commit": "ad0f46ebfb82677d9e750a8d523d4a5de97a6ade",
     "errors": 0,
     "warnings": 13,
     "parse_error": false,
@@ -1370,7 +1370,7 @@
   "rnaseq": {
     "full_name": "nf-core/rnaseq",
     "html_url": "https://github.com/nf-core/rnaseq",
-    "commit": "4a2b4c893f7e75c30b5a5658a671138d8f11dfab",
+    "commit": "2dbf0b40157be65db71eb9c86f458f26ac58c76d",
     "errors": 0,
     "warnings": 3,
     "parse_error": false,
@@ -1382,7 +1382,7 @@
   "rnasplice": {
     "full_name": "nf-core/rnasplice",
     "html_url": "https://github.com/nf-core/rnasplice",
-    "commit": "1b447239488097651d8eac44bca2c1556865eb0f",
+    "commit": "eba2bfbb279c2618e261fe5fe1f5a465e7bba3a9",
     "errors": 0,
     "warnings": 13,
     "parse_error": false,
@@ -1586,7 +1586,7 @@
   "taxmarker": {
     "full_name": "nf-core/taxmarker",
     "html_url": "https://github.com/nf-core/taxmarker",
-    "commit": "c27a6add3b00d037371481ce94da5366a36dc4e8",
+    "commit": "eb1f5a946ad01314820c97630d348c060757b99c",
     "errors": 0,
     "warnings": 21,
     "parse_error": false,
@@ -1646,7 +1646,7 @@
   "tumourevo": {
     "full_name": "nf-core/tumourevo",
     "html_url": "https://github.com/nf-core/tumourevo",
-    "commit": "30ae4698b8a4f5a7e594b39b49421ec6025ca7dd",
+    "commit": "a220b5a3e0e15c1e9f294e1b0c3b8f78ec7a1033",
     "errors": 0,
     "warnings": 44,
     "parse_error": false,
@@ -1658,7 +1658,7 @@
   "variantbenchmarking": {
     "full_name": "nf-core/variantbenchmarking",
     "html_url": "https://github.com/nf-core/variantbenchmarking",
-    "commit": "e44e239c8aec0f4ef2b56b96a7eed256959b31a2",
+    "commit": "ee85a2ea79ff4eb2b6a06e1ad6d4d154c8fa24e0",
     "errors": 0,
     "warnings": 5,
     "parse_error": false,

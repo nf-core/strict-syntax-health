@@ -1,6 +1,6 @@
 # Workflow outputs migration: tumourevo
 
-- Generated: 2026-09-26T00:22:54.327826+00:00
+- Generated: 2026-10-06T00:24:40.815087+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,4 +14,4 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 18 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/tumourevo/blob/30ae4698b8a4f5a7e594b39b49421ec6025ca7dd/conf/modules.config#L4) — 18 references
+- [`conf/modules.config`](https://github.com/nf-core/tumourevo/blob/a220b5a3e0e15c1e9f294e1b0c3b8f78ec7a1033/conf/modules.config#L4) — 18 references
