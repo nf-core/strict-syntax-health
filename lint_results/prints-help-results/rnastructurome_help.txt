@@ -1,11 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.08.0-edge
+ N E X T F L O W   ~  version 26.09.2-edge
 
-Launching `./main.nf` [irreverent_fibonacci] revision: 789f81b74f
+Launching `./main.nf` [small_becquerel] revision: 789f81b74f
 
-WARN: Unrecognized config option 'manifest.diagram'
 
 ------------------------------------------------------
                                         ,--./,-.
@@ -13,7 +12,7 @@ WARN: Unrecognized config option 'manifest.diagram'
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/rnastructurome 1.0.0
+  nf-core/rnastructurome 1.1.0dev
 ------------------------------------------------------
 Typical pipeline command:
 
@@ -50,13 +49,16 @@ Sample metadata options
   --umi_pattern                        [string]  Fallback UMI pattern for rows missing `umi_pattern`. Supplying a pattern enables umi_tools extract 
 before cutadapt.  
   --fuzzy_untreated_pairing            [boolean] When true (default), a treated group with no exact `sample_group`+`replicate` untreated match falls 
-back to the untreated sample sharing the same sample_group base token (portion before the first `_`) 
-at the same replicate — e.g. `MDA-MB-231_untreated_r1` can serve as control for 
-`MDA-MB-231_MTX_treated_r1`. If a treated group still has no untreated after that, and exactly one 
-untreated control exists anywhere else in the same reference, that single control is reused for it 
-(with a warning) — e.g. one shared untreated backing several treated replicates. Set false to 
-require exact matches; unmatched treated groups then proceed without an untreated control (scoring 
-method 2 or 4). [default: true]  
+back to the untreated whose `sample_group` shares the longest leading token prefix with it — e.g. 
+`HFF_infected_HCMV_05hpi` prefers `HFF_infected_HCMV_72hpi` (3 shared tokens) over `HFF_uninfected` 
+(1), while `MDA-MB-231_untreated_r1` still serves `MDA-MB-231_MTX_treated_r1`. Among equally close 
+candidates the same replicate wins; if none matches the replicate but the closest arm has exactly 
+one untreated, that control is reused across replicates. Genuine ties error. Denatured controls 
+resolve the same way, except that a group only inherits one if it already has an untreated. A 
+control is never borrowed from a group sharing no leading token, so unrelated samples are not paired 
+and such a treated group is left without a control. Set false to require exact matches; unmatched 
+treated groups then proceed without an untreated control (scoring method 2 or 4). [default: 
+true]  
 
 Read trimming options
   --cutadapt_adapter_5p                [string]  Global fallback 5' adapter sequence(s), comma-separated. If omitted and no per-sample adapter is 
@@ -70,6 +72,10 @@ provided, the pipeline defaults to AGATCGGAAGAGC. [default: AGATCGGAAGAGC]
   --cutadapt_len                       [integer] Minimum read length retained after trimming. [default: 25] 
   --cutadapt_min_align                 [integer] Minimum adapter overlap required for trimming. [default: 3] 
   --cutadapt_trim_n                    [boolean] Trim terminal N bases. [default: true] 
+  --cutadapt_nextseq_trim              [integer] Enable cutadapt `--nextseq-trim` with this 3' quality cutoff, trimming high-quality poly-G tails 
+left by 2-colour (NextSeq/NovaSeq) chemistry. Off by default.  
+  --cutadapt_discard_untrimmed         [boolean] Discard reads in which no adapter was found. For short-insert libraries (e.g. tRNA, miRNA) where 
+every genuine read runs into the adapter. [default: false]  
 
 Alignment options
   --transcriptome                      [boolean]         Align against a transcript-level FASTA using Bowtie (RT-stop) / Bowtie2 (MaP). Default (false) 
@@ -133,6 +139,8 @@ II Intron RT (e.g. TGIRT), off for M-MLV; leave unset to use the auto default.
   --rfcount_primary_only               [boolean]          Use only primary alignments in rf-count (`--primary-only`). [default: false] 
   --rfcount_discard_clipped_reads      [boolean]          Discard reads with excessive 5' or 3' end clipping in rf-count / rf-count-genome 
 (`--discard-clipped-reads`). [default: false]  
+  --rfcount_map_max_coverage           [integer]          In mutation mode (`-m`), downsample each transcript above this coverage in rf-count 
+(`--max-coverage`). Unset means off. Ignored with `--count_genome true`.  
   --rfcount_paired_only                [boolean]          For paired-end samples, use only reads with both mates mapped (`--paired-only`). [default: 
 false]  
   --rfcount_properly_paired            [boolean]          For paired-end samples, use only properly paired reads (`--properly-paired`). [default: false] 
@@ -168,8 +176,8 @@ normalization factor calculation. Auto: 1000 for MaP, 50 for RT-stop; leave unse
 default.  
   --rfnorm_score_method                [integer]          Override rf-norm scoring method (`-sm`). 1=Ding, 2=Rouskin, 3=Siegfried, 4=Zubradt.  (accepted: 
 1, 2, 3, 4)  
-  --rfnorm_norm_method                 [integer]          Override rf-norm normalization method (`-nm`). 2=90% Winsorizing, 3=Box-plot, 4=Mitchell (MaP only). 
- (accepted: 2, 3, 4)  
+  --rfnorm_norm_method                 [integer]          Override rf-norm normalization method (`-nm`). 1=2-8%, 2=90% Winsorizing, 3=Box-plot, 4=Mitchell 
+(MaP only).  (accepted: 1, 2, 3, 4)  
   --rfnorm_raw                         [boolean]          Score raw reactivities without applying normalization (`--raw`). [default: false] 
   --rfnorm_pseudocount                 [number]           Pseudocount used by Ding scoring (`--pseudocount`). 
   --rfnorm_ignore_lower_than_untreated [boolean]          Set reactivities lower than untreated to zero for Ding or Siegfried scoring 
@@ -180,8 +188,9 @@ default.
 0]  
   --rfnorm_nan                                            Positions with read coverage below this threshold are reported as NaN (`--nan`). Auto: 1000 for MaP, 
 50 for RT-stop. Set to 0 to disable NaN masking.  
-  --rfnorm_prefilter_min_coverage      [integer]          Genome route only: after rf-rctools extract, keep transcripts with at least one position at this 
-coverage or higher before rf-norm. Set to 0 to keep the full annotation RC. [default: 1]  
+  --rfnorm_prefilter_min_coverage      [integer]          `--count_genome true` only: after rf-rctools extract, keep transcripts with at least one position at 
+this coverage or higher before rf-norm. Set to 0 to keep the full annotation RC. [default: 1] 
+ 
   --rfnorm_img                         [boolean]          Deprecated: rf-norm plot generation (`--img`) is always enabled. [default: false] 
   --rffold_img                         [boolean]          Generate ViennaRNA RNAplot structure diagrams via rf-fold (`-g`). Disabled by default; slow on large 
 transcriptomes. Use `--r2dt` for template-based diagrams instead. [default: false]  
@@ -275,15 +284,13 @@ interpreted as a fraction of transcript length. Unset uses the tool default (off
   --rffold_window                      [integer]          Enable windowed MFE folding in rf-fold with this window size (`-w -fw N`). Set null/unset to fold 
 the whole transcript instead. [default: 1000]  
   --rffold_partition_window            [integer]          Partition-function window size in rf-fold (`-pw N`). [default: 1000] 
-  --rffold_unconstrained               [boolean]          Fold without reactivity constraints in rf-fold (`-u`). [default: false] 
-  --rffold_vienna_no_lonely_pairs      [boolean]          Pass ViennaRNA no-lonely-pairs mode to rf-fold (`-vnlp`). [default: false] 
-  --rffold_vienna_constrained          [boolean]          Use ViennaRNA hard constraints with rf-fold (`-vc`). [default: false] 
-  --rffold_vienna_max_bp_span          [integer]          Maximal base-pair span for ViennaRNA in rf-fold (`-vmd`). [default: 600] 
-  --rffold_vienna_bp_span              [integer]          Minimal base-pair span for ViennaRNA in rf-fold (`-vms`). 
+  --rffold_unconstrained               [boolean]          Fold without reactivity constraints in rf-fold (`-i`). [default: false] 
+  --rffold_vienna_no_lonely_pairs      [boolean]          Pass ViennaRNA no-lonely-pairs mode to rf-fold (`-nlp`). [default: false] 
+  --rffold_vienna_constrained          [boolean]          Use ViennaRNA hard constraints with rf-fold (`-hc`). [default: false] 
+  --rffold_vienna_max_bp_span          [integer]          Maximal base-pair span for ViennaRNA in rf-fold (`-md`). [default: 600] 
   --rffold_only_common                 [integer]          Only fold transcripts covered in at least this number of XML experiments (`-oc`). 
-  --rffold_fold_constraint_file        [string]           Constraint file for allowed base-pairing positions (`-fc`). 
-  --rffold_unpaired_constraint_file    [string]           Constraint file for required unpaired positions (`-uc`). 
-  --rffold_dotplot                     [boolean]          Generate dot plots from rf-fold (`-d`). [default: true] 
+  --rffold_fold_constraint_file        [string]           Constraint file for allowed base-pairing positions (`-c`). 
+  --rffold_dotplot                     [boolean]          Generate dot plots from rf-fold (`-dp`). [default: true] 
   --rffold_shannon_entropy             [boolean]          Compute and report Shannon entropy in rf-fold (`-sh`). [default: true] 
   --rffold_slope                       [number]           Slope for reactivity-to-folding-constraint conversion in rf-fold (`-sl`). Auto by `chemical`: DMS 
 4.6, NAI 2.2, 2A3 1, other/unset 1.8. Overridden by jackknife calibration when available.  

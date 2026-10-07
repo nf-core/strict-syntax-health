@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.09.1-edge
+ N E X T F L O W   ~  version 26.09.2-edge
 
-Launching `./main.nf` [dreamy_curran] revision: e3f25d4155
+Launching `./main.nf` [disturbed_mclean] revision: e3f25d4155
 
 
 ------------------------------------------------------
@@ -30,7 +30,6 @@ Cloud infrastructure.
   --multiqc_title               [string]  MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
 
 Quality control options
-  --skip_qc                     [boolean] Skip all QC steps except for MultiQC. 
   --skip_fastqc                 [boolean] Skip FastQC. 
 
 trimming options
@@ -71,6 +70,7 @@ plasmid, metaplasmid, metaviral, rnaviral) [default: rna]
 Mapping options
   --save_bam                    [boolean] Save the bam files from mapping 
   --save_samtools               [boolean] Save the output from samtools [default: true] 
+  --save_idxstats               [boolean] Save the per-contig read counts from `samtools idxstats` 
   --bbmap_minid                 [number]  Minimum identity needed to assign read to a contig [default: 0.9] 
   --bbmap_ambiguous             [string]  How BBMap should handle reads that align equally well to more than one site  (accepted: best, 
 all, random, toss) [default: best]  
@@ -108,14 +108,14 @@ isn't set. Restricted to the amino-acid databases `metaeuk databases -h` lists (
 nucleotide/profile entries aren't valid MetaEuk homology references); see the table in usage.md for 
 which of these we've actually confirmed downloadable.  (accepted: UniRef100, UniRef90, UniRef50, 
 UniProtKB, UniProtKB/TrEMBL, UniProtKB/Swiss-Prot, NR, GTDB, PDB) [default: UniRef50]  
-  --metaeuk_db_dir              [string] Path to a directory to store the downloaded MetaEuk database in. Will be created if it doesn't 
+  --metaeuk_dbpath              [string] Path to a directory to store the downloaded MetaEuk database in. Will be created if it doesn't 
 exist. Ignored when `--metaeuk_db` is set. [default: ./metaeuk_db/]  
 
 Functional annotation options
   --skip_eggnog                 [boolean] Skip EGGNOG functional annotation 
   --eggnog_dbpath               [string]  Specify EGGNOG database path [default: eggnog] 
   --skip_kofamscan              [boolean] If enabled, skips the run of KofamScan. 
-  --kofam_dir                   [string]  Path to a directory with KOfam files. Will be created if it doesn't exist. [default: ./kofam/] 
+  --kofam_dbpath                [string]  Path to a directory with KOfam files. Will be created if it doesn't exist. [default: ./kofam/] 
  
   --skip_dbcan                  [boolean] If enabled, skips dbCAN CAZyme annotation. 
   --dbcan_dbpath                [string]  Specify the dbCAN database path. [default: dbcan] 
@@ -142,7 +142,7 @@ Generic options
   --help_full                   [boolean]         Display the full detailed help message. 
   --show_hidden                 [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
  
- !! Hiding 31 param(s), use the `--showHidden` parameter to show them !!
+ !! Hiding 32 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
 
 * The pipeline

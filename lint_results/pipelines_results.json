@@ -38,7 +38,7 @@
   "ampliseq": {
     "full_name": "nf-core/ampliseq",
     "html_url": "https://github.com/nf-core/ampliseq",
-    "commit": "f582aa112660e6182c1d77d32582d8c7d1b80471",
+    "commit": "ca89b0902e8729ac0a141f1f39dc3834f3f843d0",
     "errors": 0,
     "warnings": 35,
     "parse_error": false,
@@ -278,11 +278,11 @@
   "datasync": {
     "full_name": "nf-core/datasync",
     "html_url": "https://github.com/nf-core/datasync",
-    "commit": "6d0dba7cb728f4a3ba042b1bbded330708e71ede",
+    "commit": "ca420a98e951849897451ea3b8e322fa7f719eb6",
     "errors": 0,
     "warnings": 3,
     "parse_error": false,
-    "prints_help": false,
+    "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
     "publishdir_count": 5
@@ -350,7 +350,7 @@
   "detaxizer": {
     "full_name": "nf-core/detaxizer",
     "html_url": "https://github.com/nf-core/detaxizer",
-    "commit": "6872dba26662fb1182a4ec104d0a3d53f2c3e01c",
+    "commit": "75f0ba7201d3d8d4315f3a1309f4717f485ee589",
     "errors": 0,
     "warnings": 21,
     "parse_error": false,
@@ -770,7 +770,7 @@
   "magmap": {
     "full_name": "nf-core/magmap",
     "html_url": "https://github.com/nf-core/magmap",
-    "commit": "2924c222018ecb95a81a05b81efeaa1e99b8c232",
+    "commit": "a728b6f20c78b166913cff4a45a763a5a826868c",
     "errors": 0,
     "warnings": 13,
     "parse_error": false,
@@ -842,7 +842,7 @@
   "metatdenovo": {
     "full_name": "nf-core/metatdenovo",
     "html_url": "https://github.com/nf-core/metatdenovo",
-    "commit": "886eac4c87ccdda0ee07d7a6c066b1f532f9e983",
+    "commit": "ae9302f1dcee00630986dff9997e4119bcc4a6a6",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1262,7 +1262,7 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "ad0f46ebfb82677d9e750a8d523d4a5de97a6ade",
+    "commit": "a681fda5b603a8b942f4f1d1f8feaa3dbbb7b6be",
     "errors": 0,
     "warnings": 13,
     "parse_error": false,
@@ -1370,7 +1370,7 @@
   "rnaseq": {
     "full_name": "nf-core/rnaseq",
     "html_url": "https://github.com/nf-core/rnaseq",
-    "commit": "2dbf0b40157be65db71eb9c86f458f26ac58c76d",
+    "commit": "d810fa8d197293e966a171cbb03b638e8f8af612",
     "errors": 0,
     "warnings": 3,
     "parse_error": false,
@@ -1382,7 +1382,7 @@
   "rnasplice": {
     "full_name": "nf-core/rnasplice",
     "html_url": "https://github.com/nf-core/rnasplice",
-    "commit": "eba2bfbb279c2618e261fe5fe1f5a465e7bba3a9",
+    "commit": "429253e269e2c2b1b4b6911bf63b8d9914a19018",
     "errors": 0,
     "warnings": 13,
     "parse_error": false,
@@ -1394,7 +1394,7 @@
   "rnastructurome": {
     "full_name": "nf-core/rnastructurome",
     "html_url": "https://github.com/nf-core/rnastructurome",
-    "commit": "e369fff1acf3a94a41929b5b15f3a35e6a17e785",
+    "commit": "5f93e41a0b9ffe8d0dba90bebfc6d9632ee85fd2",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,
@@ -1442,9 +1442,9 @@
   "scdownstream": {
     "full_name": "nf-core/scdownstream",
     "html_url": "https://github.com/nf-core/scdownstream",
-    "commit": "cdc9ddcb9578257e45a3a27731f6b7110f71e6ca",
+    "commit": "05afde2b26040abcbfd4a1fa8b8993094c273100",
     "errors": 0,
-    "warnings": 22,
+    "warnings": 4,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -1478,7 +1478,7 @@
   "seqinspector": {
     "full_name": "nf-core/seqinspector",
     "html_url": "https://github.com/nf-core/seqinspector",
-    "commit": "e42742bbc5d7004df9341ad5848a8d7288e6485a",
+    "commit": "20b019fcc8fb3c3242687ddc1f47f7ed41dedb88",
     "errors": 0,
     "warnings": 0,
     "parse_error": false,

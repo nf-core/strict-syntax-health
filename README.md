@@ -11,12 +11,12 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 > See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline.
 > **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**
 
-- **Last updated:** 2026-10-06 00:26:17 UTC
-- **Nextflow version:** 26.09.1-edge
+- **Last updated:** 2026-10-07 00:26:03 UTC
+- **Nextflow version:** 26.09.2-edge
 
 ## Pipelines
 
-- **Total:** 0 parse errors, 1216 errors, 5877 warnings across 144 pipelines
+- **Total:** 0 parse errors, 1216 errors, 5859 warnings across 144 pipelines
 - **Zero errors:** 98 pipelines (68.1%)
 
 |                    Errors                    |                     Warnings                     |
@@ -101,7 +101,6 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :white_check_mark: [methylseq](https://github.com/nf-core/methylseq)                           |     No      |      0 |       25 |     Yes     |         [View](lint_results/pipeline-results/methylseq_lint.md)         |       [View](lint_results/prints-help-results/methylseq_help.txt)        |
 | :white_check_mark: [pacvar](https://github.com/nf-core/pacvar)                                 |     No      |      0 |       25 |     Yes     |          [View](lint_results/pipeline-results/pacvar_lint.md)           |         [View](lint_results/prints-help-results/pacvar_help.txt)         |
 | :x: [rarevariantburden](https://github.com/nf-core/rarevariantburden)                          |     No      |      0 |       22 |     No      |     [View](lint_results/pipeline-results/rarevariantburden_lint.md)     |   [View](lint_results/prints-help-results/rarevariantburden_help.txt)    |
-| :white_check_mark: [scdownstream](https://github.com/nf-core/scdownstream)                     |     No      |      0 |       22 |     Yes     |       [View](lint_results/pipeline-results/scdownstream_lint.md)        |      [View](lint_results/prints-help-results/scdownstream_help.txt)      |
 | :white_check_mark: [detaxizer](https://github.com/nf-core/detaxizer)                           |     No      |      0 |       21 |     Yes     |         [View](lint_results/pipeline-results/detaxizer_lint.md)         |       [View](lint_results/prints-help-results/detaxizer_help.txt)        |
 | :white_check_mark: [taxmarker](https://github.com/nf-core/taxmarker)                           |     No      |      0 |       21 |     Yes     |         [View](lint_results/pipeline-results/taxmarker_lint.md)         |       [View](lint_results/prints-help-results/taxmarker_help.txt)        |
 | :x: [alleleexpression](https://github.com/nf-core/alleleexpression)                            |     No      |      0 |       20 |     No      |     [View](lint_results/pipeline-results/alleleexpression_lint.md)      |    [View](lint_results/prints-help-results/alleleexpression_help.txt)    |
@@ -135,7 +134,8 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :white_check_mark: [scnanoseq](https://github.com/nf-core/scnanoseq)                           |     No      |      0 |        5 |     Yes     |         [View](lint_results/pipeline-results/scnanoseq_lint.md)         |       [View](lint_results/prints-help-results/scnanoseq_help.txt)        |
 | :white_check_mark: [variantbenchmarking](https://github.com/nf-core/variantbenchmarking)       |     No      |      0 |        5 |     Yes     |    [View](lint_results/pipeline-results/variantbenchmarking_lint.md)    |  [View](lint_results/prints-help-results/variantbenchmarking_help.txt)   |
 | :white_check_mark: [hlatyping](https://github.com/nf-core/hlatyping)                           |     No      |      0 |        4 |     Yes     |         [View](lint_results/pipeline-results/hlatyping_lint.md)         |       [View](lint_results/prints-help-results/hlatyping_help.txt)        |
-| :x: [datasync](https://github.com/nf-core/datasync)                                            |     No      |      0 |        3 |     No      |         [View](lint_results/pipeline-results/datasync_lint.md)          |        [View](lint_results/prints-help-results/datasync_help.txt)        |
+| :white_check_mark: [scdownstream](https://github.com/nf-core/scdownstream)                     |     No      |      0 |        4 |     Yes     |       [View](lint_results/pipeline-results/scdownstream_lint.md)        |      [View](lint_results/prints-help-results/scdownstream_help.txt)      |
+| :white_check_mark: [datasync](https://github.com/nf-core/datasync)                             |     No      |      0 |        3 |     Yes     |         [View](lint_results/pipeline-results/datasync_lint.md)          |        [View](lint_results/prints-help-results/datasync_help.txt)        |
 | :white_check_mark: [ncrnannotator](https://github.com/nf-core/ncrnannotator)                   |     No      |      0 |        3 |     Yes     |       [View](lint_results/pipeline-results/ncrnannotator_lint.md)       |     [View](lint_results/prints-help-results/ncrnannotator_help.txt)      |
 | :white_check_mark: [proteinfold](https://github.com/nf-core/proteinfold)                       |     No      |      0 |        3 |     Yes     |        [View](lint_results/pipeline-results/proteinfold_lint.md)        |      [View](lint_results/prints-help-results/proteinfold_help.txt)       |
 | :white_check_mark: [rnaseq](https://github.com/nf-core/rnaseq)                                 |     No      |      0 |        3 |     Yes     |          [View](lint_results/pipeline-results/rnaseq_lint.md)           |         [View](lint_results/prints-help-results/rnaseq_help.txt)         |
