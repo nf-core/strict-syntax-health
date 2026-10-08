@@ -1,6 +1,6 @@
 # Workflow outputs migration: bacmodel
 
-- Generated: 2026-10-06T00:21:08.703402+00:00
+- Generated: 2026-10-08T00:21:02.202031+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,4 +14,4 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 20 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/bacmodel/blob/b27cf54638f26db62cb3c38fb51f7b5d8a75c593/conf/modules.config#L15) — 20 references
+- [`conf/modules.config`](https://github.com/nf-core/bacmodel/blob/907bc9efec4b5b217147d3eb032cddf01acd54df/conf/modules.config#L15) — 20 references

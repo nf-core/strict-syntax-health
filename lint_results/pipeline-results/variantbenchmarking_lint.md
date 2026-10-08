@@ -1,16 +1,16 @@
 # Nextflow lint results
 
-- Generated: 2026-10-06T00:24:56.928919206Z
-- Nextflow version: 26.09.1-edge
+- Generated: 2026-10-08T00:34:57.754590552Z
+- Nextflow version: 26.09.2-edge
 - Summary: 5 warnings
 
 ## :warning: Warnings
 
-- Warning: `subworkflows/local/intersect_statistics/main.nf:18:13`: Variable was declared but not used
+- Warning: `subworkflows/local/intersect_statistics/main.nf:19:17`: Variable was declared but not used
 
   ```nextflow
-          def meta         = input[0]
-              ^^^^
+              def meta = input[0]
+                  ^^^^
   ```
 
 - Warning: `subworkflows/local/report_benchmark_statistics/main.nf:75:45`: Implicit closure parameter is deprecated, declare an explicit parameter instead

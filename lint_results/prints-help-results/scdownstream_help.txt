@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.09.2-edge
 
 Downloading plugin nf-anndata@0.5.2
-Launching `./main.nf` [nasty_bose] revision: 054ced1c03
+Launching `./main.nf` [distracted_gauss] revision: a7c88c0c38
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -72,6 +72,11 @@ scDblFinder follows sc-best-practices recommendations. [default: scdblfinder]
   --doublet_removal               [boolean] Whether to remove cells flagged as doublets. When false (default), doublet scores are stored in 
 `adata.obs` for inspection, following sc-best-practices guidance to review doublets before 
 filtering. [default: false]  
+  --empty_droplet_removal         [string]  Tool used to remove empty droplets from samples that only provide an unfiltered matrix.  
+(accepted: cellbender, emptydrops) [default: cellbender]  
+  --emptydrops_lower              [integer] Total UMI count at or below which EmptyDrops treats barcodes as empty droplets for the ambient 
+profile. [default: 100]  
+  --emptydrops_fdr                [number]  FDR threshold at or below which EmptyDrops keeps a barcode as a cell. [default: 0.01] 
   --cellbender_epochs             [integer] Number of epochs to train the CellBender model [default: 150] 
 
 Integration options
@@ -127,10 +132,11 @@ method)
 analyses (PAGA, LIANA, DE, cluster-level annotation).  
 
 Tool options
-  --celltypist_model              [string] Specify the models to use for the celltypist cell type annotation 
-  --celldex_reference             [string] Path to comma-separated file containing information about the celldex references to use for the 
+  --celltypist_model              [string]  Specify the models to use for the celltypist cell type annotation 
+  --azimuth                       [boolean] Annotate cell types per cell with Pan-human Azimuth. 
+  --celldex_reference             [string]  Path to comma-separated file containing information about the celldex references to use for the 
 singleR cell type annotation.  
-  --cytetype_study_context        [string] Study description passed to CyteType for LLM-based cell type annotation (after integration, 
+  --cytetype_study_context        [string]  Study description passed to CyteType for LLM-based cell type annotation (after integration, 
 clustering, and global DE).  
 
 Resource options
@@ -207,7 +213,7 @@ Generic options
   --help_full                     [boolean]         Display the full detailed help message. 
   --show_hidden                   [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
  
- !! Hiding 18 param(s), use the `--showHidden` parameter to show them !!
+ !! Hiding 17 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
 
 * The nf-core framework

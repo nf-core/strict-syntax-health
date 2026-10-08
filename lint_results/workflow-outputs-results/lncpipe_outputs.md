@@ -1,6 +1,6 @@
 # Workflow outputs migration: lncpipe
 
-- Generated: 2026-07-29T00:28:12.023509+00:00
+- Generated: 2026-10-08T00:25:30.649966+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,17 +14,17 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 39 `publishDir` references across 14 files that should be migrated to the workflow `output {}` block:
 
-- [`subworkflows/local/prepare_genome/nextflow.config`](https://github.com/nf-core/lncpipe/blob/ff1b23f5fb89cf49106aab24d1ec111f22720d87/subworkflows/local/prepare_genome/nextflow.config#L3) — 13 references
-- [`conf/modules.config`](https://github.com/nf-core/lncpipe/blob/ff1b23f5fb89cf49106aab24d1ec111f22720d87/conf/modules.config#L15) — 4 references
-- [`subworkflows/nf-core/fastq_fastqc_umitools_fastp/nextflow.config`](https://github.com/nf-core/lncpipe/blob/ff1b23f5fb89cf49106aab24d1ec111f22720d87/subworkflows/nf-core/fastq_fastqc_umitools_fastp/nextflow.config#L7) — 4 references
-- [`subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/nextflow.config`](https://github.com/nf-core/lncpipe/blob/ff1b23f5fb89cf49106aab24d1ec111f22720d87/subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/nextflow.config#L5) — 4 references
-- [`subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/nextflow.config`](https://github.com/nf-core/lncpipe/blob/ff1b23f5fb89cf49106aab24d1ec111f22720d87/subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/nextflow.config#L7) — 3 references
-- [`subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/tests/nextflow.config`](https://github.com/nf-core/lncpipe/blob/ff1b23f5fb89cf49106aab24d1ec111f22720d87/subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/tests/nextflow.config#L22) — 2 references
-- [`subworkflows/nf-core/fastq_subsample_fq_salmon/nextflow.config`](https://github.com/nf-core/lncpipe/blob/ff1b23f5fb89cf49106aab24d1ec111f22720d87/subworkflows/nf-core/fastq_subsample_fq_salmon/nextflow.config#L5) — 2 references
-- [`modules/nf-core/subread/featurecounts/tests/nextflow.config`](https://github.com/nf-core/lncpipe/blob/ff1b23f5fb89cf49106aab24d1ec111f22720d87/modules/nf-core/subread/featurecounts/tests/nextflow.config#L3) — 1 reference
-- [`modules/nf-core/umitools/extract/tests/nextflow.config`](https://github.com/nf-core/lncpipe/blob/ff1b23f5fb89cf49106aab24d1ec111f22720d87/modules/nf-core/umitools/extract/tests/nextflow.config#L3) — 1 reference
-- [`subworkflows/local/stringtie/nextflow.config`](https://github.com/nf-core/lncpipe/blob/ff1b23f5fb89cf49106aab24d1ec111f22720d87/subworkflows/local/stringtie/nextflow.config#L3) — 1 reference
-- [`subworkflows/nf-core/fastq_align_star/nextflow.config`](https://github.com/nf-core/lncpipe/blob/ff1b23f5fb89cf49106aab24d1ec111f22720d87/subworkflows/nf-core/fastq_align_star/nextflow.config#L26) — 1 reference
-- [`subworkflows/nf-core/fastq_align_star/tests/nextflow.config`](https://github.com/nf-core/lncpipe/blob/ff1b23f5fb89cf49106aab24d1ec111f22720d87/subworkflows/nf-core/fastq_align_star/tests/nextflow.config#L3) — 1 reference
-- [`subworkflows/nf-core/fastq_align_star/tests/with_transcripts.config`](https://github.com/nf-core/lncpipe/blob/ff1b23f5fb89cf49106aab24d1ec111f22720d87/subworkflows/nf-core/fastq_align_star/tests/with_transcripts.config#L3) — 1 reference
-- [`subworkflows/nf-core/fastq_subsample_fq_salmon/tests/nextflow.config`](https://github.com/nf-core/lncpipe/blob/ff1b23f5fb89cf49106aab24d1ec111f22720d87/subworkflows/nf-core/fastq_subsample_fq_salmon/tests/nextflow.config#L3) — 1 reference
+- [`subworkflows/local/prepare_genome/nextflow.config`](https://github.com/nf-core/lncpipe/blob/ac1ab61d3e26b95be1012aa85edce1d2042b3242/subworkflows/local/prepare_genome/nextflow.config#L3) — 13 references
+- [`conf/modules.config`](https://github.com/nf-core/lncpipe/blob/ac1ab61d3e26b95be1012aa85edce1d2042b3242/conf/modules.config#L15) — 4 references
+- [`subworkflows/nf-core/fastq_fastqc_umitools_fastp/nextflow.config`](https://github.com/nf-core/lncpipe/blob/ac1ab61d3e26b95be1012aa85edce1d2042b3242/subworkflows/nf-core/fastq_fastqc_umitools_fastp/nextflow.config#L7) — 4 references
+- [`subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/nextflow.config`](https://github.com/nf-core/lncpipe/blob/ac1ab61d3e26b95be1012aa85edce1d2042b3242/subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/nextflow.config#L5) — 4 references
+- [`subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/nextflow.config`](https://github.com/nf-core/lncpipe/blob/ac1ab61d3e26b95be1012aa85edce1d2042b3242/subworkflows/nf-core/fastq_fastqc_umitools_trimgalore/nextflow.config#L7) — 3 references
+- [`subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/tests/nextflow.config`](https://github.com/nf-core/lncpipe/blob/ac1ab61d3e26b95be1012aa85edce1d2042b3242/subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/tests/nextflow.config#L22) — 2 references
+- [`subworkflows/nf-core/fastq_subsample_fq_salmon/nextflow.config`](https://github.com/nf-core/lncpipe/blob/ac1ab61d3e26b95be1012aa85edce1d2042b3242/subworkflows/nf-core/fastq_subsample_fq_salmon/nextflow.config#L5) — 2 references
+- [`modules/nf-core/subread/featurecounts/tests/nextflow.config`](https://github.com/nf-core/lncpipe/blob/ac1ab61d3e26b95be1012aa85edce1d2042b3242/modules/nf-core/subread/featurecounts/tests/nextflow.config#L3) — 1 reference
+- [`modules/nf-core/umitools/extract/tests/nextflow.config`](https://github.com/nf-core/lncpipe/blob/ac1ab61d3e26b95be1012aa85edce1d2042b3242/modules/nf-core/umitools/extract/tests/nextflow.config#L3) — 1 reference
+- [`subworkflows/local/stringtie/nextflow.config`](https://github.com/nf-core/lncpipe/blob/ac1ab61d3e26b95be1012aa85edce1d2042b3242/subworkflows/local/stringtie/nextflow.config#L3) — 1 reference
+- [`subworkflows/nf-core/fastq_align_star/nextflow.config`](https://github.com/nf-core/lncpipe/blob/ac1ab61d3e26b95be1012aa85edce1d2042b3242/subworkflows/nf-core/fastq_align_star/nextflow.config#L26) — 1 reference
+- [`subworkflows/nf-core/fastq_align_star/tests/nextflow.config`](https://github.com/nf-core/lncpipe/blob/ac1ab61d3e26b95be1012aa85edce1d2042b3242/subworkflows/nf-core/fastq_align_star/tests/nextflow.config#L3) — 1 reference
+- [`subworkflows/nf-core/fastq_align_star/tests/with_transcripts.config`](https://github.com/nf-core/lncpipe/blob/ac1ab61d3e26b95be1012aa85edce1d2042b3242/subworkflows/nf-core/fastq_align_star/tests/with_transcripts.config#L3) — 1 reference
+- [`subworkflows/nf-core/fastq_subsample_fq_salmon/tests/nextflow.config`](https://github.com/nf-core/lncpipe/blob/ac1ab61d3e26b95be1012aa85edce1d2042b3242/subworkflows/nf-core/fastq_subsample_fq_salmon/tests/nextflow.config#L3) — 1 reference

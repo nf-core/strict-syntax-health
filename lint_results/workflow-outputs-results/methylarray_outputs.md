@@ -1,6 +1,6 @@
 # Workflow outputs migration: methylarray
 
-- Generated: 2026-07-28T00:30:30.761880+00:00
+- Generated: 2026-10-08T00:27:06.701233+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,4 +14,4 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 2 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/methylarray/blob/d34f5311f6d120ef748dc501ac2a47d20ba6c327/conf/modules.config#L15) — 2 references
+- [`conf/modules.config`](https://github.com/nf-core/methylarray/blob/278890f1400c9f9def782b8594a042ac103617d9/conf/modules.config#L15) — 2 references

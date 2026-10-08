@@ -1,8 +1,52 @@
 # Nextflow lint results
 
-- Generated: 2026-07-29T00:25:44.526921690Z
-- Nextflow version: 26.07.0-edge
-- Summary: 20 warnings
+- Generated: 2026-10-08T00:20:21.467203170Z
+- Nextflow version: 26.09.2-edge
+- Summary: 6 errors, 21 warnings
+
+## :x: Errors
+
+- Error: `nextflow.config:267:40`: `manifest` is not defined
+
+  ```nextflow
+  \033[0;35m  nf-core/alleleexpression ${manifest.version}\033[0m
+                                         ^^^^^^^^
+  ```
+
+- Error: `nextflow.config:270:26`: `manifest` is not defined
+
+  ```nextflow
+          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+                           ^^^^^^^^
+  ```
+
+- Error: `nextflow.config:270:69`: `manifest` is not defined
+
+  ```nextflow
+          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+                                                                      ^^^^^^^^
+  ```
+
+- Error: `nextflow.config:270:186`: `manifest` is not defined
+
+  ```nextflow
+          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+                                                                                                                                                                                           ^^^^^^^^
+  ```
+
+- Error: `nextflow.config:279:22`: `validation` is not defined
+
+  ```nextflow
+          beforeText = validation.help.beforeText
+                       ^^^^^^^^^^
+  ```
+
+- Error: `nextflow.config:280:21`: `validation` is not defined
+
+  ```nextflow
+          afterText = validation.help.afterText
+                      ^^^^^^^^^^
+  ```
 
 ## :warning: Warnings
 
@@ -48,100 +92,107 @@
                                                          ^^
   ```
 
-- Warning: `workflows/alleleexpression.nf:37:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `nextflow.config:270:129`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
+                                                                                                                                  ^^
+  ```
+
+- Warning: `workflows/alleleexpression.nf:38:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_versions = Channel.empty()
                     ^^^^^^^
   ```
 
-- Warning: `workflows/alleleexpression.nf:76:21`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/alleleexpression.nf:77:14`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-      ch_star_index = Channel.fromPath(params.star_index)
-                      ^^^^^^^
-  ```
-
-- Warning: `workflows/alleleexpression.nf:78:14`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_gtf = Channel.fromPath(params.gtf)
+      ch_gtf = Channel.fromPath(params.gtf, checkIfExists: true)
                ^^^^^^^
   ```
 
-- Warning: `workflows/alleleexpression.nf:110:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/alleleexpression.nf:83:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+          ch_star_index = Channel.fromPath(params.star_index, checkIfExists: true)
+                          ^^^^^^^
+  ```
+
+- Warning: `workflows/alleleexpression.nf:87:20`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+          ch_fasta = Channel.fromPath(params.fasta, checkIfExists: true)
+                     ^^^^^^^
+  ```
+
+- Warning: `workflows/alleleexpression.nf:126:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           Channel.value([['id': 'dummy'], []])
           ^^^^^^^
   ```
 
-- Warning: `workflows/alleleexpression.nf:144:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/alleleexpression.nf:160:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           Channel.fromPath(params.beagle_ref).first() :
           ^^^^^^^
   ```
 
-- Warning: `workflows/alleleexpression.nf:145:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/alleleexpression.nf:161:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           Channel.empty()
           ^^^^^^^
   ```
 
-- Warning: `workflows/alleleexpression.nf:147:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/alleleexpression.nf:163:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           Channel.fromPath(params.beagle_map).first() :
           ^^^^^^^
   ```
 
-- Warning: `workflows/alleleexpression.nf:148:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/alleleexpression.nf:164:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           Channel.empty()
           ^^^^^^^
   ```
 
-- Warning: `workflows/alleleexpression.nf:179:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/alleleexpression.nf:195:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_gene_features = Channel.fromPath(params.gene_features).first()
                          ^^^^^^^
   ```
 
-- Warning: `workflows/alleleexpression.nf:195:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/alleleexpression.nf:248:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_multiqc_files = Channel.empty()
                          ^^^^^^^
   ```
 
-- Warning: `workflows/alleleexpression.nf:196:37`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/alleleexpression.nf:249:39`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-          .mix(FASTQC.out.zip.collect{it[1]})
-                                      ^^
+          .mix(FASTQC.out.zip.collect { it[1] })
+                                        ^^
   ```
 
-- Warning: `workflows/alleleexpression.nf:203:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/alleleexpression.nf:250:54`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-          Channel.empty(),  // multiqc_logo
-          ^^^^^^^
+          .mix(STAR_ALIGN_WASP.out.log_final.collect { it[1] })
+                                                       ^^
   ```
 
-- Warning: `workflows/alleleexpression.nf:204:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/alleleexpression.nf:251:47`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-          Channel.empty(),  // replace_names
-          ^^^^^^^
-  ```
-
-- Warning: `workflows/alleleexpression.nf:205:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          Channel.empty()   // sample_names
-          ^^^^^^^
+          .mix(UMITOOLS_DEDUP.out.log.collect { it[1] })
+                                                ^^
   ```

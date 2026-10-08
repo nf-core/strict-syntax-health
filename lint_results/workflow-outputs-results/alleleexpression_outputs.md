@@ -1,6 +1,6 @@
 # Workflow outputs migration: alleleexpression
 
-- Generated: 2026-07-29T00:25:44.584343+00:00
+- Generated: 2026-10-08T00:20:21.545019+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -12,6 +12,6 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 ## Legacy `publishDir` references
 
-Found 15 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
+Found 17 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/alleleexpression/blob/88c14b1de6f6734cc66e64b7ca4e8dfd1425d820/conf/modules.config#L14) — 15 references
+- [`conf/modules.config`](https://github.com/nf-core/alleleexpression/blob/725c5119bd9f0a357cbf2a7ae1090e4fc59476bb/conf/modules.config#L14) — 17 references

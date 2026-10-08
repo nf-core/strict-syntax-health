@@ -1,10 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.09.1-edge
+ N E X T F L O W   ~  version 26.09.2-edge
 
 Downloading plugin nf-slack@0.5.1
-Launching `./main.nf` [trusting_gutenberg] revision: 72d777fa52
+Launching `./main.nf` [goofy_lamarr] revision: 72d777fa52
 
 WARN: Unrecognized config option 'slack.enabled'
 WARN: Unrecognized config option 'slack.webhook.url'

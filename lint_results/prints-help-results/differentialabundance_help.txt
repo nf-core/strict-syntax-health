@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.08.0-edge
+ N E X T F L O W   ~  version 26.09.2-edge
 
-Launching `./main.nf` [distracted_golick] revision: 4dc8224c6b
+Launching `./main.nf` [elegant_jennings] revision: 4dc8224c6b
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -156,6 +156,8 @@ parametric]
   --deseq2_vs_method                        [string]  variance stabilisation method to use when making a variance stabilised matrix  (accepted: rlog, 
 vst, rlog,vst) [default: vst]  
   --deseq2_shrink_lfc                       [boolean] Shrink fold changes in results? [default: true] 
+  --deseq2_shrink_lfc_type                  [string]  Which method to use for shrinking fold changes in results?  (accepted: ashr, apeglm) [default: 
+ashr]  
   --deseq2_vs_blind                         [boolean] `blind` parameter for rlog() and/ or vst() [default: true] 
   --deseq2_vst_nsub                         [integer] `nsub` parameter passed to vst() [default: 1000] 
 

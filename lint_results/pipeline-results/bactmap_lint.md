@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-07-28T00:28:16.513474372Z
-- Nextflow version: 26.07.0-edge
+- Generated: 2026-10-08T00:21:16.869370626Z
+- Nextflow version: 26.09.2-edge
 - Summary: 17 errors, 31 warnings
 
 ## :x: Errors
@@ -118,11 +118,11 @@
   ^
   ```
 
-- Error: `workflows/bactmap.nf:76:1`: Invalid workflow definition -- check for missing or out-of-order section labels
+- Error: `workflows/bactmap.nf:85:9`: Unexpected input: ':'
 
   ```nextflow
-  workflow BACTMAP {
-  ^
+      take:
+          ^
   ```
 
 ## :warning: Warnings

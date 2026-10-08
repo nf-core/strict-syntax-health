@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.09.1-edge
+ N E X T F L O W   ~  version 26.09.2-edge
 
-Launching `./main.nf` [confident_ride] revision: 2e60bf32b3
+Launching `./main.nf` [fervent_fibonacci] revision: 2e60bf32b3
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'

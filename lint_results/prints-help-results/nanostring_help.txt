@@ -1,9 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.04.3
+ N E X T F L O W   ~  version 26.09.2-edge
 
-Launching `./main.nf` [elegant_mendel] revision: 9d0cb85655
+Downloading plugin nf-schema@3.0.0
+Launching `./main.nf` [amazing_leavitt] revision: 8aae1e9117
 
 
 ------------------------------------------------------
@@ -14,6 +15,7 @@ Launching `./main.nf` [elegant_mendel] revision: 9d0cb85655
                                         `._,._,'
   nf-core/nanostring 1.3.4dev
 ------------------------------------------------------
+
 Typical pipeline command:
 
   nextflow run nf-core/nanostring -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
@@ -55,7 +57,7 @@ Generic options
   --help_full                   [boolean]         Display the full detailed help message. 
   --show_hidden                 [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
  
- !! Hiding 20 param(s), use the `--showHidden` parameter to show them !!
+ !! Hiding 19 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
 
 * The nf-core framework
@@ -63,4 +65,5 @@ Generic options
 
 * Software dependencies
     https://github.com/nf-core/nanostring/blob/master/CITATIONS.md
+
 

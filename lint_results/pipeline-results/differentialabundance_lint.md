@@ -1,12 +1,12 @@
 # Nextflow lint results
 
-- Generated: 2026-09-09T00:20:08.781793848Z
-- Nextflow version: 26.08.0-edge
+- Generated: 2026-10-08T00:23:09.042588453Z
+- Nextflow version: 26.09.2-edge
 - Summary: 109 warnings
 
 ## :warning: Warnings
 
-- Warning: `conf/modules.config:475:115`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:477:115`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   (gsea_enrichment ? "--enrichment_gene_sets \"" + meta.params.gene_sets_files.split(',').collect { it.split('/')[-1] }.join(',') + "\"" : ''),

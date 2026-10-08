@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "93fba8b93fd34ecf1a8f45fe792a7abd420bdde4",
+  "_repo_commit": "ae6ab25b17d50a9da90e7236115c939f2c453b1e",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -2822,6 +2822,12 @@
   },
   "deeptools_computematrix": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/deeptools/computematrix",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "deeptools_computematrixoperations": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/deeptools/computematrixoperations",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
@@ -11750,6 +11756,12 @@
   },
   "trgt_plot": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/trgt/plot",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "trident_fetch": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/trident/fetch",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

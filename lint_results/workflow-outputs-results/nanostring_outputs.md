@@ -1,17 +1,16 @@
 # Workflow outputs migration: nanostring
 
-- Generated: 2026-06-16T20:31:46.827148+00:00
-- Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
+- Generated: 2026-10-08T00:27:31.179681+00:00
+- Status: :white_check_mark: **pass** — uses only the new `output {}` syntax
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
 
-## Workflow `output {}` blocks
+## Workflow `output {}` block
 
-No top-level `output {}` block found. See the docs for how to add one:
-https://docs.seqera.io/nextflow/tutorials/workflow-outputs
+Found 1 top-level `output {}` block:
+
+- [`main.nf:126`](https://github.com/nf-core/nanostring/blob/dcbd8c062f2104ef449f504838a9e06766d5f2b3/main.nf#L126)
 
 ## Legacy `publishDir` references
 
-Found 7 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
-
-- [`conf/modules.config`](https://github.com/nf-core/nanostring/blob/915f51d2d8892f3c702cdc59e9ab997372375a40/conf/modules.config#L15) — 7 references
+No `publishDir` references found. :tada:

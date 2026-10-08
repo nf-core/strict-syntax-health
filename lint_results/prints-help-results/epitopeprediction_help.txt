@@ -1,10 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.09.1-edge
+ N E X T F L O W   ~  version 26.09.2-edge
 
 Downloading plugin nf-co2footprint@1.0.0
-Launching `./main.nf` [dreamy_caravaggio] revision: c9d3acc699
+Launching `./main.nf` [trusting_leavitt] revision: c9d3acc699
 
 WARN: Unrecognized config option 'co2footprint.traceFile'
 WARN: Unrecognized config option 'co2footprint.summaryFile'
@@ -23,9 +23,9 @@ groovy.lang.MissingPropertyException: No such property: ansiLogObserver for clas
 	at ch.qos.logback.classic.Logger.filterAndLog_0_Or3Plus(Logger.java:388)
 	at ch.qos.logback.classic.Logger.info(Logger.java:589)
 	at nextflow.co2footprint.CO2FootprintFactory.create(CO2FootprintFactory.groovy:100)
-	at nextflow.Session.createObserversV1(Session.groovy:555)
-	at nextflow.Session.init0(Session.groovy:524)
-	at nextflow.Session.init(Session.groovy:486)
+	at nextflow.Session.createObserversV1(Session.groovy:552)
+	at nextflow.Session.init0(Session.groovy:521)
+	at nextflow.Session.init(Session.groovy:483)
 	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:119)
 	at nextflow.cli.CmdRun.run(CmdRun.groovy:449)
 	at nextflow.cli.Launcher.run(Launcher.groovy:534)
@@ -44,9 +44,9 @@ groovy.lang.MissingPropertyException: No such property: ansiLogObserver for clas
 	at ch.qos.logback.classic.Logger.filterAndLog_0_Or3Plus(Logger.java:388)
 	at ch.qos.logback.classic.Logger.info(Logger.java:589)
 	at nextflow.co2footprint.CO2FootprintFactory.create(CO2FootprintFactory.groovy:101)
-	at nextflow.Session.createObserversV1(Session.groovy:555)
-	at nextflow.Session.init0(Session.groovy:524)
-	at nextflow.Session.init(Session.groovy:486)
+	at nextflow.Session.createObserversV1(Session.groovy:552)
+	at nextflow.Session.init0(Session.groovy:521)
+	at nextflow.Session.init(Session.groovy:483)
 	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:119)
 	at nextflow.cli.CmdRun.run(CmdRun.groovy:449)
 	at nextflow.cli.Launcher.run(Launcher.groovy:534)
@@ -69,9 +69,9 @@ groovy.lang.MissingPropertyException: No such property: ansiLogObserver for clas
 	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
 	at nextflow.co2footprint.CO2FootprintConfig.<init>(CO2FootprintConfig.groovy:109)
 	at nextflow.co2footprint.CO2FootprintFactory.create(CO2FootprintFactory.groovy:116)
-	at nextflow.Session.createObserversV1(Session.groovy:555)
-	at nextflow.Session.init0(Session.groovy:524)
-	at nextflow.Session.init(Session.groovy:486)
+	at nextflow.Session.createObserversV1(Session.groovy:552)
+	at nextflow.Session.init0(Session.groovy:521)
+	at nextflow.Session.init(Session.groovy:483)
 	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:119)
 	at nextflow.cli.CmdRun.run(CmdRun.groovy:449)
 	at nextflow.cli.Launcher.run(Launcher.groovy:534)
@@ -96,9 +96,9 @@ groovy.lang.MissingPropertyException: No such property: ansiLogObserver for clas
 	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
 	at nextflow.co2footprint.CO2FootprintConfig.<init>(CO2FootprintConfig.groovy:109)
 	at nextflow.co2footprint.CO2FootprintFactory.create(CO2FootprintFactory.groovy:116)
-	at nextflow.Session.createObserversV1(Session.groovy:555)
-	at nextflow.Session.init0(Session.groovy:524)
-	at nextflow.Session.init(Session.groovy:486)
+	at nextflow.Session.createObserversV1(Session.groovy:552)
+	at nextflow.Session.init0(Session.groovy:521)
+	at nextflow.Session.init(Session.groovy:483)
 	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:119)
 	at nextflow.cli.CmdRun.run(CmdRun.groovy:449)
 	at nextflow.cli.Launcher.run(Launcher.groovy:534)
@@ -160,12 +160,10 @@ Run optimisation
  
 
 External software
-  --netmhc_system               [string]  Specifies the operating system in use (Linux or Darwin). This is only necessary if conda is used. 
- (accepted: linux, darwin) [default: linux]  
-  --netmhcpan_path              [string]  To use the 'netmhcpan' tool, specify the path to the original software tarball for NetMHCpan 4.0 
-here.  
-  --netmhciipan_path            [string]  To use the 'netmhciipan' tool, specify the path to the original software tarball for NetMHCIIpan 3.1 
-here.  
+  --netmhcpan_path              [string]  To use the 'netmhcpan' tool, specify the path to the original Linux software tarball for NetMHCpan 
+4.2 here.  
+  --netmhciipan_path            [string]  To use the 'netmhciipan' tool, specify the path to the original Linux software tarball for 
+NetMHCIIpan 4.3 here.  
   --accept_mixmhcpred_license   [boolean] Confirm that you have read the MixMHCpred and MixMHC2pred licenses and use them for academic 
 non-commercial research only. [default: false]  
 
