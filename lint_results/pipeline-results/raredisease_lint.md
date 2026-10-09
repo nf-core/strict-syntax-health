@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-10-08T00:31:54.404440762Z
+- Generated: 2026-10-09T00:29:39.411608083Z
 - Nextflow version: 26.09.2-edge
 - Summary: 13 warnings
 
@@ -13,21 +13,21 @@
           ^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/call_snv_sentieon/main.nf:66:62`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/call_snv_sentieon/main.nf:65:62`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   def sorted = [vcfs, idxs].transpose().sort { it[0].name }
                                                                ^^
   ```
 
-- Warning: `subworkflows/local/call_snv_sentieon/main.nf:67:48`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/call_snv_sentieon/main.nf:66:48`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   return [meta, sorted.collect { it[0] }, sorted.collect { it[1] }]
                                                  ^^
   ```
 
-- Warning: `subworkflows/local/call_snv_sentieon/main.nf:67:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/call_snv_sentieon/main.nf:66:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   return [meta, sorted.collect { it[0] }, sorted.collect { it[1] }]
@@ -69,28 +69,28 @@
       ^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/raredisease.nf:1073:9`: Variable was declared but not used
+- Warning: `workflows/raredisease.nf:1071:9`: Variable was declared but not used
 
   ```nextflow
           ch_somalier_publish = VCF_EXTRACT_RELATE_SOMALIER.out.publish
           ^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/raredisease.nf:1156:5`: Variable was declared but not used
+- Warning: `workflows/raredisease.nf:1154:5`: Variable was declared but not used
 
   ```nextflow
       ch_multiqc_config        = channel.fromPath(
       ^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/raredisease.nf:1158:5`: Variable was declared but not used
+- Warning: `workflows/raredisease.nf:1156:5`: Variable was declared but not used
 
   ```nextflow
       ch_multiqc_custom_config = val_multiqc_config ?
       ^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/raredisease.nf:1161:5`: Variable was declared but not used
+- Warning: `workflows/raredisease.nf:1159:5`: Variable was declared but not used
 
   ```nextflow
       ch_multiqc_logo          = val_multiqc_logo ?

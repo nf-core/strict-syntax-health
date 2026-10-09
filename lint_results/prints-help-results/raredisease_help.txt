@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.09.2-edge
 
-Launching `./main.nf` [grave_avogadro] revision: 0881f7fa87
+Launching `./main.nf` [nostalgic_ritchie] revision: 59bd8f05c2
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -130,7 +130,6 @@ annotation blocks from the TOML config before running vcfanno
 Requires exclude_alt to be set to true.  
   --scatter_count                     [integer] Number of intervals to split your genome into (used to parallelize annotations) [default: 20] 
  
-  --skip_split_multiallelics          [boolean] Skip the split multiallelics step in SNV calling. 
   --skip_subworkflows                 [string]  Disable specified subworkflows. 
   --skip_tools                        [string]  Disable specified tools. 
   --somalier_sites_vcf                [string]  Path to the somalier sites VCF (bgzipped). 
@@ -164,6 +163,8 @@ mt_subsample_approach is set to fraction [default: 30]
 Variant calling options
   --snv_call_region                   [string]  Restrict SNV calling (DeepVariant or Sentieon) to this region. 
   --cnvnator_binsize                  [integer] Bin size for CNVnator [default: 1000] 
+  --normalize_multiallelics           [boolean] Decompose multiallelic sites into biallelic records during variant calling (Sentieon, DeepVariant) 
+and repeat expansion calling (ExpansionHunter). [default: true]  
   --sentieon_dnascope_pcr_indel_model [string]  Option for selecting the PCR indel model used by Sentieon Dnascope.  (accepted: NONE, HOSTILE, 
 AGGRESSIVE, CONSERVATIVE) [default: CONSERVATIVE]  
   --variant_caller                    [string]  Specifies the variant caller to use - available options are 'deepvariant' and 'sentieon'.  

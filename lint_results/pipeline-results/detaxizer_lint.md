@@ -1,54 +1,26 @@
 # Nextflow lint results
 
-- Generated: 2026-10-07T00:22:07.980926149Z
+- Generated: 2026-10-09T00:24:11.561351338Z
 - Nextflow version: 26.09.2-edge
-- Summary: 21 warnings
+- Summary: 17 warnings
 
 ## :warning: Warnings
 
-- Warning: `subworkflows/local/generate_downstream_samplesheets/main.nf:73:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          .filter{ it.short_reads_1!="" } // MAG doesn't support standalone long reads
-                   ^^
-  ```
-
-- Warning: `subworkflows/local/generate_downstream_samplesheets/main.nf:75:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/generate_downstream_samplesheets/main.nf:85:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               se: it.short_reads_2 ==""
                   ^^
   ```
 
-- Warning: `subworkflows/local/generate_downstream_samplesheets/main.nf:81:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          .filter{ it.long_reads !="" && it.short_reads_1=="" }
-                   ^^
-  ```
-
-- Warning: `subworkflows/local/generate_downstream_samplesheets/main.nf:81:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          .filter{ it.long_reads !="" && it.short_reads_1=="" }
-                                         ^^
-  ```
-
-- Warning: `subworkflows/local/generate_downstream_samplesheets/main.nf:82:169`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          .collect{ log.warn("Standalone long reads are not yet supported by the nf-core/mag pipeline and ARE REMOVED from the samplesheet 'mag-{se,pe}.csv' \n sample: ${it.sample}" )}
-                                                                                                                                                                          ^^
-  ```
-
-- Warning: `subworkflows/local/generate_downstream_samplesheets/main.nf:114:15`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/generate_downstream_samplesheets/main.nf:119:15`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .map{ it.keySet().join(format_sep) }
                 ^^
   ```
 
-- Warning: `subworkflows/local/generate_downstream_samplesheets/main.nf:115:47`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/generate_downstream_samplesheets/main.nf:120:47`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .concat( ch_list_for_samplesheet.map{ it.values().join(format_sep) })

@@ -3,8 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.09.2-edge
 
-Downloading plugin nf-schema@2.7.3
-Launching `./main.nf` [loquacious_bohr] revision: 2a267001cb
+Launching `./main.nf` [agitated_cajal] revision: 100e3c427d
 
 
 ------------------------------------------------------
@@ -75,6 +74,9 @@ entirely.
   --taxcode                     [string]          Taxonomic code of the input data, passed to sativa-epang: bac(teriological), bot(anical), 
 zoo(logical) or vir(ological). Governs its nomenclature-revision suggestions.  (accepted: bac, 
 bot, zoo, vir) [default: bac]  
+  --raxmlng_model               [string]          RAxML-NG model for the reference tree, for example GTR+G4. The default DNA runs model selection 
+first. [default: DNA]  
+  --raxmlng_fast                [boolean]         Build the reference tree with the RAxML-NG fast search. 
   --folds_per_job               [integer]         Number of leave-one-out folds each placement job places. Unset places them all in one job. 
   --outdir                      [string]          The output directory where the results will be saved. You have to use absolute paths to storage on 
 Cloud infrastructure.  

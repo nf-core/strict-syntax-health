@@ -1,6 +1,6 @@
 # Workflow outputs migration: tfactivity
 
-- Generated: 2026-10-08T00:34:32.105968+00:00
+- Generated: 2026-10-09T00:31:50.606443+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,4 +14,4 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 75 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/tfactivity/blob/f3312baf26b3c912ef29bfe1b3c582345725285e/conf/modules.config#L20) — 75 references
+- [`conf/modules.config`](https://github.com/nf-core/tfactivity/blob/5ed1431efdb00188cc0c8eba97137f1cc8044c32/conf/modules.config#L20) — 75 references

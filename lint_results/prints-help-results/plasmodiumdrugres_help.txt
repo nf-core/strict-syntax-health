@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.09.2-edge
 
-Launching `./main.nf` [focused_waddington] revision: f437a008ed
+Launching `./main.nf` [sick_knuth] revision: f437a008ed
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -74,5 +74,5 @@ Generic options
     https://doi.org/10.1038/s41587-020-0439-x
 
 * Software dependencies
-    https://github.com/nf-core/plasmodiumdrugres/blob/master/CITATIONS.md
+    https://github.com/nf-core/plasmodiumdrugres/blob/main/CITATIONS.md
 

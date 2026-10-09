@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.09.2-edge
 
-Launching `./main.nf` [silly_hodgkin] revision: 751979950e
+Launching `./main.nf` [infallible_pare] revision: 4ea2530ab6
 
 
 ------------------------------------------------------
@@ -188,6 +188,7 @@ against the assembly.  (accepted: all, group, own) [default: group]
   --semibin_environment                  [string]  Pre-trained model for SemiBin2 for single sample assemblies  (accepted: human_gut, dog_gut, 
 ocean, soil, cat_gut, human_oral, mouse_gut, pig_gut, built_environment, ...) [default: global]  
   --min_contig_size                      [integer] Minimum contig size to be considered for binning and for bin quality check. [default: 1500] 
+  --max_contig_size                      [integer] Maximum contig size to be considered for binning. By default no limit. 
   --min_length_unbinned_contigs          [integer] Minimal length of contigs that are not part of any bin but treated as individual genome. 
 [default: 1000000]  
   --max_unbinned_contigs                 [integer] Maximal number of contigs that are not part of any bin but treated as individual genome. 
@@ -244,6 +245,11 @@ raw_bins_only]
 progenomes_3, gtdb_95, gtdb_214, test_data) [default: progenomes_2.1]  
   --gunc_save_db                         [boolean] Save the used GUNC reference files downloaded when not using --gunc_db parameter. 
   --generate_bigmag_file                 [boolean] Make a BIgMAG input file including GUNC results. 
+  --dereplicate                          [boolean] Turn on study-wide bin dereplication. 
+  --dereplicate_annotate_all             [boolean] Annotate every bin with Prokka, not just dereplication representatives. 
+  --dereplicate_min_completeness         [number]  Minimum completeness (%) for a bin to be included in dereplication. [default: 50] 
+  --dereplicate_max_contamination        [number]  Maximum contamination (%) for a bin to be included in dereplication. [default: 10] 
+  --dereplicate_ani                      [number]  ANI (%) threshold to cluster bins at during dereplication. [default: 95] 
 
 Ancient DNA assembly
   --ancient_dna                          [boolean] Turn on/off the ancient DNA subworkflow 

@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-07-24T00:28:19.593686316Z
-- Nextflow version: 26.07.0-edge
+- Generated: 2026-10-09T00:30:16.138781637Z
+- Nextflow version: 26.09.2-edge
 - Summary: 3 errors, 351 warnings
 
 ## :x: Errors
@@ -57,7 +57,7 @@
                                                                                                                                                                                                                   ^^
   ```
 
-- Warning: `conf/modules/gatk4_preprocessing/markduplicates.config:64:145`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules/gatk4_preprocessing/markduplicates.config:68:145`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   saveAs: { !(params.skip_tools && params.skip_tools.split(',').contains('markduplicates_report')) ? "markduplicates/${meta.id}/${it}" : null}
@@ -421,147 +421,147 @@
                         ^^
   ```
 
-- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:211:48`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:214:48`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-              ch_cram_for_bam_baserecalibrator = Channel.empty().mix(ch_cram_for_bam_baserecalibrator, input_prepare_recal_convert.cram)
+              ch_cram_for_bam_baserecalibrator = Channel.empty().mix(sncr_cram_from_bam, input_prepare_recal_convert.cram)
                                                  ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:222:48`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:225:48`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               ch_cram_for_bam_baserecalibrator = Channel.empty().mix(ch_sncr_cram_for_restart, cram_skip_splitncigar )
                                                  ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:230:38`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:233:38`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               ch_table_bqsr_no_spark = Channel.empty()
                                        ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:249:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:252:29`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               ch_table_bqsr = Channel.empty().mix(
                               ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:252:58`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:255:58`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               reports = reports.mix(ch_table_bqsr.collect{ meta, table -> table })
                                                            ^^^^
   ```
 
-- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:271:23`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:274:23`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   bam:  it[0].data_type == "bam"
                         ^^
   ```
 
-- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:272:23`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:275:23`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   cram: it[0].data_type == "cram"
                         ^^
   ```
 
-- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:276:67`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:279:67`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               input_only_table = input_recal_convert.bam.map{ meta, bam, bai, table -> [ meta, table ] }
                                                                     ^^^
   ```
 
-- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:276:72`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:279:72`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               input_only_table = input_recal_convert.bam.map{ meta, bam, bai, table -> [ meta, table ] }
                                                                          ^^^
   ```
 
-- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:277:77`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:280:77`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               input_only_bam   = input_recal_convert.bam.map{ meta, bam, bai, table -> [ meta, bam, bai ] }
                                                                               ^^^^^
   ```
 
-- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:283:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:286:30`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               cram_applybqsr = Channel.empty().mix(
                                ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:291:45`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:294:45`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               cram_variant_calling_no_spark = Channel.empty()
                                               ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:306:36`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:309:36`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               cram_variant_calling = Channel.empty().mix(
                                      ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:316:70`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:319:70`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               reports = reports.mix(CRAM_QC_RECAL.out.reports.collect{ meta, report -> report })
                                                                        ^^^^
   ```
 
-- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:328:33`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:331:33`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               csv_recalibration = Channel.empty()
                                   ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:339:36`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:342:36`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               cram_variant_calling = Channel.empty().mix(
                                      ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:341:65`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:344:65`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   input_recal_convert.cram.map{ meta, cram, crai, table -> [ meta, cram, crai ] })
                                                                   ^^^^^
   ```
 
-- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:345:36`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:348:36`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
               cram_variant_calling = Channel.empty().mix(ch_cram_for_bam_baserecalibrator)
                                      ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:354:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:357:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               bam:  it[0].data_type == "bam"
                     ^^
   ```
 
-- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:355:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:358:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               cram: it[0].data_type == "cram"
                     ^^
   ```
 
-- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:364:32`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/bam_gatk_preprocessing/main.nf:367:32`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           cram_variant_calling = Channel.empty().mix(converted, input_variant_calling_convert.cram)

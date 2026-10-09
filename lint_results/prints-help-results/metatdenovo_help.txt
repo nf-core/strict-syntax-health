@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.09.2-edge
 
-Launching `./main.nf` [elated_bartik] revision: e3f25d4155
+Launching `./main.nf` [infallible_aryabhata] revision: e3f25d4155
 
 
 ------------------------------------------------------

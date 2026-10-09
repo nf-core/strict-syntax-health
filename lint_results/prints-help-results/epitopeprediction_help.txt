@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.09.2-edge
 
 Downloading plugin nf-co2footprint@1.0.0
-Launching `./main.nf` [trusting_leavitt] revision: c9d3acc699
+Launching `./main.nf` [furious_chandrasekhar] revision: c9d3acc699
 
 WARN: Unrecognized config option 'co2footprint.traceFile'
 WARN: Unrecognized config option 'co2footprint.summaryFile'
@@ -132,7 +132,7 @@ bgzipped, with a .fai (and .gzi) index alongside. Required for variant (VCF) inp
 --vep_download_cache is set.  
   --vep_cache                   [string]  Path to the VEP offline Ensembl cache. Either the cache directory or a `.tar.gz` of it. Required for 
 variant input unless --vep_download_cache is set.  
-  --vep_cache_version           [integer] VEP cache version, matching the downloaded cache (e.g. 110). Required for variant input. 
+  --vep_cache_version           [integer] VEP cache version, matching the downloaded cache (e.g. 116). Required for variant input. 
   --vep_species                 [string]  VEP species, matching the cache (e.g. homo_sapiens, mus_musculus). Required for variant input. 
  
   --vep_genome                  [string]  VEP assembly, matching the cache (e.g. GRCh38, GRCm39). Required for variant input. 
@@ -142,12 +142,12 @@ variant input unless --vep_download_cache is set.
 Peptide prediction options
   --peptide_col_name            [string]  Specifies the column name in the input file that contains the peptide sequences. [default: 
 sequence]  
-  --min_peptide_length_classI   [integer] Specifies the minimum peptide length. [default: 8] 
-  --max_peptide_length_classI   [integer] Specifies the maximum peptide length. [default: 12] 
+  --min_peptide_length_classI   [integer] Specifies the minimum peptide length for MHC class I peptides. [default: 8] 
+  --max_peptide_length_classI   [integer] Specifies the maximum peptide length for MHC class I peptides. [default: 12] 
   --min_peptide_length_classII  [integer] Specifies the minimum peptide length for MHC class II peptides. [default: 8] 
   --max_peptide_length_classII  [integer] Specifies the maximum peptide length for MHC class II peptides. [default: 25] 
   --tools                       [string]  Specifies the prediction tool(s) to use. [default: mhcnuggets] 
-  --wild_type                   [boolean] Specifies whether wild-type sequences should be predicted. 
+  --wild_type                   [boolean] Also predict the wild-type counterparts of variant peptides. [default: false] 
   --proteome_reference          [string]  Optional reference proteome FASTA for self-filtering variant peptides. 
   --mutation_flanking_aas       [integer] Number of amino acids flanking the mutation on each side in the published variant protein FASTA 
 (`variant_fasta/`); frameshifts run to the new stop. [default: 25]  

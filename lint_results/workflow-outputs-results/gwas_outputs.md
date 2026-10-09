@@ -1,6 +1,6 @@
 # Workflow outputs migration: gwas
 
-- Generated: 2026-10-08T00:25:00.706146+00:00
+- Generated: 2026-10-09T00:26:15.401721+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,4 +14,4 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 3 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/gwas/blob/96c288a2b115317216d9882bfb9636a17180aa51/conf/modules.config#L15) — 3 references
+- [`conf/modules.config`](https://github.com/nf-core/gwas/blob/b8c3ea9deb9fee6650410d428d43be36bb4a339a/conf/modules.config#L15) — 3 references

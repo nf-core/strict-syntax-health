@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.09.1-edge
+ N E X T F L O W   ~  version 26.09.2-edge
 
-Launching `./main.nf` [clever_fibonacci] revision: 9321a188c3
+Launching `./main.nf` [peaceful_crick] revision: b5d6a14df6
 
 
 ------------------------------------------------------
@@ -78,6 +78,12 @@ trimmed [default: 0.5]
   --save_hmmsearch_filtered_fasta                [boolean] Save family fasta files after recruiting sequences with hmmsearch 
 
 Redundancy removal parameters
+  --family_redundancy_removal                    [string]  Which families take part in the removal of between-family redundancy (hmmsearch of family 
+representatives against family models).  (accepted: all, created_only, none) [default: all]  
+  --family_merging                               [string]  Which families can be merged with similar (but not redundant) families.  (accepted: all, 
+created_only, none) [default: all]  
+  --merged_family_name                           [string]  Name of a merged family that holds updated families.  (accepted: existing, new) [default: 
+existing]  
   --hmmsearch_family_redundancy_length_threshold [number]  hmmsearch minimum length percentage filter of hit env vs query length, for redundant family removal 
 [default: 1.0]  
   --hmmsearch_family_similarity_length_threshold [number]  hmmsearch minimum length percentage of hit env vs query length, to flag and report similar families 
@@ -89,7 +95,7 @@ Redundancy removal parameters
   --cluster_cov_mode_for_redundancy              [integer] mmseqs parameter for coverage mode: 0 for both, 1 for target and 2 for query sequence [default: 
 0]  
   --save_non_redundant_seqs_fasta                [boolean] Save the final family fasta files with sequence redundancy removed [default: true] 
- !! Hiding 28 param(s), use the `--showHidden` parameter to show them !!
+ !! Hiding 26 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
 
 * The pipeline

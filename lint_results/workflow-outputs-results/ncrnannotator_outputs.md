@@ -1,6 +1,6 @@
 # Workflow outputs migration: ncrnannotator
 
-- Generated: 2026-10-08T00:27:44.267071+00:00
+- Generated: 2026-10-09T00:28:17.715691+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,4 +14,4 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 6 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/ncrnannotator/blob/5689b0f781437183a882ce3217d515e7d8393432/conf/modules.config#L15) — 6 references
+- [`conf/modules.config`](https://github.com/nf-core/ncrnannotator/blob/b3e953bfbde0d6fb1c0a3b9e0ab63d05f0584ab7/conf/modules.config#L15) — 6 references

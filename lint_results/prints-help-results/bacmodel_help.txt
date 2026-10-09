@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.09.2-edge
 
-Launching `./main.nf` [shrivelled_aryabhata] revision: 7c85f765ae
+Launching `./main.nf` [disturbed_fermi] revision: 6bde8ed321
 
 WARN: Unrecognized config option 'manifest.keywords'
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
@@ -39,45 +39,54 @@ Generic options
 
 Annotation options
   --annotation_tool           [string]  Tool to use for genome annotation  (accepted: prokka, bakta) [default: prokka] 
-  --baktadb                   [string]  Directory to cache the Bakta database in (only used when `annotation_tool`='bakta'). Downloaded 
-automatically on first use via Nextflow's storeDir and reused on subsequent runs, so most users 
-never need to set this. [default: assets/bakta_db]  
-  --baktadb_type              [string]  Bakta database type to download  (accepted: light, full) [default: light] 
+  --bakta_db                  [string]  Directory containing a pre-downloaded Bakta database, or one published by a previous run of this 
+pipeline (only used when `annotation_tool`='bakta'). If unset, the database is downloaded 
+automatically into `<outdir>/databases/bakta` on first use and reused from there by later runs that 
+point `--bakta_db` at the same `<outdir>/databases/bakta`.  
+  --bakta_db_type             [string]  Bakta database type to download  (accepted: light, full) [default: light] 
   --min_contig_length         [integer] Minimum contig length for annotation and analysis [default: 200] 
 
 Database options
-  --pfamdb                    [string] Directory to cache the Pfam database in (only used when `skip_traitar`=false). Downloaded 
-automatically on first use via Nextflow's storeDir and reused on subsequent runs, so most users 
-never need to set this. [default: assets/pfam_db]  
+  --pfamdb                    [string] Directory containing a pre-downloaded Pfam database, or one published by a previous run of this 
+pipeline (only used when `skip_traitar`=false). If unset, the database is downloaded automatically 
+into `<outdir>/databases/pfam` on first use and reused from there by later runs that point 
+`--pfamdb` at the same `<outdir>/databases/pfam`.  
 
 Analysis options
   --skip_macsyfinder          [boolean] Skip MacSyFinder macromolecular systems detection [default: false] 
   --macsyfinder_models        [string]  MacSyFinder models to use (TXSS for Type III/IV/VI secretion systems) [default: TXSS] 
-  --macsyfinder_db_type       [string]  MacSyFinder --db-type: 'unordered' for MAGs/draft assemblies with unreliable gene order (default, 
-most permissive), 'ordered_replicon' for a single complete/nearly-complete genome (enables 
-synteny-aware detection), or 'gembase' for multiple complete replicons in one gembase-formatted 
+  --macsyfinder_db_type       [string]  MacSyFinder --db-type: `unordered` for MAGs/draft assemblies with unreliable gene order (default, 
+most permissive), `ordered_replicon` for a single complete/nearly-complete genome (enables 
+synteny-aware detection), or `gembase` for multiple complete replicons in one gembase-formatted 
 database  (accepted: unordered, ordered_replicon, gembase) [default: unordered]  
-  --macsyfinder_db            [string]  Directory to cache downloaded MacSyFinder models in (one subdirectory per `macsyfinder_models` 
-value). Downloaded automatically on first use via Nextflow's storeDir and reused on subsequent runs. 
-[default: assets/macsyfinder_db]  
+  --macsyfinder_db            [string]  Directory containing pre-downloaded MacSyFinder models, or ones published by a previous run of this 
+pipeline (one subdirectory per `macsyfinder_models` value). If unset, models are downloaded 
+automatically into `<outdir>/databases/macsyfinder` on first use and reused from there by later runs 
+that point `--macsyfinder_db` at the same `<outdir>/databases/macsyfinder`.  
   --skip_traitar              [boolean] Skip TRAITAR phenotype prediction [default: false] 
   --skip_carveme              [boolean] Skip CarveMe genome-scale metabolic reconstruction [default: false] 
-  --carveme_mediadb           [string]  Path to CarveMe media database TSV file (columns: medium, description, compound, name). If not 
-provided, uses CarveMe's default media database. See assets/medium_carveme_mediadb_example.tsv for 
-an example.  
+  --carveme_mediadb           [string]  Path to CarveMe media database TSV file (columns: `medium, description, compound, name`). If not 
+provided, uses CarveMe's default media database. See [example 
+file](../assets/medium_carveme_mediadb_example.tsv).  
   --skip_gapseq               [boolean] Skip Gapseq pathway analysis and metabolic modeling [default: true] 
-  --gapseq_doall_args         [string]  Custom arguments for the simplified 'gapseq doall' search step (default: '-b 200 -A diamond'). Only 
-used in the default doall workflow - ignored if any of the 
-gapseq_find_args/gapseq_findtransport_args/gapseq_draft_args/gapseq_medium_args/gapseq_fill_args 
-below are set, since that switches to the custom/stepwise workflow instead.  
-  --gapseq_find_args          [string]  Custom arguments for 'gapseq find' (e.g., '-b 200 -A diamond') 
-  --gapseq_findtransport_args [string]  Custom arguments for 'gapseq find-transport' (e.g., '-b 200') 
-  --gapseq_draft_args         [string]  Custom arguments for 'gapseq draft' (e.g., '-u 200') 
-  --gapseq_medium_args        [string]  Custom arguments for 'gapseq medium' 
-  --gapseq_fill_args          [string]  Custom arguments for 'gapseq fill' (e.g., '-b 100') 
+  --gapseq_db                 [string]  Directory containing a pre-downloaded gapseq reference sequence database (a 'Bacteria' subdirectory, 
+as produced by `gapseq update-sequences -D <dir>`). If present, the live Zenodo download is skipped 
+- set this to a pre-downloaded copy if your compute nodes lack outbound internet access to Zenodo. 
+If unset, defaults to `<outdir>/databases/gapseq`.  
+  --gapseq_doall_args         [string]  Custom arguments for the simplified `gapseq doall` search step. Only used in the default doall 
+workflow - ignored if any of the `gapseq_find_args`, `gapseq_findtransport_args`, 
+`gapseq_draft_args`, `gapseq_medium_args`, or `gapseq_fill_args` below are set, since that switches 
+to the custom/stepwise workflow instead. [default: -b 200 -A diamond]  
+  --gapseq_find_args          [string]  Custom arguments for 'gapseq find' - pathway prediction (default: '-b 200 -A diamond') 
+  --gapseq_findtransport_args [string]  Custom arguments for 'gapseq find-transport' - transporter prediction (default: '-b 200') 
+  --gapseq_draft_args         [string]  Custom arguments for 'gapseq draft' - draft model construction (default: none) 
+  --gapseq_medium_args        [string]  Custom arguments for 'gapseq medium' - add/remove specific compounds on top of the predicted medium, 
+e.g. '-c "cpd00007:0"' to remove oxygen (default: none; ignored for samples with their own 
+medium_gapseq_csv file)  
+  --gapseq_fill_args          [string]  Custom arguments for 'gapseq fill' - gap-filling (default: none) 
   --skip_memote               [boolean] Skip MEMOTE metabolic model quality evaluation (only runs when skip_gapseq=false or 
 skip_carveme=false) [default: true]  
- !! Hiding 15 param(s), use the `--showHidden` parameter to show them !!
+ !! Hiding 14 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
 
 * The nf-core framework

@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-10-08T00:21:02.102257553Z
+- Generated: 2026-10-09T00:22:58.358205602Z
 - Nextflow version: 26.09.2-edge
-- Summary: 59 warnings
+- Summary: 56 warnings
 
 ## :warning: Warnings
 
@@ -174,11 +174,11 @@
                       ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/bacmodel_annotation/main.nf:57:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/bacmodel_annotation/main.nf:57:27`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-              ch_baktadb = Channel.fromPath(baktadb_cached, checkIfExists: true)
-                           ^^^^^^^
+              ch_bakta_db = Channel.fromPath(bakta_db_cached, checkIfExists: true)
+                            ^^^^^^^
   ```
 
 - Warning: `subworkflows/local/bacmodel_annotation/main.nf:81:37`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -349,72 +349,51 @@
                     ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/gapseq_workflow/main.nf:70:60`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/gapseq_workflow/main.nf:54:20`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+          ch_seqdb = Channel.fromPath(options.gapseq_db, checkIfExists: true).first()
+                     ^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/gapseq_workflow/main.nf:80:60`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_find_input = ch_gapseq_input.map { meta, fasta, medium ->
                                                              ^^^^^^
   ```
 
-- Warning: `subworkflows/local/gapseq_workflow/main.nf:76:69`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/gapseq_workflow/main.nf:86:69`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_findtransport_input = ch_gapseq_input.map { meta, fasta, medium ->
                                                                       ^^^^^^
   ```
 
-- Warning: `subworkflows/local/gapseq_workflow/main.nf:97:47`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/gapseq_workflow/main.nf:107:47`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .join(ch_gapseq_input.map { meta, fasta, medium -> [ meta, medium ] }, by: 0)
                                                 ^^^^^
   ```
 
-- Warning: `subworkflows/local/gapseq_workflow/main.nf:135:45`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/gapseq_workflow/main.nf:145:45`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def pathways_tbl = files.find { it.name.contains('Pathways') }
                                               ^^
   ```
 
-- Warning: `subworkflows/local/gapseq_workflow/main.nf:140:46`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/gapseq_workflow/main.nf:150:46`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def transport_tbl = files.find { it.name.contains('Transporter') }
                                                ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_bacmodel_pipeline/main.nf:30:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      monochrome_logs   // boolean: Do not use coloured log outputs
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_bacmodel_pipeline/main.nf:33:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      input             //  string: Path to input samplesheet
-      ^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_bacmodel_pipeline/main.nf:131:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      hook_url        //  string: hook URL for notifications
-      ^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_bacmodel_pipeline/main.nf:179:69`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_bacmodel_pipeline/main.nf:185:69`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       def used = renamed_params.keySet().findAll { params.containsKey(it) }
                                                                       ^^
-  ```
-
-- Warning: `workflows/bacmodel.nf:57:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      def topic_versions = Channel.topic("versions")
-                           ^^^^^^^
   ```
