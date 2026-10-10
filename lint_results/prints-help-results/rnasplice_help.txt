@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.09.2-edge
 
-Launching `./main.nf` [admiring_shaw] revision: 36e3597988
+Launching `./main.nf` [reverent_keller] revision: bf8c27e3a9
 
 Parameter `input` is required but no value was provided
 

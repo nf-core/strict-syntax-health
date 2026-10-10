@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.09.2-edge
 
-Launching `./main.nf` [nostalgic_ritchie] revision: 59bd8f05c2
+Launching `./main.nf` [stoic_ardinghelli] revision: 6ed99c5295
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -134,6 +134,7 @@ Requires exclude_alt to be set to true.
   --skip_tools                        [string]  Disable specified tools. 
   --somalier_sites_vcf                [string]  Path to the somalier sites VCF (bgzipped). 
   --sv_freq_filter_expression         [string]  bcftools -e expression to filter SVs by population frequency after SVDB query. 
+  --sv_size_threshold                 [integer] Filter out SVs larger than this value in bp, after calling/merging and before annotation. 
 
 Alignment options
   --aligner                           [string]  Specifies the alignment algorithm to use - available options are 'bwamem2', 'bwa', 'bwameme' and 

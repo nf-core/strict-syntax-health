@@ -1,6 +1,6 @@
 # Workflow outputs migration: epitopeprediction
 
-- Generated: 2026-10-09T00:25:01.373813+00:00
+- Generated: 2026-10-10T00:22:09.370994+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,4 +14,4 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 28 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/epitopeprediction/blob/dd17d20db66285cd5f0f4b56a667e7506e4443b6/conf/modules.config#L15) — 28 references
+- [`conf/modules.config`](https://github.com/nf-core/epitopeprediction/blob/6d96b3045824bb2b9b12ea73c796cd850418548a/conf/modules.config#L15) — 28 references

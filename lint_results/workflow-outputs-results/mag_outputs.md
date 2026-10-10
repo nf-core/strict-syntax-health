@@ -1,6 +1,6 @@
 # Workflow outputs migration: mag
 
-- Generated: 2026-10-09T00:26:40.130714+00:00
+- Generated: 2026-10-10T00:22:49.789455+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,5 +14,5 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 77 `publishDir` references across 2 files that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/mag/blob/f090a400ec426dcdd0c59c859b1a646a9dd3e4fc/conf/modules.config#L16) — 76 references
-- [`modules/nf-core/dastool/dastool/tests/nextflow.config`](https://github.com/nf-core/mag/blob/f090a400ec426dcdd0c59c859b1a646a9dd3e4fc/modules/nf-core/dastool/dastool/tests/nextflow.config#L3) — 1 reference
+- [`conf/modules.config`](https://github.com/nf-core/mag/blob/264a7fe2169773de9b417ee660143e42692bd9f6/conf/modules.config#L16) — 76 references
+- [`modules/nf-core/dastool/dastool/tests/nextflow.config`](https://github.com/nf-core/mag/blob/264a7fe2169773de9b417ee660143e42692bd9f6/modules/nf-core/dastool/dastool/tests/nextflow.config#L3) — 1 reference

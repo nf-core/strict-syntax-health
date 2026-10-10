@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.08.0-edge
+ N E X T F L O W   ~  version 26.09.2-edge
 
-Launching `./main.nf` [loving_mayer] revision: 8e72056edd
+Launching `./main.nf` [loquacious_ramanujan] revision: 8e72056edd
 
 
 ------------------------------------------------------
@@ -131,16 +131,17 @@ Baysor
   --force_2d                      [boolean] Baysor `force_2d` parameter [default: true] 
 
 Cellpose
-  --use_cellpose                  [boolean] Whether to run cellpose segmentation 
-  --cellpose_diameter             [number]  Cellpose `diameter` parameter 
-  --cellpose_channels             [string]  Channel name(s) to use for cellpose segmentation. If multiple, separate by space, comma or pipe 
+  --use_cellpose                  [boolean]         Whether to run cellpose segmentation 
+  --cellpose_diameter             [number]          Cellpose `diameter` parameter 
+  --cellpose_channels             [string]          Channel name(s) to use for cellpose segmentation. If multiple, separate by space, comma or pipe 
 characters.  
-  --flow_threshold                [number]  Cellpose `flow_threshold` parameter 
-  --cellprob_threshold            [number]  Cellpose `cellprob_threshold` parameter 
-  --cellpose_model_type           [string]  Cellpose model type to use 
-  --pretrained_model              [string]  Cellpose `pretrained_model` parameter 
-  --cellpose_use_gpu              [boolean] Whether to use GPU for Cellpose segmentation 
-  --cellpose_kwargs               [string]  Additional cellpose parameters as a python dict string 
+  --flow_threshold                [number]          Cellpose `flow_threshold` parameter 
+  --cellprob_threshold            [number]          Cellpose `cellprob_threshold` parameter 
+  --cellpose_model_type           [string]          Cellpose model type to use 
+  --pretrained_model              [string]          Cellpose `pretrained_model` parameter 
+  --cellpose_version              [integer, string] Cellpose major version (3 or 4). Defaults to Cellpose v3. The 'gpu' profile selects the pytorch/CUDA 
+image of the chosen version.  (accepted: 3, 4, 3, 4)  
+  --cellpose_kwargs               [string]          Additional cellpose parameters as a python dict string 
 
 Stardist
   --use_stardist                  [boolean] Whether to run stardist segmentation 

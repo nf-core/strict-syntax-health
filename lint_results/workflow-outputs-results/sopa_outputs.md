@@ -1,6 +1,6 @@
 # Workflow outputs migration: sopa
 
-- Generated: 2026-09-17T00:23:40.112724+00:00
+- Generated: 2026-10-10T00:25:31.375004+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,7 +14,7 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 4 `publishDir` references across 4 files that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/sopa/blob/01b7aef478f32a199c57b79f482897c88422130e/conf/modules.config#L16) — 1 reference
-- [`modules/local/explorer/main.nf`](https://github.com/nf-core/sopa/blob/01b7aef478f32a199c57b79f482897c88422130e/modules/local/explorer/main.nf#L10) — 1 reference
-- [`modules/local/explorer_raw/main.nf`](https://github.com/nf-core/sopa/blob/01b7aef478f32a199c57b79f482897c88422130e/modules/local/explorer_raw/main.nf#L12) — 1 reference
-- [`modules/local/report/main.nf`](https://github.com/nf-core/sopa/blob/01b7aef478f32a199c57b79f482897c88422130e/modules/local/report/main.nf#L10) — 1 reference
+- [`conf/modules.config`](https://github.com/nf-core/sopa/blob/df5d3dee3086477d12a299a916bff096fd4d6537/conf/modules.config#L16) — 1 reference
+- [`modules/local/explorer/main.nf`](https://github.com/nf-core/sopa/blob/df5d3dee3086477d12a299a916bff096fd4d6537/modules/local/explorer/main.nf#L10) — 1 reference
+- [`modules/local/explorer_raw/main.nf`](https://github.com/nf-core/sopa/blob/df5d3dee3086477d12a299a916bff096fd4d6537/modules/local/explorer_raw/main.nf#L12) — 1 reference
+- [`modules/local/report/main.nf`](https://github.com/nf-core/sopa/blob/df5d3dee3086477d12a299a916bff096fd4d6537/modules/local/report/main.nf#L10) — 1 reference

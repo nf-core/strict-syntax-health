@@ -1,17 +1,10 @@
 # Nextflow lint results
 
-- Generated: 2026-10-09T00:28:33.011132928Z
+- Generated: 2026-10-10T00:23:29.485944762Z
 - Nextflow version: 26.09.2-edge
-- Summary: 11 errors, 38 warnings
+- Summary: 10 errors, 38 warnings
 
 ## :x: Errors
-
-- Error: `conf/modules.config:280:18`: Unexpected character: '`'
-
-  ```nextflow
-      cpus       = `nproc --all`.trim().toInteger() // all
-                   ^
-  ```
 
 - Error: `modules/local/hmmibdrs/main.nf:32:9`: `bam` is not defined
 

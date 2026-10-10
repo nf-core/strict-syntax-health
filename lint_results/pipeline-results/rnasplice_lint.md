@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-10-09T00:30:26.949603Z
+- Generated: 2026-10-10T00:24:41.924115141Z
 - Nextflow version: 26.09.2-edge
-- Summary: 12 warnings
+- Summary: 13 warnings
 
 ## :warning: Warnings
 
@@ -39,6 +39,13 @@
   ```nextflow
               saveAs: { filename -> null }
                         ^^^^^^^^
+  ```
+
+- Warning: `modules/local/misopysettings/main.nf:25:9`: Variable was declared but not used
+
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^
   ```
 
 - Warning: `modules/local/misopysettings/main.nf:26:9`: Variable was declared but not used
@@ -83,7 +90,7 @@
                   ^^
   ```
 
-- Warning: `workflows/rnasplice.nf:178:9`: Variable was declared but not used
+- Warning: `workflows/rnasplice.nf:182:9`: Variable was declared but not used
 
   ```nextflow
           ch_transcriptome_bam_index = BAM_SORT_STATS_SAMTOOLS.out.index

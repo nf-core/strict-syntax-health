@@ -1,52 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-10-08T00:20:21.467203170Z
+- Generated: 2026-10-10T00:21:00.984879178Z
 - Nextflow version: 26.09.2-edge
-- Summary: 6 errors, 21 warnings
-
-## :x: Errors
-
-- Error: `nextflow.config:267:40`: `manifest` is not defined
-
-  ```nextflow
-  \033[0;35m  nf-core/alleleexpression ${manifest.version}\033[0m
-                                         ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:270:26`: `manifest` is not defined
-
-  ```nextflow
-          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
-                           ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:270:69`: `manifest` is not defined
-
-  ```nextflow
-          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
-                                                                      ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:270:186`: `manifest` is not defined
-
-  ```nextflow
-          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
-                                                                                                                                                                                           ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:279:22`: `validation` is not defined
-
-  ```nextflow
-          beforeText = validation.help.beforeText
-                       ^^^^^^^^^^
-  ```
-
-- Error: `nextflow.config:280:21`: `validation` is not defined
-
-  ```nextflow
-          afterText = validation.help.afterText
-                      ^^^^^^^^^^
-  ```
+- Summary: 20 warnings
 
 ## :warning: Warnings
 
@@ -90,13 +46,6 @@
   ```nextflow
       meta.single_end ? [reads].flatten().each{reads1 << it} : reads.eachWithIndex{ v, ix -> ( ix & 1 ? reads2 : reads1) << v }
                                                          ^^
-  ```
-
-- Warning: `nextflow.config:270:129`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
-                                                                                                                                  ^^
   ```
 
 - Warning: `workflows/alleleexpression.nf:38:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead

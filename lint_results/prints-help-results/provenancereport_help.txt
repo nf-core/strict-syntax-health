@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.09.2-edge
 
 Downloading plugin nf-prov@1.7.0
-Launching `./main.nf` [nasty_planck] revision: d3a9a59cee
+Launching `./main.nf` [deadly_caravaggio] revision: 0faf596e75
 
 
 ------------------------------------------------------

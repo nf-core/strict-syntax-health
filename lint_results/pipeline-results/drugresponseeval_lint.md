@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-09-03T00:20:21.576310710Z
-- Nextflow version: 26.08.0-edge
-- Summary: 26 warnings
+- Generated: 2026-10-10T00:21:57.755132289Z
+- Nextflow version: 26.09.2-edge
+- Summary: 25 warnings
 
 ## :warning: Warnings
 
@@ -55,35 +55,35 @@
                         ^^^^^^^^
   ```
 
-- Warning: `conf/modules.config:134:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:122:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               saveAs: { filename -> null }
                         ^^^^^^^^
   ```
 
-- Warning: `conf/modules.config:161:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:138:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               saveAs: { filename -> null }
                         ^^^^^^^^
   ```
 
-- Warning: `conf/modules.config:209:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:162:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               saveAs: { filename -> null }
                         ^^^^^^^^
   ```
 
-- Warning: `conf/modules.config:217:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:170:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               saveAs: { filename -> null }
                         ^^^^^^^^
   ```
 
-- Warning: `conf/modules.config:244:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:186:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               saveAs: { filename -> null }
@@ -118,21 +118,14 @@
                                                                                                                          ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/model_testing/main.nf:142:36`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-                              .map { model_class, model_name, train_ds, val_ds, es_ds ->
-                                     ^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/model_testing/main.nf:162:47`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/model_testing/main.nf:161:47`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                               .map{ model_name, final_constant, test_mode, best_hpam_combi ->
                                                 ^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/model_testing/main.nf:175:49`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/model_testing/main.nf:174:49`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                           .map{ test_mode, model, pred_file -> [test_mode, model.split("\\.")[0]] }
@@ -160,21 +153,21 @@
                                             ^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/run_cv/main.nf:128:16`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/run_cv/main.nf:132:16`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { model_class, model_name, hpam_combis -> [model_name, hpam_combis] }
                  ^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/run_cv/main.nf:136:16`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/run_cv/main.nf:140:16`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { model_class, model_name, test_mode, split -> [model_name, test_mode, split] }
                  ^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_drugresponseeval_pipeline/main.nf:136:58`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_drugresponseeval_pipeline/main.nf:139:58`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_models = channel.from(models.split(',').collect { it.trim() })

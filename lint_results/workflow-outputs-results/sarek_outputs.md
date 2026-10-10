@@ -1,6 +1,6 @@
 # Workflow outputs migration: sarek
 
-- Generated: 2026-10-03T00:25:27.500356+00:00
+- Generated: 2026-10-10T00:25:09.740380+00:00
 - Status: :warning: **warn** — uses the new `output {}` syntax but still has legacy `publishDir` references to migrate
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -9,50 +9,50 @@ This report tracks migration from the legacy `publishDir` directive to the new [
 
 Found 1 top-level `output {}` block:
 
-- [`main.nf:387`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/main.nf#L387)
+- [`main.nf:387`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/main.nf#L387)
 
 ## Legacy `publishDir` references
 
-Found 195 `publishDir` references across 41 files that should be migrated to the workflow `output {}` block:
+Found 196 `publishDir` references across 41 files that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules/varlociraptor.config`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/conf/modules/varlociraptor.config#L22) — 24 references
-- [`conf/modules/prepare_genome.config`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/conf/modules/prepare_genome.config#L18) — 19 references
-- [`conf/modules/post_variant_calling.config`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/conf/modules/post_variant_calling.config#L24) — 10 references
-- [`conf/modules/alignment_to_fastq.config`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/conf/modules/alignment_to_fastq.config#L21) — 8 references
-- [`conf/modules/joint_germline.config`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/conf/modules/joint_germline.config#L23) — 8 references
-- [`conf/modules/modules.config`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/conf/modules/modules.config#L19) — 8 references
-- [`conf/modules/mutect2.config`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/conf/modules/mutect2.config#L22) — 8 references
-- [`conf/modules/umi.config`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/conf/modules/umi.config#L22) — 8 references
-- [`conf/modules/annotate.config`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/conf/modules/annotate.config#L22) — 7 references
-- [`conf/modules/sentieon_joint_germline.config`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/conf/modules/sentieon_joint_germline.config#L21) — 7 references
-- [`conf/modules/aligner_parabricks.config`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/conf/modules/aligner_parabricks.config#L27) — 6 references
-- [`conf/modules/freebayes.config`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/conf/modules/freebayes.config#L20) — 6 references
-- [`conf/modules/markduplicates.config`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/conf/modules/markduplicates.config#L21) — 6 references
-- [`conf/modules/controlfreec.config`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/conf/modules/controlfreec.config#L19) — 5 references
-- [`conf/modules/haplotypecaller.config`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/conf/modules/haplotypecaller.config#L25) — 5 references
-- [`conf/modules/recalibrate.config`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/conf/modules/recalibrate.config#L24) — 5 references
-- [`conf/modules/cnvkit.config`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/conf/modules/cnvkit.config#L21) — 4 references
-- [`conf/modules/mpileup.config`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/conf/modules/mpileup.config#L19) — 4 references
-- [`conf/modules/sentieon_dnascope.config`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/conf/modules/sentieon_dnascope.config#L21) — 4 references
-- [`conf/modules/sentieon_haplotyper.config`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/conf/modules/sentieon_haplotyper.config#L21) — 4 references
-- [`conf/modules/muse.config`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/conf/modules/muse.config#L22) — 3 references
-- [`conf/modules/prepare_intervals.config`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/conf/modules/prepare_intervals.config#L24) — 3 references
-- [`conf/modules/tiddit.config`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/conf/modules/tiddit.config#L22) — 3 references
-- [`conf/modules/aligner.config`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/conf/modules/aligner.config#L37) — 2 references
-- [`conf/modules/deepvariant.config`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/conf/modules/deepvariant.config#L25) — 2 references
-- [`conf/modules/download_cache.config`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/conf/modules/download_cache.config#L21) — 2 references
-- [`conf/modules/indexcov.config`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/conf/modules/indexcov.config#L8) — 2 references
-- [`conf/modules/lofreq.config`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/conf/modules/lofreq.config#L22) — 2 references
-- [`conf/modules/ngscheckmate.config`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/conf/modules/ngscheckmate.config#L8) — 2 references
-- [`conf/modules/parabricks_deepvariant.config`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/conf/modules/parabricks_deepvariant.config#L21) — 2 references
-- [`conf/modules/parabricks_haplotypecaller.config`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/conf/modules/parabricks_haplotypecaller.config#L24) — 2 references
-- [`conf/modules/prepare_recalibration.config`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/conf/modules/prepare_recalibration.config#L20) — 2 references
-- [`conf/modules/sentieon_dedup.config`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/conf/modules/sentieon_dedup.config#L32) — 2 references
-- [`conf/modules/sentieon_tnscope.config`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/conf/modules/sentieon_tnscope.config#L24) — 2 references
-- [`conf/modules/strelka.config`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/conf/modules/strelka.config#L22) — 2 references
-- [`conf/modules/ascat.config`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/conf/modules/ascat.config#L31) — 1 reference
-- [`conf/modules/contamination.config`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/conf/modules/contamination.config#L9) — 1 reference
-- [`conf/modules/manta.config`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/conf/modules/manta.config#L20) — 1 reference
-- [`conf/modules/msisensor2.config`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/conf/modules/msisensor2.config#L19) — 1 reference
-- [`conf/modules/msisensorpro.config`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/conf/modules/msisensorpro.config#L18) — 1 reference
-- [`conf/modules/trimming.config`](https://github.com/nf-core/sarek/blob/6a84ec15d4e87252b61be91e51e785c1318acdfd/conf/modules/trimming.config#L35) — 1 reference
+- [`conf/modules/varlociraptor.config`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/conf/modules/varlociraptor.config#L22) — 24 references
+- [`conf/modules/prepare_genome.config`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/conf/modules/prepare_genome.config#L18) — 19 references
+- [`conf/modules/post_variant_calling.config`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/conf/modules/post_variant_calling.config#L24) — 10 references
+- [`conf/modules/alignment_to_fastq.config`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/conf/modules/alignment_to_fastq.config#L21) — 8 references
+- [`conf/modules/joint_germline.config`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/conf/modules/joint_germline.config#L23) — 8 references
+- [`conf/modules/modules.config`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/conf/modules/modules.config#L19) — 8 references
+- [`conf/modules/mutect2.config`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/conf/modules/mutect2.config#L22) — 8 references
+- [`conf/modules/umi.config`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/conf/modules/umi.config#L22) — 8 references
+- [`conf/modules/annotate.config`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/conf/modules/annotate.config#L22) — 7 references
+- [`conf/modules/sentieon_joint_germline.config`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/conf/modules/sentieon_joint_germline.config#L21) — 7 references
+- [`conf/modules/aligner_parabricks.config`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/conf/modules/aligner_parabricks.config#L27) — 6 references
+- [`conf/modules/freebayes.config`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/conf/modules/freebayes.config#L20) — 6 references
+- [`conf/modules/markduplicates.config`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/conf/modules/markduplicates.config#L21) — 6 references
+- [`conf/modules/recalibrate.config`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/conf/modules/recalibrate.config#L24) — 6 references
+- [`conf/modules/controlfreec.config`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/conf/modules/controlfreec.config#L19) — 5 references
+- [`conf/modules/haplotypecaller.config`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/conf/modules/haplotypecaller.config#L25) — 5 references
+- [`conf/modules/cnvkit.config`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/conf/modules/cnvkit.config#L21) — 4 references
+- [`conf/modules/mpileup.config`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/conf/modules/mpileup.config#L19) — 4 references
+- [`conf/modules/sentieon_dnascope.config`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/conf/modules/sentieon_dnascope.config#L21) — 4 references
+- [`conf/modules/sentieon_haplotyper.config`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/conf/modules/sentieon_haplotyper.config#L21) — 4 references
+- [`conf/modules/muse.config`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/conf/modules/muse.config#L22) — 3 references
+- [`conf/modules/prepare_intervals.config`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/conf/modules/prepare_intervals.config#L24) — 3 references
+- [`conf/modules/tiddit.config`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/conf/modules/tiddit.config#L22) — 3 references
+- [`conf/modules/aligner.config`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/conf/modules/aligner.config#L37) — 2 references
+- [`conf/modules/deepvariant.config`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/conf/modules/deepvariant.config#L25) — 2 references
+- [`conf/modules/download_cache.config`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/conf/modules/download_cache.config#L21) — 2 references
+- [`conf/modules/indexcov.config`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/conf/modules/indexcov.config#L8) — 2 references
+- [`conf/modules/lofreq.config`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/conf/modules/lofreq.config#L22) — 2 references
+- [`conf/modules/ngscheckmate.config`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/conf/modules/ngscheckmate.config#L8) — 2 references
+- [`conf/modules/parabricks_deepvariant.config`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/conf/modules/parabricks_deepvariant.config#L21) — 2 references
+- [`conf/modules/parabricks_haplotypecaller.config`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/conf/modules/parabricks_haplotypecaller.config#L24) — 2 references
+- [`conf/modules/prepare_recalibration.config`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/conf/modules/prepare_recalibration.config#L20) — 2 references
+- [`conf/modules/sentieon_dedup.config`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/conf/modules/sentieon_dedup.config#L32) — 2 references
+- [`conf/modules/sentieon_tnscope.config`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/conf/modules/sentieon_tnscope.config#L24) — 2 references
+- [`conf/modules/strelka.config`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/conf/modules/strelka.config#L22) — 2 references
+- [`conf/modules/ascat.config`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/conf/modules/ascat.config#L31) — 1 reference
+- [`conf/modules/contamination.config`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/conf/modules/contamination.config#L9) — 1 reference
+- [`conf/modules/manta.config`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/conf/modules/manta.config#L20) — 1 reference
+- [`conf/modules/msisensor2.config`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/conf/modules/msisensor2.config#L19) — 1 reference
+- [`conf/modules/msisensorpro.config`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/conf/modules/msisensorpro.config#L18) — 1 reference
+- [`conf/modules/trimming.config`](https://github.com/nf-core/sarek/blob/34cb9bf069180cd48de77b4043a74ef0612d68ea/conf/modules/trimming.config#L35) — 1 reference
