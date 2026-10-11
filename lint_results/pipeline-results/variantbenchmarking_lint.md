@@ -1,12 +1,12 @@
 # Nextflow lint results
 
-- Generated: 2026-10-08T00:34:57.754590552Z
+- Generated: 2026-10-11T00:24:42.519583525Z
 - Nextflow version: 26.09.2-edge
 - Summary: 5 warnings
 
 ## :warning: Warnings
 
-- Warning: `subworkflows/local/intersect_statistics/main.nf:19:17`: Variable was declared but not used
+- Warning: `subworkflows/local/intersect_statistics/main.nf:18:17`: Variable was declared but not used
 
   ```nextflow
               def meta = input[0]

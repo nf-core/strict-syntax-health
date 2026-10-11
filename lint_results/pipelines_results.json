@@ -1370,7 +1370,7 @@
   "rnasplice": {
     "full_name": "nf-core/rnasplice",
     "html_url": "https://github.com/nf-core/rnasplice",
-    "commit": "034c58269d19bd101f311134eb52399bcf84633e",
+    "commit": "bd087cb5091943464c94dda739c17af18c818a40",
     "errors": 0,
     "warnings": 13,
     "parse_error": false,
@@ -1646,11 +1646,11 @@
   "variantbenchmarking": {
     "full_name": "nf-core/variantbenchmarking",
     "html_url": "https://github.com/nf-core/variantbenchmarking",
-    "commit": "a796084cec5f2fb9b4794c598d04ada6a54d85a2",
+    "commit": "762535d4ed1a615f035059967ef794a264885698",
     "errors": 0,
     "warnings": 5,
     "parse_error": false,
-    "prints_help": true,
+    "prints_help": false,
     "workflow_output": false,
     "publishdir": true,
     "publishdir_count": 77
