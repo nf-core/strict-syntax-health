@@ -1,6 +1,6 @@
 # Workflow outputs migration: rnasplice
 
-- Generated: 2026-10-11T00:24:09.850955+00:00
+- Generated: 2026-10-12T00:24:45.109545+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,7 +14,7 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 73 `publishDir` references across 4 files that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/rnasplice/blob/bd087cb5091943464c94dda739c17af18c818a40/conf/modules.config#L16) — 70 references
-- [`modules/nf-core/subread/featurecounts/tests/nextflow.config`](https://github.com/nf-core/rnasplice/blob/bd087cb5091943464c94dda739c17af18c818a40/modules/nf-core/subread/featurecounts/tests/nextflow.config#L3) — 1 reference
-- [`modules/nf-core/umitools/extract/tests/nextflow.config`](https://github.com/nf-core/rnasplice/blob/bd087cb5091943464c94dda739c17af18c818a40/modules/nf-core/umitools/extract/tests/nextflow.config#L3) — 1 reference
-- [`subworkflows/nf-core/bedgraph_bedclip_bedgraphtobigwig/tests/nextflow.config`](https://github.com/nf-core/rnasplice/blob/bd087cb5091943464c94dda739c17af18c818a40/subworkflows/nf-core/bedgraph_bedclip_bedgraphtobigwig/tests/nextflow.config#L3) — 1 reference
+- [`conf/modules.config`](https://github.com/nf-core/rnasplice/blob/6753dfcc680549b7f81d82d30f3bcfb971c78178/conf/modules.config#L16) — 70 references
+- [`modules/nf-core/subread/featurecounts/tests/nextflow.config`](https://github.com/nf-core/rnasplice/blob/6753dfcc680549b7f81d82d30f3bcfb971c78178/modules/nf-core/subread/featurecounts/tests/nextflow.config#L3) — 1 reference
+- [`modules/nf-core/umitools/extract/tests/nextflow.config`](https://github.com/nf-core/rnasplice/blob/6753dfcc680549b7f81d82d30f3bcfb971c78178/modules/nf-core/umitools/extract/tests/nextflow.config#L3) — 1 reference
+- [`subworkflows/nf-core/bedgraph_bedclip_bedgraphtobigwig/tests/nextflow.config`](https://github.com/nf-core/rnasplice/blob/6753dfcc680549b7f81d82d30f3bcfb971c78178/subworkflows/nf-core/bedgraph_bedclip_bedgraphtobigwig/tests/nextflow.config#L3) — 1 reference
