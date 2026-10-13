@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.09.2-edge
+ N E X T F L O W   ~  version 26.10.0
 
-Launching `./main.nf` [hungry_darwin] revision: 6e510620f6
+Launching `./main.nf` [crazy_poincare] revision: 6e510620f6
 
 
 ------------------------------------------------------
@@ -12,7 +12,7 @@ Launching `./main.nf` [hungry_darwin] revision: 6e510620f6
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/drugresponseeval 1.3.0
+  nf-core/drugresponseeval 1.3.1dev
 ------------------------------------------------------
 Typical pipeline command:
 

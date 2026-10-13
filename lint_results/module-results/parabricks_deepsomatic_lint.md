@@ -1,10 +1,17 @@
 # Nextflow lint results
 
-- Generated: 2026-10-12T00:26:14.205136+00:00
-- Nextflow version: 26.09.2-edge
-- Summary: 1 warning
+- Generated: 2026-10-13T00:31:15.483212+00:00
+- Nextflow version: 26.10.0
+- Summary: 2 warnings
 
 ## :warning: Warnings
+
+- Warning: `modules/nf-core/parabricks/deepsomatic/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^^
+  ```
 
 - Warning: `modules/nf-core/parabricks/deepsomatic/main.nf:47:9`: Variable was declared but not used
 

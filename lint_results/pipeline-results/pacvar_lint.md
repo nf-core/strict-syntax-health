@@ -1,16 +1,163 @@
 # Nextflow lint results
 
-- Generated: 2026-10-03T00:23:37.516516555Z
-- Nextflow version: 26.09.1-edge
-- Summary: 25 warnings
+- Generated: 2026-10-13T00:27:04.851078327Z
+- Nextflow version: 26.10.0
+- Summary: 50 warnings
 
 ## :warning: Warnings
+
+- Warning: `modules/nf-core/bcftools/index/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/bcftools/sort/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/deepvariant/callvariants/main.nf:16:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/deepvariant/makeexamples/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/deepvariant/postprocessvariants/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/deepvariant/rundeepvariant/main.nf:26:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/ensemblvep/download/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/ensemblvep/vep/main.nf:29:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/fastqc/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/fibertoolsrs/addnucleosomes/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/fibertoolsrs/extract/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/fibertoolsrs/predictm6a/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/gatk4/haplotypecaller/main.nf:24:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/gunzip/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
 
 - Warning: `modules/nf-core/gunzip/main.nf:43:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
+  ```
+
+- Warning: `modules/nf-core/hificnv/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/hiphase/main.nf:37:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/lima/main.nf:31:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/multiqc/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/pbcpgtools/alignedbamtocpgscores/main.nf:25:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/pbmm2/align/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/pbsv/call/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
   ```
 
 - Warning: `modules/nf-core/pbsv/call/main.nf:40:9`: Variable was declared but not used
@@ -20,11 +167,25 @@
           ^^^^
   ```
 
+- Warning: `modules/nf-core/pbsv/discover/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
 - Warning: `modules/nf-core/pbsv/discover/main.nf:36:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
+  ```
+
+- Warning: `modules/nf-core/pbtk/pbmerge/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
   ```
 
 - Warning: `modules/nf-core/pbtk/pbmerge/main.nf:38:9`: Variable was declared but not used
@@ -34,11 +195,60 @@
           ^^^^
   ```
 
+- Warning: `modules/nf-core/samtools/index/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/samtools/sort/main.nf:22:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/sawfish/discover/main.nf:39:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/sawfish/jointcall/main.nf:29:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/tabix/bgzip/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/trgt/genotype/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
 - Warning: `modules/nf-core/trgt/genotype/main.nf:45:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
+  ```
+
+- Warning: `modules/nf-core/trgt/plot/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
   ```
 
 - Warning: `modules/nf-core/trgt/plot/main.nf:67:9`: Variable was declared but not used
@@ -104,79 +314,44 @@
           ^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/pacvar.nf:100:59`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/pacvar.nf:97:59`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       pbmm2_input_filter_ch = pbmm2_input_ch.filter { meta, bam ->
                                                             ^^^
   ```
 
-- Warning: `workflows/pacvar.nf:126:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/pacvar.nf:123:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .filter { meta, bams -> bams.size() > 1 }
                         ^^^^
   ```
 
-- Warning: `workflows/pacvar.nf:131:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/pacvar.nf:128:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .filter { meta, bams -> bams.size() == 1 }
                         ^^^^
   ```
 
-- Warning: `workflows/pacvar.nf:145:40`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/pacvar.nf:142:40`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { meta_fasta, fasta_file, meta_fai, fai_file -> [meta_fasta, fasta_file, fai_file] }
                                          ^^^^^^^^
   ```
 
-- Warning: `workflows/pacvar.nf:153:50`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/pacvar.nf:150:50`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ordered_bam_ch = bam_bai_ch.map { meta, bam, bai -> [meta, bam] }
                                                    ^^^
   ```
 
-- Warning: `workflows/pacvar.nf:154:45`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/pacvar.nf:151:45`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ordered_bai_ch = bam_bai_ch.map { meta, bam, bai -> [meta, bai] }
                                               ^^^
-  ```
-
-- Warning: `workflows/pacvar.nf:202:75`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-                      ? orderd_bam_bai_vcf_tbi_snp.vcf_tbi.map { meta, vcf, tbi -> [ meta, vcf ] }
-                                                                            ^^^
-  ```
-
-- Warning: `workflows/pacvar.nf:227:90`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-                  cnv_input_bam_bai_maf_ch = bam_bai_vcf_snp_ch.map { meta, bam, bai, vcf, tbi ->
-                                                                                           ^^^
-  ```
-
-- Warning: `workflows/pacvar.nf:245:83`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-              ch_cnv_vcf = BAM_CNV_VARIANT_CALLING.out.vcf_indexed.map { meta, vcf, tbi -> [ meta, vcf ] }
-                                                                                    ^^^
-  ```
-
-- Warning: `workflows/pacvar.nf:265:122`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-                  (sv_input_bam_ch, sv_input_bai_ch, sv_input_maf_ch) = bam_bai_vcf_snp_ch.multiMap { meta, bam, bai, vcf, tbi ->
-                                                                                                                           ^^^
-  ```
-
-- Warning: `workflows/pacvar.nf:318:74`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-                      ? orderd_bam_bai_vcf_tbi_sv.vcf_tbi.map { meta, vcf, tbi -> [ meta, vcf ] }
-                                                                           ^^^
   ```

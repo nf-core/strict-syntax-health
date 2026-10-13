@@ -1,11 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.09.2-edge
+ N E X T F L O W   ~  version 26.10.0
 
-Downloading plugin nf-schema@2.5.1
 Downloading plugin nf-anndata@0.5.2
-Launching `./main.nf` [mighty_knuth] revision: e0886bfa58
+Launching `./main.nf` [desperate_lavoisier] revision: 46fac1a2ec
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -207,6 +206,17 @@ Pseudobulk differential expression options
 [default: false]  
   --pseudobulk_min_num_cells      [integer] Minimum number of cells per pseudobulk sample [default: 10] 
   --pseudobulk_min_total_counts   [integer] Minimum total UMI counts per pseudobulk sample [default: 1000] 
+
+Pathway analysis options
+  --decoupler                     [boolean] Score pathway and transcription factor activity on pseudobulk profiles and pseudobulk DE results 
+with decoupler.  
+  --decoupler_resources           [string]  Comma-separated Omnipath resources to score: progeny, collectri and/or hallmark. Leave empty to use 
+only decoupler_network. [default: progeny,collectri]  
+  --decoupler_network             [string]  Path to a custom prior-knowledge network, scored in addition to decoupler_resources. 
+  --decoupler_method              [string]  decoupler method used to infer activities and enrichment scores.  (accepted: ulm, mlm, waggr, 
+viper, zscore, aucell, ora, gsea) [default: ulm]  
+  --decoupler_min_targets         [integer] Minimum number of network targets shared with the data for a source to be scored. [default: 5] 
+ 
 
 Generic options
   --multiqc_methods_description   [string]          Custom MultiQC yaml file containing HTML including a methods description. 

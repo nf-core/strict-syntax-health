@@ -1,6 +1,6 @@
 # Workflow outputs migration: drugresponseeval
 
-- Generated: 2026-10-10T00:21:57.808735+00:00
+- Generated: 2026-10-13T00:26:07.147035+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,4 +14,4 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 26 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/drugresponseeval/blob/adf3b115738bdcc6b2a7104fef5e2263d6d0468f/conf/modules.config#L15) — 26 references
+- [`conf/modules.config`](https://github.com/nf-core/drugresponseeval/blob/51c52403c912037ffe6cf406811cdd5076ca8ee6/conf/modules.config#L15) — 26 references
