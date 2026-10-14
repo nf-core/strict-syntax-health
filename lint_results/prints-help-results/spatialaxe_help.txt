@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.07.0-edge
+ N E X T F L O W   ~  version 26.10.0
 
-Launching `./main.nf` [hopeful_plateau] revision: c5af9bbcb5
+Launching `./main.nf` [fervent_curran] revision: c5af9bbcb5
 
 
 ------------------------------------------------------

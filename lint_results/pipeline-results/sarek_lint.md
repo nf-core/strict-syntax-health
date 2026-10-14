@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-10-13T00:29:04.237607318Z
+- Generated: 2026-10-14T00:22:28.350735543Z
 - Nextflow version: 26.10.0
 - Summary: 126 warnings
 
@@ -601,7 +601,7 @@
       ^^^^
   ```
 
-- Warning: `modules/nf-core/parabricks/applybqsr/main.nf:24:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/parabricks/applybqsr/main.nf:22:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

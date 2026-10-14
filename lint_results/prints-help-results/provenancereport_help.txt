@@ -1,10 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.09.2-edge
+ N E X T F L O W   ~  version 26.10.0
 
 Downloading plugin nf-prov@1.7.0
-Launching `./main.nf` [deadly_caravaggio] revision: 0faf596e75
+Launching `./main.nf` [distraught_turing] revision: 0faf596e75
 
 
 ------------------------------------------------------
@@ -45,3 +45,4 @@ Generic options
 * Software dependencies
     https://github.com/nf-core/provenancereport/blob/main/CITATIONS.md
 
+WARN: Could not determine pipeline repository URL for Workflow Run RO-Crate -- launch the pipeline with canonical URL (e.g. `nextflow run nextflow-io/hello`) to ensure that the pipeline repository URL is recorded in the crate

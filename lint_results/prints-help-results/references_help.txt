@@ -1,11 +1,11 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.09.0-edge
+ N E X T F L O W   ~  version 26.10.0
 
-Launching `./main.nf` [pensive_solvay] revision: aea9bb303f
+Downloading plugin nf-core-utils@0.4.0
+Launching `./main.nf` [peaceful_euclid] revision: aea9bb303f
 
-WARN: Static typing is a preview feature -- syntax and behavior may change in future releases
 
 ------------------------------------------------------
                                         ,--./,-.
@@ -17,11 +17,11 @@ WARN: Static typing is a preview feature -- syntax and behavior may change in fu
 ------------------------------------------------------
 
 Generic options
-  trace_report_suffix: 2026-09-25_00-22-37
+  trace_report_suffix: 2026-10-14_00-21-52
   help               : true
 
 Core Nextflow options
-  runName            : pensive_solvay
+  runName            : peaceful_euclid
   launchDir          : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/references
   workDir            : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/references/work
   projectDir         : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/references

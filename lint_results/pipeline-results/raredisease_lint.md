@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-10-13T00:27:50.007484771Z
+- Generated: 2026-10-14T00:21:23.047539654Z
 - Nextflow version: 26.10.0
-- Summary: 144 warnings
+- Summary: 145 warnings
 
 ## :warning: Warnings
 
@@ -531,6 +531,13 @@
       ^^^^
   ```
 
+- Warning: `modules/nf-core/hisat2/build/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
 - Warning: `modules/nf-core/htslib/bgziptabix/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
@@ -958,7 +965,7 @@
                                                                            ^^
   ```
 
-- Warning: `subworkflows/local/call_sv_MT/main.nf:115:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/call_sv_MT/main.nf:136:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   .filter { !it.isEmpty() }
@@ -986,28 +993,28 @@
                               ^^^
   ```
 
-- Warning: `workflows/raredisease.nf:153:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/raredisease.nf:155:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_target_bed
       ^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/raredisease.nf:1171:5`: Variable was declared but not used
+- Warning: `workflows/raredisease.nf:1173:5`: Variable was declared but not used
 
   ```nextflow
       ch_multiqc_config        = channel.fromPath(
       ^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/raredisease.nf:1173:5`: Variable was declared but not used
+- Warning: `workflows/raredisease.nf:1175:5`: Variable was declared but not used
 
   ```nextflow
       ch_multiqc_custom_config = val_multiqc_config ?
       ^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/raredisease.nf:1176:5`: Variable was declared but not used
+- Warning: `workflows/raredisease.nf:1178:5`: Variable was declared but not used
 
   ```nextflow
       ch_multiqc_logo          = val_multiqc_logo ?

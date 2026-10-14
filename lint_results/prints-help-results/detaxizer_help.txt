@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.09.2-edge
+ N E X T F L O W   ~  version 26.10.0
 
-Launching `./main.nf` [jolly_celsius] revision: 60cf713c3b
+Launching `./main.nf` [zen_lavoisier] revision: 60cf713c3b
 
 
 ------------------------------------------------------
@@ -12,7 +12,7 @@ Launching `./main.nf` [jolly_celsius] revision: 60cf713c3b
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/detaxizer 1.4.0dev
+  nf-core/detaxizer 1.4.0
 ------------------------------------------------------
 Typical pipeline command:
 
@@ -32,18 +32,19 @@ General workflow parameters
   --preprocessing                         [boolean] If preprocessing with fastp should be turned on. 
   --classification_bbduk                  [boolean] Signifies that bbduk is used in the classification process. Can be combined with the 
 'classification_kraken2' parameter to run both.  
-  --classification_kraken2                [boolean] Signifies that kraken2 is used in the classification process. Can be combined with the 
-'classification_bbduk' parameter to run both. For kraken2 alone no parameter is needed.  
+  --classification_kraken2                [boolean] Run kraken2 classification. kraken2 is the default classification step. This flag makes the choice 
+explicit and can be combined with the 'classification_bbduk' parameter to run both.  
   --validation_blastn                     [boolean] If a validation of the classified reads via blastn should be carried out. 
   --classification_kraken2_post_filtering [boolean] If the filtered reads should be classified with kraken2. 
   --filter_with_classification            [boolean] When a validation via blastn is wanted but the filtering should use the IDs from the classification 
 process.  
   --skip_filter                           [boolean] If the filtering step should be skipped. 
-  --filtering_tool                        [string]  Select the read-filtering tool: seqkit or bbmap. seqkit normalizes FASTQ headers by temporarily 
-renaming them; bbmap uses filterbyname.sh for exact header matching -- Note: BBTools I/O forces any 
-base that is N to Q=0 (!).  (accepted: seqkit, bbmap) [default: seqkit]  
+  --filtering_tool                        [string]  Select the read-filtering tool. seqkit normalizes FASTQ headers by temporarily renaming them. bbmap 
+uses filterbyname.sh for exact header matching. BBTools I/O forces any base that is N to Q=0.  
+(accepted: seqkit, bbmap) [default: seqkit]  
   --output_removed_reads                  [boolean] If the removed reads should also be written to the output folder. 
-  --filter_trimmed                        [boolean] If the pre-processed reads should be used by the filter. 
+  --filter_trimmed                        [boolean] Use the preprocessed reads in the filtering step. Enabling this parameter also enables 
+preprocessing.  
   --save_intermediates                    [boolean] Save intermediates to the results folder. 
 
 bbduk
@@ -63,8 +64,8 @@ or filtered) to separate files. For the removed reads.
 0.0]  
   --kraken2confidence_removed             [number]  Confidence in the classification of a read as a certain taxon. For the removed reads. [default: 
 0.0]  
-  --cutoff_tax2filter                     [integer] If a read has less k-mers assigned to the taxon/taxa to be assessed/to be filtered the read is 
-ignored by the pipeline. [default: 0]  
+  --cutoff_tax2filter                     [integer] Minimum number of assigned k-mers for the taxon/taxa to be assessed or filtered. The pipeline 
+ignores a read with fewer assigned k-mers. [default: 0]  
   --cutoff_tax2keep                       [number]  Ratio per read of assigned to tax2filter k-mers to k-mers assigned to any other taxon (except 
 unclassified). [default: 0.0]  
   --cutoff_unclassified                   [number]  Ratio per read of assigned to tax2filter k-mers to unclassified k-mers. [default: 0.0] 

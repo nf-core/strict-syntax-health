@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.10.0
 
-Launching `./main.nf` [friendly_pike] revision: 19119f4120
+Launching `./main.nf` [zen_lamarck] revision: cd50d7102b
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -49,6 +49,7 @@ Reference file options
   --known_dbsnp                       [string]  Path to known dbSNP file. 
   --known_dbsnp_tbi                   [string]  Path to known dbSNP file index. 
   --local_genomes                     [string]  Local directory base for genome references that map to the config. 
+  --manta_config                      [string]  Path to a custom Manta configuration file (configManta.py --config). 
   --mito_name                         [string]  Name of the mitochondrial contig in the reference fasta file [default: chrM] 
   --mobile_element_references         [string]  File with mobile element references 
   --mobile_element_svdb_annotations   [string]  File with mobile element allele frequency references 
@@ -195,7 +196,11 @@ pseudo-gapped alignments due to a circular genome [default: 5]
   --saltshaker_group_radius           [integer] spatial clustering radius for saltshaker grouping [default: 600] 
   --saltshaker_high_heteroplasmy      [integer] high heteroplasmy threshold for saltshaker classification [default: 10] 
   --mitosalt_heteroplasmy_limit       [number]  detected heteroplasmy threshold [default: 0.01] 
-  --mitosalt_depth                    [integer] number of mitochondrial reads passed to mitosalt [default: 500000] 
+  --mitosalt_depth                    [integer] depth to subsample fastq files to before running mitosalt [default: 10000000] 
+  --hisat2                            [string]  Path to a pre-built HISAT2 genome index directory. If not provided, the index is built at runtime. 
+ 
+  --hisat2_build_memory               [integer] Minimum memory required to build HISAT2 index with splice sites and exons. If available memory is 
+below this threshold, a simpler index is built without splice sites.  
   --mito_length                       [integer] length of mitochondrial genome [default: 16569] 
   --saltshaker_multiple_threshold     [integer] threshold for multiple saltshaker classification [default: 5] 
   --saltshaker_noise_threshold        [number]  heteroplasmy threshold for background noise [default: 0.3] 

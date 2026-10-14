@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "74a0d090960b52c2d02bb76bc3cc67a899994a4e",
+  "_repo_commit": "7f44b7c0164e9e389ffa37fed78dd25d580b21c2",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -2924,6 +2924,30 @@
   },
   "deseq2_differential": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/deseq2/differential",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
+  "dexseq_count": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/dexseq/count",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
+  "dexseq_dtu": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/dexseq/dtu",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
+  "dexseq_exon": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/dexseq/exon",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
+  "dexseq_prepareannotation": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/dexseq/prepareannotation",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
@@ -6004,6 +6028,12 @@
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/khmer/uniquekmers",
     "errors": 0,
     "warnings": 1,
+    "parse_error": false
+  },
+  "kivvi": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/kivvi",
+    "errors": 0,
+    "warnings": 0,
     "parse_error": false
   },
   "kleborate": {
