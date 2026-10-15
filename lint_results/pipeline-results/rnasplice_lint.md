@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-10-13T00:28:23.377513741Z
+- Generated: 2026-10-15T00:22:07.172395960Z
 - Nextflow version: 26.10.0
 - Summary: 71 warnings
 
@@ -48,35 +48,7 @@
       ^^^^
   ```
 
-- Warning: `modules/local/create_bamlist/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
-
-  ```nextflow
-      when:
-      ^^^^
-  ```
-
-- Warning: `modules/local/dexseq/annotation/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
-
-  ```nextflow
-      when:
-      ^^^^
-  ```
-
-- Warning: `modules/local/dexseq/count/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
-
-  ```nextflow
-      when:
-      ^^^^
-  ```
-
-- Warning: `modules/local/dexseq/dtu/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
-
-  ```nextflow
-      when:
-      ^^^^
-  ```
-
-- Warning: `modules/local/dexseq/exon/main.nf:26:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/createbamlist/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -91,6 +63,13 @@
   ```
 
 - Warning: `modules/local/edger/exon/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/genomeparamsupgrade/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -174,7 +153,7 @@
       ^^^^
   ```
 
-- Warning: `modules/local/rmats_post/main.nf:24:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/rmats/post/main.nf:24:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -195,14 +174,7 @@
       ^^^^
   ```
 
-- Warning: `modules/local/star_genomeparams_upgrade/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
-
-  ```nextflow
-      when:
-      ^^^^
-  ```
-
-- Warning: `modules/local/strand_junctions/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/strandjunctions/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -259,6 +231,34 @@
   ```
 
 - Warning: `modules/nf-core/custom/getchromsizes/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/dexseq/count/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/dexseq/dtu/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/dexseq/exon/main.nf:25:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/dexseq/prepareannotation/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.10.0
 
 Downloading plugin nf-prov@1.7.0
-Launching `./main.nf` [distraught_turing] revision: 0faf596e75
+Launching `./main.nf` [sleepy_leibniz] revision: 0faf596e75
 
 
 ------------------------------------------------------

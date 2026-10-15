@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.09.2-edge
+ N E X T F L O W   ~  version 26.10.0
 
-Launching `./main.nf` [stupefied_curran] revision: 804e261c38
+Launching `./main.nf` [gigantic_varahamihira] revision: 804e261c38
 
 
 ------------------------------------------------------

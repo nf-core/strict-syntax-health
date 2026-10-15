@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-10-13T00:27:24.597915703Z
+- Generated: 2026-10-15T00:21:02.242064702Z
 - Nextflow version: 26.10.0
-- Summary: 10 errors, 76 warnings
+- Summary: 6 errors, 70 warnings
 
 ## :x: Errors
 
@@ -41,39 +41,11 @@
                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/original_local.nf:25:1`: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/pathogenepidemiology/subworkflows/local/gatk_MOI/main.nf'
-
-  ```nextflow
-  include { GATK_MOI             } from '../subworkflows/local/gatk_MOI'
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/original_local.nf:26:1`: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/pathogenepidemiology/modules/local/hmmibdrs/mainf.nf'
+- Error: `workflows/original_local.nf:16:1`: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/pathogenepidemiology/modules/local/hmmibdrs/mainf.nf'
 
   ```nextflow
   include { HMMIBDRS             } from '../modules/local/hmmibdrs/mainf'
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/original_local.nf:128:16`: `GATK_MOI` is not defined
-
-  ```nextflow
-    varcalls_s = GATK_MOI(
-                 ^^^^^^^^
-  ```
-
-- Error: `workflows/pathogenepidemiology.nf:12:1`: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/pathogenepidemiology/modules/local/clair3_custom/main.nf'
-
-  ```nextflow
-  include { CLAIR3_CUSTOM          } from '../modules/local/clair3_custom/main'
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `workflows/pathogenepidemiology.nf:15:1`: Invalid include source: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/pathogenepidemiology/modules/nf-core/clair3/main.nf'
-
-  ```nextflow
-  include { CLAIR3                 } from '../modules/nf-core/clair3/main'
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
 
 ## :warning: Warnings
@@ -85,49 +57,7 @@
       ^^^^
   ```
 
-- Warning: `modules/local/gatk4/applyvqsr/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
-
-  ```nextflow
-      when:
-      ^^^^
-  ```
-
-- Warning: `modules/local/gatk4/cleansam_custom/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
-
-  ```nextflow
-      when:
-      ^^^^
-  ```
-
-- Warning: `modules/local/gatk4/genomicsdbimport/main.nf:22:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
-
-  ```nextflow
-      when:
-      ^^^^
-  ```
-
-- Warning: `modules/local/gatk4/genotypegvcfs/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
-
-  ```nextflow
-      when:
-      ^^^^
-  ```
-
-- Warning: `modules/local/gatk4/haplotypecaller/main.nf:24:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
-
-  ```nextflow
-      when:
-      ^^^^
-  ```
-
 - Warning: `modules/local/gatk4/markduplicates_custom/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
-
-  ```nextflow
-      when:
-      ^^^^
-  ```
-
-- Warning: `modules/local/gatk4/variantrecalibrator/main.nf:26:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -156,6 +86,13 @@
   ```
 
 - Warning: `modules/nf-core/bcftools/concat/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/bcftools/stats/main.nf:22:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -344,70 +281,63 @@
       ^^^^
   ```
 
-- Warning: `subworkflows/local/gatk_MOI.nf:40:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/gatk_MOI.nf:47:40`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/gatk_MOI/main.nf:46:40`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_fasta_val = ch_queryfasta.map { meta, fasta -> fasta }.first()
                                          ^^^^
   ```
 
-- Warning: `subworkflows/local/gatk_MOI.nf:48:40`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/gatk_MOI/main.nf:47:40`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_fai_val   = ch_queryfai.map   { meta, fai   -> fai   }.first()
                                          ^^^^
   ```
 
-- Warning: `subworkflows/local/gatk_MOI.nf:49:40`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/gatk_MOI/main.nf:48:40`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_dict_val  = ch_querydict.map  { meta, dict  -> dict  }.first()
                                          ^^^^
   ```
 
-- Warning: `subworkflows/local/gatk_MOI.nf:78:39`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/gatk_MOI/main.nf:72:39`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_dedup_bam.map { meta, bam, bai -> tuple(meta, bam) }
                                         ^^^
   ```
 
-- Warning: `subworkflows/local/gatk_MOI.nf:94:20`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/gatk_MOI/main.nf:84:20`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-      ch_intervals = Channel.fromPath("${launchDir}/assets/intervals/core_chr*.list")
+      ch_intervals = Channel.fromPath("${projectDir}/assets/intervals/core_chr*.list")
                      ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/gatk_MOI.nf:156:19`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/gatk_MOI/main.nf:142:19`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .filter { meta, vcf, tbi -> vcf.size() > 8000 }
                     ^^^^
   ```
 
-- Warning: `subworkflows/local/gatk_MOI.nf:156:30`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/gatk_MOI/main.nf:142:30`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .filter { meta, vcf, tbi -> vcf.size() > 8000 }
                                ^^^
   ```
 
-- Warning: `subworkflows/local/gatk_MOI.nf:218:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/gatk_MOI/main.nf:200:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def vcfs = items.collect { it[1] }
                                          ^^
   ```
 
-- Warning: `subworkflows/local/gatk_MOI.nf:219:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/gatk_MOI/main.nf:201:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def tbis = items.collect { it[2] }
@@ -428,184 +358,184 @@
                     ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/preprocess_reads.nf:16:18`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/preprocess_reads.nf:15:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-      ch_samples = Channel.fromPath(samplesheet)
-                   ^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/preprocess_reads.nf:31:50`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      ch_reads_raw = ch_samples.map { meta, reads, platform ->
-                                                   ^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/preprocess_reads.nf:41:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_adapters = Channel.fromPath(adapters)
+      ch_adapters = Channel.fromPath("${projectDir}/assets/adapters.fa", checkIfExists: true)
                     ^^^^^^^
   ```
 
-- Warning: `workflows/download_references.nf:14:15`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      ch_refs = Channel.of(params.queryurl, params.hosturl)
-                ^^^^^^^
-  ```
-
-- Warning: `workflows/original_local.nf:64:34`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:53:34`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       .join(ch_samples.map { meta, reads, platform -> tuple(meta, platform) }, by: 0)
                                    ^^^^^
   ```
 
-- Warning: `workflows/original_local.nf:65:15`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:54:15`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       .filter { meta, reads, platform ->
                 ^^^^
   ```
 
-- Warning: `workflows/original_local.nf:65:21`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:54:21`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       .filter { meta, reads, platform ->
                       ^^^^^
   ```
 
-- Warning: `workflows/original_local.nf:68:25`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:57:25`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       .map { meta, reads, platform ->
                           ^^^^^^^^
   ```
 
-- Warning: `workflows/original_local.nf:101:34`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:90:34`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       .join(ch_samples.map { meta, reads, platform -> tuple(meta, platform) }, by: 0)
                                    ^^^^^
   ```
 
-- Warning: `workflows/original_local.nf:102:15`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:91:15`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       .filter { meta, reads, platform ->
                 ^^^^
   ```
 
-- Warning: `workflows/original_local.nf:102:21`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:91:21`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       .filter { meta, reads, platform ->
                       ^^^^^
   ```
 
-- Warning: `workflows/original_local.nf:105:25`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:94:25`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       .map { meta, reads, platform ->
                           ^^^^^^^^
   ```
 
-- Warning: `workflows/original_local.nf:124:55`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:113:55`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
     ch_wgs_bam_s     = aligned_s.aligned.filter { meta, bam -> meta.library_strategy == 'WGS' }
                                                         ^^^
   ```
 
-- Warning: `workflows/original_local.nf:126:3`: Variable was declared but not used
+- Warning: `workflows/original_local.nf:115:3`: Variable was declared but not used
 
   ```nextflow
     ch_amplicon_bam_s = aligned_s.aligned.filter { meta, bam -> meta.library_strategy != 'WGS' }
     ^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/original_local.nf:126:56`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:115:56`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
     ch_amplicon_bam_s = aligned_s.aligned.filter { meta, bam -> meta.library_strategy != 'WGS' }
                                                          ^^^
   ```
 
-- Warning: `workflows/original_local.nf:133:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/original_local.nf:122:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       Channel.fromPath("${launchDir}/assets/Strains.2kb.vcf.gz"),
       ^^^^^^^
   ```
 
-- Warning: `workflows/original_local.nf:134:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/original_local.nf:123:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       Channel.fromPath("${launchDir}/assets/Strains.2kb.vcf.gz.tbi")
       ^^^^^^^
   ```
 
-- Warning: `workflows/original_local.nf:169:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/original_local.nf:158:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
     ch_multiqc_input = Channel.empty()
                        ^^^^^^^
   ```
 
-- Warning: `workflows/original_local.nf:171:33`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:160:33`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_fastqc_out.collect { meta, files -> files },
                                   ^^^^
   ```
 
-- Warning: `workflows/original_local.nf:172:34`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:161:34`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_bbduk_stats.collect { meta, files -> files },
                                    ^^^^
   ```
 
-- Warning: `workflows/original_local.nf:173:33`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:162:33`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_bbduk_logs.collect { meta, files -> files },
                                   ^^^^
   ```
 
-- Warning: `workflows/original_local.nf:174:36`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:163:36`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_bbduk_dropped.collect { meta, files -> files },
                                      ^^^^
   ```
 
-- Warning: `workflows/original_local.nf:175:37`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:164:37`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_mm2stats.stats.collect { meta, files -> files },
                                       ^^^^
   ```
 
-- Warning: `workflows/original_local.nf:176:37`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:165:37`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_bm3stats.stats.collect { meta, files -> files },
                                       ^^^^
   ```
 
-- Warning: `workflows/original_local.nf:177:30`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:166:30`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           varcalls_s.collect { meta, files, idx -> files }//,
                                ^^^^
   ```
 
-- Warning: `workflows/original_local.nf:177:43`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/original_local.nf:166:43`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           varcalls_s.collect { meta, files, idx -> files }//,
                                             ^^^
+  ```
+
+- Warning: `workflows/pathogenepidemiology.nf:130:9`: Variable was declared but not used
+
+  ```nextflow
+      def ch_amplicon_bam_s = aligned_s.aligned.filter { meta, _bam -> meta.library_strategy != 'WGS' }
+          ^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `workflows/pathogenepidemiology.nf:136:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+          Channel.fromPath("${projectDir}/assets/Strains.2kb.vcf.gz", checkIfExists: true),
+          ^^^^^^^
+  ```
+
+- Warning: `workflows/pathogenepidemiology.nf:137:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+          Channel.fromPath("${projectDir}/assets/Strains.2kb.vcf.gz.tbi", checkIfExists: true)
+          ^^^^^^^
   ```

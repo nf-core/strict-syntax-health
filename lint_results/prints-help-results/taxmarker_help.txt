@@ -1,9 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.09.2-edge
+ N E X T F L O W   ~  version 26.10.0
 
-Launching `./main.nf` [agitated_cajal] revision: 100e3c427d
+Downloading plugin nf-schema@2.7.3
+Launching `./main.nf` [nasty_stone] revision: e091cd236a
 
 
 ------------------------------------------------------
@@ -77,6 +78,7 @@ bot, zoo, vir) [default: bac]
   --raxmlng_model               [string]          RAxML-NG model for the reference tree, for example GTR+G4. The default DNA runs model selection 
 first. [default: DNA]  
   --raxmlng_fast                [boolean]         Build the reference tree with the RAxML-NG fast search. 
+  --raxmlng_seed                [integer]         Random seed for the RAxML-NG reference tree search. [default: 42] 
   --folds_per_job               [integer]         Number of leave-one-out folds each placement job places. Unset places them all in one job. 
   --outdir                      [string]          The output directory where the results will be saved. You have to use absolute paths to storage on 
 Cloud infrastructure.  

@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-10-14T00:20:07.340461035Z
+- Generated: 2026-10-15T00:20:12.313288980Z
 - Nextflow version: 26.10.0
-- Summary: 45 warnings
+- Summary: 48 warnings
 
 ## :warning: Warnings
 
@@ -300,14 +300,35 @@
       ^^^^
   ```
 
-- Warning: `subworkflows/local/prepare/main.nf:233:5`: Variable was declared but not used
+- Warning: `subworkflows/local/prepare/main.nf:220:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          .mix(ch_main_prepared.filter { it.meta.assembly && !it.meta.ontreads && !it.meta.hifireads })
+                                         ^^
+  ```
+
+- Warning: `subworkflows/local/prepare/main.nf:220:61`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          .mix(ch_main_prepared.filter { it.meta.assembly && !it.meta.ontreads && !it.meta.hifireads })
+                                                              ^^
+  ```
+
+- Warning: `subworkflows/local/prepare/main.nf:220:82`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          .mix(ch_main_prepared.filter { it.meta.assembly && !it.meta.ontreads && !it.meta.hifireads })
+                                                                                   ^^
+  ```
+
+- Warning: `subworkflows/local/prepare/main.nf:235:5`: Variable was declared but not used
 
   ```nextflow
       genomescope_summary = JELLYFISH.out.genomescope_summary
       ^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare/main.nf:235:5`: Variable was declared but not used
+- Warning: `subworkflows/local/prepare/main.nf:237:5`: Variable was declared but not used
 
   ```nextflow
       genomescope_plot = JELLYFISH.out.genomescope_plot
