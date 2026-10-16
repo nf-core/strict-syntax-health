@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "8e7fdb471faf987492dfe54e1a963b4388cf0968",
+  "_repo_commit": "0e9b69f1a141ecd202fcd7df0aa7874866fa7a89",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -2998,6 +2998,12 @@
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/disambiguate",
     "errors": 0,
     "warnings": 0,
+    "parse_error": false
+  },
+  "dnaapler_all": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/dnaapler/all",
+    "errors": 0,
+    "warnings": 1,
     "parse_error": false
   },
   "dotseq_dotseq": {
@@ -7204,6 +7210,12 @@
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mobster",
     "errors": 0,
     "warnings": 0,
+    "parse_error": false
+  },
+  "mobsuite_cluster": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mobsuite/cluster",
+    "errors": 0,
+    "warnings": 1,
     "parse_error": false
   },
   "mobsuite_recon": {

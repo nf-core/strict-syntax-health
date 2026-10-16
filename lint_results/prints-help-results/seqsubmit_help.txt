@@ -1,10 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.0
+ N E X T F L O W   ~  version 26.10.1
 
 WARN: Cannot read project manifest -- Cause:  Cannot get property 'ENA_WEBIN' on null object
-Launching `./main.nf` [mad_wescoff] revision: 44cc7f221c
+Launching `./main.nf` [ecstatic_rosalind] revision: 44cc7f221c
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'

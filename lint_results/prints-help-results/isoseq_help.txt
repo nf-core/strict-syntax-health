@@ -1,11 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.08.0-edge
+ N E X T F L O W   ~  version 26.10.1
 
-Launching `./main.nf` [gloomy_celsius] revision: 978b678d19
+Launching `./main.nf` [marvelous_bell] revision: 978b678d19
 
-WARN: Unrecognized config option 'manifest.diagram'
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
 

@@ -1,0 +1,61 @@
+$ NXF_SYNTAX_PARSER=v2 nextflow run . --help
+
+
+ N E X T F L O W   ~  version 26.10.1
+
+Launching `./main.nf` [goofy_jones] revision: e91e7ee7b0
+
+WARN: Unrecognized config option 'validation.defaultIgnoreParams'
+WARN: Unrecognized config option 'validation.monochromeLogs'
+
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/captnseq 1.0.0dev
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/captnseq -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input                       [string] Path to comma-separated file containing information about the samples in the experiment. 
+  --outdir                      [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --email                       [string] Email address for completion summary. 
+  --multiqc_title               [string] MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+
+captnseq pipeline options
+  --genome_fasta                [string]  Path to the reference genome FASTA to align reads against (bwa index is built from this). 
+  --genome_features             [string]  Path to the gene-feature BED file used by intersect/sites2genes to map insertion sites onto genes. 
+ 
+  --adapter_seq                 [string]  Adapter sequence trimmed by cutadapt from both R1 and R2. [default: ACTGTCTCTTATACACATCT] 
+  --trim_minlen                 [integer] Minimum read length kept by cutadapt/fastp trimming. [default: 10] 
+  --fastp_qual_threshold        [integer] Mean quality threshold for fastp's cut_right sliding-window trimming. [default: 10] 
+  --mapQ_threshold              [integer] Minimum mapping quality kept when filtering aligned reads in samtools view. [default: 10] 
+  --min_fastq_size_bytes        [integer] Refuse to start if any input FASTQ is smaller than this, in bytes. [default: 10000] 
+  --min_mapped_reads            [integer] Minimum mapped-read count required per sample after alignment, or the run fails for that sample. 
+[default: 1000]  
+  --execution_mode              [string]  Selects which tier of the params.resources cpu/memory/time map is applied per process.  
+(accepted: single_thread, multi_thread) [default: single_thread]  
+
+Generic options
+  --multiqc_methods_description [string]          Custom MultiQC yaml file containing HTML including a methods description. 
+  --help                        [boolean, string] Display the help message. 
+  --help_full                   [boolean]         Display the full detailed help message. 
+  --show_hidden                 [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 20 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/captnseq/blob/master/CITATIONS.md
+

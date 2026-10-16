@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-10-14T00:22:28.350735543Z
-- Nextflow version: 26.10.0
+- Generated: 2026-10-16T00:22:06.524316024Z
+- Nextflow version: 26.10.1
 - Summary: 126 warnings
 
 ## :warning: Warnings
@@ -671,7 +671,7 @@
       ^^^^
   ```
 
-- Warning: `modules/nf-core/samtools/merge/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/samtools/merge/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

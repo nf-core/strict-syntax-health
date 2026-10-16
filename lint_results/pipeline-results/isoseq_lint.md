@@ -1,23 +1,100 @@
 # Nextflow lint results
 
-- Generated: 2026-09-23T00:19:42.268248600Z
-- Nextflow version: 26.08.0-edge
-- Summary: 9 warnings
+- Generated: 2026-10-16T00:18:52.250685587Z
+- Nextflow version: 26.10.1
+- Summary: 14 warnings
 
 ## :warning: Warnings
 
-- Warning: `modules/local/gstama/filelist/main.nf:20:9`: Variable was declared but not used
+- Warning: `modules/nf-core/bamtools/convert/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
-      def args = task.ext.args ?: ''
-          ^^^^
+      when:
+      ^^^^
   ```
 
-- Warning: `subworkflows/local/set_value_channel/main.nf:15:20`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `modules/nf-core/gnu/sort/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
-              .map { it[1] }
-                     ^^
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/gstama/collapse/main.nf:26:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/gstama/merge/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/gstama/polyacleanup/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/gunzip/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/isoseq/refine/main.nf:22:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/lima/main.nf:31:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/minimap2/align/main.nf:25:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/multiqc/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/pbccs/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/ultra/align/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/ultra/index/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
   ```
 
 - Warning: `subworkflows/local/utils_nfcore_isoseq_pipeline/main.nf:34:5`: Parameter was not used -- prefix with `_` to suppress warning
@@ -25,46 +102,4 @@
   ```nextflow
       input             //  string: Path to input samplesheet
       ^^^^^
-  ```
-
-- Warning: `workflows/isoseq.nf:218:39`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      GSTAMA_MERGE(ch_tmerge_in.map { [ it[0], it[1] ] }, ch_tmerge_in.map { it[2] }) // Merge all bed files from one sample into a uniq bed file
-                                        ^^
-  ```
-
-- Warning: `workflows/isoseq.nf:218:46`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      GSTAMA_MERGE(ch_tmerge_in.map { [ it[0], it[1] ] }, ch_tmerge_in.map { it[2] }) // Merge all bed files from one sample into a uniq bed file
-                                               ^^
-  ```
-
-- Warning: `workflows/isoseq.nf:218:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      GSTAMA_MERGE(ch_tmerge_in.map { [ it[0], it[1] ] }, ch_tmerge_in.map { it[2] }) // Merge all bed files from one sample into a uniq bed file
-                                                                             ^^
-  ```
-
-- Warning: `workflows/isoseq.nf:288:75`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      ch_multiqc_files = ch_multiqc_files.mix(PBCCS.out.report_json.collect{it[1]}.ifEmpty([]))
-                                                                            ^^
-  ```
-
-- Warning: `workflows/isoseq.nf:289:70`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      ch_multiqc_files = ch_multiqc_files.mix(LIMA.out.summary.collect{it[1]}.ifEmpty([]))
-                                                                       ^^
-  ```
-
-- Warning: `workflows/isoseq.nf:290:69`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      ch_multiqc_files = ch_multiqc_files.mix(LIMA.out.counts.collect{it[1]}.ifEmpty([]))
-                                                                      ^^
   ```

@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.0
+ N E X T F L O W   ~  version 26.10.1
 
-Launching `./main.nf` [fervent_curran] revision: c5af9bbcb5
+Launching `./main.nf` [confident_ramachandran] revision: 1d177c1c39
 
 
 ------------------------------------------------------
@@ -81,9 +81,6 @@ workflow output bundles. Possible options are: \"ATP1A1/CD45/E-Cadherin\" (defau
   --segger_model                           [string]  Path to a pre-trained Segger model checkpoint. 
   --format                                 [string]  Input data platform. Used by proseg, segger, and spatialdata modules.  (accepted: xenium, cosmx, 
 merscope) [default: xenium]  
-  --image_seg_methods                      [array]   List of image-based segmentation methods. 
-  --transcript_seg_methods                 [array]   List of transcript-based segmentation methods. 
-  --segfree_methods                        [array]   List of segmentation-free methods. 
   --negative_control_regex                 [string]  Regex used to identify or match negative control samples in a dataset. 
   --features                               [string]  List of features to be passed to the ficture method. (eg: TP53,OCIAD1,BCAS3,SOX) 
   --filter_transcripts                     [boolean] Whether to filter the transcripts.parquet file before running Baysor segmentation. 

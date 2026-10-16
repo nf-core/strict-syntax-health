@@ -1,10 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.0
+ N E X T F L O W   ~  version 26.10.1
 
 Downloading plugin nf-schema@2.7.3
-Launching `./main.nf` [nasty_stone] revision: e091cd236a
+Launching `./main.nf` [thirsty_wegener] revision: 4fc85aa24b
 
 
 ------------------------------------------------------
@@ -79,6 +79,8 @@ bot, zoo, vir) [default: bac]
 first. [default: DNA]  
   --raxmlng_fast                [boolean]         Build the reference tree with the RAxML-NG fast search. 
   --raxmlng_seed                [integer]         Random seed for the RAxML-NG reference tree search. [default: 42] 
+  --raxmlng_blopt               [string]          Branch length optimisation method of RAxML-NG (--blopt). Unset uses the RAxML-NG default.  
+(accepted: nr_fast, nr_safe, nr_oldstyle)  
   --folds_per_job               [integer]         Number of leave-one-out folds each placement job places. Unset places them all in one job. 
   --outdir                      [string]          The output directory where the results will be saved. You have to use absolute paths to storage on 
 Cloud infrastructure.  

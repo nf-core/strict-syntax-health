@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-10-15T00:24:02.043924+00:00
-- Nextflow version: 26.10.0
+- Generated: 2026-10-16T00:24:13.611111+00:00
+- Nextflow version: 26.10.1
 - Summary: 1 warning
 
 ## :warning: Warnings

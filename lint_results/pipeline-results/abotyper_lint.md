@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-10-15T00:17:43.916590092Z
-- Nextflow version: 26.10.0
+- Generated: 2026-10-16T00:16:42.655622795Z
+- Nextflow version: 26.10.1
 - Summary: 29 warnings
 
 ## :warning: Warnings
@@ -104,13 +104,6 @@
       ^^^^
   ```
 
-- Warning: `modules/nf-core/fastqc/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
-
-  ```nextflow
-      when:
-      ^^^^
-  ```
-
 - Warning: `modules/nf-core/minimap2/align/main.nf:25:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
@@ -119,6 +112,13 @@
   ```
 
 - Warning: `modules/nf-core/multiqc/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/nanoplot/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -188,21 +188,21 @@
                                     ^^^^^^^^
   ```
 
-- Warning: `workflows/abotyper.nf:35:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/abotyper.nf:36:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       logo                 // channel: png from params.logo (custom pathwest logo)
       ^^^^
   ```
 
-- Warning: `workflows/abotyper.nf:49:68`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/abotyper.nf:61:70`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-      ch_multiqc_files = ch_multiqc_files.mix(FASTQC.out.zip.collect{it[1]})
-                                                                     ^^
+      ch_multiqc_files = ch_multiqc_files.mix(NANOPLOT.out.txt.collect{it[1]})
+                                                                       ^^
   ```
 
-- Warning: `workflows/abotyper.nf:103:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/abotyper.nf:115:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       def topic_versions = Channel.topic("versions")

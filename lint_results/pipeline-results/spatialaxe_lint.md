@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-10-14T00:23:18.889983645Z
-- Nextflow version: 26.10.0
+- Generated: 2026-10-16T00:22:59.851146663Z
+- Nextflow version: 26.10.1
 - Summary: 72 warnings
 
 ## :warning: Warnings
@@ -433,7 +433,7 @@
       ^^^^
   ```
 
-- Warning: `modules/nf-core/multiqc/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/multiqc/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

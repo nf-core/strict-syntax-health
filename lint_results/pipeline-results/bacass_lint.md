@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-10-15T00:18:54.039019467Z
-- Nextflow version: 26.10.0
-- Summary: 60 warnings
+- Generated: 2026-10-16T00:17:40.451615455Z
+- Nextflow version: 26.10.1
+- Summary: 63 warnings
 
 ## :warning: Warnings
 
@@ -209,7 +209,7 @@
       ^^^^
   ```
 
-- Warning: `modules/nf-core/multiqc/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/multiqc/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -398,28 +398,49 @@
                              ^^^^^^^
   ```
 
-- Warning: `workflows/bacass.nf:253:47`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/bacass.nf:79:5`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      multiqc_config
+      ^^^^^^^^^^^^^^
+  ```
+
+- Warning: `workflows/bacass.nf:80:5`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      multiqc_logo
+      ^^^^^^^^^^^^
+  ```
+
+- Warning: `workflows/bacass.nf:81:5`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      multiqc_methods_description
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `workflows/bacass.nf:258:47`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   .cross(ch_longreads_concat) { it[0].sample }
                                                 ^^
   ```
 
-- Warning: `workflows/bacass.nf:286:33`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/bacass.nf:291:33`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   .branch { meta, reads ->
                                   ^^^^^
   ```
 
-- Warning: `workflows/bacass.nf:304:13`: Variable was declared but not used
+- Warning: `workflows/bacass.nf:309:13`: Variable was declared but not used
 
   ```nextflow
               ch_rasusa_log = RASUSA.out.log
               ^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/bacass.nf:313:41`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/bacass.nf:318:41`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .cross(ch_longreads_filtered) { it[0].sample }

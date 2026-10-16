@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.09.2-edge
+ N E X T F L O W   ~  version 26.10.1
 
-Launching `./main.nf` [small_becquerel] revision: 789f81b74f
+Launching `./main.nf` [nauseous_fermat] revision: 789f81b74f
 
 
 ------------------------------------------------------
@@ -167,6 +167,9 @@ unset to use the auto default.
 is passed to `--norm-window`); set to `false` or `0` to explicitly disable even for DMS (which 
 enables it by default). Leave unset to use the per-method default.  
   --rfnorm_norm_independent            [boolean]          Normalize each reactive base independently (`--norm-independent`). [default: false] 
+  --four_base_dms                      [boolean]          Four-base DMS analysis (Mitchell et al., 2023) for DMS-MaP samples at pH >= 8: rf-count keeps only 
+G->C/G->T mutations on G and drops indels (`-om H2N,G2Y -ncl`), and rf-norm normalises each base 
+separately over the whole transcript (`-4d`). [default: true]  
   --rfnorm_use_normfactor              [boolean]          Cross-experiment normalization via rf-normfactor (one factor set per reference, fed to rf-norm via 
 `-nf`), putting reactivities on a common scale. Leave unset for auto (enabled only for a reference 
 with more than one treated sample to cross-normalise); set `true` to force on, `false` to force off 
@@ -289,6 +292,9 @@ the whole transcript instead. [default: 1000]
   --rffold_vienna_constrained          [boolean]          Use ViennaRNA hard constraints with rf-fold (`-hc`). [default: false] 
   --rffold_vienna_max_bp_span          [integer]          Maximal base-pair span for ViennaRNA in rf-fold (`-md`). [default: 600] 
   --rffold_only_common                 [integer]          Only fold transcripts covered in at least this number of XML experiments (`-oc`). 
+  --rffold_use_alifold                 [boolean]          Fold a group's replicates together with RNAalifold, constrained by all their reactivity profiles at 
+once, instead of folding each with RNAfold and aggregating base pairs (`-ua`). Applies only to 
+groups with more than one replicate. [default: true]  
   --rffold_fold_constraint_file        [string]           Constraint file for allowed base-pairing positions (`-c`). 
   --rffold_dotplot                     [boolean]          Generate dot plots from rf-fold (`-dp`). [default: true] 
   --rffold_shannon_entropy             [boolean]          Compute and report Shannon entropy in rf-fold (`-sh`). [default: true] 
@@ -297,8 +303,8 @@ the whole transcript instead. [default: 1000]
   --rffold_intercept                   [number]           Intercept for reactivity-to-folding-constraint conversion in rf-fold (`-in`). Auto by `chemical`: 
 DMS -2, NAI -0.8, 2A3 -0.4, other/unset -0.6. Overridden by jackknife calibration when available. 
  
-  --rffold_vienna_rnaplot              [string]           Path to ViennaRNA `RNAplot` binary for SVG structure plots in rf-fold (`-vrp`). [default: 
-RNAplot]  
+  --rffold_vienna_rnaplot              [string]           Path to ViennaRNA `RNAplot` binary for the ViennaRNA and rf-structextract SVG structure plots. 
+[default: RNAplot]  
   --r2dt                               [boolean]          Generate template-based 2D RNA structure diagrams using R2DT, coloured by normalised 
 SHAPE/chemical-probing reactivity. [default: true]  
   --r2dt_templatable_biotypes          [string]           Comma-separated GTF biotypes sent to R2DT. R2DT only has templates for structured ncRNA classes; 

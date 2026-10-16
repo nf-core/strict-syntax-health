@@ -1,10 +1,12 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.0
+ N E X T F L O W   ~  version 26.10.1
 
+Downloading plugin nf-core-utils@0.4.0
 Downloading plugin nf-fgbio@1.0.0
-Launching `./main.nf` [gloomy_boltzmann] revision: 59c0f528f3
+Downloading plugin nf-prov@1.7.0
+Launching `./main.nf` [astonishing_hypatia] revision: 59c0f528f3
 
 
 ------------------------------------------------------
@@ -20,7 +22,7 @@ Launching `./main.nf` [gloomy_boltzmann] revision: 59c0f528f3
    \ |   \  /     .__| /¯¯\ |  \ |___ |  \
     `|____\´
 
-  nf-core/sarek 3.10.1dev
+  nf-core/sarek 3.11.0
 ------------------------------------------------------
 Typical pipeline command:
 
