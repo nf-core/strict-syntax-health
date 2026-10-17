@@ -1,10 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.0
+ N E X T F L O W   ~  version 26.10.2
 
 Downloading plugin nf-schema@2.7.2
-Launching `./main.nf` [exotic_ochoa] revision: 72c10b78f7
+Launching `./main.nf` [silly_banach] revision: 72c10b78f7
 
 
 ------------------------------------------------------

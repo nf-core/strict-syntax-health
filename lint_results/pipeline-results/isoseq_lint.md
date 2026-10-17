@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-10-16T00:18:52.250685587Z
-- Nextflow version: 26.10.1
-- Summary: 14 warnings
+- Generated: 2026-10-17T00:19:50.323303829Z
+- Nextflow version: 26.10.2
+- Summary: 15 warnings
 
 ## :warning: Warnings
 
@@ -102,4 +102,11 @@
   ```nextflow
       input             //  string: Path to input samplesheet
       ^^^^^
+  ```
+
+- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:12:5`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      input_workflow      // workflow: the workflow object used by nf-schema to get metadata from the workflow
+      ^^^^^^^^^^^^^^
   ```

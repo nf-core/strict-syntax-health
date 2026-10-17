@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.0
+ N E X T F L O W   ~  version 26.10.2
 
-Launching `./main.nf` [nauseous_lamarck] revision: 44e2f14764
+Launching `./main.nf` [magical_liskov] revision: 44e2f14764
 
 
 ------------------------------------------------------
@@ -12,7 +12,7 @@ Launching `./main.nf` [nauseous_lamarck] revision: 44e2f14764
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/genomeassembler 2.0.1-dev
+  nf-core/genomeassembler 2.0.1
 ------------------------------------------------------
 Typical pipeline command:
 

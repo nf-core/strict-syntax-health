@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.1
+ N E X T F L O W   ~  version 26.10.2
 
-Launching `./main.nf` [lonely_kimura] revision: 804e261c38
+Launching `./main.nf` [determined_monod] revision: c1c3698d49
 
 
 ------------------------------------------------------
@@ -81,6 +81,11 @@ best]
 FeatureCounts option
   --features                    [string]  Specify which features to count [default: CDS,rRNA,tRNA,tmRNA] 
   --featurecounts_fraction      [boolean] Allow featureCounts to handle multiple-mapping 
+
+HMM search options
+  --hmmdir                      [string] Directory with HMM files to search the proteins with. 
+  --hmmpattern                  [string] Pattern that selects the HMM files in `--hmmdir`. [default: *.hmm] 
+  --hmmfiles                    [string] Comma-separated list of HMM files to search the proteins with. 
 
 Sourmash
   --genomeset_mode              [string]  Perform mapping on all genomes for all samples ('joint') or sample-specific selections of genomes 

@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-10-16T00:20:04.128314529Z
-- Nextflow version: 26.10.1
+- Generated: 2026-10-17T00:21:02.973161942Z
+- Nextflow version: 26.10.2
 - Summary: 6 errors, 78 warnings
 
 ## :x: Errors
@@ -302,67 +302,67 @@
       ^^^^
   ```
 
-- Warning: `subworkflows/local/gatk_MOI/main.nf:46:40`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/gatk_MOI/main.nf:45:40`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_fasta_val = ch_queryfasta.map { meta, fasta -> fasta }.first()
                                          ^^^^
   ```
 
-- Warning: `subworkflows/local/gatk_MOI/main.nf:47:40`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/gatk_MOI/main.nf:46:36`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      ch_fai_val   = ch_queryfai.map   { meta, fai   -> fai   }.first()
-                                         ^^^^
+      ch_fai_val = ch_queryfai.map { meta, fai -> fai }.first()
+                                     ^^^^
   ```
 
-- Warning: `subworkflows/local/gatk_MOI/main.nf:48:40`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/gatk_MOI/main.nf:47:38`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-      ch_dict_val  = ch_querydict.map  { meta, dict  -> dict  }.first()
-                                         ^^^^
+      ch_dict_val = ch_querydict.map { meta, dict -> dict }.first()
+                                       ^^^^
   ```
 
-- Warning: `subworkflows/local/gatk_MOI/main.nf:72:39`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/gatk_MOI/main.nf:70:39`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_dedup_bam.map { meta, bam, bai -> tuple(meta, bam) }
                                         ^^^
   ```
 
-- Warning: `subworkflows/local/gatk_MOI/main.nf:84:20`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/gatk_MOI/main.nf:81:20`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
-      ch_intervals = Channel.fromPath("${projectDir}/assets/intervals/core_chr*.list")
+      ch_intervals = Channel
                      ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/gatk_MOI/main.nf:142:19`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/gatk_MOI/main.nf:139:19`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .filter { meta, vcf, tbi -> vcf.size() > 8000 }
                     ^^^^
   ```
 
-- Warning: `subworkflows/local/gatk_MOI/main.nf:142:30`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/gatk_MOI/main.nf:139:30`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .filter { meta, vcf, tbi -> vcf.size() > 8000 }
                                ^^^
   ```
 
-- Warning: `subworkflows/local/gatk_MOI/main.nf:200:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/gatk_MOI/main.nf:189:52`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-              def vcfs = items.collect { it[1] }
-                                         ^^
+              tuple([id: 'cohort'], sorted.collect { it[1] }, sorted.collect { it[2] })
+                                                     ^^
   ```
 
-- Warning: `subworkflows/local/gatk_MOI/main.nf:201:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/gatk_MOI/main.nf:189:78`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-              def tbis = items.collect { it[2] }
-                                         ^^
+              tuple([id: 'cohort'], sorted.collect { it[1] }, sorted.collect { it[2] })
+                                                                               ^^
   ```
 
 - Warning: `subworkflows/local/phylogeny/phylogeny.nf:17:16`: Parameter was not used -- prefix with `_` to suppress warning

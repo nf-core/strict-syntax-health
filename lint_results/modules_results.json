@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "0e9b69f1a141ecd202fcd7df0aa7874866fa7a89",
+  "_repo_commit": "1bd88f35cfd2e563ed95acd045574df2dde4f44c",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -160,6 +160,12 @@
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/agrvate",
     "errors": 0,
     "warnings": 0,
+    "parse_error": false
+  },
+  "aldy_genotype": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aldy/genotype",
+    "errors": 0,
+    "warnings": 1,
     "parse_error": false
   },
   "ale": {
@@ -3168,6 +3174,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "edger_differential": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/edger/differential",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
   "eggnogmapper": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/eggnogmapper",
     "errors": 0,
@@ -3430,6 +3442,12 @@
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fastdup",
     "errors": 0,
     "warnings": 0,
+    "parse_error": false
+  },
+  "fastga_fastga": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fastga/fastga",
+    "errors": 0,
+    "warnings": 1,
     "parse_error": false
   },
   "fastk_fastk": {
@@ -8890,6 +8908,12 @@
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/presto/pairseq",
     "errors": 0,
     "warnings": 1,
+    "parse_error": false
+  },
+  "pretextgraph": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pretextgraph",
+    "errors": 0,
+    "warnings": 0,
     "parse_error": false
   },
   "pretextmap": {

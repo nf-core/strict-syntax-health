@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-10-16T00:22:06.524316024Z
-- Nextflow version: 26.10.1
+- Generated: 2026-10-17T00:22:02.320688578Z
+- Nextflow version: 26.10.2
 - Summary: 126 warnings
 
 ## :warning: Warnings
@@ -251,7 +251,7 @@
       ^^^^
   ```
 
-- Warning: `modules/nf-core/ensemblvep/vep/main.nf:29:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/ensemblvep/vep/main.nf:30:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

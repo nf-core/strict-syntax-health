@@ -1,12 +1,12 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.1
+ N E X T F L O W   ~  version 26.10.2
 
 Downloading plugin nf-core-utils@0.4.0
 Downloading plugin nf-fgbio@1.0.0
 Downloading plugin nf-prov@1.7.0
-Launching `./main.nf` [astonishing_hypatia] revision: 59c0f528f3
+Launching `./main.nf` [furious_fourier] revision: 59c0f528f3
 
 
 ------------------------------------------------------
@@ -96,6 +96,7 @@ matched tumor will still be processed through germline variant calling tools.
   --ascat_min_map_qual                [integer] Overwrite Ascat min mapping quality required for a read to be counted. [default: 35] 
   --ascat_ploidy                      [number]  Overwrite ASCAT ploidy. 
   --ascat_purity                      [number]  Overwrite ASCAT purity. 
+  --ascat_penalty                     [number]  Set the penalty for ASCAT segmentation. [default: 70] 
   --cf_chrom_len                      [string]  Specify a custom chromosome length file. 
   --cf_coeff                          [number]  Overwrite Control-FREEC coefficientOfVariation [default: 0.05] 
   --cf_contamination_adjustment       [boolean] Overwrite Control-FREEC contaminationAdjustement 
@@ -170,7 +171,7 @@ rs_dbSNP,HGVSc_VEP,HGVSp_VEP,1000Gp3_EAS_AF,1000Gp3_AMR_AF,LRT_score,GERP++_RS,g
   --vep_spliceregion                  [boolean] Enable the use of the VEP SpliceRegion plugin. 
   --vep_custom_args                   [string]  Add an extra custom argument to VEP. [default: --everything --filter_common --per_gene 
 --total_length --offline --format vcf]  
-  --vep_version                       [string]  Should reflect the VEP version used in the container. [default: 116.0-0] 
+  --vep_version                       [string]  Should reflect the VEP version used in the container. [default: 116.3-0] 
   --outdir_cache                      [string]  The output directory where the cache will be saved. You have to use absolute paths to storage on 
 Cloud infrastructure.  
   --vep_out_format                    [string]  VEP output-file format.  (accepted: json, tab, vcf) [default: vcf] 

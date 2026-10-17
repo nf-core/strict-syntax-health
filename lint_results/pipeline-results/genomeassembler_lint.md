@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-10-15T00:20:12.313288980Z
-- Nextflow version: 26.10.0
-- Summary: 48 warnings
+- Generated: 2026-10-17T00:19:26.280431653Z
+- Nextflow version: 26.10.2
+- Summary: 46 warnings
 
 ## :warning: Warnings
 
@@ -319,20 +319,6 @@
   ```nextflow
           .mix(ch_main_prepared.filter { it.meta.assembly && !it.meta.ontreads && !it.meta.hifireads })
                                                                                    ^^
-  ```
-
-- Warning: `subworkflows/local/prepare/main.nf:235:5`: Variable was declared but not used
-
-  ```nextflow
-      genomescope_summary = JELLYFISH.out.genomescope_summary
-      ^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/prepare/main.nf:237:5`: Variable was declared but not used
-
-  ```nextflow
-      genomescope_plot = JELLYFISH.out.genomescope_plot
-      ^^^^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/utils_nfcore_genomeassembler_pipeline/main.nf:33:5`: Parameter was not used -- prefix with `_` to suppress warning

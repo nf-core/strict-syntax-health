@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-10-15T00:23:09.105016737Z
-- Nextflow version: 26.10.0
-- Summary: 53 warnings
+- Generated: 2026-10-17T00:23:36.785458874Z
+- Nextflow version: 26.10.2
+- Summary: 56 warnings
 
 ## :warning: Warnings
 
@@ -340,6 +340,27 @@
   ```nextflow
       when:
       ^^^^
+  ```
+
+- Warning: `subworkflows/local/concordance_analysis/main.nf:31:48`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              def hasConcordanceId = items.any { it[0].concordance_id }
+                                                 ^^
+  ```
+
+- Warning: `subworkflows/local/concordance_analysis/main.nf:41:92`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                          def truthIds = meta.concordance_id.toString().split(';').collect { it.trim() }
+                                                                                             ^^
+  ```
+
+- Warning: `subworkflows/local/concordance_analysis/main.nf:45:58`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                              def truthItem = items.find { it[0].id == tId }
+                                                           ^^
   ```
 
 - Warning: `subworkflows/local/intersect_statistics/main.nf:18:17`: Variable was declared but not used

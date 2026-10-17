@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.1
+ N E X T F L O W   ~  version 26.10.2
 
-Launching `./main.nf` [mad_sax] revision: 3d6668ec16
+Launching `./main.nf` [distraught_bell] revision: 3d6668ec16
 
 WARN: Unrecognized config option 'validation.monochromeLogs'
 
@@ -13,7 +13,7 @@ WARN: Unrecognized config option 'validation.monochromeLogs'
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/metaboigniter 2.1.0dev
+  nf-core/metaboigniter 2.1.0
 ------------------------------------------------------
 Typical pipeline command:
 
@@ -60,8 +60,8 @@ ALL,BIO,PUBCHEM,MESH,HMDB,KNAPSACK,CHEBI,PUBMED,KEGG,HSDB,MACONDA,METACYC,GNPS,Z
  
   --sirius_email                                                                                       [string]  E-mail for your SIRIUS account. 
   --sirius_password                                                                                    [string]  Password for your SIRIUS account. 
-  --sirius_split                                                                                       [boolean] If set, SIRIUS will be run in parallel. See mgf_splitmgf_pyopenms parameter for segmentation 
- 
+  --sirius_split                                                                                       [boolean] Run SIRIUS on each chunk in parallel. Has no effect unless `--mgf_splitmgf_pyopenms` is above 1, 
+which sets the number of chunks.  
   --split_consensus_parts                                                                              [integer] For running MS2 mapping in parallel set this higher than 1 [default: 20] 
   --run_ms2query                                                                                       [boolean] If set, MS2Query will be run 
   --sirius_runfid                                                                                      [boolean] If set, FingerID will be run. This has to be run together with run_sirius 
