@@ -1,9 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.1
+ N E X T F L O W   ~  version 26.10.2
 
-Launching `./main.nf` [nauseous_fermat] revision: 789f81b74f
+Downloading plugin nf-schema@2.7.2
+Launching `./main.nf` [peaceful_fermat] revision: 789f81b74f
 
 
 ------------------------------------------------------
@@ -12,7 +13,7 @@ Launching `./main.nf` [nauseous_fermat] revision: 789f81b74f
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/rnastructurome 1.1.0dev
+  nf-core/rnastructurome 1.1.0
 ------------------------------------------------------
 Typical pipeline command:
 

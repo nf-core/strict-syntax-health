@@ -11,12 +11,12 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 > See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline.
 > **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**
 
-- **Last updated:** 2026-10-17 00:25:16 UTC
+- **Last updated:** 2026-10-18 00:22:43 UTC
 - **Nextflow version:** 26.10.2
 
 ## Pipelines
 
-- **Total:** 0 parse errors, 1114 errors, 6890 warnings across 145 pipelines
+- **Total:** 0 parse errors, 1114 errors, 6883 warnings across 145 pipelines
 - **Zero errors:** 100 pipelines (69.0%)
 
 |                    Errors                    |                     Warnings                     |
@@ -84,7 +84,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :white_check_mark: [differentialabundance](https://github.com/nf-core/differentialabundance)   |     No      |      0 |      109 |     Yes     |   [View](lint_results/pipeline-results/differentialabundance_lint.md)   | [View](lint_results/prints-help-results/differentialabundance_help.txt)  |
 | :x: [oncoanalyser](https://github.com/nf-core/oncoanalyser)                                    |     No      |      0 |      106 |     No      |       [View](lint_results/pipeline-results/oncoanalyser_lint.md)        |      [View](lint_results/prints-help-results/oncoanalyser_help.txt)      |
 | :white_check_mark: [diseasemodulediscovery](https://github.com/nf-core/diseasemodulediscovery) |     No      |      0 |      105 |     Yes     |  [View](lint_results/pipeline-results/diseasemodulediscovery_lint.md)   | [View](lint_results/prints-help-results/diseasemodulediscovery_help.txt) |
-| :white_check_mark: [circrna](https://github.com/nf-core/circrna)                               |     No      |      0 |       95 |     Yes     |          [View](lint_results/pipeline-results/circrna_lint.md)          |        [View](lint_results/prints-help-results/circrna_help.txt)         |
+| :white_check_mark: [circrna](https://github.com/nf-core/circrna)                               |     No      |      0 |       88 |     Yes     |          [View](lint_results/pipeline-results/circrna_lint.md)          |        [View](lint_results/prints-help-results/circrna_help.txt)         |
 | :white_check_mark: [bacmodel](https://github.com/nf-core/bacmodel)                             |     No      |      0 |       77 |     Yes     |         [View](lint_results/pipeline-results/bacmodel_lint.md)          |        [View](lint_results/prints-help-results/bacmodel_help.txt)        |
 | :white_check_mark: [scdownstream](https://github.com/nf-core/scdownstream)                     |     No      |      0 |       75 |     Yes     |       [View](lint_results/pipeline-results/scdownstream_lint.md)        |      [View](lint_results/prints-help-results/scdownstream_help.txt)      |
 | :white_check_mark: [mcmicro](https://github.com/nf-core/mcmicro)                               |     No      |      0 |       72 |     Yes     |          [View](lint_results/pipeline-results/mcmicro_lint.md)          |        [View](lint_results/prints-help-results/mcmicro_help.txt)         |
@@ -221,7 +221,7 @@ The status emoji next to each pipeline shows its migration state: :white_check_m
 | :x: [cellpainting](https://github.com/nf-core/cellpainting)                           |     No      |   Yes (7)    |       [View](lint_results/workflow-outputs-results/cellpainting_outputs.md)        |
 | :x: [chipseq](https://github.com/nf-core/chipseq)                                     |     No      |   Yes (57)   |          [View](lint_results/workflow-outputs-results/chipseq_outputs.md)          |
 | :x: [circdna](https://github.com/nf-core/circdna)                                     |     No      |   Yes (35)   |          [View](lint_results/workflow-outputs-results/circdna_outputs.md)          |
-| :x: [circrna](https://github.com/nf-core/circrna)                                     |     No      |  Yes (127)   |          [View](lint_results/workflow-outputs-results/circrna_outputs.md)          |
+| :x: [circrna](https://github.com/nf-core/circrna)                                     |     No      |  Yes (128)   |          [View](lint_results/workflow-outputs-results/circrna_outputs.md)          |
 | :x: [clipseq](https://github.com/nf-core/clipseq)                                     |     No      |   Yes (24)   |          [View](lint_results/workflow-outputs-results/clipseq_outputs.md)          |
 | :x: [coproid](https://github.com/nf-core/coproid)                                     |     No      |   Yes (11)   |          [View](lint_results/workflow-outputs-results/coproid_outputs.md)          |
 | :x: [createtaxdb](https://github.com/nf-core/createtaxdb)                             |     No      |   Yes (17)   |        [View](lint_results/workflow-outputs-results/createtaxdb_outputs.md)        |

@@ -3,7 +3,8 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.10.2
 
-Launching `./main.nf` [stoic_shannon] revision: 8033629cc6
+Downloading plugin nf-schema@2.5.1
+Launching `./main.nf` [mighty_euclid] revision: 8add8d3e51
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -49,8 +50,8 @@ BSJ. [default: 0]
   --exons_only                  [boolean] Only consider exons for circRNA sequence extraction. [default: true] 
 
 FLI Detection Options
-  --fli_tools                   [string] Comma separated list of FLI detection tools to use. Supported tools: psirc, circtools, cirifull 
- 
+  --fli_tools                   [string] Comma separated list of FLI detection tools to use. Supported tools: psirc, circtools, cirifull, 
+jccirc  
 
 Quantification Options
   --quantification_tools        [string]  Comma separated list of circRNA quantification tools to use. Supported tools: ciriquant, psirc 

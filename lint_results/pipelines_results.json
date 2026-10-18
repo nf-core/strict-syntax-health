@@ -182,14 +182,14 @@
   "circrna": {
     "full_name": "nf-core/circrna",
     "html_url": "https://github.com/nf-core/circrna",
-    "commit": "95a69c431fd887df8c97e43ae8d093bf238f8834",
+    "commit": "ff26767df62cdeae4b8b5a47d2abbb0881846cf6",
     "errors": 0,
-    "warnings": 95,
+    "warnings": 88,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 127
+    "publishdir_count": 128
   },
   "clipseq": {
     "full_name": "nf-core/clipseq",
@@ -1406,7 +1406,7 @@
   "rnastructurome": {
     "full_name": "nf-core/rnastructurome",
     "html_url": "https://github.com/nf-core/rnastructurome",
-    "commit": "d67d4cb0634f24cf30fa2c7538429a6328f9e8f1",
+    "commit": "ad70142944c63fe402d0a102801c2c6d33c0b384",
     "errors": 0,
     "warnings": 36,
     "parse_error": false,

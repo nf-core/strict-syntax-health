@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-10-17T00:18:38.341303042Z
+- Generated: 2026-10-18T00:19:47.953768895Z
 - Nextflow version: 26.10.2
-- Summary: 95 warnings
+- Summary: 88 warnings
 
 ## :warning: Warnings
 
@@ -27,20 +27,6 @@
       ^^^^
   ```
 
-- Warning: `modules/local/circtest/prepare/main.nf:19:5`: Variable was declared but not used
-
-  ```nextflow
-      prefix = task.ext.prefix ?: meta.id
-      ^^^^^^
-  ```
-
-- Warning: `modules/local/ciri/build_list/main.nf:19:5`: Variable was declared but not used
-
-  ```nextflow
-      max_shift = task.ext.max_shift ?: 0
-      ^^^^^^^^^
-  ```
-
 - Warning: `modules/local/ciriquant/ciriquant/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
@@ -60,20 +46,6 @@
   ```nextflow
       when:
       ^^^^
-  ```
-
-- Warning: `modules/local/combinebeds/reads/main.nf:21:5`: Variable was declared but not used
-
-  ```nextflow
-      consider_strand = task.ext.consider_strand ?: false
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `modules/local/combinebeds/reads/main.nf:22:5`: Variable was declared but not used
-
-  ```nextflow
-      min_tools       = task.ext.min_tools       ?: 2
-      ^^^^^^^^^
   ```
 
 - Warning: `modules/local/combinebeds/shifts/main.nf:19:5`: Variable was declared but not used
@@ -118,18 +90,11 @@
       ^^^^
   ```
 
-- Warning: `modules/local/majority_vote/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/majority_vote/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
       ^^^^
-  ```
-
-- Warning: `modules/local/majority_vote/main.nf:22:5`: Variable was declared but not used
-
-  ```nextflow
-      min_tools = params.mirna_min_tools
-      ^^^^^^^^^
   ```
 
 - Warning: `modules/local/mapsplice/align/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
@@ -139,25 +104,11 @@
       ^^^^
   ```
 
-- Warning: `modules/local/matrix/join_samples/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/matrix/join_samples/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
       ^^^^
-  ```
-
-- Warning: `modules/local/matrix/join_samples/main.nf:21:5`: Variable was declared but not used
-
-  ```nextflow
-      metacols = task.ext.metacols ?: "gene_id,gene_name"
-      ^^^^^^^^
-  ```
-
-- Warning: `modules/local/matrix/join_samples/main.nf:22:5`: Variable was declared but not used
-
-  ```nextflow
-      has_header = task.ext.has_header == null ? true : task.ext.has_header
-      ^^^^^^^^^^
   ```
 
 - Warning: `modules/local/mirna_filtering/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
@@ -272,14 +223,14 @@
       ^^^^
   ```
 
-- Warning: `modules/nf-core/bedtools/intersect/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/bedtools/intersect/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
       ^^^^
   ```
 
-- Warning: `modules/nf-core/bedtools/sort/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/bedtools/sort/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -552,7 +503,7 @@
       ^^^^
   ```
 
-- Warning: `modules/nf-core/seqkit/fx2tab/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/seqkit/fx2tab/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
