@@ -182,14 +182,14 @@
   "circrna": {
     "full_name": "nf-core/circrna",
     "html_url": "https://github.com/nf-core/circrna",
-    "commit": "ff26767df62cdeae4b8b5a47d2abbb0881846cf6",
+    "commit": "a47ab59b5dce516a517a3e643d92257fa87a5c93",
     "errors": 0,
-    "warnings": 88,
+    "warnings": 95,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 128
+    "publishdir_count": 137
   },
   "clipseq": {
     "full_name": "nf-core/clipseq",
@@ -758,9 +758,9 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "264a7fe2169773de9b417ee660143e42692bd9f6",
+    "commit": "7985439c33bbffdc96a853abd298c5221c799dff",
     "errors": 0,
-    "warnings": 20,
+    "warnings": 98,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -1454,7 +1454,7 @@
   "scdownstream": {
     "full_name": "nf-core/scdownstream",
     "html_url": "https://github.com/nf-core/scdownstream",
-    "commit": "65b8594468338d095e5278bd7f1f9b956d1a66e6",
+    "commit": "4dc20f4d8aeb760835d24e69af66855b61cc0ca9",
     "errors": 0,
     "warnings": 75,
     "parse_error": false,
