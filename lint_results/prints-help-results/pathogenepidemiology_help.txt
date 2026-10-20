@@ -1,11 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.08.0-edge
+ N E X T F L O W   ~  version 26.10.2
 
-Launching `./main.nf` [grave_planck] revision: 0c1f356ff8
+Launching `./main.nf` [romantic_lalande] revision: 0c1f356ff8
 
-WARN: Unrecognized config option 'manifest.diagram'
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
 
@@ -19,10 +18,15 @@ WARN: Unrecognized config option 'validation.monochromeLogs'
 ------------------------------------------------------
 Typical pipeline command:
 
-  nextflow run pathogenepidemiology -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+  nextflow run nf-core/pathogenepidemiology -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
 
 help message of that parameter will be printed.  
 or `--helpFull`.  
+
+Pipeline input options
+  --queryurl                    [string]  URL of the query reference FASTA to download. 
+  --hosturl                     [string]  URL of the host reference FASTA to download. 
+  --threads                     [integer] Number of CPU threads to use per process. [default: 4] 
 
 Input/output options
   --input                       [string] Path to comma-separated file containing information about the samples in the experiment. 

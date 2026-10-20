@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "65f9f44005ec646ccf3b39da2b1a78555b4d2932",
+  "_repo_commit": "8fff8cfa10626a5acb7652f2212dec0cbc18b47e",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -5784,6 +5784,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "infernal_cmscan": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/infernal/cmscan",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
   "infernal_cmsearch": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/infernal/cmsearch",
     "errors": 0,
@@ -7290,6 +7296,12 @@
     "warnings": 1,
     "parse_error": false
   },
+  "modkit_validate": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/modkit/validate",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
   "molkartgarage_clahe": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/molkartgarage/clahe",
     "errors": 0,
@@ -8092,6 +8104,12 @@
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/pangolin/updatedata",
     "errors": 0,
     "warnings": 1,
+    "parse_error": false
+  },
+  "panteraga": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/panteraga",
+    "errors": 0,
+    "warnings": 0,
     "parse_error": false
   },
   "parabricks_applybqsr": {

@@ -1,9 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.1
+ N E X T F L O W   ~  version 26.10.2
 
-Launching `./main.nf` [amazing_joliot] revision: 5e3580bebb
+Downloading plugin nf-schema@2.5.1
+Launching `./main.nf` [goofy_poisson] revision: 5e3580bebb
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -72,6 +73,12 @@ true]
   --bullseye_functions_r_file     [string]          Path to functions.R used by the Bullseye GLM helper. [default: assets/bullseye_functions.R] 
   --bullseye_glm_observations     [string]          Path to a tab-delimited observations file containing sample metadata with at least a 'sample' column 
 (consistent with nf-core/differentialabundance).  
+  --bullseye_glm_coverage         [string]          Start from matrices: tab-delimited per-site coverage matrix (BULLSEYE_GATHER_SITES format: #chr, 
+start, end, cluster, strand, then one column per sample). Requires --bullseye_glm_mut and 
+--bullseye_glm_observations; skips FASTQ processing, alignment and Bullseye site calling, so --input 
+is not needed.  
+  --bullseye_glm_mut              [string]          Start from matrices: tab-delimited per-site mutation-count matrix matching --bullseye_glm_coverage 
+(same rows and sample columns).  
   --bullseye_glm_design           [string]          R formula string used as design in Bullseye GLM helper. [default: ~group] 
   --bullseye_glm_link             [string]          Link/model option passed to Bullseye helper function.  (accepted: betabin, bin, quasibinomial, 
 betareg) [default: betabin]  

@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-10-16T00:18:13.500249893Z
-- Nextflow version: 26.10.1
-- Summary: 34 warnings
+- Generated: 2026-10-20T00:19:11.896047065Z
+- Nextflow version: 26.10.2
+- Summary: 35 warnings
 
 ## :warning: Warnings
 
@@ -146,100 +146,107 @@
       ^^^^
   ```
 
-- Warning: `workflows/dartseq.nf:71:72`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/dartseq.nf:78:72`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(FASTP.out.html.collect{it[1]})
                                                                          ^^
   ```
 
-- Warning: `workflows/dartseq.nf:72:72`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/dartseq.nf:79:72`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(FASTP.out.json.collect{it[1]})
                                                                          ^^
   ```
 
-- Warning: `workflows/dartseq.nf:73:71`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/dartseq.nf:80:71`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(FASTP.out.log.collect{it[1]})
                                                                         ^^
   ```
 
-- Warning: `workflows/dartseq.nf:79:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/dartseq.nf:86:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(TRIMGALORE.out.zip.collect{it[1]})
                                                                              ^^
   ```
 
-- Warning: `workflows/dartseq.nf:80:77`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/dartseq.nf:87:77`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(TRIMGALORE.out.html.collect{it[1]})
                                                                               ^^
   ```
 
-- Warning: `workflows/dartseq.nf:81:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/dartseq.nf:88:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(TRIMGALORE.out.log.collect{it[1]})
                                                                              ^^
   ```
 
-- Warning: `workflows/dartseq.nf:90:35`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/dartseq.nf:97:35`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_fasta = params.fasta ? Channel.value([ [ id: 'fasta' ], file(params.fasta, checkIfExists: true) ]) : channel.empty()
                                     ^^^^^^^
   ```
 
-- Warning: `workflows/dartseq.nf:91:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/dartseq.nf:98:31`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
           ch_gtf = params.gtf ? Channel.value([ [ id: 'gtf' ], file(params.gtf, checkIfExists: true) ]) : channel.empty()
                                 ^^^^^^^
   ```
 
-- Warning: `workflows/dartseq.nf:102:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/dartseq.nf:109:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
                   ? Channel.value([ [ id: 'star_index' ], file(params.star_index, checkIfExists: true) ])
                     ^^^^^^^
   ```
 
-- Warning: `workflows/dartseq.nf:119:86`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/dartseq.nf:126:86`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files = ch_multiqc_files.mix(STAR_ALIGN.out.log_final.collect{it[1]})
                                                                                        ^^
   ```
 
-- Warning: `workflows/dartseq.nf:137:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/dartseq.nf:144:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
                   ? Channel.value([ [ id: 'hisat2_index' ], file(params.hisat2_index, checkIfExists: true) ])
                     ^^^^^^^
   ```
 
-- Warning: `workflows/dartseq.nf:141:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/dartseq.nf:148:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
                   ? Channel.value([ [ id: 'splicesites' ], file(params.hisat2_splicesites, checkIfExists: true) ])
                     ^^^^^^^
   ```
 
-- Warning: `workflows/dartseq.nf:172:86`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/dartseq.nf:179:86`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files = ch_multiqc_files.mix(HISAT2_ALIGN.out.summary.collect{it[1]})
                                                                                        ^^
   ```
 
-- Warning: `workflows/dartseq.nf:177:17`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/dartseq.nf:184:17`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
                   Channel.value([ [ id: 'no_fasta' ], [], [] ]),
                   ^^^^^^^
+  ```
+
+- Warning: `workflows/dartseq.nf:398:58`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  .map { meta, beds -> [ meta, beds.sort { it.name } ] }
+                                                           ^^
   ```

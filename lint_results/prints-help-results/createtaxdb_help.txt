@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.09.1-edge
+ N E X T F L O W   ~  version 26.10.2
 
-Launching `./main.nf` [elated_wing] revision: 94881d840d
+Launching `./main.nf` [big_curie] revision: 94881d840d
 
 
 ------------------------------------------------------

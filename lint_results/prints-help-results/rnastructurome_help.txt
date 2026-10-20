@@ -3,8 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.10.2
 
-Downloading plugin nf-schema@2.7.2
-Launching `./main.nf` [peaceful_fermat] revision: 789f81b74f
+Launching `./main.nf` [nice_hypatia] revision: 789f81b74f
 
 
 ------------------------------------------------------
@@ -49,17 +48,11 @@ Sample metadata options
   --pH                                 [number]  Fallback DMS reaction pH for rows missing `pH`. 
   --umi_pattern                        [string]  Fallback UMI pattern for rows missing `umi_pattern`. Supplying a pattern enables umi_tools extract 
 before cutadapt.  
-  --fuzzy_untreated_pairing            [boolean] When true (default), a treated group with no exact `sample_group`+`replicate` untreated match falls 
-back to the untreated whose `sample_group` shares the longest leading token prefix with it — e.g. 
-`HFF_infected_HCMV_05hpi` prefers `HFF_infected_HCMV_72hpi` (3 shared tokens) over `HFF_uninfected` 
-(1), while `MDA-MB-231_untreated_r1` still serves `MDA-MB-231_MTX_treated_r1`. Among equally close 
-candidates the same replicate wins; if none matches the replicate but the closest arm has exactly 
-one untreated, that control is reused across replicates. Genuine ties error. Denatured controls 
-resolve the same way, except that a group only inherits one if it already has an untreated. A 
-control is never borrowed from a group sharing no leading token, so unrelated samples are not paired 
-and such a treated group is left without a control. Set false to require exact matches; unmatched 
-treated groups then proceed without an untreated control (scoring method 2 or 4). [default: 
-true]  
+  --exact_untreated_pairing            [boolean] Require an exact `sample_group`+`replicate` match when pairing treated samples with 
+untreated/denatured controls. By default, a treated group with no exact match falls back to the 
+control whose `sample_group` shares the longest leading substring with it (see the usage docs). With 
+this set, unmatched treated groups proceed without an untreated control (scoring method 2 or 4). 
+ 
 
 Read trimming options
   --cutadapt_adapter_5p                [string]  Global fallback 5' adapter sequence(s), comma-separated. If omitted and no per-sample adapter is 
@@ -105,10 +98,10 @@ mapping to more loci than this are discarded. Increase when studying repetitive 
   --bowtie2_softclip                   [boolean]         Enable Bowtie2 local alignment mode (`--local`). 
   --bowtie2_ma                         [integer]         Bowtie2 `--ma` match bonus used with `--local`. [default: 2] 
   --bowtie2_dovetail                   [boolean]         Allow dovetailing mates (`--dovetail`). [default: true] 
-  --skip_markdup                       [boolean]         Skip SAMtools markdup deduplication (default: true). Position-based duplicate removal is not valid 
-for chemical-probing libraries without UMIs, where reads sharing a 5' start are independent RT 
-events rather than PCR duplicates. Leave enabled; UMI libraries are still deduplicated via 
-UMI-tools. Set false only if you have a specific reason. [default: true]  
+  --markdup                            [boolean]         Run SAMtools markdup deduplication on non-UMI libraries. Off by default: position-based duplicate 
+removal is not valid for chemical-probing libraries without UMIs, where reads sharing a 5' start are 
+independent RT events rather than PCR duplicates. UMI libraries are always deduplicated via 
+UMI-tools.  
   --star_map_sjdb_overhang             [integer]         STAR `--sjdbOverhang` for MaP alignment. Ideally `readLength - 1`; default 200 suits 201 bp reads. 
 [default: 200]  
 
@@ -330,7 +323,7 @@ Generic options
   --help_full                          [boolean]         Display the full detailed help message. 
   --show_hidden                        [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
  
- !! Hiding 21 param(s), use the `--showHidden` parameter to show them !!
+ !! Hiding 23 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
 
 * The nf-core framework

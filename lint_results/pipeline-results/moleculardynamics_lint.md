@@ -1,24 +1,10 @@
 # Nextflow lint results
 
-- Generated: 2026-10-13T00:26:53.821421414Z
-- Nextflow version: 26.10.0
-- Summary: 34 errors, 6 warnings
+- Generated: 2026-10-20T00:20:07.167239746Z
+- Nextflow version: 26.10.2
+- Summary: 28 errors, 6 warnings
 
 ## :x: Errors
-
-- Error: `main.nf:18:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/moleculardynamics/workflows/moleculardynamics.nf'
-
-  ```nextflow
-  include { MOLECULARDYNAMICS  } from './workflows/moleculardynamics'
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Error: `main.nf:42:5`: `MOLECULARDYNAMICS` is not defined
-
-  ```nextflow
-      MOLECULARDYNAMICS (
-      ^^^^^^^^^^^^^^^^^
-  ```
 
 - Error: `modules/local/pre_pos_check_missing_atoms.nf:30:32`: Unexpected input: '\n'
 
@@ -74,48 +60,6 @@
   ```nextflow
       tuple val(sample), path(checked_pdb), val(forcefield), val(box_type), val(distance_to_box), path(em_mdp), path(nvt_mdp), path(npt_mdp), path(md_mdp) into checked_pdb
                                                                                                                                                            ^
-  ```
-
-- Error: `nextflow.config:265:41`: `manifest` is not defined
-
-  ```nextflow
-  \033[0;35m  nf-core/moleculardynamics ${manifest.version}\033[0m
-                                          ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:268:26`: `manifest` is not defined
-
-  ```nextflow
-          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
-                           ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:268:69`: `manifest` is not defined
-
-  ```nextflow
-          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
-                                                                      ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:268:186`: `manifest` is not defined
-
-  ```nextflow
-          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
-                                                                                                                                                                                           ^^^^^^^^
-  ```
-
-- Error: `nextflow.config:277:22`: `validation` is not defined
-
-  ```nextflow
-          beforeText = validation.help.beforeText
-                       ^^^^^^^^^^
-  ```
-
-- Error: `nextflow.config:278:21`: `validation` is not defined
-
-  ```nextflow
-          afterText = validation.help.afterText
-                      ^^^^^^^^^^
   ```
 
 - Error: `subworkflows/local/pre_processing/main.nf:3:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/moleculardynamics/modules/local/pre_pos_clean_pdb.nf'
@@ -237,48 +181,67 @@
                             ^^^^^^^^^^^^^^
   ```
 
-- Error: `workflows/moleculardynamics.nf:105:1`: Unexpected end of file -- check for an unclosed brace, bracket, parenthesis, or string
+- Error: `workflows/moleculardynamics.nf:77:41`: `ch_postprocessed_gro` is not defined
+
+  ```nextflow
+      ANALYSIS_RMSD(ch_postprocessed_xtc, ch_postprocessed_gro, ch_postprocessed_tpr, params.outdir)
+                                          ^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `workflows/moleculardynamics.nf:77:63`: `ch_postprocessed_tpr` is not defined
+
+  ```nextflow
+      ANALYSIS_RMSD(ch_postprocessed_xtc, ch_postprocessed_gro, ch_postprocessed_tpr, params.outdir)
+                                                                ^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Error: `workflows/moleculardynamics.nf:113:31`: `ch_cleaned_pdb` is not defined
+
+  ```nextflow
+      cleaned_pdb             = ch_cleaned_pdb              // channel: [ tuple(sample_id, path(cleaned_pdb)) ]
+                                ^^^^^^^^^^^^^^
+  ```
 
 ## :warning: Warnings
 
-- Warning: `nextflow.config:268:129`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/moleculardynamics.nf:30:94`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-          afterText = """${manifest.doi ? "\n* The pipeline\n" : ""}${manifest.doi.tokenize(",").collect { "    https://doi.org/${it.trim().replace('https://doi.org/','')}"}.join("\n")}${manifest.doi ? "\n" : ""}
-                                                                                                                                  ^^
+      paramsSummaryMap(params, methodsDescriptionText(params)).view { "📝 Pipeline parameters:\n$it" }
+                                                                                               ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_moleculardynamics_pipeline/main.nf:31:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/moleculardynamics.nf:49:47`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-      monochrome_logs   // boolean: Do not use coloured log outputs
-      ^^^^^^^^^^^^^^^
+      ch_inputs.view { "📦 Parsed sample inputs: $it" }
+                                                ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_moleculardynamics_pipeline/main.nf:34:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/moleculardynamics.nf:56:65`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-      input             //  string: Path to input samplesheet
-      ^^^^^
+      PRE_PROCESSING.out.cleaned_pdb.view { "✅ Cleaned PDB ready: $it" }
+                                                                  ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_moleculardynamics_pipeline/main.nf:38:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/moleculardynamics.nf:62:102`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-      ch_versions = Channel.empty()
-                    ^^^^^^^
+      RUN_MD_SIMULATION.out.md_report.view { "✅ Production run completed! You can see the report here: $it" }
+                                                                                                       ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_moleculardynamics_pipeline/main.nf:70:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/moleculardynamics.nf:71:112`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-      ch_samplesheet = Channel.fromPath(params.input)
-                       ^^^^^^^
+      POST_PROCESSING.out.postprocessed_report.view { "✅ Post-processing completed! You can see the report here: $it" }
+                                                                                                                 ^^
   ```
 
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/moleculardynamics.nf:78:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-      return ch_versions.unique().map { version -> processVersionsFromYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
-                                                                                                   ^^^^^^^
+      ANALYSIS_RMSD.out.rmsd_xvg.view { "✅ RMSD analysis completed: $it" }
+                                                                    ^^
   ```
