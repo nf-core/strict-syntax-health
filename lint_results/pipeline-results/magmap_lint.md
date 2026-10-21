@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-10-17T00:20:13.997355371Z
+- Generated: 2026-10-21T00:19:42.712027848Z
 - Nextflow version: 26.10.2
 - Summary: 60 warnings
 
@@ -55,6 +55,20 @@
       ^^^^
   ```
 
+- Warning: `modules/local/duckdb/joinfeaturecountsaccno/main.nf:28:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/duckdb/splitfeaturecounts/main.nf:28:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
 - Warning: `modules/local/genomes2orfs/main.nf:16:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
@@ -70,13 +84,6 @@
   ```
 
 - Warning: `modules/local/prokkagff2tsv/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
-
-  ```nextflow
-      when:
-      ^^^^
-  ```
-
-- Warning: `modules/local/tidyverse/joinfeaturecountsaccno/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -105,13 +112,6 @@
   ```
 
 - Warning: `modules/local/tidyverse/selectgenomespecies/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
-
-  ```nextflow
-      when:
-      ^^^^
-  ```
-
-- Warning: `modules/local/tidyverse/splitfeaturecounts/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

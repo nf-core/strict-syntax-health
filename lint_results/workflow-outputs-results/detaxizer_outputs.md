@@ -1,6 +1,6 @@
 # Workflow outputs migration: detaxizer
 
-- Generated: 2026-10-15T00:19:32.001442+00:00
+- Generated: 2026-10-21T00:18:50.377327+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,4 +14,4 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 20 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/detaxizer/blob/cc62912595c0e9654b8ab6c9ad5f46b8d6b2ece0/conf/modules.config#L15) — 20 references
+- [`conf/modules.config`](https://github.com/nf-core/detaxizer/blob/92f5057f75f0be529ea48acdb6761304cf703d04/conf/modules.config#L15) — 20 references

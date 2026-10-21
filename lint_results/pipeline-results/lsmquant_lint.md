@@ -1,10 +1,17 @@
 # Nextflow lint results
 
-- Generated: 2026-08-27T01:24:15.178014667Z
-- Nextflow version: 26.08.0-edge
-- Summary: 19 warnings
+- Generated: 2026-10-21T00:19:27.264011214Z
+- Nextflow version: 26.10.2
+- Summary: 31 warnings
 
 ## :warning: Warnings
+
+- Warning: `modules/local/mat2json/main.nf:16:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
 
 - Warning: `modules/local/mat2json/main.nf:20:9`: Variable was declared but not used
 
@@ -18,6 +25,13 @@
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
+  ```
+
+- Warning: `modules/local/numorphalign/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
   ```
 
 - Warning: `modules/local/numorphalign/main.nf:25:9`: Variable was declared but not used
@@ -34,6 +48,13 @@
           ^^^^
   ```
 
+- Warning: `modules/local/numorphregister/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
 - Warning: `modules/local/numorphregister/main.nf:22:9`: Variable was declared but not used
 
   ```nextflow
@@ -48,6 +69,13 @@
           ^^^^
   ```
 
+- Warning: `modules/local/numorphstitch/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
 - Warning: `modules/local/numorphstitch/main.nf:21:9`: Variable was declared but not used
 
   ```nextflow
@@ -60,6 +88,13 @@
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
+  ```
+
+- Warning: `modules/local/stagefiles/main.nf:16:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
   ```
 
 - Warning: `modules/local/stagefiles/main.nf:20:9`: Variable was declared but not used
@@ -83,6 +118,20 @@
           ^^^^^^
   ```
 
+- Warning: `modules/local/validate_parameters/main.nf:14:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/mat2json/main.nf:15:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
 - Warning: `modules/nf-core/mat2json/main.nf:19:9`: Variable was declared but not used
 
   ```nextflow
@@ -97,11 +146,32 @@
           ^^^^
   ```
 
+- Warning: `modules/nf-core/multiqc/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/numorph/3dunet/main.nf:16:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
 - Warning: `modules/nf-core/numorph/3dunet/main.nf:41:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
+  ```
+
+- Warning: `modules/nf-core/numorph/intensity/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
   ```
 
 - Warning: `modules/nf-core/numorph/intensity/main.nf:22:9`: Variable was declared but not used
@@ -118,6 +188,20 @@
           ^^^^
   ```
 
+- Warning: `modules/nf-core/numorph/resample/main.nf:14:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/unzip/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
 - Warning: `modules/nf-core/unzip/main.nf:38:9`: Variable was declared but not used
 
   ```nextflow
@@ -132,7 +216,7 @@
       ^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_lsmquant_pipeline/main.nf:104:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/utils_nfcore_lsmquant_pipeline/main.nf:105:22`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_samplesheet = Channel.fromList(samplesheetToList(params.input, "${projectDir}/assets/schema_input.json"))

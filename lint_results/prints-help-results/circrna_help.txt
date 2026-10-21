@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.10.2
 
 Downloading plugin nf-schema@2.5.1
-Launching `./main.nf` [reverent_hodgkin] revision: 2be7e9321e
+Launching `./main.nf` [voluminous_kirch] revision: 7cd003fe68
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -107,16 +107,16 @@ Reference genome options
   --blacklist                   [string]  Path to blacklist bed file. 
   --mature                      [string]  Path to FASTA file with mature miRNAs. This parameter needs to be specified to perform miRNA 
 interaction analyses.  
-  --bowtie                      [string]  Path to Bowtie index files, surrounded by quotes. No glob pattern required. 
-  --bowtie2                     [string]  Path to Bowtie2 index files, surrounded by quotes. No glob pattern required. 
-  --bwa                         [string]  Path to BWA index directory, surrounded by quotes. No glob pattern required. 
-  --hisat2                      [string]  Path to Hisat2 index directory, surrounded by quotes. No glob pattern required. 
+  --bowtie_index                [string]  Path to Bowtie index files, surrounded by quotes. No glob pattern required. 
+  --bowtie2_index               [string]  Path to Bowtie2 index files, surrounded by quotes. No glob pattern required. 
+  --bwa_index                   [string]  Path to BWA index directory, surrounded by quotes. No glob pattern required. 
+  --hisat2_index                [string]  Path to Hisat2 index directory, surrounded by quotes. No glob pattern required. 
   --hisat2_build_memory         [string]  Minimum memory required to use splice sites and exons in the HiSAT2 index build process. 
 [default: 200.GB]  
-  --segemehl                    [string]  Path to Segemehl Index **file**. 
-  --circminer                   [string]  Path to a prebuilt circMiner index directory. If omitted, the pipeline builds the index when 
+  --segemehl_index              [string]  Path to Segemehl Index **file**. 
+  --circminer_index             [string]  Path to a prebuilt circMiner index directory. If omitted, the pipeline builds the index when 
 circMiner is selected.  
-  --star                        [string]  Path to STAR index directory, surrounded by quotes. No glob pattern required. 
+  --star_index                  [string]  Path to STAR index directory, surrounded by quotes. No glob pattern required. 
 
 Read trimming options
   --skip_trimming               [boolean] Skip the adapter trimming step. [default: false] 

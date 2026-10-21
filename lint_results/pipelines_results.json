@@ -38,7 +38,7 @@
   "ampliseq": {
     "full_name": "nf-core/ampliseq",
     "html_url": "https://github.com/nf-core/ampliseq",
-    "commit": "b260f8d9b75513397dc23aafe00a6dc8c802f044",
+    "commit": "99c6b3d0aa8b1d6d9fe874432c8a4d18c8412207",
     "errors": 0,
     "warnings": 67,
     "parse_error": false,
@@ -182,14 +182,14 @@
   "circrna": {
     "full_name": "nf-core/circrna",
     "html_url": "https://github.com/nf-core/circrna",
-    "commit": "a47ab59b5dce516a517a3e643d92257fa87a5c93",
+    "commit": "f1f9fe8eefdc2c674140a0e99e4236fee68585b9",
     "errors": 0,
-    "warnings": 95,
+    "warnings": 113,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 137
+    "publishdir_count": 136
   },
   "clipseq": {
     "full_name": "nf-core/clipseq",
@@ -278,7 +278,7 @@
   "dartseq": {
     "full_name": "nf-core/dartseq",
     "html_url": "https://github.com/nf-core/dartseq",
-    "commit": "9f5be5b15f5813a94dcedb7325511f4a6c35123e",
+    "commit": "ac98eecc1e2f3fb147a5f2fcaeda01032fecc68b",
     "errors": 0,
     "warnings": 35,
     "parse_error": false,
@@ -362,9 +362,9 @@
   "detaxizer": {
     "full_name": "nf-core/detaxizer",
     "html_url": "https://github.com/nf-core/detaxizer",
-    "commit": "cc62912595c0e9654b8ab6c9ad5f46b8d6b2ece0",
+    "commit": "92f5057f75f0be529ea48acdb6761304cf703d04",
     "errors": 0,
-    "warnings": 39,
+    "warnings": 44,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -518,9 +518,9 @@
   "fetchngs": {
     "full_name": "nf-core/fetchngs",
     "html_url": "https://github.com/nf-core/fetchngs",
-    "commit": "44cdd497638dca9f48e3971dc4e93898f4dd6279",
+    "commit": "a7ec07c59a789cdb28ced7836f58bb8edd3b09ff",
     "errors": 0,
-    "warnings": 0,
+    "warnings": 4,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -746,9 +746,9 @@
   "lsmquant": {
     "full_name": "nf-core/lsmquant",
     "html_url": "https://github.com/nf-core/lsmquant",
-    "commit": "a4d994d6d21556addb10bd024bb501c754640807",
+    "commit": "3c068dc236e4895df0c052cdc37c08b6abac9c91",
     "errors": 0,
-    "warnings": 19,
+    "warnings": 31,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -770,7 +770,7 @@
   "magmap": {
     "full_name": "nf-core/magmap",
     "html_url": "https://github.com/nf-core/magmap",
-    "commit": "dfbd3ad34c315642c2dab434b49122f76de11a18",
+    "commit": "657e6e9fdcaf85e90eb7e96dd0d5a1c2525854f7",
     "errors": 0,
     "warnings": 60,
     "parse_error": false,
@@ -842,9 +842,9 @@
   "metatdenovo": {
     "full_name": "nf-core/metatdenovo",
     "html_url": "https://github.com/nf-core/metatdenovo",
-    "commit": "28148162d71e6728ca4e7048ee791d380a097f5c",
+    "commit": "080ca2afa7c3a2f180ee9afb3fac522b59883c5c",
     "errors": 0,
-    "warnings": 0,
+    "warnings": 75,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -1058,7 +1058,7 @@
   "pacvar": {
     "full_name": "nf-core/pacvar",
     "html_url": "https://github.com/nf-core/pacvar",
-    "commit": "665d69635d2e99273067af5e5b69c552b44e0858",
+    "commit": "f2fb7a8c33e1c7ea21ebdea13b37f7f679bfa1d7",
     "errors": 0,
     "warnings": 50,
     "parse_error": false,
@@ -1106,9 +1106,9 @@
   "pathogenepidemiology": {
     "full_name": "nf-core/pathogenepidemiology",
     "html_url": "https://github.com/nf-core/pathogenepidemiology",
-    "commit": "93c52976cec845b95b45b33e8904da9792b24b06",
+    "commit": "04efdf062e3ae9537bca65f073051b95ec825b6b",
     "errors": 0,
-    "warnings": 37,
+    "warnings": 39,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -1166,9 +1166,9 @@
   "pixelator": {
     "full_name": "nf-core/pixelator",
     "html_url": "https://github.com/nf-core/pixelator",
-    "commit": "a47ecd4f9df8e3ca8eab05f58237c8840849b116",
+    "commit": "c72793120940cbaacf284c4ed2a5f3fbe2296672",
     "errors": 0,
-    "warnings": 10,
+    "warnings": 21,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -1394,7 +1394,7 @@
   "rnasplice": {
     "full_name": "nf-core/rnasplice",
     "html_url": "https://github.com/nf-core/rnasplice",
-    "commit": "b5bf2752c8b8ee46a56ef6b4ce9d466e1eb47997",
+    "commit": "8acff17e92c47a02ae21adbdc9bcb460aea78cdf",
     "errors": 0,
     "warnings": 71,
     "parse_error": false,
@@ -1442,7 +1442,7 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "f8b62e1eaf677db56d7c6538bea5d8dc95453d6d",
+    "commit": "cd1dce4b372c5c885ce93369191211536b1871df",
     "errors": 0,
     "warnings": 126,
     "parse_error": false,
@@ -1454,7 +1454,7 @@
   "scdownstream": {
     "full_name": "nf-core/scdownstream",
     "html_url": "https://github.com/nf-core/scdownstream",
-    "commit": "4dc20f4d8aeb760835d24e69af66855b61cc0ca9",
+    "commit": "083acc653d01cb893d5f4784ba1ea42369e9c039",
     "errors": 0,
     "warnings": 75,
     "parse_error": false,
@@ -1478,7 +1478,7 @@
   "scrnaseq": {
     "full_name": "nf-core/scrnaseq",
     "html_url": "https://github.com/nf-core/scrnaseq",
-    "commit": "0831d40e529cbf3e37d3e8511b3df3fecd6c2ad7",
+    "commit": "d522f9a8d512994a5ca6fd17651b91d572624051",
     "errors": 0,
     "warnings": 30,
     "parse_error": false,
@@ -1502,7 +1502,7 @@
   "seqsubmit": {
     "full_name": "nf-core/seqsubmit",
     "html_url": "https://github.com/nf-core/seqsubmit",
-    "commit": "71a9f45691f746c81cb1b4b7509423c8082a3d67",
+    "commit": "672c2ce77605aa92d6c5e6ad3ce5e20e480168f4",
     "errors": 0,
     "warnings": 35,
     "parse_error": false,
@@ -1550,14 +1550,14 @@
   "spatialaxe": {
     "full_name": "nf-core/spatialaxe",
     "html_url": "https://github.com/nf-core/spatialaxe",
-    "commit": "21187effa26cba9da3125a521039b1047ce24ac1",
+    "commit": "e834928509160752cbd2320761768045c2725852",
     "errors": 0,
-    "warnings": 72,
+    "warnings": 77,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 40
+    "publishdir_count": 41
   },
   "spatialvi": {
     "full_name": "nf-core/spatialvi",

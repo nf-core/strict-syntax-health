@@ -1,6 +1,6 @@
 # Workflow outputs migration: lsmquant
 
-- Generated: 2026-08-27T01:24:15.235600+00:00
+- Generated: 2026-10-21T00:19:27.359824+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,4 +14,4 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 5 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/lsmquant/blob/a4d994d6d21556addb10bd024bb501c754640807/conf/modules.config#L15) — 5 references
+- [`conf/modules.config`](https://github.com/nf-core/lsmquant/blob/3c068dc236e4895df0c052cdc37c08b6abac9c91/conf/modules.config#L15) — 5 references

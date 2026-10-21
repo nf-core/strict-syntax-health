@@ -1,5 +1,35 @@
 # Nextflow lint results
 
-- Generated: 2026-10-09T00:25:17.809641032Z
-- Nextflow version: 26.09.2-edge
-- Summary: No issues found
+- Generated: 2026-10-21T00:19:07.542073261Z
+- Nextflow version: 26.10.2
+- Summary: 4 warnings
+
+## :warning: Warnings
+
+- Warning: `modules/nf-core/custom/sratoolsncbisettings/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/fastqdl/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/sratools/fasterqdump/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/sratools/prefetch/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```

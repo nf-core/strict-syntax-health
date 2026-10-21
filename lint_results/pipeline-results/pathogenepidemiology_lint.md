@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-10-20T00:20:19.755651970Z
+- Generated: 2026-10-21T00:20:44.519270207Z
 - Nextflow version: 26.10.2
-- Summary: 37 warnings
+- Summary: 39 warnings
 
 ## :warning: Warnings
 
@@ -263,4 +263,18 @@
   ```nextflow
       when:
       ^^^^
+  ```
+
+- Warning: `workflows/pathogenepidemiology.nf:147:16`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .map { cohort_meta, bcf, csi, sample_meta, fasta ->
+                 ^^^^^^^^^^^
+  ```
+
+- Warning: `workflows/pathogenepidemiology.nf:150:9`: Variable was declared but not used
+
+  ```nextflow
+      def phylogeny_s = PHYLOGENY(ch_consensus_input)
+          ^^^^^^^^^^^
   ```

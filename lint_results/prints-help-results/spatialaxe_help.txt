@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.1
+ N E X T F L O W   ~  version 26.10.2
 
-Launching `./main.nf` [confident_ramachandran] revision: 1d177c1c39
+Launching `./main.nf` [jovial_fibonacci] revision: 1d177c1c39
 
 
 ------------------------------------------------------
@@ -96,7 +96,12 @@ results). [default: true]
   --baysor_tiling_min_transcripts_per_cell [integer] Post-stitch cell filtering threshold: minimum transcripts per cell. [default: 50] 
   --baysor_prior                           [string]  Prior segmentation type for Baysor. 'cells' uses Xenium bundle cell_id column; 'cellpose' uses 
 Cellpose mask as image prior.  (accepted: cells, cellpose)  
-  --baysor_prior_confidence                [number]  Baysor prior-segmentation-confidence (0-1). [default: 0.2] 
+  --baysor_prior_confidence                [number]  Baysor prior-segmentation-confidence (0-1). When null (default), auto-computed from 
+transcript-in-cell fraction. Set explicitly to skip auto-computation.  
+  --baysor_prior_confidence_mapping        [string]  Mapping strategy for auto-computed prior confidence: 'linear', 'binned', or path to a two-column CSV 
+(metric_value,confidence). [default: linear]  
+  --baysor_prior_pixel_size                [number]  Microns per pixel for converting transcript coordinates to mask pixel space during prior confidence 
+computation. [default: 0.2125]  
   --min_qv                                 [number]  Minimum Q-Score to pass filtering. [default: 20] 
   --min_x                                  [number]  only keep transcripts whose x-coordinate is greater than specified limit, if no limit is specified, 
 the default minimum value will be 0.0  

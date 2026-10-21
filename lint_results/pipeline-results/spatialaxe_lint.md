@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-10-16T00:22:59.851146663Z
-- Nextflow version: 26.10.1
-- Summary: 72 warnings
+- Generated: 2026-10-21T00:23:25.984901422Z
+- Nextflow version: 26.10.2
+- Summary: 77 warnings
 
 ## :warning: Warnings
 
@@ -35,6 +35,13 @@
   ```
 
 - Warning: `modules/local/baysor/segfree/main.nf:14:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/compute_prior_confidence/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -501,6 +508,34 @@
   ```nextflow
       when:
       ^^^^
+  ```
+
+- Warning: `subworkflows/local/baysor_run_transcripts_parquet/main.nf:151:27`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+                  .filter { meta, transcripts, mask -> mask }
+                            ^^^^
+  ```
+
+- Warning: `subworkflows/local/baysor_run_transcripts_parquet/main.nf:151:33`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+                  .filter { meta, transcripts, mask -> mask }
+                                  ^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/baysor_run_transcripts_parquet/main.nf:153:27`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+                  .filter { meta, transcripts, mask -> !mask }
+                            ^^^^
+  ```
+
+- Warning: `subworkflows/local/baysor_run_transcripts_parquet/main.nf:153:33`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+                  .filter { meta, transcripts, mask -> !mask }
+                                  ^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead

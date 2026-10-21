@@ -1,6 +1,6 @@
 # Workflow outputs migration: fetchngs
 
-- Generated: 2026-10-09T00:25:17.851892+00:00
+- Generated: 2026-10-21T00:19:07.602142+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -12,14 +12,6 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 ## Legacy `publishDir` references
 
-Found 9 `publishDir` references across 9 files that should be migrated to the workflow `output {}` block:
+Found 9 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/base.config`](https://github.com/nf-core/fetchngs/blob/44cdd497638dca9f48e3971dc4e93898f4dd6279/conf/base.config#L16) — 1 reference
-- [`modules/local/aspera_cli/nextflow.config`](https://github.com/nf-core/fetchngs/blob/44cdd497638dca9f48e3971dc4e93898f4dd6279/modules/local/aspera_cli/nextflow.config#L4) — 1 reference
-- [`modules/local/multiqc_mappings_config/nextflow.config`](https://github.com/nf-core/fetchngs/blob/44cdd497638dca9f48e3971dc4e93898f4dd6279/modules/local/multiqc_mappings_config/nextflow.config#L3) — 1 reference
-- [`modules/local/sra_fastq_ftp/nextflow.config`](https://github.com/nf-core/fetchngs/blob/44cdd497638dca9f48e3971dc4e93898f4dd6279/modules/local/sra_fastq_ftp/nextflow.config#L4) — 1 reference
-- [`modules/local/sra_ids_to_runinfo/nextflow.config`](https://github.com/nf-core/fetchngs/blob/44cdd497638dca9f48e3971dc4e93898f4dd6279/modules/local/sra_ids_to_runinfo/nextflow.config#L3) — 1 reference
-- [`modules/local/sra_runinfo_to_ftp/nextflow.config`](https://github.com/nf-core/fetchngs/blob/44cdd497638dca9f48e3971dc4e93898f4dd6279/modules/local/sra_runinfo_to_ftp/nextflow.config#L3) — 1 reference
-- [`modules/nf-core/fastqdl/nextflow.config`](https://github.com/nf-core/fetchngs/blob/44cdd497638dca9f48e3971dc4e93898f4dd6279/modules/nf-core/fastqdl/nextflow.config#L3) — 1 reference
-- [`modules/nf-core/sratools/fasterqdump/nextflow.config`](https://github.com/nf-core/fetchngs/blob/44cdd497638dca9f48e3971dc4e93898f4dd6279/modules/nf-core/sratools/fasterqdump/nextflow.config#L4) — 1 reference
-- [`modules/nf-core/sratools/prefetch/nextflow.config`](https://github.com/nf-core/fetchngs/blob/44cdd497638dca9f48e3971dc4e93898f4dd6279/modules/nf-core/sratools/prefetch/nextflow.config#L3) — 1 reference
+- [`conf/modules.config`](https://github.com/nf-core/fetchngs/blob/a7ec07c59a789cdb28ced7836f58bb8edd3b09ff/conf/modules.config#L15) — 9 references

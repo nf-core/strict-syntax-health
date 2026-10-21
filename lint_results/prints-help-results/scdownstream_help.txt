@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.10.2
 
 Downloading plugin nf-anndata@0.5.2
-Launching `./main.nf` [maniac_cantor] revision: 46fac1a2ec
+Launching `./main.nf` [naughty_pareto] revision: d4a8b64c61
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -60,11 +60,11 @@ cell_cycle_scoring is true.
   --mito_genes                    [string]  Optional file containing a list of mitochondrial gene symbols (one per line). If provided, it 
 overrides the default 'mt-' prefix heuristic.  
   --ambient_correction            [string]  Specify the tool to use for ambient RNA correction. SoupX is the default and requires an unfiltered 
-matrix for each corrected sample. If 'none' is selected, no ambient RNA correction will be 
-performed. Per-sample overrides are available via the samplesheet `ambient_correction` column.  
-(accepted: none, decontx, cellbender, soupx, scar) [default: soupx]  
-  --ambient_corrected_integration [boolean] Whether to use the ambient-corrected counts for integration. Can be overridden by the 
-`ambient_corrected_integration` in the sample sheet. [default: false]  
+matrix for each corrected sample. The samplesheet `ambient_correction=false` or global method `none` 
+bypasses correction and selects raw counts.  (accepted: none, decontx, cellbender, soupx, scar) 
+[default: soupx]  
+  --use_ambient_corrected_counts  [boolean] Select ambient-corrected counts for all subsequent QC, doublet handling, annotation, integration, 
+and downstream analyses. [default: false]  
   --doublet_detection             [string]  Specify the tools to use for doublet detection. Setting to 'none' will skip this step. Default 
 scDblFinder follows sc-best-practices recommendations. [default: scdblfinder]  
   --doublet_detection_threshold   [integer] Number of tools that need to agree on a doublet for it to be removed when `doublet_removal` is true 

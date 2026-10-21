@@ -1,10 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.08.0-edge
+ N E X T F L O W   ~  version 26.10.2
 
-Downloading plugin nf-schema@2.7.2
-Launching `./main.nf` [serene_stallman] revision: 4093aad3a1
+Launching `./main.nf` [serene_turing] revision: 4093aad3a1
 
 
 ------------------------------------------------------
@@ -13,7 +12,7 @@ Launching `./main.nf` [serene_stallman] revision: 4093aad3a1
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/lsmquant 1.0.3
+  nf-core/lsmquant 1.0.4dev
 ------------------------------------------------------
 Typical pipeline command:
 
