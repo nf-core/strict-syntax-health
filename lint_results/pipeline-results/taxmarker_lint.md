@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-10-16T00:23:19.126218469Z
-- Nextflow version: 26.10.1
-- Summary: 50 warnings
+- Generated: 2026-10-22T00:22:28.587146648Z
+- Nextflow version: 26.10.3
+- Summary: 51 warnings
 
 ## :warning: Warnings
 
@@ -27,7 +27,7 @@
       ^^^^
   ```
 
-- Warning: `modules/local/exportreference/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/exportreference/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -42,6 +42,13 @@
   ```
 
 - Warning: `modules/local/gtdbweighttranslate/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/keepnames/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -146,7 +153,7 @@
       ^^^^
   ```
 
-- Warning: `modules/nf-core/gunzip/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/find/concatenate/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -209,14 +216,14 @@
       ^^^^
   ```
 
-- Warning: `subworkflows/local/ensure_aligned/main.nf:54:65`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/ensure_aligned/main.nf:62:65`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       CHECKALIGNED(ch_sequences.map { [ [ id: 'user-alignment' ], it ] })
                                                                   ^^
   ```
 
-- Warning: `subworkflows/local/ensure_aligned/main.nf:75:37`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/ensure_aligned/main.nf:83:37`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .map { [ [ id: 'hmm' ], it ] }
@@ -335,21 +342,21 @@
                                                                              ^^
   ```
 
-- Warning: `workflows/taxmarker.nf:99:68`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/taxmarker.nf:104:68`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           SEQKIT_GREP(ch_sequences.map { [ [ id: 'user-alignment' ], it ] }, [], '')
                                                                      ^^
   ```
 
-- Warning: `workflows/taxmarker.nf:147:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/taxmarker.nf:152:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       EMBOSS_SEQRET(ch_sequences_checked.map { [ [ id: 'user-alignment' ], it ] }, 'fasta')
                                                                            ^^
   ```
 
-- Warning: `workflows/taxmarker.nf:173:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/taxmarker.nf:178:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   ch_sequences_for_resolve.map { [ [ id: 'user-alignment' ], it ] },

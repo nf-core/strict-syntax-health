@@ -1,40 +1,40 @@
 # Nextflow lint results
 
-- Generated: 2026-10-21T00:21:23.428902497Z
-- Nextflow version: 26.10.2
-- Summary: 71 warnings
+- Generated: 2026-10-22T00:21:15.748221499Z
+- Nextflow version: 26.10.3
+- Summary: 74 warnings
 
 ## :warning: Warnings
 
-- Warning: `conf/modules.config:310:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:346:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               saveAs: { filename -> null }
                         ^^^^^^^^
   ```
 
-- Warning: `conf/modules.config:319:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:355:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               saveAs: { filename -> null }
                         ^^^^^^^^
   ```
 
-- Warning: `conf/modules.config:328:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:364:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               saveAs: { filename -> null }
                         ^^^^^^^^
   ```
 
-- Warning: `conf/modules.config:337:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:373:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               saveAs: { filename -> null }
                         ^^^^^^^^
   ```
 
-- Warning: `conf/modules.config:359:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:395:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               saveAs: { filename -> null }
@@ -265,7 +265,21 @@
       ^^^^
   ```
 
+- Warning: `modules/nf-core/ea-utils/gtf2bed/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
 - Warning: `modules/nf-core/fastqc/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/fq/subsample/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -329,6 +343,13 @@
   ```
 
 - Warning: `modules/nf-core/rsem/preparereference/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/rseqc/inferexperiment/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -482,21 +503,21 @@
       ^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_rnasplice_pipeline/main.nf:531:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_rnasplice_pipeline/main.nf:537:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               if (it.size() > 1) {
                   ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_rnasplice_pipeline/main.nf:546:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_rnasplice_pipeline/main.nf:552:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               if (it.size() > 1) {
                   ^^
   ```
 
-- Warning: `workflows/rnasplice.nf:182:9`: Variable was declared but not used
+- Warning: `workflows/rnasplice.nf:236:9`: Variable was declared but not used
 
   ```nextflow
           ch_transcriptome_bam_index = BAM_SORT_STATS_SAMTOOLS.out.index

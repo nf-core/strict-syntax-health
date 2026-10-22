@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.07.0-edge
+ N E X T F L O W   ~  version 26.10.3
 
-Launching `./main.nf` [furious_edison] revision: b9d59d7c33
+Launching `./main.nf` [wise_escher] revision: b9d59d7c33
 
 
 ------------------------------------------------------
@@ -302,7 +302,7 @@ https://files.rcsb.org/pub/pdb/data/status/obsolete.dat]
   --helixfold3_maxit_src_link               [string] Link to Maxit Suite for HelixFold3 [default: 
 https://proteinfold-dataset.s3.amazonaws.com/test-data/db/helixfold3/maxit-v11.200-prod-src.tar.gz] 
  
- !! Hiding 17 param(s), use the `--showHidden` parameter to show them !!
+ !! Hiding 18 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
 
 * The pipeline

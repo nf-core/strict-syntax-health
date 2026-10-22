@@ -1,70 +1,154 @@
 # Nextflow lint results
 
-- Generated: 2026-10-10T00:23:34.685100153Z
-- Nextflow version: 26.09.2-edge
-- Summary: 9 warnings
+- Generated: 2026-10-22T00:19:36.117766280Z
+- Nextflow version: 26.10.3
+- Summary: 21 warnings
 
 ## :warning: Warnings
 
-- Warning: `modules/local/concat_tables/main.nf:28:15`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+- Warning: `modules/local/add_ref_seqs_with_full_genome_ref_fasta/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
-      Rscript ${projectDir}/bin/concat_tables.R \
-                ^^^^^^^^^^
+      when:
+      ^^^^
   ```
 
-- Warning: `modules/local/extract_allele_table/main.nf:31:15`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+- Warning: `modules/local/add_ref_seqs_with_targeted_ref_fasta/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/concat_tables/main.nf:26:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/dcifer_slaf_wrapper/main.nf:22:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/estimate_allele_frequency_naive/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/estimate_allele_prevalence_naive/main.nf:22:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/estimate_multilocus_prevfreq_naive/main.nf:25:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/extract_allele_table/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/extract_allele_table/main.nf:35:15`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
 
   ```nextflow
       python3 ${projectDir}/bin/pmo_allele_table_to_specimens.py \
                 ^^^^^^^^^^
   ```
 
-- Warning: `modules/local/extract_population_map_from_pmo/main.nf:29:15`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+- Warning: `modules/local/extract_panel_info_to_bed/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
-      python3 ${projectDir}/bin/specimen_info_to_population_map.py \
-                ^^^^^^^^^^
+      when:
+      ^^^^
   ```
 
-- Warning: `modules/local/index_population_assignment/main.nf:24:15`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+- Warning: `modules/local/extract_population_map_from_pmo/main.nf:24:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
-      Rscript ${projectDir}/bin/index_population_assignment.R \
-                ^^^^^^^^^^
+      when:
+      ^^^^
   ```
 
-- Warning: `modules/local/merge_tables/main.nf:39:15`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+- Warning: `modules/local/fem_wrapper/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
-      Rscript ${projectDir}/bin/merge_tables.R --freq_table \${slaf_table} --population "\${true_population}" --prev_table \${slap_table} --output ${pop_index}.sl_summary.tsv
-                ^^^^^^^^^^
+      when:
+      ^^^^
   ```
 
-- Warning: `modules/local/merge_tables/main.nf:41:19`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+- Warning: `modules/local/idm_wrapper/main.nf:22:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
-          Rscript ${projectDir}/bin/add_population_column.R --table \${mlaf_table} --population "\${true_population}" --output ${pop_index}.ml_summary.tsv
-                    ^^^^^^^^^^
+      when:
+      ^^^^
   ```
 
-- Warning: `modules/local/merge_tables/main.nf:46:19`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+- Warning: `modules/local/index_population_assignment/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
-          Rscript ${projectDir}/bin/add_population_column.R --table \${sl_from_ml_table} --population "\${true_population}" --output ${pop_index}.sl_from_ml_summary.tsv
-                    ^^^^^^^^^^
+      when:
+      ^^^^
   ```
 
-- Warning: `modules/local/split_aa_table_by_population/main.nf:25:8`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+- Warning: `modules/local/merge_tables/main.nf:25:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
-       ${projectDir}/bin/split_table_by_population_map.R \
-         ^^^^^^^^^^
+      when:
+      ^^^^
   ```
 
-- Warning: `modules/local/split_allele_table_by_population/main.nf:26:7`: The use of `projectDir` in a process is discouraged -- input files should be provided as process inputs
+- Warning: `modules/local/mlbm_wrapper/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
-      ${projectDir}/bin/split_table_by_population_map.R \
-        ^^^^^^^^^^
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/slaf_from_mhaps_freqs/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/slaf_from_stave_mlaf/main.nf:22:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/split_aa_table_by_population/main.nf:24:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/split_allele_table_by_population/main.nf:24:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/translate_loci_of_interest/main.nf:27:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
   ```

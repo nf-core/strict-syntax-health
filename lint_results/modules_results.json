@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "a064a845f0c2afec03e02ae7e8cfb832486a2ea1",
+  "_repo_commit": "ad5b79f86dd195618384327092f8e6c00fe6dbb1",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -3126,12 +3126,6 @@
     "warnings": 1,
     "parse_error": false
   },
-  "ea-utils_gtf2bed": {
-    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ea-utils/gtf2bed",
-    "errors": 0,
-    "warnings": 1,
-    "parse_error": false
-  },
   "eagle2": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/eagle2",
     "errors": 0,
@@ -3152,6 +3146,12 @@
   },
   "eautils_fastqstats": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/eautils/fastqstats",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
+  "eautils_gtf2bed": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/eautils/gtf2bed",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
@@ -8914,6 +8914,12 @@
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/president",
     "errors": 0,
     "warnings": 0,
+    "parse_error": false
+  },
+  "presto_assemblepairs": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/presto/assemblepairs",
+    "errors": 0,
+    "warnings": 1,
     "parse_error": false
   },
   "presto_filterseq": {

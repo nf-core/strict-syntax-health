@@ -1,10 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.0
+ N E X T F L O W   ~  version 26.10.3
 
 Downloading plugin nf-core-utils@0.4.0
-Launching `./main.nf` [peaceful_euclid] revision: aea9bb303f
+Launching `./main.nf` [special_volta] revision: 774cb8160d
 
 
 ------------------------------------------------------
@@ -17,11 +17,11 @@ Launching `./main.nf` [peaceful_euclid] revision: aea9bb303f
 ------------------------------------------------------
 
 Generic options
-  trace_report_suffix: 2026-10-14_00-21-52
+  trace_report_suffix: 2026-10-22_00-20-55
   help               : true
 
 Core Nextflow options
-  runName            : peaceful_euclid
+  runName            : special_volta
   launchDir          : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/references
   workDir            : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/references/work
   projectDir         : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/references
@@ -54,4 +54,4 @@ The following invalid input values have been detected:
 
 * Missing required parameter(s): input, outdir
 
- -- Check script 'subworkflows/local/utils_nfcore_references_pipeline/main.nf' at line: 152 or see '.nextflow.log' file for more details
+ -- Check script 'subworkflows/local/utils_nfcore_references_pipeline/main.nf' at line: 151 or see '.nextflow.log' file for more details

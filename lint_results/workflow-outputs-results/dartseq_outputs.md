@@ -1,6 +1,6 @@
 # Workflow outputs migration: dartseq
 
-- Generated: 2026-10-21T00:18:35.024535+00:00
+- Generated: 2026-10-22T00:18:09.459273+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,4 +14,4 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 14 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/dartseq/blob/ac98eecc1e2f3fb147a5f2fcaeda01032fecc68b/conf/modules.config#L15) — 14 references
+- [`conf/modules.config`](https://github.com/nf-core/dartseq/blob/5e559ecf491377176be140dec6291468dd65b376/conf/modules.config#L15) — 14 references

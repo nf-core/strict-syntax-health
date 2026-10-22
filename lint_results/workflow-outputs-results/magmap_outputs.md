@@ -1,6 +1,6 @@
 # Workflow outputs migration: magmap
 
-- Generated: 2026-10-21T00:19:42.862608+00:00
+- Generated: 2026-10-22T00:19:00.189588+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,5 +14,5 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 30 `publishDir` references across 2 files that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/magmap/blob/657e6e9fdcaf85e90eb7e96dd0d5a1c2525854f7/conf/modules.config#L15) — 29 references
-- [`modules/nf-core/subread/featurecounts/tests/nextflow.config`](https://github.com/nf-core/magmap/blob/657e6e9fdcaf85e90eb7e96dd0d5a1c2525854f7/modules/nf-core/subread/featurecounts/tests/nextflow.config#L3) — 1 reference
+- [`conf/modules.config`](https://github.com/nf-core/magmap/blob/265e52bab634122afabe4255ca2b0334667e06f5/conf/modules.config#L15) — 29 references
+- [`modules/nf-core/subread/featurecounts/tests/nextflow.config`](https://github.com/nf-core/magmap/blob/265e52bab634122afabe4255ca2b0334667e06f5/modules/nf-core/subread/featurecounts/tests/nextflow.config#L3) — 1 reference

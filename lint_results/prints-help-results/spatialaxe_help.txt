@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.2
+ N E X T F L O W   ~  version 26.10.3
 
-Launching `./main.nf` [jovial_fibonacci] revision: 1d177c1c39
+Launching `./main.nf` [focused_cuvier] revision: 1d177c1c39
 
 
 ------------------------------------------------------

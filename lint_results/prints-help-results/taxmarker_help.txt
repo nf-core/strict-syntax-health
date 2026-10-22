@@ -1,10 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.1
+ N E X T F L O W   ~  version 26.10.3
 
 Downloading plugin nf-schema@2.7.3
-Launching `./main.nf` [thirsty_wegener] revision: 4fc85aa24b
+Launching `./main.nf` [insane_euler] revision: 16d35b7a95
 
 
 ------------------------------------------------------
@@ -31,6 +31,8 @@ Input/output options
 unaligned. Only required when the input is unaligned.  
   --hmm_name                    [string]          Name of the specific profile to use from --hmm, if that database holds more than one (e.g. Barrnap's 
 databases hold one profile per rRNA gene).  
+  --align_chunk_size            [integer]         Number of sequences each hmmalign job aligns, when --sequences is unaligned. [default: 10000] 
+ 
   --seqgrep                     [string]          Keep only --sequences records whose whole FASTA header matches this pattern, dropping the rest 
 before anything else runs.  
   --upstream                    [string]          Name of an upstream data source this run's --sequences/--taxonomy came from, to enable 
@@ -56,8 +58,10 @@ from the most specific rank (1) upward. A sequence disagreeing at this one rank 
 mislabel and skips EPA-ng placement. [default: 2]  
   --raxtax_min_confidence       [number]          Minimum raxtax confidence at `--raxtax_filter_rank` for a disagreement to be flagged as a mislabel. 
 [default: 0.9]  
-  --export_n_per_species        [string, integer] Export reference FASTA files with at most this many sequences per species, e.g. `1,5,20` for one set 
-of files per number.  
+  --export_n_per_species        [string, integer] Export reference FASTA files with at most this many sequences per species, e.g. `1,5,all` for one 
+set of files per number, `all` meaning no limit.  
+  --run_reference               [boolean]         Build a reference phylogeny and model for phylogenetic placement of new sequences, from one sequence 
+per species.  
   --skip_gapfilter              [boolean]         For already-aligned input: skip filtering out sequences with too high a proportion of alignment 
 gaps, and run every sequence straight through the rest of the pipeline.  
   --min_nongap                  [number]          For already-aligned input: minimum proportion of non-gap columns a sequence must have in the 
@@ -77,6 +81,8 @@ zoo(logical) or vir(ological). Governs its nomenclature-revision suggestions.  (
 bot, zoo, vir) [default: bac]  
   --raxmlng_model               [string]          RAxML-NG model for the reference tree, for example GTR+G4. The default DNA runs model selection 
 first. [default: DNA]  
+  --raxmlng_reference_model     [string]          RAxML-NG model for the tree built by --run_reference, for example GTR+G4. Unset uses 
+--raxmlng_model.  
   --raxmlng_fast                [boolean]         Build the reference tree with the RAxML-NG fast search. 
   --raxmlng_seed                [integer]         Random seed for the RAxML-NG reference tree search. [default: 42] 
   --raxmlng_blopt               [string]          Branch length optimisation method of RAxML-NG (--blopt). Unset uses the RAxML-NG default.  

@@ -38,14 +38,14 @@
   "ampliseq": {
     "full_name": "nf-core/ampliseq",
     "html_url": "https://github.com/nf-core/ampliseq",
-    "commit": "99c6b3d0aa8b1d6d9fe874432c8a4d18c8412207",
+    "commit": "0cd3c141623d235aead0daba63a20b3cab65c725",
     "errors": 0,
     "warnings": 67,
     "parse_error": false,
     "prints_help": false,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 105
+    "publishdir_count": 106
   },
   "atacseq": {
     "full_name": "nf-core/atacseq",
@@ -182,14 +182,14 @@
   "circrna": {
     "full_name": "nf-core/circrna",
     "html_url": "https://github.com/nf-core/circrna",
-    "commit": "f1f9fe8eefdc2c674140a0e99e4236fee68585b9",
+    "commit": "ffde537162b7a5f3129044bfe717fb14ebe033e1",
     "errors": 0,
     "warnings": 113,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 136
+    "publishdir_count": 135
   },
   "clipseq": {
     "full_name": "nf-core/clipseq",
@@ -278,7 +278,7 @@
   "dartseq": {
     "full_name": "nf-core/dartseq",
     "html_url": "https://github.com/nf-core/dartseq",
-    "commit": "ac98eecc1e2f3fb147a5f2fcaeda01032fecc68b",
+    "commit": "5e559ecf491377176be140dec6291468dd65b376",
     "errors": 0,
     "warnings": 35,
     "parse_error": false,
@@ -566,7 +566,7 @@
   "genomeassembler": {
     "full_name": "nf-core/genomeassembler",
     "html_url": "https://github.com/nf-core/genomeassembler",
-    "commit": "2b24f13e5e31c8e59cb339f1b9877a8977f087dc",
+    "commit": "6811ea18853d8d051c361ebb491b5d837d80281a",
     "errors": 0,
     "warnings": 46,
     "parse_error": false,
@@ -770,7 +770,7 @@
   "magmap": {
     "full_name": "nf-core/magmap",
     "html_url": "https://github.com/nf-core/magmap",
-    "commit": "657e6e9fdcaf85e90eb7e96dd0d5a1c2525854f7",
+    "commit": "265e52bab634122afabe4255ca2b0334667e06f5",
     "errors": 0,
     "warnings": 60,
     "parse_error": false,
@@ -986,7 +986,7 @@
   "nanostring": {
     "full_name": "nf-core/nanostring",
     "html_url": "https://github.com/nf-core/nanostring",
-    "commit": "7dde24c1405d33ab8dfa09fed79bec42ed717b33",
+    "commit": "2e256ece62e59b53008baf210be704579ab991f5",
     "errors": 0,
     "warnings": 7,
     "parse_error": false,
@@ -1178,9 +1178,9 @@
   "plasmodiumdrugres": {
     "full_name": "nf-core/plasmodiumdrugres",
     "html_url": "https://github.com/nf-core/plasmodiumdrugres",
-    "commit": "48e3c5ee229868bdad3b42af38a5dcf50d939821",
+    "commit": "a7cecec819670f7ca9f11c47aac4efced94b5db5",
     "errors": 0,
-    "warnings": 9,
+    "warnings": 21,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -1214,9 +1214,9 @@
   "proteinfold": {
     "full_name": "nf-core/proteinfold",
     "html_url": "https://github.com/nf-core/proteinfold",
-    "commit": "a414fd1368009500b66761e37e7cde80366a45e9",
+    "commit": "a983586ff7cd47c64dba6bacf3c2779dd3cb9d64",
     "errors": 0,
-    "warnings": 3,
+    "warnings": 39,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -1274,7 +1274,7 @@
   "raredisease": {
     "full_name": "nf-core/raredisease",
     "html_url": "https://github.com/nf-core/raredisease",
-    "commit": "9769147989527e2267886af0641516a43d4cff63",
+    "commit": "e972dbde1aba738c1b15281b26ad12c01072d2b1",
     "errors": 0,
     "warnings": 133,
     "parse_error": false,
@@ -1310,7 +1310,7 @@
   "references": {
     "full_name": "nf-core/references",
     "html_url": "https://github.com/nf-core/references",
-    "commit": "f935a44f7d366e65abe7d8ea8f6cb2aa7181a912",
+    "commit": "829a172d4f8af6a0490a2e282eb2933a34bd5314",
     "errors": 0,
     "warnings": 23,
     "parse_error": false,
@@ -1394,14 +1394,14 @@
   "rnasplice": {
     "full_name": "nf-core/rnasplice",
     "html_url": "https://github.com/nf-core/rnasplice",
-    "commit": "8acff17e92c47a02ae21adbdc9bcb460aea78cdf",
+    "commit": "03ca7e8775a532630c235b5958c8362c9526cc86",
     "errors": 0,
-    "warnings": 71,
+    "warnings": 74,
     "parse_error": false,
     "prints_help": false,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 73
+    "publishdir_count": 79
   },
   "rnastructurome": {
     "full_name": "nf-core/rnastructurome",
@@ -1454,7 +1454,7 @@
   "scdownstream": {
     "full_name": "nf-core/scdownstream",
     "html_url": "https://github.com/nf-core/scdownstream",
-    "commit": "083acc653d01cb893d5f4784ba1ea42369e9c039",
+    "commit": "6bcf5612feff0f54c8bf8aaf8c9b3eae840fdd1c",
     "errors": 0,
     "warnings": 75,
     "parse_error": false,
@@ -1550,14 +1550,14 @@
   "spatialaxe": {
     "full_name": "nf-core/spatialaxe",
     "html_url": "https://github.com/nf-core/spatialaxe",
-    "commit": "e834928509160752cbd2320761768045c2725852",
+    "commit": "a186a750751fc1786d6d8a9884d30f6a6ea6dd2f",
     "errors": 0,
-    "warnings": 77,
+    "warnings": 80,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 41
+    "publishdir_count": 45
   },
   "spatialvi": {
     "full_name": "nf-core/spatialvi",
@@ -1598,14 +1598,14 @@
   "taxmarker": {
     "full_name": "nf-core/taxmarker",
     "html_url": "https://github.com/nf-core/taxmarker",
-    "commit": "8b638c6046474bfd3dead5d6afcc51ab396a9365",
+    "commit": "f4dfc663953da2c04bf46d478aa92c3006df0621",
     "errors": 0,
-    "warnings": 50,
+    "warnings": 51,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 6
+    "publishdir_count": 11
   },
   "taxprofiler": {
     "full_name": "nf-core/taxprofiler",
@@ -1670,7 +1670,7 @@
   "variantbenchmarking": {
     "full_name": "nf-core/variantbenchmarking",
     "html_url": "https://github.com/nf-core/variantbenchmarking",
-    "commit": "165b89583bea876ab0b198deaa16d8e76c4bf91a",
+    "commit": "1ef3bc22d7fa19f58052db740c4d75d5f2610aac",
     "errors": 0,
     "warnings": 56,
     "parse_error": false,

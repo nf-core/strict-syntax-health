@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.2
+ N E X T F L O W   ~  version 26.10.3
 
-Launching `./main.nf` [magical_booth] revision: 5e3580bebb
+Launching `./main.nf` [high_heisenberg] revision: 5e3580bebb
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -14,7 +14,7 @@ WARN: Unrecognized config option 'validation.monochromeLogs'
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/dartseq 1.0.0dev
+  nf-core/dartseq 1.0.0
 ------------------------------------------------------
 Typical pipeline command:
 

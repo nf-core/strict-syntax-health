@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.1
+ N E X T F L O W   ~  version 26.10.3
 
-Launching `./main.nf` [maniac_mccarthy] revision: 258569ed53
+Launching `./main.nf` [chaotic_mcclintock] revision: e0ee1ccd56
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -115,8 +115,8 @@ pipeline.
   --homoplasmy_af_threshold           [number]  Allele frequency threshold for mitochondrial variants. Variants with an AF above this threshold will 
 be treated as homoplasmic and assigned a 1/1 genotype. Range 0-1.0. [default: 1.0]  
   --platform                          [string]  Specifies the platform on which the reads were sequenced. [default: illumina] 
-  --pre_vep_snv_filter_expression     [string]  bcftools expression used to exclude SNVs before VEP annotation. [default: INFO/GNOMADAF > 0.70 | 
-INFO/GNOMADAF_grpmax > 0.70]  
+  --pre_vep_snv_filter_expression     [string]  bcftools view arguments used to filter SNVs before VEP annotation. [default: --exclude 
+"INFO/GNOMADAF > 0.70 | INFO/GNOMADAF_grpmax > 0.70"]  
   --ngsbits_samplegender_method       [string]  Method selection for ngs-bits samplegender  (accepted: xy, hetx, sry) [default: xy] 
   --sex_source                        [string]  Source of sample sex for sex-dependent analysis steps (e.g. ExpansionHunter).  (accepted: 
 samplesheet, auto, estimated) [default: samplesheet]  

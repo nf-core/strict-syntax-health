@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-10-21T00:23:25.984901422Z
-- Nextflow version: 26.10.2
-- Summary: 77 warnings
+- Generated: 2026-10-22T00:22:09.605470205Z
+- Nextflow version: 26.10.3
+- Summary: 80 warnings
 
 ## :warning: Warnings
 
@@ -41,7 +41,28 @@
       ^^^^
   ```
 
+- Warning: `modules/local/collect_pipeline_qc/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
 - Warning: `modules/local/compute_prior_confidence/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/emit_bundle_qc/main.nf:15:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/emit_segmentation_qc/main.nf:15:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

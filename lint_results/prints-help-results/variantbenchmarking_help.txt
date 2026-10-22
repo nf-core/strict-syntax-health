@@ -1,10 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.2
+ N E X T F L O W   ~  version 26.10.3
 
 Downloading plugin nf-prov@1.2.2
-Launching `./main.nf` [nauseous_celsius] revision: a907093df8
+Launching `./main.nf` [nostalgic_goodall] revision: a907093df8
 
 WARN: Unrecognized config option 'prov.enabled'
 WARN: Unrecognized config option 'prov.formats.bco.file'
@@ -17,7 +17,7 @@ WARN: Unrecognized config option 'validation.monochromeLogs'
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/variantbenchmarking 1.6.0dev
+  nf-core/variantbenchmarking 1.6.0
 ------------------------------------------------------
 Typical pipeline command:
 
