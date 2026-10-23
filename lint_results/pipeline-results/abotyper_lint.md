@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-10-16T00:16:42.655622795Z
-- Nextflow version: 26.10.1
-- Summary: 29 warnings
+- Generated: 2026-10-23T00:18:21.963485958Z
+- Nextflow version: 26.10.3
+- Summary: 32 warnings
 
 ## :warning: Warnings
 
@@ -74,6 +74,20 @@
   ```nextflow
       abo_panel = params.abo_panel ? Channel.fromPath(params.abo_panel).collect() : Channel.empty()
                                                                                     ^^^^^^^
+  ```
+
+- Warning: `modules/local/abo/evidence/main.nf:43:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/abo/pileup/main.nf:27:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
   ```
 
 - Warning: `modules/nf-core/bcftools/norm/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
@@ -160,49 +174,56 @@
                               ^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/predictabophenotype/main.nf:50:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/predictabophenotype/main.nf:62:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   it.file.copyTo(combined_dir.resolve(it.file.name))
                   ^^
   ```
 
-- Warning: `subworkflows/local/predictabophenotype/main.nf:50:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/predictabophenotype/main.nf:62:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   it.file.copyTo(combined_dir.resolve(it.file.name))
                                                       ^^
   ```
 
-- Warning: `subworkflows/local/variants_quantification/main.nf:33:5`: Variable was declared but not used
-
-  ```nextflow
-      ch_fasta_fai = ch_fasta
-      ^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/variants_quantification/main.nf:35:35`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/variants_quantification/main.nf:37:35`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { fasta_meta, fasta, fai_meta, fai -> [fasta_meta, fasta, fai] }
                                     ^^^^^^^^
   ```
 
-- Warning: `workflows/abotyper.nf:36:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/variants_quantification/main.nf:63:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          .filter { it[3] == null }
+                    ^^
+  ```
+
+- Warning: `subworkflows/local/variants_quantification/main.nf:64:70`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          .subscribe { log.warn "Clair3 produced no gVCF for sample '${it[0].id}': relying on the BAM pileup alone (flagged REVIEW)" }
+                                                                       ^^
+  ```
+
+- Warning: `workflows/abotyper.nf:35:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       logo                 // channel: png from params.logo (custom pathwest logo)
       ^^^^
   ```
 
-- Warning: `workflows/abotyper.nf:61:70`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/abotyper.nf:49:70`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(NANOPLOT.out.txt.collect{it[1]})
                                                                        ^^
   ```
 
-- Warning: `workflows/abotyper.nf:115:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/abotyper.nf:108:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       def topic_versions = Channel.topic("versions")

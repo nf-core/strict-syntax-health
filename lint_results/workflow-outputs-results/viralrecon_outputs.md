@@ -1,6 +1,6 @@
 # Workflow outputs migration: viralrecon
 
-- Generated: 2026-09-22T00:25:31.716800+00:00
+- Generated: 2026-10-23T00:22:44.499097+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,7 +14,7 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 169 `publishDir` references across 4 files that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules_illumina.config`](https://github.com/nf-core/viralrecon/blob/e76992871bbe836dcd98dc6f8a2379444641f850/conf/modules_illumina.config#L19) — 114 references
-- [`conf/modules_nanopore.config`](https://github.com/nf-core/viralrecon/blob/e76992871bbe836dcd98dc6f8a2379444641f850/conf/modules_nanopore.config#L19) — 52 references
-- [`conf/modules.config`](https://github.com/nf-core/viralrecon/blob/e76992871bbe836dcd98dc6f8a2379444641f850/conf/modules.config#L18) — 2 references
-- [`modules/nf-core/pycoqc/tests/nextflow.config`](https://github.com/nf-core/viralrecon/blob/e76992871bbe836dcd98dc6f8a2379444641f850/modules/nf-core/pycoqc/tests/nextflow.config#L3) — 1 reference
+- [`conf/modules_illumina.config`](https://github.com/nf-core/viralrecon/blob/77511804198c88fa3b419644f75518c68d4fa921/conf/modules_illumina.config#L19) — 114 references
+- [`conf/modules_nanopore.config`](https://github.com/nf-core/viralrecon/blob/77511804198c88fa3b419644f75518c68d4fa921/conf/modules_nanopore.config#L19) — 52 references
+- [`conf/modules.config`](https://github.com/nf-core/viralrecon/blob/77511804198c88fa3b419644f75518c68d4fa921/conf/modules.config#L18) — 2 references
+- [`modules/nf-core/pycoqc/tests/nextflow.config`](https://github.com/nf-core/viralrecon/blob/77511804198c88fa3b419644f75518c68d4fa921/modules/nf-core/pycoqc/tests/nextflow.config#L3) — 1 reference

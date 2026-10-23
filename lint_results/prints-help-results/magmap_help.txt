@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.10.3
 
-Launching `./main.nf` [scruffy_planck] revision: 5e1adde652
+Launching `./main.nf` [deadly_tuckerman] revision: 5e1adde652
 
 
 ------------------------------------------------------
@@ -12,7 +12,7 @@ Launching `./main.nf` [scruffy_planck] revision: 5e1adde652
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/magmap 1.3.1dev
+  nf-core/magmap 1.4.0dev
 ------------------------------------------------------
 Typical pipeline command:
 

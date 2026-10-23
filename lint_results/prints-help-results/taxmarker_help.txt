@@ -3,8 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.10.3
 
-Downloading plugin nf-schema@2.7.3
-Launching `./main.nf` [insane_euler] revision: 16d35b7a95
+Launching `./main.nf` [berserk_shockley] revision: 16d35b7a95
 
 
 ------------------------------------------------------

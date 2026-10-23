@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-10-13T00:26:07.048827741Z
-- Nextflow version: 26.10.0
+- Generated: 2026-10-23T00:19:18.468751868Z
+- Nextflow version: 26.10.3
 - Summary: 27 warnings
 
 ## :warning: Warnings
@@ -146,35 +146,35 @@
                                                   ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/run_cv/main.nf:52:43`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/run_cv/main.nf:59:43`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                                   .filter { dataset_name, dataset_path ->
                                             ^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/run_cv/main.nf:55:40`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/run_cv/main.nf:62:40`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                                   .map { dataset_name, dataset_path ->
                                          ^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/run_cv/main.nf:60:43`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/run_cv/main.nf:67:43`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                                   .filter { dataset_name, dataset_path ->
                                             ^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/run_cv/main.nf:126:16`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/run_cv/main.nf:133:16`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { model_class, model_name, hpam_combis -> [model_name, hpam_combis] }
                  ^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/run_cv/main.nf:134:16`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/run_cv/main.nf:141:16`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { model_class, model_name, test_mode, split -> [model_name, test_mode, split] }

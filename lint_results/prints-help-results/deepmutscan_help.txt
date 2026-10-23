@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.0
+ N E X T F L O W   ~  version 26.10.3
 
-Launching `./main.nf` [extravagant_lattes] revision: ae3065a2fd
+Launching `./main.nf` [serene_goldberg] revision: 775887a540
 
 
 ------------------------------------------------------
@@ -14,18 +14,87 @@ Launching `./main.nf` [extravagant_lattes] revision: ae3065a2fd
                                         `._,._,'
   nf-core/deepmutscan 1.0.0
 ------------------------------------------------------
+Typical pipeline command:
 
-Could not read parameters settings from JSON. java.nio.file.NoSuchFileException: /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/deepmutscan/true
-Core Nextflow options
-  runName    : extravagant_lattes
-  launchDir  : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/deepmutscan
-  workDir    : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/deepmutscan/work
-  projectDir : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/deepmutscan
-  userName   : runner
-  profile    : standard
-  configFiles: /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/deepmutscan/nextflow.config
+  nextflow run nf-core/deepmutscan -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
 
-!! Only displaying parameters that differ from the pipeline defaults !!
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input                       [string] Path to comma-separated file containing information about the samples in the experiment. 
+  --outdir                      [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --email                       [string] Email address for completion summary. 
+  --multiqc_title               [string] MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+
+Reference and library options
+  --fasta                       [string] Path to a FASTA file with the wildtype reference sequence of the mutagenised gene (exactly one 
+sequence).  
+  --reading_frame               [string] Nucleotide coordinates of the mutagenised open reading frame within the reference FASTA, in the 
+format 'start-stop' (1-based, inclusive), e.g. '352-1383'.  
+  --mutagenesis_type            [string] Codons programmed at each position of the library. When using 'custom', also provide 
+'--custom_codon_library'.  (accepted: nnk, nns, nnh, nnn, nnk_nns, nnk_nns_nnh, custom) 
+[default: nnk]  
+  --custom_codon_library        [string] Path to a .csv file defining a custom codon library. Required when '--mutagenesis_type custom' is 
+set. Provide either one global comma-separated list of codons without header (e.g. 'AAA,AAC,AAG'), 
+or a position-wise list with a header line containing 'Position', followed by one row per codon 
+position with the position and its allowed codons (e.g. '1,ACG,AAA,ACA' and '2,AAA,TTT,ACA' on 
+separate lines).  
+
+Variant counting options
+  --base_qual                   [integer] Minimum base quality (Phred) for a mismatch to be counted as a mutation, and for a base to 
+contribute to sequencing coverage. [default: 40]  
+  --min_flank                   [integer] Minimum distance (nt) a mutation or covered base must be from a read edge; also excludes those bases 
+from coverage. Set to 0 to disable edge trimming. [default: 2]  
+
+Sequencing-error correction options
+  --error_correction            [string]  Sequencing-error correction of variant counts. 'false_doubles' (default) estimates the error rate of 
+every single-nucleotide variant from reads that carry it together with a nearby programmed 
+multi-nucleotide codon variant; 'wildtype' subtracts the background measured by additional deep 
+sequencing of the unmutated template (requires samplesheet rows with type 'wildtype'); 'none' 
+disables correction.  (accepted: false_doubles, none, wildtype) [default: false_doubles]  
+  --false_doubles_method        [string]  Estimator used by the false-doubles correction. 'mle' (default) is a per-variant maximum-likelihood 
+error rate; 'eb' is an empirical-Bayes estimate that pools across variants and shrinks per 
+substitution class (steadier for sparse variants). Only applies when error_correction = 
+'false_doubles'.  (accepted: mle, eb) [default: mle]  
+  --false_doubles_codon_window  [integer] Window (in codons, upstream and downstream) within which programmed multi-nucleotide codon variants 
+are used to estimate the error rate of a single-nucleotide variant during false-doubles correction. 
+[default: 40]  
+
+Library QC options
+  --sliding_window_size         [integer] Sliding-window size (in codons) used to smooth the positional coverage and count profiles in the 
+library QC plots. [default: 10]  
+  --aimed_cov                   [integer] Targeted number of counts per amino acid variant. Used to draw the sequencing coverage that would be 
+required (assuming an even spread) in the positional coverage plots and the run report. 
+[default: 100]  
+  --run_seqdepth                [boolean] Estimate sequencing-depth saturation of every library by closed-form hypergeometric rarefaction (on 
+by default). [default: true]  
+
+Fitness estimation options
+  --fitness                     [boolean] Estimate variant fitness from matched 'input' and 'output' libraries of each sample, using the 
+default log-ratio estimator. [default: false]  
+  --min_counts                  [integer] Minimum number of reads a variant needs in every 'input' replicate to receive a fitness estimate. 
+Applied to the default estimator, DiMSum ('--fitnessMinInputCountAll') and mutscan. Variant 
+counting, error correction and library QC are not filtered. [default: 10]  
+  --output_pseudocount          [integer] Pseudocount for 'output' replicates in which a variant observed in the input was not detected 
+(dropouts), so that strongly depleted variants still receive a finite fitness value. Applied to the 
+default estimator and DiMSum ('--fitnessDropoutPseudocount'). Set to 0 to disable; dropout variants 
+then receive no fitness estimate in that replicate. [default: 1]  
+  --dimsum                      [boolean] Additionally estimate fitness with DiMSum (Faure et al., 2020). Requires '--fitness'. [default: 
+false]  
+  --mutscan                     [boolean] Additionally estimate variant enrichment with mutscan (Soneson et al., 2023), using edgeR and limma. 
+Requires '--fitness'. [default: false]  
+  --pdb                         [string]  Optional wildtype 3D structure (PDB). When supplied together with `--fitness`, an interactive 
+variant effect inspection tool (self-contained HTML) is built that projects fitness, counts and 
+error-correction biases onto the structure.  
+
+Generic options
+  --multiqc_methods_description [string]  Custom MultiQC yaml file containing HTML including a methods description. 
+  --help_full                   [boolean] Display the full detailed help message. 
+  --show_hidden                 [boolean] Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 17 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
 
 * The nf-core framework
@@ -34,6 +103,3 @@ Core Nextflow options
 * Software dependencies
     https://github.com/nf-core/deepmutscan/blob/master/CITATIONS.md
 
-ERROR ~ No such file or directory: /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/deepmutscan/true
-
- -- Check script 'subworkflows/nf-core/utils_nfschema_plugin/main.nf' at line: 72 or see '.nextflow.log' file for more details
