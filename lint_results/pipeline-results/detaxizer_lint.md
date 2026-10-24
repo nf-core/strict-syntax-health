@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-10-21T00:18:50.273503744Z
-- Nextflow version: 26.10.2
-- Summary: 44 warnings
+- Generated: 2026-10-24T00:19:17.948609241Z
+- Nextflow version: 26.10.3
+- Summary: 34 warnings
 
 ## :warning: Warnings
 
@@ -242,74 +242,4 @@
   ```nextflow
                   meta, path -> [path]
                   ^^^^
-  ```
-
-- Warning: `workflows/detaxizer.nf:428:45`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-                  ch_to_filter.filter { meta, reads, ids -> !meta.single_end }
-                                              ^^^^^
-  ```
-
-- Warning: `workflows/detaxizer.nf:428:52`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-                  ch_to_filter.filter { meta, reads, ids -> !meta.single_end }
-                                                     ^^^
-  ```
-
-- Warning: `workflows/detaxizer.nf:431:45`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-                  ch_to_filter.filter { meta, reads, ids -> meta.single_end }
-                                              ^^^^^
-  ```
-
-- Warning: `workflows/detaxizer.nf:431:52`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-                  ch_to_filter.filter { meta, reads, ids -> meta.single_end }
-                                                     ^^^
-  ```
-
-- Warning: `workflows/detaxizer.nf:435:55`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-                  ch_to_filter_bbmap.map { meta, reads, ids -> tuple(meta, reads) },
-                                                        ^^^
-  ```
-
-- Warning: `workflows/detaxizer.nf:436:42`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-                  ch_to_filter_bbmap.map { meta, reads, ids -> [ids].flatten().join(',') },
-                                           ^^^^
-  ```
-
-- Warning: `workflows/detaxizer.nf:436:48`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-                  ch_to_filter_bbmap.map { meta, reads, ids -> [ids].flatten().join(',') },
-                                                 ^^^^^
-  ```
-
-- Warning: `workflows/detaxizer.nf:443:59`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-                      ch_to_filter_bbmap.map { meta, reads, ids -> tuple(meta, reads) },
-                                                            ^^^
-  ```
-
-- Warning: `workflows/detaxizer.nf:444:46`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-                      ch_to_filter_bbmap.map { meta, reads, ids -> [ids].flatten().join(',') },
-                                               ^^^^
-  ```
-
-- Warning: `workflows/detaxizer.nf:444:52`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-                      ch_to_filter_bbmap.map { meta, reads, ids -> [ids].flatten().join(',') },
-                                                     ^^^^^
   ```

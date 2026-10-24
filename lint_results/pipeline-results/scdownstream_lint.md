@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-10-23T00:21:58.588072133Z
+- Generated: 2026-10-24T00:23:28.068183462Z
 - Nextflow version: 26.10.3
 - Summary: 75 warnings
 
@@ -363,7 +363,7 @@
       ^^^^
   ```
 
-- Warning: `modules/local/scanpy/tsne/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/scanpy/tsne/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.2
+ N E X T F L O W   ~  version 26.10.3
 
-Launching `./main.nf` [festering_minsky] revision: 0129016329
+Launching `./main.nf` [nostalgic_turing] revision: 0129016329
 
 
 ------------------------------------------------------
@@ -40,8 +40,10 @@ explicit and can be combined with the 'classification_bbduk' parameter to run bo
 process.  
   --skip_filter                           [boolean] If the filtering step should be skipped. 
   --filtering_tool                        [string]  Select the read-filtering tool. seqkit normalizes FASTQ headers by temporarily renaming them. bbmap 
-uses filterbyname.sh for exact header matching. BBTools I/O forces any base that is N to Q=0.  
-(accepted: seqkit, bbmap) [default: seqkit]  
+uses filterbyname.sh, which matches the first mate only, so second-mate read names are normalised to 
+their first-mate form before filtering and names that do not follow a known mate convention are 
+matched as-is. BBTools I/O forces any base that is N to Q=0.  (accepted: seqkit, bbmap) 
+[default: seqkit]  
   --output_removed_reads                  [boolean] If the removed reads should also be written to the output folder. 
   --filter_trimmed                        [boolean] Use the preprocessed reads in the filtering step. Enabling this parameter also enables 
 preprocessing.  

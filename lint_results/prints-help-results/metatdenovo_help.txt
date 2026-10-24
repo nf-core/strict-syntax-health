@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.2
+ N E X T F L O W   ~  version 26.10.3
 
-Launching `./main.nf` [nauseous_hodgkin] revision: e3f25d4155
+Launching `./main.nf` [serene_archimedes] revision: b2336a01a2
 
 
 ------------------------------------------------------
@@ -33,14 +33,8 @@ Quality control options
   --skip_fastqc                 [boolean] Skip FastQC. 
 
 trimming options
-  --clip_r1                     [string]  Instructs Trim Galore to remove bp from the 5' end of read 1 (or single-end reads). 
-  --clip_r2                     [string]  Instructs Trim Galore to remove bp from the 5' end of read 2 (paired-end reads only). 
-  --three_prime_clip_r1         [string]  Instructs Trim Galore to remove bp from the 3' end of read 1 AFTER adapter/quality trimming has been 
-performed.  
-  --three_prime_clip_r2         [string]  Instructs Trim Galore to remove bp from the 3' end of read 2 AFTER adapter/quality trimming has been 
-performed.  
   --save_trimmed                [boolean] Save the trimmed FastQ files in the results directory. 
-  --trim_nextseq                [string]  Instructs Trim Galore to apply the --nextseq=X option, to trim based on quality after removing 
+  --trim_nextseq                [integer] Instructs Trim Galore to apply the --nextseq=X option, to trim based on quality after removing 
 poly-G tails.  
   --skip_trimming               [boolean] Skip the adapter trimming step. 
 

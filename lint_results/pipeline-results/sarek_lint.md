@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-10-21T00:21:56.338007524Z
-- Nextflow version: 26.10.2
-- Summary: 126 warnings
+- Generated: 2026-10-24T00:22:50.057918117Z
+- Nextflow version: 26.10.3
+- Summary: 129 warnings
 
 ## :warning: Warnings
 
@@ -217,6 +217,13 @@
   ```
 
 - Warning: `modules/nf-core/controlfreec/makegraph2/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/deepsomatic/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -606,6 +613,20 @@
   ```nextflow
       when:
       ^^^^
+  ```
+
+- Warning: `modules/nf-core/parabricks/deepsomatic/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/parabricks/deepsomatic/main.nf:47:9`: Variable was declared but not used
+
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^
   ```
 
 - Warning: `modules/nf-core/parabricks/deepvariant/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime

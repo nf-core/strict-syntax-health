@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.2
+ N E X T F L O W   ~  version 26.10.3
 
-Launching `./main.nf` [big_curie] revision: 94881d840d
+Launching `./main.nf` [hungry_becquerel] revision: 94881d840d
 
 
 ------------------------------------------------------
@@ -12,7 +12,7 @@ Launching `./main.nf` [big_curie] revision: 94881d840d
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/createtaxdb 3.2.0dev
+  nf-core/createtaxdb 3.2.0
 ------------------------------------------------------
 Typical pipeline command:
 

@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-10-23T00:22:20.139747167Z
+- Generated: 2026-10-24T00:23:51.462906147Z
 - Nextflow version: 26.10.3
-- Summary: 51 warnings
+- Summary: 53 warnings
 
 ## :warning: Warnings
 
@@ -133,6 +133,20 @@
   ```
 
 - Warning: `modules/local/taxonomytree/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/treedivide/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/treegraft/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

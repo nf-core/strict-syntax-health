@@ -3,8 +3,9 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.10.3
 
-Downloading plugin nf-core-utils@0.4.0
-Launching `./main.nf` [special_volta] revision: 774cb8160d
+Downloading plugin nf-core-utils@0.5.0
+Downloading plugin nf-schema@3.0.0
+Launching `./main.nf` [lethal_stone] revision: 785b9f104d
 
 
 ------------------------------------------------------
@@ -16,20 +17,42 @@ Launching `./main.nf` [special_volta] revision: 774cb8160d
   nf-core/references 0.2dev
 ------------------------------------------------------
 
+Typical pipeline command:
+
+  nextflow run nf-core/references -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input                       [string] Path to yaml file containing information about the genome(s) and files to use for building 
+references.  
+  --outdir                      [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --tools_bundle                [string] Select a predefined bundle of tools to build references for. 
+  --tools                       [string] Specify which tools to build references for. 
+  --skip_tools                  [string] Specify which tools to skip building references for. 
+  --references_base_path        [string] Base path substituted for ${params.references_base_path} placeholders in datasheet paths. 
+  --email                       [string] Email address for completion summary. 
+  --multiqc_title               [string] MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+
+Building index options
+  --kallisto_make_unique        [boolean] Make --make-unique flag for kallisto index [default: false] 
+  --star_sjdbOverhang           [integer] Length of donor and acceptor splice site anchors for the STAR splice junction database; typically 1 
+bp less than read length.  
+  --star_genomeSAindexNbases    [integer] Length of suffix array pre-indexing string for STAR genome indexing. 
+  --hisat2_build_memory         [string]  Memory threshold for HISAT2 index building. When available process memory meets or exceeds this 
+value, splice sites and exons are used to build a splice-aware index. [default: 200.GB]  
+  --hisat2_skip_splice_sites    [boolean] Skip splice site extraction and usage for HISAT2 index building. Useful for prokaryotic genomes 
+where splice sites are not applicable. [default: false]  
+
 Generic options
-  trace_report_suffix: 2026-10-22_00-20-55
-  help               : true
-
-Core Nextflow options
-  runName            : special_volta
-  launchDir          : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/references
-  workDir            : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/references/work
-  projectDir         : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/references
-  userName           : runner
-  profile            : standard
-  configFiles        : /home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/references/nextflow.config
-
-!! Only displaying parameters that differ from the pipeline defaults !!
+  --multiqc_methods_description [string]          Custom MultiQC yaml file containing HTML including a methods description. 
+  --help                        [boolean, string] Display the help message. 
+  --help_full                   [boolean]         Display the full detailed help message. 
+  --show_hidden                 [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 18 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
 
 * The pipeline
@@ -42,16 +65,3 @@ Core Nextflow options
     https://github.com/nf-core/references/blob/main/CITATIONS.md
 
 
-Extra information
-  Tools selected to be run  :  
-------------------------------------------------------
-
-WARN: No tools specified
-ERROR ~ Validation of pipeline parameters failed!
-
- -- Check '.nextflow.log' file for details
-The following invalid input values have been detected:
-
-* Missing required parameter(s): input, outdir
-
- -- Check script 'subworkflows/local/utils_nfcore_references_pipeline/main.nf' at line: 151 or see '.nextflow.log' file for more details

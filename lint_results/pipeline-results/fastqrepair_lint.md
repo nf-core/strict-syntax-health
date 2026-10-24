@@ -1,10 +1,45 @@
 # Nextflow lint results
 
-- Generated: 2026-09-01T00:24:06.415838025Z
-- Nextflow version: 26.08.0-edge
-- Summary: 9 warnings
+- Generated: 2026-10-24T00:19:35.062237461Z
+- Nextflow version: 26.10.3
+- Summary: 17 warnings
 
 ## :warning: Warnings
+
+- Warning: `modules/nf-core/bbmap/repair/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/fastqc/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/gzrt/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/multiqc/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/wipertools/fastqgather/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
 
 - Warning: `modules/nf-core/wipertools/fastqgather/main.nf:25:21`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
@@ -18,6 +53,27 @@
   ```nextflow
       if (fastq.any { it.name == "${prefix}.fastq.gz" }) {
                       ^^
+  ```
+
+- Warning: `modules/nf-core/wipertools/fastqscatter/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/wipertools/fastqwiper/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/wipertools/reportgather/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
   ```
 
 - Warning: `modules/nf-core/wipertools/reportgather/main.nf:25:22`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -41,28 +97,28 @@
                     ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/fastq_repair_wipertools/main.nf:48:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/fastq_repair_wipertools/main.nf:49:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_cleaned_fastq = Channel.empty()
                          ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/fastq_repair_wipertools/main.nf:53:65`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/fastq_repair_wipertools/main.nf:54:65`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           def fq = id_fq.sort { a, b -> a[0] <=> b[0] }.collect { it[1] }
                                                                   ^^
   ```
 
-- Warning: `subworkflows/local/fastq_repair_wipertools/main.nf:65:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/fastq_repair_wipertools/main.nf:66:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_gathered_report = Channel.empty()
                            ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/fastq_repair_wipertools/main.nf:73:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/fastq_repair_wipertools/main.nf:74:24`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_final_reports = Channel.empty()
