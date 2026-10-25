@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "f407d5c00e870aa43ee5662af40c15f07474061e",
+  "_repo_commit": "ec5a9ed8d87a584915e6444f3f97424087f67084",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -12116,6 +12116,12 @@
   },
   "vardictjava": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/vardictjava",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "vardictrust": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/vardictrust",
     "errors": 0,
     "warnings": 0,
     "parse_error": false
