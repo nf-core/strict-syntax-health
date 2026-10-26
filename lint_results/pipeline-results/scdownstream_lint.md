@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-10-25T00:20:30.841892480Z
+- Generated: 2026-10-26T00:19:36.200111790Z
 - Nextflow version: 26.10.3
 - Summary: 75 warnings
 
@@ -34,7 +34,7 @@
       ^^^^
   ```
 
-- Warning: `modules/local/adata/prepcellxgene/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/adata/prepcellxgene/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -216,21 +216,21 @@
       ^^^^
   ```
 
-- Warning: `modules/local/liana/bysample/main.nf:24:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/liana/bysample/main.nf:25:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
       ^^^^
   ```
 
-- Warning: `modules/local/liana/rankaggregate/main.nf:24:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/liana/rankaggregate/main.nf:25:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
       ^^^^
   ```
 
-- Warning: `modules/local/liana/rankaggregate/main.nf:28:5`: Variable was declared but not used
+- Warning: `modules/local/liana/rankaggregate/main.nf:29:5`: Variable was declared but not used
 
   ```nextflow
       obs_key = meta.obs_key ?: "leiden"
@@ -342,7 +342,7 @@
       ^^^^
   ```
 
-- Warning: `modules/local/scanpy/rankgenesgroups/main.nf:26:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/scanpy/rankgenesgroups/main.nf:27:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

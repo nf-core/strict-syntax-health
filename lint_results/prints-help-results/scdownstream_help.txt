@@ -5,7 +5,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 Downloading plugin nf-schema@2.5.1
 Downloading plugin nf-anndata@0.5.2
-Launching `./main.nf` [kickass_volta] revision: d4a8b64c61
+Launching `./main.nf` [goofy_carson] revision: 5e58573b72
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'

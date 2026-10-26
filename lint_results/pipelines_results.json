@@ -1454,7 +1454,7 @@
   "scdownstream": {
     "full_name": "nf-core/scdownstream",
     "html_url": "https://github.com/nf-core/scdownstream",
-    "commit": "b82ef1893e3d9b52ae0bc006a753422404a873ff",
+    "commit": "96aa04d54e8b0fbd71d545ac98a6a24ba05ec353",
     "errors": 0,
     "warnings": 75,
     "parse_error": false,
