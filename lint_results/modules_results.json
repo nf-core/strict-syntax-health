@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "a6d01717745062df38395b45979c1f0e15b1df0c",
+  "_repo_commit": "3142db36bf7095641bf71466aedfb734f156aac9",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -2704,6 +2704,12 @@
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/datavzrd",
     "errors": 0,
     "warnings": 0,
+    "parse_error": false
+  },
+  "dds_createproject": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/dds/createproject",
+    "errors": 0,
+    "warnings": 3,
     "parse_error": false
   },
   "deacon_filter": {
@@ -11774,6 +11780,12 @@
   },
   "tinc": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/tinc",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "tmalign": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/tmalign",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

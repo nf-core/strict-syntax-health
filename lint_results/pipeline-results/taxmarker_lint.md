@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-10-24T00:23:51.462906147Z
+- Generated: 2026-10-27T00:23:34.915761863Z
 - Nextflow version: 26.10.3
-- Summary: 53 warnings
+- Summary: 54 warnings
 
 ## :warning: Warnings
 
@@ -56,6 +56,13 @@
   ```
 
 - Warning: `modules/local/profilecover/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/raxmlng/evaluate/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -139,7 +146,7 @@
       ^^^^
   ```
 
-- Warning: `modules/local/treedivide/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/treedivide/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -258,88 +265,88 @@
                                                                                ^^
   ```
 
-- Warning: `subworkflows/local/sativa/main.nf:77:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/sativa/main.nf:79:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_ref_tree   // channel: [ val(meta), path(tree.nwk) ]
       ^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/sativa/main.nf:80:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/sativa/main.nf:82:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_ref_model  // channel: [ val(meta), path(model.txt) ]
       ^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/sativa/main.nf:86:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/sativa/main.nf:88:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       def ch_alignment_meta = ch_alignment.map { [ [ id: 'user-alignment' ], it ] }
                                                                              ^^
   ```
 
-- Warning: `subworkflows/local/sativa/main.nf:100:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/sativa/main.nf:102:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       def ch_taxonomy_meta = ch_taxonomy.map { [ [ id: 'user-alignment' ], it ] }
                                                                            ^^
   ```
 
-- Warning: `subworkflows/local/sativa/main.nf:126:34`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/sativa/main.nf:129:34`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_reference_input.map { meta, _alignment, _taxonomy, _taxcode, reftree, _refmodel -> reftree },
                                    ^^^^
   ```
 
-- Warning: `subworkflows/local/sativa/main.nf:127:34`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/sativa/main.nf:130:34`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_reference_input.map { meta, _alignment, _taxonomy, _taxcode, _reftree, refmodel -> refmodel }
                                    ^^^^
   ```
 
-- Warning: `subworkflows/local/taxonomy2phylogeny/main.nf:11:53`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/taxonomy2phylogeny/main.nf:13:53`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_taxonomy_alignment.map { meta, taxonomy, alignment, raxmlng_model -> [ meta, taxonomy ] }
                                                       ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/taxonomy2phylogeny/main.nf:11:64`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/taxonomy2phylogeny/main.nf:13:64`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ch_taxonomy_alignment.map { meta, taxonomy, alignment, raxmlng_model -> [ meta, taxonomy ] }
                                                                  ^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/taxonomy2phylogeny/main.nf:20:22`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/taxonomy2phylogeny/main.nf:22:22`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { meta, taxonomy, alignment, raxmlng_model -> [ meta, alignment, raxmlng_model ] }
                        ^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/taxonomy2phylogeny/main.nf:27:31`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/taxonomy2phylogeny/main.nf:38:35`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          ch_search_input.map { meta, alignment, raxmlng_model, guide_tree -> guide_tree },
-                                ^^^^
+              ch_search_input.map { meta, alignment, raxmlng_model, guide_tree -> guide_tree },
+                                    ^^^^
   ```
 
-- Warning: `subworkflows/local/taxonomy2phylogeny/main.nf:27:37`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/taxonomy2phylogeny/main.nf:38:41`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          ch_search_input.map { meta, alignment, raxmlng_model, guide_tree -> guide_tree },
-                                      ^^^^^^^^^
+              ch_search_input.map { meta, alignment, raxmlng_model, guide_tree -> guide_tree },
+                                          ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/taxonomy2phylogeny/main.nf:27:48`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/taxonomy2phylogeny/main.nf:38:52`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          ch_search_input.map { meta, alignment, raxmlng_model, guide_tree -> guide_tree },
-                                                 ^^^^^^^^^^^^^
+              ch_search_input.map { meta, alignment, raxmlng_model, guide_tree -> guide_tree },
+                                                     ^^^^^^^^^^^^^
   ```
 
 - Warning: `subworkflows/local/weighted_clustering/main.nf:41:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -356,21 +363,21 @@
                                                                              ^^
   ```
 
-- Warning: `workflows/taxmarker.nf:104:68`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/taxmarker.nf:105:68`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           SEQKIT_GREP(ch_sequences.map { [ [ id: 'user-alignment' ], it ] }, [], '')
                                                                      ^^
   ```
 
-- Warning: `workflows/taxmarker.nf:152:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/taxmarker.nf:153:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       EMBOSS_SEQRET(ch_sequences_checked.map { [ [ id: 'user-alignment' ], it ] }, 'fasta')
                                                                            ^^
   ```
 
-- Warning: `workflows/taxmarker.nf:178:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/taxmarker.nf:179:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   ch_sequences_for_resolve.map { [ [ id: 'user-alignment' ], it ] },

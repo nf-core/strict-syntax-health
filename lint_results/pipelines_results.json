@@ -314,7 +314,7 @@
   "deepmutscan": {
     "full_name": "nf-core/deepmutscan",
     "html_url": "https://github.com/nf-core/deepmutscan",
-    "commit": "9c9fd0e15f2f2c1e78c34e29ee0121a5435ee7d7",
+    "commit": "dc89edd0b38179242243c7c709a86b4469bfe7f1",
     "errors": 0,
     "warnings": 115,
     "parse_error": false,
@@ -362,7 +362,7 @@
   "detaxizer": {
     "full_name": "nf-core/detaxizer",
     "html_url": "https://github.com/nf-core/detaxizer",
-    "commit": "e31556eaf34b3f5c0d8903a1c18d94b2d0f98fa1",
+    "commit": "2c0b3d99bd91dfe77149f25f8d0717974fdb514d",
     "errors": 0,
     "warnings": 34,
     "parse_error": false,
@@ -494,7 +494,7 @@
   "fastqrepair": {
     "full_name": "nf-core/fastqrepair",
     "html_url": "https://github.com/nf-core/fastqrepair",
-    "commit": "36aa93b3854f7c7fed8fc18a891b09e5d5454deb",
+    "commit": "32e367d239a87eb9e4bf8d47e29e291537b8a7cf",
     "errors": 0,
     "warnings": 17,
     "parse_error": false,
@@ -566,7 +566,7 @@
   "genomeassembler": {
     "full_name": "nf-core/genomeassembler",
     "html_url": "https://github.com/nf-core/genomeassembler",
-    "commit": "513366550fa88acc44f1135851dd28d431d7f9cc",
+    "commit": "87a88aa28ee3a94b38305c517a86d747dd66131f",
     "errors": 0,
     "warnings": 46,
     "parse_error": false,
@@ -602,9 +602,9 @@
   "genomicrelatedness": {
     "full_name": "nf-core/genomicrelatedness",
     "html_url": "https://github.com/nf-core/genomicrelatedness",
-    "commit": "8dec64ecb2ba72fa53d65e270fead196e82a672c",
+    "commit": "a3e2ae644f6ad6f60b68af15070a977bf53710a6",
     "errors": 0,
-    "warnings": 0,
+    "warnings": 38,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -758,14 +758,14 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "7985439c33bbffdc96a853abd298c5221c799dff",
+    "commit": "ae8ca0b78cdf52f119e4aafd9090565784185825",
     "errors": 0,
-    "warnings": 98,
+    "warnings": 100,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 77
+    "publishdir_count": 78
   },
   "magmap": {
     "full_name": "nf-core/magmap",
@@ -1106,14 +1106,14 @@
   "pathogenepidemiology": {
     "full_name": "nf-core/pathogenepidemiology",
     "html_url": "https://github.com/nf-core/pathogenepidemiology",
-    "commit": "04efdf062e3ae9537bca65f073051b95ec825b6b",
+    "commit": "eea461452df6a0f612998b1ad4fb9729fe02d0d5",
     "errors": 0,
     "warnings": 39,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 23
+    "publishdir_count": 24
   },
   "pathogensurveillance": {
     "full_name": "nf-core/pathogensurveillance",
@@ -1190,9 +1190,9 @@
   "proteinannotator": {
     "full_name": "nf-core/proteinannotator",
     "html_url": "https://github.com/nf-core/proteinannotator",
-    "commit": "79197a35ff15b158e3e7bee4df409323d4554a7d",
+    "commit": "0fce48a6ba539b0aa818dcf409528d5365e2ec4b",
     "errors": 0,
-    "warnings": 0,
+    "warnings": 12,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -1202,7 +1202,7 @@
   "proteinfamilies": {
     "full_name": "nf-core/proteinfamilies",
     "html_url": "https://github.com/nf-core/proteinfamilies",
-    "commit": "700d0e1f497651a9abdc5cac78bcd0df656b8414",
+    "commit": "463c504452c653c8baf8e3f3632b42acd4dcd7ad",
     "errors": 0,
     "warnings": 38,
     "parse_error": false,
@@ -1214,7 +1214,7 @@
   "proteinfold": {
     "full_name": "nf-core/proteinfold",
     "html_url": "https://github.com/nf-core/proteinfold",
-    "commit": "a983586ff7cd47c64dba6bacf3c2779dd3cb9d64",
+    "commit": "e349949374ccf0fbb2fc59d9fd4ef811c1ee4f1c",
     "errors": 0,
     "warnings": 39,
     "parse_error": false,
@@ -1442,7 +1442,7 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "6fbbb07b9aff9fd032fd0da0c380301706c7dce7",
+    "commit": "99840bf74fd895888af73c435abddfec2f889d55",
     "errors": 0,
     "warnings": 129,
     "parse_error": false,
@@ -1454,7 +1454,7 @@
   "scdownstream": {
     "full_name": "nf-core/scdownstream",
     "html_url": "https://github.com/nf-core/scdownstream",
-    "commit": "96aa04d54e8b0fbd71d545ac98a6a24ba05ec353",
+    "commit": "5bf1f7fa70e55cab3f11030190e4883c7739b2eb",
     "errors": 0,
     "warnings": 75,
     "parse_error": false,
@@ -1598,21 +1598,21 @@
   "taxmarker": {
     "full_name": "nf-core/taxmarker",
     "html_url": "https://github.com/nf-core/taxmarker",
-    "commit": "515ff3a014a9f63d5f975f1e7ba67ae873435c66",
+    "commit": "b28b6a87382a53f531092d0d8c1798cc86592123",
     "errors": 0,
-    "warnings": 53,
+    "warnings": 54,
     "parse_error": false,
-    "prints_help": false,
+    "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 11
+    "publishdir_count": 12
   },
   "taxprofiler": {
     "full_name": "nf-core/taxprofiler",
     "html_url": "https://github.com/nf-core/taxprofiler",
-    "commit": "3b8595987edec10bd4aff0d9dcecfb93c850871e",
+    "commit": "8cf73ff643f79de2ea4ba11aaf49b369eb2aeabb",
     "errors": 0,
-    "warnings": 55,
+    "warnings": 122,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,

@@ -1,10 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.2
+ N E X T F L O W   ~  version 26.10.3
 
-Downloading plugin nf-schema@2.7.2
-Launching `./main.nf` [pensive_mayer] revision: 4ea2530ab6
+Launching `./main.nf` [prickly_kare] revision: dd7ee746b7
 
 
 ------------------------------------------------------
@@ -156,6 +155,13 @@ Gene prediction and annotation options
   --prokka_compliance_centre             [string]  Specify sequencing centre name required for Prokka's compliance mode. 
   --skip_prokka                          [boolean] Skip Prokka genome annotation. 
   --prokka_fast_mode                     [boolean] Specify to skip CDS/product searching in Prokka runs 
+  --bakta_db                             [string]  Local tar.gz archive or uncompressed directory of a Bakta database. If not given, it is downloaded 
+(see `--bakta_db_downloadtype`).  
+  --bakta_db_downloadtype                [string]  Specify the download type for Bakta databases. Options are 'full' (30+Gb) or 'light' (~1.3Gb).  
+(accepted: full, light) [default: full]  
+  --bakta_with_compliance                [boolean] Turn on Bakta compliance mode for truncating contig names for NCBI/ENA compatibility. 
+  --bakta_fast_mode                      [boolean] Specify to skip CDS/product searching in Bakta runs 
+  --skip_bakta                           [boolean] Skip Bakta genome annotation. 
   --skip_metaeuk                         [boolean] [DEPRECATED] This parameter no longer has any effect and will be removed in a future release. 
 MetaEuk only runs when `--metaeuk_db` or `--metaeuk_mmseqs_db` is supplied.  
   --metaeuk_mmseqs_db                    [string]  A string containing the name of one of the databases listed in the [mmseqs2 

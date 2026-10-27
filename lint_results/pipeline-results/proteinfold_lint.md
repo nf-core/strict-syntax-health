@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-10-22T00:19:55.638774610Z
+- Generated: 2026-10-27T00:21:22.579586463Z
 - Nextflow version: 26.10.3
 - Summary: 39 warnings
 
@@ -272,7 +272,7 @@
       ^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_proteinfold_pipeline/main.nf:327:78`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_proteinfold_pipeline/main.nf:328:78`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       def unsupportedModes = requestedModes.findAll { !supportedModes.contains(it) }.unique().sort()

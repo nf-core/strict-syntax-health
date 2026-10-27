@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-10-19T00:20:16.523539044Z
-- Nextflow version: 26.10.2
-- Summary: 98 warnings
+- Generated: 2026-10-27T00:19:46.620475390Z
+- Nextflow version: 26.10.3
+- Summary: 100 warnings
 
 ## :warning: Warnings
 
@@ -35,6 +35,20 @@
   ```
 
 - Warning: `modules/nf-core/ale/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/bakta/bakta/main.nf:32:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/bakta/baktadbdownload/main.nf:13:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

@@ -1,12 +1,12 @@
 # Nextflow lint results
 
-- Generated: 2026-10-21T00:20:44.519270207Z
-- Nextflow version: 26.10.2
+- Generated: 2026-10-27T00:20:23.709473039Z
+- Nextflow version: 26.10.3
 - Summary: 39 warnings
 
 ## :warning: Warnings
 
-- Warning: `modules/local/bbduk_custom/main.nf:22:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/bbduk_custom/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

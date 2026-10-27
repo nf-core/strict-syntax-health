@@ -1,12 +1,12 @@
 # Nextflow lint results
 
-- Generated: 2026-10-24T00:19:01.223385428Z
+- Generated: 2026-10-27T00:17:45.742531780Z
 - Nextflow version: 26.10.3
 - Summary: 115 warnings
 
 ## :warning: Warnings
 
-- Warning: `modules/local/bamprocessing/premerge/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/bamprocessing/merge_align/main.nf:22:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
