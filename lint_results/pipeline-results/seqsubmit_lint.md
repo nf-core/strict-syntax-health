@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-10-21T00:23:05.874198307Z
-- Nextflow version: 26.10.2
-- Summary: 35 warnings
+- Generated: 2026-10-28T00:19:13.651080970Z
+- Nextflow version: 26.10.4
+- Summary: 34 warnings
 
 ## :warning: Warnings
 
@@ -46,13 +46,6 @@
   ```nextflow
       when:
       ^^^^
-  ```
-
-- Warning: `modules/local/create_reads_manifest/main.nf:25:56`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def fastq_args   = fastq_list.collect { "--fastq ${it.name}" }.join(' \\\n        ')
-                                                         ^^
   ```
 
 - Warning: `modules/local/ena_webin_cli_wrapper/main.nf:29:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime

@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-10-24T00:22:09.853819669Z
-- Nextflow version: 26.10.3
-- Summary: 74 warnings
+- Generated: 2026-10-28T00:17:30.002567118Z
+- Nextflow version: 26.10.4
+- Summary: 77 warnings
 
 ## :warning: Warnings
 
@@ -39,6 +39,20 @@
   ```nextflow
               saveAs: { filename -> null }
                         ^^^^^^^^
+  ```
+
+- Warning: `modules/local/aspli/counts/main.nf:28:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/aspli/du/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
   ```
 
 - Warning: `modules/local/clustergroups/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
@@ -503,21 +517,28 @@
       ^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_rnasplice_pipeline/main.nf:537:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_rnasplice_pipeline/main.nf:543:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               if (it.size() > 1) {
                   ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_rnasplice_pipeline/main.nf:552:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_rnasplice_pipeline/main.nf:558:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               if (it.size() > 1) {
                   ^^
   ```
 
-- Warning: `workflows/rnasplice.nf:236:9`: Variable was declared but not used
+- Warning: `subworkflows/local/utils_nfcore_rnasplice_pipeline/main.nf:573:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              if (it.size() > 1) {
+                  ^^
+  ```
+
+- Warning: `workflows/rnasplice.nf:244:9`: Variable was declared but not used
 
   ```nextflow
           ch_transcriptome_bam_index = BAM_SORT_STATS_SAMTOOLS.out.index

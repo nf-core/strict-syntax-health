@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.09.2-edge
+ N E X T F L O W   ~  version 26.10.4
 
-Launching `./main.nf` [loquacious_ramanujan] revision: 8e72056edd
+Launching `./main.nf` [romantic_agnesi] revision: 8e72056edd
 
 
 ------------------------------------------------------
@@ -43,6 +43,7 @@ Reader
 merscope, cosmx, visium_hd, molecular_cartography, macsima, phenocycler, hyperion, ome_tif, ...) 
 [default: xenium]  
   --visium_hd_imread_page         [number] Optional page for the imageio reader 
+  --reader_kwargs                 [string] Additional keyword arguments for the sopa reader, written as an inline python dictionary. 
 
 Patches
   --patch_width_pixel             [number] Width (and height) of each patch in pixels 

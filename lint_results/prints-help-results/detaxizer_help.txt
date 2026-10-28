@@ -1,10 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.3
+ N E X T F L O W   ~  version 26.10.4
 
-Downloading plugin nf-schema@2.7.2
-Launching `./main.nf` [jolly_thompson] revision: 0129016329
+Launching `./main.nf` [nice_lorenz] revision: 0129016329
 
 
 ------------------------------------------------------
@@ -13,7 +12,7 @@ Launching `./main.nf` [jolly_thompson] revision: 0129016329
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/detaxizer 1.4.0
+  nf-core/detaxizer 1.5.0dev
 ------------------------------------------------------
 Typical pipeline command:
 

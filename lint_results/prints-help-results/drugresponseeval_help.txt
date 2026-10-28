@@ -1,9 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.3
+ N E X T F L O W   ~  version 26.10.4
 
-Launching `./main.nf` [special_mendel] revision: 6e510620f6
+Downloading plugin nf-schema@2.7.3
+Launching `./main.nf` [curious_kowalevski] revision: 6e510620f6
 
 
 ------------------------------------------------------
@@ -78,6 +79,9 @@ Generic options
  
  !! Hiding 14 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
+
+* The pipeline
+    https://doi.org/10.5281/zenodo.14779984
 
 * The nf-core framework
     https://doi.org/10.1038/s41587-020-0439-x

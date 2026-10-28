@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "3142db36bf7095641bf71466aedfb734f156aac9",
+  "_repo_commit": "7b3452a23773f687ededb4befd037920e5a51341",
   "abundance_differential_filter": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/abundance_differential_filter",
     "errors": 0,
@@ -206,7 +206,7 @@
   },
   "bcl_demultiplex": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/bcl_demultiplex",
-    "errors": 0,
+    "errors": 1,
     "warnings": 0,
     "parse_error": false
   },
@@ -332,7 +332,7 @@
   },
   "fasta_index_dna": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fasta_index_dna",
-    "errors": 0,
+    "errors": 1,
     "warnings": 0,
     "parse_error": false
   },
@@ -404,7 +404,7 @@
   },
   "fastq_align_dna": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_align_dna",
-    "errors": 0,
+    "errors": 1,
     "warnings": 0,
     "parse_error": false
   },
@@ -434,7 +434,7 @@
   },
   "fastq_contam_seqtk_kraken": {
     "html_url": "https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fastq_contam_seqtk_kraken",
-    "errors": 0,
+    "errors": 1,
     "warnings": 0,
     "parse_error": false
   },

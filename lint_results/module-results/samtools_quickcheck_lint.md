@@ -1,12 +1,12 @@
 # Nextflow lint results
 
-- Generated: 2026-10-27T00:24:58.626664+00:00
-- Nextflow version: 26.10.3
+- Generated: 2026-10-28T00:21:43.142216+00:00
+- Nextflow version: 26.10.4
 - Summary: 1 warning
 
 ## :warning: Warnings
 
-- Warning: `modules/nf-core/samtools/quickcheck/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/samtools/quickcheck/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-10-10T00:25:31.319173686Z
-- Nextflow version: 26.09.2-edge
-- Summary: 12 warnings
+- Generated: 2026-10-28T00:19:30.697855644Z
+- Nextflow version: 26.10.4
+- Summary: 14 warnings
 
 ## :warning: Warnings
 
@@ -18,6 +18,20 @@
   ```nextflow
           return channels.split(/[ ,|]+/).findAll { it }
                                                     ^^
+  ```
+
+- Warning: `modules/nf-core/spaceranger/count/main.nf:16:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/untar/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
   ```
 
 - Warning: `subworkflows/local/input_check/main.nf:15:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
@@ -76,7 +90,7 @@
                                                                     ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_sopa_pipeline/main.nf:323:93`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_sopa_pipeline/main.nf:326:93`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           error("Invalid combination of nf-core/sopa parameters:\n" + errors.collect { "  - ${it}" }.join("\n") + "\nSee https://nf-co.re/sopa/docs/usage/ for the supported configurations.")

@@ -1,12 +1,12 @@
 # Nextflow lint results
 
-- Generated: 2026-10-27T00:24:58.587656+00:00
-- Nextflow version: 26.10.3
+- Generated: 2026-10-28T00:21:43.103262+00:00
+- Nextflow version: 26.10.4
 - Summary: 1 warning
 
 ## :warning: Warnings
 
-- Warning: `modules/nf-core/purecn/intervalfile/main.nf:22:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/purecn/intervalfile/main.nf:25:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

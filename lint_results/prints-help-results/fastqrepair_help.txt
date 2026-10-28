@@ -1,10 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.3
+ N E X T F L O W   ~  version 26.10.4
 
-Downloading plugin nf-schema@2.7.3
-Launching `./main.nf` [thirsty_leibniz] revision: 44a807abd6
+Launching `./main.nf` [nostalgic_golick] revision: 44a807abd6
 
 
 ------------------------------------------------------
@@ -29,6 +28,7 @@ Input/output options
   --qin                   [integer] the ASCII offset for BBMap (33=Sanger, 64=old Solexa).  (accepted: 33, 64) [default: 33] 
   --alphabet              [string]  Allowed character in the SEQ line for Wipertools. [default: ACGTN] 
   --skip_bbmap_repair     [boolean] This option tells the pipeline to skip the BBMap re-pair step. [default: false] 
+  --skip_fq_lint          [boolean] Skip the fq lint pre-check and repair all the samples. [default: false] 
   --publish_all_tools     [boolean] Publish intermediate results. [default: false] 
 
 Generic options

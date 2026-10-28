@@ -62,9 +62,9 @@
   "bacass": {
     "full_name": "nf-core/bacass",
     "html_url": "https://github.com/nf-core/bacass",
-    "commit": "1994c45292bbc5b547ea53fb52f713ffcd26a505",
+    "commit": "22f9dfbcf9f1f39a5bdfdb06e58bb434633c5350",
     "errors": 0,
-    "warnings": 63,
+    "warnings": 60,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -218,9 +218,9 @@
   "createpanelrefs": {
     "full_name": "nf-core/createpanelrefs",
     "html_url": "https://github.com/nf-core/createpanelrefs",
-    "commit": "f231aa072bfb18d796637df3564b20f8347da0b8",
+    "commit": "b4da445de5ff26dbba04ac28bc6af26f76fb6359",
     "errors": 0,
-    "warnings": 0,
+    "warnings": 25,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": true,
@@ -362,7 +362,7 @@
   "detaxizer": {
     "full_name": "nf-core/detaxizer",
     "html_url": "https://github.com/nf-core/detaxizer",
-    "commit": "2c0b3d99bd91dfe77149f25f8d0717974fdb514d",
+    "commit": "fd6435bdd72266641ca4a95009da4c376c0ebe6e",
     "errors": 0,
     "warnings": 34,
     "parse_error": false,
@@ -422,7 +422,7 @@
   "drugresponseeval": {
     "full_name": "nf-core/drugresponseeval",
     "html_url": "https://github.com/nf-core/drugresponseeval",
-    "commit": "9101b6aceffb7cfb3fa453f0f9ffaf99efe8058a",
+    "commit": "9212ae0e4acc9ee013bd51b8b8ac7f96696ef2c1",
     "errors": 0,
     "warnings": 27,
     "parse_error": false,
@@ -494,14 +494,14 @@
   "fastqrepair": {
     "full_name": "nf-core/fastqrepair",
     "html_url": "https://github.com/nf-core/fastqrepair",
-    "commit": "32e367d239a87eb9e4bf8d47e29e291537b8a7cf",
+    "commit": "959b6a9c9efb744ef83a262527a5e126efab8099",
     "errors": 0,
-    "warnings": 17,
+    "warnings": 19,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 6
+    "publishdir_count": 7
   },
   "fastquorum": {
     "full_name": "nf-core/fastquorum",
@@ -818,7 +818,7 @@
   "metaboigniter": {
     "full_name": "nf-core/metaboigniter",
     "html_url": "https://github.com/nf-core/metaboigniter",
-    "commit": "c47009a1c3f8b089d79be0625e1b7d5dc408fb7d",
+    "commit": "9e76c83b2d34f13045d2a6f6aa1e2ad19676817d",
     "errors": 0,
     "warnings": 33,
     "parse_error": false,
@@ -842,9 +842,9 @@
   "metatdenovo": {
     "full_name": "nf-core/metatdenovo",
     "html_url": "https://github.com/nf-core/metatdenovo",
-    "commit": "017514c173874c76b8841d38ff1c54dbeb6e2eed",
+    "commit": "b57e01655f8b701530fcf3acc7ca098dcce47103",
     "errors": 0,
-    "warnings": 75,
+    "warnings": 79,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -1154,7 +1154,7 @@
   "phyloplace": {
     "full_name": "nf-core/phyloplace",
     "html_url": "https://github.com/nf-core/phyloplace",
-    "commit": "c952b2f8b579719a66cd0f09e933dae431a7f550",
+    "commit": "195a7dd6f201f2d532738d72367e4faa865857c8",
     "errors": 0,
     "warnings": 29,
     "parse_error": false,
@@ -1394,19 +1394,19 @@
   "rnasplice": {
     "full_name": "nf-core/rnasplice",
     "html_url": "https://github.com/nf-core/rnasplice",
-    "commit": "d8b13477476d8ff0563da16850601d57ed694933",
+    "commit": "8409950e2d85ff54e463be11de72b6ed45922bc5",
     "errors": 0,
-    "warnings": 74,
+    "warnings": 77,
     "parse_error": false,
     "prints_help": false,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 79
+    "publishdir_count": 81
   },
   "rnastructurome": {
     "full_name": "nf-core/rnastructurome",
     "html_url": "https://github.com/nf-core/rnastructurome",
-    "commit": "ab9c0cdff7fa5f66f6dbfb2e0c86cd8294fceca0",
+    "commit": "3082852dd5e9d069ecd72823ecaf8363fabd059e",
     "errors": 0,
     "warnings": 36,
     "parse_error": false,
@@ -1442,7 +1442,7 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "99840bf74fd895888af73c435abddfec2f889d55",
+    "commit": "09aeb7d1d6d17c8714252c5739c025eb598bc9ec",
     "errors": 0,
     "warnings": 129,
     "parse_error": false,
@@ -1502,9 +1502,9 @@
   "seqsubmit": {
     "full_name": "nf-core/seqsubmit",
     "html_url": "https://github.com/nf-core/seqsubmit",
-    "commit": "672c2ce77605aa92d6c5e6ad3ce5e20e480168f4",
+    "commit": "e0eed0dad9777fd23e2f4534fb676c321a5b9d89",
     "errors": 0,
-    "warnings": 35,
+    "warnings": 34,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -1538,9 +1538,9 @@
   "sopa": {
     "full_name": "nf-core/sopa",
     "html_url": "https://github.com/nf-core/sopa",
-    "commit": "df5d3dee3086477d12a299a916bff096fd4d6537",
+    "commit": "97de50adf4059178dba2e73b27d035b3333464df",
     "errors": 0,
-    "warnings": 12,
+    "warnings": 14,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -1598,7 +1598,7 @@
   "taxmarker": {
     "full_name": "nf-core/taxmarker",
     "html_url": "https://github.com/nf-core/taxmarker",
-    "commit": "b28b6a87382a53f531092d0d8c1798cc86592123",
+    "commit": "714001c687a1f654a7651da3f209fd3f7af77a99",
     "errors": 0,
     "warnings": 54,
     "parse_error": false,
@@ -1670,14 +1670,14 @@
   "variantbenchmarking": {
     "full_name": "nf-core/variantbenchmarking",
     "html_url": "https://github.com/nf-core/variantbenchmarking",
-    "commit": "2d93fa8d025580916c39e72f88ab944350566097",
+    "commit": "f3a2cda41276677fe6c5ff6295f08eb7850252c5",
     "errors": 0,
     "warnings": 56,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 77
+    "publishdir_count": 75
   },
   "variantcatalogue": {
     "full_name": "nf-core/variantcatalogue",
@@ -1718,9 +1718,9 @@
   "viralmetagenome": {
     "full_name": "nf-core/viralmetagenome",
     "html_url": "https://github.com/nf-core/viralmetagenome",
-    "commit": "cc966c2e350eba92e33c3cbde7aea30c6372aab5",
+    "commit": "9b3ed25e48e256e5a660609aa36a7c3174cfe736",
     "errors": 0,
-    "warnings": 3,
+    "warnings": 87,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,

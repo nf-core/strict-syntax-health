@@ -1,10 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.3
+ N E X T F L O W   ~  version 26.10.4
 
 Downloading plugin nf-schema@2.8.0
-Launching `./main.nf` [compassionate_kirch] revision: e648e34c9b
+Launching `./main.nf` [agitated_fermat] revision: e648e34c9b
 
 WARN: Incorrect value detected for `validation.monochromeLogs`, a boolean is expected. Defaulting to `false`
 WARN: Incorrect value detected for `validation.monochromeLogs`, a boolean is expected. Defaulting to `false`
@@ -52,6 +52,9 @@ Generic options
  
  !! Hiding 18 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
+
+* The pipeline
+    https://doi.org/10.5281/zenodo.7643941
 
 * The nf-core framework
     https://doi.org/10.1038/s41587-020-0439-x

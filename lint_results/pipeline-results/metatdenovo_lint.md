@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-10-24T00:20:44.787336353Z
-- Nextflow version: 26.10.3
-- Summary: 75 warnings
+- Generated: 2026-10-28T00:16:34.771372511Z
+- Nextflow version: 26.10.4
+- Summary: 79 warnings
 
 ## :warning: Warnings
 
@@ -140,6 +140,27 @@
   ```
 
 - Warning: `modules/local/format/stripcdsprefix/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/interproscan/database/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/interproscan/format/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/interproscan/sum/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -308,6 +329,13 @@
   ```
 
 - Warning: `modules/nf-core/hmmer/hmmsearch/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/interproscan/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

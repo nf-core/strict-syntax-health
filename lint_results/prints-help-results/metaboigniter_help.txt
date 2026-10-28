@@ -1,11 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.2
+ N E X T F L O W   ~  version 26.10.4
 
-Launching `./main.nf` [distraught_bell] revision: 3d6668ec16
+Launching `./main.nf` [ridiculous_goldwasser] revision: 3d6668ec16
 
-WARN: Unrecognized config option 'validation.monochromeLogs'
 
 ------------------------------------------------------
                                         ,--./,-.

@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.3
+ N E X T F L O W   ~  version 26.10.4
 
-Launching `./main.nf` [serene_archimedes] revision: b2336a01a2
+Launching `./main.nf` [distracted_wing] revision: b2336a01a2
 
 
 ------------------------------------------------------
@@ -113,6 +113,10 @@ Functional annotation options
  
   --skip_dbcan                  [boolean] If enabled, skips dbCAN CAZyme annotation. 
   --dbcan_dbpath                [string]  Specify the dbCAN database path. [default: dbcan] 
+  --skip_interproscan           [boolean] If enabled, skips InterProScan functional annotation. 
+  --interproscan_dbpath         [string]  Specify the InterProScan database path. [default: interproscan] 
+  --interproscan_applications   [string]  Comma-separated list of InterProScan member databases to run (passed to --applications). 
+[default: Pfam,PANTHER]  
   --hmmdir                      [string]  Directory with hmm files which will be searched for among ORFs 
   --hmmfiles                    [string]  Comma-separated list of hmm files which will be searched for among ORFs 
   --hmmpattern                  [string]  Specify which pattern hmm files end with [default: *.hmm] 
@@ -136,7 +140,7 @@ Generic options
   --help_full                   [boolean]         Display the full detailed help message. 
   --show_hidden                 [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
  
- !! Hiding 33 param(s), use the `--showHidden` parameter to show them !!
+ !! Hiding 36 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
 
 * The pipeline
