@@ -1,12 +1,12 @@
 # Nextflow lint results
 
-- Generated: 2026-10-28T00:21:43.047282+00:00
+- Generated: 2026-10-29T00:21:43.599567+00:00
 - Nextflow version: 26.10.4
 - Summary: 1 warning
 
 ## :warning: Warnings
 
-- Warning: `modules/nf-core/ngscheckmate/patterngenerator/main.nf:22:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/ngscheckmate/patterngenerator/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

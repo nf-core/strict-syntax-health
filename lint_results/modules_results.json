@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "7b3452a23773f687ededb4befd037920e5a51341",
+  "_repo_commit": "a582d5633f7df32396681ef4458068e2b509ca91",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -6434,6 +6434,12 @@
   },
   "longphase_haplotag": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/longphase/haplotag",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
+  "longphase_modcall": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/longphase/modcall",
     "errors": 0,
     "warnings": 1,
     "parse_error": false

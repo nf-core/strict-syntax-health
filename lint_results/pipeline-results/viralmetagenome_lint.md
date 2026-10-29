@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-10-28T00:20:42.287431954Z
+- Generated: 2026-10-29T00:20:54.736687484Z
 - Nextflow version: 26.10.4
 - Summary: 87 warnings
 
@@ -202,7 +202,7 @@
       ^^^^
   ```
 
-- Warning: `modules/nf-core/bwamem2/index/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/bwamem2/index/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

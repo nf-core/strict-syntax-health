@@ -1,6 +1,6 @@
 # Workflow outputs migration: deepmutscan
 
-- Generated: 2026-10-27T00:17:45.880531+00:00
+- Generated: 2026-10-29T00:16:42.066797+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,4 +14,4 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 24 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/deepmutscan/blob/dc89edd0b38179242243c7c709a86b4469bfe7f1/conf/modules.config#L18) — 24 references
+- [`conf/modules.config`](https://github.com/nf-core/deepmutscan/blob/64c11363719774e116182e32e02c4d91a582e210/conf/modules.config#L18) — 24 references

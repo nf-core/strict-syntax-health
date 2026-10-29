@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-10-27T00:22:49.250906127Z
-- Nextflow version: 26.10.3
+- Generated: 2026-10-29T00:19:51.329943162Z
+- Nextflow version: 26.10.4
 - Summary: 75 warnings
 
 ## :warning: Warnings
@@ -216,21 +216,21 @@
       ^^^^
   ```
 
-- Warning: `modules/local/liana/bysample/main.nf:25:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/liana/bysample/main.nf:26:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
       ^^^^
   ```
 
-- Warning: `modules/local/liana/rankaggregate/main.nf:25:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/liana/rankaggregate/main.nf:26:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
       ^^^^
   ```
 
-- Warning: `modules/local/liana/rankaggregate/main.nf:29:5`: Variable was declared but not used
+- Warning: `modules/local/liana/rankaggregate/main.nf:30:5`: Variable was declared but not used
 
   ```nextflow
       obs_key = meta.obs_key ?: "leiden"
