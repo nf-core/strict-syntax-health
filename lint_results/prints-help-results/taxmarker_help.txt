@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.10.4
 
-Launching `./main.nf` [mad_swartz] revision: 0418764481
+Launching `./main.nf` [special_swanson] revision: 49c19a441f
 
 
 ------------------------------------------------------
@@ -27,13 +27,15 @@ Input/output options
   --sequences                   [string]          Path to a sequences file, aligned or not, in phylip (.phy or .phylip), Clustal (.aln) or fasta 
 format (.fa, .fasta, .fna, .faa, .afa, .mfa, .alnfaa or .alnfna). Can be gzipped.  
   --hmm                         [string]          Path to an HMM profile database, used to align --sequences via hmmalign if it turns out to be 
-unaligned. Only required when the input is unaligned.  
+unaligned. Without it, unaligned input is aligned with MAFFT.  
   --hmm_name                    [string]          Name of the specific profile to use from --hmm, if that database holds more than one (e.g. Barrnap's 
 databases hold one profile per rRNA gene).  
   --align_chunk_size            [integer]         Number of sequences each hmmalign job aligns, when --sequences is unaligned. [default: 10000] 
  
   --seqgrep                     [string]          Keep only --sequences records whose whole FASTA header matches this pattern, dropping the rest 
 before anything else runs.  
+  --unresolved_rank_pattern     [string]          Regular expression for placeholder ranks that are removed from the end of a lineage, like empty 
+ranks. [default: (?i)[ _]spp?[.]?$|Incertae[ _]sedis|^unidentified]  
   --upstream                    [string]          Name of an upstream data source this run's --sequences/--taxonomy came from, to enable 
 source-specific pipeline behaviour. Currently only 'GTDB' is recognised: translates 
 --gtdb_bac120_metadata/--gtdb_ar53_metadata into --sequence_weights automatically.  (accepted: 
@@ -61,11 +63,11 @@ mislabel and skips EPA-ng placement. [default: 2]
 set of files per number, `all` meaning no limit.  
   --run_reference               [boolean]         Build a reference phylogeny and model for phylogenetic placement of new sequences, from one sequence 
 per species.  
-  --skip_gapfilter              [boolean]         For already-aligned input: skip filtering out sequences with too high a proportion of alignment 
-gaps, and run every sequence straight through the rest of the pipeline.  
-  --min_nongap                  [number]          For already-aligned input: minimum proportion of non-gap columns a sequence must have in the 
-alignment to be kept. Sequences below this are too short/incomplete to place reliably, and are 
-reported separately instead of being placed. [default: 0.3]  
+  --skip_gapfilter              [boolean]         For already-aligned or MAFFT-aligned input: skip filtering out sequences with too high a proportion 
+of alignment gaps, and run every sequence straight through the rest of the pipeline.  
+  --min_nongap                  [number]          For already-aligned or MAFFT-aligned input: minimum proportion of non-gap columns a sequence must 
+have in the alignment to be kept. Sequences below this are too short/incomplete to place reliably, 
+and are reported separately instead of being placed. [default: 0.3]  
   --skip_profile_cover          [boolean]         For hmmalign-derived input: skip filtering out sequences that cover too little of the HMM profile, 
 and run every sequence straight through the rest of the pipeline.  
   --min_profile_cover           [number]          For hmmalign-derived input: minimum proportion of the HMM profile's match-state columns a sequence 

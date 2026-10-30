@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "a582d5633f7df32396681ef4458068e2b509ca91",
+  "_repo_commit": "b488b787eb6f21ab9f04e7ca6d78d2386e90157a",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -1810,6 +1810,12 @@
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/cellsnp/modea",
     "errors": 0,
     "warnings": 1,
+    "parse_error": false
+  },
+  "celltypist": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/celltypist",
+    "errors": 0,
+    "warnings": 0,
     "parse_error": false
   },
   "centrifuge_build": {
@@ -10222,6 +10228,12 @@
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/scanpy/scrublet",
     "errors": 0,
     "warnings": 1,
+    "parse_error": false
+  },
+  "scdblfinder": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/scdblfinder",
+    "errors": 0,
+    "warnings": 0,
     "parse_error": false
   },
   "scds": {

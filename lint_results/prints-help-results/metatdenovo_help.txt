@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.10.4
 
-Launching `./main.nf` [distracted_wing] revision: b2336a01a2
+Launching `./main.nf` [nasty_euclid] revision: b2336a01a2
 
 
 ------------------------------------------------------

@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.10.4
 
-Launching `./main.nf` [jolly_nobel] revision: 789f81b74f
+Launching `./main.nf` [desperate_becquerel] revision: 789f81b74f
 
 
 ------------------------------------------------------

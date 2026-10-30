@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.10.4
 
 Downloading plugin nf-prov@1.2.2
-Launching `./main.nf` [suspicious_lamarck] revision: a907093df8
+Launching `./main.nf` [distracted_hodgkin] revision: a907093df8
 
 WARN: Unrecognized config option 'prov.enabled'
 WARN: Unrecognized config option 'prov.formats.bco.file'
@@ -51,6 +51,7 @@ more of the following options: split_multiallelic, normalizate, deduplicate, fil
   --sv_standardization          [string]  The standardization methods to perform on the input files. Should be a comma-separated list of one 
 or more of the following options: variantextractor, svync, svdecompose, svtk  
   --skip_plots                  [string]  Skip plots: metrics, upset, svlength 
+  --skip_reports                [string]  Skip reports from these tools: datavzrd, happy 
   --min_sv_size                 [integer] Minimum SV size of variants to benchmark, 0 to disable [default: 0] 
   --max_sv_size                 [integer] Maximum SV size of variants to benchmark, -1 to disable [default: -1] 
   --min_allele_freq             [number]  Minimum Alele Frequency of variants to benchmark, Use -1 to disable [default: -1] 

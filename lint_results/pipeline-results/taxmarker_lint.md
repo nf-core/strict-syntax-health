@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-10-28T00:19:47.854054930Z
+- Generated: 2026-10-30T00:21:20.284793871Z
 - Nextflow version: 26.10.4
-- Summary: 54 warnings
+- Summary: 56 warnings
 
 ## :warning: Warnings
 
@@ -69,6 +69,13 @@
       ^^^^
   ```
 
+- Warning: `modules/local/raxmlng/moose/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
 - Warning: `modules/local/raxtax/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
@@ -90,7 +97,7 @@
       ^^^^
   ```
 
-- Warning: `modules/local/resolvetaxonomy/main.nf:25:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/resolvetaxonomy/main.nf:26:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -146,7 +153,7 @@
       ^^^^
   ```
 
-- Warning: `modules/local/treedivide/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/treedivide/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -209,6 +216,13 @@
       ^^^^
   ```
 
+- Warning: `modules/nf-core/mafft/align/main.nf:27:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
 - Warning: `modules/nf-core/multiqc/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
@@ -237,14 +251,14 @@
       ^^^^
   ```
 
-- Warning: `subworkflows/local/ensure_aligned/main.nf:62:65`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/ensure_aligned/main.nf:69:65`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       CHECKALIGNED(ch_sequences.map { [ [ id: 'user-alignment' ], it ] })
                                                                   ^^
   ```
 
-- Warning: `subworkflows/local/ensure_aligned/main.nf:83:37`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/ensure_aligned/main.nf:97:37`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .map { [ [ id: 'hmm' ], it ] }
@@ -363,21 +377,21 @@
                                                                              ^^
   ```
 
-- Warning: `workflows/taxmarker.nf:105:68`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/taxmarker.nf:106:68`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           SEQKIT_GREP(ch_sequences.map { [ [ id: 'user-alignment' ], it ] }, [], '')
                                                                      ^^
   ```
 
-- Warning: `workflows/taxmarker.nf:153:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/taxmarker.nf:155:74`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       EMBOSS_SEQRET(ch_sequences_checked.map { [ [ id: 'user-alignment' ], it ] }, 'fasta')
                                                                            ^^
   ```
 
-- Warning: `workflows/taxmarker.nf:179:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/taxmarker.nf:181:76`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   ch_sequences_for_resolve.map { [ [ id: 'user-alignment' ], it ] },

@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-10-28T00:20:12.291215378Z
+- Generated: 2026-10-30T00:21:42.412431522Z
 - Nextflow version: 26.10.4
 - Summary: 56 warnings
 
@@ -370,11 +370,11 @@
                   ^^^^
   ```
 
-- Warning: `subworkflows/local/report_benchmark_statistics/main.nf:75:45`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/report_benchmark_statistics/main.nf:84:49`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-              def clean_meta = meta.findAll { it.key != 'csv' }
-                                              ^^
+                  def clean_meta = meta.findAll { it.key != 'csv' }
+                                                  ^^
   ```
 
 - Warning: `subworkflows/local/utils_nfcore_variantbenchmarking_pipeline/main.nf:34:5`: Parameter was not used -- prefix with `_` to suppress warning

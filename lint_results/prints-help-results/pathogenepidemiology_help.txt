@@ -1,12 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.3
+ N E X T F L O W   ~  version 26.10.4
 
-Launching `./main.nf` [irreverent_darwin] revision: 0c1f356ff8
+Launching `./main.nf` [sharp_dijkstra] revision: 0c1f356ff8
 
-WARN: Unrecognized config option 'validation.defaultIgnoreParams'
-WARN: Unrecognized config option 'validation.monochromeLogs'
 
 ------------------------------------------------------
                                         ,--./,-.
@@ -24,6 +22,9 @@ help message of that parameter will be printed.
 or `--helpFull`.  
 
 Pipeline input options
+  --intervals                   [string]  Optional local uncompressed BED matching the query reference, used unchanged for core-read filtering 
+and coverage and split by GATK into one calling BED per contig. Defaults to 
+projectDir/assets/Pf3D7_core.bed; basename must be shell-safe.  
   --queryurl                    [string]  URL of the query reference FASTA to download. 
   --hosturl                     [string]  URL of the host reference FASTA to download. 
   --threads                     [integer] Number of CPU threads to use per process. [default: 4] 

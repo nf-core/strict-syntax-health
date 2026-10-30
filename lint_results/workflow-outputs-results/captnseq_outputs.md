@@ -1,6 +1,6 @@
 # Workflow outputs migration: captnseq
 
-- Generated: 2026-10-29T00:15:45.321762+00:00
+- Generated: 2026-10-30T00:14:34.663183+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -12,6 +12,6 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 ## Legacy `publishDir` references
 
-Found 16 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
+Found 17 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/captnseq/blob/a2d118c4fef11c1544e470e4286f43c53dd1cb48/conf/modules.config#L15) — 16 references
+- [`conf/modules.config`](https://github.com/nf-core/captnseq/blob/6a77569a6b8f80b4cdc680f0e0261f6f5411e076/conf/modules.config#L15) — 17 references
