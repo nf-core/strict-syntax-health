@@ -3,7 +3,8 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.10.4
 
-Launching `./main.nf` [romantic_agnesi] revision: 8e72056edd
+Downloading plugin nf-schema@2.5.1
+Launching `./main.nf` [sharp_varahamihira] revision: 8e72056edd
 
 
 ------------------------------------------------------
@@ -12,7 +13,7 @@ Launching `./main.nf` [romantic_agnesi] revision: 8e72056edd
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/sopa 1.0.1
+  nf-core/sopa 1.0.2
 ------------------------------------------------------
 Typical pipeline command:
 

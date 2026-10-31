@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.10.4
 
 Downloading plugin nf-schema@2.7.3
-Launching `./main.nf` [nice_goldwasser] revision: 6bde8ed321
+Launching `./main.nf` [small_easley] revision: 6bde8ed321
 
 
 ------------------------------------------------------
@@ -13,7 +13,7 @@ Launching `./main.nf` [nice_goldwasser] revision: 6bde8ed321
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/bacmodel 1.0.0
+  nf-core/bacmodel 1.0.1
 ------------------------------------------------------
 Typical pipeline command:
 

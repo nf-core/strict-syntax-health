@@ -1,12 +1,19 @@
 # Nextflow lint results
 
-- Generated: 2026-10-30T00:14:52.589712083Z
+- Generated: 2026-10-31T00:12:16.141355677Z
 - Nextflow version: 26.10.4
-- Summary: 25 warnings
+- Summary: 26 warnings
 
 ## :warning: Warnings
 
 - Warning: `modules/nf-core/cnvkit/batch/main.nf:30:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/cnvkit/target/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.10.4
 
 Downloading plugin nf-prov@1.7.0
-Launching `./main.nf` [festering_brown] revision: 0faf596e75
+Launching `./main.nf` [desperate_hilbert] revision: 83aa91895d
 
 
 ------------------------------------------------------
@@ -23,20 +23,22 @@ help message of that parameter will be printed.
 or `--helpFull`.  
 
 Input/output options
-  --input       [string] Path to comma-separated file containing ids and file paths to include in the report. 
-  --outdir      [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
+  --input                       [string] Path to comma-separated file containing ids and file paths to include in the report. 
+  --outdir                      [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
 Cloud infrastructure.  
-  --notebook    [string] Path to a Quarto notebook used to render the provenance report. If unset, the bundled default 
+  --notebook                    [string] Path to a Quarto notebook used to render the provenance report. If unset, the bundled default 
 notebook is used.  
-  --document    [string] Path to a documentation file to track that the provenance report has been reviewed. 
-  --email       [string] Email address for completion summary. 
+  --document                    [string] Path to a documentation file to track that the provenance report has been reviewed. 
+  --email                       [string] Email address for completion summary. 
+  --multiqc_title               [string] MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
 
 Generic options
-  --help        [boolean, string] Display the help message. 
-  --help_full   [boolean]         Display the full detailed help message. 
-  --show_hidden [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+  --multiqc_methods_description [string]          Custom MultiQC yaml file containing HTML including a methods description. 
+  --help                        [boolean, string] Display the help message. 
+  --help_full                   [boolean]         Display the full detailed help message. 
+  --show_hidden                 [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
  
- !! Hiding 14 param(s), use the `--showHidden` parameter to show them !!
+ !! Hiding 17 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
 
 * The pipeline

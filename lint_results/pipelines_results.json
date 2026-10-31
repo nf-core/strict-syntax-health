@@ -74,7 +74,7 @@
   "bacmodel": {
     "full_name": "nf-core/bacmodel",
     "html_url": "https://github.com/nf-core/bacmodel",
-    "commit": "5797b7dba502550db52f3a643a0bea29e3450d3e",
+    "commit": "024e610d2a0da45cd7a11de811e92812f56360bd",
     "errors": 0,
     "warnings": 77,
     "parse_error": false,
@@ -218,9 +218,9 @@
   "createpanelrefs": {
     "full_name": "nf-core/createpanelrefs",
     "html_url": "https://github.com/nf-core/createpanelrefs",
-    "commit": "f628b24cfe08999def24bb0dea51f5c8bdead554",
+    "commit": "9f5f567ec8aac376ed4ca0b33d3588c65485bd91",
     "errors": 0,
-    "warnings": 25,
+    "warnings": 26,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": true,
@@ -314,7 +314,7 @@
   "deepmutscan": {
     "full_name": "nf-core/deepmutscan",
     "html_url": "https://github.com/nf-core/deepmutscan",
-    "commit": "64c11363719774e116182e32e02c4d91a582e210",
+    "commit": "eb0d3ce7322031b504ed28f16b2d622acb8be9c6",
     "errors": 0,
     "warnings": 115,
     "parse_error": false,
@@ -446,9 +446,9 @@
   "eager": {
     "full_name": "nf-core/eager",
     "html_url": "https://github.com/nf-core/eager",
-    "commit": "8b8f93dcbcc7bfa91e9877968d6620c5207f91c4",
+    "commit": "82603c1b704a0636fb74836d7629e32b36a1629b",
     "errors": 0,
-    "warnings": 410,
+    "warnings": 488,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -542,9 +542,9 @@
   "funcscan": {
     "full_name": "nf-core/funcscan",
     "html_url": "https://github.com/nf-core/funcscan",
-    "commit": "9ad01cf31814e403b127567948a0af388f331653",
+    "commit": "8afd411d4f69c153626252b9e3a33de3baa48818",
     "errors": 0,
-    "warnings": 64,
+    "warnings": 119,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -1034,9 +1034,9 @@
   "oncoanalyser": {
     "full_name": "nf-core/oncoanalyser",
     "html_url": "https://github.com/nf-core/oncoanalyser",
-    "commit": "d514c4357135acb473f8b2091a22598bb04ed207",
+    "commit": "b3867ff5c9a62b18e54cfc3091420b463010fb32",
     "errors": 0,
-    "warnings": 106,
+    "warnings": 159,
     "parse_error": false,
     "prints_help": false,
     "workflow_output": true,
@@ -1238,7 +1238,7 @@
   "provenancereport": {
     "full_name": "nf-core/provenancereport",
     "html_url": "https://github.com/nf-core/provenancereport",
-    "commit": "bb6728beb0d4320779335cc116f298bcbabfa251",
+    "commit": "69ced2e3dd1af24c2c00c97c917c536a792709e7",
     "errors": 0,
     "warnings": 4,
     "parse_error": false,
@@ -1370,7 +1370,7 @@
   "rnafusion": {
     "full_name": "nf-core/rnafusion",
     "html_url": "https://github.com/nf-core/rnafusion",
-    "commit": "aa6f1f0b9d5391957df0870b66b85ade3b74dda2",
+    "commit": "d43e81ab076c2f8c760f7d3e883df1602a859cd7",
     "errors": 0,
     "warnings": 44,
     "parse_error": false,
@@ -1382,19 +1382,19 @@
   "rnaseq": {
     "full_name": "nf-core/rnaseq",
     "html_url": "https://github.com/nf-core/rnaseq",
-    "commit": "8fb4704ef03f56d9e825339004d93def0f8dd9b8",
+    "commit": "a6474f53cc0a623083c452c2ae06f7613af1d698",
     "errors": 0,
     "warnings": 81,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 113
+    "publishdir_count": 111
   },
   "rnasplice": {
     "full_name": "nf-core/rnasplice",
     "html_url": "https://github.com/nf-core/rnasplice",
-    "commit": "a46a8fc18ceaf6bbb7c2587738054a9c123b47eb",
+    "commit": "0f433570768f871ab973daaca939e8e651dc42e6",
     "errors": 0,
     "warnings": 77,
     "parse_error": false,
@@ -1406,7 +1406,7 @@
   "rnastructurome": {
     "full_name": "nf-core/rnastructurome",
     "html_url": "https://github.com/nf-core/rnastructurome",
-    "commit": "0b1438192832e86e7fdb033c379bcfb25baef91c",
+    "commit": "3c2a23d717605d81fa7147bd6ac6b813bca6ed18",
     "errors": 0,
     "warnings": 36,
     "parse_error": false,
@@ -1418,7 +1418,7 @@
   "rnavar": {
     "full_name": "nf-core/rnavar",
     "html_url": "https://github.com/nf-core/rnavar",
-    "commit": "922278e32b5c6f7faba7762bce5ddba3b74d916f",
+    "commit": "ddf5e5094e94915ac78aa992930adb2aae7376bf",
     "errors": 0,
     "warnings": 39,
     "parse_error": false,
@@ -1442,14 +1442,14 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "a19196a59172248cb157cb96076ac4676c30f369",
+    "commit": "b2c2820a7578d0e9c99037975ba1d816d11642a5",
     "errors": 0,
-    "warnings": 130,
+    "warnings": 131,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": true,
     "publishdir": true,
-    "publishdir_count": 202
+    "publishdir_count": 203
   },
   "scdownstream": {
     "full_name": "nf-core/scdownstream",
@@ -1478,7 +1478,7 @@
   "scrnaseq": {
     "full_name": "nf-core/scrnaseq",
     "html_url": "https://github.com/nf-core/scrnaseq",
-    "commit": "6c6a2a5f16897dc1bc4f6001f59335ef22ec8aa5",
+    "commit": "a45ac11ba806fbc17dd421a0d1cb8aaa3f519dbf",
     "errors": 0,
     "warnings": 30,
     "parse_error": false,
@@ -1538,7 +1538,7 @@
   "sopa": {
     "full_name": "nf-core/sopa",
     "html_url": "https://github.com/nf-core/sopa",
-    "commit": "97de50adf4059178dba2e73b27d035b3333464df",
+    "commit": "5447e2b74d0bf73c00327bf89b0909261ec07b68",
     "errors": 0,
     "warnings": 14,
     "parse_error": false,
@@ -1670,7 +1670,7 @@
   "variantbenchmarking": {
     "full_name": "nf-core/variantbenchmarking",
     "html_url": "https://github.com/nf-core/variantbenchmarking",
-    "commit": "aa0f0d5242e96fea5fa47bc4bb0d6e9f77ed40f7",
+    "commit": "31679c50442efc740a6f1d0dd4d1894f1ce51e2d",
     "errors": 0,
     "warnings": 56,
     "parse_error": false,
@@ -1730,9 +1730,9 @@
   "viralrecon": {
     "full_name": "nf-core/viralrecon",
     "html_url": "https://github.com/nf-core/viralrecon",
-    "commit": "77511804198c88fa3b419644f75518c68d4fa921",
+    "commit": "4a50fe374eece09d93b0582ad1a8b448ff711d44",
     "errors": 0,
-    "warnings": 82,
+    "warnings": 81,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,

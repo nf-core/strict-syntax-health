@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-10-23T00:22:44.308684812Z
-- Nextflow version: 26.10.3
-- Summary: 82 warnings
+- Generated: 2026-10-31T00:20:14.031152516Z
+- Nextflow version: 26.10.4
+- Summary: 81 warnings
 
 ## :warning: Warnings
 
@@ -468,18 +468,11 @@
       ^^^^
   ```
 
-- Warning: `modules/nf-core/plasmidid/main.nf:26:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/plasmidid/main.nf:30:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
       ^^^^
-  ```
-
-- Warning: `modules/nf-core/plasmidid/main.nf:44:9`: Variable was declared but not used
-
-  ```nextflow
-      def args = task.ext.args   ?: ''
-          ^^^^
   ```
 
 - Warning: `modules/nf-core/pycoqc/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime

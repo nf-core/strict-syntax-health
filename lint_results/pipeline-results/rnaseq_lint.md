@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-10-30T00:18:29.059772668Z
+- Generated: 2026-10-31T00:16:16.897633302Z
 - Nextflow version: 26.10.4
 - Summary: 81 warnings
 
@@ -468,7 +468,7 @@
       ^^^^
   ```
 
-- Warning: `modules/nf-core/summarizedexperiment/summarizedexperiment/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/summarizedexperiment/summarizedexperiment/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
