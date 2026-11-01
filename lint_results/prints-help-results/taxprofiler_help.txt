@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.3
+ N E X T F L O W   ~  version 26.10.4
 
-Launching `./main.nf` [small_lorenz] revision: 92dac02512
+Launching `./main.nf` [friendly_snyder] revision: 92dac02512
 
 
 ------------------------------------------------------

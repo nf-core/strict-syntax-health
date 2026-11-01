@@ -218,7 +218,7 @@
   "createpanelrefs": {
     "full_name": "nf-core/createpanelrefs",
     "html_url": "https://github.com/nf-core/createpanelrefs",
-    "commit": "9f5f567ec8aac376ed4ca0b33d3588c65485bd91",
+    "commit": "78e462842a0f2d4548e5886e8b9954b48cad1ce3",
     "errors": 0,
     "warnings": 26,
     "parse_error": false,
@@ -758,7 +758,7 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "7e5f32c0d74cdc20603b6f63808adb3576c7a199",
+    "commit": "11ad542f27b502697db416573c7a49c60e068e42",
     "errors": 0,
     "warnings": 100,
     "parse_error": false,
@@ -1478,7 +1478,7 @@
   "scrnaseq": {
     "full_name": "nf-core/scrnaseq",
     "html_url": "https://github.com/nf-core/scrnaseq",
-    "commit": "a45ac11ba806fbc17dd421a0d1cb8aaa3f519dbf",
+    "commit": "bedd1da45ee407c71dcef854db9ebb4b78db4ed0",
     "errors": 0,
     "warnings": 30,
     "parse_error": false,
@@ -1610,7 +1610,7 @@
   "taxprofiler": {
     "full_name": "nf-core/taxprofiler",
     "html_url": "https://github.com/nf-core/taxprofiler",
-    "commit": "8cf73ff643f79de2ea4ba11aaf49b369eb2aeabb",
+    "commit": "d36c9f8853f118cc1c6fbdd8fbf35854a71af516",
     "errors": 0,
     "warnings": 122,
     "parse_error": false,
