@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "20c6e6407f63748003b47f92837b64fb0a53ffa4",
+  "_repo_commit": "0fc371314e7612fa13b8164bd86b53683a59a8f0",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -8810,6 +8810,12 @@
   },
   "plink2_indeppairwise": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plink2/indeppairwise",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
+  "plink2_makepgen": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plink2/makepgen",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
