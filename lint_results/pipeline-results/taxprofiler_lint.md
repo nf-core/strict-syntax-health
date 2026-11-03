@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-11-01T00:16:51.842635363Z
-- Nextflow version: 26.10.4
-- Summary: 122 warnings
+- Generated: 2026-11-03T00:16:42.361863725Z
+- Nextflow version: 26.10.5
+- Summary: 125 warnings
 
 ## :warning: Warnings
 
@@ -97,7 +97,28 @@
                                                                                                                                                                                                    ^^
   ```
 
-- Warning: `conf/modules.config:653:99`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules.config:553:195`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  saveAs: { (params.perform_runmerging == false || (params.perform_runmerging && !meta.is_multirun)) && params.perform_shortread_hostremoval && params.save_analysis_ready_fastqs ? it : null },
+                                                                                                                                                                                                    ^^
+  ```
+
+- Warning: `conf/modules.config:590:194`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  saveAs: { (params.perform_runmerging == false || (params.perform_runmerging && !meta.is_multirun)) && params.perform_longread_hostremoval && params.save_analysis_ready_fastqs ? it : null },
+                                                                                                                                                                                                   ^^
+  ```
+
+- Warning: `conf/modules.config:621:236`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+                  saveAs: { (params.perform_runmerging == false || (params.perform_runmerging && !meta.is_multirun)) && (params.perform_shortread_hostremoval || params.perform_longread_hostremoval) && params.save_analysis_ready_fastqs ? it : null },
+                                                                                                                                                                                                                                             ^^
+  ```
+
+- Warning: `conf/modules.config:675:99`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               saveAs: { !params.bracken_save_intermediatekraken2 && meta.tool == "bracken" ? null : it },

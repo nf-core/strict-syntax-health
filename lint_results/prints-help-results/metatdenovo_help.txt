@@ -1,9 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.4
+ N E X T F L O W   ~  version 26.10.5
 
-Launching `./main.nf` [nasty_euclid] revision: b2336a01a2
+Downloading plugin nf-schema@2.7.3
+Launching `./main.nf` [serene_fibonacci] revision: b2336a01a2
 
 
 ------------------------------------------------------

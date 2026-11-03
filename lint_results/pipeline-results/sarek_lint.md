@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-10-31T00:18:21.922609371Z
-- Nextflow version: 26.10.4
+- Generated: 2026-11-03T00:15:38.682022700Z
+- Nextflow version: 26.10.5
 - Summary: 131 warnings
 
 ## :warning: Warnings
@@ -377,7 +377,7 @@
       ^^^^
   ```
 
-- Warning: `modules/nf-core/gatk4/filtermutectcalls/main.nf:22:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/gatk4/filtermutectcalls/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -657,7 +657,7 @@
       ^^^^
   ```
 
-- Warning: `modules/nf-core/parabricks/mutectcaller/main.nf:26:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/parabricks/mutectcaller/main.nf:29:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

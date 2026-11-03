@@ -1,12 +1,20 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.4
+ N E X T F L O W   ~  version 26.10.5
 
-Downloading plugin nf-core-utils@0.5.0
-Downloading plugin nf-schema@2.7.2
-Launching `./main.nf` [stupefied_hodgkin] revision: 78470b386a
+Downloading plugin nf-core-utils@0.7.0
+Launching `./main.nf` [loquacious_jang] revision: db0e0d43a2
 
+WARN: [main.nf] You are attempting to run the pipeline without any custom configuration!
+
+This will be dependent on your local compute environment but can be achieved via one or more of the following:
+   (1) Using an existing pipeline profile e.g. `-profile docker` or `-profile singularity`
+   (2) Using an existing nf-core/configs for your Institution e.g. `-profile crick` or `-profile uppmax`
+   (3) Using your own local custom config e.g. `-c /path/to/your/custom.config`
+
+Please refer to the quick start section and usage docs for the pipeline.
+ 
 
 ------------------------------------------------------
                                         ,--./,-.

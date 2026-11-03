@@ -1,10 +1,11 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.4
+ N E X T F L O W   ~  version 26.10.5
 
+Downloading plugin nf-core-utils@0.4.0
 Downloading plugin nf-fgbio@1.0.0
-Launching `./main.nf` [high_mercator] revision: 59c0f528f3
+Launching `./main.nf` [shrivelled_dalembert] revision: 59c0f528f3
 
 
 ------------------------------------------------------
@@ -209,8 +210,8 @@ iGenomes, this has already been set for you appropriately.
   --dragmap                           [string]  Path to dragmap indices. 
   --fasta                             [string]  Path to FASTA genome file. 
   --fasta_fai                         [string]  Path to FASTA reference index. 
-  --germline_resource                 [string]  Path to GATK Mutect2 Germline Resource File. 
-  --germline_resource_tbi             [string]  Path to GATK Mutect2 Germline Resource Index. 
+  --germline_resource                 [string]  Path to GATK Mutect2 and Parabricks MutectCaller Germline Resource File. 
+  --germline_resource_tbi             [string]  Path to GATK Mutect2 and Parabricks MutectCaller Germline Resource Index. 
   --known_indels                      [string]  Path to known indels file. 
   --known_indels_tbi                  [string]  Path to known indels file index. 
   --known_indels_vqsr                 [string]  Label string for VariantRecalibration (haplotypecaller joint variant calling). If you use AWS 

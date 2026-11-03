@@ -1,6 +1,6 @@
 # Workflow outputs migration: hgtseq
 
-- Generated: 2026-06-16T20:26:37.776994+00:00
+- Generated: 2026-11-03T00:12:36.286033+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,5 +14,5 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 50 `publishDir` references across 2 files that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/hgtseq/blob/b2b144902c2ec92cfb2c898777b293093f0d4be5/conf/modules.config#L15) — 25 references
-- [`tests/nextflow.config`](https://github.com/nf-core/hgtseq/blob/b2b144902c2ec92cfb2c898777b293093f0d4be5/tests/nextflow.config#L16) — 25 references
+- [`conf/modules.config`](https://github.com/nf-core/hgtseq/blob/b076ea7adc3a80581a649dbd7d3e0ece53a66dcb/conf/modules.config#L15) — 25 references
+- [`tests/nextflow.config`](https://github.com/nf-core/hgtseq/blob/b076ea7adc3a80581a649dbd7d3e0ece53a66dcb/tests/nextflow.config#L16) — 25 references

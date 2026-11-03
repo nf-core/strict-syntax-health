@@ -1,10 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.3
+ N E X T F L O W   ~  version 26.10.5
 
 Downloading plugin nf-schema@3.0.0
-Launching `./main.nf` [festering_moriondo] revision: 8aae1e9117
+Launching `./main.nf` [tiny_bardeen] revision: d6b24b603f
 
 
 ------------------------------------------------------
@@ -13,7 +13,7 @@ Launching `./main.nf` [festering_moriondo] revision: 8aae1e9117
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/nanostring 1.4.0
+  nf-core/nanostring 2.0.0
 ------------------------------------------------------
 
 Typical pipeline command:
@@ -59,6 +59,9 @@ Generic options
  
  !! Hiding 19 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
+
+* The pipeline
+    https://doi.org/10.5281/zenodo.8028303
 
 * The nf-core framework
     https://doi.org/10.1038/s41587-020-0439-x

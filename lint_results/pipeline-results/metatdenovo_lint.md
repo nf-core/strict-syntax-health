@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-10-30T00:16:43.680375604Z
-- Nextflow version: 26.10.4
+- Generated: 2026-11-03T00:12:55.360676695Z
+- Nextflow version: 26.10.5
 - Summary: 79 warnings
 
 ## :warning: Warnings
@@ -55,7 +55,7 @@
       ^^^^
   ```
 
-- Warning: `modules/local/eggnog/download/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/eggnog/download/main.nf:25:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

@@ -14,7 +14,7 @@
   "airrflow": {
     "full_name": "nf-core/airrflow",
     "html_url": "https://github.com/nf-core/airrflow",
-    "commit": "fe9a65d38a6437ee792dc31dfff4a2442721e9bb",
+    "commit": "c967f6a891cc62662986b7d0071cceed3d050bfe",
     "errors": 0,
     "warnings": 46,
     "parse_error": false,
@@ -218,7 +218,7 @@
   "createpanelrefs": {
     "full_name": "nf-core/createpanelrefs",
     "html_url": "https://github.com/nf-core/createpanelrefs",
-    "commit": "78e462842a0f2d4548e5886e8b9954b48cad1ce3",
+    "commit": "33e13fa9e3b4c2a6fe5f4958d7856e20f0c4acb7",
     "errors": 0,
     "warnings": 26,
     "parse_error": false,
@@ -638,9 +638,9 @@
   "hgtseq": {
     "full_name": "nf-core/hgtseq",
     "html_url": "https://github.com/nf-core/hgtseq",
-    "commit": "b2b144902c2ec92cfb2c898777b293093f0d4be5",
+    "commit": "b076ea7adc3a80581a649dbd7d3e0ece53a66dcb",
     "errors": 10,
-    "warnings": 74,
+    "warnings": 95,
     "parse_error": false,
     "prints_help": null,
     "workflow_output": false,
@@ -842,7 +842,7 @@
   "metatdenovo": {
     "full_name": "nf-core/metatdenovo",
     "html_url": "https://github.com/nf-core/metatdenovo",
-    "commit": "2f6f81045589c883314c69a79e161345fafecfa1",
+    "commit": "f2b2d494dbada0f8802c355411b6141b08e58869",
     "errors": 0,
     "warnings": 79,
     "parse_error": false,
@@ -950,9 +950,9 @@
   "mspepid": {
     "full_name": "nf-core/mspepid",
     "html_url": "https://github.com/nf-core/mspepid",
-    "commit": "980218ac80d5b19d9fb47a9d2df80546e5629764",
+    "commit": "8fe31ba08475a464482970b70dcae5e4e312aaf1",
     "errors": 0,
-    "warnings": 8,
+    "warnings": 24,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -986,7 +986,7 @@
   "nanostring": {
     "full_name": "nf-core/nanostring",
     "html_url": "https://github.com/nf-core/nanostring",
-    "commit": "2e256ece62e59b53008baf210be704579ab991f5",
+    "commit": "1123c6d3bf049a9069090370f869027263fd1db1",
     "errors": 0,
     "warnings": 7,
     "parse_error": false,
@@ -1070,9 +1070,9 @@
   "pairgenomealign": {
     "full_name": "nf-core/pairgenomealign",
     "html_url": "https://github.com/nf-core/pairgenomealign",
-    "commit": "5fe6ca159e100a4af481bd924acdf472f2cff54e",
+    "commit": "12c0a2db614c2235af6007671016dd87bc3d7c87",
     "errors": 0,
-    "warnings": 12,
+    "warnings": 27,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -1166,7 +1166,7 @@
   "pixelator": {
     "full_name": "nf-core/pixelator",
     "html_url": "https://github.com/nf-core/pixelator",
-    "commit": "93a73274696cd5397ea8ce436defd968acbb3aad",
+    "commit": "dbfc3a35c6bf5c4c4361adb1c0205133b9ba8e86",
     "errors": 0,
     "warnings": 21,
     "parse_error": false,
@@ -1238,7 +1238,7 @@
   "provenancereport": {
     "full_name": "nf-core/provenancereport",
     "html_url": "https://github.com/nf-core/provenancereport",
-    "commit": "69ced2e3dd1af24c2c00c97c917c536a792709e7",
+    "commit": "390862a06aed4de6c116b8437e03fe7ab74bf378",
     "errors": 0,
     "warnings": 4,
     "parse_error": false,
@@ -1370,7 +1370,7 @@
   "rnafusion": {
     "full_name": "nf-core/rnafusion",
     "html_url": "https://github.com/nf-core/rnafusion",
-    "commit": "d43e81ab076c2f8c760f7d3e883df1602a859cd7",
+    "commit": "4c4e76793a7a2768f83bafe63ece972528cb1760",
     "errors": 0,
     "warnings": 44,
     "parse_error": false,
@@ -1442,7 +1442,7 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "b2c2820a7578d0e9c99037975ba1d816d11642a5",
+    "commit": "e86693927bdcfd6f601509213993f3ffed856e94",
     "errors": 0,
     "warnings": 131,
     "parse_error": false,
@@ -1490,7 +1490,7 @@
   "seqinspector": {
     "full_name": "nf-core/seqinspector",
     "html_url": "https://github.com/nf-core/seqinspector",
-    "commit": "e2da4136c67e54e65a8bb3685fb0c184d6e7be7a",
+    "commit": "7c3800206aa310ecd9588eff9f208c84aa52046c",
     "errors": 0,
     "warnings": 28,
     "parse_error": false,
@@ -1610,9 +1610,9 @@
   "taxprofiler": {
     "full_name": "nf-core/taxprofiler",
     "html_url": "https://github.com/nf-core/taxprofiler",
-    "commit": "d36c9f8853f118cc1c6fbdd8fbf35854a71af516",
+    "commit": "d3c24febf32f19d7eaae6fea269fe66f9f9e9c88",
     "errors": 0,
-    "warnings": 122,
+    "warnings": 125,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,

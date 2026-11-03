@@ -1,10 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.4
+ N E X T F L O W   ~  version 26.10.5
 
 Downloading plugin nf-prov@1.7.0
-Launching `./main.nf` [desperate_hilbert] revision: 83aa91895d
+Launching `./main.nf` [happy_sinoussi] revision: 83aa91895d
 
 
 ------------------------------------------------------
