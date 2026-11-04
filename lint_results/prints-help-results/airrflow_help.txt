@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.10.5
 
 Downloading plugin nf-schema@2.7.2
-Launching `./main.nf` [reverent_lumiere] revision: 72c10b78f7
+Launching `./main.nf` [jovial_davinci] revision: a687306d13
 
 
 ------------------------------------------------------
@@ -32,6 +32,9 @@ Cloud infrastructure.
   --miairr                        [string]  Path to MiAIRR-BioSample mapping [default: 
 ${projectDir}/assets/reveal/mapping_MiAIRR_BioSample_v1.3.1.tsv]  
   --save_intermediate_repertoires [boolean] Whether to save repertoires in each intermediate step [default: true] 
+  --save_cellranger_full_output   [boolean] Save only repertoire file and summary report by default. If set the value to be true, full 
+cellranger results including bam, fasta and fastq files will be saved in the output folder. 
+[default: false]  
 
 Protocol
   --library_generation_method     [string] Protocol used for the V(D)J amplicon sequencing library generation.  (accepted: 

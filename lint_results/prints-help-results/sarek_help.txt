@@ -5,7 +5,8 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 Downloading plugin nf-core-utils@0.4.0
 Downloading plugin nf-fgbio@1.0.0
-Launching `./main.nf` [shrivelled_dalembert] revision: 59c0f528f3
+Downloading plugin nf-prov@1.7.0
+Launching `./main.nf` [adoring_kalman] revision: 29efa2eb30
 
 
 ------------------------------------------------------
@@ -38,15 +39,15 @@ variant_calling, annotate) [default: mapping]
 Cloud infrastructure.  
 
 Main options
-  --split_fastq                       [integer] Specify how many reads each split of a FastQ file contains. Set 0 to turn off splitting at all. 
+  --split_fastq                       [integer]         Specify how many reads each split of a FastQ file contains. Set 0 to turn off splitting at all. 
 [default: 50000000]  
-  --nucleotides_per_second            [integer] Estimate interval size. [default: 200000] 
-  --intervals                         [string]  Path to target bed file in case of whole exome or targeted sequencing or intervals file. 
-  --no_intervals                      [boolean] Disable usage of intervals. 
-  --wes                               [boolean] Enable when exome or panel data is provided. 
-  --tools                             [string]  Tools to use for contamination removal, duplicate marking, variant calling and/or for annotation. 
+  --nucleotides_per_second            [integer]         Estimate interval size. [default: 200000] 
+  --intervals                         [string, boolean] Path to target bed file in case of whole exome or targeted sequencing or intervals file. 
+  --no_intervals                      [boolean]         Disable usage of intervals. 
+  --wes                               [boolean]         Enable when exome or panel data is provided. 
+  --tools                             [string]          Tools to use for contamination removal, duplicate marking, variant calling and/or for annotation. 
  
-  --skip_tools                        [string]  Disable specified tools. 
+  --skip_tools                        [string]          Disable specified tools. 
 
 FASTQ Preprocessing
   --trim_fastq                        [boolean] Run FastP for read trimming 

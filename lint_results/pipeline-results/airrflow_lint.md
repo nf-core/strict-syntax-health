@@ -1,12 +1,12 @@
 # Nextflow lint results
 
-- Generated: 2026-11-03T00:11:36.375720584Z
+- Generated: 2026-11-04T00:12:02.000683550Z
 - Nextflow version: 26.10.5
 - Summary: 46 warnings
 
 ## :warning: Warnings
 
-- Warning: `main.nf:238:5`: Variable was declared but not used
+- Warning: `main.nf:239:5`: Variable was declared but not used
 
   ```nextflow
       ch_multiqc_custom_methods_description = params.multiqc_methods_description ? file(params.multiqc_methods_description, checkIfExists: true) : file("$projectDir/assets/methods_description_template.yml", checkIfExists: true)

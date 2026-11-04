@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-10-31T00:19:18.694311062Z
-- Nextflow version: 26.10.4
+- Generated: 2026-11-04T00:15:12.809040350Z
+- Nextflow version: 26.10.5
 - Summary: 14 warnings
 
 ## :warning: Warnings
@@ -62,35 +62,35 @@
       ^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_sopa_pipeline/main.nf:104:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/utils_nfcore_sopa_pipeline/main.nf:105:5`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       Channel
       ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_sopa_pipeline/main.nf:279:47`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_sopa_pipeline/main.nf:280:47`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       def enabled = ALL_METHODS.findAll { params[it] }
                                                 ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_sopa_pipeline/main.nf:280:71`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_sopa_pipeline/main.nf:281:71`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       def enabled_transcript = TRANSCRIPT_BASED_METHODS.findAll { params[it] }
                                                                         ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_sopa_pipeline/main.nf:281:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_sopa_pipeline/main.nf:282:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       def enabled_staining = STAINING_BASED_METHODS.findAll { params[it] }
                                                                     ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_sopa_pipeline/main.nf:326:93`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_sopa_pipeline/main.nf:327:93`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           error("Invalid combination of nf-core/sopa parameters:\n" + errors.collect { "  - ${it}" }.join("\n") + "\nSee https://nf-co.re/sopa/docs/usage/ for the supported configurations.")

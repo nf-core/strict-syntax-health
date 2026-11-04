@@ -14,14 +14,14 @@
   "airrflow": {
     "full_name": "nf-core/airrflow",
     "html_url": "https://github.com/nf-core/airrflow",
-    "commit": "c967f6a891cc62662986b7d0071cceed3d050bfe",
+    "commit": "9a42c395a95088c56b8b348df2ae5aed73ca4ccf",
     "errors": 0,
     "warnings": 46,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 85
+    "publishdir_count": 86
   },
   "alleleexpression": {
     "full_name": "nf-core/alleleexpression",
@@ -62,7 +62,7 @@
   "bacass": {
     "full_name": "nf-core/bacass",
     "html_url": "https://github.com/nf-core/bacass",
-    "commit": "4c415d5f7c36185a829f204fc19ef46fdb76efa0",
+    "commit": "f7b78fe7e606253556fec990185d08af1069d150",
     "errors": 0,
     "warnings": 60,
     "parse_error": false,
@@ -218,7 +218,7 @@
   "createpanelrefs": {
     "full_name": "nf-core/createpanelrefs",
     "html_url": "https://github.com/nf-core/createpanelrefs",
-    "commit": "33e13fa9e3b4c2a6fe5f4958d7856e20f0c4acb7",
+    "commit": "efa1deff5c5e41b5ff22402f959cbb99f4286941",
     "errors": 0,
     "warnings": 26,
     "parse_error": false,
@@ -518,7 +518,7 @@
   "fetchngs": {
     "full_name": "nf-core/fetchngs",
     "html_url": "https://github.com/nf-core/fetchngs",
-    "commit": "f3be60c29272f56db29ca9c2a75772be593464b7",
+    "commit": "77ab316781b44feee0f5bddc4b53a0fc2b3eb285",
     "errors": 0,
     "warnings": 4,
     "parse_error": false,
@@ -926,7 +926,7 @@
   "moleculardynamics": {
     "full_name": "nf-core/moleculardynamics",
     "html_url": "https://github.com/nf-core/moleculardynamics",
-    "commit": "649b3b5a0de618baf226613aabcdf85e4ce2bc87",
+    "commit": "d29bb658bd7231a7c98604dede46b079c006ccc9",
     "errors": 28,
     "warnings": 6,
     "parse_error": false,
@@ -1442,7 +1442,7 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "e86693927bdcfd6f601509213993f3ffed856e94",
+    "commit": "d75b20116cc7c9491212b04e0548e661e1d09571",
     "errors": 0,
     "warnings": 131,
     "parse_error": false,
@@ -1538,7 +1538,7 @@
   "sopa": {
     "full_name": "nf-core/sopa",
     "html_url": "https://github.com/nf-core/sopa",
-    "commit": "5447e2b74d0bf73c00327bf89b0909261ec07b68",
+    "commit": "6964997c46caa0ba19c9677793f5f847dd53addf",
     "errors": 0,
     "warnings": 14,
     "parse_error": false,
@@ -1730,7 +1730,7 @@
   "viralrecon": {
     "full_name": "nf-core/viralrecon",
     "html_url": "https://github.com/nf-core/viralrecon",
-    "commit": "4a50fe374eece09d93b0582ad1a8b448ff711d44",
+    "commit": "7cbb764e38012eb72a24c1a7a2d5db1e3251633a",
     "errors": 0,
     "warnings": 81,
     "parse_error": false,

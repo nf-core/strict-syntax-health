@@ -4,7 +4,8 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.10.5
 
 Downloading plugin nf-core-utils@0.7.0
-Launching `./main.nf` [loquacious_jang] revision: db0e0d43a2
+Downloading plugin nf-schema@3.0.0
+Launching `./main.nf` [kickass_saha] revision: a16f4df6b1
 
 WARN: [main.nf] You are attempting to run the pipeline without any custom configuration!
 
@@ -22,8 +23,9 @@ Please refer to the quick start section and usage docs for the pipeline.
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/createpanelrefs 1.1.0
+  nf-core/createpanelrefs 1.2.0dev
 ------------------------------------------------------
+
 Typical pipeline command:
 
   nextflow run nf-core/createpanelrefs -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
@@ -104,4 +106,5 @@ Generic options
 
 * Software dependencies
     https://github.com/nf-core/createpanelrefs/blob/main/CITATIONS.md
+
 

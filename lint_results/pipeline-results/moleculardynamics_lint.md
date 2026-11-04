@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-10-20T00:20:07.167239746Z
-- Nextflow version: 26.10.2
+- Generated: 2026-11-04T00:13:52.352094051Z
+- Nextflow version: 26.10.5
 - Summary: 28 errors, 6 warnings
 
 ## :x: Errors
@@ -17,7 +17,7 @@
 
   ```nextflow
           tuple val(sample), path("${sample}_cleaned.pdb"), val(forcefield), val(box_type), val(distance_to_box), path(em_mdp), path(nvt_mdp), path(npt_mdp), path(md_mdp) into cleaned_pdb
-                                                                                                                                                                           ^
+                                                                                                                                                                           ^^^^
   ```
 
 - Error: `modules/local/run_energy_min.nf:34:30`: Unexpected input: '\n'
@@ -59,7 +59,7 @@
 
   ```nextflow
       tuple val(sample), path(checked_pdb), val(forcefield), val(box_type), val(distance_to_box), path(em_mdp), path(nvt_mdp), path(npt_mdp), path(md_mdp) into checked_pdb
-                                                                                                                                                           ^
+                                                                                                                                                           ^^^^
   ```
 
 - Error: `subworkflows/local/pre_processing/main.nf:3:1`: Module could not be parsed: '/home/runner/work/strict-syntax-health/strict-syntax-health/pipelines/moleculardynamics/modules/local/pre_pos_clean_pdb.nf'
