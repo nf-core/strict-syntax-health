@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-11-04T00:14:37.403761247Z
+- Generated: 2026-11-05T00:15:48.365644185Z
 - Nextflow version: 26.10.5
 - Summary: 131 warnings
 
@@ -657,7 +657,7 @@
       ^^^^
   ```
 
-- Warning: `modules/nf-core/parabricks/mutectcaller/main.nf:29:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/parabricks/mutectcaller/main.nf:31:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.10.5
 
 Downloading plugin nf-schema@2.7.3
-Launching `./main.nf` [serene_fibonacci] revision: b2336a01a2
+Launching `./main.nf` [insane_jang] revision: b2336a01a2
 
 
 ------------------------------------------------------

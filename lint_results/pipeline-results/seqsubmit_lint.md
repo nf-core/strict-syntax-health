@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-10-28T00:19:13.651080970Z
-- Nextflow version: 26.10.4
-- Summary: 34 warnings
+- Generated: 2026-11-05T00:16:16.584713022Z
+- Nextflow version: 26.10.5
+- Summary: 33 warnings
 
 ## :warning: Warnings
 
@@ -84,6 +84,13 @@
   ```
 
 - Warning: `modules/local/genome_upload/main.nf:27:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/register_coassembly_sample/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -228,18 +235,4 @@
   ```nextflow
           .branch { meta, db ->
                     ^^^^
-  ```
-
-- Warning: `workflows/assemblysubmit.nf:53:29`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .map { meta, fasta, reads_1, reads_2 ->
-                              ^^^^^^^
-  ```
-
-- Warning: `workflows/assemblysubmit.nf:61:22`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .map { meta, fasta, reads_1, reads_2 ->
-                       ^^^^^
   ```

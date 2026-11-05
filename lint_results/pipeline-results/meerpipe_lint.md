@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-10-09T00:27:33.744860345Z
-- Nextflow version: 26.09.2-edge
-- Summary: 44 errors, 84 warnings
+- Generated: 2026-11-05T00:13:11.999401974Z
+- Nextflow version: 26.10.5
+- Summary: 44 errors, 95 warnings
 
 ## :x: Errors
 
@@ -297,7 +297,7 @@
 
   ```nextflow
       for (String doi_ref: manifest_doi) temp_doi_ref += "  https://doi.org/${doi_ref.replace('https://doi.org/', '').replace(' ', '')}\n"
-                  ^
+                  ^^^^^^^
   ```
 
 - Error: `tests/nextflow.config:9:20`: `PSRDB_URL` is not defined (hint: use `env('...')` to access environment variable)
@@ -315,6 +315,13 @@
   ```
 
 ## :warning: Warnings
+
+- Warning: `modules/local/decimate.nf:24:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
 
 - Warning: `modules/local/decimate.nf:28:9`: Variable was declared but not used
 
@@ -342,6 +349,13 @@
   ```nextflow
       def prefix = task.ext.prefix ?: "${meta.id}"
           ^^^^^^
+  ```
+
+- Warning: `modules/local/dm_rm_calc.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
   ```
 
 - Warning: `modules/local/dm_rm_calc.nf:24:9`: Variable was declared but not used
@@ -372,6 +386,13 @@
           ^^^^^^
   ```
 
+- Warning: `modules/local/generate_image_results.nf:25:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
 - Warning: `modules/local/generate_image_results.nf:29:9`: Variable was declared but not used
 
   ```nextflow
@@ -391,6 +412,13 @@
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
+  ```
+
+- Warning: `modules/local/generate_residuals.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
   ```
 
 - Warning: `modules/local/generate_residuals.nf:21:9`: Variable was declared but not used
@@ -421,6 +449,13 @@
           ^^^^^^
   ```
 
+- Warning: `modules/local/generate_toas.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
 - Warning: `modules/local/generate_toas.nf:27:9`: Variable was declared but not used
 
   ```nextflow
@@ -447,6 +482,13 @@
   ```nextflow
       def prefix = task.ext.prefix ?: "${meta.id}"
           ^^^^^^
+  ```
+
+- Warning: `modules/local/grab_all_pairs.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
   ```
 
 - Warning: `modules/local/grab_all_pairs.nf:24:9`: Variable was declared but not used
@@ -477,6 +519,20 @@
           ^^^^^^
   ```
 
+- Warning: `modules/local/obs_list.nf:25:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/psradd_calibrate_clean.nf:24:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
 - Warning: `modules/local/psradd_calibrate_clean.nf:28:9`: Variable was declared but not used
 
   ```nextflow
@@ -503,6 +559,13 @@
   ```nextflow
       def prefix = task.ext.prefix ?: "${meta.id}"
           ^^^^^^
+  ```
+
+- Warning: `modules/local/upload_dm_rm_results.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
   ```
 
 - Warning: `modules/local/upload_dm_rm_results.nf:21:9`: Variable was declared but not used
@@ -533,6 +596,13 @@
           ^^^^^^
   ```
 
+- Warning: `modules/local/upload_results.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
 - Warning: `modules/local/upload_results.nf:21:9`: Variable was declared but not used
 
   ```nextflow
@@ -559,6 +629,13 @@
   ```nextflow
       def prefix = task.ext.prefix ?: "${meta.id}"
           ^^^^^^
+  ```
+
+- Warning: `modules/local/upload_toas.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
   ```
 
 - Warning: `modules/local/upload_toas.nf:24:9`: Variable was declared but not used

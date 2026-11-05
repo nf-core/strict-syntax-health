@@ -6,7 +6,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 Downloading plugin nf-core-utils@0.4.0
 Downloading plugin nf-fgbio@1.0.0
 Downloading plugin nf-prov@1.7.0
-Launching `./main.nf` [adoring_kalman] revision: 29efa2eb30
+Launching `./main.nf` [soggy_baekeland] revision: d9cf6c7c65
 
 
 ------------------------------------------------------
@@ -114,6 +114,8 @@ samples from the same patient. Mutect2 outputs will be stored in a subfolder nam
 under `variant_calling/mutect2/` folder. Only a single normal sample per patient is allowed. 
 Tumor-only mode is also supported.  
   --ignore_soft_clipped_bases         [boolean] Do not analyze soft clipped bases in the reads for GATK Mutect2. 
+  --force_call_alleles                [string]  VCF (bgzipped) of alleles to force-call with GATK Mutect2 and Parabricks MutectCaller. 
+  --force_call_alleles_tbi            [string]  Index of the GATK Mutect2 force-call alleles VCF. 
   --pon                               [string]  Panel-of-normals VCF (bgzipped) for GATK Mutect2 
   --pon_tbi                           [string]  Index of PON panel-of-normals VCF. 
   --sentieon_haplotyper_emit_mode     [string]  Option for selecting output and emit-mode of Sentieon's Haplotyper. [default: variant] 
@@ -213,6 +215,9 @@ iGenomes, this has already been set for you appropriately.
   --fasta_fai                         [string]  Path to FASTA reference index. 
   --germline_resource                 [string]  Path to GATK Mutect2 and Parabricks MutectCaller Germline Resource File. 
   --germline_resource_tbi             [string]  Path to GATK Mutect2 and Parabricks MutectCaller Germline Resource Index. 
+  --contamination_resource            [string]  Path to the common germline variant sites VCF used by GATK GetPileupSummaries for contamination 
+estimation.  
+  --contamination_resource_tbi        [string]  Path to the index of the contamination resource VCF. 
   --known_indels                      [string]  Path to known indels file. 
   --known_indels_tbi                  [string]  Path to known indels file index. 
   --known_indels_vqsr                 [string]  Label string for VariantRecalibration (haplotypecaller joint variant calling). If you use AWS 
