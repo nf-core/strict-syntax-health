@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-11-05T00:15:48.365644185Z
+- Generated: 2026-11-06T00:15:06.087291127Z
 - Nextflow version: 26.10.5
-- Summary: 131 warnings
+- Summary: 134 warnings
 
 ## :warning: Warnings
 
@@ -573,7 +573,7 @@
       ^^^^
   ```
 
-- Warning: `modules/nf-core/msisensorpro/msisomatic/main.nf:22:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/msisensorpro/msisomatic/main.nf:25:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -693,6 +693,13 @@
   ```
 
 - Warning: `modules/nf-core/samtools/faidx/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/samtools/fixmate/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -921,4 +928,18 @@
   ```nextflow
       when:
       ^^^^
+  ```
+
+- Warning: `subworkflows/local/fastq_create_umi_consensus_fgbio/main.nf:47:19`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .branch { meta, bam ->
+                    ^^^^
+  ```
+
+- Warning: `subworkflows/local/fastq_create_umi_consensus_fgbio/main.nf:47:25`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .branch { meta, bam ->
+                          ^^^
   ```

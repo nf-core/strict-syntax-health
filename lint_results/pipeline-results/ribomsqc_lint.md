@@ -1,21 +1,35 @@
 # Nextflow lint results
 
-- Generated: 2026-10-08T00:32:33.635813238Z
-- Nextflow version: 26.09.2-edge
-- Summary: 2 warnings
+- Generated: 2026-11-06T00:14:31.214554540Z
+- Nextflow version: 26.10.5
+- Summary: 4 warnings
 
 ## :warning: Warnings
 
-- Warning: `workflows/ribomsqc.nf:26:23`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `modules/local/mergejsons/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
-          ch_versions = Channel.empty()
-                        ^^^^^^^
+      when:
+      ^^^^
   ```
 
-- Warning: `workflows/ribomsqc.nf:46:13`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `modules/local/msnbasexic/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
-              Channel.value(file(params.analytes_tsv, checkIfExists: true))
-              ^^^^^^^
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/multiqc/main.nf:24:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/thermorawfileparser/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
   ```

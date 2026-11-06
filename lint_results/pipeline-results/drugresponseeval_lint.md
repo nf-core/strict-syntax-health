@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-10-28T00:15:30.301525968Z
-- Nextflow version: 26.10.4
-- Summary: 27 warnings
+- Generated: 2026-11-06T00:13:34.778163289Z
+- Nextflow version: 26.10.5
+- Summary: 22 warnings
 
 ## :warning: Warnings
 
@@ -34,14 +34,14 @@
                         ^^^^^^^^
   ```
 
-- Warning: `conf/modules.config:97:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:98:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               saveAs: { filename -> null }
                         ^^^^^^^^
   ```
 
-- Warning: `conf/modules.config:105:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:106:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               saveAs: { filename -> null }
@@ -55,14 +55,14 @@
                         ^^^^^^^^
   ```
 
-- Warning: `conf/modules.config:122:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:130:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               saveAs: { filename -> null }
                         ^^^^^^^^
   ```
 
-- Warning: `conf/modules.config:138:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:154:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               saveAs: { filename -> null }
@@ -76,14 +76,7 @@
                         ^^^^^^^^
   ```
 
-- Warning: `conf/modules.config:170:23`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-              saveAs: { filename -> null }
-                        ^^^^^^^^
-  ```
-
-- Warning: `conf/modules.config:186:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:178:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               saveAs: { filename -> null }
@@ -104,91 +97,63 @@
       ^^^^
   ```
 
-- Warning: `subworkflows/local/model_testing/main.nf:61:31`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-                          .map{ model_class, model_name, rand_file -> [model_name, rand_file] }
-                                ^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/model_testing/main.nf:72:51`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/model_testing/main.nf:68:51`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                               .filter { model_name, test_mode, split_id, split_dataset, best_hpams, randomization_views, path_data ->
                                                     ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/model_testing/main.nf:72:72`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/model_testing/main.nf:68:72`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                               .filter { model_name, test_mode, split_id, split_dataset, best_hpams, randomization_views, path_data ->
                                                                          ^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/model_testing/main.nf:72:120`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/model_testing/main.nf:68:120`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                               .filter { model_name, test_mode, split_id, split_dataset, best_hpams, randomization_views, path_data ->
                                                                                                                          ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/model_testing/main.nf:154:47`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/model_testing/main.nf:162:47`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                               .map{ model_name, final_constant, test_mode, best_hpam_combi ->
                                                 ^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/model_testing/main.nf:166:49`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-                          .map{ test_mode, model, pred_file -> [test_mode, model.split("\\.")[0]] }
-                                                  ^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/run_cv/main.nf:59:43`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/run_cv/main.nf:58:43`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                                   .filter { dataset_name, dataset_path ->
                                             ^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/run_cv/main.nf:62:40`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/run_cv/main.nf:61:40`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                                   .map { dataset_name, dataset_path ->
                                          ^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/run_cv/main.nf:67:43`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/run_cv/main.nf:66:43`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                                   .filter { dataset_name, dataset_path ->
                                             ^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/run_cv/main.nf:133:16`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .map { model_class, model_name, hpam_combis -> [model_name, hpam_combis] }
-                 ^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/run_cv/main.nf:141:16`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          .map { model_class, model_name, test_mode, split -> [model_name, test_mode, split] }
-                 ^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_drugresponseeval_pipeline/main.nf:139:58`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_drugresponseeval_pipeline/main.nf:141:58`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_models = channel.from(models.split(',').collect { it.trim() })
                                                            ^^
   ```
 
-- Warning: `workflows/drugresponseeval.nf:90:9`: Variable was declared but not used
+- Warning: `workflows/drugresponseeval.nf:87:9`: Variable was declared but not used
 
   ```nextflow
       def ch_collated_versions = softwareVersionsToYAML(ch_versions.mix(topic_versions.versions_file))

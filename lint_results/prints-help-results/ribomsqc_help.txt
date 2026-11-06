@@ -1,12 +1,66 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.09.2-edge
+ N E X T F L O W   ~  version 26.10.5
 
-Launching `./main.nf` [stupefied_northcutt] revision: 46de5f72ab
+Launching `./main.nf` [nauseous_ramanujan] revision: bbeb74c559
 
-WARN: Unrecognized config option 'validation.defaultIgnoreParams'
-WARN: Unrecognized config option 'validation.monochromeLogs'
-ERROR ~ Unable to create help message: Specified param 'true' does not exist in JSON schema.
 
- -- Check script 'subworkflows/nf-core/utils_nfschema_plugin/main.nf' at line: 41 or see '.nextflow.log' file for more details
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/ribomsqc 1.1.0
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/ribomsqc -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input            [string] Path to a comma-separated file (CSV) listing samples to process. Must contain a header with two 
+columns: 'id' (sample identifier) and 'raw_file' (full path to the corresponding RAW file). You may 
+specify one or multiple samples for batch processing.  
+  --outdir           [string] Directory where the pipeline will write its output. If a relative folder name is used (e.g., 
+'results'), it will be created in the current working directory. If an absolute path is given (e.g., 
+'/path/to/output'), the folder will be created at that specific location.  
+
+Generic options
+  --help             [boolean, string] Display the help message. 
+  --help_full        [boolean]         Display the full detailed help message. 
+  --show_hidden      [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+
+XIC extraction and plotting
+  --analytes_tsv     [string]  Path to a tab-separated values (TSV) file describing the analytes for chromatographic peak 
+extraction. Must include columns: `short_name`, `long_name`, `mz_M0` (required), and optionally 
+`mz_M1`, `mz_M2`, `ms2_mz`, and `rt_teoretical` (required). Only `mz_M0` and `rt_teoretical` are 
+mandatory. `mz_M1` and `mz_M2` are reserved for future support of isotopic envelope integration. 
+ 
+  --analyte          [string]  Short name of the analyte to be extracted, as defined in the 'short_name' column of the TSV file. 
+Use a specific value such as 'm3C' to process one analyte, or use 'all' to process all analytes 
+defined in the TSV file.  
+  --rt_tolerance     [integer] Time window (in seconds) around the theoretical retention time in which peaks will be searched. The 
+window is defined as RT ± tolerance. [default: 150]  
+  --mz_tolerance     [integer] Tolerance in parts-per-million (ppm) around the specified precursor m/z value (mz_M0) for XIC 
+extraction. The window is defined as mz_M0 ± tolerance. [default: 20]  
+  --ms_level         [integer] MS level to extract chromatographic peaks from. Set to 1 for MS1 or 2 for MS2. [default: 2] 
+  --plot_xic_ms1     [boolean] Whether to plot MS1 XICs 
+  --plot_xic_ms2     [boolean] Whether to plot MS2 XICs 
+  --plot_output_path [string]  Output file name for the XIC PDF plot [default: xic_plot.pdf] 
+  --overwrite_tsv    [boolean] Whether to generate an additional TSV file accumulating the XIC extraction results. If set to 
+`true`, the output will include a progressively updated results table based on the original input 
+analytes TSV.  
+ !! Hiding 16 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/ribomsqc/blob/master/CITATIONS.md
+

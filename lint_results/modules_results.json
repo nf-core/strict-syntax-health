@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "d9d44fa4a5048f6af0d785ab973f5e49fb3ecb60",
+  "_repo_commit": "9a1cc9f2daeff56a0c53ee44cc583b577250782b",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -7300,6 +7300,12 @@
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/modkit/dmr",
     "errors": 0,
     "warnings": 1,
+    "parse_error": false
+  },
+  "modkit_entropy": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/modkit/entropy",
+    "errors": 0,
+    "warnings": 2,
     "parse_error": false
   },
   "modkit_extractcalls": {
