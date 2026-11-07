@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-10-31T00:12:37.583500031Z
-- Nextflow version: 26.10.4
-- Summary: 115 warnings
+- Generated: 2026-11-07T00:10:38.283203593Z
+- Nextflow version: 26.10.5
+- Summary: 114 warnings
 
 ## :warning: Warnings
 
@@ -776,35 +776,28 @@
                                  ^^^^^^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:461:9`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-          Channel.fromPath("${outdir}/pipeline_info/execution_trace_${params.trace_report_suffix}.txt", checkIfExists: false)
-          ^^^^^^^
-  ```
-
-- Warning: `workflows/deepmutscan.nf:469:50`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/deepmutscan.nf:461:50`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def manifest = rows.collect { [kind: it[0][0], group: it[0][1], name: it[0][2]] }
                                                    ^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:469:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/deepmutscan.nf:461:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def manifest = rows.collect { [kind: it[0][0], group: it[0][1], name: it[0][2]] }
                                                                     ^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:469:83`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/deepmutscan.nf:461:83`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def manifest = rows.collect { [kind: it[0][0], group: it[0][1], name: it[0][2]] }
                                                                                     ^^
   ```
 
-- Warning: `workflows/deepmutscan.nf:472:32`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/deepmutscan.nf:464:32`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   rows.collect { it[1] },

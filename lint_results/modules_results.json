@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "9a1cc9f2daeff56a0c53ee44cc583b577250782b",
+  "_repo_commit": "e78a2112a36afcaffa31810216eb2d97cdbce290",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -6996,6 +6996,12 @@
     "warnings": 1,
     "parse_error": false
   },
+  "mgnifam_computeclans": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mgnifam/computeclans",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
   "mgnifam_generatefamilies": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/mgnifam/generatefamilies",
     "errors": 0,
@@ -9380,6 +9386,12 @@
   },
   "rastair_methylkit": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/rastair/methylkit",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
+  "rastair2_call": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/rastair2/call",
     "errors": 0,
     "warnings": 1,
     "parse_error": false

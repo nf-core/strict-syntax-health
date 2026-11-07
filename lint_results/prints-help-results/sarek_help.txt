@@ -5,7 +5,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 Downloading plugin nf-core-utils@0.4.0
 Downloading plugin nf-fgbio@1.0.0
-Launching `./main.nf` [agitated_dijkstra] revision: d9cf6c7c65
+Launching `./main.nf` [scruffy_wegener] revision: d9cf6c7c65
 
 
 ------------------------------------------------------

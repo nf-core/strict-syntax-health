@@ -1,6 +1,6 @@
 # Workflow outputs migration: rnafusion
 
-- Generated: 2026-11-03T00:14:56.696460+00:00
+- Generated: 2026-11-07T00:12:36.063233+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,6 +14,6 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 34 `publishDir` references across 3 files that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/rnafusion/blob/4c4e76793a7a2768f83bafe63ece972528cb1760/conf/modules.config#L15) — 32 references
-- [`subworkflows/nf-core/fastq_align_star/tests/nextflow.config`](https://github.com/nf-core/rnafusion/blob/4c4e76793a7a2768f83bafe63ece972528cb1760/subworkflows/nf-core/fastq_align_star/tests/nextflow.config#L3) — 1 reference
-- [`subworkflows/nf-core/fastq_align_star/tests/with_transcripts.config`](https://github.com/nf-core/rnafusion/blob/4c4e76793a7a2768f83bafe63ece972528cb1760/subworkflows/nf-core/fastq_align_star/tests/with_transcripts.config#L3) — 1 reference
+- [`conf/modules.config`](https://github.com/nf-core/rnafusion/blob/1ee03f76beaf79ecbba512bfc7bb8e2c158e4426/conf/modules.config#L15) — 32 references
+- [`subworkflows/nf-core/fastq_align_star/tests/nextflow.config`](https://github.com/nf-core/rnafusion/blob/1ee03f76beaf79ecbba512bfc7bb8e2c158e4426/subworkflows/nf-core/fastq_align_star/tests/nextflow.config#L3) — 1 reference
+- [`subworkflows/nf-core/fastq_align_star/tests/with_transcripts.config`](https://github.com/nf-core/rnafusion/blob/1ee03f76beaf79ecbba512bfc7bb8e2c158e4426/subworkflows/nf-core/fastq_align_star/tests/with_transcripts.config#L3) — 1 reference

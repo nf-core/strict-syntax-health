@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-11-06T00:13:34.778163289Z
+- Generated: 2026-11-07T00:11:01.472602923Z
 - Nextflow version: 26.10.5
 - Summary: 22 warnings
 
@@ -97,53 +97,53 @@
       ^^^^
   ```
 
-- Warning: `subworkflows/local/model_testing/main.nf:68:51`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/model_testing/main.nf:77:51`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                               .filter { model_name, test_mode, split_id, split_dataset, best_hpams, randomization_views, path_data ->
                                                     ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/model_testing/main.nf:68:72`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/model_testing/main.nf:77:72`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                               .filter { model_name, test_mode, split_id, split_dataset, best_hpams, randomization_views, path_data ->
                                                                          ^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/model_testing/main.nf:68:120`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/model_testing/main.nf:77:120`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                               .filter { model_name, test_mode, split_id, split_dataset, best_hpams, randomization_views, path_data ->
                                                                                                                          ^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/model_testing/main.nf:162:47`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/model_testing/main.nf:171:47`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                               .map{ model_name, final_constant, test_mode, best_hpam_combi ->
                                                 ^^^^^^^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/run_cv/main.nf:58:43`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/run_cv/main.nf:75:43`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-                                  .filter { dataset_name, dataset_path ->
-                                            ^^^^^^^^^^^^
+                                  .filter { cs_name, dataset_path ->
+                                            ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/run_cv/main.nf:61:40`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/run_cv/main.nf:78:40`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-                                  .map { dataset_name, dataset_path ->
-                                         ^^^^^^^^^^^^
+                                  .map { cs_name, dataset_path ->
+                                         ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/run_cv/main.nf:66:43`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/run_cv/main.nf:83:43`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-                                  .filter { dataset_name, dataset_path ->
-                                            ^^^^^^^^^^^^
+                                  .filter { cs_name, dataset_path ->
+                                            ^^^^^^^
   ```
 
 - Warning: `subworkflows/local/utils_nfcore_drugresponseeval_pipeline/main.nf:141:58`: Implicit closure parameter is deprecated, declare an explicit parameter instead
@@ -153,7 +153,7 @@
                                                            ^^
   ```
 
-- Warning: `workflows/drugresponseeval.nf:87:9`: Variable was declared but not used
+- Warning: `workflows/drugresponseeval.nf:129:9`: Variable was declared but not used
 
   ```nextflow
       def ch_collated_versions = softwareVersionsToYAML(ch_versions.mix(topic_versions.versions_file))

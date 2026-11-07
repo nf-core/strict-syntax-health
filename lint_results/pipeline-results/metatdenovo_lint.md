@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-11-05T00:13:23.958932627Z
+- Generated: 2026-11-07T00:11:39.384238951Z
 - Nextflow version: 26.10.5
 - Summary: 79 warnings
 
@@ -41,20 +41,6 @@
       ^^^^
   ```
 
-- Warning: `modules/local/diamond/format_tax/ranklist/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
-
-  ```nextflow
-      when:
-      ^^^^
-  ```
-
-- Warning: `modules/local/diamond/format_tax/taxdump/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
-
-  ```nextflow
-      when:
-      ^^^^
-  ```
-
 - Warning: `modules/local/eggnog/download/main.nf:25:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
@@ -84,6 +70,20 @@
   ```
 
 - Warning: `modules/local/format/clusterreps/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/format/diamond/tax/ranklist/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/format/diamond/tax/taxdump/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

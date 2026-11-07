@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-11-05T00:16:16.584713022Z
+- Generated: 2026-11-07T00:14:24.194021540Z
 - Nextflow version: 26.10.5
 - Summary: 33 warnings
 
@@ -97,7 +97,7 @@
       ^^^^
   ```
 
-- Warning: `modules/local/registerstudy/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/registerstudy/main.nf:24:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
