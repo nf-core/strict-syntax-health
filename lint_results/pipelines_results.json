@@ -230,7 +230,7 @@
   "createtaxdb": {
     "full_name": "nf-core/createtaxdb",
     "html_url": "https://github.com/nf-core/createtaxdb",
-    "commit": "479ccae5b63286a64baced564ce2956f5a671ce8",
+    "commit": "f0dedbcd28007774d545d45dc2aeb899b5eee6f9",
     "errors": 0,
     "warnings": 28,
     "parse_error": false,
@@ -422,7 +422,7 @@
   "drugresponseeval": {
     "full_name": "nf-core/drugresponseeval",
     "html_url": "https://github.com/nf-core/drugresponseeval",
-    "commit": "0dd3e771794934e17449e63e882af269c9870407",
+    "commit": "7ffccc740d88e03eb716aeddb67f0515e39194ec",
     "errors": 0,
     "warnings": 22,
     "parse_error": false,
@@ -542,7 +542,7 @@
   "funcscan": {
     "full_name": "nf-core/funcscan",
     "html_url": "https://github.com/nf-core/funcscan",
-    "commit": "8afd411d4f69c153626252b9e3a33de3baa48818",
+    "commit": "d8e27979f534ad3588028d009e32c362fd5c46f6",
     "errors": 0,
     "warnings": 119,
     "parse_error": false,
