@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-10-23T00:18:21.963485958Z
-- Nextflow version: 26.10.3
-- Summary: 32 warnings
+- Generated: 2026-11-09T00:12:43.642152792Z
+- Nextflow version: 26.10.5
+- Summary: 35 warnings
 
 ## :warning: Warnings
 
@@ -76,6 +76,20 @@
                                                                                     ^^^^^^^
   ```
 
+- Warning: `main.nf:56:11`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+          ? Channel.fromPath(params.abo_clair3_region_bed, checkIfExists: true).collect()
+            ^^^^^^^
+  ```
+
+- Warning: `main.nf:57:11`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+
+  ```nextflow
+          : Channel.value([])
+            ^^^^^^^
+  ```
+
 - Warning: `modules/local/abo/evidence/main.nf:43:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
@@ -90,70 +104,77 @@
       ^^^^
   ```
 
-- Warning: `modules/nf-core/bcftools/norm/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/clair3/downloadmodel/main.nf:24:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
       ^^^^
   ```
 
-- Warning: `modules/nf-core/bcftools/query/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/bcftools/norm/main.nf:22:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
       ^^^^
   ```
 
-- Warning: `modules/nf-core/bcftools/view/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/bcftools/query/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
       ^^^^
   ```
 
-- Warning: `modules/nf-core/clair3/main.nf:25:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/bcftools/view/main.nf:24:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
       ^^^^
   ```
 
-- Warning: `modules/nf-core/minimap2/align/main.nf:25:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/clair3/main.nf:29:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
       ^^^^
   ```
 
-- Warning: `modules/nf-core/multiqc/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/minimap2/align/main.nf:28:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
       ^^^^
   ```
 
-- Warning: `modules/nf-core/nanoplot/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/multiqc/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
       ^^^^
   ```
 
-- Warning: `modules/nf-core/samtools/coverage/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/nanoplot/main.nf:22:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
       ^^^^
   ```
 
-- Warning: `modules/nf-core/samtools/flagstat/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/samtools/coverage/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
       ^^^^
   ```
 
-- Warning: `modules/nf-core/samtools/stats/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/samtools/flagstat/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/samtools/stats/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -174,35 +195,35 @@
                               ^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/predictabophenotype/main.nf:62:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/predictabophenotype/main.nf:64:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   it.file.copyTo(combined_dir.resolve(it.file.name))
                   ^^
   ```
 
-- Warning: `subworkflows/local/predictabophenotype/main.nf:62:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/predictabophenotype/main.nf:64:53`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   it.file.copyTo(combined_dir.resolve(it.file.name))
                                                       ^^
   ```
 
-- Warning: `subworkflows/local/variants_quantification/main.nf:37:35`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/variants_quantification/main.nf:39:35`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { fasta_meta, fasta, fai_meta, fai -> [fasta_meta, fasta, fai] }
                                     ^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/variants_quantification/main.nf:63:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/variants_quantification/main.nf:66:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .filter { it[3] == null }
                     ^^
   ```
 
-- Warning: `subworkflows/local/variants_quantification/main.nf:64:70`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/variants_quantification/main.nf:67:70`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .subscribe { log.warn "Clair3 produced no gVCF for sample '${it[0].id}': relying on the BAM pileup alone (flagged REVIEW)" }
@@ -216,14 +237,14 @@
       ^^^^
   ```
 
-- Warning: `workflows/abotyper.nf:49:70`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/abotyper.nf:50:70`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
       ch_multiqc_files = ch_multiqc_files.mix(NANOPLOT.out.txt.collect{it[1]})
                                                                        ^^
   ```
 
-- Warning: `workflows/abotyper.nf:108:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `workflows/abotyper.nf:111:26`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       def topic_versions = Channel.topic("versions")
