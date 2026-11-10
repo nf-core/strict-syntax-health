@@ -422,7 +422,7 @@
   "drugresponseeval": {
     "full_name": "nf-core/drugresponseeval",
     "html_url": "https://github.com/nf-core/drugresponseeval",
-    "commit": "7ffccc740d88e03eb716aeddb67f0515e39194ec",
+    "commit": "45723fdb6af23b1107325af2d6dbb0b0fad34560",
     "errors": 0,
     "warnings": 22,
     "parse_error": false,
@@ -554,11 +554,11 @@
   "genephylo": {
     "full_name": "nf-core/genephylo",
     "html_url": "https://github.com/nf-core/genephylo",
-    "commit": "a575147dad99bd2d0b5076b4f08006367136566e",
-    "errors": 1,
+    "commit": "47f34cb323bd07f819859a809bc370bf52792429",
+    "errors": 0,
     "warnings": 18,
     "parse_error": false,
-    "prints_help": null,
+    "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
     "publishdir_count": 10
@@ -890,9 +890,9 @@
   "methylseq": {
     "full_name": "nf-core/methylseq",
     "html_url": "https://github.com/nf-core/methylseq",
-    "commit": "998bc1fbc6436a98de362e1fe4c0cc2aa486c361",
+    "commit": "2e5493bd2a09c2c994bcc06357c69b86fcd6eb39",
     "errors": 0,
-    "warnings": 25,
+    "warnings": 68,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -998,7 +998,7 @@
   "nanostring": {
     "full_name": "nf-core/nanostring",
     "html_url": "https://github.com/nf-core/nanostring",
-    "commit": "e0595e80bff8650e024ed956c439e40080f69206",
+    "commit": "ff7c987d47a0f3d7af2958e9c96450470c7ff569",
     "errors": 0,
     "warnings": 7,
     "parse_error": false,
@@ -1118,14 +1118,14 @@
   "pathogenepidemiology": {
     "full_name": "nf-core/pathogenepidemiology",
     "html_url": "https://github.com/nf-core/pathogenepidemiology",
-    "commit": "b9dde7cf072a7e82f229aa6ddbf768b621710072",
+    "commit": "f76228df330e03d2af43feaaa5c8fdf70b9bb816",
     "errors": 0,
-    "warnings": 52,
+    "warnings": 58,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 26
+    "publishdir_count": 25
   },
   "pathogensurveillance": {
     "full_name": "nf-core/pathogensurveillance",
@@ -1382,9 +1382,9 @@
   "rnafusion": {
     "full_name": "nf-core/rnafusion",
     "html_url": "https://github.com/nf-core/rnafusion",
-    "commit": "1ee03f76beaf79ecbba512bfc7bb8e2c158e4426",
+    "commit": "7f49d94584b7f264f6852b4fcc28a942547a7936",
     "errors": 0,
-    "warnings": 44,
+    "warnings": 43,
     "parse_error": false,
     "prints_help": false,
     "workflow_output": false,
@@ -1394,7 +1394,7 @@
   "rnaseq": {
     "full_name": "nf-core/rnaseq",
     "html_url": "https://github.com/nf-core/rnaseq",
-    "commit": "a6474f53cc0a623083c452c2ae06f7613af1d698",
+    "commit": "48cc4b4d016fc9e64b51a20d1cb442a67cef7bcf",
     "errors": 0,
     "warnings": 81,
     "parse_error": false,
@@ -1454,7 +1454,7 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "fd93a421b5d4a13d006ca423c41341df0f053021",
+    "commit": "affa18fa060a433562e18f28e045f02aa39d7979",
     "errors": 0,
     "warnings": 134,
     "parse_error": false,
@@ -1610,7 +1610,7 @@
   "taxmarker": {
     "full_name": "nf-core/taxmarker",
     "html_url": "https://github.com/nf-core/taxmarker",
-    "commit": "9686338285dffa3c5a209b87f344f9259cd4744b",
+    "commit": "600814013d4d7c2498d16ebc522b689cba2ad368",
     "errors": 0,
     "warnings": 56,
     "parse_error": false,

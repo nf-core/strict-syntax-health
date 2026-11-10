@@ -1,0 +1,76 @@
+$ NXF_SYNTAX_PARSER=v2 nextflow run . --help
+
+
+ N E X T F L O W   ~  version 26.10.5
+
+Downloading plugin nf-schema@3.0.0
+Launching `./main.nf` [determined_pareto] revision: ed75e0e7d9
+
+
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/genephylo 1.0.0dev
+------------------------------------------------------
+
+Typical pipeline command:
+
+  nextflow run nf-core/genephylo -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input                 [string] Path to comma-separated file containing information about the samples in the experiment. 
+  --outdir                [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+
+Blast database options
+  --blastdb_option        [string] Configure database option to either download a pre-formatted one (update), build a custom one 
+(build) or reference a local database (current).  (accepted: current, update, build) [default: 
+update]  
+  --blastdb_dir           [string] Path to a local database (required for current option). 
+  --blastdb_update        [string] Name of a ncbi pre-formatted nucleotide database (required for update option). [default: 
+core_nt]  
+  --blastdb_build         [string] Path to the fasta file of the sequences for the custom database (required for build option). 
+ 
+  --blastdb_buildmap      [string] Path to a file associating each sequence id of the custom database to its taxid (required for build 
+option).  
+  --taxdump               [string] taxdump.tar.gz file containing nodes.dmp, names.dmp which assign taxonomy to NCBI taxIDs 
+
+Blast options
+  --blast_type            [string]  choose either nucleotide or protein database  (accepted: aa, nt) [default: nt] 
+  --blast_coverage        [integer] % of query vs hit identity [default: 50] 
+  --blast_identity        [integer] proportion  of exact matches [default: 50] 
+  --blast_evalue          [number]  number of hits with similiar or better score to by found by chance when searching the database of 
+similiar size [default: 0.1]  
+  --blast_hits            [integer] positive matches to query sequence [default: 100] 
+  --blast_taxids          [string]  numbers assigned by NCBI to identify taxonomical units 
+
+Phylogeny options
+  --tree_tool             [string] Choose which software to use to infer phylogenetic tree.  (accepted: iqtree, fasttree) [default: 
+fasttree]  
+
+Generic options
+  --help                  [boolean, string] Display the help message. 
+  --help_full             [boolean]         Display the full detailed help message. 
+  --show_hidden           [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+
+Configs and emails
+  --config_profile_name   [string] NA 
+  --custom_config_version [string] NA [default: master] 
+  --custom_config_base    [string] NA [default: https://raw.githubusercontent.com/nf-core/configs/master] 
+ !! Hiding 12 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/genephylo/blob/master/CITATIONS.md
+
+

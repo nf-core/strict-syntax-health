@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.4
+ N E X T F L O W   ~  version 26.10.5
 
-Launching `./main.nf` [sharp_dijkstra] revision: 0c1f356ff8
+Launching `./main.nf` [big_tuckerman] revision: 0c1f356ff8
 
 
 ------------------------------------------------------
@@ -25,6 +25,12 @@ Pipeline input options
   --intervals                   [string]  Optional local uncompressed BED matching the query reference, used unchanged for core-read filtering 
 and coverage and split by GATK into one calling BED per contig. Defaults to 
 projectDir/assets/Pf3D7_core.bed; basename must be shell-safe.  
+  --query_fasta                 [string]  Local query reference FASTA (.fa, .fasta or .fna, optionally gzipped), overriding queryurl. Reuses 
+exact adjacent uncompressed-name FASTA, dictionary, minimap2 and complete BWA-MEM3 indexes; builds 
+missing classes only. Basename must be shell-safe.  
+  --host_fasta                  [string]  Local host reference FASTA (.fa, .fasta or .fna, optionally gzipped). Takes precedence over hosturl; 
+no host indexes are required or built. Basename must start with an ASCII letter, digit or underscore 
+and contain only ASCII letters, digits, dots, underscores and hyphens.  
   --queryurl                    [string]  URL of the query reference FASTA to download. 
   --hosturl                     [string]  URL of the host reference FASTA to download. 
   --threads                     [integer] Number of CPU threads to use per process. [default: 4] 

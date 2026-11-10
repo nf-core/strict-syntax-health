@@ -5,7 +5,9 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 Downloading plugin nf-core-utils@0.4.0
 Downloading plugin nf-fgbio@1.0.0
-Launching `./main.nf` [scruffy_wegener] revision: d9cf6c7c65
+Downloading plugin nf-prov@1.7.0
+Downloading plugin nf-schema@2.7.2
+Launching `./main.nf` [golden_booth] revision: a60dba3729
 
 
 ------------------------------------------------------
@@ -114,7 +116,7 @@ under `variant_calling/mutect2/` folder. Only a single normal sample per patient
 Tumor-only mode is also supported.  
   --ignore_soft_clipped_bases         [boolean] Do not analyze soft clipped bases in the reads for GATK Mutect2. 
   --force_call_alleles                [string]  VCF (bgzipped) of alleles to force-call with GATK Mutect2 and Parabricks MutectCaller. 
-  --force_call_alleles_tbi            [string]  Index of the GATK Mutect2 force-call alleles VCF. 
+  --force_call_alleles_tbi            [string]  Index of the force-call alleles VCF for GATK Mutect2 and Parabricks MutectCaller. 
   --pon                               [string]  Panel-of-normals VCF (bgzipped) for GATK Mutect2 
   --pon_tbi                           [string]  Index of PON panel-of-normals VCF. 
   --sentieon_haplotyper_emit_mode     [string]  Option for selecting output and emit-mode of Sentieon's Haplotyper. [default: variant] 

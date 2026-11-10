@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-10-30T00:17:10.734662611Z
-- Nextflow version: 26.10.4
-- Summary: 52 warnings
+- Generated: 2026-11-10T00:12:37.322631714Z
+- Nextflow version: 26.10.5
+- Summary: 58 warnings
 
 ## :warning: Warnings
 
@@ -342,28 +342,70 @@
                                                                                                                         ^^
   ```
 
-- Warning: `subworkflows/local/prepare_references/main.nf:25:99`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/prepare_references/main.nf:52:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-          hostfasta = DOWNLOAD_HOSTFASTA(channel.value(referenceUriToTuple(hosturl))).outfile.map { meta, fasta -> fasta }
-                                                                                                    ^^^^
+              file(reference.resolveSibling("${referenceFilename}.${it}"), checkIfExists: false, glob: false)
+                                                                    ^^
   ```
 
-- Warning: `subworkflows/local/prepare_references/main.nf:30:16`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/prepare_references/main.nf:62:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          auxiliaryFiles.bwa = bwa.every { it.exists() } ? bwa : null
+                                           ^^
+  ```
+
+- Warning: `subworkflows/local/prepare_references/main.nf:74:20`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              .map { meta, fasta -> fasta }
+                     ^^^^
+  ```
+
+- Warning: `subworkflows/local/prepare_references/main.nf:80:16`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { meta, fasta -> tuple([id: fasta.baseName], fasta) }
                  ^^^^
   ```
 
-- Warning: `workflows/pathogenepidemiology.nf:152:16`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/prepare_references/main.nf:82:34`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          ? queryfasta.map { meta, fasta -> tuple(meta, auxiliaryFiles.fai) }
+                                   ^^^^^
+  ```
+
+- Warning: `subworkflows/local/prepare_references/main.nf:85:34`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          ? queryfasta.map { meta, fasta -> tuple(meta, auxiliaryFiles.dict) }
+                                   ^^^^^
+  ```
+
+- Warning: `subworkflows/local/prepare_references/main.nf:88:34`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          ? queryfasta.map { meta, fasta -> tuple(meta, auxiliaryFiles.mmi) }
+                                   ^^^^^
+  ```
+
+- Warning: `subworkflows/local/prepare_references/main.nf:93:34`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          ? queryfasta.map { meta, fasta -> tuple(meta, auxiliaryFiles.bwa) }
+                                   ^^^^^
+  ```
+
+- Warning: `workflows/pathogenepidemiology.nf:153:16`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { cohort_meta, bcf, csi, sample_meta, fasta ->
                  ^^^^^^^^^^^
   ```
 
-- Warning: `workflows/pathogenepidemiology.nf:155:9`: Variable was declared but not used
+- Warning: `workflows/pathogenepidemiology.nf:156:9`: Variable was declared but not used
 
   ```nextflow
       def phylogeny_s = PHYLOGENY(ch_consensus_input)

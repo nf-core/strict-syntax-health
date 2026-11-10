@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "fb8dd13ce49b79f843627df4a51ebfad5f9ba49c",
+  "_repo_commit": "888b825b9af9c47573ceeae5828ade0eebcb7a6d",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -2214,6 +2214,18 @@
     "warnings": 0,
     "parse_error": false
   },
+  "colabfold_colabfold": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/colabfold/colabfold",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
+  "colabfold_downloadmodels": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/colabfold/downloadmodels",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
   "comebin_runcomebin": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/comebin/runcomebin",
     "errors": 0,
@@ -3374,6 +3386,18 @@
   },
   "expansionhunterdenovo_profile": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/expansionhunterdenovo/profile",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
+  "fairbioheaders_combine": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fairbioheaders/combine",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
+  "fairbioheaders_validate": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fairbioheaders/validate",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
@@ -5192,6 +5216,12 @@
   },
   "hamronization_fargene": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/hamronization/fargene",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
+  "hamronization_resfinder": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/hamronization/resfinder",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
@@ -11140,6 +11170,12 @@
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/sparsesignatures",
     "errors": 0,
     "warnings": 0,
+    "parse_error": false
+  },
+  "spatialcontinuum_cricalc": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/spatialcontinuum/cricalc",
+    "errors": 0,
+    "warnings": 1,
     "parse_error": false
   },
   "spatyper": {

@@ -1,28 +1,26 @@
 # Nextflow lint results
 
-- Generated: 2026-11-07T00:11:12.902368238Z
+- Generated: 2026-11-10T00:11:45.588312660Z
 - Nextflow version: 26.10.5
-- Summary: 1 error, 18 warnings
-
-## :x: Errors
-
-- Error: `workflows/genephylo.nf:125:2`: Incorrect number of call arguments, expected 3 but received 1
-
-  ```nextflow
-  	TD2_LONGORFS(ch_orf_in)
-   ^^^^^^^^^^^^^^^^^^^^^^^
-  ```
+- Summary: 18 warnings
 
 ## :warning: Warnings
 
-- Warning: `modules/local/blast_extract.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/ete_taxdb.nf:16:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
       ^^^^
   ```
 
-- Warning: `modules/local/ete_taxdb.nf:16:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/gawk/blastextract/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/gawk/cleanfastaids/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -113,28 +111,21 @@
       ^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/genephylo.nf:86:50`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/genephylo.nf:87:50`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
   	ch_blast_in = ch_samplesheet.map { meta, fasta, tree -> tuple(meta, file(fasta)) }
                                                    ^^^^
   ```
 
-- Warning: `workflows/genephylo.nf:138:37`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/genephylo.nf:151:2`: Variable was declared but not used
 
   ```nextflow
-          def cds_file = files.find { it.name.endsWith('.TD2.cds') }
-                                      ^^
+  	ch_cleanfasta_out = GAWK_CLEANFASTAIDS.out.fasta
+   ^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/genephylo.nf:150:2`: Variable was declared but not used
-
-  ```nextflow
-  	ch_mafft_out = MAFFT_ALIGN.out.fas
-   ^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/genephylo.nf:193:9`: Variable was declared but not used
+- Warning: `workflows/genephylo.nf:194:9`: Variable was declared but not used
 
   ```nextflow
       def ch_collated_versions = softwareVersionsToYAML(ch_versions.mix(topic_versions.versions_file))

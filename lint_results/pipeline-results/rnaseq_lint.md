@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-10-31T00:16:16.897633302Z
-- Nextflow version: 26.10.4
+- Generated: 2026-11-10T00:13:16.828675494Z
+- Nextflow version: 26.10.5
 - Summary: 81 warnings
 
 ## :warning: Warnings
@@ -321,14 +321,14 @@
       ^^^^
   ```
 
-- Warning: `modules/nf-core/salmon/index/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/salmon/index/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
       ^^^^
   ```
 
-- Warning: `modules/nf-core/salmon/quant/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/salmon/quant/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

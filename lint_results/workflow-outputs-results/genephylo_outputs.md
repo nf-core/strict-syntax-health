@@ -1,6 +1,6 @@
 # Workflow outputs migration: genephylo
 
-- Generated: 2026-11-07T00:11:12.967565+00:00
+- Generated: 2026-11-10T00:11:45.655337+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,4 +14,4 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 10 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/genephylo/blob/a575147dad99bd2d0b5076b4f08006367136566e/conf/modules.config#L15) — 10 references
+- [`conf/modules.config`](https://github.com/nf-core/genephylo/blob/47f34cb323bd07f819859a809bc370bf52792429/conf/modules.config#L15) — 10 references

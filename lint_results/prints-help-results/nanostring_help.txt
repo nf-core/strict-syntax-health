@@ -3,8 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.10.5
 
-Downloading plugin nf-schema@3.0.0
-Launching `./main.nf` [prickly_mclean] revision: d6b24b603f
+Launching `./main.nf` [nauseous_kay] revision: d6b24b603f
 
 
 ------------------------------------------------------
@@ -38,8 +37,8 @@ Normalization Parameters
   --normalization_method        [string] The method to use for normalization of nCounter data.  (accepted: GEO, GLM) [default: GEO] 
 
 Gene Score Computation
-  --gene_score_method           [string] This selects the algorithm for computing the respective gene score. Default is 'plage.dir'. 
-[default: plage.dir]  
+  --gene_score_method           [string] This selects the algorithm for computing the respective gene score. Default is 'plage.dir'.  
+(accepted: plage, plage.dir, gsva, singscore, ssgsea, median, mean, sams) [default: plage.dir]  
   --gene_score_yaml                      This sets the YAML to be used for computing the gene scores. Needs both a name for each set of genes 
 and respective genes to be selected.  
 

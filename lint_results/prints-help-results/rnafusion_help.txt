@@ -3,8 +3,8 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.10.5
 
-Launching `./main.nf` [agitated_fourier] revision: dd75a3aebc
+Launching `./main.nf` [desperate_mendel] revision: f3317f9250
 
-Parameter `input` is required but no value was provided
+Parameter `outdir` is required but no value was provided
 
 
