@@ -1,31 +1,10 @@
 # Nextflow lint results
 
-- Generated: 2026-09-29T00:25:09.384486051Z
-- Nextflow version: 26.09.1-edge
-- Summary: 32 warnings
+- Generated: 2026-11-11T00:19:36.958433864Z
+- Nextflow version: 26.10.5
+- Summary: 14 warnings
 
 ## :warning: Warnings
-
-- Warning: `main.nf:169:16`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          path { meta, file ->
-                 ^^^^
-  ```
-
-- Warning: `main.nf:175:16`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          path { meta, file ->
-                 ^^^^
-  ```
-
-- Warning: `modules/local/compute_dataset_statistics/main.nf:21:9`: Variable was declared but not used
-
-  ```nextflow
-      def prefix = task.ext.prefix ?: "${meta.dataset}"
-          ^^^^^^
-  ```
 
 - Warning: `modules/local/expressionatlas/getaccessions/main.nf:31:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
@@ -41,151 +20,18 @@
                                                           ^^
   ```
 
+- Warning: `modules/nf-core/multiqc/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
 - Warning: `subworkflows/local/download_public_datasets/main.nf:24:5`: Variable was declared but not used
 
   ```nextflow
       ch_fetched_accessions = channel.empty()
       ^^^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/expression_normalisation/main.nf:35:15`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          meta, file ->
-                ^^^^
-  ```
-
-- Warning: `subworkflows/local/expression_normalisation/main.nf:40:74`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      ch_raw_rnaseq_datasets_to_normalise = ch_datasets.raw.filter { meta, file -> meta.platform == 'rnaseq' }
-                                                                           ^^^^
-  ```
-
-- Warning: `subworkflows/local/genorm/main.nf:94:17`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-                  meta, i, file_i, j, file_j -> i <= j } // keeps only pairs where i <= j
-                  ^^^^
-  ```
-
-- Warning: `subworkflows/local/genorm/main.nf:94:26`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-                  meta, i, file_i, j, file_j -> i <= j } // keeps only pairs where i <= j
-                           ^^^^^^
-  ```
-
-- Warning: `subworkflows/local/genorm/main.nf:94:37`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-                  meta, i, file_i, j, file_j -> i <= j } // keeps only pairs where i <= j
-                                      ^^^^^^
-  ```
-
-- Warning: `subworkflows/local/get_public_accessions/main.nf:79:35`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-                          .filter { species_name, quota -> quota == "ok" }
-                                    ^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/get_public_accessions/main.nf:80:46`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-                          .map { species_name, quota -> species_name }
-                                               ^^^^^
-  ```
-
-- Warning: `subworkflows/local/get_public_accessions/main.nf:117:55`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-                                      .map { accession, excluded_accessions -> accession }
-                                                        ^^^^^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/idmapping/main.nf:63:40`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                                  .map { it.trim() }
-                                         ^^
-  ```
-
-- Warning: `subworkflows/local/merge_data/main.nf:25:71`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      ch_normalised_rnaseq_counts = ch_normalised_counts.filter { meta, file -> meta.platform == "rnaseq" }
-                                                                        ^^^^
-  ```
-
-- Warning: `subworkflows/local/merge_data/main.nf:26:75`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      ch_normalised_microarray_counts = ch_normalised_counts.filter { meta, file -> meta.platform == "microarray" }
-                                                                            ^^^^
-  ```
-
-- Warning: `subworkflows/local/merge_data/main.nf:29:44`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-                                      .map { meta, file -> file }
-                                             ^^^^
-  ```
-
-- Warning: `subworkflows/local/merge_data/main.nf:34:48`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-                                          .map { meta, file -> file }
-                                                 ^^^^
-  ```
-
-- Warning: `subworkflows/local/merge_data/main.nf:49:44`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-                                      .map { meta, file -> file }
-                                             ^^^^
-  ```
-
-- Warning: `subworkflows/local/merge_data/main.nf:71:35`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-                              meta, file -> // extracts design file and adds batch column whenever missing (for custom datasets)
-                                    ^^^^
-  ```
-
-- Warning: `subworkflows/local/reporting/main.nf:46:32`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                          .map { it.trim() }
-                                 ^^
-  ```
-
-- Warning: `subworkflows/local/reporting/main.nf:47:35`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-                          .filter { it != "" }
-                                    ^^
-  ```
-
-- Warning: `subworkflows/local/reporting/main.nf:57:28`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          ch_all_counts.map{ meta, file -> file }.collect(), // 1 file
-                             ^^^^
-  ```
-
-- Warning: `subworkflows/local/reporting/main.nf:76:28`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          ch_all_counts.map{ meta, file -> file }.collect(),
-                             ^^^^
-  ```
-
-- Warning: `subworkflows/local/reporting/main.nf:397:50`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      ch_multiqc_report = MULTIQC.out.report.map { meta, file -> file }
-                                                   ^^^^
   ```
 
 - Warning: `subworkflows/local/utils_nfcore_stableexpression_pipeline/main.nf:33:5`: Parameter was not used -- prefix with `_` to suppress warning
@@ -195,37 +41,65 @@
       ^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_stableexpression_pipeline/main.nf:249:19`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_stableexpression_pipeline/main.nf:208:17`: Variable was declared but not used
+
+  ```nextflow
+              def nb_candidates_per_section = params.nb_candidates_per_section.toInteger()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_stableexpression_pipeline/main.nf:210:38`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          catch (NumberFormatException e) {
+                                       ^
+  ```
+
+- Warning: `subworkflows/local/utils_nfcore_stableexpression_pipeline/main.nf:261:19`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               meta, file ->
                     ^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_stableexpression_pipeline/main.nf:266:16`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_stableexpression_pipeline/main.nf:278:16`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { meta, file ->
                  ^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_stableexpression_pipeline/main.nf:387:13`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_stableexpression_pipeline/main.nf:407:13`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               it.get(1).size() == 2 // only groups with two files
               ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_stableexpression_pipeline/main.nf:390:13`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_stableexpression_pipeline/main.nf:410:13`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               meta, files ->
               ^^^^
   ```
 
-- Warning: `workflows/stableexpression.nf:196:40`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/utils_nfcore_stableexpression_pipeline/main.nf:495:27`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-              ch_all_imputed_counts.map{ meta, file -> file },
-                                         ^^^^
+                      meta, file -> // extracts design file and adds batch column whenever missing (for custom datasets)
+                            ^^^^
+  ```
+
+- Warning: `workflows/stableexpression.nf:40:5`: Variable was declared but not used
+
+  ```nextflow
+      ch_all_counts                          = channel.empty()
+      ^^^^^^^^^^^^^
+  ```
+
+- Warning: `workflows/stableexpression.nf:43:5`: Variable was declared but not used
+
+  ```nextflow
+      ch_platform_statistics                 = channel.empty()
+      ^^^^^^^^^^^^^^^^^^^^^^
   ```

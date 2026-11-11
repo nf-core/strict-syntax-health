@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.10.5
 
 Downloading plugin nf-slack@0.5.1
-Launching `./main.nf` [determined_watson] revision: 72d777fa52
+Launching `./main.nf` [elegant_hugle] revision: 9f9cb64de2
 
 WARN: Unrecognized config option 'slack.enabled'
 WARN: Unrecognized config option 'slack.webhook.url'
@@ -32,42 +32,18 @@ defined in the input samplesheet
 Cloud infrastructure.  
   --email                                                   [string] Email address for completion summary. 
 
-Amplicon options
-  --save_pna_amplicon_reads                                 [boolean] Save intermediate amplicon reads generated from the raw input reads. 
-  --pna_amplicon_mismatches                                 [number]  The number of mismatches allowed while anchoring reads using LBS sequences (in percentage of seen 
-LBS length) [default: 0.1; 0.0<=x<=0.5] [default: 0.1]  
-  --pna_amplicon_remove_polyg                               [boolean] Remove PolyG sequences (length of 10 or more) [default: true] 
-  --pna_amplicon_quality_cutoff                             [integer] Minimum average quality a read must have. Pass 0 to disable quality filtering. [default: 20] 
- 
-  --pna_amplicon_low_complexity_filter                      [boolean] Enable filtering of amplicons with low complexity UMI sequences. [default: true] 
-  --pna_amplicon_low_complexity_threshold                   [number]  The threshold for determining if a UMI sequence is of low complexity and will be removed. 
-[0.5<=x<=1.0] [default: 0.8]  
-  --pna_amplicon_lbs_filter                                 [boolean] Enable filtering of amplicons with UMI sequences that show similarity to the LBS sequence. 
-[default: true]  
-  --pna_amplicon_lbs_filter_min_overlap                     [integer] The minimum overlap required in a semi-global alignment of a UMI sequence with the LBS regions. 
-Reads with less overlap will not be removed by the LBS filter. [4<=x<=28] [default: 8]  
-  --pna_amplicon_lbs_filter_error_rate                      [number]  The allowed error-rate in a semi-global alignment of a UMI sequence with the LBS regions. The error 
-rate is defined as a percentage of UMI length. [0.0<=x<=1.0] [default: 0.1]  
+Edgelist options
+  --pna_edgelist_mismatch_threshold                         [integer] Allow this many mismatches when matching marker barcodes. [default: 0] 
+  --pna_edgelist_min_avg_quality                            [integer] Drop reads whose average quality in marker and UMI regions is below this. [default: 20] 
+  --pna_edgelist_max_umi_base_freq                          [number]  Drop low-complexity UMIs where one base makes up more than this fraction of the UMI. [default: 
+0.8]  
+  --pna_edgelist_lbs_overlap_max_edits                      [integer] Drop reads whose UMI aligns to any substring of an assay LBS (or its reverse complement) within this 
+many edits (Levenshtein distance). [default: 6]  
+  --save_pna_edgelist_reads                                 [boolean] Save the intermediate per-read edgelist parquet file generated from the raw input reads. 
+  --save_pna_edgelist_dropped_reads                         [boolean] Save the reads that were dropped by the edgelist step, with the reason they were dropped. 
 
-Demux options
-  --pna_demux_mismatches                                    [integer] The number of mismatches allowed in marker barcodes. [default: 1] 
-  --pna_demux_output_chunk_reads                            [string]  The target number of reads in a single file of the partitioned demux output. [default: 50M] 
-  --pna_demux_output_max_chunks                             [integer] The maximum number of chunks that the demuxed ouput for each umi region will be split into 
-[default: 8]  
-  --pna_demux_strategy                                      [string]  The demux and collapsing strategy to use  (accepted: paired, independent) [default: independent] 
- 
-  --save_pna_demux_parquet                                  [boolean] Save intermediate parquet files containing embeddings of all reads that contain valid antibody 
-barcodes.  
-  --save_pna_demux_passed_reads                             [boolean] Save intermediate FASTQC read files containing all reads that contain valid antibody barcodes. 
- 
-  --save_pna_demux_failed_reads                             [boolean] Save intermediate FASTQC read files containing all reads that do not contain valid antibody 
-barcodes.  
-
-Collapse options
-  --pna_collapse_algorithm                                  [string]  The algorithm to use for collapsing.  (accepted: cluster, directional) [default: directional] 
- 
-  --pna_collapse_mismatches                                 [integer] The number of mismatches allowed when collapsing (adjacency) [default: 2] 
-  --save_pna_collapsed_reads                                [boolean] Save an intermediate parquet file containing collapsed read information. 
+Aggregate options
+  --save_pna_aggregate_reads                                [boolean] Save the aggregated molecule-level parquet file. 
 
 Graph options
   --save_pna_graph_pixelfile                                [boolean] Save the PXL dataset after the graph stage. 
@@ -92,6 +68,18 @@ smaller of the two when during the refinement stage (iteration > 0) of multiplet
 automatic size filtering based on the data. [default: 8000]  
   --pna_graph_component_size_max_threshold                  [integer] Components with more nodes than this will be filtered from the output data. Set to null to enable 
 automatic size filtering based on the data. [default: 1000000]  
+
+Graph-collapse options
+  --skip_graph_collapse                                     [boolean] Skip graph-collapse step 
+  --save_pna_graph_collapse_pixelfile                       [boolean] Save the PXL dataset after the graph-collapse stage. 
+  --pna_graph_collapse_bfs_distance                         [integer] Maximum number of hops from a searched node to look for a same-marker, same-role collapse candidate. 
+[default: 6]  
+  --pna_graph_collapse_hamming_threshold                    [integer] Maximum Hamming distance (inclusive) between a searched node's UMI and a candidate's UMI for the 
+node to be collapsed into that candidate. [default: 2]  
+  --pna_graph_collapse_max_degree                           [integer] Search a node for a collapse target only when its degree is at most this value. 1 investigates only 
+leaves. [default: 1]  
+  --pna_graph_collapse_report_collapsed_sequences           [boolean] Also write a TSV file listing the component, original UMI and corrected UMI of every collapsed node. 
+ 
 
 Sample calling options
   --save_pna_sample_calling_pixelfile                       [boolean] Save the PXL dataset after the sample calling stage. 
@@ -118,22 +106,10 @@ true]
 
 Analysis options
   --skip_analysis                                           [boolean] Skip analysis step 
-  --save_pna_analysis_pixelfile                             [boolean] Save the PXL dataset after the analysis stage. 
   --pna_analysis_compute_proximity                          [boolean] Compute proximity scores [default: true] 
   --pna_analysis_compute_k_cores                            [boolean] Compute k-core summary tables for each component [default: true] 
   --pna_analysis_compute_svd_var_explained                  [boolean] Compute the variance explained by the SVD components [default: true] 
   --pna_analysis_svd_nbr_of_pivots                          [integer] Number of pivots to use for the SVD decomposition [default: 50] 
-
-Layout options
-  --skip_layout                                             [boolean] Skip layout step 
-  --pna_layout_no_node_marker_counts                        [boolean] Skip adding marker counts to the layout. 
-  --pna_layout_layout_algorithm                             [string]  Select a layout algorithm to use. This can be specified as a comma separated list to compute 
-multiple layouts. Possible values are: pmds, pmds_3d, wpmds, wpmds_3d, coarsened_pmds_3d.  
-(accepted: pmds_3d, wpmds_3d, coarsened_pmds_3d) [default: coarsened_pmds_3d]  
-  --pna_layout_pmds_pivots                                  [integer] Number of pivots to use for the PMDS layout algorithm. Default: 50. More gives better results, but 
-increases computation time. [default: 50]  
-  --pna_layout_wpmds_k                                      [integer] The window size used when computing probability weights for the wpmds layout method. Only used when 
-layout algorithm is set to wpmds. [default: 5]  
 
 Experiment Summary options
   --skip_experiment_summary                                 [boolean] Skip experiment summary generation 

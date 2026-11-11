@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.10.5
 
 Downloading plugin nf-schema@3.0.0
-Launching `./main.nf` [determined_pareto] revision: ed75e0e7d9
+Launching `./main.nf` [clever_hodgkin] revision: ed75e0e7d9
 
 
 ------------------------------------------------------
@@ -53,6 +53,7 @@ similiar size [default: 0.1]
 Phylogeny options
   --tree_tool             [string] Choose which software to use to infer phylogenetic tree.  (accepted: iqtree, fasttree) [default: 
 fasttree]  
+  --species_tree          [string] Species tree (Newick) used by Treerecs to reconcile the gene trees. 
 
 Generic options
   --help                  [boolean, string] Display the help message. 

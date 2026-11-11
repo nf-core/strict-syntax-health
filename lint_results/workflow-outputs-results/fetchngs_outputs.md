@@ -1,6 +1,6 @@
 # Workflow outputs migration: fetchngs
 
-- Generated: 2026-11-04T00:13:24.246762+00:00
+- Generated: 2026-11-11T00:14:23.781042+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -12,6 +12,6 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 ## Legacy `publishDir` references
 
-Found 9 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
+Found 10 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/fetchngs/blob/77ab316781b44feee0f5bddc4b53a0fc2b3eb285/conf/modules.config#L15) — 9 references
+- [`conf/modules.config`](https://github.com/nf-core/fetchngs/blob/69d7db45337d197d2dbc70a58cda6114cb7b65d0/conf/modules.config#L15) — 10 references

@@ -3,7 +3,8 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.10.5
 
-Launching `./main.nf` [crazy_gauss] revision: c23609c484
+Downloading plugin nf-core-utils@0.7.0
+Launching `./main.nf` [romantic_watson] revision: ec7504a72c
 
 
 ------------------------------------------------------
@@ -12,7 +13,7 @@ Launching `./main.nf` [crazy_gauss] revision: c23609c484
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/rnaseq 3.28.0dev
+  nf-core/rnaseq 3.28.0
 ------------------------------------------------------
 Typical pipeline command:
 

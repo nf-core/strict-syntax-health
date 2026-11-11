@@ -1,17 +1,10 @@
 # Nextflow lint results
 
-- Generated: 2026-11-10T00:12:57.210998033Z
+- Generated: 2026-11-11T00:17:03.265698253Z
 - Nextflow version: 26.10.5
-- Summary: 43 warnings
+- Summary: 44 warnings
 
 ## :warning: Warnings
-
-- Warning: `modules/local/gencode_download/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
-
-  ```nextflow
-      when:
-      ^^^^
-  ```
 
 - Warning: `modules/local/vcf_collect/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
@@ -147,6 +140,13 @@
   ```
 
 - Warning: `modules/nf-core/gffread/main.nf:24:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/gunzip/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -301,6 +301,13 @@
   ```
 
 - Warning: `modules/nf-core/umitools/extract/main.nf:22:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/wget/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

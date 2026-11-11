@@ -2,7 +2,7 @@
   "abotyper": {
     "full_name": "nf-core/abotyper",
     "html_url": "https://github.com/nf-core/abotyper",
-    "commit": "b90cc3fff3cba31f9b2973de8e065052282885a4",
+    "commit": "510bd126b371045b525d9202da7bf8b21be2ed2e",
     "errors": 0,
     "warnings": 35,
     "parse_error": false,
@@ -38,7 +38,7 @@
   "ampliseq": {
     "full_name": "nf-core/ampliseq",
     "html_url": "https://github.com/nf-core/ampliseq",
-    "commit": "27bbb2eaa0e6f14f4fb308255b8e28a0c906e8ee",
+    "commit": "33110d9347367213b12b6a208544e0eea9c513b8",
     "errors": 0,
     "warnings": 67,
     "parse_error": false,
@@ -314,9 +314,9 @@
   "deepmutscan": {
     "full_name": "nf-core/deepmutscan",
     "html_url": "https://github.com/nf-core/deepmutscan",
-    "commit": "04cb22136fee602ca490977dec64cce84a7a295f",
+    "commit": "3c8f1f7b9bdc8e2a9bb315dd1d1a500ca210f396",
     "errors": 0,
-    "warnings": 114,
+    "warnings": 89,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -446,7 +446,7 @@
   "eager": {
     "full_name": "nf-core/eager",
     "html_url": "https://github.com/nf-core/eager",
-    "commit": "82603c1b704a0636fb74836d7629e32b36a1629b",
+    "commit": "5c5aaab8ff9d157e09c5264b1afb7c55b875d5e6",
     "errors": 0,
     "warnings": 488,
     "parse_error": false,
@@ -518,14 +518,14 @@
   "fetchngs": {
     "full_name": "nf-core/fetchngs",
     "html_url": "https://github.com/nf-core/fetchngs",
-    "commit": "77ab316781b44feee0f5bddc4b53a0fc2b3eb285",
+    "commit": "69d7db45337d197d2dbc70a58cda6114cb7b65d0",
     "errors": 0,
     "warnings": 4,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 9
+    "publishdir_count": 10
   },
   "funcprofiler": {
     "full_name": "nf-core/funcprofiler",
@@ -554,14 +554,14 @@
   "genephylo": {
     "full_name": "nf-core/genephylo",
     "html_url": "https://github.com/nf-core/genephylo",
-    "commit": "47f34cb323bd07f819859a809bc370bf52792429",
+    "commit": "687ef5987e760a44823437eae414f80e8c4bedf1",
     "errors": 0,
-    "warnings": 18,
+    "warnings": 19,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 10
+    "publishdir_count": 19
   },
   "genephylomodeler": {
     "full_name": "nf-core/genephylomodeler",
@@ -638,9 +638,9 @@
   "hadge": {
     "full_name": "nf-core/hadge",
     "html_url": "https://github.com/nf-core/hadge",
-    "commit": "fedeeb3ef358fb7cf576eae6f20b97f95ef920d3",
+    "commit": "d8e8a563592d30fa9ca6dc014906a6b76734fae5",
     "errors": 0,
-    "warnings": 27,
+    "warnings": 57,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -662,14 +662,14 @@
   "hic": {
     "full_name": "nf-core/hic",
     "html_url": "https://github.com/nf-core/hic",
-    "commit": "e0084aec16e0b5c6ce5f11e00a0a995585fde3ed",
-    "errors": 12,
-    "warnings": 31,
+    "commit": "6a9bb1a348c64bd17553faba6367063bb103a206",
+    "errors": 0,
+    "warnings": 50,
     "parse_error": false,
-    "prints_help": null,
+    "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 39
+    "publishdir_count": 43
   },
   "hicar": {
     "full_name": "nf-core/hicar",
@@ -890,14 +890,14 @@
   "methylseq": {
     "full_name": "nf-core/methylseq",
     "html_url": "https://github.com/nf-core/methylseq",
-    "commit": "2e5493bd2a09c2c994bcc06357c69b86fcd6eb39",
+    "commit": "3caf7b85d76cd5742d06afc435decdfa812c7175",
     "errors": 0,
     "warnings": 68,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 47
+    "publishdir_count": 48
   },
   "mhcquant": {
     "full_name": "nf-core/mhcquant",
@@ -1154,14 +1154,14 @@
   "phaseimpute": {
     "full_name": "nf-core/phaseimpute",
     "html_url": "https://github.com/nf-core/phaseimpute",
-    "commit": "149fccfef51a4fc144bbc522a90c334aa0cb9bea",
+    "commit": "c23e1e05d1fe4ad49a4bd16b107a696fb90bd56e",
     "errors": 0,
-    "warnings": 0,
+    "warnings": 46,
     "parse_error": false,
     "prints_help": false,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 88
+    "publishdir_count": 95
   },
   "phyloplace": {
     "full_name": "nf-core/phyloplace",
@@ -1178,14 +1178,14 @@
   "pixelator": {
     "full_name": "nf-core/pixelator",
     "html_url": "https://github.com/nf-core/pixelator",
-    "commit": "dbfc3a35c6bf5c4c4361adb1c0205133b9ba8e86",
+    "commit": "2c30e8d8fdee269ab3835d2c62d320eda0bfca73",
     "errors": 0,
-    "warnings": 21,
+    "warnings": 12,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 12
+    "publishdir_count": 10
   },
   "plasmodiumdrugres": {
     "full_name": "nf-core/plasmodiumdrugres",
@@ -1382,19 +1382,19 @@
   "rnafusion": {
     "full_name": "nf-core/rnafusion",
     "html_url": "https://github.com/nf-core/rnafusion",
-    "commit": "7f49d94584b7f264f6852b4fcc28a942547a7936",
+    "commit": "78eca0402c9ee89bc6288e2d1695ad5cb731e065",
     "errors": 0,
-    "warnings": 43,
+    "warnings": 44,
     "parse_error": false,
     "prints_help": false,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 34
+    "publishdir_count": 36
   },
   "rnaseq": {
     "full_name": "nf-core/rnaseq",
     "html_url": "https://github.com/nf-core/rnaseq",
-    "commit": "48cc4b4d016fc9e64b51a20d1cb442a67cef7bcf",
+    "commit": "6cd7d99163ee973dceb406579c7b6fb6b21dbe51",
     "errors": 0,
     "warnings": 81,
     "parse_error": false,
@@ -1454,7 +1454,7 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "affa18fa060a433562e18f28e045f02aa39d7979",
+    "commit": "1d46c0274f2b465c55c1bf3a876fc7be4430d6f8",
     "errors": 0,
     "warnings": 134,
     "parse_error": false,
@@ -1502,7 +1502,7 @@
   "seqinspector": {
     "full_name": "nf-core/seqinspector",
     "html_url": "https://github.com/nf-core/seqinspector",
-    "commit": "7c3800206aa310ecd9588eff9f208c84aa52046c",
+    "commit": "caae6f9bac122ce56da9ee9f2dbea6e98604e708",
     "errors": 0,
     "warnings": 28,
     "parse_error": false,
@@ -1538,7 +1538,7 @@
   "smrnaseq": {
     "full_name": "nf-core/smrnaseq",
     "html_url": "https://github.com/nf-core/smrnaseq",
-    "commit": "2c2793ac05b4f9ab0cb5ab8141b7baa0594ab0c9",
+    "commit": "559916f75f1f39a11b577505ef069ba724f2727b",
     "errors": 0,
     "warnings": 35,
     "parse_error": false,
@@ -1598,9 +1598,9 @@
   "stableexpression": {
     "full_name": "nf-core/stableexpression",
     "html_url": "https://github.com/nf-core/stableexpression",
-    "commit": "c5f006a0cfbe73c7becf4097c569629ca2ed9349",
+    "commit": "c0dd9e32ff52c4cace6135da39a3d39ece67b944",
     "errors": 0,
-    "warnings": 32,
+    "warnings": 14,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": true,

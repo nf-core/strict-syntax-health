@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "888b825b9af9c47573ceeae5828ade0eebcb7a6d",
+  "_repo_commit": "cec21033a6f9ededcf304d2370ec644493559198",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -3582,6 +3582,12 @@
     "warnings": 0,
     "parse_error": false
   },
+  "fastvep_annotate": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fastvep/annotate",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
   "fastx_collapser": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fastx/collapser",
     "errors": 0,
@@ -5900,6 +5906,12 @@
   },
   "irescue": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/irescue",
+    "errors": 0,
+    "warnings": 0,
+    "parse_error": false
+  },
+  "isescan": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/isescan",
     "errors": 0,
     "warnings": 0,
     "parse_error": false

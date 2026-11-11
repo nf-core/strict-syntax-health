@@ -1,102 +1,23 @@
 # Nextflow lint results
 
-- Generated: 2026-06-16T20:26:44.657755399Z
-- Nextflow version: 26.04.3
-- Summary: 12 errors, 31 warnings
-
-## :x: Errors
-
-- Error: `modules/local/hicpro/dnase_mapping_stats.nf:2:10`: `sample` is not defined
-
-  ```nextflow
-      tag "$sample = $bam"
-           ^^^^^^^
-  ```
-
-- Error: `subworkflows/local/compartments/main.nf:26:28`: `cool` is already declared
-
-  ```nextflow
-              cool.map{meta, cool, res -> [meta, cool] },
-                             ^^^^
-  ```
-
-- Error: `subworkflows/local/cooler/main.nf:43:47`: `pairs` is already declared
-
-  ```nextflow
-      cload_inputs = pairs_res.multiMap { meta, pairs, index, cool_bin ->
-                                                ^^^^^
-  ```
-
-- Error: `subworkflows/local/hicpro/main.nf:18:5`: `meta` was assigned but not declared
-
-  ```nextflow
-      meta = row[0].clone()
-      ^^^^
-  ```
-
-- Error: `subworkflows/local/hicpro/main.nf:19:5`: `meta` is not defined
-
-  ```nextflow
-      meta.remove('chunk')
-      ^^^^
-  ```
-
-- Error: `subworkflows/local/hicpro/main.nf:20:13`: `meta` is not defined
-
-  ```nextflow
-      return [meta, row[1]]
-              ^^^^
-  ```
-
-- Error: `subworkflows/local/utils_nfcore_hic_pipeline/main.nf:140:13`: `completionEmail` is not defined
-
-  ```nextflow
-              completionEmail(
-              ^^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/utils_nfcore_hic_pipeline/main.nf:153:13`: `imNotification` is not defined
-
-  ```nextflow
-              imNotification(summary_params, hook_url)
-              ^^^^^^^^^^^^^^
-  ```
-
-- Error: `subworkflows/local/utils_nfcore_hic_pipeline/main.nf:292:9`: `meta` was assigned but not declared
-
-  ```nextflow
-          meta = row[0].clone()
-          ^^^^
-  ```
-
-- Error: `subworkflows/local/utils_nfcore_hic_pipeline/main.nf:293:9`: `meta` is not defined
-
-  ```nextflow
-          meta.chunk = i
-          ^^^^
-  ```
-
-- Error: `subworkflows/local/utils_nfcore_hic_pipeline/main.nf:294:9`: `meta` is not defined
-
-  ```nextflow
-          meta.part = row[1].size()
-          ^^^^
-  ```
-
-- Error: `subworkflows/local/utils_nfcore_hic_pipeline/main.nf:295:17`: `meta` is not defined
-
-  ```nextflow
-          map += [meta, file]
-                  ^^^^
-  ```
+- Generated: 2026-11-11T00:15:17.096734410Z
+- Nextflow version: 26.10.5
+- Summary: 50 warnings
 
 ## :warning: Warnings
 
-- Warning: `main.nf:73:5`: Emit name should be omitted when there is only one emit
+- Warning: `modules/local/fithichip/cool2matrix/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
-      multiqc_report = HIC.out.multiqc_report // channel: /path/to/multiqc_report.html
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/fithichip/main.nf:35:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
   ```
 
 - Warning: `modules/local/hicexplorer/hicPlotDistVsCounts.nf:22:9`: Variable was declared but not used
@@ -106,6 +27,27 @@
           ^^^^
   ```
 
+- Warning: `modules/local/pairs2bed/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/pairtools/pairtools_parse.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/split_cooler_dump/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
 - Warning: `modules/local/split_cooler_dump/main.nf:21:9`: Variable was declared but not used
 
   ```nextflow
@@ -113,49 +55,224 @@
           ^^^^
   ```
 
-- Warning: `subworkflows/local/compartments/main.nf:26:34`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `modules/nf-core/bowtie2/align/main.nf:32:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
-              cool.map{meta, cool, res -> [meta, cool] },
-                                   ^^^
+      when:
+      ^^^^
   ```
 
-- Warning: `subworkflows/local/cooler/main.nf:60:22`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `modules/nf-core/bowtie2/build/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/bwa/index/main.nf:22:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/bwa/mem/main.nf:28:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/calder2/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/cooler/balance/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/cooler/cload/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/cooler/dump/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/cooler/makebins/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/cooler/zoomify/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/fastqc/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/macs3/callpeak/main.nf:26:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/multiqc/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/pairix/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/pairtools/dedup/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/pairtools/merge/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/pairtools/parse/main.nf:22:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/pairtools/restrict/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/pairtools/select/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/pairtools/sort/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/pairtools/stats/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/samtools/faidx/main.nf:24:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/samtools/flagstat/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/samtools/index/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/samtools/sort/main.nf:25:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/trimgalore/main.nf:25:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `subworkflows/local/compartments/main.nf:26:41`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+              cool.map { meta, cool_file, res -> [meta, cool_file] },
+                                          ^^^
+  ```
+
+- Warning: `subworkflows/local/cooler/main.nf:66:22`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_cool.map{[it[0], it[1], ""]}
                        ^^
   ```
 
-- Warning: `subworkflows/local/cooler/main.nf:60:29`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/cooler/main.nf:66:29`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_cool.map{[it[0], it[1], ""]}
                               ^^
   ```
 
-- Warning: `subworkflows/local/cooler/main.nf:72:18`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/cooler/main.nf:71:24`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .filter{ it[2] == it[3] }
-                   ^^
+          .filter{ meta, cool, zoom_res -> meta.resolution == zoom_res }
+                         ^^^^
   ```
 
-- Warning: `subworkflows/local/cooler/main.nf:72:27`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-          .filter{ it[2] == it[3] }
-                            ^^
-  ```
-
-- Warning: `subworkflows/local/cooler/main.nf:85:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/cooler/main.nf:84:38`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           COOLER_BALANCE.out.cool.map{[it[0], it[1], ""]}
                                        ^^
   ```
 
-- Warning: `subworkflows/local/cooler/main.nf:85:45`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/cooler/main.nf:84:45`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           COOLER_BALANCE.out.cool.map{[it[0], it[1], ""]}
@@ -176,135 +293,65 @@
                         ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_hic_pipeline/main.nf:29:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      monochrome_logs   // boolean: Do not use coloured log outputs
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_hic_pipeline/main.nf:32:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      input             //  string: Path to input samplesheet
-      ^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_hic_pipeline/main.nf:33:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      help              // boolean: Display help message and exit
-      ^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_hic_pipeline/main.nf:34:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      help_full         // boolean: Show the full help message
-      ^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/local/utils_nfcore_hic_pipeline/main.nf:35:5`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-      show_hidden       // boolean: Show hidden parameters in the help message
-      ^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nextflow_pipeline/main.nf:43:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:16:5`: Variable was declared but not used
-
-  ```nextflow
-      valid_config = checkConfigProvided()
-      ^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:20:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      valid_config
-      ^^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfschema_plugin/main.nf:72:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      dummy_emit = true
-      ^^^^^^^^^^^^^^^
-  ```
-
-- Warning: `workflows/hic.nf:38:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/hic.nf:39:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       ch_restriction_site
       ^^^^^^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/hic.nf:97:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/hic.nf:114:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               def paired = files.findAll { it.name =~ /_val_[12]\.fq\.gz$/ }
                                            ^^
   ```
 
-- Warning: `workflows/hic.nf:110:68`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/hic.nf:128:72`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
-      ch_multiqc_files = ch_multiqc_files.mix(FASTQC.out.zip.collect{it[1]})
-                                                                     ^^
+          ch_multiqc_files = ch_multiqc_files.mix(FASTQC.out.zip.collect{it[1]})
+                                                                         ^^
   ```
 
-- Warning: `workflows/hic.nf:155:22`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/hic.nf:175:22`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .filter{ it[0].resolution == it[2] }
                        ^^
   ```
 
-- Warning: `workflows/hic.nf:155:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/hic.nf:175:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .filter{ it[0].resolution == it[2] }
                                            ^^
   ```
 
-- Warning: `workflows/hic.nf:170:22`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/hic.nf:190:22`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .filter{ it[0].resolution == it[2] }
                        ^^
   ```
 
-- Warning: `workflows/hic.nf:170:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/hic.nf:190:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .filter{ it[0].resolution == it[2] }
                                            ^^
   ```
 
-- Warning: `workflows/hic.nf:187:22`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/hic.nf:207:22`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .filter{ it[0].resolution == it[2] }
                        ^^
   ```
 
-- Warning: `workflows/hic.nf:187:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/hic.nf:207:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .filter{ it[0].resolution == it[2] }
                                            ^^
-  ```
-
-- Warning: `workflows/hic.nf:254:5`: Emit name should be omitted when there is only one emit
-
-  ```nextflow
-      multiqc_report = MULTIQC.out.report.map { _meta, report -> [report] }.toList() // channel: /path/to/multiqc_report.html
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ```
