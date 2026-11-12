@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-11-01T00:16:23.107093998Z
-- Nextflow version: 26.10.4
+- Generated: 2026-11-12T00:19:29.978606823Z
+- Nextflow version: 26.10.5
 - Summary: 30 warnings
 
 ## :warning: Warnings
@@ -21,13 +21,6 @@
   ```
 
 - Warning: `modules/local/parse_cellrangermulti_samplesheet/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
-
-  ```nextflow
-      when:
-      ^^^^
-  ```
-
-- Warning: `modules/local/star_align/main.nf:46:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -196,6 +189,13 @@
   ```
 
 - Warning: `modules/nf-core/star/genomegenerate/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/star/starsolo/main.nf:43:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

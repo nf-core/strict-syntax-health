@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "cec21033a6f9ededcf304d2370ec644493559198",
+  "_repo_commit": "470454ce39c7d3ea191c0e195894653bc4a782ba",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -3392,6 +3392,12 @@
   },
   "fairbioheaders_combine": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fairbioheaders/combine",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
+  "fairbioheaders_convert": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fairbioheaders/convert",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
@@ -6978,6 +6984,12 @@
     "warnings": 1,
     "parse_error": false
   },
+  "metaproviz_internalstandard": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/metaproviz/internalstandard",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
   "metaspace_converter": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/metaspace/converter",
     "errors": 0,
@@ -8814,6 +8826,12 @@
     "warnings": 1,
     "parse_error": false
   },
+  "plink_homozyg": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plink/homozyg",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
   "plink_hwe": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/plink/hwe",
     "errors": 0,
@@ -9440,6 +9458,12 @@
   },
   "rastair2_call": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/rastair2/call",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
+  "rastair2_mbias": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/rastair2/mbias",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
@@ -12284,6 +12308,12 @@
   },
   "varnet_filter": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/varnet/filter",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
+  "varnet_getref": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/varnet/getref",
     "errors": 0,
     "warnings": 1,
     "parse_error": false

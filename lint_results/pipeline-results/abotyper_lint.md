@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-11-11T00:12:34.699089823Z
+- Generated: 2026-11-12T00:12:33.324217132Z
 - Nextflow version: 26.10.5
 - Summary: 35 warnings
 
@@ -216,14 +216,14 @@
                                     ^^^^^^^^
   ```
 
-- Warning: `subworkflows/local/variants_quantification/main.nf:66:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/variants_quantification/main.nf:68:19`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .filter { it[3] == null }
                     ^^
   ```
 
-- Warning: `subworkflows/local/variants_quantification/main.nf:67:70`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/variants_quantification/main.nf:69:70`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .subscribe { log.warn "Clair3 produced no gVCF for sample '${it[0].id}': relying on the BAM pileup alone (flagged REVIEW)" }

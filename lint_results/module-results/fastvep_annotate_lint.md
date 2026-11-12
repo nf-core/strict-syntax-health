@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-11-11T00:20:35.477457+00:00
+- Generated: 2026-11-12T00:20:38.193429+00:00
 - Nextflow version: 26.10.5
 - Summary: 1 warning
 
@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/fastvep/annotate/main.nf:29:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
-    ```nextflow
-        when:
-        ^^^^^
-    ```
+  ```nextflow
+      when:
+      ^^^^^
+  ```

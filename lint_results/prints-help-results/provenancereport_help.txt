@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.10.5
 
 Downloading plugin nf-prov@1.7.0
-Launching `./main.nf` [furious_raman] revision: 83aa91895d
+Launching `./main.nf` [naughty_fibonacci] revision: 83aa91895d
 
 
 ------------------------------------------------------
@@ -13,7 +13,7 @@ Launching `./main.nf` [furious_raman] revision: 83aa91895d
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/provenancereport 1.0.1
+  nf-core/provenancereport 1.0.2dev
 ------------------------------------------------------
 Typical pipeline command:
 

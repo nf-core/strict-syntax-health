@@ -4,8 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.10.5
 
 Downloading plugin nf-fgbio@1.0.0
-Downloading plugin nf-prov@1.7.0
-Launching `./main.nf` [distracted_mandelbrot] revision: a60dba3729
+Launching `./main.nf` [disturbed_venter] revision: 5cd1df54df
 
 
 ------------------------------------------------------
@@ -21,7 +20,7 @@ Launching `./main.nf` [distracted_mandelbrot] revision: a60dba3729
    \ |   \  /     .__| /¯¯\ |  \ |___ |  \
     `|____\´
 
-  nf-core/sarek 3.12.0
+  nf-core/sarek 3.13.0dev
 ------------------------------------------------------
 Typical pipeline command:
 

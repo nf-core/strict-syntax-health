@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.3
+ N E X T F L O W   ~  version 26.10.5
 
-Launching `./main.nf` [focused_leavitt] revision: e0ee1ccd56
+Launching `./main.nf` [thirsty_montalcini] revision: 39ab2aa8c1
 
 
 ------------------------------------------------------

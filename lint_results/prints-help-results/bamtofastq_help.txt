@@ -1,10 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.4
+ N E X T F L O W   ~  version 26.10.5
 
-Downloading plugin nf-schema@2.7.3
-Launching `./main.nf` [compassionate_meninsky] revision: 287eaf9b47
+Downloading plugin nf-schema@3.0.0
+Launching `./main.nf` [pedantic_kimura] revision: 287eaf9b47
 
 
 ------------------------------------------------------
@@ -15,6 +15,7 @@ Launching `./main.nf` [compassionate_meninsky] revision: 287eaf9b47
                                         `._,._,'
   nf-core/bamtofastq 2.3.0dev
 ------------------------------------------------------
+
 Typical pipeline command:
 
   nextflow run nf-core/bamtofastq -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
@@ -64,4 +65,5 @@ Generic options
 
 * Software dependencies
     https://github.com/nf-core/bamtofastq/blob/master/CITATIONS.md
+
 

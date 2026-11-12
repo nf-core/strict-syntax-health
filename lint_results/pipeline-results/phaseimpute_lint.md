@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-11-11T00:16:15.052960658Z
+- Generated: 2026-11-12T00:16:15.135569791Z
 - Nextflow version: 26.10.5
 - Summary: 46 warnings
 
@@ -139,7 +139,7 @@
       ^^^^
   ```
 
-- Warning: `modules/nf-core/custom/geneticmapconvert/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/custom/geneticmapconvert/main.nf:24:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

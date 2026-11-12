@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.10.5
 
 Downloading plugin nf-amazon@2.15.0
-Launching `./main.nf` [sick_easley] revision: ce988dd915
+Launching `./main.nf` [stoic_jang] revision: ce988dd915
 
 
 ------------------------------------------------------

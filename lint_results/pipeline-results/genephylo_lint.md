@@ -1,12 +1,19 @@
 # Nextflow lint results
 
-- Generated: 2026-11-11T00:14:38.662659782Z
+- Generated: 2026-11-12T00:14:15.798436634Z
 - Nextflow version: 26.10.5
-- Summary: 19 warnings
+- Summary: 20 warnings
 
 ## :warning: Warnings
 
-- Warning: `modules/local/ete_taxdb.nf:16:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/ete/filter/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/ete/taxdb/main.nf:16:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

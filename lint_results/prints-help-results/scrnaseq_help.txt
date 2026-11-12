@@ -1,10 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.4
+ N E X T F L O W   ~  version 26.10.5
 
-Downloading plugin nf-schema@2.8.0
-Launching `./main.nf` [grave_blackwell] revision: b292f28dc3
+Launching `./main.nf` [distracted_allen] revision: b292f28dc3
 
 
 ------------------------------------------------------
@@ -30,8 +29,8 @@ Cloud infrastructure.
   --multiqc_title                 [string] MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
 
 Mandatory arguments
-  --barcode_whitelist             [string] If not using the 10X Genomics platform, a custom barcode whitelist can be used with 
-`--barcode_whitelist`.  
+  --barcode_whitelist             [string] Path to a custom barcode whitelist. Multiple files can be provided as a comma-separated list. 
+ 
   --aligner                       [string] Name of the tool to use for scRNA (pseudo-) alignment.  (accepted: kallisto, star, simpleaf, 
 cellranger, cellrangerarc, cellrangermulti) [default: simpleaf]  
   --protocol                      [string] The protocol that was used to generate the single cell data, e.g. 10x Genomics v2 Chemistry.
@@ -75,6 +74,7 @@ STARSolo Options
   --star_feature                  [string] Quantification type of different transcriptomic feature. Use `GeneFull` on pre-mRNA count for 
 single-nucleus RNA-seq reads. Use `Gene Velocyto` to generate RNA velocity matrix.  (accepted: 
 Gene, GeneFull, Gene Velocyto) [default: Gene]  
+  --manifest                      [string] Path to a STARsolo read-files manifest for Smart-seq input. 
 
 Kallisto/BUS Options
   --kallisto_index                [string] Specify a path to the precomputed Kallisto index. 
