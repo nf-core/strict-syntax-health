@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.10.5
 
-Launching `./main.nf` [suspicious_boyd] revision: 3482ec1bc8
+Launching `./main.nf` [stoic_newton] revision: 3482ec1bc8
 
 
 ------------------------------------------------------

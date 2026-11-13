@@ -1,12 +1,12 @@
 # Nextflow lint results
 
-- Generated: 2026-11-12T00:20:38.372303+00:00
+- Generated: 2026-11-13T00:20:38.791268+00:00
 - Nextflow version: 26.10.5
 - Summary: 1 warning
 
 ## :warning: Warnings
 
-- Warning: `modules/nf-core/parabricks/indexgvcf/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/parabricks/indexgvcf/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

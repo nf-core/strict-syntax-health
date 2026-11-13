@@ -4,7 +4,8 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.10.5
 
 WARN: Cannot read project manifest -- Cause:  Cannot get property 'ENA_WEBIN' on null object
-Launching `./main.nf` [friendly_goldberg] revision: ad250074a0
+Downloading plugin nf-schema@2.5.1
+Launching `./main.nf` [backstabbing_mcnulty] revision: 63f254ac5b
 
 WARN: Unrecognized config option 'validation.defaultIgnoreParams'
 WARN: Unrecognized config option 'validation.monochromeLogs'
@@ -25,47 +26,76 @@ help message of that parameter will be printed.
 or `--helpFull`.  
 
 Input/output options
-  --input                       [string] Path to samplesheet describing the data to be submitted (supported formats: csv, tsv, yaml, yml, 
+  --input                        [string] Path to samplesheet describing the data to be submitted (supported formats: csv, tsv, yaml, yml, 
 json). Columns/fields depend on the pipeline mode  
-  --outdir                      [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
+  --outdir                       [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
 Cloud infrastructure.  
-  --email                       [string] Email address for completion summary. 
-  --multiqc_title               [string] MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+  --email                        [string] Email address for completion summary. 
+  --multiqc_title                [string] MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
 
 rRNA and tRNA detection options
-  --rrna_limit                  [number] Minimum percentage of 16S, 23S, and 5S rRNA gene length recovered to count the gene as present. 
+  --rrna_limit                   [number] Minimum percentage of 16S, 23S, and 5S rRNA gene length recovered to count the gene as present. 
 [default: 80]  
-  --trna_limit                  [number] Minimum number of tRNA genes detected to count tRNA as present. This value is defined by the 
+  --trna_limit                   [number] Minimum number of tRNA genes detected to count tRNA as present. This value is defined by the 
 MISAG/MIMAG standard and must not be modified. [default: 18]  
 
 Assigning NCBI taxonomy with CAT_pack
-  --cat_db                       Path to local CAT_pack DB 
+  --cat_db                        Path to local CAT_pack DB 
 
-Evaluation options
-  --checkm2_db                            Path to pre-downloaded CheckM2 database. If omitted, downloads the version set by 
+Prokaryotic genome evaluation options
+  --checkm2_db                             Path to pre-downloaded CheckM2 database. If omitted, downloads the version set by 
 `--checkm2_db_download_id`  
-  --checkm2_db_download_id      [integer] Zenodo ID for CheckM2 database download [default: 14897628] 
+  --checkm2_db_download_id       [integer] Zenodo ID for CheckM2 database download [default: 14897628] 
+
+Eukaryotic genome evaluation options
+  --busco_db                     [string]  BUSCO `*_odb10` or `*_odb12` lineage dataset as an uncompressed folder or a `.tar.gz`/`.tgz` archive 
+(local path or URL), e.g. 
+`https://busco-data.ezlab.org/v5/data/lineages/eukaryota_odb10.2024-01-08.tar.gz`. A folder is 
+expected to contain a `lineages` subfolder with the lineage dataset, e.g. 
+`lineages/eukaryota_odb10`. If provided, BUSCO runs in offline mode. If omitted, BUSCO downloads the 
+lineage set by `--busco_db_lineage` during the run (requires an internet connection). Used only with 
+`--eukaryotic_completeness_tool busco`.  
+  --busco_db_lineage             [string]  Name of the BUSCO `*_odb10` or `*_odb12` lineage to check eukaryotic genomes against (e.g. 
+`eukaryota_odb10`), or `auto`, `auto_prok`, `auto_euk` for automatic lineage selection. When used 
+with `--busco_db`, it should correspond to the lineage supplied there. Without `--busco_db`, the 
+lineage is downloaded during the run (requires an internet connection). Used only with 
+`--eukaryotic_completeness_tool busco`. [default: auto_euk]  
+  --save_busco_db                [boolean] Save BUSCO lineage datasets downloaded during the run (when `--busco_db` is not provided) to the 
+output directory. Useful for reproducibility, as BUSCO datasets are frequently updated and old 
+versions do not always remain accessible. Used only with `--eukaryotic_completeness_tool busco`. 
+[default: false]  
+  --busco_clean                  [boolean] Remove BUSCO intermediate files after each run. BUSCO creates a large number of intermediate files, 
+which may cause problems on clusters with file number limits, particularly with many MAGs/bins. Used 
+only with `--eukaryotic_completeness_tool busco`. [default: true]  
+  --eukcc_db                     [string]  EukCC database as an uncompressed folder or a `.tar.gz`/`.tgz` archive (local path or URL). Used to 
+calculate completeness and contamination of eukaryotic MAGs/bins if those values were not provided 
+in the samplesheet. URLs are downloaded and archives are extracted by the pipeline in every run, so 
+we recommend downloading and extracting the database once and providing the folder. [default: 
+http://ftp.ebi.ac.uk/pub/databases/metagenomics/eukcc/eukcc2_db_ver_1.1.tar.gz]  
+  --eukaryotic_completeness_tool [string]  Tool used to calculate completeness of eukaryotic MAGs/bins: `eukcc` or `busco`. Contamination is 
+always calculated by EukCC, unless it is provided in the samplesheet.  (accepted: eukcc, busco) 
+[default: eukcc]  
 
 Generic options
-  --multiqc_methods_description [string]          Custom MultiQC yaml file containing HTML including a methods description. 
-  --help                        [boolean, string] Display the help message. 
-  --help_full                   [boolean]         Display the full detailed help message. 
-  --show_hidden                 [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+  --multiqc_methods_description  [string]          Custom MultiQC yaml file containing HTML including a methods description. 
+  --help                         [boolean, string] Display the help message. 
+  --help_full                    [boolean]         Display the full detailed help message. 
+  --show_hidden                  [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
  
 
 Pipeline flow control parameters
-  --center_name                 [string]  Name of the submitter's organisation (mandatory for broker accounts). 
-  --upload_tpa                  [boolean] Mark the submission as a Third PArty (TPA). Not applicable to `--mode reads`. [default: false] 
+  --center_name                  [string]  Name of the submitter's organisation (mandatory for broker accounts). 
+  --upload_tpa                   [boolean] Mark the submission as a Third PArty (TPA). Not applicable to `--mode reads`. [default: false] 
  
-  --mode                        [string]  Type of the data to be submitted  (accepted: mags, bins, metagenomic_assemblies, reads) 
-  --test_upload                 [boolean] Upload to ENA TEST server instead of LIVE server [default: true] 
-  --is_private                  [boolean] Use that flag if you are referencing private data accessions in the samplesheet [default: false] 
+  --mode                         [string]  Type of the data to be submitted  (accepted: mags, bins, metagenomic_assemblies, reads) 
+  --test_upload                  [boolean] Upload to ENA TEST server instead of LIVE server [default: true] 
+  --is_private                   [boolean] Use that flag if you are referencing private data accessions in the samplesheet [default: false] 
  
-  --release_date                [string]  Date (YYYY-MM-DD) until which the newly created study stays private in ENA. 
-  --submission_study            [string]  ENA study accession (PRJ/ERP) to submit the data to 
-  --study_metadata              [string]  Path to a file (JSON, CSV, or TSV) with metadata for registering a new ENA study. Required if 
+  --release_date                 [string]  Date (YYYY-MM-DD) until which the newly created study stays private in ENA. 
+  --submission_study             [string]  ENA study accession (PRJ/ERP) to submit the data to 
+  --study_metadata               [string]  Path to a file (JSON, CSV, or TSV) with metadata for registering a new ENA study. Required if 
 --submission_study is not set.  
-  --webincli_mode               [string]  Webin-CLI mode for ENA interaction: `submit` uploads data, `validate` performs validation only.  
+  --webincli_mode                [string]  Webin-CLI mode for ENA interaction: `submit` uploads data, `validate` performs validation only.  
 (accepted: submit, validate) [default: submit]  
  !! Hiding 17 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------

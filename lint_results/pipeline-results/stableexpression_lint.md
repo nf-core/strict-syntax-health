@@ -1,24 +1,10 @@
 # Nextflow lint results
 
-- Generated: 2026-11-11T00:19:36.958433864Z
+- Generated: 2026-11-13T00:19:31.942562205Z
 - Nextflow version: 26.10.5
-- Summary: 14 warnings
+- Summary: 12 warnings
 
 ## :warning: Warnings
-
-- Warning: `modules/local/expressionatlas/getaccessions/main.nf:31:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def keywords_string = keywords.split(',').collect { it.trim() }.join(' ')
-                                                          ^^
-  ```
-
-- Warning: `modules/local/geo/getaccessions/main.nf:33:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
-
-  ```nextflow
-      def keywords_string = keywords.split(',').collect { it.trim() }.join(' ')
-                                                          ^^
-  ```
 
 - Warning: `modules/nf-core/multiqc/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 

@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.10.5
 
-Launching `./main.nf` [furious_coulomb] revision: 28a63b89f8
+Launching `./main.nf` [cheeky_hopper] revision: 28a63b89f8
 
 
 ------------------------------------------------------
@@ -60,6 +60,7 @@ https://github.com/nf-core/test-datasets/raw/smrnaseq/miRBase/mature.fa]
 https://github.com/nf-core/test-datasets/raw/smrnaseq/miRBase/hairpin.fa]  
   --mirgenedb_hairpin             [string]  Path to FASTA file with miRNAs precursors. 
   --bowtie_index                  [string]  Path to a Bowtie 1 index directory 
+  --bowtie_align_args             [string]  Additional arguments to pass to Bowtie alignment. 
   --save_reference                [boolean] Save generated reference genome files to results. 
   --igenomes_base                 [string]  Directory / URL base for iGenomes references. [default: s3://ngi-igenomes/igenomes/] 
 

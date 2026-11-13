@@ -1,6 +1,6 @@
 # Workflow outputs migration: pixelator
 
-- Generated: 2026-11-12T00:16:48.081636+00:00
+- Generated: 2026-11-13T00:16:12.305889+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,5 +14,5 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 10 `publishDir` references across 2 files that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.pna.config`](https://github.com/nf-core/pixelator/blob/d6c552cc3eafb2f49d68bf7f26f5d5e814826df0/conf/modules.pna.config#L26) — 7 references
-- [`conf/modules.config`](https://github.com/nf-core/pixelator/blob/d6c552cc3eafb2f49d68bf7f26f5d5e814826df0/conf/modules.config#L16) — 3 references
+- [`conf/modules.pna.config`](https://github.com/nf-core/pixelator/blob/9479b2332c2a3e0f3173a372aa944740364d30bc/conf/modules.pna.config#L26) — 7 references
+- [`conf/modules.config`](https://github.com/nf-core/pixelator/blob/9479b2332c2a3e0f3173a372aa944740364d30bc/conf/modules.config#L16) — 3 references

@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.3
+ N E X T F L O W   ~  version 26.10.5
 
-Launching `./main.nf` [admiring_neumann] revision: 1996496361
+Launching `./main.nf` [elated_sammet] revision: 1996496361
 
 
 ------------------------------------------------------

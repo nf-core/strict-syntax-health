@@ -1,19 +1,19 @@
 # Nextflow lint results
 
-- Generated: 2026-11-07T00:14:24.194021540Z
+- Generated: 2026-11-13T00:18:58.523529955Z
 - Nextflow version: 26.10.5
-- Summary: 33 warnings
+- Summary: 35 warnings
 
 ## :warning: Warnings
 
-- Warning: `conf/modules.config:59:27`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:60:27`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   saveAs: { filename -> "db" }
                             ^^^^^^^^
   ```
 
-- Warning: `conf/modules.config:65:27`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:66:27`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
                   saveAs: { filename -> "tax" }
@@ -118,6 +118,13 @@
       ^^^^
   ```
 
+- Warning: `modules/nf-core/busco/busco/main.nf:41:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
 - Warning: `modules/nf-core/catpack/addnames/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
@@ -196,6 +203,13 @@
   ```
 
 - Warning: `modules/nf-core/find/concatenate/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/gunzip/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

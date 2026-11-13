@@ -4,7 +4,8 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.10.5
 
 Downloading plugin nf-fgbio@1.0.0
-Launching `./main.nf` [disturbed_venter] revision: 5cd1df54df
+Downloading plugin nf-prov@1.7.0
+Launching `./main.nf` [drunk_boyd] revision: 98a722b8fe
 
 
 ------------------------------------------------------
@@ -104,6 +105,7 @@ matched tumor will still be processed through germline variant calling tools.
   --cf_mincov                         [integer] Minimal read coverage for a position to be considered in BAF analysis. [default: 0] 
   --cf_ploidy                         [string]  Genome ploidy used by ControlFREEC [default: 2] 
   --cf_window                         [number]  Overwrite Control-FREEC window size. 
+  --cf_omit_sex                       [boolean] Do not pass the sample sex to Control-FREEC (tumor-only and tumor/normal). 
   --cnvkit_reference                  [string]  Copy-number reference for CNVkit 
   --freebayes_filter                  [string]  Filtering expression for vcflib/vcffilter [default: 30] 
   --joint_germline                    [boolean] Turn on the joint germline variant calling for GATK haplotypecaller 
@@ -155,6 +157,7 @@ Annotation
 rs_dbSNP,HGVSc_VEP,HGVSp_VEP,1000Gp3_EAS_AF,1000Gp3_AMR_AF,LRT_score,GERP++_RS,gnomAD_exomes_AF] 
  
   --vep_loftee                        [boolean] Enable the use of the VEP LOFTEE plugin. 
+  --vep_loftee_gerp_bigwig            [string]  Path to the GERP conservation BigWig file for the VEP LOFTEE plugin. 
   --vep_mastermind                    [boolean] Enable the use of the VEP Mastermind plugin. 
   --mastermind_file                   [string]  Path to Mastermind cited variants VCF file. 
   --mastermind_mutations              [boolean] Mastermind plugin mutations parameter. 

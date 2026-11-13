@@ -1,6 +1,6 @@
 # Workflow outputs migration: chipseq
 
-- Generated: 2026-11-07T00:10:20.943783+00:00
+- Generated: 2026-11-13T00:13:25.480036+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,6 +14,6 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 57 `publishDir` references across 3 files that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/chipseq/blob/ecba27641406eec5bec7778792294e203536b50d/conf/modules.config#L19) — 55 references
-- [`modules/nf-core/subread/featurecounts/tests/nextflow.config`](https://github.com/nf-core/chipseq/blob/ecba27641406eec5bec7778792294e203536b50d/modules/nf-core/subread/featurecounts/tests/nextflow.config#L3) — 1 reference
-- [`modules/nf-core/umitools/extract/tests/nextflow.config`](https://github.com/nf-core/chipseq/blob/ecba27641406eec5bec7778792294e203536b50d/modules/nf-core/umitools/extract/tests/nextflow.config#L3) — 1 reference
+- [`conf/modules.config`](https://github.com/nf-core/chipseq/blob/a1d41b1133c1e28ae48b6fd26378c9aa04bbfb56/conf/modules.config#L19) — 55 references
+- [`modules/nf-core/subread/featurecounts/tests/nextflow.config`](https://github.com/nf-core/chipseq/blob/a1d41b1133c1e28ae48b6fd26378c9aa04bbfb56/modules/nf-core/subread/featurecounts/tests/nextflow.config#L3) — 1 reference
+- [`modules/nf-core/umitools/extract/tests/nextflow.config`](https://github.com/nf-core/chipseq/blob/a1d41b1133c1e28ae48b6fd26378c9aa04bbfb56/modules/nf-core/umitools/extract/tests/nextflow.config#L3) — 1 reference

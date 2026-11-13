@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-11-12T00:16:48.013600305Z
+- Generated: 2026-11-13T00:16:12.240004343Z
 - Nextflow version: 26.10.5
 - Summary: 12 warnings
 
@@ -69,21 +69,21 @@
       ^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_pixelator_pipeline/main.nf:279:20`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_pixelator_pipeline/main.nf:280:20`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           .flatMap { it }
                      ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_pixelator_pipeline/main.nf:290:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_pixelator_pipeline/main.nf:291:51`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               tuple([id: 'all'], filtered.collect { it[0] }, filtered.collect { it[1] })
                                                     ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_pixelator_pipeline/main.nf:290:79`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_pixelator_pipeline/main.nf:291:79`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               tuple([id: 'all'], filtered.collect { it[0] }, filtered.collect { it[1] })

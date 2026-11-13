@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.10.5
 
 Downloading plugin nf-schema@2.7.3
-Launching `./main.nf` [stupefied_bhabha] revision: afcd3b0e08
+Launching `./main.nf` [big_stone] revision: f6c27dd409
 
 
 ------------------------------------------------------
@@ -30,16 +30,18 @@ Cloud infrastructure.
   --multiqc_title               [string] MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
 
 ABO typing options
-  --abo_reference_fasta         [string]  ABO reference FASTA (NG_006669.2, 42,144 bp) that reads are aligned to. 
-  --abo_reference_fai           [string]  Index (.fai) of the ABO reference FASTA. 
-  --abo_panel                   [string]  ABO diagnostic variant panel (positions, calling thresholds, ISBT allele associations). 
-  --abo_bed                     [string]  Panel BED file used as a fallback for the panel-filtering step. 
-  --abo_clair3_region_bed       [string]  BED file restricting Clair3 calling (and gVCF reference blocks) to the ABO exon 2-7 region. 
-  --clair3_model_url            [string]  URL of the Clair3 PyTorch model files (`pileup.pt` and `full_alignment.pt`) for the sequencing 
-chemistry used.  
-  --renaming_file               [string]  Optional tab-delimited file mapping `sequencingID` to `sampleName` to rename samples in the final 
-tables.  
-  --skip_renaming               [boolean] Skip the optional sample renaming step. [default: true] 
+  --abo_reference_fasta         [string] ABO reference FASTA (NG_006669.2, 42,144 bp) that reads are aligned to. 
+  --abo_reference_fai           [string] Index (.fai) of the ABO reference FASTA. 
+  --abo_panel                   [string] ABO diagnostic variant panel (positions, calling thresholds, ISBT allele associations). 
+  --abo_clair3_region_bed       [string] BED file restricting Clair3 calling (and gVCF reference blocks) to the ABO exon 2-7 region. 
+  --clair3_model                [string] Name of the Clair3 model packaged in the Clair3 container, used when neither --clair3_model_url nor 
+--clair3_model_path is given. [default: r1041_e82_400bps_sup_v500]  
+  --clair3_model_path           [string] Folder with your own Clair3 model (`pileup.pt` and `full_alignment.pt`), used instead of the 
+packaged model.  
+  --clair3_model_url            [string] URL of a Clair3 model folder (`pileup.pt` and `full_alignment.pt`) to download and use; takes 
+priority over --clair3_model_path and the packaged model.  
+  --minimap2_preset             [string] minimap2 alignment preset (`-x`) for the sequencing platform.  (accepted: map-ont, lr:hq, 
+map-pb, map-hifi, sr) [default: map-ont]  
 
 Generic options
   --multiqc_methods_description [string] Custom MultiQC yaml file containing HTML including a methods description. 
