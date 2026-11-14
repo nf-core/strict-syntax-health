@@ -1,9 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.5
+ N E X T F L O W   ~  version 26.10.6
 
-Launching `./main.nf` [evil_curran] revision: d6b24b603f
+Downloading plugin nf-schema@3.0.0
+Launching `./main.nf` [voluminous_sammet] revision: ba424b6f27
 
 
 ------------------------------------------------------
@@ -12,7 +13,7 @@ Launching `./main.nf` [evil_curran] revision: d6b24b603f
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/nanostring 2.0.0
+  nf-core/nanostring 2.0.1dev
 ------------------------------------------------------
 
 Typical pipeline command:
@@ -45,9 +46,6 @@ and respective genes to be selected.
 Skipping Options
   --skip_heatmap                [boolean] Skip creating the heatmap 
 
-Reference genome options
-  --genome                      [string] Name of iGenomes reference. 
-
 Generic options
   --email                       [string]          Email address for completion summary. 
   --multiqc_title               [string]          MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
@@ -56,7 +54,7 @@ Generic options
   --help_full                   [boolean]         Display the full detailed help message. 
   --show_hidden                 [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
  
- !! Hiding 19 param(s), use the `--showHidden` parameter to show them !!
+ !! Hiding 17 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
 
 * The pipeline

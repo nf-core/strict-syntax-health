@@ -1,10 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.5
+ N E X T F L O W   ~  version 26.10.6
 
 Downloading plugin nf-slack@0.5.1
-Launching `./main.nf` [special_mestorf] revision: 9f9cb64de2
+Launching `./main.nf` [determined_avogadro] revision: 9f9cb64de2
 
 WARN: Unrecognized config option 'slack.enabled'
 WARN: Unrecognized config option 'slack.webhook.url'
@@ -15,7 +15,7 @@ WARN: Unrecognized config option 'slack.webhook.url'
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/pixelator 6.1.0dev
+  nf-core/pixelator 7.0.0
 ------------------------------------------------------
 Typical pipeline command:
 

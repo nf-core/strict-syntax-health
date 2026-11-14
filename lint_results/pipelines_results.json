@@ -2,7 +2,7 @@
   "abotyper": {
     "full_name": "nf-core/abotyper",
     "html_url": "https://github.com/nf-core/abotyper",
-    "commit": "0d03403c89ba64aad8850527cc28f756c45adc47",
+    "commit": "12c3da754dde9f4c9b69f56b5ea9c786fb7a3b9a",
     "errors": 0,
     "warnings": 31,
     "parse_error": false,
@@ -782,7 +782,7 @@
   "magmap": {
     "full_name": "nf-core/magmap",
     "html_url": "https://github.com/nf-core/magmap",
-    "commit": "f6c3a7c3f521ea4b21077e45c63f24155ed10dac",
+    "commit": "5f8f3e63449c6333640926d47131589065e5d027",
     "errors": 0,
     "warnings": 60,
     "parse_error": false,
@@ -998,7 +998,7 @@
   "nanostring": {
     "full_name": "nf-core/nanostring",
     "html_url": "https://github.com/nf-core/nanostring",
-    "commit": "0c2fe0206792c08c65af9600963e1e4288cb738a",
+    "commit": "786a6942a8261ba58f39892cb05d7508fcfc2296",
     "errors": 0,
     "warnings": 7,
     "parse_error": false,
@@ -1154,9 +1154,9 @@
   "phaseimpute": {
     "full_name": "nf-core/phaseimpute",
     "html_url": "https://github.com/nf-core/phaseimpute",
-    "commit": "3d63131bbe53b0ed7dd38b36046562d28726fd27",
+    "commit": "e7dde9a8771a34bab0bfb8cb58128cfbdbcd562a",
     "errors": 0,
-    "warnings": 46,
+    "warnings": 45,
     "parse_error": false,
     "prints_help": false,
     "workflow_output": false,
@@ -1178,7 +1178,7 @@
   "pixelator": {
     "full_name": "nf-core/pixelator",
     "html_url": "https://github.com/nf-core/pixelator",
-    "commit": "9479b2332c2a3e0f3173a372aa944740364d30bc",
+    "commit": "d891f439a88f2c5d436c11dfb173f692df3adf62",
     "errors": 0,
     "warnings": 12,
     "parse_error": false,
@@ -1394,7 +1394,7 @@
   "rnaseq": {
     "full_name": "nf-core/rnaseq",
     "html_url": "https://github.com/nf-core/rnaseq",
-    "commit": "502ada4b51dce83876e4d6ba19566c16f69f86bf",
+    "commit": "ad3143f8f84fc34ad8853d21d9e4e65e7c77c386",
     "errors": 0,
     "warnings": 81,
     "parse_error": false,
@@ -1454,19 +1454,19 @@
   "sarek": {
     "full_name": "nf-core/sarek",
     "html_url": "https://github.com/nf-core/sarek",
-    "commit": "778af5861924b3565a94f2d2a26f35998c0256ea",
+    "commit": "4525d0958407e0120f6fd7aa857af80ed2c53ff0",
     "errors": 0,
-    "warnings": 134,
+    "warnings": 135,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": true,
     "publishdir": true,
-    "publishdir_count": 206
+    "publishdir_count": 205
   },
   "scdownstream": {
     "full_name": "nf-core/scdownstream",
     "html_url": "https://github.com/nf-core/scdownstream",
-    "commit": "0048567589248aac5669ffd0151b8f6d15417804",
+    "commit": "d571748cca463ce3fabac7a38c05dbbea7460a98",
     "errors": 0,
     "warnings": 75,
     "parse_error": false,
@@ -1490,7 +1490,7 @@
   "scrnaseq": {
     "full_name": "nf-core/scrnaseq",
     "html_url": "https://github.com/nf-core/scrnaseq",
-    "commit": "aeafc647350910decac6ed7f8149000822e81133",
+    "commit": "871b4d06f18d24681c7d84a2c831da57b951da64",
     "errors": 0,
     "warnings": 30,
     "parse_error": false,
@@ -1502,7 +1502,7 @@
   "seqinspector": {
     "full_name": "nf-core/seqinspector",
     "html_url": "https://github.com/nf-core/seqinspector",
-    "commit": "7494d8f73e8e8dbbf42f5669580e4de6aa361cdf",
+    "commit": "da71a2bc832e3ad81257b370b6b776eed5b5b715",
     "errors": 0,
     "warnings": 28,
     "parse_error": false,
@@ -1538,14 +1538,14 @@
   "smrnaseq": {
     "full_name": "nf-core/smrnaseq",
     "html_url": "https://github.com/nf-core/smrnaseq",
-    "commit": "42b9a70d40fb360a609c8915f4831e4cd8e6c730",
+    "commit": "7ca21c32984d1cec67b59db5b8b088893dbf6045",
     "errors": 0,
-    "warnings": 35,
+    "warnings": 30,
     "parse_error": false,
     "prints_help": true,
-    "workflow_output": false,
+    "workflow_output": true,
     "publishdir": true,
-    "publishdir_count": 52
+    "publishdir_count": 1
   },
   "sopa": {
     "full_name": "nf-core/sopa",

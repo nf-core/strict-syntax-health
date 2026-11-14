@@ -1,11 +1,12 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.5
+ N E X T F L O W   ~  version 26.10.6
 
 Downloading plugin nf-fgbio@1.0.0
 Downloading plugin nf-prov@1.7.0
-Launching `./main.nf` [drunk_boyd] revision: 98a722b8fe
+Downloading plugin nf-schema@2.7.2
+Launching `./main.nf` [distraught_leibniz] revision: 910d58d3b3
 
 
 ------------------------------------------------------
@@ -108,7 +109,7 @@ matched tumor will still be processed through germline variant calling tools.
   --cf_omit_sex                       [boolean] Do not pass the sample sex to Control-FREEC (tumor-only and tumor/normal). 
   --cnvkit_reference                  [string]  Copy-number reference for CNVkit 
   --freebayes_filter                  [string]  Filtering expression for vcflib/vcffilter [default: 30] 
-  --joint_germline                    [boolean] Turn on the joint germline variant calling for GATK haplotypecaller 
+  --joint_germline                    [boolean] Turn on the joint germline variant calling for GATK or Parabricks HaplotypeCaller 
   --joint_mutect2                     [boolean] Runs Mutect2 in joint (multi-sample) mode for better concordance among variant calls of tumor 
 samples from the same patient. Mutect2 outputs will be stored in a subfolder named with patient ID 
 under `variant_calling/mutect2/` folder. Only a single normal sample per patient is allowed. 

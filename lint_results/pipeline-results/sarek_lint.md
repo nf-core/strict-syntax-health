@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-11-13T00:17:58.688048920Z
-- Nextflow version: 26.10.5
-- Summary: 134 warnings
+- Generated: 2026-11-14T00:13:59.511452202Z
+- Nextflow version: 26.10.6
+- Summary: 135 warnings
 
 ## :warning: Warnings
 
@@ -426,7 +426,7 @@
       ^^^^
   ```
 
-- Warning: `modules/nf-core/gatk4/haplotypecaller/main.nf:24:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/gatk4/haplotypecaller/main.nf:28:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -622,6 +622,13 @@
       ^^^^
   ```
 
+- Warning: `modules/nf-core/parabricks/dbsnp/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
 - Warning: `modules/nf-core/parabricks/deepsomatic/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
@@ -650,7 +657,7 @@
       ^^^^
   ```
 
-- Warning: `modules/nf-core/parabricks/haplotypecaller/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/parabricks/haplotypecaller/main.nf:25:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

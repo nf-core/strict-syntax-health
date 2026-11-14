@@ -1,45 +1,10 @@
 # Nextflow lint results
 
-- Generated: 2026-11-13T00:19:15.738791356Z
-- Nextflow version: 26.10.5
-- Summary: 35 warnings
+- Generated: 2026-11-14T00:15:08.328268720Z
+- Nextflow version: 26.10.6
+- Summary: 30 warnings
 
 ## :warning: Warnings
-
-- Warning: `modules/local/datatable_merge/main.nf:16:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
-
-  ```nextflow
-      when:
-      ^^^^
-  ```
-
-- Warning: `modules/local/edger_qc/main.nf:16:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
-
-  ```nextflow
-      when:
-      ^^^^
-  ```
-
-- Warning: `modules/local/filter_stats/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
-
-  ```nextflow
-      when:
-      ^^^^
-  ```
-
-- Warning: `modules/local/format_fasta_mirna/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
-
-  ```nextflow
-      when:
-      ^^^^
-  ```
-
-- Warning: `modules/local/parse_fasta_mirna/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
-
-  ```nextflow
-      when:
-      ^^^^
-  ```
 
 - Warning: `modules/nf-core/bioawk/main.nf:24:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 

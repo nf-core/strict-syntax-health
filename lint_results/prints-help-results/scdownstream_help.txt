@@ -1,10 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.4
+ N E X T F L O W   ~  version 26.10.6
 
 Downloading plugin nf-anndata@0.5.2
-Launching `./main.nf` [spontaneous_kay] revision: 5e58573b72
+Launching `./main.nf` [evil_northcutt] revision: 5e58573b72
 
 
 ------------------------------------------------------
@@ -31,7 +31,8 @@ Cloud infrastructure.
   --multiqc_title                 [string]  MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
 
 Unify options
-  --unify_gene_symbols            [boolean] Unify gene symbols to the latest version of the Ensembl database 
+  --unify_gene_symbols            [boolean] Unify human gene symbols with HUGO-unifier. Runs only when species is exactly human; other species 
+skip this step with a warning when enabled.  
   --duplicate_var_resolution      [string]  Method to aggregate gene expression values for non-unique genes  (accepted: mean, sum, max, 
 make_unique) [default: sum]  
   --force_obs_cols                [string]  Force keeping certain columns in the merged AnnData object, even if they are not present in all 
@@ -67,6 +68,7 @@ and downstream analyses. [default: false]
 scDblFinder follows sc-best-practices recommendations. [default: scdblfinder]  
   --doublet_detection_threshold   [integer] Number of tools that need to agree on a doublet for it to be removed when `doublet_removal` is true 
 [default: 1]  
+  --scdblfinder_dbr_sd            [number]  Global doublet-rate uncertainty passed to scDblFinder as dbr.sd. 
   --doublet_removal               [boolean] Whether to remove cells flagged as doublets. When false (default), doublet scores are stored in 
 `adata.obs` for inspection, following sc-best-practices guidance to review doublets before 
 filtering. [default: false]  

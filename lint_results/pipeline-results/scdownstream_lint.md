@@ -1,12 +1,12 @@
 # Nextflow lint results
 
-- Generated: 2026-10-29T00:19:51.329943162Z
-- Nextflow version: 26.10.4
+- Generated: 2026-11-14T00:14:23.940790133Z
+- Nextflow version: 26.10.6
 - Summary: 75 warnings
 
 ## :warning: Warnings
 
-- Warning: `modules/local/adata/extend/main.nf:27:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/adata/extend/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -132,7 +132,7 @@
       ^^^^
   ```
 
-- Warning: `modules/local/celltypist/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/celltypist/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

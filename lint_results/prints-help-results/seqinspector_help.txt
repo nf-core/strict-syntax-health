@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.5
+ N E X T F L O W   ~  version 26.10.6
 
-Launching `./main.nf` [gigantic_moriondo] revision: 0983c2de3e
+Launching `./main.nf` [backstabbing_bernard] revision: 0983c2de3e
 
 
 ------------------------------------------------------
@@ -14,6 +14,7 @@ Launching `./main.nf` [gigantic_moriondo] revision: 0983c2de3e
                                         `._,._,'
   nf-core/seqinspector 1.2.0dev
 ------------------------------------------------------
+
 Typical pipeline command:
 
   nextflow run nf-core/seqinspector -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
@@ -86,4 +87,5 @@ Generic options
 
 * Software dependencies
     https://github.com/nf-core/seqinspector/blob/master/CITATIONS.md
+
 
