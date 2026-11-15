@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-11-14T00:15:47.877080+00:00
+- Generated: 2026-11-15T00:14:38.565619+00:00
 - Nextflow version: 26.10.6
 - Summary: 1 warning
 
@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/fairbioheaders/verify/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
-    ```nextflow
-        when:
-        ^^^^^
-    ```
+  ```nextflow
+      when:
+      ^^^^^
+  ```

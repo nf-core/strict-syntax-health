@@ -38,7 +38,7 @@
   "ampliseq": {
     "full_name": "nf-core/ampliseq",
     "html_url": "https://github.com/nf-core/ampliseq",
-    "commit": "33110d9347367213b12b6a208544e0eea9c513b8",
+    "commit": "9c8139007ef96d1f8ec6f1286eeca1d309f1808f",
     "errors": 0,
     "warnings": 67,
     "parse_error": false,
@@ -230,7 +230,7 @@
   "createtaxdb": {
     "full_name": "nf-core/createtaxdb",
     "html_url": "https://github.com/nf-core/createtaxdb",
-    "commit": "f0dedbcd28007774d545d45dc2aeb899b5eee6f9",
+    "commit": "d89c2c9db7ceaa1bde377a4bf2612259e27c3410",
     "errors": 0,
     "warnings": 28,
     "parse_error": false,
@@ -1466,9 +1466,9 @@
   "scdownstream": {
     "full_name": "nf-core/scdownstream",
     "html_url": "https://github.com/nf-core/scdownstream",
-    "commit": "d571748cca463ce3fabac7a38c05dbbea7460a98",
+    "commit": "b090db1f2301e0afff7e3482f4d827bc5b66c989",
     "errors": 0,
-    "warnings": 75,
+    "warnings": 76,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,

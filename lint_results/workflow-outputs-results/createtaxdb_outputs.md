@@ -1,6 +1,6 @@
 # Workflow outputs migration: createtaxdb
 
-- Generated: 2026-11-08T00:13:14.531942+00:00
+- Generated: 2026-11-15T00:13:13.375004+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,6 +14,6 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 17 `publishDir` references across 3 files that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/createtaxdb/blob/f0dedbcd28007774d545d45dc2aeb899b5eee6f9/conf/modules.config#L15) — 15 references
-- [`subworkflows/local/sourmash_create/tests/dna.config`](https://github.com/nf-core/createtaxdb/blob/f0dedbcd28007774d545d45dc2aeb899b5eee6f9/subworkflows/local/sourmash_create/tests/dna.config#L4) — 1 reference
-- [`subworkflows/local/sourmash_create/tests/protein.config`](https://github.com/nf-core/createtaxdb/blob/f0dedbcd28007774d545d45dc2aeb899b5eee6f9/subworkflows/local/sourmash_create/tests/protein.config#L4) — 1 reference
+- [`conf/modules.config`](https://github.com/nf-core/createtaxdb/blob/d89c2c9db7ceaa1bde377a4bf2612259e27c3410/conf/modules.config#L15) — 15 references
+- [`subworkflows/local/sourmash_create/tests/dna.config`](https://github.com/nf-core/createtaxdb/blob/d89c2c9db7ceaa1bde377a4bf2612259e27c3410/subworkflows/local/sourmash_create/tests/dna.config#L4) — 1 reference
+- [`subworkflows/local/sourmash_create/tests/protein.config`](https://github.com/nf-core/createtaxdb/blob/d89c2c9db7ceaa1bde377a4bf2612259e27c3410/subworkflows/local/sourmash_create/tests/protein.config#L4) — 1 reference

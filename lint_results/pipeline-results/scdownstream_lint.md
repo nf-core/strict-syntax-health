@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-11-14T00:14:23.940790133Z
+- Generated: 2026-11-15T00:13:53.176255570Z
 - Nextflow version: 26.10.6
-- Summary: 75 warnings
+- Summary: 76 warnings
 
 ## :warning: Warnings
 
@@ -146,7 +146,7 @@
       ^^^^
   ```
 
-- Warning: `modules/local/custom/doubletremoval/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/custom/doubletremoval/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -391,13 +391,6 @@
       ^^^^
   ```
 
-- Warning: `modules/local/scdblfinder/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
-
-  ```nextflow
-      when:
-      ^^^^
-  ```
-
 - Warning: `modules/local/scibmetrics/benchmark/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
@@ -482,7 +475,7 @@
       ^^^^
   ```
 
-- Warning: `modules/nf-core/doubletdetection/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/doubletdetection/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -503,10 +496,24 @@
       ^^^^
   ```
 
-- Warning: `modules/nf-core/scanpy/scrublet/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/scanpy/scrublet/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/scdblfinder/main.nf:22:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/scdblfinder/main.nf:26:5`: Variable was declared but not used
+
+  ```nextflow
+      args = task.ext.args ?: ''
       ^^^^
   ```
 

@@ -11,12 +11,12 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 > See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline.
 > **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**
 
-- **Last updated:** 2026-11-14 00:16:17 UTC
+- **Last updated:** 2026-11-15 00:15:01 UTC
 - **Nextflow version:** 26.10.6
 
 ## Pipelines
 
-- **Total:** 0 parse errors, 1090 errors, 8286 warnings across 146 pipelines
+- **Total:** 0 parse errors, 1090 errors, 8287 warnings across 146 pipelines
 - **Zero errors:** 103 pipelines (70.5%)
 
 |                    Errors                    |                     Warnings                     |
@@ -95,7 +95,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :white_check_mark: [metatdenovo](https://github.com/nf-core/metatdenovo)                       |     No      |      0 |       79 |     Yes     |        [View](lint_results/pipeline-results/metatdenovo_lint.md)        |      [View](lint_results/prints-help-results/metatdenovo_help.txt)       |
 | :white_check_mark: [bacmodel](https://github.com/nf-core/bacmodel)                             |     No      |      0 |       77 |     Yes     |         [View](lint_results/pipeline-results/bacmodel_lint.md)          |        [View](lint_results/prints-help-results/bacmodel_help.txt)        |
 | :x: [rnasplice](https://github.com/nf-core/rnasplice)                                          |     No      |      0 |       77 |     No      |         [View](lint_results/pipeline-results/rnasplice_lint.md)         |       [View](lint_results/prints-help-results/rnasplice_help.txt)        |
-| :white_check_mark: [scdownstream](https://github.com/nf-core/scdownstream)                     |     No      |      0 |       75 |     Yes     |       [View](lint_results/pipeline-results/scdownstream_lint.md)        |      [View](lint_results/prints-help-results/scdownstream_help.txt)      |
+| :white_check_mark: [scdownstream](https://github.com/nf-core/scdownstream)                     |     No      |      0 |       76 |     Yes     |       [View](lint_results/pipeline-results/scdownstream_lint.md)        |      [View](lint_results/prints-help-results/scdownstream_help.txt)      |
 | :white_check_mark: [mcmicro](https://github.com/nf-core/mcmicro)                               |     No      |      0 |       72 |     Yes     |          [View](lint_results/pipeline-results/mcmicro_lint.md)          |        [View](lint_results/prints-help-results/mcmicro_help.txt)         |
 | :white_check_mark: [methylseq](https://github.com/nf-core/methylseq)                           |     No      |      0 |       68 |     Yes     |         [View](lint_results/pipeline-results/methylseq_lint.md)         |       [View](lint_results/prints-help-results/methylseq_help.txt)        |
 | :x: [ampliseq](https://github.com/nf-core/ampliseq)                                            |     No      |      0 |       67 |     No      |         [View](lint_results/pipeline-results/ampliseq_lint.md)          |        [View](lint_results/prints-help-results/ampliseq_help.txt)        |

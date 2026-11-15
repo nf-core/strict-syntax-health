@@ -1,12 +1,12 @@
 # Nextflow lint results
 
-- Generated: 2026-11-14T00:15:47.863068+00:00
+- Generated: 2026-11-15T00:14:38.551807+00:00
 - Nextflow version: 26.10.6
 - Summary: 1 warning
 
 ## :warning: Warnings
 
-- Warning: `modules/nf-core/deepvariant/postprocessvariants/main.nf:24:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/deepvariant/postprocessvariants/main.nf:26:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
