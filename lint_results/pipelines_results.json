@@ -230,7 +230,7 @@
   "createtaxdb": {
     "full_name": "nf-core/createtaxdb",
     "html_url": "https://github.com/nf-core/createtaxdb",
-    "commit": "d89c2c9db7ceaa1bde377a4bf2612259e27c3410",
+    "commit": "c3c7b19b365867513cc47c07c9362682e98c561e",
     "errors": 0,
     "warnings": 28,
     "parse_error": false,
@@ -494,7 +494,7 @@
   "fastqrepair": {
     "full_name": "nf-core/fastqrepair",
     "html_url": "https://github.com/nf-core/fastqrepair",
-    "commit": "959b6a9c9efb744ef83a262527a5e126efab8099",
+    "commit": "87b8718e072720d60902c98e798c135503d8937c",
     "errors": 0,
     "warnings": 19,
     "parse_error": false,
@@ -770,7 +770,7 @@
   "mag": {
     "full_name": "nf-core/mag",
     "html_url": "https://github.com/nf-core/mag",
-    "commit": "4f339384b051c8dfbc78c2eb19446b4bf9a257fd",
+    "commit": "23c0b3c4b80bbc36256d092a91cd1ab69410e041",
     "errors": 0,
     "warnings": 100,
     "parse_error": false,
@@ -1466,7 +1466,7 @@
   "scdownstream": {
     "full_name": "nf-core/scdownstream",
     "html_url": "https://github.com/nf-core/scdownstream",
-    "commit": "b090db1f2301e0afff7e3482f4d827bc5b66c989",
+    "commit": "d9264b35ed88b648baf157d76bd9b261344fb585",
     "errors": 0,
     "warnings": 76,
     "parse_error": false,

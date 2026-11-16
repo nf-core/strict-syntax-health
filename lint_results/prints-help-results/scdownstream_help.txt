@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.10.6
 
 Downloading plugin nf-anndata@0.5.2
-Launching `./main.nf` [cheesy_ride] revision: 5e58573b72
+Launching `./main.nf` [mighty_noether] revision: 5e58573b72
 
 
 ------------------------------------------------------

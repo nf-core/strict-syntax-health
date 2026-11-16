@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.5
+ N E X T F L O W   ~  version 26.10.6
 
-Launching `./main.nf` [romantic_church] revision: dd7ee746b7
+Launching `./main.nf` [determined_borg] revision: dd7ee746b7
 
 
 ------------------------------------------------------

@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.4
+ N E X T F L O W   ~  version 26.10.6
 
-Launching `./main.nf` [nostalgic_golick] revision: 44a807abd6
+Launching `./main.nf` [maniac_cuvier] revision: 44a807abd6
 
 
 ------------------------------------------------------
@@ -12,7 +12,7 @@ Launching `./main.nf` [nostalgic_golick] revision: 44a807abd6
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/fastqrepair 1.1.2
+  nf-core/fastqrepair 1.2.0
 ------------------------------------------------------
 Typical pipeline command:
 
