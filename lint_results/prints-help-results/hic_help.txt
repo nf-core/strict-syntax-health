@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.5
+ N E X T F L O W   ~  version 26.10.6
 
-Launching `./main.nf` [agitated_mestorf] revision: c883c246ee
+Launching `./main.nf` [sick_lorenz] revision: c883c246ee
 
 
 ------------------------------------------------------
@@ -12,7 +12,7 @@ Launching `./main.nf` [agitated_mestorf] revision: c883c246ee
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/hic 2.2.0dev
+  nf-core/hic 3.0.0
 ------------------------------------------------------
 Typical pipeline command:
 

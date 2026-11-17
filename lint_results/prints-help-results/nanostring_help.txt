@@ -3,9 +3,19 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.10.6
 
-Downloading plugin nf-schema@3.0.0
-Launching `./main.nf` [voluminous_sammet] revision: ba424b6f27
+Downloading plugin nf-co2footprint@1.4.1
+nf-co2footprint plugin  ~  version 1.4.1
+Downloading plugin nf-core-utils@0.7.0
+Downloading plugin nf-prov@1.8.0
+Launching `./main.nf` [boring_gilbert] revision: 854c1bd02a
 
+[37mINFO - [nf-co2footprint] 🔕 Repeated task-specific messages (🔁) are only logged once in the console. Further occurrences are logged at DEBUG level, appearing only in the `.nextflow.log` file.[0;39m
+[33mWARN - [nf-co2footprint] Target zone null not found. Attempting to retrieve carbon intensity for fallback zone GLOBAL.[0;39m
+[37mINFO - [nf-co2footprint] Electricity Maps API key is not set. To retrieve real-time carbon intensity values, please provide a key with the parameter `emApiKey`.
+	💡 You can obtain a key for ElectricityMaps at https://portal.electricitymaps.com/auth/login.[0;39m
+[37mINFO - [nf-co2footprint] Using fallback carbon intensity from GLOBAL from CI table: 480.0 gCO₂eq/kWh.[0;39m
+[33mWARN - [nf-co2footprint] Executor 'null' not mapped.[0;39m
+[33mWARN - [nf-co2footprint] Fallback to: `machineType = null`, `pue = 1.0`. To eliminate this warning you can set `machineType` in the config to one of [local, compute cluster, cloud].[0;39m
 
 ------------------------------------------------------
                                         ,--./,-.
@@ -13,7 +23,7 @@ Launching `./main.nf` [voluminous_sammet] revision: ba424b6f27
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/nanostring 2.0.1dev
+  nf-core/nanostring 2.1.0
 ------------------------------------------------------
 
 Typical pipeline command:
@@ -24,35 +34,39 @@ help message of that parameter will be printed.
 or `--helpFull`.  
 
 Input/output options
-  --input                       [string] Path to comma-separated file containing information about the samples in the experiment. 
-  --outdir                      [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
+  --input                        [string] Path to comma-separated file containing information about the samples in the experiment. 
+  --outdir                       [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
 Cloud infrastructure.  
 
 Processing options
-  --heatmap_id_column           [string] The column used for heatmap generation, specifying the rows. The values in this column have to be 
+  --heatmap_id_column            [string] The column used for heatmap generation, specifying the rows. The values in this column have to be 
 unique. [default: SAMPLE_ID]  
-  --heatmap_genes_to_filter     [string] Path to YAML file (list, one item per line) to specify which genes should be used for the gene-count 
+  --heatmap_genes_to_filter      [string] Path to YAML file (list, one item per line) to specify which genes should be used for the gene-count 
 heatmap.  
 
 Normalization Parameters
-  --normalization_method        [string] The method to use for normalization of nCounter data.  (accepted: GEO, GLM) [default: GEO] 
+  --normalization_method         [string] The method to use for normalization of nCounter data.  (accepted: GEO, GLM) [default: GEO] 
 
 Gene Score Computation
-  --gene_score_method           [string] This selects the algorithm for computing the respective gene score. Default is 'plage.dir'.  
+  --gene_score_method            [string] This selects the algorithm for computing the respective gene score. Default is 'plage.dir'.  
 (accepted: plage, plage.dir, gsva, singscore, ssgsea, median, mean, sams) [default: plage.dir]  
-  --gene_score_yaml                      This sets the YAML to be used for computing the gene scores. Needs both a name for each set of genes 
+  --gene_score_yaml                       This sets the YAML to be used for computing the gene scores. Needs both a name for each set of genes 
 and respective genes to be selected.  
 
 Skipping Options
-  --skip_heatmap                [boolean] Skip creating the heatmap 
+  --skip_heatmap                 [boolean] Skip creating the heatmap 
+
+Export options
+  --export_differentialabundance [boolean] Write a log2 matrix of Endogenous genes and a matching samplesheet for 
+nf-core/differentialabundance.  
 
 Generic options
-  --email                       [string]          Email address for completion summary. 
-  --multiqc_title               [string]          MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
-  --multiqc_methods_description [string]          Custom MultiQC yaml file containing HTML including a methods description. 
-  --help                        [boolean, string] Display the help message. 
-  --help_full                   [boolean]         Display the full detailed help message. 
-  --show_hidden                 [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+  --email                        [string]          Email address for completion summary. 
+  --multiqc_title                [string]          MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+  --multiqc_methods_description  [string]          Custom MultiQC yaml file containing HTML including a methods description. 
+  --help                         [boolean, string] Display the help message. 
+  --help_full                    [boolean]         Display the full detailed help message. 
+  --show_hidden                  [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
  
  !! Hiding 17 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
@@ -67,3 +81,5 @@ Generic options
     https://github.com/nf-core/nanostring/blob/master/CITATIONS.md
 
 
+WARN - [nf-co2footprint] Could not find CPU model "INTEL(R) XEON(R) PLATINUM 8573C" in given TDP data table. Using default CPU power draw value (11.41 W).
+	🔖 To fix this warning, please refer to https://nextflow-io.github.io/nf-co2footprint/usage/faq/#cpu-model.

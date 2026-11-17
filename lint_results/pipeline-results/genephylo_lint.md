@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-11-13T00:15:06.075997878Z
-- Nextflow version: 26.10.5
+- Generated: 2026-11-17T00:12:44.247482846Z
+- Nextflow version: 26.10.6
 - Summary: 20 warnings
 
 ## :warning: Warnings
@@ -139,7 +139,7 @@
       ^^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/genephylo.nf:226:9`: Variable was declared but not used
+- Warning: `workflows/genephylo.nf:202:9`: Variable was declared but not used
 
   ```nextflow
       def ch_collated_versions = softwareVersionsToYAML(ch_versions.mix(topic_versions.versions_file))

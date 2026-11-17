@@ -1,10 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.5
+ N E X T F L O W   ~  version 26.10.6
 
 Downloading plugin nf-core-utils@0.5.0
-Launching `./main.nf` [agitated_archimedes] revision: 8f301bca03
+Launching `./main.nf` [jovial_rubens] revision: 8f301bca03
 
 
 ------------------------------------------------------
@@ -23,8 +23,8 @@ help message of that parameter will be printed.
 or `--helpFull`.  
 
 Input/output options
-  --input                       [string]  File containing SRA/ENA/GEO/DDBJ identifiers one per line to download their associated metadata and 
-FastQ files.  
+  --input                       [string]  File containing SRA/ENA/GEO/DDBJ or PRIDE (PXD) identifiers one per line to download their 
+associated metadata and data files.  
   --ena_metadata_fields         [string]  Comma-separated list of ENA metadata fields to fetch before downloading data. 
   --sample_mapping_fields       [string]  Comma-separated list of ENA metadata fields used to create a separate 'id_mappings.csv' and 
 'multiqc_config.yml' with selected fields that can be used to rename samples in general and in 

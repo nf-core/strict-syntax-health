@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-11-14T00:12:32.496475865Z
+- Generated: 2026-11-17T00:14:09.618749410Z
 - Nextflow version: 26.10.6
-- Summary: 7 warnings
+- Summary: 8 warnings
 
 ## :warning: Warnings
 
@@ -21,6 +21,13 @@
   ```
 
 - Warning: `modules/local/create_gene_heatmap/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/export_differentialabundance/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
