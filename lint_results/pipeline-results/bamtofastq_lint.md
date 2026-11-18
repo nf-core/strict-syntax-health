@@ -1,19 +1,12 @@
 # Nextflow lint results
 
-- Generated: 2026-11-13T00:12:53.458585152Z
-- Nextflow version: 26.10.5
-- Summary: 14 warnings
+- Generated: 2026-11-18T00:12:19.286468600Z
+- Nextflow version: 26.10.6
+- Summary: 12 warnings
 
 ## :warning: Warnings
 
 - Warning: `modules/local/checkpairedend/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
-
-  ```nextflow
-      when:
-      ^^^^
-  ```
-
-- Warning: `modules/nf-core/cat/fastq/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -70,13 +63,6 @@
   ```
 
 - Warning: `modules/nf-core/samtools/index/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
-
-  ```nextflow
-      when:
-      ^^^^
-  ```
-
-- Warning: `modules/nf-core/samtools/merge/main.nf:24:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-11-17T00:18:17.011695+00:00
+- Generated: 2026-11-18T00:16:05.960051+00:00
 - Nextflow version: 26.10.6
 - Summary: 1 warning
 
@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/trident/validate/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
-    ```nextflow
-        when:
-        ^^^^^
-    ```
+  ```nextflow
+      when:
+      ^^^^^
+  ```

@@ -98,14 +98,14 @@
   "bamtofastq": {
     "full_name": "nf-core/bamtofastq",
     "html_url": "https://github.com/nf-core/bamtofastq",
-    "commit": "e2939763048e3dbe138ba91f44a2af3285495473",
+    "commit": "9ea48e790ff9a99847ffbd36de7986b4a6c93240",
     "errors": 0,
-    "warnings": 14,
+    "warnings": 12,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 17
+    "publishdir_count": 9
   },
   "cageseq": {
     "full_name": "nf-core/cageseq",
@@ -398,9 +398,9 @@
   "diseasemodulediscovery": {
     "full_name": "nf-core/diseasemodulediscovery",
     "html_url": "https://github.com/nf-core/diseasemodulediscovery",
-    "commit": "d91cde492409c5bf6f2c70474502e35c40c14115",
+    "commit": "d0e408dda12825fa8078832c5cec058451613aa8",
     "errors": 0,
-    "warnings": 132,
+    "warnings": 2,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -554,7 +554,7 @@
   "genephylo": {
     "full_name": "nf-core/genephylo",
     "html_url": "https://github.com/nf-core/genephylo",
-    "commit": "9a628099664ce8dc6e7a60965de01b5a984c7c1d",
+    "commit": "f68280c882676c98c1e6dcbd7670195b72ba30af",
     "errors": 0,
     "warnings": 20,
     "parse_error": false,
@@ -782,7 +782,7 @@
   "magmap": {
     "full_name": "nf-core/magmap",
     "html_url": "https://github.com/nf-core/magmap",
-    "commit": "5f8f3e63449c6333640926d47131589065e5d027",
+    "commit": "c73df7093dbd8c69bd0b639c67ed8471ed138a3c",
     "errors": 0,
     "warnings": 60,
     "parse_error": false,
@@ -830,7 +830,7 @@
   "metaboigniter": {
     "full_name": "nf-core/metaboigniter",
     "html_url": "https://github.com/nf-core/metaboigniter",
-    "commit": "9e76c83b2d34f13045d2a6f6aa1e2ad19676817d",
+    "commit": "2536fb5e3ac294118cfa02cfe2ffe964a4d36595",
     "errors": 0,
     "warnings": 33,
     "parse_error": false,
@@ -854,7 +854,7 @@
   "metatdenovo": {
     "full_name": "nf-core/metatdenovo",
     "html_url": "https://github.com/nf-core/metatdenovo",
-    "commit": "d920f66db474767553834025f61cdb132ecc5ccd",
+    "commit": "f28dc890e99b85d393295f79e4e388608679f7b8",
     "errors": 0,
     "warnings": 79,
     "parse_error": false,
@@ -962,7 +962,7 @@
   "mspepid": {
     "full_name": "nf-core/mspepid",
     "html_url": "https://github.com/nf-core/mspepid",
-    "commit": "8fe31ba08475a464482970b70dcae5e4e312aaf1",
+    "commit": "2f9b909cb5e8ff758549fc8e1c08780c5e747797",
     "errors": 0,
     "warnings": 24,
     "parse_error": false,
@@ -1166,9 +1166,9 @@
   "phyloplace": {
     "full_name": "nf-core/phyloplace",
     "html_url": "https://github.com/nf-core/phyloplace",
-    "commit": "8e4f9f974485d683e5c579033f23ef197811189b",
+    "commit": "513ed7c5772d910e2da22a267ee97360a4ea35e7",
     "errors": 0,
-    "warnings": 29,
+    "warnings": 20,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
@@ -1178,7 +1178,7 @@
   "pixelator": {
     "full_name": "nf-core/pixelator",
     "html_url": "https://github.com/nf-core/pixelator",
-    "commit": "b8a700890ad7cae34df6fb2ed1578f838bda5f83",
+    "commit": "a493ab692b5ec7ab76d0640c9558abfd107e0e46",
     "errors": 0,
     "warnings": 12,
     "parse_error": false,
@@ -1490,7 +1490,7 @@
   "scrnaseq": {
     "full_name": "nf-core/scrnaseq",
     "html_url": "https://github.com/nf-core/scrnaseq",
-    "commit": "880748ed7f419fa0f26be514124793698bec5844",
+    "commit": "3bdfde7a1be428a28ebb3e479683cb6bffb3b94a",
     "errors": 0,
     "warnings": 30,
     "parse_error": false,

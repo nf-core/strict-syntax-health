@@ -1,9 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.5
+ N E X T F L O W   ~  version 26.10.6
 
-Launching `./main.nf` [suspicious_carlsson] revision: 2e60bf32b3
+Downloading plugin nf-schema@2.7.3
+Launching `./main.nf` [irreverent_woese] revision: 0969adfd4f
 
 
 ------------------------------------------------------
@@ -53,9 +54,10 @@ Module visualization
 prioritization. [default: 500]  
 
 Module annotation
-  --skip_annotation             [boolean] Flag for skipping the annotation part of the process. 
+  --run_annotation              [boolean] Flag for running the module annotation with NeDRex and the BioPAX conversion. 
   --validate_online             [boolean] Flag for validating online at baderlab.org. 
-  --add_variants                [boolean] Flag for adding variants to the biopax annotation file. 
+  --add_variants                [boolean] Flag for adding variants to the biopax annotation file. Only applies if `--run_annotation` is set. 
+ 
 
 Module evaluation
   --skip_evaluation             [boolean] Flag skipping the entire evaluation workflow 

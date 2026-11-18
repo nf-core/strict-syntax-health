@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.10.6
 
 Downloading plugin nf-schema@2.8.0
-Launching `./main.nf` [gloomy_maxwell] revision: ead558ff96
+Launching `./main.nf` [distracted_kalman] revision: ead558ff96
 
 WARN: Incorrect value detected for `validation.monochromeLogs`, a boolean is expected. Defaulting to `false`
 WARN: Incorrect value detected for `validation.monochromeLogs`, a boolean is expected. Defaulting to `false`
@@ -25,10 +25,10 @@ help message of that parameter will be printed.
 or `--helpFull`.  
 
 Input/output options
-  --phyloplace_input            [string]  Path to comma-separated file containing information about phylogenetic placements to perform. 
- 
-  --phylosearch_input           [string]  Comma-separated list of comma-separated files containing information about phylogenetic searches to 
-perform.  
+  --phyloplace_input            [string]  Path to a sample sheet (CSV, TSV, YAML or JSON) containing information about phylogenetic placements 
+to perform.  
+  --phylosearch_input           [string]  Comma-separated list of target sheets (CSV, TSV, YAML or JSON) containing information about 
+phylogenetic searches to perform.  
   --phylosearch_targets         [string]  Comma-separated list of targets to use from the `--phylosearch_input` files. 
   --search_fasta                [string]  Fasta file with sequences to be searched with HMM profiles. 
   --save_domtblout              [boolean] Save the per-domain hit table (`--domtblout`) from hmmsearch. 

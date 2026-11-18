@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.5
+ N E X T F L O W   ~  version 26.10.6
 
-Launching `./main.nf` [intergalactic_moriondo] revision: dbf4371374
+Launching `./main.nf` [chaotic_snyder] revision: dbf4371374
 
 
 ------------------------------------------------------
