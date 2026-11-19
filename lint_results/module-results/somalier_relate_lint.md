@@ -1,12 +1,12 @@
 # Nextflow lint results
 
-- Generated: 2026-11-18T00:16:05.924403+00:00
-- Nextflow version: 26.10.6
+- Generated: 2026-11-19T00:16:39.686893+00:00
+- Nextflow version: 26.11.0-edge
 - Summary: 1 warning
 
 ## :warning: Warnings
 
-- Warning: `modules/nf-core/somalier/relate/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/somalier/relate/main.nf:24:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

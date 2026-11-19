@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "a7760c36981eddfed7247e9cecd1620667809623",
+  "_repo_commit": "22babda95e2dffbab6a5d9feb53a78c818cfcf0e",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -2616,6 +2616,12 @@
     "warnings": 1,
     "parse_error": false
   },
+  "custom_mtx2h5ad": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/custom/mtx2h5ad",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
   "custom_multiqccustombiotype": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/custom/multiqccustombiotype",
     "errors": 0,
@@ -3348,6 +3354,12 @@
     "warnings": 1,
     "parse_error": false
   },
+  "epang_filterquery": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/epang/filterquery",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
   "epang_place": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/epang/place",
     "errors": 0,
@@ -3370,6 +3382,12 @@
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/estsfs",
     "errors": 0,
     "warnings": 0,
+    "parse_error": false
+  },
+  "eukcc_single": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/eukcc/single",
+    "errors": 0,
+    "warnings": 1,
     "parse_error": false
   },
   "evigene_tr2aacds": {
@@ -5876,6 +5894,12 @@
   },
   "infernal_cmsearch": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/infernal/cmsearch",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
+  "inflammatoryoncophysics_calc": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/inflammatoryoncophysics/calc",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
@@ -11142,6 +11166,12 @@
     "warnings": 1,
     "parse_error": false
   },
+  "somalier_contamination": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/somalier/contamination",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
   "somalier_extract": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/somalier/extract",
     "errors": 0,
@@ -11246,6 +11276,18 @@
   },
   "spatialcontinuum_cricalc": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/spatialcontinuum/cricalc",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
+  "spatialcontinuumtranslational_gist": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/spatialcontinuumtranslational/gist",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
+  "spatialsanctuary_simulate": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/spatialsanctuary/simulate",
     "errors": 0,
     "warnings": 1,
     "parse_error": false

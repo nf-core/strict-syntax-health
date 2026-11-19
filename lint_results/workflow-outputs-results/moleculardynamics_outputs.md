@@ -1,6 +1,6 @@
 # Workflow outputs migration: moleculardynamics
 
-- Generated: 2026-11-04T00:13:52.432063+00:00
+- Generated: 2026-11-19T00:14:36.379721+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -12,15 +12,16 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 ## Legacy `publishDir` references
 
-Found 10 `publishDir` references across 10 files that should be migrated to the workflow `output {}` block:
+Found 11 `publishDir` references across 11 files that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/moleculardynamics/blob/d29bb658bd7231a7c98604dede46b079c006ccc9/conf/modules.config#L15) — 1 reference
-- [`modules/local/analysis_rmsd.nf`](https://github.com/nf-core/moleculardynamics/blob/d29bb658bd7231a7c98604dede46b079c006ccc9/modules/local/analysis_rmsd.nf#L21) — 1 reference
-- [`modules/local/post_processing.nf`](https://github.com/nf-core/moleculardynamics/blob/d29bb658bd7231a7c98604dede46b079c006ccc9/modules/local/post_processing.nf#L21) — 1 reference
-- [`modules/local/pre_pos_clean_pdb.nf`](https://github.com/nf-core/moleculardynamics/blob/d29bb658bd7231a7c98604dede46b079c006ccc9/modules/local/pre_pos_clean_pdb.nf#L21) — 1 reference
-- [`modules/local/run_energy_min.nf`](https://github.com/nf-core/moleculardynamics/blob/d29bb658bd7231a7c98604dede46b079c006ccc9/modules/local/run_energy_min.nf#L20) — 1 reference
-- [`modules/local/run_npt_equilibration.nf`](https://github.com/nf-core/moleculardynamics/blob/d29bb658bd7231a7c98604dede46b079c006ccc9/modules/local/run_npt_equilibration.nf#L20) — 1 reference
-- [`modules/local/run_nvt_equilibration.nf`](https://github.com/nf-core/moleculardynamics/blob/d29bb658bd7231a7c98604dede46b079c006ccc9/modules/local/run_nvt_equilibration.nf#L20) — 1 reference
-- [`modules/local/run_production.nf`](https://github.com/nf-core/moleculardynamics/blob/d29bb658bd7231a7c98604dede46b079c006ccc9/modules/local/run_production.nf#L21) — 1 reference
-- [`modules/local/run_solvation.nf`](https://github.com/nf-core/moleculardynamics/blob/d29bb658bd7231a7c98604dede46b079c006ccc9/modules/local/run_solvation.nf#L24) — 1 reference
-- [`modules/local/run_topology.nf`](https://github.com/nf-core/moleculardynamics/blob/d29bb658bd7231a7c98604dede46b079c006ccc9/modules/local/run_topology.nf#L22) — 1 reference
+- [`conf/modules.config`](https://github.com/nf-core/moleculardynamics/blob/52bf6137093f25d655e036660fcbc0f65a3f4ad7/conf/modules.config#L19) — 1 reference
+- [`modules/local/analysis_rmsd.nf`](https://github.com/nf-core/moleculardynamics/blob/52bf6137093f25d655e036660fcbc0f65a3f4ad7/modules/local/analysis_rmsd.nf#L23) — 1 reference
+- [`modules/local/post_processing.nf`](https://github.com/nf-core/moleculardynamics/blob/52bf6137093f25d655e036660fcbc0f65a3f4ad7/modules/local/post_processing.nf#L22) — 1 reference
+- [`modules/local/pre_pos_check_missing_atoms.nf`](https://github.com/nf-core/moleculardynamics/blob/52bf6137093f25d655e036660fcbc0f65a3f4ad7/modules/local/pre_pos_check_missing_atoms.nf#L23) — 1 reference
+- [`modules/local/pre_pos_clean_pdb.nf`](https://github.com/nf-core/moleculardynamics/blob/52bf6137093f25d655e036660fcbc0f65a3f4ad7/modules/local/pre_pos_clean_pdb.nf#L23) — 1 reference
+- [`modules/local/run_energy_min.nf`](https://github.com/nf-core/moleculardynamics/blob/52bf6137093f25d655e036660fcbc0f65a3f4ad7/modules/local/run_energy_min.nf#L21) — 1 reference
+- [`modules/local/run_npt_equilibration.nf`](https://github.com/nf-core/moleculardynamics/blob/52bf6137093f25d655e036660fcbc0f65a3f4ad7/modules/local/run_npt_equilibration.nf#L21) — 1 reference
+- [`modules/local/run_nvt_equilibration.nf`](https://github.com/nf-core/moleculardynamics/blob/52bf6137093f25d655e036660fcbc0f65a3f4ad7/modules/local/run_nvt_equilibration.nf#L21) — 1 reference
+- [`modules/local/run_production.nf`](https://github.com/nf-core/moleculardynamics/blob/52bf6137093f25d655e036660fcbc0f65a3f4ad7/modules/local/run_production.nf#L23) — 1 reference
+- [`modules/local/run_solvation.nf`](https://github.com/nf-core/moleculardynamics/blob/52bf6137093f25d655e036660fcbc0f65a3f4ad7/modules/local/run_solvation.nf#L25) — 1 reference
+- [`modules/local/run_topology.nf`](https://github.com/nf-core/moleculardynamics/blob/52bf6137093f25d655e036660fcbc0f65a3f4ad7/modules/local/run_topology.nf#L23) — 1 reference

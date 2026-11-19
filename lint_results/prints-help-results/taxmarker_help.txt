@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.6
+ N E X T F L O W   ~  version 26.11.0-edge
 
-Launching `./main.nf` [sharp_carlsson] revision: 49c19a441f
+Launching `./main.nf` [nauseous_gates] revision: 49c19a441f
 
 
 ------------------------------------------------------
@@ -80,11 +80,12 @@ entirely.
   --taxcode                     [string]          Taxonomic code of the input data, passed to sativa-epang: bac(teriological), bot(anical), 
 zoo(logical) or vir(ological). Governs its nomenclature-revision suggestions.  (accepted: bac, 
 bot, zoo, vir) [default: bac]  
-  --raxmlng_model               [string]          RAxML-NG model for the reference tree, for example GTR+G4. The default DNA runs model selection 
-first. [default: DNA]  
-  --raxmlng_reference_model     [string]          RAxML-NG model for the tree built by --run_reference, for example GTR+G4. Unset uses 
+  --raxmlng_model               [string]          RAxML-NG model for the reference tree, for example GTR+FO+I+R10. The default DNA runs model 
+selection first. [default: DNA]  
+  --raxmlng_reference_model     [string]          RAxML-NG model for the tree built by --run_reference, for example GTR+FO+I+R10. Unset uses 
 --raxmlng_model.  
-  --raxmlng_fast                [boolean]         Build the reference tree with the RAxML-NG fast search. 
+  --raxmlng_fast                [boolean]         Build the reference tree with the RAxML-NG fast search. Use false for the thorough search. 
+[default: true]  
   --raxmlng_seed                [integer]         Random seed for the RAxML-NG reference tree search. [default: 42] 
   --raxmlng_blopt               [string]          Branch length optimisation method of RAxML-NG (--blopt). Unset uses the RAxML-NG default.  
 (accepted: nr_fast, nr_safe, nr_oldstyle)  

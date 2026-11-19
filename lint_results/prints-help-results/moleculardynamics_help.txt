@@ -1,0 +1,51 @@
+$ NXF_SYNTAX_PARSER=v2 nextflow run . --help
+
+
+ N E X T F L O W   ~  version 26.11.0-edge
+
+Launching `./main.nf` [tender_leavitt] revision: 6f7efa4ff7
+
+
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/moleculardynamics 1.0.0dev
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/moleculardynamics -profile <docker/singularity/.../institute> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input             [string] Path to comma-separated file containing information about the samples in the experiment. 
+  --outdir            [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
+Cloud infrastructure.  
+  --email             [string] Email address for completion summary. 
+
+MD simulation options
+  --gmx_cmd           [string] GROMACS executable used for every GROMACS call. [default: gmx] 
+  --water_model       [string] Water model passed to `gmx pdb2gmx -water`.  (accepted: none, spc, spce, tip3p, tip4p, tip5p, 
+tips3p) [default: spce]  
+  --water_coordinates [string] Pre-equilibrated solvent box passed to `gmx solvate -cs`. [default: spc216.gro] 
+  --ion_concentration [number] Salt concentration (mol/L) passed to `gmx genion -conc`. The system is always neutralised with NA/CL 
+ions. [default: 0.15]  
+
+Generic options
+  --help              [boolean, string] Display the help message. 
+  --help_full         [boolean]         Display the full detailed help message. 
+  --show_hidden       [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+ 
+ !! Hiding 16 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/moleculardynamics/blob/master/CITATIONS.md
+

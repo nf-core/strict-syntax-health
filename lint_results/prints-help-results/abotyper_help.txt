@@ -1,10 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.6
+ N E X T F L O W   ~  version 26.11.0-edge
 
 Downloading plugin nf-schema@2.7.3
-Launching `./main.nf` [suspicious_sax] revision: 3d5b57fcaa
+Launching `./main.nf` [drunk_thompson] revision: 6f2a31e47b
 
 
 ------------------------------------------------------
@@ -34,19 +34,19 @@ ABO typing options
   --abo_reference_fai           [string] Index (.fai) of the ABO reference FASTA. 
   --abo_panel                   [string] ABO diagnostic variant panel (positions, calling thresholds, ISBT allele associations). 
   --abo_clair3_region_bed       [string] BED file restricting Clair3 calling (and gVCF reference blocks) to the ABO exon 2-7 region. 
-  --clair3_model                [string] Name of the Clair3 model packaged in the Clair3 container, used when neither --clair3_model_url nor 
---clair3_model_path is given.  (accepted: r1041_e82_400bps_sup_v500, r1041_e82_400bps_hac_v500, 
+  --clair3_model                [string] Name of a model bundled with Clair3, used when neither --clair3_model_url nor --clair3_model_path is 
+given.  (accepted: r1041_e82_400bps_sup_v500, r1041_e82_400bps_hac_v500, 
 r1041_e82_400bps_sup_v520_with_mv, ...) [default: r1041_e82_400bps_sup_v500]  
-  --clair3_model_path           [string] Folder with your own Clair3 model (`pileup.pt` and `full_alignment.pt`), used instead of the 
-packaged model.  
-  --clair3_model_url            [string] URL of a Clair3 model folder (`pileup.pt` and `full_alignment.pt`) to download and use; takes 
-priority over --clair3_model_path and the packaged model.  
+  --clair3_model_path           [string] Folder with your own Clair3 model (`pileup.pt` and `full_alignment.pt`), used instead of the bundled 
+model.  
+  --clair3_model_url            [string] URL of a Clair3 model folder (`pileup.pt` and `full_alignment.pt`) to download and use; used instead 
+of the bundled model. Give either this or --clair3_model_path, not both.  
   --minimap2_preset             [string] minimap2 alignment preset (`-x`) for Oxford Nanopore reads.  (accepted: map-ont, lr:hq) 
 [default: map-ont]  
 
 Generic options
   --multiqc_methods_description [string] Custom MultiQC yaml file containing HTML including a methods description. 
- !! Hiding 21 param(s), use the `--showHidden` parameter to show them !!
+ !! Hiding 20 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
 
 * The nf-core framework

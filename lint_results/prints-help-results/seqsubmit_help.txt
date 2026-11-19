@@ -1,14 +1,11 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.5
+ N E X T F L O W   ~  version 26.11.0-edge
 
 WARN: Cannot read project manifest -- Cause:  Cannot get property 'ENA_WEBIN' on null object
-Downloading plugin nf-schema@2.5.1
-Launching `./main.nf` [backstabbing_mcnulty] revision: 63f254ac5b
+Launching `./main.nf` [nasty_torricelli] revision: 63f254ac5b
 
-WARN: Unrecognized config option 'validation.defaultIgnoreParams'
-WARN: Unrecognized config option 'validation.monochromeLogs'
 
 ------------------------------------------------------
                                         ,--./,-.
@@ -71,7 +68,7 @@ only with `--eukaryotic_completeness_tool busco`. [default: true]
 calculate completeness and contamination of eukaryotic MAGs/bins if those values were not provided 
 in the samplesheet. URLs are downloaded and archives are extracted by the pipeline in every run, so 
 we recommend downloading and extracting the database once and providing the folder. [default: 
-http://ftp.ebi.ac.uk/pub/databases/metagenomics/eukcc/eukcc2_db_ver_1.1.tar.gz]  
+http://ftp.ebi.ac.uk/pub/databases/metagenomics/eukcc/eukcc2_db_ver_2026-11.tar.gz]  
   --eukaryotic_completeness_tool [string]  Tool used to calculate completeness of eukaryotic MAGs/bins: `eukcc` or `busco`. Contamination is 
 always calculated by EukCC, unless it is provided in the samplesheet.  (accepted: eukcc, busco) 
 [default: eukcc]  

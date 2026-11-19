@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-11-17T00:13:25.743901645Z
-- Nextflow version: 26.10.6
-- Summary: 100 warnings
+- Generated: 2026-11-19T00:14:02.691871189Z
+- Nextflow version: 26.11.0-edge
+- Summary: 102 warnings
 
 ## :warning: Warnings
 
@@ -109,6 +109,20 @@
   ```nextflow
       when:
       ^^^^
+  ```
+
+- Warning: `modules/nf-core/binette/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/binette/main.nf:59:9`: Variable was declared but not used
+
+  ```nextflow
+      def args = task.ext.args ?: ''
+          ^^^^
   ```
 
 - Warning: `modules/nf-core/busco/busco/main.nf:41:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime

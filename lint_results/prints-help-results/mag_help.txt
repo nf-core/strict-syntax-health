@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.6
+ N E X T F L O W   ~  version 26.11.0-edge
 
-Launching `./main.nf` [evil_poitras] revision: dd7ee746b7
+Launching `./main.nf` [suspicious_mestorf] revision: f5d8246eb1
 
 
 ------------------------------------------------------
@@ -243,6 +243,7 @@ choice). [default: 14897628]
   --refine_bins_dastool                  [boolean] Turn on bin refinement using DAS Tool. 
   --refine_bins_dastool_threshold        [number]  Specify single-copy gene score threshold for bin refinement. [default: 0.5] 
   --refine_bins_dastool_savecontig2bin   [boolean] Specify to save contig to bin maps used for bin refinement 
+  --refine_bins_binette                  [boolean] Turn on bin refinement using Binette. 
   --postbinning_input                    [string]  Specify which binning output is sent for downstream annotation, taxonomic classification, bin 
 quality control etc.  (accepted: raw_bins_only, refined_bins_only, both) [default: 
 raw_bins_only]  

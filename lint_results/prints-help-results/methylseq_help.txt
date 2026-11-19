@@ -1,10 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.5
+ N E X T F L O W   ~  version 26.11.0-edge
 
-Downloading plugin nf-amazon@2.15.0
-Launching `./main.nf` [stoic_jang] revision: ce988dd915
+Launching `./main.nf` [agitated_curie] revision: a3fa4dedf4
 
 
 ------------------------------------------------------
@@ -42,9 +41,12 @@ Reference genome options
   --bismark_index               [string] Path to a directory containing a Bismark reference index. 
   --bwameth_index               [string] bwameth index filename base 
   --bwamem_index                [string] Path to the BWA-MEM index filename base 
+  --bwamem3_index               [string] Path to a bwa-mem3 methylation index (built with `bwa-mem3 index --meth`): a directory, a .tar.gz, 
+or an index prefix.  
 
 Alignment options
-  --aligner                     [string]  Alignment tool to use.  (accepted: bismark, bismark_hisat, bwameth, bwamem) [default: bismark] 
+  --aligner                     [string]  Alignment tool to use. Defaults to `bwamem3` when `--taps` is given on the command line or in 
+`-params-file`.  (accepted: bismark, bismark_hisat, bwameth, bwamem, bwamem3) [default: bismark] 
  
   --use_mem2                    [boolean] Use BWA-MEM2 algorithm for BWA-Meth indexing and alignment. 
 
@@ -97,10 +99,16 @@ MethylDackel options
   --methyl_kit                  [boolean] Save files for use with methylKit 
 
 rastair options
-  --trim_OT                     [string] Nucleotides to exclude from methylation calling on Original Top (strand) reads, following this 
-pattern: R1 start, R1 end, R2 start, R2 end [default: 0,0,10,0]  
-  --trim_OB                     [string] Nucleotides to exclude from methylation calling on Original Bottom (strand) reads, following this 
-pattern: R1 start, R1 end, R2 start, R2 end [default: 0,0,10,0]  
+  --taps_caller                 [string]  Methylation caller for TAPS data.  (accepted: rastair, rastair2) [default: rastair] 
+  --accept_rastair2_license     [boolean] Confirm that your use of rastair version 2 complies with its non-commercial license. 
+  --trim_OT                     [string]  Bases to ignore on Original Top (OT) reads in TAPS methylation calls: R1 start, R1 end, R2 start, R2 
+end. Replaces the M-bias estimate.  
+  --trim_OB                     [string]  Bases to ignore on Original Bottom (OB) reads in TAPS methylation calls: R1 start, R1 end, R2 start, 
+R2 end. Replaces the M-bias estimate.  
+  --rastair2_mbias_region       [string]  Region used to estimate M-bias trims with rastair version 2 (for example a methylated spike-in 
+contig).  
+  --rastair2_control_contigs    [string]  Comma-separated spike-in or control contigs to leave out of the rastair version 2 genome-wide 
+methylation figures.  
 
 methurator options
   --methurator_minimum_coverage [string]  Minimum CpGs coverage to consider for the saturation analysis. Can be a single integer or a list 

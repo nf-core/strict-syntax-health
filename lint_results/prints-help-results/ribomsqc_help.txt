@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.6
+ N E X T F L O W   ~  version 26.11.0-edge
 
-Launching `./main.nf` [mad_curie] revision: bbeb74c559
+Launching `./main.nf` [modest_brenner] revision: bbeb74c559
 
 
 ------------------------------------------------------
@@ -57,6 +57,9 @@ extraction. The window is defined as mz_M0 ± tolerance. [default: 20]
 analytes TSV.  
  !! Hiding 16 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
+
+* The pipeline
+    https://doi.org/10.5281/zenodo.18998042
 
 * The nf-core framework
     https://doi.org/10.1038/s41587-020-0439-x
