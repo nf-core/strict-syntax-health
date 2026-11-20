@@ -1,18 +1,17 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.4
+ N E X T F L O W   ~  version 26.11.0-edge
 
 Downloading plugin nf-co2footprint@1.0.0
-Launching `./main.nf` [zen_kay] revision: c9d3acc699
+Launching `./main.nf` [chaotic_davinci] revision: c9d3acc699
 
 WARN: Unrecognized config option 'co2footprint.traceFile'
 WARN: Unrecognized config option 'co2footprint.summaryFile'
 WARN: Unrecognized config option 'co2footprint.reportFile'
 groovy.lang.MissingPropertyException: No such property: ansiLogObserver for class: nextflow.Session
-	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:68)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:69)
 	at org.codehaus.groovy.vmplugin.v8.IndyGuardsFiltersAndSignatures.unwrap(IndyGuardsFiltersAndSignatures.java:163)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
 	at nextflow.co2footprint.Logging.CustomCaptureAppender.append(CustomCaptureAppender.groovy:46)
 	at nextflow.co2footprint.Logging.CustomCaptureAppender.append(CustomCaptureAppender.groovy)
 	at ch.qos.logback.core.AppenderBase.doAppend(AppenderBase.java:85)
@@ -23,17 +22,16 @@ groovy.lang.MissingPropertyException: No such property: ansiLogObserver for clas
 	at ch.qos.logback.classic.Logger.filterAndLog_0_Or3Plus(Logger.java:388)
 	at ch.qos.logback.classic.Logger.info(Logger.java:589)
 	at nextflow.co2footprint.CO2FootprintFactory.create(CO2FootprintFactory.groovy:100)
-	at nextflow.Session.createObserversV1(Session.groovy:575)
-	at nextflow.Session.init0(Session.groovy:544)
-	at nextflow.Session.init(Session.groovy:506)
+	at nextflow.Session.createObserversV1(Session.groovy:578)
+	at nextflow.Session.init0(Session.groovy:547)
+	at nextflow.Session.init(Session.groovy:509)
 	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:120)
 	at nextflow.cli.CmdRun.run(CmdRun.groovy:449)
-	at nextflow.cli.Launcher.run(Launcher.groovy:535)
-	at nextflow.cli.Launcher.main(Launcher.groovy:641)
+	at nextflow.cli.Launcher.run(Launcher.groovy:540)
+	at nextflow.cli.Launcher.main(Launcher.groovy:649)
 groovy.lang.MissingPropertyException: No such property: ansiLogObserver for class: nextflow.Session
-	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:68)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:69)
 	at org.codehaus.groovy.vmplugin.v8.IndyGuardsFiltersAndSignatures.unwrap(IndyGuardsFiltersAndSignatures.java:163)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
 	at nextflow.co2footprint.Logging.CustomCaptureAppender.append(CustomCaptureAppender.groovy:46)
 	at nextflow.co2footprint.Logging.CustomCaptureAppender.append(CustomCaptureAppender.groovy)
 	at ch.qos.logback.core.AppenderBase.doAppend(AppenderBase.java:85)
@@ -44,17 +42,16 @@ groovy.lang.MissingPropertyException: No such property: ansiLogObserver for clas
 	at ch.qos.logback.classic.Logger.filterAndLog_0_Or3Plus(Logger.java:388)
 	at ch.qos.logback.classic.Logger.info(Logger.java:589)
 	at nextflow.co2footprint.CO2FootprintFactory.create(CO2FootprintFactory.groovy:101)
-	at nextflow.Session.createObserversV1(Session.groovy:575)
-	at nextflow.Session.init0(Session.groovy:544)
-	at nextflow.Session.init(Session.groovy:506)
+	at nextflow.Session.createObserversV1(Session.groovy:578)
+	at nextflow.Session.init0(Session.groovy:547)
+	at nextflow.Session.init(Session.groovy:509)
 	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:120)
 	at nextflow.cli.CmdRun.run(CmdRun.groovy:449)
-	at nextflow.cli.Launcher.run(Launcher.groovy:535)
-	at nextflow.cli.Launcher.main(Launcher.groovy:641)
+	at nextflow.cli.Launcher.run(Launcher.groovy:540)
+	at nextflow.cli.Launcher.main(Launcher.groovy:649)
 groovy.lang.MissingPropertyException: No such property: ansiLogObserver for class: nextflow.Session
-	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:68)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:69)
 	at org.codehaus.groovy.vmplugin.v8.IndyGuardsFiltersAndSignatures.unwrap(IndyGuardsFiltersAndSignatures.java:163)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
 	at nextflow.co2footprint.Logging.CustomCaptureAppender.append(CustomCaptureAppender.groovy:46)
 	at nextflow.co2footprint.Logging.CustomCaptureAppender.append(CustomCaptureAppender.groovy)
 	at ch.qos.logback.core.AppenderBase.doAppend(AppenderBase.java:85)
@@ -64,22 +61,19 @@ groovy.lang.MissingPropertyException: No such property: ansiLogObserver for clas
 	at ch.qos.logback.classic.Logger.buildLoggingEventAndAppend(Logger.java:431)
 	at ch.qos.logback.classic.Logger.filterAndLog_0_Or3Plus(Logger.java:388)
 	at ch.qos.logback.classic.Logger.warn(Logger.java:718)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
 	at nextflow.co2footprint.DataContainers.CIValueComputer.computeCI(CIValueComputer.groovy:110)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
 	at nextflow.co2footprint.CO2FootprintConfig.<init>(CO2FootprintConfig.groovy:109)
 	at nextflow.co2footprint.CO2FootprintFactory.create(CO2FootprintFactory.groovy:116)
-	at nextflow.Session.createObserversV1(Session.groovy:575)
-	at nextflow.Session.init0(Session.groovy:544)
-	at nextflow.Session.init(Session.groovy:506)
+	at nextflow.Session.createObserversV1(Session.groovy:578)
+	at nextflow.Session.init0(Session.groovy:547)
+	at nextflow.Session.init(Session.groovy:509)
 	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:120)
 	at nextflow.cli.CmdRun.run(CmdRun.groovy:449)
-	at nextflow.cli.Launcher.run(Launcher.groovy:535)
-	at nextflow.cli.Launcher.main(Launcher.groovy:641)
+	at nextflow.cli.Launcher.run(Launcher.groovy:540)
+	at nextflow.cli.Launcher.main(Launcher.groovy:649)
 groovy.lang.MissingPropertyException: No such property: ansiLogObserver for class: nextflow.Session
-	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:68)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:69)
 	at org.codehaus.groovy.vmplugin.v8.IndyGuardsFiltersAndSignatures.unwrap(IndyGuardsFiltersAndSignatures.java:163)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
 	at nextflow.co2footprint.Logging.CustomCaptureAppender.append(CustomCaptureAppender.groovy:46)
 	at nextflow.co2footprint.Logging.CustomCaptureAppender.append(CustomCaptureAppender.groovy)
 	at ch.qos.logback.core.AppenderBase.doAppend(AppenderBase.java:85)
@@ -89,20 +83,17 @@ groovy.lang.MissingPropertyException: No such property: ansiLogObserver for clas
 	at ch.qos.logback.classic.Logger.buildLoggingEventAndAppend(Logger.java:431)
 	at ch.qos.logback.classic.Logger.filterAndLog_1(Logger.java:406)
 	at ch.qos.logback.classic.Logger.info(Logger.java:613)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
 	at nextflow.co2footprint.DataContainers.CIDataMatrix.findCiInMatrix(CIDataMatrix.groovy:70)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
 	at nextflow.co2footprint.DataContainers.CIValueComputer.computeCI(CIValueComputer.groovy:114)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
 	at nextflow.co2footprint.CO2FootprintConfig.<init>(CO2FootprintConfig.groovy:109)
 	at nextflow.co2footprint.CO2FootprintFactory.create(CO2FootprintFactory.groovy:116)
-	at nextflow.Session.createObserversV1(Session.groovy:575)
-	at nextflow.Session.init0(Session.groovy:544)
-	at nextflow.Session.init(Session.groovy:506)
+	at nextflow.Session.createObserversV1(Session.groovy:578)
+	at nextflow.Session.init0(Session.groovy:547)
+	at nextflow.Session.init(Session.groovy:509)
 	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:120)
 	at nextflow.cli.CmdRun.run(CmdRun.groovy:449)
-	at nextflow.cli.Launcher.run(Launcher.groovy:535)
-	at nextflow.cli.Launcher.main(Launcher.groovy:641)
+	at nextflow.cli.Launcher.run(Launcher.groovy:540)
+	at nextflow.cli.Launcher.main(Launcher.groovy:649)
 --help                          [boolean, string] Show the help message for all top level parameters. When a parameter is given to `--help`, the full 
 help message of that parameter will be printed.  
 --helpFull                      [boolean]         Show the help message for all non-hidden parameters. 

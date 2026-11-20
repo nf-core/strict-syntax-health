@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-11-19T00:16:39.592762+00:00
+- Generated: 2026-11-20T00:15:15.104873+00:00
 - Nextflow version: 26.11.0-edge
 - Summary: 1 warning
 
@@ -8,7 +8,7 @@
 
 - Warning: `modules/nf-core/custom/mtx2h5ad/main.nf:24:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
-    ```nextflow
-        when:
-        ^^^^^
-    ```
+  ```nextflow
+      when:
+      ^^^^^
+  ```

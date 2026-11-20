@@ -1,10 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.6
+ N E X T F L O W   ~  version 26.11.0-edge
 
 Downloading plugin nf-core-utils@0.5.0
-Launching `./main.nf` [jovial_rubens] revision: 8f301bca03
+Launching `./main.nf` [sick_fermi] revision: 98e63361b3
 
 
 ------------------------------------------------------
@@ -39,6 +39,8 @@ rnaseq, sarek, taxprofiler, viralrecon)
   --download_method             [string]  Method to download FastQ files. Available options are 'aspera', 'fastq-dl', 'ftp' or 'sratools'. 
 Default is 'ftp'.  (accepted: aspera, fastq-dl, ftp, sratools) [default: ftp]  
   --skip_fastq_download         [boolean] Only download metadata for public data database ids and don't download the FastQ files. 
+  --proteomics_file_categories  [string]  Comma-separated list of file categories to download for proteomics ids, e.g. 'RAW,PEAK'. 
+[default: RAW]  
   --dbgap_key                   [string]  dbGaP repository key. 
   --outdir                      [string]  The output directory where the results will be saved. You have to use absolute paths to storage on 
 Cloud infrastructure.  

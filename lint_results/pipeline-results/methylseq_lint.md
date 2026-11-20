@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-11-19T00:14:24.072676910Z
+- Generated: 2026-11-20T00:12:52.411273883Z
 - Nextflow version: 26.11.0-edge
 - Summary: 67 warnings
 
@@ -377,7 +377,7 @@
       ^^^^
   ```
 
-- Warning: `modules/nf-core/trimgalore/main.nf:22:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/trimgalore/main.nf:25:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

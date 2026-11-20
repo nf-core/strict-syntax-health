@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.3
+ N E X T F L O W   ~  version 26.11.0-edge
 
-Launching `./main.nf` [gigantic_gutenberg] revision: 05841bf155
+Launching `./main.nf` [disturbed_lattes] revision: 05841bf155
 
 
 ------------------------------------------------------

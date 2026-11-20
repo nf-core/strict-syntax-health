@@ -1,10 +1,17 @@
 # Nextflow lint results
 
-- Generated: 2026-11-19T00:14:50.945770300Z
+- Generated: 2026-11-20T00:13:35.676889357Z
 - Nextflow version: 26.11.0-edge
-- Summary: 20 warnings
+- Summary: 22 warnings
 
 ## :warning: Warnings
+
+- Warning: `conf/modules.config:90:25`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+              ].findAll { it }.join(' ')
+                          ^^
+  ```
 
 - Warning: `modules/local/hmmer/hmmextract/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
@@ -28,6 +35,13 @@
   ```
 
 - Warning: `modules/nf-core/duckdb/table2parquet/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/epang/filterquery/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

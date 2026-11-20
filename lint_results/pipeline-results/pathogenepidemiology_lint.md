@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-11-17T00:14:44.341353702Z
-- Nextflow version: 26.10.6
-- Summary: 58 warnings
+- Generated: 2026-11-20T00:13:24.241948596Z
+- Nextflow version: 26.11.0-edge
+- Summary: 60 warnings
 
 ## :warning: Warnings
 
@@ -293,6 +293,20 @@
       ^^^^
   ```
 
+- Warning: `subworkflows/local/phylogeny/main.nf:74:32`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .filter { sample_data, alignment ->
+                                 ^^^^^^^^^
+  ```
+
+- Warning: `subworkflows/local/phylogeny/main.nf:81:16`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+          .map { sample_data, alignment ->
+                 ^^^^^^^^^^^
+  ```
+
 - Warning: `subworkflows/local/prepare_intervals/main.nf:35:66`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
@@ -408,6 +422,6 @@
 - Warning: `workflows/pathogenepidemiology.nf:156:9`: Variable was declared but not used
 
   ```nextflow
-      def phylogeny_s = PHYLOGENY(ch_consensus_input)
+      def phylogeny_s = PHYLOGENY(ch_consensus_input, ch_queryfai)
           ^^^^^^^^^^^
   ```
