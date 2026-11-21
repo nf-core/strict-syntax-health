@@ -1,10 +1,20 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.5
+ N E X T F L O W   ~  version 26.11.0-edge
 
-Launching `./main.nf` [ridiculous_nightingale] revision: 775887a540
+Downloading plugin nf-schema@2.7.3
+Downloading plugin nf-co2footprint@1.4.1
+nf-co2footprint plugin  ~  version 1.4.1
+Launching `./main.nf` [kickass_colden] revision: 775887a540
 
+[37mINFO - [nf-co2footprint] 🔕 Repeated task-specific messages (🔁) are only logged once in the console. Further occurrences are logged at DEBUG level, appearing only in the `.nextflow.log` file.[0;39m
+[33mWARN - [nf-co2footprint] Target zone null not found. Attempting to retrieve carbon intensity for fallback zone GLOBAL.[0;39m
+[37mINFO - [nf-co2footprint] Electricity Maps API key is not set. To retrieve real-time carbon intensity values, please provide a key with the parameter `emApiKey`.
+	💡 You can obtain a key for ElectricityMaps at https://portal.electricitymaps.com/auth/login.[0;39m
+[37mINFO - [nf-co2footprint] Using fallback carbon intensity from GLOBAL from CI table: 480.0 gCO₂eq/kWh.[0;39m
+[33mWARN - [nf-co2footprint] Executor 'null' not mapped.[0;39m
+[33mWARN - [nf-co2footprint] Fallback to: `machineType = null`, `pue = 1.0`. To eliminate this warning you can set `machineType` in the config to one of [local, compute cluster, cloud].[0;39m
 
 ------------------------------------------------------
                                         ,--./,-.
@@ -12,7 +22,7 @@ Launching `./main.nf` [ridiculous_nightingale] revision: 775887a540
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/deepmutscan 1.0.0
+  nf-core/deepmutscan 1.1.0dev
 ------------------------------------------------------
 Typical pipeline command:
 
@@ -94,8 +104,11 @@ Generic options
   --help_full                   [boolean] Display the full detailed help message. 
   --show_hidden                 [boolean] Display hidden parameters in the help message (only works when --help or --help_full are provided). 
  
- !! Hiding 17 param(s), use the `--showHidden` parameter to show them !!
+ !! Hiding 18 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
+
+* The pipeline
+    https://doi.org/10.5281/zenodo.24218965
 
 * The nf-core framework
     https://doi.org/10.1038/s41587-020-0439-x
@@ -103,3 +116,5 @@ Generic options
 * Software dependencies
     https://github.com/nf-core/deepmutscan/blob/master/CITATIONS.md
 
+WARN - [nf-co2footprint] Could not find CPU model "AMD EPYC 9V45 96-Core Processor" in given TDP data table. Using default CPU power draw value (11.41 W).
+	🔖 To fix this warning, please refer to https://nextflow-io.github.io/nf-co2footprint/usage/faq/#cpu-model.

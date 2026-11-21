@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.11.0-edge
 
-Launching `./main.nf` [marvelous_jang] revision: 3d6668ec16
+Launching `./main.nf` [jovial_montalcini] revision: 3d6668ec16
 
 
 ------------------------------------------------------
@@ -135,6 +135,10 @@ adduct-free ones, or disregard adducts (Any).  (accepted: Identical, With_unknow
 [default: Any]  
 
 Re-Quantification
+  --requantification_rt_margin                                                                         [number]  Seconds added on each side of the retention-time span of a consensus feature's linked samples to 
+form its requantification target window. [default: 30.0]  
+  --requantification_min_apex_signal_fraction                                                          [number]  Minimum fraction of MS1 scans within 3 s of a requantified peak apex that must contain signal for 
+the fill to be accepted. [default: 0.3]  
   --extract_mz_window_featurefindermetaboident_openms                                                  [number]  m/z window size for chromatogram extraction (unit: ppm if 1 or greater, else Da/Th) 
   --extract_n_isotopes_featurefindermetaboident_openms                                                 [integer] Number of isotopes to include in each peptide assay. 
   --detect_peak_width_featurefindermetaboident_openms                                                  [number]  Expected elution peak width in seconds, for smoothing (Gauss filter). Also determines the RT 

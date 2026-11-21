@@ -1,10 +1,31 @@
 # Nextflow lint results
 
-- Generated: 2026-11-14T00:15:08.328268720Z
-- Nextflow version: 26.10.6
-- Summary: 30 warnings
+- Generated: 2026-11-21T00:14:16.080385268Z
+- Nextflow version: 26.11.0-edge
+- Summary: 33 warnings
 
 ## :warning: Warnings
+
+- Warning: `modules/local/filter_stats/main.nf:15:5`: Typed process should have only one output -- consider combining outputs into a record
+
+  ```nextflow
+      output:
+      ^^^^^^
+  ```
+
+- Warning: `modules/local/format_fasta_mirna/main.nf:15:5`: Typed process should have only one output -- consider combining outputs into a record
+
+  ```nextflow
+      output:
+      ^^^^^^
+  ```
+
+- Warning: `modules/local/parse_fasta_mirna/main.nf:15:5`: Typed process should have only one output -- consider combining outputs into a record
+
+  ```nextflow
+      output:
+      ^^^^^^
+  ```
 
 - Warning: `modules/nf-core/bioawk/main.nf:24:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 

@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.11.0-edge
 
-Launching `./main.nf` [hopeful_boltzmann] revision: a3fa4dedf4
+Launching `./main.nf` [small_mayer] revision: de29a61a47
 
 
 ------------------------------------------------------
@@ -36,7 +36,7 @@ Save intermediate files
 
 Reference genome options
   --genome                      [string] Name of iGenomes reference. 
-  --fasta                       [string] Path to FASTA genome file 
+  --fasta                       [string] Path to the genome FASTA; required unless --genome provides one. 
   --fasta_index                 [string] Path to Fasta index file. 
   --bismark_index               [string] Path to a directory containing a Bismark reference index. 
   --bwameth_index               [string] bwameth index filename base 
@@ -79,9 +79,9 @@ Bismark options
   --meth_cutoff                 [integer] Specify a minimum read coverage to report a methylation call 
   --no_overlap                  [boolean] Ignore read 2 methylation when it overlaps read 1 [default: true] 
   --ignore_r1                   [integer] Ignore methylation in first n bases of 5' end of R1 [default: 0] 
-  --ignore_r2                   [integer] Ignore methylation in first n bases of 5' end of R2 [default: 2] 
+  --ignore_r2                   [integer] Ignore methylation in first n bases of 5' end of R2 
   --ignore_3prime_r1            [integer] Ignore methylation in last n bases of 3' end of R1 [default: 0] 
-  --ignore_3prime_r2            [integer] Ignore methylation in last n bases of 3' end of R2 [default: 2] 
+  --ignore_3prime_r2            [integer] Ignore methylation in last n bases of 3' end of R2 
   --known_splices               [string]  Supply a .gtf file containing known splice sites (bismark_hisat only). 
   --local_alignment             [boolean] Allow soft-clipping of reads (potentially useful for single-cell experiments). 
   --combined_index              [boolean] Align against a single combined (CT+GA) Bismark index instead of the classic per-strand model. 
@@ -126,13 +126,14 @@ Targeted Sequencing Analysis Options
 Skip pipeline steps
   --skip_trimming               [boolean] Skip read trimming. 
   --skip_deduplication          [boolean] Skip deduplication step after alignment. 
-  --skip_fastqc                 [boolean] Skip FastQC 
+  --skip_fastqc                 [boolean] Skip all FastQC reports, including Trim Galore's raw and trimmed ones 
   --skip_multiqc                [boolean] Skip MultiQC 
 
 Run pipeline steps
   --run_preseq                  [boolean] Run preseq/lcextrap tool 
   --run_methurator              [boolean] Run methurator/gtestimator tool 
   --run_qualimap                [boolean] Run qualimap/bamqc tool 
+  --run_riker                   [boolean] Run riker multi for alignment, insert size, coverage and GC bias metrics 
   --run_targeted_sequencing     [boolean] Run advanced analysis for targeted methylation kits with enrichment of specific regions 
 
 Generic options

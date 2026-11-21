@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-11-20T00:12:38.259309376Z
+- Generated: 2026-11-21T00:13:12.577151453Z
 - Nextflow version: 26.11.0-edge
-- Summary: 33 warnings
+- Summary: 32 warnings
 
 ## :warning: Warnings
 
@@ -48,7 +48,7 @@
       ^^^^
   ```
 
-- Warning: `modules/local/openms_featurefindermetaboident/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/openms_featurefindermetaboident/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -153,6 +153,13 @@
       ^^^^
   ```
 
+- Warning: `modules/local/pyopenms_gapfillconsensus/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
 - Warning: `modules/local/pyopenms_generatesearchparams/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
@@ -167,14 +174,7 @@
       ^^^^
   ```
 
-- Warning: `modules/local/pyopenms_libbuilder/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
-
-  ```nextflow
-      when:
-      ^^^^
-  ```
-
-- Warning: `modules/local/pyopenms_merge/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/pyopenms_libbuilder/main.nf:22:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -188,14 +188,7 @@
       ^^^^
   ```
 
-- Warning: `modules/local/pyopenms_reloadmaps/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
-
-  ```nextflow
-      when:
-      ^^^^
-  ```
-
-- Warning: `modules/local/pyopenms_split/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/pyopenms_requantqc/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

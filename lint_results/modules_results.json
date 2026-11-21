@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "5ce2673c190bd7f779ec998aad835f7ec3a378c9",
+  "_repo_commit": "7952a1fb5413f72d63d5d59e2a89141496bb96e0",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -3800,6 +3800,12 @@
   },
   "fgumi_merge": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fgumi/merge",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
+  "fgumi_runall": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fgumi/runall",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
@@ -11738,6 +11744,18 @@
   },
   "sylphtax_taxprof": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/sylphtax/taxprof",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
+  "syncon_build": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/syncon/build",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
+  "syncon_decon": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/syncon/decon",
     "errors": 0,
     "warnings": 1,
     "parse_error": false

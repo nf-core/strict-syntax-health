@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.5
+ N E X T F L O W   ~  version 26.11.0-edge
 
-Launching `./main.nf` [stoic_newton] revision: 3482ec1bc8
+Launching `./main.nf` [focused_murdock] revision: 3482ec1bc8
 
 
 ------------------------------------------------------

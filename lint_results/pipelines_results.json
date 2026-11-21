@@ -314,14 +314,14 @@
   "deepmutscan": {
     "full_name": "nf-core/deepmutscan",
     "html_url": "https://github.com/nf-core/deepmutscan",
-    "commit": "fb640f70f74b1eab1fc77a6228a89e5d1119354b",
+    "commit": "c979cd967010aeb66cf2d57dc825b5d319b288b3",
     "errors": 0,
-    "warnings": 89,
+    "warnings": 88,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 24
+    "publishdir_count": 23
   },
   "demo": {
     "full_name": "nf-core/demo",
@@ -446,14 +446,14 @@
   "eager": {
     "full_name": "nf-core/eager",
     "html_url": "https://github.com/nf-core/eager",
-    "commit": "5c5aaab8ff9d157e09c5264b1afb7c55b875d5e6",
+    "commit": "a25f2721f90c3db03586e741f298eea4a40c85b5",
     "errors": 0,
     "warnings": 488,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 126
+    "publishdir_count": 117
   },
   "epigenomesegmentation": {
     "full_name": "nf-core/epigenomesegmentation",
@@ -842,14 +842,14 @@
   "metaboigniter": {
     "full_name": "nf-core/metaboigniter",
     "html_url": "https://github.com/nf-core/metaboigniter",
-    "commit": "43c1b437b1df51c8af201405fb2bab8a6d32d863",
+    "commit": "91bc94a7307053a6e2c0def6c08eeaf5aa3a9741",
     "errors": 0,
-    "warnings": 33,
+    "warnings": 32,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 34
+    "publishdir_count": 33
   },
   "metapep": {
     "full_name": "nf-core/metapep",
@@ -902,14 +902,14 @@
   "methylseq": {
     "full_name": "nf-core/methylseq",
     "html_url": "https://github.com/nf-core/methylseq",
-    "commit": "96c0f3fbcd0f2b5cda6c08a446e344693eb0f85b",
+    "commit": "a9e8ddf34c5347c948067fbdc84729e43bd2b6bf",
     "errors": 0,
     "warnings": 67,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 56
+    "publishdir_count": 57
   },
   "mhcquant": {
     "full_name": "nf-core/mhcquant",
@@ -1334,9 +1334,9 @@
   "references": {
     "full_name": "nf-core/references",
     "html_url": "https://github.com/nf-core/references",
-    "commit": "4a244d725b18953579fcde3f0ff3daf23d3727d0",
+    "commit": "b8e4eeb0263d1377fca7d74dd7990622f2dd758e",
     "errors": 0,
-    "warnings": 23,
+    "warnings": 24,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": true,
@@ -1418,14 +1418,14 @@
   "rnasplice": {
     "full_name": "nf-core/rnasplice",
     "html_url": "https://github.com/nf-core/rnasplice",
-    "commit": "e76a00091975f2d295384650091242ba72aee0f0",
+    "commit": "a61f647684c76803cb1e643ac2808ce9864dafcc",
     "errors": 0,
-    "warnings": 77,
+    "warnings": 79,
     "parse_error": false,
     "prints_help": false,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 81
+    "publishdir_count": 83
   },
   "rnastructurome": {
     "full_name": "nf-core/rnastructurome",
@@ -1550,9 +1550,9 @@
   "smrnaseq": {
     "full_name": "nf-core/smrnaseq",
     "html_url": "https://github.com/nf-core/smrnaseq",
-    "commit": "7ca21c32984d1cec67b59db5b8b088893dbf6045",
+    "commit": "861a631eb9c7669d04965feb9a12ce87b9bef99e",
     "errors": 0,
-    "warnings": 30,
+    "warnings": 33,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": true,
@@ -1610,7 +1610,7 @@
   "stableexpression": {
     "full_name": "nf-core/stableexpression",
     "html_url": "https://github.com/nf-core/stableexpression",
-    "commit": "2990e4874a0538b97f883da4be564d522af42a54",
+    "commit": "a59ef1d4994e9525c9df8371bc51ed6aaa87a6bb",
     "errors": 0,
     "warnings": 12,
     "parse_error": false,
