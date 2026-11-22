@@ -1,12 +1,12 @@
 # Nextflow lint results
 
-- Generated: 2026-11-21T00:15:01.909822+00:00
+- Generated: 2026-11-22T00:14:18.515912+00:00
 - Nextflow version: 26.11.0-edge
 - Summary: 1 warning
 
 ## :warning: Warnings
 
-- Warning: `modules/nf-core/samplesheetparser/validate/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/samplesheetparser/validate/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

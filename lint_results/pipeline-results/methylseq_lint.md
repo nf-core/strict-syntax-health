@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-11-21T00:13:25.305619025Z
+- Generated: 2026-11-22T00:13:16.622075038Z
 - Nextflow version: 26.11.0-edge
-- Summary: 67 warnings
+- Summary: 68 warnings
 
 ## :warning: Warnings
 
@@ -34,7 +34,14 @@
                                                            ^^
   ```
 
-- Warning: `modules/local/filter_bedgraph_targets/main.nf:30:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/filter_bedgraph_targets/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/filter_cov_targets/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -48,14 +55,14 @@
       ^^^^
   ```
 
-- Warning: `modules/nf-core/bcftools/stats/main.nf:25:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/widen_targets_cpg/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
       ^^^^
   ```
 
-- Warning: `modules/nf-core/bedtools/intersect/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/bcftools/stats/main.nf:25:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -398,21 +405,21 @@
       ^^^^
   ```
 
-- Warning: `subworkflows/local/targeted_sequencing/main.nf:29:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/targeted_sequencing/main.nf:31:19`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_versions = Channel.empty()
                     ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/targeted_sequencing/main.nf:30:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
+- Warning: `subworkflows/local/targeted_sequencing/main.nf:32:25`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
 
   ```nextflow
       ch_picard_metrics = Channel.empty()
                           ^^^^^^^
   ```
 
-- Warning: `subworkflows/local/targeted_sequencing/main.nf:83:72`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/targeted_sequencing/main.nf:93:72`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_intervals = PICARD_BEDTOINTERVALLIST.out.intervallist.map { it[1] }
@@ -426,49 +433,49 @@
                                          ^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_methylseq_pipeline/main.nf:408:9`: Variable was declared but not used
+- Warning: `subworkflows/local/utils_nfcore_methylseq_pipeline/main.nf:404:9`: Variable was declared but not used
 
   ```nextflow
       def citation_text = ["Tools used in the workflow included:", "FastQC (Andrews 2010),", "Trim Galore! (Krueger)", "Bismark (Krueger 2011)", "bwa-meth (Pedersen 2014)", "Picard (Broad Institute 2019)", "Qualimap (Okonechnikov 2015)", "Preseq (Daley 2013)", "MultiQC (Ewels et al. 2016)", "."].join(' ').trim()
           ^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/methylseq/main.nf:393:37`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/methylseq/main.nf:394:37`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .combine(ch_fasta.map { meta, fasta -> fasta })
                                       ^^^^
   ```
 
-- Warning: `workflows/methylseq/main.nf:394:43`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/methylseq/main.nf:395:43`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .combine(ch_fasta_index.map { meta, index -> index })
                                             ^^^^
   ```
 
-- Warning: `workflows/methylseq/main.nf:447:90`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/methylseq/main.nf:448:90`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files = ch_multiqc_files.mix(QUALIMAP_BAMQC.out.results.collect { it[1] }.ifEmpty([]))
                                                                                            ^^
   ```
 
-- Warning: `workflows/methylseq/main.nf:450:68`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/methylseq/main.nf:451:68`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(ch_riker.collect { it[1] }.ifEmpty([]))
                                                                      ^^
   ```
 
-- Warning: `workflows/methylseq/main.nf:452:87`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/methylseq/main.nf:453:87`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files = ch_multiqc_files.mix(PRESEQ_LCEXTRAP.out.log.collect { it[1] }.ifEmpty([]))
                                                                                         ^^
   ```
 
-- Warning: `workflows/methylseq/main.nf:464:106`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/methylseq/main.nf:465:106`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   ch_multiqc_files = ch_multiqc_files.mix(TARGETED_SEQUENCING.out.picard_metrics.collect { it[1] }.ifEmpty([]))

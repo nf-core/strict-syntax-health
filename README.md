@@ -11,12 +11,12 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 > See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline.
 > **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**
 
-- **Last updated:** 2026-11-21 00:15:30 UTC
+- **Last updated:** 2026-11-22 00:14:51 UTC
 - **Nextflow version:** 26.11.0-edge
 
 ## Pipelines
 
-- **Total:** 0 parse errors, 1304 errors, 8199 warnings across 147 pipelines
+- **Total:** 0 parse errors, 1304 errors, 8200 warnings across 147 pipelines
 - **Zero errors:** 104 pipelines (70.7%)
 
 |                    Errors                    |                     Warnings                     |
@@ -96,8 +96,8 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :white_check_mark: [bacmodel](https://github.com/nf-core/bacmodel)                             |     No      |      0 |       77 |     Yes     |         [View](lint_results/pipeline-results/bacmodel_lint.md)          |        [View](lint_results/prints-help-results/bacmodel_help.txt)        |
 | :white_check_mark: [scdownstream](https://github.com/nf-core/scdownstream)                     |     No      |      0 |       76 |     Yes     |       [View](lint_results/pipeline-results/scdownstream_lint.md)        |      [View](lint_results/prints-help-results/scdownstream_help.txt)      |
 | :white_check_mark: [mcmicro](https://github.com/nf-core/mcmicro)                               |     No      |      0 |       72 |     Yes     |          [View](lint_results/pipeline-results/mcmicro_lint.md)          |        [View](lint_results/prints-help-results/mcmicro_help.txt)         |
+| :white_check_mark: [methylseq](https://github.com/nf-core/methylseq)                           |     No      |      0 |       68 |     Yes     |         [View](lint_results/pipeline-results/methylseq_lint.md)         |       [View](lint_results/prints-help-results/methylseq_help.txt)        |
 | :x: [ampliseq](https://github.com/nf-core/ampliseq)                                            |     No      |      0 |       67 |     No      |         [View](lint_results/pipeline-results/ampliseq_lint.md)          |        [View](lint_results/prints-help-results/ampliseq_help.txt)        |
-| :white_check_mark: [methylseq](https://github.com/nf-core/methylseq)                           |     No      |      0 |       67 |     Yes     |         [View](lint_results/pipeline-results/methylseq_lint.md)         |       [View](lint_results/prints-help-results/methylseq_help.txt)        |
 | :x: [tumourevo](https://github.com/nf-core/tumourevo)                                          |     No      |      0 |       62 |     No      |         [View](lint_results/pipeline-results/tumourevo_lint.md)         |       [View](lint_results/prints-help-results/tumourevo_help.txt)        |
 | :white_check_mark: [bacass](https://github.com/nf-core/bacass)                                 |     No      |      0 |       60 |     Yes     |          [View](lint_results/pipeline-results/bacass_lint.md)           |         [View](lint_results/prints-help-results/bacass_help.txt)         |
 | :white_check_mark: [magmap](https://github.com/nf-core/magmap)                                 |     No      |      0 |       60 |     Yes     |          [View](lint_results/pipeline-results/magmap_lint.md)           |         [View](lint_results/prints-help-results/magmap_help.txt)         |
@@ -281,7 +281,7 @@ The status emoji next to each pipeline shows its migration state: :white_check_m
 | :x: [metatdenovo](https://github.com/nf-core/metatdenovo)                             |     No      |   Yes (18)   |        [View](lint_results/workflow-outputs-results/metatdenovo_outputs.md)        |
 | :x: [methylarray](https://github.com/nf-core/methylarray)                             |     No      |   Yes (2)    |        [View](lint_results/workflow-outputs-results/methylarray_outputs.md)        |
 | :x: [methylong](https://github.com/nf-core/methylong)                                 |     No      |   Yes (42)   |         [View](lint_results/workflow-outputs-results/methylong_outputs.md)         |
-| :x: [methylseq](https://github.com/nf-core/methylseq)                                 |     No      |   Yes (57)   |         [View](lint_results/workflow-outputs-results/methylseq_outputs.md)         |
+| :x: [methylseq](https://github.com/nf-core/methylseq)                                 |     No      |   Yes (58)   |         [View](lint_results/workflow-outputs-results/methylseq_outputs.md)         |
 | :x: [mhcquant](https://github.com/nf-core/mhcquant)                                   |     No      |   Yes (46)   |         [View](lint_results/workflow-outputs-results/mhcquant_outputs.md)          |
 | :x: [mitodetect](https://github.com/nf-core/mitodetect)                               |     No      |   Yes (2)    |        [View](lint_results/workflow-outputs-results/mitodetect_outputs.md)         |
 | :x: [mnaseseq](https://github.com/nf-core/mnaseseq)                                   |     No      |   Yes (26)   |         [View](lint_results/workflow-outputs-results/mnaseseq_outputs.md)          |
@@ -347,8 +347,8 @@ The status emoji next to each pipeline shows its migration state: :white_check_m
 
 ## Modules
 
-- **Total:** 0 parse errors, 0 errors, 1760 warnings across 2157 modules
-- **Zero errors:** 2157 modules (100.0%)
+- **Total:** 0 parse errors, 0 errors, 1762 warnings across 2159 modules
+- **Zero errors:** 2159 modules (100.0%)
 
 |                   Errors                   |                    Warnings                    |
 | :----------------------------------------: | :--------------------------------------------: |
@@ -360,7 +360,7 @@ The status emoji next to each pipeline shows its migration state: :white_check_m
 | Module | Parse Error | Errors | Warnings | Lint Output |
 | ------ | :---------: | -----: | -------: | :---------: |
 
-_Modules with zero errors are not shown above (2157 modules). They may still have warnings. See the [modules results directory](lint_results/module-results/) for all lint outputs._
+_Modules with zero errors are not shown above (2159 modules). They may still have warnings. See the [modules results directory](lint_results/module-results/) for all lint outputs._
 
 </details>
 

@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "7952a1fb5413f72d63d5d59e2a89141496bb96e0",
+  "_repo_commit": "bbd7054a060ab558521f3c6601df5323c96362fd",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -11642,6 +11642,18 @@
   },
   "svdss_index": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/svdss/index",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
+  "svdss_search": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/svdss/search",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
+  "svdss_smooth": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/svdss/smooth",
     "errors": 0,
     "warnings": 1,
     "parse_error": false

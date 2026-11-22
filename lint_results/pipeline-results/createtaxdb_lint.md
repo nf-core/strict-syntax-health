@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-11-16T00:14:53.317937560Z
-- Nextflow version: 26.10.6
+- Generated: 2026-11-22T00:12:46.737974732Z
+- Nextflow version: 26.11.0-edge
 - Summary: 28 warnings
 
 ## :warning: Warnings
@@ -27,14 +27,14 @@
       ^^^^
   ```
 
-- Warning: `modules/nf-core/centrifuger/build/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/centrifuger/build/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
       ^^^^
   ```
 
-- Warning: `modules/nf-core/diamond/makedb/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/diamond/makedb/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
