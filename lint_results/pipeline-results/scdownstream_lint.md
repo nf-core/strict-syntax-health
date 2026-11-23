@@ -1,12 +1,19 @@
 # Nextflow lint results
 
-- Generated: 2026-11-16T00:16:28.164909971Z
-- Nextflow version: 26.10.6
-- Summary: 76 warnings
+- Generated: 2026-11-23T00:14:30.972760190Z
+- Nextflow version: 26.11.0-edge
+- Summary: 78 warnings
 
 ## :warning: Warnings
 
 - Warning: `modules/local/adata/extend/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/adata/geneannotation/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -455,6 +462,13 @@
   ```
 
 - Warning: `modules/nf-core/anndata/barcodes/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/atlasgeneannotationmanipulation/gtf2featureannotation/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

@@ -1,10 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.6
+ N E X T F L O W   ~  version 26.11.0-edge
 
 Downloading plugin nf-anndata@0.5.2
-Launching `./main.nf` [mighty_noether] revision: 5e58573b72
+Launching `./main.nf` [insane_nobel] revision: e2626c626c
 
 
 ------------------------------------------------------
@@ -44,9 +44,10 @@ before `duplicate_var_resolution` is applied. All numeric suffixes following a d
 Quality control options
   --species                       [string]  Species of the input data. Used to auto-select bundled cell cycle gene lists 
 (assets/cell_cycle_genes/<species>_s_genes.txt and _g2m_genes.txt), as the MyGene.info taxonomy when 
-converting gene identifiers (samplesheet symbol_col: none), and for PROGENy pathway enrichment in 
-Tensor-cell2cell. Bundled cell cycle lists are provided for 'human' and 'mouse'. Ignored when 
---s_genes and --g2m_genes are set explicitly. [default: human]  
+converting gene identifiers (samplesheet symbol_col: none), for PROGENy pathway enrichment in 
+Tensor-cell2cell, and for --gene_annotation when no --gene_annotation_gtf is given. Bundled cell 
+cycle lists are provided for 'human' and 'mouse'. Ignored when --s_genes and --g2m_genes are set 
+explicitly. [default: human]  
   --cell_cycle_scoring            [boolean] Whether to perform cell cycle scoring. If true, S and G2M phase scores and a predicted phase label 
 are added to each cell in adata.obs. Requires the gene index (or symbol_col) to use standard gene 
 symbols matching the selected species. [default: true]  
@@ -182,6 +183,12 @@ publication-style scoring.  (accepted: fast, full) [default: fast]
 First column is used; optional header gene/symbol/names. Blank and # lines are ignored.  
   --prep_cellxgene                [boolean] Prepare the output for visualisation in cellxgene 
   --tords                         [boolean] Convert the final AnnData object to an RDS SingleCellExperiment file 
+  --gene_annotation               [boolean] Annotate the genes of the final AnnData object with biotype, chromosome and a broad biotype group 
+(adata.var columns gene_biotype, chromosome, biotype_group and gene_annotation_ambiguous). Uses 
+--gene_annotation_gtf when given, otherwise queries MyGene.info for --species.  
+  --gene_annotation_gtf           [string]  Optional GTF file used by --gene_annotation. Genes are matched on gene_name, then on gene_id 
+(version suffixes ignored). Ensembl (gene_biotype) and GENCODE (gene_type) attributes are supported. 
+ 
 
 Sampling options
   --sample_n                      [integer] Subsample to a constant number of cells. Cannot be used together with sample_fraction. 

@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-11-21T00:12:29.118040704Z
+- Generated: 2026-11-23T00:13:09.693400996Z
 - Nextflow version: 26.11.0-edge
 - Summary: 88 warnings
 
@@ -55,7 +55,7 @@
       ^^^^
   ```
 
-- Warning: `modules/local/raw_data_qc/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/raw_data_qc/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -132,7 +132,7 @@
       ^^^^
   ```
 
-- Warning: `modules/nf-core/bwa/index/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/bwamem3/index/main.nf:22:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

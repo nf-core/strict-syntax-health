@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.11.0-edge
 
-Launching `./main.nf` [sad_meninsky] revision: c25e02b8a7
+Launching `./main.nf` [berserk_davinci] revision: c25e02b8a7
 
 
 ------------------------------------------------------
@@ -122,6 +122,12 @@ Qualimap Options
 Targeted Sequencing Analysis Options
   --target_regions_file         [string]  A BED file containing the target regions 
   --collecthsmetrics            [boolean] Run Picard CollectHsMetrics in the targeted analysis 
+
+UMI options
+  --with_umi                    [boolean] Use UMIs to mark duplicates. 
+  --umi_read_structure          [string]  Read structure of each FASTQ file, when the UMIs are inline in the reads. 
+  --umi_dedup_strategy          [string]  UMI grouping strategy for `fgumi dedup`.  (accepted: identity, edit, adjacency, paired) 
+[default: adjacency]  
 
 Skip pipeline steps
   --skip_trimming               [boolean] Skip read trimming. 

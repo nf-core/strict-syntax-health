@@ -314,7 +314,7 @@
   "deepmutscan": {
     "full_name": "nf-core/deepmutscan",
     "html_url": "https://github.com/nf-core/deepmutscan",
-    "commit": "c979cd967010aeb66cf2d57dc825b5d319b288b3",
+    "commit": "382a91aa208d6b0acb0e13810a8886312bebe905",
     "errors": 0,
     "warnings": 88,
     "parse_error": false,
@@ -902,14 +902,14 @@
   "methylseq": {
     "full_name": "nf-core/methylseq",
     "html_url": "https://github.com/nf-core/methylseq",
-    "commit": "3da58f4de6c336eb5fd09a5f88dd68d72106ef0c",
+    "commit": "96a701c231adbd716202e3258cc870354b0886ca",
     "errors": 0,
-    "warnings": 68,
+    "warnings": 72,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 58
+    "publishdir_count": 62
   },
   "mhcquant": {
     "full_name": "nf-core/mhcquant",
@@ -1082,7 +1082,7 @@
   "pacvar": {
     "full_name": "nf-core/pacvar",
     "html_url": "https://github.com/nf-core/pacvar",
-    "commit": "f2fb7a8c33e1c7ea21ebdea13b37f7f679bfa1d7",
+    "commit": "bb2d4ab90f354a054c7365355aa0ae3924b991c2",
     "errors": 0,
     "warnings": 50,
     "parse_error": false,
@@ -1478,14 +1478,14 @@
   "scdownstream": {
     "full_name": "nf-core/scdownstream",
     "html_url": "https://github.com/nf-core/scdownstream",
-    "commit": "d9264b35ed88b648baf157d76bd9b261344fb585",
+    "commit": "9cd885760924a73f7291904fe51a2c48fc3d9a6a",
     "errors": 0,
-    "warnings": 76,
+    "warnings": 78,
     "parse_error": false,
     "prints_help": true,
     "workflow_output": false,
     "publishdir": true,
-    "publishdir_count": 81
+    "publishdir_count": 83
   },
   "scnanoseq": {
     "full_name": "nf-core/scnanoseq",
@@ -1682,7 +1682,7 @@
   "tumourevo": {
     "full_name": "nf-core/tumourevo",
     "html_url": "https://github.com/nf-core/tumourevo",
-    "commit": "650abe44c518da680a53bf4299bb2baeb2c877be",
+    "commit": "6e144bf1f38ddd74a2a6fbd0629e88204b44d8b9",
     "errors": 0,
     "warnings": 62,
     "parse_error": false,
