@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-11-18T00:15:12.590588273Z
-- Nextflow version: 26.10.6
-- Summary: 30 warnings
+- Generated: 2026-11-24T00:13:51.720353597Z
+- Nextflow version: 26.11.0-edge
+- Summary: 29 warnings
 
 ## :warning: Warnings
 
@@ -207,11 +207,4 @@
   ```nextflow
       when:
       ^^^^
-  ```
-
-- Warning: `subworkflows/local/align_cellrangermulti/main.nf:70:9`: Variable was declared but not used
-
-  ```nextflow
-          ch_gex_barcodes           = params.gex_barcode_sample_assignment ? file(params.gex_barcode_sample_assignment) : []
-          ^^^^^^^^^^^^^^^
   ```

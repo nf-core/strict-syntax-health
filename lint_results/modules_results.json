@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "46842d1ee933d20b78619d513aef7713ed121d72",
+  "_repo_commit": "9804fc814f848fd7100b2203e35ff6d5321d031f",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -1694,6 +1694,24 @@
   },
   "catpack_summarise": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/catpack/summarise",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
+  "ccnv_extract": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ccnv/extract",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
+  "ccnv_predict": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ccnv/predict",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
+  "ccnv_reference": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/ccnv/reference",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
@@ -3740,6 +3758,12 @@
   },
   "fgumi_codec": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fgumi/codec",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
+  "fgumi_copyumi": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/fgumi/copyumi",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
@@ -11768,6 +11792,12 @@
   },
   "syncon_decon": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/syncon/decon",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
+  "syncon_fetch": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/syncon/fetch",
     "errors": 0,
     "warnings": 1,
     "parse_error": false

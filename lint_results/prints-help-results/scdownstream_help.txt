@@ -3,8 +3,8 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.11.0-edge
 
-Downloading plugin nf-anndata@0.5.2
-Launching `./main.nf` [insane_nobel] revision: e2626c626c
+Downloading plugin nf-anndata@0.5.4
+Launching `./main.nf` [suspicious_brattain] revision: 7e1a88aa05
 
 
 ------------------------------------------------------
@@ -98,6 +98,10 @@ provided, the model will be used for integration. Otherwise, a new model will be
   --scimilarity_model             [string]  Path to a pre-trained scimilarity model, only relevant if scimilarity is selected in 
 `integration_methods`. If provided, the model will be used for integration. Otherwise, a new model 
 will be trained. [default: https://zenodo.org/records/10685499/files/model_v1.1.tar.gz]  
+  --scconcept_model               [string]  Location of the pinned human scConcept model files. Use a local directory for offline runs. 
+[default: 
+https://huggingface.co/theislab/scConcept/resolve/0dacfeaa2ac19cbd2308806ab75a2b171f92dd76/corpus40M-model30M] 
+ 
   --expimap_gmt                   [string]  Path to pathway database file (GMT format) for EXPIMAP, only relevant if expimap is selected in 
 `integration_methods`. If not provided, the default Reactome pathways will be used.  
 

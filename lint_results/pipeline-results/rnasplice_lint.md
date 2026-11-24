@@ -1,47 +1,47 @@
 # Nextflow lint results
 
-- Generated: 2026-11-21T00:14:00.423880731Z
+- Generated: 2026-11-24T00:13:17.850380931Z
 - Nextflow version: 26.11.0-edge
-- Summary: 79 warnings
+- Summary: 81 warnings
 
 ## :warning: Warnings
 
-- Warning: `conf/modules.config:346:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:356:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               saveAs: { filename -> null }
                         ^^^^^^^^
   ```
 
-- Warning: `conf/modules.config:355:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:365:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               saveAs: { filename -> null }
                         ^^^^^^^^
   ```
 
-- Warning: `conf/modules.config:364:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:374:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               saveAs: { filename -> null }
                         ^^^^^^^^
   ```
 
-- Warning: `conf/modules.config:373:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:383:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               saveAs: { filename -> null }
                         ^^^^^^^^
   ```
 
-- Warning: `conf/modules.config:395:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:405:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               saveAs: { filename -> null }
                         ^^^^^^^^
   ```
 
-- Warning: `modules/local/aspli/counts/main.nf:28:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/aspli/counts/main.nf:29:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -77,6 +77,20 @@
   ```
 
 - Warning: `modules/local/edger/exon/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/geneannotation/annotate/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/geneannotation/tables/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -552,7 +566,7 @@
                   ^^
   ```
 
-- Warning: `workflows/rnasplice.nf:246:9`: Variable was declared but not used
+- Warning: `workflows/rnasplice.nf:255:9`: Variable was declared but not used
 
   ```nextflow
           ch_transcriptome_bam_index = BAM_SORT_STATS_SAMTOOLS.out.index

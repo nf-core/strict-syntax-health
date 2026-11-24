@@ -6,7 +6,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 Downloading plugin nf-schema@2.7.3
 Downloading plugin nf-co2footprint@1.4.1
 nf-co2footprint plugin  ~  version 1.4.1
-Launching `./main.nf` [dreamy_colden] revision: 775887a540
+Launching `./main.nf` [stoic_celsius] revision: 775887a540
 
 [37mINFO - [nf-co2footprint] 🔕 Repeated task-specific messages (🔁) are only logged once in the console. Further occurrences are logged at DEBUG level, appearing only in the `.nextflow.log` file.[0;39m
 [33mWARN - [nf-co2footprint] Target zone null not found. Attempting to retrieve carbon intensity for fallback zone GLOBAL.[0;39m
@@ -57,6 +57,7 @@ Variant counting options
 contribute to sequencing coverage. [default: 40]  
   --min_flank                   [integer] Minimum distance (nt) a mutation or covered base must be from a read edge; also excludes those bases 
 from coverage. Set to 0 to disable edge trimming. [default: 2]  
+  --save_bam                    [boolean] Publish the sorted, indexed BAM of every library to intermediate_files/bam_files/sorted/. 
 
 Sequencing-error correction options
   --error_correction            [string]  Sequencing-error correction of variant counts. 'false_doubles' (default) estimates the error rate of 
@@ -116,5 +117,5 @@ Generic options
 * Software dependencies
     https://github.com/nf-core/deepmutscan/blob/master/CITATIONS.md
 
-WARN - [nf-co2footprint] Could not find CPU model "Intel(R) Xeon(R) 6975P-C" in given TDP data table. Using default CPU power draw value (11.41 W).
+WARN - [nf-co2footprint] Could not find CPU model "AMD EPYC 9V45 96-Core Processor" in given TDP data table. Using default CPU power draw value (11.41 W).
 	🔖 To fix this warning, please refer to https://nextflow-io.github.io/nf-co2footprint/usage/faq/#cpu-model.

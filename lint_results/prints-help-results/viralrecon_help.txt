@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.6
+ N E X T F L O W   ~  version 26.11.0-edge
 
-Launching `./main.nf` [big_blackwell] revision: c079035134
+Launching `./main.nf` [loquacious_hamilton] revision: 765293ef68
 
 
 ------------------------------------------------------
@@ -117,6 +117,27 @@ ivar, bcftools)
 and 'ivar' (default: 'bcftools').  (accepted: ivar, bcftools) [default: bcftools]  
   --min_mapped_reads             [integer] Minimum number of mapped reads below which samples are removed from further processing. Some 
 downstream steps in the pipeline will fail if this threshold is too low. [default: 1000]  
+  --min_depth_variants           [integer] Minimum depth of coverage required to call a variant. Used in the ivar variants subworkflow in the 
+ivar variants module for the '-m' flag and in the bcftools variants subworkflow in the bcftools 
+mpileup module to filter out variants with depth less than the specified value. [default: 10] 
+ 
+  --min_depth_consensus          [integer] Minimum depth of coverage required to call a base in the consensus sequence. Used by the ivar 
+consensus subworkflow in the ivar consensus module with the '-m' flag and in the bcftools consensus 
+subworkflow in the make bed mask module for samtools mpileup to mask bases with depth less than the 
+specified value. [default: 10]  
+  --min_allele_freq_variants     [number]  Minimum allele frequency required to call a variant. Used in the ivar variants subworkflow in the 
+ivar variants module for the '-t' flag. [default: 0.25]  
+  --min_allele_freq_consensus    [number]  Minimum allele frequency threshold used for consensus sequence generation with both iVar and 
+BCFtools. However, these tools handle the minimum allele frequency threshold differently when 
+determining which bases or variants are incorporated into the consensus sequence. This threshold is 
+used in the ivar consensus subworkflow in the ivar consensus module with the '-t' flag: a base that 
+meets this threshold will be called directly. If a single base does not meet this threshold on its 
+own, an ambiguous base representing all bases that collectively meet the threshold will be called 
+instead. This is also used in the bcftools consensus subworkflow in the bcftools filter module to 
+filter out variants with allele frequency less than the specified value. Carefully review the 
+documentation of both tools before setting this parameter, as the same threshold value may lead to 
+different consensus calling behaviour depending on the software used. The default value is intended 
+for use with BCFtools and may not be appropriate for iVar. [default: 0.75]  
   --ivar_trim_noprimer           [boolean] This option unsets the '-e' parameter in 'ivar trim' to discard reads without primers. 
   --ivar_trim_offset             [integer] This option sets the '-x' parameter in 'ivar trim' so that reads that occur at the specified offset 
 positions relative to primer positions will also be trimmed.  

@@ -1,6 +1,6 @@
 # Workflow outputs migration: rnasplice
 
-- Generated: 2026-11-21T00:14:00.588789+00:00
+- Generated: 2026-11-24T00:13:17.992956+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -12,11 +12,11 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 ## Legacy `publishDir` references
 
-Found 83 `publishDir` references across 6 files that should be migrated to the workflow `output {}` block:
+Found 92 `publishDir` references across 6 files that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/rnasplice/blob/a61f647684c76803cb1e643ac2808ce9864dafcc/conf/modules.config#L16) — 78 references
-- [`modules/nf-core/rseqc/inferexperiment/tests/nextflow.config`](https://github.com/nf-core/rnasplice/blob/a61f647684c76803cb1e643ac2808ce9864dafcc/modules/nf-core/rseqc/inferexperiment/tests/nextflow.config#L3) — 1 reference
-- [`modules/nf-core/subread/featurecounts/tests/nextflow.config`](https://github.com/nf-core/rnasplice/blob/a61f647684c76803cb1e643ac2808ce9864dafcc/modules/nf-core/subread/featurecounts/tests/nextflow.config#L3) — 1 reference
-- [`modules/nf-core/umitools/extract/tests/nextflow.config`](https://github.com/nf-core/rnasplice/blob/a61f647684c76803cb1e643ac2808ce9864dafcc/modules/nf-core/umitools/extract/tests/nextflow.config#L3) — 1 reference
-- [`subworkflows/nf-core/bedgraph_bedclip_bedgraphtobigwig/tests/nextflow.config`](https://github.com/nf-core/rnasplice/blob/a61f647684c76803cb1e643ac2808ce9864dafcc/subworkflows/nf-core/bedgraph_bedclip_bedgraphtobigwig/tests/nextflow.config#L3) — 1 reference
-- [`subworkflows/nf-core/fastq_subsample_fq_salmon/tests/nextflow.config`](https://github.com/nf-core/rnasplice/blob/a61f647684c76803cb1e643ac2808ce9864dafcc/subworkflows/nf-core/fastq_subsample_fq_salmon/tests/nextflow.config#L3) — 1 reference
+- [`conf/modules.config`](https://github.com/nf-core/rnasplice/blob/ade5873ca132d629dc079eb74f5ff70c04a1ca86/conf/modules.config#L16) — 87 references
+- [`modules/nf-core/rseqc/inferexperiment/tests/nextflow.config`](https://github.com/nf-core/rnasplice/blob/ade5873ca132d629dc079eb74f5ff70c04a1ca86/modules/nf-core/rseqc/inferexperiment/tests/nextflow.config#L3) — 1 reference
+- [`modules/nf-core/subread/featurecounts/tests/nextflow.config`](https://github.com/nf-core/rnasplice/blob/ade5873ca132d629dc079eb74f5ff70c04a1ca86/modules/nf-core/subread/featurecounts/tests/nextflow.config#L3) — 1 reference
+- [`modules/nf-core/umitools/extract/tests/nextflow.config`](https://github.com/nf-core/rnasplice/blob/ade5873ca132d629dc079eb74f5ff70c04a1ca86/modules/nf-core/umitools/extract/tests/nextflow.config#L3) — 1 reference
+- [`subworkflows/nf-core/bedgraph_bedclip_bedgraphtobigwig/tests/nextflow.config`](https://github.com/nf-core/rnasplice/blob/ade5873ca132d629dc079eb74f5ff70c04a1ca86/subworkflows/nf-core/bedgraph_bedclip_bedgraphtobigwig/tests/nextflow.config#L3) — 1 reference
+- [`subworkflows/nf-core/fastq_subsample_fq_salmon/tests/nextflow.config`](https://github.com/nf-core/rnasplice/blob/ade5873ca132d629dc079eb74f5ff70c04a1ca86/subworkflows/nf-core/fastq_subsample_fq_salmon/tests/nextflow.config#L3) — 1 reference

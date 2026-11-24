@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-11-23T00:14:30.972760190Z
+- Generated: 2026-11-24T00:13:33.718324241Z
 - Nextflow version: 26.11.0-edge
-- Summary: 78 warnings
+- Summary: 79 warnings
 
 ## :warning: Warnings
 
@@ -394,7 +394,14 @@
 - Warning: `modules/local/scarches/expimap/main.nf:26:5`: Variable was declared but not used
 
   ```nextflow
-      args   = task.ext.args ?: ''
+      args = task.ext.args ?: ''
+      ^^^^
+  ```
+
+- Warning: `modules/local/scconcept/embed/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
       ^^^^
   ```
 
@@ -405,14 +412,14 @@
       ^^^^
   ```
 
-- Warning: `modules/local/scimilarity/annotate/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/scimilarity/annotate/main.nf:24:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
       ^^^^
   ```
 
-- Warning: `modules/local/scimilarity/embed/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/scimilarity/embed/main.nf:24:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -433,14 +440,14 @@
       ^^^^
   ```
 
-- Warning: `modules/local/scvitools/scanvi/main.nf:36:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/scvitools/scanvi/main.nf:38:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
       ^^^^
   ```
 
-- Warning: `modules/local/scvitools/scvi/main.nf:33:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/scvitools/scvi/main.nf:35:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -482,7 +489,7 @@
       ^^^^
   ```
 
-- Warning: `modules/nf-core/cellbender/removebackground/main.nf:28:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/cellbender/removebackground/main.nf:30:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -503,7 +510,7 @@
       ^^^^
   ```
 
-- Warning: `modules/nf-core/quarto/notebook/main.nf:35:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/quarto/notebook/main.nf:38:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -531,14 +538,14 @@
       ^^^^
   ```
 
-- Warning: `modules/nf-core/scvitools/scar/main.nf:22:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/scvitools/scar/main.nf:26:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
       ^^^^
   ```
 
-- Warning: `modules/nf-core/scvitools/solo/main.nf:22:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/scvitools/solo/main.nf:25:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
