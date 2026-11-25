@@ -1,40 +1,40 @@
 # Nextflow lint results
 
-- Generated: 2026-11-24T00:13:17.850380931Z
+- Generated: 2026-11-25T00:17:00.054558362Z
 - Nextflow version: 26.11.0-edge
-- Summary: 81 warnings
+- Summary: 80 warnings
 
 ## :warning: Warnings
 
-- Warning: `conf/modules.config:356:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:351:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               saveAs: { filename -> null }
                         ^^^^^^^^
   ```
 
-- Warning: `conf/modules.config:365:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:360:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               saveAs: { filename -> null }
                         ^^^^^^^^
   ```
 
-- Warning: `conf/modules.config:374:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:369:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               saveAs: { filename -> null }
                         ^^^^^^^^
   ```
 
-- Warning: `conf/modules.config:383:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:378:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               saveAs: { filename -> null }
                         ^^^^^^^^
   ```
 
-- Warning: `conf/modules.config:405:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:400:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               saveAs: { filename -> null }
@@ -258,13 +258,6 @@
       ^^^^
   ```
 
-- Warning: `modules/nf-core/custom/dumpsoftwareversions/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
-
-  ```nextflow
-      when:
-      ^^^^
-  ```
-
 - Warning: `modules/nf-core/custom/getchromsizes/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
@@ -279,14 +272,14 @@
       ^^^^
   ```
 
-- Warning: `modules/nf-core/dexseq/dtu/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/dexseq/dtu/main.nf:26:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
       ^^^^
   ```
 
-- Warning: `modules/nf-core/dexseq/exon/main.nf:25:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/dexseq/exon/main.nf:28:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -545,28 +538,28 @@
       ^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_rnasplice_pipeline/main.nf:586:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_rnasplice_pipeline/main.nf:607:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               if (it.size() > 1) {
                   ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_rnasplice_pipeline/main.nf:601:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_rnasplice_pipeline/main.nf:622:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               if (it.size() > 1) {
                   ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_rnasplice_pipeline/main.nf:648:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_rnasplice_pipeline/main.nf:669:17`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               if (it.size() > 1) {
                   ^^
   ```
 
-- Warning: `workflows/rnasplice.nf:255:9`: Variable was declared but not used
+- Warning: `workflows/rnasplice.nf:264:9`: Variable was declared but not used
 
   ```nextflow
           ch_transcriptome_bam_index = BAM_SORT_STATS_SAMTOOLS.out.index

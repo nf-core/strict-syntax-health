@@ -11,12 +11,12 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 > See the [nf-core blog post](https://nf-co.re/blog/2025/nextflow_syntax_nf-core_roadmap) for details on the migration timeline.
 > **Fixing all errors from `nextflow lint` will be a requirement by early spring 2026.**
 
-- **Last updated:** 2026-11-24 00:15:24 UTC
+- **Last updated:** 2026-11-25 00:20:02 UTC
 - **Nextflow version:** 26.11.0-edge
 
 ## Pipelines
 
-- **Total:** 0 parse errors, 1304 errors, 8243 warnings across 147 pipelines
+- **Total:** 0 parse errors, 1304 errors, 8238 warnings across 147 pipelines
 - **Zero errors:** 104 pipelines (70.7%)
 
 |                    Errors                    |                     Warnings                     |
@@ -85,13 +85,13 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :white_check_mark: [chipseq](https://github.com/nf-core/chipseq)                               |     No      |      0 |      108 |     Yes     |          [View](lint_results/pipeline-results/chipseq_lint.md)          |        [View](lint_results/prints-help-results/chipseq_help.txt)         |
 | :white_check_mark: [mag](https://github.com/nf-core/mag)                                       |     No      |      0 |      102 |     Yes     |            [View](lint_results/pipeline-results/mag_lint.md)            |          [View](lint_results/prints-help-results/mag_help.txt)           |
 | :white_check_mark: [taxprofiler](https://github.com/nf-core/taxprofiler)                       |     No      |      0 |       90 |     Yes     |        [View](lint_results/pipeline-results/taxprofiler_lint.md)        |      [View](lint_results/prints-help-results/taxprofiler_help.txt)       |
-| :white_check_mark: [deepmutscan](https://github.com/nf-core/deepmutscan)                       |     No      |      0 |       87 |     Yes     |        [View](lint_results/pipeline-results/deepmutscan_lint.md)        |      [View](lint_results/prints-help-results/deepmutscan_help.txt)       |
 | :white_check_mark: [viralmetagenome](https://github.com/nf-core/viralmetagenome)               |     No      |      0 |       87 |     Yes     |      [View](lint_results/pipeline-results/viralmetagenome_lint.md)      |    [View](lint_results/prints-help-results/viralmetagenome_help.txt)     |
+| :white_check_mark: [deepmutscan](https://github.com/nf-core/deepmutscan)                       |     No      |      0 |       82 |     Yes     |        [View](lint_results/pipeline-results/deepmutscan_lint.md)        |      [View](lint_results/prints-help-results/deepmutscan_help.txt)       |
 | :white_check_mark: [mhcquant](https://github.com/nf-core/mhcquant)                             |     No      |      0 |       82 |     Yes     |         [View](lint_results/pipeline-results/mhcquant_lint.md)          |        [View](lint_results/prints-help-results/mhcquant_help.txt)        |
 | :x: [methylong](https://github.com/nf-core/methylong)                                          |     No      |      0 |       81 |     No      |         [View](lint_results/pipeline-results/methylong_lint.md)         |       [View](lint_results/prints-help-results/methylong_help.txt)        |
 | :white_check_mark: [rnaseq](https://github.com/nf-core/rnaseq)                                 |     No      |      0 |       81 |     Yes     |          [View](lint_results/pipeline-results/rnaseq_lint.md)           |         [View](lint_results/prints-help-results/rnaseq_help.txt)         |
-| :x: [rnasplice](https://github.com/nf-core/rnasplice)                                          |     No      |      0 |       81 |     No      |         [View](lint_results/pipeline-results/rnasplice_lint.md)         |       [View](lint_results/prints-help-results/rnasplice_help.txt)        |
 | :white_check_mark: [viralrecon](https://github.com/nf-core/viralrecon)                         |     No      |      0 |       81 |     Yes     |        [View](lint_results/pipeline-results/viralrecon_lint.md)         |       [View](lint_results/prints-help-results/viralrecon_help.txt)       |
+| :x: [rnasplice](https://github.com/nf-core/rnasplice)                                          |     No      |      0 |       80 |     No      |         [View](lint_results/pipeline-results/rnasplice_lint.md)         |       [View](lint_results/prints-help-results/rnasplice_help.txt)        |
 | :white_check_mark: [spatialaxe](https://github.com/nf-core/spatialaxe)                         |     No      |      0 |       80 |     Yes     |        [View](lint_results/pipeline-results/spatialaxe_lint.md)         |       [View](lint_results/prints-help-results/spatialaxe_help.txt)       |
 | :white_check_mark: [metatdenovo](https://github.com/nf-core/metatdenovo)                       |     No      |      0 |       79 |     Yes     |        [View](lint_results/pipeline-results/metatdenovo_lint.md)        |      [View](lint_results/prints-help-results/metatdenovo_help.txt)       |
 | :white_check_mark: [scdownstream](https://github.com/nf-core/scdownstream)                     |     No      |      0 |       79 |     Yes     |       [View](lint_results/pipeline-results/scdownstream_lint.md)        |      [View](lint_results/prints-help-results/scdownstream_help.txt)      |
@@ -124,7 +124,7 @@ The goal is for all nf-core pipelines to run without errors using strict syntax.
 | :white_check_mark: [seqsubmit](https://github.com/nf-core/seqsubmit)                           |     No      |      0 |       36 |     Yes     |         [View](lint_results/pipeline-results/seqsubmit_lint.md)         |       [View](lint_results/prints-help-results/seqsubmit_help.txt)        |
 | :white_check_mark: [dartseq](https://github.com/nf-core/dartseq)                               |     No      |      0 |       35 |     Yes     |          [View](lint_results/pipeline-results/dartseq_lint.md)          |        [View](lint_results/prints-help-results/dartseq_help.txt)         |
 | :white_check_mark: [detaxizer](https://github.com/nf-core/detaxizer)                           |     No      |      0 |       34 |     Yes     |         [View](lint_results/pipeline-results/detaxizer_lint.md)         |       [View](lint_results/prints-help-results/detaxizer_help.txt)        |
-| :white_check_mark: [smrnaseq](https://github.com/nf-core/smrnaseq)                             |     No      |      0 |       33 |     Yes     |         [View](lint_results/pipeline-results/smrnaseq_lint.md)          |        [View](lint_results/prints-help-results/smrnaseq_help.txt)        |
+| :white_check_mark: [smrnaseq](https://github.com/nf-core/smrnaseq)                             |     No      |      0 |       34 |     Yes     |         [View](lint_results/pipeline-results/smrnaseq_lint.md)          |        [View](lint_results/prints-help-results/smrnaseq_help.txt)        |
 | :white_check_mark: [metaboigniter](https://github.com/nf-core/metaboigniter)                   |     No      |      0 |       32 |     Yes     |       [View](lint_results/pipeline-results/metaboigniter_lint.md)       |     [View](lint_results/prints-help-results/metaboigniter_help.txt)      |
 | :white_check_mark: [lsmquant](https://github.com/nf-core/lsmquant)                             |     No      |      0 |       31 |     Yes     |         [View](lint_results/pipeline-results/lsmquant_lint.md)          |        [View](lint_results/prints-help-results/lsmquant_help.txt)        |
 | :x: [reportho](https://github.com/nf-core/reportho)                                            |     No      |      0 |       31 |     No      |         [View](lint_results/pipeline-results/reportho_lint.md)          |        [View](lint_results/prints-help-results/reportho_help.txt)        |
@@ -236,7 +236,7 @@ The status emoji next to each pipeline shows its migration state: :white_check_m
 | :x: [dartseq](https://github.com/nf-core/dartseq)                                     |     No      |   Yes (14)   |          [View](lint_results/workflow-outputs-results/dartseq_outputs.md)          |
 | :x: [datasync](https://github.com/nf-core/datasync)                                   |     No      |   Yes (5)    |         [View](lint_results/workflow-outputs-results/datasync_outputs.md)          |
 | :x: [deepmodeloptim](https://github.com/nf-core/deepmodeloptim)                       |     No      |   Yes (12)   |      [View](lint_results/workflow-outputs-results/deepmodeloptim_outputs.md)       |
-| :x: [deepmutscan](https://github.com/nf-core/deepmutscan)                             |     No      |   Yes (22)   |        [View](lint_results/workflow-outputs-results/deepmutscan_outputs.md)        |
+| :x: [deepmutscan](https://github.com/nf-core/deepmutscan)                             |     No      |   Yes (19)   |        [View](lint_results/workflow-outputs-results/deepmutscan_outputs.md)        |
 | :x: [demo](https://github.com/nf-core/demo)                                           |     No      |   Yes (5)    |           [View](lint_results/workflow-outputs-results/demo_outputs.md)            |
 | :x: [denovotranscript](https://github.com/nf-core/denovotranscript)                   |     No      |   Yes (7)    |     [View](lint_results/workflow-outputs-results/denovotranscript_outputs.md)      |
 | :x: [detaxizer](https://github.com/nf-core/detaxizer)                                 |     No      |   Yes (20)   |         [View](lint_results/workflow-outputs-results/detaxizer_outputs.md)         |
@@ -318,7 +318,7 @@ The status emoji next to each pipeline shows its migration state: :white_check_m
 | :x: [rnadnavar](https://github.com/nf-core/rnadnavar)                                 |     No      |   Yes (98)   |         [View](lint_results/workflow-outputs-results/rnadnavar_outputs.md)         |
 | :x: [rnafusion](https://github.com/nf-core/rnafusion)                                 |     No      |   Yes (36)   |         [View](lint_results/workflow-outputs-results/rnafusion_outputs.md)         |
 | :x: [rnaseq](https://github.com/nf-core/rnaseq)                                       |     No      |  Yes (111)   |          [View](lint_results/workflow-outputs-results/rnaseq_outputs.md)           |
-| :x: [rnasplice](https://github.com/nf-core/rnasplice)                                 |     No      |   Yes (92)   |         [View](lint_results/workflow-outputs-results/rnasplice_outputs.md)         |
+| :x: [rnasplice](https://github.com/nf-core/rnasplice)                                 |     No      |   Yes (91)   |         [View](lint_results/workflow-outputs-results/rnasplice_outputs.md)         |
 | :x: [rnastructurome](https://github.com/nf-core/rnastructurome)                       |     No      |   Yes (54)   |      [View](lint_results/workflow-outputs-results/rnastructurome_outputs.md)       |
 | :x: [sammyseq](https://github.com/nf-core/sammyseq)                                   |     No      |   Yes (34)   |         [View](lint_results/workflow-outputs-results/sammyseq_outputs.md)          |
 | :x: [scdownstream](https://github.com/nf-core/scdownstream)                           |     No      |   Yes (84)   |       [View](lint_results/workflow-outputs-results/scdownstream_outputs.md)        |
@@ -347,8 +347,8 @@ The status emoji next to each pipeline shows its migration state: :white_check_m
 
 ## Modules
 
-- **Total:** 0 parse errors, 0 errors, 1767 warnings across 2164 modules
-- **Zero errors:** 2164 modules (100.0%)
+- **Total:** 0 parse errors, 0 errors, 1768 warnings across 2165 modules
+- **Zero errors:** 2165 modules (100.0%)
 
 |                   Errors                   |                    Warnings                    |
 | :----------------------------------------: | :--------------------------------------------: |
@@ -360,7 +360,7 @@ The status emoji next to each pipeline shows its migration state: :white_check_m
 | Module | Parse Error | Errors | Warnings | Lint Output |
 | ------ | :---------: | -----: | -------: | :---------: |
 
-_Modules with zero errors are not shown above (2164 modules). They may still have warnings. See the [modules results directory](lint_results/module-results/) for all lint outputs._
+_Modules with zero errors are not shown above (2165 modules). They may still have warnings. See the [modules results directory](lint_results/module-results/) for all lint outputs._
 
 </details>
 

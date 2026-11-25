@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-11-24T00:12:52.660871122Z
+- Generated: 2026-11-25T00:16:04.470127939Z
 - Nextflow version: 26.11.0-edge
 - Summary: 60 warnings
 
@@ -419,9 +419,9 @@
                  ^^^^^^^^^^^
   ```
 
-- Warning: `workflows/pathogenepidemiology.nf:156:9`: Variable was declared but not used
+- Warning: `workflows/pathogenepidemiology.nf:157:13`: Variable was declared but not used
 
   ```nextflow
-      def phylogeny_s = PHYLOGENY(ch_consensus_input, ch_queryfai)
-          ^^^^^^^^^^^
+          def phylogeny_s = PHYLOGENY(ch_consensus_input, ch_queryfai)
+              ^^^^^^^^^^^
   ```

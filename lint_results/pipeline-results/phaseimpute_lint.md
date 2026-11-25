@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-11-17T00:15:04.154721856Z
-- Nextflow version: 26.10.6
+- Generated: 2026-11-25T00:16:29.129733760Z
+- Nextflow version: 26.11.0-edge
 - Summary: 45 warnings
 
 ## :warning: Warnings
@@ -160,14 +160,14 @@
       ^^^^
   ```
 
-- Warning: `modules/nf-core/glimpse/ligate/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/glimpse/ligate/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
       ^^^^
   ```
 
-- Warning: `modules/nf-core/glimpse/phase/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/glimpse/phase/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

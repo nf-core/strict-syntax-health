@@ -6,7 +6,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 Downloading plugin nf-schema@2.7.3
 Downloading plugin nf-co2footprint@1.4.1
 nf-co2footprint plugin  ~  version 1.4.1
-Launching `./main.nf` [stoic_celsius] revision: 775887a540
+Launching `./main.nf` [sharp_bohr] revision: 775887a540
 
 [37mINFO - [nf-co2footprint] 🔕 Repeated task-specific messages (🔁) are only logged once in the console. Further occurrences are logged at DEBUG level, appearing only in the `.nextflow.log` file.[0;39m
 [33mWARN - [nf-co2footprint] Target zone null not found. Attempting to retrieve carbon intensity for fallback zone GLOBAL.[0;39m
@@ -32,78 +32,120 @@ help message of that parameter will be printed.
 or `--helpFull`.  
 
 Input/output options
-  --input                       [string] Path to comma-separated file containing information about the samples in the experiment. 
-  --outdir                      [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
+  --input                            [string] Path to comma-separated file containing information about the samples in the experiment. 
+  --outdir                           [string] The output directory where the results will be saved. You have to use absolute paths to storage on 
 Cloud infrastructure.  
-  --email                       [string] Email address for completion summary. 
-  --multiqc_title               [string] MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
+  --email                            [string] Email address for completion summary. 
+  --multiqc_title                    [string] MultiQC report title. Printed as page header, used for filename if not otherwise specified. 
 
 Reference and library options
-  --fasta                       [string] Path to a FASTA file with the wildtype reference sequence of the mutagenised gene (exactly one 
+  --fasta                            [string] Path to a FASTA file with the wildtype reference sequence of the mutagenised gene (exactly one 
 sequence).  
-  --reading_frame               [string] Nucleotide coordinates of the mutagenised open reading frame within the reference FASTA, in the 
+  --reading_frame                    [string] Nucleotide coordinates of the mutagenised open reading frame within the reference FASTA, in the 
 format 'start-stop' (1-based, inclusive), e.g. '352-1383'.  
-  --mutagenesis_type            [string] Codons programmed at each position of the library. When using 'custom', also provide 
+  --sequencing                       [string] How the sequenced fragments were made: 'shotgun' (fragments from anywhere along the mutagenised 
+gene) or 'tiled' (amplicons that each span one tile of the gene, with the tile as reference).  
+(accepted: shotgun, tiled) [default: shotgun]  
+  --flank_5prime                     [string] With '--sequencing tiled': the constant sequence every read carries before the tile, in the 
+orientation of the reference (e.g. the forward primer site). Leave unset to have it found from the 
+reads.  
+  --flank_3prime                     [string] With '--sequencing tiled': the constant sequence every read carries after the tile, in the 
+orientation of the reference (e.g. the reverse complement of the reverse primer site). Leave unset 
+to have it found from the reads.  
+  --mutagenesis_type                 [string] Codons programmed at each position of the library. When using 'custom', also provide 
 '--custom_codon_library'.  (accepted: nnk, nns, nnh, nnn, nnk_nns, nnk_nns_nnh, custom) 
 [default: nnk]  
-  --custom_codon_library        [string] Path to a .csv file defining a custom codon library. Required when '--mutagenesis_type custom' is 
+  --custom_codon_library             [string] Path to a .csv file defining a custom codon library. Required when '--mutagenesis_type custom' is 
 set. Provide either one global comma-separated list of codons without header (e.g. 'AAA,AAC,AAG'), 
 or a position-wise list with a header line containing 'Position', followed by one row per codon 
 position with the position and its allowed codons (e.g. '1,ACG,AAA,ACA' and '2,AAA,TTT,ACA' on 
 separate lines).  
 
 Variant counting options
-  --base_qual                   [integer] Minimum base quality (Phred) for a mismatch to be counted as a mutation, and for a base to 
+  --base_qual                        [integer] Minimum base quality (Phred) for a mismatch to be counted as a mutation, and for a base to 
 contribute to sequencing coverage. [default: 40]  
-  --min_flank                   [integer] Minimum distance (nt) a mutation or covered base must be from a read edge; also excludes those bases 
+  --min_flank                        [integer] Minimum distance (nt) a mutation or covered base must be from a read edge; also excludes those bases 
 from coverage. Set to 0 to disable edge trimming. [default: 2]  
-  --save_bam                    [boolean] Publish the sorted, indexed BAM of every library to intermediate_files/bam_files/sorted/. 
+  --save_bam                         [boolean] Publish the sorted, indexed BAM of every library to intermediate_files/bam_files/sorted/. 
 
 Sequencing-error correction options
-  --error_correction            [string]  Sequencing-error correction of variant counts. 'false_doubles' (default) estimates the error rate of 
+  --error_correction                 [string]  Sequencing-error correction of variant counts. 'false_doubles' (default) estimates the error rate of 
 every single-nucleotide variant from reads that carry it together with a nearby programmed 
 multi-nucleotide codon variant; 'wildtype' subtracts the background measured by additional deep 
 sequencing of the unmutated template (requires samplesheet rows with type 'wildtype'); 'none' 
 disables correction.  (accepted: false_doubles, none, wildtype) [default: false_doubles]  
-  --false_doubles_method        [string]  Estimator used by the false-doubles correction. 'mle' (default) is a per-variant maximum-likelihood 
-error rate; 'eb' is an empirical-Bayes estimate that pools across variants and shrinks per 
-substitution class (steadier for sparse variants). Only applies when error_correction = 
-'false_doubles'.  (accepted: mle, eb) [default: mle]  
-  --false_doubles_codon_window  [integer] Window (in codons, upstream and downstream) within which programmed multi-nucleotide codon variants 
-are used to estimate the error rate of a single-nucleotide variant during false-doubles correction. 
-[default: 40]  
+  --false_doubles_method             [string]  Estimator used by the false-doubles correction. 'eb' (default) is an empirical-Bayes estimate: each 
+variant's error rate is shrunk towards the mean of its class (see `false_doubles_prior`) in 
+proportion to how little evidence it has, so sparsely observed variants get a stable rate. 'mle' is 
+the per-variant maximum-likelihood rate F/M, which is zero for every variant without an observed 
+false double and therefore depth-sensitive. Only applies when error_correction = 'false_doubles'. 
+ (accepted: eb, mle) [default: eb]  
+  --false_doubles_prior              [string]  Prior classes of the empirical-Bayes estimator. 'trinucleotide_context' (default) shrinks each 
+variant towards the mean of its trinucleotide context (substitution type plus both flanking bases, 
+96 classes), which is itself shrunk towards its substitution type; 'substitution_type' shrinks 
+towards the mean of the six pyrimidine-folded substitution types only. Only applies when 
+false_doubles_method = 'eb'.  (accepted: trinucleotide_context, substitution_type) [default: 
+trinucleotide_context]  
+  --false_doubles_pooling            [string]  Libraries that share one error-rate estimate in the false-doubles correction. 'all' (default) pools 
+every non-wildtype library of a `sample`; 'replicates' pools the replicates of each `sample` and 
+`type`; 'none' estimates every library on its own. Pooled libraries sum their false-double evidence 
+per variant, the rates are estimated once and each library is corrected at its own coverage. Pooling 
+assumes one error process across the pool, i.e. libraries prepared, processed and sequenced 
+together. Use 'replicates' if conditions or sorting bins were amplified or sequenced separately, as 
+a pool with different error rates gets a confidently wrong common rate. Per-library estimates are 
+always reported next to the pooled ones. Wildtype-template libraries are never pooled or corrected. 
+ (accepted: all, replicates, none) [default: all]  
+  --max_FDdist                       [integer] Maximum distance, in codons, between a single-nucleotide variant and the programmed multi-nucleotide 
+variant used as its anchor in the false-doubles correction. [default: 40]  
+  --min_FDdist                       [integer] Minimum distance, in codons, between a single-nucleotide variant and the programmed multi-nucleotide 
+variant used as its anchor in the false-doubles correction. [default: 13]  
+  --subtract_genuine_doubles         [boolean] Subtract genuine double mutants from the false-double evidence before estimating the error rate. 
+[default: true]  
+  --skip_error_signatures            [boolean] Skip the mutational-signature fit of the error spectrum (false-doubles correction only). 
+  --error_signatures_candidates      [string]  Candidate signatures for the error-spectrum fit: CSV with a `channel` column in COSMIC notation 
+(e.g. A[C>A]A, 96 rows) and one column per signature, on GRCh37 trinucleotide composition.  
+  --error_signatures_max_cosine      [number]  Signatures whose cosine similarity to an already selected signature is at or above this value are 
+not added in the forward selection of the error-spectrum fit. [default: 0.5]  
+  --error_signatures_bootstraps      [integer] Site bootstrap resamples for the candidate screen and the exposure intervals of the error-spectrum 
+fit. [default: 200]  
+  --error_signatures_genuine_doubles [boolean] Remove the expected genuine double-mutant reads from the false doubles before forming the excess 
+error spectrum. [default: true]  
 
 Library QC options
-  --sliding_window_size         [integer] Sliding-window size (in codons) used to smooth the positional coverage and count profiles in the 
+  --sliding_window_size              [integer] Sliding-window size (in codons) used to smooth the positional coverage and count profiles in the 
 library QC plots. [default: 10]  
-  --aimed_cov                   [integer] Targeted number of counts per amino acid variant. Used to draw the sequencing coverage that would be 
+  --aimed_cov                        [integer] Targeted number of counts per amino acid variant. Used to draw the sequencing coverage that would be 
 required (assuming an even spread) in the positional coverage plots and the run report. 
 [default: 100]  
-  --run_seqdepth                [boolean] Estimate sequencing-depth saturation of every library by closed-form hypergeometric rarefaction (on 
+  --run_seqdepth                     [boolean] Estimate sequencing-depth saturation of every library by closed-form hypergeometric rarefaction (on 
 by default). [default: true]  
 
 Fitness estimation options
-  --fitness                     [boolean] Estimate variant fitness from matched 'input' and 'output' libraries of each sample, using the 
+  --fitness                          [boolean] Estimate variant fitness from matched 'input' and 'output' libraries of each sample, using the 
 default log-ratio estimator. [default: false]  
-  --min_counts                  [integer] Minimum number of reads a variant needs in every 'input' replicate to receive a fitness estimate. 
+  --min_counts                       [integer] Minimum number of reads a variant needs in every 'input' replicate to receive a fitness estimate. 
 Applied to the default estimator, DiMSum ('--fitnessMinInputCountAll') and mutscan. Variant 
 counting, error correction and library QC are not filtered. [default: 10]  
-  --output_pseudocount          [integer] Pseudocount for 'output' replicates in which a variant observed in the input was not detected 
+  --output_pseudocount               [integer] Pseudocount for 'output' replicates in which a variant observed in the input was not detected 
 (dropouts), so that strongly depleted variants still receive a finite fitness value. Applied to the 
 default estimator and DiMSum ('--fitnessDropoutPseudocount'). Set to 0 to disable; dropout variants 
 then receive no fitness estimate in that replicate. [default: 1]  
-  --dimsum                      [boolean] Additionally estimate fitness with DiMSum (Faure et al., 2020). Requires '--fitness'. [default: 
+  --dimsum                           [boolean] Additionally estimate fitness with DiMSum (Faure et al., 2020). Requires '--fitness'. [default: 
 false]  
-  --mutscan                     [boolean] Additionally estimate variant enrichment with mutscan (Soneson et al., 2023), using edgeR and limma. 
-Requires '--fitness'. [default: false]  
-  --pdb                         [string]  Optional wildtype 3D structure (PDB). When supplied together with `--fitness`, an interactive 
+  --dimsum_error_model               [boolean] Fit DiMSum's error model ('--fitnessErrorModel'): replicate-specific error terms and normalisation, 
+estimated by bootstrapping. Needs at least 30 variants per replicate (90 for three replicates) that 
+pass '--min_counts' and are observed in every replicate; set to false for sparse libraries. 
+[default: true]  
+  --mutscan                          [boolean] Additionally estimate variant enrichment with edgeR and limma-voom, following mutscan's analysis 
+(Soneson et al., 2023). Requires '--fitness'. [default: false]  
+  --pdb                              [string]  Optional wildtype 3D structure (PDB). When supplied together with `--fitness`, an interactive 
 variant effect inspection tool (self-contained HTML) is built that projects fitness, counts and 
 error-correction biases onto the structure.  
 
 Generic options
-  --multiqc_methods_description [string]  Custom MultiQC yaml file containing HTML including a methods description. 
-  --help_full                   [boolean] Display the full detailed help message. 
-  --show_hidden                 [boolean] Display hidden parameters in the help message (only works when --help or --help_full are provided). 
+  --multiqc_methods_description      [string]  Custom MultiQC yaml file containing HTML including a methods description. 
+  --help_full                        [boolean] Display the full detailed help message. 
+  --show_hidden                      [boolean] Display hidden parameters in the help message (only works when --help or --help_full are provided). 
  
  !! Hiding 18 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
@@ -117,5 +159,3 @@ Generic options
 * Software dependencies
     https://github.com/nf-core/deepmutscan/blob/master/CITATIONS.md
 
-WARN - [nf-co2footprint] Could not find CPU model "AMD EPYC 9V45 96-Core Processor" in given TDP data table. Using default CPU power draw value (11.41 W).
-	🔖 To fix this warning, please refer to https://nextflow-io.github.io/nf-co2footprint/usage/faq/#cpu-model.

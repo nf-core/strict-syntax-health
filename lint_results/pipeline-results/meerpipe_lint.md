@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-11-13T00:16:02.009297073Z
-- Nextflow version: 26.10.5
+- Generated: 2026-11-25T00:13:27.992832571Z
+- Nextflow version: 26.11.0-edge
 - Summary: 44 errors, 95 warnings
 
 ## :x: Errors
@@ -372,14 +372,14 @@
           ^^^^^^
   ```
 
-- Warning: `modules/local/dm_rm_calc.nf:171:9`: Variable was declared but not used
+- Warning: `modules/local/dm_rm_calc.nf:173:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''
           ^^^^
   ```
 
-- Warning: `modules/local/dm_rm_calc.nf:172:9`: Variable was declared but not used
+- Warning: `modules/local/dm_rm_calc.nf:174:9`: Variable was declared but not used
 
   ```nextflow
       def prefix = task.ext.prefix ?: "${meta.id}"
@@ -407,7 +407,7 @@
           ^^^^^^
   ```
 
-- Warning: `modules/local/generate_image_results.nf:105:9`: Variable was declared but not used
+- Warning: `modules/local/generate_image_results.nf:109:9`: Variable was declared but not used
 
   ```nextflow
       def args = task.ext.args ?: ''

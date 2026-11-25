@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.11.0-edge
 
-Launching `./main.nf` [naughty_davinci] revision: 9590252728
+Launching `./main.nf` [high_cantor] revision: 488be61689
 
 
 ------------------------------------------------------
@@ -144,7 +144,6 @@ for you!
 [default: false]  
   --deepmased_predict_seed               [integer] Random seed for numpy in DeepMAsED predict. Set for reproducible results. [default: 12] 
   --ale_per_base_output                  [boolean] Enable ALE per-base output. This output can be very large (tens of GB). 
-  --skip_quast                           [boolean] Skip metaQUAST. 
   --skip_metamdbg                        [boolean] Skip MetaDBG assembly. 
   --skip_flye                            [boolean] Skip Flye assembly. 
   --run_pypolca                          [boolean] Run PyPOLCA polishing on long-read assemblies before binning. 

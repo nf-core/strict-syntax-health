@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-11-24T00:14:06.054697779Z
+- Generated: 2026-11-25T00:17:55.147937220Z
 - Nextflow version: 26.11.0-edge
-- Summary: 33 warnings
+- Summary: 34 warnings
 
 ## :warning: Warnings
 
@@ -235,4 +235,11 @@
   ```nextflow
       when:
       ^^^^
+  ```
+
+- Warning: `workflows/smrnaseq.nf:40:5`: Parameter was not used -- prefix with `_` to suppress warning
+
+  ```nextflow
+      has_fasta              // boolean
+      ^^^^^^^^^
   ```

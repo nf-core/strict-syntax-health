@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.11.0-edge
 
-Launching `./main.nf` [tiny_newton] revision: c25e02b8a7
+Launching `./main.nf` [stupefied_jennings] revision: f830945a38
 
 
 ------------------------------------------------------
@@ -46,12 +46,13 @@ or an index prefix.
 
 Alignment options
   --aligner                     [string]  Alignment tool to use. Defaults to `bwamem3` when `--taps` is given on the command line or in 
-`-params-file`.  (accepted: bismark, bismark_hisat, bwameth, bwamem, bwamem3) [default: bismark] 
- 
+`-params-file`; `--illumina_5base` keeps `bismark`.  (accepted: bismark, bismark_hisat, bwameth, 
+bwamem, bwamem3) [default: bismark]  
   --use_mem2                    [boolean] Use BWA-MEM2 algorithm for BWA-Meth indexing and alignment. 
 
 Special library types
   --taps                        [boolean] Preset for working with TET-assisted pyridine borane sequencing (TAPS) libraries. 
+  --illumina_5base              [boolean] Preset for Illumina 5-Base libraries (methylated C reads as T). 
   --pbat                        [boolean] Preset for working with PBAT libraries. 
   --rrbs                        [boolean] Turn on if dealing with MspI digested material. 
   --slamseq                     [boolean] Run bismark in SLAM-seq mode. 
@@ -90,6 +91,8 @@ Bismark options
   --maxins                      [integer] The maximum insert size for valid paired-end alignments. 
   --nomeseq                     [boolean] Sample is NOMe-seq or NMT-seq. Runs coverage2cytosine. 
   --comprehensive               [boolean] Merges methylation calls for every strand into a single, context dependent file. 
+  --five_base_baseq             [integer] Minimum base quality (Phred) for a methylation call in Bismark's 5-Base/TAPS mode; 0 is off. 
+[default: 0]  
 
 MethylDackel options
   --all_contexts                [boolean] Call methylation in all three CpG, CHG and CHH contexts. 

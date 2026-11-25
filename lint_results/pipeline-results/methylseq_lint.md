@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-11-24T00:12:34.154922743Z
+- Generated: 2026-11-25T00:13:57.069082248Z
 - Nextflow version: 26.11.0-edge
 - Summary: 72 warnings
 
@@ -69,7 +69,7 @@
       ^^^^
   ```
 
-- Warning: `modules/nf-core/bismark/align/main.nf:26:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/bismark/align/main.nf:27:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -461,49 +461,49 @@
                                          ^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_methylseq_pipeline/main.nf:457:9`: Variable was declared but not used
+- Warning: `subworkflows/local/utils_nfcore_methylseq_pipeline/main.nf:512:9`: Variable was declared but not used
 
   ```nextflow
       def citation_text = ["Tools used in the workflow included:", "FastQC (Andrews 2010),", "Trim Galore! (Krueger)", "Bismark (Krueger 2011)", "bwa-meth (Pedersen 2014)", "Picard (Broad Institute 2019)", params.with_umi ? "fgumi (Fulcrum Genomics)," : "", "Qualimap (Okonechnikov 2015)", "Preseq (Daley 2013)", "MultiQC (Ewels et al. 2016)", "."].findAll { citation -> citation }.join(' ').trim()
           ^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/methylseq/main.nf:418:37`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/methylseq/main.nf:422:37`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .combine(ch_fasta.map { meta, fasta -> fasta })
                                       ^^^^
   ```
 
-- Warning: `workflows/methylseq/main.nf:419:43`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/methylseq/main.nf:423:43`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .combine(ch_fasta_index.map { meta, index -> index })
                                             ^^^^
   ```
 
-- Warning: `workflows/methylseq/main.nf:472:90`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/methylseq/main.nf:476:90`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files = ch_multiqc_files.mix(QUALIMAP_BAMQC.out.results.collect { it[1] }.ifEmpty([]))
                                                                                            ^^
   ```
 
-- Warning: `workflows/methylseq/main.nf:475:68`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/methylseq/main.nf:479:68`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(ch_riker.collect { it[1] }.ifEmpty([]))
                                                                      ^^
   ```
 
-- Warning: `workflows/methylseq/main.nf:477:87`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/methylseq/main.nf:481:87`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files = ch_multiqc_files.mix(PRESEQ_LCEXTRAP.out.log.collect { it[1] }.ifEmpty([]))
                                                                                         ^^
   ```
 
-- Warning: `workflows/methylseq/main.nf:489:106`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/methylseq/main.nf:493:106`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   ch_multiqc_files = ch_multiqc_files.mix(TARGETED_SEQUENCING.out.picard_metrics.collect { it[1] }.ifEmpty([]))

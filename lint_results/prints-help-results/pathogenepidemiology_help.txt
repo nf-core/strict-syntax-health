@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.11.0-edge
 
-Launching `./main.nf` [wise_kalman] revision: 0c1f356ff8
+Launching `./main.nf` [marvelous_kimura] revision: 0c1f356ff8
 
 
 ------------------------------------------------------
@@ -25,6 +25,7 @@ Pipeline input options
   --intervals                   [string]  Optional local uncompressed BED matching the query reference, used unchanged for core-read filtering 
 and coverage and split by GATK into one calling BED per contig. Defaults to 
 projectDir/assets/Pf3D7_core.bed; basename must be shell-safe.  
+  --skip_phylogeny              [boolean] Skip phylogenetic analysis. [default: false] 
   --query_fasta                 [string]  Local query reference FASTA (.fa, .fasta or .fna, optionally gzipped), overriding queryurl. Reuses 
 exact adjacent uncompressed-name FASTA, dictionary, minimap2 and complete BWA-MEM3 indexes; builds 
 missing classes only. Basename must be shell-safe.  
