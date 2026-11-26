@@ -1,5 +1,5 @@
 {
-  "_repo_commit": "f0bb572d85db802d437d70033721a95476260131",
+  "_repo_commit": "3852918d5b1872e0aa9b26e2253132fba59a783a",
   "aardvark_compare": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/aardvark/compare",
     "errors": 0,
@@ -3242,6 +3242,12 @@
   },
   "edger_differential": {
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/edger/differential",
+    "errors": 0,
+    "warnings": 1,
+    "parse_error": false
+  },
+  "edger_diffsplice": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/edger/diffsplice",
     "errors": 0,
     "warnings": 1,
     "parse_error": false
@@ -11860,6 +11866,12 @@
     "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/tar",
     "errors": 0,
     "warnings": 0,
+    "parse_error": false
+  },
+  "tauglymphatic_calc": {
+    "html_url": "https://github.com/nf-core/modules/tree/master/modules/nf-core/tauglymphatic/calc",
+    "errors": 0,
+    "warnings": 1,
     "parse_error": false
   },
   "taxonkit_lca": {

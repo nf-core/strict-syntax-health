@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-11-25T00:16:04.470127939Z
+- Generated: 2026-11-26T00:15:06.374162182Z
 - Nextflow version: 26.11.0-edge
-- Summary: 60 warnings
+- Summary: 64 warnings
 
 ## :warning: Warnings
 
@@ -111,7 +111,28 @@
       ^^^^
   ```
 
+- Warning: `modules/nf-core/falint/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
 - Warning: `modules/nf-core/fastqc/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/filtlong/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/find/concatenate/main.nf:22:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -237,6 +258,13 @@
       ^^^^
   ```
 
+- Warning: `modules/nf-core/nanoplot/main.nf:22:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
 - Warning: `modules/nf-core/picard/collectinsertsizemetrics/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
@@ -273,6 +301,13 @@
   ```
 
 - Warning: `modules/nf-core/samtools/stats/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/samtools/view/main.nf:31:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -356,32 +391,32 @@
                                                                                                                         ^^
   ```
 
-- Warning: `subworkflows/local/prepare_references/main.nf:52:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/prepare_references/main.nf:54:67`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               file(reference.resolveSibling("${referenceFilename}.${it}"), checkIfExists: false, glob: false)
                                                                     ^^
   ```
 
-- Warning: `subworkflows/local/prepare_references/main.nf:62:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/prepare_references/main.nf:63:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           auxiliaryFiles.bwa = bwa.every { it.exists() } ? bwa : null
                                            ^^
   ```
 
-- Warning: `subworkflows/local/prepare_references/main.nf:74:20`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/prepare_references/main.nf:74:84`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-              .map { meta, fasta -> fasta }
-                     ^^^^
+          hostfasta = (host_gzip ? GUNZIP_HOSTFASTA(ch_host).gunzip : ch_host).map { meta, fasta -> fasta }
+                                                                                     ^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_references/main.nf:80:16`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/prepare_references/main.nf:80:85`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
-          .map { meta, fasta -> tuple([id: fasta.baseName], fasta) }
-                 ^^^^
+      queryfasta = (query_gzip ? GUNZIP_QUERYFASTA(ch_query).gunzip : ch_query).map { meta, fasta -> tuple([id: fasta.baseName], fasta) }
+                                                                                      ^^^^
   ```
 
 - Warning: `subworkflows/local/prepare_references/main.nf:82:34`: Parameter was not used -- prefix with `_` to suppress warning
@@ -398,28 +433,21 @@
                                    ^^^^^
   ```
 
-- Warning: `subworkflows/local/prepare_references/main.nf:88:34`: Parameter was not used -- prefix with `_` to suppress warning
-
-  ```nextflow
-          ? queryfasta.map { meta, fasta -> tuple(meta, auxiliaryFiles.mmi) }
-                                   ^^^^^
-  ```
-
-- Warning: `subworkflows/local/prepare_references/main.nf:93:34`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `subworkflows/local/prepare_references/main.nf:109:34`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           ? queryfasta.map { meta, fasta -> tuple(meta, auxiliaryFiles.bwa) }
                                    ^^^^^
   ```
 
-- Warning: `workflows/pathogenepidemiology.nf:153:16`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/pathogenepidemiology.nf:159:16`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
           .map { cohort_meta, bcf, csi, sample_meta, fasta ->
                  ^^^^^^^^^^^
   ```
 
-- Warning: `workflows/pathogenepidemiology.nf:157:13`: Variable was declared but not used
+- Warning: `workflows/pathogenepidemiology.nf:163:13`: Variable was declared but not used
 
   ```nextflow
           def phylogeny_s = PHYLOGENY(ch_consensus_input, ch_queryfai)

@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-11-18T00:13:19.589743572Z
-- Nextflow version: 26.10.6
-- Summary: 60 warnings
+- Generated: 2026-11-26T00:14:08.961630733Z
+- Nextflow version: 26.11.0-edge
+- Summary: 65 warnings
 
 ## :warning: Warnings
 
@@ -70,6 +70,34 @@
   ```
 
 - Warning: `modules/local/genomes2orfs/main.nf:16:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/kofamscan/best/main.nf:22:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/kofamscan/download/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/kofamscan/table/main.nf:17:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/kofamscan/version/main.nf:13:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -230,6 +258,13 @@
       ^^^^
   ```
 
+- Warning: `modules/nf-core/kofamscan/main.nf:22:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
 - Warning: `modules/nf-core/multiqc/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
@@ -370,56 +405,56 @@
       ^^^^^^^^^^^
   ```
 
-- Warning: `workflows/magmap.nf:257:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/magmap.nf:261:28`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .splitText() { it.trim() }
                              ^^
   ```
 
-- Warning: `workflows/magmap.nf:258:23`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/magmap.nf:262:23`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               .filter { it }
                         ^^
   ```
 
-- Warning: `workflows/magmap.nf:271:36`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/magmap.nf:275:36`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       .splitText() { it.trim() }
                                      ^^
   ```
 
-- Warning: `workflows/magmap.nf:272:31`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/magmap.nf:276:31`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       .filter { it }
                                 ^^
   ```
 
-- Warning: `workflows/magmap.nf:280:36`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/magmap.nf:284:36`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       .splitText() { it.trim() }
                                      ^^
   ```
 
-- Warning: `workflows/magmap.nf:281:31`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/magmap.nf:285:31`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                       .filter { it }
                                 ^^
   ```
 
-- Warning: `workflows/magmap.nf:341:66`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/magmap.nf:345:66`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   .map { pairs -> [ [ id: 'all' ], pairs.collect { it[0] }, pairs.collect { it[1] } ] }
                                                                    ^^
   ```
 
-- Warning: `workflows/magmap.nf:341:91`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/magmap.nf:345:91`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   .map { pairs -> [ [ id: 'all' ], pairs.collect { it[0] }, pairs.collect { it[1] } ] }

@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.6
+ N E X T F L O W   ~  version 26.11.0-edge
 
-Launching `./main.nf` [sick_lorenz] revision: c883c246ee
+Launching `./main.nf` [desperate_lovelace] revision: c883c246ee
 
 
 ------------------------------------------------------
@@ -85,59 +85,59 @@ Contact maps
   --save_raw_maps                 [boolean]         Save raw contact maps 
 
 Downstream Analysis
-  --min_size                      [integer]        Minimum chromosome size to be retained. Useful for Calder2, which cannot be applied to chromosomes 
+  --min_size                      [integer]         Minimum chromosome size to be retained. Useful for Calder2, which cannot be applied to chromosomes 
 that do not have a sufficient number of bins. [default: 0]  
-  --res_dist_decay                [string]         Resolution to build count/distance plot [default: 250000] 
-  --tads_caller                   [string]         Define methods for TADs calling [default: insulation] 
-  --compartments_caller           [string]         Define methods for compartments calling [default: cooltools] 
-  --res_tads                      [string]         Resolution to run TADs callers (comma separated) [default: 40000] 
-  --res_compartments              [string]         Resolution for compartments calling [default: 250000] 
-  --loops_caller                  [string]         Call chromatin loops with 'fithichip' (HiChIP / PLAC-seq data) and/or 'hicexplorer' 
+  --res_dist_decay                [string, integer] Resolution to build count/distance plot [default: 250000] 
+  --tads_caller                   [string]          Define methods for TADs calling [default: insulation] 
+  --compartments_caller           [string]          Define methods for compartments calling [default: cooltools] 
+  --res_tads                      [string, integer] Resolution to run TADs callers (comma separated) [default: 40000] 
+  --res_compartments              [string, integer] Resolution for compartments calling [default: 250000] 
+  --loops_caller                  [string]          Call chromatin loops with 'fithichip' (HiChIP / PLAC-seq data) and/or 'hicexplorer' 
 (hicDetectLoops), comma separated. Loops are not called when unset.  
-  --res_loops                     [string]         Resolution(s) of the contact maps used for loop calling (comma separated) [default: 5000] 
-  --loops_peaks                   [string]         BED file of 1D anchor peaks (e.g. ChIP-seq peaks of the HiChIP target) used by FitHiChIP. When 
+  --res_loops                     [string, integer] Resolution(s) of the contact maps used for loop calling (comma separated) [default: 5000] 
+  --loops_peaks                   [string]          BED file of 1D anchor peaks (e.g. ChIP-seq peaks of the HiChIP target) used by FitHiChIP. When 
 unset, anchors are inferred from the valid pairs with MACS3.  
-  --macs_gsize                    [number, string] Effective genome size for MACS3 peak calling: a number, scientific notation (e.g. 2.7e9 for human) 
+  --macs_gsize                    [number, string]  Effective genome size for MACS3 peak calling: a number, scientific notation (e.g. 2.7e9 for human) 
 or one of the MACS3 shortcuts hs, mm, ce, dm. Default: the total length of the chromosome sizes 
 file.  
-  --fithichip_lower_dist          [integer]        FitHiChIP: lower distance threshold (bp) of the interactions tested (LowDistThr) [default: 
+  --fithichip_lower_dist          [integer]         FitHiChIP: lower distance threshold (bp) of the interactions tested (LowDistThr) [default: 
 20000]  
-  --fithichip_upper_dist          [integer]        FitHiChIP: upper distance threshold (bp) of the interactions tested (UppDistThr) [default: 
+  --fithichip_upper_dist          [integer]         FitHiChIP: upper distance threshold (bp) of the interactions tested (UppDistThr) [default: 
 2000000]  
-  --fithichip_qvalue              [number]         FitHiChIP: FDR threshold of the significant interactions (QVALUE) [default: 0.01] 
-  --fithichip_inttype             [integer]        FitHiChIP: interactions tested (IntType). 1 = peak-to-peak, 2 = peak-to-non-peak, 3 = peak-to-all, 4 
+  --fithichip_qvalue              [number]          FitHiChIP: FDR threshold of the significant interactions (QVALUE) [default: 0.01] 
+  --fithichip_inttype             [integer]         FitHiChIP: interactions tested (IntType). 1 = peak-to-peak, 2 = peak-to-non-peak, 3 = peak-to-all, 4 
 = all-to-all, 5 = every type  (accepted: 1, 2, 3, 4, 5) [default: 3]  
-  --fithichip_bias                [integer]        FitHiChIP: bias regression (BiasType). Only 1 (coverage bias) is available: the ICE bias (2) runs 
+  --fithichip_bias                [integer]         FitHiChIP: bias regression (BiasType). Only 1 (coverage bias) is available: the ICE bias (2) runs 
 HiC-Pro's ice, which the FitHiChIP container does not include.  (accepted: 1) [default: 1]  
-  --fithichip_p2p_background      [boolean]        FitHiChIP: use the stringent peak-to-peak background (UseP2PBackgrnd, FitHiChIP(S)) instead of the 
+  --fithichip_p2p_background      [boolean]         FitHiChIP: use the stringent peak-to-peak background (UseP2PBackgrnd, FitHiChIP(S)) instead of the 
 loose background (FitHiChIP(L))  
-  --maxloopdistance               [integer]        hicDetectLoops: Maximum genomic distance of a loop, usually loops are within a distance of ~2MB 
+  --maxloopdistance               [integer]         hicDetectLoops: Maximum genomic distance of a loop, usually loops are within a distance of ~2MB 
 [default: 2000000]  
-  --peakwidth                     [integer]        hicDetectLoops: The width of the peak region in bins. The square around the peak will include (2 * 
+  --peakwidth                     [integer]         hicDetectLoops: The width of the peak region in bins. The square around the peak will include (2 * 
 peakWidth)^2 bins [default: 2]  
-  --windowsize                    [integer]        hicDetectLoops: The window size for the neighborhood region the peak is located in. All values from 
+  --windowsize                    [integer]         hicDetectLoops: The window size for the neighborhood region the peak is located in. All values from 
 this region (exclude the values from the peak region) are tested against the peak region for 
 significant difference. The square will have the size of (2 * windowSize)^2 bins [default: 5] 
  
-  --pvaluepreselection            [number]         hicDetectLoops: Only candidates with p-values less the given threshold will be considered as 
+  --pvaluepreselection            [number]          hicDetectLoops: Only candidates with p-values less the given threshold will be considered as 
 candidates. For each genomic distance a negative binomial distribution is fitted and for each pixel 
 a p-value given by the cumulative density function is given. This does NOT influence the p-value for 
 the neighborhood testing. Can a single value or a threshold file created by hicCreateThresholdFile 
 [default: 0.1]  
-  --peakinteractionsthreshold     [integer]        hicDetectLoops: The minimum number of interactions a detected peaks needs to have to be considered 
+  --peakinteractionsthreshold     [integer]         hicDetectLoops: The minimum number of interactions a detected peaks needs to have to be considered 
 [default: 10]  
-  --obsexpthreshold               [number]         hicDetectLoops: The minimum number of obs/exp interactions a detected peaks needs to have to be 
+  --obsexpthreshold               [number]          hicDetectLoops: The minimum number of obs/exp interactions a detected peaks needs to have to be 
 considered [default: 1.5]  
-  --pvalue                        [number]         hicDetectLoops: Rejection level for Anderson-Darling or Wilcoxon-rank sum test for H0. H0 is peak 
+  --pvalue                        [number]          hicDetectLoops: Rejection level for Anderson-Darling or Wilcoxon-rank sum test for H0. H0 is peak 
 region and background have the same distribution [default: 0.025]  
-  --expected                      [string]         hicDetectLoops: Method to compute the expected value per distance: Either the mean (mean), the mean 
+  --expected                      [string]          hicDetectLoops: Method to compute the expected value per distance: Either the mean (mean), the mean 
 of non-zero values (mean_nonzero) or the mean of non-zero values with ligation factor correction 
 (mean_nonzero_ligation)  (accepted: mean, mean_nonzero, mean_nonzero_ligation) [default: mean] 
  
-  --loop_plot_ytransform          [string]         hicPlotMatrix: transformation of the loop plot values  (accepted: log1p, log) [default: log1p] 
+  --loop_plot_ytransform          [string]          hicPlotMatrix: transformation of the loop plot values  (accepted: log1p, log) [default: log1p] 
  
-  --loop_plot_region              [string]         hicPlotMatrix: region of the loop plot, e.g. chr1:10000-20000. Whole genome when unset. 
-  --loop_plot_region2             [string]         hicPlotMatrix: second region of the loop plot for inter-region contacts, used with 
+  --loop_plot_region              [string]          hicPlotMatrix: region of the loop plot, e.g. chr1:10000-20000. Whole genome when unset. 
+  --loop_plot_region2             [string]          hicPlotMatrix: second region of the loop plot for inter-region contacts, used with 
 --loop_plot_region  
 
 Skip options

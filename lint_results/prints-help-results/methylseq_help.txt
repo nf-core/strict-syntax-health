@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.11.0-edge
 
-Launching `./main.nf` [stupefied_jennings] revision: f830945a38
+Launching `./main.nf` [awesome_lagrange] revision: f830945a38
 
 
 ------------------------------------------------------
@@ -35,14 +35,20 @@ Save intermediate files
   --save_trimmed                [boolean] Save trimmed reads to results directory. 
 
 Reference genome options
-  --genome                      [string] Name of iGenomes reference. 
-  --fasta                       [string] Path to the genome FASTA; required unless --genome provides one. 
-  --fasta_index                 [string] Path to Fasta index file. 
-  --bismark_index               [string] Path to a directory containing a Bismark reference index. 
-  --bwameth_index               [string] bwameth index filename base 
-  --bwamem_index                [string] Path to the BWA-MEM index filename base 
-  --bwamem3_index               [string] Path to a bwa-mem3 methylation index (built with `bwa-mem3 index --meth`): a directory, a .tar.gz, 
+  --genome                      [string]  Name of iGenomes reference. 
+  --fasta                       [string]  Path to the genome FASTA; required unless --genome provides one. 
+  --fasta_index                 [string]  Path to Fasta index file. 
+  --bismark_index               [string]  Path to a directory containing a Bismark reference index. 
+  --bwameth_index               [string]  bwameth index filename base 
+  --bwamem_index                [string]  Path to the BWA-MEM index filename base 
+  --bwamem3_index               [string]  Path to a bwa-mem3 methylation index (built with `bwa-mem3 index --meth`): a directory, a .tar.gz, 
 or an index prefix.  
+  --control_contigs             [string]  Comma-separated spike-in or control contigs (for example lambda or pUC19) to report on their own in 
+the MultiQC methylation summary.  
+  --control_fasta               [string]  FASTA of spike-in or control sequences (for example lambda and pUC19) that are not in the reference, 
+to align and report on their own.  
+  --control_reads               [integer] Reads (read pairs for paired-end data) per sample to align to `--control_fasta`, from the start of 
+the file; 0 aligns all of them. [default: 2000000]  
 
 Alignment options
   --aligner                     [string]  Alignment tool to use. Defaults to `bwamem3` when `--taps` is given on the command line or in 
@@ -110,8 +116,6 @@ end. Replaces the M-bias estimate.
 R2 end. Replaces the M-bias estimate.  
   --rastair2_mbias_region       [string]  Region used to estimate M-bias trims with rastair version 2 (for example a methylated spike-in 
 contig).  
-  --rastair2_control_contigs    [string]  Comma-separated spike-in or control contigs to leave out of the rastair version 2 genome-wide 
-methylation figures.  
 
 methurator options
   --methurator_minimum_coverage [string]  Minimum CpGs coverage to consider for the saturation analysis. Can be a single integer or a list 
@@ -123,7 +127,8 @@ Qualimap Options
   --bamqc_regions_file          [string] A GFF or BED file containing the target regions which will be passed to Qualimap/Bamqc. 
 
 Targeted Sequencing Analysis Options
-  --target_regions_file         [string]  A BED file containing the target regions 
+  --target_regions_file         [string]  A BED file containing the target regions, or a comma-separated list of BED files (one per panel) 
+ 
   --collecthsmetrics            [boolean] Run Picard CollectHsMetrics in the targeted analysis 
 
 UMI options
@@ -141,6 +146,8 @@ Skip pipeline steps
 Run pipeline steps
   --run_preseq                  [boolean] Run preseq/lcextrap tool 
   --run_methurator              [boolean] Run methurator/gtestimator tool 
+  --run_methylation_summary     [boolean] Add a per-sample methylation summary of the MethylDackel, Bismark or rastair 0.8 calls to the 
+MultiQC report  
   --run_qualimap                [boolean] Run qualimap/bamqc tool 
   --run_riker                   [boolean] Run riker multi for alignment, insert size, coverage and GC bias metrics 
   --run_targeted_sequencing     [boolean] Run advanced analysis for targeted methylation kits with enrichment of specific regions 

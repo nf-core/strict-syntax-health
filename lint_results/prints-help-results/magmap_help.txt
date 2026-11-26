@@ -1,9 +1,9 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.6
+ N E X T F L O W   ~  version 26.11.0-edge
 
-Launching `./main.nf` [sick_khorana] revision: 5e1adde652
+Launching `./main.nf` [kickass_curry] revision: 8ff52459c0
 
 
 ------------------------------------------------------
@@ -46,6 +46,13 @@ bakta_supported_only, bakta_all) [default: prokka]
   --bakta_db                    [string]  Path to a directory holding the Bakta database, used only when --annotator is bakta_supported_only 
 or bakta_all. [default: magmap_bakta_db]  
   --bakta_store_dir             [string]  Path to a directory where Bakta annotation output is stored. [default: magmap_bakta] 
+  --skip_kofamscan              [boolean] Skip the KofamScan annotation of the genome proteins. 
+  --kofamscan_store_dir         [string]  Path to a directory where KofamScan output is stored. [default: magmap_kofamscan] 
+  --kofam_dbpath                [string]  Path to a directory where the KOfam database is stored. [default: magmap_kofam_db] 
+  --kofam_ko_list_url           [string]  URL or path of the gzipped KOfam ko_list file. [default: 
+https://www.genome.jp/ftp/db/kofam/ko_list.gz]  
+  --kofam_profiles_url          [string]  URL or path of the KOfam HMM profiles archive (a tar.gz file). [default: 
+https://www.genome.jp/ftp/db/kofam/profiles.tar.gz]  
   --save_parquet                [boolean] Also write the summary tables in Parquet format, alongside the default gzipped TSV. 
   --email                       [string]  Email address for completion summary. 
   --multiqc_title               [string]  MultiQC report title. Printed as page header, used for filename if not otherwise specified. 

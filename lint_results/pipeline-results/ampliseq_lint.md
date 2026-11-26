@@ -1,7 +1,7 @@
 # Nextflow lint results
 
-- Generated: 2026-11-15T00:12:50.964030342Z
-- Nextflow version: 26.10.6
+- Generated: 2026-11-26T00:12:16.449076592Z
+- Nextflow version: 26.11.0-edge
 - Summary: 67 warnings
 
 ## :warning: Warnings
@@ -307,14 +307,14 @@
                                  ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_ampliseq_pipeline/main.nf:536:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_ampliseq_pipeline/main.nf:534:57`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           def collisions = filesToKeys.values().findAll { it.size() > 1 }
                                                           ^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_ampliseq_pipeline/main.nf:539:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `subworkflows/local/utils_nfcore_ampliseq_pipeline/main.nf:537:42`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   collisions.collect { "'${it.join("', '")}'" }.join(", ") + ". List each database only once.")
