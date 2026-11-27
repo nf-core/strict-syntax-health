@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.11.0-edge
 
-Launching `./main.nf` [awesome_lagrange] revision: f830945a38
+Launching `./main.nf` [determined_kirch] revision: f830945a38
 
 
 ------------------------------------------------------
@@ -61,7 +61,6 @@ Special library types
   --illumina_5base              [boolean] Preset for Illumina 5-Base libraries (methylated C reads as T). 
   --pbat                        [boolean] Preset for working with PBAT libraries. 
   --rrbs                        [boolean] Turn on if dealing with MspI digested material. 
-  --slamseq                     [boolean] Run bismark in SLAM-seq mode. 
   --em_seq                      [boolean] Preset for EM-seq libraries. 
   --single_cell                 [boolean] Trimming preset for single-cell bisulfite libraries. 
   --accel                       [boolean] Trimming preset for the Accel kit. 
@@ -150,6 +149,7 @@ Run pipeline steps
 MultiQC report  
   --run_qualimap                [boolean] Run qualimap/bamqc tool 
   --run_riker                   [boolean] Run riker multi for alignment, insert size, coverage and GC bias metrics 
+  --run_methylsieve             [boolean] Run methylsieve next to rastair for conversion and M-bias metrics on TAPS and 5-Base data 
   --run_targeted_sequencing     [boolean] Run advanced analysis for targeted methylation kits with enrichment of specific regions 
 
 Generic options
@@ -158,7 +158,7 @@ Generic options
   --help_full                   [boolean]         Display the full detailed help message. 
   --show_hidden                 [boolean]         Display hidden parameters in the help message (only works when --help or --help_full are provided). 
  
- !! Hiding 19 param(s), use the `--showHidden` parameter to show them !!
+ !! Hiding 20 param(s), use the `--showHidden` parameter to show them !!
 ------------------------------------------------------
 
 * The pipeline

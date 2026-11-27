@@ -1,40 +1,40 @@
 # Nextflow lint results
 
-- Generated: 2026-11-26T00:16:28.752524140Z
+- Generated: 2026-11-27T00:14:09.186383434Z
 - Nextflow version: 26.11.0-edge
-- Summary: 77 warnings
+- Summary: 79 warnings
 
 ## :warning: Warnings
 
-- Warning: `conf/modules.config:350:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:387:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               saveAs: { filename -> null }
                         ^^^^^^^^
   ```
 
-- Warning: `conf/modules.config:359:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:396:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               saveAs: { filename -> null }
                         ^^^^^^^^
   ```
 
-- Warning: `conf/modules.config:368:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:405:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               saveAs: { filename -> null }
                         ^^^^^^^^
   ```
 
-- Warning: `conf/modules.config:377:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:414:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               saveAs: { filename -> null }
                         ^^^^^^^^
   ```
 
-- Warning: `conf/modules.config:399:23`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `conf/modules.config:436:23`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               saveAs: { filename -> null }
@@ -48,7 +48,7 @@
       ^^^^
   ```
 
-- Warning: `modules/local/aspli/du/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/aspli/du/main.nf:24:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -63,6 +63,13 @@
   ```
 
 - Warning: `modules/local/createbamlist/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/custom/splicingsummary/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -202,7 +209,7 @@
       ^^^^
   ```
 
-- Warning: `modules/local/stager/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/stager/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -377,7 +384,7 @@
       ^^^^
   ```
 
-- Warning: `modules/nf-core/rsem/preparereference/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/rsem/preparereference/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -385,6 +392,13 @@
   ```
 
 - Warning: `modules/nf-core/rseqc/inferexperiment/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/nf-core/rseqc/junctionsaturation/main.nf:22:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

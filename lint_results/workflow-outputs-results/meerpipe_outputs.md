@@ -1,6 +1,6 @@
 # Workflow outputs migration: meerpipe
 
-- Generated: 2026-11-25T00:13:28.139911+00:00
+- Generated: 2026-11-27T00:12:44.244071+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,8 +14,8 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 9 `publishDir` references across 5 files that should be migrated to the workflow `output {}` block:
 
-- [`modules/local/generate_image_results.nf`](https://github.com/nf-core/meerpipe/blob/977f72f50b7f3edb712c6a600537c8c9bac90dcc/modules/local/generate_image_results.nf#L7) — 3 references
-- [`conf/modules.config`](https://github.com/nf-core/meerpipe/blob/977f72f50b7f3edb712c6a600537c8c9bac90dcc/conf/modules.config#L16) — 2 references
-- [`modules/local/psradd_calibrate_clean.nf`](https://github.com/nf-core/meerpipe/blob/977f72f50b7f3edb712c6a600537c8c9bac90dcc/modules/local/psradd_calibrate_clean.nf#L7) — 2 references
-- [`modules/local/decimate.nf`](https://github.com/nf-core/meerpipe/blob/977f72f50b7f3edb712c6a600537c8c9bac90dcc/modules/local/decimate.nf#L7) — 1 reference
-- [`modules/local/generate_toas.nf`](https://github.com/nf-core/meerpipe/blob/977f72f50b7f3edb712c6a600537c8c9bac90dcc/modules/local/generate_toas.nf#L6) — 1 reference
+- [`modules/local/generate_image_results.nf`](https://github.com/nf-core/meerpipe/blob/8091d5fb633aef3ed3ac54d5c39b85f6aea4d0b9/modules/local/generate_image_results.nf#L7) — 3 references
+- [`conf/modules.config`](https://github.com/nf-core/meerpipe/blob/8091d5fb633aef3ed3ac54d5c39b85f6aea4d0b9/conf/modules.config#L16) — 2 references
+- [`modules/local/psradd_calibrate_clean.nf`](https://github.com/nf-core/meerpipe/blob/8091d5fb633aef3ed3ac54d5c39b85f6aea4d0b9/modules/local/psradd_calibrate_clean.nf#L7) — 2 references
+- [`modules/local/decimate.nf`](https://github.com/nf-core/meerpipe/blob/8091d5fb633aef3ed3ac54d5c39b85f6aea4d0b9/modules/local/decimate.nf#L7) — 1 reference
+- [`modules/local/generate_toas.nf`](https://github.com/nf-core/meerpipe/blob/8091d5fb633aef3ed3ac54d5c39b85f6aea4d0b9/modules/local/generate_toas.nf#L6) — 1 reference

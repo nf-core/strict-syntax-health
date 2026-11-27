@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-11-26T00:16:54.805866580Z
+- Generated: 2026-11-27T00:15:05.784595010Z
 - Nextflow version: 26.11.0-edge
 - Summary: 56 warnings
 
@@ -118,7 +118,7 @@
       ^^^^
   ```
 
-- Warning: `modules/local/sativaepang/misreport/main.nf:22:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/sativaepang/misreport/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -132,7 +132,7 @@
       ^^^^
   ```
 
-- Warning: `modules/local/taxonomytree/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/taxonomytree/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

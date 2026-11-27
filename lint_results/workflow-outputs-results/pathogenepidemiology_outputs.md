@@ -1,6 +1,6 @@
 # Workflow outputs migration: pathogenepidemiology
 
-- Generated: 2026-11-26T00:15:06.542741+00:00
+- Generated: 2026-11-27T00:13:36.176761+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,6 +14,6 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 26 `publishDir` references across 3 files that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/pathogenepidemiology/blob/ebb3ce46a0bbb86f7e18103a7b87ce41f7e4f9c6/conf/modules.config#L15) — 24 references
-- [`modules/nf-core/gatk4/variantrecalibrator/tests/AS.config`](https://github.com/nf-core/pathogenepidemiology/blob/ebb3ce46a0bbb86f7e18103a7b87ce41f7e4f9c6/modules/nf-core/gatk4/variantrecalibrator/tests/AS.config#L3) — 1 reference
-- [`modules/nf-core/gatk4/variantrecalibrator/tests/noAS.config`](https://github.com/nf-core/pathogenepidemiology/blob/ebb3ce46a0bbb86f7e18103a7b87ce41f7e4f9c6/modules/nf-core/gatk4/variantrecalibrator/tests/noAS.config#L3) — 1 reference
+- [`conf/modules.config`](https://github.com/nf-core/pathogenepidemiology/blob/3ce15c758cfb9364fa9d6c141008dac5e126e690/conf/modules.config#L15) — 24 references
+- [`modules/nf-core/gatk4/variantrecalibrator/tests/AS.config`](https://github.com/nf-core/pathogenepidemiology/blob/3ce15c758cfb9364fa9d6c141008dac5e126e690/modules/nf-core/gatk4/variantrecalibrator/tests/AS.config#L3) — 1 reference
+- [`modules/nf-core/gatk4/variantrecalibrator/tests/noAS.config`](https://github.com/nf-core/pathogenepidemiology/blob/3ce15c758cfb9364fa9d6c141008dac5e126e690/modules/nf-core/gatk4/variantrecalibrator/tests/noAS.config#L3) — 1 reference

@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-11-13T00:14:27.259008814Z
-- Nextflow version: 26.10.5
-- Summary: 19 warnings
+- Generated: 2026-11-27T00:12:14.873188390Z
+- Nextflow version: 26.11.0-edge
+- Summary: 21 warnings
 
 ## :warning: Warnings
 
@@ -111,7 +111,7 @@
       ^^^^
   ```
 
-- Warning: `modules/nf-core/samshee/main.nf:22:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/samplesheetparser/validate/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -137,4 +137,18 @@
   ```nextflow
       when:
       ^^^^
+  ```
+
+- Warning: `workflows/demultiplex.nf:69:43`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          skip_tools = skip_tools.collect { it == "samshee" ? "samplesheetparser" : it }
+                                            ^^
+  ```
+
+- Warning: `workflows/demultiplex.nf:69:83`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+
+  ```nextflow
+          skip_tools = skip_tools.collect { it == "samshee" ? "samplesheetparser" : it }
+                                                                                    ^^
   ```

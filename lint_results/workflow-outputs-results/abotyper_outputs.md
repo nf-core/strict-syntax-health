@@ -1,6 +1,6 @@
 # Workflow outputs migration: abotyper
 
-- Generated: 2026-11-20T00:11:20.376160+00:00
+- Generated: 2026-11-27T00:11:57.078030+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,4 +14,4 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 20 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/abotyper/blob/a6ed63da946ae5d2d985116e972bdbdc2d9bf38b/conf/modules.config#L14) — 20 references
+- [`conf/modules.config`](https://github.com/nf-core/abotyper/blob/655cd185d1e0e2fc2535cef34d90da86dcfc6c58/conf/modules.config#L14) — 20 references

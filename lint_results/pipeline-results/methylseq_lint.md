@@ -1,19 +1,19 @@
 # Nextflow lint results
 
-- Generated: 2026-11-26T00:14:35.548784403Z
+- Generated: 2026-11-27T00:12:55.392333363Z
 - Nextflow version: 26.11.0-edge
-- Summary: 73 warnings
+- Summary: 75 warnings
 
 ## :warning: Warnings
 
-- Warning: `conf/modules/bismark_genomepreparation.config:12:23`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules/bismark_genomepreparation.config:11:23`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               saveAs: { it =~ /.*\.yml/ ? null : it },
                         ^^
   ```
 
-- Warning: `conf/modules/bismark_genomepreparation.config:12:48`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `conf/modules/bismark_genomepreparation.config:11:48`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               saveAs: { it =~ /.*\.yml/ ? null : it },
@@ -258,6 +258,13 @@
       ^^^^
   ```
 
+- Warning: `modules/nf-core/methylsieve/main.nf:25:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
 - Warning: `modules/nf-core/multiqc/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
@@ -384,6 +391,13 @@
       ^^^^
   ```
 
+- Warning: `modules/nf-core/samtools/collate/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
 - Warning: `modules/nf-core/samtools/dict/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
@@ -468,49 +482,49 @@
                                          ^^^^^^
   ```
 
-- Warning: `subworkflows/local/utils_nfcore_methylseq_pipeline/main.nf:594:9`: Variable was declared but not used
+- Warning: `subworkflows/local/utils_nfcore_methylseq_pipeline/main.nf:596:9`: Variable was declared but not used
 
   ```nextflow
       def citation_text = ["Tools used in the workflow included:", "FastQC (Andrews 2010),", "Trim Galore! (Krueger)", "Bismark (Krueger 2011)", "bwa-meth (Pedersen 2014)", "Picard (Broad Institute 2019)", params.with_umi ? "fgumi (Fulcrum Genomics)," : "", "Qualimap (Okonechnikov 2015)", "Preseq (Daley 2013)", "MultiQC (Ewels et al. 2016)", "."].findAll { citation -> citation }.join(' ').trim()
           ^^^^^^^^^^^^^
   ```
 
-- Warning: `workflows/methylseq/main.nf:516:37`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/methylseq/main.nf:530:37`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .combine(ch_fasta.map { meta, fasta -> fasta })
                                       ^^^^
   ```
 
-- Warning: `workflows/methylseq/main.nf:517:43`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/methylseq/main.nf:531:43`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
               .combine(ch_fasta_index.map { meta, index -> index })
                                             ^^^^
   ```
 
-- Warning: `workflows/methylseq/main.nf:570:90`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/methylseq/main.nf:584:90`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files = ch_multiqc_files.mix(QUALIMAP_BAMQC.out.results.collect { it[1] }.ifEmpty([]))
                                                                                            ^^
   ```
 
-- Warning: `workflows/methylseq/main.nf:573:68`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/methylseq/main.nf:587:68`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
           ch_multiqc_files = ch_multiqc_files.mix(ch_riker.collect { it[1] }.ifEmpty([]))
                                                                      ^^
   ```
 
-- Warning: `workflows/methylseq/main.nf:575:87`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/methylseq/main.nf:589:87`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
               ch_multiqc_files = ch_multiqc_files.mix(PRESEQ_LCEXTRAP.out.log.collect { it[1] }.ifEmpty([]))
                                                                                         ^^
   ```
 
-- Warning: `workflows/methylseq/main.nf:588:106`: Implicit closure parameter is deprecated, declare an explicit parameter instead
+- Warning: `workflows/methylseq/main.nf:602:106`: Implicit closure parameter is deprecated, declare an explicit parameter instead
 
   ```nextflow
                   ch_multiqc_files = ch_multiqc_files.mix(TARGETED_SEQUENCING.out.picard_metrics.collect { it[1] }.ifEmpty([]))

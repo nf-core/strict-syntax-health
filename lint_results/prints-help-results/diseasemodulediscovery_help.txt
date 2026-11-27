@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.11.0-edge
 
-Launching `./main.nf` [distracted_brazil] revision: 86d4f12776
+Launching `./main.nf` [loving_yalow] revision: 27af4070e0
 
 
 ------------------------------------------------------
@@ -65,6 +65,8 @@ Module evaluation
   --skip_digest                 [boolean] Flag for skipping DIGEST 
   --skip_digest_reference_free  [boolean] Flag for skipping only the reference-free mode of DIGEST 
   --skip_digest_reference_based [boolean] Flag for skipping only the reference-based mode of DIGEST 
+  --digest_mapping_files        [string]  Path to a directory with the DIGEST mapping files 
+  --save_digest_mapping_files   [boolean] Save the downloaded DIGEST mapping files to the output directory 
   --run_seed_perturbation       [boolean] Flag for running the seed perturbation-based evaluation 
   --run_network_perturbation    [boolean] Flag for running the network perturbation-base evaluation 
   --n_network_perturbations     [integer] Number of times the network will be perturbed for the network perturbation-based evaluation 

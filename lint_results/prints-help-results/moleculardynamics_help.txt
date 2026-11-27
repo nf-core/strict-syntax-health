@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.11.0-edge
 
-Launching `./main.nf` [tender_leavitt] revision: 6f7efa4ff7
+Launching `./main.nf` [jovial_church] revision: 6f7efa4ff7
 
 
 ------------------------------------------------------

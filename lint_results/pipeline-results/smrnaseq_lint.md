@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-11-25T00:17:55.147937220Z
+- Generated: 2026-11-27T00:14:51.476462425Z
 - Nextflow version: 26.11.0-edge
-- Summary: 34 warnings
+- Summary: 35 warnings
 
 ## :warning: Warnings
 
@@ -21,6 +21,13 @@
   ```
 
 - Warning: `modules/local/parse_fasta_mirna/main.nf:15:5`: Typed process should have only one output -- consider combining outputs into a record
+
+  ```nextflow
+      output:
+      ^^^^^^
+  ```
+
+- Warning: `modules/local/umi_from_sequence/main.nf:22:5`: Typed process should have only one output -- consider combining outputs into a record
 
   ```nextflow
       output:
@@ -237,7 +244,7 @@
       ^^^^
   ```
 
-- Warning: `workflows/smrnaseq.nf:40:5`: Parameter was not used -- prefix with `_` to suppress warning
+- Warning: `workflows/smrnaseq.nf:42:5`: Parameter was not used -- prefix with `_` to suppress warning
 
   ```nextflow
       has_fasta              // boolean

@@ -1,10 +1,10 @@
 $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
 
- N E X T F L O W   ~  version 26.10.5
+ N E X T F L O W   ~  version 26.11.0-edge
 
 Downloading plugin nf-schema@2.7.2
-Launching `./main.nf` [pedantic_kay] revision: 39d3b5c32b
+Launching `./main.nf` [condescending_heisenberg] revision: 39d3b5c32b
 
 
 ------------------------------------------------------
@@ -27,14 +27,18 @@ Workflow options
 the reads. [default: true]  
   --publish_raw_fastq              [boolean] Whether to publish raw, untrimmed FASTQ files alongside trimmed FASTQ files. When false, only 
 trimmed FASTQ files are published. [default: false]  
-  --skip_tools                     [string]  Comma-separated list of tools to skip (fastp,fastqc,kraken,multiqc,checkqc,falco,md5sum,samshee) 
- 
+  --skip_tools                     [string]  Comma-separated list of tools to skip 
+(fastp,fastqc,kraken,multiqc,checkqc,falco,md5sum,samplesheetparser). The old 'samshee' token is 
+accepted as a deprecated alias for 'samplesheetparser'.  
   --sample_size                    [integer] Number of reads to subsample for contamination detection. [default: 100000] 
   --kraken_db                      [string]  Path to the Kraken2 database used for contamination screening. 
-  --json_schema_validator          [string]  JSON-formatted schema string passed to the samshee module for samplesheet validation. 
-  --name_schema_validator          [string]  Schema name passed to the samshee module for samplesheet validation. 
-  --file_schema_validator          [string]  Local JSON schema file passed to the samshee module for samplesheet validation. 
-  --v1_schema                      [boolean] Whether the Illumina samplesheet is in v1 format. 
+  --validator_strictness           [string]  Strictness level for samplesheet-parser validation. 'lenient' uses a minimum index distance of 2 
+with no colour balance check; 'standard' (default) uses a minimum index distance of 3 with no colour 
+balance check; 'strict' uses a minimum index distance of 4, a conservative colour balance check, and 
+Illumina v2 conformance (index length against declared cycles, RunName, FileFormatVersion, bundled 
+Illumina v2 JSON Schema).  (accepted: lenient, standard, strict) [default: standard]  
+  --validator_schema               [string]  Path to a custom JSON Schema (Draft 2020-12) file, passed to samplesheet-parser via --schema for 
+additional samplesheet validation.  
 
 Input/output options
   --input                          [string]  Path to comma-separated file containing information about the samples in the experiment. 
