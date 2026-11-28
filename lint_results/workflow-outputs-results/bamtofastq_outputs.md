@@ -1,6 +1,6 @@
 # Workflow outputs migration: bamtofastq
 
-- Generated: 2026-11-18T00:12:19.354206+00:00
+- Generated: 2026-11-28T00:11:39.897852+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,4 +14,4 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 9 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/bamtofastq/blob/9ea48e790ff9a99847ffbd36de7986b4a6c93240/conf/modules.config#L15) — 9 references
+- [`conf/modules.config`](https://github.com/nf-core/bamtofastq/blob/7e6822804f944b05c85519f042043974bef422bc/conf/modules.config#L15) — 9 references

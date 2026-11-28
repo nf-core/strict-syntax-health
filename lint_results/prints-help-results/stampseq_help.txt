@@ -1,0 +1,146 @@
+$ NXF_SYNTAX_PARSER=v2 nextflow run . --help
+
+
+ N E X T F L O W   ~  version 26.11.0-edge
+
+Downloading plugin nf-schema@2.6.0
+Launching `./main.nf` [peaceful_leakey] revision: 3d635409ee
+
+
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/stampseq 1.0.0dev
+------------------------------------------------------
+Typical pipeline command:
+
+  nextflow run nf-core/stampseq -profile <docker/singularity/.../institute> --mode <bulk|sc> --input samplesheet.csv --outdir <OUTDIR>
+
+help message of that parameter will be printed.  
+or `--helpFull`.  
+
+Input/output options
+  --input                       [string] Path to comma-separated file containing information about the samples in the experiment. 
+  --outdir                      [string] The output directory where the results will be saved. Use absolute paths on cloud infrastructure. 
+ 
+  --email                       [string] Email address for completion summary. 
+  --multiqc_title               [string] MultiQC report title. Printed as page header. 
+
+Pipeline options
+  --mode                        [string]  Pipeline mode. 'bulk' processes bulk RNA-seq through MARINE and/or SAILOR. 'sc' processes 10x 
+Genomics single-cell RNA-seq through MARINE SC.  (accepted: bulk, sc)  
+  --run_marine                  [boolean] Run MARINE edit calling in bulk mode. Set to false to run SAILOR only. [default: true] 
+  --run_sailor                  [boolean] Run SAILOR Bayesian edit calling in bulk mode. Set to false to run MARINE only. [default: true] 
+ 
+  --run_flare                   [boolean] Run FLARE edit-cluster identification (RBP-STAMP). Requires --run_sailor true, as FLARE operates on 
+SAILOR outputs. Leave false for RiboSTAMP data. [default: false]  
+
+Reference genome options
+  --genome                      [string] Genome build key used to select the built-in genePred file for metaPlotR. One of: hg19, hg38, 
+hg38_V44, mm10, mm39.  (accepted: hg19, hg38, hg38_V44, mm10, mm39)  
+  --fasta                       [string] Path to genome FASTA file. Required for MARINE (samtools calmd) and SAILOR. 
+  --star_index                  [string] Path to pre-built STAR genome index directory. Required for bulk FASTQ mode. 
+  --gtf                         [string] GTF annotation file. Required for STAR alignment (bulk FASTQ) and featureCounts (bulk MARINE). 
+ 
+  --gene_bed                    [string] BED6 gene-model file (.bed or .bed6, optionally gzipped).Used by RSeQC infer_experiment.py for 
+strandedness inference and by MARINE for edit-site annotation.  
+  --dbsnp_bed                   [string] dbSNP BED file (BED3 format). Known SNP positions are removed from MARINE and SAILOR edit calls 
+during filtering.  
+  --cellranger_ref              [string] Pre-built CellRanger reference directory. Required for --mode sc with FASTQ input. 
+
+Edit calling options
+  --edit_type                   [string]  Type of RNA editing to detect. 'C>T' for A-to-I editing on the reverse strand (most STAMP/DART-seq 
+experiments). 'A>G' for sense-strand A-to-I editing. Used throughout filtering, normalization, and 
+metaPlotR steps.  (accepted: C>T, A>G) [default: C>T]  
+  --marine_sif                  [string]  Path to a pre-built MARINE Singularity SIF. If not set, Nextflow automatically pulls and converts 
+docker.io/aravindsundaravadivelu/marine:1.0.2.  
+  --ribostamp_utils_sif         [string]  Path to a pre-built ribostamp_utils Singularity SIF. If not set, Nextflow automatically pulls and 
+converts docker.io/aravindsundaravadivelu/ribostamp_utils:1.0.0.  
+  --barcode_tag                 [string]  BAM tag storing cell barcodes. CellRanger uses 'CB'. Only applies to --mode sc. [default: CB] 
+ 
+  --strandedness                [integer] Library strandedness: 0=unstranded, 1=forward, 2=reverse. Only required when running SAILOR from BAM 
+input without running MARINE first (strandedness is otherwise inferred per-sample by RSeQC 
+infer_experiment.py).  (accepted: 0, 1, 2)  
+  --min_base_quality            [integer] Minimum base quality (Phred) for MARINE to count a base toward editing evidence. [default: 30] 
+ 
+  --min_read_quality            [integer] Minimum read mapping quality for MARINE. Use 255 for CellRanger-mapped BAMs (CellRanger assigns 255 
+to uniquely mapped reads). [default: 255]  
+  --min_dist_from_end           [integer] Number of bases at each read end that MARINE ignores when calling edits. Base quality drops off near 
+read ends, so untrimmed ends contribute sequencing errors across all conversion types and dilute the 
+expected C>T signal. [default: 0]  
+
+Edit filtering options
+  --min_count                   [integer] Minimum number of reads with an edit at a site. Applied during SC filtering. Lower values call more 
+sites but increase noise. [default: 3]  
+  --max_frac                    [number]  Bulk only. Maximum editing fraction per site; sites above it are filtered as likely SNPs or 
+mismatches. The sc equivalent is --site_max_frac. [default: 0.1]  
+  --site_max_frac               [number]  Maximum editing fraction per site for sc Filter 5 (filter_sc_site_max_frac): edited reads / samtools 
+read depth, summed over the cells in the barcode list. Depth counts read-end bases that MARINE skips 
+when min_dist_from_end > 0, and reads on both strands, so the fraction runs slightly low in those 
+cases. [default: 0.05]  
+  --filter_bulk_multiallelic    [boolean] Bulk F1: remove sites where more than one alt base appears at the same contig/position/ref. 
+[default: true]  
+  --filter_bulk_dbsnp           [boolean] Bulk F2: remove edit sites whose position overlaps a dbSNP entry. [default: true] 
+  --filter_bulk_max_frac        [boolean] Bulk F3: remove sites where edit_fraction exceeds --max_frac. [default: true] 
+  --filter_bulk_unannotated     [boolean] Bulk F4: remove sites with no gene annotation (feature_type == -1). [default: true] 
+  --filter_sc_multi_conversion  [boolean] SC F1: remove sites showing more than one conversion type across all cells. [default: true] 
+  --filter_sc_dbsnp             [boolean] SC F2: remove edit sites whose position overlaps a dbSNP entry. [default: true] 
+  --filter_sc_min_count         [boolean] SC F3: remove sites with fewer than --min_count total edited reads across all cells. [default: 
+true]  
+  --filter_sc_unannotated       [boolean] SC F4: remove sites with no gene annotation (feature_type == -1). [default: true] 
+  --filter_sc_site_max_frac     [boolean] SC F5 (opt-in): remove sites where more than --site_max_frac of reads are edited, with depth 
+measured by samtools over the sc BAM across all cells in the sample's barcode list (samplesheet 
+'barcodes' column, else the CellRanger barcodes). Adds one pass over each BAM. [default: false] 
+ 
+  --filter_sc_recount_min_count [boolean] With F5 on: re-apply --min_count counting only edited reads from cells in the barcode list. F3 
+counts all CellRanger cells, so a site can pass it on reads from cells outside the list. No effect 
+without a 'barcodes' column. [default: true]  
+
+SAILOR options
+  --sailor_conf                 [number] Minimum SAILOR confidence score for an edit site to enter EPR/EPKM normalization. [default: 0.5] 
+ 
+  --sailor_snakefile            [string] Path to the SAILOR Snakefile. Defaults to the bundled copy at assets/sailor/Snakefile. Override to 
+use a different version.  
+  --sailor_snakemake_path       [string] Absolute path to the snakemake binary, or 'snakemake' if it is already in PATH. Set this to e.g. 
+'/path/to/conda/envs/snakemake/bin/snakemake' when running under Singularity where snakemake is not 
+in the host PATH. [default: snakemake]  
+  --sailor_singularity_cache    [string] Directory for caching SAILOR Singularity images. Will be created if it does not exist. 
+  --sailor_singularity_bind     [string] Comma-separated bind paths for SAILOR's internal Singularity calls (e.g. 
+'/condo/brannanlab,/home/user/refs'). Must cover the locations of --fasta and --dbsnp_bed. Also 
+applied to FLARE's internal Singularity calls.  
+
+FLARE options
+  --flare_snakefile             [string]  Path to the FLARE Snakefile. Defaults to the bundled copy at assets/workflow_FLARE/Snakefile. 
+Override to use a different version.  
+  --flare_regions               [string]  Pre-built FLARE regions folder produced by generate_regions.py (genome-level, ~8-10 GB, reusable 
+across runs). If not supplied, it is generated on-the-fly from --gtf. Build once and reuse via this 
+param to avoid the expensive regeneration.  
+  --flare_window_size           [integer] Sliding-window size (bp) for generate_regions.py. Only used when regions are auto-generated (no 
+--flare_regions given). [default: 30]  
+  --flare_fdr                   [number]  FDR threshold used by FLARE to filter significant edit clusters/peaks. [default: 0.1] 
+  --flare_max_merge_dist        [integer] Maximum distance (bp) for merging adjacent significant peaks into a single cluster. [default: 
+15]  
+  --editc_sif                   [string]  Path to a local editc (ekofman/editc:v2) Singularity SIF, used for FLARE region generation on 
+offline HPC. Defaults to pulling docker.io/ekofman/editc:v2.  
+
+Metagene plot options
+  --genepred                    [string] Path to a custom genePred annotation file for metaPlotR. If not set, the pipeline selects the 
+built-in file based on --genome (hg19, hg38, hg38_V44, mm10, mm39).  
+
+Generic options
+  --multiqc_methods_description [string]          Custom MultiQC yaml file containing HTML including a methods description. 
+  --help                        [boolean, string] Display the help message. 
+  --help_full                   [boolean]         Display the full detailed help message. 
+  --show_hidden                 [boolean]         Display hidden parameters in the help message. 
+ !! Hiding 19 param(s), use the `--showHidden` parameter to show them !!
+------------------------------------------------------
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/stampseq/blob/master/CITATIONS.md
+

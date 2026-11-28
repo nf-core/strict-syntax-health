@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-11-25T00:18:25.802726024Z
+- Generated: 2026-11-28T00:15:21.505480643Z
 - Nextflow version: 26.11.0-edge
-- Summary: 81 warnings
+- Summary: 82 warnings
 
 ## :warning: Warnings
 
@@ -14,6 +14,13 @@
   ```
 
 - Warning: `modules/local/collapse_primers/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/extract_consensus_regions/main.nf:18:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:
@@ -90,7 +97,7 @@
       ^^^^
   ```
 
-- Warning: `modules/local/resistance_report/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/local/resistance_report/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

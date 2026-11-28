@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.11.0-edge
 
-Launching `./main.nf` [compassionate_newton] revision: 6e7e327594
+Launching `./main.nf` [boring_euler] revision: 5755daa5d7
 
 
 ------------------------------------------------------
@@ -51,6 +51,7 @@ Reference genome options
   --mature                      [string]  Path to FASTA file with mature miRNAs. [default: 
 https://github.com/nf-core/test-datasets/raw/smrnaseq/miRBase/mature.fa]  
   --mirgenedb_mature            [string]  Path to FASTA file with MirGeneDB mature miRNAs. 
+  --mirgenedb_star              [string]  Optional path to FASTA file with MirGeneDB star miRNAs, added to `--mirgenedb_mature`. 
   --hairpin                     [string]  Path to FASTA file with miRNAs precursors. [default: 
 https://github.com/nf-core/test-datasets/raw/smrnaseq/miRBase/hairpin.fa]  
   --mirgenedb_hairpin           [string]  Path to FASTA file with miRNAs precursors. 
@@ -89,6 +90,7 @@ Contamination filter options
 Skipping pipeline steps
   --skip_fastqc                 [boolean] Skip FastQC 
   --skip_mirdeep                [boolean] Skip miRDeep 
+  --skip_mirtop                 [boolean] Skip the mirtop isomiR annotation. 
   --skip_multiqc                [boolean] Skip MultiQC 
   --skip_fastp                  [boolean] Skip FastP 
 

@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-11-17T00:16:48.724443669Z
-- Nextflow version: 26.10.6
-- Summary: 80 warnings
+- Generated: 2026-11-28T00:14:40.248346030Z
+- Nextflow version: 26.11.0-edge
+- Summary: 79 warnings
 
 ## :warning: Warnings
 
@@ -557,11 +557,4 @@
   ```nextflow
                   .filter { meta, transcripts, mask -> !mask }
                                   ^^^^^^^^^^^
-  ```
-
-- Warning: `subworkflows/nf-core/utils_nfcore_pipeline/main.nf:101:98`: The use of `Channel` to access channel factories is deprecated -- use `channel` instead
-
-  ```nextflow
-      return ch_versions.unique().map { version -> processVersionsFromYAML(version) }.unique().mix(Channel.of(workflowVersionToYAML()))
-                                                                                                   ^^^^^^^
   ```

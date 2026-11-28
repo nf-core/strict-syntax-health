@@ -1,6 +1,6 @@
 # Nextflow lint results
 
-- Generated: 2026-11-27T00:14:51.476462425Z
+- Generated: 2026-11-28T00:14:25.812337166Z
 - Nextflow version: 26.11.0-edge
 - Summary: 35 warnings
 
@@ -20,7 +20,7 @@
       ^^^^^^
   ```
 
-- Warning: `modules/local/parse_fasta_mirna/main.nf:15:5`: Typed process should have only one output -- consider combining outputs into a record
+- Warning: `modules/local/parse_fasta_mirna/main.nf:17:5`: Typed process should have only one output -- consider combining outputs into a record
 
   ```nextflow
       output:

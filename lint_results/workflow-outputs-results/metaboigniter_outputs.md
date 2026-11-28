@@ -1,6 +1,6 @@
 # Workflow outputs migration: metaboigniter
 
-- Generated: 2026-11-25T00:13:36.086810+00:00
+- Generated: 2026-11-28T00:12:42.081806+00:00
 - Status: :x: **error** — no `output {}` block found; still relies on the legacy `publishDir` directive
 
 This report tracks migration from the legacy `publishDir` directive to the new [workflow outputs](https://docs.seqera.io/nextflow/tutorials/workflow-outputs) syntax.
@@ -14,4 +14,4 @@ https://docs.seqera.io/nextflow/tutorials/workflow-outputs
 
 Found 33 `publishDir` references across 1 file that should be migrated to the workflow `output {}` block:
 
-- [`conf/modules.config`](https://github.com/nf-core/metaboigniter/blob/f558a23a081a60ab0c44221b615a6c6891ae2be1/conf/modules.config#L15) — 33 references
+- [`conf/modules.config`](https://github.com/nf-core/metaboigniter/blob/4b62a9e0b17d38760f404fc223bfbfc85d41aaf3/conf/modules.config#L15) — 33 references

@@ -1,12 +1,12 @@
 # Nextflow lint results
 
-- Generated: 2026-11-27T00:15:48.840391+00:00
+- Generated: 2026-11-28T00:16:00.709890+00:00
 - Nextflow version: 26.11.0-edge
 - Summary: 1 warning
 
 ## :warning: Warnings
 
-- Warning: `modules/nf-core/deacon/filter/main.nf:21:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+- Warning: `modules/nf-core/deacon/filter/main.nf:22:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

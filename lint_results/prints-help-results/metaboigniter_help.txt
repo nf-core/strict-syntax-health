@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.11.0-edge
 
-Launching `./main.nf` [magical_shaw] revision: 3d6668ec16
+Launching `./main.nf` [spontaneous_goldstine] revision: 3d6668ec16
 
 
 ------------------------------------------------------

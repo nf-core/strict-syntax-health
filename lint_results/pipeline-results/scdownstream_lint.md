@@ -1,8 +1,8 @@
 # Nextflow lint results
 
-- Generated: 2026-11-27T00:14:30.737976452Z
+- Generated: 2026-11-28T00:14:07.611302838Z
 - Nextflow version: 26.11.0-edge
-- Summary: 79 warnings
+- Summary: 82 warnings
 
 ## :warning: Warnings
 
@@ -102,6 +102,20 @@
   ```nextflow
       when:
       ^^^^
+  ```
+
+- Warning: `modules/local/arboreto/grnboost2/main.nf:23:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/arboreto/grnboost2/main.nf:28:5`: Variable was declared but not used
+
+  ```nextflow
+      obs_key = meta.obs_key ?: "leiden"
+      ^^^^^^^
   ```
 
 - Warning: `modules/local/azimuth/main.nf:20:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
@@ -364,6 +378,13 @@
   ```
 
 - Warning: `modules/local/scanpy/sample/main.nf:19:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
+
+  ```nextflow
+      when:
+      ^^^^
+  ```
+
+- Warning: `modules/local/scanpy/sexprediction/main.nf:22:5`: The `when` section is deprecated -- use conditional logic in the calling workflow, or the `process.when` config option to disable a process at runtime
 
   ```nextflow
       when:

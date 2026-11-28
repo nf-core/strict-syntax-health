@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.11.0-edge
 
-Launching `./main.nf` [backstabbing_perlman] revision: 765293ef68
+Launching `./main.nf` [chaotic_coulomb] revision: 765293ef68
 
 
 ------------------------------------------------------
@@ -187,6 +187,7 @@ HIV resistance options
   --sdrms_csv                    [string]  Path to CSV file to determine SDRM mutations (default: sdrms_hiv1.csv) 
   --mutation_csv                 [string]  Path to CSV file to determine mutation type (default: mutation-type-pairs_hiv1.csv 
   --perform_hiv_resistance       [boolean] Whether to perform sierra local HIV resistance analysis. 
+  --split_hiv_fragments          [boolean] Split HIV consensus genome into the different pol fragments. 
 
 Generic options
   --multiqc_methods_description  [string]          Custom MultiQC yaml file containing HTML including a methods description. 

@@ -4,7 +4,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
  N E X T F L O W   ~  version 26.11.0-edge
 
 Downloading plugin nf-anndata@0.5.4
-Launching `./main.nf` [cheesy_poitras] revision: 7e1a88aa05
+Launching `./main.nf` [high_goldberg] revision: fc6567a40d
 
 
 ------------------------------------------------------
@@ -13,7 +13,7 @@ Launching `./main.nf` [cheesy_poitras] revision: 7e1a88aa05
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/scdownstream 0.0.1dev
+  nf-core/scdownstream 1.0.0
 ------------------------------------------------------
 Typical pipeline command:
 
@@ -45,9 +45,10 @@ Quality control options
   --species                       [string]  Species of the input data. Used to auto-select bundled cell cycle gene lists 
 (assets/cell_cycle_genes/<species>_s_genes.txt and _g2m_genes.txt), as the MyGene.info taxonomy when 
 converting gene identifiers (samplesheet symbol_col: none), for PROGENy pathway enrichment in 
-Tensor-cell2cell, and for --gene_annotation when no --gene_annotation_gtf is given. Bundled cell 
-cycle lists are provided for 'human' and 'mouse'. Ignored when --s_genes and --g2m_genes are set 
-explicitly. [default: human]  
+Tensor-cell2cell, and for --gene_annotation when no --gene_annotation_gtf is given. Also selects the 
+bundled sex marker gene lists (assets/sex_genes/<species>_y_genes.txt and _x_genes.txt). Bundled 
+cell cycle and sex marker lists are provided for 'human' and 'mouse'. Ignored when --s_genes and 
+--g2m_genes are set explicitly. [default: human]  
   --cell_cycle_scoring            [boolean] Whether to perform cell cycle scoring. If true, S and G2M phase scores and a predicted phase label 
 are added to each cell in adata.obs. Requires the gene index (or symbol_col) to use standard gene 
 symbols matching the selected species. [default: true]  
@@ -57,6 +58,15 @@ cell_cycle_scoring is true.
   --g2m_genes                     [string]  Optional path to a plain-text file of G2M phase gene symbols (one per line, # lines ignored). 
 Overrides the species-derived default from assets/cell_cycle_genes/. Only used when 
 cell_cycle_scoring is true.  
+  --sex_prediction                [boolean] Whether to predict the sex of each sample. If true, per-cell Y gene and XIST count fractions, a 
+per-cell call and the sample-level call are added to adata.obs, and a per-sample summary is written 
+to 02_quality_control/sex_prediction/. [default: false]  
+  --sex_y_genes                   [string]  Optional path to a plain-text file of genes from the male-specific region of chromosome Y (one per 
+line, # lines ignored). Overrides the species-derived default from assets/sex_genes/. Only used when 
+sex_prediction is true.  
+  --sex_x_genes                   [string]  Optional path to a plain-text file of X-inactivation genes such as XIST (one per line, # lines 
+ignored). Overrides the species-derived default from assets/sex_genes/. Only used when 
+sex_prediction is true.  
   --mito_genes                    [string]  Optional file containing a list of mitochondrial gene symbols (one per line). If provided, it 
 overrides the default 'mt-' prefix heuristic.  
   --ambient_correction            [string]  Specify the tool to use for ambient RNA correction. SoupX is the default and requires an unfiltered 
@@ -228,6 +238,18 @@ only decoupler_network. [default: progeny,collectri]
 viper, zscore, aucell, ora, gsea) [default: ulm]  
   --decoupler_min_targets         [integer] Minimum number of network targets shared with the data for a source to be scored. [default: 5] 
  
+
+Gene regulatory network options
+  --grn                           [boolean] Infer a gene regulatory network for each group of each clustering with GRNBoost2 (arboreto). Runs 
+for groupings whose analysis plan entry includes grn, or for all groupings when analyses is empty. 
+[default: false]  
+  --grn_tfs                       [string]  Optional plain-text file of transcription factor gene symbols (one per line, # lines ignored) used 
+as candidate regulators. Without it, all selected target genes are candidate regulators.  
+  --grn_n_top_genes               [integer] Number of highly variable genes used as GRN targets. [default: 2000] 
+  --grn_min_cells                 [integer] Minimum number of cells a group needs for a network to be inferred. [default: 50] 
+  --grn_max_links                 [integer] Maximum number of regulator to target links kept per group, ranked by importance. Use 0 to keep all 
+links. [default: 10000]  
+  --grn_seed                      [integer] Random seed for GRNBoost2. [default: 0] 
 
 Generic options
   --multiqc_methods_description   [string]          Custom MultiQC yaml file containing HTML including a methods description. 

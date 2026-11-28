@@ -3,7 +3,7 @@ $ NXF_SYNTAX_PARSER=v2 nextflow run . --help
 
  N E X T F L O W   ~  version 26.11.0-edge
 
-Launching `./main.nf` [determined_kirch] revision: f830945a38
+Launching `./main.nf` [focused_wescoff] revision: f830945a38
 
 
 ------------------------------------------------------
@@ -12,7 +12,7 @@ Launching `./main.nf` [determined_kirch] revision: f830945a38
   |\ | |__  __ /  ` /  \ |__) |__         }  {
   | \| |       \__, \__/ |  \ |___     \`-._,-`-,
                                         `._,._,'
-  nf-core/methylseq 4.3.0dev
+  nf-core/methylseq 5.0.0dev
 ------------------------------------------------------
 Typical pipeline command:
 
